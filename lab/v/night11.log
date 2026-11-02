@@ -1,0 +1,16 @@
+t2_trick_10000_burst0.3_charge1_duty0.05_eta0.03_lam0.5_n50_p00_planted1_pmax1_pmin0_pv4_sight0.03_zthr3_0-16: efficiency -0.23 [-0.46, 0.01]  gain -0.40  food 1.83  poison 1.11  last third 1.61 [1.28, 2.02]  stranded 0%  firings 365  power 4 nW  job False extra beats per 10 s 45.5  grown 18.0/life, on the weak motor 59%
+  planted: right w +0.219 (above wrong in 66%), wrong w -0.226; right w by body ratio corr +0.22
+  curve food:poison per seg 1.6 1.7 1.7 1.6 1.6 1.6 1.7 1.6 1.6 1.6
+  food per seg per life 189 197 188 183 181 179 182 175 176 175
+t2_trick_10000_burst0.3_charge1_duty0.05_eta0.03_lam2_n50_p00_planted1_pmax1_pmin0_pv4_sight0.03_zthr3_0-16: efficiency -0.22 [-0.45, 0.03]  gain -0.38  food 1.81  poison 1.09  last third 1.67 [1.32, 2.10]  stranded 0%  firings 364  power 4 nW  job False extra beats per 10 s 44.1  grown 17.2/life, on the weak motor 61%
+  planted: right w -0.221 (above wrong in 50%), wrong w -0.369; right w by body ratio corr +0.20
+  curve food:poison per seg 1.6 1.7 1.7 1.6 1.6 1.7 1.6 1.7 1.7 1.7
+  food per seg per life 186 191 187 178 181 178 173 180 182 174
+t2_trick_10000_burst0.3_charge1_duty0.05_eta0.03_lam0.5_n50_p00_planted1_pmax1_pmin0_pv8_sight0.03_zthr3_0-16: efficiency -0.24 [-0.46, 0.01]  gain -0.41  food 1.77  poison 1.09  last third 1.62 [1.29, 2.03]  stranded 0%  firings 361  power 4 nW  job False extra beats per 10 s 41.1  grown 16.5/life, on the weak motor 49%
+  planted: right w -0.285 (above wrong in 31%), wrong w +0.248; right w by body ratio corr +0.04
+  curve food:poison per seg 1.6 1.6 1.6 1.7 1.7 1.6 1.6 1.6 1.6 1.7
+  food per seg per life 178 175 175 177 180 179 176 174 179 177
+t2_trick_10000_burst0.3_charge1_duty0.05_eta0.03_lam2_n50_p00_planted1_pmax1_pmin0_pv8_sight0.03_zthr3_0-16: efficiency -0.23 [-0.45, 0.01]  gain -0.40  food 1.77  poison 1.09  last third 1.65 [1.30, 2.08]  stranded 0%  firings 362  power 4 nW  job False extra beats per 10 s 41.5  grown 16.0/life, on the weak motor 50%
+  planted: right w -0.458 (above wrong in 38%), wrong w +0.157; right w by body ratio corr -0.01
+  curve food:poison per seg 1.6 1.6 1.6 1.7 1.6 1.6 1.7 1.7 1.6 1.6
+  food per seg per life 179 172 175 177 174 180 179 178 181 173

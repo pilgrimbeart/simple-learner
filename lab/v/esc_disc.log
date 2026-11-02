@@ -1,0 +1,27 @@
+== scripted, beats added (held out 100-147)
+-- left
+flee    : ate 0.605, lost 0.456 a 10 s, age 86 s
+tracker : ate 0.856, lost 1.042 a 10 s, age 82 s
+{'mode': 'left', 'add': 1.0}: net (eaten - lost), flee - tracker +0.337 [+0.309, +0.366]
+-- right
+flee    : ate 0.598, lost 0.442 a 10 s, age 86 s
+tracker : ate 0.840, lost 1.030 a 10 s, age 81 s
+{'mode': 'right', 'add': 1.0}: net (eaten - lost), flee - tracker +0.347 [+0.319, +0.374]
+-- both
+flee    : ate 0.629, lost 0.392 a 10 s, age 78 s
+tracker : ate 0.662, lost 0.930 a 10 s, age 76 s
+{'mode': 'both', 'add': 1.0}: net (eaten - lost), flee - tracker +0.506 [+0.482, +0.529]
+== grower, two knobs (held out)
+grow    : 811 robots, ate 0.679, lost 0.530 a 10 s, age 87 s
+tracker : 892 robots, ate 0.837, lost 1.026 a 10 s, age 80 s
+  grew in 810 of 811 (median at 6 s); bites unpredicted 60085 of 60086; finished 810, kept none 66, m0 271, m1 206, both 267
+{'knob': 1.0, 'w0': 0.0}: net (eaten - lost), grow - tracker +0.339 [+0.314, +0.363]
+grow    : 804 robots, ate 0.699, lost 0.573 a 10 s, age 88 s
+tracker : 886 robots, ate 0.874, lost 1.033 a 10 s, age 80 s
+  grew in 804 of 804 (median at 6 s); bites unpredicted 61868 of 61882; finished 804, kept none 99, m0 307, m1 211, both 187
+{'knob': 1.0, 'w0': -2.0}: net (eaten - lost), grow - tracker +0.286 [+0.262, +0.314]
+== control: phantom pain
+grow    : 899 robots, ate 0.837, lost 0.822 a 10 s, age 79 s
+tracker : 840 robots, ate 0.983, lost 1.039 a 10 s, age 85 s
+  grew in 899 of 899 (median at 5 s); bites unpredicted 35584 of 35584; finished 899, kept none 148, m0 180, m1 181, both 390
+{'knob': 1.0, 'w0': 0.0, 'phantom': 1.0}: net (eaten - lost), grow - tracker +0.071 [+0.044, +0.097]

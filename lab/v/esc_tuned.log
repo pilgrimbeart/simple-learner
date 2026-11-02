@@ -1,0 +1,11 @@
+== escape grower vs the tuned tracker (scan x2, hold x0.5), held out
+grow    : 955 robots, ate 0.738, lost 2.081 a 10 s, age 75 s
+tracker : 943 robots, ate 0.895, lost 2.268 a 10 s, age 76 s
+  grew in 955 of 955 (median at 6 s); bites unpredicted 75118 of 75121; finished 955, kept none 87, m0 379, m1 145, both 344
+{'knob': 1.0, 'w0': 0.0, 't_scan': 2.0, 't_hold': 0.5}: net (eaten - lost), grow - tracker +0.029 [+0.004, +0.054]
+grow    : 943 robots, ate 0.759, lost 2.081 a 10 s, age 76 s
+tracker : 941 robots, ate 0.937, lost 2.277 a 10 s, age 76 s
+  grew in 943 of 943 (median at 6 s); bites unpredicted 77615 of 77615; finished 943, kept none 113, m0 390, m1 164, both 276
+{'knob': 1.0, 'w0': -2.0, 't_scan': 2.0, 't_hold': 0.5}: net (eaten - lost), grow - tracker +0.018 [-0.011, +0.044]
+  grew in 949 of 949 (median at 5 s); bites unpredicted 36033 of 36033; finished 949, kept none 156, m0 164, m1 206, both 423
+{'knob': 1.0, 'w0': 0.0, 'phantom': 1.0, 't_scan': 2.0, 't_hold': 0.5}: net (eaten - lost), grow - tracker -0.073 [-0.092, -0.054]

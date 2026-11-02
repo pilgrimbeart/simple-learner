@@ -1,0 +1,9 @@
+dance {}: efficiency 2.60 [2.48, 2.72]  gain 4.50  food 6.53  poison 1.02  last third 6.99 [6.42, 7.61]  stranded 0%  firings 362  power 4 nW  job True
+dance {'zig': 50.0, 'push': 2.0}: efficiency 1.93 [1.82, 2.05]  gain 3.11  food 4.76  poison 0.83  last third 6.33 [5.55, 7.34]  stranded 0%  firings 303  power 4 nW  job True
+dance {'zig': 50.0, 'push': 2.0, 'back': 1.0}: efficiency 1.46 [1.36, 1.56]  gain 2.39  food 4.20  poison 0.90  last third 5.02 [4.46, 5.69]  stranded 0%  firings 318  power 4 nW  job True
+dance {'zig': 50.0, 'push': 2.0, 'back': -1.0}: efficiency 1.28 [1.20, 1.37]  gain 2.11  food 3.95  poison 0.92  last third 4.62 [4.16, 5.19]  stranded 1%  firings 318  power 4 nW  job True
+dance {'zig': 50.0, 'push': 3.0, 'back': 1.0}: efficiency 1.31 [1.22, 1.39]  gain 2.09  food 3.76  poison 0.84  last third 4.93 [4.42, 5.55]  stranded 0%  firings 298  power 4 nW  job True
+dance {'zig': 25.0, 'push': 2.0, 'back': 1.0}: efficiency 1.35 [1.25, 1.45]  gain 1.99  food 3.31  poison 0.66  last third 4.69 [4.10, 5.39]  stranded 0%  firings 233  power 4 nW  job True
+dance {'zig': 100.0, 'push': 2.0, 'back': 1.0}: efficiency 0.89 [0.79, 0.98]  gain 1.70  food 4.25  poison 1.27  last third 3.60 [3.23, 4.01]  stranded 0%  firings 459  power 4 nW  job True
+dance {'zig': 50.0, 'push': 2.0, 'back': 2.0}: efficiency 0.80 [0.72, 0.88]  gain 1.32  food 3.15  poison 0.92  last third 3.64 [3.27, 4.09]  stranded 0%  firings 327  power 4 nW  job True
+dance {'zig': 50.0, 'push': 4.0, 'back': 1.0}: efficiency 1.23 [1.14, 1.32]  gain 1.95  food 3.58  poison 0.81  last third 4.54 [4.06, 5.12]  stranded 1%  firings 293  power 4 nW  job True

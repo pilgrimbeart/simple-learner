@@ -1,0 +1,13 @@
+the model lives B's lives as when they were predicted (4 lives, 100 s): ok
+each life draws its own blocks, the same for a seed every time: ok
+the nominal model (vary=0, for debugging) lives: ok
+doubt: born at trust (V_L 0.19 V), a food steps it down to its rail, a poison up by 0.66 V: ok
+doubt: poisons in a row (3) reach V_H (1.48 V), flip the bit and reset it to V_L: ok
+doubt stays within the rails: ok
+a drive's stray first beat (motor B alone, D13) only when asked for (lone): ok
+circuit B is built of 151 parts (151 as benched), each seed's the same every time: ok
+the latch on motor B (163 parts) moves no other part's tolerance: ok
+the self-tuning brain lives its lives as when it was moved (2 lives, 300 s): ok
+its knobs stay within their bounds: ok
+fixed (tune=0), it lives B's life with the knobs it was born with (the floor): ok
+its knobs move only by tuning (eta=0: each stays where born, only wiggling): ok

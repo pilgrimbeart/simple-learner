@@ -1,0 +1,4 @@
+seer2 {'rerr': 0.5, 'lat': 0.5}: efficiency 3.95 [3.78, 4.09]  gain 6.34  food 8.68  poison 1.17  last third 7.47 [7.00, 8.07]  stranded 1%  firings 302  power 0 nW  job True
+seer2 {'rerr': inf, 'lat': 0.5}: efficiency 3.15 [3.01, 3.29]  gain 5.02  food 7.69  poison 1.33  last third 5.44 [5.00, 5.94]  stranded 0%  firings 297  power 0 nW  job True
+seer2 {'rerr': 0.5, 'lat': 0.25}: efficiency 4.12 [3.95, 4.28]  gain 6.66  food 9.04  poison 1.19  last third 7.07 [6.54, 7.71]  stranded 2%  firings 309  power 0 nW  job True
+seer2 {'rerr': inf, 'lat': 0.25}: efficiency 3.54 [3.40, 3.68]  gain 5.64  food 8.07  poison 1.22  last third 6.42 [5.83, 7.14]  stranded 0%  firings 297  power 0 nW  job True

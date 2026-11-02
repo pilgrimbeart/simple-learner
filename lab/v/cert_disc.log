@@ -1,0 +1,22 @@
+== pursuit (arenas 0-15)
+-- left 0.2
+{'mode': 'left', 'dur': 0.2}: net, pursue - grow -0.081 [-0.110, -0.052]
+-- left 0.5
+{'mode': 'left', 'dur': 0.5}: net, pursue - grow -0.042 [-0.083, -0.005]
+-- right 0.2
+{'mode': 'right', 'dur': 0.2}: net, pursue - grow -0.052 [-0.072, -0.032]
+-- right 0.5
+{'mode': 'right', 'dur': 0.5}: net, pursue - grow -0.069 [-0.101, -0.034]
+-- both 0.2
+{'mode': 'both', 'dur': 0.2}: net, pursue - grow +0.071 [+0.044, +0.099]
+-- both 0.5
+{'mode': 'both', 'dur': 0.5}: net, pursue - grow +0.084 [+0.058, +0.112]
+== alert (arenas 0-15)
+-- run 3
+{'mode': 'run', 'T': 3.0}: net, alert - grow +0.068 [+0.039, +0.093]
+-- run 10
+{'mode': 'run', 'T': 10.0}: net, alert - grow +0.121 [+0.106, +0.135]
+-- still 3
+{'mode': 'still', 'T': 3.0}: net, alert - grow +0.082 [+0.043, +0.125]
+-- still 10
+{'mode': 'still', 'T': 10.0}: net, alert - grow +0.076 [+0.040, +0.110]

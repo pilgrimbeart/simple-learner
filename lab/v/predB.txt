@@ -1,0 +1,4 @@
+numbers {'hold': 0.1764, 'bored': 6.0411, 'scan': 12.333, 'drive': 50.0, 'run': 43.5712, 'step': 0.656, 'fstep': 0.7077, 'drift': 0.0202, 'hi': 0.8, 'conf': 0.6764, 'top': 1.1236, 'flip_reset': 1, 'fl
+spreads {'hold': 0.16, 'bored': 0.21, 'scan': 0.092, 'drive': 0.113, 'run': 0.068, 'step': 0.038, 'fstep': 0.157, 'drift': 0.08} {'hi': 0.0095, 'flip_to': 0.0047}
+PREDICTION on 50000-50031 x 2: model of circuit B: efficiency 2.03 [1.85, 2.21]  gain 3.54  food 6.06  poison 1.26  last third 5.27 [4.55, 6.20]  stranded 2%  firings 366  power 9 nW  job True
+the model on 256 x 2 other seeds (the mean to expect): model of circuit B: efficiency 2.28 [2.21, 2.35]  gain 3.95  food 6.29  poison 1.17  last third 6.01 [5.68, 6.36]  stranded 0%  firings 362  powe

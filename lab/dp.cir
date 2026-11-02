@@ -1,0 +1,20 @@
+diff pair transfer, sky130 5 V
+.include "/home/pilgrim/.local/opt/sky130_fd_pr/models/hv_tt.spice"
+VDD vdd 0 3
+VSS vss 0 -3
+Vref ref 0 0
+Vin in 0 0
+Ib vdd bd 5n
+Xbd bd bd vss vss sky130_fd_pr__nfet_g5v0d10v5 W=4 L=4
+Xt tail bd vss vss sky130_fd_pr__nfet_g5v0d10v5 W=4 L=4
+X1 d1 in tail vss sky130_fd_pr__nfet_g5v0d10v5 W=4 L=4
+X2 d2 ref tail vss sky130_fd_pr__nfet_g5v0d10v5 W=4 L=4
+V1 vdd d1 0
+V2 vdd d2 0
+.dc Vin -0.4 0.4 0.05
+.control
+run
+print i(V1) i(V2)
+quit
+.endc
+.end

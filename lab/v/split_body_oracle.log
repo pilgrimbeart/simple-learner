@@ -1,0 +1,2 @@
+split {'steer': 0.0, 'body': 1.0, 'oracle': 1.0}: efficiency 2.32 [2.22, 2.42]  gain 4.04  food 6.09  poison 1.02  last third 6.29 [5.83, 6.78]  stranded 0%  firings 369  power 4 nW  job True
+split {'W': 0.2, 'N': 1.0, 'Q': 1.0, 'reset': 1.0, 'body': 1.0, 'oracle': 1.0, 'lag': 1.0, 'map': 'learn', 'gap': 0.1}: efficiency 2.71 [2.60, 2.82]  gain 4.69  food 6.78  poison 1.04  last third 6.60 [6.12, 7.14]  stranded 0%  firings 365  power 4 nW  job True  (map learned right in 253, wrong 3 of 256)

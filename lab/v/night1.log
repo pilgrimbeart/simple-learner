@@ -1,0 +1,21 @@
+t2_plain_10000_0-16: efficiency 0.14 [-0.02, 0.36]  gain 0.32  food 0.85  poison 0.26  last third 4.03 [1.76, 5.50]  stranded 69%  firings 655  power 4 nW  job False extra beats per 10 s 0.0
+  curve food:poison per seg 2.4 2.8 3.0 3.0 3.3 4.3 4.1 4.3 3.7 4.1
+  food per seg per life 134 102 93 88 76 72 69 69 70 71
+t2_trick_10000_eta0.01_0-16: efficiency 0.14 [-0.06, 0.37]  gain 0.29  food 2.14  poison 0.93  last third 3.03 [2.44, 3.79]  stranded 6%  firings 511  power 4 nW  job False extra beats per 10 s 177.1  grown 19.8/life, on the weak motor 43%
+  curve food:poison per seg 1.3 1.8 2.0 2.2 2.5 2.8 2.9 2.8 3.2 3.1
+  food per seg per life 210 214 218 204 203 208 218 221 224 221
+t2_trick_10000_eta0.01_sight0.003_0-16: efficiency 0.17 [-0.06, 0.45]  gain 0.34  food 2.41  poison 1.03  last third 2.95 [2.33, 3.79]  stranded 9%  firings 513  power 4 nW  job False extra beats per 10 s 154.5  grown 12.8/life, on the weak motor 55%
+  curve food:poison per seg 1.4 1.9 2.2 2.4 2.5 2.5 2.8 2.9 2.9 3.1
+  food per seg per life 228 234 253 250 251 257 252 247 221 220
+t2_trick_10000_eta0.01_sight0.01_0-16: efficiency -0.06 [-0.31, 0.21]  gain -0.12  food 2.73  poison 1.43  last third 2.29 [1.87, 2.89]  stranded 9%  firings 529  power 4 nW  job False extra beats per 10 s 170.7  grown 7.7/life, on the weak motor 54%
+  curve food:poison per seg 1.3 1.5 1.8 2.0 2.1 2.1 2.0 2.2 2.3 2.5
+  food per seg per life 269 274 276 281 288 277 258 259 264 287
+t2_trick_10000_eta0.01_sight0.03_0-16: efficiency -0.02 [-0.33, 0.32]  gain -0.04  food 2.47  poison 1.25  last third 2.03 [1.55, 2.79]  stranded 6%  firings 504  power 4 nW  job False extra beats per 10 s 130.4  grown 3.6/life, on the weak motor 63%
+  curve food:poison per seg 1.5 2.0 2.0 2.2 2.0 2.0 2.0 2.1 2.0 2.0
+  food per seg per life 270 265 256 257 240 241 240 245 240 216
+t2_trick_10000_eta0.01_sight0.1_0-16: efficiency -0.08 [-0.27, 0.14]  gain -0.16  food 1.90  poison 1.03  last third 2.23 [1.67, 3.15]  stranded 16%  firings 510  power 4 nW  job False extra beats per 10 s 106.6  grown 2.3/life, on the weak motor 62%
+  curve food:poison per seg 1.4 1.5 1.8 1.8 1.9 1.9 2.1 2.2 2.3 2.3
+  food per seg per life 222 200 206 202 184 185 195 183 162 161
+t2_trick_10000_eta0.01_sight0.01_taste0_0-16: efficiency -0.06 [-0.34, 0.22]  gain -0.13  food 2.72  poison 1.43  last third 2.14 [1.69, 2.86]  stranded 19%  firings 539  power 4 nW  job False extra beats per 10 s 150.9  grown 8.0/life, on the weak motor 56%
+  curve food:poison per seg 1.5 1.6 1.9 1.9 2.0 2.0 2.1 2.1 2.1 2.2
+  food per seg per life 283 283 283 276 275 273 260 270 256 262

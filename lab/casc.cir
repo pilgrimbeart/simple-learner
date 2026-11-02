@@ -1,0 +1,17 @@
+cascoded pmos mirror
+.include "/home/pilgrim/.local/opt/sky130_fd_pr/models/hv_tt.spice"
+VDD vdd 0 3
+VSS vss 0 -3
+Iin d vss 5n
+X1 a a vdd vdd sky130_fd_pr__pfet_g5v0d10v5 W=4 L=4
+X3 d d a vdd sky130_fd_pr__pfet_g5v0d10v5 W=4 L=4
+X2 b a vdd vdd sky130_fd_pr__pfet_g5v0d10v5 W=4 L=4
+X4 o d b vdd sky130_fd_pr__pfet_g5v0d10v5 W=4 L=4
+Vo o 0 0
+.dc Vo -3 2.8 0.4
+.control
+run
+print i(Vo)
+quit
+.endc
+.end

@@ -1,0 +1,15 @@
+pmos mirror output vs drain voltage
+.include "/home/pilgrim/.local/opt/sky130_fd_pr/models/hv_tt.spice"
+VDD vdd 0 3
+VSS vss 0 -3
+Iin d vss 5n
+X1 d d vdd vdd sky130_fd_pr__pfet_g5v0d10v5 W=4 L=16
+X2 o d vdd vdd sky130_fd_pr__pfet_g5v0d10v5 W=4 L=16
+Vo o 0 0
+.dc Vo -3 2.8 0.4
+.control
+run
+print i(Vo)
+quit
+.endc
+.end

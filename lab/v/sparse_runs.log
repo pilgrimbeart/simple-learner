@@ -1,0 +1,4 @@
+tuner blocks 6 {'mistune': 3.0, 'tune': 0.0} 0:32: efficiency 0.29 [0.22, 0.37]  gain 0.54  food 1.39  poison 0.43  last third 3.32 [2.96, 3.73]  stranded 3%  firings 420  power 4 nW  job True
+tuner blocks 6 {'mistune': 3.0, 'eta': 0.003} 0:32: efficiency 0.32 [0.25, 0.38]  gain 0.57  food 1.41  poison 0.42  last third 3.49 [3.13, 3.88]  stranded 0%  firings 397  power 4 nW  job True
+tuner blocks 6 {'mistune': 3.0, 'eta': 0.01} 0:32: efficiency 0.32 [0.26, 0.38]  gain 0.56  food 1.40  poison 0.42  last third 3.46 [3.14, 3.85]  stranded 0%  firings 388  power 4 nW  job True
+tuner blocks 6 {'mistune': 3.0, 'eta': 0.03} 0:32: efficiency 0.27 [0.23, 0.31]  gain 0.48  food 1.20  poison 0.36  last third 3.46 [3.21, 3.75]  stranded 3%  firings 376  power 4 nW  job True

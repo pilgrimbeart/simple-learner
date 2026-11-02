@@ -33,7 +33,7 @@ class Brains(dict):
 
 
 BRAINS = Brains({
-    "sheet": ("brains.sheet", "SheetBrain", {}), "designed-circuit": ("brains.designed", "DesignedBrain", {}),
+    "designed-circuit": ("brains.designed", "DesignedBrain", {}),
     "baseline-circuit": ("brains.baseline", "BaselineBrain", {}),
     "adjusting-circuit": ("brains.adjusting", "AdjustingBrain", {}),
     "knowing-circuit": ("brains.knowing", "KnowingBrain", {}),
@@ -59,7 +59,7 @@ class Life:
     """A body and a brain in a world. step() runs one tick (units.TICK); t counts them. poison: the poison colour, or
     None (all food). brain: a name in BRAINS, or (for experiments) a function from the seed to a brain."""
 
-    def __init__(self, seed: int = 0, poison: str | None = "red", learning: bool = True, brain: str = "sheet"):
+    def __init__(self, seed: int = 0, poison: str | None = "red", learning: bool = True, brain: str = "designed-circuit"):
         self.rng = np.random.default_rng(seed)                  # the world's: the same for every brain
         self.poison, self.learning = poison, learning
         self.brain = BRAINS[brain](seed) if isinstance(brain, str) else brain(seed)
@@ -151,7 +151,7 @@ def measure(lives: int, seconds: float = 100.0, brains=tuple(BRAINS), all_food: 
                   f" {np.mean([r[1] for r in results]):.2f}, food {np.mean([r[2] for r in results]):.2f}")
 
 
-def watch(seed: int = 0, brain: str = "sheet", record: str | None = None, until: float = 100.0,
+def watch(seed: int = 0, brain: str = "designed-circuit", record: str | None = None, until: float = 100.0,
           all_food: bool = False) -> None:
     """A life, live. Left, the brain's own panel. Right, the world: red and blue blocks, lettered R and B,
     the creature a disc with its mouth marked, and what its eyes see. It runs FAST ticks a frame, but SLOW while the
@@ -267,11 +267,6 @@ def watch(seed: int = 0, brain: str = "sheet", record: str | None = None, until:
                     life = Life(seed, poison, brain=brain)
                 elif event.key == pygame.K_a:
                     auto = True
-                elif event.key == pygame.K_d and hasattr(life.brain, "damage_at"):    # damage, at the mouse
-                    mx, my = pygame.mouse.get_pos()
-                    mx -= x0
-                    inside = 0 <= mx < side and 0 <= my < side
-                    life.brain.damage_at(mx / side if inside else 0.5, my / side if inside else 0.5)
         if auto:
             settling = life.moving is None or (life.t - life.moving) * TICK < SETTLE
             per_frame = SLOW if life.brain.built() and settling else FAST
@@ -334,7 +329,7 @@ def watch(seed: int = 0, brain: str = "sheet", record: str | None = None, until:
         lines = (f"tick {life.t:6d}   brain: {brain}   stage: {stage}   poison: {poison or 'none (all food)'}   eaten: red {eaten['red']},"
                  f" blue {eaten['blue']}",
                  "recent meals: " + " ".join(m[0].upper() for _, m in life.meals[-14:]),
-                 f"{speed()}   r new life   d damage (at the mouse)   space pause   up/down: speed{'' if auto else '   a: auto speed'}   Esc")
+                 f"{speed()}   r new life   space pause   up/down: speed{'' if auto else '   a: auto speed'}   Esc")
         for i, line in enumerate(lines):
             screen.blit(font.render(line, True, (255, 255, 255)), (6, side + 6 + 22 * i))
         hover = pygame.mouse.get_pos()
@@ -366,11 +361,9 @@ def rules() -> list:
     """Watching: the rules the simulation enforces, as (depth, text): 0 a heading, 1 a point, 2 a point under it. The
     numbers are read from the code, so the list can't drift from what is enforced."""
     import mixed_feedback as mf
-    import sheet
     import units as u
     import world
     from minimal import spec
-    sb = _constants("brains/sheet.py", ("SIZE", "RATE", "UPDATE"))   # (read, not imported: importing compiles the rules)
     return [
         (0, "Units"),
         (1, f"Everything in SI units, every number derived from a few axioms (units.py): a tick of the body is"
@@ -387,21 +380,9 @@ def rules() -> list:
         (1, "Which colour feeds which sensor, and which motor drives which thruster, is drawn at random for each life:"
             " no brain can be built knowing it."),
         (1, "A thruster fires once for each spike of its motor; a motor spikes when its voltage rises through"
-            f" {mf.SPIKE:g} V, and can spike again only once it has fallen below {mf.RESET:g} V."),
+            f" {mf.SPIKE:g} V, and can spike again only once it has fallen a typical voltage below it."),
         (1, "The body must never become part of the solution: it does no job a brain could do (credit, timing,"
             " filtering, choosing what learns)."),
-        (0, "The sheet brain"),
-        (1, f"A {sb['SIZE']} x {sb['SIZE']} sheet of identical cells, born alike bar noise, each running one local rule:"
-            " a cell sees only its own numbers, its neighbours' mean of each shared number and how many neighbours it"
-            " has; never its position, the sheet's size, a clock or any one neighbour."),
-        (1, f"Shared numbers are clipped to -1..1 and shown with noise {sheet.SHOW:g}; kept numbers get noise"
-            f" {sheet.NOISE:g} at every update, whole numbers re-rounded."),
-        (1, f"The sheet takes {sb['RATE']:g} steps a second, each cell updating with chance {sb['UPDATE']:g} in a"
-            " step: at random, never all at once."),
-        (1, "The body reaches only cells by the names they gave themselves: stimuli to S1 and S2, taste to T, thrusts"
-            " counted from M1 and M2."),
-        (1, "No hidden size or fixed waits, no magic knowledge: a path finds its target by a signal the target itself"
-            " sends."),
         (0, "The circuit simulator (every circuit brain)"),
         (1, "Everything that affects behaviour is explicit circuit: nodes (capacitors, with any leak) and elements (a"
             " current from a node's voltage, possibly filtered and gated); no program beside it."),
@@ -461,14 +442,6 @@ def rules() -> list:
     ]
 
 
-def _constants(path: str, names) -> dict:
-    """Module-level constants of a source file, read without importing it."""
-    import ast
-    tree = ast.parse(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), path)).read())
-    return {t.id: ast.literal_eval(n.value) for n in tree.body if isinstance(n, ast.Assign)
-            for t in n.targets if isinstance(t, ast.Name) and t.id in names}
-
-
 def rules_text() -> str:
     """The rules (rules()) as plain text, Markdown-style, to copy or keep (python creature.py --rules)."""
     out = ["# What the simulation enforces"]
@@ -499,7 +472,7 @@ def copy_text(pygame, text: str) -> bool:
         return False
 
 
-def open_text(text: str, name: str = "nca-learn-rules.txt") -> str:
+def open_text(text: str, name: str = "simple-learner-rules.txt") -> str:
     """Write text to a file and open it in the system's viewer (Notepad under WSL), where any of it can be selected;
     returns the file's path."""
     import subprocess
@@ -690,7 +663,7 @@ class SchematicViewer:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--brain", default="sheet", help="the brain to watch or record: one of BRAINS, or a --spec")
+    parser.add_argument("--brain", default="designed-circuit", help="the brain to watch or record: one of BRAINS, or a --spec")
     parser.add_argument("--spec", nargs="+", default=[], metavar="RESULTS",
                         help="also offer these circuits of the minimal search (minimal/results/*.json), named by file")
     parser.add_argument("--seed", type=int, default=0)

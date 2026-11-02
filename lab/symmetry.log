@@ -1,0 +1,18 @@
+original legal 
+mirror legal 
+both S0's legal 
+both S1's legal 
+average legal 
+
+(1) the original's lives split by which sensor is food (paired by seed and substrate; S0-food minus S1-food)
+  food      S0 food 5.460  S1 food 5.309  difference +0.151 [-0.030, +0.328]
+  poison    S0 food 0.895  S1 food 1.061  difference -0.166 [-0.309, -0.038]
+  gain      S0 food 3.670  S1 food 3.188  difference +0.482 [+0.140, +0.879]
+  stranded  S0 food 0.000  S1 food 0.000  difference +0.000 [+0.000, +0.000]
+
+(2) the variants on the same seeds
+  original   score +2.28 [+1.96, +2.54], eff 1.74, gain 3.00, stranded 0.0%, job True
+  mirror     score +2.32 [+2.02, +2.59], eff 1.77, gain 3.06, stranded 0.8%, job True; gain vs original +0.20 [-0.02, +0.43]
+  both S0's  score +2.31 [+1.99, +2.56], eff 1.77, gain 3.04, stranded 0.0%, job True; gain vs original +0.04 [-0.14, +0.22]
+  both S1's  score +2.51 [+2.22, +2.77], eff 1.88, gain 3.24, stranded 0.0%, job True; gain vs original +0.32 [+0.12, +0.52]
+  average    score +2.33 [+2.04, +2.59], eff 1.78, gain 3.06, stranded 0.8%, job True; gain vs original +0.14 [-0.04, +0.33]

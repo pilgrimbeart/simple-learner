@@ -1,0 +1,24 @@
+/home/pilgrim/git/nca-learn/.venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:4609: RuntimeWarning: invalid value encountered in scalar subtract
+  diff_b_a = b - a
+t2_plain_100000_judge10000_seg10000_0-16: efficiency 0.11 [0.00, 0.29]  gain 0.29  food 0.42  poison 0.07  last third 6.07 [5.43, nan]  stranded 88%  firings 833  power 4 nW  job False extra beats per 10 s 0.0
+  curve food:poison per seg 3.2 4.7 5.8 5.5 5.5 6.5 6.2 6.2 6.4 6.3
+  food per seg per life 845 631 513 522 445 423 422 417 422 424
+t2_trick_100000_burst0.3_charge1_duty0.01_eta0.03_judge10000_lam0.5_n2_p00_planted1_pmax1_pmin0_seg10000_sight0.03_zthr3_0-16: efficiency 0.10 [-0.13, 0.38]  gain 0.19  food 1.41  poison 0.61  last third 2.31 [1.60, 3.23]  stranded 3%  firings 432  power 4 nW  job False extra beats per 10 s 7.1  grown 1.2/life, on the weak motor 71%
+  planted: right w +0.934 (above wrong in 88%), wrong w -0.463; right w by body ratio corr +0.61
+  curve food:poison per seg 2.7 2.5 2.4 2.4 2.3 2.3 2.4 2.4 2.4 2.3
+  food per seg per life 1754 1686 1496 1424 1390 1397 1359 1371 1390 1409
+t2_trick_100000_burst0.3_charge1_duty0.01_eta0.03_judge10000_lam0.5_n50_p00_planted1_pmax1_pmin0_seg10000_sight0.03_zthr3_0-16: efficiency 0.02 [-0.24, 0.30]  gain 0.03  food 1.60  poison 0.78  last third 2.09 [1.53, 2.82]  stranded 0%  firings 358  power 4 nW  job False extra beats per 10 s 23.0  grown 21.0/life, on the weak motor 67%
+  planted: right w +0.884 (above wrong in 84%), wrong w +0.024; right w by body ratio corr +0.34
+  curve food:poison per seg 2.3 2.4 2.1 2.0 2.0 2.0 2.1 2.1 2.0 2.0
+  food per seg per life 2356 2736 2075 1728 1638 1599 1605 1604 1576 1596
+/home/pilgrim/git/nca-learn/.venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:3037: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+/home/pilgrim/git/nca-learn/.venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:3038: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+t2_trick_100000_burst0.3_charge1_duty0.01_eta0.03_judge10000_lam0.5_learn0_n50_p00_planted1_pmax1_pmin0_seg10000_sight0.03_zthr3_0-16: efficiency 0.02 [-0.24, 0.31]  gain 0.04  food 1.58  poison 0.77  last third 2.08 [1.53, 2.81]  stranded 0%  firings 349  power 4 nW  job False extra beats per 10 s 8.8  grown 0.0/life, on the weak motor 0%
+  planted: right w +0.000 (above wrong in 0%), wrong w +0.000; right w by body ratio corr +nan
+  curve food:poison per seg 2.1 2.1 2.1 2.1 2.0 2.0 2.1 2.1 2.1 2.0
+  food per seg per life 1581 1608 1559 1585 1581 1594 1596 1579 1585 1585
+t2_trick_100000_burst0.3_charge1_duty0.01_eta0.03_judge10000_lam0.5_n50_p00_pmax1_pmin0_seg10000_sight0.03_zthr3_0-16: efficiency 0.03 [-0.24, 0.32]  gain 0.05  food 1.59  poison 0.77  last third 2.05 [1.50, 2.78]  stranded 0%  firings 356  power 4 nW  job False extra beats per 10 s 20.4  grown 21.2/life, on the weak motor 66%
+  curve food:poison per seg 2.2 2.3 2.2 1.9 2.0 2.0 2.1 2.1 2.0 2.1
+  food per seg per life 2092 2222 1972 1670 1637 1614 1584 1594 1570 1587

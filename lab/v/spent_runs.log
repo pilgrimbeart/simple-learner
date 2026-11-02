@@ -1,0 +1,14 @@
+== firings charged. escape scripted, held out
+{'mode': 'left', 'add': 1.0}: net (eaten - lost), flee - tracker +0.088 [+0.061, +0.117]
+{'mode': 'both', 'add': 1.0}: net (eaten - lost), flee - tracker +0.123 [+0.101, +0.146]
+== escape grower and control, held out
+  grew in 810 of 811 (median at 6 s); bites unpredicted 60085 of 60086; finished 810, kept none 66, m0 271, m1 206, both 267
+{'knob': 1.0, 'w0': 0.0}: net (eaten - lost), grow - tracker +0.136 [+0.115, +0.157]
+  grew in 899 of 899 (median at 5 s); bites unpredicted 35584 of 35584; finished 899, kept none 148, m0 180, m1 181, both 390
+{'knob': 1.0, 'w0': 0.0, 'phantom': 1.0}: net (eaten - lost), grow - tracker -0.094 [-0.118, -0.070]
+== pursuit, beats added, timed vs random (0-15)
+{'mode': 'both', 'dur': 0.5, 'add': 1.0}: net, pursue - grow -0.191 [-0.220, -0.157]
+{'mode': 'both', 'dur': 0.5, 'add': 1.0, 'prand': 0.8}: net, pursue - grow -0.321 [-0.344, -0.298]
+== keep moving always, keep still always (0-15)
+{'mode': 'run', 'always': 1.0}: net, alert - grow -0.489 [-0.514, -0.464]
+{'mode': 'still', 'always': 1.0}: net, alert - grow +0.426 [+0.390, +0.460]

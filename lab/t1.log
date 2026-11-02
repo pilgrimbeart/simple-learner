@@ -1,0 +1,26 @@
+rule brain: ok
+rule interface: ok
+rule organs: ok
+rule see: ok
+rule wiring: ok
+body blocks: ok
+body __init__: ok
+body adjusting: ok
+body baseline: ok
+body circuit: ok
+body designed: ok
+body healing: ok
+body knowing: ok
+body recruiting: ok
+body chip: reaches into the sheet (._s)
+body creature: ok
+body diagram: ok
+body measure_organs: ok
+body measure_recruitment: ok
+body measure_wiring: ok
+body mixed_feedback: ok
+body schematic: ok
+body test_compiled: ok
+body units: ok
+body watch: ok
+body world: ok

@@ -1,0 +1,72 @@
+clock 3+1@20 scan   8 drive  40 hold 0.05  eff  1.15 gain  1.58 food  3.15 poison  0.79 last  4.86 stranded   0% job True
+clock 3+1@20 scan   8 drive  40 hold 0.10  eff  1.84 gain  2.68 food  4.46 poison  0.89 last  6.27 stranded   0% job True
+clock 3+1@20 scan   8 drive  40 hold 0.20  eff  2.12 gain  3.32 food  5.15 poison  0.91 last  7.66 stranded   0% job True
+clock 3+1@20 scan   8 drive  80 hold 0.05  eff  1.77 gain  2.62 food  4.71 poison  1.04 last  6.08 stranded   0% job True
+clock 3+1@20 scan   8 drive  80 hold 0.10  eff  2.11 gain  3.46 food  5.82 poison  1.18 last  6.25 stranded   0% job True
+clock 3+1@20 scan   8 drive  80 hold 0.20  eff  1.87 gain  3.39 food  5.96 poison  1.28 last  5.51 stranded   0% job True
+clock 3+1@20 scan   8 drive 160 hold 0.05  eff  1.92 gain  3.26 food  6.41 poison  1.58 last  4.87 stranded   0% job True
+clock 3+1@20 scan   8 drive 160 hold 0.10  eff  1.43 gain  2.73 food  6.67 poison  1.97 last  3.69 stranded   0% job True
+clock 3+1@20 scan   8 drive 160 hold 0.20  eff  0.73 gain  1.64 food  6.52 poison  2.44 last  2.98 stranded   0% job False
+clock 3+1@20 scan  16 drive  40 hold 0.05  eff  1.12 gain  1.68 food  3.84 poison  1.08 last  4.43 stranded   0% job True
+clock 3+1@20 scan  16 drive  40 hold 0.10  eff  1.93 gain  3.06 food  5.34 poison  1.14 last  6.86 stranded   0% job True
+clock 3+1@20 scan  16 drive  40 hold 0.20  eff  2.29 gain  3.91 food  6.12 poison  1.10 last  6.45 stranded   0% job True
+clock 3+1@20 scan  16 drive  80 hold 0.05  eff  1.90 gain  3.10 food  5.75 poison  1.32 last  4.93 stranded   0% job True
+clock 3+1@20 scan  16 drive  80 hold 0.10  eff  2.22 gain  4.02 food  7.10 poison  1.54 last  5.04 stranded   0% job True
+clock 3+1@20 scan  16 drive  80 hold 0.20  eff  1.98 gain  3.98 food  7.05 poison  1.53 last  5.72 stranded   0% job True
+clock 3+1@20 scan  16 drive 160 hold 0.05  eff  2.13 gain  4.00 food  7.68 poison  1.84 last  4.62 stranded   0% job True
+clock 3+1@20 scan  16 drive 160 hold 0.10  eff  1.51 gain  3.25 food  8.03 poison  2.39 last  3.75 stranded   0% job True
+clock 3+1@20 scan  16 drive 160 hold 0.20  eff  0.90 gain  2.28 food  8.00 poison  2.86 last  2.91 stranded   0% job False
+clock 3+1@20 scan  32 drive  40 hold 0.05  eff  0.96 gain  1.68 food  3.98 poison  1.15 last  3.86 stranded   0% job True
+clock 3+1@20 scan  32 drive  40 hold 0.10  eff  1.44 gain  2.60 food  5.26 poison  1.33 last  4.31 stranded   0% job True
+clock 3+1@20 scan  32 drive  40 hold 0.20  eff  1.67 gain  3.20 food  5.87 poison  1.34 last  4.72 stranded   0% job True
+clock 3+1@20 scan  32 drive  80 hold 0.05  eff  1.56 gain  2.93 food  5.92 poison  1.49 last  4.50 stranded   0% job True
+clock 3+1@20 scan  32 drive  80 hold 0.10  eff  1.64 gain  3.36 food  7.03 poison  1.83 last  4.00 stranded   0% job True
+clock 3+1@20 scan  32 drive  80 hold 0.20  eff  1.31 gain  2.92 food  6.39 poison  1.74 last  3.95 stranded   0% job True
+clock 3+1@20 scan  32 drive 160 hold 0.05  eff  1.65 gain  3.51 food  7.75 poison  2.12 last  3.98 stranded   0% job True
+clock 3+1@20 scan  32 drive 160 hold 0.10  eff  1.10 gain  2.64 food  7.65 poison  2.51 last  3.57 stranded   0% job True
+clock 3+1@20 scan  32 drive 160 hold 0.20  eff  0.42 gain  1.14 food  7.14 poison  3.00 last  2.48 stranded   0% job False
+clock 3+1@20 scan  56 drive  40 hold 0.05  eff  0.65 gain  1.36 food  3.52 poison  1.08 last  4.33 stranded   0% job True
+clock 3+1@20 scan  56 drive  40 hold 0.10  eff  0.87 gain  1.87 food  4.57 poison  1.35 last  3.68 stranded   0% job True
+clock 3+1@20 scan  56 drive  40 hold 0.20  eff  0.90 gain  1.99 food  4.73 poison  1.37 last  3.84 stranded   0% job True
+clock 3+1@20 scan  56 drive  80 hold 0.05  eff  0.95 gain  2.13 food  5.22 poison  1.54 last  3.91 stranded   0% job True
+clock 3+1@20 scan  56 drive  80 hold 0.10  eff  0.95 gain  2.26 food  6.01 poison  1.88 last  3.60 stranded   0% job True
+clock 3+1@20 scan  56 drive  80 hold 0.20  eff  0.52 gain  1.31 food  4.86 poison  1.78 last  3.08 stranded   0% job True
+clock 3+1@20 scan  56 drive 160 hold 0.05  eff  0.98 gain  2.46 food  7.15 poison  2.34 last  3.39 stranded   0% job True
+clock 3+1@20 scan  56 drive 160 hold 0.10  eff  0.23 gain  0.63 food  6.02 poison  2.69 last  2.45 stranded   0% job False
+clock 3+1@20 scan  56 drive 160 hold 0.20  eff -0.12 gain -0.37 food  5.89 poison  3.13 last  1.88 stranded   0% job False
+give up 3@20 scan   8 drive  40 hold 0.05  eff  1.16 gain  1.63 food  3.11 poison  0.74 last  5.77 stranded   2% job True
+give up 3@20 scan   8 drive  40 hold 0.10  eff  1.76 gain  2.62 food  4.39 poison  0.88 last  6.97 stranded   0% job True
+give up 3@20 scan   8 drive  40 hold 0.20  eff  1.95 gain  3.12 food  5.14 poison  1.01 last  6.86 stranded   0% job True
+give up 3@20 scan   8 drive  80 hold 0.05  eff  1.61 gain  2.46 food  4.57 poison  1.05 last  5.21 stranded   1% job True
+give up 3@20 scan   8 drive  80 hold 0.10  eff  2.03 gain  3.40 food  5.80 poison  1.20 last  5.57 stranded   0% job True
+give up 3@20 scan   8 drive  80 hold 0.20  eff  1.64 gain  3.05 food  5.68 poison  1.32 last  5.04 stranded   1% job True
+give up 3@20 scan   8 drive 160 hold 0.05  eff  1.92 gain  3.34 food  6.44 poison  1.55 last  4.69 stranded   0% job True
+give up 3@20 scan   8 drive 160 hold 0.10  eff  1.33 gain  2.62 food  6.46 poison  1.92 last  3.89 stranded   2% job True
+give up 3@20 scan   8 drive 160 hold 0.20  eff  0.76 gain  1.75 food  6.52 poison  2.38 last  2.80 stranded   0% job False
+give up 3@20 scan  16 drive  40 hold 0.05  eff  1.18 gain  1.79 food  3.80 poison  1.00 last  4.70 stranded   0% job True
+give up 3@20 scan  16 drive  40 hold 0.10  eff  1.86 gain  2.99 food  5.06 poison  1.03 last  5.73 stranded   0% job True
+give up 3@20 scan  16 drive  40 hold 0.20  eff  2.17 gain  3.76 food  6.01 poison  1.12 last  6.83 stranded   1% job True
+give up 3@20 scan  16 drive  80 hold 0.05  eff  1.84 gain  3.07 food  5.50 poison  1.21 last  4.93 stranded   1% job True
+give up 3@20 scan  16 drive  80 hold 0.10  eff  2.03 gain  3.71 food  6.78 poison  1.53 last  4.77 stranded   0% job True
+give up 3@20 scan  16 drive  80 hold 0.20  eff  1.73 gain  3.50 food  6.50 poison  1.50 last  5.20 stranded   1% job True
+give up 3@20 scan  16 drive 160 hold 0.05  eff  1.95 gain  3.71 food  7.51 poison  1.90 last  4.41 stranded   0% job True
+give up 3@20 scan  16 drive 160 hold 0.10  eff  1.43 gain  3.12 food  7.65 poison  2.27 last  3.72 stranded   0% job True
+give up 3@20 scan  16 drive 160 hold 0.20  eff  0.77 gain  1.93 food  7.45 poison  2.76 last  2.97 stranded   0% job False
+give up 3@20 scan  32 drive  40 hold 0.05  eff  0.80 gain  1.41 food  3.56 poison  1.07 last  5.08 stranded   1% job True
+give up 3@20 scan  32 drive  40 hold 0.10  eff  1.26 gain  2.29 food  4.89 poison  1.30 last  4.11 stranded   2% job True
+give up 3@20 scan  32 drive  40 hold 0.20  eff  1.56 gain  3.01 food  5.61 poison  1.30 last  5.00 stranded   0% job True
+give up 3@20 scan  32 drive  80 hold 0.05  eff  1.42 gain  2.68 food  5.46 poison  1.39 last  4.21 stranded   1% job True
+give up 3@20 scan  32 drive  80 hold 0.10  eff  1.55 gain  3.19 food  6.64 poison  1.73 last  4.21 stranded   2% job True
+give up 3@20 scan  32 drive  80 hold 0.20  eff  1.16 gain  2.60 food  6.14 poison  1.77 last  3.91 stranded   1% job True
+give up 3@20 scan  32 drive 160 hold 0.05  eff  1.49 gain  3.23 food  7.49 poison  2.13 last  3.62 stranded   0% job True
+give up 3@20 scan  32 drive 160 hold 0.10  eff  1.09 gain  2.63 food  7.53 poison  2.45 last  3.24 stranded   0% job True
+give up 3@20 scan  32 drive 160 hold 0.20  eff  0.48 gain  1.31 food  6.95 poison  2.82 last  2.51 stranded   1% job False
+give up 3@20 scan  56 drive  40 hold 0.05  eff  0.57 gain  1.20 food  3.34 poison  1.07 last  3.58 stranded   1% job True
+give up 3@20 scan  56 drive  40 hold 0.10  eff  0.82 gain  1.74 food  4.39 poison  1.32 last  4.01 stranded   0% job True
+give up 3@20 scan  56 drive  40 hold 0.20  eff  0.86 gain  1.87 food  4.55 poison  1.34 last  3.47 stranded   0% job True
+give up 3@20 scan  56 drive  80 hold 0.05  eff  0.92 gain  2.06 food  5.06 poison  1.50 last  4.08 stranded   1% job True
+give up 3@20 scan  56 drive  80 hold 0.10  eff  0.96 gain  2.28 food  5.88 poison  1.80 last  3.54 stranded   0% job True
+give up 3@20 scan  56 drive  80 hold 0.20  eff  0.55 gain  1.38 food  4.88 poison  1.75 last  3.05 stranded   0% job True
+give up 3@20 scan  56 drive 160 hold 0.05  eff  0.89 gain  2.23 food  6.78 poison  2.28 last  3.07 stranded   0% job True
+give up 3@20 scan  56 drive 160 hold 0.10  eff  0.32 gain  0.89 food  6.17 poison  2.64 last  2.38 stranded   1% job False
+give up 3@20 scan  56 drive 160 hold 0.20  eff -0.11 gain -0.32 food  5.71 poison  3.01 last  1.99 stranded   0% job False

@@ -1,0 +1,34 @@
+gen   0  mean -13.404  best -11.749  sigma 0.150
+gen   1  mean -12.036  best -11.698  sigma 0.147
+gen   2  mean -11.893  best -11.846  sigma 0.154
+gen   3  mean -11.683  best -11.634  sigma 0.151
+gen   4  mean -11.528  best -11.632  sigma 0.144
+gen   5  mean -11.970  best -11.728  sigma 0.144
+gen   6  mean -11.686  best -11.737  sigma 0.150
+gen   7  mean -11.669  best -11.481  sigma 0.152
+gen   8  mean -11.766  best -11.580  sigma 0.155
+gen   9  mean -11.897  best -11.656  sigma 0.159
+gen  10  mean -11.993  best -11.618  sigma 0.161
+gen  11  mean -11.523  best -11.561  sigma 0.168
+gen  12  mean -11.687  best -11.491  sigma 0.180
+gen  13  mean -11.917  best -11.552  sigma 0.187
+gen  14  mean -11.869  best -11.700  sigma 0.202
+gen  15  mean -11.505  best -11.646  sigma 0.216
+gen  16  mean -11.653  best -11.807  sigma 0.222
+gen  17  mean -12.063  best -11.568  sigma 0.229
+gen  18  mean -12.142  best -11.750  sigma 0.225
+gen  19  mean -11.714  best -11.650  sigma 0.221
+gen  20  mean -11.701  best -11.662  sigma 0.215
+gen  21  mean -11.891  best -11.523  sigma 0.218
+gen  22  mean -11.873  best -11.643  sigma 0.215
+gen  23  mean -11.906  best -11.569  sigma 0.214
+gen  24  mean -12.006  best -11.636  sigma 0.213
+gen  25  mean -11.926  best -11.636  sigma 0.213
+gen  26  mean -11.706  best -11.627  sigma 0.212
+gen  27  mean -11.734  best -11.606  sigma 0.215
+gen  28  mean -11.975  best -11.596  sigma 0.213
+gen  29  mean -11.942  best -11.647  sigma 0.210
+{'T': 638, 'R': 90, 'C': 27, 'D': 6, 'sources': 80, 'total': 841, 'nodes': 13, 'elements': 20}
+held out, silicon: efficiency 0.63 [0.42, 0.83]  gain 0.77  food 1.34  poison 0.29  last third 5.50 [3.45, 9.57]  stranded 20%  firings 96  power 33 nW  job False
+held out, biology: efficiency -0.66 [-0.78, -0.53]  gain -0.79  food 0.83  poison 0.81  last third 1.25 [0.98, 1.57]  stranded 8%  firings 88  power 33 nW  job False
+held out, biology x2: efficiency -0.48 [-0.57, -0.38]  gain -0.61  food 0.61  poison 0.61  last third 0.99 [0.83, 1.16]  stranded 22%  firings 120  power 34 nW  job False

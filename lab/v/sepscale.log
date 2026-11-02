@@ -1,0 +1,12 @@
+K=1 {'T': 638, 'R': 90, 'C': 27, 'D': 6, 'sources': 80, 'total': 841, 'nodes': 13, 'elements': 20} violations: []
+  K=1 held out, silicon: efficiency 2.06 [1.85, 2.27]  gain 3.30  food 5.21  poison 0.95  last third 6.42 [5.32, 7.76]  stranded 0%  firings 284  power 31 nW  job True
+  K=1 held out, biology: efficiency -0.90 [-1.29, -0.51]  gain -1.44  food 3.67  poison 2.55  last third 1.47 [1.25, 1.78]  stranded 0%  firings 281  power 31 nW  job False
+  K=1 held out, biology x2: efficiency -1.53 [-1.62, -1.45]  gain -2.59  food 2.52  poison 2.56  last third 1.04 [0.96, 1.14]  stranded 2%  firings 331  power 32 nW  job False
+K=4 {'T': 638, 'R': 90, 'C': 27, 'D': 6, 'sources': 80, 'total': 841, 'nodes': 13, 'elements': 20} violations: []
+  K=4 held out, silicon: efficiency 1.92 [1.76, 2.09]  gain 3.20  food 5.17  poison 0.98  last third 6.42 [5.62, 7.45]  stranded 0%  firings 285  power 98 nW  job True
+  K=4 held out, biology: efficiency 0.86 [0.49, 1.19]  gain 1.45  food 4.67  poison 1.61  last third 3.06 [2.48, 3.88]  stranded 0%  firings 288  power 99 nW  job True
+  K=4 held out, biology x2: efficiency -1.24 [-1.38, -1.10]  gain -2.12  food 3.05  poison 2.58  last third 1.24 [1.11, 1.37]  stranded 0%  firings 306  power 100 nW  job False
+K=16 {'T': 638, 'R': 90, 'C': 27, 'D': 6, 'sources': 80, 'total': 841, 'nodes': 13, 'elements': 20} violations: []
+  K=16 held out, silicon: efficiency 1.56 [1.39, 1.73]  gain 3.02  food 5.06  poison 1.02  last third 5.61 [4.56, 7.01]  stranded 0%  firings 286  power 367 nW  job True
+  K=16 held out, biology: efficiency 0.84 [0.53, 1.12]  gain 1.64  food 4.84  poison 1.60  last third 3.54 [2.74, 4.60]  stranded 0%  firings 286  power 368 nW  job True
+  K=16 held out, biology x2: efficiency -0.91 [-1.07, -0.77]  gain -1.81  food 3.27  poison 2.54  last third 1.44 [1.23, 1.69]  stranded 0%  firings 306  power 374 nW  job False

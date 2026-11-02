@@ -43,34 +43,48 @@ and when, why it matters, the line it belongs to, and the experiment that would 
    problem; Fremaux and Gerstner 2016; synaptic tagging, Frey and Morris 1997), random recurrent networks with fading
    memory (Maass 2002; Jaeger 2001; Izhikevich 2006, polychronization), the cerebellum's expansion and error signal
    (Marr 1969, Albus 1971). In blocks: a slow tag node and a write gated by taste per part. Slow (sparse, mostly
-   unearned meals: long lives); taste's broadcast is legal in a circuit, but in the sheet must diffuse. Tricks to
+   unearned meals: long lives); taste's broadcast is legal in a circuit. Tricks to
    find: a lopsided body's steering (credit the motor patterns before meals), sweeping back for a block just lost,
    and ones we haven't thought of. Phase 2's recruitment route, after self-tuning on spending. Since
    (`discrete/NOTEBOOK.md`, D16 and its continuation, 2026-10-30 to 11-01): random detectors learned by taste rescue
    a lopsided body without steering it; a planted right steer pays and is learned from meals with one exploring coin
-   per burst, but among random detectors every scheme so far fails. Open: why, against the bounds below.
-   **First, the bounds** (the user, 2026-11-01): what could an ideal observer (unlimited reasoning, only the brain's
-   own senses, beats and tastes; Geisler's ideal observer analysis) do, granted every node of a primitive brain that
-   is failing? Seeing the nodes adds no information about the world (each is a function of the senses, beats and
-   tastes, and its own noise: the data processing inequality); it says only where to intervene, and lets natural
-   variation be read without exploring (off-policy evaluation). Two bounds: its value, a Bayes-adaptive POMDP's,
-   between B and the policy told the body; and how fast it could confirm a change worth Delta in meals, about
-   z^2 sigma^2 / Delta^2 (Wald's sequential test), with a log K for the best of K candidates (best-arm
-   identification; Lai and Robbins for the cost of trying them). From lives: meals' spread per unit time on each
-   body; Delta for the planted steer and for a sample of random detectors at fixed odds, learning off; how much each
-   detector's natural firing predicts meals with nobody exploring; the bits per second taste carries about the body.
-   Each kind of trick then sorts into learnable from meals, learnable only with free signals (prediction), or not
-   within a life (evolution's), telling steps 3 to 5 where to look. Watching and intervening are one problem (dual
-   control, Feldbaum 1960): the brain's own noise is a free randomised experiment where it reaches the candidate,
-   and probing pays only where it doesn't (no overlap) or is too faint. **Mind the wall** (the user, 2026-11-01):
-   learning is impossible when a life carries too little signal about the change for its length (signal to noise
-   per second, Delta^2 / sigma^2, against the life; taste's bits per second about the body), and collapses, as
-   ALOHA's throughput does past its load, when explorers share one taste within a credit window (stages 6 to 12's
-   collapse from 20 random detectors to 50 and 200). Track both in every experiment, and treat a negative result
-   beyond the wall as saying nothing about the mechanism. Plan (2026-11-01): an exact Bayesian ideal observer over
-   the body's wiring and strengths with B's knobs as its levers first; a strong learner (a network, trained across
-   lives as evolution, run within one) only if a large gap remains; then the cheapest process reaching most of the
-   best one's gain.
+   per burst, but among random detectors little is found (50 reach 0.24 against the planted steer's 0.70 in 100,000 s lives). Open: why, against the bounds below.
+   **First, the bounds** (the user, 2026-11-01; the theory in `BOUNDS.md`): what could an ideal observer do, granted
+   every node of a primitive brain that is failing? From lives: meals' spread per unit time on each body; Delta for
+   the planted steer and for a sample of random detectors at fixed odds, learning off; how much each detector's
+   natural firing predicts meals with nobody exploring; the bits per second taste carries about the body; explorers
+   per credit window. Each kind of trick then sorts into learnable from meals, learnable only with free signals
+   (prediction), or not within a life (evolution's), telling steps 3 to 5 where to look. Plan (2026-11-01): an exact
+   Bayesian ideal observer over the body's wiring and strengths with B's knobs as its levers first; a strong learner
+   (a network, trained across lives as evolution, run within one) only if a large gap remains; then the cheapest
+   process reaching most of the best one's gain.
+   Since (`discrete/NOTEBOOK.md`, D21): the first yardstick, the seer told places only as well as pulses tell
+   them, says a memory of where blocks are adds little over B (2.8 at best against 2.54) because the eyes don't say
+   where across their corridor a block lies. Open: is that offset worth getting by moving (active sensing), and what
+   would an ideal observer that senses actively reach? Next (the user, 2026-11-01: let it emerge, not forced; time is
+   where a small brain computes, `BOUNDS.md`, Time): does a tiny dynamical circuit evolved in the loop (Beer 2003;
+   Sepulchre's motifs) scan and steer by the phase of its pulses, and what of that could a life learn? First, whether
+   the minimal search's evolved circuits already do. Since (D22): none do; an evolved network didn't either, and these
+   eyes and this body don't offer it (the pulses' timing carries little about a block's offset even when probing, and
+   no wiggling policy used what there is). **For the user**: the headroom (B 2.5, a perfect
+   memory of seen places 4.5) needs information across the corridor; an eye split across it (left and right halves
+   for each colour) or finer turning would offer it. A body change, the user's to decide. The yardstick values a
+   split eye at 3.95 (the range roughly known) or 3.15 (not), against B's 2.54 (D21). Since (D24, prepared, the body
+   unchanged): with a split eye, B plus a reflex of a few parts (steer towards the half that lit, by a beat with its
+   partner a tick late, 7 degrees; which motor is which learned from its own scan) reaches 3.02 against 2.49 held
+   out (+21%), 2.71 against 2.32 on lopsided bodies told their balance. Finer turning needs no body change (timing
+   gives it); the split eye does. Yours to decide.
+   **Rhythm by mode locking** (the user, 2026-11-01): oscillators entrained to each other, each at half the last (a
+   binary count of a signal's period); if the signal's period is 1.5 times one of theirs, can that emerge? Nonlinear
+   oscillators lock at simple ratios (3:2 among them; Arnold tongues, widest for the simplest), and a bank of them
+   resonates at a rhythm's period, its multiples and simple ratios (Large's neural resonance: Large and Kolen 1994;
+   Large, Almonte and Velasco 2010). A repeating mismatch (the signal at phases 0, 2/3, 1/3 of an oscillator) is
+   structured surprise, where a grower could recruit an adaptive oscillator that tunes itself to lock; a bank summing
+   each period's multiples is D20's subharmonic summation in oscillators. Locking needs many cycles of one rhythm
+   (D23), so test on long steady sweeps: does a bank find the period with fewer parts than D20's 192 counters?
+   Since (D23): on 60 s spins, 96 resonators with harmonics summed read the period sooner than the histogram but
+   plateau lower, for as many parts; entraining limit cycles did worse. Open: a ternary recruit grown on structured
+   surprise, and rhythms with one partner over many cycles (a gait, the arena's pursuits).
 
 4. **How can a brain realise it isn't solving the problem, and recruit more neurons to do so?** (the user,
    2026-10-30: the most interesting question; work through several cases until the generic answer shows.) At the
@@ -123,8 +137,8 @@ and when, why it matters, the line it belongs to, and the experiment that would 
    sparse (D15, D16). A column learns from predicting its own next input, a signal every tick, and reward has only to
    choose among models already good. Here: a unit predicting what its eyes do after its own motors' beats (a turn
    moves a block across the gaze) could learn a lopsided body from every beat, not from meals; units with different
-   hypotheses (delays, which motor) voting by how well each predicted. Questions: is the repeated unit a cell (the
-   sheet brain) or something column-sized; does two pulse streams in and two motors out leave enough to predict (the
+   hypotheses (delays, which motor) voting by how well each predicted. Questions: is the repeated unit a neuron or
+   something column-sized; does two pulse streams in and two motors out leave enough to predict (the
    body's bandwidth: the body question above). (Steering by a model learned in the life is allowed: the goal, "keep
    what is chased ahead", is the same in every life, so evolution's to supply, and no property of the body is the
    reference; the model of this body is the life's to learn.) Experiment: case 2 of step 4 both ways, from taste
@@ -160,6 +174,17 @@ and when, why it matters, the line it belongs to, and the experiment that would 
    past opponents (self-play can cycle). The roles: food wants not to be eaten (flees), poison wants to be eaten
    (approaches, mimics food), so the creature must tell them by behaviour: a decider, memory, prediction. Smallest
    start: the food a creature (B's brain, the grower, an urge not to be eaten), the poison fixed.
+7. **Map every way a brain could change itself, then a universal circuit** (the user, 2026-11-02: even the simplest
+   body, world and brain offer a rich set of interventions; map it logically, with discipline, then perhaps one
+   circuit that can do them all). The map so far is `PARTS.md`: what changes (state, tune, modulate, rewire, prune,
+   duplicate, add), which part (a catalogue by what it does in time, all made of feedback loops of either sign at
+   several timescales, delays and coincidences), when (each change's local trigger) and how it is judged (its
+   fastest credit signal: the brain's own movement in seconds, a missed prediction in tens, outcomes in 10,000 or
+   more). Open: what signal says "no setting of these knobs will do, a new kind of part is needed" (a plateau told
+   from a ceiling); which parts can be judged faster than meals (those worth adding); and whether one free unit, a
+   node of the grammar's elements inserted at zero effect, can become each part by local rules. First, the map's
+   test: express every working brain here (B, D20's balance learner, D24's steer) in it, with each part's
+   cost in SKY130 and the signal that could have tuned it; a brain that doesn't fit shows what the map lacks.
 
 ## The body (`NOTEBOOK.md`, The body)
 
@@ -230,8 +255,8 @@ and when, why it matters, the line it belongs to, and the experiment that would 
 - **Level 1 has no rules** (the user, 2026-10-20): the parts built from nodes and elements are invented as needed,
   about eight unnamed kinds (`experiments/NOTEBOOK.md`).
 
-## The sheet brain (`NOTEBOOK.md`)
+## Self-optimisation
 
-- **Back to the sheet**: cellular automata again, with what the circuits have taught. Every unit a fast bistable and a
-  slow integrator, each slow variable outlasting the loop it closes, each tuning its own time constant from its own
-  signals (D13): the project's real goal, self-optimisation from local signals.
+- **The project's real goal: self-optimisation from local signals.** Every unit a fast bistable and a slow
+  integrator, each slow variable outlasting the loop it closes, each tuning its own time constant from its own signals
+  (D13).

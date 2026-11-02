@@ -1,0 +1,18 @@
+== alert, with rates
+alert   : ate 0.410, lost 0.360 a 10 s, age 75 s, bites ended 0.55 a s, responding 52% of the time
+grow    : ate 0.406, lost 0.477 a 10 s, age 83 s, bites ended 0.00 a s, responding 0% of the time
+{'mode': 'run', 'T': 10.0}: net, alert - grow +0.121 [+0.106, +0.135]
+alert   : ate 0.652, lost 0.637 a 10 s, age 100 s, bites ended 1.00 a s, responding 47% of the time
+grow    : ate 0.590, lost 0.650 a 10 s, age 89 s, bites ended 0.00 a s, responding 0% of the time
+{'mode': 'still', 'T': 10.0}: net, alert - grow +0.076 [+0.040, +0.110]
+== alert controls: always
+alert   : ate 0.410, lost 0.352 a 10 s, age 73 s, bites ended 0.00 a s, responding 60% of the time
+grow    : ate 0.386, lost 0.468 a 10 s, age 80 s, bites ended 0.00 a s, responding 0% of the time
+{'mode': 'run', 'always': 1.0}: net, alert - grow +0.139 [+0.112, +0.166]
+alert   : ate 0.624, lost 0.623 a 10 s, age 103 s, bites ended 0.00 a s, responding 56% of the time
+grow    : ate 0.609, lost 0.657 a 10 s, age 88 s, bites ended 0.00 a s, responding 0% of the time
+{'mode': 'still', 'always': 1.0}: net, alert - grow +0.049 [+0.011, +0.081]
+== pursuit both 0.5, with rates
+pursue  : ate 0.554, lost 0.520 a 10 s, age 81 s, bites ended 0.80 a s
+grow    : ate 0.531, lost 0.581 a 10 s, age 90 s, bites ended 0.00 a s
+{'mode': 'both', 'dur': 0.5}: net, pursue - grow +0.084 [+0.058, +0.112]

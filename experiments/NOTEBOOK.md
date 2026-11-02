@@ -577,7 +577,7 @@ wave 2, once the cascade has reached the motors: smoke test, 3 of 4 lives found 
 ## Power of the generic recruit (2026-10-19)
 
 Static power by the gated average (sum of |gain| x clip(V_gate, 0, 1), sampled over ticks 60,000-70,000, four poison
-lives; scratchpad script): knowing circuit 280; guided bridge 476 (+196); share leader (wsls, listening full,
+lives; a scratchpad script from an earlier session, not kept): knowing circuit 280; guided bridge 476 (+196); share leader (wsls, listening full,
 inhibit/gate only) 1,505 (+1,225); with inherit 1,553; inputs cascade (two waves) 3,653. By element kind (share
 leader, seed 0), most of the recruit's power is choosing, not acting: the enables' latch and pairwise rivalry,
 863 (n(n-1) ungated elements, each fully biased whether or not its rival is on), the tiredness knock-outs 221, and the

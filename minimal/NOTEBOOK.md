@@ -788,7 +788,7 @@ advanced on seeing food would do better, and after a turn of 360 degrees might d
 ## M16: the leaders on lopsided bodies (2026-10-28)
 
 The user's bodies (each thruster 0.5 to 2 times world.py's, drawn independently: `discrete/bodies.py`'s `THRUSTERS`),
-the leaders lived in the real `creature.Life` (silicon), held out (50000-50031 x 2; `scratchpad/minbodies.py`):
+the leaders lived in the real `creature.Life` (silicon), held out (50000-50031 x 2; `lab/minbodies.py`):
 
 | design | standard bodies | lopsided bodies |
 |---|---|---|

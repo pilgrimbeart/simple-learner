@@ -27,6 +27,8 @@ evolve the *rule* by which cells recruit.
 
 ## Ways to recruit, from the literature
 
+(The wider map, every kind of change a brain could make to itself and the parts it could add: `PARTS.md`.)
+
 | mechanism | trigger | what is recruited | local? |
 |---|---|---|---|
 | size principle [1] | rising common drive; units have graded thresholds | more of the same units, smallest first | fully |
@@ -47,7 +49,7 @@ evolve the *rule* by which cells recruit.
 1. **The common pattern is random variation plus local selection.** Almost every local mechanism generates
    candidates at random and selects them locally: Ashby's random parameter jumps, kept if stable [6]; Valiant's
    random wiring, where units that happen to see a conjunction are kept [15]; memory allocation's random
-   excitability, where the most excitable wins [2]; and this project's own sheet, where random raised hands let a
+   excitability, where the most excitable wins [2]; and the sheet brain's (now in nca-learn), where random raised hands let a
    path's tip pick exactly one. Randomness replaces the god: a unit need not work out *what* to recruit, only have a
    source of variety and a local signal that says "keep this".
 2. **Two kinds of recruitment.** More of the same (the size principle: more force), which graded thresholds give

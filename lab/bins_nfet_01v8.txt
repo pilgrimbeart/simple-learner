@@ -1,0 +1,3 @@
+sky130_fd_pr__esd_nfet_01v8__model.0  wmin=2.0345e-05 wmax=2.0355e-5 lmin=1.6e-07 lmax=1.7e-07 
+sky130_fd_pr__esd_nfet_01v8__model.1  lmax=1.7e-07 wmin=4.0305e-05 wmax=4.0315e-5 lmin=1.6e-07 
+sky130_fd_pr__esd_nfet_01v8__model.2  wmin=5.395e-06 wmax=5.405e-6 lmin=1.75e-07 lmax=1.85e-07 

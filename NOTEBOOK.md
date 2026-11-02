@@ -1,16 +1,13 @@
-# The sheet brain, the body and the circuit simulator: lab notebook
+# The body and the circuit simulator: lab notebook
 
-The history, methods and findings of the project's first lines of work: the sheet brain, the body and how a creature
-is scored, and how the circuit brains are simulated (their noise above all). Dead ends are kept because they are
+The history, methods and findings of the body and how a creature is scored, and of how the circuit brains are
+simulated (their noise above all); the sheet brain's are in nca-learn's notebook. Dead ends are kept because they are
 lessons too; the rules they led to are in `AGENTS.md`, the big picture in the README. Older entries keep the names
-they were written with: the "grown brain" is the sheet brain, the "mixed-signal brain" the designed circuit, and the
+they were written with: the "mixed-signal brain" is the designed circuit, and the
 "minimal" circuit of recruitment (until 2026-10-21) the baseline circuit.
 
 ## Where it stands
 
-- **The sheet brain works as designed and has been left as it is since 2026-10-17**: it builds its coordinates, organs
-  and wiring from nothing, and learns the bit from taste alone in 24 lives of 32 (README: The sheet brain, Result). It
-  is slow: about 6 s to build itself, a pulse 0.13 s to cross the sheet, and meals are few.
 - **The body** is a disc with its mouth at the front of its rim and two thrusters on its rear rim (`world.py`), in real
   units since 2026-10-22; earlier bodies capped every brain (below: Telling food from poison).
 - **The circuit simulator** (`mixed_feedback.py`) carries noise and mismatch as a substrate makes them (silicon,
@@ -26,7 +23,7 @@ they were written with: the "grown brain" is the sheet brain, the "mixed-signal 
 - **Rules kept only in prose drift, so make the rule the structure.** The golden rule is that each cell sees only the
   mean of each number its neighbours share. Earlier experiments (before this project) quietly broke it, reading each
   neighbour separately (the smallest, one by tag, each one's sums), and nothing in the code stopped them. So each rule
-  is enforced in code and tested: the sheet's engine, the circuit brains' circuits, the minimal search's `check`.
+  is enforced in code and tested: the circuit brains' circuits, the minimal search's `check`.
 - **When a change lets the brain drop machinery, ask where its job went.** How the body came to assign credit (2026-10-16): The user had described the sensor cell as having "two inputs (what it
   senses and food/poison)". I read "a food/poison input on the sensor" as licence to route the reward to the right
   sensor, and proposed "reward at contact": the body gives food or poison only to the eaten colour's sensor. I
@@ -58,254 +55,16 @@ they were written with: the "grown brain" is the sheet brain, the "mixed-signal 
   the live view's eye beams went on stepping in whole units and fading over REACH, so they faded to nothing; no test
   draws the view, and it was noticed only by the user, days later. After a change of units, look at every view.
 
-## The sheet brain
-
-Its rules are in `AGENTS.md`, its design in the README. Three lessons shaped them:
-
-- **Stochastic updates only.** Lockstep lets rules lean on a shared rhythm and makes artefacts (flipping every tick,
-  checkerboard oscillations).
-- **Symmetry must be broken, and noise breaks it.** Identical cells in a regular sheet can't choose between equal
-  options (a corner, a handedness, a route). Something local and random breaks the tie, and the rule then has to make
-  the choice stick.
-- **Inputs spike**: sparse kicks, never continuous levels.
-
-### The engine
-
-- **What `sheet.py` does.** Only the engine knows the grid. A rule module declares its numbers, which are shared, and
-  their birth values, and one compiled `update(me, mean, count, inp, out)`: its own numbers, its neighbours' mean of
-  each shared one, how many neighbours it has, and what the body delivered. The engine updates each cell with chance
-  UPDATE, adds a little noise to every number a cell keeps, shows each shared number clipped to -1..1 with noise of
-  1% (drawn afresh every tick), and builds the sheet from one birth vector (identical bar declared noise). The body
-  reaches the sheet only through `cells()`, `give()`, `get()` and `take()`; watching uses `view()`, and the
-  experimenter's `damage()` replaces cells with new-born ones. `test_rules.py` checks every rule's imports, signature
-  and birth at two sizes, and that no body code reaches inside.
-- **A loophole, closed.** The engine once passed a rule its own numbers as a view into the sheet's memory, and
-  compiled code doesn't check bounds: a rule indexing past its own numbers would have read its neighbour's. The engine
-  now copies into the rule's own small arrays, and `test_rules.py` runs every rule with bounds checking on.
-- **A cheat, closed.** The engine once let a rule share exp(-beta d): it showed exp(-5 d), but added the noise to d
-  first, so the tiny number shown (about 1e-300 at d = 140) was in effect free of noise, and the mean gave the
-  neighbours' smallest d exactly. It broke the spirit of the noise rule. Twelve of the 18 shared numbers of that
-  version used it: the election, ring counts, x, y, both distance fields, tips, offers and news. The engine now
-  encodes nothing; the user set the range (-1..1) and the noise (first 10%, then 5%, settled at 1%).
-
-### What averages can do, honestly
-
-- **Read sums, not means.** A neighbour moves the mean by at most 2 / count, so a cell works with the sum over its
-  neighbours (count x mean), whose noise is about 0.03 at 1%.
-- **Flags count exactly.** Shown as +1 or -1, a flag's sum counts the neighbours showing +1. At noise 10% (the
-  first setting) a count of 8 was wrong once in 2,500 reads, and a single misread could seed a whole false field
-  (below); at 1% it doesn't happen.
-- **A few levels, if every mix stays apart.** A number shown at a few strengths tells a cell how many neighbours
-  show each, as long as every mix that can occur sums clearly apart. Trap: path + tip summed exactly to two pulses
-  (2 + 0.8 = 1.4 + 1.4), so cells beside parallel paths took pulses that weren't there and paths pulsed by
-  themselves. The strengths now leave every mix of up to two cells at least 0.4 apart (`rules/see.py`).
-- **Gradients for where.** Hold some cells fixed and let every other cell take its neighbours' mean: the sheet
-  settles into a smooth field, read closely from means. The obvious tool for coordinates; I first veered away from
-  it, trying to keep the counted coordinates of the old version.
-- **Waves.** An excitable flag runs outwards from where it starts and dies at the edges and where waves meet.
-- **Not the smallest.** No mean gives the smallest of the neighbours' numbers. What a cell can get instead: a count
-  mod K, shown one-hot on K flags (below).
-
-### Distance mod 5 (`rules/see.py`)
-
-- **What it is.** A field from some source cells: each cell shows its distance mod K on K flags. In a settled field
-  a cell's neighbours are one step nearer, level or farther, three residues in a row, so the lowest is the one after
-  the gap, and a cell is one more than that.
-- **Mod 4 isn't enough.** On a diagonal of a square ring a cell has only one neighbour one step nearer. If that one is
-  wrong, the next cell sees "lowest = level" and shifts up one; the cell at the break then sees four residues, which
-  mod 4 can't place, and the defect locks in. Mod 5 sees the gap: 20 single-source fields of 20 exact, against 8 of
-  20 at mod 4.
-- **A value may only fall.** If one more than its lowest neighbour would be higher than what a cell has (or there is
-  none), it lets go and rests a few updates before taking a value again. Without that, a single misread (at 10%
-  noise) seeded a false field that counted up for ever, a perpetual source of waves; and a field whose source has
-  gone fades instead of counting up.
-- **Only from one source, at any size.** Where waves from several sources meet, one can arrive a few steps early by
-  chance; mod 5 can't tell distance 45 from 50, and the meeting line settles in the wrong place for good. At 97 that
-  happened in 8 lives of 10 (mod 6: 1 of 10; slower, steadier fronts helped but not enough); the unevenness of fronts
-  grows with size, so no fixed K is safe at any size. A first plan placed the organs where the corners' fields meet
-  (the edge midpoints and the centre lie on that cross); it was dropped for this. Fields from one source (each
-  actuator) are fine.
-
-### Where am I (`rules/organs.py`)
-
-- **The race.** Corners beat as pacemakers at random periods; one reached by another's wave before its own beat
-  stands down. Exactly one left, the organiser (once called V, when it was also an actuator), in 20 lives of 20,
-  typically by tick 100-500 (worst about 1,100). Traps:
-  - with a rest of 4 updates after excitation, waves re-entered and circled (about 600 cells excited at all times),
-    and in 4 lives of 10 every corner stood down; a rest of 10 cured it;
-  - damage started circling waves (spirals) anyway, which beat faster than the organiser and knocked it out. Each beat now
-    carries its number mod 3 (two flags), and a cell takes only the next beat after the last it took: a wave curling
-    back, or a stray piece of an older beat, is refused. Alternating two parities wasn't enough: a stray piece of the
-    previous beat has the other parity and was still taken, by the organiser too.
-- **Labels need their own pulses.** Labels first rode the organiser's waves along the edges. But those sweep each
-  far edge all at once (every cell of it is the same distance from the organiser), so a label started at a far corner
-  had only the rest time to travel, and reached about 11 cells. Labels now run as their own pulses along the edges,
-  started by the organiser's two coin-tossed neighbours at each of its beats.
-- **Labels must expire.** Before the race is decided, a corner that later loses labels the edges; when it stands down,
-  edges and corners it labelled get no more pulses and kept the old labels for ever (in 1 life of 8 a far corner held
-  an old -1 and never started its +1). A label lapses after some of the organiser's beats with no pulse to renew it
-  (3, then 6: below).
-- **A label stops at a corner.** The two edge cells beside a corner are each other's neighbours, so a label would leak
-  round the corner. The cell at the end of an edge shows its label at half strength, which edge cells ignore and
-  corners take; a corner starts the next edge's label at 0.75, which the edge cell beside it takes only when it sees
-  no full label.
-- **Gradients settle slowly, so: momentum while drifting.** Plain averaging settles in about size^2 updates (at 49,
-  labels right by tick 750, x within a column by about 3,000). With a cell carrying on 0.9 of its last move while its
-  short and long averages of x differ by more than 0.03, about 1,500. Momentum always on amplified the noise (x
-  wobbled by 1-2 columns).
-- **The noise keeps slow wobbles up**, about half a column at 49 at 1% (at 5%, up to 5 columns at 97): no stillness
-  test finer than that can pass, and a cell exactly on a threshold flips. So a mark (the band that places a name)
-  flips only when x is 0.05 past its threshold, and stillness is judged at 0.03.
-- **Names must stand still, and stay.** Names taken early drifted a cell or two as x settled, and each move re-grew a
-  field and its paths. Now: a cell takes a place only while still; a name after 300 updates of holding it (80 let a
-  turning point of the momentum pass for still: one life named an organ three cells off, and a second of it
-  appeared later); a named cell keeps its name while its x stays within 0.15 of the place's, and shows 0 on mark so
-  no neighbour takes the same name. 12 lives of 12 named by tick 1,270-2,160; in 10 no name ever changed, in 2 one
-  was lost and retaken once (the lapsing labels, below); the organs within 2 cells of where they belong. A slower average for the marks (600 updates) was worse: it
-  lagged while x settled.
-
-- **One missed beat costs three, so labels must outlive it.** The user saw every path vanish at about tick 10,000
-  (seed 0), and come back about 1,000 ticks later. Traced: the coin-tossed cell that starts the x = -1 edge's label
-  pulses, beside the organiser, missed one beat (it didn't update while any neighbour was excited by it: rare, as
-  updates are random). A cell takes only the next beat after the last it took, so it then refused the next two as
-  out of turn, and started no label pulse for three beats. With STALE = 3 the x = -1 edge forgot its label; so did
-  the far corner, which starts the y = 1 edge's +1; so did the y = 1 edge, and the sensors on it lost their names
-  and their paths faded. STALE is now 6 beats (a count of beats, not tied to size). Seed 0 then holds every name and
-  path to tick 12,000, and 6 lives of 12,000 ticks had no name change after first naming (before: 2 and 4 in two
-  lives of 4 at 4,000 ticks).
-
-### Wiring (`rules/wiring.py`)
-
-- **Breadcrumbs are impossible from averages** (a cell remembering which neighbour a wave came from). Instead a cell
-  needs its distance to each sink, and which neighbours are one step nearer or farther.
-- **The sinks send the distance fields: no magic knowledge.** To save two shared numbers, the wiring once took a
-  cell's distance to one sink to be its row (making that sink the whole tail edge to fit) and to the other the larger
-  of x and y. That built
-  into the rule where the organs were meant to be. Now each sink, once named, sends out its own field.
-- **Path cells show their residue as a pattern on three flags** (any three residues in a row independent, so the
-  sums untangle into nearer, level and farther), at a strength for path, tip or pulse. The patterns chosen add the
-  least noise when untangled (at most 1.41 times one sum's); the first choice added up to 1.73, and at residue 4 a
-  misread started a pulse every few hundred ticks. None now in 12,000 ticks.
-- **The tip must show itself on the path flags.** Tips announcing themselves on the offer flag instead let cells level
-  with a tip (beside it, below its parent) offer too, and paths spread into fans of 300-590 cells. Excluding cells
-  with a path cell level with them stopped the fans but stranded tips on a field's diagonal, where the only cell one
-  step nearer sat beside another path. Now a candidate is a cell that sees a tip one step farther: exact.
-- **A handshake by counting.** The tip says "go" while it sees exactly one raised hand (twice in a row to start);
-  a candidate joins after three "go"s in a row with its hand up. A candidate with another path cell above it as well
-  raises its hand rarely: joining would give that path a second way on and split its pulses.
-- **Two copies of one pulse must read as a pulse.** Where paths run side by side a cell can have two parents, and a
-  pulse coming down one splits; the copies may meet again at once. With strengths where two pulses summed like a
-  tip and a path, the cell where they met took neither and the pulse died.
-- **Result.** 8 lives of 49: 319 of 320 pulses arrived, 1 extra arrival, about 53 ticks each.
-- **Fading and pulses.** A path cell with no path cell one step farther leaves (after 2 reads). A pulse is carried
-  for 6 updates, then rested 7; the next cell must update at least once meanwhile (it almost always does at 0.9).
-
-### Learning, first brain (withdrawn)
-
-The first brain had sensors R and B and actuators A (forward) and V (back off and turn), a news wave, a trace and a
-chew delay; all are gone (below: symmetric organs, reward at contact). Its lessons:
-
-- **News as a wave.** The news of a kick was first a min-age field (the withdrawn exp trick), then a wave across the
-  sheet: a sensor that saw news around it after its own had gone by forgot its own kick, so only the more recently
-  kicked kept a trace. Trap: a sensor still resting from sending its own news ignored the other's, so both kept
-  their traces and a bad taste lowered the food's balance too (food ended at 0.83); noticing news whenever its own
-  had gone by fixed it (0.97).
-- **The min-age field** (kept for its lessons): a field ages more slowly than a cell's own count, so "news fresher
-  than my kick" fired on a cell's own echo; and one field for both sensors conflated kicks a few updates apart.
-- **Two factors.** The balance moved by taste x the cell's recent-input trace; which way it sent its pulse didn't
-  enter. Tumbles (now and then a pulse to V) made a creature that saw nothing search.
-
-### Symmetric organs: no purpose in the cells (2026-10-16)
-
-- **The rule knew what the organs were for.** R and B differed only in name, but A and V were different kinds (V was
-  the organiser corner as well as an actuator), and the brain preferred A: born b = 0.9 towards A, a good taste
-  pushed b towards A and a bad one towards V, a bad taste made R and B recoil towards V, and tumbles went to V. So
-  "A approaches, V avoids" was built into the cells. The test now: the rule is unchanged if the two sensors, or the
-  two actuators, are swapped, and the body draws its wiring (colour to sensor, thruster to actuator) at random each
-  life.
-- **Organs.** The organiser corner is no longer an organ. Sensors S1, S2 sit either side of the middle of the y = 1
-  edge and actuators M1, M2 likewise on y = -1, placed by one rule; 1 or 2 is the side of the middle (x < 0: 1), which
-  the coin toss settled. Named within 1-2 cells of their places in 4 lives of 4; but 2 and 4 name changes after first
-  naming in two lives (before: 0 or 1). Traced to labels lapsing after a missed beat (see Where am I): fixed.
-- **The old rule did credit assignment for free.** With "good means A" built in, it only had to learn what a colour is
-  worth (two factors). A symmetric rule has to learn which action earned the reward (three factors), and that is
-  hard here. Poison's share of meals by thirds after moving, 16 lives of 8,000 ticks with learning (`--measure 16`)
-  unless said:
-
-  | version | poison share | chance of going forward at the end: poison / food |
-  |---|---|---|
-  | old, asymmetric | 43%, 39%, 42% | 0.20 / 0.84 |
-  | symmetric, a fresh choice for each pulse | 46%, 49%, 49% | 0.46 / 0.54 |
-  | a held mode, chosen afresh after each reward | 49%, 48%, 54% | 0.38 / 0.43 |
-  | held mode, 16 lives of 24,000 | 47%, 38%, 40% | 0.42 / 0.49; several lives locked at 0 or 1 |
-  | ... and the eaten colour's sensor stimulated on eating | 50%, 44%, 37% | 0.36 / 0.24; worse lock-in |
-  | ... and learning steps x 0.3 | 51%, 46%, 45% | 0.42 / 0.53; no lock-in, weak |
-  | ... and no learning where the other sensor fired first | 40%, 49%, 46% | 0.41 / 0.42 |
-  | learning off | 50% | 0.50 / 0.50 |
-
-- **Why: the delay.** A pulse takes about 53 ticks to cross the brain, and the reward comes 17 after the meal. With a
-  fresh choice for each pulse, the sends a trace weights most (a median 17 updates before the reward) were still in
-  flight at the meal: at a reward the eaten colour's trace pointed to A 32% of the time, to V 28%. A held mode makes
-  the pulses in flight and those that drove the meal agree: 43% against 24%.
-- **Why: the sensors compete.** A colour is often eaten while its sensor is in the mode for V, and not soon after it
-  switched (a median 18 firings in that mode): the other sensor's pulses to A push harder than V pulls back, so the
-  creature eats what one sensor was steering it away from. That sensor then learns the wrong way whichever the taste:
-  good reinforces V, bad pushes it to A. So the poison's sensor settles near a third of the way to A, and the food's
-  has a tipping point there: below it, it slides to V and stays (it eats food only by accident, in V's mode).
-- **Dead ends.** Stimulating the eaten colour's sensor on eating (so it holds the trace) credits it for those
-  accidental meals too: worse. Ignoring meals where the other sensor fired first didn't help either.
-- **The way out: two forward thrusters, two factors.** The user's design: the actuators mirror the sensors, two
-  thrusters at the tail's corners, both pushing forward; one alone also turns the body away from its side. A sensor
-  learns only "fire both, or one?" (one: always the same, its side, by a coin toss; a random side each time would
-  average out to straight ahead). Two factors again (a good reward makes both more likely), but no cell knows what
-  either actuator does: "good: drive harder" is a gain, and swapping sensors or actuators changes nothing. 16 lives
-  of 8,000, with the trace and news: poison's share 50%, 45%, 45%; chance of firing both at the end, poison 0.07,
-  food 0.91 (learning off: 50%, and 0.50 both).
-- **The body caps the behaviour, not the learning.** With p set by hand from birth (poison's sensor 0, food's 1),
-  poison was still 46% of meals; a sharper veer (turning 2x, 4x) didn't help (41-55%), nor firing nothing at all at
-  poison (45-48%). Every poison meal had been seen clearly just before (median strength 0.99): the creature charges
-  straight at food, its eyes can't tell left from right, so it can't steer round poison in the strip ahead, and a
-  pulse takes about 53 ticks to cross the brain.
-- **Reward at contact (withdrawn: it made the body assign credit).** The chew delay with eyes shut, the flavour
-  stimulus on eating, the news wave and the trace were all there to credit the reward to the eaten colour's sensor
-  when both sensors got it. I proposed that the body give the reward only to the eaten colour's sensor, as the block
-  touches the mouth, and called it a simplification; the user agreed on that framing. It was the body doing the
-  credit assignment the brain had been doing (see Taste, below). With it, p moved a quarter (later half) of the way
-  to 1 or 0 at each reward, with 26 shared numbers. 16 lives of 8,000: poison's share 50%, 47%, 43%; firing both at
-  the end, poison 0.09, food 0.91. As good as the trace and news, but only because the body did their work. Ceiling
-  with p perfect: 48%, 42%, 47%.
-
-### Taste: one input, and credit assigned inside the brain (2026-10-16)
+## Taste: one input, and credit assigned inside the brain (2026-10-16)
 
 - **Why.** Learning had been `reward(sensor, value)`: the body handed the reward to the eaten colour's sensor, so the
   body did the credit assignment. The user's ruling: for every brain, taste is one input, +1 for food and -1 for
   poison at the tick a block touches the mouth, else 0, saying nothing about which sensor. The body must never be part
-  of the solution. The sheet brain gets taste through a fifth organ, T (the marked cells on the y = 1 edge between S1
-  and S2), not a broadcast to every cell: a sheet-wide signal would be magic.
-- **What a sensor can know.** At each meal (sheet brain), ticks since each sensor's last stimulus: the eaten colour's
-  sensor was stimulated within 10 ticks in 85% of meals, the other in 17%. Giving credit only to the sensor stimulated
-  last cuts the wrong share to 7% (within 20 ticks: right 89%, wrong 7%). So the one taste carries enough, if the
-  sensors also know which of them was stimulated last.
+  of the solution.
 - **Designed circuit.** An eligibility node per sensor (charged by its spikes, leaking over ELIGIBLE ticks) gates two
   amplifiers that charge or empty P while taste is good or bad. Each spike also empties the other sensor's E (FORGET,
   cross-inhibition). 64 lives: E 10 with FORGET learned 63/64, median 1,512, net +0.86 (no FORGET: 64/64, 1,830, +0.72;
   the oracle about +0.92).
-- **Sheet, first try:** a sensor learned when taste began on a T cell beside it and it had been stimulated within
-  ELIGIBLE updates. 24 of 32 lives learned. Counting two stimuli, or a lower RATE, did no better (23 and 21 of 32).
-- **Pings.** A stimulated sensor shows a ping for 2 updates, then rests for 4. A T cell that sees a ping does the same,
-  so a one-way wave runs along the T cells to the other sensor (about 8 updates), which forgets its stimulus. A cell
-  that has just pinged rests, so its echo is ignored. This is the circuit's FORGET, made from local signals: 31 of 32
-  lives learned. It costs one shared number, ping. Waves from both sensors at once annihilate, and then both stay
-  eligible, as before.
-- **A gap in the taste organ.** The lives that still failed (6-8 of 64) each had one sensor whose p never moved. Its
-  T neighbour was missing: the mark's end had drifted a cell after the sensor took its name, and the cell between was
-  neither marked (so not T) nor free to be a sensor (a named neighbour). Fix: a cell on y = 1 between a named sensor
-  and the mark takes T too; a T cell shows mark +1 and keeps its name while marked or beside a sensor. Every sensor in
-  32 sheets then had a T neighbour at 4,000 and 8,000 ticks. After the fix, 64 lives: ELIGIBLE 15 learned 64/64
-  (median 1,210 ticks after moving; net +0.46; p at the end 0.17 and 0.86), ELIGIBLE 10 63/64 (1,305; +0.44); the
-  oracle 64/64 (584; +0.58).
-- **Not fixed: a doubled actuator name.** In one sheet of 32 (Life seed 17) two cells took M1. It happens with or
-  without the gap fix, so it is older.
 
 ## The body, and how a creature is scored
 
@@ -382,15 +141,6 @@ meals per 1,000 ticks.
   hush on, its sensor was then silenced (ceiling 0.9-1.9). A lower bias (-2.0): no meals at all. A boredom drive
   (both motors pushed while neither sensor had fired lately): more meals (2.4) but a worse ratio (7.9 in the second
   half). LEARN 0.5 or ELIGIBLE 20: worse (6.2, 7.2). SENSE 1.0: 7.2; TURN 0.24: 6.9.
-- **The sheet brain on the new body: starved.** Each kick now moves the body about a fifth as far, and the mouth is
-  a point, so at one sheet update per tick it ate about 0.9 meals per 1,000 ticks and learned in only 12 of 32 lives
-  within 10,000 ticks (median 4,613 after moving; it had been 32 of 32 on the square). Its food:poison by thirds was
-  1.2, 2.6, 2.5 (1.2 on the square); with p perfect, 6.7, 5.3, 2.2 at 0.7 meals per 1,000. The same cure as the
-  circuit's: run the sheet several updates (steps) to each tick of the world (SPEED). 32 lives, learning: 2 steps,
-  17 learned, food:poison 1.2, 1.7, 4.0, about 1.0 meals; 4 steps, 24 learned, 1.5, 2.0, 3.0, 1.3-1.8 meals, net
-  food +0.25, +0.53, +0.89 per 1,000 ticks; with p perfect, 3.6, 2.7, 4.8 at 1.6 meals. Kept at 4: a pulse crosses
-  the sheet in about 13 ticks instead of 53, and the creature moves after about 600 ticks instead of 2,500. The cost
-  is compute: 37 ticks a second instead of 150.
 - **What would go further.** The eyes can't tell left from right, so a veer is always to one side, sometimes into
   poison lying beside the food: one sensor per side would fix it, but that is more sensors, a ground-rule change.
 

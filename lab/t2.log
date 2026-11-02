@@ -1,0 +1,13 @@
+circuit, designed circuit, 2,000 runs of 2.5 ms: spikes the same, voltages within 7.5e-15: ok
+circuits, 20 random (half on the chip's supply, outputs fading near its rails), 300 runs of 2.5 ms each: ok
+growth: state kept True; target spikes 38 before a relay split its synapse, 38 after: ok
+noise, memory written: sd at step 0.000125 and 6.25e-05 s, expected about 0.22 V: (0.22400536217184902, 0.22567942420869902): ok
+noise, silicon, memory written: sd, expected about 8.0e-04 V (single electrons): 0.0008019704231131393: ok
+noise, memory idle: held exactly: 0.3: ok
+noise, leaky node: sd at step 0.000125 and 6.25e-05 s: (0.1491647740863314, 0.14417212876614782): ok
+noise, the same node 4 times as big: quieter by about 2 (sqrt 4), not 4: (0.1491647740863314, 0.07435382807006471): ok
+noise, silicon, leaky node at rest: sd, expected about sqrt(kT/C) = 4.1e-05 V: 4.268083048354202e-05: ok
+noise, the noise can't be turned off: False: ok
+mismatch: spread of capacitance, gain, offset 0.110, 0.107, 0.109 (about 0.1); kept on growth True; a grown part mismatched True: ok
+pulses: charge right within 1.1e-15 of itself, none early True: ok
+world, 3,000 random scenes: ok

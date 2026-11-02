@@ -56,7 +56,8 @@ per meal spent resting, moving and thinking), gain rate (meals per 10 s), food, 
   keeps those that unstrand. On the standard body it costs 0.26.
   Taken apart (D16, continued): the right steer, planted, pays (0.68, job done, against B's 0.11), and meals credit
   it only if exploring runs at the outcome's timescale (one coin per burst: 0.67, job done); among random detectors
-  every scheme failed so far, credit colliding as they multiply.
+  50 find a little steering in 100,000 s lives (0.24 against B's 0.11, unpaired), far below the planted steer alone
+  (0.70), their exploring spoiling B's colour choices, and credit colliding as they multiply.
 - **Recruitment, case 1** (D17): with taste wired to nothing, a generic grower (predict what follows each eye, grow a
   recruit where a bad outcome is predicted and happens anyway, let it try the pathway's operations) grows in every
   poison life on the poison eye, in no all-food life, and, trying every operation once before keeping the best,
@@ -92,6 +93,28 @@ per meal spent resting, moving and thinking), gain rate (meals per 10 s), food, 
   holding up to 3 pulses (2 bits) 1.88, tied with the bank; one-bit stages 1.78 (79%), probably below it. Restricted
   to what a circuit could hold (192 counters, 2-bit stages; still blocks, nothing built in transistors): lopsided 1.93 (88%), fully varied 1.68, standard 2.49, each
   tied with the exact histogram.
+- **What placing blocks could be worth** (D21): the seer told each block's place only as well as pulses tell it
+  falls from 4.5 to 2.8 (offset across unknown, range +-50%) or 2.1 (neither), against B's 2.54: the eyes don't say
+  where across their corridor a block is, so a memory of places adds little unless the brain senses across by
+  moving.
+- **Sideways sensing, evolved?** (D22): a 6-node continuous-time network evolved in the loop, told the colour,
+  reaches 2.03 held out (B told the colour 2.54) and forages as B does, eating blocks only within the mouth's 1 mm
+  of its path: no sideways sensing emerged. Under B's movements the pulses' timing says almost nothing about a
+  block's offset (R2 0.02; the side no better than the sweep's bias); probing by wiggling makes it a little readable
+  (the side right in 77% of pulses against 56%), but no dance-like policy uses it (all below B, 0.8-1.9 against
+  2.6). These eyes don't offer sideways sensing; B is near what they allow, and the headroom needs a body change
+  (the user's; D24 prepares a split eye). (A beat's 18 degree turn, thought too coarse, can be cut to 7 by timing,
+  D24.)
+- **The dance form** (D23): D20's period found by an entraining oscillator fails (sweeps of 4 revolutions, 5 blocks
+  each: it never locks); a bank of 96 resonators with harmonics summed reads a 20 s spin's period better than the
+  intervals' histogram (69% against 53%) but plateaus lower (69% against 88% at 40 s), for as many parts.
+- **A split eye, prepared for the user's decision** (D24; world.py unchanged, the split made in an experiment's
+  wrapper): each eye's pulses tagged by which half of the corridor saw them, the halves wired at random. B told the
+  colour, plus a reflex: one food pulse or more from one half and at most one from the other in 0.2 s turns it
+  towards that half, by one beat with its partner a tick late (7 degrees, not a lone beat's 18: finer turning by
+  timing, no body change). Which motor turns towards which half is learned from its own scan in a median 12 s
+  (right in 254 of 256 lives by the end). Held out on fresh seeds: **3.02 [2.92, 3.11] against B's 2.49 [2.40,
+  2.58]** (+21%; told the map, 3.14); on lopsided bodies told their balance, 2.71 against 2.32 (+17%).
 - **Bodies** (D13): with each thruster 0.5-2, every fixed design collapses (B 0.32, the best searched on such bodies
   0.76); told its balance, B gets 1.92 (2.15 with its drive started in step, D20); eight local rules for finding the balance reach at most 0.8; judging each
   drive does better (D19), and a model learned from its own turning far better (D20).
@@ -763,7 +786,7 @@ after half the food sightings (`learn_avoid` 0.86), and the first motor-B firing
 
 ## D13: the fast model, and what the hand-design suggests (2026-10-28)
 
-**The model** (`scratchpad/cmodel.py`, to move into `discrete/`): the CMOS policy circuit as its blocks' measured
+**The model** (`lab/cmodel.py`, to move into `discrete/`): the CMOS policy circuit as its blocks' measured
 behaviour, each block a few lines, its numbers from short bench runs (`blocks.py`): eye 1.4 ms delay, 10 ms hold;
 drive hold 63 ms after the last food pulse (the policy's: 0.2 s); boredom 2.7 s; scan 12.3, drive 44, run 12.6 per s;
 doubt +1.12 V a poison, leaking 0.43 V/s, the bit flipping as doubt rises through about 1.5 V and re-arming only below
@@ -835,7 +858,7 @@ wrong" (flip): two hypotheses with opposite remedies, told apart by the sense th
 marginal value theorem (1976): leave when the local rate falls below the habitat's; as circuit, two leaky integrators
 of food seen, a fast and a slow, compared. D11's "poison seen lifts the give-up timer" was this, half done.
 
-**Results overnight** (`scratchpad/cmodel2.py`, `msearch2.py`: each variant searched on seeds 0-127 from the best
+**Results overnight** (`lab/cmodel2.py`, `msearch2.py`: each variant searched on seeds 0-127 from the best
 so far, then judged on 50000-50127, paired; nominal blocks, no tolerances yet):
 
 | variant | efficiency held out | gain |
@@ -853,7 +876,7 @@ threshold at 0.8 V, trust at -1.8 V): it may go further. Leaving by stigmergy (C
 this model (both searches pushed boredom out, to 14 s in C); clearing on food adds nothing once a flip clears (A tied
 with E). Not yet with tolerances or varied bodies.
 
-**Judged robustly** (`scratchpad/cmodel3.py`). The blocks benched in ngspice on 32 seeds (`blocks.py`), each
+**Judged robustly** (`lab/cmodel3.py`). The blocks benched in ngspice on 32 seeds (`blocks.py`), each
 number's spread over the seeds' tolerances (sd of its log): eye hold 0.08, drive hold 0.14, boredom 0.21, scan and run
 0.10, drive 0.07, doubt's step 0.05, its leak 0.17; doubt's lower threshold 0.23 V within 0.01 (the upper one, not
 measured cleanly, taken as 0.02 V); assumed: a block redesigned keeps its relative spread. Each life then draws its
@@ -875,13 +898,13 @@ own blocks; with bodies, its own thrusters (each 0.5 to 2, `bodies.THRUSTERS`). 
   surely best, +0.60 over A). A thruster at half strength makes the scan slow and the drive curve; a straight run
   becomes a circle. So the question of a brain adapting to its body is now the main one.
 
-**Evidence is barely bursty** (`scratchpad/bursts.py`, B in the fast model with tolerances, 256 lives): with the
+**Evidence is barely bursty** (`lab/bursts.py`, B in the fast model with tolerances, 256 lives): with the
 bit right, poison is eaten at 0.094 per s; within 0.5, 1, 2, 5 s after a poison at 1.04, 1.11, 1.07, 0.99 times that;
 after a food at 1.47, 1.33, 1.13, 0.97 times (blocks lying close together), but a meal has already stepped doubt
 down. So poisons are close to independent evidence, and counting each as a full step is sound: the worry about bursts
 (above) was small.
 
-**Do the best timescales vary from life to life?** (`scratchpad/timescales.py`: B with tolerances, bodies each
+**Do the best timescales vary from life to life?** (`lab/timescales.py`: B with tolerances, bodies each
 thruster 0.5-2 with the drive balanced by the oracle, seeds 0-127 x 2 grouped by strength, sqrt(left x right), into
 thirds; efficiency):
 
@@ -895,7 +918,7 @@ Yes, predictably: a strong body wants a slower drive and a shorter hold, a weak 
 body's speed, rate x strength). But adapting them is worth about +0.1 overall (the oracle restoring every firing got
 2.00 against balance alone's 1.92), against the balance's +1.6. Doubt in B has no timescale left to learn.
 
-**The ladder's top rung: an omniscient brain** (`scratchpad/omni.py`; QUESTIONS.md). Told every block's place, its
+**The ladder's top rung: an omniscient brain** (`lab/omni.py`; QUESTIONS.md). Told every block's place, its
 own pose and wiring and which colour is food, it steers to the nearest food whose straight path passes no poison
 (turning with the thruster that turns it towards it, allowing for the spin to come; pushing with both while it points
 there and goes slower than a cap). Held out (50000-50063 x 2, standard bodies): **efficiency about 20 [19, 22], gain
@@ -903,7 +926,7 @@ about 58, food 52-65 per 10 s**, against B's 2.4 and 6. Even so it strands 9-16%
 can't turn tightly enough for): a lower bound. So these organs leave about ten times today's performance to a brain
 that knows where things are; the mapping rung (legal inputs only) will say how much of that knowledge can be had.
 
-**A short memory rung** (`scratchpad/memo.py`: B's blocks with tolerances, told which colour is food and its own
+**A short memory rung** (`lab/memo.py`: B's blocks with tolerances, told which colour is food and its own
 heading, as perfect path integration would give; having lost sight of food it turns back to the heading where it last
 saw it, within so many s, then drives; held out, 50000-50063 x 2): without memory 2.54 [2.40, 2.66]; with 0.5-4 s of
 it about 2.0, worse. A first version was far worse (down to -2.0: it went back for food it had just eaten, ignoring
@@ -913,7 +936,7 @@ range too: the mapping rung. And a by-product: **told the colour from birth, B g
 same lives otherwise): learning costs it 0.15. The learning is near ideal; the headroom (to the omniscient 20) is all
 in finding food.
 
-**The seer rung, and what a map is worth** (`scratchpad/seer.py`): told the exact place of each block the moment an
+**The seer rung, and what a map is worth** (`lab/seer.py`): told the exact place of each block the moment an
 eye pulses for it (the nearest of that colour in the corridor), remembering it until eaten, told its pose and which
 colour is food; steering (as omni.py) to the nearest remembered food with no remembered poison on its path, scanning
 with one thruster when it knows none, and after 2 s of that running straight 0.5 s (without the run it ate what it
@@ -928,14 +951,14 @@ had seen and then scanned in place: 70% stranded). Held out (50000-50063 x 2): *
 
 A perfect map of what it has seen would nearly double B: that is the most intelligence (remembering and placing
 blocks) can buy behind these eyes. The rest, 4.5 to 20, isn't intelligence but coverage: an eye's corridor (2 mm
-wide, 15 mm long) never sees most blocks. A first mapper inferring places from pulses (`scratchpad/mapper.py`, an
+wide, 15 mm long) never sees most blocks. A first mapper inferring places from pulses (`lab/mapper.py`, an
 evidence grid) failed (0.6 food per 10 s): scanning from one spot, an eye can't tell how far a block is, so every
 cell of the corridor looks alike; it needs ranging by moving (parallax, the pulse rate as it nears).
 Given the seer's exploring run and lower thresholds it still got only about 1 food per 10 s (16 seeds x 2), firing
 about 900 times per 10 s: each pulse credited every cell along the corridor as strongly as if the block were in each,
 so the map filled with false lines of food. A sound mapper needs a proper sensor model (one nearest block per
 corridor, the evidence shared out along it): a substantial build, left open.
-A second mapper with that sensor model (`scratchpad/mapper2.py`: an occupancy grid; each tick, per eye, the chance
+A second mapper with that sensor model (`lab/mapper2.py`: an occupancy grid; each tick, per eye, the chance
 that the nearest block of its colour lies in each bin along the corridor, or none, weighed by the pulses' Poisson
 likelihood; bins nearer than it emptied, it filled, those behind kept): judged cell by cell no cell passed 0.32 (the
 evidence spreads over the corridor's width) and it ate blind; judged by a block's chance within a block's size, it
@@ -943,14 +966,14 @@ avoids poison well (food:poison 8 in the last third) but finds only 2.0-2.4 food
 (efficiency 0.45-0.65, 16 seeds x 2). Still a poor lower bound: a mapping brain that beats B is possible (the seer's
 4.5), but building one is a robotics project of its own.
 
-**Reversal: confidence, bounded, doesn't cost it** (`scratchpad/reversal.py`; an experiment only, the task never
+**Reversal: confidence, bounded, doesn't cost it** (`lab/reversal.py`; an experiment only, the task never
 swaps): the poison colour swapped at 50 s, B against E (doubt floored at 0), tolerances, 50000-50127 x 2. Just after
 (50-70 s) B eats food 4.87 and poison 2.16 per 10 s (ratio 2.3), E 4.10 and 2.88 (1.4); in the last 20 s B 6.04 and
 1.00 (6.0), E 5.62 and 1.46 (3.9). B's trust is bounded (about two and a half meals' worth), so two or three poisons
 undo it: the bound is the hedge a Bayesian makes against a world that might change. So B gets both: it keeps trust
 where the world is steady and reverses when it isn't.
 
-**Adapting to the body** (`scratchpad/cmodel4.py`; held out, tolerances and bodies each thruster 0.5 to 2):
+**Adapting to the body** (`lab/cmodel4.py`; held out, tolerances and bodies each thruster 0.5 to 2):
 
 | brain | efficiency | stranded |
 |---|---|---|
@@ -985,7 +1008,7 @@ rest is physics: a weak body is slower). So the target for adapting is a single 
   biased (every approach began in the same half, its first moments rich in pulses: the balance ran to its limit on
   every body). The deeper reason: a block wholly inside an eye's corridor pulses the same wherever it lies in it, so a
   small wobble changes nothing the eye sees until the block leaves; the wobble only spoils approaches.
-- **Given time, extremum seeking stalls** (`scratchpad/longbody.py`: one body kept 300 s, each 100 s judged, seeds
+- **Given time, extremum seeking stalls** (`lab/longbody.py`: one body kept 300 s, each 100 s judged, seeds
   0-63 x 2): with small steps (0.01) 0.37, 0.81, 0.83; larger (0.03) 0.38, 0.45, 0.49; not adapting about 0.2; the
   oracle 1.9-2.1. Time doubles it, then it settles at less than half the oracle: its estimate never gets precise, each
   approach's signal too noisy. Weak in itself, not merely slow. A meal ending an approach added to its reward (as 5
@@ -1000,7 +1023,7 @@ than a 100 s life, and eyes that show which way it curves); no mapping brain now
 thrusters confirmed; B's bench to be rerun four at a time.
 
 **B in transistors, and the model's prediction, written before SPICE lives it** (2026-10-29). The circuit
-(`scratchpad/cmos.py`'s `pol` with mirror, counter, runfast; 151 parts): doubt a capacitor split between the rails
+(`lab/cmos.py`'s `pol` with mirror, counter, runfast; 151 parts): doubt a capacitor split between the rails
 (13.8 pF), poison stepping it up through four unit pMOS copies of the taste pulse, food stepping it down through four
 unit nMOS copies fed by a pMOS from the taste node (gate held at 1.1 V), no leak, the supply's rail the bound of
 trust, the flip pulling it down until its Schmitt lets go; drive hold 16 pF, boredom 45 pF, the run on the fast
@@ -1079,7 +1102,7 @@ levels, compared on its score, what it costs (parts, power), and what each level
 | Sepulchre | leaky nodes, saturating elements, events from fast positive feedback and slow negative feedback | below |
 | above Sepulchre | timers, oscillators, tallies as primitives | `model.py` (D13) |
 
-**B at Sepulchre's level** (`scratchpad/sepb.py`), in the minimal line's language (mixed_feedback's nodes and
+**B at Sepulchre's level** (`lab/sepb.py`), in the minimal line's language (mixed_feedback's nodes and
 elements) under its rules "mixed" (every node leaky but memory nodes, no clamps), lived by its simulator (noise,
 mismatch), its parts and power as `chip.py` builds it in SKY130: 13 nodes, 20 elements. The eyes and taste leaky
 nodes a pulse holds up for tens of ms; the bit a memory node with a node copying its negative; food and poison routed
@@ -1147,7 +1170,7 @@ What it says:
   structure doesn't have. The knobs are gains, offsets and time constants of B's existing elements, not added
   capacitance or structure, so this says B as drawn can't be tuned into robustness; the minimal line's leaders,
   searched over structure too, survive biology at about 500 parts and 130 nW, so robustness can be built, not tuned
-  (scratchpad `sepsearch.py`, `v/sep_search_silicon_biology_biologyx2.json`).
+  (`lab/sepsearch.py`, `v/sep_search_silicon_biology_biologyx2.json`).
 - Robustness built by size (2026-10-31): the silicon-tuned design with every node's capacitance and every current into
   it scaled by K (resistances by 1/K: the same dynamics, a node's noise down about sqrt(K), its power up K), the inputs
   (eyes, taste: the body's pulses are fixed charges) and boredom (already 50 pF, the limit) left alone. Held out:
@@ -1165,7 +1188,7 @@ What it says:
   841 parts (the minimal line's leaders: about 500 parts, 130 nW). Beyond K 4 biology gains nothing and silicon
   slowly loses; twice biology's noise fails at every size, so what remains is in the nodes not scaled, the inputs
   most likely (the taste node's noise stepping doubt, an eye's faking a sighting), which size can't fix: they need
-  structure (a filter that waits for a pulse's whole charge). (scratchpad `sepscale.py`, `ONLY=` for a subset;
+  structure (a filter that waits for a pulse's whole charge). (`lab/sepscale.py`, `ONLY=` for a subset;
   `v/sepscale.log`, `v/sepscale_bit.log`.)
 - Why twice biology's noise still fails (2026-10-31, `sepdiag.py`: the brain alone, no input, 60 s). The inputs:
   at twice biology's noise the taste node rests past doubt's step thresholds (+-0.3 V) 15% of the time (biology's 2%)
@@ -1190,7 +1213,7 @@ Phase 2 of the plan (QUESTIONS.md), at the block level (the user's choice, D14):
 well and compensates, tuning towards better outcomes (never a setpoint, AGENTS.md). Testbed: B's five spending knobs
 (hold, boredom, scan, drive and run rates) drawn at birth up to 3 times off its searched values (log-uniform, each
 life its own), against the floor (fixed there) and the ceiling (B's values, fixed), on the same lives, robustly judged
-(`scratchpad/selftune.py`; 16 held-out seeds x 2).
+(`lab/selftune.py`; 16 held-out seeds x 2).
 
 **The tuner**: simultaneous perturbation (SPSA; node perturbation, as in Fiete and Seung's birdsong model, 2006).
 Each epoch, every knob nudges itself by its own random sign for one half and the other way for the other half; the
@@ -1232,7 +1255,7 @@ So **knowing it isn't doing well is possible from outcomes alone, but slowly**: 
 **A yardstick: the best use of the brain's information** (the user, 2026-10-29: what does "perfect" look like, given
 how sparse the feedback is?). Not the ceiling (told the best setting from birth) but the best a learner could do
 with only what the brain senses (meals, food sightings, its own firings) and unlimited computation: a Bayesian
-optimiser inside the life (`scratchpad/bo2.py`: each 40 s window one setting of the knobs, its efficiency recorded;
+optimiser inside the life (`lab/bo2.py`: each 40 s window one setting of the knobs, its efficiency recorded;
 a Gaussian process over the knobs, a length scale per knob and the noise fitted from the life's own windows; the next
 setting by Thompson sampling, so it explores while unsure and settles as it learns). Godlike in computation, never in
 information, and never a brain. Run on the standard body (spending only) and on lopsided bodies (thrusters 0.5-2,
@@ -1306,7 +1329,7 @@ tied (-0.04 [-0.10, +0.03]); lopsided 0.82, -0.08 [-0.15, -0.02] (meta-rate 0.00
 There was no headroom to find: 0.003 to 0.01 tie on the standard body, and the balance made faster by hand loses
 (x3: 0.57, -0.34 [-0.46, -0.21]; x10: 0.21, -0.70).
 
-**Shadows that compete** (the user's idea, 2026-10-29; `scratchpad/shadow.py`): sixteen copies of the hold (0.03
+**Shadows that compete** (the user's idea, 2026-10-29; `lab/shadow.py`): sixteen copies of the hold (0.03
 to 1.5 s), each judged counterfactually from every drive without driving, its meals kept less the drive's extra
 firings at the brain's own price of energy; the hold used the best shadow's (winner takes all), on a random fifth of
 drives twice that, so longer shadows are judged too. **A dead end**: 1.28 against the floor's 1.74 (-0.46 [-0.56,
@@ -1330,7 +1353,7 @@ it where something is badly wrong (a lopsided body). This yardstick is a lower b
 an optimiser that explored less would score higher, and the ceiling stays the only true upper bound. Shadows that compete were a dead end (above).
 
 In a world with sparser meals (2026-10-31; QUESTIONS step 2's open: does one fixed rate survive?). Six blocks of
-each colour instead of 18 (`world.BLOCKS`, patched for the experiment, scratchpad `sparse.py`), standard body,
+each colour instead of 18 (`world.BLOCKS`, patched for the experiment, `lab/sparse.py`), standard body,
 mistuned at birth, 10,000 s, seeds 0-31: food falls to about 1.4 per 10 s and efficiency to 0.29 for the floor; B's
 own knobs, untuned, get 0.45, so there is at least 0.16 to gain (B's knobs were chosen for the dense world, so the
 true ceiling is higher). The tuner barely moves: rates 0.003 and 0.01 both 0.32 (+0.02 [-0.01, +0.06] over the
@@ -1352,7 +1375,7 @@ tracks meals closely; found here, none.
 ## D16: can a brain learn tricks nobody designed? (2026-10-30)
 
 Phase 3 of the plan (QUESTIONS.md; the user's idea, 2026-10-29): beside B (fixed, its own tolerances), a reservoir
-of 200 random sequence detectors over the brain's own events (`scratchpad/trick.py`): each fires when its event b
+of 200 random sequence detectors over the brain's own events (`lab/trick.py`): each fires when its event b
 (an eye, or a motor's beat) comes its own delay (up to 1 s) after its event a, within 50 ms, and may then add a beat
 to its own motor, with probability 0.01 + w, w its memory node. Each keeps a fading tag (2 s) of whether it acted
 against its odds (+(1 - p) if it did, -p if not, so the tag averages zero whatever the meals: REINFORCE); taste
@@ -1378,8 +1401,8 @@ credit comes only through sparse meals, a thousand of them per life.
 
 ### D16, continued: can meals credit a trick at all? (2026-10-31 to 11-01)
 
-D16 asked a random reservoir to find steering and it didn't. Taken apart (`scratchpad/trick2.py`, a `Trick2` over
-D16's detectors; runs `scratchpad/night1.sh` to `night13.sh`, logs `scratchpad/v/night*.log`): lopsided bodies,
+D16 asked a random reservoir to find steering and it didn't. Taken apart (`lab/trick2.py`, a `Trick2` over
+D16's detectors; runs `lab/night1.sh` to `night13.sh`, logs `lab/v/night*.log`): lopsided bodies,
 training seeds 0-15 x 2, lives of 10,000 s unless said. A **planted** detector is the right steer by hand (a beat of
 motor 1, then another 2 later: add a beat to the weaker thruster's motor), its **wrong twin** the same to the stronger.
 
@@ -1397,6 +1420,7 @@ motor 1, then another 2 later: add a beat to the weaker thruster's motor), its *
 | 11 | poison worth 4 or 8, charge x0.5 or x2 | all about -0.23, food:poison 1.6 against B's 4: exploring a beat keyed to an eye spoils B's colour choices, and explorers at once confound each other's credit |
 | 12 | lives of 100,000 s judged on the last 10,000, exploring 1% of bursts | plain B 0.11 (88% stranded, food per 10,000 s 845 to 417); planted pair 0.10 (right w +0.93, above wrong in 88%); planted among 50 0.02 (right +0.88, 84%), the same not learning 0.02, 50 random 0.03; food:poison about 2.3 against 6 |
 | 13 | the fixed right steer (odds 0.9, learning off) in those lives | **0.68 [0.30, 1.07], job done** (per beat 0.68 [0.28, 1.08]); the wrong twin 0.04. So stage 12's learner learned the steer but hardly acted on it (7 extra beats per 10 s against 97): its evidence gate compared w (at most 1) with the root of every step it had ever taken, growing without end, so the gate shut. A flaw of the scheme, not a finding |
+| 14 | stage 12 with the gate's evidence fading (over 10,000 s) | planted pair **0.70 [0.40, 1.00]**, as good as the fixed steer (right w +0.88, above wrong in 91%; wrong -0.83); planted among 50 0.30 [-0.02, 0.61] (right w -0.37 on average, above wrong in 72%); 50 random 0.24 [-0.07, 0.54], 15 grown, 64% of them on the weak motor: some steering found, against stage 12's plain B 0.11 on the same seeds (not paired). Food 3.3 per 10 s, but food:poison 2.3 against B's 6: the exploring still spoils B's choices |
 
 So: **the trick exists and pays** (stage 3); **meals can credit it, but only if exploring runs at the timescale
 the outcome reveals**: one coin per burst of beats, not per beat (stage 5; Fiete and Seung 2006, the songbird's
@@ -1405,15 +1429,17 @@ number: exploring grows with candidates; any floor on w ratchets credit noise up
 take each other's credit; exploring a beat keyed to an eye spoils the colour choice B makes; sight credit is gamed
 by moving more. Even with the right detector learned among 50 (stage 12), the learned odds earn nothing over the
 same detectors not learning: the exploring of the other 49 costs what the right one gains. Credit from outcomes
-scales badly with candidates (stage 12 is being rerun with the gate's evidence fading, stage 14), so structure
-has to come from somewhere cheaper: prediction (phase 5) or growth aimed
+scales badly with candidates: with the gate mended (stage 14), 50 random detectors find some steering (64% of
+those grown on the weak motor) and roughly double B's score in long lives, but stay far below the planted steer
+alone (0.24 against 0.70), poisoned choices the price of their exploring. So structure has to come from somewhere
+cheaper: prediction (phase 5) or growth aimed
 where the brain is frustrated (phase 4, D17), not a random reservoir.
 
 ## D17: recruitment, case 1: taste wired to nothing (2026-10-30)
 
 The plan's step 4 (QUESTIONS.md; the user: how can a brain realise it isn't solving the problem and recruit more
 neurons?), at the block level. The unwired brain is B without its learning: either eye starts a drive, taste goes
-nowhere (`scratchpad/grow.py`). Beside it, per eye, a generic grower: **predict** (a fading tag of the eye's pulses,
+nowhere (`lab/grow.py`). Beside it, per eye, a generic grower: **predict** (a fading tag of the eye's pulses,
 1 s; at each taste the eye's prediction moves towards it by its tag); **notice the gap** (frustration: a leaky count,
 50 s, of poisons tasted while the eye was tagged and predicted bad); **grow** (frustration past 2 grows a recruit on
 that eye's pathway, the declared primitive); **experiment** (the recruit knows nothing of the circuit: it tries the
@@ -1443,7 +1469,7 @@ life. With the whole-outcome judge as well, 1.73 (tied with the eye's own judge,
 So the judge's reach mattered less than exploring before settling: a recruit has to see every option before win-stay.
 
 **A lopsided body: not a recruitment case** (the user, 2026-10-30: a case must be one no tuning of the brain's
-parts can solve; one more knob, a gain per motor, solves this one, D15). Tried anyway (`scratchpad/grow2.py`). B with D16's detectors grown only where the gap is:
+parts can solve; one more knob, a gain per motor, solves this one, D15). Tried anyway (`lab/grow2.py`). B with D16's detectors grown only where the gap is:
 frustration, a leaky count of drives that end with the block lost, grows batches of detectors over the events of
 driving (the food eye, the motors' beats); a lost drive is also credited as a bad outcome through the tags, as taste
 is. 8 seeds x 2, 2,000 s, lopsided bodies: all 200 grown at once (drives fail constantly on such a body), 130 extra
@@ -1453,7 +1479,7 @@ wrong for the job: a detector adds single beats, while steering a lopsided body 
 1.5 to 2 times on every drive, hundreds of coordinated beats, each credited only through rare outcomes. The eyes say only how much of a
 colour is in view, not where, so prediction can't read a veer's direction either.
 
-**A world that frustrates: guarded food** (the user's idea, 2026-10-30; `scratchpad/guarded.py`). Still a random
+**A world that frustrates: guarded food** (the user's idea, 2026-10-30; `lab/guarded.py`). Still a random
 world, one statistic changed: each food block has a poison guard beside it (2.5 mm from its centre, at a random
 angle), the pair kept together. The rays stop at the first block, so the food hides behind its guard from one side.
 100 s lives, 32 held-out seeds x 2:
@@ -1481,7 +1507,7 @@ tick; the bitten can pull away); mouth to mouth nothing happens; collisions; an 
 (a fresh brain, its own wiring) appears at random at once, so N stay alive and newborns are the world's food. My
 choices: belly 20 meals, a bite 1 meal a second, soft springs between discs slow against the tick, and no pain for
 the bitten (taste is what touches the mouth; a pain sense would be a new body-to-brain signal, the user's decision).
-`scratchpad/arena.py`, watched live by `scratchpad/arena_watch.py` (mouth M and tail T lettered, bites drawn).
+`lab/arena.py`, watched live by `lab/arena_watch.py` (mouth M and tail T lettered, bites drawn).
 
 First look, four robots with B's brain, 16 arenas of 1,000 s (559 robots): robots bite, get bitten, starve and are
 replaced (lives of about 115 s), and clump in biting chains. B can't learn the colour here: it learns from poison
@@ -1637,7 +1663,7 @@ triangle's circumradius), its front half red and its rear half blue, its mouth t
 thrusters on its rear rim (their physics unchanged: a firing adds forward speed and a turn); collisions a spring along
 the line of centres, frictionless, so no push spins a robot; the eyes see the colour of the half each ray meets; a
 mouth within 0.3 mm of another's rim, on its rear half, bites. The triangle arena is kept as
-`scratchpad/arena_triangle.py`. Over 200 s, robots touch in 92% of ticks (they clump), overlapping a median 0.07 mm,
+`lab/arena_triangle.py`. Over 200 s, robots touch in 92% of ticks (they clump), overlapping a median 0.07 mm,
 0.25 mm at the 99th percentile (rarely far more, 3.9 mm once: probably a newborn placed on another robot, untraced).
 A rear half is a far bigger target than a tail disc, so robots eat two to three times as much (16 arenas of 300 s,
 meals eaten a robot a 10 s): told B 0.76 [0.73, 0.78] (0.33 on the triangle), the tracker 1.08 [1.06, 1.11] (0.40), so
@@ -1693,7 +1719,7 @@ there is little left that the life must learn.
 The plan's step 5 (QUESTIONS.md: learn from what happens every moment, not only from meals), its first experiment,
 with D18's lesson (judge each try at once, against its own jitter). B (its tolerances drawn, its learning as
 designed) on bodies with each thruster 0.5 to 2 (`bodies.THRUSTERS`), lives of 2,000 s, the other knobs B's
-(`drivebal.py`, in the scratchpad). The drive's balance x (log of motor 0's rate over motor 1's) is jittered afresh
+(`drivebal.py`, in `lab/`). The drive's balance x (log of motor 0's rate over motor 1's) is jittered afresh
 by e at each drive's start; the drive's outcome, the food pulses it saw (a drive lasts while the block stays in view,
 so one that curves off loses it sooner), against its running mean (20 drives), moves x by eta (outcome - mean) e.
 About 9 drives a 10 s, so some 1,800 lessons a life, against a few hundred meals.
@@ -1729,7 +1755,7 @@ jitter. While B scans, one motor alone turns it at a steady rate, so whatever it
 revolution, and a revolution's period goes as 1 / that thruster's strength. So scanning with each motor in turn and
 finding each one's period gives the thrusters' ratio, and the drive's balance x = log(T0 / T1) straightens the drive
 (k0 g0 = k1 g1). The goal (keep what is chased ahead) is the same every life, evolution's; the model of this body
-is the life's (QUESTIONS.md, step 5). `periodbal.py`, in the scratchpad; lopsided bodies (each thruster 0.5 to 2),
+is the life's (QUESTIONS.md, step 5). `periodbal.py`, in `lab/`; lopsided bodies (each thruster 0.5 to 2),
 lives of 2,000 s, B's other knobs as designed.
 
 Feasibility (`period_probe.py`, 60 s of one-motor scanning): the eye pulses' intervals recur at 0.79 of the period
@@ -1924,6 +1950,243 @@ lopsided **1.93**, tied with the exact histogram (-0.10 [-0.30, +0.06]), 88% of 
 the ceiling (-0.26 [-0.44, -0.11]); standard **2.49**, tied with B (+0.03 [-0.09, +0.16]). So nothing in it needs
 exact counting: some 200 counters and a short delay line of 2-bit stages would do. Building them in SKY130 is not
 started.
+
+## D21: the yardstick: what knowing where blocks are is worth behind these eyes (2026-11-01)
+
+The first measure of the bounds (QUESTIONS.md, step 3; `BOUNDS.md`): is there room for a brain to gain by placing
+what it has seen (place-like cells, the user's happy medium between a built-in map and none)? D13's seer, told each
+block's exact place when an eye pulses for it, reaches 4.5 against B's 2.54 (both told the colour). But a pulse says
+only that the nearest block of its colour is somewhere in the corridor ahead (4 mm wide, 15 mm long). So the seer
+told places only as well as pulses could tell them (`lab/seer2.py`): each pulse an estimate, its range off by
+a factor exp(N(0, rerr)) (inf: anywhere along the corridor), its offset across exact or (lat) anywhere across the
+corridor; estimates of one block averaged over its pulses or the first kept; an estimate reached without eating
+dropped. Still told its pose (perfect path integration) and the colour: generous. Held out, 50000-50063 x 2:
+
+| range known to | offset across | pulses averaged | efficiency |
+|---|---|---|---|
+| exactly | exact | | 4.55 [4.33, 4.77] |
+| +-25% | exact | yes | 4.40 [4.22, 4.57] |
+| +-50% | exact | yes | 4.10 [3.95, 4.25] |
+| +-50% | exact | no | 3.78 [3.59, 3.94] |
+| a factor e | exact | yes | 3.06 [2.90, 3.21] |
+| not at all | exact | yes / no | 3.43 [3.31, 3.55] / 3.09 [2.93, 3.25] |
+| +-50% | **not at all** | yes | **2.82 [2.70, 2.95]** |
+| not at all | not at all | yes / no | 2.13 [2.01, 2.25] / 1.86 [1.72, 2.01] |
+| B, told the colour (D13) | | | 2.54 [2.40, 2.66] |
+
+(Averaging uniform guesses at the range converges on the corridor's middle, a lucky bias: why "not at all" beats
+"a factor e".) **The offset across matters most, and the eyes barely give it**: a block anywhere in the 4 mm corridor
+gives the same pulses (a little fewer when part of it is outside), while the mouth eats within 1 mm. Known across but
+not in range, a memory of places is worth 3.1-3.4, well above B; not known across, even with the range good to
++-50%, 2.8, about 0.3 above B (unpaired), and with neither, below B. So behind these eyes most of the seer's 4.5 is
+information the eyes don't deliver: a memory of where blocks are can add little over B's "drive while you see it",
+unless the brain gets the offset by moving (sweeping the corridor across a block and timing when it enters and
+leaves: active sensing), which this yardstick doesn't try. Not an ideal observer (its policy is the seer's, and it
+never senses actively), so a rough bound, but it says where the headroom is: in sensing across, not in remembering.
+
+What an eye split across the corridor would be worth (the same yardstick, `lat=0.5`: told which half a block is in,
+not where within it; `lat=0.25`, which quarter; log `lab/v/seer2_split.log`):
+
+| across | range +-50% | range unknown |
+|---|---|---|
+| nothing (these eyes) | 2.82 [2.70, 2.95] | 2.13 [2.01, 2.25] |
+| which half (an eye split in two) | **3.95 [3.78, 4.09]** | 3.15 [3.01, 3.29] |
+| which quarter | 4.12 [3.95, 4.28] | 3.54 [3.40, 3.68] |
+| exactly | 4.10 [3.95, 4.25] | 3.43 [3.31, 3.55] |
+
+A split eye recovers most of the headroom (to 3.95 against B's 2.54, with the range roughly known); quarters add
+little more. A body change, the user's to decide (D22).
+
+## D22: does sideways sensing emerge in an evolved dynamical network? (2026-11-01)
+
+After D21 (the headroom is in sensing where across the corridor a block lies) and the user's insight that time is
+where a small brain computes (README; `BOUNDS.md`, Time): a 6-node continuous-time network (Beer 2003;
+`lab/ctrnn.py`), evolved by CMA-ES (minimal/search.py's) in the real body's loop, told which eye is food:
+leaky nodes fully connected, each its own time constant (20 ms to 5 s), every eye pulse kicking every node, nodes 0
+and 1 setting the motors' rates, noise on every node; nothing about scanning, holding or phase designed in. Judged
+by `discrete/tune.py`'s robust efficiency on 8 seeds x 2 a generation, 24 a generation, 150 generations from zero,
+then 150 more from the best (logs `lab/v/ctrnn_n6*.out`). Held out (50000-50063 x 2):
+
+| | efficiency | food | poison | last third | firings |
+|---|---|---|---|---|---|
+| after 150 generations | 1.25 [1.17, 1.34] | 7.20 | 2.00 | 3.76 | 777 |
+| after 300 | **2.03 [1.96, 2.10]** | 5.43 | 0.58 | 8.87 | 548 |
+| B, told the colour (D13) | 2.54 [2.40, 2.66] | 6.1 | | | |
+
+It plateaued about 2.0-2.2 on its training lives. **Sideways sensing**, tested directly (`lab/sideways.py`,
+50000-50031 x 2: for each block's first food pulse, its offset across the corridor, and whether that block is eaten
+within 1 s):
+
+| offset across | B, told the colour | the network, 150 gens | the network, 300 gens |
+|---|---|---|---|
+| 0-0.5 mm | 75% | 63% | 67% |
+| 0.5-1 mm | 73% | 57% | 57% |
+| 1-1.5 mm | 34% | 36% | 36% |
+| 1.5-2 mm | 23% | 18% | 21% |
+
+The same cliff past the mouth's 1 mm in all three: blocks in the mouth's path are eaten by going straight, the rest
+only when a turn happens to bring them in. **No sideways sensing emerged**: evolution found a B-like forager, a
+little worse. Not yet known whether the pulses' timing carries the offset well enough to use (a far block gives
+about one pulse a sweep, and the spin runs on 1.5 ticks after a thruster stops: minimal/NOTEBOOK.md, M11), so the
+next measure is how much the timing of a block's pulses, against the creature's own beats, tells about its offset
+(the bound on timing, `BOUNDS.md`, Time) before evolving bigger.
+
+**The bound on timing, under B's movements** (`lab/timing.py`, log `lab/v/timing.log`; B told the
+colour, 50000-50063 x 2, 44,861 food pulses with the block in view): at each food pulse, what the brain could know
+(its pulses' exact times: pulses in the burst, time since it began and since the last, pulses in the last 0.05 and
+0.2 s; its motors' beats in the last 0.05 and 0.2 s and since the burst began; whether it is driving) against the
+offset of the block that pulsed, signed towards the side motor 0 turns to (a life could learn the sign: its wiring
+is fixed). Gradient-boosted trees, cross-validated by life:
+
+| while | pulses | offset sd | R2, signed offset | R2, its size | side right, beyond 1 mm | the commoner side alone |
+|---|---|---|---|---|---|---|
+| scanning | 12,650 | 0.88 mm | 0.02 | 0.01 | 69% | 68% |
+| driving | 32,211 | 0.78 mm | 0.03 | 0.04 | 61% | 58% |
+
+**Under B's movements, the timing carries almost nothing about where across the corridor a block is**: beyond the
+mouth's reach the side is guessed no better than by always guessing the side the sweep brings blocks in from. B's
+scan turns fast (a beat turns the body about 18 degrees, 16 rad/s fading at 50 per s, against a corridor about 30
+degrees wide at 7.5 mm), so a block crosses the corridor within a tick or two and gives about one pulse. So
+sideways sensing would need movements made to probe (slow sweeps across a block seen), and those pay only once the
+reading exists, and the reading only once they do: a valley no small step of evolution crosses, which may be why it
+didn't emerge. Next: whether a probing movement (on a food pulse, single beats alternating left and right) makes
+the offset readable at all; if not, these eyes and this body don't offer it.
+
+**Under probing movements** (the same measure, `timing.py probe=RATE,S`, log `lab/v/probe_runs.log`; 32 seeds
+x 2): on a food pulse, B's beats replaced for 0.5 or 1 s by single beats alternating between the motors at 6 to 24
+per s. While probing, beyond the mouth's reach the side is right in 72-77% of pulses against 55-56% for the commoner
+side (R2 0.10-0.17, the slowest wiggle best), all of it from the conjunction of a pulse with the creature's own last
+beat (pulse timing alone: R2 0.00): a pulse just after a motor-1 beat finds the block on the side away from that turn
+63-65% of the time; after a motor-0 beat, 50%. Readable, a little. **And usable? No** (`lab/dance.py`, held out
+50000-50063 x 2, B told the colour; while driving, beats alternating instead of paired, with a forward pair every
+`push` beats, and on each food pulse extra beats turning back, away from the last turn, or on, towards it):
+
+| policy | efficiency |
+|---|---|
+| B | **2.60 [2.48, 2.72]** |
+| zig-zag drive (50 per s, a pair every 2nd) | 1.93 [1.82, 2.05] |
+| zig-zag, turning back on each pulse (variants of rate, push, beats) | 0.80 to 1.46 |
+| zig-zag, turning on | 1.28 [1.20, 1.37] |
+
+Every turn knocks a block out of the mouth's 1 mm path faster than the thin side information steers it back: a
+beat turns the body 18 degrees, too coarse to correct an offset of a millimetre or two. So **these eyes and this
+body don't offer sideways sensing**, not from B's movements nor from any probing tried, and B is near what they
+allow for finding food: the headroom of D21 (to 4.5) needs information across the corridor these eyes don't give.
+Reaching it is a question for the body (an eye split across the corridor, finer turning), the user's to decide.
+(Corrected by D24: finer turning was there all along, by timing: a lone beat turns 18 degrees, but its partner a
+tick later cancels most of it, leaving 7. What these eyes lack is the side, not the fine turn.)
+
+## D23: D20's period found by entraining instead of counting? (2026-11-01)
+
+The dance (BOUNDS.md, Time; the user: learning to dance, not to solve a chess problem) where the information exists:
+D20 finds each motor's revolution period from the eye pulses recurring in its sweeps, with a delay line and 192
+counters, never built in transistors. Could an oscillator entraining to the pulses find it with far fewer parts?
+Offline (`lab/afo.py`): D20's sweeps (8 s every 32 s, never stopping) from 32 lopsided seeds x 2, 1000 s each
+(log `lab/v/afo_sweeps_0-32.pkl`), the histogram's balance within 0.2 of the right one in 95% of lives
+(correlation 0.96). Each estimator's balance from the first 8 to 32 sweeps:
+
+| estimator | within 0.2 | correlation |
+|---|---|---|
+| D20's histogram of intervals, subharmonic summation | **95%** | 0.96 |
+| an adaptive-frequency oscillator per motor (each pass pulls its phase to 0 and nudges its frequency; frequency creeping up from too slow, so the first lock is the fundamental; Righetti, Buchli and Ijspeert 2006), several couplings and creep rates | 8-22% | -0.26 to 0.23 |
+| a resonator climbing (three per motor, the energy of each sweep's passes at the period and either side, faded over sweeps, moving to the best), from 0.5-4 s | 14-36% | -0.26 to 0.18 |
+| a bank of 200 resonators, the most energetic | 22-53% | 0.53-0.62 |
+
+Traced: the periodicity is there (the passes' power pooled over sweeps, phase-free, peaks at the right periods:
+seed 0, 2.11 and 1.87 s, balance 0.12, right 0.12). But a sweep lasts about 4 revolutions and each revolution brings
+about 5 passes from different blocks: an oscillator must lock its phase before its frequency correction means
+anything, and in 4 cycles, kicked by the other blocks' passes, it never does. Without phase, a resonator's energy
+over a short sweep is a comb of narrow peaks at the period and its multiples: a climber misses the narrow peaks, a
+bank picks multiples; D20 needed subharmonic summation to choose. **So entrainment needs a long dance with one
+consistent partner**: many cycles, one rhythm. Here there are several partners at once and few cycles, and the
+phase-free statistic (intervals, with chance's) is the efficient one; the dance form isn't a free lunch.
+
+**Where locking has its cycles: a bank of resonators on long steady spins** (the user's idea of oscillators locking at
+simple ratios; Large's neural resonance; `lab/bank.py`, log `lab/v/bank.log`). 60 s of one-motor
+scanning at B's rate on 32 lopsided seeds, both motors; each motor's period from the first 10 to 60 s, judged by the
+balance within 0.1 of the right one. A bank of N oscillators log-spaced 0.1-4 s, each pass kicking all of them, the
+most resonant after summing each period's harmonics (subharmonic summation; at first I summed the wrong way, at
+multiples, and integrated the rotation by plain Euler steps, which grew the fast oscillators until they swamped
+the rest: both traced and fixed):
+
+| estimator | 10 s | 20 s | 40 s | 60 s |
+|---|---|---|---|---|
+| intervals' histogram, comb (period_probe.py's) | 16% | 53% | **88%** | 81% |
+| 96 resonators (damped, 0.1 per s) | **47%** | **69%** | 69% | 66% |
+| 48 resonators | 47% | 47% | 59% | 41% |
+| 24 resonators | 44% | 34% | 25% | 19% |
+| 48 limit-cycle oscillators (entraining, beta -1) | 47% | 19% | 50% | 34% |
+
+Traced on two spins: the bank's spectrum matches the exact one, and its top peaks are the period's harmonics (0.72 s
+for 2.16, 0.95 for 1.92: several blocks a revolution spread the power over them), so the harmonics' summation is
+essential. A resonator bank with it reads a period sooner than the histogram (within 20 s, 69% against 53%) but
+plateaus lower, and needs about as many oscillators (96) as D20's counters; oscillators that entrain (limit
+cycles) do worse than plain resonators. No saving in parts here; the oscillator form's advantage, if any, is speed
+on short evidence.
+
+## D24: a split eye, prepared for the user's decision (2026-11-01)
+
+The user said go ahead with preparing D22's open body question, without changing the body: what would a brain make
+of an eye split across the corridor? `world.py` is unchanged; `lab/split.py` wraps a life. Each eye's
+pulses are drawn exactly as `creature.Life` draws them (the world's random stream untouched, so with no steer it is
+B's life to the tick: 2.60, as dance.py), and each is tagged by the half of the corridor whose rays saw it (a Poisson
+process split by each half's share, from a stream of its own). So the brain has four sensors, 2 x the colour's
+sensor + the half's wire, the halves wired at random each life as everything else is.
+
+**The brain**: B told the colour (V_H 99), and a steering reflex while it drives. Which motor turns towards which half
+is told (to measure), wrong, or learned: B scans on motor 0 alone, so a block passing through the view is seen first
+in the half motor 0 turns towards, then in the other. A saturating counter steps +1 or -1 at each change of half
+between pulses less than `gap` s apart while scanning (any colour).
+
+**Tracing the reflex** (`lab/split_diag.py`: at each steer, where the nearest food block in the corridor really
+is, and whether it is eaten within 1 s). The first versions all lost to B (1.5-2.6, told the map). Three causes, in
+turn:
+
+1. A rule that tested "the other half silent" on a leaky count never fired (a leaky count is never 0 again): 55
+   steers in 64 lives. Windowed counts instead.
+2. B drives at 50 pairs a second, so while the condition held every pair turned: several 18 degree turns in a row.
+   One turn per detection (the counts cleared after a steer).
+3. Still a loss: steers at blocks 1-2 mm off the path were eaten 64-74% of the time (unsteered, 11-14%), but at
+   blocks within 1 mm, which B eats 80-86% of the time, only 34-48%. The body turns about its centre, 2.3 mm behind
+   the mouth, so a beat of 18 degrees swings a block at range r across by about (r + 2.3 mm) x 0.32, near 2 mm:
+   past the mouth for any block already within 1.2 mm of its path. The halves split at the middle and the mouth
+   eats within 1 mm of it, so many steers were at blocks already on course.
+
+**Finer turning, by timing** (no body change): the partner beat a tick late. A beat's turning speed fades at 50 per s,
+so its partner 10 ms later cancels all but 1 - e^-0.5 of the turn: about 7 degrees (two ticks, 12). The swing
+becomes about 0.7 mm, which helps a block 1-2 mm off and barely disturbs one on course. D22's conclusion that a
+beat's 18 degrees is too coarse was wrong about the body: finer turning was there, in time.
+
+**Results** (efficiency, B told the colour; tuned on seeds 0-63, rule W 0.2 s, N 1, Q 1, cleared after each steer,
+lag 1 tick; the map counter's gap 0.1 s chosen on seeds 0-63, after I had first looked at it on held-out seeds
+50064-50127, so the final judging is on 50192-50319 x 2, never looked at before; logs `lab/v/split_*.log`):
+
+| brain | held out 50064-50191 | held out 50192-50319 |
+|---|---|---|
+| B (no steer: the same lives) | 2.58 [2.49, 2.66] | 2.49 [2.40, 2.58] |
+| split eye, map told | 3.23 [3.14, 3.32] | **3.14 [3.03, 3.25]** |
+| split eye, map learned (gap 0.3; then 0.1) | 2.91 [2.80, 3.02] | **3.02 [2.92, 3.11]** |
+| split eye, map wrong | 1.67 [1.60, 1.73] | |
+
+The map learned: right in 254 of 256 lives by the end (gap 0.1), settled right for good in a median 12 s (quartiles
+5 and 27 s), wrong 5% of the time over a life and unknown 10% (`lab/split_learn.py`). Counting only changes
+after a run of pulses in one half made it worse (block-centred pulses alternate halves at random), as did a much
+shorter gap. Food went from 6.4 to 7.2 per 10 s, poison unchanged.
+
+**On lopsided bodies** (each thruster 0.5-2), B collapses without its balance (0.26; with the steer 0.56), as D13
+found. Told its balance with its drive started in step (D20's ceiling arm): **2.32 [2.22, 2.42] to 2.71 [2.60,
+2.82]** with the map learned (held out 50192-50319 x 2; right in 253 of 256). The steer stacks on the balance;
+smaller, since a lopsided pair's late partner cancels more or less than 7 degrees.
+
+Watched (`lab/watch_split.py --seed 50192`, frames recorded): the panel shows each half's food pulses, the
+map learned against the truth (right by 24 s) and each steer; by 24 s it had eaten 21 food and 1 poison, where B in
+the same life had eaten 17 and 2.
+
+**For the user**: a split eye is worth about +0.5 (+21%) to B with a reflex of a few parts: a window count per half
+(two counters), a comparator, a one-tick delay on one motor, and a saturating counter for the map, against the
+seer's yardstick of 3.95 for a perfect memory with a split eye (D21). The map is learned by the brain from its own
+movement, as B's balance is in D20: nothing about the body is told. Whether to make the eye split is the user's
+decision; until then, world.py stays as it is.
 
 ## Lessons from this line, in full (moved from the old LESSONS.md)
 

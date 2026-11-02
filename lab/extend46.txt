@@ -1,0 +1,4 @@
+failed: []
+learn_avoid_46, 50040-50079: efficiency 1.82 [1.71, 1.93]  gain 4.87  food 8.62  poison 1.88  last third 5.08 [4.54, 5.71]  stranded 0%  firings 768  power 130 nW  job True
+learn_avoid_46, 50000-50079: efficiency 1.83 [1.70, 1.94]  gain 4.88  food 8.46  poison 1.79  last third 5.37 [4.98, 5.83]  stranded 1%  firings 767  power 130 nW  job True
+stranded: [(50010, 'red')]

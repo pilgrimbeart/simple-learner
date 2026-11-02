@@ -1,0 +1,12 @@
+subthreshold sweep, sky130 5 V nfet
+.include "/home/pilgrim/.local/opt/sky130_fd_pr/models/hv_tt.spice"
+Vd d 0 1
+Vg g 0 0
+X1 d g 0 0 sky130_fd_pr__nfet_g5v0d10v5 W=2 L=4
+.dc Vg 0 1.2 0.1
+.control
+run
+print -i(Vd)
+quit
+.endc
+.end

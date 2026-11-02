@@ -1,0 +1,4 @@
+split {'steer': 0.0}: efficiency 2.58 [2.49, 2.66]  gain 4.42  food 6.40  poison 0.99  last third 6.52 [6.03, 7.07]  stranded 0%  firings 354  power 4 nW  job True
+split {'W': 0.2, 'N': 1.0, 'Q': 1.0, 'reset': 1.0, 'lag': 1.0}: efficiency 3.23 [3.14, 3.32]  gain 5.48  food 7.46  poison 0.99  last third 7.83 [7.34, 8.41]  stranded 0%  firings 346  power 4 nW  job True
+split {'W': 0.2, 'N': 1.0, 'Q': 1.0, 'reset': 1.0, 'lag': 1.0, 'map': 'learn'}: efficiency 2.91 [2.80, 3.02]  gain 4.96  food 7.01  poison 1.02  last third 7.38 [6.83, 8.02]  stranded 1%  firings 351  power 4 nW  job True  (map learned right in 244, wrong 9 of 256)
+split {'W': 0.2, 'N': 1.0, 'Q': 1.0, 'reset': 1.0, 'lag': 1.0, 'map': 'wrong'}: efficiency 1.67 [1.60, 1.73]  gain 2.88  food 4.88  poison 1.00  last third 4.84 [4.52, 5.22]  stranded 0%  firings 362  power 4 nW  job True

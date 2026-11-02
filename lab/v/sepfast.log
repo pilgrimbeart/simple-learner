@@ -1,0 +1,14 @@
+taste x4, silicon: efficiency 1.95 [1.71, 2.19]  gain 3.16  food 5.14  poison 0.99  last third 6.33 [5.18, 7.84]  stranded 0%  firings 285  power 49 nW  job True
+taste x4, biology: efficiency 0.85 [0.39, 1.27]  gain 1.38  food 4.59  poison 1.60  last third 3.58 [2.71, 4.95]  stranded 0%  firings 286  power 49 nW  job True
+taste x4, biology x2: efficiency -1.30 [-1.52, -1.08]  gain -2.27  food 2.90  poison 2.59  last third 1.11 [0.99, 1.26]  stranded 0%  firings 349  power 50 nW  job False
+eyes x4, silicon: efficiency 1.99 [1.79, 2.17]  gain 3.18  food 5.08  poison 0.95  last third 6.71 [5.79, 7.82]  stranded 0%  firings 268  power 63 nW  job True
+eyes x4, biology: efficiency 0.65 [0.24, 1.09]  gain 1.05  food 4.61  poison 1.78  last third 2.88 [2.28, 3.75]  stranded 0%  firings 271  power 63 nW  job False
+eyes x4, biology x2: efficiency -1.43 [-1.59, -1.26]  gain -2.42  food 3.07  poison 2.75  last third 1.08 [0.97, 1.20]  stranded 0%  firings 318  power 64 nW  job False
+both x4, silicon: efficiency 1.87 [1.59, 2.11]  gain 3.00  food 5.03  poison 1.02  last third 5.85 [4.60, 7.31]  stranded 0%  firings 268  power 65 nW  job True
+both x4, biology: efficiency 1.08 [0.62, 1.51]  gain 1.73  food 4.65  poison 1.46  last third 3.80 [2.98, 4.94]  stranded 0%  firings 269  power 65 nW  job True
+both x4, biology x2: efficiency -1.18 [-1.38, -0.94]  gain -2.00  food 3.16  poison 2.58  last third 1.33 [1.16, 1.56]  stranded 0%  firings 319  power 65 nW  job False
+/home/pilgrim/git/nca-learn/.venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:4609: RuntimeWarning: invalid value encountered in scalar subtract
+  diff_b_a = b - a
+both x8, silicon: efficiency 0.00 [0.00, 0.00]  gain 0.00  food 0.00  poison 0.00  last third inf [nan, nan]  stranded 100%  firings 0  power 0 nW  job False
+both x8, biology: efficiency 0.00 [0.00, 0.00]  gain 0.00  food 0.00  poison 0.00  last third inf [nan, nan]  stranded 100%  firings 0  power 0 nW  job False
+both x8, biology x2: efficiency 0.00 [0.00, 0.00]  gain 0.00  food 0.00  poison 0.00  last third inf [nan, nan]  stranded 100%  firings 0  power 0 nW  job False

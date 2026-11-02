@@ -1,0 +1,11 @@
+RC test
+V1 in 0 PULSE(0 1 1m 1n 1n 10m 20m)
+R1 in out 1k
+C1 out 0 1u
+.tran 10u 5m
+.control
+run
+meas tran v3 find v(out) at=2m
+quit
+.endc
+.end

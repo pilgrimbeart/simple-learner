@@ -1,0 +1,21 @@
+t2_plain_2000_0-16: efficiency 0.13 [-0.07, 0.38]  gain 0.26  food 1.18  poison 0.46  last third 2.83 [1.72, 4.11]  stranded 44%  firings 498  power 4 nW  job False extra beats per 10 s 0.0
+  curve food:poison per seg 2.4 2.8
+  food per seg per life 134 102
+t2_trick_2000_learn0_n1_p00.25_planted1_pmax1_0-16: efficiency 0.12 [-0.30, 0.57]  gain 0.20  food 2.31  poison 1.05  last third 2.12 [1.54, 2.88]  stranded 0%  firings 337  power 4 nW  job False extra beats per 10 s 24.2  grown 0.0/life, on the weak motor 0%
+  curve food:poison per seg 2.2 2.2
+  food per seg per life 230 232
+t2_trick_2000_learn0_n1_p00.25_planted-1_pmax1_0-16: efficiency -0.07 [-0.22, 0.08]  gain -0.12  food 1.23  poison 0.67  last third 1.77 [1.39, 2.19]  stranded 0%  firings 343  power 4 nW  job False extra beats per 10 s 24.9  grown 0.0/life, on the weak motor 0%
+  curve food:poison per seg 1.8 1.8
+  food per seg per life 123 122
+t2_trick_2000_learn0_n1_p00.5_planted1_pmax1_0-16: efficiency 0.22 [-0.22, 0.64]  gain 0.38  food 2.82  poison 1.22  last third 2.49 [1.83, 3.29]  stranded 0%  firings 367  power 4 nW  job False extra beats per 10 s 49.6  grown 0.0/life, on the weak motor 0%
+  curve food:poison per seg 2.3 2.4
+  food per seg per life 283 281
+t2_trick_2000_learn0_n1_p00.5_planted-1_pmax1_0-16: efficiency -0.05 [-0.18, 0.09]  gain -0.08  food 1.23  poison 0.65  last third 1.95 [1.64, 2.32]  stranded 0%  firings 385  power 4 nW  job False extra beats per 10 s 53.6  grown 0.0/life, on the weak motor 0%
+  curve food:poison per seg 1.8 1.9
+  food per seg per life 121 124
+t2_trick_2000_learn0_n1_p00.9_planted1_pmax1_0-16: efficiency 0.66 [0.24, 1.09]  gain 1.22  food 3.72  poison 1.25  last third 3.15 [2.48, 3.97]  stranded 0%  firings 418  power 4 nW  job True extra beats per 10 s 92.9  grown 0.0/life, on the weak motor 0%
+  curve food:poison per seg 2.9 3.1
+  food per seg per life 372 372
+t2_trick_2000_learn0_n1_p00.9_planted-1_pmax1_0-16: efficiency 0.09 [-0.01, 0.19]  gain 0.17  food 1.17  poison 0.50  last third 2.27 [1.80, 2.81]  stranded 0%  firings 503  power 4 nW  job False extra beats per 10 s 122.6  grown 0.0/life, on the weak motor 0%
+  curve food:poison per seg 2.4 2.3
+  food per seg per life 121 113

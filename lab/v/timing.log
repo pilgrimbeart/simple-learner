@@ -1,0 +1,9 @@
+44861 food pulses with the block in view, 64 seeds x 2
+  (beyond 1 mm, the commoner side alone: 51%)
+all: 44861 pulses; offset sd 0.82 mm, residual 0.80 mm, R2 0.05; |offset| R2 0.04; side right 59% (beyond the mouth's 1 mm: 65% of 11223)
+  (beyond 1 mm, the commoner side alone: 68%)
+scanning: 12650 pulses; offset sd 0.88 mm, residual 0.87 mm, R2 0.02; |offset| R2 0.01; side right 63% (beyond the mouth's 1 mm: 69% of 4031)
+  (beyond 1 mm, the commoner side alone: 58%)
+driving: 32211 pulses; offset sd 0.78 mm, residual 0.77 mm, R2 0.03; |offset| R2 0.04; side right 58% (beyond the mouth's 1 mm: 61% of 7192)
+  scanning, pulse timing only: R2 0.02
+  scanning, own beats only: R2 0.02

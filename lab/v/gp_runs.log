@@ -1,0 +1,12 @@
+== scripted ceiling, beats added (arenas 0-15)
+{'mode': 'both', 'dur': 0.5, 'add': 1.0}: net, pursue - grow +0.128 [+0.095, +0.166]
+{'mode': 'both', 'dur': 0.5, 'add': 1.0, 'prand': 0.8}: net, pursue - grow +0.143 [+0.121, +0.167]
+== pursuit grower (arenas 0-15)
+pgrow   : 265 robots, ate 0.550, lost 0.550 a 10 s, age 89 s
+grow    : 254 robots, ate 0.560, lost 0.585 a 10 s, age 93 s
+  grew in 265 of 265; ending with both motors above half rate in 44, mean rates 0.34 / 0.38 of full
+{'w0': -2.0}: net, pursuit grower - escape grower +0.026 [-0.008, +0.062]
+pgrow   : 279 robots, ate 0.513, lost 0.502 a 10 s, age 84 s
+grow    : 247 robots, ate 0.546, lost 0.571 a 10 s, age 95 s
+  grew in 278 of 279; ending with both motors above half rate in 100, mean rates 0.53 / 0.55 of full
+{'w0': 0.0}: net, pursuit grower - escape grower +0.036 [+0.005, +0.067]

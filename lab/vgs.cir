@@ -1,0 +1,15 @@
+vgs at nA
+.include "/home/pilgrim/.local/opt/sky130_fd_pr/models/hv_tt.spice"
+VDD vdd 0 3
+VSS vss 0 -3
+In vdd dn 10n
+Xn dn dn vss vss sky130_fd_pr__nfet_g5v0d10v5 W=4 L=4
+Ip dp vss 10n
+Xp dp dp vdd vdd sky130_fd_pr__pfet_g5v0d10v5 W=4 L=4
+.op
+.control
+run
+print v(dn) v(dp)
+quit
+.endc
+.end

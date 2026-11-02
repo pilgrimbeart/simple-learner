@@ -1,0 +1,15 @@
+== pursuit control: bursts at random, the bite-end rate
+pursue  : ate 0.430, lost 0.432 a 10 s, age 77 s, bites ended 0.00 a s
+grow    : ate 0.489, lost 0.504 a 10 s, age 93 s, bites ended 0.00 a s
+{'mode': 'both', 'dur': 0.5, 'prand': 0.8}: net, pursue - grow +0.012 [-0.008, +0.031]
+== alert still control: at random, the bite-end rate
+alert   : ate 0.600, lost 0.595 a 10 s, age 102 s, bites ended 0.00 a s, responding 55% of the time
+grow    : ate 0.595, lost 0.647 a 10 s, age 89 s, bites ended 0.00 a s, responding 0% of the time
+{'mode': 'still', 'T': 10.0, 'prand': 1.0}: net, alert - grow +0.056 [+0.011, +0.099]
+== pursuit, held out, real vs random
+pursue  : ate 0.552, lost 0.518 a 10 s, age 83 s, bites ended 0.80 a s
+grow    : ate 0.530, lost 0.579 a 10 s, age 89 s, bites ended 0.00 a s
+{'mode': 'both', 'dur': 0.5}: net, pursue - grow +0.083 [+0.066, +0.101]
+pursue  : ate 0.427, lost 0.418 a 10 s, age 77 s, bites ended 0.00 a s
+grow    : ate 0.495, lost 0.524 a 10 s, age 93 s, bites ended 0.00 a s
+{'mode': 'both', 'dur': 0.5, 'prand': 0.8}: net, pursue - grow +0.038 [+0.020, +0.053]

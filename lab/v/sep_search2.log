@@ -1,0 +1,35 @@
+gen   0  mean -12.768  best -12.541  sigma 0.150
+gen   1  mean -12.796  best -11.964  sigma 0.141
+gen   2  mean -11.607  best -11.505  sigma 0.142
+gen   3  mean -11.684  best -11.513  sigma 0.149
+gen   4  mean -11.808  best -11.440  sigma 0.159
+gen   5  mean -12.031  best -11.611  sigma 0.162
+gen   6  mean -11.657  best -11.363  sigma 0.162
+gen   7  mean -11.570  best -11.387  sigma 0.155
+gen   8  mean -11.837  best -11.683  sigma 0.151
+gen   9  mean -11.490  best -11.615  sigma 0.143
+gen  10  mean -11.716  best -11.565  sigma 0.144
+gen  11  mean -12.219  best -11.447  sigma 0.142
+gen  12  mean -11.708  best -11.565  sigma 0.144
+gen  13  mean -11.614  best -11.820  sigma 0.139
+gen  14  mean -11.548  best -11.772  sigma 0.137
+gen  15  mean -11.498  best -11.640  sigma 0.133
+gen  16  mean -12.327  best -11.436  sigma 0.129
+gen  17  mean -11.910  best -11.406  sigma 0.124
+gen  18  mean -11.885  best -11.618  sigma 0.119
+gen  19  mean -11.677  best -11.444  sigma 0.117
+gen  20  mean -11.668  best -11.506  sigma 0.117
+gen  21  mean -12.196  best -11.489  sigma 0.121
+gen  22  mean -11.856  best -11.492  sigma 0.122
+gen  23  mean -12.026  best -11.518  sigma 0.124
+gen  24  mean -11.961  best -11.650  sigma 0.120
+gen  25  mean -11.868  best -11.589  sigma 0.120
+gen  26  mean -11.576  best -11.352  sigma 0.123
+gen  27  mean -12.024  best -11.451  sigma 0.122
+gen  28  mean -11.892  best -11.203  sigma 0.121
+gen  29  mean -11.948  best -11.600  sigma 0.118
+{'r_hd': 32142609547.773884, 'g_f': 1.4402090136317303e-10, 'g_p': 5.498493452172791e-10, 'v_bored': np.float64(-0.720648412939952), 'tau_xs': 0.8, 'tau_xd': 0.15, 'g_xp': 1.066841708430357e-10, 'g_xs': 2.4294288695838776e-10, 'g_xd': 3.017337638771521e-10, 'g_mb': 1.883940002893706e-10, 'g_dq': 9.999999999999985e-12, 'g_dqf': 1.3715504325756352e-11, 'v_h': 0.5472308397420336, 'v_l': np.float64(-0.5540699789395709), 'r_eye': 73999999999.99991, 'g_bt': 2.911304376132683e-10, 'g_dor': 5.471234423195093e-11, 'r_t': 21067267481.145123}
+{'T': 638, 'R': 90, 'C': 27, 'D': 6, 'sources': 80, 'total': 841, 'nodes': 13, 'elements': 20}
+held out, silicon: efficiency 0.77 [0.59, 0.95]  gain 0.98  food 2.02  poison 0.52  last third 9.02 [6.48, 13.61]  stranded 17%  firings 113  power 39 nW  job False
+held out, biology: efficiency -0.16 [-0.51, 0.17]  gain -0.21  food 1.95  poison 1.08  last third 1.85 [1.40, 2.49]  stranded 2%  firings 124  power 40 nW  job False
+held out, biology x2: efficiency -0.73 [-0.86, -0.62]  gain -0.98  food 1.01  poison 1.00  last third 1.01 [0.85, 1.17]  stranded 5%  firings 149  power 40 nW  job False

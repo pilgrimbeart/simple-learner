@@ -1,0 +1,5 @@
+46 parts, failed lives: []
+learn_avoid_46: efficiency 1.84 [1.57, 2.05]  gain 4.88  food 8.31  poison 1.71  last third 5.69 [5.10, 6.36]  stranded 1%  firings 766  power 130 nW  job True
+45 parts, failed lives: []
+learn_avoid_45: efficiency 1.22 [0.72, 1.66]  gain 3.25  food 7.88  poison 2.32  last third 3.40 [2.62, 4.49]  stranded 1%  firings 763  power 132 nW  job True
+Tue Oct 27 23:17:44 GMT 2026

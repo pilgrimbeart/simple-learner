@@ -1,0 +1,48 @@
+== probe 6,0.5
+25477 food pulses with the block in view, 32 seeds x 2
+  (beyond 1 mm, the commoner side alone: 55%)
+all: 25477 pulses; offset sd 0.83 mm, residual 0.78 mm, R2 0.12; |offset| R2 0.06; side right 64% (beyond the mouth's 1 mm: 73% of 6670)
+  (beyond 1 mm, the commoner side alone: 73%)
+scanning: 2871 pulses; offset sd 0.88 mm, residual 0.97 mm, R2 -0.21; |offset| R2 -0.21; side right 57% (beyond the mouth's 1 mm: 63% of 971)
+  (beyond 1 mm, the commoner side alone: 56%)
+driving: 7410 pulses; offset sd 0.81 mm, residual 0.83 mm, R2 -0.05; |offset| R2 -0.03; side right 55% (beyond the mouth's 1 mm: 61% of 1852)
+  (beyond 1 mm, the commoner side alone: 55%)
+probing: 15196 pulses; offset sd 0.83 mm, residual 0.75 mm, R2 0.17; |offset| R2 0.07; side right 66% (beyond the mouth's 1 mm: 77% of 3847)
+  probing, pulse timing only: R2 0.00
+  probing, own beats only: R2 0.16
+== probe 12,0.5
+25579 food pulses with the block in view, 32 seeds x 2
+  (beyond 1 mm, the commoner side alone: 53%)
+all: 25579 pulses; offset sd 0.85 mm, residual 0.81 mm, R2 0.09; |offset| R2 0.04; side right 62% (beyond the mouth's 1 mm: 70% of 6927)
+  (beyond 1 mm, the commoner side alone: 64%)
+scanning: 2911 pulses; offset sd 0.91 mm, residual 0.96 mm, R2 -0.11; |offset| R2 -0.20; side right 57% (beyond the mouth's 1 mm: 64% of 988)
+  (beyond 1 mm, the commoner side alone: 55%)
+driving: 8796 pulses; offset sd 0.80 mm, residual 0.83 mm, R2 -0.08; |offset| R2 -0.07; side right 54% (beyond the mouth's 1 mm: 56% of 2116)
+  (beyond 1 mm, the commoner side alone: 55%)
+probing: 13872 pulses; offset sd 0.86 mm, residual 0.80 mm, R2 0.13; |offset| R2 0.03; side right 66% (beyond the mouth's 1 mm: 75% of 3823)
+  probing, pulse timing only: R2 0.01
+  probing, own beats only: R2 0.10
+== probe 24,0.5
+24693 food pulses with the block in view, 32 seeds x 2
+  (beyond 1 mm, the commoner side alone: 55%)
+all: 24693 pulses; offset sd 0.88 mm, residual 0.84 mm, R2 0.08; |offset| R2 0.04; side right 62% (beyond the mouth's 1 mm: 69% of 7278)
+  (beyond 1 mm, the commoner side alone: 69%)
+scanning: 3026 pulses; offset sd 0.92 mm, residual 0.98 mm, R2 -0.14; |offset| R2 -0.21; side right 59% (beyond the mouth's 1 mm: 65% of 1076)
+  (beyond 1 mm, the commoner side alone: 54%)
+driving: 7913 pulses; offset sd 0.81 mm, residual 0.84 mm, R2 -0.08; |offset| R2 -0.08; side right 53% (beyond the mouth's 1 mm: 56% of 1977)
+  (beyond 1 mm, the commoner side alone: 56%)
+probing: 13754 pulses; offset sd 0.89 mm, residual 0.85 mm, R2 0.10; |offset| R2 0.03; side right 65% (beyond the mouth's 1 mm: 72% of 4225)
+  probing, pulse timing only: R2 0.00
+  probing, own beats only: R2 0.06
+== probe 12,1.0
+29509 food pulses with the block in view, 32 seeds x 2
+  (beyond 1 mm, the commoner side alone: 52%)
+all: 29509 pulses; offset sd 0.87 mm, residual 0.82 mm, R2 0.11; |offset| R2 0.04; side right 64% (beyond the mouth's 1 mm: 73% of 8620)
+  (beyond 1 mm, the commoner side alone: 70%)
+scanning: 2574 pulses; offset sd 0.91 mm, residual 0.96 mm, R2 -0.12; |offset| R2 -0.25; side right 58% (beyond the mouth's 1 mm: 65% of 911)
+  (beyond 1 mm, the commoner side alone: 58%)
+driving: 7054 pulses; offset sd 0.81 mm, residual 0.85 mm, R2 -0.11; |offset| R2 -0.07; side right 52% (beyond the mouth's 1 mm: 54% of 1752)
+  (beyond 1 mm, the commoner side alone: 53%)
+probing: 19881 pulses; offset sd 0.88 mm, residual 0.82 mm, R2 0.14; |offset| R2 0.04; side right 67% (beyond the mouth's 1 mm: 77% of 5957)
+  probing, pulse timing only: R2 0.00
+  probing, own beats only: R2 0.10

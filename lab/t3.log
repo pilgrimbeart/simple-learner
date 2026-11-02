@@ -1,0 +1,31 @@
+/home/pilgrim/git/nca-learn/.venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:4609: RuntimeWarning: invalid value encountered in scalar subtract
+  diff_b_a = b - a
+fastlife: the same lives as creature.Life (3 lives, 30 s): ok
+a legal circuit is built: ok
+an element too strong for its node's capacitor (40 typical currents into a typical capacitor: 4800 V/s, the limit 1200 V/s) is refused: ok
+a capacitor too small for its leak (RC 0.25 ms) and its element is refused: ok
+an unfiltered self-feedback faster than 10 steps (3 typical currents x 1 per typical voltage into a typical capacitor: 0.83 ms) is refused: ok
+the same self-feedback, filtered, is built: ok
+a sensor whose pulse would move it too fast is refused: ok
+a circuit drawn at another voltage (1 V, as before 2026-10-26) is refused: ok
+converting a circuit to another voltage and back gives it again: ok
+a circuit not in SI units (as before 2026-10-22) is refused: ok
+a leak a chip can't set (100 GOhm, above units.R_MAX) is refused: ok
+a capacitor a chip can't hold (150 pF, above units.C_MAX) is refused: ok
+a current a chip can't bias (0.5 pA, below units.I_MIN) is refused: ok
+an element naming no node is refused: ok
+a taste node shared with a sensor is refused: ok
+every node within the rails (+-0.90 V): highest 0.81, lowest -0.60: ok
+a circuit can't be built without noise (it is one of mixed_feedback.SUBSTRATES'): ok
+parts counted as built for SPICE (47 transistors, 9 resistors, 6 capacitors, 8 diodes, 11 bias sources: the netlist has 47, 9, 6, 6, 11), and the clamps on m 2 diodes more: ok
+power is what the supply delivers (chip.py): one step 10.096 nW, by hand 10.096 nW; static 7.51 nW, of it the element's tail and reference 4.02 nW: ok
+pruning: a node nothing reads goes, and the rest are renumbered: ok
+pruning: each option is legal and has fewer parts: ok
+the score counts starving life by life and third by third (even +2.00, one stranding +1.67): ok
+moving costs (a firing 0.002 of a meal: +1.40 against +0.80 firing twice as often), and efficiency is meals gained per meal spent (1.25, 0.91): ok
+efficiency counts a poison as 2 meals lost (1.25 without, 0.62 with one every four meals): ok
+confidence: paired lives tell a 15% difference in efficiency (95% interval +0.197 to +0.233), and no life of 128 stranded is still up to 2.9%: ok
+mixed feedback's rules refuse a clamp or a node with no leak (but a memory node), and allow memory nodes and gates (learning and storage, on which Sepulchre is silent): ok
+judged with several substrates' noise, the worst one's score counts (+2.00 and -2.00: -2.00): ok
+judged with the noise of silicon, biology, biology x2 by default, every measure the worst substrate's (efficiency 0.99, of 1.41 and 0.99), its interval resampled jointly (0.87 to 1.11): ok
+lives cached (the league's) keep their substrates: efficiency 0.99 after, as before: ok

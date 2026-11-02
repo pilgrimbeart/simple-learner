@@ -4,11 +4,16 @@ The rules, for agents and people alike: how to work here, and the constraints ev
 picture and what has been learned are in the README; the history behind each rule is in the notebooks. Each fact in
 this repository lives in one place (below); other files link to it.
 
+This project was split on 2026-11-02 from [nca-learn](https://github.com/pilgrimbeart/nca-learn) (`../nca-learn`),
+which keeps the sheet brain: a sheet of identical cells that grows its own nervous system by local rules. The lessons
+common to both are copied here (`NOTEBOOK.md`, Lessons); the sheet's own history (what averages can honestly carry,
+the cheats a grid invites) is in nca-learn's `NOTEBOOK.md`, worth reading before a circuit grows units by local rules.
+
 ## Working
 
 - **Push only when the user says "Push".** Work directly on `main`. On "Push": commit in the foreground, then in one
-  background task run the four checks (`python test_rules.py`, `python test_compiled.py`, `python -m
-  minimal.test_minimal`, `python -m discrete.test_model`) in a fresh venv built from `requirements.txt` alone, on a
+  background task run the three checks (`python test_compiled.py`, `python -m minimal.test_minimal`,
+  `python -m discrete.test_model`) in a fresh venv built from `requirements.txt` alone, on a
   clean checkout of that commit (a temporary `git worktree`), and push only if they pass. Say nothing if all pass;
   report a failure with its log. (A fresh venv because another may hide a missing dependency. No GitHub CI.)
 - **Rip up and rewrite**: prefer a cleaner, smaller design to incremental edits that keep legacy structure.
@@ -21,14 +26,18 @@ this repository lives in one place (below); other files link to it.
   |---|---|
   | the rules | this file |
   | the quest, what has been learned (each finding explained for a newcomer), an overview of each line of work, how to run things, the terms | `README.md` (define a new term in its Terms when it first appears in a user-facing document) |
-  | each line of work's current state ("Where it stands", rewritten as it changes), then its dated history, methods, results and dead ends | the sheet brain, the body and the circuit simulator: `NOTEBOOK.md`; recruitment: `experiments/NOTEBOOK.md`; the minimal search: `minimal/NOTEBOOK.md`; discrete circuits: `discrete/NOTEBOOK.md` |
+  | each line of work's current state ("Where it stands", rewritten as it changes), then its dated history, methods, results and dead ends | the body and the circuit simulator: `NOTEBOOK.md`; recruitment: `experiments/NOTEBOOK.md`; the minimal search: `minimal/NOTEBOOK.md`; discrete circuits: `discrete/NOTEBOOK.md` |
   | the axioms: physical constants, scales, units | `units.py` |
   | the noise model | `mixed_feedback.py`'s docstring |
   | how each part is built in transistors, and so its parts and power | `chip.py` (written out for SPICE by `minimal/spice.py`) |
   | rankings | `experiments/LEADERBOARD.md`, `minimal/LEAGUE.md` (generated) |
-  | background reading | `MIXED_FEEDBACK.md`, `RECRUITMENT.md` |
+  | the lab: one-off experiment scripts and their logs, cited by the notebooks (paths absolute to this machine) | `lab/`, `lab/v/` |
+  | background reading | `MIXED_FEEDBACK.md`, `RECRUITMENT.md`, `BOUNDS.md`, `PARTS.md` |
   | open questions, most valuable first | `QUESTIONS.md` |
 
+- **One-off scripts go in `lab/`**, never only in a session's /tmp scratchpad: a notebook may cite only what the
+  repository keeps. Logs and small results in `lab/v/`; large ones (pickles, frames) stay out of git, noted where
+  they are.
 - **Open questions** (the user's idea, 2026-10-28): a question that occurs mid-quest is parked in `QUESTIONS.md`
   rather than chased; one answered leaves it, its answer in its line's notebook. With nothing else to do (the user
   away), take the most valuable one.
@@ -40,7 +49,7 @@ this repository lives in one place (below); other files link to it.
 - **Mind the noise wall** (the user, 2026-11-01): for a learning experiment, estimate its signal to noise per second
   against the life's length, and its explorers per credit window, before reading a result; a negative result where
   learning was impossible (too little signal, or credit colliding as ALOHA's packets do) says nothing about the
-  mechanism (`QUESTIONS.md`, step 3).
+  mechanism (`BOUNDS.md`, The walls).
 - **The user is colour-blind**: use colour, never as the only cue (pair it with shape, line style or a label), and no
   hues hard to tell apart, such as red and green (Okabe-Ito).
 - **Long runs** share one laptop: one job at a time. Kill processes only by explicit PID, never by a pattern. To pause
@@ -75,23 +84,12 @@ The point is a brain that learns in situ, so the brain must do the work.
 - **Local only, no god.** A unit knows only its own state and its neighbours' signals. It may draw from its own noise,
   but a choice among units comes from their local competition, never from outside. No unit knows it is optimally
   tuned: "finished" means its own adjustment has stalled while its own discomfort persists.
+- **No magic knowledge, no hidden size** (learned on the sheet brain, nca-learn): a grown unit finds its target by a
+  signal the target sends out, never by where it should be; and no fixed wait, cap or threshold is tuned to one size
+  of brain: stages hand over when their work is done.
 - **Comparisons are fair.** Brains are compared on the same lives (the same worlds and wirings); a refactor of one
   brain leaves the others' lives unchanged. All-food lives (both colours food) are the control for anything that
   should happen only when there is something to learn.
-
-## The sheet brain (README: The sheet brain)
-
-- Identical cells running one local rule (`rules/`). A cell sees only its own numbers, its neighbours' **mean** of each
-  shared number, and its neighbour count; `sheet.py` enforces this and `test_rules.py` checks it.
-- **Noise must matter.** Neighbours see each shared number clipped to -1..1 with 1% noise (the user's setting); no
-  encoding may squeeze information below the noise or stretch it over orders of magnitude (`NOTEBOOK.md`, The
-  engine: the exp(-beta d) cheat). What a cell keeps to itself is not limited.
-- **No magic knowledge**: a path finds its target by a signal the target sends out, never by where it should be.
-- Few shared numbers (28 now), counted in the README when they change.
-- Random asynchronous updates, noise in every number, whole numbers re-rounded at each update.
-- No hidden size: no fixed wait, cap or threshold tuned to one sheet; stages hand over when their work is done.
-- The body gives inputs to, and takes outputs from, cells by the names they took, and never decides from a
-  sheet-wide view (watching may).
 
 ## The circuit brains (README: The circuit brains)
 
