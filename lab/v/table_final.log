@@ -1,0 +1,108 @@
+== 1 colour: base -3.38
+   target 2.75; gap +6.12 [+5.99, +6.25]
+   manual Judge: tally written while driving: 2.72; against base +6.10 [+5.96, +6.23]; against target -0.02 [-0.13, +0.08]
+      in plain, always on: 2.72; against base +6.10 [+5.96, +6.23]
+   manual Store: B: 2.51; against base +5.89 [+5.77, +6.01]; against target -0.23 [-0.34, -0.13]; against the first manual -0.21 [-0.32, -0.09]
+      in plain, always on: 2.51; against base +5.89 [+5.77, +6.01]
+   manual Use: path: 2.36; against base +5.73 [+5.57, +5.90]; against target -0.39 [-0.57, -0.23]; against the first manual -0.37 [-0.52, -0.20]
+      in plain, always on: 2.36; against base +5.73 [+5.57, +5.90]
+   auto circuit 100 s: 2.72; against base +6.10 [+5.96, +6.23]
+      against the best manual +0.00 [+0.00, +0.00]
+      plain: 2.72; against base +6.10 [+5.96, +6.23]; flips 0.7
+      allfood: 4.55; against base -2.15 [-2.33, -1.97]; flips 0.0
+== 2 thrusters: base 0.31
+   target 2.55; gap +2.24 [+2.01, +2.46]
+   manual Sense: sweeps 192: 2.06; against base +1.76 [+1.49, +2.01]; against target -0.48 [-0.58, -0.39]
+      in plain, always on: 2.72; against base -0.06 [-0.10, -0.02]
+   auto sweepsg2 1000 s: 1.95; against base +1.65 [+1.41, +1.88]
+      against the best manual -0.11 [-0.22, -0.00]
+      plain: 2.78; against base -0.00 [-0.01, +0.01]; flips 1.3
+      allfood: 4.44; against base +0.00 [+0.00, +0.00]; flips 0.0
+== 3 swap10: base -0.01
+   target 2.82; gap +2.83 [+2.70, +2.97]
+   manual Judge: no trust: 1.15; against base +1.17 [+1.03, +1.30]; against target -1.67 [-1.82, -1.52]
+      in plain, always on: 2.42; against base -0.30 [-0.41, -0.21]
+   auto volatile2 100 s: 0.90; against base +0.91 [+0.77, +1.05]
+      against the best manual -0.26 [-0.40, -0.11]
+      plain: 2.71; against base -0.01 [-0.02, +0.00]; flips 0.7
+      allfood: 4.55; against base +0.00 [+0.00, +0.00]; flips 0.0
+== 4a alternate: base -3.33
+   target 2.65; gap +5.98 [+5.79, +6.17]
+   manual Store: sequence 2: 2.46; against base +5.79 [+5.57, +6.01]; against target -0.19 [-0.38, +0.01]
+      in plain, always on: 2.60; against base -0.12 [-0.21, -0.02]
+   auto grow 100 s: 1.77; against base +5.11 [+4.82, +5.38]
+      against the best manual -0.68 [-0.92, -0.48]
+      plain: 2.72; against base +0.00 [+0.00, +0.00]; flips 0.6
+      allfood: 4.55; against base +0.00 [+0.00, +0.00]; flips 0.0
+   auto grow 400 s: 2.23; against base +5.65 [+5.51, +5.78]
+      plain: 2.75; against base +0.00 [-0.01, +0.01]; flips 1.0
+      allfood: 4.47; against base +0.00 [+0.00, +0.00]; flips 0.0
+== 4b pattern: base -2.71
+   target 2.63; gap +5.34 [+5.18, +5.49]
+   manual Store: sequence 3: 2.33; against base +5.04 [+4.88, +5.21]; against target -0.30 [-0.46, -0.13]
+      in plain, always on: 2.53; against base -0.20 [-0.30, -0.08]
+   auto grow 100 s: 0.58; against base +3.29 [+3.10, +3.46]
+      against the best manual -1.75 [-1.94, -1.59]
+      plain: 2.72; against base +0.00 [+0.00, +0.00]; flips 0.6
+      allfood: 4.55; against base +0.00 [+0.00, +0.00]; flips 0.0
+   auto grow 400 s: 1.83; against base +4.55 [+4.45, +4.66]
+      plain: 2.75; against base +0.00 [-0.01, +0.01]; flips 1.0
+      allfood: 4.47; against base +0.00 [+0.00, +0.00]; flips 0.0
+== 5 digest: base -4.73
+   target 1.83; gap +6.57 [+6.33, +6.80]
+   manual Use: still 1 s: 1.74; against base +6.48 [+6.24, +6.72]; against target -0.09 [-0.17, +0.00]
+      in plain, always on: 1.90; against base -0.82 [-0.95, -0.69]
+   auto learnpause3 100 s: 0.63; against base +5.37 [+5.11, +5.63]
+      against the best manual -1.11 [-1.25, -0.98]
+      plain: 2.71; against base -0.01 [-0.02, +0.00]; flips 0.6
+      allfood: 4.55; against base +0.00 [+0.00, +0.00]; flips 0.0
+   auto learnpause3 400 s: 1.27; against base +5.94 [+5.79, +6.08]
+      plain: 2.75; against base +0.00 [-0.01, +0.01]; flips 0.9
+      allfood: 4.47; against base +0.00 [+0.00, +0.00]; flips 0.0
+== 6 noisy: base 1.25
+   target 2.75; gap +1.50 [+1.38, +1.62]
+   manual Judge: coincidence 20 ms: 1.87; against base +0.62 [+0.51, +0.73]; against target -0.88 [-1.02, -0.73]
+      in plain, always on: 2.72; against base +0.00 [+0.00, +0.00]
+   manual Store: told eye leaky count: 1.77; against base +0.52 [+0.39, +0.65]; against target -0.98 [-1.12, -0.83]; against the first manual -0.10 [-0.24, +0.05]
+      in plain, always on: 2.72; against base +0.00 [+0.00, +0.00]
+   auto adapteye 100 s: 1.74; against base +0.49 [+0.40, +0.58]
+      against the best manual -0.13 [-0.26, -0.01]
+      plain: 2.70; against base -0.02 [-0.05, -0.01]; flips 0.7
+      allfood: 4.52; against base -0.03 [-0.08, +0.00]; flips 0.0
+== 7 unreliable: base 0.36
+   target 0.69; gap +0.33 [+0.16, +0.50]
+   manual Store/Judge: trust 4: 0.63; against base +0.27 [+0.13, +0.40]; against target -0.06 [-0.19, +0.08]
+      in plain, always on: 2.72; against base -0.00 [-0.02, +0.01]
+   manual trust 3: 0.58; against base +0.22 [+0.06, +0.37]; against target -0.11 [-0.26, +0.04]; against the first manual -0.05 [-0.10, -0.00]
+      in plain, always on: 2.72; against base -0.00 [-0.02, +0.01]
+   auto bt 100 s: 0.56; against base +0.20 [+0.08, +0.32]
+      against the best manual -0.07 [-0.18, +0.05]
+      plain: 2.72; against base +0.00 [+0.00, +0.00]; flips 0.6
+      allfood: 4.55; against base +0.00 [+0.00, +0.00]; flips 0.0
+   auto bt 400 s: 0.72; against base +0.33 [+0.23, +0.42]
+      plain: 2.76; against base +0.01 [+0.00, +0.03]; flips 0.8
+      allfood: 4.47; against base +0.00 [+0.00, +0.00]; flips 0.0
+== 8 ageing: base 0.36
+   target 2.61; gap +2.25 [+2.18, +2.32]
+   manual Judge: jitter: 1.76; against base +1.40 [+1.33, +1.47]; against target -0.85 [-0.94, -0.78]
+      in plain, always on: 1.80; against base -0.98 [-1.02, -0.93]
+   manual Sense: sweeps: 1.00; against base +0.64 [+0.59, +0.70]; against target -1.61 [-1.71, -1.51]; against the first manual -0.76 [-0.84, -0.67]
+      in plain, always on: 2.69; against base -0.08 [-0.13, -0.04]
+   auto jitterg2 1000 s: 1.42; against base +1.06 [+0.99, +1.13]
+      against the best manual -0.34 [-0.44, -0.24]
+      plain: 2.78; against base -0.00 [-0.00, +0.00]; flips 1.3
+      allfood: 4.44; against base +0.00 [+0.00, +0.00]; flips 0.0
+== 9 weak: base 1.79
+   target 1.88; gap +0.10 [-0.01, +0.20]
+   manual Judge: trust 3: 1.85; against base +0.07 [+0.03, +0.11]; against target -0.03 [-0.13, +0.07]
+      in plain, always on: 2.72; against base -0.00 [-0.02, +0.01]
+== 10 patchy: base 0.41
+   target 0.84; gap +0.43 [+0.28, +0.58]
+   manual Judge: trust 3: 0.65; against base +0.24 [+0.12, +0.36]; against target -0.19 [-0.32, -0.05]
+      in plain, always on: 2.72; against base -0.00 [-0.02, +0.01]
+   manual Immunise: searched: 0.60; against base +0.19 [+0.00, +0.37]; against target -0.25 [-0.43, -0.07]; against the first manual -0.06 [-0.23, +0.12]
+      in plain, always on: 2.21; against base -0.51 [-0.66, -0.36]
+   auto bt 100 s: 0.50; against base +0.09 [+0.00, +0.18]
+      against the best manual -0.15 [-0.26, -0.05]
+      plain: 2.72; against base +0.00 [+0.00, +0.00]; flips 0.6
+      allfood: 4.55; against base +0.00 [+0.00, +0.00]; flips 0.0

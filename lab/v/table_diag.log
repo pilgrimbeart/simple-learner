@@ -1,0 +1,13 @@
+100 s, sweeps never allowed: (0.0, [0.0, 0.0])
+100 s, gate 12: (-0.03560751920638516, [-0.07014755015653519, -0.00756923791737815])
+   lives with 0-0 sweeps: 116, mean difference -0.00, mean |x| through life 0.000
+   lives with 1-1 sweeps: 10, mean difference -0.17, mean |x| through life 0.000
+   lives with 2-3 sweeps: 2, mean difference -1.88, mean |x| through life 0.290
+1000 s, sweeps never allowed: (0.0, [0.0, 0.0])
+1000 s, gate 12: (-0.0871347192032097, [-0.1343657127398039, -0.043590832245531945])
+   lives with 0-0 sweeps: 34, mean difference +0.00, mean |x| through life 0.000
+   lives with 1-1 sweeps: 42, mean difference +0.02, mean |x| through life 0.000
+   lives with 2-3 sweeps: 33, mean difference -0.10, mean |x| through life 0.001
+   lives with 4-999 sweeps: 19, mean difference -0.48, mean |x| through life 0.123
+jitterg plain 100 s: share of time on 0.41; mean |x| 0.026
+jitterg plain 1000 s: share of time on 0.22; mean |x| 0.030

@@ -1,0 +1,19 @@
+== digest
+digest | fix learnpause3 {"theta": 2.0, "late": 0.0, "down_on": 0.0, "margin": 1.2} | 100 s: efficiency 0.78 [0.68, 0.87]  gain 1.05  food 3.09  poison 1.02  stranded 0%  firings 170
+   against the base brain +5.45 [+5.20, +5.69]
+   plain: 2.69, against the base brain -0.04 [-0.07, -0.01]; grew 0, turned on 12, of 128
+   allfood: 4.29, against the base brain +0.00 [+0.00, +0.00]; grew 0, turned on 0, of 128
+digest | fix learnpause3 {"theta": 2.0, "late": 0.0, "down_on": 0.0, "margin": 1.2} | 400 s: efficiency 1.31 [1.27, 1.35]  gain 1.70  food 2.98  poison 0.64  stranded 0%  firings 144
+   against the base brain +6.11 [+5.96, +6.25]
+   plain: 2.64, against the base brain -0.14 [-0.19, -0.10]; grew 0, turned on 44, of 128
+   allfood: 4.37, against the base brain +0.00 [+0.00, +0.00]; grew 0, turned on 0, of 128
+== thrusters
+thrusters | fix sweepsg2 {"stall": 0.05, "gate": 12.0, "bank": 192.0, "debounce": 2.0, "need": 100.0} | 1000 s: efficiency 1.83 [1.72, 1.94]  gain 3.07  food 4.87  poison 0.90  stranded 0%  firings 339
+   against the base brain +1.15 [+0.91, +1.40]
+   plain: 2.76, against the base brain -0.00 [-0.00, +0.00]; grew 0, turned on 0, of 128
+   allfood: 4.42, against the base brain +0.00 [+0.00, +0.00]; grew 0, turned on 0, of 128
+== ageing
+ageing | fix jitterg2 {"learn": 1.0, "eta": 0.06, "sd": 0.15, "gate": 14.0, "win": 200.0, "born": 1.5} | 1000 s: efficiency 1.39 [1.31, 1.47]  gain 2.36  food 4.30  poison 0.97  stranded 0%  firings 345
+   against the base brain +1.02 [+0.95, +1.09]
+   plain: 2.76, against the base brain +0.00 [+0.00, +0.00]; grew 0, turned on 0, of 128
+   allfood: 4.42, against the base brain +0.00 [+0.00, +0.00]; grew 0, turned on 0, of 128

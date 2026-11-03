@@ -119,7 +119,7 @@ per meal spent resting, moving and thinking), gain rate (meals per 10 s), food, 
   the colour (2.50 against 2.49 held out, B 2.21), and stands at component level with silicon's noise (2.15, B 1.84).
 - **The second story** (D26): unequal thrusters, its baseline and target measured: immune to 1%, half the score gone by
   x1.25; on the usual bodies 0.21 against 2.56, one number of about 3.7 bits.
-- **The interventions table** (D28; `STORIES.md`): ten mismatches against story 1's circuit. Nine have a sure manual cure (row 10's a small one), four an automatic version that passes its plain-world test.
+- **The interventions table** (D28; `STORIES.md`): ten mismatches against story 1's circuit, judged on fresh seeds. Each has a sure manual cure, though row 9's is tiny and the rest of its gap was never there. Eight have an automatic version that helps and ties with the base brain in the plain world; row 6's costs 0.02. Universal circuit: D29.
 - **The ladder of harder tests** (D27; `STORIES.md`): swaps, sequences, a rule about time. A sequence memory grown when frustrated solves alternate and pattern; one brain reading the run of goods before each poison chooses between cures, surely above the baseline on five tests of eight, tied on three (plain, slow swaps, and digest, which its menu cannot cure).
 - **Bodies** (D13): with each thruster 0.5-2, every fixed design collapses (B 0.32, the best searched on such bodies
   0.76); told its balance, B gets 1.92 (2.15 with its drive started in step, D20); eight local rules for finding the balance reach at most 0.8; judging each
@@ -2326,4 +2326,23 @@ and arms, on story 1's circuit; `lab/table_rows.py` the class-by-class trials (e
 - A bug of mine: settings named `eye_x`, `local_x`, `far_x` were read as scalings of a number, and crashed rows 9 and 10's first run. Renamed; no result was affected.
 - Digest's target first ran without its pause (-3.70), corrected to 1.79 before use. Moving blocks and scarce's told arm were added afterwards as checks.
 
-**Not watched live**: this entry's new arms have been judged but not seen running.
+**The automatic versions, traced and fixed.** Scoring on training and validation seeds: the row's efficiency, less 3 x any shortfall against the base brain in the plain world (`lab/table_fix.py`, `lab/table_more.py`, `lab/table_third.py`; logs `table_fix.log`, `table_more.log`, `table_third.log`, `table_fourth.log`, `table_gate.log`).
+
+- *Gated sweeps and jitter paid in the plain world because of false alarms that feed themselves.* With sweeps never allowed the difference from base is exactly 0, and with gate 12 almost all the cost sits in 19 lives of 128 with 4 or more sweeps, -0.48 each, their balance at a mean |x| of 0.12 (`lab/table_diag.py`, `table_diag.log`). A chance shortage lets a sweep run, the balance moves on thin counts, meals fall, and more sweeps follow. Requiring two short checks running (`SweepsG2`) took it to 0. My earlier hypothesis, eating during sweeps corrupting the bit, was wrong or small.
+- *Jitter's count was born at its own gate*, so every life's start read as a shortage: on 41% of the time in a plain 100 s life. Born at 1.5 x the gate, over 200 s (`JitterG2`). Gate 15 is the highest tied on tuning seeds (14: 1.39, 15: 1.47, 16: 1.55 but surely below base in plain, 17: 1.66).
+- *Volatility had to be the mark of a world that was right and changed*: a flip that ended a run of goods, not any flip (`Volatile2`).
+- *The pause*: counting bads soon after a taste false-alarmed in 44 of 128 plain lives at 400 s, since poison at the first wrong bit comes in runs and the 400 s tally accumulated. Counting only meals vouched for as food, a 150 s leak and a late bad counting against, 4 of 128 (`LearnPause3`). Its 100 s number is mostly the cost of learning: 15 s at about -4.7 then 1.75 averages near 0.8.
+- *Weak eye: its old target was the fault.* Told the colour with the eye still weak, settings searched per case: 1.83 on earlier seeds against 1.77; told alone 1.88 against 1.79 here, gap not sure. The loss is pulses never delivered.
+- *Row 1 in the all-food world.* The harness's first comparison of its circuit with the brain with taste unwired: 4.55 against 6.70. The bit shuts out an eye with nothing to avoid.
+
+**The final judge** (`lab/table_final.py`, `lab/table_settings.json`; `table_final.log`): every entry on 54000-54063 x 2, once. Numbers in `STORIES.md`. Row 6's plain test failed narrowly there (-0.02 [-0.05, -0.01]) having passed on the earlier seeds, and I didn't retune it. Tuning seeds had flattered little: rows 2, 3 and 8's automatic numbers moved by about 0.05 or less against their last look, as did row 7's gain (0.32 to 0.56, base 0.10 to 0.36, the gain about the same).
+
+**Row 1's automatic version**: both eyes followed until the first bad, whose eye is then the poison's (`U` with `open=1`): plain +0.00 [-0.09, +0.11], all food +2.15 [+1.97, +2.33], equal to taste unwired, on 54000-54063 x 2 (`table_watch.log`).
+
+**The cross-test** (`lab/table_final.py cross`; `table_cross.log`; matrix and conclusions in `STORIES.md`).
+
+**Seen without a display, not on screen**: `lab/table_watch.py` lists when each mechanism turns on in 16 lives; none of these arms has been watched running.
+
+## D29: looking for one universal correction circuit (night of 2026-11-03)
+
+The user's plan for the night: step back, conclude, state hypotheses, test comprehensively, explain success or failure. Conclusions, hypotheses H0-H3 and the plan are in `STORIES.md`; `lab/universal.py` holds the candidate.

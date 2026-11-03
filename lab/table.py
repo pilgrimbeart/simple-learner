@@ -20,7 +20,8 @@ from minimal.spec import SPAN, Lived, thirds, summary, efficiency, interval
 import world
 import ladder as Lad
 from ladder import Rule, COL, paired
-from story1 import Gated, RunLimit, Path
+from story1 import Gated, RunLimit, Path, Still
+import grow as G
 from units import TICK, MILLI
 import periodbal as PB
 import drivebal as DB
@@ -212,7 +213,14 @@ class Plain(Flaw):
     pass
 
 
-WORLDS = {"plain": Plain, "thrusters": Thrusters, "swap10": Swap10, "alternate": Alternate, "pattern": Pattern, "digest": Digest,
+class AllFood(Flaw):
+    """The control for anything that should happen only with something to learn: both colours food."""
+
+    def poison(self, t):
+        return None
+
+
+WORLDS = {"plain": Plain, "allfood": AllFood, "thrusters": Thrusters, "swap10": Swap10, "alternate": Alternate, "pattern": Pattern, "digest": Digest,
           "patchy": Patchy, "scarce": Scarce, "noisy": NoisyEye, "weak": WeakEye, "ageing": Ageing, "unreliable": Unreliable, "moving": Moving}
 LONG = {"ageing": 1000.0, "thrusters": 1000.0}                               # a life long enough for the mismatch to bite
 
@@ -346,6 +354,8 @@ class Integrate(Circuit):
         self.cnt, self.tu = [0.0, 0.0], [0.0, 0.0]
 
     def level(self, k):
+        if self.p.get("eye_told") and k != self.p.get("bad_eye"):
+            return 1.0
         return self.p.get("theta", 2.0)
 
     def stimulate(self, sensor, at):
@@ -449,6 +459,179 @@ class LearnTrust(Circuit):
         return super().step()
 
 
+class SweepsG(SweepsC):
+    """Sweeps that only a shortage of meals allows, the balance moving only then too, so a body that eats well is left alone."""
+
+    def taste(self, value, at):
+        if self.t < self.cal_until:                     # a sweep ignores what it sees, so what it eats says nothing of the bit
+            if value > 0:
+                self.meals += 1
+                self.mt.append(self.fc)
+            return
+        super().taste(value, at)
+
+    def _learn(self):
+        if self.t >= self.next and self.fc > 0 and self.content():
+            self.next += self.p.get("every", 20.0)
+            return []
+        return super()._learn()
+
+
+class JitterG(JitterC):
+    """D19's jitter only while meals are short: good tastes on the last 32 s of life under `gate`. Holds: a leaky count of meals."""
+
+    def __init__(self, seed, p):
+        super().__init__(seed, p)
+        self.sd0, self.rate = self.p.get("sd", 0.3), self.p.get("gate", 12.0) * self.p.get("win", 32.0) / 32.0     # (born content)
+
+    def taste(self, value, at):
+        Gated.taste(self, value, at)
+        if value > 0:
+            self.rate += 1.0
+
+    def step(self):
+        w = self.p.get("win", 32.0)
+        self.rate *= 1 - TICK / w
+        self.p["sd"] = self.sd0 if self.rate * 32.0 / w < self.p.get("gate", 12.0) else 0.0
+        return super().step()
+
+
+class Volatile2(Circuit):
+    """Trust falls for tau s only after a flip that ended a run of at least `k` vouched goods, `need` of them within tau: the mark
+    of a world that was right and changed. A flip at birth has no such run. Holds: a run counter, a timer."""
+
+    run_g, until, last_long = 0, -1e9, -1e9
+
+    def taste(self, value, at):
+        p = self.p
+        if value > 0 and self.vouched():
+            self.run_g += 1
+        p["trust"] = 0 if self.t < self.until else 1
+        n = len(self.flips)
+        super().taste(value, at)
+        if len(self.flips) > n:
+            tau = p.get("tau", 40.0)
+            if self.run_g >= p.get("k", 3.0):
+                if p.get("need", 1.0) <= 1 or self.t - self.last_long < tau:
+                    self.until = self.t + tau
+                self.last_long = self.t
+            self.run_g = 0
+
+
+class LearnPause2(Lad.Pause):
+    """The pause, learned and able to lapse: a tally P of bads within `win` s of the last taste, less for goods so soon, leaking
+    (tau_p). The pause is on while P is at theta, its length a staircase: up to a bad's gap times `margin`, down a little at a good.
+    With the pause on nothing comes soon, P leaks away and it lapses, so a false alarm ends itself. Holds: a tally, a slow node."""
+
+    P, est = 0.0, 0.0
+
+    def __init__(self, seed, p):
+        super().__init__(seed, p)
+        self.p["pause"] = 0.0
+        self.on_at = []
+
+    def taste(self, value, at):
+        gap = self.t - self.ate_at
+        p = self.p
+        if value < 0 and gap < p.get("win", 1.5) and (not p.get("vouch") or self.vouched()):
+            self.P = min(p.get("mtop", 6.0), self.P + 1)
+            self.est = max(self.est, gap * p.get("margin", 1.1))
+        elif value > 0:
+            if gap < p.get("win", 1.5):
+                self.P = max(0.0, self.P - p.get("down", 1.0))
+            self.est *= p.get("shrink", 0.98)
+        super().taste(value, at)
+
+    def step(self):
+        p = self.p
+        self.P *= 1 - TICK / p.get("tau_p", 200.0)
+        on = self.P >= p.get("theta", 3.0)
+        if on and not p["pause"]:
+            self.on_at.append(self.t)
+        p["pause"] = self.est if on else 0.0
+        return super().step()
+
+
+class SweepsG2(SweepsG):
+    """The gate must read short `debounce` slots running before a sweep; the first sweep of a contented body is then rare, and the
+    balance moves only on `need` pairs. Holds: a small counter."""
+
+    shorts, checked = 0, -1e9
+
+    def content(self):
+        c = super().content()
+        if self.t - self.checked >= self.p["cal_every"]:
+            self.checked, self.shorts = self.t, 0 if c else self.shorts + 1
+        return c or self.shorts < self.p.get("debounce", 2.0)
+
+
+class JitterG2(JitterG):
+    """Born well above the gate (`born` times it), so a life's start isn't taken for a shortage."""
+
+    def __init__(self, seed, p):
+        super().__init__(seed, p)
+        self.rate *= self.p.get("born", 1.5)
+
+
+class LearnPause3(Lad.Pause):
+    """The pause, judged against later meals: a tally P up for a bad within `win` s of the last taste, down `late` for a bad after
+    longer (bads that don't care about the gap say nothing of it), down for a good so soon: `down` while the pause is off, `down_on`
+    while on (a good just after the pause speaks well of the pause). Pause on while P is at theta. Its length a staircase: a bad's gap
+    x `margin` up, shrink at each good inside win, so the many goods long after say nothing. Holds: a tally, a slow node."""
+
+    P, est = 0.0, 0.0
+
+    def __init__(self, seed, p):
+        super().__init__(seed, p)
+        self.p["pause"] = 0.0
+        self.on_at = []
+
+    def taste(self, value, at):
+        gap = self.t - self.ate_at
+        p = self.p
+        soon = gap < p.get("win", 1.5)
+        if p.get("vouch") and not self.vouched():       # vouch=1: only meals of the colour it was driving at as food
+            super().taste(value, at)
+            return
+        if value < 0:
+            if soon:
+                self.P = min(p.get("mtop", 6.0), self.P + 1)
+                self.est = max(self.est, gap * p.get("margin", 1.2))
+            else:
+                self.P = max(0.0, self.P - p.get("late", 1.0))
+        elif value > 0 and soon:
+            self.P = max(0.0, self.P - (p.get("down_on", 0.0) if p["pause"] else p.get("down", 1.0)))
+            self.est *= p.get("shrink", 0.98)
+        super().taste(value, at)
+
+    def step(self):
+        p = self.p
+        self.P *= 1 - TICK / p.get("tau_p", 400.0)
+        on = self.P >= p.get("theta", 3.0) or (p["pause"] and self.P > p.get("off", p.get("theta", 3.0)))     # off: it lapses only below this
+        if on and not p["pause"]:
+            self.on_at.append(self.t)
+        p["pause"] = self.est if on else 0.0
+        return super().step()
+
+
+class Bt(LearnTrust):
+    """LearnTrust whose bounce counts step_b."""
+
+    def taste(self, value, at):
+        was = self.B
+        super().taste(value, at)
+        if self.B > was:
+            self.B = was + self.p.get("step_b", 1.0)
+
+
+class Unwired(RunLimit, G.Unwired):
+    """Row 1's base: taste wired to nothing, either eye starts a drive."""
+
+
+class B(RunLimit, M.Model):
+    """Row 1's Store: the bounded tally, written by every taste."""
+
+
 class JudgeSoon(Circuit):
     """Judge, for digest: a taste within W s of the last says nothing of the colour, so the bit ignores it. Moves nothing else."""
 
@@ -502,7 +685,7 @@ class Rest(Circuit):
 
 ARMS = {"told": Told, "circuit": Circuit, "toldpause": ToldPause, "probe": Probe, "path": PathC, "scanside": ScanSide, "scanlearn": ScanLearn,
         "sweeps": SweepsC, "jitter": JitterC, "filter": Filter, "integrate": Integrate, "adapteye": AdaptEye, "eyehold": EyeHold,
-        "autohold": AutoHold, "judgesoon": JudgeSoon, "eyeslow": EyeSlow, "learntrust": LearnTrust, "local": Local, "rest": Rest}
+        "autohold": AutoHold, "judgesoon": JudgeSoon, "sweepsg": SweepsG, "jitterg": JitterG, "volatile2": Volatile2, "learnpause2": LearnPause2, "bt": Bt, "sweepsg2": SweepsG2, "jitterg2": JitterG2, "learnpause3": LearnPause3, "unwired": Unwired, "B": B, "toldc": Told, "still": Still, "eyeslow": EyeSlow, "learntrust": LearnTrust, "local": Local, "rest": Rest}
 
 
 def arms():
@@ -528,7 +711,7 @@ def life(job):
     if told:
         q["V_H"] = 99.0
     R = WORLDS[w](first)
-    R.told = told or bool(kw.get("told_flaw"))
+    R.told = told and arm != "toldc"                    # toldc: told the colour, the mismatch still there
     lf = Life(seed, first, brain=lambda s: arms()[arm](s, q))
     b = lf.brain
     R.setup(lf, seed)
@@ -561,6 +744,7 @@ def life(job):
     l.x = getattr(b, "x", None)
     l.sweeps = getattr(b, "sweeps", 0)
     l.mode = getattr(b, "mode", None)
+    l.weak_food = lf.brain.p.get("bad_eye") == 1 - lf.sensor[first]    # (weak, noisy) the flawed eye is the food's
     return l
 
 

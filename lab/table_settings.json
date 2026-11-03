@@ -1,0 +1,369 @@
+{
+ "1 colour": {
+  "world": "plain",
+  "base": [
+   "unwired",
+   {}
+  ],
+  "target": [
+   "told",
+   {}
+  ],
+  "manual": [
+   [
+    "Judge: tally written while driving",
+    "circuit",
+    {}
+   ],
+   [
+    "Store: B",
+    "B",
+    {}
+   ],
+   [
+    "Use: path",
+    "path",
+    {
+     "theta": 1.5,
+     "reverse": 1.0,
+     "trust": 2.0
+    }
+   ]
+  ],
+  "auto": [
+   "circuit",
+   {}
+  ]
+ },
+ "2 thrusters": {
+  "world": "thrusters",
+  "target": [
+   "told",
+   {}
+  ],
+  "manual": [
+   [
+    "Sense: sweeps 192",
+    "sweeps",
+    {
+     "cal_every": 32.0,
+     "cal_len": 8.0,
+     "stall": 0.05,
+     "stall_need": 3000.0,
+     "gate": 8.0,
+     "gate_rate": 1.0,
+     "cal_first": 0.0,
+     "cal_fast": 12.0,
+     "bank": 192.0,
+     "local": 1.0,
+     "binary": 1.0,
+     "cap": 3.0
+    }
+   ]
+  ],
+  "auto": [
+   "sweepsg2",
+   {
+    "cal_every": 32.0,
+    "cal_len": 8.0,
+    "stall": 0.05,
+    "stall_need": 3000.0,
+    "gate": 14.0,
+    "gate_rate": 1.0,
+    "cal_first": 32.0,
+    "cal_fast": 32.0,
+    "bank": 192.0,
+    "local": 1.0,
+    "binary": 1.0,
+    "cap": 3.0,
+    "debounce": 2.0,
+    "need": 100.0
+   }
+  ]
+ },
+ "3 swap10": {
+  "world": "swap10",
+  "target": [
+   "told",
+   {}
+  ],
+  "manual": [
+   [
+    "Judge: no trust",
+    "circuit",
+    {
+     "trust": 0.0
+    }
+   ]
+  ],
+  "auto": [
+   "volatile2",
+   {
+    "k": 2.0,
+    "need": 1.0,
+    "tau": 40.0
+   }
+  ]
+ },
+ "4a alternate": {
+  "world": "alternate",
+  "target": [
+   "told",
+   {}
+  ],
+  "manual": [
+   [
+    "Store: sequence 2",
+    "cycle",
+    {
+     "cycle": 2.0
+    }
+   ]
+  ],
+  "auto": [
+   "grow",
+   {
+    "theta": 3.0,
+    "tau": 10.0
+   }
+  ],
+  "lengths": [
+   100.0,
+   400.0
+  ]
+ },
+ "4b pattern": {
+  "world": "pattern",
+  "target": [
+   "told",
+   {}
+  ],
+  "manual": [
+   [
+    "Store: sequence 3",
+    "cycle",
+    {
+     "cycle": 3.0
+    }
+   ]
+  ],
+  "auto": [
+   "grow",
+   {
+    "theta": 3.0,
+    "tau": 10.0
+   }
+  ],
+  "lengths": [
+   100.0,
+   400.0
+  ]
+ },
+ "5 digest": {
+  "world": "digest",
+  "target": [
+   "toldpause",
+   {
+    "pause": 1.0
+   }
+  ],
+  "manual": [
+   [
+    "Use: still 1 s",
+    "pause",
+    {
+     "pause": 1.0
+    }
+   ]
+  ],
+  "auto": [
+   "learnpause3",
+   {
+    "vouch": 1.0,
+    "win": 1.2,
+    "theta": 2.0,
+    "tau_p": 150.0,
+    "off": 0.5,
+    "late": 1.0,
+    "down_on": 0.0,
+    "mtop": 4.0,
+    "margin": 1.2
+   }
+  ],
+  "lengths": [
+   100.0,
+   400.0
+  ]
+ },
+ "6 noisy": {
+  "world": "noisy",
+  "target": [
+   "told",
+   {}
+  ],
+  "manual": [
+   [
+    "Judge: coincidence 20 ms",
+    "filter",
+    {
+     "eye_told": 1.0,
+     "win": 0.02
+    }
+   ],
+   [
+    "Store: told eye leaky count",
+    "integrate",
+    {
+     "eye_told": 1.0,
+     "tau_e": 0.05,
+     "theta": 2.0
+    }
+   ]
+  ],
+  "auto": [
+   "adapteye",
+   {
+    "tau_e": 0.05,
+    "margin": 3.0,
+    "tau_s": 10.0
+   }
+  ]
+ },
+ "7 unreliable": {
+  "world": "unreliable",
+  "target": [
+   "told",
+   {}
+  ],
+  "manual": [
+   [
+    "Store/Judge: trust 4",
+    "circuit",
+    {
+     "trust": 4.0
+    }
+   ],
+   [
+    "trust 3",
+    "circuit",
+    {
+     "trust": 3.0
+    }
+   ]
+  ],
+  "auto": [
+   "bt",
+   {
+    "short": 3.0,
+    "tau_b": 1000.0,
+    "top": 6.0,
+    "step_b": 2.0
+   }
+  ],
+  "lengths": [
+   100.0,
+   400.0
+  ]
+ },
+ "8 ageing": {
+  "world": "ageing",
+  "target": [
+   "told",
+   {}
+  ],
+  "manual": [
+   [
+    "Judge: jitter",
+    "jitter",
+    {
+     "eta": 0.06,
+     "sd": 0.15,
+     "learn": 1.0
+    }
+   ],
+   [
+    "Sense: sweeps",
+    "sweeps",
+    {
+     "cal_every": 32.0,
+     "cal_len": 8.0,
+     "stall": 0.0,
+     "stall_need": 3000.0,
+     "gate": 8.0,
+     "gate_rate": 1.0,
+     "cal_first": 0.0,
+     "cal_fast": 12.0,
+     "bank": 192.0,
+     "local": 1.0,
+     "binary": 1.0,
+     "cap": 3.0,
+     "forget": 0.8
+    }
+   ]
+  ],
+  "auto": [
+   "jitterg2",
+   {
+    "learn": 1.0,
+    "eta": 0.06,
+    "sd": 0.15,
+    "gate": 15.0,
+    "win": 200.0,
+    "born": 1.5
+   }
+  ]
+ },
+ "9 weak": {
+  "world": "weak",
+  "target": [
+   "toldc",
+   {}
+  ],
+  "manual": [
+   [
+    "Judge: trust 3",
+    "circuit",
+    {
+     "trust": 3.0
+    }
+   ]
+  ]
+ },
+ "10 patchy": {
+  "world": "patchy",
+  "target": [
+   "toldc",
+   {}
+  ],
+  "manual": [
+   [
+    "Judge: trust 3",
+    "circuit",
+    {
+     "trust": 3.0
+    }
+   ],
+   [
+    "Immunise: searched",
+    "circuit",
+    {
+     "hold_x": 2.38,
+     "bored_x": 0.844,
+     "scan_x": 1.217,
+     "drive_x": 0.352,
+     "run_x": 1.464,
+     "run_max": 1.0
+    }
+   ]
+  ],
+  "auto": [
+   "bt",
+   {
+    "short": 3.0,
+    "tau_b": 1000.0,
+    "top": 4.0,
+    "step_b": 2.0
+   }
+  ]
+ }
+}

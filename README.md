@@ -207,8 +207,10 @@ The findings that changed the direction of the work, each told in full in the no
 
 - **Most mismatches between a brain and its world have a small cure, but one that stays out of the way is harder.** We
   gave the same small learning brain ten different problems, such as unequal thrusters, a noisy eye and food that must be
-  eaten in sequence. Nine have a cure by hand that is surely better, and judging evidence better was the commonest. Only four
-  have an automatic version that costs nothing when the problem is absent (`STORIES.md`, the table).
+  eaten in sequence. All have a cure by hand that is surely better, one of them tiny, and judging evidence better was the
+  commonest. Eight have an automatic version that helps and costs nothing we can measure when the problem is absent. The trick
+  was mostly stopping false alarms from feeding themselves: for instance, acting only once a shortage has lasted two checks running.
+  The automatic versions pay in the time they take to notice (`STORIES.md`, the table).
 
 ## The ground rules, for every brain
 
