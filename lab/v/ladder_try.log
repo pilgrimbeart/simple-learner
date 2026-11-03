@@ -1,0 +1,41 @@
+plain circuit {}: efficiency 2.72 [2.64, 2.80]  gain 4.65  food 6.64  poison 1.00  last third 6.79  stranded 0%  firings 352
+plain transition {}: efficiency 2.72 [2.64, 2.80]  gain 4.65  food 6.64  poison 1.00  last third 6.79  stranded 0%  firings 352
+   turned on in 0 of 128 median at 0.0
+plain lengths {}: efficiency 1.98 [1.77, 2.16]  gain 3.40  food 6.27  poison 1.44  last third 4.23  stranded 0%  firings 356
+   lengths, median 1.0 flips 11.6875
+plain rhythm {}: efficiency 1.72 [1.61, 1.82]  gain 2.96  food 6.20  poison 1.62  last third 4.51  stranded 0%  firings 356
+   learned T, median 12.578535450094678 flips 20.4140625
+plain circuit {'trust': 0}: efficiency 2.50 [2.38, 2.60]  gain 4.26  food 6.52  poison 1.13  last third 5.95  stranded 0%  firings 351
+alternate circuit {'trust': 0}: efficiency -1.99 [-2.11, -1.87]  gain -3.37  food 3.74  poison 3.56  last third 1.07  stranded 0%  firings 347
+alternate flip {}: efficiency 2.05 [1.91, 2.19]  gain 3.47  food 6.07  poison 1.30  last third 4.64  stranded 0%  firings 344
+alternate alteye {}: efficiency 2.21 [2.06, 2.35]  gain 3.72  food 6.10  poison 1.19  last third 4.59  stranded 0%  firings 342
+alternate lengths {}: efficiency 1.51 [1.37, 1.65]  gain 2.58  food 5.80  poison 1.61  last third 5.03  stranded 0%  firings 352
+   lengths, median 1.0 flips 58.203125
+alternate transition {}: efficiency 1.40 [1.23, 1.55]  gain 2.38  food 5.67  poison 1.65  last third 4.51  stranded 0%  firings 350
+   turned on in 128 of 128 median at 7.70499999999988
+pattern circuit {'trust': 0}: efficiency -1.28 [-1.37, -1.18]  gain -2.17  food 4.24  poison 3.20  last third 1.32  stranded 0%  firings 350
+pattern flip {}: efficiency 0.05 [-0.04, 0.13]  gain 0.08  food 4.95  poison 2.43  last third 2.07  stranded 0%  firings 344
+pattern lengths {}: efficiency 0.16 [0.02, 0.30]  gain 0.27  food 5.08  poison 2.40  last third 2.07  stranded 0%  firings 348
+   lengths, median 1.0 flips 51.6875
+pattern transition {}: efficiency -1.57 [-1.67, -1.46]  gain -2.67  food 4.05  poison 3.36  last third 1.30  stranded 0%  firings 349
+   turned on in 128 of 128 median at 14.73999999999973
+swap50 circuit {'trust': 0}: efficiency 2.16 [2.06, 2.27]  gain 3.66  food 6.12  poison 1.23  last third 5.29  stranded 0%  firings 346
+swap50 rhythm {}: efficiency 1.51 [1.40, 1.61]  gain 2.59  food 6.07  poison 1.74  last third 4.39  stranded 0%  firings 356
+   learned T, median 24.367882864827962 flips 21.140625
+swap50 lengths {}: efficiency -0.18 [-0.30, -0.08]  gain -0.31  food 4.89  poison 2.60  last third 1.00  stranded 0%  firings 350
+   lengths, median 1.0 flips 35.40625
+swap20 circuit {'trust': 0}: efficiency 1.77 [1.66, 1.87]  gain 3.01  food 6.01  poison 1.50  last third 4.02  stranded 0%  firings 350
+swap20 rhythm {}: efficiency 0.99 [0.86, 1.11]  gain 1.69  food 5.74  poison 2.02  last third 3.51  stranded 0%  firings 355
+   learned T, median 15.96879229621778 flips 23.2421875
+swap20 lengths {}: efficiency -0.74 [-0.88, -0.59]  gain -1.26  food 4.57  poison 2.91  last third 1.14  stranded 0%  firings 351
+   lengths, median 1.0 flips 41.28125
+swap10 circuit {'trust': 0}: efficiency 1.08 [0.95, 1.20]  gain 1.83  food 5.56  poison 1.86  last third 2.99  stranded 0%  firings 347
+swap10 rhythm {}: efficiency 0.31 [0.18, 0.43]  gain 0.53  food 5.34  poison 2.41  last third 2.51  stranded 0%  firings 352
+   learned T, median 9.464075442000825 flips 28.5859375
+swap10 lengths {}: efficiency -1.61 [-1.71, -1.51]  gain -2.73  food 4.06  poison 3.40  last third 1.02  stranded 0%  firings 350
+   lengths, median 1.0 flips 49.9921875
+swap5 circuit {'trust': 0}: efficiency 0.00 [-0.12, 0.11]  gain 0.00  food 4.95  poison 2.48  last third 2.02  stranded 0%  firings 351
+swap5 rhythm {}: efficiency -0.26 [-0.42, -0.10]  gain -0.45  food 5.11  poison 2.78  last third 2.17  stranded 0%  firings 358
+   learned T, median 4.736429716642977 flips 35.6640625
+swap5 lengths {}: efficiency -1.99 [-2.10, -1.88]  gain -3.36  food 3.69  poison 3.52  last third 0.96  stranded 0%  firings 342
+   lengths, median 1.0 flips 51.9609375

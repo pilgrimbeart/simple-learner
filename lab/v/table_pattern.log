@@ -1,0 +1,15 @@
+pattern | base: efficiency -2.72 [-2.83, -2.61]  gain -4.61  food 3.38  poison 4.00  stranded 0%  firings 345
+pattern | Store | cycle {"cycle": 3.0}: efficiency 2.12 [2.02, 2.22]  gain 3.59  food 6.07  poison 1.24  stranded 0%  firings 344
+   against the base brain +4.85 [+4.70, +5.00]
+pattern | Store | cycle {"cycle": 6.0}: efficiency 1.91 [1.76, 2.06]  gain 3.22  food 5.95  poison 1.37  stranded 0%  firings 342
+   against the base brain +4.63 [+4.44, +4.83]
+pattern | Immunise | circuit {"hold_x": 0.474, "bored_x": 2.808, "scan_x": 1.036, "drive_x": 0.43, "run_x": 1.312, "run_max": 1.0}: efficiency -1.52 [-1.63, -1.41]  gain -2.08  food 1.60  poison 1.84  stranded 4%  firings 180
+   against the base brain +1.20 [+1.03, +1.37]
+pattern | Spend | circuit {"scan_x": 0.588, "drive_x": 0.379, "run_x": 0.661}: efficiency -2.12 [-2.22, -2.03]  gain -2.84  food 1.99  poison 2.41  stranded 0%  firings 166
+   against the base brain +0.60 [+0.46, +0.74]
+pattern | Judge | circuit {"trust": 0.0}: efficiency -1.16 [-1.24, -1.08]  gain -1.96  food 4.24  poison 3.10  stranded 0%  firings 346
+   against the base brain +1.56 [+1.44, +1.69]
+pattern | Sense | probe {"probe_T": 3.0, "probe_len": 3.0}: efficiency -2.03 [-2.14, -1.92]  gain -3.46  food 4.24  poison 3.85  stranded 0%  firings 353
+   against the base brain +0.69 [+0.56, +0.83]
+pattern | Use | path {"theta": 0.5, "tau": 30.0, "trust": 2.0}: efficiency -1.53 [-1.60, -1.45]  gain -2.39  food 1.95  poison 2.17  stranded 0%  firings 281
+   against the base brain +1.20 [+1.06, +1.34]

@@ -185,6 +185,13 @@ and when, why it matters, the line it belongs to, and the experiment that would 
    node of the grammar's elements inserted at zero effect, can become each part by local rules. First, the map's
    test: express every working brain here (B, D20's balance learner, D24's steer) in it, with each part's
    cost in SKY130 and the signal that could have tuned it; a brain that doesn't fit shows what the map lacks.
+   Since (the user, 2026-11-02): done as stories, one per performance issue (`STORIES.md`), general observations after
+   several, and the universal circuit only if they earn it. Done: which colour is food (D25); unequal thrusters, block level (D26: 192 counters still far from the simplest);
+   the table of rows (D28; `STORIES.md`), the current aim, with its open automatic versions in rows 2, 3, 5 and 8;
+   the ladder of harder tests (D27): swaps, sequences, digest, one brain choosing cures. Open from D27: a clock told the period (is it the estimate or the phase?); undoing a growth that didn't help;
+   a brain that knows it has no cure; re-validating the ladder at component level; this patch is empty; how fast to spend (the likely
+   honest negative). Open from D25: what would tell a world where nothing can be learned from one merely hard? In it
+   the circuit flips 16.5 times a life where doing nothing scores best.
 
 ## The body (`NOTEBOOK.md`, The body)
 

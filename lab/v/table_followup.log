@@ -1,0 +1,9 @@
+patchy told {}: efficiency 0.88 [0.70, 1.07]  gain 1.40  food 7.38  poison 2.99  stranded 1%  firings 293
+   against the base brain +0.15 [-0.02, +0.32]
+scarce told {}: efficiency 0.56 [0.50, 0.61]  gain 0.83  food 1.09  poison 0.13  stranded 5%  firings 245
+   against the base brain +0.10 [+0.05, +0.16]
+weak | base: efficiency 1.77 [1.66, 1.88]  gain 2.84  food 4.97  poison 1.06  stranded 0%  firings 301
+weak | Sense | eyeslow {"slow_k": 0.5, "slow_b": 1.0}: efficiency 1.76 [1.65, 1.87]  gain 2.71  food 4.66  poison 0.98  stranded 0%  firings 267
+   against the base brain -0.01 [-0.14, +0.11]
+weak | Sense | probe {"probe_T": 20.0, "probe_len": 1.0}: efficiency 1.45 [1.36, 1.55]  gain 2.33  food 4.79  poison 1.23  stranded 0%  firings 300
+   against the base brain -0.31 [-0.42, -0.21]

@@ -326,7 +326,7 @@ def watch(seed: int = 0, brain: str = "designed-circuit", record: str | None = N
             screen.blit(font.render("yuck!", True, (0, 0, 0), (255, 255, 255)), (px[0] + 14, px[1] - 28))
         stage = "moving and learning" if life.moving is not None else life.brain.stage()
         eaten = {c: sum(1 for _, m in life.meals if m == c) for c in COLOURS}
-        lines = (f"tick {life.t:6d}   brain: {brain}   stage: {stage}   poison: {poison or 'none (all food)'}   eaten: red {eaten['red']},"
+        lines = (f"tick {life.t:6d}   brain: {brain}   stage: {stage}   poison: {life.poison or 'none (all food)'}   eaten: red {eaten['red']},"
                  f" blue {eaten['blue']}",
                  "recent meals: " + " ".join(m[0].upper() for _, m in life.meals[-14:]),
                  f"{speed()}   r new life   space pause   up/down: speed{'' if auto else '   a: auto speed'}   Esc")

@@ -1,0 +1,27 @@
+run n=1: eff 1.33 gain 2.32 last 3.25 stranded 1%
+run n=2: eff 2.14 gain 3.73 last 5.45 stranded 0%
+run n=3: eff 2.23 gain 3.91 last 5.44 stranded 0%
+path block t0.5 c1 w1 tau0: eff -0.06 gain -0.13 last 1.50 stranded 2%
+path block t0.5 c1 w1 tau30: eff 0.55 gain 1.07 last 2.29 stranded 0%
+path block t0.5 c1 w3 tau0: eff 1.12 gain 2.14 last 2.77 stranded 1%
+path block t0.5 c1 w3 tau30: eff 1.31 gain 2.40 last 3.31 stranded 0%
+path block t0.5 c2 w1 tau0: eff -1.77 gain -4.58 last 0.98 stranded 4%
+path block t0.5 c2 w1 tau30: eff -1.00 gain -2.17 last 1.26 stranded 0%
+path block t0.5 c2 w3 tau0: eff -0.58 gain -1.30 last 1.31 stranded 2%
+path block t0.5 c2 w3 tau30: eff 0.16 gain 0.33 last 2.20 stranded 0%
+path block t1.5 c1 w1 tau0: eff 1.09 gain 2.06 last 2.94 stranded 1%
+path block t1.5 c1 w1 tau30: eff 0.77 gain 1.44 last 2.55 stranded 0%
+path block t1.5 c1 w3 tau0: eff 1.45 gain 2.65 last 3.54 stranded 0%
+path block t1.5 c1 w3 tau30: eff 0.95 gain 1.76 last 2.71 stranded 0%
+path block t1.5 c2 w1 tau0: eff -0.92 gain -2.11 last 1.15 stranded 2%
+path block t1.5 c2 w1 tau30: eff 0.07 gain 0.14 last 1.89 stranded 0%
+path block t1.5 c2 w3 tau0: eff 0.55 gain 1.09 last 2.05 stranded 0%
+path block t1.5 c2 w3 tau30: eff 0.83 gain 1.57 last 2.60 stranded 0%
+path block t2.5 c1 w1 tau0: eff 1.27 gain 2.35 last 3.58 stranded 2%
+path block t2.5 c1 w1 tau30: eff 0.59 gain 1.12 last 2.31 stranded 0%
+path block t2.5 c1 w3 tau0: eff 1.38 gain 2.52 last 3.80 stranded 1%
+path block t2.5 c1 w3 tau30: eff 0.59 gain 1.11 last 2.32 stranded 0%
+path block t2.5 c2 w1 tau0: eff -0.33 gain -0.72 last 1.49 stranded 3%
+path block t2.5 c2 w1 tau30: eff 0.18 gain 0.35 last 2.00 stranded 1%
+path block t2.5 c2 w3 tau0: eff 0.84 gain 1.64 last 2.61 stranded 1%
+path block t2.5 c2 w3 tau30: eff 0.87 gain 1.62 last 2.63 stranded 0%

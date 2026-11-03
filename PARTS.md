@@ -89,22 +89,42 @@ stalled with discomfort persisting is a candidate; telling a plateau from a ceil
 
 ## 4. How it is judged: the credit
 
-This decides more than the operation does. What a change did must be judged by some signal, and these differ by
-orders of magnitude in how fast they judge (this project's results):
+This decides more than the operation does. What a change did must be judged by some signal, but how fast depends on
+the signal *and the question put to it*, in bits to learn over bits per second (rough sums from this project's results;
+balance from its median error at birth):
 
-| credit from | how fast | here |
-|---|---|---|
-| **the brain's own movement**: what its action did to its senses | seconds | D24: which motor turns towards which half of the eye, learned in a median 12 s |
-| **a prediction missed**: the next pulse early or late | tens of seconds | D20: the body's balance, 93% of the ceiling |
-| **outcomes**: the taste, meals | 10,000 to 100,000 s, against a life of 100 | D16: a steer learned from the taste only in 100,000 s lives; D15's tuner |
+| what was learned | bits | signal | time | bits/s |
+|---|---|---|---|---|
+| which motor turns towards which half of the eye (D24) | 1 | the brain's own movement | 12 s | 0.08 |
+| which colour is food (D25) | 1 | taste, while driving | 1.5 s | 0.7 |
+| the body's balance (D20) | ~2 | what comes round again in its sweeps | 140 s | 0.014 |
+| the body's balance (D15) | 1.4 | meals | 10,000 s | 0.00014 |
+| a spending knob, 8% apart (D15) | | meals | about 4,000 s a comparison | below the wall in a life of 100 s |
 
-So **every part should be classed by the fastest signal that can tune it**, and a part is worth adding only if some
-signal faster than meals can judge it, or the noise wall makes it unlearnable in a life (`BOUNDS.md`, The walls).
-Exploring cause and effect round the loop (sensors, actuators, the world, sensors) is cheap where the brain reads
+This corrects an earlier form of this section, which ranked signals (own movement, prediction, outcomes) and concluded
+that a part must be judged faster than meals. Taste settles the colour faster than anything else here, because the
+effect is large and one meal can say nearly all of it; D16's 10,000 s was the learners' limit, not the signal's
+(`BOUNDS.md`, How long a life must be). So **judge a candidate by its own effect's signal to noise per second**, against
+the life and its number of rivals (`BOUNDS.md`, The walls). Exploring cause and effect round the loop (sensors, actuators, the world, sensors) is cheap where the brain reads
 the consequences of its own acts, and ruinous where it waits for food. The general form of that exploration is
 perturbation: a part varies its own output a little and keeps what an evaluator rewards (node and weight perturbation;
 in birdsong, one circuit injects the variation and another judges it [20]). Biology makes variation cheap to explore
 by keeping its parts weakly linked, so that a change in one rarely breaks the rest [21, 22].
+
+## 5. Why: what each intervention moves
+
+The operations above say how a brain changes; this says why. A chain runs from hidden facts Z to history H (senses, beats,
+tastes), memory M, action A and value V, and an intervention can act on only so many terms. A working hypothesis, tried
+on ten rows (`STORIES.md`, the table), where Immunise and Spend never won; each trigger as tested there:
+
+| class | what it changes | example | trigger |
+|---|---|---|---|
+| **Sense** | I(Z;H), moving in order to learn | D20's sweeps | Z uncertain and worth knowing |
+| **Store** | I(Z;M), keeping more of H | B's doubt, the hold | the past predicts outcomes beyond M: I(V;H\|M) > 0 |
+| **Use** | what A does with M | rung 1's bridge, the balance | M predicts a bad outcome anyway: I(V;M\|A) > 0 |
+| **Immunise** | V's dependence on Z | D5's "drive only while you see it" | V steep in Z, and no signal shows Z |
+| **Judge** | how well evidence is credited | D25's write while driving; one coin per burst | evidence counted that says little |
+| **Spend** | the same V for less | pruning, power gating | I(part;A\|rest) about 0 |
 
 ## A universal circuit?
 

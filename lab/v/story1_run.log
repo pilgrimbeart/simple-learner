@@ -1,0 +1,12 @@
+circuit 50206 blue: meals 11086, longest gap 28 s at 7512 s; runs 336, median 0.9 s, longest 46 s at 7518 s eating 3; running 4% of life; runs over 60 s 0
+circuit 50206 red: meals 7764, longest gap 3115 s at 11885 s; runs 240, median 0.9 s, longest 3109 s at 11891 s eating 0; running 34% of life; runs over 60 s 3
+circuit 50207 blue: meals 10921, longest gap 28 s at 13555 s; runs 344, median 0.8 s, longest 33 s at 9922 s eating 4; running 3% of life; runs over 60 s 0
+circuit 50207 red: meals 10705, longest gap 21 s at 14582 s; runs 346, median 0.8 s, longest 29 s at 14578 s eating 3; running 3% of life; runs over 60 s 0
+B 50206 blue: meals 11293, longest gap 34 s at 4266 s; runs 339, median 1.0 s, longest 51 s at 4264 s eating 2; running 4% of life; runs over 60 s 0
+B 50206 red: meals 11535, longest gap 14 s at 10869 s; runs 351, median 0.9 s, longest 15 s at 3578 s eating 4; running 3% of life; runs over 60 s 0
+B 50207 blue: meals 10788, longest gap 80 s at 9185 s; runs 339, median 0.8 s, longest 138 s at 9126 s eating 4; running 4% of life; runs over 60 s 1
+B 50207 red: meals 10776, longest gap 16 s at 6146 s; runs 329, median 0.8 s, longest 17 s at 11750 s eating 2; running 3% of life; runs over 60 s 0
+told 50206 blue: meals 11089, longest gap 78 s at 5037 s; runs 342, median 1.1 s, longest 113 s at 5000 s eating 1; running 6% of life; runs over 60 s 3
+told 50206 red: meals 11217, longest gap 107 s at 14207 s; runs 344, median 1.1 s, longest 199 s at 14153 s eating 9; running 6% of life; runs over 60 s 1
+told 50207 blue: meals 11065, longest gap 17 s at 14243 s; runs 316, median 0.8 s, longest 10 s at 3891 s eating 2; running 3% of life; runs over 60 s 0
+told 50207 red: meals 10793, longest gap 64 s at 5184 s; runs 323, median 0.9 s, longest 192 s at 5055 s eating 5; running 4% of life; runs over 60 s 1

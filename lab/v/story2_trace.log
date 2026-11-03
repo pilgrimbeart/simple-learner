@@ -1,0 +1,9 @@
+unscaled scan, x1.25: error 0: 2.75
+  error -0.40: -0.01, against none -2.75 [-2.92, -2.61]
+  error -0.20: 1.60, against none -1.15 [-1.28, -1.01]
+  error -0.10: 2.42, against none -0.32 [-0.47, -0.18]
+  error -0.05: 2.70, against none -0.04 [-0.19, +0.10]
+  error +0.05: 2.15, against none -0.59 [-0.74, -0.44]
+  error +0.10: 1.70, against none -1.05 [-1.16, -0.92]
+  error +0.20: 1.08, against none -1.67 [-1.81, -1.54]
+  error +0.40: 0.25, against none -2.50 [-2.65, -2.35]

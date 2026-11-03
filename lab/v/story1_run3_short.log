@@ -1,0 +1,7 @@
+no limit: efficiency 2.54 [2.43, 2.66]  gain 4.45  food 6.49  poison 1.02  last third 6.86 [6.15, 7.68]  stranded 0%  firings 373  power 4 nW  job True
+run_max 0.5: efficiency 2.71 [2.61, 2.81]  gain 4.58  food 6.48  poison 0.95  last third 6.98 [6.20, 7.91]  stranded 0%  firings 344  power 4 nW  job True  vs none +0.17 [+0.00, +0.34]
+run_max 1: efficiency 2.72 [2.64, 2.80]  gain 4.65  food 6.64  poison 1.00  last third 6.79 [6.17, 7.54]  stranded 0%  firings 352  power 4 nW  job True  vs none +0.18 [+0.07, +0.29]
+run_max 2: efficiency 2.63 [2.53, 2.72]  gain 4.53  food 6.54  poison 1.01  last third 6.94 [6.19, 7.79]  stranded 0%  firings 359  power 4 nW  job True  vs none +0.09 [-0.02, +0.19]
+run_max 5: efficiency 2.59 [2.49, 2.68]  gain 4.49  food 6.53  poison 1.02  last third 6.96 [6.24, 7.84]  stranded 0%  firings 366  power 4 nW  job True  vs none +0.04 [-0.00, +0.11]
+run_max 10: efficiency 2.58 [2.49, 2.68]  gain 4.49  food 6.54  poison 1.02  last third 6.90 [6.19, 7.71]  stranded 0%  firings 368  power 4 nW  job True  vs none +0.04 [+0.00, +0.11]
+run_max 20: efficiency 2.56 [2.47, 2.66]  gain 4.47  food 6.53  poison 1.03  last third 6.81 [6.13, 7.62]  stranded 0%  firings 370  power 4 nW  job True  vs none +0.02 [+0.00, +0.07]

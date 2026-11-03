@@ -1,0 +1,32 @@
+a 1.0: baseline: efficiency 2.77 [2.67, 2.87]  gain 4.69  food 6.62  poison 0.97  stranded 0%  firings 344
+a 1.0: balanced: efficiency 2.77 [2.67, 2.87]  gain 4.69  food 6.62  poison 0.97  stranded 0%  firings 344
+   gap +0.00 [+0.00, +0.00]
+a 1.01: baseline: efficiency 2.79 [2.68, 2.91]  gain 4.72  food 6.58  poison 0.93  stranded 0%  firings 343
+a 1.01: balanced: efficiency 2.79 [2.71, 2.88]  gain 4.70  food 6.47  poison 0.89  stranded 0%  firings 338
+   gap -0.00 [-0.14, +0.14]
+a 1.03: baseline: efficiency 2.59 [2.47, 2.70]  gain 4.37  food 6.17  poison 0.90  stranded 0%  firings 342
+a 1.03: balanced: efficiency 2.75 [2.63, 2.85]  gain 4.61  food 6.44  poison 0.91  stranded 0%  firings 337
+   gap +0.16 [+0.01, +0.30]
+a 1.1: baseline: efficiency 2.17 [2.02, 2.32]  gain 3.64  food 5.38  poison 0.87  stranded 0%  firings 337
+a 1.1: balanced: efficiency 2.64 [2.54, 2.75]  gain 4.45  food 6.36  poison 0.95  stranded 0%  firings 339
+   gap +0.47 [+0.29, +0.65]
+a 1.25: baseline: efficiency 1.06 [0.95, 1.17]  gain 1.78  food 3.76  poison 0.99  stranded 0%  firings 337
+a 1.25: balanced: efficiency 2.78 [2.66, 2.89]  gain 4.67  food 6.42  poison 0.88  stranded 0%  firings 339
+   gap +1.71 [+1.56, +1.87]
+a 1.5: baseline: efficiency -0.03 [-0.14, 0.08]  gain -0.05  food 2.07  poison 1.06  stranded 1%  firings 326
+a 1.5: balanced: efficiency 2.74 [2.64, 2.84]  gain 4.66  food 6.39  poison 0.87  stranded 0%  firings 347
+   gap +2.77 [+2.66, +2.89]
+a 2.0: baseline: efficiency -0.78 [-0.92, -0.65]  gain -1.24  food 0.81  poison 1.02  stranded 15%  firings 294
+a 2.0: balanced: efficiency 2.49 [2.38, 2.60]  gain 4.26  food 6.06  poison 0.90  stranded 0%  firings 355
+   gap +3.27 [+3.13, +3.41]
+a 4.0: baseline: efficiency -0.53 [-0.66, -0.39]  gain -0.83  food 0.17  poison 0.50  stranded 70%  firings 283
+a 4.0: balanced: efficiency 2.02 [1.89, 2.16]  gain 3.72  food 5.44  poison 0.86  stranded 0%  firings 419
+   gap +2.55 [+2.44, +2.65]
+100 s: baseline: efficiency 0.21 [-0.08, 0.54]  gain 0.34  food 2.17  poison 0.92  stranded 18%  firings 306
+100 s: balanced: efficiency 2.56 [2.44, 2.68]  gain 4.35  food 6.18  poison 0.92  stranded 0%  firings 348
+100 s: restored: efficiency 2.56 [2.44, 2.68]  gain 4.45  food 6.23  poison 0.89  stranded 0%  firings 368
+   gap +2.35 [+2.03, +2.66]; balance's spread 0.63 (log), median size 0.49
+2000 s: baseline: efficiency 0.26 [-0.17, 0.73]  gain 0.42  food 2.23  poison 0.90  stranded 8%  firings 297
+2000 s: balanced: efficiency 2.47 [2.36, 2.58]  gain 4.20  food 6.14  poison 0.97  stranded 0%  firings 348
+2000 s: restored: efficiency 2.55 [2.43, 2.66]  gain 4.32  food 6.14  poison 0.91  stranded 0%  firings 346
+   gap +2.20 [+1.75, +2.62]; balance's spread 0.65 (log), median size 0.52

@@ -167,6 +167,17 @@ The findings that changed the direction of the work, each told in full in the no
   allows for finding food (D22). An eye split into left and right halves would give the side directly: with it, B
   plus a small steering reflex, its wiring learned from its own scan, finds 21% more food, held out (D24, prepared
   for the user's decision; the body is unchanged).
+- **What a brain counts as evidence can matter more than how much it remembers.** B, our best forager, kept a running
+  tally of poisons to work out which colour is food, and lost about a tenth of its score to being told the answer. It
+  raised false alarms and was slow to notice real ones, because it also counted poison merely bumped into while scanning:
+  a poison tasted while driving at what it thinks is food says nearly everything, one tasted otherwise says little. Remembering more didn't help. Counting a taste only
+  while driving, one small change using a signal B already had, closes the whole gap: the creature finds the colour in a
+  second or two, and scores as if told. Measuring the information first is what showed the room was there: its senses
+  carry about 3 bits a second about a one-bit question, far more than B was using (`STORIES.md`, 1).
+- **One warning signal, and its context says which cure.** Tasting poison while driving at what it thinks is food tells a brain something is wrong, but not what. Given harder worlds (colours that
+  must alternate, a pattern, colours that swap), we found small cures for each, such as a counter that every good taste advances, holding a few bits of what to follow next. Applied to the wrong world a cure hurts.
+  But how many good meals came before the poison tells a sequence from a swap: one brain reading that picks the right cure itself, surely better than its starting point in five of eight tests, and doing no harm on plain
+  (`STORIES.md`).
 - **Time is where a small brain computes** (the user's insight, 2026-11-01). Deep networks come from a world without
   time: a mapping from input to output. A small creature's brain is a dynamical system whose computation is its
   timing (oscillators, delays, phase, coincidences), with the loop through its body and the world doing half the
@@ -193,6 +204,11 @@ The findings that changed the direction of the work, each told in full in the no
   compared on the same worlds (the same seeds), and one counts as better only if the 95% interval of their
   difference excludes zero; otherwise they are tied, and no order is claimed (`experiments/NOTEBOOK.md`, E0;
   `minimal/NOTEBOOK.md`, M9).
+
+- **Most mismatches between a brain and its world have a small cure, but one that stays out of the way is harder.** We
+  gave the same small learning brain ten different problems, such as unequal thrusters, a noisy eye and food that must be
+  eaten in sequence. Nine have a cure by hand that is surely better, and judging evidence better was the commonest. Only four
+  have an automatic version that costs nothing when the problem is absent (`STORIES.md`, the table).
 
 ## The ground rules, for every brain
 
@@ -494,6 +510,8 @@ The open questions, most valuable first, are in [`QUESTIONS.md`](QUESTIONS.md).
   is death, and a newborn takes its place (`discrete/NOTEBOOK.md`, D18).
 - **Grower**: generic machinery beside a brain that notices a gap (a bad outcome nothing predicted), grows a recruit
   where it is, and lets the recruit try the simplest operations, keeping what works; told nothing of what it is for.
+- **Story**: one performance issue followed from a brain with no concept of it, through the gap to it solved perfectly,
+  manual interventions and how a brain could detect it, to the simplest circuit that does (`STORIES.md`).
 - **Function-preserving growth**: adding a part with its effect at zero, so the brain is exactly as good as before,
   then tuning it in: trying a part costs nothing (`PARTS.md`).
 - **Ideal observer** (Geisler's term, the user's choice, 2026-11-01): a brain of unlimited reasoning but only the
@@ -580,6 +598,7 @@ python creature.py --record frames  # save a life's frames as PNGs, headless (me
 | `MIXED_FEEDBACK.md` | the mixed-feedback approach (Sepulchre and colleagues): what is new in it, the literature, and what it suggests here |
 | `RECRUITMENT.md` | how a brain might recruit more computational power locally, with no god: the literature, insights and plan |
 | `BOUNDS.md` | what limits how well and how fast any brain could learn in a life: the ideal observer, watching against intervening, the walls, MacKay |
+| `STORIES.md` | one page per performance issue: the gap, the interventions tried, how a brain could detect it, the simplest circuit that does |
 | `PARTS.md` | the ways a working brain could change itself (tune, modulate, rewire, prune, duplicate, add), a catalogue of parts by what they do in time, what triggers each change and what signal judges it; towards a universal circuit |
 
 ## Licence

@@ -1,0 +1,7 @@
+scan on motor 1, x1.25: error 0: 2.74
+  error -0.20: 1.09, against none -1.64 [-1.78, -1.50]
+  error -0.10: 1.64, against none -1.10 [-1.22, -0.97]
+  error -0.05: 2.07, against none -0.67 [-0.82, -0.52]
+  error +0.05: 2.73, against none -0.00 [-0.14, +0.13]
+  error +0.10: 2.51, against none -0.23 [-0.38, -0.07]
+  error +0.20: 1.71, against none -1.02 [-1.16, -0.89]

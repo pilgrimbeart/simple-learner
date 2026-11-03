@@ -115,6 +115,12 @@ per meal spent resting, moving and thinking), gain rate (meals per 10 s), food, 
   timing, no body change). Which motor turns towards which half is learned from its own scan in a median 12 s
   (right in 254 of 256 lives by the end). Held out on fresh seeds: **3.02 [2.92, 3.11] against B's 2.49 [2.40,
   2.58]** (+21%; told the map, 3.14); on lopsided bodies told their balance, 2.71 against 2.32 (+17%).
+- **The first story** (D25; `STORIES.md`): B's doubt written only while a drive is on closes the whole gap to being told
+  the colour (2.50 against 2.49 held out, B 2.21), and stands at component level with silicon's noise (2.15, B 1.84).
+- **The second story** (D26): unequal thrusters, its baseline and target measured: immune to 1%, half the score gone by
+  x1.25; on the usual bodies 0.21 against 2.56, one number of about 3.7 bits.
+- **The interventions table** (D28; `STORIES.md`): ten mismatches against story 1's circuit. Nine have a sure manual cure (row 10's a small one), four an automatic version that passes its plain-world test.
+- **The ladder of harder tests** (D27; `STORIES.md`): swaps, sequences, a rule about time. A sequence memory grown when frustrated solves alternate and pattern; one brain reading the run of goods before each poison chooses between cures, surely above the baseline on five tests of eight, tied on three (plain, slow swaps, and digest, which its menu cannot cure).
 - **Bodies** (D13): with each thruster 0.5-2, every fixed design collapses (B 0.32, the best searched on such bodies
   0.76); told its balance, B gets 1.92 (2.15 with its drive started in step, D20); eight local rules for finding the balance reach at most 0.8; judging each
   drive does better (D19), and a model learned from its own turning far better (D20).
@@ -2188,6 +2194,106 @@ seer's yardstick of 3.95 for a perfect memory with a split eye (D21). The map is
 movement, as B's balance is in D20: nothing about the body is told. Whether to make the eye split is the user's
 decision; until then, world.py stays as it is.
 
+## D25: the first story: which colour is food (2026-11-02)
+
+The interventions phase's pilot (`STORIES.md`, its result; `AGENTS.md`, its rules): block model, standard bodies,
+tolerances drawn, no SPICE, re-validated at component level with silicon's noise. `lab/story1.py` holds the arms;
+training seeds 0-63 x 2; ladder judged on 50000-50063 x 2; final on 50200-50327 x 2, which chose nothing; logs
+`lab/v/story1_*.log`.
+
+**Evidence** (`story1.py stats`, told and told-backwards lives, seeds 0-63 x 2; `lab/v/story1_rates.json`). Each taste
+by its sign and which of the followed and other eye pulsed within 0.3 s, per s, with the bit right and wrong:
+
+| taste | followed pulsed | other pulsed | right | wrong | evidence the bit is wrong |
+|---|---|---|---|---|---|
+| poison | yes | no | 0.008 | 0.487 | +5.94 bits |
+| poison | yes | yes | 0.035 | 0.152 | +2.11 |
+| poison | no | yes | 0.050 | 0.004 | -3.58 |
+| poison | no | no | 0.006 | 0.006 | -0.10 |
+
+(Food mirrors these, the lives being paired.) In all 3.26 bits/s towards the truth, right or wrong. My sum beside
+`PARTS.md` the first day, 0.66 bits/s, used poison's rate alone and missed which eye vouched for it. Silence carries
+nothing, for the same reason: the total rates are equal.
+
+**The ideal observer** (`Bayes`): the log-odds that the bit is wrong, each taste adding its log ratio, holding the likelier
+bit. Exact given those rates, treating tastes as independent; it keeps B's movements, so it bounds learning the bit, not
+foraging. It ties with being told. B's "learning costs only 0.15" (D13, on other seeds) understated what a better write
+could recover: here B is 0.28 below told, all recoverable.
+
+**Why B falls short.** It counts every poison. A poison bumped into while scanning says little or even speaks for the bit
+(the third row above), yet steps doubt up. Tuning that tally only reached 2.27, a fuller count (`count`), a fading count
+(`fade`), and a run counter food resets (`run`, which is what the tuned tally turned out to be) no higher. A no-bit
+brain judging each eye by its own drives (`path`) reaches 2.12 if the bad eye ends a drive and 1.22 if it is merely
+ignored, repeating `learn_avoid`'s lesson (D8) that declining isn't avoiding.
+
+**The circuit** (`Gated`): the tally written only while driving. `use=0` reads B's own drive signal; `use=1`, separate
+tags with a window, came no better (2.56 against 2.55 on training seeds), so no new tag is needed. Trust 0 scores 2.32;
+1 2.54; 2 to 9 2.55, so one step of trust suffices and a two-state counter would do. It is a three-factor write (taste,
+times what was just being done), as the minimal line's bit already is (M10).
+
+**Controls.** The unsolvable world (each meal's taste a coin, `--control random`) is a wrapper in `story1.py`, an experiment
+only. Nothing separates it from a hard world yet: the circuit flips 16.5 times a life.
+
+**At component level** (`lab/story1_node.py`): D14's tuned B (`lab/v/sep_search_silicon.json`) with doubt's two writes
+gated by the hold node, doubt's four numbers polished 12 generations by efficiency (`lab/v/story1_node.json`,
+`story1_node_tune.log`). B itself was not re-polished here, and B's 30 generations had more knobs, so if anything this
+favours B. The told arm is a fixed bit's right half of each pair, so it isn't paired with the circuit.
+
+**A run with no end** (the user, watching a long life, 2026-11-02: at about tick 1,200,000 it travels straight almost for
+ever). `model.py`'s run ends only at a food pulse: no timer. Traced (`lab/story1_run2.py`, seed 50206, red as poison,
+`lab/v/story1_run2.log`): from 11,891 s a run of 4,579 s, no meal, spin exactly 0, 0.0011 degrees off the world's axis, so
+0.0011 mm sideways a lap. The user suspected noise; the block model has none on the thrusters (they fire in exact
+pairs). With no meal no block respawns, and the drift itself brings a block into the corridor at last. The long runs
+lie near the axes and diagonals, closed lines of the torus, the ones that stay clear; D9's stranding again. B and told
+have them too (113-199 s in `lab/v/story1_run.log`).
+A limit on the run (`Timed`: past `run_max` s boredom restarts, so it scans onto a new heading): training seeds, 0.5 s
+2.71, 1 s 2.72, 2 s 2.63, 5 s 2.59, 10 s 2.58, 20 s 2.56, none 2.54 (1 s +0.18 [+0.07, +0.29]). Held out at 1 s
+(`lab/v/story1_run3_held.log`): lives of 100 s, seeds 50400-50527 x 2, 2.62 against 2.53, +0.09 [-0.01, +0.21], tied, stranded
+1% to 0%; lives of 10,000 s, seeds 50600-50615 x 2, 2.72 against 2.57, **+0.15 [+0.11, +0.18]**, gain +0.16 [+0.10, +0.22].
+The results above in this entry have the flaw. The user's decisions: the limit joins the baseline, every arm re-judged
+(`lab/story1_final2.py`, `lab/v/story1_final2.log`: `STORIES.md` holds the numbers; settings as chosen without it, rates
+recaptured); a thruster mismatch is not a repair for every body, but a flaw to introduce and learn to compensate for:
+the next story. At component level (`lab/story1_node.py`, `limited`; `lab/v/story1_node_judge2.log`) a first limit, charged
+whenever drive-or-run was up and lifting boredom hard, stranded 19% of lives on training seeds (ordinary drives charged it,
+and it pushed boredom past where a drive leaves it, so the scans ran long). Charged only while running, latching past 0 V and
+reset once boredom's node is back at 0.1 V, four elements: 2.35 against 2.05 without, on training seeds.
+
+## D26: the second story: unequal thrusters (2026-11-02)
+
+The user's framing: the mismatch is a flaw introduced to discover how to compensate, as its own experiment with a baseline
+and an optimum target (`STORIES.md`, 2; `lab/story2.py`; logs `lab/v/story2_gap.log`, `story2_error.log`). B told the
+colour, the run's limit, `sync=1`, each flaw's body `factors`. Where the lopsided ceiling of D20 was 2.15, it is 2.56 with
+the run's limit on these seeds.
+
+The curve's shape is the finding: nothing to x1.01, a sure cost by x1.03, half the score by x1.25, below zero by x1.5. D5's
+blind driver collapsed by 1%; B's eyes correct small curves for free ("drive while you see it"), so it is immune up to about
+1%, and then not. x4 scores above x2 only because it strands in 70% of lives and so eats less poison.
+
+Precision: the score against the error e in the log balance is lopsided (e > 0, motor 0 rate too high, costs far more than
+e < 0), at x1.25 and x2 alike, measured relative to the balance that makes the drive straight. Untraced. Candidates: `model.py`
+scales the scan by g0 too (D20's smear), so e > 0 also speeds the scan; and a curve with the scan's turn against one
+across it. The peak may lie just below 0: e = -0.05 is tied with 0 at both sizes, so the told balance is the target only
+to within that. Bits to learn are a rough sum: log2(spread / tolerance) = log2(0.63 / 0.05).
+
+Stage 3 (`lab/story2_stage3.py`, logs `lab/v/story2_fixed.log`, `story2_learners.log`): `STORIES.md` holds the table. The curve's lopsidedness
+traced: not the scan's speed (`trace`, unscaled, the same; `story2_trace.log`) but its direction (`lab/story2_mirror.py`, the scan on motor 1: the
+curve flips, `story2_mirror.log`). A coarse estimate biased to the cheap side (`lab/story2_bias.py`, `story2_bias.log`): nothing, tied at every
+bias. The fixed search's training-to-held-out fell little (0.80 to 0.91, within noise), its best below D19 and D20 as ever.
+
+## D27: the ladder of harder tests (night of 2026-11-02)
+
+The user's idea, each test one change to story 1's baseline, none accumulating (`STORIES.md`). `lab/ladder.py` holds the rules and brains; rounds on training
+seeds `lab/ladder_try*.py`, `lab/ladder_digest.py`, logs `lab/v/ladder_*.log`; final `lab/ladder_final.py`, `lab/ladder_final2.py` on 52000-52063 x 2,
+longer lives on 52100-52131 x 2. Dead ends and bugs, which the story page leaves out:
+
+- `Transition` (flip after a vouched good once a tally passes theta) detected alternate in every life and never in plain, but cured it poorly (1.40); `Detect` kept its tally and cured by
+  following the eye that didn't pulse last, 1.63-1.88: that eye is wrong often enough to cost. `Cycle` needs neither: a good taste itself advances the turn.
+- `Lengths`, a learned run per eye, collapsed to length 1 on any stray poison; `Lengths2`, believing a length only twice over, never reached the rule (alternate -0.21, pattern -0.78).
+- Three clocks for swaps: `Rhythm`, `Rhythm2`, `Rhythm3`. All find the period; none beats removing trust, at 10 s 0.42-0.79 against 1.16. The rough bound for a reactive brain, 1.4 s wrong a swap, is a sum, not measured. A clock told the period isn't tried: it would say whether the estimate or the phase is what fails.
+- Digest's first form gave the brain two tastes per meal, and its numbers meant nothing; mended (`Digest.taste`, one meal one taste), W shortened from 2 s to 1 s since at about one meal a second 2 s leaves little to eat.
+- `Diagnose` tried at short 2, 3, 4 and tau_v 20, 40, on training seeds: 2 and 40 chosen, little between them. Its 5 s swaps look like sequences (few goods between), as expected. Not tried: undoing growth that didn't help, which might mend both.
+- All at block level; none re-validated at component level, as the phase's rule asks once a story succeeds. A sequence memory is a counter and a few memory nodes, and should be buildable.
+
 ## Lessons from this line, in full (moved from the old LESSONS.md)
 
 - **An ideal body is also a gift an optimiser takes.** The two thrusters were identical to the last digit, and a
@@ -2201,3 +2307,23 @@ decision; until then, world.py stays as it is.
   results (`discrete/NOTEBOOK.md` D7). Check convergence in both step and tolerance, on the first design that works,
   and distrust a design whose behaviour hangs on a marginal event: a simulator's rounding, or a real part's
   tolerance, decides it.
+
+## D28: the interventions table (2026-11-03)
+
+The user's aim: about 10 rows, then one universal correction circuit (`STORIES.md`, the table and its limits; rules in `AGENTS.md`). `lab/table.py` holds the worlds
+and arms, on story 1's circuit; `lab/table_rows.py` the class-by-class trials (each setting on 53000-53015 x 2, the best 3 on 53016-53047 x 2, the best held out on 53100-53163 x 2);
+`lab/table_auto.py` the automatic versions, in their world and the plain world; `lab/table_paired.py` the comparisons behind each "tied". Logs `lab/v/table_*.log`.
+
+**Row 2's old baseline was not comparable**: `lab/story2.py`'s brain is told the colour. Rebuilt on the circuit: 0.67 to 2.42 at 1,000 s. `sync=1` changes nothing on a body with equal rates.
+
+**Dead ends and causes.**
+
+- A told scan side (`ScanSide`), one bit from D26's lopsided curve: +0.04 [-0.03, +0.11] on row 2, so the curve's lopsidedness can't be cashed in that way, and learning it (`ScanLearn`) gained nothing.
+- Weak eye: hold scaled to the eye (`EyeHold`, `AutoHold`), slowing while following it (`EyeSlow`), nothing above the base brain. Its target, the standard body, holds pulses this body never delivers.
+- Clumps: staying near a recent meal (`Local`) -0.02 [-0.11, +0.06]. Being told the colour is tied with the base, so the poison here (3.13 per 10 s) comes from clumps, not from the bit.
+- Scarce: resting (`Rest`) -0.01. Its best manual, a search, +0.06 [+0.00, +0.12]; told +0.10. Too small to be a row.
+- A coincidence filter on both eyes, not only the noisy one (`Filter`, eye_told 0): 0.96 in the noisy world, 1.05 in plain, -1.67. An unconditional filter ruins a good eye; `AdaptEye`, setting each threshold from its eye's background rate, passes both.
+- A bug of mine: settings named `eye_x`, `local_x`, `far_x` were read as scalings of a number, and crashed rows 9 and 10's first run. Renamed; no result was affected.
+- Digest's target first ran without its pause (-3.70), corrected to 1.79 before use. Moving blocks and scarce's told arm were added afterwards as checks.
+
+**Not watched live**: this entry's new arms have been judged but not seen running.

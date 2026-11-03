@@ -1,0 +1,22 @@
+count
+  eff 1.42 gain 2.48 last 3.63 stranded 0% {'fstep': 0.0, 'drift': 0.0, 'V_L': 0.0, 'step': 0.5, 'V_H': 0.75}
+  eff 1.33 gain 2.32 last 3.25 stranded 1% {'fstep': 0.0, 'drift': 0.0, 'V_L': 0.0, 'step': 0.5, 'V_H': 0.25}
+  eff 1.31 gain 2.30 last 3.32 stranded 0% {'fstep': 0.0, 'drift': 0.0, 'V_L': 0.0, 'step': 0.5, 'V_H': 1.25}
+fade
+  eff 2.20 gain 3.86 last 5.56 stranded 0% {'fstep': 0.0, 'drift': 0.1, 'V_L': 0.0, 'step': 0.5, 'V_H': 1.25}
+  eff 2.10 gain 3.66 last 5.97 stranded 0% {'fstep': 0.0, 'drift': 0.3333333333333333, 'V_L': 0.0, 'step': 0.5, 'V_H': 1.25}
+  eff 2.06 gain 3.60 last 5.47 stranded 0% {'fstep': 0.0, 'drift': 0.3333333333333333, 'V_L': 0.0, 'step': 0.5, 'V_H': 0.75}
+  eff 1.91 gain 3.32 last 4.66 stranded 0% {'fstep': 0.0, 'drift': 0.1, 'V_L': 0.0, 'step': 0.5, 'V_H': 0.75}
+  eff 1.74 gain 3.06 last 4.24 stranded 0% {'fstep': 0.0, 'drift': 0.03333333333333333, 'V_L': 0.0, 'step': 0.5, 'V_H': 1.25}
+tally
+  eff 2.30 gain 4.01 last 6.51 stranded 0% {'fstep': 1.312, 'drift': 0.0, 'V_H': 1.34295}
+  eff 2.29 gain 3.98 last 5.44 stranded 0% {'fstep': 1.312, 'drift': 0.0, 'V_H': 0.6869500000000001}
+  eff 2.28 gain 3.98 last 6.18 stranded 0% {'fstep': 1.312, 'drift': 0.02, 'V_H': 1.34295}
+  eff 2.28 gain 3.98 last 5.98 stranded 0% {'fstep': 1.312, 'drift': 0.1, 'V_H': 1.34295}
+  eff 2.28 gain 3.97 last 5.86 stranded 0% {'fstep': 0.656, 'drift': 0.1, 'V_H': 1.34295}
+path
+  eff 2.28 gain 4.04 last 6.29 stranded 1% {'reverse': 1, 'theta': 1.5, 'cost': 1, 'trust': 3, 'tau': 0}
+  eff 2.24 gain 3.99 last 6.01 stranded 1% {'reverse': 1, 'theta': 1.5, 'cost': 1, 'trust': 1, 'tau': 0}
+  eff 2.13 gain 3.83 last 5.13 stranded 0% {'reverse': 1, 'theta': 0.5, 'cost': 1, 'trust': 3, 'tau': 0}
+  eff 2.12 gain 3.75 last 6.40 stranded 1% {'reverse': 1, 'theta': 2.5, 'cost': 1, 'trust': 3, 'tau': 0}
+  eff 2.12 gain 3.78 last 5.01 stranded 1% {'reverse': 1, 'theta': 2.5, 'cost': 2, 'trust': 3, 'tau': 0}

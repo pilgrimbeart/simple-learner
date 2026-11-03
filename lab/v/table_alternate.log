@@ -1,0 +1,23 @@
+digest: base brain: efficiency -4.67 [-4.90, -4.42]  gain -7.91  food 2.23  poison 5.07  stranded 0%  firings 345
+digest: target: efficiency -3.70 [-3.86, -3.53]  gain -6.28  food 2.84  poison 4.56  stranded 0%  firings 348
+   gap +0.98 [+0.72, +1.24]
+ageing: base brain: efficiency 0.37 [0.33, 0.41]  gain 0.60  food 2.23  poison 0.81  stranded 0%  firings 308
+ageing: target: efficiency 2.59 [2.53, 2.64]  gain 4.43  food 6.30  poison 0.94  stranded 0%  firings 354
+   gap +2.21 [+2.14, +2.29]
+alternate | base: efficiency -3.56 [-3.72, -3.38]  gain -6.05  food 3.02  poison 4.53  stranded 0%  firings 348
+alternate | Store | cycle {"cycle": 2.0}: efficiency 2.55 [2.40, 2.71]  gain 4.34  food 6.49  poison 1.07  stranded 0%  firings 349
+   against the base brain +6.11 [+5.87, +6.35]
+alternate | Use | flip {}: efficiency 1.97 [1.82, 2.12]  gain 3.33  food 5.98  poison 1.33  stranded 0%  firings 342
+   against the base brain +5.53 [+5.29, +5.75]
+alternate | Use | alteye {}: efficiency 2.20 [2.06, 2.34]  gain 3.71  food 6.10  poison 1.19  stranded 0%  firings 342
+   against the base brain +5.76 [+5.53, +5.98]
+alternate | Immunise | circuit {"hold_x": 0.474, "bored_x": 2.808, "scan_x": 1.036, "drive_x": 0.43, "run_x": 1.312, "run_max": 1.0}: efficiency -2.05 [-2.23, -1.86]  gain -2.81  food 1.48  poison 2.15  stranded 3%  firings 182
+   against the base brain +1.50 [+1.26, +1.74]
+alternate | Spend | circuit {"scan_x": 0.417, "drive_x": 0.445, "run_x": 0.76}: efficiency -2.43 [-2.59, -2.25]  gain -3.20  food 1.70  poison 2.45  stranded 0%  firings 158
+   against the base brain +1.13 [+0.87, +1.40]
+alternate | Judge | circuit {"trust": 0.0}: efficiency -1.97 [-2.08, -1.87]  gain -3.35  food 3.80  poison 3.58  stranded 0%  firings 347
+   against the base brain +1.58 [+1.38, +1.79]
+alternate | Sense | probe {"probe_T": 3.0, "probe_len": 3.0}: efficiency -2.54 [-2.69, -2.40]  gain -4.35  food 3.92  poison 4.13  stranded 0%  firings 354
+   against the base brain +1.01 [+0.76, +1.26]
+alternate | Use | path {"theta": 0.5, "tau": 30.0, "trust": 2.0}: efficiency -1.53 [-1.64, -1.42]  gain -2.41  food 2.01  poison 2.21  stranded 2%  firings 286
+   against the base brain +2.02 [+1.81, +2.23]

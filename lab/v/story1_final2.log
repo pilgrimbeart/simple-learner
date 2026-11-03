@@ -1,0 +1,53 @@
+  sign,followed,other (0, 0, 0): right 0.005/s  wrong 0.006/s  evidence +0.06 bits
+  sign,followed,other (0, 0, 1): right 0.044/s  wrong 0.004/s  evidence -3.54 bits
+  sign,followed,other (0, 1, 0): right 0.008/s  wrong 0.487/s  evidence +5.87 bits
+  sign,followed,other (0, 1, 1): right 0.035/s  wrong 0.155/s  evidence +2.13 bits
+  sign,followed,other (1, 0, 0): right 0.006/s  wrong 0.005/s  evidence -0.06 bits
+  sign,followed,other (1, 0, 1): right 0.004/s  wrong 0.044/s  evidence +3.54 bits
+  sign,followed,other (1, 1, 0): right 0.487/s  wrong 0.008/s  evidence -5.87 bits
+  sign,followed,other (1, 1, 1): right 0.155/s  wrong 0.035/s  evidence -2.13 bits
+  evidence rate: if wrong 3.21 bits/s towards wrong; if right 3.21 bits/s towards right
+ladder, 50000-50063 x 2
+still: efficiency 0.00 [0.00, 0.00]  gain 0.00  food 0.00  poison 0.00  last third inf [nan, nan]  stranded 100%  firings 0  power 4 nW  job False
+unwired: efficiency -3.38 [-3.45, -3.31]  gain -7.14  food 7.14  poison 7.14  last third 1.00 [1.00, 1.00]  stranded 0%  firings 554  power 4 nW  job False
+told: efficiency 2.78 [2.68, 2.88]  gain 4.70  food 6.60  poison 0.95  last third 7.16 [6.58, 7.85]  stranded 0%  firings 345  power 4 nW  job True
+bayes: efficiency 2.62 [2.52, 2.74]  gain 4.43  food 6.53  poison 1.05  last third 6.75 [6.23, 7.35]  stranded 0%  firings 345  power 4 nW  job True
+B: efficiency 2.46 [2.34, 2.58]  gain 4.17  food 6.38  poison 1.11  last third 6.58 [5.97, 7.36]  stranded 0%  firings 344  power 4 nW  job True
+count2: efficiency 1.49 [1.34, 1.64]  gain 2.52  food 5.89  poison 1.68  last third 3.54 [3.14, 4.00]  stranded 0%  firings 344  power 4 nW  job True
+run1: efficiency 1.37 [1.23, 1.51]  gain 2.31  food 5.63  poison 1.66  last third 3.62 [3.21, 4.11]  stranded 0%  firings 341  power 4 nW  job True
+run2: efficiency 2.33 [2.19, 2.47]  gain 3.93  food 6.22  poison 1.15  last third 5.62 [4.99, 6.31]  stranded 0%  firings 341  power 4 nW  job True
+run3: efficiency 2.41 [2.28, 2.53]  gain 4.08  food 6.37  poison 1.15  last third 6.40 [5.73, 7.17]  stranded 0%  firings 345  power 4 nW  job True
+fade3_5s: efficiency 2.27 [2.12, 2.42]  gain 3.85  food 6.31  poison 1.23  last third 5.94 [5.17, 6.84]  stranded 0%  firings 345  power 4 nW  job True
+tally: efficiency 2.44 [2.30, 2.57]  gain 4.11  food 6.29  poison 1.09  last third 6.57 [5.91, 7.29]  stranded 0%  firings 341  power 4 nW  job True
+path_block: efficiency 1.42 [1.28, 1.55]  gain 2.51  food 6.71  poison 2.10  last third 3.23 [3.03, 3.45]  stranded 0%  firings 382  power 4 nW  job True
+path_reverse: efficiency 2.37 [2.25, 2.49]  gain 4.02  food 6.39  poison 1.19  last third 7.47 [6.75, 8.37]  stranded 0%  firings 347  power 4 nW  job True
+circuit: efficiency 2.64 [2.54, 2.74]  gain 4.47  food 6.55  poison 1.04  last third 6.87 [6.22, 7.61]  stranded 0%  firings 345  power 4 nW  job True
+final, 50200-50327 x 2
+unwired: efficiency -3.38 [-3.43, -3.34]  gain -7.23  food 7.23  poison 7.23  last third 1.00 [1.00, 1.00]  stranded 0%  firings 566  power 4 nW  job False
+told: efficiency 2.73 [2.65, 2.81]  gain 4.63  food 6.54  poison 0.95  last third 6.93 [6.45, 7.45]  stranded 0%  firings 346  power 4 nW  job True
+bayes: efficiency 2.77 [2.69, 2.84]  gain 4.71  food 6.57  poison 0.93  last third 6.93 [6.45, 7.44]  stranded 0%  firings 347  power 4 nW  job True
+B: efficiency 2.43 [2.34, 2.52]  gain 4.11  food 6.35  poison 1.12  last third 5.92 [5.48, 6.41]  stranded 0%  firings 345  power 4 nW  job True
+circuit: efficiency 2.72 [2.64, 2.79]  gain 4.61  food 6.53  poison 0.96  last third 7.01 [6.55, 7.53]  stranded 0%  firings 347  power 4 nW  job True
+circuit - told efficiency: -0.01 [-0.08, +0.06]
+circuit - told gain: -0.02 [-0.15, +0.11]
+circuit - bayes efficiency: -0.05 [-0.10, -0.01]
+circuit - bayes gain: -0.09 [-0.18, -0.02]
+circuit - B efficiency: +0.29 [+0.21, +0.36]
+circuit - B gain: +0.50 [+0.35, +0.63]
+circuit - unwired efficiency: +6.10 [+6.00, +6.19]
+circuit - unwired gain: +11.84 [+11.64, +12.03]
+bayes - told efficiency: +0.04 [-0.03, +0.11]
+bayes - told gain: +0.07 [-0.06, +0.21]
+B - told efficiency: -0.31 [-0.39, -0.23]
+B - told gain: -0.52 [-0.67, -0.38]
+bayes: born wrong 128: first flip median 1.0 s, 90th 3.1 s, never 0; born right 128: 2.3% ever flip; right 99.2%
+B: born wrong 128: first flip median 3.6 s, 90th 9.8 s, never 0; born right 128: 20.3% ever flip; right 96.5%
+circuit: born wrong 128: first flip median 1.4 s, 90th 3.7 s, never 0; born right 128: 3.9% ever flip; right 99.0%
+all-food circuit: efficiency 4.41 [4.32, 4.51]  gain 7.50  food 7.50  poison 0.00  last third inf [nan, nan]  stranded 0%  firings 347  power 4 nW  job True
+   flips a life 0.00
+all-food told: efficiency 4.42 [4.36, 4.48]  gain 7.51  food 7.51  poison 0.00  last third inf [nan, nan]  stranded 0%  firings 347  power 4 nW  job True
+all-food unwired: efficiency 6.81 [6.71, 6.91]  gain 14.56  food 14.56  poison 0.00  last third inf [nan, nan]  stranded 0%  firings 568  power 4 nW  job True
+random circuit: efficiency -2.21 [-2.36, -2.05]  gain -3.74  food 3.70  poison 3.72  last third 1.02 [0.95, 1.09]  stranded 0%  firings 345  power 4 nW  job False
+   flips a life 16.27
+random told: efficiency -2.16 [-2.26, -2.07]  gain -3.67  food 3.77  poison 3.72  last third 0.98 [0.93, 1.02]  stranded 0%  firings 346  power 4 nW  job False
+random unwired: efficiency -3.27 [-3.43, -3.11]  gain -7.00  food 7.30  poison 7.15  last third 1.00 [0.95, 1.05]  stranded 0%  firings 566  power 4 nW  job False

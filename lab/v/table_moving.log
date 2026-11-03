@@ -1,0 +1,11 @@
+moving | base: efficiency 2.49 [2.39, 2.59]  gain 4.30  food 6.85  poison 1.27  stranded 0%  firings 361
+moving | Immunise | circuit {"hold_x": 0.808, "bored_x": 0.521, "scan_x": 0.593, "drive_x": 1.733, "run_x": 0.617, "run_max": 0.5}: efficiency 2.26 [2.16, 2.35]  gain 4.01  food 6.67  poison 1.33  stranded 0%  firings 387
+   against the base brain -0.23 [-0.39, -0.09]
+moving | Spend | circuit {"scan_x": 0.959, "drive_x": 0.739, "run_x": 0.604}: efficiency 2.35 [2.26, 2.45]  gain 3.74  food 5.92  poison 1.09  stranded 0%  firings 294
+   against the base brain -0.14 [-0.26, -0.01]
+moving | Judge | circuit {"use": 1.0, "window": 0.1, "trust": 1.0}: efficiency 2.48 [2.38, 2.57]  gain 4.27  food 6.83  poison 1.28  stranded 0%  firings 361
+   against the base brain -0.01 [-0.05, +0.01]
+moving | Sense | probe {"probe_T": 20.0, "probe_len": 1.0}: efficiency 2.18 [2.08, 2.27]  gain 3.75  food 6.54  poison 1.40  stranded 0%  firings 359
+   against the base brain -0.31 [-0.43, -0.19]
+moving | Use | path {"theta": 0.5, "tau": 30.0, "trust": 2.0}: efficiency 1.03 [0.90, 1.16]  gain 1.82  food 6.64  poison 2.41  stranded 0%  firings 388
+   against the base brain -1.47 [-1.62, -1.30]

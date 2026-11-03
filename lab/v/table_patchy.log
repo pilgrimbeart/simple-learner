@@ -1,0 +1,13 @@
+patchy | base: efficiency 0.73 [0.55, 0.90]  gain 1.16  food 7.42  poison 3.13  stranded 1%  firings 293
+patchy | Store | local {"local_t": 1.0, "local_k": 5.0, "far_k": 1.0}: efficiency 0.71 [0.53, 0.88]  gain 1.13  food 7.31  poison 3.09  stranded 1%  firings 291
+   against the base brain -0.02 [-0.11, +0.06]
+patchy | Immunise | circuit {"hold_x": 2.38, "bored_x": 0.844, "scan_x": 1.217, "drive_x": 0.352, "run_x": 1.464, "run_max": 1.0}: efficiency 0.89 [0.74, 1.04]  gain 1.35  food 5.83  poison 2.24  stranded 1%  firings 255
+   against the base brain +0.16 [-0.02, +0.35]
+patchy | Spend | circuit {"scan_x": 0.454, "drive_x": 0.568, "run_x": 0.979}: efficiency 0.46 [0.32, 0.59]  gain 0.61  food 5.09  poison 2.24  stranded 0%  firings 167
+   against the base brain -0.27 [-0.47, -0.07]
+patchy | Judge | circuit {"trust": 3.0}: efficiency 0.94 [0.76, 1.10]  gain 1.50  food 7.53  poison 3.02  stranded 1%  firings 294
+   against the base brain +0.21 [+0.10, +0.32]
+patchy | Sense | probe {"probe_T": 20.0, "probe_len": 1.0}: efficiency 0.45 [0.28, 0.62]  gain 0.71  food 7.33  poison 3.31  stranded 1%  firings 296
+   against the base brain -0.28 [-0.46, -0.11]
+patchy | Use | path {"theta": 0.5, "tau": 30.0, "trust": 2.0}: efficiency -1.22 [-1.37, -1.07]  gain -1.93  food 4.62  poison 3.27  stranded 0%  firings 289
+   against the base brain -1.95 [-2.16, -1.72]

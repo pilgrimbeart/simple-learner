@@ -1,0 +1,90 @@
+unreliable | auto learntrust {"short": 3.0, "tau_b": 100.0, "top": 5.0} | 100 s: efficiency 0.20 [0.08, 0.30]  gain 0.33  food 4.94  poison 2.30  stranded 0%  firings 342
+   against the base brain +0.10 [-0.02, +0.20]
+   in plain: efficiency 2.73 [2.64, 2.83]  gain 4.63  food 6.54  poison 0.96  stranded 0%  firings 347
+   plain, against the base brain +0.00 [+0.00, +0.00]
+      plain: flips 0.6; grew in 0; turned on in 0; of 128
+unreliable | auto learntrust {"short": 3.0, "tau_b": 100.0, "top": 5.0} | 400 s: efficiency 0.51 [0.44, 0.57]  gain 0.86  food 5.23  poison 2.18  stranded 0%  firings 342
+   against the base brain +0.19 [+0.11, +0.28]
+   in plain: efficiency 2.78 [2.73, 2.83]  gain 4.70  food 6.58  poison 0.94  stranded 0%  firings 344
+   plain, against the base brain +0.00 [+0.00, +0.00]
+      plain: flips 0.8; grew in 0; turned on in 0; of 128
+swap10 | auto volatile {"tau": 40.0} | 100 s: efficiency 1.07 [0.97, 1.17]  gain 1.82  food 5.51  poison 1.85  stranded 0%  firings 348
+   against the base brain +1.06 [+0.93, +1.19]
+   in plain: efficiency 2.62 [2.50, 2.74]  gain 4.44  food 6.46  poison 1.01  stranded 0%  firings 346
+   plain, against the base brain -0.11 [-0.18, -0.04]
+      plain: flips 1.5; grew in 0; turned on in 0; of 128
+swap10 | auto diagnose {"theta": 3.0, "tau": 10.0, "short": 2.0, "tau_v": 40.0} | 100 s: efficiency 0.57 [0.43, 0.70]  gain 0.96  food 5.20  poison 2.12  stranded 0%  firings 345
+   against the base brain +0.56 [+0.43, +0.67]
+   in plain: efficiency 2.71 [2.61, 2.81]  gain 4.59  food 6.51  poison 0.96  stranded 0%  firings 347
+   plain, against the base brain -0.02 [-0.04, -0.00]
+      plain: flips 0.9; grew in 0; turned on in 0; of 128
+alternate | auto grow {"theta": 3.0, "tau": 10.0} | 100 s: efficiency 1.73 [1.53, 1.92]  gain 2.94  food 5.93  poison 1.50  stranded 0%  firings 349
+   against the base brain +5.28 [+5.01, +5.54]
+   in plain: efficiency 2.72 [2.63, 2.82]  gain 4.62  food 6.54  poison 0.96  stranded 0%  firings 346
+   plain, against the base brain -0.00 [-0.02, +0.01]
+      plain: flips 0.6; grew in 2; turned on in 0; of 128
+alternate | auto grow {"theta": 3.0, "tau": 10.0} | 400 s: efficiency 2.18 [2.08, 2.28]  gain 3.67  food 6.10  poison 1.22  stranded 0%  firings 340
+   against the base brain +5.62 [+5.50, +5.74]
+   in plain: efficiency 2.78 [2.73, 2.82]  gain 4.69  food 6.57  poison 0.94  stranded 0%  firings 344
+   plain, against the base brain -0.00 [-0.02, +0.01]
+      plain: flips 0.8; grew in 5; turned on in 0; of 128
+pattern | auto grow {"theta": 3.0, "tau": 10.0} | 100 s: efficiency 0.57 [0.41, 0.71]  gain 0.96  food 5.24  poison 2.14  stranded 0%  firings 345
+   against the base brain +3.29 [+3.07, +3.49]
+   in plain: efficiency 2.72 [2.63, 2.82]  gain 4.62  food 6.54  poison 0.96  stranded 0%  firings 346
+   plain, against the base brain -0.00 [-0.02, +0.01]
+      plain: flips 0.6; grew in 2; turned on in 0; of 128
+pattern | auto grow {"theta": 3.0, "tau": 10.0} | 400 s: efficiency 1.83 [1.75, 1.91]  gain 3.08  food 5.87  poison 1.40  stranded 0%  firings 338
+   against the base brain +4.58 [+4.48, +4.68]
+   in plain: efficiency 2.78 [2.73, 2.82]  gain 4.69  food 6.57  poison 0.94  stranded 0%  firings 344
+   plain, against the base brain -0.00 [-0.02, +0.01]
+      plain: flips 0.8; grew in 5; turned on in 0; of 128
+digest | auto learnpause {} | 100 s: efficiency 0.57 [0.48, 0.67]  gain 0.76  food 2.73  poison 0.98  stranded 0%  firings 156
+   against the base brain +5.25 [+4.98, +5.49]
+   in plain: efficiency 2.70 [2.59, 2.80]  gain 4.53  food 6.43  poison 0.95  stranded 0%  firings 339
+   plain, against the base brain -0.03 [-0.07, -0.00]
+      plain: flips 0.6; grew in 0; turned on in 11; of 128
+digest | auto learnpause {} | 400 s: efficiency 1.08 [1.03, 1.13]  gain 1.36  food 2.55  poison 0.60  stranded 0%  firings 126
+   against the base brain +5.87 [+5.73, +6.02]
+   in plain: efficiency 2.62 [2.55, 2.69]  gain 4.26  food 5.98  poison 0.86  stranded 0%  firings 310
+   plain, against the base brain -0.15 [-0.21, -0.10]
+      plain: flips 0.8; grew in 0; turned on in 42; of 128
+noisy | auto filter {"win": 0.05, "eye_told": 0.0} | 100 s: efficiency 0.96 [0.86, 1.06]  gain 1.72  food 4.32  poison 1.30  stranded 0%  firings 393
+   against the base brain -0.35 [-0.48, -0.22]
+   in plain: efficiency 1.05 [0.95, 1.15]  gain 1.59  food 3.42  poison 0.92  stranded 0%  firings 254
+   plain, against the base brain -1.67 [-1.82, -1.55]
+      plain: flips 0.7; grew in 0; turned on in 0; of 128
+noisy | auto adapteye {"tau_e": 0.05, "margin": 3.0, "tau_s": 10.0} | 100 s: efficiency 1.79 [1.69, 1.90]  gain 3.16  food 5.39  poison 1.12  stranded 0%  firings 380
+   against the base brain +0.48 [+0.37, +0.60]
+   in plain: efficiency 2.71 [2.62, 2.81]  gain 4.59  food 6.51  poison 0.96  stranded 0%  firings 346
+   plain, against the base brain -0.02 [-0.04, +0.00]
+      plain: flips 0.6; grew in 0; turned on in 0; of 128
+weak | auto autohold {"top": 6.0, "pow": 1.0, "tau_s": 30.0} | 100 s: efficiency 1.66 [1.56, 1.77]  gain 2.82  food 4.96  poison 1.07  stranded 0%  firings 345
+   against the base brain -0.11 [-0.20, -0.01]
+   in plain: efficiency 2.62 [2.52, 2.72]  gain 4.46  food 6.30  poison 0.92  stranded 0%  firings 351
+   plain, against the base brain -0.11 [-0.23, -0.00]
+      plain: flips 0.6; grew in 0; turned on in 0; of 128
+thrusters | auto sweeps {"cal_every": 32.0, "cal_len": 8.0, "stall": 0.05, "stall_need": 3000.0, "gate": 8.0, "gate_rate": 1.0, "cal_first": 0.0, "cal_fast": 12.0, "bank": 32.0, "local": 1.0, "binary": 1.0, "cap": 3.0} | 1000 s: efficiency 1.48 [1.28, 1.69]  gain 2.45  food 4.10  poison 0.82  stranded 1%  firings 325
+   against the base brain +0.81 [+0.55, +1.08]
+   in plain: efficiency 2.65 [2.58, 2.70]  gain 4.45  food 6.27  poison 0.91  stranded 1%  firings 337
+   plain, against the base brain -0.12 [-0.18, -0.05]
+      plain: flips 1.5; grew in 0; turned on in 0; of 128
+thrusters | auto sweeps {"cal_every": 32.0, "cal_len": 8.0, "stall": 0.05, "stall_need": 3000.0, "gate": 8.0, "gate_rate": 1.0, "cal_first": 0.0, "cal_fast": 12.0, "bank": 192.0, "local": 1.0, "binary": 1.0, "cap": 3.0} | 1000 s: efficiency 2.10 [1.99, 2.20]  gain 3.53  food 5.32  poison 0.90  stranded 0%  firings 339
+   against the base brain +1.42 [+1.16, +1.69]
+   in plain: efficiency 2.68 [2.63, 2.72]  gain 4.49  food 6.31  poison 0.91  stranded 0%  firings 337
+   plain, against the base brain -0.09 [-0.14, -0.04]
+      plain: flips 1.5; grew in 0; turned on in 0; of 128
+thrusters | auto jitter {"learn": 1.0, "eta": 0.03, "sd": 0.3, "N": 1000.0} | 1000 s: efficiency 1.25 [1.13, 1.36]  gain 2.09  food 4.03  poison 0.97  stranded 1%  firings 337
+   against the base brain +0.57 [+0.31, +0.82]
+   in plain: efficiency 1.52 [1.46, 1.58]  gain 2.55  food 4.61  poison 1.03  stranded 0%  firings 339
+   plain, against the base brain -1.25 [-1.30, -1.19]
+      plain: flips 3.4; grew in 0; turned on in 0; of 128
+ageing | auto jitter {"learn": 1.0, "eta": 0.06, "sd": 0.15} | 1000 s: efficiency 1.67 [1.60, 1.74]  gain 2.84  food 4.82  poison 0.99  stranded 0%  firings 348
+   against the base brain +1.30 [+1.23, +1.36]
+   in plain: efficiency 1.74 [1.68, 1.80]  gain 2.93  food 4.93  poison 1.00  stranded 0%  firings 340
+   plain, against the base brain -1.02 [-1.08, -0.96]
+      plain: flips 2.8; grew in 0; turned on in 0; of 128
+ageing | auto sweeps {"cal_every": 32.0, "cal_len": 8.0, "stall": 0.0, "stall_need": 3000.0, "gate": 8.0, "gate_rate": 1.0, "cal_first": 0.0, "cal_fast": 12.0, "bank": 32.0, "local": 1.0, "binary": 1.0, "cap": 3.0, "forget": 0.7} | 1000 s: efficiency 1.03 [0.97, 1.10]  gain 1.69  food 3.41  poison 0.86  stranded 0%  firings 317
+   against the base brain +0.66 [+0.60, +0.71]
+   in plain: efficiency 2.64 [2.56, 2.70]  gain 4.42  food 6.27  poison 0.92  stranded 0%  firings 337
+   plain, against the base brain -0.13 [-0.20, -0.06]
+      plain: flips 1.5; grew in 0; turned on in 0; of 128

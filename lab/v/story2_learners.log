@@ -1,0 +1,18 @@
+baseline: efficiency 0.26 [-0.17, 0.73]  gain 0.42  food 2.23  poison 0.90  stranded 8%  firings 297
+D19, jitter judged per drive: efficiency 1.34 [1.12, 1.53]  gain 2.22  food 4.14  poison 0.96  stranded 0%  firings 331
+sweeps, exact histogram: efficiency 2.22 [2.05, 2.38]  gain 3.74  food 5.60  poison 0.93  stranded 0%  firings 340
+   balance within 0.1 91%, within 0.2 97%; sweeps 7
+sweeps, 192 counters: efficiency 2.24 [2.07, 2.40]  gain 3.77  food 5.62  poison 0.92  stranded 0%  firings 340
+   balance within 0.1 91%, within 0.2 97%; sweeps 6
+sweeps, 96 counters: efficiency 2.11 [1.91, 2.28]  gain 3.54  food 5.40  poison 0.93  stranded 0%  firings 340
+   balance within 0.1 88%, within 0.2 94%; sweeps 7
+sweeps, 64 counters: efficiency 1.96 [1.78, 2.13]  gain 3.29  food 5.13  poison 0.92  stranded 0%  firings 339
+   balance within 0.1 81%, within 0.2 88%; sweeps 7
+sweeps, 48 counters: efficiency 1.80 [1.50, 2.09]  gain 3.00  food 4.87  poison 0.93  stranded 2%  firings 333
+   balance within 0.1 77%, within 0.2 83%; sweeps 9
+sweeps, 32 counters: efficiency 1.70 [1.43, 1.94]  gain 2.83  food 4.65  poison 0.91  stranded 0%  firings 331
+   balance within 0.1 66%, within 0.2 81%; sweeps 9
+sweeps, 24 counters: efficiency 1.55 [1.24, 1.85]  gain 2.56  food 4.37  poison 0.90  stranded 2%  firings 326
+   balance within 0.1 55%, within 0.2 73%; sweeps 9
+sweeps, 16 counters: efficiency 1.17 [0.81, 1.51]  gain 1.89  food 3.58  poison 0.85  stranded 3%  firings 310
+   balance within 0.1 42%, within 0.2 59%; sweeps 10

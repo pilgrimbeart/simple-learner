@@ -1,0 +1,13 @@
+gen   0  mean +2.105  best +2.229  sigma 0.150
+gen   1  mean +2.165  best +2.242  sigma 0.133
+gen   2  mean +2.105  best +2.212  sigma 0.131
+gen   3  mean +2.061  best +2.307  sigma 0.112
+gen   4  mean -7.145  best +2.350  sigma 0.107
+gen   5  mean +2.162  best +2.364  sigma 0.106
+gen   6  mean +2.190  best +2.409  sigma 0.107
+gen   7  mean +2.188  best +2.304  sigma 0.115
+gen   8  mean +2.232  best +2.267  sigma 0.134
+gen   9  mean +2.177  best +2.284  sigma 0.122
+gen  10  mean +2.031  best +2.354  sigma 0.140
+gen  11  mean +1.983  best +2.161  sigma 0.106
+{'g_dq': 3.4106697550198013e-11, 'g_dqf': 4.378471601470091e-11, 'v_h': np.float64(0.23696214004881588), 'v_l': np.float64(-0.2480958117396697)}

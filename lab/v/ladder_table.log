@@ -1,0 +1,21 @@
+plain: baseline: efficiency 2.73 [2.63, 2.82]  gain 4.65  food 6.58  poison 0.96  last third 7.20  stranded 0%  firings 351
+plain: target: efficiency 2.67 [2.59, 2.76]  gain 4.54  food 6.45  poison 0.96  last third 7.31  stranded 0%  firings 346
+   gap -0.06 [-0.15, +0.04]
+swap50: baseline: efficiency 2.42 [2.32, 2.53]  gain 4.14  food 6.41  poison 1.14  last third 6.95  stranded 0%  firings 352
+swap50: target: efficiency 2.72 [2.63, 2.81]  gain 4.63  food 6.50  poison 0.93  last third 6.73  stranded 0%  firings 349
+   gap +0.30 [+0.17, +0.41]
+swap20: baseline: efficiency 1.28 [1.18, 1.39]  gain 2.17  food 5.67  poison 1.75  last third 3.77  stranded 0%  firings 346
+swap20: target: efficiency 2.73 [2.62, 2.83]  gain 4.63  food 6.47  poison 0.92  last third 7.42  stranded 0%  firings 346
+   gap +1.45 [+1.32, +1.57]
+swap10: baseline: efficiency 0.01 [-0.09, 0.11]  gain 0.02  food 4.85  poison 2.42  last third 2.04  stranded 0%  firings 347
+swap10: target: efficiency 2.88 [2.79, 2.96]  gain 4.90  food 6.78  poison 0.94  last third 7.31  stranded 0%  firings 350
+   gap +2.87 [+2.73, +3.00]
+swap5: baseline: efficiency -1.39 [-1.50, -1.28]  gain -2.37  food 4.26  poison 3.31  last third 1.30  stranded 0%  firings 348
+swap5: target: efficiency 2.92 [2.83, 3.00]  gain 4.99  food 6.95  poison 0.98  last third 7.22  stranded 0%  firings 354
+   gap +4.31 [+4.17, +4.44]
+alternate: baseline: efficiency -3.45 [-3.60, -3.29]  gain -5.86  food 3.05  poison 4.46  last third 0.69  stranded 0%  firings 348
+alternate: target: efficiency 2.69 [2.53, 2.84]  gain 4.55  food 6.37  poison 0.91  last third 6.01  stranded 0%  firings 346
+   gap +6.13 [+5.89, +6.39]
+pattern: baseline: efficiency -2.72 [-2.82, -2.61]  gain -4.61  food 3.48  poison 4.05  last third 0.87  stranded 0%  firings 347
+pattern: target: efficiency 2.73 [2.60, 2.85]  gain 4.61  food 6.44  poison 0.91  last third 7.26  stranded 0%  firings 344
+   gap +5.44 [+5.30, +5.59]

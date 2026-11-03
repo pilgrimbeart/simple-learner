@@ -1,0 +1,12 @@
+unwired parts {'T': 557, 'R': 78, 'C': 27, 'D': 6, 'sources': 69, 'total': 737, 'nodes': 13, 'elements': 16} violations []
+fixed parts {'T': 605, 'R': 86, 'C': 27, 'D': 6, 'sources': 75, 'total': 799, 'nodes': 13, 'elements': 18} violations []
+B parts {'T': 638, 'R': 90, 'C': 27, 'D': 6, 'sources': 80, 'total': 841, 'nodes': 13, 'elements': 20} violations []
+circuit parts {'T': 653, 'R': 94, 'C': 27, 'D': 6, 'sources': 81, 'total': 861, 'nodes': 13, 'elements': 20} violations []
+unwired: efficiency -3.11 [-3.16, -3.06]  gain -5.74  food 5.74  poison 5.74  last third 1.00 [1.00, 1.00]  stranded 0%  firings 408  power 29 nW  job False
+B: efficiency 1.84 [1.73, 1.95]  gain 2.96  food 5.01  poison 1.02  last third 5.97 [5.41, 6.64]  stranded 1%  firings 287  power 31 nW  job True
+circuit: efficiency 2.15 [2.05, 2.25]  gain 3.45  food 5.18  poison 0.86  last third 6.60 [5.97, 7.37]  stranded 1%  firings 286  power 31 nW  job True
+told: efficiency 2.18 [2.05, 2.30]  gain 3.49  food 5.16  poison 0.83  last third 6.56 [5.76, 7.59]  stranded 2%  firings 286  power 31 nW  job True
+circuit - B efficiency: +0.31 [+0.24, +0.38]
+circuit - B gain: +0.49 [+0.38, +0.60]
+circuit - unwired efficiency: +5.26 [+5.15, +5.38]
+circuit - unwired gain: +9.19 [+8.98, +9.39]

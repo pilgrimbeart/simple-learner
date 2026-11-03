@@ -1,0 +1,8 @@
+32 counters, bias 0.0: efficiency 1.59 [1.26, 1.88]  gain 2.64  food 4.37  poison 0.87  stranded 2%  firings 330
+32 counters, bias -0.03: efficiency 1.60 [1.27, 1.90]  gain 2.67  food 4.36  poison 0.84  stranded 3%  firings 334
+32 counters, bias -0.06: efficiency 1.47 [1.14, 1.77]  gain 2.45  food 4.06  poison 0.81  stranded 3%  firings 328
+32 counters, bias -0.1: efficiency 1.53 [1.19, 1.83]  gain 2.55  food 4.26  poison 0.86  stranded 3%  firings 333
+64 counters, bias 0.0: efficiency 2.01 [1.72, 2.25]  gain 3.39  food 5.14  poison 0.88  stranded 2%  firings 341
+64 counters, bias -0.03: efficiency 2.01 [1.75, 2.22]  gain 3.40  food 5.18  poison 0.89  stranded 0%  firings 343
+64 counters, bias -0.06: efficiency 1.98 [1.76, 2.18]  gain 3.34  food 5.05  poison 0.85  stranded 0%  firings 341
+64 counters, bias -0.1: efficiency 1.92 [1.63, 2.18]  gain 3.23  food 4.95  poison 0.86  stranded 0%  firings 337

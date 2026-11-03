@@ -1,0 +1,15 @@
+{'use': 0, 'trust': 0}: eff 2.32 gain 4.07 last 5.93 stranded 0% first flip 1.6 s; born right flips 3.0 a life; right 96.3%
+{'use': 0, 'trust': 1}: eff 2.54 gain 4.45 last 6.86 stranded 0% first flip 1.6 s; born right flips 0.0 a life; right 98.5%
+{'use': 0, 'trust': 2}: eff 2.55 gain 4.45 last 6.96 stranded 0% first flip 1.6 s; born right flips 0.0 a life; right 98.5%
+{'use': 0, 'trust': 3}: eff 2.55 gain 4.45 last 6.96 stranded 0% first flip 1.6 s; born right flips 0.0 a life; right 98.5%
+{'use': 0, 'trust': 5}: eff 2.55 gain 4.45 last 6.96 stranded 0% first flip 1.6 s; born right flips 0.0 a life; right 98.5%
+{'use': 0, 'trust': 9}: eff 2.55 gain 4.45 last 6.96 stranded 0% first flip 1.6 s; born right flips 0.0 a life; right 98.5%
+{'use': 1, 'trust': 0, 'window': 0.1}: eff 2.42 gain 4.23 last 6.11 stranded 0% first flip 1.8 s; born right flips 1.5 a life; right 97.3%
+{'use': 1, 'trust': 2, 'window': 0.1}: eff 2.55 gain 4.46 last 7.00 stranded 0% first flip 1.8 s; born right flips 0.0 a life; right 98.5%
+{'use': 1, 'trust': 5, 'window': 0.1}: eff 2.55 gain 4.46 last 7.00 stranded 0% first flip 1.8 s; born right flips 0.0 a life; right 98.5%
+{'use': 1, 'trust': 0, 'window': 0.3}: eff 2.33 gain 4.07 last 5.94 stranded 0% first flip 1.7 s; born right flips 1.6 a life; right 96.7%
+{'use': 1, 'trust': 2, 'window': 0.3}: eff 2.56 gain 4.48 last 7.02 stranded 0% first flip 1.7 s; born right flips 0.0 a life; right 98.4%
+{'use': 1, 'trust': 5, 'window': 0.3}: eff 2.56 gain 4.48 last 7.02 stranded 0% first flip 1.7 s; born right flips 0.0 a life; right 98.4%
+{'use': 1, 'trust': 0, 'window': 0.6}: eff 2.28 gain 3.99 last 5.78 stranded 0% first flip 1.8 s; born right flips 1.5 a life; right 95.3%
+{'use': 1, 'trust': 2, 'window': 0.6}: eff 2.49 gain 4.34 last 6.95 stranded 0% first flip 1.8 s; born right flips 0.0 a life; right 97.9%
+{'use': 1, 'trust': 5, 'window': 0.6}: eff 2.49 gain 4.34 last 6.95 stranded 0% first flip 1.8 s; born right flips 0.0 a life; right 97.9%

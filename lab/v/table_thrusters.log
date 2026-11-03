@@ -1,0 +1,19 @@
+thrusters | base: efficiency 0.67 [0.42, 0.94]  gain 1.09  food 2.68  poison 0.80  stranded 3%  firings 308
+thrusters | Use | scanside {"scan_told": 1.0, "scan_flip": 1.0}: efficiency 0.71 [0.43, 1.00]  gain 1.16  food 2.67  poison 0.76  stranded 1%  firings 315
+   against the base brain +0.04 [-0.03, +0.11]
+thrusters | Use | scanlearn {"trial": 60.0}: efficiency 0.67 [0.42, 0.95]  gain 1.09  food 2.80  poison 0.85  stranded 0%  firings 310
+   against the base brain -0.00 [-0.09, +0.08]
+thrusters | Judge | jitter {"learn": 1.0, "eta": 0.03, "sd": 0.3, "N": 1000.0}: efficiency 1.25 [1.13, 1.36]  gain 2.09  food 4.03  poison 0.97  stranded 1%  firings 337
+   against the base brain +0.57 [+0.31, +0.82]
+thrusters | Sense | sweeps {"cal_every": 32.0, "cal_len": 8.0, "stall": 0.05, "stall_need": 3000.0, "gate": 8.0, "gate_rate": 1.0, "cal_first": 0.0, "cal_fast": 12.0, "bank": 192.0, "local": 1.0, "binary": 1.0, "cap": 3.0}: efficiency 2.10 [1.99, 2.20]  gain 3.53  food 5.32  poison 0.90  stranded 0%  firings 339
+   against the base brain +1.42 [+1.16, +1.69]
+thrusters | Immunise | circuit {"hold_x": 0.382, "bored_x": 1.364, "scan_x": 2.17, "drive_x": 1.227, "run_x": 0.59, "run_max": 1.0}: efficiency 0.96 [0.71, 1.20]  gain 1.70  food 3.81  poison 1.05  stranded 2%  firings 382
+   against the base brain +0.29 [+0.07, +0.50]
+thrusters | Spend | circuit {"scan_x": 0.945, "drive_x": 0.47, "run_x": 0.531}: efficiency 0.93 [0.69, 1.17]  gain 1.32  food 2.40  poison 0.54  stranded 0%  firings 206
+   against the base brain +0.26 [+0.10, +0.43]
+thrusters | Judge | circuit {"trust": 3.0}: efficiency 0.72 [0.47, 0.98]  gain 1.17  food 2.71  poison 0.77  stranded 2%  firings 309
+   against the base brain +0.05 [+0.02, +0.08]
+thrusters | Sense | probe {"probe_T": 20.0, "probe_len": 1.0}: efficiency 0.48 [0.25, 0.73]  gain 0.78  food 2.63  poison 0.93  stranded 0%  firings 308
+   against the base brain -0.19 [-0.24, -0.15]
+thrusters | Use | path {"theta": 0.5, "tau": 30.0, "trust": 2.0}: efficiency -0.10 [-0.27, 0.07]  gain -0.17  food 2.27  poison 1.22  stranded 9%  firings 344
+   against the base brain -0.78 [-0.95, -0.60]

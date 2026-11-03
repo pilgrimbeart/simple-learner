@@ -1,0 +1,11 @@
+drawn: scan 11.321410159613938 run 41.99502711800556 bored 5.62199090581161 hold 0.17773567354418546 poison eye 0
+run 910-970 s (60 s): meals 1, flips 0; heading 133.074 deg, moved over the run 1.9479 deg; second half 0.000000 deg; largest spin late 0.00e+00 rad/s; ended by food pulse: True; pos [35.27411825 54.97269843] mm
+   off the world's axis 44.9782 deg: sideways 59.9544 mm a lap
+run 5989-7591 s (1601 s): meals 6, flips 0; heading 81.325 deg, moved over the run 8.6681 deg; second half 0.000000 deg; largest spin late 0.00e+00 rad/s; ended by food pulse: True; pos [7.48614206 5.24598708] mm
+   off the world's axis 0.0073 deg: sideways 0.0077 mm a lap
+run 11891-16470 s (4579 s): meals 0, flips 0; heading 178.828 deg, moved over the run 1.1730 deg; second half 0.000000 deg; largest spin late 0.00e+00 rad/s; ended by food pulse: True; pos [41.89946116  1.51526716] mm
+   off the world's axis 0.0011 deg: sideways 0.0011 mm a lap
+run 24672-24771 s (99 s): meals 2, flips 0; heading 178.766 deg, moved over the run 1.1730 deg; second half 0.000000 deg; largest spin late 0.00e+00 rad/s; ended by food pulse: True; pos [25.62097268  2.00814254] mm
+   off the world's axis 0.0607 deg: sideways 0.0635 mm a lap
+run from 29301 s still going at 30000 s; heading 134.9872 deg, spin 0.00e+00, meals in it 3
+meals 17669 flips 14

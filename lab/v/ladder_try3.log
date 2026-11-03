@@ -1,0 +1,24 @@
+plain cycle {'cycle': 1.0}: efficiency 2.72 [2.64, 2.80]  gain 4.65  food 6.64  poison 1.00  last third 6.79  stranded 0%  firings 352
+plain cycle {'cycle': 2.0}: efficiency 2.63 [2.54, 2.72]  gain 4.48  food 6.48  poison 1.00  last third 7.16  stranded 0%  firings 350
+plain cycle {'cycle': 3.0}: efficiency 2.49 [2.39, 2.58]  gain 4.24  food 6.44  poison 1.10  last third 6.48  stranded 0%  firings 351
+plain cycle {'cycle': 6.0}: efficiency 2.25 [2.15, 2.34]  gain 3.83  food 6.30  poison 1.24  last third 6.66  stranded 0%  firings 349
+alternate cycle {'cycle': 1.0}: efficiency -3.31 [-3.46, -3.17]  gain -5.64  food 3.03  poison 4.34  last third 0.67  stranded 0%  firings 349
+alternate cycle {'cycle': 2.0}: efficiency 2.30 [2.13, 2.47]  gain 3.90  food 6.23  poison 1.17  last third 5.32  stranded 0%  firings 344
+alternate cycle {'cycle': 3.0}: efficiency -3.39 [-3.54, -3.24]  gain -5.79  food 3.17  poison 4.48  last third 0.63  stranded 0%  firings 353
+alternate cycle {'cycle': 6.0}: efficiency 1.81 [1.58, 2.03]  gain 3.07  food 5.89  poison 1.41  last third 4.38  stranded 0%  firings 347
+pattern cycle {'cycle': 1.0}: efficiency -2.68 [-2.78, -2.57]  gain -4.54  food 3.42  poison 3.98  last third 0.84  stranded 0%  firings 347
+pattern cycle {'cycle': 2.0}: efficiency -2.61 [-2.72, -2.52]  gain -4.46  food 3.50  poison 3.98  last third 0.88  stranded 0%  firings 351
+pattern cycle {'cycle': 3.0}: efficiency 2.29 [2.17, 2.40]  gain 3.88  food 6.24  poison 1.18  last third 5.67  stranded 0%  firings 347
+pattern cycle {'cycle': 6.0}: efficiency 1.84 [1.68, 1.98]  gain 3.14  food 6.13  poison 1.49  last third 4.99  stranded 0%  firings 353
+alternate cycle {'cycle': 2.0, 'trust': 2.0}: efficiency 2.31 [2.14, 2.48]  gain 3.92  food 6.28  poison 1.18  last third 5.23  stranded 0%  firings 345
+alternate cycle {'cycle': 3.0, 'trust': 2.0}: efficiency -3.43 [-3.55, -3.30]  gain -5.84  food 3.09  poison 4.47  last third 0.64  stranded 0%  firings 351
+pattern cycle {'cycle': 2.0, 'trust': 2.0}: efficiency -2.91 [-3.04, -2.79]  gain -4.97  food 3.37  poison 4.17  last third 0.77  stranded 0%  firings 351
+pattern cycle {'cycle': 3.0, 'trust': 2.0}: efficiency 2.23 [2.09, 2.36]  gain 3.78  food 6.22  poison 1.22  last third 5.21  stranded 0%  firings 347
+plain rhythm3 {}: efficiency 2.72 [2.63, 2.79]  gain 4.64  food 6.64  poison 1.00  last third 6.85  stranded 0%  firings 352
+swap50 rhythm3 {}: efficiency 2.45 [2.36, 2.54]  gain 4.20  food 6.46  poison 1.13  last third 7.51  stranded 0%  firings 354
+swap20 rhythm3 {}: efficiency 1.49 [1.39, 1.60]  gain 2.55  food 5.95  poison 1.70  last third 4.13  stranded 0%  firings 354
+swap10 rhythm3 {}: efficiency 0.79 [0.66, 0.92]  gain 1.35  food 5.51  poison 2.08  last third 3.06  stranded 0%  firings 352
+swap5 rhythm3 {}: efficiency -0.44 [-0.58, -0.27]  gain -0.74  food 4.78  poison 2.76  last third 2.01  stranded 0%  firings 350
+swap10 rhythm3 {'lag': 0.5}: efficiency 0.66 [0.53, 0.79]  gain 1.12  food 5.48  poison 2.18  last third 2.86  stranded 0%  firings 355
+swap10 rhythm3 {'lag': 1.5}: efficiency 0.80 [0.69, 0.92]  gain 1.37  food 5.51  poison 2.07  last third 3.16  stranded 0%  firings 351
+swap5 rhythm3 {'lag': 0.5}: efficiency -0.39 [-0.54, -0.23]  gain -0.66  food 4.88  poison 2.77  last third 2.05  stranded 0%  firings 351

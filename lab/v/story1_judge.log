@@ -1,0 +1,68 @@
+still: efficiency 0.00 [0.00, 0.00]  gain 0.00  food 0.00  poison 0.00  last third inf [nan, nan]  stranded 100%  firings 0  power 4 nW  job False
+unwired: efficiency -3.36 [-3.44, -3.29]  gain -7.11  food 7.11  poison 7.11  last third 1.00 [1.00, 1.00]  stranded 0%  firings 555  power 4 nW  job False
+wrong: efficiency -6.97 [-7.19, -6.77]  gain -12.05  food 1.02  poison 6.53  last third 0.14 [0.13, 0.16]  stranded 5%  firings 362  power 4 nW  job False
+told: efficiency 2.60 [2.48, 2.72]  gain 4.50  food 6.53  poison 1.02  last third 6.99 [6.42, 7.61]  stranded 0%  firings 362  power 4 nW  job True
+bayes: efficiency 2.53 [2.41, 2.65]  gain 4.37  food 6.47  poison 1.05  last third 7.10 [6.40, 7.97]  stranded 0%  firings 362  power 4 nW  job True
+B: efficiency 2.18 [2.02, 2.33]  gain 3.76  food 6.21  poison 1.22  last third 5.69 [5.09, 6.39]  stranded 2%  firings 363  power 4 nW  job True
+count2: efficiency 1.41 [1.26, 1.57]  gain 2.44  food 5.76  poison 1.66  last third 3.65 [3.24, 4.11]  stranded 0%  firings 361  power 4 nW  job True
+fade3_5s: efficiency 2.07 [1.92, 2.22]  gain 3.60  food 6.18  poison 1.29  last third 5.70 [4.94, 6.61]  stranded 2%  firings 368  power 4 nW  job True
+tally: efficiency 2.27 [2.11, 2.43]  gain 3.91  food 6.31  poison 1.20  last third 5.89 [5.31, 6.59]  stranded 0%  firings 360  power 4 nW  job True
+run1: efficiency 1.37 [1.22, 1.51]  gain 2.35  food 5.64  poison 1.65  last third 3.29 [2.97, 3.67]  stranded 0%  firings 356  power 4 nW  job True
+run2: efficiency 2.11 [1.97, 2.24]  gain 3.62  food 6.14  poison 1.26  last third 5.10 [4.58, 5.73]  stranded 0%  firings 357  power 4 nW  job True
+run3: efficiency 2.17 [2.00, 2.32]  gain 3.74  food 6.26  poison 1.26  last third 5.75 [5.10, 6.51]  stranded 1%  firings 363  power 4 nW  job True
+path_block: efficiency 1.22 [1.01, 1.41]  gain 2.24  food 6.69  poison 2.23  last third 3.23 [2.85, 3.59]  stranded 0%  firings 412  power 4 nW  job True
+path_reverse: efficiency 2.12 [1.91, 2.30]  gain 3.70  food 6.35  poison 1.32  last third 6.47 [5.58, 7.47]  stranded 1%  firings 371  power 4 nW  job True
+grow: efficiency 1.68 [1.51, 1.85]  gain 3.00  food 6.67  poison 1.83  last third 5.01 [4.48, 5.60]  stranded 0%  firings 390  power 4 nW  job True
+
+paired, efficiency [95%], against told and against B
+  still: told -2.60 [-2.72, -2.48]  B -2.18 [-2.33, -2.02]
+  unwired: told -5.97 [-6.10, -5.82]  B -5.54 [-5.71, -5.38]
+  wrong: told -9.58 [-9.90, -9.26]  B -9.15 [-9.45, -8.87]
+  bayes: told -0.07 [-0.17, +0.03]  B +0.35 [+0.21, +0.51]
+  count2: told -1.19 [-1.35, -1.03]  B -0.77 [-0.97, -0.57]
+  fade3_5s: told -0.53 [-0.70, -0.36]  B -0.11 [-0.25, +0.03]
+  tally: told -0.33 [-0.48, -0.19]  B +0.09 [-0.05, +0.23]
+  run1: told -1.23 [-1.40, -1.07]  B -0.81 [-1.00, -0.61]
+  run2: told -0.50 [-0.64, -0.35]  B -0.07 [-0.22, +0.08]
+  run3: told -0.44 [-0.60, -0.28]  B -0.01 [-0.11, +0.08]
+  path_block: told -1.38 [-1.60, -1.19]  B -0.95 [-1.21, -0.72]
+  path_reverse: told -0.49 [-0.70, -0.27]  B -0.06 [-0.32, +0.18]
+  grow: told -0.92 [-1.11, -0.74]  B -0.49 [-0.76, -0.23]
+
+detection: the bit's first flip when born wrong, false flips when born right, share of life right
+  bayes: born wrong 64: median first flip 1.2 s, 90th 3.7 s, never 0; born right 64: 3% ever flip, 0.1 flips a life; right 99.0%
+  B: born wrong 64: median first flip 4.6 s, 90th 10.0 s, never 0; born right 64: 38% ever flip, 1.0 flips a life; right 95.6%
+  count2: born wrong 64: median first flip 3.4 s, 90th 6.6 s, never 0; born right 64: 100% ever flip, 8.0 flips a life; right 87.1%
+  fade3_5s: born wrong 64: median first flip 4.8 s, 90th 12.6 s, never 0; born right 64: 47% ever flip, 1.0 flips a life; right 94.2%
+  tally: born wrong 64: median first flip 3.7 s, 90th 9.1 s, never 0; born right 64: 45% ever flip, 1.4 flips a life; right 95.7%
+  run1: born wrong 64: median first flip 2.0 s, 90th 4.3 s, never 0; born right 64: 100% ever flip, 16.0 flips a life; right 86.7%
+  run2: born wrong 64: median first flip 3.5 s, 90th 7.0 s, never 0; born right 64: 70% ever flip, 2.5 flips a life; right 94.6%
+  run3: born wrong 64: median first flip 4.9 s, 90th 10.6 s, never 0; born right 64: 31% ever flip, 0.7 flips a life; right 95.4%
+  path_block: poison eye changed in 128 of 128, median 94.9 s; food eye changed in 17
+  path_reverse: poison eye changed in 128 of 128, median 4.3 s; food eye changed in 2
+
+controls
+all-food unwired: efficiency 6.70 [6.56, 6.84]  gain 14.22  food 14.22  poison 0.00  last third inf [nan, nan]  stranded 0%  firings 559  power 4 nW  job True
+    
+all-food told: efficiency 4.38 [4.28, 4.49]  gain 7.57  food 7.57  poison 0.00  last third inf [nan, nan]  stranded 0%  firings 362  power 4 nW  job True
+    
+all-food B: efficiency 4.39 [4.25, 4.53]  gain 7.58  food 7.58  poison 0.00  last third inf [nan, nan]  stranded 0%  firings 362  power 4 nW  job True
+    flips a life 0.00
+all-food run3: efficiency 4.39 [4.25, 4.53]  gain 7.58  food 7.58  poison 0.00  last third inf [nan, nan]  stranded 0%  firings 362  power 4 nW  job True
+    flips a life 0.00
+all-food path_reverse: efficiency 6.70 [6.56, 6.84]  gain 14.22  food 14.22  poison 0.00  last third inf [nan, nan]  stranded 0%  firings 559  power 4 nW  job True
+    eyes changed a life 0.00
+all-food still: efficiency 0.00 [0.00, 0.00]  gain 0.00  food 0.00  poison 0.00  last third inf [nan, nan]  stranded 100%  firings 0  power 4 nW  job False
+    
+random unwired: efficiency -3.27 [-3.48, -3.07]  gain -6.92  food 7.17  poison 7.05  last third 1.00 [0.94, 1.07]  stranded 0%  firings 555  power 4 nW  job False
+    
+random told: efficiency -2.10 [-2.23, -1.97]  gain -3.63  food 3.82  poison 3.73  last third 1.03 [0.95, 1.10]  stranded 0%  firings 362  power 4 nW  job False
+    
+random B: efficiency -2.05 [-2.22, -1.88]  gain -3.52  food 3.79  poison 3.65  last third 1.01 [0.92, 1.11]  stranded 0%  firings 358  power 4 nW  job False
+    flips a life 6.83
+random run3: efficiency -2.26 [-2.47, -2.06]  gain -3.89  food 3.58  poison 3.74  last third 0.93 [0.84, 1.04]  stranded 0%  firings 360  power 4 nW  job False
+    flips a life 5.78
+random path_reverse: efficiency -1.97 [-2.17, -1.75]  gain -4.36  food 4.87  poison 4.62  last third 1.06 [0.96, 1.15]  stranded 0%  firings 608  power 4 nW  job False
+    eyes changed a life 1.80
+random still: efficiency 0.00 [0.00, 0.00]  gain 0.00  food 0.00  poison 0.00  last third inf [nan, nan]  stranded 100%  firings 0  power 4 nW  job False
+    

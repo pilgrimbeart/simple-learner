@@ -1,0 +1,48 @@
+theta 2 tau 10 plain: efficiency 2.72 [2.63, 2.80]  gain 4.64  food 6.65  poison 1.00  last third 6.85  stranded 0%  firings 352
+   final length [(1, 119), (2, 9)] first growth median 13.6
+theta 2 tau 10 alternate: efficiency 1.92 [1.71, 2.11]  gain 3.27  food 6.06  poison 1.40  last third 5.23  stranded 0%  firings 352
+   final length [(2, 112), (6, 16)] first growth median 6.6
+theta 2 tau 10 pattern: efficiency 1.13 [1.00, 1.26]  gain 1.92  food 5.55  poison 1.82  last third 4.82  stranded 0%  firings 348
+   final length [(3, 73), (6, 55)] first growth median 8.3
+theta 2 tau 10 swap20: efficiency -0.50 [-0.61, -0.38]  gain -0.85  food 4.75  poison 2.80  last third 0.97  stranded 0%  firings 352
+   final length [(2, 1), (3, 1), (6, 126)] first growth median 40.6
+theta 3 tau 10 plain: efficiency 2.71 [2.63, 2.79]  gain 4.63  food 6.64  poison 1.00  last third 6.83  stranded 0%  firings 352
+   final length [(1, 125), (2, 2), (3, 1)] first growth median 25.1
+theta 3 tau 10 alternate: efficiency 1.70 [1.53, 1.86]  gain 2.88  food 5.90  poison 1.51  last third 5.64  stranded 0%  firings 348
+   final length [(2, 124), (3, 2), (6, 2)] first growth median 10.2
+theta 3 tau 10 pattern: efficiency 0.76 [0.62, 0.89]  gain 1.29  food 5.44  poison 2.08  last third 5.69  stranded 0%  firings 351
+   final length [(3, 101), (6, 27)] first growth median 11.6
+theta 3 tau 10 swap20: efficiency 1.05 [0.91, 1.19]  gain 1.80  food 5.69  poison 1.95  last third 2.81  stranded 0%  firings 354
+   final length [(1, 85), (2, 15), (3, 13), (6, 15)] first growth median 60.5
+theta 2 tau 20 plain: efficiency 2.71 [2.63, 2.80]  gain 4.63  food 6.65  poison 1.01  last third 6.86  stranded 0%  firings 352
+   final length [(1, 113), (2, 13), (3, 1), (6, 1)] first growth median 30.0
+theta 2 tau 20 alternate: efficiency 1.87 [1.65, 2.07]  gain 3.19  food 6.03  poison 1.42  last third 4.71  stranded 0%  firings 352
+   final length [(2, 106), (6, 22)] first growth median 6.6
+theta 2 tau 20 pattern: efficiency 1.12 [0.99, 1.26]  gain 1.90  food 5.48  poison 1.79  last third 4.89  stranded 0%  firings 348
+   final length [(3, 62), (6, 66)] first growth median 8.3
+theta 2 tau 20 swap20: efficiency -0.75 [-0.86, -0.64]  gain -1.28  food 4.63  poison 2.96  last third 0.92  stranded 0%  firings 353
+   final length [(6, 128)] first growth median 25.0
+theta 3 tau 20 plain: efficiency 2.71 [2.62, 2.79]  gain 4.62  food 6.62  poison 1.00  last third 6.84  stranded 0%  firings 351
+   final length [(1, 123), (2, 4), (3, 1)] first growth median 58.0
+theta 3 tau 20 alternate: efficiency 1.78 [1.60, 1.95]  gain 3.03  food 6.00  poison 1.48  last third 5.15  stranded 0%  firings 351
+   final length [(2, 118), (6, 10)] first growth median 8.8
+theta 3 tau 20 pattern: efficiency 0.83 [0.70, 0.96]  gain 1.41  food 5.40  poison 2.00  last third 5.58  stranded 0%  firings 346
+   final length [(3, 80), (6, 48)] first growth median 10.3
+theta 3 tau 20 swap20: efficiency 0.37 [0.21, 0.54]  gain 0.64  food 5.29  poison 2.33  last third 1.66  stranded 0%  firings 354
+   final length [(1, 7), (2, 21), (3, 40), (6, 60)] first growth median 60.5
+theta 4 tau 20 plain: efficiency 2.72 [2.64, 2.80]  gain 4.65  food 6.64  poison 1.00  last third 6.86  stranded 0%  firings 352
+   final length [(1, 126), (2, 2)] first growth median 17.5
+theta 4 tau 20 alternate: efficiency 1.54 [1.37, 1.71]  gain 2.62  food 5.76  poison 1.57  last third 5.99  stranded 0%  firings 346
+   final length [(2, 126), (6, 2)] first growth median 13.3
+theta 4 tau 20 pattern: efficiency 0.56 [0.42, 0.69]  gain 0.95  food 5.47  poison 2.26  last third 5.46  stranded 0%  firings 355
+   final length [(3, 111), (6, 17)] first growth median 14.1
+theta 4 tau 20 swap20: efficiency 1.17 [1.06, 1.28]  gain 2.00  food 5.74  poison 1.87  last third 3.10  stranded 0%  firings 353
+   final length [(1, 87), (2, 24), (3, 11), (6, 6)] first growth median 62.1
+theta 4 tau 40 plain: efficiency 2.72 [2.63, 2.79]  gain 4.64  food 6.63  poison 1.00  last third 6.80  stranded 0%  firings 352
+   final length [(1, 125), (2, 3)] first growth median 25.1
+theta 4 tau 40 alternate: efficiency 1.60 [1.43, 1.75]  gain 2.71  food 5.81  poison 1.55  last third 5.85  stranded 0%  firings 347
+   final length [(2, 122), (6, 6)] first growth median 12.8
+theta 4 tau 40 pattern: efficiency 0.74 [0.61, 0.87]  gain 1.26  food 5.53  poison 2.14  last third 5.77  stranded 0%  firings 352
+   final length [(3, 102), (6, 26)] first growth median 13.1
+theta 4 tau 40 swap20: efficiency 0.60 [0.46, 0.73]  gain 1.02  food 5.41  poison 2.20  last third 1.90  stranded 0%  firings 352
+   final length [(1, 1), (2, 29), (3, 56), (6, 42)] first growth median 60.9

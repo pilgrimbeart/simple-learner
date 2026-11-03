@@ -1,0 +1,26 @@
+unwired: efficiency -3.38 [-3.43, -3.33]  gain -7.21  food 7.21  poison 7.21  last third 1.00 [1.00, 1.00]  stranded 0%  firings 566  power 4 nW  job False
+told: efficiency 2.49 [2.40, 2.57]  gain 4.30  food 6.38  poison 1.04  last third 6.01 [5.57, 6.49]  stranded 1%  firings 362  power 4 nW  job True
+bayes: efficiency 2.54 [2.46, 2.61]  gain 4.41  food 6.46  poison 1.03  last third 6.16 [5.72, 6.61]  stranded 1%  firings 365  power 4 nW  job True
+B: efficiency 2.21 [2.10, 2.32]  gain 3.83  food 6.26  poison 1.22  last third 5.72 [5.24, 6.22]  stranded 1%  firings 363  power 4 nW  job True
+circuit: efficiency 2.50 [2.39, 2.59]  gain 4.34  food 6.43  poison 1.05  last third 6.05 [5.59, 6.50]  stranded 1%  firings 366  power 4 nW  job True
+circuit - told efficiency: +0.01 [-0.08, +0.09]
+circuit - told gain: +0.04 [-0.11, +0.18]
+circuit - bayes efficiency: -0.04 [-0.10, +0.02]
+circuit - bayes gain: -0.07 [-0.17, +0.03]
+circuit - B efficiency: +0.29 [+0.19, +0.38]
+circuit - B gain: +0.51 [+0.35, +0.67]
+circuit - unwired efficiency: +5.87 [+5.75, +5.99]
+circuit - unwired gain: +11.55 [+11.34, +11.76]
+bayes - told efficiency: +0.05 [-0.03, +0.13]
+bayes - told gain: +0.11 [-0.03, +0.25]
+B - told efficiency: -0.28 [-0.37, -0.18]
+B - told gain: -0.47 [-0.64, -0.30]
+bayes: born wrong 128: first flip median 1.0 s, 90th 2.8 s, never 0; born right 128: 2.3% ever flip, 0.05 flips a life; right 99.2%
+B: born wrong 128: first flip median 4.3 s, 90th 8.8 s, never 1; born right 128: 35.2% ever flip, 0.78 flips a life; right 95.6%
+circuit: born wrong 128: first flip median 1.5 s, 90th 4.6 s, never 1; born right 128: 3.1% ever flip, 0.08 flips a life; right 98.5%
+all-food circuit: efficiency 4.26 [4.10, 4.39]  gain 7.40  food 7.40  poison 0.00  last third inf [nan, nan]  stranded 1%  firings 367  power 4 nW  job True
+   flips a life 0.00
+all-food told: efficiency 4.30 [4.20, 4.38]  gain 7.42  food 7.42  poison 0.00  last third inf [nan, nan]  stranded 0%  firings 362  power 4 nW  job True
+random circuit: efficiency -2.30 [-2.44, -2.16]  gain -3.98  food 3.64  poison 3.81  last third 0.96 [0.90, 1.02]  stranded 1%  firings 363  power 4 nW  job False
+   flips a life 16.52
+random told: efficiency -2.08 [-2.18, -1.98]  gain -3.59  food 3.75  poison 3.67  last third 0.98 [0.93, 1.03]  stranded 0%  firings 362  power 4 nW  job False

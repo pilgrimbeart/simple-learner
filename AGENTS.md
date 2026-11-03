@@ -32,6 +32,7 @@ the cheats a grid invites) is in nca-learn's `NOTEBOOK.md`, worth reading before
   | how each part is built in transistors, and so its parts and power | `chip.py` (written out for SPICE by `minimal/spice.py`) |
   | rankings | `experiments/LEADERBOARD.md`, `minimal/LEAGUE.md` (generated) |
   | the lab: one-off experiment scripts and their logs, cited by the notebooks (paths absolute to this machine) | `lab/`, `lab/v/` |
+  | the interventions phase's results, one page per performance issue | `STORIES.md` |
   | background reading | `MIXED_FEEDBACK.md`, `RECRUITMENT.md`, `BOUNDS.md`, `PARTS.md` |
   | open questions, most valuable first | `QUESTIONS.md` |
 
@@ -52,6 +53,17 @@ the cheats a grid invites) is in nca-learn's `NOTEBOOK.md`, worth reading before
   mechanism (`BOUNDS.md`, The walls).
 - **The user is colour-blind**: use colour, never as the only cue (pair it with shape, line style or a label), and no
   hues hard to tell apart, such as red and green (Okabe-Ito).
+- **The interventions phase** (the user's decisions, 2026-11-02; `PARTS.md`): no SPICE, physical plausibility taken as
+  read. Each story (one performance issue X: baseline without X, the gap, manual interventions, detection, the simplest
+  automated circuit) runs in the block model (`discrete/model.py`) through to a successful last stage, then is
+  re-validated once in the node-and-element simulator (`mixed_feedback.py`). Only silicon's noise need be survived,
+  not biology's. The rules below that call for SPICE or for every substrate don't apply to this phase's stories.
+- **The interventions table** (the user's decisions, 2026-11-03; `STORIES.md`): the output is about 10 stories, each a row:
+  the mismatch between body or world and the base brain; the best manual cure; how it kicks in automatically only when
+  needed. Then look for one universal correction circuit. Each row applies one mismatch to story 1's finished circuit. Each
+  row tries every class of `PARTS.md`, section 5, tuned, or records why a class can't apply; the row's cure is the simplest
+  tied with the best. Its automatic version must tie with the base brain in the unmodified world. Re-validation in
+  `mixed_feedback.py` waits until the table is complete, and then covers only the rows or universal circuit we keep.
 - **Long runs** share one laptop: one job at a time. Kill processes only by explicit PID, never by a pattern. To pause
   a run, stop (SIGSTOP) only its pool's workers, never a shell or a process the harness waits on. Don't change code a
   running job will import later.
