@@ -34,6 +34,8 @@ the cheats a grid invites) is in nca-learn's `NOTEBOOK.md`, worth reading before
   | the lab: one-off experiment scripts and their logs, cited by the notebooks (paths absolute to this machine) | `lab/`, `lab/v/` |
   | the interventions phase's results, one page per performance issue | `STORIES.md` |
   | background reading | `MIXED_FEEDBACK.md`, `RECRUITMENT.md`, `BOUNDS.md`, `PARTS.md` |
+  | the current programme: its question, stages, how we work, decisions; check work against it before starting | `PROGRAMME.md` |
+  | the grammar of challenges and the experiment's detail | `GRAMMAR.md` |
   | open questions, most valuable first | `QUESTIONS.md` |
 
 - **One-off scripts go in `lab/`**, never only in a session's /tmp scratchpad: a notebook may cite only what the
