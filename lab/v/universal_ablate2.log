@@ -1,0 +1,84 @@
+== without None
+  thrusters: 1.27 (base 0.43), +0.84 [+0.49, +1.21], recovery 0.48; flips 2.6, grew 0.00, paused 0.00, |x| 0.31
+  swap10: -0.09 (base -0.02), -0.07 [-0.51, +0.34], recovery -0.06; flips 10.2, grew 0.00, paused 0.00, |x| 0.00
+  alternate: 0.56 (base -3.54), +4.10 [+3.63, +4.61], recovery 0.71; flips 8.2, grew 1.00, paused 0.00, |x| 0.00
+  pattern: -1.85 (base -2.61), +0.77 [+0.42, +1.08], recovery 0.15; flips 16.3, grew 0.91, paused 0.06, |x| 0.00
+  digest: -1.90 (base -4.92), +3.02 [+2.48, +3.49], recovery 0.47; flips 9.8, grew 0.00, paused 0.88, |x| 0.00
+  noisy: 1.60 (base 1.37), +0.23 [+0.04, +0.42], recovery 0.37; flips 0.7, grew 0.00, paused 0.00, |x| 0.00
+  unreliable: 0.41 (base -0.03), +0.43 [+0.04, +0.83], recovery 1.61; flips 3.7, grew 0.03, paused 0.00, |x| 0.00
+  ageing: 1.40 (base 0.28), +1.12 [+0.94, +1.28], recovery 0.80; flips 1.8, grew 0.00, paused 0.00, |x| 0.81
+  weak: 1.83 (base 1.74), +0.09 [-0.16, +0.36], recovery 0.47; flips 0.6, grew 0.00, paused 0.00, |x| 0.00
+  patchy: 0.73 (base 0.71), +0.02 [-0.43, +0.45], recovery 0.10; flips 1.9, grew 0.00, paused 0.00, |x| 0.00
+  plain: 2.78, +0.05 [-0.17, +0.25]; flips 0.1, grew 0.00, paused 0.00
+  allfood: 6.82, +2.43
+score 0.44003494069983357
+== without eye
+  thrusters: 1.28 (base 0.43), +0.85 [+0.52, +1.21], recovery 0.48; flips 2.7, grew 0.00, paused 0.00, |x| 0.29
+  swap10: -0.09 (base -0.02), -0.07 [-0.51, +0.34], recovery -0.06; flips 10.2, grew 0.00, paused 0.00, |x| 0.00
+  alternate: 0.56 (base -3.54), +4.10 [+3.63, +4.61], recovery 0.71; flips 8.2, grew 1.00, paused 0.00, |x| 0.00
+  pattern: -1.88 (base -2.61), +0.73 [+0.35, +1.08], recovery 0.15; flips 16.6, grew 0.94, paused 0.06, |x| 0.00
+  digest: -1.91 (base -4.92), +3.01 [+2.48, +3.48], recovery 0.47; flips 9.7, grew 0.00, paused 0.88, |x| 0.00
+  noisy: 1.25 (base 1.37), -0.12 [-0.36, +0.11], recovery -0.19; flips 0.8, grew 0.00, paused 0.00, |x| 0.00
+  unreliable: 0.37 (base -0.03), +0.40 [+0.01, +0.77], recovery 1.48; flips 3.8, grew 0.03, paused 0.03, |x| 0.00
+  ageing: 1.43 (base 0.28), +1.15 [+0.99, +1.30], recovery 0.82; flips 1.9, grew 0.00, paused 0.00, |x| 0.81
+  weak: 1.83 (base 1.74), +0.09 [-0.16, +0.36], recovery 0.47; flips 0.6, grew 0.00, paused 0.00, |x| 0.00
+  patchy: 0.57 (base 0.71), -0.14 [-0.53, +0.25], recovery -0.60; flips 2.1, grew 0.00, paused 0.00, |x| 0.00
+  plain: 2.77, +0.05 [-0.18, +0.24]; flips 0.1, grew 0.00, paused 0.00
+  allfood: 6.82, +2.43
+score 0.04650220100974367
+== without trustk
+  thrusters: 1.16 (base 0.43), +0.73 [+0.38, +1.11], recovery 0.42; flips 4.7, grew 0.00, paused 0.00, |x| 0.29
+  swap10: 0.17 (base -0.02), +0.19 [+0.03, +0.35], recovery 0.16; flips 9.1, grew 0.00, paused 0.00, |x| 0.00
+  alternate: 0.21 (base -3.54), +3.75 [+3.19, +4.28], recovery 0.65; flips 8.4, grew 0.94, paused 0.00, |x| 0.00
+  pattern: -2.24 (base -2.61), +0.37 [+0.05, +0.74], recovery 0.07; flips 15.7, grew 0.69, paused 0.09, |x| 0.00
+  digest: -1.51 (base -4.92), +3.41 [+2.96, +3.90], recovery 0.53; flips 12.1, grew 0.06, paused 1.00, |x| 0.00
+  noisy: 1.60 (base 1.37), +0.23 [+0.04, +0.42], recovery 0.37; flips 0.7, grew 0.00, paused 0.00, |x| 0.00
+  unreliable: 0.39 (base -0.03), +0.42 [+0.04, +0.78], recovery 1.55; flips 5.4, grew 0.00, paused 0.06, |x| 0.00
+  ageing: 1.39 (base 0.28), +1.11 [+0.93, +1.27], recovery 0.79; flips 2.5, grew 0.00, paused 0.00, |x| 0.81
+  weak: 1.83 (base 1.74), +0.09 [-0.16, +0.36], recovery 0.46; flips 0.7, grew 0.00, paused 0.00, |x| 0.00
+  patchy: 0.61 (base 0.71), -0.10 [-0.55, +0.30], recovery -0.41; flips 2.0, grew 0.00, paused 0.03, |x| 0.00
+  plain: 2.78, +0.05 [-0.17, +0.25]; flips 0.1, grew 0.00, paused 0.00
+  allfood: 6.82, +2.43
+score 0.21835246939314876
+== without growk
+  thrusters: 1.27 (base 0.43), +0.84 [+0.49, +1.21], recovery 0.48; flips 2.6, grew 0.00, paused 0.00, |x| 0.31
+  swap10: -0.09 (base -0.02), -0.07 [-0.51, +0.34], recovery -0.06; flips 10.2, grew 0.00, paused 0.00, |x| 0.00
+  alternate: -2.96 (base -3.54), +0.58 [+0.06, +1.11], recovery 0.10; flips 20.6, grew 0.00, paused 0.00, |x| 0.00
+  pattern: -2.49 (base -2.61), +0.12 [-0.33, +0.58], recovery 0.02; flips 17.9, grew 0.00, paused 0.06, |x| 0.00
+  digest: -1.90 (base -4.92), +3.02 [+2.48, +3.49], recovery 0.47; flips 9.8, grew 0.00, paused 0.88, |x| 0.00
+  noisy: 1.60 (base 1.37), +0.23 [+0.04, +0.42], recovery 0.37; flips 0.7, grew 0.00, paused 0.00, |x| 0.00
+  unreliable: 0.42 (base -0.03), +0.44 [+0.04, +0.84], recovery 1.63; flips 3.7, grew 0.00, paused 0.00, |x| 0.00
+  ageing: 1.40 (base 0.28), +1.12 [+0.94, +1.28], recovery 0.80; flips 1.8, grew 0.00, paused 0.00, |x| 0.81
+  weak: 1.83 (base 1.74), +0.09 [-0.16, +0.36], recovery 0.47; flips 0.6, grew 0.00, paused 0.00, |x| 0.00
+  patchy: 0.73 (base 0.71), +0.02 [-0.43, +0.45], recovery 0.10; flips 1.9, grew 0.00, paused 0.00, |x| 0.00
+  plain: 2.78, +0.05 [-0.17, +0.25]; flips 0.1, grew 0.00, paused 0.00
+  allfood: 6.82, +2.43
+score 0.36639331760771865
+== without pausek
+  thrusters: 1.27 (base 0.43), +0.84 [+0.49, +1.21], recovery 0.48; flips 2.6, grew 0.00, paused 0.00, |x| 0.31
+  swap10: -0.09 (base -0.02), -0.07 [-0.51, +0.34], recovery -0.06; flips 10.2, grew 0.00, paused 0.00, |x| 0.00
+  alternate: 0.56 (base -3.54), +4.10 [+3.63, +4.61], recovery 0.71; flips 8.2, grew 1.00, paused 0.00, |x| 0.00
+  pattern: -1.86 (base -2.61), +0.76 [+0.41, +1.08], recovery 0.15; flips 16.4, grew 0.91, paused 0.00, |x| 0.00
+  digest: -4.33 (base -4.92), +0.59 [+0.16, +1.07], recovery 0.09; flips 20.1, grew 0.22, paused 0.00, |x| 0.00
+  noisy: 1.60 (base 1.37), +0.23 [+0.04, +0.42], recovery 0.37; flips 0.7, grew 0.00, paused 0.00, |x| 0.00
+  unreliable: 0.41 (base -0.03), +0.43 [+0.04, +0.83], recovery 1.61; flips 3.7, grew 0.03, paused 0.00, |x| 0.00
+  ageing: 1.40 (base 0.28), +1.12 [+0.94, +1.28], recovery 0.80; flips 1.8, grew 0.00, paused 0.00, |x| 0.81
+  weak: 1.83 (base 1.74), +0.09 [-0.16, +0.36], recovery 0.47; flips 0.6, grew 0.00, paused 0.00, |x| 0.00
+  patchy: 0.73 (base 0.71), +0.02 [-0.43, +0.45], recovery 0.10; flips 1.9, grew 0.00, paused 0.00, |x| 0.00
+  plain: 2.78, +0.05 [-0.17, +0.25]; flips 0.1, grew 0.00, paused 0.00
+  allfood: 6.82, +2.43
+score 0.40232255999647426
+== without jit
+  thrusters: 0.46 (base 0.43), +0.03 [-0.04, +0.10], recovery 0.02; flips 3.6, grew 0.00, paused 0.00, |x| 0.00
+  swap10: -0.09 (base -0.02), -0.07 [-0.51, +0.34], recovery -0.06; flips 10.2, grew 0.00, paused 0.00, |x| 0.00
+  alternate: 0.56 (base -3.54), +4.10 [+3.63, +4.61], recovery 0.71; flips 8.2, grew 1.00, paused 0.00, |x| 0.00
+  pattern: -1.85 (base -2.61), +0.77 [+0.42, +1.08], recovery 0.15; flips 16.3, grew 0.91, paused 0.06, |x| 0.00
+  digest: -1.90 (base -4.92), +3.02 [+2.48, +3.49], recovery 0.47; flips 9.8, grew 0.00, paused 0.88, |x| 0.00
+  noisy: 1.60 (base 1.37), +0.23 [+0.04, +0.42], recovery 0.37; flips 0.7, grew 0.00, paused 0.00, |x| 0.00
+  unreliable: 0.41 (base -0.03), +0.43 [+0.04, +0.83], recovery 1.61; flips 3.7, grew 0.03, paused 0.00, |x| 0.00
+  ageing: 0.32 (base 0.28), +0.04 [-0.03, +0.11], recovery 0.03; flips 4.8, grew 0.00, paused 0.00, |x| 0.00
+  weak: 1.83 (base 1.74), +0.09 [-0.16, +0.36], recovery 0.47; flips 0.6, grew 0.00, paused 0.00, |x| 0.00
+  patchy: 0.73 (base 0.71), +0.02 [-0.43, +0.45], recovery 0.10; flips 1.9, grew 0.00, paused 0.00, |x| 0.00
+  plain: 2.78, +0.05 [-0.17, +0.25]; flips 0.1, grew 0.00, paused 0.00
+  allfood: 6.82, +2.43
+score 0.31632200297592056

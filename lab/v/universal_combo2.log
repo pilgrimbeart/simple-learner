@@ -1,0 +1,14 @@
+thrusters+swap10 1000 s: base -0.73, U -1.15, bank -0.13; bank-base +0.60 [+0.45, +0.77]; bank-U +1.02 [+0.86, +1.19]; grew 0.97 paused 0.72 |x| 0.33
+thrusters+alternate 1000 s: base -1.50, U 1.26, bank 1.27; bank-base +2.76 [+2.27, +3.26]; bank-U +0.01 [-0.20, +0.22]; grew 1.00 paused 0.34 |x| 0.35
+thrusters+digest 1000 s: base -1.76, U -0.79, bank 0.11; bank-base +1.87 [+1.33, +2.41]; bank-U +0.90 [+0.70, +1.09]; grew 0.41 paused 0.95 |x| 0.33
+noisy+swap10 100 s: base -0.67, U -0.66, bank -0.35; bank-base +0.32 [+0.16, +0.48]; bank-U +0.31 [+0.08, +0.57]; grew 0.61 paused 0.44 |x| 0.00
+noisy+alternate 100 s: base -2.03, U -0.26, bank 0.90; bank-base +2.93 [+2.65, +3.19]; bank-U +1.16 [+0.86, +1.45]; grew 1.00 paused 0.31 |x| 0.00
+noisy+digest 100 s: base -2.58, U -1.91, bank -0.63; bank-base +1.95 [+1.67, +2.22]; bank-U +1.28 [+0.96, +1.57]; grew 0.17 paused 1.00 |x| 0.00
+ageing+unreliable 1000 s: base -0.33, U 0.24, bank 0.28; bank-base +0.61 [+0.54, +0.68]; bank-U +0.03 [-0.04, +0.12]; grew 0.50 paused 0.89 |x| 0.92
+weak+pattern 100 s: base -1.86, U -1.69, bank 0.61; bank-base +2.46 [+2.25, +2.67]; bank-U +2.30 [+2.10, +2.50]; grew 1.00 paused 0.30 |x| 0.00
+noisy+thrusters 100 s: base 0.21, U 0.25, bank 0.20; bank-base -0.01 [-0.18, +0.16]; bank-U -0.05 [-0.21, +0.11]; grew 0.06 paused 0.06 |x| 0.01
+thrusters+unreliable 1000 s: base -0.19, U 0.18, bank 0.22; bank-base +0.41 [+0.29, +0.53]; bank-U +0.05 [-0.06, +0.14]; grew 0.52 paused 0.73 |x| 0.34
+digest+alternate 100 s: base -5.55, U -3.09, bank -2.82; bank-base +2.72 [+2.24, +3.24]; bank-U +0.27 [-0.30, +0.79]; grew 1.00 paused 1.00 |x| 0.00
+digest+pattern 100 s: base -5.67, U -3.70, bank -2.71; bank-base +2.96 [+2.61, +3.32]; bank-U +0.99 [+0.68, +1.29]; grew 1.00 paused 1.00 |x| 0.00
+digest+swap10 100 s: base -5.41, U -3.83, bank -3.25; bank-base +2.17 [+1.83, +2.51]; bank-U +0.59 [+0.29, +0.87]; grew 0.98 paused 1.00 |x| 0.00
+digest+unreliable 100 s: base -5.24, U -3.15, bank -1.98; bank-base +3.26 [+3.00, +3.49]; bank-U +1.17 [+0.86, +1.47]; grew 0.62 paused 1.00 |x| 0.00

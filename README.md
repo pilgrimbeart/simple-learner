@@ -211,6 +211,16 @@ The findings that changed the direction of the work, each told in full in the no
   commonest. Eight have an automatic version that helps and costs nothing we can measure when the problem is absent. The trick
   was mostly stopping false alarms from feeding themselves: for instance, acting only once a shortage has lasted two checks running.
   The automatic versions pay in the time they take to notice (`STORIES.md`, the table).
+- **Several ideas about the world can be tested at once, without acting on any of them, but not everything can be tested that way.**
+  We looked for one circuit that cures all ten problems. Stacking each problem's cure with its own alarm went poorly, because the
+  alarms read one another's problems. Trying changes at random and keeping what helped failed too: there is too little signal in a
+  life, and it does harm when nothing is wrong. What worked was noticing that once a taste is trusted, it reveals which colour was food,
+  whatever the creature was doing at the time. So it can keep several rival ideas of what taste means (it never changes, it changes
+  often, it alternates, it repeats in threes), score them all on every taste, and follow whichever predicts best. In a world with nothing
+  wrong, no rival ever gets ahead, so nothing changes. One setting of this circuit helps surely in 8 of the 10 problems and in 13 of 14
+  combinations it was never tuned on. It is still partly a failure: it is worse than three problems' own cures, it can only choose among
+  ideas it already holds, and it can't judge the eyes or the thrusters, since no taste says how to reach a block. Those need other
+  evidence, so the honest answer is three loops rather than one (`STORIES.md`, One universal circuit; `discrete/NOTEBOOK.md`, D29).
 
 ## The ground rules, for every brain
 
@@ -514,6 +524,10 @@ The open questions, most valuable first, are in [`QUESTIONS.md`](QUESTIONS.md).
   where it is, and lets the recruit try the simplest operations, keeping what works; told nothing of what it is for.
 - **Story**: one performance issue followed from a brain with no concept of it, through the gap to it solved perfectly,
   manual interventions and how a brain could detect it, to the simplest circuit that does (`STORIES.md`).
+- **Bank of predictors**: several rival models of what taste means, all kept up to date and scored on every taste, with the creature
+  following whichever has earned the most evidence over the default (`STORIES.md`, One universal circuit).
+- **Off-policy scoring**: judging a model on what happened while something else was in charge, so it can be judged without being
+  tried. **On-policy** is the opposite: a change is judged only by acting on it, as jitter is.
 - **Function-preserving growth**: adding a part with its effect at zero, so the brain is exactly as good as before,
   then tuning it in: trying a part costs nothing (`PARTS.md`).
 - **Ideal observer** (Geisler's term, the user's choice, 2026-11-01): a brain of unlimited reasoning but only the

@@ -104,17 +104,81 @@ Difference from the base brain, 100 s (thrusters and ageing 1,000 s), fresh seed
 - **H3, generate and test:** a single alarm (bads, or a shortage) drives random trial of any knob (trust, pause, balance, table length, eye threshold),
   keeping what improves things. The simplest in principle and the most universal, since it knows nothing of the rows, but it may hit the noise wall
   within 100 s, so judged in long lives.
+- **H4, a bank of predictors** (added after H0/H1 were measured): every vouched taste reveals which colour was food, so every candidate model of what
+  taste means can be scored on every taste without being acted on. No trial, no cost, and nothing moves in a world that suits the default.
 
-**The plan.** `lab/universal.py`; `discrete/NOTEBOOK.md`, D29.
+## One universal circuit: the result (`discrete/NOTEBOOK.md`, D29)
 
-1. Build H0/H1 as one brain, each part removable (`U`). Every world, plain and all food; each part removed in turn, to say what each buys.
-2. Trace each conflict to its cause (flip signatures per world) before tuning: measure whether H1's premise holds at all.
-3. Search knob settings across all worlds at once with lots of lives, scored by each row's recovery (0 at base, 1 at its best manual), its mean and its
-   worst, less any plain cost. Longer lives where a part is slow.
-4. Build H2 and H3 as alternatives, same tests.
-5. Combinations of mismatches never seen together (thrusters + swaps, noisy eye + sequence...), as the real test of universality.
-6. Judge the best of each on fresh seeds (55000 on), in each world, against each row's own automatic version and the base. Remove parts to explain
-   each result. Success or failure gets an explanation by what each part did in each world.
+**The answer: partly.** One circuit at one setting, the same in every world, helps surely in 8 of the 10 rows (1, 2, 3, 4, 5, 6, 8, 10; row 7 only by 400 s; row 9 had
+little to gain) and costs nothing measurable in the plain world. It is the best thing we have for mismatches combined. But it isn't one mechanism: it is one rule for what taste means, plus two
+other loops for things taste can't score. It also falls surely short of three rows' own automatic versions, and cures only what its bank holds.
+
+**The circuit** (`lab/universal_v.py`, setting `lab/v/universal_v7.json`).
+
+- *The bank.* A model is a table of n bits, indexed by the count of good tastes mod n, each bit with a tally of some depth of trust. The default is length 1,
+  trust 3. The six rivals are length 1 with trust 0, and lengths 2 to 6 with trust 2. Every vouched taste updates all of them and scores all of them.
+- *Choosing.* Each rival holds evidence: +1 when it predicted the taste and the default didn't, -3 for the reverse, kept within 0 to 10. The creature follows the
+  rival with the most evidence past a threshold. Evidence moves only where models disagree.
+- *The pause*: the same idea applied to a taste's timing, with its own evidence: up for a bad soon after a taste, down for a good soon after one or a bad late. Its length is a two-way staircase.
+- *The eye threshold* (row 6's) and *the balance's jitter while meals are short* (row 8's), unchanged in design.
+
+**Judged once** on seeds that nothing had touched (55100-55163 x 2; `lab/universal_judge.py`, `lab/v/universal_judge.log`). Lives of the row's length. "Share" is the bank's
+gain as a share of the gain by the best manual cure, from the rounded numbers. Base numbers differ from the table's because the seeds differ.
+
+| # | world | s | base | **bank** | gain over base | share | row's own | bank - row's own | best manual |
+|---|---|---|---|---|---|---|---|---|---|
+| 2 | thrusters | 1000 | 0.49 | **1.34** | +0.85 [+0.67, +1.04] | 50% | 1.92 | **-0.58** [-0.77, -0.39] | 2.18 |
+| 3 | swap 10 s | 100 | -0.01 | **0.45** | +0.47 [+0.29, +0.65] | 44% | 0.99 | **-0.54** [-0.69, -0.39] | 1.05 |
+| | | 400 | -0.14 | **0.73** | +0.87 [+0.77, +0.98] | 74% | 0.98 | **-0.25** [-0.34, -0.16] | 1.04 |
+| 4a | alternate | 100 | -3.43 | **1.49** | +4.92 [+4.72, +5.14] | 85% | 1.71 | tied, -0.22 [-0.48, +0.06] | 2.35 |
+| | | 400 | -3.46 | **2.08** | +5.54 [+5.39, +5.69] | 94% | 2.12 | tied, -0.04 [-0.20, +0.12] | 2.45 |
+| 4b | A, A, B | 100 | -2.76 | **1.47** | +4.23 [+4.04, +4.41] | 83% | 0.55 | **+0.92** [+0.70, +1.13] | 2.34 |
+| | | 400 | -2.77 | **1.98** | +4.75 [+4.65, +4.85] | 93% | 1.87 | +0.11 [+0.01, +0.21] | 2.34 |
+| 5 | digest | 100 | -4.81 | **-0.30** | +4.52 [+4.27, +4.76] | 69% | 0.75 | **-1.05** [-1.23, -0.88] | 1.72 |
+| | | 400 | -4.87 | **0.24** | +5.11 [+4.98, +5.24] | 77% | 1.25 | **-1.00** [-1.10, -0.91] | 1.76 |
+| 6 | noisy eye | 100 | 1.25 | **1.82** | +0.57 [+0.46, +0.68] | 93% | 1.78 | tied, +0.03 [-0.06, +0.13] | 1.86 |
+| 7 | unreliable | 100 | 0.34 | **0.47** | not sure, +0.12 [-0.04, +0.29] | 38% | 0.54 | tied, -0.07 [-0.25, +0.12] | 0.66 |
+| | | 400 | 0.34 | **0.61** | +0.27 [+0.18, +0.36] | 69% | 0.71 | -0.10 [-0.19, -0.02] | 0.73 |
+| 8 | ageing | 1000 | 0.33 | **1.44** | +1.12 [+1.03, +1.19] | 78% | 1.41 | tied, +0.03 [-0.07, +0.13] | 1.77 |
+| 9 | weak eye | 100 | 1.81 | **1.76** | tied, -0.05 [-0.18, +0.08] | none | none | | 1.87 |
+| 10 | clumps | 100 | 0.74 | **0.94** | +0.20 [+0.01, +0.37] | 95% | 0.84 | tied, +0.10 [-0.06, +0.27] | 0.95 |
+
+Plain test, against the base brain: 100 s -0.02 [-0.14, +0.11], 400 s +0.04 [-0.03, +0.12], 1,000 s +0.02 [-0.02, +0.07], so it passes at every length. Row 1 is covered by the plain and all-food
+numbers: plain 2.70; both colours food 6.71 at 100 s (the base brain 4.44, surely below), which matches row 1's own automatic version.
+
+**Mismatches combined**, never used in tuning (`lab/universal_combo.py`, `lab/v/universal_combo2.log`; validation seeds): surely above base in 13 of 14, surely above the earlier
+candidate U (H0/H1) in 9, tied in 5, surely below in none. The exception is noisy eye + thrusters, tied at 100 s, probably too short for balance to move; it has not been tried longer. Better is not the same as good:
+the digest pairs stay well below 0 (-2.82 with alternate, -3.25 with swaps, against -5.55 and -5.41), and thrusters + swaps is -0.13.
+
+**Variants of the rows' worlds** (`lab/universal_unseen.py`, `lab/v/universal_unseen2.log`; validation seeds): other sequences +3.2 to +5.0 at 100 s; digest 0.5 s +1.02, 2 s +3.80,
+3 s +2.08; swap 5 s +0.41. **Surely worse: swap 50 s -0.29 [-0.48, -0.11] at 100 s** (-0.10, not sure, at 400 s). Not traced, but this is the one world where the base's light trust is nearly right
+and the bank starts heavier. No gain at 100 s: swap 20 s, unreliable 10%, 30% and 40%; the last two and swap 20 s gain surely by 400 s.
+
+**Why it works.**
+
+1. *The question "what does this taste mean?" can be scored off-policy.* A vouched taste says which colour was food, whichever model was driving, so all models learn and are
+   compared on every taste. Nothing has to be tried. H3 (generate and test) was the same search on-policy, and it failed for that reason: one knob's notch at a time at about 1 in 6 x 1/2
+   per trial takes some 400 s, and judging a change by one window's meals gives false keeps (it cost plain -0.28). Those noise figures are in D29.
+2. *Models compete on the same evidence, so most of the matrix's conflicts go away.* Growth cost -1.21 at swaps and bounce-raised trust -0.81, each by its own rule; here a rival is chosen only by
+   predicting better. In a trace (`lab/v/universal_vdbg3.log`) it picks correctly: swaps mostly trust 0 (75% of the time, first pick at 14 s), alternate length 2 (84%, 13 s), pattern length 3 (81%, 11 s), digest stays
+   on the default and pauses (first pause at 9 s, in every life). In plain, no model is ever chosen, in any traced life, and every rival's evidence ends at 0.
+3. *A heavy default stops being a danger.* Trust of 2 or more blinded U in sequence worlds, since those were detected through flips. Now trust 3 is only the default model, and it helps the thin worlds.
+
+**Why it falls short.**
+
+1. *Delay.* Evidence takes 11-14 s to pass the threshold, at a bad score. This is why alternate and the pattern close most of the gap only by 400 s.
+2. *Thresholds trade worlds, and that remains.* Trust 0 scores well by chance after two lies in a row, so a low threshold hurts unreliable worlds; a high one delays swaps (validation seeds, swap at 100 s: threshold 1 about +0.7, 2 +0.54, 3 +0.33). I chose 2. It
+   explains part of swap's -0.54 against its row, the time on the default (about 20-25% of the life) perhaps half. The rest is untraced.
+3. *More rivals, more false picks.* Removing any rival not needed in a world helps a little there (alternate +0.15 to +0.19), at the risk of having no cure for another (no trust 0: swap -2.21; no length 2: alternate -0.78).
+4. *Digest's staircase is generality paid for by row 5.* Without it, digest at 100 s scores +5.09 rather than +4.47 over base on validation seeds, but 2 s digest gets +2.74 rather than +3.51. I chose generality; that accounts for much of the
+   row's -1.05, not all.
+5. *Thrusters use jitter, because sweeps were not kept.* Jitter reaches about half to two-thirds of sweeps' gain (+0.85 here; +1.02 against +1.65 in the matrix). Adding sweeps was not tried.
+6. *A bank cures only what it holds.* With no model of length 4 or 5, those sequences gained only +1.37 and +1.26; with them, +3.73 and +3.44. This is the old menu limit, moved rather than removed. Nothing in the circuit says "my bank doesn't hold this".
+7. *It isn't one mechanism.* No taste prediction can score eye thresholds or the balance, because they are about how the creature reaches a block, not what a taste means. They need other evidence: an eye's own background rate, and meals by trial. So a
+   single loop appears out of reach here, and the honest shape is three: **model selection for meaning, a rate for the senses, trial for movement.**
+
+**Not done.** Block model only, with no re-validation in `mixed_feedback.py`. Nobody has watched it on screen (`python lab/watch_universal.py alternate`; a frame recorded without a display: `lab/v/universal_alternate_30s.png`). Its parts are uncounted, and the bank is a fair size:
+22 table entries, 7 tables, plus evidence and position counters. The balance's gate is still an absolute meal count, the setpoint `AGENTS.md` warns about. H2 was absorbed rather than built: the bank holds its sequence contexts, the pause its timing, but "follow neither" was never tried.
 
 ## 1. Which colour is food (`discrete/NOTEBOOK.md`, D25)
 

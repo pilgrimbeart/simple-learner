@@ -1,0 +1,1 @@
+{"learn": 1.0, "win": 200.0, "gate": 15.0, "margin_e": 3.0, "theta": 2.0, "theta_n": 1.0, "hyst": 1.0, "pen": 3.0, "Emax": 10.0, "theta_off": 1.0, "tau_E": 0.0, "bk": 19.0, "theta_p": 2.0, "down": 1.0, "late": 1.0, "mtop": 4.0, "tau_hold": 600.0, "tau_p": 150.0, "off": 0.5, "margin_p": 1.2, "win_p": 1.2, "d": 3.0, "stair": 1.25, "up": 0.03}

@@ -1,0 +1,33 @@
+swap5 100 s: base -1.40, bank -0.99, +0.41 [+0.10, +0.74]; grew 0.81 paused 0.55
+swap5 400 s: base -1.42, bank -0.85, +0.58 [+0.43, +0.73]; grew 1.00 paused 0.92
+swap20 100 s: base 1.26, bank 1.31, +0.05 [-0.16, +0.25]; grew 0.20 paused 0.19
+swap20 400 s: base 1.15, bank 1.61, +0.46 [+0.36, +0.56]; grew 0.22 paused 0.41
+swap50 100 s: base 2.33, bank 2.04, -0.29 [-0.48, -0.11]; grew 0.00 paused 0.20
+swap50 400 s: base 2.12, bank 2.02, -0.10 [-0.23, +0.03]; grew 0.09 paused 0.44
+seq2again 100 s: base -3.35, bank 1.64, +4.99 [+4.75, +5.23]; grew 1.00 paused 0.33
+seq2again 400 s: base -3.36, bank 2.17, +5.54 [+5.37, +5.70]; grew 1.00 paused 0.52
+seq4 100 s: base -2.42, bank 1.30, +3.73 [+3.50, +3.93]; grew 1.00 paused 0.34
+seq4 400 s: base -2.52, bank 1.83, +4.35 [+4.22, +4.48]; grew 1.00 paused 0.59
+seq4b 100 s: base -1.88, bank 1.60, +3.49 [+3.29, +3.66]; grew 1.00 paused 0.39
+seq4b 400 s: base -2.00, bank 2.03, +4.03 [+3.89, +4.18]; grew 1.00 paused 0.69
+seq5 100 s: base -2.03, bank 1.41, +3.44 [+3.20, +3.69]; grew 1.00 paused 0.28
+seq5 400 s: base -2.03, bank 1.88, +3.91 [+3.77, +4.05]; grew 1.00 paused 0.61
+seq6 100 s: base -2.67, bank 0.51, +3.18 [+2.89, +3.48]; grew 1.00 paused 0.53
+seq6 400 s: base -2.78, bank 1.16, +3.93 [+3.70, +4.15]; grew 1.00 paused 0.86
+digest0.5 100 s: base -1.42, bank -0.40, +1.02 [+0.76, +1.29]; grew 0.12 paused 0.98
+digest0.5 400 s: base -1.59, bank -0.03, +1.56 [+1.44, +1.71]; grew 0.16 paused 1.00
+digest2 100 s: base -7.33, bank -3.53, +3.80 [+3.22, +4.35]; grew 0.72 paused 1.00
+digest2 400 s: base -7.37, bank -1.20, +6.17 [+5.86, +6.45]; grew 0.77 paused 1.00
+digest3 100 s: base -8.01, bank -5.93, +2.08 [+1.72, +2.43]; grew 0.94 paused 1.00
+digest3 400 s: base -7.76, bank -4.15, +3.61 [+3.31, +3.92]; grew 1.00 paused 1.00
+unreliable0.1 100 s: base 1.51, bank 1.56, +0.06 [-0.18, +0.28]; grew 0.02 paused 0.05
+unreliable0.1 400 s: base 1.65, bank 1.74, +0.09 [-0.03, +0.20]; grew 0.03 paused 0.22
+unreliable0.3 100 s: base -0.79, bank -0.60, +0.20 [-0.09, +0.50]; grew 0.41 paused 0.58
+unreliable0.3 400 s: base -0.85, bank -0.42, +0.43 [+0.28, +0.59]; grew 0.70 paused 0.98
+unreliable0.4 100 s: base -1.76, bank -1.68, +0.08 [-0.24, +0.38]; grew 0.78 paused 0.80
+unreliable0.4 400 s: base -1.85, bank -1.37, +0.48 [+0.35, +0.62]; grew 0.98 paused 1.00
+-- each rival removed
+no trust-0 | swap1 -2.21 [-2.47, -1.95] | alter +0.19 [+0.02, +0.46] | patte +0.17 [+0.02, +0.33] | diges +0.04 [-0.07, +0.13] | unrel +0.04 [-0.07, +0.15] | plain +0.00 [+0.00, +0.00]
+no 2 | swap1 +0.02 [-0.09, +0.13] | alter -0.78 [-1.23, -0.34] | patte -0.02 [-0.18, +0.11] | diges +0.03 [+0.00, +0.07] | unrel -0.04 [-0.12, +0.02] | plain +0.00 [+0.00, +0.00]
+no 3 | swap1 +0.02 [-0.11, +0.15] | alter +0.15 [+0.03, +0.35] | patte -0.30 [-0.68, +0.09] | diges -0.01 [-0.03, +0.00] | unrel +0.01 [-0.01, +0.04] | plain +0.00 [+0.00, +0.00]
+no 6 | swap1 +0.06 [-0.07, +0.20] | alter +0.15 [+0.02, +0.35] | patte +0.01 [-0.05, +0.06] | diges +0.00 [-0.01, +0.02] | unrel +0.01 [-0.03, +0.05] | plain +0.00 [+0.00, +0.00]

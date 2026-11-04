@@ -1,0 +1,12 @@
+== patchy 400 s: share of time by model (n/trust): 1/1:0.34 1/0:0.08 1/3:0.57
+   first pick median 86 s, in 0.94 of lives; picks a life 2.4; tastes 354, vouched 264; E mean 1/1:0.0 1/0:0.3 1/3:3.1 2/1:0.2 3/1:0.2 6/1:0.2
+   first pause median 109 s in 0.77 of lives, pausing at end 0.06, est 1.28
+== unreliable 400 s: share of time by model (n/trust): 1/1:0.12 1/0:0.08 1/3:0.77 6/1:0.01
+   first pick median 28 s, in 1.00 of lives; picks a life 6.4; tastes 267, vouched 232; E mean 1/1:0.0 1/0:0.5 1/3:5.2 2/1:0.6 3/1:0.4 6/1:0.5
+   first pause median 60 s in 0.92 of lives, pausing at end 0.09, est 1.39
+== weak 400 s: share of time by model (n/trust): 1/1:0.79 1/0:0.05 1/3:0.15
+   first pick median 125 s, in 0.32 of lives; picks a life 0.7; tastes 224, vouched 186; E mean 1/1:0.0 1/0:0.1 1/3:0.6 2/1:0.0 3/1:0.0 6/1:0.0
+   first pause median 166 s in 0.17 of lives, pausing at end 0.05, est 0.79
+== noisy 400 s: share of time by model (n/trust): 1/1:0.78 1/0:0.06 1/3:0.16
+   first pick median 132 s, in 0.39 of lives; picks a life 0.8; tastes 243, vouched 201; E mean 1/1:0.0 1/0:0.0 1/3:0.5 2/1:0.1 3/1:0.0 6/1:0.0
+   first pause median 130 s in 0.12 of lives, pausing at end 0.02, est 1.13

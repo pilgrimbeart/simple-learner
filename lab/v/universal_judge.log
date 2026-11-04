@@ -1,0 +1,77 @@
+{"learn": 1.0, "win": 200.0, "gate": 15.0, "margin_e": 3.0, "theta": 2.0, "theta_n": 1.0, "hyst": 1.0, "pen": 3.0, "Emax": 10.0, "theta_off": 1.0, "tau_E": 0.0, "bk": 19.0, "theta_p": 2.0, "down": 1.0, "late": 1.0, "mtop": 4.0, "tau_hold": 600.0, "tau_p": 150.0, "off": 0.5, "margin_p": 1.2, "win_p": 1.2, "d": 3.0, "stair": 1.25, "up": 0.03}
+== 2 thrusters 1000 s: base 0.49, bank 1.34; bank-base +0.85 [+0.67, +1.04]; flips 2.0 grew 0.20 paused 0.09 |x| 0.36
+   told 2.49; bank-told -1.14 [-1.35, -0.94]
+   manual Sense: sweeps 192 2.18; bank-manual -0.84 [-1.04, -0.65]
+   row's own sweepsg2 1.92; bank-row -0.58 [-0.77, -0.39]
+== 3 swap10 100 s: base -0.01, bank 0.45; bank-base +0.47 [+0.29, +0.65]; flips 9.4 grew 0.38 paused 0.36 |x| 0.00
+   told 2.88; bank-told -2.43 [-2.60, -2.25]
+   manual Judge: no trust 1.05; bank-manual -0.60 [-0.74, -0.44]
+   row's own volatile2 0.99; bank-row -0.54 [-0.69, -0.39]
+== 3 swap10 400 s: base -0.14, bank 0.73; bank-base +0.87 [+0.77, +0.98]; flips 45.6 grew 0.55 paused 0.66 |x| 0.01
+   told 2.87; bank-told -2.14 [-2.23, -2.06]
+   manual Judge: no trust 1.04; bank-manual -0.31 [-0.40, -0.22]
+   row's own volatile2 0.98; bank-row -0.25 [-0.34, -0.16]
+== 4a alternate 100 s: base -3.43, bank 1.49; bank-base +4.92 [+4.72, +5.14]; flips 2.5 grew 1.00 paused 0.36 |x| 0.00
+   told 2.62; bank-told -1.13 [-1.35, -0.90]
+   manual Store: sequence 2 2.35; bank-manual -0.85 [-1.06, -0.64]
+   row's own grow 1.71; bank-row -0.22 [-0.48, +0.06]
+== 4a alternate 400 s: base -3.46, bank 2.08; bank-base +5.54 [+5.39, +5.69]; flips 4.0 grew 1.00 paused 0.50 |x| 0.00
+   told 2.65; bank-told -0.57 [-0.72, -0.43]
+   manual Store: sequence 2 2.45; bank-manual -0.37 [-0.52, -0.22]
+   row's own grow 2.12; bank-row -0.04 [-0.20, +0.12]
+== 4b pattern 100 s: base -2.76, bank 1.47; bank-base +4.23 [+4.04, +4.41]; flips 2.4 grew 1.00 paused 0.36 |x| 0.00
+   told 2.68; bank-told -1.21 [-1.38, -1.05]
+   manual Store: sequence 3 2.34; bank-manual -0.88 [-1.05, -0.72]
+   row's own grow 0.55; bank-row +0.92 [+0.70, +1.13]
+== 4b pattern 400 s: base -2.77, bank 1.98; bank-base +4.75 [+4.65, +4.85]; flips 4.9 grew 1.00 paused 0.61 |x| 0.00
+   told 2.63; bank-told -0.64 [-0.73, -0.56]
+   manual Store: sequence 3 2.34; bank-manual -0.36 [-0.46, -0.27]
+   row's own grow 1.87; bank-row +0.11 [+0.01, +0.21]
+== 5 digest 100 s: base -4.81, bank -0.30; bank-base +4.52 [+4.27, +4.76]; flips 3.5 grew 0.12 paused 1.00 |x| 0.00
+   told 1.78; bank-told -2.08 [-2.25, -1.91]
+   manual Use: still 1 s 1.72; bank-manual -2.01 [-2.18, -1.85]
+   row's own learnpause3 0.75; bank-row -1.05 [-1.23, -0.88]
+== 5 digest 400 s: base -4.87, bank 0.24; bank-base +5.11 [+4.98, +5.24]; flips 4.9 grew 0.15 paused 1.00 |x| 0.08
+   told 1.81; bank-told -1.57 [-1.64, -1.49]
+   manual Use: still 1 s 1.76; bank-manual -1.52 [-1.60, -1.45]
+   row's own learnpause3 1.25; bank-row -1.00 [-1.10, -0.91]
+== 6 noisy 100 s: base 1.25, bank 1.82; bank-base +0.57 [+0.46, +0.68]; flips 0.2 grew 0.00 paused 0.00 |x| 0.00
+   told 2.72; bank-told -0.90 [-1.01, -0.80]
+   manual Judge: coincidence 20 ms 1.86; bank-manual -0.05 [-0.17, +0.07]
+   row's own adapteye 1.78; bank-row +0.03 [-0.06, +0.13]
+== 6 noisy 400 s: base 1.37, bank 1.87; bank-base +0.50 [+0.43, +0.56]; flips 0.2 grew 0.00 paused 0.03 |x| 0.03
+   told 2.73; bank-told -0.87 [-0.93, -0.80]
+   manual Judge: coincidence 20 ms 1.89; bank-manual -0.02 [-0.08, +0.04]
+   row's own adapteye 1.90; bank-row -0.03 [-0.10, +0.04]
+== 7 unreliable 100 s: base 0.34, bank 0.47; bank-base +0.12 [-0.04, +0.29]; flips 1.8 grew 0.16 paused 0.36 |x| 0.00
+   told 0.70; bank-told -0.23 [-0.38, -0.07]
+   manual Store/Judge: trust 4 0.66; bank-manual -0.19 [-0.34, -0.04]
+   row's own bt 0.54; bank-row -0.07 [-0.25, +0.12]
+== 7 unreliable 400 s: base 0.34, bank 0.61; bank-base +0.27 [+0.18, +0.36]; flips 4.5 grew 0.29 paused 0.78 |x| 0.02
+   told 0.73; bank-told -0.11 [-0.20, -0.03]
+   manual Store/Judge: trust 4 0.73; bank-manual -0.11 [-0.19, -0.04]
+   row's own bt 0.71; bank-row -0.10 [-0.19, -0.02]
+== 8 ageing 1000 s: base 0.33, bank 1.44; bank-base +1.12 [+1.03, +1.19]; flips 0.3 grew 0.02 paused 0.09 |x| 0.79
+   told 2.63; bank-told -1.18 [-1.29, -1.08]
+   manual Judge: jitter 1.77; bank-manual -0.32 [-0.43, -0.23]
+   row's own jitterg2 1.41; bank-row +0.03 [-0.07, +0.13]
+== 9 weak 100 s: base 1.81, bank 1.76; bank-base -0.05 [-0.18, +0.08]; flips 0.3 grew 0.02 paused 0.01 |x| 0.00
+   told 1.88; bank-told -0.12 [-0.25, +0.02]
+   manual Judge: trust 3 1.87; bank-manual -0.11 [-0.24, +0.02]
+== 9 weak 400 s: base 1.77, bank 1.77; bank-base -0.01 [-0.07, +0.06]; flips 0.3 grew 0.02 paused 0.08 |x| 0.02
+   told 1.86; bank-told -0.09 [-0.16, -0.02]
+   manual Judge: trust 3 1.87; bank-manual -0.11 [-0.17, -0.04]
+== 10 patchy 100 s: base 0.74, bank 0.94; bank-base +0.20 [+0.01, +0.37]; flips 0.5 grew 0.02 paused 0.14 |x| 0.00
+   told 0.90; bank-told +0.04 [-0.12, +0.20]
+   manual Judge: trust 3 0.95; bank-manual -0.01 [-0.17, +0.16]
+   row's own bt 0.84; bank-row +0.10 [-0.06, +0.27]
+== 10 patchy 400 s: base 0.92, bank 1.01; bank-base +0.09 [-0.01, +0.19]; flips 0.9 grew 0.03 paused 0.37 |x| 0.01
+   told 1.02; bank-told -0.01 [-0.10, +0.08]
+   manual Judge: trust 3 1.06; bank-manual -0.05 [-0.15, +0.06]
+   row's own bt 1.04; bank-row -0.03 [-0.13, +0.08]
+== plain 100 s: base 2.71, bank 2.70; bank-base -0.02 [-0.14, +0.11]; flips 0.1 grew 0.00 paused 0.00 |x| 0.00
+== plain 400 s: base 2.71, bank 2.75; bank-base +0.04 [-0.03, +0.12]; flips 0.1 grew 0.00 paused 0.00 |x| 0.00
+== plain 1000 s: base 2.76, bank 2.78; bank-base +0.02 [-0.02, +0.07]; flips 0.1 grew 0.00 paused 0.00 |x| 0.00
+== allfood 100 s: base 4.44, bank 6.71; bank-base +2.27 [+2.09, +2.46]; flips 0.0 grew 0.00 paused 0.00 |x| 0.00
+== allfood 400 s: base 4.41, bank 6.72; bank-base +2.31 [+2.22, +2.41]; flips 0.0 grew 0.00 paused 0.00 |x| 0.00
+== allfood 1000 s: base 4.43, bank 6.73; bank-base +2.30 [+2.23, +2.37]; flips 0.0 grew 0.00 paused 0.00 |x| 0.00

@@ -1,0 +1,21 @@
+== swap10 100 s: share of time by model (n/trust): 1/1:0.42 1/0:0.56
+   first pick median 34 s, in 0.99 of lives; picks a life 1.2; tastes 73, vouched 63; E mean 1/1:0.0 1/0:6.7 1/3:0.4 2/0:1.0 2/1:0.2 2/3:0.4 3/0:0.5 3/1:0.4 3/3:0.6 6/0:0.7 6/1:0.5 6/3:0.7
+   first pause median 50 s in 0.16 of lives, pausing at end 0.03, est 1.42
+== unreliable 100 s: share of time by model (n/trust): 1/1:0.83 1/0:0.02 1/3:0.10 2/0:0.01 3/0:0.02 6/0:0.02
+   first pick median 62 s, in 0.48 of lives; picks a life 0.6; tastes 70, vouched 61; E mean 1/1:0.0 1/0:1.0 1/3:2.4 2/0:1.0 2/1:0.6 2/3:2.2 3/0:1.0 3/1:0.8 3/3:2.0 6/0:1.1 6/1:0.9 6/3:1.9
+   first pause median 38 s in 0.58 of lives, pausing at end 0.21, est 1.52
+== patchy 100 s: share of time by model (n/trust): 1/1:0.98 1/3:0.01
+   first pick median 72 s, in 0.06 of lives; picks a life 0.1; tastes 92, vouched 69; E mean 1/1:0.0 1/0:0.2 1/3:0.8 2/0:0.2 2/1:0.1 2/3:0.8 3/0:0.2 3/1:0.1 3/3:0.8 6/0:0.2 6/1:0.2 6/3:0.7
+   first pause median 31 s in 0.31 of lives, pausing at end 0.08, est 1.06
+== alternate 100 s: share of time by model (n/trust): 1/1:0.21 2/0:0.70 2/1:0.08 6/0:0.02
+   first pick median 20 s, in 1.00 of lives; picks a life 1.0; tastes 70, vouched 62; E mean 1/1:0.0 1/0:1.4 1/3:4.5 2/0:10.0 2/1:10.0 2/3:9.9 3/0:1.8 3/1:6.0 3/3:7.1 6/0:10.0 6/1:9.9 6/3:9.9
+   first pause median 16 s in 0.27 of lives, pausing at end 0.10, est 1.39
+== pattern 100 s: share of time by model (n/trust): 1/1:0.22 3/0:0.60 3/1:0.16 6/0:0.01
+   first pick median 21 s, in 1.00 of lives; picks a life 1.1; tastes 71, vouched 62; E mean 1/1:0.0 1/0:0.2 1/3:3.3 2/0:0.3 2/1:0.7 2/3:2.0 3/0:9.9 3/1:9.9 3/3:9.8 6/0:9.9 6/1:9.8 6/3:9.4
+   first pause median 17 s in 0.22 of lives, pausing at end 0.06, est 1.43
+== digest 100 s: share of time by model (n/trust): 1/1:0.95 1/0:0.02 1/3:0.03
+   first pick median 49 s, in 0.11 of lives; picks a life 0.1; tastes 43, vouched 38; E mean 1/1:0.0 1/0:0.6 1/3:0.8 2/0:0.7 2/1:0.2 2/3:0.6 3/0:0.7 3/1:0.2 3/3:0.6 6/0:0.6 6/1:0.2 6/3:0.3
+   first pause median 9 s in 1.00 of lives, pausing at end 0.94, est 1.30
+== plain 100 s: share of time by model (n/trust): 1/1:1.00
+   first pick median -1 s, in 0.00 of lives; picks a life 0.0; tastes 75, vouched 66; E mean 1/1:0.0 1/0:0.0 1/3:0.0 2/0:0.0 2/1:0.0 2/3:0.0 3/0:0.0 3/1:0.0 3/3:0.0 6/0:0.0 6/1:0.0 6/3:0.0
+   first pause median -1 s in 0.00 of lives, pausing at end 0.00, est 0.08

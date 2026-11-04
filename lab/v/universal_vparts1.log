@@ -1,0 +1,24 @@
+thrusters (jit) 1000 s: base 0.78, row's own sweepsg2 1.96, part alone 1.56, whole 1.52
+   whole-base +0.73 [+0.44, +1.02]; whole-row -0.45 [-0.71, -0.20]; whole-alone -0.04 [-0.12, +0.03]; alone-row -0.41 [-0.68, -0.17]; grew 0.27 paused 0.16 |x| 0.32
+ageing (jit) 1000 s: base 0.36, row's own jitterg2 1.54, part alone 1.46, whole 1.41
+   whole-base +1.05 [+0.92, +1.16]; whole-row -0.13 [-0.24, -0.02]; whole-alone -0.06 [-0.15, +0.04]; alone-row -0.07 [-0.18, +0.02]; grew 0.12 paused 0.16 |x| 0.75
+swap10 (trustk) 100 s: base -0.03, row's own volatile2 0.99, part alone 0.83, whole 0.80
+   whole-base +0.83 [+0.61, +1.03]; whole-row -0.19 [-0.41, +0.01]; whole-alone -0.03 [-0.14, +0.06]; alone-row -0.16 [-0.39, +0.08]; grew 0.36 paused 0.09 |x| 0.00
+unreliable (trustk) 100 s: base 0.24, row's own bt 0.43, part alone 0.11, whole 0.12
+   whole-base -0.13 [-0.41, +0.17]; whole-row -0.32 [-0.57, -0.06]; whole-alone +0.00 [-0.14, +0.15]; alone-row -0.32 [-0.54, -0.12]; grew 0.36 paused 0.58 |x| 0.00
+patchy (trustk) 100 s: base 0.77, row's own bt 0.91, part alone 0.78, whole 0.55
+   whole-base -0.21 [-0.54, +0.11]; whole-row -0.36 [-0.69, -0.01]; whole-alone -0.22 [-0.39, -0.07]; alone-row -0.13 [-0.45, +0.17]; grew 0.09 paused 0.34 |x| 0.00
+weak (trustk) 100 s: base 1.81, row's own circuit 1.81, part alone 1.72, whole 1.70
+   whole-base -0.11 [-0.30, +0.08]; whole-row -0.11 [-0.30, +0.08]; whole-alone -0.02 [-0.06, +0.01]; alone-row -0.08 [-0.26, +0.09]; grew 0.00 paused 0.02 |x| 0.00
+alternate (growk) 100 s: base -3.26, row's own grow 1.78, part alone 1.88, whole 1.85
+   whole-base +5.11 [+4.76, +5.43]; whole-row +0.07 [-0.18, +0.32]; whole-alone -0.03 [-0.09, +0.00]; alone-row +0.10 [-0.16, +0.36]; grew 1.00 paused 0.06 |x| 0.00
+pattern (growk) 100 s: base -2.78, row's own grow 0.82, part alone 2.08, whole 2.02
+   whole-base +4.80 [+4.57, +5.02]; whole-row +1.20 [+0.92, +1.48]; whole-alone -0.06 [-0.17, +0.00]; alone-row +1.26 [+0.97, +1.54]; grew 1.00 paused 0.08 |x| 0.00
+digest (pausek) 100 s: base -4.67, row's own learnpause3 0.68, part alone 0.52, whole 0.35
+   whole-base +5.03 [+4.70, +5.35]; whole-row -0.33 [-0.59, -0.08]; whole-alone -0.16 [-0.35, +0.01]; alone-row -0.16 [-0.39, +0.06]; grew 0.22 paused 1.00 |x| 0.00
+noisy (eye) 100 s: base 1.26, row's own adapteye 1.72, part alone 1.67, whole 1.65
+   whole-base +0.39 [+0.20, +0.58]; whole-row -0.08 [-0.26, +0.11]; whole-alone -0.02 [-0.05, -0.00]; alone-row -0.05 [-0.23, +0.13]; grew 0.00 paused 0.05 |x| 0.00
+plain 100 s: base 2.58, whole 2.59, +0.01 [-0.18, +0.21]; grew 0.00 paused 0.00
+plain 1000 s: base 2.76, whole 2.74, -0.02 [-0.08, +0.03]; grew 0.00 paused 0.16
+allfood 100 s: base 4.34, whole 6.81, +2.48 [+2.21, +2.74]; grew 0.00 paused 0.00
+allfood 1000 s: base 4.40, whole 6.81, +2.42 [+2.30, +2.52]; grew 0.00 paused 0.00

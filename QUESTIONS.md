@@ -187,7 +187,10 @@ and when, why it matters, the line it belongs to, and the experiment that would 
    cost in SKY130 and the signal that could have tuned it; a brain that doesn't fit shows what the map lacks.
    Since (the user, 2026-11-02): done as stories, one per performance issue (`STORIES.md`), general observations after
    several, and the universal circuit only if they earn it. Done: which colour is food (D25); unequal thrusters, block level (D26: 192 counters still far from the simplest);
-   the table of rows (D28; `STORIES.md`), judged; next the universal circuit;
+   the table of rows (D28; `STORIES.md`), judged; a universal circuit, the bank of predictors (D29), judged, partly a success.
+   Open from D29, most valuable first: re-validate it in `mixed_feedback.py` once kept; what could add a model to the bank, or say that it holds none that fits (a bank is
+   still a menu); swap 50 s, where it costs surely, and the untraced half of swap 10 s's shortfall; a relative shortage in place of the absolute gate; sweeps in place of jitter; the bank's cost in parts, and whether tables can share a counter;
+   noisy eye + thrusters at long lengths; whether eye thresholds and balance can share one on-policy loop;
    the ladder of harder tests (D27): swaps, sequences, digest, one brain choosing cures. Open from D27: a clock told the period (is it the estimate or the phase?); undoing a growth that didn't help;
    a brain that knows it has no cure; re-validating the ladder at component level; this patch is empty; how fast to spend (the likely
    honest negative). Open from D25: what would tell a world where nothing can be learned from one merely hard? In it

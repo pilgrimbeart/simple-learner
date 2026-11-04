@@ -1,0 +1,14 @@
+{"learn": 1.0, "k_s": 2.0, "theta_g": 2.0, "theta_p": 2.0, "tau_p": 60.0}
+  thrusters: 1.27 (base 0.43), +0.84 [+0.51, +1.20], recovery 0.48; flips 2.7, grew 0.00, paused 0.00, |x| 0.31
+  swap10: 0.27 (base -0.02), +0.30 [-0.11, +0.67], recovery 0.26; flips 11.8, grew 0.44, paused 0.12, |x| 0.00
+  alternate: 1.14 (base -3.54), +4.68 [+4.11, +5.31], recovery 0.81; flips 5.6, grew 1.00, paused 0.00, |x| 0.00
+  pattern: -0.03 (base -2.61), +2.58 [+2.21, +2.92], recovery 0.51; flips 10.0, grew 1.00, paused 0.06, |x| 0.00
+  digest: -1.23 (base -4.92), +3.69 [+3.17, +4.26], recovery 0.57; flips 7.6, grew 0.31, paused 0.94, |x| 0.00
+  noisy: 1.56 (base 1.37), +0.20 [-0.01, +0.39], recovery 0.32; flips 0.8, grew 0.00, paused 0.03, |x| 0.00
+  unreliable: 0.43 (base -0.03), +0.45 [+0.06, +0.84], recovery 1.68; flips 3.7, grew 0.12, paused 0.03, |x| 0.00
+  ageing: 1.39 (base 0.28), +1.11 [+0.92, +1.27], recovery 0.79; flips 1.8, grew 0.00, paused 0.00, |x| 0.81
+  weak: 1.83 (base 1.74), +0.09 [-0.16, +0.36], recovery 0.47; flips 0.6, grew 0.00, paused 0.00, |x| 0.00
+  patchy: 0.73 (base 0.71), +0.02 [-0.43, +0.45], recovery 0.09; flips 1.9, grew 0.06, paused 0.03, |x| 0.00
+  plain: 2.78, +0.05 [-0.17, +0.25]; flips 0.1, grew 0.00, paused 0.00
+  allfood: 6.82, +2.43
+score 0.5950726096899601
