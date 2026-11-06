@@ -99,7 +99,7 @@ recruited.
    free) and carry one set of choosing machinery instead of a new recruit per wave. Open questions: direction (an
    undirected walk faces a frontier exponential in depth; the local gradient to try is the neighbours most active
    just before pains, what learned listening measures and what routed rung 1's bridge); time (judging a menu takes
-   about 10,000 ticks per stop, so listen before trying); where the next recruit starts (where the walker stopped,
+   about 100 s per stop, so listen before trying); where the next recruit starts (where the walker stopped,
    depth-first, or back at the pain, breadth-first). Needs a deeper test bed: relay neurons between eyes and motors so
    the cure is k hops from T, distractor branches; vary k and branching; compare walking (gradient or random), waves
    and attaching widely by success, time to cure, energy and wire length.

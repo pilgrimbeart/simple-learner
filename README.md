@@ -423,9 +423,9 @@ The open questions, most valuable first, are in [`QUESTIONS.md`](QUESTIONS.md).
 **Units** (the axioms: `units.py`)
 
 - **Real units**: everything in SI, every number that can be derived derived from a few axioms (`units.py`).
-- **Tick**: the body's step, 10 ms: the eyes look, the thrusters fire and the body moves once a tick (a reaction in 2
-  to 4 ticks is an insect's). The circuit is integrated in steps of 0.125 ms, 80 to a tick. The live view shows real
-  time at about 3 ticks a frame (it says how fast it runs against real time).
+- **Tick**: the body's step, 10 ms: the eyes look, the thrusters fire and the body moves once a tick (a reaction in 20
+  to 40 ms is an insect's). The circuit is integrated in steps of 0.125 ms, 80 to a tick. The live view shows real
+  time at about 30 ms of a life a frame (it says how fast it runs against real time).
 - **Supply**: the chip's, 1.8 V across (SKY130's core devices), analogue ground halfway. The **rails** a node stays
   within are the supply's, +-0.9 V; an output's current fades within a few hundredths of a volt of them.
 - **Typical voltage**: a third of a rail, 0.3 V: the unit a design's voltages are reckoned in (a gate is open at it, a

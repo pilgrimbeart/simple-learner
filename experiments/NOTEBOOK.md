@@ -21,10 +21,10 @@ Rung 1 (RECRUITMENT.md): the knowing circuit (brains/knowing.py) learns what pre
 has no outputs. Can it grow, in its life and by local means only, the link that lets that knowledge change behaviour?
 Everything is circuit (mixed_feedback.py) except growth, the one declared primitive (brains/recruiting.py).
 
-Conventions. A condition is 64 lives of 10,000 ticks: 32 seeds, each run once with red and once with blue as
+Units (converted to seconds on 2026-11-06, the user's rule): a tick was the world's step, 10 ms, and a circuit tick 2.5 ms; "per 1,000 ticks" is per 10 s; a count in circuit ticks keeps its original beside it. Conventions. A condition is 64 lives of 100 s: 32 seeds, each run once with red and once with blue as
 poison, and the same 64 in all-food lives. Food:poison is pooled over lives, with a bootstrap 95% interval over
 lives. Comparisons between variants are *paired*: the same seeds and, with per-node noise streams (below), the same
-noise, so a difference is caused by the variant; the measure is net food (food minus poison) per 1,000 ticks after
+noise, so a difference is caused by the variant; the measure is net food (food minus poison) per 10 s after
 the creature starts moving. Scripts: `python -m experiments.e<N>_...`; raw records in experiments/results/.
 
 ## Plan
@@ -43,7 +43,7 @@ the creature starts moving. Scripts: `python -m experiments.e<N>_...`; raw recor
   keeping every existing state; a new node starts at its start voltage or where its leak alone would rest it.
   test_compiled.py: splitting a synapse with a relay keeps the state, and the relay passes spikes (44 target spikes
   after, 42 before).
-- **Slow nodes must be quiet nodes.** First version: F (fading over 3,000 ticks) with C = 10 rose to 0.93 in an
+- **Slow nodes must be quiet nodes.** First version: F (fading over 30 s) with C = 10 rose to 0.93 in an
   all-food life, and bridges grew there. Cause: every node gets the same noise current, so a node integrating over
   tau circuit ticks wanders by about 0.2 sqrt(tau / 2) / C in steady state: about 1.5 for F, against a range of 0..1,
   and the clamp at 0 turns the walk into a drift upward. A slow integrator needs a capacitance that grows as the square
@@ -51,9 +51,9 @@ the creature starts moving. Scripts: `python -m experiments.e<N>_...`; raw recor
   gains scaled to keep its time and rates. Physics, not tuning: the same disease as the knobs' drift (below: Before E0), cured
   differently because F must fade.
 - **Frustration's trigger moved off the noise.** The taste node's own noise (about 0.1) sometimes dipped toward the
-  "bad taste" threshold (-0.5), and F integrated those leaks over thousands of ticks (F about 0.08 in all-food lives);
+  "bad taste" threshold (-0.5), and F integrated those leaks over tens of seconds (F about 0.08 in all-food lives);
   the threshold for F is now -0.8 (a bad taste takes the node to about -1.3).
-- **Common random numbers.** The recruiting circuit with growth off ate 3.49 food per 1,000 ticks in all-food lives
+- **Common random numbers.** The recruiting circuit with growth off ate 3.49 food per 10 s in all-food lives
   against the baseline circuit's 3.14, intervals not overlapping, though its extra nodes have no outputs. Paired by seed,
   the difference was +0.34 with a standard deviation of 1.00: paired lives were uncorrelated, because all nodes drew
   noise from one stream and adding nodes reshuffled the sensors' and motors' noise. The noise stream, not the seed,
@@ -61,7 +61,7 @@ the creature starts moving. Scripts: `python -m experiments.e<N>_...`; raw recor
   recruitment brains; the sheet brain and the designed circuit keep theirs, so their lives are unchanged). Then the
   baseline, knowing and recruiting-without-growth brains live *identical* lives (paired difference 0.00, standard
   deviation 0.00): nothing in the extra circuitry leaks into behaviour, and the +0.34 was chance. Lessons: at 64 lives
-  two independent noise streams differ by about 0.15 food per 1,000 ticks by chance alone (the baseline circuit's own
+  two independent noise streams differ by about 0.15 food per 10 s by chance alone (the baseline circuit's own
   figure moved from 3.14 to 3.02 with the change of stream), so unpaired comparisons of different brains are weak; with
   common random numbers, variants are compared life for life.
 
@@ -98,12 +98,12 @@ competition between a sensor's sprouts.
 ## E2: frustration (2026-10-18)
 
 *Question.* Does the frustration node F signal "my predictions don't prevent pain", and only that? *Method.* Growth
-off; F sampled every 100 ticks; help while F > 0.5; and the first sprout that reached the growth level (what would
+off; F sampled every 1 s; help while F > 0.5; and the first sprout that reached the growth level (what would
 have grown). Four conditions at the first settings (rise per unprevented pain 0.1): the timing guard (a slow element
 from T to its eligibility, meant to keep T's innate answer to a taste out of F) on or off, and T able to learn or not.
 `python -m experiments.e2_frustration 64`; results/e2.txt.
 
-| condition | F at 1,000 / 3,000 / 10,000 ticks | lives with F > 0.5 | help while F > 0.5, poison / food sensor | first sprout to reach growth |
+| condition | F at 10 / 30 / 100 s | lives with F > 0.5 | help while F > 0.5, poison / food sensor | first sprout to reach growth |
 |---|---|---|---|---|
 | A guard, learning | 0.04 / 0.14 / 0.24 | 3 of 64 | 0.72 / 0.06 | poison's, in 11 lives |
 | B no guard, learning | 0.04 / 0.15 / 0.26 | 11 of 64 | 0.83 / 0.22 | poison's, in 19 lives |
@@ -115,15 +115,15 @@ from T to its eligibility, meant to keep T's innate answer to a taste out of F) 
 innate answer comes too late to count anyway) and costs genuine anticipation (3 frustrated lives against 11): dropped.
 (3) Routing works: help reaches the poison sensor (0.72 against 0.06), and every sprout that reached growth was the
 poison sensor's (30 of 30). (4) F is too weak. Working: F settles where its rise per unprevented pain x the rate of
-poison meals (about 1.5 per 1,000 ticks) x its fading time (3,000) balances the fade, about 0.45 x T's eligibility at
+poison meals (about 1.5 per 10 s) x its fading time (3,000) balances the fade, about 0.45 x T's eligibility at
 the pain, so 0.2 to 0.25 (measured 0.24), against a threshold of 0.5. With a rise of 0.3 it settles near 0.7; and
-once a bridge cuts poison to O1's rate (0.57 per 1,000) near 0.25, below threshold, so help stops by itself.
+once a bridge cuts poison to O1's rate (0.57 per 10 s) near 0.25, below threshold, so help stops by itself.
 
 *E2b, recalibrated* (rise 0.3, no guard; `--second`; results/e2b.txt):
 
-| condition | F at 1,000 / 3,000 / 10,000 | lives with F > 0.5 | help, poison / food | first sprout to reach growth |
+| condition | F at 10 / 30 / 100 s | lives with F > 0.5 | help, poison / food | first sprout to reach growth |
 |---|---|---|---|---|
-| E learning | 0.12 / 0.42 / 0.66 | 64 of 64 (median first at 3,450) | 0.95 / 0.26 | poison's, in 63 lives (all that reached it) |
+| E learning | 0.12 / 0.42 / 0.66 | 64 of 64 (median first at 34.5 s) | 0.95 / 0.26 | poison's, in 63 lives (all that reached it) |
 | F no learning | 0.06 / 0.16 / 0.22 | 12 of 64 | 0.02 / 0.02 | none |
 | all-food lives | 0.01 / 0.01 / 0.02 | 0 | | none |
 
@@ -147,12 +147,12 @@ results/e3.txt.
 | recruiting | 1.92 [1.73, 2.12] | 3.29 [2.50, 4.47] | +0.69 [+0.55, +0.84] | +0.00 (nothing grew) |
 
 Bridges per poison life: exactly one, on the poison sensor (O1) 44; two on the poison sensor (O3-like) 6; one on
-each sensor 10; two on poison and one on food 3; none 1. First bridge at a median of 3,307 ticks, always on the poison
+each sensor 10; two on poison and one on food 3; none 1. First bridge at a median of 33.07 s, always on the poison
 sensor. Recruiting against the oracle: -0.38 [-0.55, -0.22].
 
 *Findings.* Local growth works: in 63 of 64 poison lives a bridge grew, the first always on the poison sensor; by the
 last third food:poison is indistinguishable from the oracle's (3.29 against 3.47); in all-food lives nothing grew, at
-no cost. The shortfall against the oracle has two causes: the bridge comes at about tick 3,300 rather than at birth,
+no cost. The shortfall against the oracle has two causes: the bridge comes at about 33 s rather than at birth,
 and 19 lives grew extra bridges. *Diagnosis of the extras.* (a) On the food sensor (13): routing is proportional (the
 food sensor still gets about a quarter of the help: 0.26 in E2b), and F fades slowly, so help flows long after the
 first bridge until the food sensor's sprout crosses. Wanted: a logical AND, help only to a sensor that predicts pain
@@ -167,14 +167,14 @@ to a sensor whose synapse onto T is past 1/2, and only while a "frustrated" flag
 bridge per neuron (a bridge brings a memory node that keeps its neuron's other sprouts down); each alone and both;
 and two ablations of the E3 design. `python -m experiments.e4_variants 64`; results/e4.txt.
 
-| variant | lives with exactly O1 | food-sensor bridges | doubles on poison | first bridge (median tick) | food:poison, last third [95%] | net vs knowing | vs oracle O1 |
+| variant | lives with exactly O1 | food-sensor bridges | doubles on poison | first bridge (median s) | food:poison, last third [95%] | net vs knowing | vs oracle O1 |
 |---|---|---|---|---|---|---|---|
-| R0 (E3) | 44 | 13 | 9 | 3,307 | 3.29 [2.50, 4.47] | +0.69 | -0.38 [-0.55, -0.22] |
-| A1 no routing | 0 | 68 | 6 | 3,299 | 2.10 [1.52, 2.88] | +0.23 | -0.84 [-0.97, -0.72] |
-| A2 no competition | 0 | 72 | 63 | 3,300 | 1.85 [1.51, 2.26] | +0.43 | -0.64 [-0.77, -0.52] |
-| R1 sharp routing | 47 | 5 | 16 | 2,460 | 3.09 [2.60, 3.79] | +0.87 | -0.20 [-0.35, -0.06] |
-| R2 one bridge per neuron | 52 | 11 | 0 | 3,307 | 3.90 [3.02, 5.01] | +0.71 | -0.36 [-0.52, -0.20] |
-| R3 sharp + one per neuron | 62 | 2 | 0 | 2,460 | 3.92 [3.30, 4.79] | +0.93 [+0.79, +1.08] | -0.14 [-0.28, -0.00] |
+| R0 (E3) | 44 | 13 | 9 | 33.1 | 3.29 [2.50, 4.47] | +0.69 | -0.38 [-0.55, -0.22] |
+| A1 no routing | 0 | 68 | 6 | 33 | 2.10 [1.52, 2.88] | +0.23 | -0.84 [-0.97, -0.72] |
+| A2 no competition | 0 | 72 | 63 | 33 | 1.85 [1.51, 2.26] | +0.43 | -0.64 [-0.77, -0.52] |
+| R1 sharp routing | 47 | 5 | 16 | 24.6 | 3.09 [2.60, 3.79] | +0.87 | -0.20 [-0.35, -0.06] |
+| R2 one bridge per neuron | 52 | 11 | 0 | 33.1 | 3.90 [3.02, 5.01] | +0.71 | -0.36 [-0.52, -0.20] |
+| R3 sharp + one per neuron | 62 | 2 | 0 | 24.6 | 3.92 [3.30, 4.79] | +0.93 [+0.79, +1.08] | -0.14 [-0.28, -0.00] |
 
 No variant grew anything in all-food lives, and none cost anything there (+0.00).
 
@@ -190,10 +190,10 @@ left is the time before growth (the oracle's bridge is there from birth). Tested
 
 `python -m experiments.e5_analysis 64 [a] [b] [c] [d] [e]`; results/e5ad.txt, e5bc.txt, e5c.txt, e5e.txt. R3 as in E4.
 
-*(a) Is R3's shortfall only the time before growth?* A time-matched oracle places O1 by hand at the very tick R3 grew
-its bridge in the same life (same motor); a from-birth oracle at tick 1.
+*(a) Is R3's shortfall only the time before growth?* A time-matched oracle places O1 by hand at the very moment R3 grew
+its bridge in the same life (same motor); a from-birth oracle at birth.
 
-| comparison (net food per 1,000 ticks, paired) | difference [95%] |
+| comparison (net food per 10 s, paired) | difference [95%] |
 |---|---|
 | R3 against the time-matched oracle | +0.01 [-0.12, +0.14] |
 | time-matched against from-birth oracle | -0.19 [-0.32, -0.06] |
@@ -204,14 +204,14 @@ time before growth. Hypothesis confirmed.
 
 *(b) Sensitivity* (R3 with one setting changed; 64 lives):
 
-| setting | lives with exactly O1 | first bridge (median tick) | net vs knowing | bridges in all-food lives |
+| setting | lives with exactly O1 | first bridge (median s) | net vs knowing | bridges in all-food lives |
 |---|---|---|---|---|
-| frustration rise 0.2 | 59 | 3,491 | +0.75 [+0.61, +0.89] | 0 |
-| 0.3 (R3) | 62 | 2,460 | +0.93 [+0.79, +1.08] | 0 |
-| 0.5 | 63 | 1,956 | +0.97 [+0.82, +1.11] | 0 |
-| 0.8 | 61 | 1,758 | +0.96 [+0.81, +1.12] | 0 |
-| growth level 0.6 | 64 | 2,447 | +0.98 [+0.84, +1.12] | 0 |
-| growth level 0.95 | 61 | 2,470 | +0.86 [+0.71, +1.02] | 0 |
+| frustration rise 0.2 | 59 | 34.9 | +0.75 [+0.61, +0.89] | 0 |
+| 0.3 (R3) | 62 | 24.6 | +0.93 [+0.79, +1.08] | 0 |
+| 0.5 | 63 | 19.6 | +0.97 [+0.82, +1.11] | 0 |
+| 0.8 | 61 | 17.6 | +0.96 [+0.81, +1.12] | 0 |
+| growth level 0.6 | 64 | 24.5 | +0.98 [+0.84, +1.12] | 0 |
+| growth level 0.95 | 61 | 24.7 | +0.86 [+0.71, +1.02] | 0 |
 
 Broad optimum: a faster frustration brings growth earlier without misplacing it, up to a point (0.8 begins to
 misplace); a lower growth level costs nothing. Nothing grows in all-food lives at any setting. Chosen for E6: 0.5
@@ -267,11 +267,11 @@ current: the same effect at no running cost, bringing R4 to about 256, level wit
 *Method.* R3 against R4 (R3 with frustration rise 0.5 and growth level 0.6) on fresh seeds (100-131), with the knowing
 brain and oracle O1. `python -m experiments.e6_confirm 64`; results/e6.txt.
 
-| | exactly O1 | first bridge (median tick) | net vs knowing | all-food lives | vs oracle O1 |
+| | exactly O1 | first bridge (median s) | net vs knowing | all-food lives | vs oracle O1 |
 |---|---|---|---|---|---|
 | oracle O1 | 64 | birth | +1.15 [+1.00, +1.31] | -0.30 [-0.48, -0.13] | |
-| R3 | 58 | 2,334 | +0.90 [+0.72, +1.07] | +0.00 | -0.25 [-0.39, -0.12] |
-| R4 | 61 | 1,690 | +1.00 [+0.85, +1.14] | +0.00 | -0.15 [-0.32, +0.01] |
+| R3 | 58 | 23.3 | +0.90 [+0.72, +1.07] | +0.00 | -0.25 [-0.39, -0.12] |
+| R4 | 61 | 16.9 | +1.00 [+0.85, +1.14] | +0.00 | -0.15 [-0.32, +0.01] |
 
 R4 against R3: +0.10 [-0.07, +0.26].
 
@@ -292,7 +292,7 @@ averaged over a world where half the lives have poison, recruiting beats a bridg
    chance frustration grows nothing); routing by what each synapse learned is essential (without it growth is blind);
    competition between a neuron's sprouts is essential (without it every sprout grows); help must be a logical AND
    (predicts pain, and frustrated), and a neuron that has sprouted must stay changed (one bridge per neuron).
-3. *What it buys*: as much net food as a hand-placed bridge, less the time before growth (about 1,700 ticks), and no
+3. *What it buys*: as much net food as a hand-placed bridge, less the time before growth (about 17 s), and no
    cost in food where nothing needs learning, where a built-in bridge costs. In power it is not cheaper: about 1.7
    times the designed circuit's (gated average), nearly half of it a wasteful always-on inhibitor (E5d, with a fix).
 4. *Methods that mattered*: oracle structures as ceilings; paired lives with per-node noise streams (common random
@@ -337,7 +337,7 @@ the local hold never holds, and the bridge neuron's own spontaneous spikes add e
 ## Conclusions, revised after E7
 
 The recruiting circuit (defaults: sharp routing, one bridge per neuron, frustration rise 0.5, growth level 0.6, local
-hold) grows exactly the oracle's structure in about 62 of 64 poison lives, nets about +1.1 food per 1,000 ticks over
+hold) grows exactly the oracle's structure in about 62 of 64 poison lives, nets about +1.1 food per 10 s over
 the knowing circuit with last-third food:poison about 5, and grows nothing in all-food lives. Everything is circuit
 except the growth primitive, and the primitive now needs to know only where the winning sprout is: the bridge
 connects to the synapses of the sensor it grows from and nothing else.
@@ -350,7 +350,7 @@ needed. Can a recruit that knows nothing of the circuit, attached only to its fr
 neighbours on the graph, learn for itself which connection, treated how, reduces frustration, and if it can't, spread
 the problem outward (an inflammation, a healing response)? The user's terms: only T has frustration (it may be
 effectively global: "recruit something near here"); near is one edge; try any creative rules, as long as nothing
-"understands" the circuit; lives up to 100,000 ticks; keep a leaderboard (LEADERBOARD.md).
+"understands" the circuit; lives up to 1,000 s; keep a leaderboard (LEADERBOARD.md).
 
 *The healing circuit* (brains/healing.py). Generic throughout:
 - Frustration motif: a unit that can be frustrated has F (slow: anticipated pain, pain while it had just fired:
@@ -360,7 +360,7 @@ effectively global: "recruit something near here"); near is one edge; try any cr
 - Growth (the one primitive): a frustrated unit (F past 1/2) with no recruit gets one, attached to it and to every
   neuron within one edge; a recruit's own recruit attaches to it and to every neuron within one edge of anything it
   was attached to (inflammation spreading one edge per failed wave).
-- The recruit: a neuron R; a hold node (its action lasts about 10 ticks after it fires); listening synapses from every
+- The recruit: a neuron R; a hold node (its action lasts about 100 ms after it fires); listening synapses from every
   attached neuron (strengths: memory nodes); a menu of acting options (inhibit or excite an attached neuron; turn down
   one of an attached neuron's ungated output synapses, through a gate node that rests open), each with an enable node.
 - Listening ("pain"): a strength rises when its neuron fired just before an ouch and falls when it fired just before
@@ -369,24 +369,24 @@ effectively global: "recruit something near here"); near is one edge; try any cr
   acts; a tired option is knocked out and kept out while tiredness fades (inhibition of return), and another wins.
 
 *Calibration, traced (H0).* First runs failed four ways, each traced to a cause: (1) listening saturated for every
-input: an ouch pulse stays above half for about 8 circuit ticks, not the 1.3 assumed (the taste node's), so each pain
-raised a strength by about 1.2; the pulse was shortened and measured (above half for 4.5 circuit ticks at full height)
+input: an ouch pulse stays above half for about 20 ms (8 circuit ticks), not the 1.3 circuit ticks (3 ms) assumed (the taste node's), so each pain
+raised a strength by about 1.2; the pulse was shortened and measured (above half for 11 ms (4.5 circuit ticks) at full height)
 and the gains scaled to it. (2) No option ever switched on: an enable's slow rise settled at 0.32, under its latch's
-threshold; doubled. (3) Listening couldn't discriminate: the poison and food eyes rose at +0.3 and +0.2 per 1,000 ticks,
+threshold; doubled. (3) Listening couldn't discriminate: the poison and food eyes rose at +0.3 and +0.2 per 10 s,
 being often active together; a constant slow decline can't separate rates so close; T's own synapses discriminate
 (0.87 against 0.13) because good tastes weaken them, so recruits now hear yum too: listening then sends the food eye
-to 0. (4) Win-stay lose-shift gave up every few hundred ticks until every option was tired: options were blamed before
+to 0. (4) Win-stay lose-shift gave up every few seconds until every option was tired: options were blamed before
 listening had learned when to act, and the tolerance would knock out even the right option (which still lets about
-0.6 pains through per 1,000 ticks); tiredness is now a rate threshold (pain per tick of acting above about 1 in 3,000,
+0.6 pains through per 10 s); tiredness is now a rate threshold (pain while acting above about one per 30 s,
 between the untreated rate and a good option's), eased by good tastes after acting. A shared inhibitor in place of
 pairwise rivalry failed: every enable was born at rest above its latch threshold, all latched together, and a shared
 node can't tell one option on from ten; pairwise rivalry restored, enables born at 0.
 
-*Smoke test* (seeds 0-2, 40,000 ticks, last 10,000 ticks): red 0 settled on inhibiting the poison eye (ignore; food 18,
+*Smoke test* (seeds 0-2, 400 s, last 100 s): red 0 settled on inhibiting the poison eye (ignore; food 18,
 poison 7); red 1 and 2 on turning down the poison eye's synapse to the left motor (a veer: 18:3, 25:6); all-food lives
 recruited nothing. With no knowledge of the circuit, the bridge's structure was found in two lives of three.
 
-## H1: rules for a generic recruit, 30,000-tick lives (2026-10-19)
+## H1: rules for a generic recruit, 300 s lives (2026-10-19)
 
 `python -m experiments.h1_rules 64 30000`; results/h1_30000.txt; LEADERBOARD.md. Wave 1 only (no cascade); paired
 with the knowing circuit (no recruitment).
@@ -420,19 +420,19 @@ wave 1 helps (0.00), as expected: a neuron-level action can't make a veer from t
 
 ## H2, first attempts: the cascade's trigger (2026-10-19)
 
-Smoke tests (three lives, 60,000 ticks, neurons-only menu). (1) Recruits frustrated by any pain after acting cascaded
-within about 120 ticks, before trying anything. (2) Frustrated only by pain while idle (every option knocked out:
-"exhausted"), wave 2 waited 10,000-27,000 ticks, but wave 3 followed within about 100 ticks (a newborn recruit is idle
+Smoke tests (three lives, 600 s, neurons-only menu). (1) Recruits frustrated by any pain after acting cascaded
+within about 1.2 s, before trying anything. (2) Frustrated only by pain while idle (every option knocked out:
+"exhausted"), wave 2 waited 100-270 s, but wave 3 followed within about 1 s (a newborn recruit is idle
 while its options rise from nothing, and one pain raised its frustration by 0.5); with slowly building idleness and
-smaller steps, no second wave at all in 60,000 ticks: with full listening R acts constantly, so its tiredness tracks
+smaller steps, no second wave at all in 600 s: with full listening R acts constantly, so its tiredness tracks
 pains minus good tastes, which no neuron-level option changes much, so no option is knocked out and the recruit is never
 idle. (3) The user's own description is the right trigger: "if it can't reduce frustration, it itself starts to emit
-frustration": a slow node filling while the parent stays frustrated (F past 1/2), about 10,000 ticks after the recruit
-came. Then waves 2 and 3 grew about 10,000 ticks apart, but settled on nothing: with full listening a wave-2 recruit
+frustration": a slow node filling while the parent stays frustrated (F past 1/2), about 100 s after the recruit
+came. Then waves 2 and 3 grew about 100 s apart, but settled on nothing: with full listening a wave-2 recruit
 fires at everything (motors too), and a neuron-level action (inhibit a motor) needs timing. So the cascade needs
 learned listening: H2 proper.
 
-## H3: the best rules in 100,000-tick lives (2026-10-19)
+## H3: the best rules in 1,000 s lives (2026-10-19)
 
 `python -m experiments.h_run 64 100000 ...`; results/h3_100000.txt; LEADERBOARD.md.
 
@@ -454,8 +454,8 @@ lose-shift, full listening, inhibiting or gating only, is statistically indistin
 +0.04]), with a higher last-third food:poison (4.7 against 3.6), settling on the veer in 92% of lives. No help routing,
 no sprouts placed for the job, nothing named. (2) The reinforcement rule fails: graded options let gating the food
 eye's synapse persist beside the poison eye's, and its constant jitter disturbs behaviour (with full listening food
-fell to 0.5 per 1,000 ticks). Committing to one option beats blending, here. (3) Learned listening is less stable in
-long lives (veer share 86% at 30,000 ticks, 66% at 100,000). Hypothesis: with learned listening R acts only when it
+fell to 0.5 per 10 s). Committing to one option beats blending, here. (3) Learned listening is less stable in
+long lives (veer share 86% at 300 s, 66% at 1,000 s). Hypothesis: with learned listening R acts only when it
 detects poison, so good tastes rarely follow its actions and never ease its tiredness, and even the right option
 (which still lets some pain through) is knocked out in the end; with full listening good tastes follow its constant
 action as often as they should, balancing tiredness. To check by recording when options switch.
@@ -468,7 +468,7 @@ once frustration passes the threshold. Three options (brains/healing.py): grow_a
 acts, and counts as having acted, only while T's "frustrated" flag, F past 1/2, is on), and listen="inherit" (where T
 already holds a learned memory on its synapse from an attached neuron, the recruit's listening synapse from it is
 gated by that same memory node). `python -m experiments.h_run 64 100000 ...`; results/h4_100000.txt. Switch counts are
-recorded now (the last tick at which a wave-1 recruit's chosen option changed).
+recorded now (the last moment at which a wave-1 recruit's chosen option changed).
 
 | rule | net food vs knowing | food:poison, last third | veer | median switches | median last switch |
 |---|---|---|---|---|---|
@@ -488,8 +488,7 @@ recruit nodes' noise streams): +1.12 then +1.14, +0.66 then +0.70: the noise rea
 0.04.
 
 *Findings on the user's idea.* (1) Waiting for frustration is not the slow part: T's frustration passes 1/2 about
-1,000 ticks into a life (recruits came at ticks 949-1,228), while win-stay lose-shift is still switching at tick
-70,000-90,000 (median last switch). Recruiting early (F past 0.15, about tick 360) moved nothing measurably. (2) Passing
+10 s into a life (recruits came at 9.49-12.28 s), while win-stay lose-shift is still switching at 700-900 s (median last switch). Recruiting early (F past 0.15, about 3.6 s) moved nothing measurably. (2) Passing
 knowledge forward works: inheriting T's learned strengths lifts learned listening from +0.76 to +0.95 and the veer share
 holds; it doesn't reach full listening (+1.14), so listening at all, even well informed, still costs actions. (3)
 Shadow mode as built hurt (+0.81 to +0.74; with inherit +0.95 to +0.81), and the cause is the gate, not the idea: T's
@@ -502,7 +501,7 @@ pairwise rivalry's sigmoid tails (slope 12) from eleven resting rivals summed pa
 0.0028 = 0.009 of C against 0.008), so no enable ever rose. A scaling flaw: fixed by a steeper rivalry (slope 20), after
 which wave 2 latches. This changes every win-stay lose-shift recruit, so H5 reruns the leaders. (2) With full listening
 and inhibition only, the cascade found a degenerate cure: wave 2 inhibited a motor in 61 of 64 lives, and the creature
-nearly stopped (food 0.35 per 1,000 ticks against 1.5): fewer pains, and fewer good tastes too. Frustration and
+nearly stopped (food 0.35 per 10 s against 1.5): fewer pains, and fewer good tastes too. Frustration and
 tiredness count pains and good tastes, not their ratio, so freezing looks like a cure. Lesson: a healing response
 judged by pain alone rewards doing less; the judge must be the share of bad tastes, or freezing must cost something.
 
@@ -535,7 +534,7 @@ the task: with the menu of neurons only, wave 2 settles on inhibiting a motor (4
 listening), and food falls by half: the freezing cure again, which judging by rates allows. Next: judge by shares (H7).
 
 *A second sigmoid tail.* The first share judge (tiredness that rests only while its option is off, eased by half a
-pain's step per good taste) churned: tiredness climbed with no tastes at all, 0 to 0.46 in 2,000 ticks. The resting
+pain's step per good taste) churned: tiredness climbed with no tastes at all, 0 to 0.46 in 20 s. The resting
 tail of the pain-after input (sigmoid slope 10, 0.7% of full) charges tiredness constantly; under the rate judge the
 good-after input's equal tail cancels it exactly, so it never showed. With unequal steps it doesn't cancel. Fixed by a
 steep sigmoid (slope 30). The general lesson, twice in a day: a sigmoid's resting tail is a small constant current, and
@@ -543,9 +542,9 @@ summed over many inputs, or left uncancelled over a long time constant, it is no
 
 ## H7: judging by the share of bad tastes (2026-10-19)
 
-judge="share": an option's tiredness hardly fades while it is on (100,000 ticks), rises a step per pain after acting
+judge="share": an option's tiredness hardly fades while it is on (1,000 s), rises a step per pain after acting
 and falls half a step per good taste, so it tires when more than 1 taste in 3 after acting is bad, whatever the rate;
-while off, it rests over 10,000 ticks (an off node, held down by the enable, gates the rest). Step 0.05 (0.15 churned:
+while off, it rests over 100 s (an off node, held down by the enable, gates the rest). Step 0.05 (0.15 churned:
 a run of three or four pains crossed the threshold even under the right option). results/h7_100000.txt.
 
 | rule | net food vs knowing | food:poison, last third | veer | median switches | median last switch |
@@ -560,23 +559,23 @@ a run of three or four pains crossed the threshold even under the right option).
 | share: neurons only, cascade | +0.14 [+0.09, +0.19] | 1.21 (food 1.06) | | 19 | |
 
 *Findings.* (1) Judging by share settles win-stay lose-shift: every life settled on the veer, after a median of 5
-switches by tick 13,000 (under rates: 14 switches, still switching at tick 72,000), and the last third's food:poison
+switches by 130 s (under rates: 14 switches, still switching at 720 s), and the last third's food:poison
 doubled, 4.4 to 7.4, against the guided bridge's 3.6. Net food over the whole life barely moves (+1.14), since it is
 dominated by the first third, before T has learned which colour hurts. With both signs the menu is twice as long and
 it still settles: the judge, not the menu, was the problem. (2) Inherit is better under share too (+1.05, 97% veer,
 from +0.92), but full listening still leads. (3) The cascade with neurons only still fails, and not by freezing now:
-wave 2 inhibits a motor while the poison eye fires, a real veer (seed 0: 12 food, 3 poison in the last 20,000 ticks),
-but each spike holds the motor off for 10 ticks, and the creature fires that thruster half as often and eats half as
-much. Share doesn't see the cost of eating less. A shorter hold (3 or 1 ticks) removes the cost and the veer with it:
+wave 2 inhibits a motor while the poison eye fires, a real veer (seed 0: 12 food, 3 poison in the last 200 s),
+but each spike holds the motor off for 100 ms, and the creature fires that thruster half as often and eats half as
+much. Share doesn't see the cost of eating less. A shorter hold (30 or 10 ms) removes the cost and the veer with it:
 turning away needs the motor off long enough to turn. A neuron-level veer has a cost a synapse-level one doesn't.
 (4) That points to the menu: a recruit turning down the synapses arriving at its neighbours (menu "inputs") finds
 nothing in wave 1, where T's inputs are memories and the eyes have none, and the eyes' synapses to the motors in
 wave 2, once the cascade has reached the motors: smoke test, 3 of 4 lives found "gate poison eye -> motor" in wave 2
-(ticks 12,000-38,000), 34:3 and 35:9 food:poison in the last 20,000 ticks. H9.
+(120-380 s), 34:3 and 35:9 food:poison in the last 200 s. H9.
 
 ## Power of the generic recruit (2026-10-19)
 
-Static power by the gated average (sum of |gain| x clip(V_gate, 0, 1), sampled over ticks 60,000-70,000, four poison
+Static power by the gated average (sum of |gain| x clip(V_gate, 0, 1), sampled over 600-700 s, four poison
 lives; a scratchpad script from an earlier session, not kept): knowing circuit 280; guided bridge 476 (+196); share leader (wsls, listening full,
 inhibit/gate only) 1,505 (+1,225); with inherit 1,553; inputs cascade (two waves) 3,653. By element kind (share
 leader, seed 0), most of the recruit's power is choosing, not acting: the enables' latch and pairwise rivalry,
@@ -601,7 +600,7 @@ about twice the guided bridge's (3.7, H6).
 ## H9: the cascade with the menu "inputs" (2026-10-19)
 
 results/h9_100000.txt. Wave 1 can't help (T's inputs are memories, the eyes have none); a recruit still frustrated
-10,000 ticks after it came is frustrated itself, and wave 2 reaches the motors, whose inputs include the eyes' synapses.
+100 s after it came is frustrated itself, and wave 2 reaches the motors, whose inputs include the eyes' synapses.
 
 | rule | net food vs knowing | food:poison, last third | wave 2 gates the poison eye |
 |---|---|---|---|
@@ -626,7 +625,7 @@ at all; "inhibit a motor" with full listening stops the creature, and with no ne
 an option is on its tiredness creeps up, eased only by good tastes, so no news is bad news) and "retire" (a recruit
 frustrated enough to recruit stands down for good, a memory node holding its actions off: de-recruitment). Also the
 power fix (latch, rivalry, knock-out gated by their own source). Caveat seen in the smoke test: a recruit's
-frustration is charged by its parent's frustration, which fades over 10,000 ticks, so a successful wave 2 can still
+frustration is charged by its parent's frustration, which fades over 100 s, so a successful wave 2 can still
 retire.
 
 ## H10: power gating, starve and retire (2026-10-19)
@@ -646,19 +645,19 @@ their own source.
 with inherit 609, inputs cascade 1,028 (was 3,653). The generic recruit now costs about what the guided bridge does,
 and behaves as before (+1.17, 7.6).
 
-*Starve* (tiredness creeping up while on, knocked out after 40,000 ticks with no good tastes): the cascade's lives
+*Starve* (tiredness creeping up while on, knocked out after 400 s with no good tastes): the cascade's lives
 that end inhibiting a motor fall from 28 to 17 of 64 and no longer freeze (about 10 food and 10 poison per last third,
 was 2 and 1.5), and those finding the poison eye's gate rise from 35 to 42; net unchanged, as a freeze still lasts
 much of a life before it starves.
 
 *Retire* (a recruit frustrated enough to recruit stands down for good) failed outright, every life reaching wave 3
-and doing nothing: a recruit's frustration was charged by its parent's, which fades over 10,000 ticks and outlasts a
+and doing nothing: a recruit's frustration was charged by its parent's, which fades over 100 s and outlasts a
 cure, so successful waves retired too. Charging every wave from the root's own flag (T's) instead (trigger="root")
 was the remedy to try. A prediction refuted on the way: I estimated T would stay "frustrated" even when cured (0.37
-pains per 1,000 ticks x 0.5 per pain x 3,000 ticks ~ 0.55); measured under the wave-1 cure, T's F averages 0.04-0.10
-and its flag is on 0-4% of late ticks, as F counts only anticipated pains. Smoke tests of root-triggered retire (three
-lives) still failed, for two reasons: a wave given 10,000 ticks of grace can't judge a ten-option menu, and when T
-stays frustrated every wave retires in the end, the last one too, so no one acts. With 30,000 ticks, the same. H11
+pains per 10 s x 0.5 per pain x 30 s ~ 0.55); measured under the wave-1 cure, T's F averages 0.04-0.10
+and its flag is on 0-4% of the time late in life, as F counts only anticipated pains. Smoke tests of root-triggered retire (three
+lives) still failed, for two reasons: a wave given 100 s of grace can't judge a ten-option menu, and when T
+stays frustrated every wave retires in the end, the last one too, so no one acts. With 300 s, the same. H11
 measures these at scale. What de-recruitment should mean (may the last recruit stand down? a cap on waves is a
 hidden size) is a design question for the user.
 
@@ -673,9 +672,9 @@ results/h11_100000.txt. Menu "inputs", listening full, inhibit/gate only, share 
 | root, 30k grace: cascade | +0.38 [+0.27, +0.50] | 4.28 | 2 in 63, 3 in 1 |
 | root (10k or 30k grace): cascade, retire (with or without starve, inherit) | -0.00 to +0.08 | about 1.0 | 3 in all 64 |
 
-*Findings.* (1) The best cascade yet: every wave frustrated by T's own flag, and a starve of 20,000 ticks (a freeze
+*Findings.* (1) The best cascade yet: every wave frustrated by T's own flag, and a starve of 200 s (a freeze
 knocked out twice as fast as at 40,000): +0.66, against +0.38 to +0.53 before; the root trigger alone changes little
-(+0.40 against +0.38), the faster starve does the work (+0.26). (2) A longer grace (30,000 ticks before a recruit is
+(+0.40 against +0.38), the faster starve does the work (+0.26). (2) A longer grace (300 s before a recruit is
 frustrated itself) holds the cascade at wave 2 in nearly every life, without gain. (3) Retire fails in every form,
 confirming the smoke tests: with T still frustrated every recruit stands down in the end, the last one too, and no one
 acts. What de-recruitment should mean is left to the user (RECRUITMENT.md, future work: a walking recruit would
@@ -690,7 +689,7 @@ smoke-test script was superseded by `h_run.py` and removed.
 ## Lessons from this line, in full (moved from the old LESSONS.md)
 
 - **Machinery beside the thing studied does its work: the rules were not circuits** (the user's question, 2026-10-18). The net's unit rules (`net_rules/adjust.py`) are compiled
-  programs layered on the circuit: per-tick traces, event bookkeeping ("pending", a peak over two ticks, an estimate
+  programs layered on the circuit: per-tick traces, event bookkeeping ("pending", a peak over 20 ms, an estimate
   of rest), a hard-coded threshold, and a knob that writes the circuit's bias from outside it. The locality checks
   stopped a rule seeing other units, but inside a unit it was free digital computation: functionality beyond the
   literal circuit, which the mixed-feedback track promises not to have ("everything, learning too, is nodes and
@@ -724,16 +723,16 @@ telling food from poison, and let it discover in its life that it needs more. Th
 - **The baseline circuit** (`brains/baseline.py`): the designed circuit's four neurons, each sensor driving both motors
   through a synapse that relays every spike, taste into a node connected to nothing. Both circuit brains now share
   `CircuitBrain` (neurons, taste node, running, drawing); 32 recorded lives were unchanged, every meal and firing.
-- **64 lives of 10,000 ticks:**
+- **64 lives of 100 s:**
 
-  | | poison lives: food:poison by third | meals per 1,000 ticks | all-food lives: food per 1,000 ticks by third |
+  | | poison lives: food:poison by third | meals per 10 s | all-food lives: food per 10 s by third |
   |---|---|---|---|
   | baseline circuit | 1.0, 1.0, 1.0 | 3.14 (half poison) | 3.09, 3.38, 2.97 |
   | designed circuit, learning | 2.3, 6.4, 5.3 (55 of 64 learned) | 1.66 | 2.17, 2.54, 2.80 |
 
 - **Machinery costs food when there is nothing to learn.** In all-food lives the learner eats a fifth less than the
   baseline circuit: its sensors hush each other, and with p at 1/2 half its sightings become veers. Even in poison lives
-  it eats less food (about 1.3 against 1.6 per 1,000 ticks); what it gains is avoiding poison (about 0.3 against 1.6).
+  it eats less food (about 1.3 against 1.6 per 10 s); what it gains is avoiding poison (about 0.3 against 1.6).
   That cost is what makes recruiting machinery only when needed worth anything.
 - **Why non-learners score exactly 1.0:** lives are paired, each seed run once with red as poison and once with blue,
   and a brain that ignores taste behaves identically in both, so its food and poison counts mirror exactly.
@@ -764,7 +763,7 @@ telling food from poison, and let it discover in its life that it needs more. Th
      or at its limit), so I need help: recruit.
 
   In the baseline circuit, in a red-poison life: the red sensor is involved and implicated (it was stimulated within
-  10 ticks before 85% of red meals, the other sensor before 17%: "What a sensor can know", above) but can change
+  100 ms before 85% of red meals, the other sensor before 17%: "What a sensor can know", above) but can change
   nothing, so it is frustrated: recruitment should start there. The motors fire before bad *and* good tastes:
   involved but conflicted, which shows the colours were merged upstream. In all-food lives there is no pain, so
   nothing is implicated, frustrated or recruited.
@@ -820,8 +819,8 @@ the sheet), and withdrawn because they were programs, not circuit (Lessons that 
 rebuilt as circuit (next). What stands is the specification of the local signals a unit needs:
 
 - **A knob is a memory: its noise comes with writing, not with time.** Noised every tick, a knob clamped at its top
-  walked down; the never-tasted motors ended less excitable and explored less (all-food lives ate 2.27 per 1,000
-  ticks against the baseline circuit's 3.12). With noise only on writes the adjusting circuit eats exactly as the
+  walked down; the never-tasted motors ended less excitable and explored less (all-food lives ate 2.27 per 10 s
+  against the baseline circuit's 3.12). With noise only on writes the adjusting circuit eats exactly as the
   baseline circuit where nothing is learned. Likewise slow averages refreshed only at events need a fade.
 - **Rung 0 helps, but far from enough**: every unit's excitability a knob moved by eligibility x taste cut poison by a
   third (food:poison 1.5 against the baseline circuit's 1.0; the designed circuit 5.3 in the last third): the case for
@@ -853,7 +852,7 @@ rebuilt as circuit (next). What stands is the specification of the local signals
   taste node into the knob, gated by eligibility (bad charges it, good empties it), as the designed circuit's P.
 - **Measurement watches from outside** (`measure_recruitment.py`): the brain logs what went in and what each neuron did;
   the observer computes the local quantities (involvement, confidence, firing consistency, misses) over the second
-  half of each life. 64 lives of 10,000 ticks:
+  half of each life. 64 lives of 100 s:
 
   | | poison lives: food, poison per 1,000 (food:poison) | poison's sensor: excitability, fires, confidence (received), miss | all-food lives: food per 1,000 |
   |---|---|---|---|
@@ -887,17 +886,17 @@ rebuilt as circuit (next). What stands is the specification of the local signals
 - **The knowing circuit** (`brains/knowing.py`), all circuit: T fires innately at a bad taste (an amplifier from the
   taste node), and through a plastic synapse from each sensor whose strength is a memory node, charged by a bad
   taste and emptied by a good one while that sensor was recently active (the designed circuit's P motif, on the
-  sensor-to-T synapses). 64 lives of 10,000 ticks (`python measure_recruitment.py 64 10000 knowing`):
+  sensor-to-T synapses). 64 lives of 100 s (`python measure_recruitment.py 64 10000 knowing`):
 
   | | poison lives | all-food lives |
   |---|---|---|
   | behaviour | food 1.58, poison 1.58 per 1,000 (1.0, as the baseline circuit) | food 3.16 per 1,000 (as the baseline circuit) |
   | T's synapses | from poison's sensor 0.87, from food's 0.13 | 0.00 |
-  | T anticipates (a spike within 10 ticks before the taste) | 96% of poison meals; 51% of food meals | (no poison); 19% of meals |
+  | T anticipates (a spike within 100 ms before the taste) | 96% of poison meals; 51% of food meals | (no poison); 19% of meals |
   | T's confidence (when it fired before a meal, the meal was poison) | 0.66 | 0.00 |
 
   Knowledge leaks nowhere (behaviour as the baseline circuit's). T learns the association, and anticipates nearly every
-  poison meal; its false alarms are about chance at its rate (about 50 spikes per 1,000 ticks, against 18 in all-food
+  poison meal; its false alarms are about chance at its rate (about 50 spikes per 10 s, against 18 in all-food
   lives, which is its own spontaneous firing): red blocks are often in view on the way to a blue one, so T has become
   a "danger in view" detector, which is arguably the right signal for avoiding. Frustrated by the test (confident,
   pain going on) in poison lives; calm in all-food lives.
@@ -912,8 +911,8 @@ The full record, with methods, tables and working, is `experiments/NOTEBOOK.md` 
   pain and only while frustrated; competing sprouts on each sensor's output synapses; and, when a sprout passes its
   level, a bridge splitting that synapse (a relay held down while T has fired lately, so the creature veers from
   danger). On held-out lives it grows exactly the oracle's structure in 61 of 64 poison lives, nets +1.00 food per
-  1,000 ticks over the knowing circuit (oracle at birth +1.15; the gap is only the time before growth, about 1,700
-  ticks: a time-matched oracle does no better), and grows nothing in all-food lives, where a built-in bridge costs.
+  10 s over the knowing circuit (oracle at birth +1.15; the gap is only the time before growth, about 17
+  s: a time-matched oracle does no better), and grows nothing in all-food lives, where a built-in bridge costs.
 - **Essential**: routing by what each synapse onto T learned (without it, bridges land on the food sensor: veering
   from food); competition among a neuron's sprouts (without it every sprout grows); help as a logical AND (predicts
   pain, and frustrated); a sprouted neuron stays changed (one bridge per neuron). Frustration needs both knowledge and
@@ -952,14 +951,14 @@ menu (inhibit or excite each attached neuron, turn down a synapse) and a local r
 
 - **A recruit that knows nothing matches the guided bridge.** Win-stay lose-shift in circuit (enables that latch,
   pairwise rivalry, tiredness that knocks an option out), listening to everything attached, a menu of inhibiting and
-  gating: +1.16 net food per 1,000 ticks against +1.16 for rung 1's guided bridge (held out, paired -0.06 [-0.13,
+  gating: +1.16 net food per 10 s against +1.16 for rung 1's guided bridge (held out, paired -0.06 [-0.13,
   +0.03]), choosing "gate the poison eye's synapse to a motor" out of seven options in every life.
 - **Judge an option by the share of bad tastes after it, not their rate.** Judged by rates (tiredness fading with
-  time), an option was still being switched at tick 70,000-90,000, and anything that made the creature do less looked
+  time), an option was still being switched at 700-900 s, and anything that made the creature do less looked
   like a cure. Judged by share (tiredness that hardly fades while the option is on, a step up per pain, half a step
-  down per good taste), it settles by tick 8,000-13,000 after 3-5 switches, and the last third's food:poison doubles
+  down per good taste), it settles by 80-130 s after 3-5 switches, and the last third's food:poison doubles
   (4.4 to 7.0, held out; the guided bridge 3.7). But a share can't judge an option followed by no tastes at all.
-- **Choosing is the slow part, not waiting for frustration.** T is frustrated 1,000 ticks into a life. The user's
+- **Choosing is the slow part, not waiting for frustration.** T is frustrated 10 s into a life. The user's
   idea of recruiting early and learning "in shadow mode" moved nothing measurably: a shadow can learn what to listen to,
   not which action helps, which needs acting. And a shadow gated by the parent's frustration withdraws the recruit as
   soon as its help calms the parent (a fix that undoes itself); commissioning it for good (a memory node) fixes that.
@@ -972,13 +971,13 @@ menu (inhibit or excite each attached neuron, turn down a synapse) and a local r
 - **Wireheading is real.** Recruits learning from anticipated pain only chose to silence T five times as often:
   recruits must learn from pain itself.
 - **The cascade works when the cure is one edge further.** With a menu of the synapses arriving at attached neurons,
-  wave 1 (on T and the eyes) can do nothing useful; still frustrated 10,000 ticks later, it is frustrated itself, and
+  wave 1 (on T and the eyes) can do nothing useful; still frustrated 100 s later, it is frustrated itself, and
   wave 2, reaching the motors, gates the poison eye's synapse in about 60% of lives. Its failures: a neuron-level
   cure (inhibit a motor while the poison eye fires) is a real veer but costs half the meals (turning needs the motor
-  off for 10 ticks, and a shorter hold loses the veer); with full listening it froze the creature; and wave 1's last
+  off for 100 ms, and a shorter hold loses the veer); with full listening it froze the creature; and wave 1's last
   option stays on after wave 2 cures the poison, and then looks good, even when harmful (credit leaking between waves).
   Best so far (+0.66, last third 4.9): every wave frustrated by the first unit's own flag, and "starve" (while an
-  option is on its tiredness creeps up, eased only by good tastes, so a freeze is knocked out within 20,000 ticks).
+  option is on its tiredness creeps up, eased only by good tastes, so a freeze is knocked out within 200 s).
 - **De-recruitment by retiring failed in every form.** A recruit frustrated enough to recruit stood down for good;
   but while the pain lasts every recruit reaches that point, the last one too, and then no one acts. What standing
   down should mean (may the last recruit? a cap on waves would be a hidden size) is open; a recruit that walks would

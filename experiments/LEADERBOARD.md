@@ -1,6 +1,6 @@
 # Leaderboard: rules for recruiting (experiments/NOTEBOOK.md)
 
-Net food per 1,000 ticks against the knowing circuit (no recruitment), paired life for life (same seeds
+Net food per 10 s against the knowing circuit (no recruitment), paired life for life (same seeds
 and noise), with bootstrap 95% intervals; in poison lives and in all-food lives (where nothing should
 be recruited); food:poison over the last third of life; the share of poison lives in which a recruit
 settled on turning down the poison eye's synapse to a motor (a veer); recruits grown in all-food lives.
@@ -17,7 +17,7 @@ that fails grows another, one step further out; *root:*, every wave frustrated b
 *retire*, a recruit that fails stands down; *starve*, an option followed by no good tastes tires;
 *early*, *shadow*, recruiting before frustration peaks; *held out*, fresh lives (seeds from 100).
 
-## Lives of 30,000 ticks
+## Lives of 300 s
 
 | rank | rule | lives | net food, poison lives | all-food lives | food:poison, last third | veer | recruits in all-food | note |
 |---|---|---|---|---|---|---|---|---|
@@ -32,7 +32,7 @@ that fails grows another, one step further out; *root:*, every wave frustrated b
 | 9 | wsls, menu of neurons only | 64 | -0.00 [-0.11, +0.10] | +0.00 [+0.00, +0.00] | 0.99 [0.90, 1.08] | 0% | 0 |  |
 | 10 | one random option, with synapses | 64 | -0.04 [-0.26, +0.18] | +0.00 [+0.00, +0.00] | 0.93 [0.74, 1.14] | 25% | 0 |  |
 
-## Lives of 100,000 ticks
+## Lives of 1,000 s
 
 | rank | rule | lives | net food, poison lives | all-food lives | food:poison, last third | veer | recruits in all-food | note |
 |---|---|---|---|---|---|---|---|---|

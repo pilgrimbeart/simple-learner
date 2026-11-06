@@ -71,7 +71,7 @@ and when, why it matters, the line it belongs to, and the experiment that would 
    for each colour) or finer turning would offer it. A body change, the user's to decide. The yardstick values a
    split eye at 3.95 (the range roughly known) or 3.15 (not), against B's 2.54 (D21). Since (D24, prepared, the body
    unchanged): with a split eye, B plus a reflex of a few parts (steer towards the half that lit, by a beat with its
-   partner a tick late, 7 degrees; which motor is which learned from its own scan) reaches 3.02 against 2.49 held
+   partner 10 ms later, 7 degrees; which motor is which learned from its own scan) reaches 3.02 against 2.49 held
    out (+21%), 2.71 against 2.32 on lopsided bodies told their balance. Finer turning needs no body change (timing
    gives it); the split eye does. Yours to decide.
    **Rhythm by mode locking** (the user, 2026-11-01): oscillators entrained to each other, each at half the last (a
@@ -134,7 +134,7 @@ and when, why it matters, the line it belongs to, and the experiment that would 
 5. **Learn from predicting, not only from taste?** (the user, 2026-10-30, after the neocortex's columns: Mountcastle's
    repeated column; Hawkins' Thousand Brains theory, 2021: some 150,000 alike columns, each modelling the world from
    its own sensory and motor activity, voting on the best.) Every limit found today is information: meals are
-   sparse (D15, D16). A column learns from predicting its own next input, a signal every tick, and reward has only to
+   sparse (D15, D16). A column learns from predicting its own next input, a signal all the time, and reward has only to
    choose among models already good. Here: a unit predicting what its eyes do after its own motors' beats (a turn
    moves a block across the gaze) could learn a lopsided body from every beat, not from meals; units with different
    hypotheses (delays, which motor) voting by how well each predicted. Questions: is the repeated unit a neuron or
@@ -197,7 +197,6 @@ and when, why it matters, the line it belongs to, and the experiment that would 
    the circuit flips 16.5 times a life where doing nothing scores best.
 
 8. **Left over from stage 1c** (`discrete/NOTEBOOK.md`, D32; 2026-11-05). What does the floor's gain consist of: forgetting, or undoing its own -3? Ablate rivals to see. Could a circuit hold a family of periods at about 13 bits, the one thing that closed half of swap's gap? Can a bank learn the lie rate, since every mixture is fixed at one value? Is there a tighter proof of the limit on tastes, and should the body have a firing cap at all? Can q=.7 ever reach a yes?
-9. **The fast model moves at a finer step** (`discrete/NOTEBOOK.md`, D33; 2026-11-06; the user's, since a fix changes the body). Halving the tick shifts plain by -.17 and some worlds by up to .6. The check halved the body's tick and the brain models' together (both step once a tick). First separate them: halve one and not the other. Then, if it is the body: fire each beat at a random moment within its tick and see if 10 ms and 5 ms agree; should the body take beats at their moments? If the model: step it finer than the body.
 
 ## The body (`NOTEBOOK.md`, The body)
 

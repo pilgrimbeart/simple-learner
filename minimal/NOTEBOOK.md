@@ -22,7 +22,7 @@ to move or to leave a patch, and fails in silicon.
 The rules and their numbers are in `AGENTS.md` and `minimal/spec.py`, each enforced by `check`. They grew entry by
 entry, and each entry was judged by the rules of its day:
 
-| from | noise and mismatch | judged at | the score, per 1,000 ticks | the job |
+| from | noise and mismatch | judged at | the score, per 10 s | the job |
 |---|---|---|---|---|
 | M1 | a fixed noise per node; mismatch 3% | half, nominal and double noise | food - 2 x poison - 2 x (food short of 1) | food 1, last third's food:poison 3 |
 | M4 | | | ... - 0.05 x power (0.01 from M5, on the device measure) | |
@@ -33,11 +33,11 @@ entry, and each entry was judged by the rules of its day:
 | M12 | in SI units (`units.py`); noise a substrate's | silicon, biology and twice biology's, the worst counting | per 10 s (the same numbers); a meal 10 uJ, a firing 20 nJ, resting 1 uW | food per 10 s 1 |
 
 Up to M11 the entries are in the old units: times in ticks of the body (10 ms each) or of the circuit (2.5 ms, 4 to a
-tick), rates per 1,000 ticks (the same numbers as per 10 s), currents in nA, capacitors in units of 2.5 pF, resistors
+tick), rates per 1,000 body ticks (the same numbers as per 10 s; converted to per 10 s here since), currents in nA, capacitors in units of 2.5 pF, resistors
 in GOhm, power in nW. Every stored design was converted to SI on 2026-10-22 (M12), and lives the same lives.
 
 Why the score has this shape: plain net (food - poison) rewarded eating more as much as eating better (a first search
-shrank the motors' capacitors until noise fired them constantly, and ate 17 food and 13 poison per 1,000 ticks), and
+shrank the motors' capacitors until noise fired them constantly, and ate 17 food and 13 poison per 10 s), and
 without the starving term the search stood still (0 beats any movement before learning).
 
 Lives are always paired (red, then blue, as poison, on one seed), so a circuit that ignores taste scores below 0, and
@@ -86,7 +86,7 @@ active (the write element's filtered input: the eligibility) moves m towards it.
 
 A robust explorer needs a clock: a relaxation oscillator, firing at a rate its own parts set. Delayed self-inhibition
 alone (two time constants, negative feedback only) settles instead of cycling; it needs fast positive feedback too:
-a neuron biased to fire on its own (2 elements on a node). At bias -1 it fired 216-233 times per 1,000 ticks at half,
+a neuron biased to fire on its own (2 elements on a node). At bias -1 it fired 216-233 times per 10 s at half,
 the usual and double noise (and stuck high, depolarisation block, at bias 0 and above). So: motor 1 is the clock,
 and the creature circles, its eyes sweeping all round; seeing food kicks motor 0 too, and it drives straight at it;
 seeing poison leaves it circling, so it turns away. The bit says which sensor kicks motor 0.
@@ -119,7 +119,7 @@ Counting parts as above, every solution must have:
 3. **A memory**: a node holding the bit for a life, a capacitor with no leak (1 part), or a bistable node (more).
 4. **A write**: the bit must change only when a taste follows one sensor's activity, which needs an element whose
    current depends on both: a gated element (2 parts) at least, and a time constant spanning the delay between
-   seeing a block and tasting it (a tick or two): the sensor node's own decay, or a filter (2 parts).
+   seeing a block and tasting it (10-20 ms): the sensor node's own decay, or a filter (2 parts).
 5. **A read** in both directions: each sensor's effect on the motors must depend on the bit, so at least one
    element per sensor involving the memory, gated (2 x 2 parts), for a full flip. One element can give a default
    guess (one colour avoided from birth) that evidence corrects only half the time (M2's variants test it).
@@ -176,14 +176,14 @@ Shown C2's schematic (a page since withdrawn), the user asked three things:
 1. **The clock's fast amplifier has no capacitor: an oscillator leaning on the simulator's step?** Its speed is set
    by M1's capacitor over its gain, but the tuned capacitor was small (0.23) and the gains large (5.3, and 20 for the
    slow one, which could move M1 by 4 V in one integration step). Measured: the clock's rate held at 231, 233, 233
-   kicks per 1,000 ticks at steps 0.05, 0.025, 0.0125 (its timing is the slow filter's), and C2 in the real Life at
+   kicks per 10 s at steps 0.05, 0.025, 0.0125 (its timing is the slow filter's), and C2 in the real Life at
    half the step scored +0.94 against +0.56 (16 seeds x 2; intervals overlap). Not an artefact, but **the rule in
    AGENTS.md (limits on gains and time constants against the step, for an optimised circuit) had not been applied**.
-   Now: nothing may move a node more than 10 V per circuit tick (0.5 V per step): an element (|gain| / C), a leak
+   Now: nothing may move a node more than 4 V per ms (10 V per circuit tick of 2.5 ms; 0.5 V per step): an element (|gain| / C), a leak
    (1 / RC), or the body's pulse into a sensor or the taste node (3 / C). Every design so far broke it (C2 86, C1b
    20, C2b 719, C 16), so every result above is to be redone under it.
 2. **The clock drives one thruster, unconnected to the other: must their rates match for a straight approach?**
-   Measured (after learning): with food in view, motor 0 (the eyes) 148 kicks per 1,000 ticks against the clock's
+   Measured (after learning): with food in view, motor 0 (the eyes) 148 kicks per 10 s against the clock's
    206; with nothing in view, 0 against 232. So it doesn't go straight: it closes on food along a gentle arc (turning
    much more slowly than its search circle), which catches the near blocks. Matching isn't needed, but the mismatch
    sets how far off food can be and still be caught.
@@ -220,8 +220,8 @@ open search (`minimal/evolve.py`) now has three objectives: score, parts and pow
 
 ## M5: redoing the designs under the slew limit and the energy cost
 
-- **C2**, from its values pulled inside the limit (capacitors raised until nothing moves a node more than 10 V per
-  circuit tick), 80 generations: power fell from about 36 to 5.5 (on the device-dissipation measure), and it nearly
+- **C2**, from its values pulled inside the limit (capacitors raised until nothing moves a node more than 4 V per
+  ms), 80 generations: power fell from about 36 to 5.5 (on the device-dissipation measure), and it nearly
   does the job: food 0.99, 1.12, 1.20 and last third 3.45, 4.22, 2.66 at half, usual and double noise (short at
   half, on food, and at double, on food:poison). The mean score was still rising (-1.6 at generation 19, +0.2 at
   79): continued.
@@ -245,12 +245,12 @@ open search (`minimal/evolve.py`) now has three objectives: score, parts and pow
 - **A device fed back to itself** (the user, 2026-10-20: "a naked device fed back to itself implies infinite
   speed"). It feeds its own node's capacitor (a gm-C loop), so its speed is C / (gain x slope); but the slew limit
   alone allowed a time constant of about 2 integration steps, and the C2 first drawn had one of about 1 step (M1's
-  capacitor 0.23). Now also: every unfiltered self-feedback acts no faster than gain x slope / C = 2 per circuit tick,
+  capacitor 0.23). Now also: every unfiltered self-feedback acts no faster than gain x slope / C = 800 per s (2 per circuit tick),
   a time constant of at least 10 steps (the designed circuit's neurons sit exactly there). C2 as now tuned meets it
-  (M1's capacitor 9.3: the fast loop 4.4 circuit ticks, 88 steps; the slow one set by its filter, 79 circuit ticks).
+  (M1's capacitor 9.3: the fast loop 11 ms (4.4 circuit ticks), 88 steps; the slow one set by its filter, 198 ms (79 circuit ticks)).
 - **The inputs' source impedance** (the user: with an infinitely stiff source, the input capacitors would do
   nothing). The body drives each input as a current source (infinite impedance, like a photodiode): a fixed charge
-  per stimulus (3 for a circuit tick), so the capacitor is what turns it into a voltage (q / C) and with the leak sets
+  per stimulus (3 for a stimulus lasting a circuit tick, 2.5 ms), so the capacitor is what turns it into a voltage (q / C) and with the leak sets
   its decay; it doesn't run away because each pulse is brief and the leak drains it. But nothing stopped a node going
   beyond the supply: the slew limit allowed a pulse to lift a node 10 V, a tuned taste node rested at -3 V and fell far
   below on a bad taste, and the power measure assumed rails at +-3 V. Now **every node is held within the rails
@@ -313,7 +313,7 @@ predicted every design would now fail, mostly on the mismatch (from 3% to 10%).
   now passes comfortably.
 - **What the polish changed**: every sensor's capacitance shrank (S0 1.1 -> 0.66 and S1 1.5 -> 1.0 in N_E1_32p;
   1.4 -> 0.90 and 3.2 -> 0.91 in N_E1_23p) while its resistance rose, so its time constant RC stayed about where it
-  was (8.5 and 8.6 ticks; 7.9 and 16.7) on smaller currents. Under the old fixed noise per node the search had begun
+  was (85 and 86 ms; 79 and 167 ms) on smaller currents. Under the old fixed noise per node the search had begun
   to make nodes big to drown it; now a node's noise grows with its size and its currents, so that is gone and the
   search goes the other way: small sensors.
 - **The two winners are one circuit** (zeroing each element's gain in turn, 32 held-out seeds x 2; a zero gain keeps
@@ -336,8 +336,8 @@ predicted every design would now fail, mostly on the mismatch (from 3% to 10%).
   does the job at the lower bound argued above (The lower bound). From N_E1_23p only M1's leak went: N_E1_23p_pruned, 22 parts, power
   6.8, score +0.42, last third 3.84.
 - **The 21-part clock runs on noise.** M1 is now a capacitor with one delayed, saturating negative feedback (gain
-  -1.25 through a filter of 22 circuit ticks): a damped resonance that noise keeps ringing. Its spikes per 1,000
-  ticks (16 seeds): 23 at half the noise, 162 at the usual, 240 at double. The 23- and 32-part clocks are true
+  -1.25 through a filter of 55 ms (22 circuit ticks)): a damped resonance that noise keeps ringing. Its spikes per 10 s
+  (16 seeds): 23 at half the noise, 162 at the usual, 240 at double. The 23- and 32-part clocks are true
   oscillators: 184 and 186 at half, the same at double. Under the rule (judged at the nominal noise only, the user's
   decision) the 21-part circuit is legal; but it is exactly the dependence the old half-and-double check caught, and
   the lower bound's item 6 excludes ("a way to explore that doesn't hang on the noise level"), so it reaches 21 by
@@ -350,10 +350,10 @@ predicted every design would now fail, mostly on the mismatch (from 3% to 10%).
   its gain on the league's seeds did not carry to others. So under these rules the league's leader is
   N_E1_32p_pruned (21 parts, power 1.3, Pareto alone), with its noise-driven clock.
 - **Stress tests** (N_E1_23p; the 21-part circuit alike): with learning off, food and poison are exactly equal (1,354
-  each over 64 paired lives), so all of the preference is learned. Over 100,000-tick lives, whenever it eats it still
-  picks food 4-5 times as often as poison, but food per 1,000 ticks falls from 1.34 (first tenth) to 0.3-0.4 (last
+  each over 64 paired lives), so all of the preference is learned. Over 1,000 s lives, whenever it eats it still
+  picks food 4-5 times as often as poison, but food per 10 s falls from 1.34 (first tenth) to 0.3-0.4 (last
   tenths) and the share of lives eating nothing in a tenth rises to 75%. If the poison colour swaps halfway through a
-  20,000-tick life, food:poison drops to 0.2-0.3 and stays there: it learns only from food (a bad taste shuts the
+  200 s life, food:poison drops to 0.2-0.3 and stays there: it learns only from food (a bad taste shuts the
   writes' gates harder), and having learned, it no longer approaches the colour that is now food.
 - **Stranding** (the user, watching seed 1 live): after 10 food and 4 poison, N_E1_23p circled on the spot (a
   2.5-unit patch) for the rest of its life. Its only way to travel is to see food, and a distant block gives few eye
@@ -364,13 +364,13 @@ predicted every design would now fail, mostly on the mismatch (from 3% to 10%).
 ## M8: stranding, and a way to explore (night of 2026-10-20)
 
 The user watched N_E1_23p live: on seed 1, after 10 food and 4 poison, it spun on the spot (a 2.5-unit patch) for the
-rest of its life. Reproduced (`creature.Life`, seed 1: last meal at tick 5,425; N_E1_32p strands at 8,004). The
+rest of its life. Reproduced (`creature.Life`, seed 1: last meal at 54.25 s; N_E1_32p strands at 80.04 s). The
 winners travel only towards food they see, and a distant block gives few eye pulses; with nothing near, they spin
-for ever. Over the league's lives 21-24% of their lives eat nothing in the last third; over 100,000-tick lives 75%
+for ever. Over the league's lives 21-24% of their lives eat nothing in the last third; over 1,000 s lives 75%
 eat nothing in the last tenths. The score summed food over all lives, so stranded lives hid among the others.
 
 - **The score now counts starving life by life and third by third** (`spec.net`: cost x how far each third of each
-  life falls short of 1 food per 1,000 ticks), and **the job allows at most 5% of lives stranded** (no food in the
+  life falls short of 1 food per 10 s), and **the job allows at most 5% of lives stranded** (no food in the
   last third; a creature eating 1.4 per 1,000 goes a last third without food by chance about 1% of the time). The
   user suggested a penalty for not eating; this is it, counted where it happens.
 - **Moving costs nothing** unless an experiment sets `spec.THRUST` (`search.py --thrust`), the user's other
@@ -379,7 +379,7 @@ eat nothing in the last tenths. The score summed food over all lives, so strande
 - **Ways to explore.** (1) Run and tumble (as E. coli): M0 firing now and then of its own, so straight runs break the
   spin; no new parts, only M0's rest nearer threshold, which a polish under the new score may find (S_E1_23p, from
   N_E1_23p). (2) **Hunger** (H_E1_23p, by hand, then polished): a node H charging towards a high rest over about
-  1,500 ticks, drained by a good taste; while it is high, an element gated by H copies the clock's spikes into M0, so
+  15 s, drained by a good taste; while it is high, an element gated by H copies the clock's spikes into M0, so
   both thrusters fire together and the spin becomes a straight run. 5 parts more (H's C and R, an element from T, a
   gated element from M1). Untuned, on 32 held-out seeds x 2: stranded 6% against N_E1_23p's 22%, food 1.71 against
   1.40, but poison 0.68 against 0.41 (it runs through poison too) and last third 2.98 against 6.90.
@@ -394,13 +394,13 @@ eat nothing in the last tenths. The score summed food over all lives, so strande
 - **Hunger helps, but the polish trades it away** (league seeds): untuned, stranded 10%, food 1.55, poison 0.64, last
   third 2.76, score -0.14; polished (H_E1_23p, 28 parts, 120 generations), stranded 15%, food 1.39, poison 0.44, last
   third 4.62, score +0.03, power 7.6. A straight run eats whatever lies in its path, half of it poison, and under the
-  score a poison meal costs as much as a third of a life short by one meal per 1,000 ticks, so the polish weakened
+  score a poison meal costs as much as a third of a life short by one meal per 10 s, so the polish weakened
   the hunger for fewer poison meals. A hunger that stops at the poison colour (the bit gating the run, as it gates the
   reads) would need more parts; not tried yet.
 - **The hunger had a bug**: H never charged (it sat at -2.5 to -2.8 V all life). The drain from T was a sigmoid about
   1.6 V above T's rest, whose trickle at rest (0.003) matched H's charging current; so every run was a food chase,
   and the polish above tuned a circuit that was never hungry. Fixed (the drain's step at 1.5 V, slope 10, gain -20):
-  H charges, the creature breaks out on long straight runs (42 units in 500 ticks), and **stranding falls to 4%**,
+  H charges, the creature breaks out on long straight runs (42 units in 5 s), and **stranding falls to 4%**,
   inside the job, untuned; but poison 0.92 (last third 1.92). **With tanh reads** (no new parts: the read for the
   colour the bit calls poison then holds M0 down, cutting a hungry run short when poison is in view, while at birth
   both still excite): food 1.59, poison 0.65, last third 3.19, **stranded 7%**, score -0.09, untuned: nearly the job.
@@ -408,7 +408,7 @@ eat nothing in the last tenths. The score summed food over all lives, so strande
   `results/HFT_E1_23p_start.json`).
 - **HFT_E1_23p does the job under the new rules** (the fixed hunger with tanh reads, polished 120 generations; league
   seeds): 28 parts, score +0.37 [+0.22, +0.53], food 2.01 (the most of any circuit yet), poison 0.71, last third
-  3.87, **stranded 2%**, power 10.1, thruster firings 322 per 1,000 ticks.
+  3.87, **stranded 2%**, power 10.1, thruster firings 322 per 10 s.
 - **Pruned, HFT_E1_23p becomes a steering vehicle that leans on the noise.** Pruning took M1's leak, H's leak, H's
   drain, one of M1's feedbacks, then ungated the copy (so H went): **HFT_E1_23p_pruned**, 22 parts, power 6.0, score
   +0.37, food 2.16, last third 3.64, stranded 5% (the limit): it does the job. M1 is now a slow oscillator (no leak,
@@ -425,18 +425,18 @@ eat nothing in the last tenths. The score summed food over all lives, so strande
 
   The 28-part circuit is sturdy; the pruned one does the job only at the nominal noise. (The 28-part clock is a true
   oscillator. Its hunger is part noise too: the polish moved H's rest from +1 to -0.11 V, just short of the gate
-  opening at 0, so after a meal drains H to about -2 V it relaxes back over 1,000-3,000 ticks and its noise carries it
-  over 0; then the creature runs, 55-73 units in 500 ticks against 1-5 while it spins. That holds at half the noise,
+  opening at 0, so after a meal drains H to about -2 V it relaxes back over 10-30 s and its noise carries it
+  over 0; then the creature runs, 55-73 units in 5 s against 1-5 while it spins. That holds at half the noise,
   stranded 5%.) **Pruning judged at the nominal noise alone trades mechanism for noise** (twice tonight: here and
   N_E1_32p_pruned), because noise costs no parts. A check at half and double the noise, at least in the final
   judgement, would stop it (adopted in M11, the user's decision of 2026-10-22).
 - **Stress tests of HFT_E1_23p**: learning off, food and poison equal (1,483 each), so its preference is all learned.
-  Over 100,000-tick lives (32), food per 1,000 ticks stays at 2.0-2.5 and food:poison at 3.9-4.9 in every tenth after
+  Over 1,000 s lives (32), food per 10 s stays at 2.0-2.5 and food:poison at 3.9-4.9 in every tenth after
   the first, and **no life goes a tenth without food** (the old winners: food down to 0.3, 75% of lives eating
   nothing in the last tenths). A reversal halfway through still fails (food:poison 0.32, 0.38, 0.53 in the sixths
   after the swap), creeping back only through what hungry runs eat by chance: it still learns from food alone.
 - **If moving costs** (the user's suggestion, as an experiment: `--thrust 0.002`, 0.002 of score per thruster firing
-  per 1,000 ticks, polished 80 generations from HFT_E1_23p): T_HFT_E1_23p fires 182 times per 1,000 ticks against
+  per 10 s, polished 80 generations from HFT_E1_23p): T_HFT_E1_23p fires 182 times per 10 s against
   322, eats less (food 1.78 against 2.01) but chooses better (poison 0.55 against 0.71, last third 5.31 against
   3.87), and strands a little more (5%, the limit); score +0.00 after paying 0.36 for its firings, so about +0.36
   before, the same as HFT_E1_23p's. Paying to move makes it choosier, not lazier. Not adopted: the weight is a guess at
@@ -473,13 +473,13 @@ eat nothing in the last tenths. The score summed food over all lives, so strande
   and places on the front "sure" or "tied with".
 - **Area** by analogy with subthreshold analogue CMOS (README, Terms): shown, not ranked.
 - **Why the winners waste moves.** Every top design runs about 11 units per revolution, with about 80% of its firings
-  on one thruster; the firing cost cut firings by about 40% but not the shape of the loop. Food stays in view for 3-5
-  ticks as the gaze sweeps it, and only about 12% of sightings are eaten (about 40% when the food is near): the
+  on one thruster; the firing cost cut firings by about 40% but not the shape of the loop. Food stays in view for 30-50
+  ms as the gaze sweeps it, and only about 12% of sightings are eaten (about 40% when the food is near): the
   creature spins past food, as the user saw live (M11).
 - **The open search with efficiency as an objective** (`evolve_fuel`, 60 generations, from the M8 designs): **EF_22p**
   (22 parts) does the job, efficiency 1.66 [1.59, 1.73], food 2.56, stranded 2%, surely the most efficient design
   then; on fresh seeds (500-563, run once) 1.62 [1.55, 1.69], stranded 0% [0%, 3%]. It is HFT_E1_23p_pruned's wiring
-  with a noise-driven clock (87, 184, 217 spikes per 1,000 ticks at half, nominal and double noise). A second search
+  with a noise-driven clock (87, 184, 217 spikes per 10 s at half, nominal and double noise). A second search
   with efficiency counted from resting, moving and thinking (`evolve_eff`) found nothing better; several of its
   archive's designs were older ones again (EE_22p lives HFT_E1_23p_pruned's lives, EE_28p T_HFT_E1_23p's).
 - **Polishing for the score doesn't polish efficiency**: EF_22p polished (EF_22p_pol) fell to efficiency 1.47 and
@@ -495,9 +495,9 @@ EV_21p, NP_E1_32p); all four are the same circuit, give or take one element. Pie
 
 | piece | what it is | one of Sepulchre's components? |
 |---|---|---|
-| S0, S1, T | passive leaky nodes (time constants about 9, 12 and 0.6 ticks): the eyes' pulses low-pass filtered into a voltage, the taste a brief pulse | yes: a node with its monotone backbone and no elements |
+| S0, S1, T | passive leaky nodes (time constants about 9, 12 and 6 ms): the eyes' pulses low-pass filtered into a voltage, the taste a brief pulse | yes: a node with its monotone backbone and no elements |
 | M0 (a motor) | a passive leaky node, pushed up by currents; counted as spiking when it rises through 0 having been below -1 | the node, yes; but its events are made by the body's spike counter, not by fast positive feedback |
-| M1 (the clock, the other motor) | no leak; one slow negative self-feedback (filtered over 204 ticks) holds it near -0.37 V, and noise carries it across 0 and back below -1 | partly: slow negative feedback is theirs (I+s), but no leak breaks the monotone backbone, and with no fast positive feedback it has no spike of its own: its rate is the noise's (133, 225 and 252 spikes per 1,000 ticks, seeing nothing, at half, the usual and double noise) |
+| M1 (the clock, the other motor) | no leak; one slow negative self-feedback (filtered over 2.04 s) holds it near -0.37 V, and noise carries it across 0 and back below -1 | partly: slow negative feedback is theirs (I+s), but no leak breaks the monotone backbone, and with no fast positive feedback it has no spike of its own: its rate is the noise's (133, 225 and 252 spikes per 10 s, seeing nothing, at half, the usual and double noise) |
 | m (the bit) | a memory node: a capacitor with no leak | no: their memory is bistability, from positive feedback; a perfect integrator is the idealisation they avoid |
 | m <- S0, S1, gated by T | the write: a three-factor rule (what was seen, times the taste) | no: a gate (one node's voltage scaling an element's current) is this project's addition; they modulate gains from outside the circuit |
 | M0 <- m, gated by S0, S1 | the read: the bit sets each eye's effect on the motor | no, as above |
@@ -509,10 +509,10 @@ with hysteresis, a Schmitt trigger, the only positive feedback in the system, an
 for every brain); its **memory** from a perfect integrator; its **rhythm** from noise.
 
 **It got that way by pruning a mixed-feedback circuit.** The circuits it was pruned from have a true relaxation
-oscillator in M1: a leak, fast positive feedback and slow negative feedback (filtered over 200-290 ticks). Seeing
+oscillator in M1: a leak, fast positive feedback and slow negative feedback (filtered over 2-2.9 s). Seeing
 nothing, their clocks don't care about the noise:
 
-| clock | half noise | usual | double (M1 spikes per 1,000 ticks, 4 lives x 3,000 ticks) |
+| clock | half noise | usual | double (M1 spikes per 10 s, 4 lives x 30 s) |
 |---|---|---|---|
 | N_E1_23p (23 parts), mixed feedback | 183 | 183 | 181 |
 | HFT_E1_23p (28 parts), mixed feedback | 269 | 269 | 268 |
@@ -555,7 +555,7 @@ until the same search runs under their rules and judged across the noise range.
 
 **What building a stricter circuit showed** (no memory nodes at all, from HFT_E1_23p): a leaky node holding the bit
 fails, because a leaky node is membrane and gets membrane noise, which random-walks a slow bit by about 2.7 V in
-1,000 ticks (food:poison about 1.2); a latch fails differently, settling at birth into "approach colour 1, avoid colour
+10 s (food:poison about 1.2); a latch fails differently, settling at birth into "approach colour 1, avoid colour
 0" and, learning only from food, never eating colour 0 to find out. The integrator's graded middle had been doing
 quiet work: an undecided state at birth, so that the creature tries both colours until meals commit it. A latch works
 only with a way back from a wrong guess: learning from poison (a poison node, and a write that flips the latch on
@@ -574,20 +574,20 @@ sweeping its eyes across far blocks too quickly to react before they have gone; 
 advanced on seeing food would do better, and after a turn of 360 degrees might drive off and look elsewhere.
 
 - **What the body allows** (scripted policies, not brains: told the bit from birth, seeing only the eyes' pulses, on
-  the real body; 8 seeds x 2, rough): one that reacts to a food pulse for about 2 ticks scores as EF_22p does
-  (efficiency 1.68 against 1.66, counting no poison); one that holds its course for 4 ticks after a pulse, 2.9; holding,
-  and roaming straight for 15 ticks after 80 ticks of scanning, 3.95. A far block gives about one pulse as the gaze
-  sweeps it, and the spin carries on for about 1.5 ticks after a thruster stops, so a brief reaction is lost. Turning
+  the real body; 8 seeds x 2, rough): one that reacts to a food pulse for about 20 ms scores as EF_22p does
+  (efficiency 1.68 against 1.66, counting no poison); one that holds its course for 40 ms after a pulse, 2.9; holding,
+  and roaming straight for 150 ms after 800 ms of scanning, 3.95. A far block gives about one pulse as the gaze
+  sweeps it, and the spin carries on for about 15 ms after a thruster stops, so a brief reaction is lost. Turning
   slower barely helps: one thruster alone always drives the same circle (about 1.2 units' radius) whatever its rate.
-  The search had missed it because a hold is a new node with a time constant of a few ticks, and every start came from
+  The search had missed it because a hold is a new node with a time constant of a few tens of ms, and every start came from
   circuits that react briefly.
 - **Poison now counts in efficiency** (the user's decision): the most efficient policy, with poison free, ate a poison
   for every three meals. Efficiency is now meals gained (food less 2 a poison) per meal spent; EF_22p's falls from
-  1.66 to about 0.4, and the policies' best to about 2.7 (slow scanning, a hold of 10 ticks, a roam every 200,
+  1.66 to about 0.4, and the policies' best to about 2.7 (slow scanning, a hold of 100 ms, a roam every 2 s,
   turning away from poison).
 - **The hold-and-roam circuit, by hand (HR_35p, 35 parts)**: EF_22p's senses and memory; a scanning oscillator on one
   motor (fast positive and strong slow negative feedback, so its rate barely depends on mismatch); a hold node G
-  (time constant about 50 ticks) charged by a sighting of the colour the bit calls food and drained by the other's;
+  (time constant about 500 ms) charged by a sighting of the colour the bit calls food and drained by the other's;
   the second motor an excitable node that copies the scanner's spikes while G is open, so both thrusters fire
   together and the creature goes straight; and a roam timer that fills while G is shut and, when full, opens G. The
   timer needed its drain sharpened (a sigmoid's tail at rest matched its charging current, M8's hunger bug again).
@@ -600,7 +600,7 @@ advanced on seeing food would do better, and after a turn of 360 degrees might d
   just misses: noise turns it a little, the food leaves the corridor, and with only one way to turn it drives past.
   Object persistence (remember a sighting and sweep back for it, the body can turn both ways) is the next design.
 - **The three objectives** (the user's): the simplest brain doing the job, the best driver for energy (efficiency) and
-  the best for speed and accuracy (gain rate: meals gained per 1,000 ticks, energy free), each its own dimension. The
+  the best for speed and accuracy (gain rate: meals gained per 10 s, energy free), each its own dimension. The
   league names the best at each; the open search keeps all three with the job as a constraint; the polish and pruning
   can target one (`--by`). Thrift is shown, not ranked.
 - **Judged at three noise levels again** (the user's decision): every polish, pruning, open search and final judgement
@@ -804,18 +804,18 @@ model design (2.39).
 - **Match the brain's speed to the body's (impedance matching)** (2026-10-21, the user's observation live: the best
   circuit spins, sweeps its narrow gaze past far food and can't react before it has gone). Scripted policies (not
   brains) that see only the eyes' pulses and are told the bit from birth showed what the body allows: one that reacts
-  to a food pulse for about 2 ticks scores as EF_22p does (efficiency 1.68 against 1.66, then counting no poison); one
-  that holds its course for 4 ticks after a pulse, 2.9; holding and roaming straight for 15 ticks after 80 of
-  scanning, 3.95. A far block gives about one pulse as the gaze sweeps it, and the spin carries on for about 1.5 ticks
+  to a food pulse for about 20 ms scores as EF_22p does (efficiency 1.68 against 1.66, then counting no poison); one
+  that holds its course for 40 ms after a pulse, 2.9; holding and roaming straight for 150 ms after 800 ms of
+  scanning, 3.95. A far block gives about one pulse as the gaze sweeps it, and the spin carries on for about 15 ms
   after a thruster stops: a brain faster than that loses the sighting, so the brain's time constant has to match the
   body's sweep and momentum, not be as fast as possible. Turning slower barely helps (one thruster always drives the
   same circle, about 1.2 units' radius, whatever the rate). The search missed it because a hold is a new node with a
-  time constant of a few ticks, and every start came from circuits that react briefly. With poison free in efficiency
+  time constant of a few tens of ms, and every start came from circuits that react briefly. With poison free in efficiency
   the best policy drove into whatever lay ahead (a poison per three meals), so efficiency now counts a poison as COST
   meals lost, as the score does (the user's decision).
 - **A score summed over lives hides lives that fail.** The minimal search's winners did the job on every measure
   (food, food:poison, held-out seeds, a finer step), yet the user, watching one life, saw the creature eat 14 meals
-  and then spin on the spot for the remaining 4,500 ticks. A fifth of all their lives did that; summed food was
+  and then spin on the spot for the remaining 45 s. A fifth of all their lives did that; summed food was
   carried by the rest. The search had found a strategy (spin to look, dash only at food it sees) that is optimal on
   average and fatal in a fifth of worlds. Count a failure where it happens: the score now charges each third of each
   life for its own shortfall, and the job limits stranded lives (minimal/NOTEBOOK.md, M8). Watching a life live
@@ -848,18 +848,18 @@ The full record is `minimal/NOTEBOOK.md`; here only what generalises.
 
 - **Exploring is a job of its own.** The old winners could only travel towards food they saw. A hunger (a node
   drained by a good taste, gating the clock into the second thruster) makes them travel when they haven't eaten;
-  with it the winner keeps eating over 100,000-tick lives in every tenth. A first version did nothing, because its
+  with it the winner keeps eating over 1,000 s lives in every tenth. A first version did nothing, because its
   drain leaked at rest exactly as fast as it charged: a polish tuned a circuit that was never hungry, and only a
   trace of the node's voltage showed it.
 - **A graded memory does quiet work, and a noisy one can't hold it** (2026-10-21, building a circuit of Sepulchre's
   components). The simplest circuits keep the bit in a perfect integrator (a floating gate). Made leaky, as every
-  mixed-feedback node is, the bit gets the membrane noise every leaky node has and wanders 2.7 V in 1,000 ticks; made a
+  mixed-feedback node is, the bit gets the membrane noise every leaky node has and wanders 2.7 V in 10 s; made a
   latch, it falls at birth into one guess and, learning only from food, never eats the other colour to correct it.
   The integrator's middle was an undecided state that let the creature try both colours first. A binary memory needs
   a way back from a wrong guess (learning from poison), so it costs parts the graded one didn't. Sepulchre is silent
   on learning and storage, so we allow our floating gates under his rules (MIXED_FEEDBACK.md).
 - **Body efficiency needs a balance** (2026-10-21). Food per firing alone rewards a creature for dawdling; counting
-  the resting cost (NEED per 1,000 ticks) as well as moving and thinking gives a measure that both haste and dawdling
+  the resting cost (NEED per 10 s) as well as moving and thinking gives a measure that both haste and dawdling
   lower. With poison free in it, the best scripted policy drove into whatever lay ahead (a poison for every three
   meals), so it counts a poison as COST meals lost, as the score does (2026-10-22).
 

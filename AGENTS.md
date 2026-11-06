@@ -76,7 +76,7 @@ the cheats a grid invites) is in nca-learn's `NOTEBOOK.md`, worth reading before
 The point is a brain that learns in situ, so the brain must do the work.
 
 - **The interface.** The body (`world.py`) and `Life` (`creature.py`) talk to a brain only through sensors 0 and 1,
-  motors 0 and 1, and one taste (`stimulate`, `taste`, `step`). Taste is +1 (food) or -1 (poison) for a tick when a
+  motors 0 and 1, and one taste (`stimulate`, `taste`, `step`). Taste is +1 (food) or -1 (poison) at the moment (one 10 ms step) a
   block touches the mouth, else 0, and never says which sensor it is about. The body draws its wiring (colour to
   sensor, thruster to motor) at random each life, so the brain doesn't know what its organs are for. Never change
   the task's ground rules (what an organ is, what connects to what) without asking the user first.

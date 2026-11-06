@@ -117,7 +117,9 @@ def phase_label():
 
 
 def _out_of_results(lab):
-    return bool(lab["refused"]) or lab["labelled"] > 0
+    """Out if any life was refused, or at least 3 of the 16 lives carry a stage-5 label: a real rewiring, freeze or placement is
+    labelled in nearly every life, a false one in about 1 in 1,000 (D34), so 3 of 16 by chance is about 6e-7 (fixed before any result)."""
+    return bool(lab["refused"]) or lab["labelled"] >= 3
 
 
 def phase_main():

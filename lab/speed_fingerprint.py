@@ -52,6 +52,7 @@ if __name__ == "__main__":
         base = json.load(open(OUT))
         bad = [k for k, h, _ in res if base["hash"][k] != h]
         print(f"{len(res) - len(bad)} of {len(res)} lives identical; wall {wall:.0f} s")
+        print("  differing by mode:", {m: sum(1 for k in bad if k.split("|")[2] == m) for m in ("False", "True")})
         for k in bad[:10]:
             print("  DIFFERS", k)
         for k in sorted(timing):

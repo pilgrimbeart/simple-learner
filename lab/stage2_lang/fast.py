@@ -422,6 +422,8 @@ COPIED = {
     "seconds.SecondsModel._beat": "e19b3a0b693f47f1",
     "seconds._crossings": "7de391fae0664178",
     "seconds._matched_step": "edad5a21221da087",
+    "seconds.SecondsModel.stimulate": "bed7297aed173ed5",       # FastModel.stimulate stands in for these two
+    "discrete.model.Model.stimulate": "8513eb84f2154712",
 }
 _CHECKED = []
 
@@ -434,6 +436,8 @@ def _check_copied():
     for k, h in COPIED.items():
         mod, *path = k.split(".")
         obj = importlib.import_module("stage2_lang.seconds" if mod == "seconds" else mod)
+        if mod == "discrete":
+            obj = importlib.import_module("discrete." + path.pop(0))
         for a in path:
             obj = getattr(obj, a)
         if hashlib.sha256(inspect.getsource(obj).encode()).hexdigest()[:16] != h:

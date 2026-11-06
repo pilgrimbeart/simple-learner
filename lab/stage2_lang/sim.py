@@ -25,6 +25,7 @@ from __future__ import annotations
 
 import heapq
 import math
+import re
 
 import numpy as np
 from numba import njit
@@ -117,10 +118,15 @@ def _touching_u(xy, alive, h0, h1, world, eat):
         ex, ey = dx - u * sx, dy - u * sy
         e2 = ex * ex + ey * ey
         if e2 < eat * eat:
-            # the first point of the segment within reach: solve |d - v s| = eat for the smaller v
-            back = math.sqrt(max(0.0, eat * eat - e2) / ss) if ss > 0.0 else 0.0
+            # the first point of the segment within reach: the smaller root v of |d - v s| = eat, or 0 if it starts within reach
+            # (the checker, 2026-11-06: going back from the clipped closest point gave moments up to a tick early)
+            dd, ds = dx * dx + dy * dy, dx * sx + dy * sy
+            if dd <= eat * eat or ss <= 0.0:
+                v = 0.0
+            else:
+                v = (ds - math.sqrt(max(0.0, ds * ds - ss * (dd - eat * eat)))) / ss
             bs.append(b)
-            us.append(max(0.0, u - back))
+            us.append(min(max(v, 0.0), 1.0))
     return bs, us
 
 
@@ -208,11 +214,12 @@ def _sense(xy, alive, look, bright, across, K, scr, hx, hy, fx, fy, state, dt, s
     [(rng.random() * dt, wire_s[c], c) for _ in range(rng.poisson(SENSE * seen[c] * dt))] draws them. out rows: moment, eye, colour.
     Returns the count, or -1 if a rate is too high for the method (the caller then draws in Python)."""
     s0, s1 = _see(xy, alive, look, bright, across, K, scr, hx, hy, fx, fy)
+    if sense * s0 * dt >= 10 or sense * s1 * dt >= 10:  # before any draw: the caller draws both in Python (out[0, 0], out[0, 1]: the light)
+        out[0, 0], out[0, 1] = s0, s1
+        return -1
     n = 0
     for c in range(2):
         lam = sense * (s0 if c == 0 else s1) * dt
-        if lam >= 10:
-            return -1
         X = _poisson(state, lam)
         for _ in range(X):
             out[0, n], out[1, n], out[2, n] = _NEXT_DOUBLE(state) * dt, (ws0 if c == 0 else ws1), c
@@ -431,6 +438,20 @@ class WLife:
         else:
             heapq.heappush(self.pending, (due, self._seq, fn, self._cmd))
 
+    def _run_overdue(self, t0):
+        """Seconds mode, at a tick's start: the deferrals due by now (late ones run now). Those due later in the tick wait for the
+        motion's heap (_due_in_tick), so each runs at its own moment (the checker, 2026-11-06: they had all run at the tick's start)."""
+        while self.pending and self.pending[0][0] <= t0 + 1e-12:
+            due, _, fn, cmd = heapq.heappop(self.pending)
+            self.now, self._at = t0, 0.0
+            self._run_later(fn, cmd)
+
+    def _due_in_tick(self, ev, t0, dt):
+        """Move the deferrals due within this tick into the motion's heap, at their moments."""
+        while self.pending and self.pending[0][0] < t0 + dt - 1e-12:
+            due, seq, fn, cmd = heapq.heappop(self.pending)
+            ev.append((due - t0, 2, seq, ("defer", fn, cmd)))
+
     def _run_later(self, fn, cmd):
         was = self._cmd
         self._cmd = cmd
@@ -442,8 +463,13 @@ class WLife:
             raise Refused(f"a rule raised a Python error in a deferral: {type(e).__name__}: {e}") from None
         self._cmd = was
 
+    def _one_of_two(self, k, what):
+        if isinstance(k, bool) or not isinstance(k, (int, float, np.integer, np.floating)) or k not in (0, 1):
+            raise Refused(f"a rule named {what} {k}: only 0 or 1 exist")
+        return int(k)
+
     def inject_pulse(self, eye):
-        eye = int(eye)
+        eye = self._one_of_two(eye, "eye")              # (an index like -1 reached the brain's own state: the checker, 2026-11-06)
         if not self.secs:
             at = self.r.random() * self.dt
             if self.tr is not None:
@@ -461,7 +487,7 @@ class WLife:
             self._ipulses.append((self._at if self._at is not None else self.trng.random() * self.dt, eye))
 
     def inject_thrust(self, th):
-        th = int(th)
+        th = self._one_of_two(th, "thruster")
         if not self.secs or self._sub is not None:
             self.fire(th, 1.0, True)
         else:
@@ -545,6 +571,9 @@ class WLife:
 
     # ------------------------------------------------ one tick
     def fire(self, th, gain, by_rule=False):
+        """A thruster fires: it costs the creature whoever made it fire (the brain, or a world rule: a late or spurious thrust is the
+        creature's own thruster firing). A command the world drops never reaches the thruster and costs nothing (the user, 2026-11-06:
+        the break is between brain and thruster)."""
         if self.moving is None:
             self.moving = self.t
         self.body.fire(th, gain)
@@ -566,7 +595,7 @@ class WLife:
                 if self._fast:
                     from stage2_lang.fast import FastModel
                     src = repr(getattr(self.world, "text", "")) + repr(getattr(self.world, "src", ""))
-                    if isinstance(self.brain, FastModel) and "(thrust" not in src and "(after" not in src:
+                    if isinstance(self.brain, FastModel) and not re.search(r"\(\s*(thrust|after)\b", src):
                         self._state = self.rng.bit_generator.ctypes.state_address
                         self._told_fn = self.world.fn.get("told")
                         self._pulses = np.zeros((3, 64))
@@ -688,10 +717,7 @@ class WLife:
         t0 = self.t * dt
         tr = self.tr
         self.now = t0
-        while self.pending and self.pending[0][0] < t0 + dt - 1e-12:
-            due, _, fn, cmd = heapq.heappop(self.pending)
-            self.now, self._at = max(due, t0), max(due, t0) - t0
-            self._run_later(fn, cmd)
+        self._run_overdue(t0)
         self.now, self._at = t0, None
         if self.f_tick is not None:
             self.f_tick(self)
@@ -732,6 +758,7 @@ class WLife:
         ev = [(min(max(at, 0.0), dt * (1 - 1e-12)), 1, i, ("beat", m)) for i, (m, at) in enumerate(beats)]
         ev += [(at, 1, 10_000 + i, ("thrust", th)) for i, (at, th) in enumerate(self._thrusts)]
         self._thrusts = []
+        self._due_in_tick(ev, t0, dt)
         heapq.heapify(ev)
         if self.f_move is not None:
             self.f_move(self)
@@ -739,8 +766,13 @@ class WLife:
         self._sub = ev
         p0 = body.pos.copy()
         cur = 0.0
-        while ev:
+        while ev or cur < dt:
+            if not ev:
+                self._advance(cur, dt)
+                cur = dt
+                continue                                # (a meal in that last stretch may have scheduled one more)
             at, _, _, (kind, *x) = heapq.heappop(ev)
+            at = max(at, cur)                           # never back in time: one due before the moment reached runs now
             self._advance(cur, at)
             cur = at
             self.now, self._at = t0 + at, at
@@ -763,7 +795,6 @@ class WLife:
                 self.fire(x[0], 1.0, True)
             else:
                 self._run_later(x[0], x[1])
-        self._advance(cur, dt)
         self._sub = None
         self.now, self._at = t0, None
         self.inst.moved(p0)
@@ -776,10 +807,7 @@ class WLife:
         dt = self.dt
         t0 = self.t * dt
         self.now = t0
-        while self.pending and self.pending[0][0] < t0 + dt - 1e-12:
-            due, _, fn, cmd = heapq.heappop(self.pending)
-            self.now, self._at = max(due, t0), max(due, t0) - t0
-            self._run_later(fn, cmd)
+        self._run_overdue(t0)
         self.now, self._at = t0, None
         if self.f_tick is not None:
             self.f_tick(self)
@@ -812,34 +840,37 @@ class WLife:
         if beats is None or ((motors or beats) and sorted(m for m, _ in beats) != sorted(motors)):
             beats = [(m, self.trng.random() * dt) for m in motors]
         self.tick_meals = []
-        if not beats and not self._thrusts:
-            self._sub = []
-            self._advance_fast(0.0, dt)
-        else:
-            ev = [(min(max(at, 0.0), dt * (1 - 1e-12)), 1, i, ("beat", m)) for i, (m, at) in enumerate(beats)]
+        ev = [(min(max(at, 0.0), dt * (1 - 1e-12)), 1, i, ("beat", m)) for i, (m, at) in enumerate(beats)] if beats else []
+        if self._thrusts:
             ev += [(at, 1, 10_000 + i, ("thrust", th)) for i, (at, th) in enumerate(self._thrusts)]
             self._thrusts = []
-            heapq.heapify(ev)
-            self._sub = ev
-            cur = 0.0
-            while ev:
-                at, _, _, (kind, *x) = heapq.heappop(ev)
-                self._advance_fast(cur, at)
-                cur = at
-                self.now, self._at = t0 + at, at
-                if kind == "beat":
-                    m = x[0]
-                    for th in (0, 1):
-                        if self.wire_m[th] != m:
-                            continue
-                        self._cmd = m
-                        self.fire(th, 1.0)
-                    self._cmd = None
-                elif kind == "thrust":
-                    self.fire(x[0], 1.0, True)
-                else:
-                    self._run_later(x[0], x[1])
-            self._advance_fast(cur, dt)
+        if self.pending:
+            self._due_in_tick(ev, t0, dt)
+        heapq.heapify(ev)
+        self._sub = ev
+        cur = 0.0
+        while ev or cur < dt:                           # as _step_seconds: never back in time, nothing added late is lost
+            if not ev:
+                self._advance_fast(cur, dt)
+                cur = dt
+                continue
+            at, _, _, (kind, *x) = heapq.heappop(ev)
+            at = max(at, cur)
+            self._advance_fast(cur, at)
+            cur = at
+            self.now, self._at = t0 + at, at
+            if kind == "beat":
+                m = x[0]
+                for th in (0, 1):
+                    if self.wire_m[th] != m:
+                        continue
+                    self._cmd = m
+                    self.fire(th, 1.0)
+                self._cmd = None
+            elif kind == "thrust":
+                self.fire(x[0], 1.0, True)
+            else:
+                self._run_later(x[0], x[1])
         self._sub = None
         self.now, self._at = t0, None
         self.t += 1
@@ -847,15 +878,12 @@ class WLife:
     def _step_fused(self):
         """_step_fast with the light and draws (_sense), and the brain, beats and motion (_tick_b), compiled: the same steps, order and
         draws (lab/speed_fingerprint.py checks). Falls back to _step_fast for a tick with an injected thrust."""
-        if self._thrusts or self._ipulses or not self.brain._packed:
+        if self._thrusts or self._ipulses or self.pending or not self.brain._packed:
             return self._step_fast()                    # (a thrust or deferral rule sends the whole life to _step_fast: see step)
         dt = self.dt
         t0 = self.t * dt
         self.now = t0
-        while self.pending and self.pending[0][0] < t0 + dt - 1e-12:
-            due, _, fn, cmd = heapq.heappop(self.pending)
-            self.now, self._at = max(due, t0), max(due, t0) - t0
-            self._run_later(fn, cmd)
+        self._run_overdue(t0)
         self.now, self._at = t0, None
         if self.f_tick is not None:
             self.f_tick(self)
@@ -879,10 +907,15 @@ class WLife:
         P = self._pulses
         n = _sense(body.xy, body.alive, body.look, body.bright, body.across, K, self._far, hx, hy, body._fc, body._fs, self._state,
                    dt, self.SENSE, self.wire_s[0], self.wire_s[1], P)
-        if n < 0:
-            raise ValueError("a pulse rate too high for the compiled draw")
-        if n or self._ipulses:
-            pulses = list(zip(P[0, :n].tolist(), [int(x) for x in P[1, :n]], [int(x) for x in P[2, :n]]))
+        if n < 0:                                       # a rate the compiled draw doesn't cover: numpy's own, in Python, the same order
+            s0, s1, rng = float(P[0, 0]), float(P[0, 1]), self.rng
+            pulses = [(rng.random() * dt, self.wire_s[0], 0) for _ in range(rng.poisson(self.SENSE * s0 * dt))]
+            pulses += [(rng.random() * dt, self.wire_s[1], 1) for _ in range(rng.poisson(self.SENSE * s1 * dt))]
+            n = 0
+        else:
+            pulses = None
+        if n or self._ipulses or pulses:
+            pulses = (pulses or []) + list(zip(P[0, :n].tolist(), [int(x) for x in P[1, :n]], [int(x) for x in P[2, :n]]))
             if self._ipulses:
                 pulses += [(at, eye, -1) for at, eye in self._ipulses]
                 self._ipulses = []

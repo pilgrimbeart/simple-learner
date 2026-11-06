@@ -55,13 +55,15 @@ they were written with: the "mixed-signal brain" is the designed circuit, and th
   the live view's eye beams went on stepping in whole units and fading over REACH, so they faded to nothing; no test
   draws the view, and it was noticed only by the user, days later. After a change of units, look at every view.
 
+*Units in the dated entries below* (converted to seconds on 2026-11-06, the user's rule): a tick was the world's step, 10 ms; a circuit tick one world tick until SPEED, then a quarter of one, 2.5 ms; "per 1,000 ticks" is per 10 s. Where a number is given in circuit ticks, the original count is kept beside it.
+
 ## Taste: one input, and credit assigned inside the brain (2026-10-16)
 
 - **Why.** Learning had been `reward(sensor, value)`: the body handed the reward to the eaten colour's sensor, so the
   body did the credit assignment. The user's ruling: for every brain, taste is one input, +1 for food and -1 for
   poison at the tick a block touches the mouth, else 0, saying nothing about which sensor. The body must never be part
   of the solution.
-- **Designed circuit.** An eligibility node per sensor (charged by its spikes, leaking over ELIGIBLE ticks) gates two
+- **Designed circuit.** An eligibility node per sensor (charged by its spikes, leaking over ELIGIBLE, 0.1 s) gates two
   amplifiers that charge or empty P while taste is good or bad. Each spike also empties the other sensor's E (FORGET,
   cross-inhibition). 64 lives: E 10 with FORGET learned 63/64, median 1,512, net +0.86 (no FORGET: 64/64, 1,830, +0.72;
   the oracle about +0.92).
@@ -77,20 +79,20 @@ they were written with: the "mixed-signal brain" is the designed circuit, and th
 
 ### Scoring per unit of time
 
-- **Score per tick, not per meal** (the user). Two scores: how soon the sensors learn (ticks after moving until both
-  are within 0.2 of right: the rules), and food minus poison per 1,000 ticks (the sheet and the body). Poison's share
+- **Score per second, not per meal** (the user). Two scores: how soon the sensors learn (seconds after moving until both
+  are within 0.2 of right: the rules), and food minus poison per 10 s (the sheet and the body). Poison's share
   of meals alone hides the rate: a slow creature can eat well and little.
 - **Slower or sparser raises the ceiling but costs meals.** Ceiling with p perfect, poison's share by thirds (meals
   per third, 32 lives): thrust 0.5 (now) 48%, 42%, 47% (about 380); 0.25: 43%, 41%, 44% (180); 0.125: 23%, 32%, 30%
   (80). 9 blocks of each colour instead of 18: 41%, 43%, 46% (135); 5: 34%, 36%, 42% (75). For the same meals, slower
-  is better than sparser: it gives the 53-tick brain time to act. But per tick the slow creature loses (16 lives
+  is better than sparser: it gives the brain, about 0.53 s slow, time to act. But per second the slow creature loses (16 lives
   each, learning on):
 
-  | version | learned (median ticks after moving) | food minus poison per 1,000 ticks, by third |
+  | version | learned (median s after moving) | food minus poison per 10 s, by third |
   |---|---|---|
-  | thrust 0.5, p moves 1/4 of the way | 16 of 16, 1,331 | -0.03, +0.38, +1.06 |
-  | thrust 0.5, p moves 1/2 of the way (now) | 16 of 16, 997 | -0.20, +2.15, +0.48 |
-  | thrust 0.125, 1/2 of the way | 13 of 16, 2,945 | +0.14, +0.41, +0.68 |
+  | thrust 0.5, p moves 1/4 of the way | 16 of 16, 13.3 | -0.03, +0.38, +1.06 |
+  | thrust 0.5, p moves 1/2 of the way (now) | 16 of 16, 10.0 | -0.20, +2.15, +0.48 |
+  | thrust 0.125, 1/2 of the way | 13 of 16, 29.5 | +0.14, +0.41, +0.68 |
 
   Once learned the thirds differ by noise; 16 lives are too few to rank the net food finely.
 - **Angling the thrusters doesn't help** (the user's idea: a lone thruster should mostly turn the body, not drive it
@@ -103,36 +105,36 @@ they were written with: the "mixed-signal brain" is the designed circuit, and th
 
 ### Telling food from poison: a pointed body and a faster circuit (2026-10-17)
 
-The user's target: at least 2 food for each poison after 10,000 ticks, ideally nearer 10, worked out on the
+The user's target: at least 2 food for each poison after 100 s, ideally nearer 10, worked out on the
 designed circuit (quicker to learn and to tune). Measured as food:poison over 24-32 lives, with p held perfect by
-hand (the ceiling) or learning; "second half" is ticks 5,000-10,000. Before: 1.5 at the ceiling, 1.5 learning, 4.7
-meals per 1,000 ticks.
+hand (the ceiling) or learning; "second half" is 50-100 s. Before: 1.5 at the ceiling, 1.5 learning, 4.7
+meals per 10 s.
 
-- **Where poison was eaten.** Every poison meal had been in view for at least 30 ticks. Three causes, each measured:
+- **Where poison was eaten.** Every poison meal had been in view for at least 0.3 s. Three causes, each measured:
   the square's mouth was its whole front edge (5 units), and every turn swept it across poison beside the corridor;
-  each neuron could spike only about once in 17 circuit ticks, so the creature moved in big lunges that coasted 2-3
+  each neuron could spike only about once in 170 ms (17 circuit ticks, then one to each tick of the world), so the creature moved in big lunges that coasted 2-3
   units into whatever lay ahead (the user's "slow brain and momentum"); and the plastic synapse leaked (at p = 1 a
   sensor's spike reached both motors only 74% of the time, so a quarter of food sightings became veers).
 - **An ideal reflex first.** A controller with no brain (straight at food, veer from poison, the right thruster at
-  once) found what a body allows: on a pointed body with gentler thrust it reached 10-27 (0.5-2.6 meals per 1,000),
+  once) found what a body allows: on a pointed body with gentler thrust it reached 10-27 (0.5-2.6 meals per 10 s),
   refractory time and blind wandering cost little, and 10% leak in the reflex halved it. So the body had to change,
   and then the brain had to be fast and clean.
 - **The body** (ground rules, agreed with the user): an equilateral triangle, point forward, the point the mouth
   (eaten within EAT of it; the eyes' corridor is 2 EAT wide); PUSH 0.5 → 0.2, TURN 0.08 → 0.16, DRAG 0.2 → 0.5
   (small kicks that die quickly, a tighter turn); SENSE 0.21 → 0.5. Triangle alone: ceiling 1.5 → 2.5. Slower thrust
-  or more drag alone raised the ceiling but starved the creature (0.1-0.6 meals per 1,000 ticks) while the circuit
+  or more drag alone raised the ceiling but starved the creature (0.1-0.6 meals per 10 s) while the circuit
   still lunged.
 - **The circuit runs 4 of its ticks to each tick of the world** (SPEED). Its refractory time is unchanged in circuit
   ticks, so it spikes four times as often and each kick is a quarter as big relative to the body's motion. Ceiling
-  4.6 at SPEED 4 (1.0 meals per 1,000). A shorter recovery (tau 3 instead of 10) broke the neuron: almost no spikes.
+  4.6 at SPEED 4 (1.0 meals per 10 s). A shorter recovery (tau 3 instead of 10) broke the neuron: almost no spikes.
 - **A clean synapse.** WEAK 0.05 → 0 and STRONG 0.35 → 0.7: a sensor at p = 1 now reaches both motors about 99% of
   the time, at p = 0 never. Ceiling 4.6 → 12.7, meals 1.6.
-- **Each sensor hushes the other** (INHIBIT 1.5 over HUSH 10 ticks, a hush node per sensor): while it sees food the
+- **Each sensor hushes the other** (INHIBIT 1.5 over HUSH, 0.1 s, a hush node per sensor): while it sees food the
   creature stops answering poison, and the other way round, so it no longer swerves between them into a third block.
-  Ceiling 12.7 → 14.2; learning, second half, 4.5 → 8.5. Stronger (3) or longer (25 ticks) did no better.
-- **Learning, 10,000 ticks (24 lives): 4.5 over the whole life, 8.5 in the second half, 1.8 meals per 1,000; p at
-  the end poison 0.13, food 0.99.** Over 20,000 ticks: 6.1 over the life, 8.2 over ticks 10,000-20,000. 64 lives of
-  10,000 ticks: 4.3 over the life, 7.0 in the second half, ceiling 14.8; on `--measure`'s 32 lives the thirds are
+  Ceiling 12.7 → 14.2; learning, second half, 4.5 → 8.5. Stronger (3) or longer (0.25 s) did no better.
+- **Learning, 100 s (24 lives): 4.5 over the whole life, 8.5 in the second half, 1.8 meals per 10 s; p at
+  the end poison 0.13, food 0.99.** Over 200 s: 6.1 over the life, 8.2 over 100-200 s. 64 lives of
+  100 s: 4.3 over the life, 7.0 in the second half, ceiling 14.8; on `--measure`'s 32 lives the thirds are
   2.2, 5.9, 4.6. Poison meals are few, so the ratio differs a lot between sets of lives: rank variants on 64. p for
   poison settles near 0.1, not 0: poison meals are now rare, and each is a learning event, while food meals now and
   then credit the poison sensor when both were seen.
@@ -195,29 +197,29 @@ reward came after a chew delay with eyes shut. Its lessons:
   (meals, firings and sensors' p), so the refactor changed nothing. Thrusters must fire in the same order as before:
   spin is a float sum.
 - **The neuron.** The paper's spiking neuron (fast positive feedback, slow negative; tanh) at the paper's bias was
-  bistable, not excitable: one pulse set off firing that never stopped (bias -1.2 to -1.4, recovery 5-20 ticks). At
-  bias -1.6 it rests: one spike for any pulse above about 1 (a tick long), and noise 0.2 gives about 6.5 spikes per
-  1,000 ticks of its own (the sheet's sensors fire by themselves about 9 per 1,000).
+  bistable, not excitable: one pulse set off firing that never stopped (bias -1.2 to -1.4, recovery 12-50 ms, 5-20 circuit ticks). At
+  bias -1.6 it rests: one spike for any pulse above about 1 (a circuit tick, 2.5 ms, long), and noise 0.2 gives about 6.5 spikes per
+  10 s of its own (the sheet's sensors fire by themselves about 9 per 10 s).
 - **Noise grades a synapse.** A sensor's spike crosses a synapse of weight 0.05 almost never, 0.15 half the time, 0.35
   almost always: noise makes the choice, so a plastic weight between them is a chance of firing the other motor too,
   as the sheet's sensor's p is.
-- **A/B, the same 16 lives each:** sheet learned in 16 of 16 (median 1,024 ticks after moving), food minus poison per
-  1,000 ticks by third -0.20, +1.97, +0.37, poison's share 52%, 38%, 47%; designed circuit 16 of 16 (median 1,090),
+- **A/B, the same 16 lives each:** sheet learned in 16 of 16 (median 10.2 s after moving), food minus poison per
+  10 s by third -0.20, +1.97, +0.37, poison's share 52%, 38%, 47%; designed circuit 16 of 16 (median 10.9 s),
   +0.89, +1.13, +1.32, and 40%, 39%, 35%. Learning after moving is about as fast (set by how often it eats); but the
-  circuit moves from the first tick and reacts at once, where a pulse takes about 53 ticks to cross the sheet, so it
+  circuit moves from the first tick and reacts at once, where a pulse takes about 0.53 s to cross the sheet, so it
   steers round more poison than the sheet brain could even with perfect p (about 46%), and nets about twice the food
   in a life.
 
 ### Simulating the designed circuit (2026-10-18)
 
-Reviewed with evolving circuit brains in mind (many lives of 10,000 ticks), so it must be fast and must not be
+Reviewed with evolving circuit brains in mind (many lives of 100 s), so it must be fast and must not be
 exploitable.
 
-- **Where the time goes.** A life took about 1.5 s per 1,000 ticks, 85% of it in `Circuit._advance`: 80 integration
+- **Where the time goes.** A life took about 1.5 s of computing per 10 s of life, 85% of it in `Circuit._advance`: 80 integration
   steps per world tick, each a dozen numpy calls on 11 nodes and 24 elements, so call overhead swamps the arithmetic.
   The same integration as one numba loop, drawing from the same random generator, matched the original (voltages
-  within 2e-12; motor spikes the same over 3,000 ticks, and the meals of 4 lives) and ran the circuit about 45x faster
-  (0.28 s per 10,000 ticks). Then the world (`look`, `move`) and the per-tick Python in `Life` dominated (about 3.5 s
+  within 2e-12; motor spikes the same over 30 s, and the meals of 4 lives) and ran the circuit about 45x faster
+  (0.28 s per 100 s of life). Then the world (`look`, `move`) and the per-tick Python in `Life` dominated (about 3.5 s
   a life), so the eyes and mouth are compiled too (blocks held as arrays). Passing numpy's random generator into
   compiled code costs about 25 us a call, so each tick's noise is drawn beforehand in one call (the same stream). A
   life now takes about 0.5 s (from about 15). `test_compiled.py` checks both against plain numpy versions of the same
@@ -231,13 +233,12 @@ exploitable.
   threshold), so a last bit there could change a life only for a block exactly at the threshold.
 - **The integration step doesn't matter.** An input is a current lasting one circuit tick (a quarter of a world
   tick), fixed in model time, not in steps; noise is scaled by sqrt(DT); spikes are found with hysteresis at each
-  step. From DT 0.2 to 0.01 (now 0.05) these agreed within sampling noise: spontaneous spikes (10-11 per 1,000
-  ticks), spikes per stimulus (0.87-0.91), how often the plastic synapse relays, and one taste's move of p (0.287-0.289,
+  step. From DT 0.2 to 0.01 (now 0.05) these agreed within sampling noise: spontaneous spikes (10-11 per 10 s), spikes per stimulus (0.87-0.91), how often the plastic synapse relays, and one taste's move of p (0.287-0.289,
   noise off). 64 lives at DT 0.05, 0.1 and 0.2: food:poison 4.2, 4.8, 4.2 (poison meals 205, 172, 199, give or take
   14). So DT 0.1 would halve the cost, if checked.
-- **Pulse shape: stimulus safe, taste not.** A stimulus works by charge: the same charge over 0.25 to 8 circuit
-  ticks gave 0.85-0.86 spikes per pulse. Learning works by how long the taste node stays above 0.5 (a steep sigmoid,
-  with LEARN's gain set by hand for "above half about 1.3 ticks"): the same charge over 0.25, 1, 2 and 4 circuit ticks
+- **Pulse shape: stimulus safe, taste not.** A stimulus works by charge: the same charge over 0.6 to 20 ms (0.25 to 8 circuit
+  ticks) gave 0.85-0.86 spikes per pulse. Learning works by how long the taste node stays above 0.5 (a steep sigmoid,
+  with LEARN's gain set by hand for "above half about 1.3 circuit ticks", 3 ms): the same charge over 0.6, 2.5, 5 and 10 ms
   moved p by 0.22, 0.29, 0.36 and 0.05. Harmless while the pulse is fixed, but an evolved circuit would tune itself
   to that exact rectangle. An input delivered as a charge at an instant, with the input node's own leak setting how
   long it lasts, leaves no tick in the interface (it changes both input nodes, and LEARN would need recalibrating).
@@ -284,18 +285,18 @@ which subthreshold silicon shares (Sarpeshkar, Delbrueck and Mead 1993), and the
   a node 4 times as big quieter by 2, not 4, every part mismatched by about 10%, a pulse's charge exact wherever it
   falls.
 - **Calibration.** SHOT (0.005) and MEMBRANE (0.02) share the old variance equally for the standard neuron at rest
-  (its two elements carry 1.87 each, cancelling: gross 3.7, net 0). Without mismatch it fires 4.4 times per 1,000
-  ticks on its own, as before (4.6; the 6.5 above was with older parameters), one spike per pulse.
+  (its two elements carry 1.87 each, cancelling: gross 3.7, net 0). Without mismatch it fires 4.4 times per 10 s
+  on its own, as before (4.6; the 6.5 above was with older parameters), one spike per pulse.
 - **The paper's neuron doesn't survive 10% mismatch.** With it, about a third of standard neurons (35% of 200) fire
-  on their own at 20-60 per 1,000 ticks (median 2), and a pulse gives 1.46 spikes on average, not 1 (3%: 11.5 per
-  1,000, 1.15). Its excitability balances fast positive against slow negative feedback of equal gain and bias -1.6,
+  on their own at 20-60 per 10 s (median 2), and a pulse gives 1.46 spikes on average, not 1 (3%: 11.5 per
+  10 s, 1.15). Its excitability balances fast positive against slow negative feedback of equal gain and bias -1.6,
   near the bistable range (bias -1.2 to -1.4, above): a 10% shift in bias or in either gain tips it into firing by
   itself. Biology keeps such neurons in shape by homeostasis; these circuits have none, except the adjusting
   circuit's rung 0, which adjusts each neuron's excitability.
-- **Every circuit brain collapses** (32 lives of 10,000 ticks, the same lives under the old and the new simulator;
+- **Every circuit brain collapses** (32 lives of 100 s, the same lives under the old and the new simulator;
   food:poison in the last third, old -> new): designed circuit 4.6 -> 1.0, recruiting circuit 5.4 -> 1.3, adjusting
   1.7 -> 0.9, healing circuit 1.2 -> 1.2 and healing cascade 0.9 -> 1.2 (these two need longer lives: their
-  leaderboard is at 30,000 and 100,000 ticks). Taking mismatch away (a diagnostic only) separates the causes: the
+  leaderboard is at 300 and 1,000 s). Taking mismatch away (a diagnostic only) separates the causes: the
   designed circuit 2.54 with none, 1.63 at 3%, 1.02 at 10%; the recruiting circuit 3.27, 1.81, 1.26; the healing
   circuit 1.52, 1.50, 1.18. So mostly mismatch; the rest of the designed circuit's loss (4.6 to 2.5 with no
   mismatch) is the new noise or the random timing, not yet traced. These brains were built by hand on
@@ -316,13 +317,13 @@ which subthreshold silicon shares (Sarpeshkar, Delbrueck and Mead 1993), and the
 - **Mismatch breaks the neurons, not the learning.** With mismatch in one group of parts at a time (64 lives, last
   third food:poison): none 1.70, the neurons' own parts 0.99, synapses 2.05, learning (E, P and their writers) 1.59,
   hush 2.15, taste 2.02. So the neurons alone do the damage. Of 200 standard neurons under 10% mismatch, half fire
-  more than 10 times per 1,000 ticks of their own accord, and those that don't miss pulses; moving them further from
+  more than 10 times per 10 s of their own accord, and those that don't miss pulses; moving them further from
   threshold trades one for the other (bias -2.0: 14% fire on their own, 28% of pulses missed; no margin tried gives
   both under 10%). An excitable neuron sits near the point where it starts to oscillate, and 10% mismatch pushes a
   share of them over it.
 - **Rate homeostasis restores the rates, not the function** (an experiment, not kept): each neuron given a knob, a
   memory node charged by a steady current and drained by its own spikes, feeding a current back into it, so that it
-  settles at its designed rate (sensors 19, motors 45 per 1,000 ticks; the target mismatched like every part). Under
+  settles at its designed rate (sensors 19, motors 45 per 10 s; the target mismatched like every part). Under
   10% mismatch the rates come back (sensors from 0.1-179 to 12-37, 10th-90th percentile; motors from 0.3-199 to
   31-74), but food:poison barely moves (1.11 against 0.97; sensors only 0.92). A rate can't tell a spike the eye
   caused from one of the neuron's own, so a dull sensor is woken until noise fills its quota. The minimal search's

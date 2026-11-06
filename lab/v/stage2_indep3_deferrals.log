@@ -1,0 +1,8 @@
+0.01 ordinary  n (+ n 1)) (after 0.0005 (set m (+ meals 69 deferrals run 15
+0.01 ordinary  n (+ n 1)) (after 0.02 (set m (+ m meals 63 deferrals run 63
+0.01 fast  n (+ n 1)) (after 0.0005 (set m (+ meals 69 deferrals run 15
+0.01 fast  n (+ n 1)) (after 0.02 (set m (+ m meals 63 deferrals run 63
+0.00125 ordinary  n (+ n 1)) (after 0.0005 (set m (+ meals 69 deferrals run 3
+0.00125 ordinary  n (+ n 1)) (after 0.02 (set m (+ m meals 72 deferrals run 72
+0.00125 fast  n (+ n 1)) (after 0.0005 (set m (+ meals 69 deferrals run 3
+0.00125 fast  n (+ n 1)) (after 0.02 (set m (+ m meals 72 deferrals run 72

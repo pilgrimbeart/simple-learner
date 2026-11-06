@@ -1,0 +1,144 @@
+plain        circuit dt  1.25 ms lives 6 errors 0 []
+    beats 20458 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 20458 motion_bad_ticks 0 meals 370 meals_dropped 0 taste_ok 370 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 0 missed 3 defer_sched 0 defer_run 0 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 0 meal_dt_max 0.000569 meal_dt_mean 1.09e-05 extra_worst 1 missed_worst 0.993 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+plain        bank    dt  1.25 ms lives 6 errors 0 []
+    beats 20970 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 20970 motion_bad_ticks 0 meals 432 meals_dropped 0 taste_ok 432 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 0 missed 3 defer_sched 0 defer_run 0 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 0 meal_dt_max 0.000983 meal_dt_mean 1.55e-05 extra_worst 1 missed_worst 0.983 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+digest       circuit dt  1.25 ms lives 6 errors 0 []
+    beats 19696 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 19696 motion_bad_ticks 0 meals 362 meals_dropped 0 taste_ok 362 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 0 missed 1 defer_sched 0 defer_run 0 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 0 meal_dt_max 0.000786 meal_dt_mean 9.88e-06 extra_worst 1 missed_worst 0.993 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+digest       bank    dt  1.25 ms lives 6 errors 0 []
+    beats 12753 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 12753 motion_bad_ticks 0 meals 260 meals_dropped 0 taste_ok 260 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 0 missed 1 defer_sched 0 defer_run 0 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 6.94e-15 meal_dt_max 0.000731 meal_dt_mean 1.28e-05 extra_worst 1 missed_worst 0.982 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+unreliable   circuit dt  1.25 ms lives 6 errors 0 []
+    beats 20070 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 20070 motion_bad_ticks 0 meals 387 meals_dropped 0 taste_ok 387 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 0 missed 3 defer_sched 0 defer_run 0 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 0 meal_dt_max 0.000964 meal_dt_mean 1.39e-05 extra_worst 1 missed_worst 0.984 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+unreliable   bank    dt  1.25 ms lives 6 errors 0 []
+    beats 19693 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 19693 motion_bad_ticks 0 meals 412 meals_dropped 0 taste_ok 412 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 0 missed 5 defer_sched 0 defer_run 0 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 0 meal_dt_max 0.00084 meal_dt_mean 1.37e-05 extra_worst 1 missed_worst 0.983 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+rarefeast    circuit dt  1.25 ms lives 6 errors 0 []
+    beats 20458 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 20458 motion_bad_ticks 0 meals 370 meals_dropped 0 taste_ok 370 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 0 missed 3 defer_sched 0 defer_run 0 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 0 meal_dt_max 0.000569 meal_dt_mean 1.09e-05 extra_worst 1 missed_worst 0.993 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+rarefeast    bank    dt  1.25 ms lives 6 errors 0 []
+    beats 20970 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 20970 motion_bad_ticks 0 meals 432 meals_dropped 0 taste_ok 432 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 0 missed 3 defer_sched 0 defer_run 0 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 0 meal_dt_max 0.000983 meal_dt_mean 1.55e-05 extra_worst 1 missed_worst 0.983 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+decoys       circuit dt  1.25 ms lives 6 errors 0 []
+    beats 20509 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 20509 motion_bad_ticks 0 meals 366 meals_dropped 0 taste_ok 250 taste_bad 0 zero_worth 116 orphan_tastes 0 extra 0 missed 4 defer_sched 0 defer_run 0 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 0 meal_dt_max 0.000881 meal_dt_mean 1.33e-05 extra_worst 1 missed_worst 0.968 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+decoys       bank    dt  1.25 ms lives 6 errors 0 []
+    beats 19915 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 19915 motion_bad_ticks 0 meals 401 meals_dropped 0 taste_ok 261 taste_bad 0 zero_worth 140 orphan_tastes 0 extra 0 missed 2 defer_sched 0 defer_run 0 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 0 meal_dt_max 0.000983 meal_dt_mean 1.37e-05 extra_worst 1 missed_worst 0.994 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+swap10       circuit dt  1.25 ms lives 6 errors 0 []
+    beats 20739 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 20739 motion_bad_ticks 0 meals 379 meals_dropped 0 taste_ok 379 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 0 missed 4 defer_sched 0 defer_run 0 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 0 meal_dt_max 0.000441 meal_dt_mean 8.34e-06 extra_worst 1 missed_worst 0.993 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+swap10       bank    dt  1.25 ms lives 6 errors 0 []
+    beats 20227 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 20227 motion_bad_ticks 0 meals 368 meals_dropped 0 taste_ok 368 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 0 missed 4 defer_sched 0 defer_run 0 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 0 meal_dt_max 0.000567 meal_dt_mean 1.23e-05 extra_worst 1 missed_worst 0.982 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+alternate    circuit dt  1.25 ms lives 6 errors 0 []
+    beats 19642 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 19642 motion_bad_ticks 0 meals 364 meals_dropped 0 taste_ok 364 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 0 missed 0 defer_sched 0 defer_run 0 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 0 meal_dt_max 0.000358 meal_dt_mean 8.87e-06 extra_worst 1 missed_worst 1 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+alternate    bank    dt  1.25 ms lives 6 errors 0 []
+    beats 18636 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 18636 motion_bad_ticks 0 meals 334 meals_dropped 0 taste_ok 334 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 0 missed 0 defer_sched 0 defer_run 0 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 0 meal_dt_max 0.000855 meal_dt_mean 1.61e-05 extra_worst 1 missed_worst 1 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+keylock      circuit dt  1.25 ms lives 6 errors 0 []
+    beats 20458 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 20458 motion_bad_ticks 0 meals 370 meals_dropped 0 taste_ok 370 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 0 missed 3 defer_sched 0 defer_run 0 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 0 meal_dt_max 0.000569 meal_dt_mean 1.09e-05 extra_worst 1 missed_worst 0.993 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+keylock      bank    dt  1.25 ms lives 6 errors 0 []
+    beats 22962 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 22962 motion_bad_ticks 0 meals 474 meals_dropped 0 taste_ok 474 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 0 missed 2 defer_sched 0 defer_run 0 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 6.94e-15 meal_dt_max 0.000686 meal_dt_mean 1.19e-05 extra_worst 1 missed_worst 0.994 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+after_meal   circuit dt  1.25 ms lives 6 errors 0 []
+    beats 20458 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 20458 motion_bad_ticks 0 meals 370 meals_dropped 0 taste_ok 370 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 0 missed 3 defer_sched 370 defer_run 370 defer_lost 0 defer_backwards 0
+    fire_err 4.89e-13 end_err 9.51e-13 meal_dt_max 0.000569 meal_dt_mean 1.09e-05 extra_worst 1 missed_worst 0.993 defer_late_max 0.000746 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+after_meal   bank    dt  1.25 ms lives 6 errors 0 []
+    beats 20970 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 20970 motion_bad_ticks 0 meals 432 meals_dropped 0 taste_ok 432 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 0 missed 3 defer_sched 432 defer_run 432 defer_lost 0 defer_backwards 0
+    fire_err 6.25e-14 end_err 1.21e-13 meal_dt_max 0.000983 meal_dt_mean 1.55e-05 extra_worst 1 missed_worst 0.983 defer_late_max 0.000742 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+after_meal0  circuit dt  1.25 ms lives 6 errors 0 []
+    beats 20458 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 20458 motion_bad_ticks 0 meals 370 meals_dropped 0 taste_ok 370 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 0 missed 3 defer_sched 370 defer_run 370 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 0 meal_dt_max 0.000569 meal_dt_mean 1.09e-05 extra_worst 1 missed_worst 0.993 defer_late_max 0.00125 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+after_meal0  bank    dt  1.25 ms lives 6 errors 0 []
+    beats 20970 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 20970 motion_bad_ticks 0 meals 432 meals_dropped 0 taste_ok 432 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 0 missed 3 defer_sched 432 defer_run 432 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 0 meal_dt_max 0.000983 meal_dt_mean 1.55e-05 extra_worst 1 missed_worst 0.983 defer_late_max 0.00124 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+after_tick   circuit dt  1.25 ms lives 6 errors 0 []
+    beats 20458 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 20458 motion_bad_ticks 0 meals 370 meals_dropped 0 taste_ok 370 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 0 missed 3 defer_sched 2908 defer_run 2908 defer_lost 0 defer_backwards 0
+    fire_err 5.5e-13 end_err 1.1e-12 meal_dt_max 0.000569 meal_dt_mean 1.08e-05 extra_worst 1 missed_worst 0.993 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+after_tick   bank    dt  1.25 ms lives 6 errors 0 []
+    beats 20970 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 20970 motion_bad_ticks 0 meals 432 meals_dropped 0 taste_ok 432 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 0 missed 3 defer_sched 2908 defer_run 2908 defer_lost 0 defer_backwards 0
+    fire_err 5.67e-13 end_err 1.13e-12 meal_dt_max 0.000983 meal_dt_mean 1.55e-05 extra_worst 1 missed_worst 0.983 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+after_pulse  circuit dt  1.25 ms lives 6 errors 0 []
+    beats 20458 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 20458 motion_bad_ticks 0 meals 370 meals_dropped 0 taste_ok 370 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 0 missed 3 defer_sched 225 defer_run 225 defer_lost 0 defer_backwards 0
+    fire_err 2.82e-13 end_err 5.55e-13 meal_dt_max 0.000569 meal_dt_mean 1.09e-05 extra_worst 1 missed_worst 0.993 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+after_pulse  bank    dt  1.25 ms lives 6 errors 0 []
+    beats 20970 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 20970 motion_bad_ticks 0 meals 432 meals_dropped 0 taste_ok 432 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 0 missed 3 defer_sched 226 defer_run 226 defer_lost 0 defer_backwards 0
+    fire_err 6.94e-15 end_err 2.84e-14 meal_dt_max 0.000983 meal_dt_mean 1.55e-05 extra_worst 1 missed_worst 0.983 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+plain        circuit dt 10.00 ms lives 20 errors 0 []
+    beats 70072 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 70072 motion_bad_ticks 0 meals 1288 meals_dropped 0 taste_ok 1288 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 1 missed 32 defer_sched 0 defer_run 0 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 6.94e-15 meal_dt_max 0.00974 meal_dt_mean 0.000821 extra_worst 1.02 missed_worst 0.807 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+plain        bank    dt 10.00 ms lives 20 errors 0 []
+    beats 70259 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 70259 motion_bad_ticks 0 meals 1318 meals_dropped 0 taste_ok 1318 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 1 missed 37 defer_sched 0 defer_run 0 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 6.94e-15 meal_dt_max 0.00927 meal_dt_mean 0.000774 extra_worst 1.02 missed_worst 0.881 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+digest       circuit dt 10.00 ms lives 20 errors 0 []
+    beats 70941 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 70941 motion_bad_ticks 0 meals 1373 meals_dropped 0 taste_ok 1373 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 0 missed 30 defer_sched 0 defer_run 0 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 6.94e-15 meal_dt_max 0.00939 meal_dt_mean 0.000825 extra_worst 1 missed_worst 0.82 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+digest       bank    dt 10.00 ms lives 20 errors 0 []
+    beats 44764 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 44764 motion_bad_ticks 0 meals 909 meals_dropped 0 taste_ok 909 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 1 missed 26 defer_sched 0 defer_run 0 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 6.94e-15 meal_dt_max 0.00845 meal_dt_mean 0.000785 extra_worst 1 missed_worst 0.856 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+unreliable   circuit dt 10.00 ms lives 20 errors 0 []
+    beats 70278 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 70278 motion_bad_ticks 0 meals 1251 meals_dropped 0 taste_ok 1251 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 0 missed 30 defer_sched 0 defer_run 0 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 6.94e-15 meal_dt_max 0.00939 meal_dt_mean 0.00079 extra_worst 1 missed_worst 0.829 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+unreliable   bank    dt 10.00 ms lives 20 errors 0 []
+    beats 68363 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 68363 motion_bad_ticks 0 meals 1296 meals_dropped 0 taste_ok 1296 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 0 missed 40 defer_sched 0 defer_run 0 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 6.94e-15 meal_dt_max 0.00922 meal_dt_mean 0.000859 extra_worst 1 missed_worst 0.881 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+rarefeast    circuit dt 10.00 ms lives 20 errors 0 []
+    beats 70072 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 70072 motion_bad_ticks 0 meals 1288 meals_dropped 0 taste_ok 1288 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 1 missed 32 defer_sched 0 defer_run 0 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 6.94e-15 meal_dt_max 0.00974 meal_dt_mean 0.000821 extra_worst 1.02 missed_worst 0.807 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+rarefeast    bank    dt 10.00 ms lives 20 errors 0 []
+    beats 70259 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 70259 motion_bad_ticks 0 meals 1318 meals_dropped 0 taste_ok 1318 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 1 missed 37 defer_sched 0 defer_run 0 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 6.94e-15 meal_dt_max 0.00927 meal_dt_mean 0.000774 extra_worst 1.02 missed_worst 0.881 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+decoys       circuit dt 10.00 ms lives 20 errors 0 []
+    beats 69956 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 69956 motion_bad_ticks 0 meals 1283 meals_dropped 0 taste_ok 820 taste_bad 0 zero_worth 463 orphan_tastes 0 extra 1 missed 31 defer_sched 0 defer_run 0 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 6.94e-15 meal_dt_max 0.00974 meal_dt_mean 0.000839 extra_worst 1.02 missed_worst 0.807 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+decoys       bank    dt 10.00 ms lives 20 errors 0 []
+    beats 71176 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 71176 motion_bad_ticks 0 meals 1341 meals_dropped 0 taste_ok 892 taste_bad 0 zero_worth 449 orphan_tastes 0 extra 1 missed 43 defer_sched 0 defer_run 0 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 6.94e-15 meal_dt_max 0.00927 meal_dt_mean 0.000763 extra_worst 1.02 missed_worst 0.879 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+swap10       circuit dt 10.00 ms lives 20 errors 0 []
+    beats 68680 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 68680 motion_bad_ticks 0 meals 1241 meals_dropped 0 taste_ok 1241 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 1 missed 19 defer_sched 0 defer_run 0 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 6.94e-15 meal_dt_max 0.00957 meal_dt_mean 0.000824 extra_worst 1 missed_worst 0.825 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+swap10       bank    dt 10.00 ms lives 20 errors 0 []
+    beats 67821 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 67821 motion_bad_ticks 0 meals 1272 meals_dropped 0 taste_ok 1272 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 1 missed 36 defer_sched 0 defer_run 0 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 6.94e-15 meal_dt_max 0.00903 meal_dt_mean 0.000791 extra_worst 1 missed_worst 0.823 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+alternate    circuit dt 10.00 ms lives 20 errors 0 []
+    beats 71480 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 71480 motion_bad_ticks 0 meals 1384 meals_dropped 0 taste_ok 1384 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 0 missed 30 defer_sched 0 defer_run 0 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 6.94e-15 meal_dt_max 0.00973 meal_dt_mean 0.000871 extra_worst 1 missed_worst 0.81 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+alternate    bank    dt 10.00 ms lives 20 errors 0 []
+    beats 68834 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 68834 motion_bad_ticks 0 meals 1324 meals_dropped 0 taste_ok 1324 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 0 missed 26 defer_sched 0 defer_run 0 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 6.94e-15 meal_dt_max 0.00864 meal_dt_mean 0.000795 extra_worst 1 missed_worst 0.902 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+keylock      circuit dt 10.00 ms lives 20 errors 0 []
+    beats 70226 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 70226 motion_bad_ticks 0 meals 1298 meals_dropped 0 taste_ok 1298 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 1 missed 29 defer_sched 0 defer_run 0 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 6.94e-15 meal_dt_max 0.00959 meal_dt_mean 0.00082 extra_worst 1.02 missed_worst 0.817 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+keylock      bank    dt 10.00 ms lives 20 errors 0 []
+    beats 82437 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 82437 motion_bad_ticks 0 meals 1621 meals_dropped 0 taste_ok 1621 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 1 missed 44 defer_sched 0 defer_run 0 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 6.94e-15 meal_dt_max 0.00988 meal_dt_mean 0.000821 extra_worst 1.02 missed_worst 0.857 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+after_meal   circuit dt 10.00 ms lives 20 errors 0 []
+    beats 70072 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 70072 motion_bad_ticks 0 meals 1288 meals_dropped 0 taste_ok 1288 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 1 missed 32 defer_sched 1288 defer_run 1288 defer_lost 0 defer_backwards 0
+    fire_err 5.68e-13 end_err 8.26e-13 meal_dt_max 0.00974 meal_dt_mean 0.000821 extra_worst 1.02 missed_worst 0.807 defer_late_max 0.0095 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+after_meal   bank    dt 10.00 ms lives 20 errors 0 []
+    beats 70259 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 70259 motion_bad_ticks 0 meals 1318 meals_dropped 0 taste_ok 1318 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 1 missed 37 defer_sched 1318 defer_run 1318 defer_lost 0 defer_backwards 0
+    fire_err 1.09e-12 end_err 1.47e-12 meal_dt_max 0.00927 meal_dt_mean 0.000774 extra_worst 1.02 missed_worst 0.881 defer_late_max 0.0095 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+after_meal0  circuit dt 10.00 ms lives 20 errors 0 []
+    beats 70072 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 70072 motion_bad_ticks 0 meals 1288 meals_dropped 0 taste_ok 1288 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 1 missed 32 defer_sched 1288 defer_run 1288 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 6.94e-15 meal_dt_max 0.00974 meal_dt_mean 0.000821 extra_worst 1.02 missed_worst 0.807 defer_late_max 0.01 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+after_meal0  bank    dt 10.00 ms lives 20 errors 0 []
+    beats 70259 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 70259 motion_bad_ticks 0 meals 1318 meals_dropped 0 taste_ok 1318 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 1 missed 37 defer_sched 1318 defer_run 1318 defer_lost 0 defer_backwards 0
+    fire_err 0 end_err 6.94e-15 meal_dt_max 0.00927 meal_dt_mean 0.000774 extra_worst 1.02 missed_worst 0.881 defer_late_max 0.01 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+after_tick   circuit dt 10.00 ms lives 20 errors 0 []
+    beats 70072 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 70072 motion_bad_ticks 0 meals 1288 meals_dropped 0 taste_ok 1288 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 1 missed 32 defer_sched 10126 defer_run 10126 defer_lost 0 defer_backwards 0
+    fire_err 1.14e-12 end_err 2.24e-12 meal_dt_max 0.00973 meal_dt_mean 0.000815 extra_worst 1.02 missed_worst 0.807 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+after_tick   bank    dt 10.00 ms lives 20 errors 0 []
+    beats 70259 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 70259 motion_bad_ticks 0 meals 1318 meals_dropped 0 taste_ok 1318 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 1 missed 37 defer_sched 10126 defer_run 10126 defer_lost 0 defer_backwards 0
+    fire_err 1.14e-12 end_err 2.21e-12 meal_dt_max 0.00924 meal_dt_mean 0.000768 extra_worst 1.02 missed_worst 0.881 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+after_pulse  circuit dt 10.00 ms lives 20 errors 0 []
+    beats 70072 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 70072 motion_bad_ticks 0 meals 1288 meals_dropped 0 taste_ok 1288 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 1 missed 32 defer_sched 661 defer_run 661 defer_lost 0 defer_backwards 0
+    fire_err 1.13e-12 end_err 1.88e-12 meal_dt_max 0.00974 meal_dt_mean 0.000819 extra_worst 1.02 missed_worst 0.807 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)
+after_pulse  bank    dt 10.00 ms lives 20 errors 0 []
+    beats 70259 beats_clipped 0 beats_drawn 0 beat_mismatch 0 firings 70259 motion_bad_ticks 0 meals 1318 meals_dropped 0 taste_ok 1318 taste_bad 0 zero_worth 0 orphan_tastes 0 extra 1 missed 37 defer_sched 671 defer_run 671 defer_lost 0 defer_backwards 0
+    fire_err 1.11e-12 end_err 1.9e-12 meal_dt_max 0.00927 meal_dt_mean 0.000772 extra_worst 1.02 missed_worst 0.881 defer_late_max 0 defer_early_max 0   (motion errors in mm, rad, mm/s; moments in s)

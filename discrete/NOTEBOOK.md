@@ -115,7 +115,7 @@ per meal spent resting, moving and thinking), gain rate (meals per 10 s), food, 
 - **A split eye, prepared for the user's decision** (D24; world.py unchanged, the split made in an experiment's
   wrapper): each eye's pulses tagged by which half of the corridor saw them, the halves wired at random. B told the
   colour, plus a reflex: one food pulse or more from one half and at most one from the other in 0.2 s turns it
-  towards that half, by one beat with its partner a tick late (7 degrees, not a lone beat's 18: finer turning by
+  towards that half, by one beat with its partner 10 ms later (7 degrees, not a lone beat's 18: finer turning by
   timing, no body change). Which motor turns towards which half is learned from its own scan in a median 12 s
   (right in 254 of 256 lives by the end). Held out on fresh seeds: **3.02 [2.92, 3.11] against B's 2.49 [2.40,
   2.58]** (+21%; told the map, 3.14); on lopsided bodies told their balance, 2.71 against 2.32 (+17%).
@@ -1078,7 +1078,7 @@ one block turns another on) must be benched too; the stray firing lived between 
 
 *A fix tried, and stopped.* Motor B latched to the beat (`cmos.pol`'s `edge`: DRIVE-or-RUN through a transmission
 gate while the beat's output y is high, held by a weak keeper through the beat, B on nor(y, latched); 12 transistors,
-0.4 nW more) only halved the stray firing (B alone in 23-38% of drives' first ticks, against 54-57%; four traced lives
+0.4 nW more) only halved the stray firing (B alone in 23-38% of drives' first 10 ms, against 54-57%; four traced lives
 ate 50 food against 45): B's first firing waited for the next beat, but A still missed it at times. Not chased
 further. **The user's call (2026-10-29): the point of SPICE is to check we're close to something physically
 realisable, not to match the model exactly.** B is: it does the job held out in SKY130 at 3.7 nW, at 80% of the
@@ -1529,8 +1529,8 @@ accidental. Chasing a tail at the same speed rarely catches it unless it turns.
 
 Mended after the user watched (2026-10-30): robots drove through each other, since only the two coloured discs
 collided; now five discs cover each triangle (mouth, tail, rear corners, centre) and the spring is stiffer (K 3000;
-still slow against the tick). Over 300 s, robots touch in 32% of ticks, overlapping by a median 0.16 mm, 0.66 mm at
-the 99th percentile, 1.3 mm at worst (a disc is 2 mm across). The bitten now taste -1 a tick (pain as bad taste:
+still slow against the tick). Over 300 s, robots touch for 32% of the time, overlapping by a median 0.16 mm, 0.66 mm at
+the 99th percentile, 1.3 mm at worst (a disc is 2 mm across). The bitten now taste -1 for each 10 ms bitten (pain as bad taste:
 the user's decision); B's doubt now rises with pain whatever its eyes see, flipping its bit 10 to 14 times a life.
 The view shows its speed against real time and slows to 1/100 of it.
 
@@ -1608,7 +1608,7 @@ outcome. Chosen on arenas 0-15 (net over the tracker): win 1 s, sd 0.3: +0.138; 
 sd 0.03: +0.202. Judged on fresh arenas 100-147: **+0.186 [+0.173, +0.199]**, a turn kept in 696 of 721 lives, its
 loss to bites halved (0.37 to 0.18 a 10 s); the scripted turn on the same arenas +0.241 [+0.223, +0.259]: the grower
 gets 77% of it. (Motor 0 kept 410 times, motor 1 286: B's drive is not symmetric in its motors, its lone first beat
-on motor 1.) Traced (`findbite.py`): bitten, the grower fires its motor and the bite is broken within a tick, then
+on motor 1.) Traced (`findbite.py`): bitten, the grower fires its motor and the bite is broken within 10 ms, then
 it spins on, 480 degrees in the 0.5 s response; a shorter scripted response does as well (0.1 s +0.241, 0.04 s
 +0.244 on arenas 0-15), so the response's length doesn't matter and the scripted ceiling stands.
 
@@ -1674,7 +1674,7 @@ triangle's circumradius), its front half red and its rear half blue, its mouth t
 thrusters on its rear rim (their physics unchanged: a firing adds forward speed and a turn); collisions a spring along
 the line of centres, frictionless, so no push spins a robot; the eyes see the colour of the half each ray meets; a
 mouth within 0.3 mm of another's rim, on its rear half, bites. The triangle arena is kept as
-`lab/arena_triangle.py`. Over 200 s, robots touch in 92% of ticks (they clump), overlapping a median 0.07 mm,
+`lab/arena_triangle.py`. Over 200 s, robots touch for 92% of the time (they clump), overlapping a median 0.07 mm,
 0.25 mm at the 99th percentile (rarely far more, 3.9 mm once: probably a newborn placed on another robot, untraced).
 A rear half is a far bigger target than a tail disc, so robots eat two to three times as much (16 arenas of 300 s,
 meals eaten a robot a 10 s): told B 0.76 [0.73, 0.78] (0.33 on the triangle), the tracker 1.08 [1.06, 1.11] (0.40), so
@@ -2038,7 +2038,7 @@ within 1 s):
 The same cliff past the mouth's 1 mm in all three: blocks in the mouth's path are eaten by going straight, the rest
 only when a turn happens to bring them in. **No sideways sensing emerged**: evolution found a B-like forager, a
 little worse. Not yet known whether the pulses' timing carries the offset well enough to use (a far block gives
-about one pulse a sweep, and the spin runs on 1.5 ticks after a thruster stops: minimal/NOTEBOOK.md, M11), so the
+about one pulse a sweep, and the spin runs on 15 ms after a thruster stops: minimal/NOTEBOOK.md, M11), so the
 next measure is how much the timing of a block's pulses, against the creature's own beats, tells about its offset
 (the bound on timing, `BOUNDS.md`, Time) before evolving bigger.
 
@@ -2057,7 +2057,7 @@ is fixed). Gradient-boosted trees, cross-validated by life:
 **Under B's movements, the timing carries almost nothing about where across the corridor a block is**: beyond the
 mouth's reach the side is guessed no better than by always guessing the side the sweep brings blocks in from. B's
 scan turns fast (a beat turns the body about 18 degrees, 16 rad/s fading at 50 per s, against a corridor about 30
-degrees wide at 7.5 mm), so a block crosses the corridor within a tick or two and gives about one pulse. So
+degrees wide at 7.5 mm), so a block crosses the corridor within 10-20 ms and gives about one pulse. So
 sideways sensing would need movements made to probe (slow sweeps across a block seen), and those pay only once the
 reading exists, and the reading only once they do: a valley no small step of evolution crosses, which may be why it
 didn't emerge. Next: whether a probing movement (on a food pulse, single beats alternating left and right) makes
@@ -2163,8 +2163,8 @@ turn:
    past the mouth for any block already within 1.2 mm of its path. The halves split at the middle and the mouth
    eats within 1 mm of it, so many steers were at blocks already on course.
 
-**Finer turning, by timing** (no body change): the partner beat a tick late. A beat's turning speed fades at 50 per s,
-so its partner 10 ms later cancels all but 1 - e^-0.5 of the turn: about 7 degrees (two ticks, 12). The swing
+**Finer turning, by timing** (no body change): the partner beat 10 ms late. A beat's turning speed fades at 50 per s,
+so its partner 10 ms later cancels all but 1 - e^-0.5 of the turn: about 7 degrees (20 ms later, 12). The swing
 becomes about 0.7 mm, which helps a block 1-2 mm off and barely disturbs one on course. D22's conclusion that a
 beat's 18 degrees is too coarse was wrong about the body: finer turning was there, in time.
 
@@ -2194,7 +2194,7 @@ map learned against the truth (right by 24 s) and each steer; by 24 s it had eat
 the same life had eaten 17 and 2.
 
 **For the user**: a split eye is worth about +0.5 (+21%) to B with a reflex of a few parts: a window count per half
-(two counters), a comparator, a one-tick delay on one motor, and a saturating counter for the map, against the
+(two counters), a comparator, a 10 ms delay on one motor, and a saturating counter for the map, against the
 seer's yardstick of 3.95 for a perfect memory with a split eye (D21). The map is learned by the brain from its own
 movement, as B's balance is in D20: nothing about the body is told. Whether to make the eye split is the user's
 decision; until then, world.py stays as it is.
@@ -2580,3 +2580,12 @@ The user's decisions (2026-11-06): no in-life change to the brain or the brain-b
 **Halving the step** (`lab/stage2c_steps.py halve`, `lab/v/stage2c_halve.log`; six worlds, base and bank, 10 ms to 0.625 ms, 100 pairs a step on fresh seeds, before and after the conversion to seconds). (1) **Both loops reach the same limit**: at 0.625 ms the tick-locked loop and the loop in seconds agree in every world and arm within noise (plain base 2.45 and 2.44, bank 2.41 and 2.38; alternate bank 1.61 and 1.66; digest base -3.88 and -3.69), which is what a correct conversion must give, since the old loop's coarse parts (beats at the tick's start, one Euler step, one clipped taste a tick) vanish as the tick shrinks. (2) **The conversion bought most of the convergence**: at 10 ms the old loop was off its finest value by up to .8 (digest base -.77, digest bank -.34, plain and swap10 base +.21); in seconds, base is within .15 at 10 ms in all six. (3) **The bank still moves**: in seconds, at 10 ms it is .15 to .38 below its 0.625 ms value (alternate -.38, unreliable -.19), and in alternate it was still rising at the last halving (+.21 [+.06,+.36]). What remains counted once a tick in the bank (seconds.py): its outputs for a tick decided at the tick's start, so a taste acts from the next tick, and its slow nodes decayed per tick. (4) At 100 pairs a step the difference between steps has a 95% half-width of about .1 to .25, so the rule (two halvings within .05) can't be met at this size: my prediction C5.1, right. Being repeated on alternate and plain at 400 pairs, down to 0.3125 ms (`lab/stage2c_converge2.py`).
 
 **It settles** (`lab/stage2c_converge2.py`, `lab/v/stage2c_converge2.log`; seconds mode, 400 pairs a step, seeds 68000-69599). The bank in alternate: 1.44 at 2.5 ms, 1.49 at 1.25, 1.53 at 0.625, 1.52 at 0.3125 (successive differences +.05, +.03, -.01, each about ±.09); bank minus base 4.39, 4.45, 4.50, 4.51. Plain: base 2.42, 2.39, 2.41, 2.41; bank 2.39, 2.36, 2.38, 2.40; bank minus base -.03 throughout. So the earlier rise to 1.66 at 0.625 ms was 100 pairs' noise, and my prediction (still rising) was wrong. In seconds, every quantity here is within about .03 of its finest value from 1.25 ms, and within .08 from 2.5 ms; at 10 ms the bank reads up to .38 low. So the one-tick delay of the bank's reaction (its taste acts from the next tick) matters at 10 ms but not below about 2 ms, and needs no fix for now. Fine enough, for this body (fastest time constant 20 ms) and these brains: about 1.25 ms, a sixteenth of the body's fastest time constant, with results reported at 10 ms read as provisional. The strict rule (two halvings with 95% intervals inside ±.05) would need about 600 pairs a step.
+
+**The third independent check** (an agent, seeds 69600-69999, its own instruments; `lab/stage2_indep3_*.py`, `lab/v/stage2_indep3_*.log`, predictions first). It finished one of its five checks before its speed-up run filled the memory (my design: the instruments' per-tick record at 1.25 ms on seven workers), so checks 1, 2, 4 and 5 rest on its reading of the code, which I then tested. **Holds**: every one of about 1.6 million beats fires its thruster at its stated moment; the body's motion matches the exact exponential solution within 7e-15; every meal with a worth gives exactly one taste, of its sign, at the meal's moment. **Found, and fixed by me** (2026-11-06):
+- *A world could reach the brain on the fast path*: `(pulse k)` took any integer, and the compiled brain adds the pulse to its state at 26 + k, so `(pulse -1)` wrote its record of whether it was driving (confirmed: 200 ticks ran, no refusal). Now an eye or thruster named by a rule must be 0 or 1, or the world is refused.
+- *Meal moments early*: where the mouth's closest point fell past its segment's end, the engine went back from the clipped point, so a meal's moment (and its taste's) came up to a tick early: mean 3.0 ms at 10 ms, 0.6 ms at 1.25 ms. Now the first point within reach is solved exactly. In the reference engine itself, not only the fast path.
+- *Deferrals from a meal broken*: one due in the tick's last stretch was lost (15 of 69 `(after 0.0005 ...)` ran at 10 ms), and one due before the moment already reached ran with time going backwards, the body moved twice over the overlap; and deferrals from the tick stage due later in the tick ran at the next tick's start, or, if pending, all at the tick's start. Now each runs at its own moment, never before the moment reached, nothing added late is lost. Also in the reference engine.
+- *The fast path*: it raised an error instead of drawing in Python when a pulse rate was 10 or more a tick (now draws in Python, numpy's own, before any compiled draw); it chose the fused tick by the text "(thrust" or "(after", which "( thrust" passes (now a pattern); and its guard didn't hash the pulse methods it stands in for (now it does).
+- *What a firing costs* (the checker queried both cases): the user's decision (2026-11-06): a thruster costs when it fires, whoever made it fire (a world's late or spurious thrust is the creature's own thruster firing), and a command the world drops costs nothing, the break being between brain and thruster. That is what the engine already did; I had briefly changed both (pushes free, drops charged) and changed them back before stage 3's lives.
+- *Not fixed, measured*: the mouth's path between events is taken as a straight chord, so when translation and turning cancel a block the true path reaches is missed until the next tick: 2-3% of meals at 10 ms, about 1% at 1.25 ms; it vanishes as the step shrinks, as D34's halving requires.
+After the fixes: lives in the tick-locked mode unchanged (144 of 144 of the fingerprint); 24 of 144 in seconds mode changed, as they should; then the fast path identical to the ordinary one again (288 of 288, `lab/speed_fingerprint.py`; 624 of 624 in all 39 hand worlds, `lab/speed_crosscheck.py`). The checker's own seconds test re-run after the fixes (`lab/v/stage2_indep3_seconds_after_fixes.log`), before and after: meal moments' mean error against the true path 3.07 -> 0.81 ms at 10 ms and 0.58 -> 0.01 ms at 1.25 ms (what remains is the chord's: 2.6% and 0.7% of meals a tick late); deferrals run 22,414 of 26,799 -> 26,796 of 26,796 at 10 ms and 6,293 of 7,828 -> 7,871 of 7,871 at 1.25 ms, none early, the latest by at most one tick. D34's halving and settling were measured before these fixes; repeated at 400 pairs after them (`lab/v/stage2c_converge2_after_fixes.log`, the same seeds): every value within .01 of before (the bank in alternate 1.45, 1.49, 1.53, 1.52 from 2.5 to 0.3125 ms; plain flat), so the settling by about 1.25 ms stands.

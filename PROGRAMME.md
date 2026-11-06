@@ -99,6 +99,8 @@ We boil down during the search, not at the end, when nobody could reason about t
 | 2026-11-06 | The main session does the work itself, without sub-agents (tokens, cores); an independent check only when a gate needs one, asked first | the user |
 | 2026-11-06 | A world's description length judges nothing: near-duplicates are judged by their lives, and a world's size is the count of the generator's blocks it was drawn with, reported only | main session, prompted by the user |
 | 2026-11-06 | Stage 3's worlds from lab/stage3_gen.py (2b's generator in the 2c language; body constructs fixed from birth, by the user's rule), frozen before drawing; development seeds 80000-89999 | main session, under the user's delegation |
+| 2026-11-06 | A thruster costs when it fires, whoever made it fire; a command the world drops costs nothing (the break is between brain and thruster) | the user |
+| 2026-11-06 | Stage 3 keeps a world out if 3 or more of its 16 labelling lives carry a stage-5 label | main session, before stage 3's lives |
 | 2026-11-06 | One independent agent checks stage 2c (interface by construction, instruments, seconds, speed) before stage 3; final runs in seconds at about 1.25 ms; the reference only on worlds with a gap, at 2.5 ms | the user (approving the main session's plan) |
 | 2026-11-06 | Stage 2a is done (engine identical to the unmodified lives, worlds checked against their descriptions, labelled in bits); stage 2b starts, owing the independent engine check; the finer-step move goes to the user, and stage 3's headline is repeated at 5 ms | main session, under the user's delegation |
 
