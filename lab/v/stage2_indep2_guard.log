@@ -1,0 +1,96 @@
+== the old attacks (lab/stage2_indep_attacks.py's STAGE5)
+  unmarked delay1: REFUSED statically (this world can change the rules of the current constraints: a taste with no meal, or later than its meal (a taste injected); a taste lost)
+  unmarked lostgood: REFUSED statically (this world can change the rules of the current constraints: a taste lost)
+  unmarked rewire50: REFUSED statically (this world can change the rules of the current constraints: a rewiring)
+  unmarked lethal: REFUSED statically (this world can change the rules of the current constraints: a meal or a rule ends a life)
+  unmarked liar: REFUSED statically (this world can change the rules of the current constraints: a taste written from (- value), not the literal 1 or -1)
+  liar, lying meta only: REFUSED statically (this world can change the rules of the current constraints: marked as lying; a taste written from (- value), not the literal 1 or -1)
+  random liar: REFUSED statically (this world can change the rules of the current constraints: a taste written from (- value), not the literal 1 or -1)
+  taste of 0: REFUSED statically (this world can change the rules of the current constraints: a taste written from 0, not the literal 1 or -1)
+  taste of .5: REFUSED statically (this world can change the rules of the current constraints: a taste written from (* 0.5 value), not the literal 1 or -1)
+  score against taste: 0 of 40 lives accepted; REFUSED in 40 (first at tick 15: the score against the taste: tick 239, taste 1.0, the scored meals say -1.0)
+  brain written (bp): does not compile (LangError: not a statement: (bp hold 0.001) (stage tick))
+  brain told food (bp): does not compile (LangError: not a statement: (bp food (sensor F)) (stage tick))
+  taste from the score stage: 40 of 40 lives accepted; meals 3033, scored bad 391, tastes +2617/-380; bad meals under a +1 taste 0; food+poison ticks 10, verdicts against colour in them 0; 3-meal ticks 0; amounts good 2642, bad 391; meals after the first bad 2895; blocks hidden 0
+  meal dropped, block uneaten: 40 of 40 lives accepted; meals 2850, scored bad 376, tastes +2464/-371; bad meals under a +1 taste 0; food+poison ticks 5, verdicts against colour in them 0; 3-meal ticks 0; amounts good 2474, bad 376; meals after the first bad 2707; blocks hidden 0
+  colours swapped (truthful): 40 of 40 lives accepted; meals 3067, scored bad 400, tastes +2647/-389; bad meals under a +1 taste 0; food+poison ticks 10, verdicts against colour in them 10; 3-meal ticks 0; amounts good 2667, bad 400; meals after the first bad 2933; blocks hidden 0
+  world fires a thruster: 40 of 40 lives accepted; meals 2894, scored bad 389, tastes +2487/-383; bad meals under a +1 taste 0; food+poison ticks 6, verdicts against colour in them 0; 3-meal ticks 0; amounts good 2505, bad 389; meals after the first bad 2741; blocks hidden 0
+== reaching the brain
+  (world (on tick (set poison W))): LangError: not a word of the language: W (stage tick)
+  (world (let W 0) (on tick (set W 1))): compiles and lives; refused None
+  (world (table brain 1 1 0) (on tick (put brain 0 0 1))): compiles and lives; refused None
+  (world (on tick (set poison (W.brain.p)))): LangError: not a word of the language: (W.brain.p) (stage tick)
+  (world (on tick (set poison (__import__ 1)))): LangError: not a word of the language: (__import__ 1) (stage tick)
+  (world (each brain (set poison 0))): LangError: not a clause: each
+  (world (on tick (each W (set poison 0)))): compiles and lives; refused None
+  (world (let math 0) (on tick (set math 1))): compiles and lives; refused None
+  (world (on tick (set poison (bpget hold)))): LangError: not a word of the language: (bpget hold) (stage tick)
+  (world (on tick (bp hold 1))): LangError: not a statement: (bp hold 1) (stage tick)
+  (world (let x_W 0)): compiles and lives; refused None
+  (world (on tick (set poison (at brain 0)))): LangError: not a table: (at brain 0) (stage tick)
+  (world (const brain 1)): LangError: not a constant: brain
+  (world (on tick (set dt 0.02))): LangError: not writable here: (set dt 0.02) (stage tick)
+  (world (on tick (set now 5))): LangError: not writable here: (set now 5) (stage tick)
+  (world (on tick (set rng 0))): LangError: not writable here: (set rng 0) (stage tick)
+  (world (on tick (set TICK 0.02))): LangError: not writable here: (set TICK 0.02) (stage tick)
+  (world (on tick (set P F))): LangError: not writable here: (set P F) (stage tick)
+  (world (on tick (set seen 1))): LangError: not writable here: (set seen 1) (stage tick)
+  (world (on pulse (set eye 1))): LangError: not writable here: (set eye 1) (stage pulse)
+  (world (on fire (set motor 1))): LangError: not writable here: (set motor 1) (stage fire)
+  bank via arms.py (spy) vs universal_v.V, (world (told (if (chance 0.5) P F)) (on tick (set poison (if (chance 0.2) F P)))): 4 of 40 identical; first differing ticks [72, 72, 102, 133, 133, 159]
+  bank via arms.py (spy) vs universal_v.V, (world (told P) (on tick (set poison (if (chance 0.2) F P)))): 40 of 40 identical; first differing ticks []
+== new attacks
+  rewire by see at 50 s: 80 of 80 lives accepted; meals 5795, scored bad 953, tastes +4808/-934; bad meals under a +1 taste 0; food+poison ticks 16, verdicts against colour in them 0; 3-meal ticks 0; amounts good 4842, bad 953; meals after the first bad 5580; blocks hidden 0
+     pulses per eye before 50 s [12324, 12487], after [12625, 12222]
+  rewire by look at 50 s: 80 of 80 lives accepted; meals 5795, scored bad 953, tastes +4808/-934; bad meals under a +1 taste 0; food+poison ticks 16, verdicts against colour in them 0; 3-meal ticks 0; amounts good 4842, bad 953; meals after the first bad 5580; blocks hidden 0
+     pulses per eye before 50 s [12324, 12487], after [12625, 12222]
+  rewire by fire at 50 s: 80 of 80 lives accepted; meals 6016, scored bad 823, tastes +5147/-794; bad meals under a +1 taste 0; food+poison ticks 27, verdicts against colour in them 0; 3-meal ticks 0; amounts good 5193, bad 823; meals after the first bad 5801; blocks hidden 0
+     pulses per eye before 50 s [12324, 12487], after [12803, 12288]
+  life ended at first poison (body frozen): 80 of 80 lives accepted; meals 215, scored bad 80, tastes +133/-79; bad meals under a +1 taste 0; food+poison ticks 1, verdicts against colour in them 0; 3-meal ticks 0; amounts good 135, bad 80; meals after the first bad 0; blocks hidden 0
+  poison taste 1 s late (block hidden, put under the mouth): 80 of 80 lives accepted; meals 6047, scored bad 901, tastes +5124/-898; bad meals under a +1 taste 0; food+poison ticks 3, verdicts against colour in them 0; 3-meal ticks 0; amounts good 5146, bad 901; meals after the first bad 5797; blocks hidden 682
+  verdicts swapped in food+poison ticks (forced): 80 of 80 lives accepted; meals 38223, scored bad 16867, tastes +5192/-731; bad meals under a +1 taste 89; food+poison ticks 16032, verdicts against colour in them 16032; 3-meal ticks 104; amounts good 2.136e+04, bad 1.687e+04; meals after the first bad 38061; blocks hidden 0
+  one meal bad under a +1 taste (three food, forced): 80 of 80 lives accepted; meals 56254, scored bad 15900, tastes +24216/-0; bad meals under a +1 taste 15900; food+poison ticks 36, verdicts against colour in them 0; 3-meal ticks 15900; amounts good 4.035e+04, bad 1.59e+04; meals after the first bad 55974; blocks hidden 0
+  food worth 1e-6, tasting +1: 80 of 80 lives accepted; meals 6072, scored bad 789, tastes +5235/-764; bad meals under a +1 taste 0; food+poison ticks 24, verdicts against colour in them 0; 3-meal ticks 0; amounts good 0.005283, bad 789; meals after the first bad 5857; blocks hidden 0
+  poison worth 1000, tasting -1: 80 of 80 lives accepted; meals 6072, scored bad 789, tastes +5235/-764; bad meals under a +1 taste 0; food+poison ticks 24, verdicts against colour in them 0; 3-meal ticks 0; amounts good 5283, bad 7.89e+05; meals after the first bad 5857; blocks hidden 0
+  COST 1e-4 from 50 s: 80 of 80 lives accepted; meals 6072, scored bad 789, tastes +5235/-764; bad meals under a +1 taste 0; food+poison ticks 24, verdicts against colour in them 0; 3-meal ticks 0; amounts good 5283, bad 789; meals after the first bad 5857; blocks hidden 0
+  COST -1 from 50 s, by expression: 0 of 80 lives accepted; REFUSED in 80 (first at tick 5000: COST -1, THRUST 1.0: the score against the taste)
+  taste inverted by literals: 0 of 80 lives accepted; REFUSED in 80 (first at tick 13: the score against the taste: tick 239, taste -1, the scored meals say 1.0)
+  taste inverted by literals, score inverted too: 80 of 80 lives accepted; meals 6072, scored bad 789, tastes +5235/-764; bad meals under a +1 taste 0; food+poison ticks 24, verdicts against colour in them 24; 3-meal ticks 0; amounts good 5283, bad 789; meals after the first bad 5857; blocks hidden 0
+  half the food tastes lost, worth kept: 0 of 80 lives accepted; REFUSED in 80 (first at tick 13: a taste lost: tick 459, taste None, the scored meals say 1.0)
+  a Python error on poison (1/0): 0 of 80 lives accepted; CRASHED in 80 (ZeroDivisionError: division by zero)
+  a Python error on poison (log -1): 0 of 80 lives accepted; CRASHED in 80 (ValueError: math domain error)
+  food+food tick, one meal worth 0: 0 of 80 lives accepted; REFUSED in 80 (first at tick 13: a taste with no scored meal: tick 236, taste 1.0, the scored meals say None)
+== through the builder's runner (arms.one)
+  rewire by see at 50 s: 8 of 8 run; []
+  rewire by look at 50 s: 8 of 8 run; []
+  rewire by fire at 50 s: 8 of 8 run; []
+  life ended at first poison (body frozen): 8 of 8 run; []
+  poison taste 1 s late (block hidden, put under the mouth): 8 of 8 run; []
+  verdicts swapped in food+poison ticks (forced): 8 of 8 run; []
+  one meal bad under a +1 taste (three food, forced): 8 of 8 run; []
+  food worth 1e-6, tasting +1: 8 of 8 run; []
+  poison worth 1000, tasting -1: 8 of 8 run; []
+  COST 1e-4 from 50 s: 8 of 8 run; []
+  COST -1 from 50 s, by expression: 0 of 8 run; ['Refused: COST -1, THRUST 1.0: the score against the taste']
+  taste inverted by literals: 0 of 8 run; ['Refused: the score against the taste: tick 239, taste -1, the scored meals say 1.0']
+  taste inverted by literals, score inverted too: 8 of 8 run; []
+  half the food tastes lost, worth kept: 0 of 8 run; ['Refused: a taste lost: tick 459, taste None, the scored meals say 1.0']
+  a Python error on poison (1/0): 0 of 8 run; ['ZeroDivisionError: division by zero']
+  a Python error on poison (log -1): 0 of 8 run; ['ValueError: math domain error']
+  food+food tick, one meal worth 0: 0 of 8 run; ['Refused: a taste with no scored meal: tick 236, taste 1.0, the scored meals say None']
+  unmarked delay1: refused statically
+  unmarked lostgood: refused statically
+  unmarked rewire50: refused statically
+  unmarked lethal: refused statically
+  unmarked liar: refused statically
+  liar, lying meta only: refused statically
+  random liar: refused statically
+  taste of 0: refused statically
+  taste of .5: refused statically
+  score against taste: 0 of 8 run; ['Refused: the score against the taste: tick 239, taste 1.0, the scored meals say -1.0']
+  brain written (bp): refused statically
+  brain told food (bp): refused statically
+  taste from the score stage: 8 of 8 run; []
+  meal dropped, block uneaten: 8 of 8 run; []
+  colours swapped (truthful): 8 of 8 run; []
+  world fires a thruster: 8 of 8 run; []

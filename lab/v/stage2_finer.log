@@ -1,0 +1,33 @@
+done plain 0.01
+done swap10 0.01
+done digest 0.01
+done blind 0.01
+done noisy 0.01
+done bruise 0.01
+done moving 0.01
+done keylock 0.01
+done plain 0.005
+done swap10 0.005
+done digest 0.005
+done blind 0.005
+done noisy 0.005
+done bruise 0.005
+done moving 0.005
+done keylock 0.005
+plain        circuit  10 ms +2.695  5 ms +2.528  difference -0.168 [-0.333,-0.003]  MOVES
+plain        bank     10 ms +2.725  5 ms +2.509  difference -0.216 [-0.368,-0.056]  MOVES
+swap10       circuit  10 ms +0.048  5 ms -0.075  difference -0.123 [-0.284,+0.030]  holds
+swap10       bank     10 ms +0.596  5 ms +0.421  difference -0.175 [-0.406,+0.059]  holds
+digest       circuit  10 ms -4.778  5 ms -4.216  difference +0.563 [+0.231,+0.883]  MOVES
+digest       bank     10 ms -0.336  5 ms -0.029  difference +0.307 [+0.093,+0.526]  MOVES
+blind        circuit  10 ms +1.172  5 ms +1.159  difference -0.012 [-0.167,+0.155]  holds
+blind        bank     10 ms +1.159  5 ms +1.134  difference -0.025 [-0.183,+0.133]  holds
+noisy        circuit  10 ms +1.345  5 ms +1.232  difference -0.113 [-0.229,+0.008]  holds
+noisy        bank     10 ms +1.700  5 ms +1.743  difference +0.043 [-0.120,+0.200]  holds
+bruise       circuit  10 ms -5.020  5 ms -5.624  difference -0.604 [-0.882,-0.328]  MOVES
+bruise       bank     10 ms -4.390  5 ms -4.795  difference -0.404 [-0.625,-0.175]  MOVES
+moving       circuit  10 ms +2.442  5 ms +2.395  difference -0.046 [-0.198,+0.097]  holds
+moving       bank     10 ms +2.456  5 ms +2.241  difference -0.215 [-0.388,-0.059]  MOVES
+keylock      circuit  10 ms +4.051  5 ms +3.794  difference -0.257 [-0.414,-0.085]  MOVES
+keylock      bank     10 ms +5.139  5 ms +4.526  difference -0.614 [-0.846,-0.378]  MOVES
+queue finished

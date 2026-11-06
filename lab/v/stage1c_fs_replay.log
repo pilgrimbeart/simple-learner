@@ -1,0 +1,127 @@
+== 2(a) the hazard a floor implies. A rival's odds against the default under fixed share: O -> (1-h)O + h r, for small O (r the rival's share of a redraw). So the odds cannot fall below about h r: a soft floor at log2(h r) bits. A floor at 0 with threshold theta counters of u bits each: the distance from floor to the MAP's boundary is theta u = log2(1 / (h r)), so h r = 2^(-theta u). u = log2((1-e)/e) if the counter's unit is one hit at lie rate e.
+   e | u bits | h r at theta 2 (1/0) | h r at theta 3 (sequences) | total hazard a taste (1/0 + 5 sequences) | mean scored tastes between changes | seconds at 0.63 tastes a s
+   0.235 | 1.70 | 0.09437 | 0.02899 | 0.23931 | 4.2 | 6.6
+   0.2 | 2.00 | 0.06250 | 0.01562 | 0.14062 | 7.1 | 11.3
+   0.1 | 3.17 | 0.01235 | 0.00137 | 0.01920 | 52.1 | 82.7
+   0.05 | 4.25 | 0.00277 | 0.00015 | 0.00350 | 285.8 | 453.6
+   0.025 | 5.29 | 0.00066 | 0.00002 | 0.00074 | 1348.2 | 2139.9
+   So the setting of the hazard depends on which lie rate a counter's unit is read at; at the measured +1 of about 1.7 bits (D31), e .235, a total hazard of 0.24 a taste. No single h matches a counter across worlds whose lie rates differ, since a counter's step doesn't change with e, while a Bayesian's does.
+
+== tuning streams 61000-61063 x 2: 150 settings (h, e, pi of default)
+   tune plain done [0 s]
+   tune swap10 done [1 s]
+   tune alternate done [1 s]
+   tune pattern done [2 s]
+   tune digest done [2 s]
+   tune unreliable done [2 s]
+   tune patchy done [3 s]
+   tune weak done [3 s]
+   tune noisy done [3 s]
+   the settings closest to the bank by false picks and right-pick times (tuning):
+   (0.1, 0.2, 0.5) distance 0.0096 plain 0.00 diges 0.49 unrel 0.50 patch 0.10 weak 0.02 noisy 0.01 swap1 15.22 alter 9.10 patte 14.76
+   (0.03, 0.05, 0.9) distance 0.0137 plain 0.00 diges 0.50 unrel 0.45 patch 0.10 weak 0.02 noisy 0.01 swap1 15.30 alter 9.10 patte 14.64
+   (0.2, 0.2, 0.5) distance 0.0159 plain 0.00 diges 0.54 unrel 0.53 patch 0.12 weak 0.02 noisy 0.01 swap1 15.14 alter 9.10 patte 14.76
+   (0.2, 0.1, 0.9) distance 0.0170 plain 0.00 diges 0.41 unrel 0.40 patch 0.06 weak 0.02 noisy 0.01 swap1 15.30 alter 9.75 patte 14.87
+   (0.4, 0.2, 0.5) distance 0.0175 plain 0.00 diges 0.55 unrel 0.54 patch 0.11 weak 0.03 noisy 0.01 swap1 15.14 alter 9.10 patte 15.07
+   (0.01, 0.025, 0.9) distance 0.0185 plain 0.00 diges 0.55 unrel 0.49 patch 0.11 weak 0.02 noisy 0.01 swap1 15.14 alter 9.10 patte 14.64
+   (0.1, 0.05, 0.9) distance 0.0198 plain 0.00 diges 0.55 unrel 0.55 patch 0.12 weak 0.03 noisy 0.01 swap1 15.14 alter 9.10 patte 14.76
+   (0.4, 0.05, 0.9) distance 0.0204 plain 0.00 diges 0.56 unrel 0.55 patch 0.11 weak 0.03 noisy 0.01 swap1 15.14 alter 9.10 patte 14.87
+   the setting with most agreement (same next prediction, tastes where either is on a rival, tuning): (0.0, 0.2, 0.9) 0.942
+   chosen on tuning, then judged on fresh seeds: {'closest': (0.1, 0.2, 0.5), 'closest0': (0.0, 0.025, 0.9), 'best_j': (0.0, 0.2, 0.9), 'best_j0': (0.0, 0.2, 0.9)}
+
+== fresh streams 62000-62399 x 2, chosen settings, plus implied ones
+   fresh plain done [1 s]
+   fresh swap10 done [2 s]
+   fresh alternate done [3 s]
+   fresh pattern done [4 s]
+   fresh digest done [5 s]
+   fresh unreliable done [6 s]
+   fresh patchy done [7 s]
+   fresh weak done [8 s]
+   fresh noisy done [9 s]
+   setting: then per world, false picks [95%] (bank's alongside), or right pick's median time
+   bank replay: plain 0.003 diges 0.529 unrel 0.448 patch 0.099 weak 0.005 noisy 0.013 | swap1 14.7s alter 11.7s patte 14.1s
+   (0.1, 0.2, 0.5): plain 0.005 [0.001,0.010] diges 0.545 [0.510,0.580] unrel 0.421 [0.386,0.459] patch 0.114 [0.092,0.138] weak 0.009 [0.003,0.015] noisy 0.021 [0.011,0.031] | swap1 14.7s (1.00) alter 9.8s (1.00) patte 12.9s (1.00) | same model when either on a rival 0.868 [0.861,0.876], same prediction 0.927 [0.925,0.929], in the default-right worlds 0.743, all tastes 0.983
+   (0.0, 0.025, 0.9): plain 0.004 [0.000,0.009] diges 0.389 [0.355,0.424] unrel 0.223 [0.193,0.253] patch 0.066 [0.050,0.084] weak 0.007 [0.003,0.014] noisy 0.015 [0.007,0.023] | swap1 14.8s (1.00) alter 9.8s (1.00) patte 13.5s (1.00) | same model when either on a rival 0.901 [0.893,0.908], same prediction 0.937 [0.934,0.939], in the default-right worlds 0.678, all tastes 0.985
+   (0.0, 0.2, 0.9): plain 0.001 [0.000,0.004] diges 0.169 [0.144,0.195] unrel 0.134 [0.110,0.161] patch 0.019 [0.010,0.028] weak 0.000 [0.000,0.000] noisy 0.001 [0.000,0.004] | swap1 18.1s (1.00) alter 11.7s (1.00) patte 14.3s (1.00) | same model when either on a rival 0.903 [0.896,0.911], same prediction 0.943 [0.940,0.945], in the default-right worlds 0.665, all tastes 0.988
+   (0.0, 0.2, 0.9): plain 0.001 [0.000,0.004] diges 0.169 [0.144,0.195] unrel 0.134 [0.110,0.161] patch 0.019 [0.010,0.028] weak 0.000 [0.000,0.000] noisy 0.001 [0.000,0.004] | swap1 18.1s (1.00) alter 11.7s (1.00) patte 14.3s (1.00) | same model when either on a rival 0.903 [0.896,0.911], same prediction 0.943 [0.940,0.945], in the default-right worlds 0.665, all tastes 0.988
+   (1.0, 0.235, 0.5): plain 0.000 [0.000,0.000] diges 0.000 [0.000,0.000] unrel 0.000 [0.000,0.000] patch 0.000 [0.000,0.000] weak 0.000 [0.000,0.000] noisy 0.000 [0.000,0.000] | swap1 infs (0.00) alter infs (0.00) patte infs (0.00) | same model when either on a rival 0.000 [0.000,0.000], same prediction 0.556 [0.547,0.565], in the default-right worlds 0.575, all tastes 0.866
+   (0.095, 0.235, 0.5): plain 0.005 [0.001,0.010] diges 0.495 [0.459,0.530] unrel 0.330 [0.297,0.364] patch 0.100 [0.080,0.122] weak 0.009 [0.003,0.015] noisy 0.020 [0.011,0.030] | swap1 14.8s (1.00) alter 9.8s (1.00) patte 13.0s (1.00) | same model when either on a rival 0.871 [0.863,0.878], same prediction 0.928 [0.926,0.930], in the default-right worlds 0.714, all tastes 0.983
+   (0.03, 0.2, 0.5): plain 0.005 [0.001,0.010] diges 0.463 [0.427,0.500] unrel 0.284 [0.251,0.316] patch 0.084 [0.066,0.104] weak 0.010 [0.004,0.016] noisy 0.019 [0.010,0.029] | swap1 14.8s (1.00) alter 9.8s (1.00) patte 12.8s (1.00) | same model when either on a rival 0.908 [0.901,0.915], same prediction 0.937 [0.935,0.939], in the default-right worlds 0.671, all tastes 0.986
+   (0.01, 0.1, 0.5): plain 0.033 [0.021,0.045] diges 0.699 [0.667,0.729] unrel 0.507 [0.475,0.544] patch 0.242 [0.214,0.274] weak 0.061 [0.046,0.079] noisy 0.074 [0.056,0.091] | swap1 12.9s (1.00) alter 9.6s (1.00) patte 12.2s (1.00) | same model when either on a rival 0.846 [0.837,0.853], same prediction 0.916 [0.914,0.919], in the default-right worlds 0.683, all tastes 0.977
+   (0.003, 0.05, 0.5): plain 0.033 [0.021,0.045] diges 0.706 [0.676,0.738] unrel 0.516 [0.482,0.554] patch 0.245 [0.216,0.275] weak 0.061 [0.046,0.079] noisy 0.074 [0.056,0.091] | swap1 12.9s (1.00) alter 9.6s (1.00) patte 12.2s (1.00) | same model when either on a rival 0.831 [0.821,0.839], same prediction 0.915 [0.912,0.917], in the default-right worlds 0.713, all tastes 0.976
+   (0.0, 0.2, 0.5): plain 0.004 [0.000,0.009] diges 0.389 [0.355,0.424] unrel 0.223 [0.193,0.253] patch 0.066 [0.050,0.084] weak 0.007 [0.003,0.014] noisy 0.015 [0.007,0.023] | swap1 14.8s (1.00) alter 9.8s (1.00) patte 13.5s (1.00) | same model when either on a rival 0.901 [0.893,0.908], same prediction 0.937 [0.934,0.939], in the default-right worlds 0.678, all tastes 0.985
+   (0.0, 0.1, 0.5): plain 0.031 [0.020,0.044] diges 0.665 [0.634,0.696] unrel 0.469 [0.435,0.506] patch 0.230 [0.201,0.260] weak 0.059 [0.044,0.076] noisy 0.071 [0.054,0.089] | swap1 12.9s (1.00) alter 9.6s (1.00) patte 13.1s (1.00) | same model when either on a rival 0.817 [0.807,0.827], same prediction 0.917 [0.914,0.919], in the default-right worlds 0.733, all tastes 0.976
+   (0.0, 0.05, 0.5): plain 0.031 [0.020,0.044] diges 0.665 [0.634,0.696] unrel 0.469 [0.435,0.506] patch 0.230 [0.201,0.260] weak 0.059 [0.044,0.076] noisy 0.071 [0.054,0.089] | swap1 12.9s (1.00) alter 9.6s (1.00) patte 13.1s (1.00) | same model when either on a rival 0.817 [0.807,0.827], same prediction 0.917 [0.914,0.919], in the default-right worlds 0.733, all tastes 0.976
+
+   paired on fresh seeds: fixed-share closest minus stationary closest in agreement (same prediction, either on a rival; tastes pooled over worlds):
+   -0.010 [-0.011,-0.008]
+
+   does a life's pick go with the bank's? phi coefficient of 'a rival was picked in this life', default-right worlds, and share of the bank's false-pick lives also picked by this learner:
+   (0.1, 0.2, 0.5): plain phi 0.71, shared 1.00 | diges phi 0.79, shared 0.91 | unrel phi 0.81, shared 0.86 | patch phi 0.79, shared 0.87 | weak phi 0.56, shared 0.75 | noisy phi 0.76, shared 1.00
+   (0.0, 0.025, 0.9): plain phi 0.41, shared 0.50 | diges phi 0.56, shared 0.65 | unrel phi 0.47, shared 0.44 | patch phi 0.45, shared 0.41 | weak phi 0.40, shared 0.50 | noisy phi 0.45, shared 0.50
+   (0.0, 0.2, 0.9): plain phi 0.71, shared 0.50 | diges phi 0.43, shared 0.32 | unrel phi 0.43, shared 0.30 | patch phi 0.39, shared 0.18 | weak phi nan, shared 0.00 | noisy phi 0.31, shared 0.10
+   (0.0, 0.2, 0.9): plain phi 0.71, shared 0.50 | diges phi 0.43, shared 0.32 | unrel phi 0.43, shared 0.30 | patch phi 0.39, shared 0.18 | weak phi nan, shared 0.00 | noisy phi 0.31, shared 0.10
+
+   false picks by life length (first pick before 33, 66, 100 s), unreliable, digest, patchy. A floor's grow with the length, a stationary learner's saturate (D31):
+   unreliable: bank 0.200 0.336 0.448 | (0.1, 0.2, 0.5) 0.225 0.338 0.421 | (0.0, 0.025, 0.9) 0.181 0.205 0.223
+   digest: bank 0.259 0.395 0.529 | (0.1, 0.2, 0.5) 0.334 0.451 0.545 | (0.0, 0.025, 0.9) 0.295 0.354 0.389
+   patchy: bank 0.041 0.071 0.099 | (0.1, 0.2, 0.5) 0.069 0.094 0.114 | (0.0, 0.025, 0.9) 0.059 0.062 0.066
+
+   picks by threshold: bank replay at theta 1,2,3,4 against fixed share at the implied h at e = .235 (u = 1.7), and at the h with the same false picks (scan of h, e .2, pi .5), on the pinned stream:
+   scan plain done [1 s]
+   scan swap10 done [2 s]
+   scan alternate done [3 s]
+   scan pattern done [4 s]
+   scan digest done [5 s]
+   scan unreliable done [6 s]
+   scan patchy done [7 s]
+   scan weak done [8 s]
+   scan noisy done [9 s]
+   bank theta 1: unrel 0.909 diges 0.900 patch 0.575
+   bank theta 2: unrel 0.448 diges 0.529 patch 0.099
+   bank theta 3: unrel 0.133 diges 0.155 patch 0.010
+   bank theta 4: unrel 0.055 diges 0.055 patch 0.001
+   fixed share h 0.0, e 0.2: unrel 0.223 diges 0.389 patch 0.066 plain 0.004 weak 0.007 noisy 0.015 | swap1 14.8s alter 9.8s patte 13.5s
+   fixed share h 0.001, e 0.2: unrel 0.224 diges 0.389 patch 0.066 plain 0.004 weak 0.007 noisy 0.015 | swap1 14.8s alter 9.8s patte 12.8s
+   fixed share h 0.003, e 0.2: unrel 0.226 diges 0.390 patch 0.066 plain 0.004 weak 0.007 noisy 0.015 | swap1 14.8s alter 9.8s patte 12.8s
+   fixed share h 0.01, e 0.2: unrel 0.244 diges 0.404 patch 0.069 plain 0.004 weak 0.007 noisy 0.015 | swap1 14.8s alter 9.8s patte 12.8s
+   fixed share h 0.03, e 0.2: unrel 0.284 diges 0.463 patch 0.084 plain 0.005 weak 0.010 noisy 0.019 | swap1 14.8s alter 9.8s patte 12.8s
+   fixed share h 0.06, e 0.2: unrel 0.352 diges 0.519 patch 0.105 plain 0.005 weak 0.010 noisy 0.020 | swap1 14.8s alter 9.8s patte 12.8s
+   fixed share h 0.1, e 0.2: unrel 0.421 diges 0.545 patch 0.114 plain 0.005 weak 0.009 noisy 0.021 | swap1 14.7s alter 9.8s patte 12.9s
+   fixed share h 0.2, e 0.2: unrel 0.481 diges 0.574 patch 0.124 plain 0.005 weak 0.009 noisy 0.021 | swap1 14.6s alter 9.8s patte 13.3s
+   fixed share h 0.4, e 0.2: unrel 0.490 diges 0.573 patch 0.119 plain 0.004 weak 0.007 noisy 0.020 | swap1 14.7s alter 9.8s patte 13.9s
+   fixed share h 0.7, e 0.2: unrel 0.443 diges 0.494 patch 0.094 plain 0.003 weak 0.004 noisy 0.015 | swap1 15.2s alter 11.9s patte 15.5s
+   fixed share h 1.0, e 0.2: unrel 0.000 diges 0.000 patch 0.000 plain 0.000 weak 0.000 noisy 0.000 | swap1 infs alter infs patte infs
+
+== which hazard does each world's stream support? log2 evidence per life relative to h = 0 at the same e and pi (.5), on the pinned stream and the bank's stream (fresh seeds). Positive: the stream favours change. Exact under the stated likelihood.
+   evidence plain done [1 s]
+   evidence swap10 done [3 s]
+   evidence alternate done [5 s]
+   evidence pattern done [6 s]
+   evidence digest done [7 s]
+   evidence unreliable done [9 s]
+   evidence patchy done [10 s]
+   evidence weak done [12 s]
+   evidence noisy done [13 s]
+   -- bank's stream
+   plain      best e 0.025 best h 0.01, -0.180 bits a taste | h0: +0.0[+0.0,+0.0] h0.0001: +0.0[-0.0,+0.0] h0.0003: +0.0[-0.0,+0.0] h0.001: +0.0[-0.0,+0.0] h0.003: +0.0[-0.0,+0.0] h0.01: +0.0[-0.0,+0.0] h0.03: +0.0[-0.0,+0.0] h0.1: -0.0[-0.0,+0.0] h0.2: -0.0[-0.0,+0.0] h0.4: -0.0[-0.0,+0.0]
+   swap10     best e 0.2 best h 0, -0.838 bits a taste | h0: +0.0[+0.0,+0.0] h0.0001: -0.0[-0.0,-0.0] h0.0003: -0.0[-0.0,-0.0] h0.001: -0.0[-0.0,-0.0] h0.003: -0.1[-0.1,-0.1] h0.01: -0.5[-0.5,-0.5] h0.03: -1.5[-1.5,-1.4] h0.1: -4.7[-4.9,-4.6] h0.2: -8.2[-8.5,-7.9] h0.4: -11.2[-11.6,-10.7]
+   alternate  best e 0.05 best h 0.003, -0.434 bits a taste | h0: +0.0[+0.0,+0.0] h0.0001: +0.0[+0.0,+0.1] h0.0003: +0.1[+0.0,+0.1] h0.001: +0.1[+0.0,+0.2] h0.003: +0.1[-0.0,+0.2] h0.01: -0.1[-0.2,+0.1] h0.03: -0.9[-1.2,-0.6] h0.1: -4.4[-4.8,-4.0] h0.2: -9.8[-10.3,-9.3] h0.4: -20.7[-21.4,-19.9]
+   pattern    best e 0.05 best h 0.01, -0.490 bits a taste | h0: +0.0[+0.0,+0.0] h0.0001: +0.2[+0.1,+0.3] h0.0003: +0.3[+0.2,+0.4] h0.001: +0.4[+0.3,+0.5] h0.003: +0.5[+0.4,+0.7] h0.01: +0.6[+0.4,+0.8] h0.03: -0.0[-0.3,+0.2] h0.1: -3.4[-3.8,-3.0] h0.2: -8.8[-9.4,-8.3] h0.4: -19.3[-20.0,-18.6]
+   digest     best e 0.2 best h 0.4, -0.821 bits a taste | h0: +0.0[+0.0,+0.0] h0.0001: +0.0[+0.0,+0.0] h0.0003: +0.0[+0.0,+0.0] h0.001: +0.0[+0.0,+0.0] h0.003: +0.0[+0.0,+0.0] h0.01: +0.1[+0.1,+0.1] h0.03: +0.1[+0.1,+0.2] h0.1: +0.2[+0.2,+0.3] h0.2: +0.3[+0.3,+0.4] h0.4: +0.5[+0.4,+0.6]
+   unreliable best e 0.2 best h 0.4, -0.775 bits a taste | h0: +0.0[+0.0,+0.0] h0.0001: +0.0[+0.0,+0.0] h0.0003: +0.0[+0.0,+0.0] h0.001: +0.0[+0.0,+0.0] h0.003: +0.1[+0.0,+0.1] h0.01: +0.1[+0.1,+0.2] h0.03: +0.2[+0.1,+0.2] h0.1: +0.2[+0.1,+0.3] h0.2: +0.2[+0.1,+0.3] h0.4: +0.3[+0.2,+0.4]
+   patchy     best e 0.1 best h 0.01, -0.545 bits a taste | h0: +0.0[+0.0,+0.0] h0.0001: +0.0[+0.0,+0.0] h0.0003: +0.0[+0.0,+0.0] h0.001: +0.0[+0.0,+0.0] h0.003: +0.0[+0.0,+0.0] h0.01: +0.0[+0.0,+0.1] h0.03: +0.0[-0.0,+0.1] h0.1: -0.0[-0.1,+0.0] h0.2: -0.0[-0.1,+0.0] h0.4: +0.0[-0.1,+0.1]
+   weak       best e 0.05 best h 0.003, -0.356 bits a taste | h0: +0.0[+0.0,+0.0] h0.0001: +0.0[-0.0,+0.0] h0.0003: +0.0[-0.0,+0.0] h0.001: +0.0[-0.0,+0.0] h0.003: +0.0[-0.0,+0.0] h0.01: -0.0[-0.0,+0.0] h0.03: -0.0[-0.0,-0.0] h0.1: -0.1[-0.1,-0.0] h0.2: -0.1[-0.1,-0.1] h0.4: -0.1[-0.1,-0.1]
+   noisy      best e 0.05 best h 0.01, -0.309 bits a taste | h0: +0.0[+0.0,+0.0] h0.0001: +0.0[+0.0,+0.0] h0.0003: +0.0[+0.0,+0.0] h0.001: +0.0[+0.0,+0.0] h0.003: +0.0[+0.0,+0.0] h0.01: +0.0[+0.0,+0.0] h0.03: +0.0[-0.0,+0.1] h0.1: +0.0[-0.0,+0.1] h0.2: -0.0[-0.1,+0.1] h0.4: -0.0[-0.1,+0.1]
+   -- pinned
+   plain      best e 0.025 best h 0.01, -0.180 bits a taste | h0: +0.0[+0.0,+0.0] h0.0001: +0.0[-0.0,+0.0] h0.0003: +0.0[-0.0,+0.0] h0.001: +0.0[-0.0,+0.0] h0.003: +0.0[-0.0,+0.0] h0.01: +0.0[-0.0,+0.0] h0.03: +0.0[-0.0,+0.0] h0.1: -0.0[-0.0,+0.0] h0.2: -0.0[-0.0,+0.0] h0.4: -0.0[-0.0,+0.0]
+   swap10     best e 0.2 best h 0, -0.782 bits a taste | h0: +0.0[+0.0,+0.0] h0.0001: -0.0[-0.0,-0.0] h0.0003: -0.0[-0.0,-0.0] h0.001: -0.0[-0.0,-0.0] h0.003: -0.1[-0.1,-0.1] h0.01: -0.3[-0.3,-0.3] h0.03: -1.0[-1.1,-0.9] h0.1: -3.1[-3.2,-2.9] h0.2: -4.7[-4.9,-4.5] h0.4: -6.0[-6.3,-5.7]
+   alternate  best e 0.05 best h 0.003, -0.361 bits a taste | h0: +0.0[+0.0,+0.0] h0.0001: +0.1[+0.0,+0.2] h0.0003: +0.2[+0.1,+0.3] h0.001: +0.2[+0.1,+0.3] h0.003: +0.2[+0.0,+0.4] h0.01: +0.0[-0.2,+0.2] h0.03: -0.8[-1.0,-0.5] h0.1: -3.9[-4.2,-3.5] h0.2: -8.3[-8.7,-7.9] h0.4: -17.1[-17.6,-16.5]
+   pattern    best e 0.05 best h 0.003, -0.400 bits a taste | h0: +0.0[+0.0,+0.0] h0.0001: +0.2[+0.1,+0.2] h0.0003: +0.2[+0.2,+0.3] h0.001: +0.4[+0.2,+0.5] h0.003: +0.4[+0.3,+0.6] h0.01: +0.4[+0.2,+0.6] h0.03: -0.3[-0.5,+0.0] h0.1: -3.3[-3.6,-3.0] h0.2: -8.0[-8.4,-7.6] h0.4: -17.2[-17.8,-16.7]
+   digest     best e 0.2 best h 0.4, -0.812 bits a taste | h0: +0.0[+0.0,+0.0] h0.0001: +0.0[+0.0,+0.0] h0.0003: +0.0[+0.0,+0.0] h0.001: +0.0[+0.0,+0.0] h0.003: +0.0[+0.0,+0.0] h0.01: +0.1[+0.1,+0.1] h0.03: +0.2[+0.1,+0.2] h0.1: +0.3[+0.2,+0.3] h0.2: +0.4[+0.3,+0.4] h0.4: +0.5[+0.4,+0.6]
+   unreliable best e 0.2 best h 0.4, -0.784 bits a taste | h0: +0.0[+0.0,+0.0] h0.0001: +0.0[+0.0,+0.0] h0.0003: +0.0[+0.0,+0.0] h0.001: +0.0[+0.0,+0.0] h0.003: +0.0[+0.0,+0.1] h0.01: +0.1[+0.1,+0.1] h0.03: +0.1[+0.1,+0.2] h0.1: +0.1[+0.1,+0.2] h0.2: +0.2[+0.1,+0.3] h0.4: +0.2[+0.1,+0.3]
+   patchy     best e 0.1 best h 0.01, -0.545 bits a taste | h0: +0.0[+0.0,+0.0] h0.0001: +0.0[+0.0,+0.0] h0.0003: +0.0[+0.0,+0.0] h0.001: +0.0[+0.0,+0.0] h0.003: +0.0[+0.0,+0.0] h0.01: +0.0[-0.0,+0.0] h0.03: +0.0[-0.0,+0.0] h0.1: -0.0[-0.1,+0.0] h0.2: -0.1[-0.1,+0.0] h0.4: -0.0[-0.1,+0.1]
+   weak       best e 0.05 best h 0, -0.357 bits a taste | h0: +0.0[+0.0,+0.0] h0.0001: -0.0[-0.0,+0.0] h0.0003: -0.0[-0.0,+0.0] h0.001: -0.0[-0.0,+0.0] h0.003: -0.0[-0.0,+0.0] h0.01: -0.0[-0.0,-0.0] h0.03: -0.0[-0.0,-0.0] h0.1: -0.1[-0.1,-0.1] h0.2: -0.1[-0.1,-0.1] h0.4: -0.1[-0.1,-0.1]
+   noisy      best e 0.05 best h 0.01, -0.308 bits a taste | h0: +0.0[+0.0,+0.0] h0.0001: +0.0[+0.0,+0.0] h0.0003: +0.0[+0.0,+0.0] h0.001: +0.0[+0.0,+0.0] h0.003: +0.0[+0.0,+0.0] h0.01: +0.0[-0.0,+0.0] h0.03: +0.0[-0.0,+0.0] h0.1: -0.0[-0.0,+0.0] h0.2: -0.0[-0.1,+0.0] h0.4: -0.0[-0.1,+0.0]
+[1793805894.948478]

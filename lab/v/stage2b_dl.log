@@ -1,0 +1,120 @@
+== the checker's invariance tests, every world of worlds.py (stage 5's included, compiled only)
+  44 worlds, 3 renamings each, comments/meta/stream/whitespace, lets reordered 3 ways: 0 changes (stage 2a: 4, all lets reordered)
+== meaning kept, text changed / meaning changed, text nearly kept: stage 2a's bits -> the normal form's
+  swap10                                       280 ->   296 bits, canonical 91576b82
+  swap10, a dead variable                      280 ->   296 bits, canonical 91576b82
+  swap10, + 0                                  320 ->   296 bits, canonical 91576b82
+  swap10, operands commuted                    296 ->   296 bits, canonical 91576b82
+  swap10, via a variable                       392 ->   296 bits, canonical 91576b82
+  swap every 10.1 s                            280 ->   296 bits, canonical 91576b82
+  swap every 11 s                              280 ->   296 bits, canonical be4e8ceb
+  swap every 1000 s (never)                    280 ->     0 bits, canonical 82887970
+  swap10, period folded from (* 2 5)           320 ->   296 bits, canonical 91576b82
+  swap10, * 1 and - 0                          368 ->   296 bits, canonical 91576b82
+  swap10, a rule that never acts added         424 ->   296 bits, canonical 91576b82
+  swap10, an (if) whose branches agree         376 ->   296 bits, canonical 91576b82
+  plain, (set seen seen)                       112 ->     0 bits, canonical 82887970
+  plain, (set poison P)                        136 ->     0 bits, canonical 82887970
+  plain, (set gain 1)                          144 ->     0 bits, canonical 82887970
+  plain, (const PUSH PUSH)                      80 ->     0 bits, canonical 82887970
+  plain, (after 2000 (pulse 0))                184 ->     0 bits, canonical 82887970
+  plain, never (worlds.py)                     464 ->     0 bits, canonical 82887970
+  halfthrust_const                             216 ->   216 bits, canonical b49bc6af
+  halfthrust_gain (identical lives)            152 ->   152 bits, canonical a844dc29
+  weak                                         360 ->   360 bits, canonical ad33b18d
+  dim25 (equal in distribution)                368 ->   368 bits, canonical 76551427
+  parity                                      1152 ->  1168 bits, canonical a7b9ca37
+  parity, lets reordered                      1280 ->  1168 bits, canonical a7b9ca37
+== ranking, every world of worlds.py: stage 2a's -> the normal form's
+      0 ->     0  plain
+    464 ->     0  never
+    104 ->   104  costly
+    144 ->   144  liar
+    152 ->   152  drag2
+    152 ->   152  halfthrust_gain
+    160 ->   160  allfood
+    176 ->   176  delay1
+    184 ->   184  mirror
+    216 ->   216  halfthrust_const
+    216 ->   216  lethal
+    224 ->   224  lostgood
+    248 ->   248  bruise
+    264 ->   264  late_swap_50
+    264 ->   264  rarefeast
+    272 ->   272  scarce
+    256 ->   288  crosstalk
+    280 ->   296  swap10
+    280 ->   296  swap11
+    296 ->   296  alternate
+    296 ->   296  coin
+    296 ->   296  unreliable
+    296 ->   296  unreliable22
+    312 ->   312  region
+    336 ->   336  noisy
+    352 ->   352  fail50
+    360 ->   360  weak
+    368 ->   368  dim25
+    376 ->   376  blind
+    416 ->   424  decoys
+    440 ->   440  digest
+    432 ->   448  every5th
+    464 ->   456  thrusters
+    440 ->   464  swapmeals6
+    464 ->   464  late_alternate_50
+    488 ->   488  keylock
+    464 ->   504  rewire50
+    520 ->   544  pattern
+    592 ->   592  moving
+    728 ->   752  word
+    960 ->   960  patchy
+    960 ->   992  nlate_pattern_50
+   1152 ->  1168  parity
+   1800 ->  1760  cells
+== the normal form of a few worlds
+  never: (world (let last -1))
+  parity: (world (let s0 (int 2)) (let s1 (int 2)) (let s2 (int 2)) (let s3 (int 2)) (let s4 (int 2)) (let s5 (int 2)) (let s6 (int 2)) (let s7 (int 2)) (let h0 0) (let h1 0) (let h2 0) (let h3 0) (let h4 0) (let h5 0) (let h6 0) (let h7 0) (on tick (set poison (- 1 (mod (+ (* s0 h0) (* s1 h1) (* s2 h2) (* s3 h3) (* s4 h4) (* s5 h5) (* s6 h6) (* s7 h7)) 2)))) (on score (set h7 h6) (set h6 h5) (set h5 h4) (set h4 h3) (set h3 h2) (set h2 h1) (set h1 h0) (set h0 colour)))
+  digest: (world (let was -1000000000.0) (told-wait 1) (on meal (if (< (- t was) 1) (set sign -1)) (set was t)))
+  keylock: (world (let key -99) (on tick (set poison (if (< (- t key) 5) -1 P))) (on score (if (= colour F) (set key t))))
+  cells: (world (let next 5) (let c 0) (table now N 1 (int 2)) (table nxt N 1 0) (on birth (each b (bset b (* (+ 0.5 (mod b 6)) (/ WORLD 6)) (* (+ 0.5 (floor (/ b 6))) (/ WORLD 6))) (if (= (at now b) 0) (hide b)))) (on tick (if (>= t next) (do (set next (+ next 5)) (each b (set c (+ (at now (mod (+ b 1) N)) (at now (mod (+ b 35) N)) (at now (mod (+ b 6) N)) (at now (mod (+ b 30) N)) (at now (mod (+ b 7) N)) (at now (mod (+ b 5) N)) (at now (mod (+ b 31) N)) (at now (mod (+ b 29) N)))) (put nxt b (if (or (= c 3) (and (= c 2) (= (at now b) 1))) 1 0))) (each b (put now b (at nxt b)) (if (= (at now b) 1) (show b) (hide b)))))) (on respawn (set nx (bx block)) (set ny (by block))))
+
+== exact: each hand world against its normal form, compiled and lived, seeds 65050-65059 x 2, base and bank
+  plain                40/40 lives identical
+  swap10               40/40 lives identical
+  alternate            40/40 lives identical
+  pattern              40/40 lives identical
+  digest               40/40 lives identical
+  unreliable           40/40 lives identical
+  patchy               40/40 lives identical
+  weak                 40/40 lives identical
+  noisy                40/40 lives identical
+  coin                 40/40 lives identical
+  allfood              40/40 lives identical
+  never                40/40 lives identical
+  late_alternate_50    40/40 lives identical
+  late_swap_50         40/40 lives identical
+  nlate_pattern_50     40/40 lives identical
+  swap11               40/40 lives identical
+  swapmeals6           40/40 lives identical
+  unreliable22         40/40 lives identical
+  every5th             40/40 lives identical
+  dim25                40/40 lives identical
+  mirror               40/40 lives identical
+  halfthrust_const     40/40 lives identical
+  halfthrust_gain      40/40 lives identical
+  thrusters            40/40 lives identical
+  fail50               40/40 lives identical
+  drag2                40/40 lives identical
+  moving               40/40 lives identical
+  scarce               40/40 lives identical
+  blind                40/40 lives identical
+  crosstalk            40/40 lives identical
+  bruise               40/40 lives identical
+  region               40/40 lives identical
+  keylock              40/40 lives identical
+  decoys               40/40 lives identical
+  rarefeast            40/40 lives identical
+  costly               40/40 lives identical
+  parity               40/40 lives identical
+  word                 40/40 lives identical
+  cells                40/40 lives identical
+  in all 1560/1560 lives identical

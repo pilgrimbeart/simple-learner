@@ -78,7 +78,12 @@ Each round used a different source. A round counts as changing the plan only if 
 | 10 | physics (conservation, symmetry, phase changes, resonance) | no | only new examples |
 | 11 | five fresh agents who saw none of this (`lab/v/grammar_outsiders1.md`) | **yes** | whole other worlds on the same wires; every constant redrawn each life; probes of what was learned; four more capabilities |
 | 12 | three more fresh agents, and a critic who read the draft (`lab/v/grammar_outsiders2.md`) | **yes, the most** | an executable language; a false claim of mine withdrawn; five flaws in the experiment; ladders within a capability; three more capabilities |
-| 13 | a second critic, on a different model (same file) | yes, in detail and order | what the language still lacks; a pre-registered number; controls first; cuts for cost. Its verdict: stable enough to start building |
+| 13 | a second critic, on the same model despite my asking for another (same file) | yes, in detail and order | what the language still lacks; a pre-registered number; controls first; cuts for cost. Its verdict: stable enough to start building |
+| 14 | the same eight lenses, sealed: an empty directory, no project instructions, memory or git status (`lab/blind_agents.sh`, `lab/v/grammar_outsiders3.md`) | **no structural change** | see below |
+
+**The fresh agents weren't fully blind.** The harness starts each with `AGENTS.md`, the memory index and a git status, as the outside set's author reported. They didn't see this document, but they may have seen the rules and the table's existence, so their independence is partial. And all of them, critics included, ran on one model, the same as mine, so their agreement counts for little.
+
+**What the sealed round showed.** The leak made little difference: the sealed lenses converged on the same things (delayed taste in five of eight, a gait, mimics, region-dependent worth, matching pennies, an unstable body, a rooted creature), and by my reading nearly everything can be written in the language, though that's untested until it exists. One exception: worlds that probe a clone of the brain ("what would you do?", in mathematics' Newcomb and self-reference ideas) need a read the language lacks. They also added new examples, and: **no taste at all, value shown only by the body's response** came up twice, and **replaying the seed** tests whether a memorised motor tape scores well, which is a trap for our scoring rather than for the brain. Three sealed agents also say what the user feared: every fault is one someone thought to write. This is one model's view, so it isn't independent confirmation.
 
 **Brainstorming has stopped being the way to change this plan.** Rounds 11-13 never gave two quiet rounds in a row, and a critic can always find more. But the last round changed details, order and cost, not the structure, and what's left will be settled by building. This is my judgement, and the second critic's.
 
@@ -285,7 +290,7 @@ The question is whether the detectors needed grow more slowly than the challenge
 
 **Before any code:**
 
-1. **Write down the primary number, and what result means no.** Three counts would let whichever looks flat be reported. Proposed: **parts needed to reach a fixed coverage of learnable worlds, by band of description length, on fresh draws.** Detectors, models and capabilities are reported as explanation only. "No" is defined by the control in step 3.
+1. **Write down the primary result, and what means no**: `PROGRAMME.md`. Three counts would let whichever looks flat be reported, so detectors, models and capabilities are explanation only.
 2. **Seal two sets.** A test set compiled by a fresh agent from outside sources, RL benchmarks and the conditioning literature, from neither this document nor its lists; worlds in it that won't compile stay in the denominator. And a held-out split, frozen before the first cure.
 
 **Then, in order:**
@@ -295,7 +300,7 @@ The question is whether the detectors needed grow more slowly than the challenge
 5. **A pilot of about 100 draws**: the share of learnable worlds with a gap, and lives per world. Only then freeze the samplers, **two or three rival ones with different primitives**, since one sampler sets the answer. Report the spread. Keep sampled worlds to about 300.
 6. **The present circuit's coverage on fresh draws, with no new cures.** The first real number, and it scores the predictions below.
 7. **Does a longer life change what's learnable?** The job asks for about 10 meals in 100 s, so few rules can be learned at all. Check at 10x, on about 30 worlds, whether ceilings rise. 100x is out of reach (about 4 days per circuit, estimated).
-8. **Add cures, by a designer who sees only the training worlds, to the largest failure groups.** One cumulative circuit, scored in parts and power, since a new bank model can absorb what would have been a detector. After each addition, re-run earlier worlds and the unmodified world. L0 worlds have a frozen list and their own plot, as new detectors would otherwise create new challenges.
+8. **Add cures, by a designer who sees only the training worlds, to the largest failure groups, simplifying as we go** (`PROGRAMME.md`). One cumulative circuit, scored by description length, then parts and power, since a new bank model can absorb what would have been a detector. After each addition, re-run earlier worlds and the unmodified world. L0 worlds have a frozen list and their own plot, as new detectors would otherwise create new challenges.
 9. **Open the held-out split and the outside set.**
 10. **Then the rule-changing worlds**, reported apart.
 
@@ -360,4 +365,4 @@ Guesses, to be scored.
 
 ## Still open
 
-- The primary number and what result means no: proposed above, for the user to settle before any code.
+- The primary result's 80% and half, and the definition of description length, to be fixed after stage 1 (`PROGRAMME.md`).

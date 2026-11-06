@@ -1,0 +1,15 @@
+== control: c = 1 everywhere, told's threshold: lab/stage1c_synth.run against synth_controls.run on the same seed. F_novel, its interval, R must match exactly.
+   q=0 (no): synth_controls F 0.0000 [-0.057,0.053] R 1.179; here F 0.0000 [-0.057,0.053] R 1.179
+   q=.3 (between): synth_controls F 0.2603 [0.153,0.365] R 1.021; here F 0.2603 [0.153,0.365] R 1.021
+   q=.5 (between): synth_controls F 0.4658 [0.340,0.578] R 0.765; here F 0.4658 [0.340,0.578] R 0.765
+   q=.7 (yes): synth_controls F 0.7222 [0.614,0.817] R 0.559; here F 0.7222 [0.614,0.817] R 0.559
+   q=.85 (yes): synth_controls F 0.8514 [0.769,0.932] R 0.311; here F 0.8514 [0.769,0.932] R 0.311
+   q=1 (yes): synth_controls F 0.9155 [0.843,0.972] R 0.155; here F 0.9155 [0.843,0.972] R 0.155
+   mismatches: 0 of 30
+== old section 5 rates reproduce? (synth_controls s5 at N 225, M 75, se .2, the verdicts through this file's run with flat ceilings; compare with lab/v/synth_controls.log's 5.)
+   q=0 (no): yes 0.00 no 1.00 between 0.00 median F 0.00
+   q=.3 (between): yes 0.00 no 0.01 between 0.99 median F 0.24
+   q=.5 (between): yes 0.00 no 0.00 between 1.00 median F 0.43
+   q=.7 (yes): yes 0.14 no 0.00 between 0.86 median F 0.63
+   q=.85 (yes): yes 0.99 no 0.00 between 0.01 median F 0.76
+   q=1 (yes): yes 1.00 no 0.00 between 0.00 median F 0.89

@@ -1,0 +1,64 @@
+identity None               circuit  10/10 lives exact; 100000 ticks, 789 tastes
+identity None               bank     10/10 lives exact; 100000 ticks, 781 tastes
+identity 2 s
+identity plain              circuit  10/10 lives exact; 100000 ticks, 789 tastes
+identity plain              bank     10/10 lives exact; 100000 ticks, 781 tastes
+identity plain              vtold    10/10 lives exact; 100000 ticks, 733 tastes
+identity late_never         circuit  10/10 lives exact; 100000 ticks, 789 tastes
+identity late_never         bank     10/10 lives exact; 100000 ticks, 781 tastes
+identity late_never         vtold    10/10 lives exact; 100000 ticks, 733 tastes
+identity 5 s
+nine plain              circuit  10/10 lives exact; 100000 ticks, 789 tastes
+nine plain              bank     10/10 lives exact; 100000 ticks, 781 tastes
+nine plain              vtold    10/10 lives exact; 100000 ticks, 733 tastes
+nine swap10             circuit  10/10 lives exact; 100000 ticks, 800 tastes
+nine swap10             bank     10/10 lives exact; 100000 ticks, 707 tastes
+nine swap10             vtold    10/10 lives exact; 100000 ticks, 796 tastes
+nine alternate          circuit  10/10 lives exact; 100000 ticks, 650 tastes
+nine alternate          bank     10/10 lives exact; 100000 ticks, 708 tastes
+nine alternate          vtold    10/10 lives exact; 100000 ticks, 750 tastes
+nine pattern            circuit  10/10 lives exact; 100000 ticks, 748 tastes
+nine pattern            bank     10/10 lives exact; 100000 ticks, 717 tastes
+nine pattern            vtold    10/10 lives exact; 100000 ticks, 746 tastes
+nine digest             circuit  10/10 lives exact; 100000 ticks, 732 tastes
+nine digest             bank     10/10 lives exact; 100000 ticks, 490 tastes
+nine digest             vtold    10/10 lives exact; 100000 ticks, 512 tastes
+nine unreliable         circuit  10/10 lives exact; 100000 ticks, 762 tastes
+nine unreliable         bank     10/10 lives exact; 100000 ticks, 793 tastes
+nine unreliable         vtold    10/10 lives exact; 100000 ticks, 718 tastes
+nine patchy             circuit  10/10 lives exact; 100000 ticks, 941 tastes
+nine patchy             bank     10/10 lives exact; 100000 ticks, 843 tastes
+nine patchy             vtold    10/10 lives exact; 100000 ticks, 862 tastes
+nine weak               circuit  10/10 lives exact; 100000 ticks, 614 tastes
+nine weak               bank     10/10 lives exact; 100000 ticks, 643 tastes
+nine weak               vtold    10/10 lives exact; 100000 ticks, 577 tastes
+nine noisy              circuit  10/10 lives exact; 100000 ticks, 599 tastes
+nine noisy              bank     10/10 lives exact; 100000 ticks, 642 tastes
+nine noisy              vtold    10/10 lives exact; 100000 ticks, 644 tastes
+nine 17 s
+bonus coin               circuit  10/10 lives exact; 100000 ticks, 792 tastes
+bonus coin               bank     10/10 lives exact; 100000 ticks, 660 tastes
+bonus coin               vtold    10/10 lives exact; 100000 ticks, 659 tastes
+bonus allfood            circuit  10/10 lives exact; 100000 ticks, 724 tastes
+bonus allfood            bank     10/10 lives exact; 100000 ticks, 1480 tastes
+bonus allfood            vtold    10/10 lives exact; 100000 ticks, 724 tastes
+bonus scarce             circuit  0/10 lives exact; 100000 ticks, 118 tastes  FIRST: (60000, 'red', 'body differs first at tick 0')
+bonus scarce             bank     0/10 lives exact; 100000 ticks, 130 tastes  FIRST: (60000, 'red', 'body differs first at tick 0')
+bonus scarce             vtold    0/10 lives exact; 100000 ticks, 129 tastes  FIRST: (60000, 'red', 'body differs first at tick 0')
+bonus moving             circuit  10/10 lives exact; 100000 ticks, 806 tastes
+bonus moving             bank     10/10 lives exact; 100000 ticks, 811 tastes
+bonus moving             vtold    10/10 lives exact; 100000 ticks, 827 tastes
+bonus late_alternate_50  circuit  10/10 lives exact; 100000 ticks, 794 tastes
+bonus late_alternate_50  bank     10/10 lives exact; 100000 ticks, 763 tastes
+bonus late_alternate_50  vtold    10/10 lives exact; 100000 ticks, 770 tastes
+bonus late_swap_50       circuit  10/10 lives exact; 100000 ticks, 795 tastes
+bonus late_swap_50       bank     10/10 lives exact; 100000 ticks, 752 tastes
+bonus late_swap_50       vtold    10/10 lives exact; 100000 ticks, 779 tastes
+bonus nlate_pattern_50   circuit  10/10 lives exact; 100000 ticks, 762 tastes
+bonus nlate_pattern_50   bank     10/10 lives exact; 100000 ticks, 726 tastes
+bonus nlate_pattern_50   vtold    10/10 lives exact; 100000 ticks, 730 tastes
+bonus 16 s
+bonus thrusters          circuit  10/10 lives exact; 100000 ticks, 489 tastes
+bonus 1 s
+reference loop = table.life and bits_bank.life: yes
+DIFFERENCES

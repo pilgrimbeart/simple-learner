@@ -1,0 +1,8 @@
+174 ideas in GRAMMAR.md's catalogue, 174 entries; unmatched ideas: []
+status: {'s5': 23, 'ok': 124, 'no': 6, 'bad': 21} ; failed to compile or run: []
+description length, bits: median 444.0 90% 810.4000000000001 max 1760
+by status: ok median 444; s5 median 320; bad median 696
+   marked s5, text shows no static reason (a runtime check would catch it): food takes time to eat
+   marked s5, text shows no static reason (a runtime check would catch it): taste inverted for good
+   marked s5, text shows no static reason (a runtime check would catch it): an implausibly rare punishment
+== bad, and why

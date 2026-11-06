@@ -1,0 +1,10 @@
+done 10 ms in 84 s
+done 1 ms in 762 s
+plain bank               10 ms +2.693  1 ms +2.361  1 ms - 10 ms -0.332 [-0.450,-0.217]
+plain bank pausek=0      10 ms +2.690  1 ms +2.361  1 ms - 10 ms -0.330 [-0.449,-0.212]
+plain bank jit=0         10 ms +2.693  1 ms +2.361  1 ms - 10 ms -0.332 [-0.450,-0.217]
+plain bank eye=0         10 ms +2.701  1 ms +2.357  1 ms - 10 ms -0.345 [-0.459,-0.234]
+plain bank bankk=0       10 ms +2.696  1 ms +2.362  1 ms - 10 ms -0.334 [-0.450,-0.220]
+plain bank trustk=0      10 ms +2.693  1 ms +2.361  1 ms - 10 ms -0.332 [-0.450,-0.217]
+plain vtold              10 ms +2.690  1 ms +2.497  1 ms - 10 ms -0.193 [-0.301,-0.089]
+plain circuit            10 ms +2.705  1 ms +2.446  1 ms - 10 ms -0.259 [-0.365,-0.154]

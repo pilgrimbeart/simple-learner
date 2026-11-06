@@ -1,0 +1,191 @@
+== static: the checker's attacks verbatim, then mine in the stage-2c language
+  checker 1       unmarked delay1                                                        NOT A PROGRAM: not a stage: taste
+  checker 1       unmarked lostgood                                                      NOT A PROGRAM: not a stage: taste
+  checker 1       unmarked rewire50                                                      NOT A PROGRAM: not a statement: (wire-sensor 0 (sensor 1)) (stage tick)
+  checker 1       unmarked lethal                                                        NOT A PROGRAM: not a word of the language: bad (stage score)
+  checker 1       unmarked liar                                                          NOT A PROGRAM: not a stage: taste
+  checker 1       liar, lying meta only                                                  NOT A PROGRAM: not a stage: taste
+  checker 1       random liar                                                            NOT A PROGRAM: not a stage: taste
+  checker 1       taste of 0                                                             NOT A PROGRAM: not a stage: taste
+  checker 1       taste of .5                                                            NOT A PROGRAM: not a stage: taste
+  checker 1       score against taste                                                    NOT A PROGRAM: not a word of the language: bad (stage score)
+  checker 1       brain written (bp)                                                     NOT A PROGRAM: not a statement: (bp hold 0.001) (stage tick)
+  checker 1       brain told food (bp)                                                   NOT A PROGRAM: not a statement: (bp food (sensor F)) (stage tick)
+  checker 1       taste from the score stage                                             compiles
+  checker 1       meal dropped, block uneaten                                            compiles
+  checker 1       colours swapped (truthful)                                             NOT A PROGRAM: not a word of the language: sign (stage meal)
+  checker 1       world fires a thruster                                                 REFUSED: a draw once a tick, (chance 0.01): write it as a rate, (chance (* r TICK)) or (poisson (* r TICK)); (thrust 0) once a tick: put it under (if (chance (* r TICK))
+  checker 2       rewire by see at 50 s                                                  compiles
+  checker 2       rewire by look at 50 s                                                 compiles
+  checker 2       rewire by fire at 50 s                                                 compiles
+  checker 2       life ended at first poison (body frozen)                               NOT A PROGRAM: not a word of the language: bad (stage score)
+  checker 2       poison taste 1 s late (block hidden, put under the mouth)              compiles
+  checker 2       verdicts swapped in food+poison ticks (forced)                         NOT A PROGRAM: not a word of the language: sign (stage meal)
+  checker 2       one meal bad under a +1 taste (three food, forced)                     NOT A PROGRAM: not writable here: (set bad 1) (stage score)
+  checker 2       food worth 1e-6, tasting +1                                            NOT A PROGRAM: not a word of the language: bad (stage score)
+  checker 2       poison worth 1000, tasting -1                                          NOT A PROGRAM: not a word of the language: bad (stage score)
+  checker 2       COST 1e-4 from 50 s                                                    NOT A PROGRAM: COST is fixed at birth: (const COST e) only: (set COST 0.0001) (stage tick)
+  checker 2       COST -1 from 50 s, by expression                                       NOT A PROGRAM: COST is fixed at birth: (const COST e) only: (set COST (- 0 1)) (stage tick)
+  checker 2       taste inverted by literals                                             NOT A PROGRAM: not a stage: taste
+  checker 2       taste inverted by literals, score inverted too                         NOT A PROGRAM: not a stage: taste
+  checker 2       half the food tastes lost, worth kept                                  NOT A PROGRAM: not writable here: (set sign 0) (stage meal)
+  checker 2       a Python error on poison (1/0)                                         NOT A PROGRAM: not a word of the language: bad (stage score)
+  checker 2       a Python error on poison (log -1)                                      NOT A PROGRAM: not a word of the language: bad (stage score)
+  checker 2       food+food tick, one meal worth 0                                       NOT A PROGRAM: not writable here: (set amount 0) (stage score)
+  checker 2 brain (world (on tick (set poison W)))                                       NOT A PROGRAM: not a word of the language: W (stage tick)
+  checker 2 brain (world (let W 0) (on tick (set W 1)))                                  compiles
+  checker 2 brain (world (table brain 1 1 0) (on tick (put brain 0 0 1)))                compiles
+  checker 2 brain (world (on tick (set poison (W.brain.p))))                             NOT A PROGRAM: not a word of the language: (W.brain.p) (stage tick)
+  checker 2 brain (world (on tick (set poison (__import__ 1))))                          NOT A PROGRAM: not a word of the language: (__import__ 1) (stage tick)
+  checker 2 brain (world (each brain (set poison 0)))                                    NOT A PROGRAM: not a clause: each
+  checker 2 brain (world (on tick (each W (set poison 0))))                              compiles
+  checker 2 brain (world (let math 0) (on tick (set math 1)))                            compiles
+  checker 2 brain (world (on tick (set poison (bpget hold))))                            NOT A PROGRAM: not a word of the language: (bpget hold) (stage tick)
+  checker 2 brain (world (on tick (bp hold 1)))                                          NOT A PROGRAM: not a statement: (bp hold 1) (stage tick)
+  checker 2 brain (world (let x_W 0))                                                    compiles
+  checker 2 brain (world (on tick (set poison (at brain 0))))                            NOT A PROGRAM: not a table: (at brain 0) (stage tick)
+  checker 2 brain (world (const brain 1))                                                NOT A PROGRAM: not a constant: brain
+  checker 2 brain (world (on tick (set dt 0.02)))                                        NOT A PROGRAM: not writable here: (set dt 0.02) (stage tick)
+  checker 2 brain (world (on tick (set now 5)))                                          NOT A PROGRAM: not writable here: (set now 5) (stage tick)
+  checker 2 brain (world (on tick (set rng 0)))                                          NOT A PROGRAM: not writable here: (set rng 0) (stage tick)
+  checker 2 brain (world (on tick (set TICK 0.02)))                                      NOT A PROGRAM: not writable here: (set TICK 0.02) (stage tick)
+  checker 2 brain (world (on tick (set P F)))                                            NOT A PROGRAM: not writable here: (set P F) (stage tick)
+  checker 2 brain (world (on tick (set seen 1)))                                         NOT A PROGRAM: not writable here: (set seen 1) (stage tick)
+  checker 2 brain (world (on pulse (set eye 1)))                                         NOT A PROGRAM: not writable here: (set eye 1) (stage pulse)
+  checker 2 brain (world (on fire (set motor 1)))                                        NOT A PROGRAM: not writable here: (set motor 1) (stage fire)
+  mine            life ended at first poison (body frozen), by worth                     compiles
+  mine            food worth 1e-6, literal                                               REFUSED: a meal's worth 1e-06, outside 0 and +-[0.1, 10.0]
+  mine            food worth 1e-6, by expression                                         compiles
+  mine            poison worth 1000, by expression                                       compiles
+  mine            COST 1e-4 from 50 s                                                    NOT A PROGRAM: COST is fixed at birth: (const COST e) only: (set COST 0.0001) (stage tick)
+  mine            a Python error on poison (1/0)                                         compiles
+  mine            a Python error on poison (log -1)                                      compiles
+  mine            a Python error in a deferral                                           compiles
+  mine            rewire by fire, deferred 1 ms                                          compiles
+  mine            rewire by fire, laundered through the tick stage                       REFUSED: (thrust want) once a tick: put it under (if (chance (* r TICK)) ...) or (repeat (poisson (* r TICK)) ...)
+  mine            rewire by see, both eyes' light exchanged from 50 s                    compiles
+  mine            body frozen by drag from 50 s                                          compiles
+  mine            every block hidden at 50 s                                             compiles
+  mine            a tick-stage lie, chance per tick                                      REFUSED: a draw once a tick, (chance 0.2): write it as a rate, (chance (* r TICK)) or (poisson (* r TICK))
+  mine            a pulse every tick                                                     REFUSED: (pulse 0) once a tick: put it under (if (chance (* r TICK)) ...) or (repeat (poisson (* r TICK)) ...)
+  mine            a pulse at a rate                                                      compiles
+  mine            a count of ticks                                                       REFUSED: (set n (+ n 1)) with no condition: a count of ticks
+  mine            told that draws                                                        NOT A PROGRAM: (told (if (chance 0.5) P F)) draws: what a told arm is told is a function of the world's state, never a draw (it is read inside brain calls)
+  mine            worth swapped in two-meal ticks (honest now: each meal its own taste)  compiles
+  hand            plain                                                                  compiles
+  hand            swap10                                                                 compiles
+  hand            alternate                                                              compiles
+  hand            pattern                                                                compiles
+  hand            digest                                                                 compiles
+  hand            unreliable                                                             compiles
+  hand            patchy                                                                 compiles
+  hand            weak                                                                   compiles
+  hand            noisy                                                                  compiles
+  hand            coin                                                                   compiles
+  hand            allfood                                                                compiles
+  hand            never                                                                  compiles
+  hand            late_alternate_50                                                      compiles
+  hand            late_swap_50                                                           compiles
+  hand            nlate_pattern_50                                                       compiles
+  hand            swap11                                                                 compiles
+  hand            swapmeals6                                                             compiles
+  hand            unreliable22                                                           compiles
+  hand            every5th                                                               compiles
+  hand            dim25                                                                  compiles
+  hand            mirror                                                                 compiles
+  hand            halfthrust_const                                                       compiles
+  hand            halfthrust_gain                                                        compiles
+  hand            thrusters                                                              compiles
+  hand            fail50                                                                 compiles
+  hand            drag2                                                                  compiles
+  hand            moving                                                                 compiles
+  hand            scarce                                                                 compiles
+  hand            blind                                                                  compiles
+  hand            crosstalk                                                              compiles
+  hand            bruise                                                                 compiles
+  hand            region                                                                 compiles
+  hand            keylock                                                                compiles
+  hand            decoys                                                                 compiles
+  hand            rarefeast                                                              compiles
+  hand            costly                                                                 compiles
+  hand            parity                                                                 compiles
+  hand            word                                                                   compiles
+  hand            cells                                                                  compiles
+  stage 5         delay1                                                                 NOT A PROGRAM: not a stage: taste
+  stage 5         lostgood                                                               NOT A PROGRAM: not a stage: taste
+  stage 5         rewire50                                                               NOT A PROGRAM: not a statement: (wire-sensor 0 (sensor 1)) (stage tick)
+  stage 5         lethal                                                                 NOT A PROGRAM: not a word of the language: bad (stage score)
+  stage 5         liar                                                                   NOT A PROGRAM: not a stage: taste
+
+== told: the bank via arms (spy reads the told rule) against universal_v.V, legacy mode, lockstep, 40 lives
+  (world (told P) (on meal (if (chance 0.2) (set worth (- worth))))): 40 of 40 identical; first differing ticks []
+
+== lives, seconds mode, seeds 66690-66709 x 2, base and bank (80 a world): refused lives, and lives labelled by each instrument
+  checker 1       taste from the score stage                                   refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  checker 1       meal dropped, block uneaten                                  refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  checker 2       rewire by see at 50 s                                        refused 0/80; labelled: eye 80, motor 0, frozen 0, placed 0; median onset eye 50 s
+  checker 2       rewire by look at 50 s                                       refused 0/80; labelled: eye 80, motor 0, frozen 0, placed 0; median onset eye 50 s
+  checker 2       rewire by fire at 50 s                                       refused 0/80; labelled: eye 0, motor 79, frozen 0, placed 0, motor 50 s
+  checker 2       poison taste 1 s late (block hidden, put under the mouth)    refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 80, placed 2.7 s
+  checker 2 brain (world (let W 0) (on tick (set W 1)))                        refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  checker 2 brain (world (table brain 1 1 0) (on tick (put brain 0 0 1)))      refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  checker 2 brain (world (on tick (each W (set poison 0))))                    refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  checker 2 brain (world (let math 0) (on tick (set math 1)))                  refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  checker 2 brain (world (let x_W 0))                                          refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  mine            life ended at first poison (body frozen), by worth           refused 0/80; labelled: eye 0, motor 0, frozen 80, placed 0, frozen 10 s
+  mine            food worth 1e-6, by expression                               refused 80/80 (a meal's worth 1e-06, outside 0 and +-[0.1, 10.0]); labelled: eye 0, motor 0, frozen 0, placed 0
+  mine            poison worth 1000, by expression                             refused 80/80 (a meal's worth -1000.0, outside 0 and +-[0.1, 10.0]); labelled: eye 0, motor 0, frozen 0, placed 0
+  mine            a Python error on poison (1/0)                               refused 80/80 (a rule raised a Python error in on_meal); labelled: eye 0, motor 0, frozen 0, placed 0
+  mine            a Python error on poison (log -1)                            refused 80/80 (a rule raised a Python error in on_meal); labelled: eye 0, motor 0, frozen 0, placed 0
+  mine            a Python error in a deferral                                 refused 80/80 (a rule raised a Python error in a deferral); labelled: eye 0, motor 0, frozen 0, placed 0
+  mine            rewire by fire, deferred 1 ms                                refused 0/80; labelled: eye 0, motor 78, frozen 0, placed 0, motor 50 s
+  mine            rewire by see, both eyes' light exchanged from 50 s          refused 0/80; labelled: eye 80, motor 0, frozen 0, placed 0; median onset eye 50 s
+  mine            body frozen by drag from 50 s                                refused 0/80; labelled: eye 0, motor 0, frozen 80, placed 0, frozen 50 s
+  mine            every block hidden at 50 s                                   refused 0/80; labelled: eye 0, motor 0, frozen 80, placed 0, frozen 50 s
+  mine            a pulse at a rate                                            refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  mine            worth swapped in two-meal ticks (honest now: each meal its o refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 80, placed 0.2 s
+  hand            plain                                                        refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            swap10                                                       refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            alternate                                                    refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            pattern                                                      refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            digest                                                       refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            unreliable                                                   refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            patchy                                                       refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            weak                                                         refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            noisy                                                        refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            coin                                                         refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            allfood                                                      refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            never                                                        refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            late_alternate_50                                            refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            late_swap_50                                                 refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            nlate_pattern_50                                             refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            swap11                                                       refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            swapmeals6                                                   refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            unreliable22                                                 refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            every5th                                                     refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            dim25                                                        refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            mirror                                                       refused 0/80; labelled: eye 0, motor 1, frozen 0, placed 0, motor 70 s
+  hand            halfthrust_const                                             refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            halfthrust_gain                                              refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            thrusters                                                    refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            fail50                                                       refused 0/80; labelled: eye 0, motor 2, frozen 0, placed 0, motor 65 s
+  hand            drag2                                                        refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            moving                                                       refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            scarce                                                       refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            blind                                                        refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            crosstalk                                                    refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            bruise                                                       refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            region                                                       refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            keylock                                                      refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            decoys                                                       refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            rarefeast                                                    refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            costly                                                       refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            parity                                                       refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            word                                                         refused 0/80; labelled: eye 0, motor 0, frozen 0, placed 0
+  hand            cells                                                        refused 0/80; labelled: eye 0, motor 0, frozen 44, placed 64, frozen 60 s, placed 15.0 s
+
+== false positives on the hand worlds (lives labelled / lives)
+  rewired_eye: 0/3120 = 0.0000; worlds: {}
+  rewired_motor: 3/3120 = 0.0010; worlds: {'mirror': 1, 'fail50': 2}
+  frozen: 44/3120 = 0.0141; worlds: {'cells': 44}
+  placed: 64/3120 = 0.0205; worlds: {'cells': 64}

@@ -1,0 +1,87 @@
+corpus SHA-256: 3f31af4436da50b676c78b59c8a0c214bddbed1a6f0bbd960fbfda2b3f42d2d7
+streams 345 s
+first differences plain 367 s
+first differences swap10 377 s
+first differences alternate 389 s
+first differences pattern 400 s
+first differences digest 410 s
+first differences unreliable 421 s
+first differences patchy 431 s
+first differences weak 441 s
+first differences noisy 453 s
+first differences coin 462 s
+first differences allfood 473 s
+first differences never 484 s
+first differences late_alternate_50 493 s
+first differences late_swap_50 503 s
+first differences nlate_pattern_50 515 s
+first differences swap11 524 s
+first differences swapmeals6 535 s
+first differences unreliable22 546 s
+first differences every5th 557 s
+first differences dim25 568 s
+first differences mirror 578 s
+first differences halfthrust_const 591 s
+first differences halfthrust_gain 603 s
+first differences thrusters 613 s
+first differences fail50 627 s
+first differences drag2 639 s
+first differences moving 665 s
+first differences scarce 672 s
+first differences blind 682 s
+first differences crosstalk 694 s
+first differences bruise 703 s
+first differences region 712 s
+first differences keylock 723 s
+first differences decoys 732 s
+first differences rarefeast 741 s
+first differences costly 751 s
+first differences sag 761 s
+first differences parity 770 s
+first differences word 782 s
+first differences cells 790 s
+
+== labels, at the bank's rate. Development, hand-picked. Numbers measured unless named; D and rate evidence are estimates. e, rho: 95% over seed pairs.
+world                   DL                e            rho   n/s b/taste           b/life             D   rate first diff base/bank/unwired: median s (none)  class
+plain                    0 0.025[0.022,0.029] 0.000[0.00,0.00]  0.64    0.83  53.0[50.8,55.1]      0.0[0,0]    0.0 none none none                                 A (no difference on the wires in any life under three policies)
+swap10                 280 0.025[0.022,0.029] 0.442[0.43,0.45]  0.62    0.83  51.5[49.5,53.6] 137.4[129,147]   16.3 11.0(0%) 11.2(0%) 10.5(0%)                     ordinary
+alternate              296 0.030[0.023,0.037] 0.481[0.48,0.49]  0.56    0.80  44.8[41.7,47.8] 126.0[114,139]   65.5 1.5(0%) 1.3(0%) 1.3(0%)                        ordinary
+pattern                520 0.026[0.023,0.029] 0.357[0.35,0.36]  0.58    0.83  48.3[46.2,50.5] 103.7[98,109]   55.6 4.2(0%) 3.7(0%) 3.5(0%)                        ordinary
+digest                 616 0.223[0.209,0.236] 0.000[0.00,0.00]  0.41    0.24    9.7[8.8,10.6]   18.3[16,21]  101.7 2.3(0%) 2.8(0%) 2.4(0%)                        ordinary
+unreliable             296 0.218[0.207,0.229] 0.000[0.00,0.00]  0.60    0.24  14.7[13.2,16.2]   25.9[24,28]   14.6 3.7(0%) 2.9(0%) 3.4(0%)                        ordinary
+patchy                 960 0.115[0.106,0.123] 0.000[0.00,0.00]  0.70    0.49  33.9[31.4,36.3]     8.9[7,10]   29.7 0.4(0%) 0.4(0%) 0.4(0%)                        ordinary
+weak                   360 0.061[0.052,0.070] 0.000[0.00,0.00]  0.47    0.67  31.2[29.4,32.9]      1.2[1,2]  170.0 0.8(0%) 0.7(0%) 0.7(0%)                        ordinary
+noisy                  336 0.051[0.044,0.058] 0.000[0.00,0.00]  0.51    0.71  36.0[34.2,37.8]      0.7[0,1] 1065.9 0.1(0%) 0.1(0%) 0.1(0%)                        ordinary
+coin                   296 0.486[0.471,0.500] 0.000[0.00,0.00]  0.53    0.00     0.0[0.0,0.1]   84.7[79,91]   47.2 1.4(0%) 1.3(0%) 1.3(0%)                        A (a taste says nothing of the colour (e reaches .49))
+allfood                160                -              -  0.00     nan                -             -    2.7 1.6(0%) 1.3(0%) 1.3(0%)                        A (no colour is ever the rule's: nothing to learn)
+never                  464 0.025[0.022,0.029] 0.000[0.00,0.00]  0.64    0.83  53.0[50.8,55.1]      0.0[0,0]    0.0 none none none                                 A (no difference on the wires in any life under three policies)
+late_alternate_50      464 0.027[0.023,0.032] 0.260[0.25,0.27]  0.59    0.82  48.6[46.5,50.6]   75.3[70,81]   20.2 52.2(0%) 53.1(0%) 50.7(0%)                     ordinary
+late_swap_50           264 0.024[0.021,0.028] 0.421[0.41,0.43]  0.60    0.84  50.3[48.5,52.1] 129.0[121,138]    0.7 51.8(0%) 51.4(0%) 50.2(0%)                     ordinary
+nlate_pattern_50       960 0.214[0.203,0.226] 0.224[0.21,0.23]  0.56    0.25  13.9[12.6,15.4]   36.6[35,38]   34.0 3.7(0%) 2.9(0%) 3.4(0%)                        ordinary
+swap11                 280 0.029[0.025,0.034] 0.427[0.42,0.44]  0.60    0.81  48.6[46.4,50.7] 122.0[114,130]   16.5 11.9(0%) 11.8(0%) 11.3(0%)                     ordinary
+swapmeals6             440 0.028[0.024,0.033] 0.475[0.47,0.48]  0.58    0.82  47.7[45.4,50.0] 134.2[125,144]   29.7 8.4(0%) 8.8(0%) 5.3(0%)                        ordinary
+unreliable22           296 0.239[0.228,0.250] 0.000[0.00,0.00]  0.60    0.21  12.5[11.4,13.7]   30.3[28,33]   18.6 3.9(0%) 2.5(0%) 2.3(0%)                        ordinary
+every5th               432 0.212[0.207,0.218] 0.000[0.00,0.00]  0.63    0.25  16.0[15.0,16.9]   25.8[24,27]    9.0 5.4(0%) 5.2(0%) 3.8(0%)                        ordinary
+dim25                  368 0.068[0.060,0.076] 0.000[0.00,0.00]  0.47    0.64  29.9[28.2,31.6]      1.7[1,2]  168.1 0.8(0%) 0.8(0%) 0.8(0%)                        ordinary
+mirror                 184 0.022[0.019,0.026] 0.000[0.00,0.00]  0.62    0.85  52.5[50.6,54.2]      0.0[0,0]    0.0 1.1(0%) 0.9(0%) 0.9(0%)                        A (by symmetry: wiring of thruster to motor is drawn anyway; see its check)
+halfthrust_const       216 0.016[0.012,0.020] 0.000[0.00,0.00]  0.42    0.88  36.8[35.5,38.1]      0.1[0,0]   14.8 0.4(0%) 0.4(0%) 0.4(0%)                        ordinary
+halfthrust_gain        152 0.016[0.012,0.020] 0.000[0.00,0.00]  0.42    0.88  36.8[35.5,38.1]      0.1[0,0]   14.8 0.4(0%) 0.4(0%) 0.4(0%)                        ordinary
+thrusters              464 0.097[0.075,0.126] 0.000[0.00,0.00]  0.24    0.54   12.9[9.0,17.3]      2.1[1,3]   57.3 0.2(0%) 0.2(0%) 0.2(0%)                        ordinary
+fail50                 352 0.024[0.018,0.030] 0.000[0.00,0.00]  0.32    0.84  26.9[25.4,28.4]      0.0[0,0]   43.3 50.4(0%) 50.3(0%) 50.1(0%)                     ordinary
+drag2                  152 0.019[0.015,0.023] 0.000[0.00,0.00]  0.50    0.86  43.0[41.0,44.9]      0.1[0,0]   11.1 0.4(0%) 0.4(0%) 0.4(0%)                        ordinary
+moving                 592 0.025[0.021,0.028] 0.000[0.00,0.00]  0.65    0.83  54.1[52.3,56.0]      0.0[0,0]    3.8 0.2(0%) 0.2(0%) 0.2(0%)                        ordinary
+scarce                 272 0.005[0.001,0.011] 0.000[0.00,0.00]  0.10    0.95    9.4[8.6,10.2]      0.2[0,0]  534.7 0.5(0%) 0.5(0%) 0.5(0%)                        ordinary
+blind                  376 0.074[0.064,0.086] 0.000[0.00,0.00]  0.32    0.62  19.8[18.3,21.4]      1.5[1,2]  395.6 0.4(0%) 0.4(0%) 0.4(0%)                        ordinary
+crosstalk              256 0.158[0.147,0.169] 0.000[0.00,0.00]  0.48    0.37  17.7[16.4,19.0]   11.5[10,13]   55.1 0.3(0%) 0.3(0%) 0.3(0%)                        ordinary
+bruise                 248 0.460[0.454,0.466] 0.000[0.00,0.00]  0.50    0.00     0.2[0.2,0.3]   73.3[71,76]  103.5 1.9(0%) 2.2(0%) 1.9(0%)                        ordinary
+region                 312 0.026[0.023,0.030] 0.437[0.43,0.44]  0.53    0.83  44.1[42.2,45.9] 115.5[108,124]   32.8 1.9(0%) 1.3(0%) 1.3(0%)                        ordinary
+keylock                488 0.030[0.013,0.048] 0.000[0.00,0.00]  0.41    0.81  33.3[29.2,37.6]      0.0[0,1]    7.4 6.2(0%) 3.3(0%) 2.5(0%)                        ordinary
+decoys                 416 0.028[0.023,0.033] 0.000[0.00,0.00]  0.43    0.82  34.8[33.5,36.1]      0.0[0,0]    6.7 2.0(0%) 1.8(0%) 1.7(0%)                        ordinary
+rarefeast              264 0.025[0.022,0.029] 0.000[0.00,0.00]  0.64    0.83  53.0[50.8,55.1]      0.0[0,0]    0.0 none none none                                 A (no difference on the wires in any life under three policies)
+costly                 104 0.025[0.022,0.029] 0.000[0.00,0.00]  0.64    0.83  53.0[50.8,55.1]      0.0[0,0]    0.0 none none none                                 A (no difference on the wires in any life under three policies)
+sag                    456 0.024[0.020,0.028] 0.000[0.00,0.00]  0.58    0.83  48.6[46.5,50.7]      0.0[0,0]    0.1 51.2(0%) 51.2(0%) 50.4(0%)                     B (evidence 0.1 bits below Wald's 3.82 for one pair, at this rate)
+parity                1152 0.025[0.020,0.030] 0.369[0.34,0.40]  0.55    0.83  45.6[42.8,48.7] 101.9[92,113]   33.3 1.7(0%) 1.9(0%) 1.7(0%)                        ordinary
+word                   728 0.021[0.016,0.025] 0.000[0.00,0.00]  0.44    0.85  37.9[32.8,43.2]      0.0[0,0]   44.6 0.4(0%) 0.4(0%) 0.4(0%)                        ordinary
+cells                 1800 0.010[0.008,0.012] 0.000[0.00,0.00]  1.09    0.92 100.6[79.8,122.0]      1.0[1,2]  288.1 0.2(0%) 0.2(0%) 0.2(0%)                        ordinary
+
+done 793 s

@@ -1,0 +1,5 @@
+(world) (meta) (stream) (const) (let) (table) (told) (told-wait) (on) (birth) (tick) (see) (pulse) (fire) (move) (meal) (respawn) (taste) (score) (BLOCK) (BLOCKS) (BODY) (COST) (DRAG) (EAT) (PUSH) (RADIUS) (RANGE) (RAYS) (REACH) (SENSE) (THRUST) (TURN) (WORLD) (x) (y) (vx) (vy) (heading) (spin) (t) (P) (F) (TICK) (N) (PI) (TWOPI) (speed) (poison) (+) (*) (-) (/) (=) (!=) (<) (<=) (>) (>=) (and) (or) (mod) (min) (max) (abs) (floor) (exp) (log) (sqrt) (sin) (cos) (pow) (atan2) (chance) (uniform) (normal) (int) (poisson) (raw) (sensor) (motorof) (bx) (by) (kind) (look) (bright) (alive) (dist) (wdist) (near) (nearest) (bpget) (pulse) (thrust) (taste) (bset) (bkind) (blook) (bbright) (hide) (show) (respawn) (score) (end) (wire-sensor) (wire-motor) (set) (if) (do) (repeat) (each) (until) (after) (drop) (put) (at) (not) (bp) (block) (block) (block) (colour) (colour) (colour) (colour) (eye) (motor) (thruster) (amount) (bad) (gain) (nx) (ny) (seen) (sign) (value)
+# #
+
+%%
+0 14 23 28 33 37 40 43 45 47 49 51 53 54 56 57 z -14 -28 -47 -61 -94 94 142

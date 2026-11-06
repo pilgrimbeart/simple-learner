@@ -1,0 +1,62 @@
+== invariance on every world of worlds.py: 3 renamings, comments/meta/stream/whitespace, lets reordered
+  39 worlds: 0 changes []
+== meaning-preserving rewrites: bits original -> rewrite (canonical)
+  same   + 0: 296 -> 296 (91576b82 91576b82)
+  same   operands commuted: 296 -> 296 (91576b82 91576b82)
+  same   via a variable: 296 -> 296 (91576b82 91576b82)
+  same   a dead variable: 296 -> 296 (91576b82 91576b82)
+  same   never: 0 -> 0 (82887970 82887970)
+  MOVES  > against <: 264 -> 248 (d7e09fd6 f68060b1)
+  MOVES  if negated, branches swapped: 264 -> 272 (d7e09fd6 b1219a48)
+  MOVES  <= against not >: 248 -> 272 (6ee874a8 b1219a48)
+  MOVES  statement if against expression if: 264 -> 256 (d7e09fd6 a6be235e)
+  MOVES  (* 2 x) against (+ x x): 192 -> 152 (9ad4332c 2d0c686e)
+  MOVES  (* 0.5 PUSH) as const against gain .5: 216 -> 152 (b49bc6af a844dc29)
+  same   one tick clause against two: 392 -> 392 (b6363bb8 b6363bb8)
+  same   De Morgan: 312 -> 312 (de168710 f44ac78f)
+  same   nested do: 264 -> 264 (d7e09fd6 d7e09fd6)
+  MOVES  (- 0 x) against (- x): 184 -> 144 (0de578da 2ba89e59)
+  MOVES  double not: 264 -> 272 (d7e09fd6 d854c6a3)
+  MOVES  F against (- 1 P): 264 -> 288 (d7e09fd6 c71a7f77)
+  MOVES  swap by mod against by if: 296 -> 352 (91576b82 e38a97b9)
+  MOVES  a never-acting rule on a counter: 0 -> 416 (82887970 45ddc3ca)
+  MOVES  a rule acting at 33 s written as t*30 > 1000: 232 -> 280 (48567793 57468b1f)
+  12 of 20 move
+== do the rewrites in SAME really keep the lives? (lockstep, 20 lives each)
+  + 0: 20 of 20 identical
+  operands commuted: 20 of 20 identical
+  via a variable: 20 of 20 identical
+  a dead variable: 20 of 20 identical
+  never: 20 of 20 identical
+  > against <: 20 of 20 identical
+  if negated, branches swapped: 20 of 20 identical
+  <= against not >: 20 of 20 identical
+  statement if against expression if: 20 of 20 identical
+  (* 2 x) against (+ x x): 20 of 20 identical
+  (* 0.5 PUSH) as const against gain .5: 20 of 20 identical
+  one tick clause against two: 20 of 20 identical
+  De Morgan: 20 of 20 identical
+  nested do: 20 of 20 identical
+  (- 0 x) against (- x): 20 of 20 identical
+  double not: 20 of 20 identical
+  F against (- 1 P): 20 of 20 identical
+  swap by mod against by if: 20 of 20 identical
+  a never-acting rule on a counter: 20 of 20 identical
+  a rule acting at 33 s written as t*30 > 1000: 19 of 20 identical
+== soundness: the world against to_text(normalise(world)), lockstep; and pairs that differ
+  speed read before vx halves (inlined past it?): bits 416, canonical 39352176; normal form (world (stream 177375580) (let s 0) (on move (set vx (* 0.5 vx)) (set vy (* 0.5 vy)) (if (> speed 0.012) (set spin (* 0.5 spin))))); lives as the world 0 of 20
+  the same, speed read after: bits 416, canonical 39352176; normal form (world (stream 66986455) (on move (set vx (* 0.5 vx)) (set vy (* 0.5 vy)) (if (> speed 0.012) (set spin (* 0.5 spin))))); lives as the world 20 of 20
+  dist read before x moves (inlined past it?): bits 384, canonical 05a30815; normal form (world (stream 40883663) (let d 0) (on tick (set x (+ x 0.0005)) (if (< (dist 0.03 0.03) 0.02) (set poison F)))); lives as the world 20 of 20
+  the same, dist read after: bits 384, canonical 05a30815; normal form (world (stream 172846985) (on tick (set x (+ x 0.0005)) (if (< (dist 0.03 0.03) 0.02) (set poison F)))); lives as the world 20 of 20
+  near read before a meal-time move: bits 408, canonical 0c0ccc91; normal form (world (stream 157126206) (let q 0) (on move (set heading (+ heading 0.3)) (if (> (near -1 0.003) 0) (set spin 0)))); lives as the world 20 of 20
+  the same, near read after: bits 408, canonical 0c0ccc91; normal form (world (stream 95466658) (on move (set heading (+ heading 0.3)) (if (> (near -1 0.003) 0) (set spin 0)))); lives as the world 20 of 20
+  draws: chance first: bits 312, canonical f5adcf22; normal form (world (stream 29962142) (on tick (set poison (if (and (chance 0.5) (< t 50)) F P)))); lives as the world 20 of 20
+  draws: chance second: bits 312, canonical f5adcf22; normal form (world (stream 264613042) (on tick (set poison (if (and (< t 50) (chance 0.5)) F P)))); lives as the world 20 of 20
+  pair 'speed read before vx halves (inlined past it?)' / 'the same, speed read after': same canonical True; lives identical 0 of 20
+  pair 'dist read before x moves (inlined past it?)' / 'the same, dist read after': same canonical True; lives identical 20 of 20
+  pair 'near read before a meal-time move' / 'the same, near read after': same canonical True; lives identical 20 of 20
+  pair 'draws: chance first' / 'draws: chance second': same canonical True; lives identical 0 of 20
+== every world of worlds.py: its normal form lives as it does? (lockstep, 6 lives each)
+  (only worlds whose normal form lives differently are listed)
+== ranking
+  never 0, plain 0, costly 104, drag2 152, halfthrust_gain 152, allfood 160, mirror 184, halfthrust_const 216, bruise 248, late_swap_50 264, rarefeast 264, scarce 272, crosstalk 288, alternate 296, coin 296, swap10 296, swap11 296, unreliable 296, unreliable22 296, region 312, noisy 336, fail50 352, weak 360, dim25 368, blind 376, decoys 424, digest 440, every5th 448, thrusters 456, late_alternate_50 464, swapmeals6 464, keylock 488, pattern 544, moving 592, word 752, patchy 960, nlate_pattern_50 992, parity 1168, cells 1760

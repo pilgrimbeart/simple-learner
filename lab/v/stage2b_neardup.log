@@ -1,0 +1,45 @@
+== near-duplicates, seeds 65400-65599 x 2 (200 pairs); first differences on 65400-65419 x 2
+-- rewritten: halfthrust: a constant / at the firing (identical lives)
+   circuit  same 400/400; d eff +0.000 [+0.000,+0.000]; bits a life 0.0000 (raw 0.0000, p 1.000); lives to tell apart inf; first wire difference median nan s, none in 40/40
+   bank     same 400/400; d eff +0.000 [+0.000,+0.000]; bits a life 0.0000 (raw 0.0000, p 1.000); lives to tell apart inf; first wire difference median nan s, none in 40/40
+   unwired  same 400/400; d eff +0.000 [+0.000,+0.000]; bits a life 0.0000 (raw 0.0000, p 1.000); lives to tell apart inf; first wire difference median nan s, none in 40/40
+-- rewritten: unreliable / the same with uniform for chance and no stream named (equal in distribution)
+   circuit  same 0/400; d eff -0.011 [-0.126,+0.100]; bits a life 0.0019 (raw 0.0189, p 0.415); lives to tell apart 2061; first wire difference median 1.54 s, none in 0/40
+   bank     same 0/400; d eff +0.002 [-0.102,+0.105]; bits a life 0.0000 (raw 0.0191, p 0.502); lives to tell apart inf; first wire difference median 1.27 s, none in 0/40
+   unwired  same 0/400; d eff +0.000 [+0.000,+0.000]; bits a life 0.0000 (raw 0.0000, p 1.000); lives to tell apart inf; first wire difference median 1.36 s, none in 0/40
+-- rewritten: weak / dim25 (equal in distribution, L5 against L4)
+   circuit  same 0/400; d eff -0.070 [-0.158,+0.021]; bits a life 0.0010 (raw 0.0170, p 0.472); lives to tell apart 3974; first wire difference median 0.74 s, none in 0/40
+   bank     same 0/400; d eff +0.001 [-0.081,+0.090]; bits a life 0.0000 (raw 0.0119, p 0.705); lives to tell apart inf; first wire difference median 0.74 s, none in 0/40
+   unwired  same 0/400; d eff +0.016 [-0.032,+0.066]; bits a life 0.0052 (raw 0.0242, p 0.367); lives to tell apart 732; first wire difference median 0.74 s, none in 0/40
+-- nudged: swap10 / swap11 (10%)
+   circuit  same 0/400; d eff +0.187 [+0.116,+0.257] SURE; bits a life 0.1884 (raw 0.2055, p 0.000); lives to tell apart 20; first wire difference median 10.71 s, none in 0/40
+   bank     same 0/400; d eff +0.072 [-0.020,+0.161]; bits a life 0.0991 (raw 0.1173, p 0.000); lives to tell apart 39; first wire difference median 20.20 s, none in 0/40
+   unwired  same 0/400; d eff +0.000 [+0.000,+0.000]; bits a life 0.0000 (raw 0.0000, p 1.000); lives to tell apart inf; first wire difference median 10.48 s, none in 0/40
+-- nudged: unreliable .2 / .22
+   circuit  same 0/400; d eff -0.098 [-0.215,+0.017]; bits a life 0.0056 (raw 0.0239, p 0.352); lives to tell apart 688; first wire difference median 2.96 s, none in 0/40
+   bank     same 0/400; d eff -0.248 [-0.359,-0.145] SURE; bits a life 0.0690 (raw 0.0873, p 0.000); lives to tell apart 55; first wire difference median 1.38 s, none in 0/40
+   unwired  same 0/400; d eff +0.000 [+0.000,+0.000]; bits a life 0.0000 (raw 0.0000, p 1.000); lives to tell apart inf; first wire difference median 1.38 s, none in 0/40
+-- nudged: DRAG x2 / x2.1 (5%)
+   circuit  same 0/400; d eff -0.045 [-0.114,+0.025]; bits a life 0.0458 (raw 0.0668, p 0.000); lives to tell apart 83; first wire difference median 0.87 s, none in 0/40
+   bank     same 0/400; d eff -0.071 [-0.138,-0.001] SURE; bits a life 0.0411 (raw 0.0613, p 0.010); lives to tell apart 93; first wire difference median 0.87 s, none in 0/40
+   unwired  same 0/400; d eff +0.042 [+0.010,+0.076] SURE; bits a life 0.0215 (raw 0.0363, p 0.113); lives to tell apart 178; first wire difference median 0.85 s, none in 0/40
+-- nudged: one colour .25 / .30 as bright
+   circuit  same 0/400; d eff +0.148 [+0.067,+0.226] SURE; bits a life 0.0177 (raw 0.0340, p 0.085); lives to tell apart 216; first wire difference median 5.35 s, none in 0/40
+   bank     same 0/400; d eff +0.131 [+0.060,+0.202] SURE; bits a life 0.0217 (raw 0.0379, p 0.052); lives to tell apart 176; first wire difference median 4.31 s, none in 0/40
+   unwired  same 0/400; d eff -0.070 [-0.114,-0.024] SURE; bits a life 0.0859 (raw 0.1017, p 0.003); lives to tell apart 44; first wire difference median 4.08 s, none in 0/40
+-- few ticks: plain / poison swapped for 0.1 s at 50 s (10 ticks)
+   circuit  same 0/400; d eff -0.331 [-0.387,-0.277] SURE; bits a life 0.9502 (raw 0.9612, p 0.000); lives to tell apart 4; first wire difference median 51.61 s, none in 0/40
+   bank     same 0/400; d eff -0.650 [-0.709,-0.591] SURE; bits a life 2.3013 (raw 2.3153, p 0.000); lives to tell apart 2; first wire difference median 51.44 s, none in 0/40
+   unwired  same 0/400; d eff +0.000 [+0.000,+0.000]; bits a life 0.0000 (raw 0.0000, p 1.000); lives to tell apart inf; first wire difference median 50.41 s, none in 0/40
+-- few ticks: the colours swap for good at 50 s / at 50.05 s (5 ticks)
+   circuit  same 390/400; d eff +0.003 [-0.005,+0.013]; bits a life 0.0000 (raw 0.0001, p 0.965); lives to tell apart inf; first wire difference median nan s, none in 40/40
+   bank     same 391/400; d eff -0.004 [-0.012,+0.003]; bits a life 0.0000 (raw 0.0002, p 0.440); lives to tell apart 177177; first wire difference median nan s, none in 40/40
+   unwired  same 368/400; d eff +0.000 [+0.000,+0.000]; bits a life 0.0000 (raw 0.0000, p 1.000); lives to tell apart inf; first wire difference median 50.03 s, none in 38/40
+-- distinct: plain / swap10
+   circuit  same 0/400; d eff -2.703 [-2.769,-2.636] SURE; bits a life 19.6254 (raw 19.6481, p 0.000); lives to tell apart 0; first wire difference median 10.71 s, none in 0/40
+   bank     same 0/400; d eff -2.191 [-2.284,-2.103] SURE; bits a life 10.0075 (raw 10.0328, p 0.000); lives to tell apart 0; first wire difference median 11.13 s, none in 0/40
+   unwired  same 0/400; d eff +0.000 [+0.000,+0.000]; bits a life 0.0000 (raw 0.0000, p 1.000); lives to tell apart inf; first wire difference median 10.48 s, none in 0/40
+-- distinct: plain / DRAG x2
+   circuit  same 0/400; d eff -0.361 [-0.426,-0.292] SURE; bits a life 4.3416 (raw 4.3669, p 0.000); lives to tell apart 1; first wire difference median 0.42 s, none in 0/40
+   bank     same 0/400; d eff -0.411 [-0.483,-0.330] SURE; bits a life 4.8684 (raw 4.8956, p 0.000); lives to tell apart 1; first wire difference median 0.42 s, none in 0/40
+   unwired  same 0/400; d eff +0.793 [+0.745,+0.839] SURE; bits a life 7.3937 (raw 7.4176, p 0.000); lives to tell apart 1; first wire difference median 0.42 s, none in 0/40

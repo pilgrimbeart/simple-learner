@@ -1,0 +1,211 @@
+== 1. The budget per life, real lives of the bank, 95% intervals over seeds. n: pulses, vouched, scored. e: chance what a scored taste says of the colour is false against the rule's food colour.
+   A: chance a scored taste's meal was the followed colour. Lsign: chance the sign is false of the colour eaten. I = 1-H(e), bits a taste could carry to a pair of hypotheses that disagree on it
+plain       pulses 74.6 [73.8,75.4] vouched 65.2 [64.6,65.9] scored 63.3 [62.6,64.0] | e 0.025 [0.024,0.027] A 0.975 [0.973,0.976] Lsign 0.000 [0.000,0.000] | I 0.830 [0.823,0.838] bits/taste | 52.6 [51.9,53.3] bits/life, 0.526 bits/s; first 10 s 4.6 [4.4,4.8], 30 s 15.3 [14.9,15.6]; scored in 10 s 5.6, 30 s 18.4
+swap10      pulses 71.2 [70.4,72.0] vouched 62.4 [61.6,63.1] scored 60.4 [59.6,61.1] | e 0.027 [0.026,0.029] A 0.973 [0.971,0.974] Lsign 0.000 [0.000,0.000] | I 0.819 [0.811,0.826] bits/taste | 49.4 [48.7,50.2] bits/life, 0.494 bits/s; first 10 s 4.6 [4.4,4.7], 30 s 14.5 [14.2,14.8]; scored in 10 s 5.6, 30 s 17.7
+alternate   pulses 70.2 [69.0,71.4] vouched 61.2 [60.1,62.2] scored 58.1 [57.0,59.2] | e 0.029 [0.027,0.031] A 0.971 [0.969,0.973] Lsign 0.000 [0.000,0.000] | I 0.809 [0.799,0.819] bits/taste | 47.0 [46.0,47.9] bits/life, 0.470 bits/s; first 10 s 4.0 [3.8,4.2], 30 s 13.5 [13.1,13.9]; scored in 10 s 4.9, 30 s 16.7
+pattern     pulses 69.9 [69.0,70.7] vouched 61.0 [60.2,61.8] scored 59.0 [58.1,59.7] | e 0.027 [0.025,0.028] A 0.973 [0.972,0.975] Lsign 0.000 [0.000,0.000] | I 0.821 [0.814,0.829] bits/taste | 48.4 [47.7,49.1] bits/life, 0.484 bits/s; first 10 s 4.3 [4.2,4.5], 30 s 13.9 [13.6,14.2]; scored in 10 s 5.3, 30 s 16.9
+digest      pulses 48.9 [48.5,49.3] vouched 42.6 [42.3,43.0] scored 40.4 [40.1,40.8] | e 0.208 [0.203,0.214] A 0.983 [0.981,0.984] Lsign 0.192 [0.187,0.197] | I 0.262 [0.252,0.272] bits/taste | 10.6 [10.2,11.0] bits/life, 0.106 bits/s; first 10 s 1.3 [1.2,1.3], 30 s 3.4 [3.3,3.6]; scored in 10 s 4.8, 30 s 13.1
+unreliable  pulses 71.5 [70.6,72.4] vouched 62.5 [61.7,63.2] scored 60.4 [59.7,61.2] | e 0.214 [0.210,0.218] A 0.975 [0.974,0.977] Lsign 0.199 [0.195,0.203] | I 0.252 [0.244,0.258] bits/taste | 15.2 [14.7,15.7] bits/life, 0.152 bits/s; first 10 s 1.4 [1.3,1.4], 30 s 4.4 [4.3,4.6]; scored in 10 s 5.4, 30 s 17.7
+patchy      pulses 96.4 [93.9,99.2] vouched 72.2 [70.3,74.2] scored 70.1 [68.2,72.0] | e 0.117 [0.114,0.121] A 0.883 [0.879,0.886] Lsign 0.000 [0.000,0.000] | I 0.478 [0.469,0.487] bits/taste | 33.5 [32.5,34.5] bits/life, 0.335 bits/s; first 10 s 3.2 [3.0,3.4], 30 s 10.1 [9.7,10.5]; scored in 10 s 6.7, 30 s 21.2
+weak        pulses 59.8 [59.1,60.5] vouched 50.1 [49.5,50.7] scored 48.2 [47.6,48.8] | e 0.061 [0.059,0.064] A 0.939 [0.936,0.941] Lsign 0.000 [0.000,0.000] | I 0.668 [0.658,0.677] bits/taste | 32.2 [31.6,32.7] bits/life, 0.322 bits/s; first 10 s 2.4 [2.3,2.6], 30 s 8.9 [8.7,9.1]; scored in 10 s 3.7, 30 s 13.3
+noisy       pulses 64.0 [63.3,64.6] vouched 53.2 [52.6,53.8] scored 51.3 [50.7,51.9] | e 0.050 [0.048,0.053] A 0.950 [0.947,0.952] Lsign 0.000 [0.000,0.000] | I 0.713 [0.703,0.723] bits/taste | 36.6 [36.0,37.2] bits/life, 0.366 bits/s; first 10 s 2.9 [2.8,3.0], 30 s 10.4 [10.1,10.7]; scored in 10 s 4.1, 30 s 14.6
+
+== 1b. A taste as a channel from 'the followed colour is the food' (told right, told wrong, 200 seeds x 2). Sign alone on scored tastes: P(good | right), P(good | wrong), I with a uniform prior on right/wrong.
+   All pulses: Poisson rate of each kind (sign, followed eye within 0.3 s, other eye within 0.3 s), bits/s = KL rate between right and wrong, each way. Upper bound for vouching's loss on these features only.
+plain       I with kind, per pulse, uniform prior 0.697 bits, so 0.517 bits/s told right, against the sign on scored tastes 0.541 bits/s
+plain       scored per s right 0.645 wrong 0.457; P(good|right) 0.975 P(good|wrong) 0.022 I_sign 0.838 bits/taste; pulses per s right 0.741 wrong 0.537; KL rate right||wrong 3.203, wrong||right 2.352 bits/s
+swap10      I with kind, per pulse, uniform prior 0.704 bits, so 0.537 bits/s told right, against the sign on scored tastes 0.548 bits/s
+swap10      scored per s right 0.664 wrong 0.473; P(good|right) 0.972 P(good|wrong) 0.024 I_sign 0.826 bits/taste; pulses per s right 0.763 wrong 0.551; KL rate right||wrong 3.381, wrong||right 2.447 bits/s
+alternate   I with kind, per pulse, uniform prior 0.695 bits, so 0.507 bits/s told right, against the sign on scored tastes 0.501 bits/s
+alternate   scored per s right 0.634 wrong 0.461; P(good|right) 0.972 P(good|wrong) 0.038 I_sign 0.791 bits/taste; pulses per s right 0.730 wrong 0.540; KL rate right||wrong 2.686, wrong||right 3.006 bits/s
+pattern     I with kind, per pulse, uniform prior 0.719 bits, so 0.526 bits/s told right, against the sign on scored tastes 0.530 bits/s
+pattern     scored per s right 0.633 wrong 0.457; P(good|right) 0.973 P(good|wrong) 0.021 I_sign 0.837 bits/taste; pulses per s right 0.731 wrong 0.536; KL rate right||wrong 3.147, wrong||right 2.690 bits/s
+digest      I with kind, per pulse, uniform prior 0.460 bits, so 0.224 bits/s told right, against the sign on scored tastes 0.223 bits/s
+digest      scored per s right 0.412 wrong 0.447; P(good|right) 0.776 P(good|wrong) 0.010 I_sign 0.541 bits/taste; pulses per s right 0.487 wrong 0.528; KL rate right||wrong 1.893, wrong||right 0.933 bits/s
+unreliable  I with kind, per pulse, uniform prior 0.215 bits, so 0.154 bits/s told right, against the sign on scored tastes 0.157 bits/s
+unreliable  scored per s right 0.621 wrong 0.484; P(good|right) 0.784 P(good|wrong) 0.210 I_sign 0.253 bits/taste; pulses per s right 0.716 wrong 0.565; KL rate right||wrong 0.681, wrong||right 0.543 bits/s
+patchy      I with kind, per pulse, uniform prior 0.337 bits, so 0.322 bits/s told right, against the sign on scored tastes 0.356 bits/s
+patchy      scored per s right 0.709 wrong 0.381; P(good|right) 0.880 P(good|wrong) 0.099 I_sign 0.502 bits/taste; pulses per s right 0.958 wrong 0.608; KL rate right||wrong 1.500, wrong||right 1.202 bits/s
+weak        I with kind, per pulse, uniform prior 0.549 bits, so 0.325 bits/s told right, against the sign on scored tastes 0.337 bits/s
+weak        scored per s right 0.491 wrong 0.368; P(good|right) 0.938 P(good|wrong) 0.051 I_sign 0.687 bits/taste; pulses per s right 0.591 wrong 0.459; KL rate right||wrong 1.750, wrong||right 1.273 bits/s
+noisy       I with kind, per pulse, uniform prior 0.545 bits, so 0.345 bits/s told right, against the sign on scored tastes 0.377 bits/s
+noisy       scored per s right 0.522 wrong 0.408; P(good|right) 0.950 P(good|wrong) 0.046 I_sign 0.722 bits/taste; pulses per s right 0.632 wrong 0.503; KL rate right||wrong 1.896, wrong||right 1.464 bits/s
+
+== 2a. Each model in each world: hit rate on scored tastes, and H(hit rate), the bits a taste it leaves unexplained (a prequential code length, so a model's learning cost is in it: this is its Occam factor). Then rho: share of tastes where it disagrees with the default; a: chance it is the one right, given that.
+plain       hit  1/3:0.973 1/0:0.950 2/2:0.972 3/2:0.971 4/2:0.969 5/2:0.968 6/2:0.967 | best 1/3
+            H    1/3:0.177 1/0:0.286 2/2:0.184 3/2:0.191 4/2:0.198 5/2:0.204 6/2:0.210
+            rho  1/3:0.000 1/0:0.024 2/2:0.002 3/2:0.003 4/2:0.005 5/2:0.006 6/2:0.007
+            a    1/3:0.000 1/0:0.024 2/2:0.126 3/2:0.084 4/2:0.067 5/2:0.060 6/2:0.053
+swap10      hit  1/3:0.575 1/0:0.812 2/2:0.537 3/2:0.527 4/2:0.522 5/2:0.533 6/2:0.539 | best 1/0
+            H    1/3:0.983 1/0:0.696 2/2:0.996 3/2:0.998 4/2:0.999 5/2:0.997 6/2:0.996
+            rho  1/3:0.000 1/0:0.303 2/2:0.241 3/2:0.337 4/2:0.392 5/2:0.435 6/2:0.458
+            a    1/3:0.000 1/0:0.891 2/2:0.420 3/2:0.429 4/2:0.432 5/2:0.451 6/2:0.460
+alternate   hit  1/3:0.385 1/0:0.162 2/2:0.943 3/2:0.466 4/2:0.918 5/2:0.447 6/2:0.896 | best 2/2
+            H    1/3:0.962 1/0:0.638 2/2:0.316 3/2:0.997 4/2:0.410 5/2:0.992 6/2:0.483
+            rho  1/3:0.000 1/0:0.353 2/2:0.603 3/2:0.376 4/2:0.590 5/2:0.385 6/2:0.575
+            a    1/3:0.000 1/0:0.184 2/2:0.963 3/2:0.608 4/2:0.952 5/2:0.581 6/2:0.944
+pattern     hit  1/3:0.606 1/0:0.416 2/2:0.591 3/2:0.929 4/2:0.588 5/2:0.585 6/2:0.895 | best 3/2
+            H    1/3:0.967 1/0:0.979 2/2:0.976 3/2:0.371 4/2:0.978 5/2:0.979 6/2:0.485
+            rho  1/3:0.000 1/0:0.334 2/2:0.138 3/2:0.368 4/2:0.192 5/2:0.215 6/2:0.354
+            a    1/3:0.000 1/0:0.215 2/2:0.445 3/2:0.938 4/2:0.452 5/2:0.451 6/2:0.908
+digest      hit  1/3:0.753 1/0:0.700 2/2:0.725 3/2:0.714 4/2:0.705 5/2:0.695 6/2:0.684 | best 1/3
+            H    1/3:0.807 1/0:0.881 2/2:0.849 3/2:0.864 4/2:0.875 5/2:0.887 6/2:0.900
+            rho  1/3:0.000 1/0:0.172 2/2:0.067 3/2:0.097 4/2:0.119 5/2:0.140 6/2:0.159
+            a    1/3:0.000 1/0:0.347 2/2:0.295 3/2:0.300 4/2:0.302 5/2:0.294 6/2:0.285
+unreliable  hit  1/3:0.774 1/0:0.665 2/2:0.760 3/2:0.752 4/2:0.744 5/2:0.735 6/2:0.729 | best 1/3
+            H    1/3:0.772 1/0:0.920 2/2:0.795 3/2:0.809 4/2:0.821 5/2:0.834 6/2:0.843
+            rho  1/3:0.000 1/0:0.201 2/2:0.041 3/2:0.060 4/2:0.074 5/2:0.087 6/2:0.101
+            a    1/3:0.000 1/0:0.231 2/2:0.332 3/2:0.317 4/2:0.298 5/2:0.281 6/2:0.278
+patchy      hit  1/3:0.877 1/0:0.791 2/2:0.873 3/2:0.869 4/2:0.865 5/2:0.861 6/2:0.857 | best 1/3
+            H    1/3:0.537 1/0:0.740 2/2:0.549 3/2:0.560 4/2:0.570 5/2:0.580 6/2:0.591
+            rho  1/3:0.000 1/0:0.114 2/2:0.009 3/2:0.015 4/2:0.020 5/2:0.025 6/2:0.030
+            a    1/3:0.000 1/0:0.120 2/2:0.249 3/2:0.215 4/2:0.195 5/2:0.183 6/2:0.160
+weak        hit  1/3:0.935 1/0:0.881 2/2:0.931 3/2:0.927 4/2:0.923 5/2:0.920 6/2:0.916 | best 1/3
+            H    1/3:0.348 1/0:0.525 2/2:0.362 3/2:0.376 4/2:0.391 5/2:0.404 6/2:0.417
+            rho  1/3:0.000 1/0:0.059 2/2:0.005 3/2:0.010 4/2:0.014 5/2:0.018 6/2:0.023
+            a    1/3:0.000 1/0:0.050 2/2:0.124 3/2:0.103 4/2:0.087 5/2:0.083 6/2:0.080
+noisy       hit  1/3:0.946 1/0:0.903 2/2:0.942 3/2:0.939 4/2:0.936 5/2:0.933 6/2:0.930 | best 1/3
+            H    1/3:0.303 1/0:0.458 2/2:0.318 3/2:0.331 4/2:0.344 5/2:0.356 6/2:0.367
+            rho  1/3:0.000 1/0:0.047 2/2:0.005 3/2:0.009 4/2:0.013 5/2:0.016 6/2:0.020
+            a    1/3:0.000 1/0:0.051 2/2:0.148 3/2:0.120 4/2:0.099 5/2:0.090 6/2:0.087
+
+== 2b. Replay check: the bank's counters replayed on its own stream against its recorded picks (first pick, all lives)
+  plain: first picks reproduced 800/800
+  swap10: first picks reproduced 800/800
+  alternate: first picks reproduced 800/800
+  pattern: first picks reproduced 800/800
+  digest: first picks reproduced 800/800
+  unreliable: first picks reproduced 800/800
+  patchy: first picks reproduced 800/800
+  weak: first picks reproduced 800/800
+  noisy: first picks reproduced 800/800
+
+== 2c. Evidence at the bank's first pick of a rival. n: scored tastes so far. diff: its hits less the default's, whole stream. Bits at e=0.1 (3.17 a hit) and with e integrated out per model (Beta(1,1)), each against the default. Pcand: posterior of the picked model, uniform prior over seven; P0.9: default's prior 0.9, rivals sharing 0.1; e=0.1.
+plain       picks in 0.003 of lives, 0.00 of them right | at pick median t 39.3 s, n 28, diff 1 (10-90%: -1,3), bits 3.2, Beta bits 0.4, Pcand 0.444, P0.9 0.410; share of picks with diff<=0: 0.50
+swap10      picks in 1.000 of lives, 0.94 of them right | at pick median t 14.6 s, n 9, diff 1 (10-90%: 0,2), bits 3.2, Beta bits 1.8, Pcand 0.600, P0.9 0.132; share of picks with diff<=0: 0.11
+alternate   picks in 1.000 of lives, 0.87 of them right | at pick median t 11.4 s, n 6, diff 2 (10-90%: 2,3), bits 6.3, Beta bits 1.3, Pcand 0.196, P0.9 0.193; share of picks with diff<=0: 0.01
+pattern     picks in 1.000 of lives, 0.27 of them right | at pick median t 10.9 s, n 6, diff 2 (10-90%: 1,3), bits 6.3, Beta bits 1.0, Pcand 0.196, P0.9 0.173; share of picks with diff<=0: 0.01
+digest      picks in 0.529 of lives, 0.00 of them right | at pick median t 34.3 s, n 16, diff 1 (10-90%: -2,2), bits 3.2, Beta bits 0.0, Pcand 0.248, P0.9 0.118; share of picks with diff<=0: 0.37
+unreliable  picks in 0.448 of lives, 0.00 of them right | at pick median t 37.7 s, n 22, diff 0 (10-90%: -6,2), bits 0.0, Beta bits -0.8, Pcand 0.090, P0.9 0.015; share of picks with diff<=0: 0.61
+patchy      picks in 0.099 of lives, 0.00 of them right | at pick median t 53.3 s, n 31, diff 0 (10-90%: -4,2), bits 0.0, Beta bits -1.3, Pcand 0.143, P0.9 0.017; share of picks with diff<=0: 0.65
+weak        picks in 0.005 of lives, 0.00 of them right | at pick median t 67.6 s, n 42, diff 0 (10-90%: -2,2), bits 0.0, Beta bits 0.3, Pcand 0.435, P0.9 0.072; share of picks with diff<=0: 0.50
+noisy       picks in 0.013 of lives, 0.00 of them right | at pick median t 45.2 s, n 26, diff 1 (10-90%: -1,2), bits 3.2, Beta bits 1.6, Pcand 0.252, P0.9 0.132; share of picks with diff<=0: 0.40
+
+== 2d. Selection on bank's own stream (real lives): first pick of a rival (false where the default is right), first right pick. Each rule: share of lives with a pick, median time (s), right pick's share and median.
+bank +1/-3 floor 0, theta 2,3                    plain false 0.003 | swap1 right 1.00@14.7s false-first 0.06 | alter right 1.00@11.7s false-first 0.13 | patte right 1.00@13.9s false-first 0.73 | diges false 0.529 | unrel false 0.448 | patch false 0.099 | weak false 0.005 | noisy false 0.013
+MAP default +0.5 hits (a rival needs 1 ahead)    plain false 0.031 | swap1 right 1.00@12.9s false-first 0.02 | alter right 1.00@9.6s false-first 0.88 | patte right 1.00@12.9s false-first 0.89 | diges false 0.659 | unrel false 0.476 | patch false 0.236 | weak false 0.059 | noisy false 0.072
+MAP default +1.5 hits (a rival needs 2 ahead)    plain false 0.004 | swap1 right 1.00@14.8s false-first 0.04 | alter right 1.00@9.8s false-first 0.12 | patte right 1.00@13.3s false-first 0.78 | diges false 0.375 | unrel false 0.242 | patch false 0.069 | weak false 0.007 | noisy false 0.016
+MAP default +2.5 hits (a rival needs 3 ahead)    plain false 0.001 | swap1 right 1.00@18.1s false-first 0.07 | alter right 1.00@11.7s false-first 0.05 | patte right 1.00@14.0s false-first 0.36 | diges false 0.105 | unrel false 0.144 | patch false 0.024 | weak false 0.000 | noisy false 0.001
+MAP default +3.5 hits (a rival needs 4 ahead)    plain false 0.000 | swap1 right 1.00@26.6s false-first 0.10 | alter right 1.00@14.9s false-first 0.01 | patte right 1.00@16.4s false-first 0.06 | diges false 0.035 | unrel false 0.072 | patch false 0.004 | weak false 0.000 | noisy false 0.000
+MAP default +4.5 hits (a rival needs 5 ahead)    plain false 0.000 | swap1 right 0.99@33.5s false-first 0.10 | alter right 1.00@18.0s false-first 0.01 | patte right 1.00@20.8s false-first 0.03 | diges false 0.010 | unrel false 0.037 | patch false 0.001 | weak false 0.000 | noisy false 0.000
+MAP default +6.5 hits (a rival needs 7 ahead)    plain false 0.000 | swap1 right 0.96@45.9s false-first 0.04 | alter right 1.00@24.7s false-first 0.00 | patte right 1.00@30.9s false-first 0.02 | diges false 0.000 | unrel false 0.006 | patch false 0.001 | weak false 0.000 | noisy false 0.000
+MAP default +8.5 hits (a rival needs 9 ahead)    plain false 0.000 | swap1 right 0.90@59.5s false-first 0.01 | alter right 1.00@30.4s false-first 0.00 | patte right 0.99@41.2s false-first 0.00 | diges false 0.000 | unrel false 0.003 | patch false 0.000 | weak false 0.000 | noisy false 0.000
+counter +1/-1 floor 0.0, theta 2                 plain false 0.003 | swap1 right 1.00@14.7s false-first 0.06 | alter right 1.00@11.7s false-first 0.13 | patte right 1.00@13.8s false-first 0.72 | diges false 0.532 | unrel false 0.451 | patch false 0.100 | weak false 0.005 | noisy false 0.013
+counter +1/-1 floor 0.0, theta 4                 plain false 0.000 | swap1 right 1.00@26.1s false-first 0.10 | alter right 1.00@18.0s false-first 0.01 | patte right 1.00@20.6s false-first 0.03 | diges false 0.021 | unrel false 0.068 | patch false 0.006 | weak false 0.000 | noisy false 0.000
+counter +1/-3 floor 0.0, theta 1                 plain false 0.035 | swap1 right 1.00@12.8s false-first 0.05 | alter right 1.00@9.8s false-first 0.88 | patte right 1.00@13.3s false-first 0.89 | diges false 0.900 | unrel false 0.909 | patch false 0.575 | weak false 0.125 | noisy false 0.105
+counter +1/-3 floor 0.0, theta 3                 plain false 0.000 | swap1 right 1.00@17.4s false-first 0.10 | alter right 1.00@15.0s false-first 0.06 | patte right 1.00@16.4s false-first 0.23 | diges false 0.026 | unrel false 0.149 | patch false 0.018 | weak false 0.000 | noisy false 0.001
+counter +1/-3 floor 0.0, theta 4                 plain false 0.000 | swap1 right 0.99@26.3s false-first 0.09 | alter right 1.00@18.3s false-first 0.01 | patte right 1.00@21.1s false-first 0.05 | diges false 0.007 | unrel false 0.054 | patch false 0.006 | weak false 0.000 | noisy false 0.000
+counter +1/-3 floor None, theta 2                plain false 0.001 | swap1 right 0.97@15.3s false-first 0.03 | alter right 1.00@11.8s false-first 0.12 | patte right 1.00@14.8s false-first 0.73 | diges false 0.230 | unrel false 0.146 | patch false 0.029 | weak false 0.003 | noisy false 0.006
+counter +1/-1 floor None, theta 2                plain false 0.001 | swap1 right 1.00@14.8s false-first 0.03 | alter right 1.00@11.7s false-first 0.12 | patte right 1.00@14.0s false-first 0.73 | diges false 0.294 | unrel false 0.189 | patch false 0.033 | weak false 0.003 | noisy false 0.006
+counter +1/-2 floor 0.0, theta 2                 plain false 0.003 | swap1 right 1.00@14.7s false-first 0.06 | alter right 1.00@11.7s false-first 0.13 | patte right 1.00@13.9s false-first 0.73 | diges false 0.529 | unrel false 0.448 | patch false 0.099 | weak false 0.005 | noisy false 0.013
+
+== 2d. Selection on the default pinned (exact to any selector's first pick): first pick of a rival (false where the default is right), first right pick. Each rule: share of lives with a pick, median time (s), right pick's share and median.
+bank +1/-3 floor 0, theta 2,3                    plain false 0.003 | swap1 right 1.00@14.7s false-first 0.06 | alter right 1.00@11.7s false-first 0.13 | patte right 1.00@14.1s false-first 0.73 | diges false 0.529 | unrel false 0.448 | patch false 0.099 | weak false 0.005 | noisy false 0.013
+MAP default +0.5 hits (a rival needs 1 ahead)    plain false 0.031 | swap1 right 1.00@12.9s false-first 0.03 | alter right 1.00@9.6s false-first 0.88 | patte right 1.00@13.1s false-first 0.89 | diges false 0.665 | unrel false 0.469 | patch false 0.230 | weak false 0.059 | noisy false 0.071
+MAP default +1.5 hits (a rival needs 2 ahead)    plain false 0.004 | swap1 right 1.00@14.8s false-first 0.04 | alter right 1.00@9.8s false-first 0.12 | patte right 1.00@13.5s false-first 0.78 | diges false 0.389 | unrel false 0.223 | patch false 0.066 | weak false 0.007 | noisy false 0.015
+MAP default +2.5 hits (a rival needs 3 ahead)    plain false 0.001 | swap1 right 1.00@18.1s false-first 0.06 | alter right 1.00@11.7s false-first 0.05 | patte right 1.00@14.3s false-first 0.35 | diges false 0.169 | unrel false 0.134 | patch false 0.019 | weak false 0.000 | noisy false 0.001
+MAP default +3.5 hits (a rival needs 4 ahead)    plain false 0.000 | swap1 right 0.99@27.5s false-first 0.10 | alter right 1.00@15.3s false-first 0.02 | patte right 1.00@16.5s false-first 0.07 | diges false 0.081 | unrel false 0.065 | patch false 0.003 | weak false 0.000 | noisy false 0.000
+MAP default +4.5 hits (a rival needs 5 ahead)    plain false 0.000 | swap1 right 0.98@35.1s false-first 0.13 | alter right 1.00@18.0s false-first 0.01 | patte right 1.00@20.2s false-first 0.03 | diges false 0.026 | unrel false 0.037 | patch false 0.000 | weak false 0.000 | noisy false 0.000
+MAP default +6.5 hits (a rival needs 7 ahead)    plain false 0.000 | swap1 right 0.96@51.2s false-first 0.10 | alter right 1.00@24.2s false-first 0.01 | patte right 1.00@26.5s false-first 0.02 | diges false 0.006 | unrel false 0.007 | patch false 0.000 | weak false 0.000 | noisy false 0.000
+MAP default +8.5 hits (a rival needs 9 ahead)    plain false 0.000 | swap1 right 0.88@64.1s false-first 0.06 | alter right 1.00@31.1s false-first 0.01 | patte right 1.00@33.5s false-first 0.02 | diges false 0.001 | unrel false 0.000 | patch false 0.000 | weak false 0.000 | noisy false 0.000
+counter +1/-1 floor 0.0, theta 2                 plain false 0.003 | swap1 right 1.00@14.7s false-first 0.06 | alter right 1.00@11.7s false-first 0.13 | patte right 1.00@14.1s false-first 0.72 | diges false 0.532 | unrel false 0.451 | patch false 0.100 | weak false 0.005 | noisy false 0.013
+counter +1/-1 floor 0.0, theta 4                 plain false 0.000 | swap1 right 1.00@27.0s false-first 0.10 | alter right 1.00@17.9s false-first 0.02 | patte right 1.00@20.1s false-first 0.05 | diges false 0.069 | unrel false 0.072 | patch false 0.001 | weak false 0.000 | noisy false 0.000
+counter +1/-3 floor 0.0, theta 1                 plain false 0.035 | swap1 right 1.00@12.8s false-first 0.05 | alter right 1.00@9.8s false-first 0.88 | patte right 1.00@13.3s false-first 0.89 | diges false 0.900 | unrel false 0.909 | patch false 0.575 | weak false 0.125 | noisy false 0.105
+counter +1/-3 floor 0.0, theta 3                 plain false 0.000 | swap1 right 1.00@17.5s false-first 0.09 | alter right 1.00@15.3s false-first 0.06 | patte right 1.00@16.5s false-first 0.21 | diges false 0.155 | unrel false 0.133 | patch false 0.010 | weak false 0.000 | noisy false 0.000
+counter +1/-3 floor 0.0, theta 4                 plain false 0.000 | swap1 right 0.99@27.4s false-first 0.12 | alter right 1.00@18.0s false-first 0.02 | patte right 1.00@20.3s false-first 0.05 | diges false 0.055 | unrel false 0.055 | patch false 0.001 | weak false 0.000 | noisy false 0.000
+counter +1/-3 floor None, theta 2                plain false 0.001 | swap1 right 0.97@15.3s false-first 0.04 | alter right 1.00@11.8s false-first 0.12 | patte right 0.99@15.3s false-first 0.74 | diges false 0.240 | unrel false 0.136 | patch false 0.026 | weak false 0.003 | noisy false 0.006
+counter +1/-1 floor None, theta 2                plain false 0.001 | swap1 right 1.00@14.8s false-first 0.03 | alter right 1.00@11.7s false-first 0.12 | patte right 1.00@14.3s false-first 0.73 | diges false 0.315 | unrel false 0.175 | patch false 0.034 | weak false 0.003 | noisy false 0.006
+counter +1/-2 floor 0.0, theta 2                 plain false 0.003 | swap1 right 1.00@14.7s false-first 0.06 | alter right 1.00@11.7s false-first 0.13 | patte right 1.00@14.1s false-first 0.73 | diges false 0.529 | unrel false 0.448 | patch false 0.099 | weak false 0.005 | noisy false 0.013
+
+== 2e. Same false picks, paired. For each MAP threshold: no more false picks than the bank in unreliable (the world that sets its threshold), and separately pooled across the six worlds whose right model is the default. On the pinned stream, where a first pick is exact for any selector. Information efficiency: tastes the ideal needs over tastes the bank needs, to the right pick.
+  the bank's false picks: plain 0.003 digest 0.529 unreliable 0.448 patchy 0.099 weak 0.005 noisy 0.013; pooled 0.182
+  MAP k=0.5: plain 0.031 digest 0.665 unreliable 0.469 patchy 0.230 weak 0.059 noisy 0.071; pooled 0.254
+  MAP k=1.5: plain 0.004 digest 0.389 unreliable 0.223 patchy 0.066 weak 0.007 noisy 0.015; pooled 0.117
+  MAP k=2.5: plain 0.001 digest 0.169 unreliable 0.134 patchy 0.019 weak 0.000 noisy 0.001; pooled 0.054
+  MAP k=3.5: plain 0.000 digest 0.081 unreliable 0.065 patchy 0.003 weak 0.000 noisy 0.000; pooled 0.025
+  MAP k=4.5: plain 0.000 digest 0.026 unreliable 0.037 patchy 0.000 weak 0.000 noisy 0.000; pooled 0.011
+  MAP k=6.5: plain 0.000 digest 0.006 unreliable 0.007 patchy 0.000 weak 0.000 noisy 0.000; pooled 0.002
+  MAP k=8.5: plain 0.000 digest 0.001 unreliable 0.000 patchy 0.000 weak 0.000 noisy 0.000; pooled 0.000
+  so k = 1.5 matches unreliable's false picks, k = 1.5 the pooled
+  swap10 k=1.5: ideal first right pick median 14.8 s (1.00), bank 14.7 s (1.00); ideal - bank mean 0.42 [-0.06,0.91] s; tastes ideal 10.8, bank 10.4, efficiency 1.03 [1.01,1.05]
+  alternate k=1.5: ideal first right pick median 9.8 s (1.00), bank 11.7 s (1.00); ideal - bank mean -2.01 [-2.29,-1.75] s; tastes ideal 4.6, bank 5.8, efficiency 0.80 [0.78,0.81]
+  pattern k=1.5: ideal first right pick median 13.5 s (1.00), bank 14.1 s (1.00); ideal - bank mean -0.65 [-0.96,-0.35] s; tastes ideal 7.2, bank 8.7, efficiency 0.84 [0.82,0.85]
+  evidence by time, on the pinned stream and real lives: median hits ahead of the default of the best rival in the right set, and at e=0.1 in bits (3.17 a hit); a rival right set only
+    swap10 pinned: 5 s 0, 10 s 0, 15 s 2, 20 s 3, 30 s 4, 100 s 13
+    swap10 real: 5 s 0, 10 s 0, 15 s 1, 20 s 3, 30 s 4, 100 s 15
+    alternate pinned: 5 s 0, 10 s 2, 15 s 3, 20 s 5, 30 s 8, 100 s 29
+    alternate real: 5 s 0, 10 s 2, 15 s 4, 20 s 5, 30 s 8, 100 s 31
+    pattern pinned: 5 s 0, 10 s 1, 15 s 3, 20 s 4, 30 s 8, 100 s 27
+    pattern real: 5 s 0, 10 s 1, 15 s 3, 20 s 4, 30 s 6, 100 s 19
+
+== 3. The rule. If each model is right with chance 1-e independently, a disagreement moves the log odds by +L or -L, L = log2((1-e)/e), and nothing else. +1/-3 is symmetric at no e.
+   It is the LLR of a different pair: under 'rival' it is the right one of a disagreement with chance a, under 'default' with chance b. Then up = log2(a/b), down = log2((1-a)/(1-b)). Solutions of down/up = -3, by the unit of a +1:
+   unit 0.25 bits: a 0.8108, b 0.6818; so theta 2 is 0.5 bits, theta 3 0.8 bits, clip 10 2.5 bits
+   unit 0.50 bits: a 0.8619, b 0.6095; so theta 2 is 1.0 bits, theta 3 1.5 bits, clip 10 5.0 bits
+   unit 1.00 bits: a 0.9333, b 0.4667; so theta 2 is 2.0 bits, theta 3 3.0 bits, clip 10 10.0 bits
+   unit 1.58 bits: a 0.9750, b 0.3250; so theta 2 is 3.2 bits, theta 3 4.8 bits, clip 10 15.8 bits
+   unit 2.00 bits: a 0.9882, b 0.2471; so theta 2 is 4.0 bits, theta 3 6.0 bits, clip 10 20.0 bits
+   unit 2.32 bits: a 0.9936, b 0.1990; so theta 2 is 4.6 bits, theta 3 7.0 bits, clip 10 23.2 bits
+   unit 3.00 bits: a 0.9983, b 0.1248; so theta 2 is 6.0 bits, theta 3 9.0 bits, clip 10 30.0 bits
+   unit 4.00 bits: a 0.9998, b 0.0625; so theta 2 is 8.0 bits, theta 3 12.0 bits, clip 10 40.0 bits
+   As the unit shrinks a, b -> 3/4: the counter's drift a - 3(1-a) changes sign at a = 3/4, so what it tests is 'this rival is the right one in more than 3/4 of disagreements'.
+   Measured: for each rival, a in the world it fits, b in each world the default fits, tastes as streams (so correlated). The derived rule per rival, LLR in bits (Laplace):
+   1/0 in swap10 a 0.890 (n 14654) vs plain: b 0.025 (n 1236): up +5.15, down -3.15, ratio 0.61; per taste KL(rival||default) 1.287 bits
+   1/0 in swap10 a 0.890 (n 14654) vs digest: b 0.347 (n 5565): up +1.36, down -2.58, ratio 1.89; per taste KL(rival||default) 0.282 bits
+   1/0 in swap10 a 0.890 (n 14654) vs unreliable: b 0.231 (n 9718): up +1.95, down -2.81, ratio 1.44; per taste KL(rival||default) 0.433 bits
+   1/0 in swap10 a 0.890 (n 14654) vs patchy: b 0.120 (n 6383): up +2.89, down -3.01, ratio 1.04; per taste KL(rival||default) 0.680 bits
+   1/0 in swap10 a 0.890 (n 14654) vs weak: b 0.051 (n 2286): up +4.13, down -3.12, ratio 0.75; per taste KL(rival||default) 1.013 bits
+   1/0 in swap10 a 0.890 (n 14654) vs noisy: b 0.051 (n 1947): up +4.12, down -3.11, ratio 0.76; per taste KL(rival||default) 1.009 bits
+   2/2 in alternate a 0.963 (n 28018) vs plain: b 0.134 (n 95): up +2.84, down -4.53, ratio 1.59; per taste KL(rival||default) 1.548 bits
+   2/2 in alternate a 0.963 (n 28018) vs digest: b 0.295 (n 2175): up +1.70, down -4.23, ratio 2.48; per taste KL(rival||default) 0.894 bits
+   2/2 in alternate a 0.963 (n 28018) vs unreliable: b 0.333 (n 2001): up +1.53, down -4.16, ratio 2.71; per taste KL(rival||default) 0.796 bits
+   2/2 in alternate a 0.963 (n 28018) vs patchy: b 0.250 (n 503): up +1.95, down -4.33, ratio 2.22; per taste KL(rival||default) 1.033 bits
+   2/2 in alternate a 0.963 (n 28018) vs weak: b 0.128 (n 201): up +2.91, down -4.54, ratio 1.56; per taste KL(rival||default) 1.586 bits
+   2/2 in alternate a 0.963 (n 28018) vs noisy: b 0.152 (n 209): up +2.67, down -4.50, ratio 1.69; per taste KL(rival||default) 1.446 bits
+   3/2 in pattern a 0.938 (n 17368) vs plain: b 0.089 (n 167): up +3.40, down -3.88, ratio 1.14; per taste KL(rival||default) 1.087 bits
+   3/2 in pattern a 0.938 (n 17368) vs digest: b 0.300 (n 3146): up +1.64, down -3.50, ratio 2.13; per taste KL(rival||default) 0.488 bits
+   3/2 in pattern a 0.938 (n 17368) vs unreliable: b 0.317 (n 2899): up +1.57, down -3.46, ratio 2.21; per taste KL(rival||default) 0.462 bits
+   3/2 in pattern a 0.938 (n 17368) vs patchy: b 0.215 (n 838): up +2.12, down -3.66, ratio 1.73; per taste KL(rival||default) 0.649 bits
+   3/2 in pattern a 0.938 (n 17368) vs weak: b 0.105 (n 368): up +3.15, down -3.85, ratio 1.22; per taste KL(rival||default) 1.001 bits
+   3/2 in pattern a 0.938 (n 17368) vs noisy: b 0.122 (n 375): up +2.94, down -3.83, ratio 1.30; per taste KL(rival||default) 0.929 bits
+   6/2 in pattern a 0.908 (n 16700) vs plain: b 0.056 (n 376): up +4.03, down -3.35, ratio 0.83; per taste KL(rival||default) 1.186 bits
+   6/2 in pattern a 0.908 (n 16700) vs digest: b 0.285 (n 5129): up +1.67, down -2.95, ratio 1.77; per taste KL(rival||default) 0.441 bits
+   6/2 in pattern a 0.908 (n 16700) vs unreliable: b 0.278 (n 4870): up +1.71, down -2.97, ratio 1.74; per taste KL(rival||default) 0.452 bits
+   6/2 in pattern a 0.908 (n 16700) vs patchy: b 0.160 (n 1669): up +2.50, down -3.18, ratio 1.27; per taste KL(rival||default) 0.700 bits
+   6/2 in pattern a 0.908 (n 16700) vs weak: b 0.081 (n 883): up +3.48, down -3.31, ratio 0.95; per taste KL(rival||default) 1.010 bits
+   6/2 in pattern a 0.908 (n 16700) vs noisy: b 0.088 (n 808): up +3.37, down -3.30, ratio 0.98; per taste KL(rival||default) 0.976 bits
+   4/2 in alternate a 0.952 (n 27412) vs plain: b 0.070 (n 240): up +3.76, down -4.26, ratio 1.13; per taste KL(rival||default) 1.988 bits
+   4/2 in alternate a 0.952 (n 27412) vs digest: b 0.302 (n 3863): up +1.66, down -3.85, ratio 2.32; per taste KL(rival||default) 0.820 bits
+   4/2 in alternate a 0.952 (n 27412) vs unreliable: b 0.298 (n 3575): up +1.68, down -3.86, ratio 2.30; per taste KL(rival||default) 0.831 bits
+   4/2 in alternate a 0.952 (n 27412) vs patchy: b 0.196 (n 1112): up +2.28, down -4.05, ratio 1.78; per taste KL(rival||default) 1.165 bits
+   4/2 in alternate a 0.952 (n 27412) vs weak: b 0.089 (n 550): up +3.42, down -4.23, ratio 1.24; per taste KL(rival||default) 1.800 bits
+   4/2 in alternate a 0.952 (n 27412) vs noisy: b 0.101 (n 523): up +3.24, down -4.21, ratio 1.30; per taste KL(rival||default) 1.696 bits
+   Disagreements run together: for 1/0, in unreliable and swap10, the length of a run of consecutive disagreements, and the chance the rival is right at each place in it (pinned stream):
+   unreliable: runs a life 9.89, mean length 1.25; rival right at place 0..3: 0.231(n7914) 0.237(n1618) 0.203(n325)
+   swap10: runs a life 7.61, mean length 2.20; rival right at place 0..3: 0.884(n6087) 0.902(n4334) 0.877(n2975)
+   plain: runs a life 1.51, mean length 1.02; rival right at place 0..3: 0.024(n1210) 0.045(n22) 0.000(n1)
+   The trade-off, on the pinned stream (first picks exact): false picks in unreliable, per rival; time to right pick in swap10, by threshold on the bank's counter:
+   theta 1: unreliable false 0.909 (by 1/0:638 2/2:46 3/2:16 4/2:8 5/2:8 6/2:11), plain false 0.035; swap10 right pick 1.00 at 12.8 s
+   theta 2: unreliable false 0.448 (by 1/0:282 2/2:27 3/2:18 4/2:12 5/2:10 6/2:9), plain false 0.003; swap10 right pick 1.00 at 14.7 s
+   theta 3: unreliable false 0.133 (by 1/0:65 2/2:11 3/2:9 4/2:12 5/2:7 6/2:2), plain false 0.000; swap10 right pick 1.00 at 17.5 s
+   theta 4: unreliable false 0.055 (by 1/0:21 2/2:5 3/2:4 4/2:6 5/2:5 6/2:3), plain false 0.000; swap10 right pick 0.99 at 27.4 s
+   Derived for 1/0 in unreliable, as a run test: q = 0.231 its chance on a disagreement, about 12.1 disagreements a life (Poisson). The floor at 0 with any pen >= 1 makes theta a run of theta wins in the disagreements; without it the walk reaches +k with chance (q/(1-q))^k once in a life (Gambler's ruin):
+   theta 1: with the floor, derived 0.939; without it, derived 0.300
+   theta 2: with the floor, derived 0.397; without it, derived 0.090
+   theta 3: with the floor, derived 0.096; without it, derived 0.027
+   theta 4: with the floor, derived 0.020; without it, derived 0.008
+   The same with the floor's effect shown by the exact posterior's MAP, same stream:
+   k 0.5: unreliable false 0.469, plain false 0.031; swap10 right pick 1.00 at 12.9 s
+   k 1.5: unreliable false 0.223, plain false 0.004; swap10 right pick 1.00 at 14.8 s
+   k 2.5: unreliable false 0.134, plain false 0.001; swap10 right pick 1.00 at 18.1 s
+   k 3.5: unreliable false 0.065, plain false 0.000; swap10 right pick 0.99 at 27.5 s

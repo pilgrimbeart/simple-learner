@@ -1,0 +1,85 @@
+== efficiency, 63200-63249 x 2, 50 pairs, 95% over seed pairs. Development, hand-picked: engine proving, not stage 3. x = (bank - max(base, 0)) / (told - max(base, 0)), told with its pause where stated. Pass here: told only, x > .5, with x > .25 beside it; no reference, that's stage 2b's.
+world               cl               base               bank               told              model            bank-base               x[95%] pass | sigma base bank d  pairs for se(x)=.1
+plain                A +2.70[+2.58,+2.82] +2.77[+2.64,+2.89] +2.69[+2.55,+2.81]                  -   +0.07[-0.09,+0.23] +nan[-27.14,+30.29] no   | 0.45 0.46 0.59  41825115
+swap10               o -0.02[-0.13,+0.09] +0.61[+0.45,+0.75] +2.80[+2.69,+2.92] +1.09[+0.97,+1.21]   +0.63[+0.45,+0.80] +0.22[+0.15,+0.27] no   | 0.40 0.55 0.66  4
+alternate            o -3.37[-3.57,-3.17] +1.49[+1.23,+1.71] +2.73[+2.56,+2.90] +2.18[+2.01,+2.35]   +4.87[+4.54,+5.17] +0.55[+0.45,+0.64] pass | 0.69 0.88 1.13  11
+pattern              o -2.67[-2.78,-2.57] +1.46[+1.30,+1.61] +2.73[+2.61,+2.85] +2.04[+1.90,+2.19]   +4.13[+3.94,+4.33] +0.53[+0.48,+0.59] pass | 0.40 0.56 0.71  5
+digest               o -4.98[-5.27,-4.67] -0.45[-0.67,-0.24] +1.69[+1.59,+1.78]                  -   +4.52[+4.18,+4.86] -0.27[-0.40,-0.15] no   | 1.10 0.76 1.21  20
+unreliable           o +0.23[+0.04,+0.40] +0.44[+0.28,+0.61] +0.80[+0.67,+0.93]                  -   +0.22[-0.00,+0.44] +0.38[-0.01,+0.76] >.25 | 0.64 0.58 0.81  186
+patchy               o +0.61[+0.43,+0.79] +0.72[+0.53,+0.91] +0.92[+0.77,+1.07]                  -   +0.11[-0.09,+0.31] +0.36[-0.46,+1.15] >.25 | 0.64 0.72 0.73  2297
+weak                 o +1.79[+1.69,+1.88] +1.68[+1.55,+1.81] +1.80[+1.70,+1.91]                  -   -0.10[-0.24,+0.05] -5.89[-26.41,+31.96] no   | 0.33 0.45 0.52  3385540711
+noisy                o +1.31[+1.22,+1.40] +1.67[+1.55,+1.79] +1.87[+1.77,+1.97]                  -   +0.36[+0.23,+0.49] +0.64[+0.44,+0.87] pass | 0.33 0.42 0.46  59
+coin                 A -2.14[-2.30,-1.98] -2.04[-2.19,-1.88] -1.94[-2.07,-1.81]                  -   +0.10[-0.12,+0.32] +nan[+0.94,+1.17] no   | 0.58 0.57 0.80  16
+allfood              A +4.30[+4.16,+4.45] +6.92[+6.73,+7.10] +4.30[+4.16,+4.45]                  -   +2.62[+2.40,+2.83] +2257.29[+578.30,+2399.98] pass | 0.54 0.67 0.80  2034648075
+never                A +2.70[+2.58,+2.82] +2.77[+2.64,+2.89] +2.69[+2.55,+2.81]                  -   +0.07[-0.09,+0.23] +nan[-27.14,+30.29] no   | 0.45 0.46 0.59  41825115
+late_alternate_50    o -0.23[-0.33,-0.13] +1.53[+1.41,+1.65] +2.68[+2.56,+2.79] +2.04[+1.92,+2.15]   +1.76[+1.62,+1.90] +0.57[+0.52,+0.62] pass | 0.37 0.43 0.50  3
+late_swap_50         o +2.35[+2.24,+2.46] +2.06[+1.95,+2.16] +2.73[+2.60,+2.86]                  -   -0.29[-0.40,-0.16] -0.76[-1.40,-0.37] no   | 0.39 0.39 0.44  337
+nlate_pattern_50     o -1.24[-1.40,-1.06] -0.85[-1.00,-0.71] +0.78[+0.64,+0.92] -0.82[-0.97,-0.67]   +0.39[+0.19,+0.59] -1.09[-1.40,-0.84] no   | 0.63 0.53 0.71  110
+swap11               o +0.17[+0.06,+0.27] +0.51[+0.35,+0.68] +2.86[+2.75,+2.97] +1.15[+1.04,+1.25]   +0.35[+0.19,+0.50] +0.13[+0.07,+0.19] no   | 0.38 0.59 0.58  5
+swapmeals6           o -1.09[-1.19,-0.98] +0.02[-0.10,+0.14] +2.69[+2.58,+2.81]                  -   +1.11[+0.96,+1.25] +0.01[-0.04,+0.05] no   | 0.38 0.44 0.51  3
+unreliable22         o +0.05[-0.12,+0.20] +0.25[+0.08,+0.42] +0.51[+0.40,+0.62]                  -   +0.20[-0.02,+0.43] +0.44[-0.07,+0.89] >.25 | 0.60 0.61 0.83  292
+every5th             o +0.60[+0.50,+0.71] +0.73[+0.61,+0.85] +0.75[+0.63,+0.87]                  -   +0.13[-0.01,+0.26] +0.87[-0.82,+3.82] pass | 0.37 0.42 0.51  437959
+dim25                o +1.77[+1.68,+1.87] +1.65[+1.54,+1.77] +1.90[+1.79,+2.02]                  -   -0.12[-0.24,+0.01] -0.89[-6.79,+0.31] no   | 0.36 0.41 0.45  1399822
+mirror               A +2.66[+2.55,+2.77] +2.60[+2.49,+2.71] +2.75[+2.63,+2.86]                  -   -0.06[-0.19,+0.07] -0.66[-8.89,+6.98] no   | 0.39 0.40 0.47  5730561
+halfthrust_const     o +1.84[+1.75,+1.92] +1.88[+1.80,+1.95] +1.94[+1.84,+2.03]                  -   +0.04[-0.07,+0.15] +0.38[-2.59,+2.47] >.25 | 0.31 0.26 0.39  16967158
+halfthrust_gain      o +1.84[+1.75,+1.92] +1.88[+1.80,+1.95] +1.94[+1.84,+2.03]                  -   +0.04[-0.07,+0.15] +0.38[-2.59,+2.47] >.25 | 0.31 0.26 0.39  16967158
+thrusters            o +0.34[+0.05,+0.65] +0.34[+0.10,+0.60] +0.29[-0.02,+0.60]                  -   -0.00[-0.15,+0.15] +nan[-11.84,+9.42] no   | 1.09 0.91 0.53  2607042
+fail50               o +1.60[+1.51,+1.70] +1.60[+1.50,+1.68] +1.59[+1.49,+1.68]                  -   -0.01[-0.10,+0.09] +nan[-13.07,+15.27] no   | 0.34 0.35 0.34  8910456
+drag2                o +2.33[+2.25,+2.41] +2.22[+2.11,+2.31] +2.35[+2.26,+2.45]                  -   -0.11[-0.23,-0.01] -4.96[-35.90,+37.33] no   | 0.30 0.35 0.40  13958857
+moving               o +2.58[+2.48,+2.68] +2.43[+2.31,+2.55] +2.57[+2.45,+2.69]                  -   -0.14[-0.28,-0.01] +nan[-48.11,+34.26] no   | 0.36 0.44 0.49  134156388
+scarce               o +0.45[+0.40,+0.50] +0.44[+0.38,+0.50] +0.53[+0.47,+0.59]                  -   -0.01[-0.09,+0.07] -0.10[-1.51,+0.88] no   | 0.19 0.22 0.28  1918
+blind                o +1.16[+1.01,+1.29] +1.17[+1.06,+1.29] +1.34[+1.22,+1.45]                  -   +0.02[-0.15,+0.18] +0.10[-1.88,+0.94] no   | 0.51 0.40 0.59  89207
+crosstalk            o +0.63[+0.47,+0.79] +0.67[+0.52,+0.82] +0.85[+0.71,+0.98]                  -   +0.03[-0.17,+0.24] +0.15[-1.70,+0.98] no   | 0.57 0.52 0.75  437008
+bruise               o -4.91[-5.19,-4.64] -4.27[-4.48,-4.05] -3.57[-3.80,-3.35]                  -   +0.63[+0.38,+0.89] +nan[+1.13,+1.28] no   | 0.97 0.77 0.91  7
+region               o -1.46[-1.59,-1.34] -1.24[-1.37,-1.11] +0.63[+0.53,+0.71]                  -   +0.22[+0.04,+0.40] -1.99[-2.35,-1.70] no   | 0.46 0.47 0.65  145
+keylock              o +4.03[+3.89,+4.16] +5.25[+5.04,+5.46] +4.16[+4.04,+4.28]                  -   +1.22[+1.00,+1.43] +9.57[+5.18,+34.03] pass | 0.48 0.77 0.79  17002167
+decoys               o +1.75[+1.65,+1.84] +1.75[+1.67,+1.83] +1.79[+1.68,+1.88]                  -   +0.00[-0.11,+0.11] +0.00[-11.35,+12.70] no   | 0.33 0.29 0.40  8213998
+rarefeast            A +4.40[+4.08,+4.73] +4.50[+4.18,+4.82] +4.42[+4.11,+4.72]                  -   +0.11[-0.12,+0.34] +6.02[-25.00,+31.07] pass | 1.15 1.14 0.81  909539016
+costly               A +0.59[+0.56,+0.61] +0.60[+0.57,+0.62] +0.58[+0.56,+0.61]                  -   +0.01[-0.02,+0.04] +nan[-24.89,+27.28] no   | 0.10 0.10 0.12  19448517
+sag                  B +2.57[+2.46,+2.68] +2.63[+2.48,+2.76] +2.62[+2.50,+2.74]                  -   +0.06[-0.09,+0.20] +1.08[-8.27,+12.23] pass | 0.38 0.50 0.51  307416670
+parity               o -1.38[-1.75,-1.01] -1.14[-1.50,-0.76] +2.55[+2.41,+2.69]                  -   +0.24[-0.17,+0.65] -0.45[-0.60,-0.30] no   | 1.36 1.37 1.44  31
+word                 o +1.79[+1.53,+2.05] +1.87[+1.60,+2.15] +1.81[+1.58,+2.04]                  -   +0.08[-0.04,+0.21] +3.87[-26.96,+26.48] pass | 0.93 1.01 0.45  39848522
+cells                o +4.28[+2.74,+5.87] -41.64[-70.57,-19.81] +7.16[+5.63,+8.69]                  - -45.91[-75.09,-23.74] -15.90[-29.20,-8.14] no   | 5.72 92.69 93.93  146150
+
+== the told pass rule, with a gap above .2: 17 worlds; x > .5: 4; x > .25: 7. Bootstrap the lives, not the worlds: these worlds were picked by hand, so the share means nothing beyond them.
+   no gap (told - max(base, 0) <= .2): plain, weak, coin, allfood, never, every5th, dim25, mirror, halfthrust_const, halfthrust_gain, thrusters, fail50, drag2, moving, scarce, blind, bruise, keylock, decoys, rarefeast, costly, sag, word
+
+== doing no harm: bank minus base, lower 95% bound above -.1?
+   coin         +0.103 [-0.116,+0.325] BREACHED
+   allfood      +2.617 [+2.402,+2.830] holds
+   never        +0.070 [-0.092,+0.234] holds
+   plain        +0.070 [-0.092,+0.234] holds
+   mirror       -0.058 [-0.189,+0.073] BREACHED
+   rarefeast    +0.105 [-0.115,+0.341] BREACHED
+   costly       +0.012 [-0.020,+0.044] holds
+
+== planted pairs, bank and base, A - B paired on seeds. Duplicates should tie; a lookalike need not
+   swap11             swap10           near-duplicate             base +0.188 [+0.045,+0.339]
+   swap11             swap10           near-duplicate             bank -0.092 [-0.297,+0.104]
+   swapmeals6         swap10           lookalike                  base -1.066 [-1.225,-0.910]
+   swapmeals6         swap10           lookalike                  bank -0.585 [-0.776,-0.381]
+   unreliable22       unreliable       near-duplicate             base -0.180 [-0.403,+0.049]
+   unreliable22       unreliable       near-duplicate             bank -0.192 [-0.413,+0.022]
+   every5th           unreliable       lookalike                  base +0.372 [+0.169,+0.601]
+   every5th           unreliable       lookalike                  bank +0.289 [+0.125,+0.450]
+   dim25              weak             duplicate in distribution  base -0.014 [-0.144,+0.121]
+   dim25              weak             duplicate in distribution  bank -0.030 [-0.188,+0.142]
+   mirror             plain            duplicate in distribution  base -0.041 [-0.189,+0.116]
+   mirror             plain            duplicate in distribution  bank -0.170 [-0.308,-0.011]
+   halfthrust_const   halfthrust_gain  the same lives             base +0.000 [+0.000,+0.000]
+   halfthrust_const   halfthrust_gain  the same lives             bank +0.000 [+0.000,+0.000]
+
+== sigma of a pair's efficiency: base median 0.42 range 0.10-5.72; bank median 0.48 range 0.10-92.69; paired difference median 0.59 range 0.12-93.93
+   pairs for se .1 in efficiency, per world: median 23, 90% 84, max 859220
+   pairs for se .1 in x (gap above .2), per world: median 59, 90% 59839, max 437008
+   base      0.39 s of a core a life (worst world 0.94), 16.5 lives a second on 7 workers
+   bank      0.44 s of a core a life (worst world 0.96), 14.7 lives a second on 7 workers
+   told      0.44 s of a core a life (worst world 0.97), 14.5 lives a second on 7 workers
+   default   0.43 s of a core a life (worst world 0.92), 14.9 lives a second on 7 workers
+   model     0.40 s of a core a life (worst world 0.45), 16.1 lives a second on 7 workers
+   toldwait  0.51 s of a core a life (worst world 0.51), 12.3 lives a second on 7 workers
+   implied for 300 worlds, at se .1 in efficiency: 6980 pairs, 13960 lives of one circuit, 0.3 h at 14.7 lives a second; base and told once each besides
+   implied for 300 worlds, at se .1 in x: 17838 pairs, 35676 lives of one circuit, 0.7 h at 14.7 lives a second; base and told once each besides
+   implied for 300 worlds, at se .1 in x, each world's own pairs summed: 10352942 pairs, 20705885 lives of one circuit, 391.3 h at 14.7 lives a second; base and told once each besides
+
+total 1105 s of wall clock for 40 worlds

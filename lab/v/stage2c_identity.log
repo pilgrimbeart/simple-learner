@@ -1,0 +1,85 @@
+== identity, switch off, seeds 66620-66669 x 2
+no rule, 100 s bank: 100 of 100 lives identical tick by tick; calls compared: pulses 62102, tastes 7275, firings 341118, meals 7371; lives with no meal 0; attributes the engine touched beyond the interface: []
+no rule, 100 s circuit: 100 of 100 lives identical tick by tick; calls compared: pulses 61808, tastes 7130, firings 340404, meals 7190; lives with no meal 0; attributes the engine touched beyond the interface: []
+no rule, 100 s model: 100 of 100 lives identical tick by tick; calls compared: pulses 61727, tastes 7229, firings 366406, meals 7307; lives with no meal 0; attributes the engine touched beyond the interface: []
+mutant (world (const DRAG 50.000001)) circuit: 0 of 20 lives identical tick by tick; calls compared: pulses 2, tastes 0, firings 40, meals 0; lives with no meal 20; attributes the engine touched beyond the interface: []
+   DIFFERS {'kind': 'circuit', 'seed': 66620, 'first': 'red', 'bad': ('state', 2, 2.0056881155916528e-10), 'meals_ok': True, 'fir_ok': True, 'wires_ok': True, 'rng_ok': True, 'other': [], 'pulses': 0, 'tastes': 0, 'firings': 2, 'meals': 0}
+   DIFFERS {'kind': 'circuit', 'seed': 66620, 'first': 'blue', 'bad': ('state', 2, 2.0056881155916528e-10), 'meals_ok': True, 'fir_ok': True, 'wires_ok': True, 'rng_ok': True, 'other': [], 'pulses': 0, 'tastes': 0, 'firings': 2, 'meals': 0}
+   DIFFERS {'kind': 'circuit', 'seed': 66621, 'first': 'red', 'bad': ('state', 1, 1.9530695463676473e-10), 'meals_ok': True, 'fir_ok': True, 'wires_ok': True, 'rng_ok': True, 'other': [], 'pulses': 0, 'tastes': 0, 'firings': 2, 'meals': 0}
+   DIFFERS {'kind': 'circuit', 'seed': 66621, 'first': 'blue', 'bad': ('state', 1, 1.9530695463676473e-10), 'meals_ok': True, 'fir_ok': True, 'wires_ok': True, 'rng_ok': True, 'other': [], 'pulses': 0, 'tastes': 0, 'firings': 2, 'meals': 0}
+   DIFFERS {'kind': 'circuit', 'seed': 66622, 'first': 'red', 'bad': ('state', 2, 1.9576961232670165e-10), 'meals_ok': True, 'fir_ok': True, 'wires_ok': True, 'rng_ok': True, 'other': [], 'pulses': 0, 'tastes': 0, 'firings': 2, 'meals': 0}
+   DIFFERS {'kind': 'circuit', 'seed': 66622, 'first': 'blue', 'bad': ('state', 2, 1.9576961232670165e-10), 'meals_ok': True, 'fir_ok': True, 'wires_ok': True, 'rng_ok': True, 'other': [], 'pulses': 0, 'tastes': 0, 'firings': 2, 'meals': 0}
+   DIFFERS {'kind': 'circuit', 'seed': 66623, 'first': 'red', 'bad': ('state', 1, 2.0859681343354808e-10), 'meals_ok': True, 'fir_ok': True, 'wires_ok': True, 'rng_ok': True, 'other': [], 'pulses': 0, 'tastes': 0, 'firings': 2, 'meals': 0}
+   DIFFERS {'kind': 'circuit', 'seed': 66623, 'first': 'blue', 'bad': ('state', 1, 2.0859681343354808e-10), 'meals_ok': True, 'fir_ok': True, 'wires_ok': True, 'rng_ok': True, 'other': [], 'pulses': 0, 'tastes': 0, 'firings': 2, 'meals': 0}
+   DIFFERS {'kind': 'circuit', 'seed': 66624, 'first': 'red', 'bad': ('state', 1, 2.392030670761436e-10), 'meals_ok': True, 'fir_ok': True, 'wires_ok': True, 'rng_ok': True, 'other': [], 'pulses': 0, 'tastes': 0, 'firings': 2, 'meals': 0}
+   DIFFERS {'kind': 'circuit', 'seed': 66624, 'first': 'blue', 'bad': ('state', 1, 2.392030670761436e-10), 'meals_ok': True, 'fir_ok': True, 'wires_ok': True, 'rng_ok': True, 'other': [], 'pulses': 0, 'tastes': 0, 'firings': 2, 'meals': 0}
+   DIFFERS {'kind': 'circuit', 'seed': 66625, 'first': 'red', 'bad': ('state', 0, 1.999027783583518e-10), 'meals_ok': True, 'fir_ok': True, 'wires_ok': True, 'rng_ok': True, 'other': [], 'pulses': 0, 'tastes': 0, 'firings': 2, 'meals': 0}
+   DIFFERS {'kind': 'circuit', 'seed': 66625, 'first': 'blue', 'bad': ('state', 0, 1.999027783583518e-10), 'meals_ok': True, 'fir_ok': True, 'wires_ok': True, 'rng_ok': True, 'other': [], 'pulses': 0, 'tastes': 0, 'firings': 2, 'meals': 0}
+   DIFFERS {'kind': 'circuit', 'seed': 66626, 'first': 'red', 'bad': ('state', 1, 2.2906278610013153e-10), 'meals_ok': True, 'fir_ok': True, 'wires_ok': True, 'rng_ok': True, 'other': [], 'pulses': 0, 'tastes': 0, 'firings': 2, 'meals': 0}
+   DIFFERS {'kind': 'circuit', 'seed': 66626, 'first': 'blue', 'bad': ('state', 1, 2.2906278610013153e-10), 'meals_ok': True, 'fir_ok': True, 'wires_ok': True, 'rng_ok': True, 'other': [], 'pulses': 0, 'tastes': 0, 'firings': 2, 'meals': 0}
+   DIFFERS {'kind': 'circuit', 'seed': 66627, 'first': 'red', 'bad': ('state', 0, 2.340121499355696e-10), 'meals_ok': True, 'fir_ok': True, 'wires_ok': True, 'rng_ok': True, 'other': [], 'pulses': 0, 'tastes': 0, 'firings': 2, 'meals': 0}
+   DIFFERS {'kind': 'circuit', 'seed': 66627, 'first': 'blue', 'bad': ('state', 0, 2.340121499355696e-10), 'meals_ok': True, 'fir_ok': True, 'wires_ok': True, 'rng_ok': True, 'other': [], 'pulses': 0, 'tastes': 0, 'firings': 2, 'meals': 0}
+   DIFFERS {'kind': 'circuit', 'seed': 66628, 'first': 'red', 'bad': ('state', 1, 2.2176356584413526e-10), 'meals_ok': True, 'fir_ok': True, 'wires_ok': True, 'rng_ok': True, 'other': [], 'pulses': 1, 'tastes': 0, 'firings': 2, 'meals': 0}
+   DIFFERS {'kind': 'circuit', 'seed': 66628, 'first': 'blue', 'bad': ('state', 1, 2.2176356584413526e-10), 'meals_ok': True, 'fir_ok': True, 'wires_ok': True, 'rng_ok': True, 'other': [], 'pulses': 1, 'tastes': 0, 'firings': 2, 'meals': 0}
+   DIFFERS {'kind': 'circuit', 'seed': 66629, 'first': 'red', 'bad': ('state', 1, 2.1643281611360976e-10), 'meals_ok': True, 'fir_ok': True, 'wires_ok': True, 'rng_ok': True, 'other': [], 'pulses': 0, 'tastes': 0, 'firings': 2, 'meals': 0}
+   DIFFERS {'kind': 'circuit', 'seed': 66629, 'first': 'blue', 'bad': ('state', 1, 2.1643281611360976e-10), 'meals_ok': True, 'fir_ok': True, 'wires_ok': True, 'rng_ok': True, 'other': [], 'pulses': 0, 'tastes': 0, 'firings': 2, 'meals': 0}
+mutant (world (on pulse (if (chance 0.001) (drop)))) circuit: 11 of 20 lives identical tick by tick; calls compared: pulses 10326, tastes 1168, firings 56081, meals 1177; lives with no meal 0; attributes the engine touched beyond the interface: []
+   DIFFERS {'kind': 'circuit', 'seed': 66620, 'first': 'red', 'bad': ('calls', 7349, ('s', 7349, 0, 0.001345135196096724), ('m', 7349, (0, 1))), 'meals_ok': True, 'fir_ok': True, 'wires_ok': True, 'rng_ok': True, 'other': [], 'pulses': 555, 'tastes': 57, 'firings': 2983, 'meals': 57}
+   DIFFERS {'kind': 'circuit', 'seed': 66620, 'first': 'blue', 'bad': ('calls', 9072, ('s', 9072, 1, 0.0009057795928626289), ('m', 9072, ())), 'meals_ok': True, 'fir_ok': True, 'wires_ok': True, 'rng_ok': True, 'other': [], 'pulses': 555, 'tastes': 72, 'firings': 3116, 'meals': 72}
+   DIFFERS {'kind': 'circuit', 'seed': 66621, 'first': 'blue', 'bad': ('calls', 8291, ('s', 8291, 0, 0.009504737147017085), ('m', 8291, ())), 'meals_ok': True, 'fir_ok': True, 'wires_ok': True, 'rng_ok': True, 'other': [], 'pulses': 548, 'tastes': 55, 'firings': 2600, 'meals': 55}
+   DIFFERS {'kind': 'circuit', 'seed': 66623, 'first': 'red', 'bad': ('calls', 2294, ('s', 2294, 1, 0.0003789188370291574), ('m', 2294, ())), 'meals_ok': True, 'fir_ok': True, 'wires_ok': True, 'rng_ok': True, 'other': [], 'pulses': 117, 'tastes': 23, 'firings': 1018, 'meals': 23}
+   DIFFERS {'kind': 'circuit', 'seed': 66623, 'first': 'blue', 'bad': ('calls', 1984, ('s', 1984, 1, 0.001343879875113162), ('m', 1984, ())), 'meals_ok': True, 'fir_ok': True, 'wires_ok': True, 'rng_ok': True, 'other': [], 'pulses': 117, 'tastes': 18, 'firings': 835, 'meals': 18}
+   DIFFERS {'kind': 'circuit', 'seed': 66624, 'first': 'red', 'bad': ('calls', 3503, ('s', 3503, 0, 0.0007339077392970395), ('m', 3503, ())), 'meals_ok': True, 'fir_ok': True, 'wires_ok': True, 'rng_ok': True, 'other': [], 'pulses': 188, 'tastes': 20, 'firings': 1002, 'meals': 20}
+   DIFFERS {'kind': 'circuit', 'seed': 66624, 'first': 'blue', 'bad': ('calls', 3604, ('s', 3604, 0, 0.004227610063334048), ('m', 3604, (0,))), 'meals_ok': True, 'fir_ok': True, 'wires_ok': True, 'rng_ok': True, 'other': [], 'pulses': 188, 'tastes': 12, 'firings': 915, 'meals': 12}
+   DIFFERS {'kind': 'circuit', 'seed': 66626, 'first': 'red', 'bad': ('calls', 9618, ('s', 9618, 0, 0.007186144754149745), ('m', 9618, ())), 'meals_ok': True, 'fir_ok': True, 'wires_ok': True, 'rng_ok': True, 'other': [], 'pulses': 585, 'tastes': 60, 'firings': 2997, 'meals': 60}
+   DIFFERS {'kind': 'circuit', 'seed': 66626, 'first': 'blue', 'bad': ('calls', 8067, ('s', 8067, 1, 0.008001650668907938), ('m', 8067, (0, 1))), 'meals_ok': True, 'fir_ok': True, 'wires_ok': True, 'rng_ok': True, 'other': [], 'pulses': 585, 'tastes': 60, 'firings': 2731, 'meals': 60}
+
+== reproduction against the wrappers, switch off, seeds 66620-66639 x 2
+identity None               circuit  40/40 lives exact; 400000 ticks, 2823 tastes
+identity None               bank     40/40 lives exact; 400000 ticks, 2864 tastes
+identity 13 s
+identity plain              circuit  40/40 lives exact; 400000 ticks, 2823 tastes
+identity plain              bank     40/40 lives exact; 400000 ticks, 2864 tastes
+identity plain              vtold    40/40 lives exact; 400000 ticks, 2828 tastes
+identity late_never         circuit  40/40 lives exact; 400000 ticks, 2823 tastes
+identity late_never         bank     40/40 lives exact; 400000 ticks, 2864 tastes
+identity late_never         vtold    40/40 lives exact; 400000 ticks, 2828 tastes
+identity 41 s
+nine swap10             circuit  40/40 lives exact; 400000 ticks, 2929 tastes
+nine swap10             bank     40/40 lives exact; 400000 ticks, 2867 tastes
+nine swap10             vtold    40/40 lives exact; 400000 ticks, 3058 tastes
+nine alternate          circuit  40/40 lives exact; 400000 ticks, 2938 tastes
+nine alternate          bank     40/40 lives exact; 400000 ticks, 2928 tastes
+nine alternate          vtold    40/40 lives exact; 400000 ticks, 3128 tastes
+nine pattern            circuit  40/40 lives exact; 400000 ticks, 2831 tastes
+nine pattern            bank     40/40 lives exact; 400000 ticks, 2848 tastes
+nine pattern            vtold    40/40 lives exact; 400000 ticks, 2966 tastes
+nine patchy             circuit  40/40 lives exact; 400000 ticks, 3469 tastes
+nine patchy             bank     40/40 lives exact; 400000 ticks, 3830 tastes
+nine patchy             vtold    40/40 lives exact; 400000 ticks, 3630 tastes
+nine weak               circuit  40/40 lives exact; 400000 ticks, 2337 tastes
+nine weak               bank     40/40 lives exact; 400000 ticks, 2314 tastes
+nine weak               vtold    40/40 lives exact; 400000 ticks, 2284 tastes
+nine noisy              circuit  40/40 lives exact; 400000 ticks, 2421 tastes
+nine noisy              bank     40/40 lives exact; 400000 ticks, 2563 tastes
+nine noisy              vtold    40/40 lives exact; 400000 ticks, 2440 tastes
+nine 112 s
+bonus allfood            circuit  40/40 lives exact; 400000 ticks, 2798 tastes
+bonus allfood            bank     40/40 lives exact; 400000 ticks, 5560 tastes
+bonus allfood            vtold    40/40 lives exact; 400000 ticks, 2766 tastes
+bonus scarce             circuit  40/40 lives exact; 400000 ticks, 462 tastes
+bonus scarce             bank     40/40 lives exact; 400000 ticks, 495 tastes
+bonus scarce             vtold    40/40 lives exact; 400000 ticks, 475 tastes
+bonus moving             circuit  40/40 lives exact; 400000 ticks, 3122 tastes
+bonus moving             bank     40/40 lives exact; 400000 ticks, 3222 tastes
+bonus moving             vtold    40/40 lives exact; 400000 ticks, 3090 tastes
+bonus late_alternate_50  circuit  40/40 lives exact; 400000 ticks, 2814 tastes
+bonus late_alternate_50  bank     40/40 lives exact; 400000 ticks, 2767 tastes
+bonus late_alternate_50  vtold    40/40 lives exact; 400000 ticks, 2842 tastes
+bonus late_swap_50       circuit  40/40 lives exact; 400000 ticks, 2780 tastes
+bonus late_swap_50       bank     40/40 lives exact; 400000 ticks, 2816 tastes
+bonus late_swap_50       vtold    40/40 lives exact; 400000 ticks, 2916 tastes
+bonus 169 s
+bonus thrusters          circuit  40/40 lives exact; 400000 ticks, 1600 tastes
+bonus 6 s
+ALL EXACT

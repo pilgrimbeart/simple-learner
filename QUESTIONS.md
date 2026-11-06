@@ -196,6 +196,9 @@ and when, why it matters, the line it belongs to, and the experiment that would 
    honest negative). Open from D25: what would tell a world where nothing can be learned from one merely hard? In it
    the circuit flips 16.5 times a life where doing nothing scores best.
 
+8. **Left over from stage 1c** (`discrete/NOTEBOOK.md`, D32; 2026-11-05). What does the floor's gain consist of: forgetting, or undoing its own -3? Ablate rivals to see. Could a circuit hold a family of periods at about 13 bits, the one thing that closed half of swap's gap? Can a bank learn the lie rate, since every mixture is fixed at one value? Is there a tighter proof of the limit on tastes, and should the body have a firing cap at all? Can q=.7 ever reach a yes?
+9. **The fast model moves at a finer step** (`discrete/NOTEBOOK.md`, D33; 2026-11-06; the user's, since a fix changes the body). Halving the tick shifts plain by -.17 and some worlds by up to .6. The check halved the body's tick and the brain models' together (both step once a tick). First separate them: halve one and not the other. Then, if it is the body: fire each beat at a random moment within its tick and see if 10 ms and 5 ms agree; should the body take beats at their moments? If the model: step it finer than the body.
+
 ## The body (`NOTEBOOK.md`, The body)
 
 - **Would evolving the body pay more than evolving the brain?** (the user, 2026-10-30) Every limit found so far is

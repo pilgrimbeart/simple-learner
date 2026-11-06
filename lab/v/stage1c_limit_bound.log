@@ -1,0 +1,11 @@
+q = 0.6065; a firing: 0.508 mm of displacement, 0.407 rad of turn, 0.939 mm of arc at the mouth; l = 1.447 mm a single firing; a pair 1.017 mm
+Blocks 36, density 0.0100 /mm^2, exclusion 7.0 mm. Path per meal for large m: 1.767 mm (proved, in expectation); at m = 1000 1.734, at m = 200 1.608. Fresh-field estimate 3.08 mm.
+Firing limits, none in the body's code: bench drive 50 a second per thruster (the present circuit's beat; drawn with spread 11%), one a tick per thruster (100), and the simulator's honesty limit: a spike needs a node up through 0 V and down below -V_TYP, at most V_TYP/2 a 0.125 ms step: at least 6 steps, 1333 a second per thruster.
+cap R a second | speed straight (mean, mm/s; every firing paired) | peak mm/s | PROVED: meals a second <= (firing anyhow) | ESTIMATE: pair firing, fresh field, no turning: meals a second
+   25 | 25.4 | 46.3 | 41.1 | 8.2
+   50 | 50.8 | 63.3 | 82.1 | 16.5
+   100 | 101.7 | 101.7 | 100.0 (the tick limit) | 33.0
+   200 | 203.3 | 203.3 | 100.0 (the tick limit) | 66.0
+   400 | 406.6 | 406.6 | 100.0 (the tick limit) | 132.0
+   1333 | 1355.1 | 1355.1 | 100.0 (the tick limit) | 439.9
+Control: greedy teleporting mouth on the placement rules, 20000 meals: path per meal 3.49 mm (greedy, so an upper estimate of the best possible, against the proved 1.77). Close pairs per placement at r = 3, 5, 7: [0.27715 0.7722  1.5081 ] against the proved rate [0.287, 0.798, 1.563].

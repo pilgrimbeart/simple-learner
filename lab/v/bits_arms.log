@@ -1,0 +1,212 @@
+== tuning seeds: each setting's efficiency per world
+base plain 2.64 swap1 -0.05 alter -3.37 patte -2.81 diges -4.88 unrel 0.22 patch 0.53 weak 1.74 noisy 1.39
+bank plain 2.58 swap1 0.44 alter 1.56 patte 1.57 diges -0.28 unrel 0.34 patch 0.68 weak 1.71 noisy 1.70 score 0.277
+map(k=0.5) plain 2.58 swap1 0.87 alter 1.97 patte 1.69 diges -0.49 unrel 0.21 patch 0.64 weak 1.72 noisy 1.70 score 0.247
+map(k=1.5) plain 2.58 swap1 0.61 alter 1.96 patte 1.69 diges -0.34 unrel 0.33 patch 0.68 weak 1.71 noisy 1.70 score 0.315
+map(k=2.5) plain 2.58 swap1 0.44 alter 1.72 patte 1.50 diges -0.22 unrel 0.41 patch 0.73 weak 1.71 noisy 1.70 score 0.340
+map(k=3.5) plain 2.58 swap1 0.27 alter 1.57 patte 1.42 diges -0.19 unrel 0.47 patch 0.73 weak 1.71 noisy 1.70 score 0.343
+map(k=4.5) plain 2.58 swap1 0.14 alter 1.40 patte 1.25 diges -0.19 unrel 0.46 patch 0.73 weak 1.71 noisy 1.70 score 0.318
+map(k=6.5) plain 2.58 swap1 -0.31 alter 1.00 patte 0.87 diges -0.20 unrel 0.47 patch 0.73 weak 1.71 noisy 1.70 score 0.223
+bma(eps=0.05,pr=0.143) plain 2.53 swap1 0.74 alter 2.04 patte 1.94 diges -0.48 unrel 0.34 patch 0.69 weak 1.72 noisy 1.70 score 0.209
+bma(eps=0.05,pr=0.5) plain 2.58 swap1 0.78 alter 1.93 patte 1.72 diges -0.39 unrel 0.27 patch 0.70 weak 1.73 noisy 1.72 score 0.340
+bma(eps=0.05,pr=0.9) plain 2.58 swap1 0.61 alter 1.86 patte 1.68 diges -0.30 unrel 0.30 patch 0.73 weak 1.72 noisy 1.70 score 0.348
+bma(eps=0.05,pr=0.99) plain 2.58 swap1 0.34 alter 1.81 patte 1.62 diges -0.24 unrel 0.42 patch 0.69 weak 1.71 noisy 1.70 score 0.319
+bma(eps=0.1,pr=0.143) plain 2.53 swap1 0.74 alter 2.04 patte 1.94 diges -0.48 unrel 0.34 patch 0.69 weak 1.72 noisy 1.70 score 0.209
+bma(eps=0.1,pr=0.5) plain 2.58 swap1 0.76 alter 1.93 patte 1.71 diges -0.39 unrel 0.28 patch 0.70 weak 1.73 noisy 1.72 score 0.360
+bma(eps=0.1,pr=0.9) plain 2.58 swap1 0.50 alter 1.87 patte 1.67 diges -0.31 unrel 0.36 patch 0.68 weak 1.71 noisy 1.70 score 0.313
+bma(eps=0.1,pr=0.99) plain 2.58 swap1 0.38 alter 1.62 patte 1.47 diges -0.20 unrel 0.42 patch 0.73 weak 1.71 noisy 1.70 score 0.336
+bma(eps=0.2,pr=0.143) plain 2.54 swap1 0.77 alter 2.04 patte 1.92 diges -0.47 unrel 0.24 patch 0.67 weak 1.72 noisy 1.70 score 0.177
+bma(eps=0.2,pr=0.5) plain 2.58 swap1 0.61 alter 1.97 patte 1.71 diges -0.36 unrel 0.33 patch 0.72 weak 1.74 noisy 1.72 score 0.400
+bma(eps=0.2,pr=0.9) plain 2.58 swap1 0.36 alter 1.78 patte 1.55 diges -0.25 unrel 0.43 patch 0.69 weak 1.71 noisy 1.70 score 0.324
+bma(eps=0.2,pr=0.99) plain 2.58 swap1 0.08 alter 1.46 patte 1.23 diges -0.19 unrel 0.48 patch 0.73 weak 1.71 noisy 1.70 score 0.319
+ctr(pen=3,floor=None) plain 2.58 swap1 0.40 alter 1.54 patte 1.46 diges -0.20 unrel 0.41 patch 0.70 weak 1.71 noisy 1.70 score 0.325
+ctr(pen=1,floor=0) plain 2.58 swap1 0.59 alter 1.71 patte 1.63 diges -0.39 unrel 0.27 patch 0.67 weak 1.71 noisy 1.70 score 0.246
+ctr(pen=1,floor=None) plain 2.58 swap1 0.60 alter 1.68 patte 1.61 diges -0.27 unrel 0.37 patch 0.71 weak 1.71 noisy 1.70 score 0.323
+ctr(pen=1,floor=0,theta=3) plain 2.58 swap1 0.47 alter 1.54 patte 1.41 diges -0.26 unrel 0.39 patch 0.73 weak 1.71 noisy 1.70 score 0.325
+ctr(pen=2,floor=0) plain 2.58 swap1 0.49 alter 1.63 patte 1.62 diges -0.27 unrel 0.37 patch 0.66 weak 1.71 noisy 1.70 score 0.289
+fix plain: 0:2.58 1:2.27 2:2.58 3:2.54 4:2.54 5:2.49 6:2.48
+fix swap10: 0:-1.42 1:1.09 2:-1.96 3:-1.99 4:-1.99 5:-1.96 6:-1.74
+fix alternate: 0:-3.03 1:-1.91 2:2.43 3:-2.84 4:1.98 5:-2.82 6:1.77
+fix pattern: 0:-2.74 1:-1.15 2:-2.62 3:2.13 4:-2.42 5:-2.37 6:1.89
+fix digest: 0:-0.19 1:-1.15 2:-0.46 3:-0.59 4:-0.65 5:-0.74 6:-0.81
+fix unreliable: 0:0.48 1:-0.53 2:0.35 3:0.22 4:0.10 5:0.14 6:0.03
+fix patchy: 0:0.73 1:-0.09 2:0.65 3:0.67 4:0.60 5:0.46 6:0.37
+fix weak: 0:1.71 1:1.28 2:1.74 3:1.70 4:1.68 5:1.63 6:1.58
+fix noisy: 0:1.70 1:1.22 2:1.71 3:1.70 4:1.63 5:1.58 6:1.56
+one Bayes setting for all worlds, by the search's own score: ('bma', '{"eps": 0.2, "pr": 0.5}')
+per world: plain:('map', '{"k": 1.5}') swap10:('map', '{"k": 0.5}') alternate:('bma', '{"eps": 0.05, "pr": 0.14285714285714285}') pattern:('bma', '{"eps": 0.05, "pr": 0.14285714285714285}') digest:('bma', '{"eps": 0.2, "pr": 0.99}') unreliable:('bma', '{"eps": 0.2, "pr": 0.99}') patchy:('map', '{"k": 3.5}') weak:('bma', '{"eps": 0.2, "pr": 0.5}') noisy:('bma', '{"eps": 0.1, "pr": 0.5}')
+best model from birth: plain:0 swap10:1 alternate:2 pattern:3 digest:0 unreliable:0 patchy:0 weak:2 noisy:2
+manual: plain:Judge: tally written while driving swap10:Judge: no trust alternate:Store: sequence 2 pattern:Store: sequence 3 digest:Use: still 1 s unreliable:Store/Judge: trust 4 patchy:Immunise: searched weak:Judge: trust 3 noisy:Judge: coincidence 20 ms
+
+== judged, seeds 60000-60199 x 2. Each against the bank, paired
+-- plain: bank 2.624; rival picks in 0.00 of lives, a right pick in 0.00, at -1.0 s
+   base 2.643 (+0.019 [-0.054,+0.092])
+   Bayes one setting bma(eps=0.2,pr=0.5) 2.625 (+0.001 [-0.010,+0.010]); picks 0.00, right 0.00 at -1.0 s
+   Bayes this world's best map(k=1.5) 2.624 (-0.000 [-0.001,+0.000]); picks 0.00, right 0.00 at -1.0 s
+   ctr(pen=3,floor=None) 2.624 (+0.000 [+0.000,+0.000])
+   ctr(pen=1,floor=0) 2.622 (-0.002 [-0.005,+0.000])
+   ctr(pen=1,floor=None) 2.622 (-0.002 [-0.005,+0.000])
+   ctr(pen=1,floor=0,theta=3) 2.625 (+0.001 [+0.000,+0.002])
+   ctr(pen=2,floor=0) 2.625 (+0.001 [+0.000,+0.004])
+   best model from birth (0) 2.625 (+0.001 [+0.000,+0.002])
+   the bank's parts told the colour 2.760 (+0.136 [+0.052,+0.216] SURE)
+   base movements told the colour, mismatch there 2.765 (+0.140 [+0.053,+0.225] SURE)
+   row's target (told) 2.765 (+0.140 [+0.053,+0.225] SURE)
+   row's manual (Judge: tally written while driving) 2.643 (+0.019 [-0.054,+0.092])
+   step Bayes(this world's best) - bank [crude inference]: -0.000 [-0.001,+0.000]
+   step birth - Bayes(this world's best) [time to gather evidence among the seven]: +0.001 [+0.000,+0.004]
+   step told parts - birth [the model's own learning]: +0.135 [+0.051,+0.216]
+   step target - told parts [the bank's movements and parts]: +0.004 [-0.007,+0.017]
+   step manual - told parts: -0.117 [-0.178,-0.053]
+-- swap10: bank 0.501; rival picks in 1.00 of lives, a right pick in 1.00, at 14.9 s
+   base -0.078 (-0.579 [-0.671,-0.487] SURE)
+   Bayes one setting bma(eps=0.2,pr=0.5) 0.636 (+0.135 [+0.060,+0.201] SURE); picks 1.00, right 1.00 at 15.2 s
+   Bayes this world's best map(k=0.5) 0.879 (+0.378 [+0.284,+0.466] SURE); picks 1.00, right 1.00 at 13.1 s
+   ctr(pen=3,floor=None) 0.376 (-0.125 [-0.195,-0.062] SURE)
+   ctr(pen=1,floor=0) 0.569 (+0.068 [+0.006,+0.130] SURE)
+   ctr(pen=1,floor=None) 0.576 (+0.075 [+0.006,+0.133] SURE)
+   ctr(pen=1,floor=0,theta=3) 0.382 (-0.119 [-0.222,-0.027] SURE)
+   ctr(pen=2,floor=0) 0.563 (+0.062 [+0.019,+0.104] SURE)
+   best model from birth (1) 1.004 (+0.503 [+0.409,+0.589] SURE)
+   the bank's parts told the colour 2.770 (+2.270 [+2.179,+2.357] SURE)
+   base movements told the colour, mismatch there 2.774 (+2.273 [+2.183,+2.361] SURE)
+   row's target (told) 2.774 (+2.273 [+2.183,+2.361] SURE)
+   row's manual (Judge: no trust) 1.075 (+0.575 [+0.477,+0.656] SURE)
+   step Bayes(this world's best) - bank [crude inference]: +0.378 [+0.284,+0.466]
+   step birth - Bayes(this world's best) [time to gather evidence among the seven]: +0.125 [+0.043,+0.207]
+   step told parts - birth [the model's own learning]: +1.766 [+1.688,+1.848]
+   step target - told parts [the bank's movements and parts]: +0.003 [-0.008,+0.015]
+   step manual - told parts: -1.695 [-1.765,-1.620]
+-- alternate: bank 1.723; rival picks in 1.00 of lives, a right pick in 1.00, at 11.5 s
+   base -3.254 (-4.978 [-5.114,-4.850] SURE)
+   Bayes one setting bma(eps=0.2,pr=0.5) 2.044 (+0.321 [+0.195,+0.460] SURE); picks 1.00, right 1.00 at 9.3 s
+   Bayes this world's best bma(eps=0.05,pr=0.143) 2.090 (+0.366 [+0.222,+0.506] SURE); picks 1.00, right 1.00 at 8.0 s
+   ctr(pen=3,floor=None) 1.731 (+0.008 [-0.029,+0.042])
+   ctr(pen=1,floor=0) 1.721 (-0.002 [-0.040,+0.036])
+   ctr(pen=1,floor=None) 1.714 (-0.010 [-0.049,+0.028])
+   ctr(pen=1,floor=0,theta=3) 1.534 (-0.189 [-0.313,-0.059] SURE)
+   ctr(pen=2,floor=0) 1.735 (+0.011 [-0.023,+0.044])
+   best model from birth (2) 2.321 (+0.597 [+0.481,+0.721] SURE)
+   the bank's parts told the colour 2.604 (+0.881 [+0.754,+1.012] SURE)
+   base movements told the colour, mismatch there 2.606 (+0.883 [+0.756,+1.014] SURE)
+   row's target (told) 2.606 (+0.883 [+0.756,+1.014] SURE)
+   row's manual (Store: sequence 2) 2.460 (+0.737 [+0.622,+0.860] SURE)
+   step Bayes(this world's best) - bank [crude inference]: +0.366 [+0.222,+0.506]
+   step birth - Bayes(this world's best) [time to gather evidence among the seven]: +0.231 [+0.116,+0.362]
+   step told parts - birth [the model's own learning]: +0.284 [+0.175,+0.405]
+   step target - told parts [the bank's movements and parts]: +0.002 [-0.003,+0.008]
+   step manual - told parts: -0.144 [-0.260,-0.037]
+-- pattern: bank 1.569; rival picks in 1.00 of lives, a right pick in 1.00, at 15.2 s
+   base -2.663 (-4.232 [-4.336,-4.140] SURE)
+   Bayes one setting bma(eps=0.2,pr=0.5) 1.832 (+0.264 [+0.153,+0.360] SURE); picks 1.00, right 1.00 at 11.9 s
+   Bayes this world's best bma(eps=0.05,pr=0.143) 1.951 (+0.382 [+0.283,+0.481] SURE); picks 1.00, right 1.00 at 10.3 s
+   ctr(pen=3,floor=None) 1.458 (-0.110 [-0.169,-0.057] SURE)
+   ctr(pen=1,floor=0) 1.599 (+0.030 [-0.006,+0.067])
+   ctr(pen=1,floor=None) 1.593 (+0.025 [-0.020,+0.068])
+   ctr(pen=1,floor=0,theta=3) 1.400 (-0.169 [-0.273,-0.067] SURE)
+   ctr(pen=2,floor=0) 1.596 (+0.028 [-0.000,+0.056])
+   best model from birth (3) 2.102 (+0.533 [+0.415,+0.633] SURE)
+   the bank's parts told the colour 2.662 (+1.093 [+0.995,+1.184] SURE)
+   base movements told the colour, mismatch there 2.670 (+1.101 [+1.004,+1.191] SURE)
+   row's target (told) 2.670 (+1.101 [+1.004,+1.191] SURE)
+   row's manual (Store: sequence 3) 2.231 (+0.662 [+0.564,+0.762] SURE)
+   step Bayes(this world's best) - bank [crude inference]: +0.382 [+0.283,+0.481]
+   step birth - Bayes(this world's best) [time to gather evidence among the seven]: +0.151 [+0.062,+0.242]
+   step told parts - birth [the model's own learning]: +0.560 [+0.475,+0.649]
+   step target - told parts [the bank's movements and parts]: +0.008 [+0.000,+0.016]
+   step manual - told parts: -0.431 [-0.514,-0.342]
+-- digest: bank -0.309; rival picks in 0.53 of lives, a right pick in 0.00, at -1.0 s
+   base -4.788 (-4.480 [-4.630,-4.329] SURE)
+   Bayes one setting bma(eps=0.2,pr=0.5) -0.288 (+0.021 [-0.057,+0.096]); picks 0.20, right 0.00 at -1.0 s
+   Bayes this world's best bma(eps=0.2,pr=0.99) -0.138 (+0.171 [+0.105,+0.226] SURE); picks 0.01, right 0.00 at -1.0 s
+   ctr(pen=3,floor=None) -0.206 (+0.102 [+0.061,+0.144] SURE)
+   ctr(pen=1,floor=0) -0.357 (-0.048 [-0.094,-0.005] SURE)
+   ctr(pen=1,floor=None) -0.270 (+0.038 [-0.015,+0.085])
+   ctr(pen=1,floor=0,theta=3) -0.221 (+0.088 [+0.022,+0.151] SURE)
+   ctr(pen=2,floor=0) -0.320 (-0.012 [-0.035,+0.010])
+   best model from birth (0) -0.133 (+0.176 [+0.115,+0.229] SURE)
+   the bank's parts told the colour 0.023 (+0.332 [+0.213,+0.456] SURE)
+   base movements told the colour, mismatch there -3.694 (-3.385 [-3.521,-3.244] SURE)
+   row's target (toldpause) 1.813 (+2.122 [+2.028,+2.224] SURE)
+   row's manual (Use: still 1 s) 1.734 (+2.042 [+1.949,+2.138] SURE)
+   step Bayes(this world's best) - bank [crude inference]: +0.171 [+0.105,+0.226]
+   step birth - Bayes(this world's best) [time to gather evidence among the seven]: +0.005 [-0.011,+0.032]
+   step told parts - birth [the model's own learning]: +0.156 [+0.047,+0.281]
+   step target - told parts [the bank's movements and parts]: +1.790 [+1.695,+1.895]
+   step manual - told parts: +1.711 [+1.614,+1.816]
+-- unreliable: bank 0.479; rival picks in 0.41 of lives, a right pick in 0.00, at -1.0 s
+   base 0.244 (-0.235 [-0.338,-0.119] SURE)
+   Bayes one setting bma(eps=0.2,pr=0.5) 0.459 (-0.019 [-0.082,+0.039]); picks 0.22, right 0.00 at -1.0 s
+   Bayes this world's best bma(eps=0.2,pr=0.99) 0.548 (+0.069 [+0.023,+0.115] SURE); picks 0.02, right 0.00 at -1.0 s
+   ctr(pen=3,floor=None) 0.566 (+0.087 [+0.046,+0.128] SURE)
+   ctr(pen=1,floor=0) 0.383 (-0.096 [-0.143,-0.056] SURE)
+   ctr(pen=1,floor=None) 0.505 (+0.026 [-0.020,+0.071])
+   ctr(pen=1,floor=0,theta=3) 0.510 (+0.031 [-0.020,+0.081])
+   ctr(pen=2,floor=0) 0.434 (-0.045 [-0.080,-0.012] SURE)
+   best model from birth (0) 0.545 (+0.066 [+0.019,+0.112] SURE)
+   the bank's parts told the colour 0.752 (+0.274 [+0.172,+0.374] SURE)
+   base movements told the colour, mismatch there 0.800 (+0.322 [+0.226,+0.421] SURE)
+   row's target (told) 0.800 (+0.322 [+0.226,+0.421] SURE)
+   row's manual (Store/Judge: trust 4) 0.640 (+0.161 [+0.051,+0.274] SURE)
+   step Bayes(this world's best) - bank [crude inference]: +0.069 [+0.023,+0.115]
+   step birth - Bayes(this world's best) [time to gather evidence among the seven]: -0.003 [-0.012,+0.004]
+   step told parts - birth [the model's own learning]: +0.208 [+0.110,+0.308]
+   step target - told parts [the bank's movements and parts]: +0.048 [+0.014,+0.084]
+   step manual - told parts: -0.113 [-0.195,-0.023]
+-- patchy: bank 0.702; rival picks in 0.11 of lives, a right pick in 0.00, at -1.0 s
+   base 0.633 (-0.070 [-0.181,+0.038])
+   Bayes one setting bma(eps=0.2,pr=0.5) 0.669 (-0.034 [-0.081,+0.007]); picks 0.10, right 0.00 at -1.0 s
+   Bayes this world's best map(k=3.5) 0.712 (+0.010 [-0.027,+0.044]); picks 0.01, right 0.00 at -1.0 s
+   ctr(pen=3,floor=None) 0.719 (+0.016 [-0.011,+0.045])
+   ctr(pen=1,floor=0) 0.671 (-0.031 [-0.064,-0.002] SURE)
+   ctr(pen=1,floor=None) 0.688 (-0.014 [-0.049,+0.019])
+   ctr(pen=1,floor=0,theta=3) 0.704 (+0.002 [-0.034,+0.034])
+   ctr(pen=2,floor=0) 0.688 (-0.015 [-0.037,-0.000] SURE)
+   best model from birth (0) 0.714 (+0.012 [-0.025,+0.045])
+   the bank's parts told the colour 0.808 (+0.106 [-0.005,+0.231])
+   base movements told the colour, mismatch there 0.851 (+0.148 [+0.039,+0.263] SURE)
+   row's target (toldc) 0.851 (+0.148 [+0.039,+0.263] SURE)
+   row's manual (Immunise: searched) 0.822 (+0.120 [+0.004,+0.235] SURE)
+   step Bayes(this world's best) - bank [crude inference]: +0.010 [-0.027,+0.044]
+   step birth - Bayes(this world's best) [time to gather evidence among the seven]: +0.002 [-0.000,+0.005]
+   step told parts - birth [the model's own learning]: +0.094 [-0.017,+0.209]
+   step target - told parts [the bank's movements and parts]: +0.042 [-0.007,+0.095]
+   step manual - told parts: +0.014 [-0.101,+0.121]
+-- weak: bank 1.783; rival picks in 0.00 of lives, a right pick in 0.00, at -1.0 s
+   base 1.705 (-0.078 [-0.150,-0.010] SURE)
+   Bayes one setting bma(eps=0.2,pr=0.5) 1.781 (-0.002 [-0.016,+0.011]); picks 0.00, right 0.00 at -1.0 s
+   Bayes this world's best bma(eps=0.2,pr=0.5) 1.781 (-0.002 [-0.016,+0.011]); picks 0.00, right 0.00 at -1.0 s
+   ctr(pen=3,floor=None) 1.784 (+0.001 [+0.000,+0.004])
+   ctr(pen=1,floor=0) 1.783 (+0.000 [+0.000,+0.001])
+   ctr(pen=1,floor=None) 1.784 (+0.001 [+0.000,+0.004])
+   ctr(pen=1,floor=0,theta=3) 1.784 (+0.001 [+0.000,+0.004])
+   ctr(pen=2,floor=0) 1.783 (+0.000 [+0.000,+0.000])
+   best model from birth (2) 1.741 (-0.042 [-0.070,-0.015] SURE)
+   the bank's parts told the colour 1.841 (+0.058 [-0.017,+0.127])
+   base movements told the colour, mismatch there 1.844 (+0.062 [-0.014,+0.129])
+   row's target (toldc) 1.844 (+0.062 [-0.014,+0.129])
+   row's manual (Judge: trust 3) 1.743 (-0.040 [-0.105,+0.028])
+   step Bayes(this world's best) - bank [crude inference]: -0.002 [-0.016,+0.011]
+   step birth - Bayes(this world's best) [time to gather evidence among the seven]: -0.040 [-0.068,-0.011]
+   step told parts - birth [the model's own learning]: +0.100 [+0.022,+0.171]
+   step target - told parts [the bank's movements and parts]: +0.004 [-0.010,+0.018]
+   step manual - told parts: -0.098 [-0.148,-0.043]
+-- noisy: bank 1.769; rival picks in 0.01 of lives, a right pick in 0.00, at -1.0 s
+   base 1.359 (-0.410 [-0.475,-0.342] SURE)
+   Bayes one setting bma(eps=0.2,pr=0.5) 1.769 (-0.000 [-0.014,+0.013]); picks 0.01, right 0.00 at -1.0 s
+   Bayes this world's best bma(eps=0.1,pr=0.5) 1.766 (-0.004 [-0.018,+0.012]); picks 0.06, right 0.00 at -1.0 s
+   ctr(pen=3,floor=None) 1.774 (+0.005 [+0.000,+0.013] SURE)
+   ctr(pen=1,floor=0) 1.767 (-0.002 [-0.005,+0.000])
+   ctr(pen=1,floor=None) 1.773 (+0.003 [-0.001,+0.011])
+   ctr(pen=1,floor=0,theta=3) 1.774 (+0.005 [+0.000,+0.013] SURE)
+   ctr(pen=2,floor=0) 1.771 (+0.002 [+0.000,+0.005])
+   best model from birth (2) 1.735 (-0.035 [-0.067,-0.001] SURE)
+   the bank's parts told the colour 1.856 (+0.086 [+0.020,+0.151] SURE)
+   base movements told the colour, mismatch there 1.442 (-0.328 [-0.393,-0.266] SURE)
+   row's target (told) 2.765 (+0.995 [+0.916,+1.069] SURE)
+   row's manual (Judge: coincidence 20 ms) 1.802 (+0.033 [-0.042,+0.106])
+   step Bayes(this world's best) - bank [crude inference]: -0.004 [-0.018,+0.012]
+   step birth - Bayes(this world's best) [time to gather evidence among the seven]: -0.031 [-0.065,+0.000]
+   step told parts - birth [the model's own learning]: +0.121 [+0.046,+0.191]
+   step target - told parts [the bank's movements and parts]: +0.909 [+0.833,+0.984]
+   step manual - told parts: -0.054 [-0.131,+0.020]

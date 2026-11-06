@@ -1,0 +1,157 @@
+== static: lang.World(text) refuses, or compiles
+  hand     plain                                          compiles
+  hand     swap10                                         compiles
+  hand     alternate                                      compiles
+  hand     pattern                                        compiles
+  hand     digest                                         compiles
+  hand     unreliable                                     compiles
+  hand     patchy                                         compiles
+  hand     weak                                           compiles
+  hand     noisy                                          compiles
+  hand     coin                                           compiles
+  hand     allfood                                        compiles
+  hand     never                                          compiles
+  hand     late_alternate_50                              compiles
+  hand     late_swap_50                                   compiles
+  hand     nlate_pattern_50                               compiles
+  hand     swap11                                         compiles
+  hand     swapmeals6                                     compiles
+  hand     unreliable22                                   compiles
+  hand     every5th                                       compiles
+  hand     dim25                                          compiles
+  hand     mirror                                         compiles
+  hand     halfthrust_const                               compiles
+  hand     halfthrust_gain                                compiles
+  hand     thrusters                                      compiles
+  hand     fail50                                         compiles
+  hand     drag2                                          compiles
+  hand     moving                                         compiles
+  hand     scarce                                         compiles
+  hand     blind                                          compiles
+  hand     crosstalk                                      compiles
+  hand     bruise                                         compiles
+  hand     region                                         compiles
+  hand     keylock                                        compiles
+  hand     decoys                                         compiles
+  hand     rarefeast                                      compiles
+  hand     costly                                         compiles
+  hand     parity                                         compiles
+  hand     word                                           compiles
+  hand     cells                                          compiles
+  stage 5  delay1                                         REFUSED: marked stage 5; a taste with no meal, or later than its meal (a taste injected); a taste lost
+  stage 5  lostgood                                       REFUSED: marked stage 5; a taste lost
+  stage 5  rewire50                                       REFUSED: marked stage 5; a rewiring
+  stage 5  lethal                                         REFUSED: marked stage 5; a meal or a rule ends a life
+  stage 5  liar                                           REFUSED: marked stage 5; marked as lying; a taste written from (- value), not the literal 1 or -1
+  retired  sag                                            NOT A PROGRAM: not a statement: (bp hold (* 0.5 (bpget hold))) (stage tick)
+  checker  unmarked delay1                                REFUSED: a taste with no meal, or later than its meal (a taste injected); a taste lost
+  checker  unmarked lostgood                              REFUSED: a taste lost
+  checker  unmarked rewire50                              REFUSED: a rewiring
+  checker  unmarked lethal                                REFUSED: a meal or a rule ends a life
+  checker  unmarked liar                                  REFUSED: a taste written from (- value), not the literal 1 or -1
+  checker  liar, lying meta only                          REFUSED: marked as lying; a taste written from (- value), not the literal 1 or -1
+  checker  random liar                                    REFUSED: a taste written from (- value), not the literal 1 or -1
+  checker  taste of 0                                     REFUSED: a taste written from 0, not the literal 1 or -1
+  checker  taste of .5                                    REFUSED: a taste written from (* 0.5 value), not the literal 1 or -1
+  checker  score against taste                            compiles
+  checker  brain written (bp)                             NOT A PROGRAM: not a statement: (bp hold 0.001) (stage tick)
+  checker  brain told food (bp)                           NOT A PROGRAM: not a statement: (bp food (sensor F)) (stage tick)
+  checker  taste from the score stage                     compiles
+  checker  meal dropped, block uneaten                    compiles
+  checker  colours swapped (truthful)                     compiles
+  checker  world fires a thruster                         compiles
+  mine     brain read (bpget)                             NOT A PROGRAM: not a word of the language: (bpget food) (stage tick)
+  mine     an each variable that names the brain          NOT A PROGRAM: (each name s ...): (each W.brain.p (set poison P)) (stage tick)
+  mine     taste always good, literal                     compiles
+  mine     taste always bad, literal                      compiles
+  mine     sign .5, literal                               REFUSED: a meal's sign 0.5: a taste other than +-1
+  mine     sign halved                                    compiles
+  mine     sign doubled                                   compiles
+  mine     amount -1, literal                             REFUSED: a meal's amount -1: the score against the taste
+  mine     amount negated                                 compiles
+  mine     food worth nothing, tasting good               compiles
+  mine     poison worth nothing, tasting bad              compiles
+  mine     decoy that tastes                              compiles
+  mine     COST -2, literal                               REFUSED: COST -2: poison not bad, the score against the taste
+  mine     COST negated mid-life                          compiles
+  mine     THRUST -1                                      REFUSED: THRUST -1: a firing that pays
+  mine     an extra score                                 REFUSED: a score with no meal (score ...): nothing to check it against a taste
+  mine     an end by chance                               REFUSED: a meal or a rule ends a life
+  mine     a taste injected at birth                      REFUSED: a taste with no meal, or later than its meal (a taste injected)
+  mine     a motor rewiring                               REFUSED: a rewiring
+  mine     a taste dropped when two meals                 REFUSED: a taste lost
+  mine     the score inverted at the meal                 compiles
+  mine     lies about worth, taste truthful (unreliable)  compiles
+  mine     steering reversed at 50 s (mimics a rewiring)  compiles
+  mine     eyes exchanged at 50 s (mimics a rewiring)     compiles
+  mine     digest as stage 2a wrote it                    compiles
+  mine     digest at the meal (stage 2b)                  compiles
+
+== paths: no way round the guard
+  unmarked liar: compile-only world not lived (this world can't be lived: ['a taste written from (- value), not the literal 1 or -1'])
+  unmarked liar, refusal cleared by hand: the engine refuses at tick 58 (the score against the taste: tick 58, taste -1.0, the scored meals say 1.0)
+  unmarked delay1: compile-only world not lived (this world can't be lived: ['a taste with no meal, or later than its meal (a taste injected)', 'a taste lost'])
+  unmarked delay1, refusal cleared by hand: the engine refuses at tick 58 (a taste lost: tick 58, taste None, the scored meals say 1.0)
+  an end by chance: compile-only world not lived (this world can't be lived: ['a meal or a rule ends a life'])
+  an end by chance, refusal cleared by hand: the engine refuses at tick 498 (a life ended)
+
+== dynamic: lives on 65100-65119 x 2, base and bank, by arms.one, the runner's loop and sim.WLife by hand; lives refused by the engine and why (first reason of each life)
+  hand     plain                                          refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     swap10                                         refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     alternate                                      refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     pattern                                        refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     digest                                         refused lives: arms 20/80 {'a taste with no scored meal': 12, 'a taste lost': 8}; runner 20/80 {'a taste with no scored meal': 12, 'a taste lost': 8}; by hand 8/40 {'a taste with no scored meal': 4, 'a taste lost': 4}
+  hand     unreliable                                     refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     patchy                                         refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     weak                                           refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     noisy                                          refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     coin                                           refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     allfood                                        refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     never                                          refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     late_alternate_50                              refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     late_swap_50                                   refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     nlate_pattern_50                               refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     swap11                                         refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     swapmeals6                                     refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     unreliable22                                   refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     every5th                                       refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     dim25                                          refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     mirror                                         refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     halfthrust_const                               refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     halfthrust_gain                                refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     thrusters                                      refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     fail50                                         refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     drag2                                          refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     moving                                         refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     scarce                                         refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     blind                                          refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     crosstalk                                      refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     bruise                                         refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     region                                         refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     keylock                                        refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     decoys                                         refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     rarefeast                                      refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     costly                                         refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     parity                                         refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     word                                           refused lives: arms 0/80; runner 0/80; by hand 0/40
+  hand     cells                                          refused lives: arms 0/80; runner 0/80; by hand 0/40
+  checker  score against taste                            refused lives: arms 80/80 {'the score against the taste': 80}; runner 80/80 {'the score against the taste': 80}; by hand 40/40 {'the score against the taste': 40}
+  checker  taste from the score stage                     refused lives: arms 0/80; runner 0/80; by hand 0/40
+  checker  meal dropped, block uneaten                    refused lives: arms 0/80; runner 0/80; by hand 0/40
+  checker  colours swapped (truthful)                     refused lives: arms 0/80; runner 0/80; by hand 0/40
+  checker  world fires a thruster                         refused lives: arms 0/80; runner 0/80; by hand 0/40
+  mine     taste always good, literal                     refused lives: arms 80/80 {'the score against the taste': 80}; runner 80/80 {'the score against the taste': 80}; by hand 40/40 {'the score against the taste': 40}
+  mine     taste always bad, literal                      refused lives: arms 80/80 {'the score against the taste': 80}; runner 80/80 {'the score against the taste': 80}; by hand 40/40 {'the score against the taste': 40}
+  mine     sign halved                                    refused lives: arms 80/80 {"a meal's sign 0.5": 40, "a meal's sign -0.5": 40}; runner 80/80 {"a meal's sign 0.5": 40, "a meal's sign -0.5": 40}; by hand 40/40 {"a meal's sign 0.5": 20, "a meal's sign -0.5": 20}
+  mine     sign doubled                                   refused lives: arms 80/80 {"a meal's sign 2.0": 40, "a meal's sign -2.0": 40}; runner 80/80 {"a meal's sign 2.0": 40, "a meal's sign -2.0": 40}; by hand 40/40 {"a meal's sign 2.0": 20, "a meal's sign -2.0": 20}
+  mine     amount negated                                 refused lives: arms 80/80 {"a meal's amount -1": 80}; runner 80/80 {"a meal's amount -1": 80}; by hand 40/40 {"a meal's amount -1": 40}
+  mine     food worth nothing, tasting good               refused lives: arms 80/80 {'a taste with no scored meal': 80}; runner 80/80 {'a taste with no scored meal': 80}; by hand 40/40 {'a taste with no scored meal': 40}
+  mine     poison worth nothing, tasting bad              refused lives: arms 80/80 {'a taste with no scored meal': 79, 'a taste lost': 1}; runner 80/80 {'a taste with no scored meal': 79, 'a taste lost': 1}; by hand 40/40 {'a taste with no scored meal': 39, 'a taste lost': 1}
+  mine     decoy that tastes                              refused lives: arms 0/80; runner 0/80; by hand 0/40
+  mine     COST negated mid-life                          refused lives: arms 80/80 {'COST -2, THRUST 1.0': 80}; runner 80/80 {'COST -2, THRUST 1.0': 80}; by hand 40/40 {'COST -2, THRUST 1.0': 40}
+  mine     the score inverted at the meal                 refused lives: arms 80/80 {'the score against the taste': 80}; runner 80/80 {'the score against the taste': 80}; by hand 40/40 {'the score against the taste': 40}
+  mine     lies about worth, taste truthful (unreliable)  refused lives: arms 0/80; runner 0/80; by hand 0/40
+  mine     steering reversed at 50 s (mimics a rewiring)  refused lives: arms 0/80; runner 0/80; by hand 0/40
+  mine     eyes exchanged at 50 s (mimics a rewiring)     refused lives: arms 0/80; runner 0/80; by hand 0/40
+  mine     digest as stage 2a wrote it                    refused lives: arms 20/80 {'a taste with no scored meal': 12, 'a taste lost': 8}; runner 20/80 {'a taste with no scored meal': 12, 'a taste lost': 8}; by hand 8/40 {'a taste with no scored meal': 4, 'a taste lost': 4}
+  mine     digest at the meal (stage 2b)                  refused lives: arms 0/80; runner 0/80; by hand 0/40

@@ -1,0 +1,35 @@
+== Fano upper bound on log2 N (and N), per world, at Pe 0.05; n, C from the bank's real lives. C = 1-H(e); digest's own, from told right and wrong, is larger (0.53), since its channel is lopsided, and shown beside it.
+plain       e 0.025 C 0.831 | 10 s: n 5.4, log2 N <= 5.8 (N <= 54.1) | 30 s: n 18.1, log2 N <= 16.8 (N <= 1.17e+05) | 100 s: n 63.0, log2 N <= 56.2 (N <= 8.16e+16)
+swap10      e 0.027 C 0.818 | 10 s: n 5.4, log2 N <= 5.7 (N <= 51.5) | 30 s: n 17.2, log2 N <= 15.8 (N <= 5.89e+04) | 100 s: n 60.0, log2 N <= 52.8 (N <= 7.6e+15)
+alternate   e 0.029 C 0.811 | 10 s: n 5.1, log2 N <= 5.4 (N <= 42.2) | 30 s: n 17.0, log2 N <= 15.6 (N <= 4.84e+04) | 100 s: n 59.5, log2 N <= 51.8 (N <= 3.97e+15)
+pattern     e 0.026 C 0.825 | 10 s: n 5.2, log2 N <= 5.6 (N <= 47.4) | 30 s: n 16.7, log2 N <= 15.6 (N <= 4.94e+04) | 100 s: n 59.5, log2 N <= 52.7 (N <= 7.34e+15)
+digest      e 0.207 C 0.264 | 10 s: n 4.9, log2 N <= 2.4 (N <= 5.28) | 30 s: n 13.0, log2 N <= 4.7 (N <= 25.4) | 100 s: n 40.6, log2 N <= 12.3 (N <= 5.09e+03)
+unreliable  e 0.215 C 0.249 | 10 s: n 5.4, log2 N <= 2.5 (N <= 5.5) | 30 s: n 17.6, log2 N <= 5.7 (N <= 50.7) | 100 s: n 60.1, log2 N <= 16.8 (N <= 1.13e+05)
+patchy      e 0.119 C 0.472 | 10 s: n 6.6, log2 N <= 4.3 (N <= 20.3) | 30 s: n 20.3, log2 N <= 11.1 (N <= 2.26e+03) | 100 s: n 68.9, log2 N <= 35.3 (N <= 4.31e+10)
+weak        e 0.062 C 0.665 | 10 s: n 3.7, log2 N <= 3.6 (N <= 12.4) | 30 s: n 13.2, log2 N <= 10.3 (N <= 1.26e+03) | 100 s: n 48.3, log2 N <= 34.8 (N <= 3.07e+10)
+noisy       e 0.050 C 0.712 | 10 s: n 3.9, log2 N <= 4.0 (N <= 16) | 30 s: n 14.7, log2 N <= 12.1 (N <= 4.33e+03) | 100 s: n 51.4, log2 N <= 39.6 (N <= 8.24e+11)
+
+== Union estimate of log2 N at Pe 0.05, by rho; a family of tables drawn at random has rho 1/2, and a large family cannot have more (Plotkin). Negative: not even two models at this error.
+plain       B 1.677 | 10 s: rho 0.5: +0.2 rho 0.2: -2.5 rho 0.05: -3.9 | 30 s: rho 0.5: +10.8 rho 0.2: +1.7 rho 0.05: -2.8 | 100 s: rho 0.5: +48.5 rho 0.2: +16.8 rho 0.05: +1.0
+swap10      B 1.613 | 10 s: rho 0.5: +0.0 rho 0.2: -2.6 rho 0.05: -3.9 | 30 s: rho 0.5: +9.5 rho 0.2: +1.2 rho 0.05: -2.9 | 100 s: rho 0.5: +44.1 rho 0.2: +15.0 rho 0.05: +0.5
+alternate   B 1.575 | 10 s: rho 0.5: -0.3 rho 0.2: -2.7 rho 0.05: -3.9 | 30 s: rho 0.5: +9.1 rho 0.2: +1.0 rho 0.05: -3.0 | 100 s: rho 0.5: +42.5 rho 0.2: +14.4 rho 0.05: +0.4
+pattern     B 1.645 | 10 s: rho 0.5: -0.0 rho 0.2: -2.6 rho 0.05: -3.9 | 30 s: rho 0.5: +9.5 rho 0.2: +1.2 rho 0.05: -2.9 | 100 s: rho 0.5: +44.6 rho 0.2: +15.3 rho 0.05: +0.6
+digest      B 0.302 | 10 s: rho 0.5: -3.6 rho 0.2: -4.0 rho 0.05: -4.2 | 30 s: rho 0.5: -2.4 rho 0.2: -3.5 rho 0.05: -4.1 | 100 s: rho 0.5: +1.8 rho 0.2: -1.9 rho 0.05: -3.7
+unreliable  B 0.283 | 10 s: rho 0.5: -3.6 rho 0.2: -4.0 rho 0.05: -4.2 | 30 s: rho 0.5: -1.8 rho 0.2: -3.3 rho 0.05: -4.1 | 100 s: rho 0.5: +4.2 rho 0.2: -0.9 rho 0.05: -3.5
+patchy      B 0.625 | 10 s: rho 0.5: -2.3 rho 0.2: -3.5 rho 0.05: -4.1 | 30 s: rho 0.5: +2.0 rho 0.2: -1.8 rho 0.05: -3.7 | 100 s: rho 0.5: +17.2 rho 0.2: +4.3 rho 0.05: -2.2
+weak        B 1.052 | 10 s: rho 0.5: -2.4 rho 0.2: -3.5 rho 0.05: -4.1 | 30 s: rho 0.5: +2.6 rho 0.2: -1.5 rho 0.05: -3.6 | 100 s: rho 0.5: +21.1 rho 0.2: +5.8 rho 0.05: -1.8
+noisy       B 1.192 | 10 s: rho 0.5: -2.0 rho 0.2: -3.4 rho 0.05: -4.1 | 30 s: rho 0.5: +4.4 rho 0.2: -0.8 rho 0.05: -3.4 | 100 s: rho 0.5: +26.3 rho 0.2: +7.9 rho 0.05: -1.3
+
+== Wald: tastes to separate one pair at 5% both ways, w = 3.82 bits; then seconds at 0.63 scored tastes a s (the plain world's), by lie rate e and disagreement share rho. Over 100 s: a 100 s life is too short for that pair at that error, given this rate of tastes.
+  e 0.025: D 5.021 bits a disagreement, C 0.831 | rho 1.0: 0.8 tastes = 1 s rho 0.5: 1.5 tastes = 2 s rho 0.2: 3.8 tastes = 6 s rho 0.05: 15.2 tastes = 24 s rho 0.01: 76.1 tastes = 121 s
+  e 0.05: D 3.823 bits a disagreement, C 0.714 | rho 1.0: 1.0 tastes = 2 s rho 0.5: 2.0 tastes = 3 s rho 0.2: 5.0 tastes = 8 s rho 0.05: 20.0 tastes = 32 s rho 0.01: 100.0 tastes = 159 s
+  e 0.1: D 2.536 bits a disagreement, C 0.531 | rho 1.0: 1.5 tastes = 2 s rho 0.5: 3.0 tastes = 5 s rho 0.2: 7.5 tastes = 12 s rho 0.05: 30.2 tastes = 48 s rho 0.01: 150.8 tastes = 239 s
+  e 0.2: D 1.200 bits a disagreement, C 0.278 | rho 1.0: 3.2 tastes = 5 s rho 0.5: 6.4 tastes = 10 s rho 0.2: 15.9 tastes = 25 s rho 0.05: 63.7 tastes = 101 s rho 0.01: 318.6 tastes = 506 s
+  e 0.3: D 0.489 bits a disagreement, C 0.119 | rho 1.0: 7.8 tastes = 12 s rho 0.5: 15.6 tastes = 25 s rho 0.2: 39.1 tastes = 62 s rho 0.05: 156.4 tastes = 248 s rho 0.01: 781.9 tastes = 1241 s
+  e 0.35: D 0.268 bits a disagreement, C 0.066 | rho 1.0: 14.3 tastes = 23 s rho 0.5: 28.5 tastes = 45 s rho 0.2: 71.3 tastes = 113 s rho 0.05: 285.4 tastes = 453 s rho 0.01: 1426.9 tastes = 2265 s
+  e 0.4: D 0.117 bits a disagreement, C 0.029 | rho 1.0: 32.7 tastes = 52 s rho 0.5: 65.4 tastes = 104 s rho 0.2: 163.4 tastes = 259 s rho 0.05: 653.6 tastes = 1037 s rho 0.01: 3267.8 tastes = 5187 s
+  e 0.45: D 0.029 bits a disagreement, C 0.007 | rho 1.0: 132.1 tastes = 210 s rho 0.5: 264.1 tastes = 419 s rho 0.2: 660.3 tastes = 1048 s rho 0.05: 2641.1 tastes = 4192 s rho 0.01: 13205.7 tastes = 20961 s
+
+== The ceiling on n: pulses of taste in a life under brains that don't choose, and the bank when both colours are food
+  unwired in plain: meals a life 145.0, sd 14.3, max 181; efficiency -3.39
+  circuit in allfood: meals a life 74.7, sd 11.5, max 108; efficiency 4.39

@@ -1,0 +1,73 @@
+== world rules broken: each should fail its world's own check
+caught  swap10: (/ t 10) -> (/ t 10.5)
+caught  swap10: (+ P  -> (+ F 
+caught  swap11: (/ t 11) -> (/ t 10)
+caught  alternate: (on score (set last colour)) -> (on score (set last P))
+caught  pattern: (= i 2) F P -> (= i 0) F P
+caught  pattern: (mod (+ i 1) 3) -> (mod (+ i 1) 4)
+caught  digest: (or (= colour P) (< (- t was) 1)) -> (or (= colour P) (< (- t was) 1.5))
+caught  digest: (on taste (if (< (- t was) 1) (set value -1))) -> 
+caught  digest: (set was t) -> 
+caught  unreliable: 0.2 -> 0.25
+caught  unreliable22: 0.22 -> 0.2
+caught  coin: 0.5 -> 0.45
+caught  patchy: 0.003 -> 0.006
+caught  patchy: (int 4) -> (int 1)
+caught  weak: 0.25 -> 0.35
+caught  weak: (= eye e)  -> (>= eye 0) 
+caught  dim25: 0.25 -> 0.5
+caught  dim25: (= colour c) -> (>= colour 0)
+caught  noisy: (* 10 TICK) -> (* 12 TICK)
+caught  noisy: (pulse e) -> (pulse (int 2))
+caught  allfood: (set poison -1) -> (set poison (if (< t 10) P -1))
+caught  never: 1000 -> 90
+caught  late_alternate_50: (< t 50) -> (< t 55)
+caught  late_swap_50: (< t 50) -> (< t 55)
+caught  nlate_pattern_50: 0.2 -> 0.3
+caught  swapmeals6: (/ n 6) -> (/ n 7)
+caught  every5th: (mod n 5) -> (mod n 4)
+caught  every5th: (= (mod n 5) 4) -> (chance 0.2)
+caught  mirror: (drop)  -> 
+caught  halfthrust_const: (const TURN (* 0.5 TURN)) -> 
+caught  halfthrust_gain: 0.5 -> 0.6
+caught  thrusters: (pow 2 (uniform -1 1)) -> (pow 4 (uniform -1 1))
+caught  fail50: (>= t 50) -> (>= t 500)
+caught  drag2: (* 2 DRAG) -> (* 1.9 DRAG)
+caught  moving: 0.005 -> 0.006
+caught  scarce: 3 -> 4
+caught  blind: 0.055 -> 0.11
+caught  blind: (set last t) -> 
+caught  crosstalk: 0.3 -> 0.2
+caught  bruise: 0.03 -> 0.04
+caught  region: P F -> F P
+caught  keylock: (- t key) 5 -> (- t key) 8
+caught  decoys: (set sign 0) -> 
+caught  decoys: (mod b 3) -> (mod b 4)
+caught  rarefeast: 0.05 -> 0.1
+caught  rarefeast: (on score -> (on meal (if (chance 0.05) (set sign -1))) (on score
+caught  costly: THRUST 10 -> THRUST 5
+caught  sag: (* 0.5  -> (* 0.6 
+caught  sag: (>= t 50) -> (>= t 40)
+caught  parity: (* s7 h7) -> (* s6 h7)
+caught  word: (set i 0) -> (set i i)
+caught  cells: (= c 3) -> (= c 4)
+caught  delay1: (after 1 -> (after 2
+caught  lostgood: 0.5 -> 0.6
+world rules: caught 54, missed 0
+== engine broken
+caught  e_taste_stream, by identity: plain circuit red: body differs first at tick 38
+caught  e_rule_uses_body_stream, by identity: patchy circuit red: body differs first at tick 134
+caught  e_light_1e7, by identity: plain circuit red: body differs first at tick 0
+caught  e_no_cross_ray, by identity: plain circuit red: body differs first at tick 0
+caught  e_drag_early, by identity: plain circuit red: body differs first at tick 0
+caught  e_fire_order, by identity: plain circuit red: body differs first at tick 69
+caught  e_tell_on, by reproduction: plain bank red: rows differ at 0: [(0.34000000000000014, 1.0, True, False, True, 0, 1, 1, 2, 1000000000.34, 0,
+caught  e_bad_end_of_tick, by reproduction: plain circuit red: meals differ at 0: [(34, False)] [(34, True)]
+caught  e_state_leak, by no leak: alternate
+caught  e_at_leak, by shortcut: plain: a taste's moment depends on its sign: z 14.4
+caught  e_later_off_by_one, by delay1: delay isn't 1 s
+caught  e_respawn_ignored, by reproduction: patchy circuit red: body differs first at tick 0
+caught  e_prune_off, by description length: dead state: 560 against 392
+caught  e_extra_wire, by strict brain: raised AttributeError: 'Strict' object has no attribute 'hint'
+caught  e_pulse_tick_boundary, by shortcut: plain: pulse moments aren't uniform: z 122.0
+engine: caught 15 of 15

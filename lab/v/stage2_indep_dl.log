@@ -1,0 +1,61 @@
+== invariance, every world of worlds.py
+  45 worlds, 3 renamings each, comments/meta/stream/whitespace, lets reordered: 4 changes
+    ('nlate_pattern_50', 'lets reordered', 960, 944)
+    ('thrusters', 'lets reordered', 464, 456)
+    ('parity', 'lets reordered', 1152, 1280)
+    ('word', 'lets reordered', 728, 744)
+== meaning kept, text changed / meaning changed, text nearly kept
+  swap10: 280 bits, canonical 51772d30
+  swap10, a dead variable: 280 bits, canonical 51772d30
+  swap10, + 0: 320 bits, canonical 3d8eba8f
+  swap10, operands commuted: 296 bits, canonical 91576b82
+  swap10, via a variable: 392 bits, canonical 252aede1
+  swap every 10.1 s: 280 bits, canonical 51772d30
+  swap every 11 s: 280 bits, canonical 63cb4b22
+  swap every 1000 s (never): 280 bits, canonical 49aca427
+== ranking, every world of worlds.py
+      0  plain
+    104  costly
+    144  liar
+    152  drag2
+    152  halfthrust_gain
+    160  allfood
+    176  delay1
+    184  mirror
+    216  halfthrust_const
+    216  lethal
+    224  lostgood
+    248  bruise
+    256  crosstalk
+    264  late_swap_50
+    264  rarefeast
+    272  scarce
+    280  swap10
+    280  swap11
+    296  alternate
+    296  coin
+    296  unreliable
+    296  unreliable22
+    312  region
+    336  noisy
+    352  fail50
+    360  weak
+    368  dim25
+    376  blind
+    416  decoys
+    432  every5th
+    440  swapmeals6
+    456  sag
+    464  late_alternate_50
+    464  never
+    464  rewire50
+    464  thrusters
+    488  keylock
+    520  pattern
+    592  moving
+    616  digest
+    728  word
+    960  nlate_pattern_50
+    960  patchy
+   1152  parity
+   1800  cells

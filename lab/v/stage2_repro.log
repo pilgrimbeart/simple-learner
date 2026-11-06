@@ -1,0 +1,68 @@
+identity None               circuit  100/100 lives exact; 1000000 ticks, 7302 tastes
+identity None               bank     100/100 lives exact; 1000000 ticks, 7450 tastes
+identity 41 s
+identity plain              circuit  100/100 lives exact; 1000000 ticks, 7302 tastes
+identity plain              bank     100/100 lives exact; 1000000 ticks, 7450 tastes
+identity plain              vtold    100/100 lives exact; 1000000 ticks, 7399 tastes
+identity late_never         circuit  100/100 lives exact; 1000000 ticks, 7302 tastes
+identity late_never         bank     100/100 lives exact; 1000000 ticks, 7450 tastes
+identity late_never         vtold    100/100 lives exact; 1000000 ticks, 7399 tastes
+identity 170 s
+nine plain              circuit  100/100 lives exact; 1000000 ticks, 7302 tastes
+nine plain              bank     100/100 lives exact; 1000000 ticks, 7450 tastes
+nine plain              vtold    100/100 lives exact; 1000000 ticks, 7399 tastes
+nine swap10             circuit  100/100 lives exact; 1000000 ticks, 7305 tastes
+nine swap10             bank     100/100 lives exact; 1000000 ticks, 7211 tastes
+nine swap10             vtold    100/100 lives exact; 1000000 ticks, 7391 tastes
+nine alternate          circuit  100/100 lives exact; 1000000 ticks, 7284 tastes
+nine alternate          bank     100/100 lives exact; 1000000 ticks, 7384 tastes
+nine alternate          vtold    100/100 lives exact; 1000000 ticks, 7170 tastes
+nine pattern            circuit  100/100 lives exact; 1000000 ticks, 7263 tastes
+nine pattern            bank     100/100 lives exact; 1000000 ticks, 6923 tastes
+nine pattern            vtold    100/100 lives exact; 1000000 ticks, 7417 tastes
+nine digest             circuit  100/100 lives exact; 1000000 ticks, 7381 tastes
+nine digest             bank     100/100 lives exact; 1000000 ticks, 4926 tastes
+nine digest             vtold    100/100 lives exact; 1000000 ticks, 4990 tastes
+nine unreliable         circuit  100/100 lives exact; 1000000 ticks, 7293 tastes
+nine unreliable         bank     100/100 lives exact; 1000000 ticks, 6975 tastes
+nine unreliable         vtold    100/100 lives exact; 1000000 ticks, 7188 tastes
+nine patchy             circuit  100/100 lives exact; 1000000 ticks, 9764 tastes
+nine patchy             bank     100/100 lives exact; 1000000 ticks, 9775 tastes
+nine patchy             vtold    100/100 lives exact; 1000000 ticks, 9617 tastes
+nine weak               circuit  100/100 lives exact; 1000000 ticks, 5888 tastes
+nine weak               bank     100/100 lives exact; 1000000 ticks, 6067 tastes
+nine weak               vtold    100/100 lives exact; 1000000 ticks, 5961 tastes
+nine noisy              circuit  100/100 lives exact; 1000000 ticks, 5853 tastes
+nine noisy              bank     100/100 lives exact; 1000000 ticks, 6487 tastes
+nine noisy              vtold    100/100 lives exact; 1000000 ticks, 6249 tastes
+nine 516 s
+bonus coin               circuit  100/100 lives exact; 1000000 ticks, 7444 tastes
+bonus coin               bank     100/100 lives exact; 1000000 ticks, 6402 tastes
+bonus coin               vtold    100/100 lives exact; 1000000 ticks, 6343 tastes
+bonus allfood            circuit  100/100 lives exact; 1000000 ticks, 7322 tastes
+bonus allfood            bank     100/100 lives exact; 1000000 ticks, 14366 tastes
+bonus allfood            vtold    100/100 lives exact; 1000000 ticks, 7382 tastes
+bonus scarce             circuit  100/100 lives exact; 1000000 ticks, 1244 tastes
+bonus scarce             bank     100/100 lives exact; 1000000 ticks, 1361 tastes
+bonus scarce             vtold    100/100 lives exact; 1000000 ticks, 1261 tastes
+bonus moving             circuit  100/100 lives exact; 1000000 ticks, 7819 tastes
+bonus moving             bank     100/100 lives exact; 1000000 ticks, 7892 tastes
+bonus moving             vtold    100/100 lives exact; 1000000 ticks, 7948 tastes
+bonus late_alternate_50  circuit  100/100 lives exact; 1000000 ticks, 7392 tastes
+bonus late_alternate_50  bank     100/100 lives exact; 1000000 ticks, 7069 tastes
+bonus late_alternate_50  vtold    100/100 lives exact; 1000000 ticks, 7468 tastes
+bonus late_swap_50       circuit  100/100 lives exact; 1000000 ticks, 7440 tastes
+bonus late_swap_50       bank     100/100 lives exact; 1000000 ticks, 7165 tastes
+bonus late_swap_50       vtold    100/100 lives exact; 1000000 ticks, 7420 tastes
+bonus nlate_pattern_50   circuit  100/100 lives exact; 1000000 ticks, 7496 tastes
+bonus nlate_pattern_50   bank     100/100 lives exact; 1000000 ticks, 6743 tastes
+bonus nlate_pattern_50   vtold    100/100 lives exact; 1000000 ticks, 7062 tastes
+bonus 383 s
+bonus thrusters          circuit  100/100 lives exact; 1000000 ticks, 3629 tastes
+bonus 19 s
+reference loop = table.life and bits_bank.life: yes
+ALL EXACT
+
+real	19m12.172s
+user	129m48.330s
+sys	0m44.311s

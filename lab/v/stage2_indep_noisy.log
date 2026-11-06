@@ -1,0 +1,4 @@
+200 lives: injected (replayed) 202416 = 10.121/s against 10/s (Poisson sd 0.022); the noisy eye's own pulses 61134 / expected 60774 = 1.0059; other eye 0.9965
+per life, received minus replayed is never negative: True
+replayed counts on these 50 seeds: mean 1012.1 per life (1000 expected), sd 36.4
+1000 seeds 64000-64999: mean injected per life 1001.325 se 1.038206807432893

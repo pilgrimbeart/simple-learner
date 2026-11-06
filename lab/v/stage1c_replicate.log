@@ -1,0 +1,149 @@
+bank plain 2.650  [22 s]
+bank swap10 0.470  [45 s]
+bank alternate 1.590  [70 s]
+bank pattern 1.439  [95 s]
+bank digest -0.289  [123 s]
+bank unreliable 0.518  [157 s]
+bank patchy 0.752  [183 s]
+bank weak 1.754  [209 s]
+bank noisy 1.738  [238 s]
+pinned plain 2.649  [265 s]
+pinned swap10 -1.457  [291 s]
+pinned alternate -3.043  [317 s]
+pinned pattern -2.799  [344 s]
+pinned digest -0.168  [368 s]
+pinned unreliable 0.570  [393 s]
+pinned patchy 0.761  [419 s]
+pinned weak 1.755  [447 s]
+pinned noisy 1.744  [483 s]
+right plain 2.755  [499 s]
+right swap10 2.798  [518 s]
+right alternate 2.738  [534 s]
+right pattern 2.675  [552 s]
+right digest 0.100  [575 s]
+right unreliable 0.742  [596 s]
+right patchy 0.756  [617 s]
+right weak 1.840  [642 s]
+right noisy 1.838  [664 s]
+wrong plain -5.859  [685 s]
+wrong swap10 -6.044  [706 s]
+wrong alternate -5.713  [725 s]
+wrong pattern -5.887  [748 s]
+wrong digest -6.385  [770 s]
+wrong unreliable -4.441  [793 s]
+wrong patchy -5.312  [815 s]
+wrong weak -4.700  [835 s]
+wrong noisy -4.761  [857 s]
+streams done 985 s
+
+== headline arms, 62000-62199 x 2. Efficiency [95%]; each against the bank, paired; D31's value in ()
+-- plain: bank 2.659 [2.600,2.722] (D31 2.62)
+   Bayes one setting (bma e.2 pr.5, ties by rounding): 2.653 [2.594,2.716] (D31 2.63); against bank -0.006 [-0.018,+0.003]
+   Bayes world's best ('map', {'k': 1.5}): 2.655 [2.596,2.718] (D31 2.62); against bank -0.005 [-0.015,+0.001]
+   best model from birth (0): 2.660 [2.600,2.722] (D31 2.63); against bank +0.000 [+0.000,+0.001]
+   told (bank's parts): 2.755 [2.701,2.809] (D31 2.76); against bank +0.096 [+0.016,+0.174] SURE
+   +1/-1 no floor: 2.660 [2.600,2.722]; against bank +0.000 [+0.000,+0.001]
+   +1/-3 no floor: 2.660 [2.600,2.722]; against bank +0.000 [+0.000,+0.001]
+   tie to default: bma pr .500001: 2.655 [2.596,2.719]; against bank -0.004 [-0.013,+0.001]
+   tie to rivals: bma pr .499999: 2.654 [2.594,2.717]; against bank -0.006 [-0.020,+0.008]
+   base: 2.714 [2.661,2.766]; against bank +0.055 [-0.027,+0.135]
+   [1123 s]
+-- swap10: bank 0.504 [0.420,0.588] (D31 0.50)
+   Bayes one setting (bma e.2 pr.5, ties by rounding): 0.635 [0.570,0.702] (D31 0.64); against bank +0.131 [+0.054,+0.209] SURE
+   Bayes world's best ('map', {'k': 0.5}): 0.792 [0.720,0.862] (D31 0.88); against bank +0.287 [+0.191,+0.383] SURE
+   best model from birth (1): 1.062 [0.996,1.122] (D31 1.00); against bank +0.558 [+0.457,+0.652] SURE
+   told (bank's parts): 2.798 [2.744,2.855] (D31 2.77); against bank +2.294 [+2.189,+2.396] SURE
+   +1/-1 no floor: 0.615 [0.540,0.687]; against bank +0.110 [+0.043,+0.175] SURE
+   +1/-3 no floor: 0.436 [0.353,0.518]; against bank -0.069 [-0.131,-0.006] SURE
+   tie to default: bma pr .500001: 0.638 [0.571,0.704]; against bank +0.134 [+0.058,+0.211] SURE
+   tie to rivals: bma pr .499999: 0.624 [0.557,0.691]; against bank +0.120 [+0.042,+0.201] SURE
+   base: -0.018 [-0.073,0.037]; against bank -0.522 [-0.621,-0.429] SURE
+   [1283 s]
+-- alternate: bank 1.558 [1.450,1.665] (D31 1.72)
+   Bayes one setting (bma e.2 pr.5, ties by rounding): 2.018 [1.921,2.113] (D31 2.04); against bank +0.460 [+0.315,+0.612] SURE
+   Bayes world's best ('bma', {'eps': 0.05, 'pr': 0.14285714285714285}): 2.237 [2.134,2.338] (D31 2.09); against bank +0.679 [+0.531,+0.835] SURE
+   best model from birth (2): 2.367 [2.272,2.455] (D31 2.32); against bank +0.809 [+0.671,+0.940] SURE
+   told (bank's parts): 2.738 [2.654,2.825] (D31 2.60); against bank +1.180 [+1.047,+1.315] SURE
+   +1/-1 no floor: 1.595 [1.492,1.698]; against bank +0.037 [-0.022,+0.103]
+   +1/-3 no floor: 1.573 [1.472,1.675]; against bank +0.015 [-0.037,+0.072]
+   tie to default: bma pr .500001: 1.928 [1.828,2.020]; against bank +0.369 [+0.223,+0.510] SURE
+   tie to rivals: bma pr .499999: 2.216 [2.124,2.311]; against bank +0.658 [+0.521,+0.811] SURE
+   base: -3.360 [-3.455,-3.260]; against bank -4.918 [-5.058,-4.775] SURE
+   [1421 s]
+-- pattern: bank 1.457 [1.368,1.542] (D31 1.57)
+   Bayes one setting (bma e.2 pr.5, ties by rounding): 1.745 [1.668,1.825] (D31 1.83); against bank +0.288 [+0.176,+0.402] SURE
+   Bayes world's best ('bma', {'eps': 0.05, 'pr': 0.14285714285714285}): 1.848 [1.761,1.929] (D31 1.95); against bank +0.391 [+0.284,+0.499] SURE
+   best model from birth (3): 2.090 [2.013,2.162] (D31 2.10); against bank +0.633 [+0.527,+0.736] SURE
+   told (bank's parts): 2.675 [2.612,2.737] (D31 2.66); against bank +1.218 [+1.120,+1.318] SURE
+   +1/-1 no floor: 1.516 [1.433,1.594]; against bank +0.059 [+0.009,+0.110] SURE
+   +1/-3 no floor: 1.399 [1.304,1.489]; against bank -0.058 [-0.113,-0.004] SURE
+   tie to default: bma pr .500001: 1.739 [1.661,1.814]; against bank +0.282 [+0.172,+0.398] SURE
+   tie to rivals: bma pr .499999: 1.753 [1.673,1.835]; against bank +0.296 [+0.182,+0.414] SURE
+   base: -2.683 [-2.737,-2.628]; against bank -4.140 [-4.242,-4.039] SURE
+   [1542 s]
+-- digest: bank -0.333 [-0.424,-0.241] (D31 -0.31)
+   Bayes one setting (bma e.2 pr.5, ties by rounding): -0.241 [-0.328,-0.151] (D31 -0.29); against bank +0.092 [+0.012,+0.175] SURE
+   Bayes world's best ('bma', {'eps': 0.2, 'pr': 0.99}): -0.196 [-0.295,-0.107] (D31 -0.14); against bank +0.138 [+0.086,+0.192] SURE
+   best model from birth (0): -0.196 [-0.294,-0.107] (D31 -0.13); against bank +0.137 [+0.082,+0.189] SURE
+   told (bank's parts): 0.100 [0.016,0.179] (D31 0.02); against bank +0.433 [+0.315,+0.552] SURE
+   +1/-1 no floor: -0.339 [-0.440,-0.248]; against bank -0.006 [-0.056,+0.048]
+   +1/-3 no floor: -0.247 [-0.343,-0.161]; against bank +0.086 [+0.046,+0.126] SURE
+   tie to default: bma pr .500001: -0.249 [-0.342,-0.163]; against bank +0.084 [+0.008,+0.161] SURE
+   tie to rivals: bma pr .499999: -0.224 [-0.303,-0.142]; against bank +0.109 [+0.031,+0.190] SURE
+   base: -4.773 [-4.899,-4.656]; against bank -4.440 [-4.581,-4.301] SURE
+   [1640 s]
+-- unreliable: bank 0.524 [0.449,0.602] (D31 0.48)
+   Bayes one setting (bma e.2 pr.5, ties by rounding): 0.468 [0.382,0.551] (D31 0.46); against bank -0.056 [-0.126,+0.010]
+   Bayes world's best ('bma', {'eps': 0.2, 'pr': 0.99}): 0.563 [0.489,0.638] (D31 0.55); against bank +0.039 [-0.014,+0.093]
+   best model from birth (0): 0.568 [0.495,0.643] (D31 0.55); against bank +0.044 [-0.010,+0.097]
+   told (bank's parts): 0.742 [0.675,0.811] (D31 0.75); against bank +0.218 [+0.119,+0.316] SURE
+   +1/-1 no floor: 0.498 [0.418,0.582]; against bank -0.026 [-0.083,+0.029]
+   +1/-3 no floor: 0.550 [0.474,0.629]; against bank +0.026 [-0.017,+0.067]
+   tie to default: bma pr .500001: 0.466 [0.381,0.546]; against bank -0.059 [-0.124,+0.003]
+   tie to rivals: bma pr .499999: 0.442 [0.356,0.523]; against bank -0.082 [-0.156,-0.009] SURE
+   base: 0.242 [0.166,0.323]; against bank -0.282 [-0.390,-0.172] SURE
+   [1762 s]
+-- patchy: bank 0.778 [0.680,0.876] (D31 0.70)
+   Bayes one setting (bma e.2 pr.5, ties by rounding): 0.768 [0.671,0.866] (D31 0.67); against bank -0.010 [-0.057,+0.041]
+   Bayes world's best ('map', {'k': 3.5}): 0.799 [0.702,0.897] (D31 0.71); against bank +0.021 [-0.013,+0.057]
+   best model from birth (0): 0.797 [0.699,0.894] (D31 0.71); against bank +0.019 [-0.014,+0.053]
+   told (bank's parts): 0.756 [0.663,0.845] (D31 0.81); against bank -0.022 [-0.146,+0.101]
+   +1/-1 no floor: 0.772 [0.676,0.868]; against bank -0.006 [-0.035,+0.023]
+   +1/-3 no floor: 0.790 [0.697,0.886]; against bank +0.012 [-0.012,+0.038]
+   tie to default: bma pr .500001: 0.762 [0.666,0.860]; against bank -0.016 [-0.064,+0.036]
+   tie to rivals: bma pr .499999: 0.759 [0.655,0.861]; against bank -0.019 [-0.078,+0.037]
+   base: 0.674 [0.580,0.776]; against bank -0.104 [-0.210,+0.004]
+   [1867 s]
+-- weak: bank 1.766 [1.712,1.815] (D31 1.78)
+   Bayes one setting (bma e.2 pr.5, ties by rounding): 1.757 [1.701,1.809] (D31 1.78); against bank -0.008 [-0.023,+0.004]
+   Bayes world's best ('bma', {'eps': 0.2, 'pr': 0.5}): 1.757 [1.701,1.809] (D31 1.78); against bank -0.008 [-0.023,+0.004]
+   best model from birth (2): 1.718 [1.660,1.771] (D31 1.74); against bank -0.048 [-0.081,-0.015] SURE
+   told (bank's parts): 1.840 [1.782,1.900] (D31 1.84); against bank +0.074 [+0.002,+0.145] SURE
+   +1/-1 no floor: 1.765 [1.712,1.816]; against bank -0.000 [-0.003,+0.003]
+   +1/-3 no floor: 1.767 [1.713,1.816]; against bank +0.001 [+0.000,+0.003]
+   tie to default: bma pr .500001: 1.765 [1.711,1.816]; against bank -0.000 [-0.008,+0.006]
+   tie to rivals: bma pr .499999: 1.760 [1.704,1.811]; against bank -0.006 [-0.021,+0.008]
+   base: 1.745 [1.684,1.801]; against bank -0.021 [-0.093,+0.048]
+   [1984 s]
+-- noisy: bank 1.752 [1.697,1.809] (D31 1.77)
+   Bayes one setting (bma e.2 pr.5, ties by rounding): 1.741 [1.686,1.798] (D31 1.77); against bank -0.011 [-0.029,+0.007]
+   Bayes world's best ('bma', {'eps': 0.1, 'pr': 0.5}): 1.745 [1.690,1.803] (D31 1.77); against bank -0.007 [-0.024,+0.010]
+   best model from birth (2): 1.725 [1.670,1.783] (D31 1.74); against bank -0.026 [-0.054,+0.002]
+   told (bank's parts): 1.838 [1.780,1.898] (D31 1.86); against bank +0.086 [+0.011,+0.161] SURE
+   +1/-1 no floor: 1.754 [1.699,1.811]; against bank +0.002 [-0.003,+0.008]
+   +1/-3 no floor: 1.755 [1.701,1.813]; against bank +0.004 [+0.000,+0.009]
+   tie to default: bma pr .500001: 1.746 [1.690,1.806]; against bank -0.006 [-0.020,+0.008]
+   tie to rivals: bma pr .499999: 1.739 [1.685,1.796]; against bank -0.013 [-0.035,+0.009]
+   base: 1.312 [1.261,1.362]; against bank -0.440 [-0.509,-0.370] SURE
+   [2105 s]
+
+== tally: new against D31's, inside the new 95% interval?
+plain: bank yes(2.62 vs 2.66) one yes(2.63 vs 2.65) best yes(2.62 vs 2.65) fix yes(2.63 vs 2.66) told yes(2.76 vs 2.75)
+swap10: bank yes(0.50 vs 0.50) one yes(0.64 vs 0.64) best NO(0.88 vs 0.79) fix yes(1.00 vs 1.06) told yes(2.77 vs 2.80)
+alternate: bank NO(1.72 vs 1.56) one yes(2.04 vs 2.02) best NO(2.09 vs 2.24) fix yes(2.32 vs 2.37) told NO(2.60 vs 2.74)
+pattern: bank NO(1.57 vs 1.46) one NO(1.83 vs 1.74) best NO(1.95 vs 1.85) fix yes(2.10 vs 2.09) told yes(2.66 vs 2.67)
+digest: bank yes(-0.31 vs -0.33) one yes(-0.29 vs -0.24) best yes(-0.14 vs -0.20) fix yes(-0.13 vs -0.20) told yes(0.02 vs 0.10)
+unreliable: bank yes(0.48 vs 0.52) one yes(0.46 vs 0.47) best yes(0.55 vs 0.56) fix yes(0.55 vs 0.57) told yes(0.75 vs 0.74)
+patchy: bank yes(0.70 vs 0.78) one NO(0.67 vs 0.77) best yes(0.71 vs 0.80) fix yes(0.71 vs 0.80) told yes(0.81 vs 0.76)
+weak: bank yes(1.78 vs 1.77) one yes(1.78 vs 1.76) best yes(1.78 vs 1.76) fix yes(1.74 vs 1.72) told yes(1.84 vs 1.84)
+noisy: bank yes(1.77 vs 1.75) one yes(1.77 vs 1.74) best yes(1.77 vs 1.75) fix yes(1.74 vs 1.73) told yes(1.86 vs 1.84)

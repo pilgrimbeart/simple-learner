@@ -1,0 +1,45 @@
+== Wald: 3.82 bits for one pair at 5% both ways; any test, sequential too. Largest lie rate one pair disagreeing on every taste can stand, and seconds for a rare disagreement. No attribution error at all in this table: a learner's own attribution only adds lies, so these are the generous figures.
+   bank (measured), 0.76 tastes/s: lie limit by 10/30/100 s 0.297 0.381 0.434; s for e .025 on 1% 100.1, e .2 on 5% 83.8, e .35 on 20% 93.8, e .45 on 1% 17358, e .49 on 100% 4353
+   fast bank (measured), 0.85 tastes/s: lie limit by 10/30/100 s 0.308 0.387 0.438; s for e .025 on 1% 89.4, e .2 on 5% 74.8, e .35 on 20% 83.8, e .45 on 1% 15512, e .49 on 100% 3891
+   unwired (measured), 1.45 tastes/s: lie limit by 10/30/100 s 0.351 0.413 0.452; s for e .025 on 1% 52.6, e .2 on 5% 44.0, e .35 on 20% 49.3, e .45 on 1% 9119, e .49 on 100% 2287
+   eat-most, wires only (measured), 5.52 tastes/s: lie limit by 10/30/100 s 0.423 0.455 0.476; s for e .025 on 1% 13.8, e .2 on 5% 11.5, e .35 on 20% 12.9, e .45 on 1% 2392, e .49 on 100% 600
+   oracle, R=50 (measured; not a brain), 5.70 tastes/s: lie limit by 10/30/100 s 0.424 0.456 0.476; s for e .025 on 1% 13.4, e .2 on 5% 11.2, e .35 on 20% 12.5, e .45 on 1% 2318, e .49 on 100% 581
+   oracle, R=100 (measured; not a brain), 10.56 tastes/s: lie limit by 10/30/100 s 0.444 0.468 0.482; s for e .025 on 1% 7.2, e .2 on 5% 6.0, e .35 on 20% 6.8, e .45 on 1% 1251, e .49 on 100% 314
+   PROVED, R=50 (upper bound, cap assumed), 82.08 tastes/s: lie limit by 10/30/100 s 0.480 0.488 0.494; s for e .025 on 1% 0.9, e .2 on 5% 0.8, e .35 on 20% 0.9, e .45 on 1% 161, e .49 on 100% 40
+   PROVED, R=100, 100.00 tastes/s: lie limit by 10/30/100 s 0.482 0.489 0.494; s for e .025 on 1% 0.8, e .2 on 5% 0.6, e .35 on 20% 0.7, e .45 on 1% 132, e .49 on 100% 33
+   the tick (upper bound, unconditional), 100.00 tastes/s: lie limit by 10/30/100 s 0.482 0.489 0.494; s for e .025 on 1% 0.8, e .2 on 5% 0.6, e .35 on 20% 0.7, e .45 on 1% 132, e .49 on 100% 33
+
+== Fano: log2 N <= (bits + 1) / (1 - Pe), Pe .05, at 10/30/100 s; bits as measured for each policy through its wires ((ii): a lower bound on what the features carry) and the ceiling (rate x (1 - H(lie rate of the world)), attribution perfect, for the proved rate).
+   plain      bank 0.576 bits/s: 7.1/19.2/61.7 | fast bank 0.535 bits/s: 6.7/17.9/57.4 | unwired 1.128 bits/s: 12.9/36.7/119.8 | eat-most 2.436 bits/s: 26.7/78.0/257.5
+   unreliable bank 0.158 bits/s: 2.7/6.1/17.7 | fast bank 0.156 bits/s: 2.7/6.0/17.5 | unwired 0.325 bits/s: 4.5/11.3/35.2 | eat-most 0.742 bits/s: 8.9/24.5/79.2
+   digest     bank 0.283 bits/s: 4.0/10.0/30.9 | fast bank 0.223 bits/s: 3.4/8.1/24.5 | unwired 0.237 bits/s: 3.6/8.6/26.0 | eat-most 0.033 bits/s: 1.4/2.1/4.5
+   patchy     bank 0.450 bits/s: 5.8/15.3/48.4 | fast bank 0.196 bits/s: 3.1/7.2/21.7 | unwired 0.825 bits/s: 9.7/27.1/87.9 | eat-most 0.541 bits/s: 6.8/18.1/58.0
+   weak       bank 0.362 bits/s: 4.9/12.5/39.2 | fast bank 0.311 bits/s: 4.3/10.9/33.8 | unwired 0.748 bits/s: 8.9/24.7/79.8 | eat-most 1.298 bits/s: 14.7/42.0/137.7
+   noisy      bank 0.284 bits/s: 4.0/10.0/31.0 | fast bank 0.344 bits/s: 4.7/11.9/37.2 | unwired 0.604 bits/s: 7.4/20.1/64.6 | eat-most 1.539 bits/s: 17.2/49.6/163.0
+   ceiling for any brain, one lie in five (unreliable): taste rate x (1 - H(.2)) = rate x 0.278:
+     bank (measured): 0.21 bits/s, log2 N <= 3/8/23
+     fast bank (measured): 0.24 bits/s, log2 N <= 4/9/26
+     unwired (measured): 0.40 bits/s, log2 N <= 5/14/43
+     eat-most, wires only (measured): 1.53 bits/s, log2 N <= 17/50/163
+     oracle, R=50 (measured; not a brain): 1.58 bits/s, log2 N <= 18/51/168
+     oracle, R=100 (measured; not a brain): 2.93 bits/s, log2 N <= 32/94/310
+     PROVED, R=50 (upper bound, cap assumed): 22.82 bits/s, log2 N <= 241/722/2403
+     PROVED, R=100: 27.80 bits/s, log2 N <= 294/879/2927
+     the tick (upper bound, unconditional): 27.80 bits/s, log2 N <= 294/879/2927
+   digest: any taste within 1 s of the last is bad whatever its colour, so at most one informative taste a second, whatever the brain's speed: at most 100 a life, 1 - H(lie) bits each. Proved, for the world as written.
+
+== Union estimate: log2 N reached at Pe .05, pairs disagreeing on half of tastes, each lied about independently: n rho B - log2 20. An estimate.
+   plain      bank         e 0.040, scored 0.75/s: +0.7/+10.8/+46.2 (10/30/100 s); 2.0 s per doubling
+   plain      fast bank    e 0.082, scored 0.82/s: -0.8/+6.4/+31.3 (10/30/100 s); 2.8 s per doubling
+   plain      unwired      e 0.049, scored 1.43/s: +4.4/+21.8/+82.6 (10/30/100 s); 1.2 s per doubling
+   plain      eat-most     e 0.183, scored 5.18/s: +5.3/+24.6/+92.0 (10/30/100 s); 1.0 s per doubling
+   unreliable bank         e 0.229, scored 0.71/s: -3.4/-1.7/+4.6 (10/30/100 s); 11.3 s per doubling
+   unreliable fast bank    e 0.244, scored 0.79/s: -3.5/-1.7/+4.3 (10/30/100 s); 11.6 s per doubling
+   unreliable unwired      e 0.230, scored 1.43/s: -2.5/+1.0/+13.5 (10/30/100 s); 5.6 s per doubling
+   unreliable eat-most     e 0.309, scored 5.18/s: -1.4/+4.5/+25.0 (10/30/100 s); 3.4 s per doubling
+   patchy     bank         e 0.145, scored 0.98/s: -1.9/+3.1/+20.3 (10/30/100 s); 4.1 s per doubling
+   patchy     fast bank    e 0.182, scored 0.51/s: -3.4/-1.5/+5.2 (10/30/100 s); 10.5 s per doubling
+   patchy     unwired      e 0.148, scored 1.72/s: -0.1/+8.4/+38.2 (10/30/100 s); 2.4 s per doubling
+   patchy     eat-most     e 0.233, scored 1.94/s: -2.0/+2.7/+19.2 (10/30/100 s); 4.3 s per doubling
+
+   D31's 1.9 s (plain) and 11.8 s (unreliable) a doubling, at the bank's rate, against the best measured above.

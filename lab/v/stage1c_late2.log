@@ -1,0 +1,149 @@
+== the floor at 0 (the bank) minus each alternative, life efficiency; positive: the floor at 0 pays. Each world equal weight, 95% over seeds. After T where the group is mid-life.
+-- bank minus +1/-3 no floor
+   nine stationary                  life -0.002 [-0.015,+0.011]
+   after plain, all                 life +0.105 [+0.086,+0.125] SURE; after T +0.251 [+0.209,+0.293] SURE
+   after plain, T30                 life +0.113 [+0.074,+0.152] SURE; after T +0.168 [+0.111,+0.226] SURE
+   T50                              life +0.109 [+0.078,+0.139] SURE; after T +0.233 [+0.168,+0.298] SURE
+   T70                              life +0.094 [+0.074,+0.115] SURE; after T +0.351 [+0.277,+0.428] SURE
+   after plain, alternate+pattern   life +0.123 [+0.098,+0.149] SURE; after T +0.283 [+0.231,+0.337] SURE
+   after plain, one swap            life +0.070 [+0.049,+0.091] SURE; after T +0.185 [+0.135,+0.240] SURE
+   lies, all                        life +0.156 [+0.122,+0.188] SURE; after T +0.345 [+0.287,+0.403] SURE
+   lies, alternate+pattern          life +0.255 [+0.216,+0.290] SURE; after T +0.540 [+0.475,+0.604] SURE
+   lies, one swap                   life -0.043 [-0.095,+0.006]; after T -0.046 [-0.155,+0.061]
+-- bank minus +1/-3 floor -3
+   nine stationary                  life -0.005 [-0.018,+0.008]
+   after plain, all                 life +0.098 [+0.080,+0.117] SURE; after T +0.238 [+0.199,+0.280] SURE
+   after plain, T30                 life +0.101 [+0.063,+0.141] SURE; after T +0.150 [+0.094,+0.209] SURE
+   T50                              life +0.100 [+0.069,+0.130] SURE; after T +0.216 [+0.151,+0.280] SURE
+   T70                              life +0.093 [+0.074,+0.115] SURE; after T +0.348 [+0.275,+0.425] SURE
+   after plain, alternate+pattern   life +0.113 [+0.089,+0.137] SURE; after T +0.264 [+0.215,+0.316] SURE
+   after plain, one swap            life +0.070 [+0.049,+0.091] SURE; after T +0.185 [+0.135,+0.240] SURE
+   lies, all                        life +0.123 [+0.090,+0.155] SURE; after T +0.287 [+0.229,+0.348] SURE
+   lies, alternate+pattern          life +0.203 [+0.166,+0.238] SURE; after T +0.450 [+0.385,+0.514] SURE
+   lies, one swap                   life -0.038 [-0.090,+0.011]; after T -0.037 [-0.148,+0.073]
+-- bank minus +1/-3 floor -10
+   nine stationary                  life -0.002 [-0.015,+0.011]
+   after plain, all                 life +0.105 [+0.086,+0.125] SURE; after T +0.251 [+0.209,+0.293] SURE
+   after plain, T30                 life +0.113 [+0.074,+0.153] SURE; after T +0.168 [+0.111,+0.226] SURE
+   T50                              life +0.109 [+0.078,+0.139] SURE; after T +0.233 [+0.168,+0.298] SURE
+   T70                              life +0.094 [+0.074,+0.115] SURE; after T +0.351 [+0.277,+0.428] SURE
+   after plain, alternate+pattern   life +0.123 [+0.098,+0.149] SURE; after T +0.283 [+0.231,+0.337] SURE
+   after plain, one swap            life +0.070 [+0.049,+0.091] SURE; after T +0.185 [+0.135,+0.240] SURE
+   lies, all                        life +0.155 [+0.121,+0.187] SURE; after T +0.343 [+0.285,+0.402] SURE
+   lies, alternate+pattern          life +0.253 [+0.214,+0.288] SURE; after T +0.538 [+0.472,+0.602] SURE
+   lies, one swap                   life -0.043 [-0.095,+0.006]; after T -0.046 [-0.155,+0.061]
+-- +1/-1 floor 0 minus +1/-1 no floor
+   nine stationary                  life -0.018 [-0.028,-0.008] SURE
+   after plain, all                 life +0.064 [+0.049,+0.079] SURE; after T +0.164 [+0.132,+0.197] SURE
+   after plain, T30                 life +0.057 [+0.028,+0.087] SURE; after T +0.084 [+0.041,+0.129] SURE
+   T50                              life +0.059 [+0.032,+0.086] SURE; after T +0.129 [+0.070,+0.184] SURE
+   T70                              life +0.075 [+0.058,+0.094] SURE; after T +0.280 [+0.217,+0.348] SURE
+   after plain, alternate+pattern   life +0.052 [+0.033,+0.072] SURE; after T +0.133 [+0.092,+0.175] SURE
+   after plain, one swap            life +0.088 [+0.066,+0.112] SURE; after T +0.228 [+0.174,+0.284] SURE
+   lies, all                        life +0.040 [+0.005,+0.072] SURE; after T +0.164 [+0.101,+0.221] SURE
+   lies, alternate+pattern          life +0.120 [+0.084,+0.155] SURE; after T +0.330 [+0.261,+0.396] SURE
+   lies, one swap                   life -0.119 [-0.172,-0.066] SURE; after T -0.170 [-0.278,-0.057] SURE
+-- +1/-1 floor 0 minus +1/-1 floor -3
+   nine stationary                  life -0.018 [-0.028,-0.008] SURE
+   after plain, all                 life +0.064 [+0.049,+0.079] SURE; after T +0.164 [+0.132,+0.197] SURE
+   after plain, T30                 life +0.057 [+0.027,+0.087] SURE; after T +0.084 [+0.041,+0.128] SURE
+   T50                              life +0.059 [+0.032,+0.086] SURE; after T +0.129 [+0.070,+0.184] SURE
+   T70                              life +0.075 [+0.058,+0.094] SURE; after T +0.280 [+0.217,+0.348] SURE
+   after plain, alternate+pattern   life +0.052 [+0.033,+0.072] SURE; after T +0.133 [+0.092,+0.175] SURE
+   after plain, one swap            life +0.088 [+0.066,+0.112] SURE; after T +0.228 [+0.174,+0.284] SURE
+   lies, all                        life +0.033 [-0.001,+0.065]; after T +0.150 [+0.089,+0.208] SURE
+   lies, alternate+pattern          life +0.107 [+0.071,+0.141] SURE; after T +0.305 [+0.238,+0.370] SURE
+   lies, one swap                   life -0.114 [-0.166,-0.061] SURE; after T -0.161 [-0.270,-0.048] SURE
+-- +1/-1 floor 0 minus bank
+   nine stationary                  life +0.001 [-0.012,+0.015]
+   after plain, all                 life +0.014 [+0.006,+0.023] SURE; after T +0.036 [+0.019,+0.052] SURE
+   after plain, T30                 life +0.008 [-0.011,+0.026]; after T +0.012 [-0.016,+0.039]
+   T50                              life +0.024 [+0.010,+0.038] SURE; after T +0.052 [+0.022,+0.083] SURE
+   T70                              life +0.012 [+0.004,+0.020] SURE; after T +0.043 [+0.018,+0.071] SURE
+   after plain, alternate+pattern   life +0.033 [+0.023,+0.043] SURE; after T +0.072 [+0.050,+0.093] SURE
+   after plain, one swap            life -0.024 [-0.036,-0.011] SURE; after T -0.037 [-0.060,-0.015] SURE
+   lies, all                        life -0.063 [-0.092,-0.033] SURE; after T -0.025 [-0.075,+0.024]
+   lies, alternate+pattern          life +0.019 [-0.013,+0.050]; after T +0.129 [+0.075,+0.184] SURE
+   lies, one swap                   life -0.227 [-0.275,-0.181] SURE; after T -0.334 [-0.431,-0.242] SURE
+-- fixed share (2a) minus stationary BMA e.2
+   nine stationary                  life +0.000 [-0.004,+0.004]
+   after plain, all                 life +0.006 [+0.001,+0.012] SURE; after T +0.011 [+0.001,+0.021] SURE
+   after plain, T30                 life +0.013 [+0.002,+0.025] SURE; after T +0.019 [+0.003,+0.037] SURE
+   T50                              life +0.005 [-0.002,+0.013]; after T +0.011 [-0.005,+0.028]
+   T70                              life +0.001 [-0.004,+0.005]; after T +0.003 [-0.013,+0.017]
+   after plain, alternate+pattern   life +0.008 [+0.001,+0.015] SURE; after T +0.014 [+0.001,+0.027] SURE
+   after plain, one swap            life +0.004 [-0.002,+0.010]; after T +0.005 [-0.005,+0.015]
+   lies, all                        life +0.026 [+0.010,+0.041] SURE; after T +0.044 [+0.018,+0.067] SURE
+   lies, alternate+pattern          life +0.030 [+0.009,+0.050] SURE; after T +0.055 [+0.021,+0.089] SURE
+   lies, one swap                   life +0.018 [-0.002,+0.037]; after T +0.021 [-0.021,+0.060]
+-- stationary BMA e.2 minus bank
+   nine stationary                  life +0.095 [+0.071,+0.119] SURE
+   after plain, all                 life +0.074 [+0.054,+0.094] SURE; after T +0.156 [+0.113,+0.196] SURE
+   after plain, T30                 life +0.094 [+0.058,+0.134] SURE; after T +0.140 [+0.086,+0.198] SURE
+   T50                              life +0.096 [+0.063,+0.128] SURE; after T +0.208 [+0.144,+0.275] SURE
+   T70                              life +0.032 [+0.011,+0.053] SURE; after T +0.119 [+0.047,+0.193] SURE
+   after plain, alternate+pattern   life +0.157 [+0.129,+0.185] SURE; after T +0.339 [+0.281,+0.395] SURE
+   after plain, one swap            life -0.091 [-0.113,-0.071] SURE; after T -0.209 [-0.259,-0.162] SURE
+   lies, all                        life -0.057 [-0.099,-0.015] SURE; after T -0.103 [-0.166,-0.035] SURE
+   lies, alternate+pattern          life -0.034 [-0.080,+0.012]; after T -0.064 [-0.135,+0.008]
+   lies, one swap                   life -0.103 [-0.159,-0.047] SURE; after T -0.180 [-0.293,-0.068] SURE
+
+== all 24 worlds, the tally's weighting: 9 stationary and 15 mid-life, each world one share, so stationary 37.5%, mid-life 62.5%. The same with the two groups given equal weight, bank minus +1/-3 no floor:
+   bank minus +1/-3 no floor: +0.062 [+0.050,+0.074]
+   +1/-1 floor 0 minus bank: -0.008 [-0.018,+0.002]
+   +1/-1 no floor minus bank: -0.026 [-0.038,-0.014]
+   stationary BMA e.2 minus bank: +0.058 [+0.041,+0.075]
+   fixed share (2a) minus bank: +0.065 [+0.049,+0.081]
+
+== the hazard the mid-life streams support: log2 evidence a life, each h against h = 0, at each world's best e, pi .5; the bank's own streams, 200 seeds x 2
+   late_alternate_30    e 0.1 best h 0.003: h0 +0.0[+0.0,+0.0] h0.0001 +0.0[+0.0,+0.0] h0.0003 +0.0[+0.0,+0.0] h0.001 +0.0[+0.0,+0.1] h0.003 +0.1[+0.0,+0.1] h0.01 +0.0[-0.1,+0.1] h0.03 -0.3[-0.4,-0.2] h0.1 -2.2[-2.4,-2.0] h0.2 -5.5[-5.8,-5.1] h0.4 -12.7[-13.2,-12.2]
+   late_alternate_50    e 0.05 best h 0.03: h0 +0.0[+0.0,+0.0] h0.0001 +0.1[+0.0,+0.1] h0.0003 +0.1[+0.0,+0.2] h0.001 +0.2[+0.1,+0.3] h0.003 +0.3[+0.2,+0.4] h0.01 +0.5[+0.4,+0.7] h0.03 +0.8[+0.6,+1.0] h0.1 +0.3[+0.0,+0.6] h0.2 -1.4[-1.8,-1.1] h0.4 -6.0[-6.4,-5.5]
+   late_alternate_70    e 0.05 best h 0.1: h0 +0.0[+0.0,+0.0] h0.0001 +0.0[+0.0,+0.0] h0.0003 +0.0[+0.0,+0.1] h0.001 +0.1[+0.1,+0.2] h0.003 +0.3[+0.2,+0.3] h0.01 +0.5[+0.4,+0.6] h0.03 +1.0[+0.8,+1.1] h0.1 +1.3[+1.1,+1.6] h0.2 +0.9[+0.6,+1.1] h0.4 -1.1[-1.4,-0.8]
+   late_pattern_30      e 0.1 best h 0.01: h0 +0.0[+0.0,+0.0] h0.0001 +0.0[+0.0,+0.1] h0.0003 +0.1[+0.1,+0.1] h0.001 +0.2[+0.1,+0.3] h0.003 +0.3[+0.2,+0.4] h0.01 +0.5[+0.3,+0.6] h0.03 +0.3[+0.1,+0.5] h0.1 -1.3[-1.6,-1.0] h0.2 -4.3[-4.8,-3.9] h0.4 -10.3[-11.0,-9.8]
+   late_pattern_50      e 0.05 best h 0.03: h0 +0.0[+0.0,+0.0] h0.0001 +0.2[+0.1,+0.3] h0.0003 +0.4[+0.3,+0.5] h0.001 +0.6[+0.4,+0.8] h0.003 +0.9[+0.7,+1.1] h0.01 +1.3[+1.0,+1.5] h0.03 +1.7[+1.4,+2.0] h0.1 +1.6[+1.2,+1.9] h0.2 +0.1[-0.3,+0.6] h0.4 -3.5[-4.2,-2.9]
+   late_pattern_70      e 0.05 best h 0.1: h0 +0.0[+0.0,+0.0] h0.0001 +0.1[+0.0,+0.1] h0.0003 +0.2[+0.1,+0.2] h0.001 +0.3[+0.2,+0.4] h0.003 +0.5[+0.4,+0.6] h0.01 +0.8[+0.6,+1.0] h0.03 +1.3[+1.1,+1.5] h0.1 +1.9[+1.6,+2.1] h0.2 +1.7[+1.4,+2.0] h0.4 +0.5[+0.2,+0.9]
+   late_swap_30         e 0.05 best h 0.1: h0 +0.0[+0.0,+0.0] h0.0001 +0.1[+0.1,+0.1] h0.0003 +0.2[+0.2,+0.3] h0.001 +0.5[+0.5,+0.6] h0.003 +1.0[+0.9,+1.2] h0.01 +1.8[+1.6,+2.0] h0.03 +2.6[+2.3,+2.9] h0.1 +2.9[+2.6,+3.2] h0.2 +2.5[+2.1,+2.8] h0.4 +1.1[+0.7,+1.4]
+   late_swap_50         e 0.05 best h 0.1: h0 +0.0[+0.0,+0.0] h0.0001 +0.1[+0.1,+0.1] h0.0003 +0.2[+0.1,+0.2] h0.001 +0.4[+0.4,+0.5] h0.003 +0.9[+0.8,+1.0] h0.01 +1.6[+1.5,+1.8] h0.03 +2.5[+2.3,+2.7] h0.1 +2.9[+2.6,+3.2] h0.2 +2.5[+2.1,+2.8] h0.4 +1.1[+0.7,+1.4]
+   late_swap_70         e 0.05 best h 0.1: h0 +0.0[+0.0,+0.0] h0.0001 +0.1[+0.1,+0.2] h0.0003 +0.3[+0.3,+0.4] h0.001 +0.7[+0.6,+0.8] h0.003 +1.2[+1.1,+1.3] h0.01 +2.0[+1.9,+2.2] h0.03 +2.9[+2.7,+3.1] h0.1 +3.3[+3.0,+3.6] h0.2 +3.0[+2.6,+3.3] h0.4 +1.7[+1.4,+2.1]
+   nlate_alternate_30   e 0.3 best h 0.1: h0 +0.0[+0.0,+0.0] h0.0001 +0.0[+0.0,+0.0] h0.0003 +0.0[+0.0,+0.0] h0.001 +0.1[+0.0,+0.1] h0.003 +0.1[+0.1,+0.2] h0.01 +0.4[+0.3,+0.4] h0.03 +0.7[+0.6,+0.7] h0.1 +0.8[+0.7,+1.0] h0.2 +0.7[+0.5,+0.9] h0.4 +0.3[+0.1,+0.5]
+   nlate_alternate_70   e 0.3 best h 0.1: h0 +0.0[+0.0,+0.0] h0.0001 +0.0[+0.0,+0.0] h0.0003 +0.0[+0.0,+0.0] h0.001 +0.0[+0.0,+0.0] h0.003 +0.1[+0.1,+0.1] h0.01 +0.2[+0.2,+0.3] h0.03 +0.4[+0.4,+0.5] h0.1 +0.5[+0.4,+0.6] h0.2 +0.5[+0.4,+0.6] h0.4 +0.4[+0.3,+0.5]
+   nlate_pattern_30     e 0.3 best h 0.1: h0 +0.0[+0.0,+0.0] h0.0001 +0.0[+0.0,+0.0] h0.0003 +0.0[+0.0,+0.0] h0.001 +0.1[+0.0,+0.1] h0.003 +0.2[+0.1,+0.2] h0.01 +0.4[+0.3,+0.4] h0.03 +0.7[+0.6,+0.8] h0.1 +0.9[+0.8,+1.0] h0.2 +0.8[+0.6,+0.9] h0.4 +0.5[+0.3,+0.6]
+   nlate_pattern_70     e 0.3 best h 0.1: h0 +0.0[+0.0,+0.0] h0.0001 +0.0[+0.0,+0.0] h0.0003 +0.0[+0.0,+0.0] h0.001 +0.0[+0.0,+0.0] h0.003 +0.1[+0.1,+0.1] h0.01 +0.2[+0.2,+0.3] h0.03 +0.4[+0.3,+0.5] h0.1 +0.5[+0.4,+0.6] h0.2 +0.5[+0.4,+0.6] h0.4 +0.4[+0.3,+0.5]
+   nlate_swap_30        e 0.3 best h 0.01: h0 +0.0[+0.0,+0.0] h0.0001 +0.0[+0.0,+0.0] h0.0003 +0.0[+0.0,+0.0] h0.001 +0.0[+0.0,+0.0] h0.003 +0.0[+0.0,+0.0] h0.01 +0.0[-0.0,+0.0] h0.03 +0.0[-0.0,+0.1] h0.1 -0.0[-0.1,+0.1] h0.2 -0.1[-0.2,-0.0] h0.4 -0.2[-0.3,-0.1]
+   nlate_swap_70        e 0.3 best h 0.1: h0 +0.0[+0.0,+0.0] h0.0001 +0.0[+0.0,+0.0] h0.0003 +0.0[+0.0,+0.0] h0.001 +0.0[+0.0,+0.0] h0.003 +0.0[+0.0,+0.0] h0.01 +0.0[+0.0,+0.1] h0.03 +0.0[+0.0,+0.1] h0.1 +0.1[+0.0,+0.2] h0.2 +0.1[-0.0,+0.2] h0.4 -0.0[-0.1,+0.1]
+
+== fixed share at the setting that resembled the bank (MAP, h .1, e .2, pi .5), in real lives. Life efficiency against the bank; and after T
+   plain                +2.658, against bank -0.002 [-0.006,+0.000]
+   swap10               +0.311, against bank -0.193 [-0.275,-0.118]
+   alternate            +1.862, against bank +0.304 [+0.181,+0.422]
+   pattern              +1.501, against bank +0.044 [-0.045,+0.134]
+   digest               -0.314, against bank +0.019 [-0.029,+0.070]
+   unreliable           +0.544, against bank +0.020 [-0.035,+0.074]
+   patchy               +0.759, against bank -0.019 [-0.051,+0.011]
+   weak                 +1.767, against bank +0.001 [+0.000,+0.004]
+   noisy                +1.752, against bank +0.000 [-0.007,+0.008]
+   late_alternate_30    +1.608, against bank +0.237 [+0.160,+0.317]
+   late_alternate_50    +1.657, against bank +0.183 [+0.123,+0.247]
+   late_alternate_70    +1.787, against bank +0.149 [+0.114,+0.182]
+   late_pattern_30      +1.528, against bank +0.189 [+0.107,+0.267]
+   late_pattern_50      +1.596, against bank +0.165 [+0.109,+0.220]
+   late_pattern_70      +1.781, against bank +0.119 [+0.094,+0.144]
+   late_swap_30         +2.026, against bank +0.047 [+0.010,+0.083]
+   late_swap_50         +2.076, against bank +0.035 [+0.013,+0.060]
+   late_swap_70         +2.120, against bank -0.004 [-0.019,+0.012]
+   nlate_alternate_30   -1.174, against bank +0.124 [+0.048,+0.201]
+   nlate_alternate_70   -0.256, against bank +0.069 [+0.014,+0.123]
+   nlate_pattern_30     -1.143, against bank +0.072 [+0.003,+0.137]
+   nlate_pattern_70     -0.198, against bank +0.065 [+0.009,+0.120]
+   nlate_swap_30        -0.184, against bank -0.090 [-0.169,-0.008]
+   nlate_swap_70        -0.068, against bank +0.021 [-0.034,+0.079]
+   nine stationary                  +0.019 [-0.002,+0.040]
+   after plain, all                 +0.125 [+0.107,+0.142]
+   after plain, T30                 +0.158 [+0.118,+0.199]
+   T50                              +0.128 [+0.098,+0.159]
+   T70                              +0.088 [+0.072,+0.104]
+   after plain, alternate+pattern   +0.174 [+0.149,+0.198]
+   after plain, one swap            +0.026 [+0.011,+0.041]
+   lies, all                        +0.044 [+0.005,+0.080]
+   lies, alternate+pattern          +0.083 [+0.042,+0.124]
+   lies, one swap                   -0.034 [-0.086,+0.015]

@@ -19,7 +19,7 @@ the cheats a grid invites) is in nca-learn's `NOTEBOOK.md`, worth reading before
 - **Rip up and rewrite**: prefer a cleaner, smaller design to incremental edits that keep legacy structure.
 - **Real units, from few axioms** (the user's decision): every quantity in SI, every number that can be derived
   derived from the axioms in `units.py`; a design's own choices stay with the design, in SI. Rates are per 10 s, a
-  life lasts 100 s.
+  life lasts 100 s, or 1000 s in a test that says so (the user, 2026-11-06: some evidence is too scarce for 100 s).
 - **Each fact in one place**; link, don't copy:
 
   | what | where |
@@ -49,6 +49,7 @@ the cheats a grid invites) is in nca-learn's `NOTEBOOK.md`, worth reading before
   terms a newcomer understands, with a link to the notebook. Keep each notebook's "Where it stands" current.
 - **Measure, and trace each failure to a cause before fixing it.** **Show a working behaviour live**
   (`python creature.py`, `python -m discrete.watch`) before reporting it.
+- **Measure in bits** (the user, 2026-11-04, David MacKay's rigour): for any claim about learning or adapting, say how many bits are needed, how many the wires supply and how many were used, against an ideal Bayesian learner with the same evidence. Stay sceptical: a result a design could achieve by building in its test's description proves nothing.
 - **Mind the noise wall** (the user, 2026-11-01): for a learning experiment, estimate its signal to noise per second
   against the life's length, and its explorers per credit window, before reading a result; a negative result where
   learning was impossible (too little signal, or credit colliding as ALOHA's packets do) says nothing about the
@@ -66,7 +67,7 @@ the cheats a grid invites) is in nca-learn's `NOTEBOOK.md`, worth reading before
   row tries every class of `PARTS.md`, section 5, tuned, or records why a class can't apply; the row's cure is the simplest
   tied with the best. Its automatic version must tie with the base brain in the unmodified world. Re-validation in
   `mixed_feedback.py` waits until the table is complete, and then covers only the rows or universal circuit we keep.
-- **Long runs** share one laptop: one job at a time. Kill processes only by explicit PID, never by a pattern. To pause
+- **Long runs** share one laptop: one job at a time. **One maths thread per worker**: set `OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1` for anything with a process pool (8 threads per worker made one arm 50 times slower, 2026-11-05). Kill processes only by explicit PID, never by a pattern. To pause
   a run, stop (SIGSTOP) only its pool's workers, never a shell or a process the harness waits on. Don't change code a
   running job will import later.
 
@@ -88,8 +89,12 @@ The point is a brain that learns in situ, so the brain must do the work.
   better outcomes, not to a setpoint the body supplies.
 - **Nor may the simulator.** An optimiser, an agent included, finds anything a design can exploit. So: random timing
   (no lockstep, no inputs only on tick boundaries), noise on everything, nothing carried below the noise; a result
-  must hold on fresh seeds and at a finer step, with the simulator's error control tight enough that the step doesn't
-  matter (`discrete/NOTEBOOK.md`, D7); for an optimised circuit, limits on time constants and gains against the step.
+  must hold on fresh seeds and at a finer step (the fast model, the user's, 2026-11-06: work at the 10 ms tick, then
+  halve the step until it stops changing; my refinements: until two successive halvings differ by under .05 within
+  their 95% interval, on the reported comparisons, not only levels). **Everything in seconds, never in ticks** (the
+  user, 2026-11-06): no delay, rate, window or event counted in ticks, in a body, world or brain. Keep the
+  simulator's error control tight enough that the step doesn't matter (`discrete/NOTEBOOK.md`, D7); for an optimised
+  circuit, limits on time constants and gains against the step.
 - **Circuit noise is a substrate's, and the simulator's alone** (the user's decisions): shot noise, resting noise,
   mismatch and pulses at random moments, for biology or silicon, as `mixed_feedback.py`'s docstring specifies, each
   derived from `units.py`. It lives in the one integration step every simulation calls (`_step`) and in how the

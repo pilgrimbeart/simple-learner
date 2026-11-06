@@ -1,0 +1,16 @@
+done 10 ms in 21 s
+done 5 ms in 42 s
+done 2.5 ms in 79 s
+done 1 ms in 205 s
+plain circuit    10 ms +2.700
+plain circuit     5 ms +2.539  against 10 ms -0.161 [-0.271,-0.055]
+plain circuit   2.5 ms +2.434  against 10 ms -0.266 [-0.369,-0.168]
+plain circuit     1 ms +2.450  against 10 ms -0.250 [-0.350,-0.144]
+plain bank       10 ms +2.747
+plain bank        5 ms +2.479  against 10 ms -0.269 [-0.376,-0.161]
+plain bank      2.5 ms +2.434  against 10 ms -0.314 [-0.433,-0.196]
+plain bank        1 ms +2.250  against 10 ms -0.497 [-0.607,-0.381]
+plain bank - base at   10 ms +0.047 [-0.043,+0.143]
+plain bank - base at    5 ms -0.060 [-0.173,+0.052]
+plain bank - base at  2.5 ms +0.000 [-0.096,+0.089]
+plain bank - base at    1 ms -0.200 [-0.289,-0.111]

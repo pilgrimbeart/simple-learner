@@ -176,7 +176,7 @@ Today a person has to interpret "L3, depends on history", so step 1's fixed gene
 
 "One meal, one taste" isn't what `Life.step` does: several meals in a tick give one clipped pulse, and food plus poison cancels to no pulse. The audit also omits the eyes' Poisson firing, the birth state and the respawn exclusion zone.
 
-## Second critic, a different model, who read the fourth draft
+## Second critic, who read the fourth draft (Opus 5.5, the same model as the others: the override I asked for didn't apply)
 
 **1. What the language still can't express**
 

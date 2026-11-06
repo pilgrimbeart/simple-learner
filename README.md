@@ -221,6 +221,12 @@ The findings that changed the direction of the work, each told in full in the no
   combinations it was never tuned on. It is still partly a failure: it is worse than three problems' own cures, it can only choose among
   ideas it already holds, and it can't judge the eyes or the thrusters, since no taste says how to reach a block. Those need other
   evidence, so the honest answer is three loops rather than one (`STORIES.md`, One universal circuit; `discrete/NOTEBOOK.md`, D29).
+- **In a clean world the limit is what the brain can imagine, not how much evidence it gets.** We counted what a life can teach. A taste that
+  never lies carries nearly a bit, so at our circuit's pace a life offers about 50 bits, and it only needs about one to learn which colour is food. If one taste
+  in five lies, the offer falls to about 15, though a creature that eats faster can buy several times more, at the cost of eating more poison. Compared with an ideal
+  judge of the same ideas, our circuit is close to right on when to change its mind if rules can change, and we can improve on it, but the largest gaps aren't in
+  judging at all. They come from worlds none of its ideas describes. Food that swaps every 10 s is the clearest: a learner told only that swaps happen barely helps,
+  while one choosing among hundreds of possible timings, about 14 bits of ideas, closes half the gap. Knowing *when* is what's missing (`discrete/NOTEBOOK.md`, D31, D32).
 
 ## The ground rules, for every brain
 
@@ -528,6 +534,12 @@ The open questions, most valuable first, are in [`QUESTIONS.md`](QUESTIONS.md).
   following whichever has earned the most evidence over the default (`STORIES.md`, One universal circuit).
 - **Off-policy scoring**: judging a model on what happened while something else was in charge, so it can be judged without being
   tried. **On-policy** is the opposite: a change is judged only by acting on it, as jitter is.
+- **Sampler**: a program that draws random worlds from a grammar with chosen probabilities, and so decides what "most worlds" means (`GRAMMAR.md`).
+- **F_novel**: on challenges a circuit's design never saw, its pass rate above the base circuit's, as a share of what the base circuit leaves. The design is fixed; the circuit still learns in each life (`PROGRAMME.md`).
+- **Description length**: how many bits it takes to write a thing down in its most compact form, so that repeated motifs cost little (`PROGRAMME.md`).
+- **Occam factor** (MacKay): the extra evidence a choice among more models needs, about log2 of their number, which is why a bigger bank picks more slowly and falsely more often.
+- **Bits per taste**: how much one taste can tell a brain, 1 - H(e) for a taste that misleads with chance e: 0.83 at 2.5%, 0.25 at 21%. A life's bits are that times its tastes: a ceiling on the evidence, not what was learned.
+- **Run detector** (Page's CUSUM): a score that rises on wins, falls on losses and stops at a floor of zero, so it reacts to a recent run and forgets what came before. It is the standard test for a change at an unknown time. The bank's entry rule is one, and its picks resemble those of an exact posterior that expects frequent change.
 - **Function-preserving growth**: adding a part with its effect at zero, so the brain is exactly as good as before,
   then tuning it in: trying a part costs nothing (`PARTS.md`).
 - **Ideal observer** (Geisler's term, the user's choice, 2026-11-01): a brain of unlimited reasoning but only the

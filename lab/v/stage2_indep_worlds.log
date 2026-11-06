@@ -1,0 +1,27 @@
+plain (200 lives): rule from the description: 0 of 14546 single meals disagree, 0 of 192 meals in two-meal ticks; taste disagrees with score in 0 of 14546 single meals
+    eye 0: 62652 received / 62635 expected = 1.0003 (excess +0.00/s); other eye 62776 / 63138 = 0.9943 (excess -0.02/s)
+swap10 (200 lives): rule from the description: 0 of 14089 single meals disagree, 0 of 183 meals in two-meal ticks; taste disagrees with score in 0 of 14089 single meals
+alternate (200 lives): rule from the description: 0 of 14346 single meals disagree, 40 of 140 meals in two-meal ticks; taste disagrees with score in 0 of 14346 single meals; e.g. [(64101, 'red', 342, 1, 'engine good'), (64101, 'blue', 342, 1, 'engine good'), (64102, 'red', 9790, 0, 'engine good')]
+pattern (200 lives): rule from the description: 0 of 14410 single meals disagree, 32 of 170 meals in two-meal ticks; taste disagrees with score in 0 of 14410 single meals; e.g. [(64102, 'red', 3061, 1, 'engine good'), (64102, 'blue', 2989, 1, 'engine good'), (64114, 'red', 7317, 1, 'engine bad')]
+digest (200 lives): rule from the description: 2 of 12163 single meals disagree, 0 of 177 meals in two-meal ticks; taste disagrees with score in 0 of 12163 single meals; e.g. [(64115, 'blue', 476, 0, 'engine bad'), (64132, 'red', 3283, 1, 'engine bad')]
+unreliable (200 lives): meals not their colour's worth: 2890 of 14510 = 0.1992 [0.1928, 0.2058]
+    two-meal ticks whose meals share the lie: 108, don't: 0
+patchy (200 lives): rule from the description: 0 of 17699 single meals disagree, 0 of 1882 meals in two-meal ticks; taste disagrees with score in 0 of 17699 single meals
+    eye 0: 67342 received / 67187 expected = 1.0023 (excess +0.01/s); other eye 66449 / 66238 = 1.0032 (excess +0.01/s)
+    block positions (birth and every respawn, 26781): offset from the nearest of the wrapper's 4 centres, sd x 2.995 mm, y 2.982 mm, mean [-0.0048038  -0.00253244] mm; farther than 5 sd (15 mm): 0
+weak (200 lives): rule from the description: 0 of 11777 single meals disagree, 0 of 165 meals in two-meal ticks; taste disagrees with score in 0 of 11777 single meals
+    coin's eye: 13869 received / 55298 expected = 0.2508 (excess -2.07/s); other eye 65518 / 65289 = 1.0035 (excess +0.01/s)
+noisy (200 lives): rule from the description: 0 of 12029 single meals disagree, 0 of 152 meals in two-meal ticks; taste disagrees with score in 0 of 12029 single meals
+    coin's eye: 263550 received / 60774 expected = 4.3366 (excess +10.14/s); other eye 55082 / 55274 = 0.9965 (excess -0.01/s)
+coin (200 lives): meals not their colour's worth: 6802 of 13629 = 0.4991 [0.4907, 0.5075]
+    two-meal ticks whose meals share the lie: 84, don't: 0
+late_swap_50 (200 lives): rule from the description: 0 of 14244 single meals disagree, 0 of 216 meals in two-meal ticks; taste disagrees with score in 0 of 14244 single meals
+late_alternate_50 (200 lives): rule from the description: 0 of 14303 single meals disagree, 27 of 218 meals in two-meal ticks; taste disagrees with score in 0 of 14303 single meals; e.g. [(64100, 'red', 7321, 1, 'engine bad'), (64101, 'blue', 8340, 1, 'engine bad'), (64106, 'blue', 7803, 1, 'engine good')]
+every5th (200 lives): rule from the description: 0 of 14353 single meals disagree, 29 of 190 meals in two-meal ticks; taste disagrees with score in 0 of 14353 single meals; e.g. [(64101, 'red', 342, 1, 'engine good'), (64101, 'red', 2427, 1, 'engine good'), (64101, 'red', 2976, 1, 'engine good')]
+    meals not their colour's worth: 2823 of 14543 = 0.1941 [0.1878, 0.2006]
+blind (200 lives): rule from the description: 0 of 9779 single meals disagree, 0 of 202 meals in two-meal ticks; taste disagrees with score in 0 of 9779 single meals
+    pulses in ticks within 55 ms of a firing: 0 (expected without blinding 89561); elsewhere 28092 / 28337 = 0.9913; share of ticks blind 0.696
+crosstalk (200 lives): rule from the description: 0 of 13486 single meals disagree, 0 of 145 meals in two-meal ticks; taste disagrees with score in 0 of 13486 single meals
+    eye 0: 84102 received / 84056 expected = 1.0005 (excess +0.00/s); other eye 84256 / 84405 = 0.9982 (excess -0.01/s)
+      against no crosstalk: eye 0 1.3030, eye 1 1.2954
+region (200 lives): rule from the description: 0 of 13452 single meals disagree, 0 of 170 meals in two-meal ticks; taste disagrees with score in 0 of 13452 single meals

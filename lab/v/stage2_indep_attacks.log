@@ -1,0 +1,124 @@
+== channels: what each world's engine touches on the brain beyond the interface, and the taste values it gets
+  plain: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  swap10: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  alternate: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  pattern: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  digest: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  unreliable: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  patchy: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  weak: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  noisy: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  coin: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  allfood: other []; taste values [1.0]; sensors [0, 1]; moments in [0, dt): True
+  never: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  late_alternate_50: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  late_swap_50: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  nlate_pattern_50: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  swap11: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  swapmeals6: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  unreliable22: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  every5th: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  dim25: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  mirror: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  halfthrust_const: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  halfthrust_gain: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  thrusters: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  fail50: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  drag2: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  moving: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  scarce: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  blind: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  crosstalk: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  bruise: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  region: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  keylock: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  decoys: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  rarefeast: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  costly: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  sag: other [('get', 'p')]; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True  <-- beyond the interface
+  parity: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  word: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  cells: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  delay1: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  lostgood: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  rewire50: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  lethal: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+  liar: other []; taste values [-1.0, 1.0]; sensors [0, 1]; moments in [0, dt): True
+== moments
+  plain: tastes good 10433, bad 1545; moment good vs bad KS p 0.285; each against uniform p 0.594, 0.275; mean 0.4987 vs 0.4893
+  digest: tastes good 4327, bad 5615; moment good vs bad KS p 0.763; each against uniform p 0.175, 0.756; mean 0.5040 vs 0.5017
+  every5th: tastes good 8511, bad 3373; moment good vs bad KS p 0.938; each against uniform p 0.816, 0.789; mean 0.5003 vs 0.4988
+  unreliable: tastes good 8117, bad 3525; moment good vs bad KS p 0.070; each against uniform p 0.639, 0.089; mean 0.5010 vs 0.4946
+  pattern: tastes good 7290, bad 4384; moment good vs bad KS p 0.904; each against uniform p 0.214, 0.512; mean 0.4965 vs 0.4966
+  bruise: tastes good 3038, bad 7438; moment good vs bad KS p 0.457; each against uniform p 0.233, 0.709; mean 0.5076 vs 0.4998
+  keylock: tastes good 13773, bad 283; moment good vs bad KS p 0.635; each against uniform p 0.680, 0.643; mean 0.4996 vs 0.4983
+  noisy: pulse moments, noisy eye vs other, KS p 0.483; noisy-eye pulses 104951, of which 891 (0.0085) are given away as injected by coming before the other eye's in their tick
+  plain: ticks with both eyes' pulses 289; in 289 the first call is colour 0's eye (as creature.Life does)
+== inert: hooks that never act, against creature.Life (identity instrument) and the plain engine
+  (world (let last -1) (on tick (set poison (if (< t 1000) P last))) (on score (if (>= t 1000) (set last colour)))) bank: 20 of 20 lives identical tick by tick; calls compared: pulses 12518, tastes 1485, firings 69445, meals 1504; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (let last -1) (on tick (set poison (if (< t 1000) P last))) (on score (if (>= t 1000) (set last colour)))) circuit: 20 of 20 lives identical tick by tick; calls compared: pulses 12519, tastes 1451, firings 69731, meals 1463; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (on see (set seen seen))) bank: 20 of 20 lives identical tick by tick; calls compared: pulses 12518, tastes 1485, firings 69445, meals 1504; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (on see (set seen seen))) circuit: 20 of 20 lives identical tick by tick; calls compared: pulses 12519, tastes 1451, firings 69731, meals 1463; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (on see (set seen (* 1 seen)))) bank: 20 of 20 lives identical tick by tick; calls compared: pulses 12518, tastes 1485, firings 69445, meals 1504; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (on see (set seen (* 1 seen)))) circuit: 20 of 20 lives identical tick by tick; calls compared: pulses 12519, tastes 1451, firings 69731, meals 1463; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (on pulse (if (> t 1000) (drop)))) bank: 20 of 20 lives identical tick by tick; calls compared: pulses 12518, tastes 1485, firings 69445, meals 1504; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (on pulse (if (> t 1000) (drop)))) circuit: 20 of 20 lives identical tick by tick; calls compared: pulses 12519, tastes 1451, firings 69731, meals 1463; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (on fire (set gain 1))) bank: 20 of 20 lives identical tick by tick; calls compared: pulses 12518, tastes 1485, firings 69445, meals 1504; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (on fire (set gain 1))) circuit: 20 of 20 lives identical tick by tick; calls compared: pulses 12519, tastes 1451, firings 69731, meals 1463; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (on fire (set gain gain))) bank: 20 of 20 lives identical tick by tick; calls compared: pulses 12518, tastes 1485, firings 69445, meals 1504; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (on fire (set gain gain))) circuit: 20 of 20 lives identical tick by tick; calls compared: pulses 12519, tastes 1451, firings 69731, meals 1463; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (on meal (set sign sign))) bank: 20 of 20 lives identical tick by tick; calls compared: pulses 12518, tastes 1485, firings 69445, meals 1504; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (on meal (set sign sign))) circuit: 20 of 20 lives identical tick by tick; calls compared: pulses 12519, tastes 1451, firings 69731, meals 1463; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (on taste (set value value))) bank: 20 of 20 lives identical tick by tick; calls compared: pulses 12518, tastes 1485, firings 69445, meals 1504; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (on taste (set value value))) circuit: 20 of 20 lives identical tick by tick; calls compared: pulses 12519, tastes 1451, firings 69731, meals 1463; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (on score (set bad bad) (set amount amount))) bank: 20 of 20 lives identical tick by tick; calls compared: pulses 12518, tastes 1485, firings 69445, meals 1504; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (on score (set bad bad) (set amount amount))) circuit: 20 of 20 lives identical tick by tick; calls compared: pulses 12519, tastes 1451, firings 69731, meals 1463; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (on move (set x x) (set spin spin))) bank: 20 of 20 lives identical tick by tick; calls compared: pulses 12518, tastes 1485, firings 69445, meals 1504; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (on move (set x x) (set spin spin))) circuit: 20 of 20 lives identical tick by tick; calls compared: pulses 12519, tastes 1451, firings 69731, meals 1463; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (let z 0) (on tick (set z (chance 0.5)))) bank: 20 of 20 lives identical tick by tick; calls compared: pulses 12518, tastes 1485, firings 69445, meals 1504; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (let z 0) (on tick (set z (chance 0.5)))) circuit: 20 of 20 lives identical tick by tick; calls compared: pulses 12519, tastes 1451, firings 69731, meals 1463; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (let z (uniform 0 1)) (table q 36 2 (normal 0 1)) (on tick (set z (+ z (at q 3 1))))) bank: 20 of 20 lives identical tick by tick; calls compared: pulses 12518, tastes 1485, firings 69445, meals 1504; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (let z (uniform 0 1)) (table q 36 2 (normal 0 1)) (on tick (set z (+ z (at q 3 1))))) circuit: 20 of 20 lives identical tick by tick; calls compared: pulses 12519, tastes 1451, firings 69731, meals 1463; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (on tick (if (> t 1000) (set poison F)))) bank: 20 of 20 lives identical tick by tick; calls compared: pulses 12518, tastes 1485, firings 69445, meals 1504; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (on tick (if (> t 1000) (set poison F)))) circuit: 20 of 20 lives identical tick by tick; calls compared: pulses 12519, tastes 1451, firings 69731, meals 1463; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (on tick (set poison P))) bank: 20 of 20 lives identical tick by tick; calls compared: pulses 12518, tastes 1485, firings 69445, meals 1504; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (on tick (set poison P))) circuit: 20 of 20 lives identical tick by tick; calls compared: pulses 12519, tastes 1451, firings 69731, meals 1463; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (const PUSH PUSH) (const EAT EAT)) bank: 20 of 20 lives identical tick by tick; calls compared: pulses 12518, tastes 1485, firings 69445, meals 1504; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (const PUSH PUSH) (const EAT EAT)) circuit: 20 of 20 lives identical tick by tick; calls compared: pulses 12519, tastes 1451, firings 69731, meals 1463; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (on birth (each b (bset b (bx b) (by b))))) bank: 20 of 20 lives identical tick by tick; calls compared: pulses 12518, tastes 1485, firings 69445, meals 1504; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (on birth (each b (bset b (bx b) (by b))))) circuit: 20 of 20 lives identical tick by tick; calls compared: pulses 12519, tastes 1451, firings 69731, meals 1463; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (stream 123) (on tick (set poison (if (and (chance 0.5) (> t 1000)) F P)))) bank: 20 of 20 lives identical tick by tick; calls compared: pulses 12518, tastes 1485, firings 69445, meals 1504; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (stream 123) (on tick (set poison (if (and (chance 0.5) (> t 1000)) F P)))) circuit: 20 of 20 lives identical tick by tick; calls compared: pulses 12519, tastes 1451, firings 69731, meals 1463; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (on tick (if (> t 1000) (pulse 0)))) bank: 20 of 20 lives identical tick by tick; calls compared: pulses 12518, tastes 1485, firings 69445, meals 1504; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (on tick (if (> t 1000) (pulse 0)))) circuit: 20 of 20 lives identical tick by tick; calls compared: pulses 12519, tastes 1451, firings 69731, meals 1463; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (on tick (after 2000 (pulse 0)))) bank: 20 of 20 lives identical tick by tick; calls compared: pulses 12518, tastes 1485, firings 69445, meals 1504; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (on tick (after 2000 (pulse 0)))) circuit: 20 of 20 lives identical tick by tick; calls compared: pulses 12519, tastes 1451, firings 69731, meals 1463; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (on pulse (if (and (> t 1000) (chance 0.5)) (drop)))) bank: 20 of 20 lives identical tick by tick; calls compared: pulses 12518, tastes 1485, firings 69445, meals 1504; lives with no meal 0; attributes the engine touched beyond the interface: []
+  (world (on pulse (if (and (> t 1000) (chance 0.5)) (drop)))) circuit: 20 of 20 lives identical tick by tick; calls compared: pulses 12519, tastes 1451, firings 69731, meals 1463; lives with no meal 0; attributes the engine touched beyond the interface: []
+== exact equalities the worlds claim
+  halfthrust_const vs halfthrust_gain: 100 of 100 lives identical; first differing ticks []
+  plain vs never: 100 of 100 lives identical; first differing ticks []
+  plain vs mirror: 0 of 100 lives identical; first differing ticks [24, 24, 33, 33, 33, 33, 38, 47]
+  weak vs dim25: 0 of 100 lives identical; first differing ticks [3, 3, 3, 3, 3, 3, 3, 3]
+== stage 5: refused by the runner's guard?
+  delay1: refused (delay1 is a stage-5 world: ['a taste pulse with no meal, or later than its meal', 'a taste lost']. Not run as a result.)
+  lostgood: refused (lostgood is a stage-5 world: ['a taste lost']. Not run as a result.)
+  rewire50: refused (rewire50 is a stage-5 world: ['a rewiring']. Not run as a result.)
+  lethal: refused (lethal is a stage-5 world: ['a meal or a rule ends a life']. Not run as a result.)
+  liar: refused (liar is a stage-5 world: marked. Not run as a result.)
+  unmarked delay1: guard refuses (['a taste pulse with no meal, or later than its meal', 'a taste lost']); a life runs: taste values [-1.0, 1.0]; brain attrs []
+  unmarked lostgood: guard refuses (['a taste lost']); a life runs: taste values [-1.0, 1.0]; brain attrs []
+  unmarked rewire50: guard refuses (['a rewiring']); a life runs: taste values [-1.0, 1.0]; brain attrs []
+  unmarked lethal: guard refuses (['a meal or a rule ends a life']); a life runs: taste values [-1.0, 1.0]; brain attrs []
+  unmarked liar: guard ACCEPTS ([]); a life runs: taste values [-1.0, 1.0]; brain attrs []
+  liar, lying meta only: guard ACCEPTS ([]); a life runs: taste values [-1.0, 1.0]; brain attrs []
+  random liar: guard ACCEPTS ([]); a life runs: taste values [-1.0, 1.0]; brain attrs []
+  taste of 0: guard ACCEPTS ([]); a life runs: taste values [0.0]; brain attrs []
+  taste of .5: guard ACCEPTS ([]); a life runs: taste values [-0.5, 0.5]; brain attrs []
+  score against taste: guard ACCEPTS ([]); a life runs: taste values [-1.0, 1.0]; brain attrs []
+  brain written (bp): guard ACCEPTS ([]); a life runs: taste values [-1.0, 1.0]; brain attrs [('get', 'p')]
+  brain told food (bp): guard ACCEPTS ([]); a life runs: taste values [-1.0, 1.0]; brain attrs [('get', 'p')]
+  taste from the score stage: guard ACCEPTS ([]); a life runs: taste values [-1.0, 1.0]; brain attrs []
+  meal dropped, block uneaten: guard ACCEPTS ([]); a life runs: taste values [-1.0, 1.0]; brain attrs []
+  colours swapped (truthful): guard ACCEPTS ([]); a life runs: taste values [-1.0, 1.0]; brain attrs []
+  world fires a thruster: guard ACCEPTS ([]); a life runs: taste values [-1.0, 1.0]; brain attrs []

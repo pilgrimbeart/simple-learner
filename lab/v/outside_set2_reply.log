@@ -1,0 +1,8 @@
+I've written `outside_set.md` with 45 entries.
+
+- **Rules:** 36 are "Current rules" and 9 are "Changes rules".
+- **Source kinds:** 25 are RL benchmarks or RL failure-analysis papers, and 4 are classical-control benchmarks. 14 are animal-learning or comparative-cognition papers, and 2 are foraging-ecology papers.
+- **Difficulty:** The fetch tool couldn't read several pages, including the PMC articles, the Nature paper and the OpenAI faulty-reward post. For those I confirmed the citation details from search results and did not read the full text.
+- **Weakest sources:** Kamin's blocking paper and Tolman & Honzik rest on secondary summaries only, and the file says so. I left out sources I couldn't confirm at all, such as the Sutton & Barto bandit text.
+- **My own numbers:** The translation numbers are my proposals, not values from the sources.
+- **Strained translations:** A few entries strain the creature's world badly because it has no position sense, no landmarks and forward-only thrust. The entries say how.

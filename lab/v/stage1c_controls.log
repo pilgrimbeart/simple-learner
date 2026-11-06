@@ -1,0 +1,24 @@
+== controls: each new piece of code, on development seeds 60000-60003 x 2 (spent in 1b, used only as a code check)
+life() = bits_bank.life: True
+late_never = plain, lives exactly: True
+nlate_never = unreliable, lives exactly: True
+ctrr pen 3 floor 0 = the bank, lives exactly: True
+banke = the bank, lives exactly: True
+fsbma h=0 = bma, same e, pr, lives exactly: False
+mix s7 only = bma, lives exactly: False
+ureye = table.Unwired, thirds exactly: True
+vtoldeye = vtold: True
+HMM filter P(colour 1) 0.9325239593; brute force over paths 0.9325239593
+fixed share vs brute force over paths: max difference 6.81e-14
+family T10: 1 periods 10.000-10.000, nearest to 10: 10.0000, 1 phases, 1.00 bits
+family T4: 4 periods 5.000-50.000, nearest to 10: 10.0000, 1 phases, 3.00 bits
+family T64: 64 periods 1.990-99.496, nearest to 10: 10.0000, 1 phases, 7.00 bits
+family T64P16: 64 periods 1.990-99.496, nearest to 10: 10.0000, 16 phases, 11.00 bits
+family T393P16: 393 periods 2.000-98.857, nearest to 10: 10.0252, 16 phases, 13.62 bits
+family T393P64: 393 periods 2.000-98.857, nearest to 10: 10.0252, 64 phases, 15.62 bits
+pdiff -0.072 [-0.243,+0.092] against table.paired -0.072 [-0.243,+0.092]; efficiency 0.6444 eff_ci 0.6444
+
+The two False lines above are floating-point ties, not a coding error. At pr=.5 the default's weight can exactly equal the rivals' total, and `int(vote > 0.5)` then resolves the tie by rounding. Rerun (seeds 60000-60003 x 2):
+  eps .2 pr .37 and eps .13 pr .61, unreliable, swap10, alternate: fsbma h=0 and mix s7 both identical to bma, lives exactly (efficiencies equal to all digits).
+  eps .2 pr .5: identical in swap10; alternate bma 1.667, fsbma/mix 2.084, all 8 lives differ; unreliable 1 life of 8 differs.
+  So 1b's "one setting" (bma e=.2 pr=.5) has its ties settled by rounding. Measured in lab/stage1c_replicate.py with pr=.5 +- 1e-6.

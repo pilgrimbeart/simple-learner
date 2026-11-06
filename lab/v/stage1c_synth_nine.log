@@ -1,0 +1,24 @@
+== coin-flip taste: each meal poison by a fair coin. Efficiency [95%] over 100 seeds x 2; meals a life. A meal's expected worth is 0.5 - 2 x 0.5 = -0.5, so any eating scores below 0. Seconds: 100.
+   base circuit: -2.268 [-2.372,-2.162], meals 74.6
+   bank: -2.075 [-2.193,-1.950], meals 64.7
+   unwired: -3.429 [-3.481,-3.373], meals 146.8
+   still: 0.000 [0.000,0.000], meals 0.0
+   stopper (e .2, stop at .9): -1.228 [-1.301,-1.152], meals 30.8
+   stopper (stop at .99): -1.618 [-1.714,-1.512], meals 46.3
+   the stopper against base: +1.040 [+0.916,+1.165] SURE ; bank against base: +0.194 [+0.047,+0.347] SURE
+== the same stopper in worlds with something to learn: does a brain that may stop lose there? Against the bank, paired, 100 seeds x 2
+   plain: 2.687, against the bank +0.000 [+0.000,+0.000]; stopped in 0.00 of lives
+   unreliable: 0.563, against the bank -0.014 [-0.029,-0.002] SURE; stopped in 0.03 of lives
+   alternate: 0.021, against the bank -1.453 [-1.579,-1.323] SURE; stopped in 1.00 of lives
+   digest: -0.336, against the bank +0.031 [+0.005,+0.066] SURE; stopped in 0.05 of lives
+   swap10: 0.024, against the bank -0.537 [-0.626,-0.448] SURE; stopped in 0.94 of lives
+== the still creature in the nine worlds. base and told on 100 seeds x 2 (told: the bank's parts told the colour). Closure if measured from base: (0 - base) / (told - base). Rows where the base is below 0: a learning-free stop could pass at half the gap.
+   plain: base 2.73, told 2.76, still 0.000, closure by standing still -108.87
+   swap10: base -0.01, told 2.77, still 0.000, closure by standing still +0.00
+   alternate: base -3.39, told 2.74, still 0.000, closure by standing still +0.55 PASSES at half
+   pattern: base -2.70, told 2.68, still 0.000, closure by standing still +0.50 PASSES at half
+   digest: base -4.79, told 0.07, still 0.000, closure by standing still +0.99 PASSES at half
+   unreliable: base 0.21, told 0.77, still 0.000, closure by standing still -0.38
+   patchy: base 0.67, told 0.76, still 0.000, closure by standing still -7.50
+   weak: base 1.76, told 1.84, still 0.000, closure by standing still -20.95
+   noisy: base 1.28, told 1.84, still 0.000, closure by standing still -2.30

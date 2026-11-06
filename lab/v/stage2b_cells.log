@@ -1,0 +1,15 @@
+== plain, seeds 65070-65079 x 2
+  circuit: efficiency +2.80; per life meals 73 (max 92), bad 9, firings 3362, spent 16.8, gain +46.9; meals of the block eaten the tick before 0 a life; longest run of ticks with a meal, median 2, max 3
+     worst lives: meals 50 bad 8 same-block 0 run 1 gain +26 spent 15.4; meals 69 bad 11 same-block 0 run 3 gain +36 spent 16.4; meals 67 bad 10 same-block 0 run 2 gain +37 spent 16.1
+  bank: efficiency +2.66; per life meals 73 (max 90), bad 9, firings 3450, spent 16.9, gain +45.1; meals of the block eaten the tick before 0 a life; longest run of ticks with a meal, median 2, max 3
+     worst lives: meals 60 bad 12 same-block 0 run 1 gain +24 spent 15.9; meals 52 bad 9 same-block 0 run 1 gain +25 spent 15.3; meals 70 bad 13 same-block 0 run 1 gain +31 spent 16.0
+== cells, seeds 65070-65079 x 2
+  circuit: efficiency +4.09; per life meals 163 (max 291), bad 33, firings 2928, spent 15.9, gain +65.0; meals of the block eaten the tick before 129 a life; longest run of ticks with a meal, median 16, max 20
+     worst lives: meals 182 bad 122 same-block 159 run 19 gain -184 spent 14.9; meals 128 bad 95 same-block 113 run 17 gain -157 spent 14.9; meals 200 bad 118 same-block 169 run 15 gain -154 spent 16.3
+  bank: efficiency -135.08; per life meals 1226 (max 9513), bad 1101, firings 2669, spent 15.4, gain -2076.8; meals of the block eaten the tick before 1194 a life; longest run of ticks with a meal, median 18, max 8629
+     worst lives: meals 9513 bad 9513 same-block 9510 run 8629 gain -19026 spent 10.4; meals 8133 bad 8097 same-block 8123 run 8092 gain -16158 spent 11.6; meals 1752 bad 1644 same-block 1724 run 1634 gain -3180 spent 15.5
+== cells, respawn kept clear of the creature, seeds 65070-65079 x 2
+  circuit: efficiency +0.49; per life meals 12 (max 34), bad 1, firings 2533, spent 15.1, gain +7.5; meals of the block eaten the tick before 0 a life; longest run of ticks with a meal, median 1, max 1
+     worst lives: meals 8 bad 4 same-block 0 run 1 gain -4 spent 15.0; meals 8 bad 3 same-block 0 run 1 gain -1 spent 15.7; meals 6 bad 2 same-block 0 run 1 gain +0 spent 15.7
+  bank: efficiency +0.37; per life meals 11 (max 27), bad 2, firings 2518, spent 15.1, gain +5.7; meals of the block eaten the tick before 0 a life; longest run of ticks with a meal, median 1, max 1
+     worst lives: meals 5 bad 4 same-block 0 run 1 gain -7 spent 14.9; meals 3 bad 1 same-block 0 run 1 gain +0 spent 14.9; meals 3 bad 1 same-block 0 run 1 gain +0 spent 15.6

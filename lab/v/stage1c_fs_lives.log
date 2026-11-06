@@ -1,0 +1,31 @@
+== 2(a) fixed share in real lives. Swept on 61000-61063 x 2 by the search's own score, as 1b; judged on 62000-62199 x 2 against the bank and 1b's one setting.
+bank score 0.277
+fsmap(h=0.003,eps=0.1,pr=0.6) plain 2.58 swap1 0.63 alter 2.01 patte 1.67 diges -0.40 unrel 0.33 patch 0.66 weak 1.73 noisy 1.70 score 0.321 [118 s]
+fsmap(h=0.003,eps=0.2,pr=0.6) plain 2.58 swap1 0.58 alter 1.99 patte 1.70 diges -0.33 unrel 0.33 patch 0.67 weak 1.71 noisy 1.70 score 0.305 [160 s]
+fsmap(h=0.01,eps=0.1,pr=0.6) plain 2.58 swap1 0.60 alter 1.97 patte 1.70 diges -0.39 unrel 0.42 patch 0.66 weak 1.73 noisy 1.70 score 0.358 [204 s]
+fsmap(h=0.01,eps=0.2,pr=0.6) plain 2.58 swap1 0.55 alter 1.99 patte 1.67 diges -0.32 unrel 0.35 patch 0.68 weak 1.71 noisy 1.70 score 0.316 [250 s]
+fsmap(h=0.03,eps=0.1,pr=0.6) plain 2.58 swap1 0.51 alter 2.00 patte 1.66 diges -0.44 unrel 0.43 patch 0.65 weak 1.72 noisy 1.70 score 0.341 [304 s]
+fsmap(h=0.03,eps=0.2,pr=0.6) plain 2.58 swap1 0.53 alter 1.99 patte 1.69 diges -0.32 unrel 0.36 patch 0.67 weak 1.71 noisy 1.70 score 0.317 [361 s]
+fsmap(h=0.1,eps=0.1,pr=0.6) plain 2.58 swap1 0.23 alter 1.81 patte 1.53 diges -0.43 unrel 0.37 patch 0.65 weak 1.72 noisy 1.70 score 0.277 [416 s]
+fsmap(h=0.1,eps=0.2,pr=0.6) plain 2.58 swap1 0.10 alter 1.93 patte 1.53 diges -0.24 unrel 0.38 patch 0.70 weak 1.71 noisy 1.70 score 0.286 [469 s]
+fsbma(h=0.003,eps=0.1,pr=0.6) plain 2.58 swap1 0.65 alter 1.88 patte 1.69 diges -0.38 unrel 0.31 patch 0.68 weak 1.74 noisy 1.70 score 0.374 [521 s]
+fsbma(h=0.003,eps=0.2,pr=0.6) plain 2.58 swap1 0.64 alter 1.86 patte 1.64 diges -0.31 unrel 0.36 patch 0.71 weak 1.74 noisy 1.70 score 0.411 [574 s]
+fsbma(h=0.01,eps=0.1,pr=0.6) plain 2.58 swap1 0.66 alter 1.87 patte 1.68 diges -0.41 unrel 0.29 patch 0.70 weak 1.74 noisy 1.70 score 0.374 [628 s]
+fsbma(h=0.01,eps=0.2,pr=0.6) plain 2.58 swap1 0.60 alter 1.84 patte 1.64 diges -0.30 unrel 0.35 patch 0.72 weak 1.74 noisy 1.70 score 0.402 [681 s]
+fsbma(h=0.03,eps=0.1,pr=0.6) plain 2.58 swap1 0.53 alter 1.88 patte 1.65 diges -0.43 unrel 0.35 patch 0.68 weak 1.73 noisy 1.70 score 0.365 [735 s]
+fsbma(h=0.03,eps=0.2,pr=0.6) plain 2.58 swap1 0.54 alter 1.86 patte 1.60 diges -0.32 unrel 0.32 patch 0.71 weak 1.74 noisy 1.70 score 0.381 [792 s]
+fsbma(h=0.1,eps=0.1,pr=0.6) plain 2.58 swap1 0.33 alter 1.72 patte 1.60 diges -0.39 unrel 0.37 patch 0.67 weak 1.73 noisy 1.70 score 0.344 [845 s]
+fsbma(h=0.1,eps=0.2,pr=0.6) plain 2.58 swap1 0.24 alter 1.88 patte 1.55 diges -0.38 unrel 0.37 patch 0.70 weak 1.73 noisy 1.70 score 0.353 [899 s]
+one setting: ('fsbma', '{"h": 0.003, "eps": 0.2, "pr": 0.6}')
+per world: {'plain': ('fsmap', '{"h": 0.003, "eps": 0.2, "pr": 0.6}'), 'swap10': ('fsbma', '{"h": 0.01, "eps": 0.1, "pr": 0.6}'), 'alternate': ('fsmap', '{"h": 0.003, "eps": 0.1, "pr": 0.6}'), 'pattern': ('fsmap', '{"h": 0.01, "eps": 0.1, "pr": 0.6}'), 'digest': ('fsmap', '{"h": 0.1, "eps": 0.2, "pr": 0.6}'), 'unreliable': ('fsmap', '{"h": 0.03, "eps": 0.1, "pr": 0.6}'), 'patchy': ('fsbma', '{"h": 0.01, "eps": 0.2, "pr": 0.6}'), 'weak': ('fsbma', '{"h": 0.003, "eps": 0.1, "pr": 0.6}'), 'noisy': ('fsmap', '{"h": 0.003, "eps": 0.2, "pr": 0.6}')}
+
+== judged, 62000-62199 x 2
+plain: bank 2.659; fixed share one setting 2.658, against bank -0.001 [-0.006,+0.002], against 1b's one Bayes setting +0.005 [-0.003,+0.016]; this world's best 2.655, against bank -0.005 [-0.015,+0.001] [993 s]
+swap10: bank 0.504; fixed share one setting 0.647, against bank +0.142 [+0.064,+0.223] SURE, against 1b's one Bayes setting +0.011 [-0.025,+0.044]; this world's best 0.662, against bank +0.158 [+0.068,+0.244] SURE [1080 s]
+alternate: bank 1.558; fixed share one setting 1.927, against bank +0.369 [+0.227,+0.511] SURE, against 1b's one Bayes setting -0.091 [-0.176,-0.012] SURE; this world's best 1.924, against bank +0.366 [+0.237,+0.489] SURE [1165 s]
+pattern: bank 1.457; fixed share one setting 1.724, against bank +0.267 [+0.160,+0.380] SURE, against 1b's one Bayes setting -0.021 [-0.072,+0.027]; this world's best 1.627, against bank +0.170 [+0.085,+0.252] SURE [1252 s]
+digest: bank -0.333; fixed share one setting -0.237, against bank +0.097 [+0.024,+0.170] SURE, against 1b's one Bayes setting +0.004 [-0.048,+0.052]; this world's best -0.283, against bank +0.050 [+0.003,+0.095] SURE [1338 s]
+unreliable: bank 0.524; fixed share one setting 0.514, against bank -0.010 [-0.071,+0.051], against 1b's one Bayes setting +0.046 [-0.004,+0.097]; this world's best 0.501, against bank -0.024 [-0.075,+0.028] [1425 s]
+patchy: bank 0.778; fixed share one setting 0.770, against bank -0.008 [-0.055,+0.044], against 1b's one Bayes setting +0.002 [-0.024,+0.027]; this world's best 0.781, against bank +0.003 [-0.043,+0.053] [1509 s]
+weak: bank 1.766; fixed share one setting 1.765, against bank -0.000 [-0.008,+0.006], against 1b's one Bayes setting +0.008 [-0.003,+0.021]; this world's best 1.766, against bank +0.000 [-0.007,+0.008] [22239 s]
+noisy: bank 1.752; fixed share one setting 1.749, against bank -0.003 [-0.017,+0.011], against 1b's one Bayes setting +0.008 [-0.005,+0.022]; this world's best 1.751, against bank -0.001 [-0.011,+0.009] [22294 s]

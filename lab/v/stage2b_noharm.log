@@ -1,0 +1,7 @@
+== doing no harm, 200 pairs, seeds 65600-65799 x 2: bank - base, efficiency, 95%; passes if the lower bound > -.1
+  coin       base -2.178, bank -1.981; bank - base +0.197 [+0.091,+0.296] NO HARM; sigma of the difference 0.74, pairs for a half-width of .1 212
+  rarefeast  base +4.406, bank +4.236; bank - base -0.169 [-0.266,-0.072] not shown; sigma of the difference 0.70, pairs for a half-width of .1 187
+  mirror     base +2.657, bank +2.665; bank - base +0.008 [-0.061,+0.080] NO HARM; sigma of the difference 0.51, pairs for a half-width of .1 99
+  allfood    base +4.455, bank +6.773; bank - base +2.318 [+2.205,+2.432] NO HARM; sigma of the difference 0.81, pairs for a half-width of .1 255
+  never      base +2.679, bank +2.547; bank - base -0.132 [-0.207,-0.057] not shown; sigma of the difference 0.54, pairs for a half-width of .1 110
+  costly     base +0.573, bank +0.548; bank - base -0.026 [-0.041,-0.011] NO HARM; sigma of the difference 0.11, pairs for a half-width of .1 4

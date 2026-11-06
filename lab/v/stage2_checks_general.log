@@ -1,0 +1,10 @@
+strict brain, only the three wires, every call checked, in 44 worlds (L0 apart): ok
+same seed same life; unaffected by earlier lives and worlds, in 45 worlds: ok
+the same in another worker process, whatever ran there before: ok
+shortcut: ok (11 s)
+   ticks with several meals, in those lives: 55 (left out of the truthfulness test: the pulse is clipped)
+stage5 mark and truthfulness: ok (33 s)
+runner refuses stage 5: ok (0 s)
+validator: ok (0 s)
+description length: ok (1 s)
+ALL OK

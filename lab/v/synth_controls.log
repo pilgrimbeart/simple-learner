@@ -1,0 +1,308 @@
+
+=== 1. Recovery: cures to 80% of fresh draws (draw-weighted, corrected by the base rate), against the known answer ===
+median C80 / reached 80% in what share of 20 runs; M = 1000 fresh draws. 'truth' from the population itself.
+se (fp): 0.0(0.000)  0.2(0.006)  0.3(0.048)  0.5(0.159)
+equal K=3 truth 3
+   se 0.0: N100:     3/1.00  N300:     3/1.00  N1000:     3/1.00  N3000:     3/1.00
+   se 0.2: N100:     3/1.00  N300:     3/1.00  N1000:     3/1.00  N3000:     3/1.00
+   se 0.3: N100:     3/1.00  N300:     3/1.00  N1000:     3/1.00  N3000:     3/1.00
+   se 0.5: N100:     3/0.85  N300:     3/0.70  N1000:     3/0.80  N3000:     3/0.75
+equal K=10 truth 9
+   se 0.0: N100:     8/1.00  N300:     8/1.00  N1000:     8/1.00  N3000:     9/1.00
+   se 0.2: N100:     9/1.00  N300:     9/1.00  N1000:     9/1.00  N3000:     9/1.00
+   se 0.3: N100:     9/1.00  N300:     9/1.00  N1000:     9/1.00  N3000:     9/1.00
+   se 0.5: N100:    10/0.80  N300:    10/0.75  N1000:    10/0.75  N3000:    10/0.70
+equal K=30 truth 25
+   se 0.0: N100:    24/1.00  N300:    25/1.00  N1000:    25/1.00  N3000:    24/1.00
+   se 0.2: N100:    25/1.00  N300:    25/1.00  N1000:    25/1.00  N3000:    24/1.00
+   se 0.3: N100:    26/1.00  N300:    26/1.00  N1000:    26/1.00  N3000:    26/1.00
+   se 0.5: N100:    29/0.25  N300:    30/0.70  N1000:    30/0.75  N3000:    30/0.80
+equal K=100 truth 80
+   se 0.0: N100:   nan/0.00  N300:    80/1.00  N1000:    81/1.00  N3000:    81/1.00
+   se 0.2: N100:   nan/0.00  N300:    81/1.00  N1000:    82/1.00  N3000:    80/1.00
+   se 0.3: N100:   nan/0.00  N300:    84/1.00  N1000:    84/1.00  N3000:    84/1.00
+   se 0.5: N100:   nan/0.00  N300:    97/0.10  N1000:    98/1.00  N3000:    99/1.00
+equal K=300 truth 241
+   se 0.0: N100:   nan/0.00  N300:   nan/0.00  N1000:   240/1.00  N3000:   240/1.00
+   se 0.2: N100:   nan/0.00  N300:   nan/0.00  N1000:   242/1.00  N3000:   243/1.00
+   se 0.3: N100:   nan/0.00  N300:   nan/0.00  N1000:   251/1.00  N3000:   252/1.00
+   se 0.5: N100:   nan/0.00  N300:   nan/0.00  N1000:   288/0.40  N3000:   292/1.00
+zipf1 K=3 truth 2
+   se 0.0: N100:     2/1.00  N300:     2/1.00  N1000:     2/1.00  N3000:     2/1.00
+   se 0.2: N100:     2/1.00  N300:     2/1.00  N1000:     2/1.00  N3000:     2/1.00
+   se 0.3: N100:     3/1.00  N300:     3/1.00  N1000:     3/1.00  N3000:     3/1.00
+   se 0.5: N100:     3/0.85  N300:     3/0.70  N1000:     3/0.80  N3000:     3/0.75
+zipf1 K=10 truth 6
+   se 0.0: N100:     6/1.00  N300:     6/1.00  N1000:     6/1.00  N3000:     6/1.00
+   se 0.2: N100:     6/1.00  N300:     6/1.00  N1000:     6/1.00  N3000:     6/1.00
+   se 0.3: N100:     7/1.00  N300:     7/1.00  N1000:     7/1.00  N3000:     7/1.00
+   se 0.5: N100:    10/0.75  N300:    10/0.75  N1000:    10/0.75  N3000:    10/0.75
+zipf1 K=30 truth 14
+   se 0.0: N100:    16/1.00  N300:    15/1.00  N1000:    14/1.00  N3000:    14/1.00
+   se 0.2: N100:    17/1.00  N300:    15/1.00  N1000:    14/1.00  N3000:    14/1.00
+   se 0.3: N100:    20/1.00  N300:    19/1.00  N1000:    17/1.00  N3000:    16/1.00
+   se 0.5: N100:    26/0.05  N300:    28/0.75  N1000:    28/0.90  N3000:    29/1.00
+zipf1 K=100 truth 36
+   se 0.0: N100:    41/0.05  N300:    46/1.00  N1000:    38/1.00  N3000:    36/1.00
+   se 0.2: N100:    41/0.05  N300:    46/1.00  N1000:    40/1.00  N3000:    37/1.00
+   se 0.3: N100:   nan/0.00  N300:    56/1.00  N1000:    53/1.00  N3000:    48/1.00
+   se 0.5: N100:   nan/0.00  N300:   nan/0.00  N1000:    90/1.00  N3000:    90/1.00
+zipf1 K=300 truth 86
+   se 0.0: N100:   nan/0.00  N300:   111/0.05  N1000:   107/1.00  N3000:    92/1.00
+   se 0.2: N100:   nan/0.00  N300:   111/0.05  N1000:   118/1.00  N3000:   102/1.00
+   se 0.3: N100:   nan/0.00  N300:   nan/0.00  N1000:   151/1.00  N3000:   142/1.00
+   se 0.5: N100:   nan/0.00  N300:   nan/0.00  N1000:   nan/0.00  N3000:   258/1.00
+
+=== 1b. The rest, N = 300, M = 1000, 20 runs ===
+('variants share 1.0', 0.0): C 5, end raw 1.000, base 0.000, end corrected 1.000, C80 5/1.00, designer's own C80 4
+('variants share 0.5', 0.0): C 56, end raw 0.983, base 0.000, end corrected 0.983, C80 38/1.00, designer's own C80 26
+('variants share 0.0', 0.0): C 96, end raw 0.955, base 0.000, end corrected 0.955, C80 80/1.00, designer's own C80 58
+('own', 0.0): C 300, end raw 0.000, base 0.000, end corrected 0.000, C80 nan/0.00, designer's own C80 240
+('variants share 1.0', 0.2): C 5, end raw 0.993, base 0.007, end corrected 0.993, C80 5/1.00, designer's own C80 4
+('variants share 0.5', 0.2): C 55, end raw 0.970, base 0.007, end corrected 0.970, C80 38/1.00, designer's own C80 27
+('variants share 0.0', 0.2): C 94, end raw 0.942, base 0.006, end corrected 0.941, C80 80/1.00, designer's own C80 60
+('own', 0.2): C 299, end raw 0.007, base 0.005, end corrected 0.000, C80 nan/0.00, designer's own C80 240
+('variants share 1.0', 0.3): C 5, end raw 0.954, base 0.050, end corrected 0.951, C80 5/1.00, designer's own C80 5
+('variants share 0.5', 0.3): C 54, end raw 0.925, base 0.045, end corrected 0.922, C80 42/1.00, designer's own C80 32
+('variants share 0.0', 0.3): C 95, end raw 0.911, base 0.049, end corrected 0.907, C80 84/1.00, designer's own C80 71
+('own', 0.3): C 300, end raw 0.046, base 0.050, end corrected -0.002, C80 nan/0.00, designer's own C80 247
+('variants share 1.0', 0.5): C 5, end raw 0.839, base 0.160, end corrected 0.808, C80 5/0.80, designer's own C80 5
+('variants share 0.5', 0.5): C 54, end raw 0.825, base 0.155, end corrected 0.793, C80 55/0.45, designer's own C80 45
+('own', 0.5): C 300, end raw 0.158, base 0.158, end corrected 0.003, C80 nan/0.00, designer's own C80 272
+('variants share 0.0', 0.5): C 94, end raw 0.805, base 0.165, end corrected 0.765, C80 nan/0.00, designer's own C80 84
+truth: own: end corrected 0, C80 undefined. variants (5 families x 20): share 1: 4 cures to 80%; share 0.5: about 35 (5 + 30); share 0: 80.
+
+=== 1c. Motifs: same coverage, cost differs. K = 1000 own cures from 5 motifs (1000 bits once, 30 a copy), N = 300 ===
+motif-built: C 256, D 12695 bits, known D 12695, F_novel 0.002, R 0.050, verdicts NO+M:100
+all different: C 256, D 256500 bits, known D 256500, F_novel 0.002, R 1.018, verdicts NO:100
+[section 1 done at 8 s]
+
+=== 2a. What the control looks like: every world its own cure ===
+N 100 se 0.0: cures 100; fresh coverage at the end raw 0.000 (base 0.000), corrected +0.000; reached 80% in 0%; designer's own view reached 80% at 80 cures
+N 100 se 0.2: cures 100; fresh coverage at the end raw 0.006 (base 0.005), corrected +0.001; reached 80% in 0%; designer's own view reached 80% at 80 cures
+N 100 se 0.3: cures 99; fresh coverage at the end raw 0.051 (base 0.050), corrected +0.003; reached 80% in 0%; designer's own view reached 80% at 83 cures
+N 100 se 0.5: cures 100; fresh coverage at the end raw 0.151 (base 0.163), corrected -0.007; reached 80% in 0%; designer's own view reached 80% at 88 cures
+N 300 se 0.0: cures 300; fresh coverage at the end raw 0.000 (base 0.000), corrected +0.000; reached 80% in 0%; designer's own view reached 80% at 240 cures
+N 300 se 0.2: cures 299; fresh coverage at the end raw 0.007 (base 0.006), corrected +0.001; reached 80% in 0%; designer's own view reached 80% at 241 cures
+N 300 se 0.3: cures 300; fresh coverage at the end raw 0.047 (base 0.049), corrected -0.001; reached 80% in 0%; designer's own view reached 80% at 248 cures
+N 300 se 0.5: cures 300; fresh coverage at the end raw 0.156 (base 0.153), corrected +0.002; reached 80% in 0%; designer's own view reached 80% at 273 cures
+N 1000 se 0.0: cures 1000; fresh coverage at the end raw 0.000 (base 0.000), corrected +0.000; reached 80% in 0%; designer's own view reached 80% at 800 cures
+N 1000 se 0.2: cures 999; fresh coverage at the end raw 0.006 (base 0.007), corrected +0.001; reached 80% in 0%; designer's own view reached 80% at 802 cures
+N 1000 se 0.3: cures 1000; fresh coverage at the end raw 0.050 (base 0.049), corrected +0.001; reached 80% in 0%; designer's own view reached 80% at 824 cures
+N 1000 se 0.5: cures 1000; fresh coverage at the end raw 0.155 (base 0.156), corrected -0.002; reached 80% in 0%; designer's own view reached 80% at 919 cures
+
+=== 2b. Same data, opposite truths: population 1 (duplicates) and population 6 (all distinct, shared cure) ===
+coverage curves on one seed: max |diff| 0.000, cures 30 and 30: the cure matrices are the same
+duplicates: F_novel nan, novel share 0.00, R 1.00: EXH
+distinct:   F_novel 1.00, novel share 1.00, R 0.100: YES
+
+=== 2c. Every population under each rule. N = 300, M = 300, se 0.2, 40 runs ===
+population           truth   written |     C novel%  F_novel      R proposed verdicts (% of runs)
+K=3                  no         100% |     3   0.00      nan   1.01 EXH:100
+K=10                 no         100% |    10   0.00      nan   1.01 EXH:100
+K=30                 no         100% |    30   0.00      nan   1.01 EXH:100
+K=100                no         100% |    95   0.05    0.000   1.01 EXH:100
+K=300                no           0% |   190   0.36    0.000   1.01 EXH:100
+K=3000               no           0% |   285   0.90    0.000   1.01 NO:100
+zipf1 K=30           no         100% |    30   0.00    0.000   1.01 EXH:100
+zipf1 K=300          no          15% |   112   0.21    0.000   1.01 EXH:100
+zipf1.5 K=3000       no         100% |    58   0.13    0.000   1.01 EXH:100
+own                  no           0% |   299   1.00    0.000   1.01 NO:100
+variants share 1     no         100% |     5   0.00      nan   1.01 EXH:100
+variants share .5    no         100% |    55   0.00      nan  11.13 EXH:100
+variants share 0     no         100% |    95   0.00      nan  19.23 EXH:100
+motif K=1000         motif        0% |   257   0.75   -0.001   0.05 NO+M:100
+motif K=100          motif      100% |    95   0.05    0.000   0.08 EXH+M:100
+alldiff K=1000       no           0% |   260   0.75    0.000   1.01 NO:100
+general m=3          yes        100% |     3   1.00    0.993   0.01 YES:100
+general m=30         yes        100% |    30   1.00    0.997   0.10 YES:100
+general m=100        yes        100% |    90   1.00    0.933   0.31 YES:100
+general m=300        mid          0% |   189   1.00    0.625   0.64 MID:100
+mix q=.9             yes        100% |    59   1.00    0.894   0.20 YES:100
+mix q=.7             yes          0% |   120   1.00    0.690   0.41 YES:100
+mix q=.5             mid          0% |   179   1.00    0.495   0.61 MID:100
+mix q=.3             mid          0% |   234   1.00    0.291   0.79 MID:100
+mix q=.1             no           0% |   288   1.00    0.067   0.98 NO:100
+written = share of runs the written rule, with the one computable control (0.8 N full-cost cures), says yes.
+
+=== 2d. The written rule's verdict depends on the pool: own-cure populations, se 0.2, 20 runs ===
+K=100 zipf 0.0: N100: yes 0%, proposed EXH:100  N300: yes 100%, proposed EXH:100  N1000: yes 100%, proposed EXH:100  N3000: yes 100%, proposed EXH:100
+K=300 zipf 0.0: N100: yes 0%, proposed NO:100  N300: yes 0%, proposed EXH:100  N1000: yes 100%, proposed EXH:100  N3000: yes 100%, proposed EXH:100
+K=1000 zipf 0.0: N100: yes 0%, proposed NO:100  N300: yes 0%, proposed NO:100  N1000: yes 0%, proposed EXH:100  N3000: yes 100%, proposed EXH:100
+K=300 zipf 1.0: N100: yes 0%, proposed EXH:100  N300: yes 5%, proposed EXH:100  N1000: yes 100%, proposed EXH:100  N3000: yes 100%, proposed EXH:100
+K=1000 zipf 1.0: N100: yes 0%, proposed EXH:60 NO:40  N300: yes 0%, proposed EXH:100  N1000: yes 15%, proposed EXH:100  N3000: yes 100%, proposed EXH:100
+
+=== 2e. Is 1 - F_novel the marginal cures per new challenge? Mixes, N to 3N, se 0.2 ===
+(so 'less than half the control' and 'F_novel above a half' are one condition, not two)
+q 0.0: new cures per new world 0.995; 1 - F_novel 1.000; R at N = 300 1.014
+q 0.3: new cures per new world 0.748; 1 - F_novel 0.719; R at N = 300 0.809
+q 0.5: new cures per new world 0.520; 1 - F_novel 0.505; R at N = 300 0.601
+q 0.7: new cures per new world 0.320; 1 - F_novel 0.304; R at N = 300 0.406
+q 0.9: new cures per new world 0.107; 1 - F_novel 0.103; R at N = 300 0.206
+q 1.0: new cures per new world 0.005; 1 - F_novel 0.006; R at N = 300 0.101
+
+=== 2f. False splits: how good must 'is this challenge new?' be? False yes % among populations with no sharing ===
+N 225, M 75 and 300, se 0.2, 100 runs. e = chance a duplicate's signature looks new
+K=10 M75: e0.0: 0%  e0.05: 0%  e0.1: 0%  e0.2: 0%  e0.3: 0%  e0.5: 43%  e0.7: 100%  e0.9: 100%
+K=10 M300: e0.0: 0%  e0.05: 0%  e0.1: 0%  e0.2: 0%  e0.3: 0%  e0.5: 56%  e0.7: 100%  e0.9: 100%
+K=30 M75: e0.0: 0%  e0.05: 0%  e0.1: 0%  e0.2: 0%  e0.3: 0%  e0.5: 54%  e0.7: 100%  e0.9: 100%
+K=30 M300: e0.0: 0%  e0.05: 0%  e0.1: 0%  e0.2: 0%  e0.3: 0%  e0.5: 68%  e0.7: 100%  e0.9: 100%
+K=100 M75: e0.0: 0%  e0.05: 0%  e0.1: 0%  e0.2: 0%  e0.3: 0%  e0.5: 32%  e0.7: 99%  e0.9: 100%
+K=100 M300: e0.0: 0%  e0.05: 0%  e0.1: 0%  e0.2: 0%  e0.3: 0%  e0.5: 25%  e0.7: 100%  e0.9: 100%
+K=300 M75: e0.0: 0%  e0.05: 0%  e0.1: 0%  e0.2: 0%  e0.3: 0%  e0.5: 0%  e0.7: 0%  e0.9: 0%
+K=300 M300: e0.0: 0%  e0.05: 0%  e0.1: 0%  e0.2: 0%  e0.3: 0%  e0.5: 0%  e0.7: 0%  e0.9: 0%
+zipf1 K=300 M75: e0.0: 0%  e0.05: 0%  e0.1: 0%  e0.2: 0%  e0.3: 0%  e0.5: 2%  e0.7: 51%  e0.9: 95%
+zipf1 K=300 M300: e0.0: 0%  e0.05: 0%  e0.1: 0%  e0.2: 0%  e0.3: 0%  e0.5: 2%  e0.7: 66%  e0.9: 99%
+variants sharing a cure, fine (signature sees each gain as new if 'fine'): EXH+M:100, novel share 0.10
+variants sharing a cure, fine500 (signature sees each gain as new if 'fine'): YES:100, novel share 0.91
+variants sharing a cure, skeleton500 (signature sees each gain as new if 'fine'): EXH:100, novel share 0.00
+[section 2 done at 26 s]
+
+=== 3. Apparent saving from arithmetic alone: populations with NO sharing, N = 300, se 0 unless stated, 20 runs ===
+Every saving below is fake: each type needs its own cure.
+
+a. Pool arithmetic, the written rule's control: saving = 1 - C(80% fresh) / (0.8 N)
+zipf 0.0: K3: 99%  K10: 96%  K30: 90%  K100: 67%  K300: never
+zipf 1.0: K3: 99%  K10: 98%  K30: 94%  K100: 81%  K300: never
+zipf 1.5: K3: 99%  K10: 98%  K30: 98%  K100: 96%  K300: 95%
+
+b. Frequency alone: 1 - C80(zipf) / C80(equal), same K, from the population (no sampling)
+zipf 1.0: K10: 33%  K30: 44%  K100: 55%  K300: 64%  K1000: 72%
+zipf 1.5: K10: 56%  K30: 76%  K100: 89%  K300: 95%  K1000: 98%
+
+c. Concavity of the designer's own (training) curve vs the fresh curve: 1 - C80 / (0.8 C_total). The training
+   curve is what greedy sorts; a fresh curve of an equal-frequency population should be straight (0%).
+K=30 zipf 0.0: cures 30; training 12%; fresh -2%
+K=100 zipf 0.0: cures 95; training 22%; fresh -7%
+K=300 zipf 0.0: cures 190; training 14%; fresh never reaches 80%
+K=1000 zipf 0.0: cures 256; training 4%; fresh never reaches 80%
+K=300 zipf 1.0: cures 112; training 42%; fresh never reaches 80%
+
+d. Noise on the designer's own view, the pure control, truth 240 cures: a cure seems to cover its world plus fp of the rest
+se 0.0 (fp 0.000): one look: C80 240 = 0% saving; re-run each addition: C80 240 = 0% saving; cures 300 / 300; fresh corrected +0.000 / +0.000
+se 0.2 (fp 0.006): one look: C80 70 = 71% saving; re-run each addition: C80 241 = -0% saving; cures 125 / 299; fresh corrected +0.000 / +0.001
+se 0.3 (fp 0.048): one look: C80 16 = 93% saving; re-run each addition: C80 246 = -3% saving; cures 32 / 300; fresh corrected +0.003 / -0.001
+se 0.5 (fp 0.159): one look: C80 6 = 98% saving; re-run each addition: C80 272 = -14% saving; cures 13 / 300; fresh corrected -0.008 / +0.004
+se 1.0 (fp 0.309): one look: C80 4 = 98% saving; re-run each addition: C80 nan = nan% saving; cures 7 / 300; fresh corrected +0.003 / -0.002
+
+e. Scoring each cure separately (a world counts if any cure seemed to work), the pure control, 100 cures, measured
+se 0.1: coverage 0% from noise alone (one measurement per cumulative circuit: 0.0%)
+se 0.2: coverage 46% from noise alone (one measurement per cumulative circuit: 0.6%)
+se 0.3: coverage 99% from noise alone (one measurement per cumulative circuit: 4.8%)
+se 0.5: coverage 100% from noise alone (one measurement per cumulative circuit: 15.9%)
+
+f. Motif arithmetic: own-cure population, every cure a copy of one motif with a tuned parameter: 1 - (M + n p) / (n (M + p))
+n 3: M 1000, p 30: 65%
+n 10: M 1000, p 30: 87%
+n 30: M 1000, p 30: 94%
+n 100: M 1000, p 30: 96%
+
+g. The proposed statistic on the same populations: F_novel (should be 0), N 225, M 300, se 0.2, 100 runs
+K=300: F_novel median +0.000, 97.5th percentile across runs +0.022, verdicts EXH:81 NO:19
+K=1000: F_novel median +0.000, 97.5th percentile across runs +0.013, verdicts NO:100
+zipf1 K=1000: F_novel median +0.000, 97.5th percentile across runs +0.019, verdicts EXH:100
+zipf1.5 K=3000: F_novel median +0.000, 97.5th percentile across runs +0.034, verdicts EXH:100
+own: F_novel median +0.000, 97.5th percentile across runs +0.010, verdicts NO:100
+[section 3 done at 28 s]
+
+=== 4. Description length on invented circuits, some built to game it ===
+circuit                                 parts   truth      DL  DL/tr     raw raw/tr  count bits/count
+one motif, 30 plain copies                780     735    5160   7.02   18080  24.61    1.3        565
+three motifs, 30 tuned copies             780    2296    9464   4.12   27200  11.85    3.3        696
+30 all different                          780   19791   23416   1.18   59360   3.00   30.3        653
+GAME huge rule (30 cures' table)         3900   19791   31288   1.58   77312   3.91    1.0      19791
+GAME near copies, jitter 40%              780    7159   17760   2.48  133784  18.69    1.3       5507
+GAME near copies, jitter 1% (<grid)       780     735    5160   7.02  120080 163.45    1.3        565
+GAME one kind swapped per copy            780    2514   10824   4.30   28432  11.31    3.3        762
+GAME connected padding in each copy      3810    5212   29824   5.72   71176  13.66    3.3       1579
+GAME dead parts, unconnected              981    2296    9464   4.12   43432  18.92    3.3        696
+spread (max / min, over the suite): DL 5.94, raw 54.49, count 35.0
+
+Renaming and reordering, 20 trials:
+three motifs, 30 tuned copies: DL 9448-9464 (0.17%), raw 50440-51152, unrenamed raw 27200; count unchanged
+30 all different: DL 23416-23416 (0.00%), raw 63664-64360, unrenamed raw 59360; count unchanged
+
+What a copy costs (DL of n copies of one motif, one tuned parameter each; marginal bits per copy):
+n 1: 872 bits
+n 3: 1896 bits, 512.0 per added copy
+n 10: 2984 bits, 155.4 per added copy
+n 30: 5600 bits, 130.8 per added copy
+n 100: 11344 bits, 82.1 per added copy
+n 300: 24480 bits, 65.7 per added copy
+and n all-different cures:
+n 1: 776 bits
+n 3: 2424 bits, 824.0 per added cure
+n 10: 8008 bits, 797.7 per added cure
+n 30: 23568 bits, 778.0 per added cure
+n 100: 74896 bits, 733.3 per added cure
+
+The compressor's own arithmetic: all-different cures against one cure's size. Should be 1 if a compressor adds nothing.
+no corpus: one cure alone 1844 bits; 30 all different 26992 bits, ratio to 30 x alone 0.488
+given the frozen corpus: one cure alone 800 bits; 30 all different 23688 bits, ratio to 30 x alone 0.987
+
+Padding against a cure-relative control: S = DL(circuit) / (copies x DL(one copy alone))
+honest 0.362; padded 0.223; against the frozen reference of 800 bits: honest 0.394, padded 1.243; huge rule against its own size 1.0 / 30 = 0.033, against the reference 1.304
+[section 4 done at 43 s]
+
+=== 5. Power: N = 225 pool, M fresh worlds, proposed rule, worlds with graded effects (working Beta(8,2), not Beta(1,9)), 200 runs ===
+% of runs saying YES / NO. se = per-world standard error of the gap closed = sigma_pair / sqrt(pairs). Truth labelled.
+own (no)
+   se 0.1: M25:   0/  0  M50:   0/100  M75:   0/100  M150:   0/100  M300:   0/100   median F_novel 0.00
+   se 0.2: M25:   0/  0  M50:   0/ 98  M75:   0/100  M150:   0/100  M300:   0/100   median F_novel 0.00
+   se 0.3: M25:   0/  0  M50:   0/ 86  M75:   0/ 98  M150:   0/100  M300:   0/100   median F_novel 0.01
+   se 0.4: M25:   0/  0  M50:   0/ 72  M75:   0/ 86  M150:   0/100  M300:   0/100   median F_novel 0.00
+   se 0.5: M25:   0/  0  M50:   0/ 57  M75:   0/ 75  M150:   0/ 93  M300:   0/100   median F_novel 0.02
+zipf1 K=3000 (no)
+   se 0.1: M25:   0/  0  M50:   0/  6  M75:   0/ 40  M150:   0/ 42  M300:   0/ 35   median F_novel 0.00
+   se 0.2: M25:   0/  0  M50:   0/  6  M75:   0/ 41  M150:   0/ 40  M300:   0/ 36   median F_novel 0.00
+   se 0.3: M25:   0/  0  M50:   0/  4  M75:   0/ 31  M150:   0/ 33  M300:   0/ 41   median F_novel 0.00
+   se 0.4: M25:   0/  0  M50:   0/  3  M75:   0/ 28  M150:   0/ 36  M300:   0/ 32   median F_novel -0.01
+   se 0.5: M25:   0/  0  M50:   0/  2  M75:   0/ 16  M150:   0/ 28  M300:   0/ 32   median F_novel -0.01
+mix q=.3 (between)
+   se 0.1: M25:   0/  0  M50:   0/  0  M75:   0/  0  M150:   0/  0  M300:   0/  0   median F_novel 0.26
+   se 0.2: M25:   0/  0  M50:   0/  1  M75:   0/  0  M150:   0/  0  M300:   0/  0   median F_novel 0.24
+   se 0.3: M25:   0/  0  M50:   0/  2  M75:   0/  3  M150:   0/  0  M300:   0/  2   median F_novel 0.22
+   se 0.4: M25:   0/  0  M50:   0/  2  M75:   0/  4  M150:   0/  6  M300:   0/  6   median F_novel 0.19
+   se 0.5: M25:   0/  0  M50:   0/  8  M75:   0/  7  M150:   0/  8  M300:   0/ 10   median F_novel 0.17
+mix q=.5 (not yes)
+   se 0.1: M25:   0/  0  M50:   0/  0  M75:   0/  0  M150:   0/  0  M300:   0/  0   median F_novel 0.47
+   se 0.2: M25:   0/  0  M50:   0/  0  M75:   0/  0  M150:   0/  0  M300:   0/  0   median F_novel 0.44
+   se 0.3: M25:   0/  0  M50:   0/  0  M75:   0/  0  M150:   0/  0  M300:   0/  0   median F_novel 0.40
+   se 0.4: M25:   0/  0  M50:   0/  0  M75:   0/  0  M150:   0/  0  M300:   0/  0   median F_novel 0.35
+   se 0.5: M25:   0/  0  M50:   0/  0  M75:   0/  0  M150:   0/  0  M300:   0/  0   median F_novel 0.32
+mix q=.7 (yes)
+   se 0.1: M25:   0/  0  M50:  63/  0  M75:  76/  0  M150:  89/  0  M300:  84/  0   median F_novel 0.67
+   se 0.2: M25:   0/  0  M50:  10/  0  M75:  10/  0  M150:  16/  0  M300:  22/  0   median F_novel 0.62
+   se 0.3: M25:   0/  0  M50:   0/  0  M75:   0/  0  M150:   0/  0  M300:   0/  0   median F_novel 0.56
+   se 0.4: M25:   0/  0  M50:   0/  0  M75:   0/  0  M150:   0/  0  M300:   0/  0   median F_novel 0.50
+   se 0.5: M25:   0/  0  M50:   0/  0  M75:   0/  0  M150:   0/  0  M300:   0/  0   median F_novel 0.45
+mix q=.85 (yes)
+   se 0.1: M25:   0/  0  M50: 100/  0  M75: 100/  0  M150: 100/  0  M300: 100/  0   median F_novel 0.82
+   se 0.2: M25:   0/  0  M50:  97/  0  M75: 100/  0  M150: 100/  0  M300: 100/  0   median F_novel 0.76
+   se 0.3: M25:   0/  0  M50:  65/  0  M75:  78/  0  M150:  96/  0  M300:  92/  0   median F_novel 0.68
+   se 0.4: M25:   0/  0  M50:   6/  0  M75:   8/  0  M150:  14/  0  M300:  21/  0   median F_novel 0.61
+   se 0.5: M25:   0/  0  M50:   0/  0  M75:   0/  0  M150:   0/  0  M300:   0/  0   median F_novel 0.55
+general m=30 (yes)
+   se 0.1: M25:   0/  0  M50: 100/  0  M75: 100/  0  M150: 100/  0  M300: 100/  0   median F_novel 0.97
+   se 0.2: M25:   0/  0  M50: 100/  0  M75: 100/  0  M150: 100/  0  M300: 100/  0   median F_novel 0.89
+   se 0.3: M25:   0/  0  M50:  99/  0  M75: 100/  0  M150: 100/  0  M300: 100/  0   median F_novel 0.81
+   se 0.4: M25:   0/  0  M50:  72/  0  M75:  86/  0  M150: 100/  0  M300: 100/  0   median F_novel 0.71
+   se 0.5: M25:   0/  0  M50:  34/  0  M75:  53/  0  M150:  78/  0  M300:  98/  0   median F_novel 0.65
+
+=== 5b. Does the bootstrap over worlds cover the circuit's true F_novel? mix q=.7, crisp effects, se 0.1, N 225, 200 runs ===
+M 25: 95% interval held the truth in 95% of runs
+M 75: 95% interval held the truth in 93% of runs
+M 300: 95% interval held the truth in 94% of runs
+
+=== 5c. Cost: worlds x pairs x 2 s / 8 cores, per circuit judged ===
+Pairs needed for a se: (sigma_pair / se)^2. sigma_pair (gap units, per pair of lives) is unknown until stage 2.
+ sigma    se  pairs | 75 worlds | 300 worlds | a curve of 30 circuits on 75 | the same on 150
+   0.5   0.2      7 |     0.04h |      0.15h |                         1.1h |    2.2h
+   0.5   0.3      3 |     0.02h |      0.06h |                         0.5h |    0.9h
+   1.0   0.2     25 |     0.13h |      0.52h |                         3.9h |    7.8h
+   1.0   0.3     12 |     0.06h |      0.25h |                         1.9h |    3.8h
+   2.0   0.2    100 |     0.52h |      2.08h |                        15.6h |   31.2h
+   2.0   0.3     45 |     0.23h |      0.94h |                         7.0h |   14.1h
+   4.0   0.2    400 |     2.08h |      8.33h |                        62.5h |  125.0h
+   4.0   0.3    178 |     0.93h |      3.71h |                        27.8h |   55.6h
+[section 5 done at 91 s]
