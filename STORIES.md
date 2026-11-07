@@ -180,6 +180,8 @@ and the bank starts heavier. No gain at 100 s: swap 20 s, unreliable 10%, 30% an
 **Not done.** Block model only, with no re-validation in `mixed_feedback.py`. Nobody has watched it on screen (`python lab/watch_universal.py alternate`; a frame recorded without a display: `lab/v/universal_alternate_30s.png`). Its parts are uncounted, and the bank is a fair size:
 22 table entries, 7 tables, plus evidence and position counters. The balance's gate is still an absolute meal count, the setpoint `AGENTS.md` warns about. H2 was absorbed rather than built: the bank holds its sequence contexts, the pause its timing, but "follow neither" was never tried.
 
+**Since, on worlds drawn at random** (`PROGRAMME.md`, stage 3; `discrete/NOTEBOOK.md`, D35): the bank surely covers between a quarter and a half of those with something to learn, as well as an ideal judge where its models fit, and fails where none does (observation 6, at scale: mostly ideas about timing). The eye filter of observation 7 does harm when the eyes are more sensitive than usual: it is the rate for the senses, but its constants were set at the usual rate. Next: rivals made from simple parts rather than written (stage R).
+
 ## 1. Which colour is food (`discrete/NOTEBOOK.md`, D25)
 
 Every arm here has the baseline's 1 s limit on a run (below: A flaw found by watching).

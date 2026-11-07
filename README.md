@@ -4,11 +4,40 @@
 a sheet of identical cells that grows its own nervous system, lives on there as a small self-contained demo; this
 repository carries on the circuit brains.)
 
-Can a brain grow itself, emergently, and be useful? Grown, here, means built by local rules alone: nothing places
-its parts, no unit sees the whole, and no god decides. Useful means capable of learning one bit of information during
-its lifetime: here, which of two colours is food and which is poison.
+## The quest
 
-It is an open-ended exploration, learning by doing. Three lines of work so far:
+How can useful, complex behaviour emerge in a brain from simple parts acting locally? We explore it by simulation, in
+the simplest scenarios we can make: a small creature with two eyes, two thrusters and one sense of taste, in a world
+of red and blue blocks, one colour food and the other poison. Its brain must learn, within one short life, which is
+which: one bit. Every part acts only on what it can sense locally: nothing places its parts, no unit sees the whole,
+and no god decides. And because a theory that can't be built is no use, we keep the brain simple and efficient to
+build too, and check that it can be made in real components.
+
+**How we got here.**
+1. **The sheet brain** (in [nca-learn](https://github.com/pilgrimbeart/nca-learn)): a sheet of identical cells that
+   differentiates and assembles a brain that learns the bit. It worked, and gave us the simplest possible body and
+   world, made to run fast. But each cell needed complex circuitry inside, so the parts weren't simple.
+2. **The circuit brain** (this repository): a small brain built by hand that learns the bit in a short life. Then built
+   in real components (transistors, resistors, capacitors), lived in the circuit simulator SPICE, to check it is
+   grounded in reality. It is. But SPICE is far too slow for experiments, so we now work in a fast model of the
+   circuit's blocks, each block's numbers measured in SPICE.
+3. **Towards a brain that optimises itself.** Now the aim is a general recipe: circuits that (a) notice, by
+   themselves, that they are not doing well for the creature, and (b) put it right, from local parts, ideally by
+   emergence rather than by our design. So we gave the same small brain many different mismatches with its world
+   (unequal thrusters, a noisy eye, food whose colour swaps), cured each by hand, and looked for what the cures have
+   in common. One circuit, the *bank of predictors*, does the job of many: it keeps several rival ideas of what taste
+   means, scores them all on every taste, and follows the best. We then tested it on worlds drawn at random, so as
+   not to mark our own homework.
+
+**Where we are** (`PROGRAMME.md`; a summary in `ABSTRACT.md`). A life offers about 50 bits of evidence, but writing
+down a world's rule takes hundreds, so no brain learns a world from nothing in one life: it can only choose among
+what its structure already makes cheap. The bank copes with between a quarter and a half of the random worlds that
+have something to learn, and uses its evidence almost as well as an ideal judge would. Where it fails, it lacks the
+idea, mostly an idea about *time* (when the colours swap, how soon after a meal another turns bad). But its ideas
+are ones we wrote in. The next step is a bank that makes its own rivals, out of many simple circuits connected in
+various ways, so that the ideas come from simple repeated parts rather than from us.
+
+Three lines of work so far:
 
 - **The circuit brains** are small circuits of excitable neurons built from one mixed-feedback element (Ribar and
   Sepulchre). The recruitment series among them grows while it acts: it starts with too little and recruits more in
@@ -227,6 +256,16 @@ The findings that changed the direction of the work, each told in full in the no
   judge of the same ideas, our circuit is close to right on when to change its mind if rules can change, and we can improve on it, but the largest gaps aren't in
   judging at all. They come from worlds none of its ideas describes. Food that swaps every 10 s is the clearest: a learner told only that swaps happen barely helps,
   while one choosing among hundreds of possible timings, about 14 bits of ideas, closes half the gap. Knowing *when* is what's missing (`discrete/NOTEBOOK.md`, D31, D32).
+- **On worlds we didn't choose, the bank covers what its ideas describe, and no more.** To judge whether the bank is
+  general rather than tuned to the problems we built it for, a program drew worlds at random from our grammar of
+  challenges, fixed before we saw any. Only about a third have anything to learn. Of those, the bank surely copes with
+  about a quarter and surely fails over two fifths; the rest are too close to call. Where an ideal judge holding
+  thousands of ideas succeeds, the bank nearly always does too, and where the bank fails, mostly so does that judge:
+  the failures are missing ideas, chiefly about timing (colours that swap at some period, a meal soon after the last
+  being bad) and place. A ten times longer life rescues a few of the meal-timing worlds and none of the swaps. One
+  part did harm: the eye filter, tuned for the eyes' usual pulse rate, costs a lot when the eyes are more sensitive. So
+  the bank's principle (rival predictors judged on every taste) works, but its repertoire is ours, which is why the
+  next step is rivals the brain makes itself (`discrete/NOTEBOOK.md`, D35).
 
 ## The ground rules, for every brain
 
@@ -416,16 +455,19 @@ The notebook (`discrete/NOTEBOOK.md`) tells how they were found.
 
 ## Next
 
-The open questions, most valuable first, are in [`QUESTIONS.md`](QUESTIONS.md).
+The current programme, its stages and decisions, is in [`PROGRAMME.md`](PROGRAMME.md); the open questions, most
+valuable first, in [`QUESTIONS.md`](QUESTIONS.md).
 
 ## Terms
 
 **Units** (the axioms: `units.py`)
 
 - **Real units**: everything in SI, every number that can be derived derived from a few axioms (`units.py`).
-- **Tick**: the body's step, 10 ms: the eyes look, the thrusters fire and the body moves once a tick (a reaction in 20
-  to 40 ms is an insect's). The circuit is integrated in steps of 0.125 ms, 80 to a tick. The live view shows real
-  time at about 30 ms of a life a frame (it says how fast it runs against real time).
+- **Tick**: the simulation's step. In the live view and the circuit brains, 10 ms for the body, with the circuit
+  integrated in steps of 0.125 ms, 80 to a tick. In the programme's engine (`lab/stage2_lang/`) everything happens at
+  its own moment in seconds and the step is halved until results stop changing: about 1.25 ms is fine enough for this
+  body, whose fastest time constant is 20 ms. The live view shows real time at about 30 ms of a life a frame (it says
+  how fast it runs against real time).
 - **Supply**: the chip's, 1.8 V across (SKY130's core devices), analogue ground halfway. The **rails** a node stays
   within are the supply's, +-0.9 V; an output's current fades within a few hundredths of a volt of them.
 - **Typical voltage**: a third of a rail, 0.3 V: the unit a design's voltages are reckoned in (a gate is open at it, a
@@ -534,6 +576,20 @@ The open questions, most valuable first, are in [`QUESTIONS.md`](QUESTIONS.md).
   following whichever has earned the most evidence over the default (`STORIES.md`, One universal circuit).
 - **Off-policy scoring**: judging a model on what happened while something else was in charge, so it can be judged without being
   tried. **On-policy** is the opposite: a change is judged only by acting on it, as jitter is.
+- **World** (in the programme): a rule changing the creature's world, written in a small language (`lab/stage2_lang/`),
+  for instance "the colours swap every 12 s" or "a meal soon after the last is bad". The language can't touch the
+  brain or break the interface. A **generator** draws worlds at random from it, frozen before any draw.
+- **Arm**: one brain run on the same lives as the others, so they compare fairly. **Base**: the existing circuit;
+  **bank**: base with the bank of predictors; **told**: the bank's own parts told the right colour at every moment, a
+  yardstick, not a brain; **reference**: a frozen ideal learner holding 12,591 ideas, the bar's other half.
+- **Gap**: how much better the told arm does than base (or than standing still, if base is below that). A world has
+  **something to learn** if its gap is at least .1 and surely above 0. **x**: the share of the gap the bank closes;
+  **r**: the same for the reference. A world **passes** if x is above a quarter and above half of r (`PROGRAMME.md`).
+- **Coverage**: the share of worlds with something to learn that the bank passes. With uncertain worlds it is a range:
+  sure passes at the low end, sure passes plus those too close to call at the high end.
+- **Doing no harm**: in a world with nothing to learn, the bank is never surely more than .1 below base.
+- **Pair**: two lives on one seed, red then blue as poison, so a brain that ignores taste scores 0 on average; intervals
+  are taken over pairs.
 - **Sampler**: a program that draws random worlds from a grammar with chosen probabilities, and so decides what "most worlds" means (`GRAMMAR.md`).
 - **F_novel**: on challenges a circuit's design never saw, its pass rate above the base circuit's, as a share of what the base circuit leaves. The design is fixed; the circuit still learns in each life (`PROGRAMME.md`).
 - **Description length**: how many bits it takes to write a thing down in its most compact form, so that repeated motifs cost little (`PROGRAMME.md`).
@@ -620,7 +676,10 @@ python creature.py --record frames  # save a life's frames as PNGs, headless (me
 | `test_compiled.py` | checks the compiled circuit (`mixed_feedback.py`) and eyes and mouth (`world.py`) against plain numpy versions |
 | `schematic.py` | draws `media/designed_circuit.svg` and `.png`, the designed circuit's schematic (by hand: redraw it when it changes) |
 | `AGENTS.md` | the rules, for agents and people: principles, honesty, every brain's constraints, how to work here |
-| `lab/` | one-off experiment scripts and their logs (`lab/v/`), cited by the notebooks; run from the repository's root |
+| `lab/` | one-off experiment scripts and their logs (`lab/v/`), cited by the notebooks; run from the repository's root. `lab/universal_v.py`: the bank of predictors; `lab/stage2_lang/`: the language for worlds and its engine, in seconds |
+| `PROGRAMME.md` | the current programme: its question, stages, gates and decisions |
+| `ABSTRACT.md` | the programme so far, in one page |
+| `GRAMMAR.md` | the grammar of challenges the worlds are drawn from, and how they are judged |
 | `QUESTIONS.md` | the open questions, most valuable first: parked mid-quest, removed when answered |
 | `NOTEBOOK.md` | the lab notebook of the body and the circuit simulator: what was tried, what failed and why |
 | `MIXED_FEEDBACK.md` | the mixed-feedback approach (Sepulchre and colleagues): what is new in it, the literature, and what it suggests here |

@@ -19,7 +19,9 @@ the cheats a grid invites) is in nca-learn's `NOTEBOOK.md`, worth reading before
 - **Rip up and rewrite**: prefer a cleaner, smaller design to incremental edits that keep legacy structure.
 - **Real units, from few axioms** (the user's decision): every quantity in SI, every number that can be derived
   derived from the axioms in `units.py`; a design's own choices stay with the design, in SI. Rates are per 10 s, a
-  life lasts 100 s, or 1000 s in a test that says so (the user, 2026-11-06: some evidence is too scarce for 100 s).
+  life lasts 100 s, or 1000 s in a test that says so (the user, 2026-11-06: some evidence is too scarce for 100 s), or
+  10,000 s in a test of how results scale with life length (the user, 2026-11-07: long lives may be our equivalent of
+  deep learning's scale). A long life is judged on its last third, against the told arm, as 1000 s lives are.
 - **Each fact in one place**; link, don't copy:
 
   | what | where |
@@ -35,6 +37,7 @@ the cheats a grid invites) is in nca-learn's `NOTEBOOK.md`, worth reading before
   | the interventions phase's results, one page per performance issue | `STORIES.md` |
   | background reading | `MIXED_FEEDBACK.md`, `RECRUITMENT.md`, `BOUNDS.md`, `PARTS.md` |
   | the current programme: its question, stages, how we work, decisions; check work against it before starting | `PROGRAMME.md` |
+  | the programme so far in one page, as an abstract (a summary that links, rewritten as results change) | `ABSTRACT.md` |
   | the grammar of challenges and the experiment's detail | `GRAMMAR.md` |
   | open questions, most valuable first | `QUESTIONS.md` |
 

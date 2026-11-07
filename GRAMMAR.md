@@ -2,7 +2,8 @@
 
 The next step after the universal circuit (`STORIES.md`): many more challenges, to see whether the detectors needed grow more slowly
 than the challenges. The danger, as the user put it: after much grinding we may only have built detectors for our own grammar. So this
-draft has two jobs: to generate worlds, and to measure how far the generator's own limits are shaping the answer. Nothing here has been run.
+draft has two jobs: to generate worlds, and to measure how far the generator's own limits are shaping the answer. Stages 2 and 3 have since run it
+(`discrete/NOTEBOOK.md`, D33-D35): the language and engine are in `lab/stage2_lang/`, and the predictions below are scored where stage 3 tested them.
 
 ## The grammar
 
@@ -300,7 +301,7 @@ The question is whether the detectors needed grow more slowly than the challenge
 5. **A pilot of about 100 draws**: the share of learnable worlds with a gap, and lives per world. Only then freeze the samplers, **two or three rival ones with different primitives**, since one sampler sets the answer. Report the spread. Keep sampled worlds to about 300.
 6. **The present circuit's coverage on fresh draws, with no new cures.** The first real number, and it scores the predictions below.
 7. **Does a longer life change what's learnable?** The job asks for about 10 meals in 100 s, so few rules can be learned at all. Check at 10x, on about 30 worlds, whether ceilings rise. 100x is out of reach (about 4 days per circuit, estimated).
-8. **Add cures, by a designer who sees only the training worlds, to the largest failure groups, simplifying as we go** (`PROGRAMME.md`). One cumulative circuit, scored by description length, then parts and power, since a new bank model can absorb what would have been a detector. After each addition, re-run earlier worlds and the unmodified world. L0 worlds have a frozen list and their own plot, as new detectors would otherwise create new challenges.
+8. (Parked at decision B, 2026-11-07, for stage R: rivals made from simple parts, `PROGRAMME.md`.) **Add cures, by a designer who sees only the training worlds, to the largest failure groups, simplifying as we go** (`PROGRAMME.md`). One cumulative circuit, scored by description length, then parts and power, since a new bank model can absorb what would have been a detector. After each addition, re-run earlier worlds and the unmodified world. L0 worlds have a frozen list and their own plot, as new detectors would otherwise create new challenges.
 9. **Open the held-out split and the outside set.**
 10. **Then the rule-changing worlds**, reported apart.
 
@@ -330,7 +331,7 @@ No grammar can be shown to span every possible world, so instead we measure wher
 
 ## My predictions, written before running anything
 
-Guesses, to be scored.
+Guesses, to be scored. Scored by stage 3 (D35), where it tested them: place-dependent worth stays uncured, right (3 of 3 region worlds fail); bursts of lies fool the bank, partly (3 of 8 lie worlds fail); most random expressions unlearnable in a life, right in effect (about 70% have nothing to learn, not by length alone); the present detectors cover about half the learnable ones, consistent (a quarter to a half). The rest weren't tested (delayed taste, gaits and trade-offs are stage 5's kinds or weren't drawn).
 
 - **Taste delayed by more than about half a second breaks the bank**, since "vouched" assumes the taste belongs to the present drive. A new type.
 - **`DRAG`, `PUSH`, `TURN` are a new type**: no loop adjusts the brain's time constants now.

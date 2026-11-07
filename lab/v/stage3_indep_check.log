@@ -1,0 +1,132 @@
+draws: redo 100 (g0..g142), fresh 200 (g143..g402)
+[distinct] fresh repeats of a fresh draw 6 [('g236', 'g217'), ('g246', 'g228'), ('g301', 'g228'), ('g350', 'g303'), ('g366', 'g228'), ('g381', 'g228')]; repeats of a redo draw 7 ['g179', 'g203', 'g234', 'g237', 'g263', 'g293', 'g372']; distinct 187
+[near-dup] pairs (a fresh distinct world with every number within 5% (relative) of an earlier world's, same form): 14 [('g18', 'g214'), ('g22', 'g401'), ('g65', 'g393'), ('g31', 'g276'), ('g74', 'g402'), ('g40', 'g330'), ('g202', 'g364'), ('g374', 'g392'), ('g142', 'g317'), ('g144', 'g305'), ('g309', 'g394'), ('g326', 'g356'), ('g326', 'g395'), ('g356', 'g395')]
+[out] refused in labelling []; labelled lives by world (of 16) {'g180': 4, 'g248': 6, 'g249': 3, 'g396': 2}; out 3 ['g180', 'g248', 'g249']; lives per world {16}
+[judged] 184
+[refusals] main: 0 refused lives
+[refusals] ref: 0 refused lives
+[refusals] topup: 0 refused lives
+[refusals] harm: 0 refused lives
+[refusals] long: 0 refused lives
+[main] judged worlds without main lives: []; lives per arm {120}
+
+[first pass, 60 pairs] something to learn 67/184; learn-worlds lacking a ref run ['g200']
+  sure pass 10, sure fail 19, can't tell 38
+  pass: ['g157', 'g170', 'g188', 'g268', 'g284', 'g294', 'g311', 'g314', 'g363', 'g383']
+  fail: ['g149', 'g174', 'g183', 'g192', 'g226', 'g227', 'g244', 'g245', 'g254', 'g261', 'g280', 'g296', 'g302', 'g328', 'g335', 'g337', 'g344', 'g361', 'g380']
+  unclear: ['g143', 'g144', 'g151', 'g155', 'g171', 'g182', 'g185', 'g190', 'g196', 'g198', 'g199', 'g200', 'g212', 'g214', 'g217', 'g231', 'g238', 'g252', 'g256', 'g264', 'g267', 'g281', 'g288', 'g303', 'g305', 'g317', 'g327', 'g331', 'g347', 'g349', 'g352', 'g360', 'g379', 'g384', 'g395', 'g397', 'g398', 'g399']
+  verdicts that change if r's own uncertainty enters the bar: [('g397', 'unclear', 'fail')]
+  worlds where .5 r sets the bar (r > .5): [('g143', np.float64(0.59)), ('g157', np.float64(0.52)), ('g185', np.float64(0.5)), ('g190', np.float64(0.67)), ('g198', np.float64(0.65)), ('g199', np.float64(0.51)), ('g281', np.float64(0.66)), ('g284', np.float64(0.54)), ('g294', np.float64(0.63)), ('g311', np.float64(0.56)), ('g314', np.float64(2.54)), ('g363', np.float64(0.63)), ('g383', np.float64(7.83)), ('g397', np.float64(0.53)), ('g398', np.float64(0.99))]
+
+[top-up] first-pass can't-tell 38; in more_topup 37; topup worlds not in that list []
+  g143  gap +0.105[+0.070,+0.142] x -0.300[-0.939,+0.128] r -0.31 bar 0.250 -> fail     (bar with r's interval: fail)
+  g144  gap +0.452[+0.392,+0.511] x +0.434[+0.312,+0.556] r -0.49 bar 0.250 -> pass     (bar with r's interval: pass)
+  g151  gap +0.156[+0.106,+0.206] x -0.059[-0.546,+0.262] r -0.56 bar 0.250 -> unclear  (bar with r's interval: unclear)
+  g155  gap +0.085[+0.040,+0.129] x -0.389[-1.658,+0.210] r -0.29 bar 0.250 -> nothing  (bar with r's interval: -)
+  g171  gap +0.320[+0.261,+0.376] x +0.261[+0.049,+0.448] r -0.25 bar 0.250 -> unclear  (bar with r's interval: unclear)
+  g182  gap +0.240[+0.193,+0.288] x +0.455[+0.235,+0.648] r +0.45 bar 0.250 -> unclear  (bar with r's interval: unclear)
+  g185  gap +0.119[+0.075,+0.161] x -0.079[-0.652,+0.350] r -0.29 bar 0.250 -> unclear  (bar with r's interval: unclear)
+  g190  gap +0.094[+0.051,+0.139] x -0.273[-1.223,+0.318] r -0.79 bar 0.250 -> nothing  (bar with r's interval: -)
+  g196  gap +0.128[+0.091,+0.167] x -0.103[-0.573,+0.225] r -0.54 bar 0.250 -> fail     (bar with r's interval: fail)
+  g198  gap +0.102[+0.057,+0.148] x -0.231[-1.085,+0.283] r +0.20 bar 0.250 -> unclear  (bar with r's interval: unclear)
+  g199  gap +0.072[+0.021,+0.121] x -0.471[-3.109,+0.403] r -0.17 bar 0.250 -> nothing  (bar with r's interval: -)
+  g200  NOT TOPPED UP: 60-pair gap +0.100[+0.003,+0.199] x +0.726[-1.067,+2.617], no ref run; kept at its 60-pair verdict
+  g212  gap +0.060[+0.017,+0.098] x -0.490[-2.503,+0.223] r -0.87 bar 0.250 -> nothing  (bar with r's interval: -)
+  g214  gap +0.104[+0.063,+0.144] x +0.045[-0.614,+0.573] r -0.61 bar 0.250 -> unclear  (bar with r's interval: unclear)
+  g217  gap +0.218[+0.170,+0.264] x +0.459[+0.216,+0.673] r +0.32 bar 0.250 -> unclear  (bar with r's interval: unclear)
+  g231  gap +0.158[+0.097,+0.219] x +0.352[-0.134,+0.784] r -0.53 bar 0.250 -> unclear  (bar with r's interval: unclear)
+  g238  gap +0.103[+0.077,+0.128] x -0.236[-0.603,+0.063] r -0.23 bar 0.250 -> fail     (bar with r's interval: fail)
+  g252  gap +0.066[+0.031,+0.103] x -0.991[-2.874,-0.314] r -1.84 bar 0.250 -> nothing  (bar with r's interval: -)
+  g256  gap +0.247[+0.144,+0.345] x +0.259[-0.211,+0.587] r +0.02 bar 0.250 -> unclear  (bar with r's interval: unclear)
+  g264  gap +0.206[+0.141,+0.270] x +0.160[-0.217,+0.465] r -0.61 bar 0.250 -> unclear  (bar with r's interval: unclear)
+  g267  gap +0.100[+0.060,+0.139] x -0.081[-0.792,+0.408] r -0.23 bar 0.250 -> nothing  (bar with r's interval: -)
+  g281  gap +0.078[+0.005,+0.151] x -0.566[-5.206,+0.700] r -0.63 bar 0.250 -> nothing  (bar with r's interval: -)
+  g288  gap +0.138[+0.059,+0.215] x -0.405[-1.848,+0.252] r -0.58 bar 0.250 -> unclear  (bar with r's interval: unclear)
+  g303  gap +0.130[+0.089,+0.170] x +0.121[-0.279,+0.461] r -0.05 bar 0.250 -> unclear  (bar with r's interval: unclear)
+  g305  gap +0.451[+0.392,+0.510] x +0.436[+0.311,+0.558] r -0.49 bar 0.250 -> pass     (bar with r's interval: pass)
+  g317  gap +0.223[+0.169,+0.277] x +0.397[+0.145,+0.635] r -0.45 bar 0.250 -> unclear  (bar with r's interval: unclear)
+  g327  gap +0.063[+0.020,+0.105] x -0.718[-3.463,+0.111] r -0.84 bar 0.250 -> nothing  (bar with r's interval: -)
+  g331  gap +0.131[+0.085,+0.176] x -0.069[-0.602,+0.327] r -0.47 bar 0.250 -> unclear  (bar with r's interval: unclear)
+  g347  gap +0.070[+0.027,+0.114] x -0.309[-1.943,+0.441] r -1.20 bar 0.250 -> nothing  (bar with r's interval: -)
+  g349  gap +0.085[+0.040,+0.130] x -0.322[-1.466,+0.310] r -0.84 bar 0.250 -> nothing  (bar with r's interval: -)
+  g352  gap +1.933[+1.854,+1.969] x +0.286[+0.251,+0.308] r +0.24 bar 0.250 -> pass     (bar with r's interval: pass)
+  g360  gap +0.179[+0.136,+0.224] x +0.300[-0.008,+0.589] r -2.35 bar 0.250 -> unclear  (bar with r's interval: unclear)
+  g379  gap +0.072[+0.031,+0.113] x -0.550[-2.222,+0.141] r -1.10 bar 0.250 -> nothing  (bar with r's interval: -)
+  g384  gap +1.916[+1.870,+1.965] x +0.255[+0.222,+0.287] r +0.33 bar 0.250 -> unclear  (bar with r's interval: unclear)
+  g395  gap +0.194[+0.134,+0.253] x +0.139[-0.286,+0.462] r -0.20 bar 0.250 -> unclear  (bar with r's interval: unclear)
+  g397  gap +2.010[+1.952,+2.071] x +0.157[+0.125,+0.189] r +0.53 bar 0.264 -> fail     (bar with r's interval: fail)
+  g398  gap +0.266[+0.200,+0.331] x +0.499[+0.238,+0.759] r +0.78 bar 0.389 -> unclear  (bar with r's interval: unclear)
+  g399  gap +0.121[+0.078,+0.163] x +0.012[-0.463,+0.430] r -0.24 bar 0.250 -> unclear  (bar with r's interval: unclear)
+  fail 4, pass 3, unclear 19, nothing 11
+  first 120 top-up base lives identical to the first pass's (gain, spent): 0 of 4440
+  'something to learn' differs between my bootstrap and the producer's seed-0 bootstrap at 60 pairs: [('g200', True, False)]
+
+[final] something to learn 56/184 = 0.304 Wilson [0.242,0.374]
+  sure pass 13 ['g144', 'g157', 'g170', 'g188', 'g268', 'g284', 'g294', 'g305', 'g311', 'g314', 'g352', 'g363', 'g383']
+  sure fail 23 ['g143', 'g149', 'g174', 'g183', 'g192', 'g196', 'g226', 'g227', 'g238', 'g244', 'g245', 'g254', 'g261', 'g280', 'g296', 'g302', 'g328', 'g335', 'g337', 'g344', 'g361', 'g380', 'g397']
+  can't tell 20 ['g151', 'g171', 'g182', 'g185', 'g198', 'g200', 'g214', 'g217', 'g231', 'g256', 'g264', 'g288', 'g303', 'g317', 'g331', 'g360', 'g384', 'g395', 'g398', 'g399']
+  coverage between 0.232 [0.141,0.358] and 0.589 [0.459,0.708]
+  near-duplicates collapsed (drop ['g214', 'g276', 'g305', 'g317', 'g330', 'g356', 'g364', 'g392', 'g393', 'g394', 'g395', 'g401', 'g402']): judged 171, to learn 52, sure pass 12, can't tell 17: coverage 0.231 [0.137,0.361] to 0.558 [0.423,0.684]
+  near pair g18/g214: identical (gain, spent) lives in main 324/360; verdicts None, unclear
+  near pair g22/g401: identical (gain, spent) lives in main 360/360; verdicts None, pass
+  near pair g65/g393: identical (gain, spent) lives in main 0/360; verdicts None, unclear
+  near pair g31/g276: identical (gain, spent) lives in main 2/360; verdicts None, unclear
+  near pair g74/g402: identical (gain, spent) lives in main 0/360; verdicts None, unclear
+  near pair g40/g330: identical (gain, spent) lives in main 0/360; verdicts None, unclear
+  near pair g202/g364: identical (gain, spent) lives in main 0/360; verdicts unclear, unclear
+  near pair g374/g392: identical (gain, spent) lives in main 0/360; verdicts unclear, unclear
+  near pair g142/g317: identical (gain, spent) lives in main 287/360; verdicts None, unclear
+  near pair g144/g305: identical (gain, spent) lives in main 360/360; verdicts pass, pass
+  near pair g309/g394: identical (gain, spent) lives in main 1/360; verdicts pass, pass
+  near pair g326/g356: identical (gain, spent) lives in main 1/360; verdicts unclear, unclear
+  near pair g326/g395: identical (gain, spent) lives in main 27/360; verdicts unclear, unclear
+  near pair g356/g395: identical (gain, spent) lives in main 16/360; verdicts unclear, unclear
+
+[ref step] verdicts that move if the reference's efficiency shifts by +-.05 or +-.08 (D34's 'within about .08'): [('g157', 0.08, 'pass', 'unclear'), ('g198', 0.05, 'unclear', 'fail'), ('g198', 0.08, 'unclear', 'fail')]
+  sure verdicts within .03 of the bar (x lower - bar, x upper - bar): [('g188', np.float64(0.024), np.float64(0.846)), ('g196', np.float64(-0.823), np.float64(-0.025)), ('g268', np.float64(0.008), np.float64(0.171)), ('g352', np.float64(0.001), np.float64(0.058))]
+
+[selection] nothing-to-learn at 60 pairs with gap >= .07 (not topped up; some would have a gap at 300): 21 [('g146', np.float64(0.083), np.float64(0.01)), ('g156', np.float64(0.079), np.float64(-0.013)), ('g176', np.float64(0.121), np.float64(-0.008)), ('g206', np.float64(0.079), np.float64(-0.022)), ('g216', np.float64(0.071), np.float64(-0.021)), ('g220', np.float64(0.074), np.float64(-0.013)), ('g224', np.float64(0.077), np.float64(0.013)), ('g259', np.float64(0.096), np.float64(-0.033)), ('g270', np.float64(0.085), np.float64(0.011)), ('g274', np.float64(0.071), np.float64(-0.016)), ('g275', np.float64(0.102), np.float64(-0.012)), ('g279', np.float64(0.085), np.float64(0.015)), ('g283', np.float64(0.092), np.float64(0.007)), ('g285', np.float64(0.075), np.float64(-0.074)), ('g291', np.float64(0.078), np.float64(-0.002)), ('g313', np.float64(0.078), np.float64(-0.018)), ('g323', np.float64(0.155), np.float64(-0.19)), ('g326', np.float64(0.075), np.float64(-0.056)), ('g334', np.float64(0.09), np.float64(-0.011)), ('g336', np.float64(0.083), np.float64(0.01)), ('g356', np.float64(0.121), np.float64(-0.012))]
+  top-up worlds that lost their gap at 300 pairs: 11; first-pass sure verdicts never re-checked: 29; sure-verdict worlds with gap < .2 at 60 pairs: [('g383', np.float64(0.162)), ('g254', np.float64(0.151)), ('g337', np.float64(0.122)), ('g344', np.float64(0.138))]
+  multiplicity: 36 sure verdicts at one-sided 2.5% each: about 0.9 expected false sure calls if every world sat on the bar (an upper figure)
+  x > 1 at 100 s among worlds to learn: [('g314', np.float64(2.57)), ('g383', np.float64(8.22))]
+
+[harm, first pass, nothing-to-learn 128 incl. top-up drops] surely below base 13, by > .1 4 ['g172', 'g262', 'g322', 'g367']; surely above 21; rule 'lower bound > -.1' fails in 55
+[harm, 200 fresh pairs (more_harm)]
+  plain base +2.436 bank +2.423 told +2.464  bank-base -0.013[-0.077,+0.051]  told-base +0.028[-0.023,+0.082]  400 lives
+  g80   base +3.072 bank +2.522 told +2.602  bank-base -0.550[-0.613,-0.486]  told-base -0.470[-0.533,-0.409]  400 lives
+  g118  base +3.074 bank +2.488 told +2.598  bank-base -0.587[-0.660,-0.513]  told-base -0.477[-0.546,-0.411]  400 lives
+  g172  base +2.925 bank +2.570 told +2.654  bank-base -0.355[-0.422,-0.290]  told-base -0.271[-0.328,-0.215]  400 lives
+  g262  base +2.913 bank +2.823 told +2.878  bank-base -0.090[-0.158,-0.025]  told-base -0.035[-0.109,+0.037]  400 lives
+  g322  base +2.953 bank +2.557 told +2.642  bank-base -0.396[-0.463,-0.328]  told-base -0.310[-0.374,-0.248]  400 lives
+  g367  base +3.072 bank +2.967 told +3.062  bank-base -0.105[-0.191,-0.023]  told-base -0.010[-0.087,+0.068]  400 lives
+[1000 s, 20 pairs; last third; bar .25 (no ref at 1000 s)]
+  g149  100s fail    base -1.61 bank -1.28 told -0.60 gap -0.60[-0.70,-0.51] x +2.12[+1.83,+2.53] -> nothing  
+  g174  100s fail    base -1.96 bank +0.46 told +1.43 gap +1.43[+1.34,+1.53] x +0.32[+0.25,+0.40] -> pass     
+  g183  100s fail    base -3.30 bank -0.78 told +0.31 gap +0.31[+0.20,+0.42] x -2.49[-4.33,-1.59] -> fail     
+  g192  100s fail    base -0.04 bank +0.21 told +0.46 gap +0.46[+0.41,+0.50] x +0.47[+0.36,+0.59] -> pass     
+  g226  100s fail    base -0.78 bank -0.61 told +1.08 gap +1.08[+0.99,+1.17] x -0.56[-0.70,-0.45] -> fail     
+  g227  100s fail    base +1.37 bank +1.32 told +2.43 gap +1.07[+0.93,+1.21] x -0.04[-0.24,+0.14] -> fail     
+  g244  100s fail    base -1.59 bank +0.39 told +1.42 gap +1.42[+1.32,+1.53] x +0.27[+0.18,+0.37] -> unclear  
+  g245  100s fail    base -1.10 bank -0.92 told +2.27 gap +2.27[+2.10,+2.44] x -0.41[-0.49,-0.34] -> fail     
+  g254  100s fail    base +1.28 bank +0.72 told +0.69 gap -0.59[-0.68,-0.49] x +0.96[+0.85,+1.08] -> nothing  bank>told
+  g261  100s fail    base -3.21 bank +2.01 told +1.41 gap +1.41[+1.32,+1.49] x +1.43[+1.26,+1.58] -> pass     bank>told
+  g280  100s fail    base -0.38 bank -0.42 told +0.25 gap +0.25[+0.16,+0.33] x -1.73[-2.59,-1.28] -> fail     
+  g296  100s fail    base +3.93 bank +3.89 told +3.79 gap -0.14[-0.22,-0.05] x +0.26[-0.50,+1.10] -> nothing  bank>told
+  g302  100s fail    base -1.75 bank -1.52 told -0.75 gap -0.75[-0.86,-0.65] x +2.03[+1.74,+2.37] -> nothing  
+  g328  100s fail    base -0.32 bank -0.25 told +0.59 gap +0.59[+0.52,+0.66] x -0.43[-0.57,-0.30] -> fail     
+  g335  100s fail    base +1.35 bank +1.36 told +2.39 gap +1.04[+0.80,+1.24] x +0.01[-0.29,+0.24] -> fail     
+  g337  100s fail    base +0.19 bank +0.17 told +0.16 gap -0.03[-0.08,+0.02] x +0.85[-3.73,+6.88] -> nothing  bank>told
+  g344  100s fail    base +1.62 bank +1.58 told +1.53 gap -0.08[-0.18,+0.01] x +0.39[-2.38,+4.82] -> nothing  bank>told
+  g361  100s fail    base +1.72 bank +1.65 told +2.41 gap +0.69[+0.55,+0.82] x -0.10[-0.39,+0.17] -> fail     
+  g380  100s fail    base +0.93 bank +1.05 told +2.40 gap +1.47[+1.33,+1.61] x +0.08[-0.02,+0.17] -> fail     
+  g397  100s unclear base +0.32 bank +0.62 told +2.30 gap +1.98[+1.84,+2.13] x +0.15[+0.04,+0.27] -> unclear  
+  g384  100s unclear base +1.83 bank +1.33 told +1.36 gap -0.47[-0.67,-0.29] x +1.06[+0.78,+1.58] -> nothing  
+  g352  100s unclear base +0.11 bank +0.73 told +1.40 gap +1.29[+1.08,+1.45] x +0.48[+0.39,+0.56] -> pass     
+  g171  100s unclear base +0.76 bank +0.65 told +0.78 gap +0.02[-0.12,+0.14] x -5.51[-28.57,+26.80] -> nothing  
+  g144  100s unclear base +0.41 bank +0.33 told +0.47 gap +0.06[-0.14,+0.29] x -1.23[-15.40,+15.74] -> nothing  
+  g305  100s unclear base +0.41 bank +0.35 told +0.49 gap +0.08[-0.12,+0.29] x -0.80[-15.91,+16.98] -> nothing  
+  g398  100s unclear base +0.58 bank +1.05 told +1.09 gap +0.51[+0.23,+0.77] x +0.93[+0.70,+1.37] -> pass     
+  g256  100s unclear base +1.19 bank +1.24 told +1.42 gap +0.23[-0.01,+0.48] x +0.25[-2.99,+3.09] -> nothing  
+  g264  100s unclear base +0.60 bank +0.29 told +0.29 gap -0.31[-0.52,-0.11] x +0.99[+0.47,+2.64] -> nothing  bank>told
+  g399  100s unclear base +1.83 bank +1.53 told +1.42 gap -0.41[-0.54,-0.29] x +0.73[+0.48,+1.09] -> nothing  bank>told
+  g281  100s unclear base +2.52 bank +2.54 told +2.67 gap +0.15[+0.00,+0.30] x +0.10[-3.08,+1.60] -> unclear  

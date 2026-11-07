@@ -2,15 +2,21 @@
 
 One page to keep us on track. If work doesn't serve the question below, it is parked in `QUESTIONS.md`. `GRAMMAR.md` holds the detail.
 
+## Why (the quest, `README.md`)
+
+We want a general recipe for a brain that optimises itself: circuits that notice, by themselves, that they aren't doing well for the creature, and put it right, from simple local parts, ideally by emergence rather than by our design. Ten mismatches cured by hand (`STORIES.md`) gave one circuit that does the job of many, the bank of predictors: rival ideas of what taste means, all scored on every taste, the best followed. This programme asks whether that is a general principle or ten cures glued together.
+
 ## The question
 
 **Does a brain facing many more challenges need proportionally more hand-built detectors, or do fewer general ones emerge?**
 
 If it needs one for each, we have just hand-designed everything, and nothing interesting is emerging. If fewer will do, what are they, and why? Then: can hierarchy (detectors that learn about detectors) make the circuit find them itself, rather than us?
 
+**In bits.** A life offers about 50 bits of evidence (D31), but a world's rule takes hundreds to write down (D33), so a brain can only learn what its structure already makes cheap: learning in a life is choosing and tuning within a repertoire. The question becomes how small a repertoire, made of how simple parts, covers how much. A repertoire of K rivals costs about log2 K bits of evidence to choose from (the Occam factor), and its description can be tiny if the rivals are drawn by a simple rule from simple parts, though it still costs parts and power to build.
+
 ## Where we are
 
-**Stage 2b, by agents: the frozen reference, about 100 random worlds, near-duplicates, and the engine checked independently.** Stage 2a built the language and engine and proved them against the unmodified world (`discrete/NOTEBOOK.md`, D33); the finer-step move it found in the unmodified world is the user's to decide (`QUESTIONS.md`). The user has handed over the decisions up to B (2026-11-04), each step to be proven first, so the main session takes them by the gates below and logs them. **The next decision that is the user's alone: B.**
+**Decision B taken (the user, 2026-11-07): the bank makes its own rivals.** Stage 3 is done and checked independently: on fresh random worlds the bank's hand-written repertoire surely covers 12 of the 55 with something to learn and surely fails 24, coverage between .22 and .56; its failures are missing ideas, mostly about timing; one part (the eye filter, tuned to the eyes' usual rate) does harm where the eyes are more sensitive (`discrete/NOTEBOOK.md`, D35; `ABSTRACT.md`). Being firmed up (`lab/stage3_firm.py`): small gaps re-measured, doing no harm on every nothing-to-learn world, the reference at 1000 s. **Next: stage R**, below, in place of stage 4's hand-made cures.
 
 **Gates, fixed before the results.** A gate that fails stops the work there, and it is reported, not argued round.
 
@@ -31,8 +37,28 @@ Each ends with a result and a decision by the user. **No stage starts without th
 | 2a | A minimal language and engine; about 30 worlds by hand, each labelled in bits | the engine is proven against the unmodified world | go on to random worlds, or fix the language |
 | 2b | The frozen reference; about 100 random worlds; near-duplicates; real sigma and cost per world | we know what share of random worlds are learnable, and the cost per world | whether random worlds are worth using at all |
 | 3 | **The present circuit, unchanged, on fresh worlds; then longer lives on about 30** | a coverage number exists | **B: the main decision.** What's uncovered, and is it worth continuing? |
-| 4 | Add cures, by a separate designer, to the largest groups of failures, simplifying as we go | the primary result is reached or the budget is spent | less than 10x, or not, for immediate and truthful taste |
-| 5 | The rule-changing worlds; types; hierarchy | to be planned at B or later | |
+| R | **Rivals made, not written** (decision B): the bank's rivals assembled from many simple parts connected in various ways, hierarchies included (counters of toggles, an oscillator driving a toggle, a timer gating a counter); first drawn at birth, then grown in the life where no rival predicts | below | whether a repertoire from simple parts covers what the written one does and more, at what cost in evidence and parts |
+| 4 | (parked at B) Add cures, by a separate designer, to the largest groups of failures | | |
+| 5 | The rule-changing worlds; types | to be planned later | |
+
+## Stage R: rivals made, not written
+
+**What a rival is.** Every rival in today's bank is a *context* and a *table*: a signal that takes one of k values (the count of good tastes mod n), and a learned bit for each value saying which colour is food then, with a tally of trust. A made rival keeps the table and builds the context from simple parts, each a block a circuit can hold:
+- a **toggle** (flips on each input event), so a chain of toggles is a binary counter (k = 2, 4, 8);
+- a **counter that resets** at n (k = n), for counts not a power of two;
+- an **oscillator** of period T, read in phase bins (k bins), so a toggle driven by it has period 2T;
+- a **timer** since an event (a taste, a good taste), read as before or after its delay;
+- a **conjunction** of two contexts (their product: k1 x k2 values), the way hierarchies form.
+
+Inputs are only what a brain already has: tastes, good tastes, its own clock (oscillators and timers in seconds, never ticks), with each part's own mismatch and the oscillators' phase noise. A rival is scored exactly as today's are (evidence where it disagrees with the default), so it is judged on every taste without being acted on.
+
+**Steps, each with its predictions written first and its gate:**
+1. **R1, the parts reproduce the bank.** Today's seven rivals rebuilt from these parts give identical lives. Gate: identical.
+2. **R2, drawn at birth.** K rivals drawn at random by a fixed rule (parts and depth, periods and delays log-uniform over ranges fixed in seconds before any run), the bar to adopt a rival rising with log2 K as the Occam factor requires, derived, not tuned. Measured on stage 3's worlds (development: base, told and reference lives already exist on the same seeds): coverage, doing no harm, and false picks against K (1, 10, 100, 1000), with the number of matching rivals a world needs worked out first. Gate: a K is found that covers surely more than the written bank with no harm, or the reason none can is measured.
+3. **R3, grown in the life.** Start with few parts; where the followed rival keeps being contradicted (frustration), grow a new rival by connecting a part to an existing rival's context (function-preserving: it starts with no evidence). Compared with R2 at equal parts. Gate: grown ties or beats drawn at equal parts, or the reason is measured.
+4. **R4, judged on worlds never seen**: a fresh draw from stage 3's generator (development numbers 300-499, fixed now), then, at the user's decision, the sealed outside set and held-out seeds.
+
+**In bits, for every step:** the evidence each world offers about its rule (the told arm's tastes), the Occam cost of K, how many of the K rivals fit each world, and the parts and power of the repertoire. The eye filter's fault (D35) is left as it is in R, so comparisons stay with the written bank; it is the next cure.
 
 ## The primary result
 
@@ -102,10 +128,14 @@ We boil down during the search, not at the end, when nobody could reason about t
 | 2026-11-06 | A thruster costs when it fires, whoever made it fire; a command the world drops costs nothing (the break is between brain and thruster) | the user |
 | 2026-11-06 | Stage 3 keeps a world out if 3 or more of its 16 labelling lives carry a stage-5 label | main session, before stage 3's lives |
 | 2026-11-06 | One independent agent checks stage 2c (interface by construction, instruments, seconds, speed) before stage 3; final runs in seconds at about 1.25 ms; the reference only on worlds with a gap, at 2.5 ms | the user (approving the main session's plan) |
+| 2026-11-07 | One independent agent checks stage 3's coverage (the gate "3 to B"); the gaps it found are filled before the result is final | the user |
+| 2026-11-07 | Decision B: next, the bank makes its own rivals from simple parts connected in various ways, hierarchies included (stage R); stage 4's hand-made cures parked | the user |
+| 2026-11-07 | Rules about time may need far longer lives; long lives may be our equivalent of deep learning's scale, so stage R measures coverage against life length as well as K; lives of 10,000 s allowed for that (AGENTS.md) | the user |
 | 2026-11-06 | Stage 2a is done (engine identical to the unmodified lives, worlds checked against their descriptions, labelled in bits); stage 2b starts, owing the independent engine check; the finer-step move goes to the user, and stage 3's headline is repeated at 5 ms | main session, under the user's delegation |
 
 ## Parked, for later
 
 - A learning adversary, GAN-style (`QUESTIONS.md`, the arms race): after stage 3, as a generator of worlds we couldn't think of.
-- Hierarchy: stage 5, informed by what stage 3 and 4 leave uncovered.
+- Hierarchy beyond rivals' contexts (detectors that learn which detectors to grow): after stage R.
+- The eye filter's built-in rate (D35): a cure after stage R.
 - A richer world: only once this one has taught us everything it can.
