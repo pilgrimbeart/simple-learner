@@ -275,6 +275,14 @@ The findings that changed the direction of the work, each told in full in the no
   wobble costs a tenth of the food, and spotting that cost from the drives themselves takes about fifteen times more
   drives than a short life has. The older design was safe in short lives only because it never wobbled while it was
   eating well. When to explore at all is still open (`discrete/NOTEBOOK.md`, D36).
+- **Adaptability costs** (the user's insight, 2026-11-09). We keep what is built before a life (evolution, or our
+  design) apart from what is learned in it, but the two can't be fully separated: whatever is built in fits some
+  range of worlds. And there is a second-order effect: a brain built to cope with very varied worlds must spend
+  something (trials, wobbles, evidence) finding out which world it is in, so on a short, easy trial it does worse than
+  a brain built for exactly that world, which needs to find out nothing. The balance learner shows it: in long lives
+  its exploring pays, but on a body with equal thrusters, in a 100 s life, it costs a fifth to a half of the food,
+  where a brain that assumes equal thrusters loses nothing (`discrete/NOTEBOOK.md`, D36). So how well a brain should
+  adapt depends on how varied its worlds are and how long it has to live in them.
 
 ## The ground rules, for every brain
 

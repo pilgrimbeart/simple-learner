@@ -197,3 +197,9 @@ because it barely wobbles at all; and at 100 s in the thrusters it is surely bel
 both runs); but at 2000 s v7 is behind the old learner here, |x| .59 against .70, within .1 of .69 in 32 of 40 (old 35). 38 wrong:
 plain at 10,000 s, 30 pairs pooled, v7 -.117 [-.157,-.079] against base, the old bank -.111 [-.201,-.029]; v7 minus old -.006
 [-.101,+.094]. The first 10 pairs' -.06 was luck; in plain at 10,000 s v7 is no better than the old bank, only steadier.
+
+**Scored 40-43** (`lab/v/rprop_fresh9.log`): 40 wrong (plain at 10,000 s: v9a -.12, v9b -.10 against base, neither surely above v7,
++.02 and +.04): chance moves were not plain's residual loss. 41 wrong (nearly plain: v9a -.09, v9b -.08, both surely below base; v7 too
+here, -.07 [-.11,-.03], where its first 10 pairs gave +.10). 42 wrong in part: both much slower (|x| .10 at 300 s, the old .33), within
+.1 of .69 in only 30 and 28 of 40, and 5 and 6 lives left near 0. 43: v9a held (-.22 [-.55,+.08]), v9b wrong (-.33 [-.65,-.01]). The
+always-valid bar costs the trip far more than it saves in plain. v9 dropped.

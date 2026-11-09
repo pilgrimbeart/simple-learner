@@ -242,7 +242,15 @@ and when, why it matters, the line it belongs to, and the experiment that would 
   safe at 100 s only by never wobbling, and is a rate the body supplies. What local evidence could tell a block, early, that its balance
   is worth exploring: a sign of lopsidedness that needs no wobble (none found yet: a drive's length is unsigned), or a rule weighing
   the wobble's cost against the life still ahead? Experiment: in the thrusters and plain at 100 s, the information per drive about
-  |right| available without wobbling, against the 96 drives a life gives.
+  |right| available without wobbling, against the 96 drives a life gives. The thruster line is closed (the user, 2026-11-09); what is
+  left is the floor: the least an ideal learner pays to tell plain from lopsided, at 100 s and 10,000 s, solved on a small surrogate
+  of the drives (the outcome's mean and noise against the balance, drives a second, the cost spilling into later drives), checked
+  against v7's lives, rather than by more lives. And whether "do no harm" is then judged against that floor (the user's decision).
+- **Can surprise teach before reward, and is that attention?** (the user and main session, 2026-11-09) A world whose consequences
+  come only after a sequence of actions (a block that turns to food after the right moves) shows almost nothing to a first-layer
+  learner: one action's correlation with food is near zero. A second-layer unit that notices "this sequence changed what I see",
+  before any food, has a much denser signal; attending to what surprised it narrows what to try. Talk the world through first,
+  as simple as possible (the user).
 - High-value resistors (500 MOhm to 1 GOhm) are rarely better than 5% and leak across a board's surface: the bipolar
   circuits' 1% (`life.TOL`) was optimistic.
 

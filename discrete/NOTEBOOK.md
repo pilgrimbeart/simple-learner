@@ -2775,3 +2775,21 @@ old bank's long-life loss in plain varies a lot with the seeds: -.40 on the scal
 (the same construction, checked). So the scaling test's seeds were hard ones for the old bank: its paired gains with the cure stand,
 but their size there may be high. Double thruster, 2000 s: one life of 40 left near 0 (4 of 80 over both runs); |x| .59 at 2000 s
 against the old learner's .70.
+**v9, dropped** (`lab/rprop9.py`, `lab/rprop_fresh9.py`, `lab/v/rprop_fresh9.log`, seeds 82800-82849; predictions 40-43 first). An
+always-valid bar on the move test (v9a), and the peak's mark halving the step too (v9b), against chance moves in plain. Plain at
+10,000 s barely moves (v9a -.12, v9b -.10 against base, v7 -.13 on the same seeds), so chance moves were not the residual loss; the trip
+far from right is much slower (|x| .10 at 300 s against the old learner's .33; 5 and 6 of 40 lives left near 0). In nearly plain all
+three are surely a little below base here (-.07 to -.09).
+**Closed: the balance learner** (the user, 2026-11-09: close out the unbalanced thrusters). What it taught:
+- Adaptability costs (the user's insight; README). A brain built for varied bodies must spend trials finding out which body it has; on
+  a short, easy trial it loses to a brain built for exactly that body. In plain, exploring the balance costs more than a 100 s life's
+  drives can reveal (a wobble of .05 costs 11%, and showing that takes about 1,400 drives against 96).
+- The self-sizing rules work where there is time: surely faster to balance a lopsided body, and in 10,000 s lives the written bank
+  lifted surely in 12 of 13 worlds. The peak's mark (does the wobble hurt both ways?) answers "nothing to learn" versus "learning is
+  slow", which a test of the slope alone can't.
+- The old learner's safety at 100 s comes from never wobbling while it eats well (its fixed gate), not from judging its wobble.
+- Outcomes are not independent draws: about half a wobble's cost falls in later drives, outside the drive that made it.
+Decision: the bank keeps the old learner and its gate as the default (safe at 100 s, where stage 3 is judged); the sized learner v7
+(`lab/rprop.py`) is kept as the long-life version. Not done, parked in `QUESTIONS.md`: the floor (the least an ideal learner pays to
+tell plain from lopsided), best computed on a small surrogate of the drives rather than by more lives, and whether "do no harm" should be
+judged against that floor rather than as a tie with base (the user's decision).

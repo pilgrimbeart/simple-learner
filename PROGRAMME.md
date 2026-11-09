@@ -18,6 +18,8 @@ If it needs one for each, we have just hand-designed everything, and nothing int
 
 **Decision B taken (the user, 2026-11-07): the bank makes its own rivals.** Stage 3 is done and checked independently: on fresh random worlds the bank's hand-written repertoire surely covers 11 of the 61 with something to learn and surely fails 24, coverage between .18 and .61; its failures are missing ideas, mostly about timing (at 1000 s an ideal judge with timing ideas learns swaps the bank can't); one part (the eye filter, tuned to the eyes' usual rate) does harm where the eyes are more sensitive, and the bank costs a little (about .07) in many worlds with nothing to learn (`discrete/NOTEBOOK.md`, D35; `ABSTRACT.md`). **Next: stage R**, below, in place of stage 4's hand-made cures.
 
+**Next (the user, 2026-11-09; not started): the paired-blocks world**, below. The balance learner is closed (`discrete/NOTEBOOK.md`, D36). This comes ahead of stage R's remaining steps.
+
 **Gates, fixed before the results.** A gate that fails stops the work there, and it is reported, not argued round.
 
 - **1c to 2:** (a) stage 1b's headline numbers replicate on fresh development seeds, or the differences are recorded and explained; (b) whether the bank's forgetting pays is settled by a measurement either way; (c) the taste limit is an upper bound with a proof, or called an estimate everywhere; (d) a pass definition is chosen on synthetic data, with its false yes and false no rates, before any real world runs.
@@ -40,6 +42,21 @@ Each ends with a result and a decision by the user. **No stage starts without th
 | R | **Rivals made, not written** (decision B): the bank's rivals assembled from many simple parts connected in various ways, hierarchies included (counters of toggles, an oscillator driving a toggle, a timer gating a counter); first drawn at birth, then grown in the life where no rival predicts | below | whether a repertoire from simple parts covers what the written one does and more, at what cost in evidence and parts |
 | 4 | (parked at B) Add cures, by a separate designer, to the largest groups of failures | | |
 | 5 | The rule-changing worlds; types | to be planned later | |
+
+## Next: blocks in pairs (not started)
+
+**The world.** Each food block has one poison block beside it, at a set gap; nothing else changes: the same body, eyes, taste and worth of a block, written in the language (an eaten block must reappear beside a partner, or the pairs dissolve). The one setting is the gap: wide (should be as easy as plain), medium (avoidable with care), too close (impossible, a control).
+
+**Why this world.** It asks about space and skill, with no memory or sequence: "food in view" is no longer enough, the right rule being "food in view and no poison in view". That is a combination of two inputs, so perhaps the simplest test of whether a second layer is needed. It also tests attention: `designed-circuit` silences the other eye while it heeds one colour (by its description, untested here; B's and the bank's behaviour unchecked), which would blind it to the poison beside its food. By the code's description the eyes' corridor is what the mouth will sweep, so a silent poison eye should mean a safe drive; a near block's shadow can break that.
+
+**Why pairs and not clusters (the user).** With blocks abutting, a food block with poison to its left, right and behind sits in a U of poison, and the creature has no reverse: it can't eat the food without being trapped. A very competent brain might solve that (drive right round the cluster to judge whether it is viable), but that is far beyond what we have. Pairs have no such trap.
+
+**First steps, before any long runs:**
+1. The geometry, from the body's numbers (`world.py`: mouth, corridor, turning, momentum): which gaps can any brain separate, and at what aim? A failure at an impossible gap says nothing.
+2. A yardstick: knowing the colours doesn't help here, so the usual told arm won't do. A hand-written cautious policy ("drive only when the poison eye is silent") measures what caution is worth at each gap.
+3. Show the world live, for the user to judge, before anything is run at length.
+
+**To score with care.** Eating the poison to clear the way may be the best move where food is worth more than poison costs: that would be a smart answer, not a failure. Predictions and gates to be written before the lives, as always.
 
 ## Stage R: rivals made, not written
 
@@ -109,6 +126,7 @@ We boil down during the search, not at the end, when nobody could reason about t
 
 | date | decision | by |
 |---|---|---|
+| 2026-11-09 | The balance learner closed; next, the paired-blocks world, pairs before clusters (a U of poison traps a creature with no reverse); written up, not started | the user |
 | 2026-11-04 | Rule-changing worlds only after testing within the current constraints | the user |
 | 2026-11-04 | Marks left in the world: not yet | the user |
 | 2026-11-04 | The brain's own parts are a link | the user |
@@ -144,6 +162,8 @@ We boil down during the search, not at the end, when nobody could reason about t
   for the body and world mismatches of the interventions table. Harder: such a rival can be judged only by food per second while it
   is in charge, not on every taste without acting, so its evidence is far scarcer; stage R's long lives say whether it is affordable.
 - A richer world: only once this one has taught us everything it can.
+- **Clusters of abutting blocks** (the user, 2026-11-09): after pairs, if they teach us something; includes the U of poison, which only a brain able to survey a cluster before committing could handle.
+- **Key and lock** (main session, 2026-11-09): blue tastes of nothing but arms the next red, in two versions, with and without a visible clue beforehand: consequences that come later, and whether surprise teaches before reward (`QUESTIONS.md`).
 - **Obstacles that hide food** (the user, 2026-11-08): many blocks of a third kind that only block the view of the other two, so that it
   pays to steer round them. Two versions: seen only through occlusion (the interface unchanged: a world of the language, perhaps already
   writable as dark blocks, `bright` 0, if they still occlude and can't be eaten; to check), or sensed in their own right (a change to
