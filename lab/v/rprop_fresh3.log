@@ -1,0 +1,8 @@
+== double thruster (the right |x| .69), 2000 s, 20 pairs: |x| mean (sd)
+  old     0s 0.00 (0.00)  100s 0.02 (0.02)  200s 0.14 (0.11)  300s 0.31 (0.20)  500s 0.53 (0.21)  1000s 0.66 (0.17)  2000s 0.67 (0.07)
+  sized3  0s 0.00 (0.00)  100s 0.21 (0.24)  200s 0.33 (0.27)  300s 0.45 (0.26)  500s 0.62 (0.21)  1000s 0.66 (0.07)  2000s 0.68 (0.05)
+Traceback (most recent call last):
+  File "/home/pilgrim/git/simple-learner/lab/rprop_fresh.py", line 62, in <module>
+    R._save("rprop_fresh" + v, out)
+            ~~~~~~~~~~~~~~^~~
+numpy._core._exceptions._UFuncNoLoopError: ufunc 'add' did not contain a loop with signature matching types (dtype('<U11'), dtype('float64')) -> None

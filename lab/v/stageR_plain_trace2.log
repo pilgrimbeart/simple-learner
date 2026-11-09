@@ -1,0 +1,19 @@
+window (s)   goods  bads  pausing  est (s)  P     colour flips  eye rate  jitter sd   (sums or means over 8 lives)
+    0- 1000   4428   584  0.000    0.77  0.03      3    118.50  0.0021
+ 1000- 2000   4385   608  0.000    1.22  0.04      0    110.82  0.0150
+ 2000- 3000   4190   607  0.000    1.30  0.04      6    109.29  0.0258
+ 3000- 4000   3916   619  0.000    1.32  0.04      0    102.41  0.0520
+ 4000- 5000   3993   584  0.000    1.35  0.04      0    101.21  0.0499
+ 5000- 6000   3885   572  0.002    1.35  0.04      0    100.74  0.0575
+ 6000- 7000   3638   634  0.000    1.36  0.04      0     93.58  0.0953
+ 7000- 8000   3751   628  0.000    1.38  0.04      0     95.61  0.0783
+ 8000- 9000   3911   557  0.005    1.39  0.05      2     99.77  0.0593
+ 9000-10000   3620   589  0.000    1.39  0.05      0     94.43  0.0754
+  life: est at end 1.39, max est 1.39, max P 2.00
+  life: est at end 1.38, max est 1.44, max P 2.98
+  life: est at end 1.40, max est 1.40, max P 2.00
+  life: est at end 1.36, max est 1.36, max P 2.00
+  life: est at end 1.40, max est 1.40, max P 2.00
+  life: est at end 1.35, max est 1.39, max P 2.96
+  life: est at end 1.43, max est 1.43, max P 2.00
+  life: est at end 1.42, max est 1.42, max P 2.00

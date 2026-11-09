@@ -1,8 +1,7 @@
 # How many ideas must a small brain be born with?
 
 *The programme so far, as an abstract (2026-11-07). Details and every number's source: `discrete/NOTEBOOK.md`
-(D31-D35), `PROGRAMME.md`, `STORIES.md`. Figures marked ? are not yet known. Stage 3's figures are being firmed up
-(`lab/stage3_firm.py`) and may move by a world or two.*
+(D31-D35), `PROGRAMME.md`, `STORIES.md`. Figures marked ? are not yet known.*
 
 **Aim.** We want to know how useful behaviour can emerge from simple parts acting locally, and we study it in the
 simplest setting we could build. A simulated creature has two eyes, two thrusters and one sense of taste (+1 food,
@@ -41,15 +40,18 @@ more than half of what the reference closes. A separate agent then checked the v
 code of its own.
 
 **Results.**
-- **What there is to learn.** About 30% of the random worlds have something to learn [24-37%].
-- **Coverage.** Of those, the bank surely passes 22-23% and surely fails about 43%; the rest are too close to call.
-  So coverage lies between about a quarter and a half.
+- **What there is to learn.** 35% of the 174 distinct random worlds have something to learn [28-42%].
+- **Coverage.** Of those 61, the bank surely passes 11 (18%) and surely fails 24 (39%); the other 26 are too close
+  to call, mostly worlds with little to gain. So coverage lies between about a fifth and three fifths.
+- **Doing no harm.** Where there is nothing to learn (113 worlds), the bank surely does no harm in 79 and surely harms
+  in 2; in many it costs a little, about .07 against gains elsewhere of .3 to 2.5.
 - **Efficient within its repertoire.** Where the reference learner surely succeeds, the bank surely passes in 7 of 9
   worlds. Where the bank fails, the reference mostly fails too.
 - **Failures are missing ideas.** They cluster in a few families: colours that swap at some period, a meal soon
   after the last being bad, a food colour set by place, and some liars. A ten times longer life rescues a few of the
-  meal-timing worlds and none of the swaps. In swaps the missing idea is *when*: an earlier test found that about 14
-  bits of hypotheses about timing close half the gap.
+  meal-timing worlds (4 of 16 pass at 1000 s) and none of the seven swaps. In swaps the missing idea is *when*: an
+  earlier test found that about 14 bits of hypotheses about timing close half the gap, and at 1000 s the reference,
+  which holds such hypotheses, closes most of the gap in several swap worlds the bank fails.
 - **One part does harm.** Where the eyes are about twice as sensitive, the bank loses .36 to .59 against base. Switching
   parts off traces most of that loss to its eye filter, whose constants were tuned at the eyes' usual pulse rate:
   built-in knowledge of the body that turns out to be wrong.
@@ -72,3 +74,8 @@ toggle doubles its period). First drawn at random at birth, K of them, with the 
 then grown within the life where no rival predicts. If a repertoire drawn by a simple rule covers more than the
 written one, at a cost in evidence and parts that grows slowly with the worlds covered, then a few general parts are
 emerging. If it needs one part per world, then we have hand-designed everything.
+
+**Along the way (stage R, 2026-11-08).** Long lives at first seemed to lose more than they gained. The cause was the bank's balance
+learner, which wears the bank down over 10,000 s. A version that sizes its own steps and quiets its own wobble lifts long lives surely
+in 12 of 13 worlds, but costs .6 in 100 s lives: exploring a body whose thrusters are equal costs more than a short life's drives can
+reveal. When a part should explore at all is now an open question (`discrete/NOTEBOOK.md`, D36).

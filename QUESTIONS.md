@@ -231,6 +231,18 @@ and when, why it matters, the line it belongs to, and the experiment that would 
   biology's noise fails at any size: the inputs' noise (taste, eyes), which size can't reach and faster input leaks
   don't fix. Open: B's doubt with the minimal leaders' bit (a perfect integrator written by seen times taste, where
   noise averages out) in place of a thresholded tally, judged at all three noises.
+- **Can a memory node take the sized balance learner's small writes?** (the user's question, 2026-11-08, on noise; D36, v6-v7) The
+  learner's balance moves in steps down to .0125 and its wobble down to .05 (v6) or .005 (v7), plain numbers in the block model. Silicon's
+  noise is far below them (a memory node is still unless written, its write rough by one electron an event), but a write below
+  `chip.DEAD` (1% of its full current) doesn't tunnel at all. Whether the smallest steps survive depends on how the write is built: for
+  the re-validation in `mixed_feedback.py`.
+- **When should a block explore at all?** (main session, night of 2026-11-08; D36, the cure in 100 s lives) In plain a wobble of .05
+  costs 11% of the food, and a drive's outcome needs about 1,400 drives to show it; a 100 s life has about 96. The sized learner pays
+  back in long lives (judged on their last third, so early exploring is nearly free) but costs .6 at 100 s; the old bank's fixed gate is
+  safe at 100 s only by never wobbling, and is a rate the body supplies. What local evidence could tell a block, early, that its balance
+  is worth exploring: a sign of lopsidedness that needs no wobble (none found yet: a drive's length is unsigned), or a rule weighing
+  the wobble's cost against the life still ahead? Experiment: in the thrusters and plain at 100 s, the information per drive about
+  |right| available without wobbling, against the 96 drives a life gives.
 - High-value resistors (500 MOhm to 1 GOhm) are rarely better than 5% and leak across a board's surface: the bipolar
   circuits' 1% (`life.TOL`) was optimistic.
 

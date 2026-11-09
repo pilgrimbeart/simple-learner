@@ -1,0 +1,10 @@
+== plain, 100 s, 30 pairs, a fixed wobble, never moving
+  sd 0.00: score 2.401, minus sd 0 +0.000 [+0.000,+0.000]; drives a life 91.2, pulses a drive 4.27 (sd 3.57), length a drive 0.26 s
+  sd 0.05: score 2.123, minus sd 0 -0.277 [-0.449,-0.114]; drives a life 96.0, pulses a drive 3.81 (sd 3.27), length a drive 0.25 s
+      within: pulses on |e|/sd slope -0.327; the peak test's mean/sd per drive -0.053, so drives to two standard errors about 1423
+  sd 0.10: score 1.855, minus sd 0 -0.546 [-0.677,-0.407]; drives a life 100.1, pulses a drive 3.47 (sd 2.94), length a drive 0.23 s
+      within: pulses on |e|/sd slope -0.591; the peak test's mean/sd per drive -0.140, so drives to two standard errors about 205
+  sd 0.20: score 1.566, minus sd 0 -0.835 [-1.006,-0.656]; drives a life 105.3, pulses a drive 3.19 (sd 2.78), length a drive 0.22 s
+      within: pulses on |e|/sd slope -0.933; the peak test's mean/sd per drive -0.216, so drives to two standard errors about 86
+  sd 0.30: score 1.182, minus sd 0 -1.219 [-1.373,-1.060]; drives a life 110.2, pulses a drive 2.99 (sd 2.63), length a drive 0.21 s
+      within: pulses on |e|/sd slope -0.911; the peak test's mean/sd per drive -0.211, so drives to two standard errors about 90

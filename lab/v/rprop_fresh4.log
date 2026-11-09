@@ -1,0 +1,13 @@
+== double thruster (the right |x| .69), 2000 s, 20 pairs: |x| mean (sd)
+  old     0s 0.00 (0.00)  100s 0.02 (0.02)  200s 0.16 (0.12)  300s 0.33 (0.26)  500s 0.55 (0.24)  1000s 0.61 (0.17)  2000s 0.66 (0.10)
+  sized4  0s 0.00 (0.00)  100s 0.20 (0.28)  200s 0.21 (0.28)  300s 0.21 (0.28)  500s 0.21 (0.28)  1000s 0.22 (0.28)  2000s 0.22 (0.28)
+== thrusters, 100 s, 30 pairs (whole life)
+  base   0.251   minus old -0.014 [-0.177,+0.147]
+  old    0.265   minus base +0.014 [-0.147,+0.177]
+  sized4 0.410   minus base +0.158 [-0.073,+0.375]   minus old +0.144 [-0.131,+0.374]
+  never  0.270   minus base +0.019 [-0.143,+0.181]   minus old +0.005 [-0.012,+0.025]
+== thrusters, 1000 s, 10 pairs (last third)
+  base   0.310   minus old -1.233 [-1.800,-0.672]
+  old    1.542   minus base +1.233 [+0.672,+1.800]
+  sized4 0.736   minus base +0.427 [-0.067,+0.986]   minus old -0.806 [-1.439,-0.208]
+  never  0.254   minus base -0.056 [-0.144,+0.027]   minus old -1.289 [-1.820,-0.750]

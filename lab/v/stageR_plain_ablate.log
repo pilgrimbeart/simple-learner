@@ -1,0 +1,6 @@
+base 2.453; bank 2.056, minus base -0.397   (the scaling test's lives)
+bank {'eye': 0}: 2.138, minus base -0.315 [-0.500,-0.145]
+bank {'jit': 0}: 2.486, minus base +0.032 [-0.023,+0.094]
+bank {'pausek': 0}: 2.096, minus base -0.358 [-0.570,-0.163]
+bank {'trustk': 0}: 2.056, minus base -0.397 [-0.604,-0.201]
+bank {'growk': 0}: 2.056, minus base -0.397 [-0.604,-0.201]

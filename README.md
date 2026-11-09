@@ -31,7 +31,7 @@ build too, and check that it can be made in real components.
 
 **Where we are** (`PROGRAMME.md`; a summary in `ABSTRACT.md`). A life offers about 50 bits of evidence, but writing
 down a world's rule takes hundreds, so no brain learns a world from nothing in one life: it can only choose among
-what its structure already makes cheap. The bank copes with between a quarter and a half of the random worlds that
+what its structure already makes cheap. The bank copes with between a fifth and three fifths of the random worlds that
 have something to learn, and uses its evidence almost as well as an ideal judge would. Where it fails, it lacks the
 idea, mostly an idea about *time* (when the colours swap, how soon after a meal another turns bad). But its ideas
 are ones we wrote in. The next step is a bank that makes its own rivals, out of many simple circuits connected in
@@ -259,13 +259,22 @@ The findings that changed the direction of the work, each told in full in the no
 - **On worlds we didn't choose, the bank covers what its ideas describe, and no more.** To judge whether the bank is
   general rather than tuned to the problems we built it for, a program drew worlds at random from our grammar of
   challenges, fixed before we saw any. Only about a third have anything to learn. Of those, the bank surely copes with
-  about a quarter and surely fails over two fifths; the rest are too close to call. Where an ideal judge holding
+  about a fifth and surely fails two fifths; the rest are too close to call. Where an ideal judge holding
   thousands of ideas succeeds, the bank nearly always does too, and where the bank fails, mostly so does that judge:
   the failures are missing ideas, chiefly about timing (colours that swap at some period, a meal soon after the last
-  being bad) and place. A ten times longer life rescues a few of the meal-timing worlds and none of the swaps. One
+  being bad) and place. A ten times longer life rescues a few of the meal-timing worlds and none of the swaps,
+  though in a life that long the ideal judge, which holds ideas about timing, does learn several swaps. One
   part did harm: the eye filter, tuned for the eyes' usual pulse rate, costs a lot when the eyes are more sensitive. So
   the bank's principle (rival predictors judged on every taste) works, but its repertoire is ours, which is why the
   next step is rivals the brain makes itself (`discrete/NOTEBOOK.md`, D35).
+- **Trying things out has a price, and in a short life the brain may not be able to see it.** To learn how to balance
+  a lopsided body, a part of the brain wobbles its balance a little on each drive and keeps what goes better. We gave
+  it rules of its own: a bigger step while its moves agree, a smaller one when they reverse, and a quieter wobble once
+  the wobble hurts whichever way it goes (the sign of standing on a peak). In long lives this works well, and it
+  rescued much of what long lives had seemed to lose. But on a body whose thrusters are exactly equal, even a tiny
+  wobble costs a tenth of the food, and spotting that cost from the drives themselves takes about fifteen times more
+  drives than a short life has. The older design was safe in short lives only because it never wobbled while it was
+  eating well. When to explore at all is still open (`discrete/NOTEBOOK.md`, D36).
 
 ## The ground rules, for every brain
 

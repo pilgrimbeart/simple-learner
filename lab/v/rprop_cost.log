@@ -1,0 +1,5 @@
+plain 10,000 s, 5 pairs, last third
+  base    2.537   minus wob0 +0.047 [-0.023,+0.119]
+  wob0    2.490   minus base -0.047 [-0.119,+0.023]
+  wob.02  2.375   minus base -0.162 [-0.223,-0.115]   minus wob0 -0.115 [-0.207,-0.022]
+  wob.05  2.245   minus base -0.292 [-0.367,-0.214]   minus wob0 -0.245 [-0.323,-0.167]

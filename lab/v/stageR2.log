@@ -1,0 +1,91 @@
+/home/pilgrim/git/simple-learner/lab/stageR2.py:117: RuntimeWarning: invalid value encountered in subtract
+  dl, dh = np.percentile((x - xs["written"])[np.isfinite(x - xs["written"])], [2.5, 97.5])
+== worlds with something to learn: x (60 pairs, 95%) for the written bank and each K; the bar max(.5 r, .25); the new minus the written, paired
+  g143  gap +0.15 bar 0.29 | written +0.33u  K10 +0.33u d=  K100 +0.33u d=  K1000 +0.33u d= | L1 flaky fixed | K100 picks []
+  g144  gap +0.46 bar 0.25 | written +0.44u  K10 +0.60p d=  K100 +0.61p d+  K1000 +0.60p d= | L7 lie fixed | K100 picks [('osc(8.15s/2)', 1), ('count4(count7(taste))', 1)]
+  g149  gap +0.58 bar 0.25 | written -1.85f  K10 -2.27f d-  K100 -2.11f d-  K1000 -2.19f d- | L7 allfood fixed; L7 region fixed | K100 picks [('count8(good)', 9), ('count10(good)', 7)]
+  g151  gap +0.16 bar 0.25 | written -0.34u  K10 -0.38u d=  K100 -0.39u d=  K1000 -0.39u d= | L6 mouth fixed; L1 flaky fixed | K100 picks []
+  g157  gap +0.37 bar 0.26 | written +0.62p  K10 +0.62p d=  K100 +0.62p d=  K1000 +0.62p d= | L5 noisy fixed | K100 picks []
+  g170  gap +1.66 bar 0.25 | written +0.49p  K10 -0.56f d-  K100 -0.09f d-  K1000 -0.16f d- | L4 dimall bursts; L7 alternate fixed | K100 picks [('count2(good)', 66), ('count4(good)', 26)]
+  g171  gap +0.46 bar 0.25 | written +0.36u  K10 +0.38u d=  K100 +0.37u d=  K1000 +0.40u d= | L3 onescarce fixed; L4 cross fixed | K100 picks [('within3.16s(taste)', 1), ('count12(taste)', 1)]
+  g174  gap +1.87 bar 0.25 | written -0.00f  K10 -0.23f d-  K100 -0.33f d-  K1000 -0.29f d- | L7 satiety fixed | K100 picks [('within0.651s(taste)', 3), ('(within0.754s(good) x within7.33s(taste))', 2)]
+  g182  gap +0.21 bar 0.25 | written -0.03u  K10 -0.03u d=  K100 -0.03u d=  K1000 -0.03u d= | L3 moving from; L3 onescarce fixed; L1 spurious fixed | K100 picks []
+  g183  gap +0.50 bar 0.25 | written -1.29f  K10 -1.34f d=  K100 -1.39f d=  K1000 -1.44f d= | L7 lie fixed; L7 satiety from | K100 picks [('count8(taste)', 2), ('count9(good)', 2)]
+  g185  gap +0.10 bar 0.25 | written +0.45u  K10 +0.57u d+  K100 +0.57u d+  K1000 +0.57u d+ | L4 dim from; L7 nth fixed | K100 picks []
+  g188  gap +0.33 bar 0.25 | written +0.67p  K10 +0.77p d=  K100 +0.73p d=  K1000 +0.72p d= | L7 lie from | K100 picks [('osc(8.05s/4)', 1), ('osc(1.11s/2)', 1)]
+  g192  gap +0.24 bar 0.25 | written -0.08f  K10 -0.07f d=  K100 -0.07f d=  K1000 -0.07f d= | L7 satiety from; L3 blocks fixed | K100 picks []
+  g196  gap +0.14 bar 0.25 | written +0.06u  K10 +0.12u d=  K100 +0.12u d=  K1000 +0.12u d= | L1 flaky fixed | K100 picks []
+  g198  gap +0.11 bar 0.32 | written +0.28u  K10 +0.28u d=  K100 +0.28u d=  K1000 +0.28u d= | L2 spinbias fixed | K100 picks []
+  g214  gap +0.13 bar 0.25 | written -0.12u  K10 -0.12u d=  K100 -0.12u d=  K1000 -0.12u d= | L5 weak fixed | K100 picks []
+  g217  gap +0.17 bar 0.25 | written +0.35u  K10 +0.35u d=  K100 +0.35u d=  K1000 +0.35u d= | L3 onescarce fixed | K100 picks []
+  g226  gap +1.11 bar 0.25 | written -0.59f  K10 -0.66f d=  K100 -0.70f d-  K1000 -0.68f d- | L6 bounce until; L7 swap fixed; L5 sense fixed | K100 picks [('count11(good)', 5), ('count12(good)', 4)]
+  g227  gap +0.97 bar 0.25 | written -0.25f  K10 -0.88f d-  K100 -0.75f d-  K1000 -0.87f d- | L7 swap fixed | K100 picks [('osc(69.6s/2)', 2), ('count2(osc(45.4s/2))', 2)]
+  g231  gap +0.17 bar 0.25 | written +0.98u  K10 +1.12u d=  K100 +1.12u d=  K1000 +1.12u d= | L1 gain_both fixed; L4 cross fixed | K100 picks []
+  g238  gap +0.11 bar 0.25 | written +0.08u  K10 +0.08u d=  K100 +0.08u d=  K1000 +0.08u d= | L1 mirror fixed; L3 blocks fixed | K100 picks []
+  g244  gap +1.87 bar 0.25 | written -0.03f  K10 -0.29f d-  K100 -0.45f d-  K1000 -0.31f d- | L7 satiety fixed | K100 picks [('within0.481s(taste)', 4), ('within0.576s(taste)', 3)]
+  g245  gap +2.50 bar 0.25 | written -0.44f  K10 -0.51f d=  K100 -0.49f d=  K1000 -0.47f d= | L7 alternate cycle | K100 picks [('count2(good)', 26), ('count5(good)', 22)]
+  g254  gap +0.15 bar 0.25 | written -1.05f  K10 -0.67u d=  K100 -0.74u d=  K1000 -0.49u d+ | L2 drag from; L7 lie until | K100 picks [('count9(taste)', 3), ('count8(taste)', 2)]
+  g256  gap +0.26 bar 0.25 | written +0.37u  K10 +0.38u d=  K100 +0.39u d=  K1000 +0.45u d= | L3 clumps fixed | K100 picks [('(count10(taste) x within0.279s(taste))', 1)]
+  g261  gap +2.16 bar 0.25 | written +0.06f  K10 -0.92f d-  K100 -0.31f d-  K1000 -0.19f d- | L7 alternate fixed; L7 satiety until | K100 picks [('count2(good)', 62), ('count4(good)', 34)]
+  g264  gap +0.22 bar 0.25 | written -0.20u  K10 -0.12u d=  K100 -0.04u d+  K1000 -0.04u d+ | L4 cross fixed | K100 picks []
+  g268  gap +1.34 bar 0.25 | written +0.34p  K10 +0.32u d=  K100 +0.33u d=  K1000 +0.34p d= | L7 satiety from; L1 mirror fixed | K100 picks [('(within0.461s(taste) x within0.996s(taste))', 1), ('within0.559s(good)', 1)]
+  g280  gap +0.60 bar 0.25 | written -0.68f  K10 -0.84f d-  K100 -0.78f d=  K1000 -0.78f d= | L5 weak fixed; L7 region bursts; L3 blocks fixed | K100 picks [('count9(good)', 2), ('count4(good)', 2)]
+  g284  gap +2.38 bar 0.27 | written +0.52p  K10 -0.25f d-  K100 +0.22u d-  K1000 +0.20f d- | L7 alternate from; L2 drag from | K100 picks [('count2(good)', 61), ('count4(good)', 35)]
+  g288  gap +0.19 bar 0.25 | written -0.02u  K10 -0.17u d=  K100 -0.13u d=  K1000 -0.13u d= | L3 clumps fixed; L1 mirror fixed | K100 picks []
+  g294  gap +0.44 bar 0.32 | written +0.71p  K10 +0.74p d=  K100 +0.74p d=  K1000 +0.74p d= | L5 noisy fixed; L4 reach fixed | K100 picks []
+  g296  gap +1.25 bar 0.25 | written +0.03f  K10 -0.38f d-  K100 -0.32f d-  K1000 -0.40f d- | L7 swap fixed; L7 allfood from; L3 moving until | K100 picks [('count15(good)', 4), ('count13(good)', 3)]
+  g302  gap +0.48 bar 0.25 | written -2.59f  K10 -3.13f d-  K100 -3.22f d-  K1000 -3.15f d- | L3 blocks fixed; L7 region fixed; L2 push fixed | K100 picks [('count16(good)', 8), ('count12(good)', 7)]
+  g303  gap +0.12 bar 0.25 | written +0.30u  K10 +0.30u d=  K100 +0.30u d=  K1000 +0.30u d= | L3 onescarce fixed | K100 picks []
+  g305  gap +0.46 bar 0.25 | written +0.44u  K10 +0.60p d=  K100 +0.61p d+  K1000 +0.60p d= | L7 lie fixed | K100 picks [('osc(8.15s/2)', 1), ('count4(count7(taste))', 1)]
+  g311  gap +1.98 bar 0.28 | written +0.51p  K10 +0.16f d-  K100 +0.28u d-  K1000 +0.27u d- | L7 alternate from | K100 picks [('count2(good)', 40), ('count4(good)', 24)]
+  g314  gap +0.90 bar 1.27 | written +2.57p  K10 +2.57p d=  K100 +2.57p d=  K1000 +2.57p d= | L5 noisy fixed; L7 allfood fixed | K100 picks []
+  g317  gap +0.16 bar 0.25 | written +0.66u  K10 +0.67u d=  K100 +0.85u d=  K1000 +0.84u d= | L7 lie fixed | K100 picks [('osc(7.54s/2)', 1)]
+  g328  gap +1.00 bar 0.25 | written -0.18f  K10 -0.45f d-  K100 -0.43f d-  K1000 -0.45f d- | L2 push fixed; L7 swap fixed; L5 noisy fixed | K100 picks [('osc(43s/4)', 3), ('count14(good)', 3)]
+  g331  gap +0.19 bar 0.25 | written +0.49u  K10 +0.56u d=  K100 +0.56u d=  K1000 +0.56u d= | L9 feast fixed; L5 weak fixed | K100 picks []
+  g335  gap +0.69 bar 0.25 | written -0.35f  K10 -1.01f d-  K100 -1.11f d-  K1000 -1.04f d- | L7 swap bursts; L2 drag fixed | K100 picks [('count2(within1.43s(good))', 2), ('count3(within0.434s(good))', 2)]
+  g337  gap +0.12 bar 0.25 | written -0.15f  K10 -0.15f d=  K100 -0.15f d=  K1000 -0.15f d= | L7 lie fixed; L2 drag fixed; L3 blocks fixed | K100 picks [('osc(4.99s/4)', 1)]
+  g344  gap +0.14 bar 0.25 | written -0.56f  K10 -0.56f d=  K100 -0.56f d=  K1000 -0.56f d= | L2 drag fixed; L3 onescarce fixed; L5 sense fixed | K100 picks []
+  g352  gap +1.88 bar 0.25 | written +0.26u  K10 +0.22u d=  K100 +0.24u d=  K1000 +0.26u d= | L7 satiety cycle | K100 picks [('within0.83s(good)', 1), ('within0.864s(good)', 1)]
+  g360  gap +0.17 bar 0.25 | written +0.50u  K10 +0.45u d=  K100 +0.47u d=  K1000 +0.53u d= | L7 nth fixed | K100 picks [('count4(taste)', 13), ('count8(taste)', 3)]
+  g361  gap +0.69 bar 0.25 | written -0.36f  K10 -1.14f d-  K100 -1.13f d-  K1000 -1.15f d- | L7 swap fixed | K100 picks [('osc(200s/2)', 2), ('osc(107s/2)', 2)]
+  g363  gap +0.54 bar 0.32 | written +0.76p  K10 +0.77p d=  K100 +0.77p d=  K1000 +0.77p d= | L3 blocks fixed; L5 noisy fixed | K100 picks []
+  g380  gap +1.28 bar 0.25 | written -0.02f  K10 -0.63f d-  K100 -0.57f d-  K1000 -0.70f d- | L7 swap bursts | K100 picks [('osc(125s/2)', 3), ('count14(good)', 3)]
+  g383  gap +0.16 bar 3.91 | written +8.22p  K10 +8.20p d=  K100 +8.21p d=  K1000 +8.21p d= | L7 alternate bursts; L7 keylock fixed | K100 picks []
+  g384  gap +1.91 bar 0.25 | written +0.22u  K10 -0.38f d-  K100 -0.07f d-  K1000 -0.12f d- | L3 blocks fixed; L7 alternate until | K100 picks [('count2(good)', 72), ('count4(good)', 38)]
+  g395  gap +0.15 bar 0.25 | written -0.15u  K10 -0.13u d=  K100 -0.13u d=  K1000 -0.13u d= | L4 cross fixed | K100 picks []
+  g397  gap +2.04 bar 0.27 | written +0.20u  K10 -0.25f d-  K100 -0.22f d-  K1000 -0.20f d- | L7 allfood cycle; L7 swap fixed | K100 picks [('count10(good)', 6), ('count9(good)', 6)]
+  g398  gap +0.30 bar 0.50 | written +0.91u  K10 +1.04p d=  K100 +1.01p d=  K1000 +1.04p d= | L6 bruise bursts | K100 picks [('osc(5.17s/2)', 1), ('(osc(58.7s/4) x within1.44s(good))', 1)]
+  g399  gap +0.21 bar 0.25 | written +0.16u  K10 +0.16u d=  K100 +0.16u d=  K1000 +0.16u d= | L3 blocks fixed; L3 clumps fixed; L3 blocks fixed | K100 picks []
+  written  sure pass 10, sure fail 19, can't tell 26 of 55: coverage 0.18 to 0.65
+  K10      sure pass 9, sure fail 23, can't tell 23 of 55: coverage 0.16 to 0.58
+  K100     sure pass 9, sure fail 21, can't tell 25 of 55: coverage 0.16 to 0.62
+  K1000    sure pass 10, sure fail 22, can't tell 23 of 55: coverage 0.18 to 0.60
+
+== nothing to learn: each arm minus base (60 pairs, 95%); harm if surely below -.1
+  plain written +0.08[-0.05,+0.22]  K10 +0.08[-0.05,+0.22]  K100 +0.08[-0.05,+0.22]  K1000 +0.08[-0.05,+0.22]  K1000fixed +0.08[-0.06,+0.22] | plain
+  g80   written -0.60[-0.72,-0.47]H  K10 -0.60[-0.72,-0.47]H  K100 -0.60[-0.72,-0.47]H  K1000 -0.60[-0.72,-0.47]H  K1000fixed -0.60[-0.72,-0.47]H | L5 sense fixed
+  g118  written -0.57[-0.70,-0.45]H  K10 -0.57[-0.70,-0.45]H  K100 -0.57[-0.70,-0.45]H  K1000 -0.57[-0.70,-0.45]H  K1000fixed -0.57[-0.70,-0.45]H | L5 sense fixed
+  g172  written -0.44[-0.56,-0.31]H  K10 -0.44[-0.56,-0.31]H  K100 -0.44[-0.56,-0.31]H  K1000 -0.44[-0.56,-0.31]H  K1000fixed -0.44[-0.56,-0.31]H | L5 sense fixed
+  g262  written -0.25[-0.36,-0.12]H  K10 -0.25[-0.36,-0.12]H  K100 -0.25[-0.36,-0.12]H  K1000 -0.25[-0.36,-0.12]H  K1000fixed -0.25[-0.36,-0.12]H | L4 reach fixed
+  g322  written -0.47[-0.59,-0.35]H  K10 -0.47[-0.59,-0.35]H  K100 -0.47[-0.59,-0.35]H  K1000 -0.47[-0.59,-0.35]H  K1000fixed -0.47[-0.59,-0.35]H | L5 sense fixed
+  g367  written -0.26[-0.40,-0.12]H  K10 -0.26[-0.40,-0.12]H  K100 -0.26[-0.40,-0.12]H  K1000 -0.26[-0.40,-0.12]H  K1000fixed -0.28[-0.43,-0.14]H | L6 mouth fixed
+  g146  written +0.03[-0.05,+0.12]  K10 +0.03[-0.05,+0.12]  K100 +0.03[-0.05,+0.12]  K1000 +0.03[-0.05,+0.12]  K1000fixed +0.03[-0.05,+0.12] | L1 flaky fixed
+  g148  written +0.15[-0.00,+0.30]  K10 +0.15[-0.00,+0.30]  K100 +0.15[-0.00,+0.30]  K1000 +0.15[-0.00,+0.30]  K1000fixed +0.15[-0.00,+0.30] | L7 keylock bursts
+  g150  written +0.87[+0.57,+1.16]  K10 +1.04[+0.74,+1.34]  K100 +0.88[+0.62,+1.16]  K1000 +0.86[+0.55,+1.17]  K1000fixed +1.03[+0.77,+1.30] | L7 allbad fixed; L7 allbad from
+  g152  written -0.11[-0.22,+0.01]  K10 -0.11[-0.22,+0.01]  K100 -0.11[-0.22,+0.01]  K1000 -0.11[-0.22,+0.01]  K1000fixed -0.11[-0.22,+0.01] | L2 spinbias fixed
+  g153  written +0.01[-0.02,+0.04]  K10 +0.01[-0.02,+0.04]  K100 +0.01[-0.02,+0.04]  K1000 +0.01[-0.02,+0.04]  K1000fixed +0.01[-0.02,+0.04] | L9 thrustcost fixed; L7 allfood from
+  g155  written -0.01[-0.13,+0.12]  K10 -0.01[-0.13,+0.12]  K100 -0.01[-0.13,+0.12]  K1000 -0.01[-0.13,+0.12]  K1000fixed -0.01[-0.13,+0.12] | L2 spinbias fixed
+  g156  written -0.04[-0.14,+0.07]  K10 -0.04[-0.14,+0.07]  K100 -0.04[-0.14,+0.07]  K1000 -0.04[-0.14,+0.07]  K1000fixed -0.04[-0.14,+0.07] | L1 spurious fixed
+  g158  written -0.11[-0.24,+0.02]  K10 -0.11[-0.24,+0.02]  K100 -0.11[-0.24,+0.02]  K1000 -0.11[-0.24,+0.02]  K1000fixed -0.11[-0.24,+0.02] | L5 sense fixed
+  g159  written -0.09[-0.23,+0.05]  K10 -0.09[-0.23,+0.05]  K100 -0.09[-0.23,+0.05]  K1000 -0.09[-0.23,+0.05]  K1000fixed -0.09[-0.23,+0.05] | L2 current fixed
+  g160  written +0.05[-0.09,+0.19]  K10 +0.03[-0.11,+0.18]  K100 +0.03[-0.11,+0.18]  K1000 +0.03[-0.11,+0.18]  K1000fixed +0.05[-0.09,+0.19] | L3 clumps fixed
+  g162  written -0.07[-0.15,+0.01]  K10 -0.07[-0.15,+0.01]  K100 -0.07[-0.15,+0.01]  K1000 -0.07[-0.15,+0.01]  K1000fixed -0.08[-0.16,+0.00] | L1 gain_one fixed
+  g164  written +0.08[-0.03,+0.19]  K10 +0.08[-0.03,+0.19]  K100 +0.08[-0.03,+0.19]  K1000 +0.08[-0.03,+0.19]  K1000fixed +0.08[-0.04,+0.19] | L9 cost fixed
+  g167  written -0.03[-0.13,+0.07]  K10 -0.03[-0.13,+0.07]  K100 -0.03[-0.13,+0.07]  K1000 -0.03[-0.13,+0.07]  K1000fixed -0.03[-0.13,+0.07] | L6 bounce fixed
+  g169  written +1.52[+1.33,+1.70]  K10 +1.52[+1.33,+1.70]  K100 +1.52[+1.33,+1.70]  K1000 +1.52[+1.33,+1.70]  K1000fixed +1.52[+1.33,+1.70] | L7 allfood fixed; L2 spinbias fixed
+  g175  written +0.02[-0.08,+0.12]  K10 +0.02[-0.08,+0.12]  K100 +0.02[-0.08,+0.12]  K1000 +0.02[-0.08,+0.12]  K1000fixed -0.00[-0.10,+0.10] | L1 mirror fixed; L1 mirror fixed
+  g176  written +0.05[-0.09,+0.20]  K10 +0.06[-0.08,+0.21]  K100 +0.06[-0.08,+0.21]  K1000 +0.06[-0.08,+0.21]  K1000fixed +0.01[-0.13,+0.16] | L1 gain_both fixed
+  g178  written +0.07[-0.05,+0.19]  K10 +0.07[-0.05,+0.19]  K100 +0.07[-0.05,+0.19]  K1000 +0.07[-0.05,+0.19]  K1000fixed +0.07[-0.06,+0.19] | L3 moving from
+  g184  written +0.89[+0.67,+1.11]  K10 +0.95[+0.70,+1.19]  K100 +0.83[+0.59,+1.07]  K1000 +0.78[+0.54,+1.02]  K1000fixed +0.94[+0.71,+1.18] | L6 bruise from; L6 bruise fixed
+  g187  written +2.03[+1.87,+2.19]  K10 +2.03[+1.87,+2.19]  K100 +2.03[+1.87,+2.19]  K1000 +2.03[+1.87,+2.19]  K1000fixed +2.03[+1.87,+2.19] | L7 allfood until; L7 allfood until
+  g189  written +0.07[-0.14,+0.29]  K10 -0.10[-0.30,+0.11]  K100 -0.10[-0.34,+0.15]  K1000 -0.01[-0.25,+0.23]  K1000fixed -0.10[-0.31,+0.11] | L7 allbad cycle; L5 weak fixed

@@ -1,0 +1,14 @@
+== plain, 10000 s, 10 pairs (last third)
+  base      2.534   minus old +0.076 [-0.029,+0.188]
+  old       2.458   minus base -0.076 [-0.188,+0.029]
+  adaptive  2.259   minus base -0.275 [-0.435,-0.162]   minus old -0.199 [-0.422,-0.016]
+== thrusters, 100 s, 30 pairs (whole life)
+  base      0.139   minus old -0.011 [-0.172,+0.147]
+  old       0.150   minus base +0.011 [-0.147,+0.172]
+  adaptive  0.360   minus base +0.221 [+0.010,+0.440]   minus old +0.210 [+0.009,+0.417]
+  never     0.153   minus base +0.013 [-0.141,+0.172]   minus old +0.003 [-0.020,+0.030]
+== thrusters, 1000 s, 10 pairs (last third)
+  base      0.149   minus old -1.170 [-1.954,-0.440]
+  old       1.318   minus base +1.170 [+0.440,+1.954]
+  adaptive  0.319   minus base +0.170 [-0.040,+0.489]   minus old -1.000 [-1.689,-0.398]
+  never     0.078   minus base -0.071 [-0.201,+0.050]   minus old -1.240 [-2.086,-0.460]

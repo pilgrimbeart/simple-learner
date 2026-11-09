@@ -1,0 +1,27 @@
+== 10000 s lives, last third, 10 pairs: x (95%) for the written bank and each K against max(.5 r, .25), r from the 1000 s reference
+  g227  gap +0.58 bar 0.25 | written -0.87[-1.66,-0.53]f  K10 -2.06[-3.82,-1.26]f  K100 -1.89[-3.19,-1.35]f  K1000 -2.10[-3.57,-1.52]f  K1000+ -2.13[-3.51,-1.58]f | L7 swap fixed
+  g361  gap +0.35 bar 0.25 | written -1.79[-3.41,-1.05]f  K10 -3.45[-6.57,-2.06]f  K100 -3.07[-5.51,-2.04]f  K1000 -3.48[-6.08,-2.40]f  K1000+ -3.36[-5.83,-2.32]f | L7 swap fixed
+  g335  gap +0.43 bar 0.25 | written -1.24[-2.18,-0.79]f  K10 -2.65[-4.62,-1.72]f  K100 -2.45[-4.07,-1.69]f  K1000 -2.62[-4.26,-1.83]f  K1000+ -2.51[-4.12,-1.76]f | L7 swap bursts; L2 drag fixed
+  g380  gap +1.29 bar 0.25 | written -0.15[-0.22,-0.09]f  K10 -0.65[-0.92,-0.43]f  K100 -0.56[-0.68,-0.46]f  K1000 -0.55[-0.67,-0.47]f  K1000+ -0.54[-0.69,-0.43]f | L7 swap bursts
+  g397  gap +1.92 bar 0.53 | written +0.01[-0.04,+0.06]f  K10 -0.29[-0.46,-0.15]f  K100 -0.15[-0.22,-0.09]f  K1000 -0.16[-0.18,-0.14]f  K1000+ -0.12[-0.17,-0.07]f | L7 allfood cycle; L7 swap fixed
+  g328  gap +0.57 bar 0.40 | written -0.38[-0.47,-0.27]f  K10 -0.53[-0.67,-0.39]f  K100 -0.39[-0.51,-0.27]f  K1000 -0.29[-0.36,-0.23]f  K1000+ -0.27[-0.36,-0.19]f | L2 push fixed; L7 swap fixed; L5 noisy fixed
+  g226  gap +1.07 bar 0.31 | written -0.51[-0.57,-0.45]f  K10 -0.77[-0.94,-0.61]f  K100 -0.55[-0.63,-0.50]f  K1000 -0.28[-0.32,-0.23]f  K1000+ -0.30[-0.35,-0.25]f | L6 bounce until; L7 swap fixed; L5 sense fixed
+  g245  gap +2.26 bar 0.25 | written -0.38[-0.43,-0.35]f  K10 -0.48[-0.58,-0.40]f  K100 -0.41[-0.47,-0.36]f  K1000 -0.16[-0.25,-0.08]f  K1000+ -0.16[-0.27,-0.08]f | L7 alternate cycle
+  g261  gap +1.30 bar 0.71 | written +1.24[+1.13,+1.37]p  K10 +0.50[-0.17,+1.09]u  K100 +1.06[+0.90,+1.24]p  K1000 +0.84[+0.76,+0.93]p  K1000+ +0.84[+0.75,+0.93]p | L7 alternate fixed; L7 satiety until
+  g352  gap +1.16 bar 0.28 | written +0.47[+0.41,+0.53]p  K10 +0.45[+0.39,+0.51]p  K100 +0.28[+0.21,+0.37]u  K1000 +0.23[+0.13,+0.34]u  K1000+ +0.23[+0.13,+0.34]u | L7 satiety cycle
+  g174  gap +1.31 bar 0.25 | written +0.35[+0.32,+0.39]p  K10 +0.05[-0.13,+0.24]f  K100 -0.45[-0.52,-0.39]f  K1000 -0.58[-0.64,-0.51]f  K1000+ -0.58[-0.64,-0.51]f | L7 satiety fixed
+  g244  gap +1.35 bar 0.25 | written +0.37[+0.35,+0.41]p  K10 +0.15[-0.01,+0.30]u  K100 -0.42[-0.52,-0.33]f  K1000 -0.60[-0.69,-0.52]f  K1000+ -0.60[-0.69,-0.52]f | L7 satiety fixed
+  g192  gap +0.37 bar 0.27 | written +0.60[+0.35,+0.90]p  K10 +0.09[-0.15,+0.32]u  K100 -0.23[-0.46,-0.01]f  K1000 -0.21[-0.39,-0.06]f  K1000+ -0.21[-0.39,-0.06]f | L7 satiety from; L3 blocks fixed
+  written  sure pass 5, sure fail 8, can't tell 0 of 13
+  K10      sure pass 1, sure fail 9, can't tell 3 of 13
+  K100     sure pass 1, sure fail 11, can't tell 1 of 13
+  K1000    sure pass 1, sure fail 11, can't tell 1 of 13
+  K1000+   sure pass 1, sure fail 11, can't tell 1 of 13
+
+== plain (nothing to learn): each arm minus base, last third (95%); harm if surely below -.1
+  written    -0.397 [-0.604,-0.201]  HARM
+  K10        -0.372 [-0.571,-0.186]  HARM
+  K100       -0.372 [-0.571,-0.186]  HARM
+  K1000      -0.372 [-0.571,-0.186]  HARM
+  K1000+     -0.372 [-0.571,-0.186]  HARM
+  K1000fixed -0.393 [-0.621,-0.174]  HARM

@@ -16,7 +16,7 @@ If it needs one for each, we have just hand-designed everything, and nothing int
 
 ## Where we are
 
-**Decision B taken (the user, 2026-11-07): the bank makes its own rivals.** Stage 3 is done and checked independently: on fresh random worlds the bank's hand-written repertoire surely covers 12 of the 55 with something to learn and surely fails 24, coverage between .22 and .56; its failures are missing ideas, mostly about timing; one part (the eye filter, tuned to the eyes' usual rate) does harm where the eyes are more sensitive (`discrete/NOTEBOOK.md`, D35; `ABSTRACT.md`). Being firmed up (`lab/stage3_firm.py`): small gaps re-measured, doing no harm on every nothing-to-learn world, the reference at 1000 s. **Next: stage R**, below, in place of stage 4's hand-made cures.
+**Decision B taken (the user, 2026-11-07): the bank makes its own rivals.** Stage 3 is done and checked independently: on fresh random worlds the bank's hand-written repertoire surely covers 11 of the 61 with something to learn and surely fails 24, coverage between .18 and .61; its failures are missing ideas, mostly about timing (at 1000 s an ideal judge with timing ideas learns swaps the bank can't); one part (the eye filter, tuned to the eyes' usual rate) does harm where the eyes are more sensitive, and the bank costs a little (about .07) in many worlds with nothing to learn (`discrete/NOTEBOOK.md`, D35; `ABSTRACT.md`). **Next: stage R**, below, in place of stage 4's hand-made cures.
 
 **Gates, fixed before the results.** A gate that fails stops the work there, and it is reported, not argued round.
 
@@ -130,6 +130,7 @@ We boil down during the search, not at the end, when nobody could reason about t
 | 2026-11-06 | One independent agent checks stage 2c (interface by construction, instruments, seconds, speed) before stage 3; final runs in seconds at about 1.25 ms; the reference only on worlds with a gap, at 2.5 ms | the user (approving the main session's plan) |
 | 2026-11-07 | One independent agent checks stage 3's coverage (the gate "3 to B"); the gaps it found are filled before the result is final | the user |
 | 2026-11-07 | Decision B: next, the bank makes its own rivals from simple parts connected in various ways, hierarchies included (stage R); stage 4's hand-made cures parked | the user |
+| 2026-11-07 | The one-bit question (which colour is food) first, as the simplest case; rivals for how to drive after stage R (Parked) | the user |
 | 2026-11-07 | Rules about time may need far longer lives; long lives may be our equivalent of deep learning's scale, so stage R measures coverage against life length as well as K; lives of 10,000 s allowed for that (AGENTS.md) | the user |
 | 2026-11-06 | Stage 2a is done (engine identical to the unmodified lives, worlds checked against their descriptions, labelled in bits); stage 2b starts, owing the independent engine check; the finer-step move goes to the user, and stage 3's headline is repeated at 5 ms | main session, under the user's delegation |
 
@@ -138,4 +139,17 @@ We boil down during the search, not at the end, when nobody could reason about t
 - A learning adversary, GAN-style (`QUESTIONS.md`, the arms race): after stage 3, as a generator of worlds we couldn't think of.
 - Hierarchy beyond rivals' contexts (detectors that learn which detectors to grow): after stage R.
 - The eye filter's built-in rate (D35): a cure after stage R.
+- Rivals for how to drive, not only which colour is food (the user agreed, 2026-11-07): after stage R, the same recipe (a repertoire of
+  simple parts, a bar rising with its size, no harm in plain) applied to adjustments of the driving (turn strength, approach, pacing),
+  for the body and world mismatches of the interventions table. Harder: such a rival can be judged only by food per second while it
+  is in charge, not on every taste without acting, so its evidence is far scarcer; stage R's long lives say whether it is affordable.
 - A richer world: only once this one has taught us everything it can.
+- **Obstacles that hide food** (the user, 2026-11-08): many blocks of a third kind that only block the view of the other two, so that it
+  pays to steer round them. Two versions: seen only through occlusion (the interface unchanged: a world of the language, perhaps already
+  writable as dark blocks, `bright` 0, if they still occlude and can't be eaten; to check), or sensed in their own right (a change to
+  the body and interface, the user's decision). GRAMMAR.md already lists an occluder primitive as missing (L10, the medium or space).
+- **Stage R again in Sepulchre's mixed-feedback blocks only** (the user, 2026-11-08): the parts of the snake-robot paper (Huo, Forni,
+  Sepulchre, `MIXED_FEEDBACK.md` [20]: rebound-excitable neurons, half-centre oscillators, the rebound winner-take-all motif), wired
+  at random with random weights, and above all with mechanisms that tune the weights themselves. Everything stage R measures (coverage
+  on stage 3's worlds, no harm in plain, life lengths up to 10,000 s), so the two kinds of part are compared on the same lives. These
+  blocks have rhythm, phase reset and entrainment built in, which stage R's free-running oscillators lack.

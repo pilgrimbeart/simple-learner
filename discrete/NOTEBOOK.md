@@ -10,7 +10,16 @@ per meal spent resting, moving and thinking), gain rate (meals per 10 s), food, 
 
 ## Where it stands
 
-- **Stage 3, the bank on fresh random worlds** (D35, checked independently): about 30% have something to learn; the bank surely covers between a quarter and a half of those; its failures are ideas it lacks, mostly about timing; its eye filter does harm where the eyes are more sensitive. Being firmed up (`lab/stage3_firm.py`). Next, by the user's decision B: stage R, rivals made from simple parts (`PROGRAMME.md`).
+- **The balance learner that sizes itself** (D36, night of 2026-11-08): the old learner's fixed gate (wobble below 15 good tastes per 32 s,
+  a rate the body supplies) replaced by rules a block keeps for itself: it moves its balance a step when the sum of its drives' evidence
+  is significant, doubles the step while moves agree and halves it when they reverse, and halves its wobble when its wobble surely hurts
+  whichever way it goes (the mark of standing on a peak). It balances a lopsided body surely faster than the old learner (|x| ahead at
+  100-300 s), and in the 10,000 s scaling test it lifts the written bank surely in 12 of 13 worlds (+.10 to +.69 in x; the swaps from sure
+  fails to can't tell). But in 100 s lives it costs .6 on average over stage 3's worlds: a learner born exploring pays for its wobble, in
+  plain 11% of the food at a wobble of only .05, and a drive's outcome needs about 1,400 drives to show that cost (a 100 s life has
+  about 96). The old bank is safe at 100 s only because its gate never opens there. In plain at 10,000 s the new learner is no better
+  than the old on average (-.12 against base, 30 pairs), only steadier. Open: when to explore at all (`QUESTIONS.md`).
+- **Stage 3, the bank on fresh random worlds** (D35, checked independently): 35% have something to learn; the bank's coverage of those lies between .18 and .61 (11 sure passes, 24 sure fails, 26 too close to call); its failures are ideas it lacks, mostly about timing, and at 1000 s an ideal judge with timing ideas learns the swaps the bank can't; it does no harm in 79 of 113 nothing-to-learn worlds, harms surely in 2 (its eye filter, where the eyes are more sensitive), and costs a little (about .07) in many. Next, by the user's decision B: stage R, rivals made from simple parts (`PROGRAMME.md`).
 - **The budget in bits** (D31, D32): at the bank's rate of tastes a life offers about 50 bits in a clean world and 15 with one lie in five, but a brain may buy several times more by eating faster. The bank's picks resemble a comparison expecting frequent change; its floor pays among counters, though a vote that never forgets does better still. Swap's gap is about when, and a learner holding about 14 bits of periods closes half of it. In clean worlds the wall is the models held, not bits.
 - **Worlds as programs** (D33): a small language writes 40 worlds; its engine reproduces the unmodified lives exactly. The fast model's lives move when the tick is halved (plain -.17), whether through the body's tick or the brain model's is untested: the user's to decide.
 - **Fine enough** (D34): with everything in seconds, results settle by about 1.25 ms (a sixteenth of the body's fastest time constant); the old tick-locked loop was off by up to .8 at 10 ms. The engine is now about 7x faster, lives unchanged.
@@ -2608,6 +2617,10 @@ After the fixes: lives in the tick-locked mode unchanged (144 of 144 of the fing
 
 **The independent check** (the gate "3 to B"; an agent that didn't produce the work, the user's approval, 2026-11-07; its own code from the raw lives, `lab/stage3_indep_check.py`, `stage3_indep_rerun.py`, `stage3_indep_bits.py`, logs `lab/v/stage3_indep_*.log`; I read its key lines). **Confirmed**: the counts (187 distinct, 3 out, 184 judged), the generator's hash, the pairing, disjoint seeds, no refused lives, 53 of 53 saved lives re-run identically, the pass rule as written, the harm on fresh seeds, and that the reference's coarser step moves at most two verdicts. **Its coverage**: 56 with something to learn, 13 sure passes, 23 sure fails, 20 can't tell, .23 [.14,.36] to .59 [.46,.71]; every difference from mine is a world on a threshold, decided by the bootstrap's own noise. **Corrected**: g144 and g305 are one world (360 of 360 lives identical), as is g401 with redo g22; collapsing near-copies leaves the range .23 to .56. **Weaknesses**: 21 worlds judged nothing to learn at 60 pairs had gaps of .07 or more and were never re-measured, nor were sure verdicts on small gaps (g337, g344, g383); doing no harm as PROGRAMME words it (lower bound above -.1) fails to be shown in 55 of 128 nothing-to-learn worlds at 60 pairs; the 1000 s verdicts lacked the reference. All four are being run (`lab/stage3_firm.py`: the 26 worlds re-measured to 300 pairs; the other 96 nothing-to-learn worlds to 200 pairs; the reference at 1000 s; a final count with identical worlds once and a 20,000-draw bootstrap).
 
+**The final count** (`lab/stage3_firm.py final`, `lab/v/stage3_firm.log`; every world with lives identical to an earlier one's counted once, which removes 10 more, so 174 judged). **61 of 174 (.35 [.28,.42]) have something to learn. The bank surely passes 11, surely fails 24, and 26 can't be told: coverage between .18 [.10,.30] and .61 [.48,.72].** The re-measured small gaps moved worlds both ways: several judged nothing to learn at 60 pairs have a small sure gap at 300 (g143, g146, g196, g238: flaky or mirrored eyes, gaps .10-.13), mostly can't-tell or failing; g383's sure pass holds (x 7.6, its gap only .17). Most can't-tell worlds have gaps of .1 to .25, where 300 pairs can't place x either side of .25; finer verdicts there would need thousands of pairs for a gap worth little.
+- **Doing no harm, on every nothing-to-learn world** (113; 200 or 300 pairs): shown (lower bound above -.1) in 79; surely harmed by more than .1 in only 2, the SENSE worlds g322 (-.44) and g172 (-.38), both the eye filter. Not shown in 32, most of them surely a little below base (25 worlds surely below base, typically by .05-.10). So the bank's cost where there is nothing to learn is small but real and widespread: about .07 of efficiency, against which its gains elsewhere are 0.3 to 2.5. Not traced; the cost of exploring a lie it believes in (a rival adopted on luck) is the obvious candidate.
+- **1000 s lives with the reference** (20 pairs, last third, the full bar): of 16 worlds with something to judge, 4 pass (satiety g174, g192, g352; g261 alternate with satiety), 2 can't tell (g244 satiety, g398 bruise bursts), 10 fail: all seven swap worlds, the alternate cycle g245, a lie with satiety (g183), region bursts (g280); 14 have nothing to judge at 1000 s. The reference now closes much of the gap in several swap worlds the bank fails (r .63 g226, .80 g328, 1.07 g397, .31 g227): with ten times the evidence, an ideal judge holding timing hypotheses learns a swap, and the bank, which holds none, doesn't. That is the clearest sign yet that the swaps want an idea, and that the idea pays at 1000 s; stage R tests whether parts drawn at random supply it.
+
 
 ## D36: stage R, rivals made from simple parts (2026-11-07)
 
@@ -2616,3 +2629,149 @@ After the fixes: lives in the tick-locked mode unchanged (144 of 144 of the fing
 **R1, the written bank rebuilt from parts: identical.** Each of V7's rivals is a context (the count of good tastes mod n, n 1 to 6) and a table; rebuilt as parts, 4 is a chain of two toggles and 6 a toggle and a 3-counter together (a bijection with the count mod 6). 160 of 160 lives identical to the bank's on 8 worlds (plain and seven of stage 3's fresh worlds where the bank picks rivals; seeds 81200-81209, 1.25 ms; `lab/rivals.py identity`).
 
 **R2, K rivals drawn at birth** (`lab/stageR2.py`, queued after `lab/stage3_firm.py`): K = 10, 100, 1000 with the Occam bar, on stage 3's 55 fresh worlds with something to learn and 26 with nothing, on stage 3's own seeds so every comparison is paired with its base, told, reference and written-bank lives. A first look on 4 lives each: in plain no rival is adopted at K = 100 or 1000 (efficiency 2.58, as the written bank); a life takes 0.6-1.1 s at K = 1000.
+
+**R2 at 100 s: random rivals do no better than the written bank, and worse where it was built to work** (`lab/v/stageR2.log`; 60 pairs, 1.25 ms; predictions scored in `lab/v/stageR_predictions.md`, mostly wrong). Sure passes of 55: written 10, K = 10 9, K = 100 9, K = 1000 10; coverage .16-.18 to .58-.65 for all. Paired against the written bank: better surely in 2-3 worlds (g144 = g305, a lie, x .44 to .61; g185 nth; g254 at K = 1000), worse surely in 13-17: every swap (by .4 to .8 in x), every alternation (.2 to 1.0), both satiety worlds with a fixed gap (g174, g244, by .3 to .45), region. Where there is nothing to learn, no rival is adopted at any K, with or without the Occam bar: every arm equals the written bank (so the harm in the SENSE worlds is the eye filter's, untouched). Three causes, traced (`lab/stageR2_trace.py`, `lab/v/stageR2_trace.log`; 40 lives each, K = 100 against the written bank, recording each taste while a rival is followed):
+- **The written bank holds "it changes often"** (the default's table with trust 0, a colour that flips on one bad taste), which is what carries it through swaps: in g361 the written bank follows a rival on 1169 tastes, right .85 where the default would be .75; K = 100 follows one on 128. R2's rule can draw no rival without a context, so it can't hold this idea. My rule's omission, not a property of random repertoires; the 10,000 s test adds it back as one arm (K1000+).
+- **Scoring without acting assumes acting doesn't change the world.** In satiety worlds (a meal soon after the last is bad, whatever its colour) the timer rivals adopted are right .27 of the time where the default would be .85 (g244): while scored passively, "soon after a meal, the other colour" looks right; once followed, it changes when the creature eats, and is wrong. The bank's whole economy (every rival judged on every taste, for free) rests on the world not depending on which rival is followed; satiety breaks that. The user's question about testing hypotheses with the world in the loop (2026-11-07) is the general form.
+- **Alternation**: the random banks hold count2 rivals, but with trusts drawn at random, adopted later (the Occam bar: 5.4 at K = 100 with the n > 1 increment, against 3) and switched more often (84 adoptions in 40 lives against 62 in g170); right .74 where the written bank's are .82.
+So at 100 s, a random repertoire of these parts doesn't find the ideas the written bank lacks, and loses the ones it had. The 1000 s and 10,000 s runs say whether more evidence changes that.
+
+**R2 at 1000 s** (`lab/v/stageR2_long.log`; the 30 worlds of stage 3's 1000 s lives, 20 pairs, seeds 81000-81019, last third, the bar from the 1000 s reference). Of 17 with something to judge, the written bank passes 4, K = 10 none, K = 100 one (g261), K = 1000 none; no swap passes at any K. Two trends with K, both as the traces at 100 s explain: in swaps and the alternate cycle a larger K helps (K = 1000 against K = 100: g226 -.38 against -.53, g328 -.18 against -.43, g245 -.07 against -.36), though it still trails the written bank's "it changes often" in four swaps; in satiety worlds a larger K hurts more (g174: written +.32, K = 10 .00, K = 100 -.46, K = 1000 -.68), more timer rivals adopted on passive evidence that acting falsifies. The 10,000 s test (`lab/stageR_scale.py`, running) has the arm K1000+ for the first; the second needs a rival judged while acted on, which is outside R2's rule.
+
+**The 10,000 s scaling test** (`lab/stageR_scale.py`, `lab/v/stageR_scale.log`; 13 timing worlds and plain, 10 pairs, seeds 81400-81409, 1.25 ms, last third; arms base, told, the written bank, K = 10, 100, 1000, and K1000+ = K = 1000's rivals plus "it changes often"; predictions 9-14 scored in `lab/v/stageR_predictions.md`, mostly wrong). No swap passes at any K. Larger K helps a little in swaps and the alternate cycle (g226 K = 1000 -.28 against K = 100 -.55; g245 -.16 against -.41), still behind or level with the written bank. K1000+ equals K1000 within .1 everywhere (not traced; its Occam bar of 6.3 against the written bank's 2 is the candidate). Satiety worlds worse with more K, at every length. **And in plain every bank arm, the written bank included, is surely below base by about .4** (-.37 to -.40; at 100 s +.08), with no rival adopted.
+
+**Traced: the bank wears down over a long life, through its jitter gate** (`lab/stageR_plain_trace.py`, `_trace2.py`, `_trace3.py`, `lab/stageR_plain_ablate.py`; logs `lab/v/stageR_plain_*.log`). The loss grows with the life (last third, the written bank minus base: -.19 [-.60,+.21] at 300 s, +.01 at 1000 s, -.13 at 3000 s, -.40 [-.60,-.20] at 10,000 s); goods fall 18% from the first 1000 s to the last while base holds near 2.45. The pause never switches on in plain, and the balance learner's setting stays small (|x| under .1 on average). Switching parts off in 10,000 s lives: jitter off +.03 [-.02,+.09], no harm at all; eye filter off -.32, pause off -.36, trust and growth off change nothing. So the cause is the jitter gate (`lab/universal.py`, U.step): the balance learner's random steering (sd .15 a drive) turns on whenever a leaky count of good tastes over 200 s falls below 15 per 32 s. Plain gives about 17.7, so the gate sits just above the creature's usual rate; any dip turns the jitter on, the jitter worsens steering, fewer goods keep it on: the share of time jittering rises from 1% in the first 1000 s to about half by the end. A fixed rate the body happens to supply, used as a setpoint (the kind `AGENTS.md` forbids), with a slow ratchet visible only in long lives; the same class of fault as the eye filter (D35). Base (story 1's circuit) has no jitter or balance learner at all. So every bank arm's x at 10,000 s carries this loss, and the scaling test's verdicts are confounded by it, most where the gap is small.
+
+**A block-level cure for the wobble, tried and not yet working** (`lab/adaptive.py`, the user's direction 2026-11-08: rules a block keeps
+for itself, with no knowledge of meals; predictions and their scores in `lab/v/adaptive_predictions.md`; tests `lab/adaptive_test.py`,
+`lab/adaptive_x.py`, `lab/adaptive_fresh.py`, logs `lab/v/adaptive_*.log`). Rules: (1) compare the input wire only with its own past (fast
+against slow average, beyond counting noise) to re-arm the wobble; (2) keep wobbling only while the wobble's own correlation with the
+outcome is significant; (3') keep a learned change only if its evidence is significant, else return to where it began. Found on the
+scaling test's seeds, while designing: the long-life loss there comes from the balance setting, which random-walks while the wobble is on
+and freezes when it stops (|x| against the life's gain, correlation -.79; the learner's own measure falls too, so not a proxy); averaging
+the trials doesn't help (a walk without a restoring force averages to a walk). **Judged on fresh seeds, it fails:** in plain at 10,000 s
+it is surely below base (-.28) and below the old bank; in the thrusters world (each thruster 0.5 to 2) at 1000 s the old bank gains 1.17
+over base and the new one .17 (it quiets before it has learned); only at 100 s is it better (+.21, born exploring, where the old bank's
+balance learner never switches on). **And the old bank's long-life loss in plain is not shown on fresh seeds** (-.08 [-.19,+.03], against
+-.40 [-.60,-.20] on the scaling test's seeds): 10 pairs a set is too few to size it, so the jitter-gate diagnosis above stands as the
+cause on those seeds, but its size is unknown. So the old gate does a real job in long lives (lopsided thrusters), and any replacement
+must learn as fast as it does there; the measure for that is drives taken against an ideal learner's, not yet computed.
+
+**The old bank's long-life loss in plain, sized** (`lab/plain_long_size.py`, `lab/v/plain_long_size.log`; 30 more pairs, seeds
+81700-81729, 10,000 s, last third): -.23 [-.35,-.13]; pooled with the two earlier sets of 10 (50 pairs), **-.235 [-.32,-.15]: surely below
+base by more than .1.** The two sets of 10 (-.40, -.08) were both draws from this. So the bank surely harms in plain over a long life, by
+about a tenth of its efficiency, traced on the first set to its wobble (above); and the same wobble earns 1.17 in the thrusters world at
+1000 s. A cure must keep the second and lose the first.
+
+**How fast could the balance learner be?** (`lab/balance_speed.py`, logs `lab/v/balance_speed_*.log`; fresh seeds 81800-81819, 1.25 ms).
+- *What a drive tells* (plain, the balance held at offsets d, 40 lives of 300 s each): the food pulses a drive are a sharp peak at d = 0,
+  not a parabola: 4.16 at 0, 3.09 and 2.97 at -.15 and +.15, 2.45 and 2.60 at .3, 1.84 and 2.14 at .6; the life's gain .41, .26/.23,
+  .05/.12, -.09/.00. So a .15 error costs 40% of the gain, and a drive is very informative near the peak: the slope is about 7.6 pulses
+  per unit of x against a spread of about 3 a drive, so a pair of drives either side of the estimate fixes the offset to about .28, and
+  an ideal learner reaches .05 in about 60 drives (a minute of life), .1 in about 16. (The script's quadratic fit, which gives 355 to
+  3,200, is the wrong shape and is not used.)
+- *How fast the learners go* (one thruster twice the other, the right |x| .69, 40 lives of 2000 s): the old learner |x| .03 at 100 s,
+  .15 at 200 s, .47 at 500 s, .60 at 1000 s, .66 at 1500 s, about a thousand drives; the adaptive one (rules 1-3') .09 at 100 s, then
+  stalls near .1-.15 (its wobble quiets before it arrives).
+So the evidence is not the limit: an ideal learner would balance this body in a few hundred drives at most, the old learner takes about
+a thousand and only once meals are scarce, the adaptive one never. The waste is in the learner's fixed step (its expected move a drive
+is eta sd^2 f', about .004 at full slope) and in its gate, not in the senses.
+
+**A learner that sizes its own step** (`lab/rprop.py`, judged by `lab/rprop_fresh.py`, traced by `lab/rprop_trace.py`, logs
+`lab/v/rprop_*.log`; predictions 8-11 in `lab/v/adaptive_predictions.md`, written first; fresh seeds 81900-81969). It moves its balance
+by its step D only when the sum of d e since its last move is two standard errors from 0; D doubles when a move agrees with the last,
+halves when it reverses, and halves when 50 drives pass with nothing significant; its wobble's size is D's, within [.05, .4]. All four
+predictions failed or were not shown:
+- One thruster twice the other (right |x| .69), 2000 s: |x| .10 at 100 s (the old learner .01), then stuck: .14 at 2000 s (the old .66).
+  Traced: far from right, 50 drives seldom give a significant sum (the slope there is about 2 pulses a unit, not the peak's 7.6, so my
+  "few hundred drives at most" was for the last stretch only), each give-up throws the evidence away and halves the wobble, and a smaller
+  wobble gathers less: by 200 s it is at the floor. Three lives of ten never moved from 0. The old learner's fixed step never discards.
+- Random thrusters, 100 s: +.12 [-.14,+.38] over the old bank (not shown); 1000 s: -.16 [-.56,+.15] (not shown either way).
+- Plain, 10,000 s: -.20 [-.27,-.13] below base, as the old bank (-.20 [-.35,-.07]), though its |x| stays under .1.
+**The wobble itself is the long-life loss** (`lab/rprop_cost.py`, plain 10,000 s, 5 pairs, the balance held at 0): a fixed wobble of .02
+costs .12 [.02,.21] a second against none, one of .05 .25 [.17,.32]; none ties with base (-.05 [-.12,+.02]). A 1% change of each
+thruster costs 5% of the gain: the peak is a cusp, the cost of an offset growing with its size, not its square. If so, a probe's cost
+and its evidence both grow with its size, so a smaller wobble buys nothing per bit; only probing fewer drives saves.
+**The cusp is plain's knife-edge** (`lab/peak_check.py`, `lab/v/peak_check.log`, fresh seeds 81980-81999, 40 lives of 300 s, the
+balance held at the right value plus d). Plain: food pulses a drive 4.22 at 0, 3.90-4.05 at ±.02 (5% off), 3.63-3.87 at ±.05, ~3.0 at
+±.15; the same at .625 ms (4.23, 3.84-3.97, 3.66-3.86, ~2.99), so not the step. One thruster twice the other: 3.18 at the right value,
+3.15-3.16 at ±.02 (under 1%), 3.05-3.06 at ±.05, 2.67-2.69 at ±.15: a rounded peak, as a smooth body should give. So only two exactly
+equal thrusters give the sharp peak, and only there does every wobble cost in proportion to its size; a body that differs at all from
+perfect symmetry (every real one) has a rounded peak, where a small wobble costs little (its square). The long-life loss of every
+wobbling bank in plain (D36's wear-down, the adaptive and sized banks) is at least partly the price of this knife-edge, which the old
+learner's random walk adds to.
+**v2, no give-ups** (`lab/rprop_fresh.py 2`, `lab/v/rprop_fresh2.log`, seeds 82000-82059): its sums run until significant, D shrinks only
+on a reversal. One thruster twice the other: |x| .14 at 100 s, .38 at 200 s (the old .01, .15), level at 500 s (.54, .55); within .1 of
+.69 at 2000 s in 36 of 40 lives (the old 32). Random thrusters: +.03 [-.27,+.32] against the old bank at 100 s, -.19 [-.59,+.18] at
+1000 s. *How much a drive tells far from right* (`lab/peak_check.py far`, `lab/v/peak_far.log`, 40 lives of 300 s held at each x): food
+pulses a drive 1.73 at x 0, 1.91 at .15, 2.16 at .3, 2.50 at .45, 2.92 at .6, 3.16 at .69, 2.66 at .84, spread 1.2 to 2.7; so with a
+wobble of .3 a drive's signal against its noise is about .3 everywhere below the peak, a significant step about 40 drives, the trip from 0
+about 200 drives on average. *Why v2 still stuck* (`lab/rprop_trace.py 2`, `lab/v/rprop_trace2.log`): lives differ (one's slope at 0 is
+.31, a quarter of the average, so ~950 drives a step); a large wobble raises the total thrust (e^(x/2) + e^(-x/2)), diluting the
+first-order signal; and doubling overshoots (x thrown to 1.2-1.4, then a long wait back).
+**v3-v5** (`lab/rprop_fresh.py 3|3b|4|5`, logs `lab/v/rprop_fresh3*.log`, `_fresh4.log`, `_fresh5.log`; diagnoses `lab/rprop_right.py`,
+`lab/v/rprop_right.log`, `lab/v/rprop_fresh3f.log`; each on its own fresh seeds, predictions 15-23 first). Against the old learner:
+
+| version | the change | double thruster, |x| at 300 s / within .1 at 2000 s | thrusters 100 s | thrusters 1000 s |
+|---|---|---|---|---|
+| v3 | v2, step never above .3 | .45 vs .31, +.13 [+.01,+.26] / 40 of 40 (old 35) | -.01 [-.25,+.22] | -.32 [-.65,+.02] |
+| v4 | v3, give-ups (50 drives) halve step and wobble, sums kept | frozen at .21 / - | +.14 [-.13,+.37] | -.81 [-1.44,-.21] |
+| v5 | v3, give-ups halve the wobble only, sums kept | frozen at .26 / - | +.20 [-.01,+.42] | -.10 [-.43,+.22] |
+
+v3's loss at 1000 s is not its floor wobble (without it -.37) nor its accuracy (|x - right| .09 against .08): a life born near right
+never gets a significant sum, so never reverses and never quiets, its wobble .3 for life (seed 82150: right -.06, x 0 throughout, the last
+third 22 and 53 meals against 80 and 74). And any rule that quiets for want of significant evidence (v1, v4, v5) also quiets the lives
+far from right whose evidence is only slow. The dilemma: "nothing to learn here" and "learning here is slow" look alike to a test of the
+slope alone.
+**v6: quieting on a peak's mark** (`lab/rprop_fresh.py 6`, `lab/v/rprop_fresh6.log`, seeds 82400-82459, predictions 24-26 first, all
+held). v3 (no give-ups, step at most .3) plus one test: the block also sums d (e^2 - sd^2), whether its drives go worse the larger its
+wobble, whichever way; when that sum is two standard errors below 0 (the mark of standing on a peak) it halves its wobble; a move restores
+it. Far from right the sum is not negative (a large wobble there even helps, by more total thrust), so lives far off keep exploring: the
+dilemma of v1-v5 answered by a second statistic, not by a wait. Against the old learner: double thruster |x| .21, .29, .43, .55 at 100,
+200, 300, 500 s (the old .02, .16, .32, .48; surely ahead to 300 s, +.11 [+.02,+.19] there), within .1 of .69 at 2000 s in 37 of 40 (the
+old 30); thrusters 100 s -.11 [-.34,+.10]; 1000 s +.17 [-.02,+.36]. The first version as good as the old learner in long lives and
+surely faster to balance; its long-life harm in plain is being measured.
+**v6's long-life harm, v7 and v8** (`lab/rprop_fresh.py 6L|7|8`, logs `lab/v/rprop_fresh6L.log`, `_fresh7.log`, `_fresh8.log`, fresh seeds,
+predictions 27-36 first). v6 in plain at 10,000 s: -.25 [-.33,-.17] against base, its floor wobble .05 meeting plain's knife-edge; in a
+nearly-plain world (each thruster 0.95 to 1.05, a world written in the language beside plain, not in place of it) -.05 [-.21,+.15].
+v7 lowers the floor to .005, so the peak test alone sets how quiet it gets; v8 also gives that test an always-valid bar (Robbins' normal
+mixture: checked every drive, a false alarm ever only 5% likely). Against the old learner and base:
+
+| | double thruster: |x| ahead at 300 s; within .1 at 2000 s | thrusters 100 s | thrusters 1000 s | plain 10,000 s vs base | nearly plain vs base |
+|---|---|---|---|---|---|
+| v6 | +.11 [+.02,+.19]; 37/40 (old 30) | -.11 [-.34,+.10] | +.17 [-.02,+.36] | -.25 [-.33,-.17] | -.05 [-.21,+.15] |
+| v7 | +.09 [-.04,+.22]; 33/40 (old 37), 3 never left 0 | - | -.17 [-.57,+.22] | -.06 [-.12,-.01] | +.10 [-.06,+.28] |
+| v8 | +.21 [+.12,+.29]; 39/40 (old 30), none at 0 | +.03 [-.21,+.26] | +.17 [-.18,+.54] | -.19 [-.25,-.11] | - |
+
+The old bank in the nearly-plain world is surely below base (-.16 [-.26,-.06]) and v7 surely above it (+.26 [+.16,+.37]). v7 and v8
+trade: v7 quiets plain well but sometimes falsely far from right (a two-standard-error test checked every drive fires by chance in the
+end); v8 never falsely, but too slowly for plain's knife-edge. The night's runs use v7.
+**The scaling test with the cure** (`lab/stageR_scale_cure.py`, `lab/v/stageR_scale_cure.log`, v7, the scaling test's seeds 81400-81409,
+paired with its uncured lives; stage R predictions 15-18 first). The written bank and K1000+ with the sized learner in place of the old
+learner and its fixed gate, 10,000 s lives. The cure lifts the written bank's x surely in 12 of 13 worlds, by +.10 to +.69 (one surely
+lower: g245, alternate cycle, -.11 [-.19,-.02]); written's verdicts go from 5 pass / 8 fail to 6 / 4 (3 can't tell). The three swap
+worlds that failed (g227, g361, g335, x -.9 to -1.8) now sit at x +.06 to +.26, can't tell; g380 (swap bursts) passes. So the wear-down
+was most of the long lives' failure, not the swaps themselves. K1000+ gains as much (+.11 to +.59 in 10 worlds) but still fails 11: its
+problem is its own (late adoption, the Occam bar). Plain: written -.136 [-.209,-.070] against base (uncured -.397), K1000+ -.147: no
+longer surely harmful by the bar, but a third of the loss remains. Cause traced (v7's plain traces, `lab/rprop_fresh.py 7`): chance moves
+of a full .3 step, which nothing in plain ever halves (2 of 20 lives at x +-.3 for 100 s or more in the last third). v9 tests two fixes
+(`lab/rprop9.py`).
+**The cure in 100 s lives: the price of exploring** (`lab/stage3_cure.py`, `lab/v/stage3_cure.log`; traced in `lab/rprop_short.py`,
+`lab/rprop_wobble_signal.py`, `lab/rprop_gate.py`, logs of the same names; stage R predictions 19-20, adaptive 44-48 first). Stage 3's 184
+fresh worlds at 100 s with v7 in place of the old learner: bankS - bank -.60 on average, surely worse in 152 of 184, surely better in 9;
+sure passes 0 against 10. (The construction checked: the same code path reproduces the old bank's lives exactly.) The cause is the
+wobble itself, not moves: in plain at 100 s v7 loses 1.30 of base's 2.47; never moving recovers .11; born with its wobble .1 instead of
+.3, .77. A fixed wobble with no learning costs plain -.28 at .05 (11% of the food), -.55 at .1, -1.22 at .3: plain's cusp. A drive's own
+pulses do show the loss, but faintly: to see at two standard errors that the wobble hurts takes about 1,400 drives at .05, 200 at .1, 90
+at .3, and a 100 s life has about 96. So no rule that judges its wobble by its own drives can make a learner born exploring safe in short
+plain lives: the bits aren't there. The old bank is safe at 100 s because its gate (wobble only below 15 good tastes per 32 s) never
+opens in a life eating normally; kept on v7, it makes v7 identical to the old bank there. And at 100 s balancing pays nowhere tested:
+in the thrusters the old bank is surely below base (-.15 [-.27,-.02]), v7 level with base. The cure is a long-life cure; what decides
+whether to explore at all needs evidence a drive's outcome doesn't carry in time.
+**v7 firmed up, and a caveat on the scaling test** (`lab/rprop_fresh.py 7m`, `lab/v/rprop_fresh7m.log`, seeds 82700-82759; adaptive
+predictions 37-39). Plain at 10,000 s, 30 pairs pooled with v7's first 10: v7 -.117 [-.157,-.079] against base, the old bank -.111
+[-.201,-.029], v7 minus old -.006 [-.101,+.094]. v7 is steadier than the old bank (a third the spread) but no better on average. The
+old bank's long-life loss in plain varies a lot with the seeds: -.40 on the scaling test's 81400-81409, -.19 on v8's, -.11 on these 30
+(the same construction, checked). So the scaling test's seeds were hard ones for the old bank: its paired gains with the cure stand,
+but their size there may be high. Double thruster, 2000 s: one life of 40 left near 0 (4 of 80 over both runs); |x| .59 at 2000 s
+against the old learner's .70.

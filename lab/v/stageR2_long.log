@@ -1,0 +1,35 @@
+== 1000 s lives, last third, 20 pairs: x for the written bank and each K, against the bar max(.5 r, .25)
+  g149  nothing to judge at 1000 s (gap -0.60)
+  g174  gap +1.43 bar 0.25 | written +0.32[+0.25,+0.39]p  K10 -0.00[-0.17,+0.16]f  K100 -0.46[-0.63,-0.29]f  K1000 -0.68[-0.86,-0.51]f | L7 satiety fixed
+  g183  gap +0.31 bar 0.25 | written -2.49[-4.41,-1.58]f  K10 -2.76[-4.66,-1.76]f  K100 -3.53[-5.68,-2.40]f  K1000 -4.35[-7.11,-3.09]f | L7 lie fixed; L7 satiety from
+  g192  gap +0.46 bar 0.27 | written +0.47[+0.36,+0.58]p  K10 +0.32[+0.17,+0.47]u  K100 +0.04[-0.19,+0.23]f  K1000 -0.11[-0.36,+0.12]f | L7 satiety from; L3 blocks fixed
+  g226  gap +1.08 bar 0.31 | written -0.56[-0.70,-0.44]f  K10 -0.78[-0.90,-0.65]f  K100 -0.53[-0.68,-0.40]f  K1000 -0.38[-0.47,-0.29]f | L6 bounce until; L7 swap fixed; L5 sense fixed
+  g227  gap +1.07 bar 0.25 | written -0.04[-0.25,+0.15]f  K10 -0.90[-1.31,-0.55]f  K100 -0.73[-0.96,-0.52]f  K1000 -0.73[-0.94,-0.54]f | L7 swap fixed
+  g244  gap +1.42 bar 0.25 | written +0.27[+0.18,+0.36]u  K10 -0.07[-0.27,+0.10]f  K100 -0.52[-0.66,-0.38]f  K1000 -0.57[-0.74,-0.42]f | L7 satiety fixed
+  g245  gap +2.27 bar 0.25 | written -0.41[-0.49,-0.33]f  K10 -0.49[-0.56,-0.43]f  K100 -0.36[-0.44,-0.28]f  K1000 -0.07[-0.19,+0.05]f | L7 alternate cycle
+  g254  nothing to judge at 1000 s (gap -0.59)
+  g261  gap +1.41 bar 0.71 | written +1.43[+1.26,+1.59]p  K10 +0.25[-0.31,+0.80]u  K100 +1.16[+0.93,+1.40]p  K1000 +0.79[+0.48,+1.08]u | L7 alternate fixed; L7 satiety until
+  g280  gap +0.25 bar 0.25 | written -1.73[-2.58,-1.28]f  K10 -2.24[-3.69,-1.48]f  K100 -1.55[-2.39,-1.12]f  K1000 -1.85[-3.05,-1.23]f | L5 weak fixed; L7 region bursts; L3 blocks fixed
+  g296  nothing to judge at 1000 s (gap -0.14)
+  g302  nothing to judge at 1000 s (gap -0.75)
+  g328  gap +0.59 bar 0.40 | written -0.43[-0.57,-0.29]f  K10 -0.76[-0.94,-0.61]f  K100 -0.43[-0.56,-0.33]f  K1000 -0.18[-0.29,-0.05]f | L2 push fixed; L7 swap fixed; L5 noisy fixed
+  g335  gap +1.04 bar 0.25 | written +0.01[-0.30,+0.24]f  K10 -1.02[-1.59,-0.63]f  K100 -0.62[-1.01,-0.36]f  K1000 -0.66[-1.03,-0.43]f | L7 swap bursts; L2 drag fixed
+  g337  nothing to judge at 1000 s (gap -0.03)
+  g344  nothing to judge at 1000 s (gap -0.08)
+  g361  gap +0.69 bar 0.25 | written -0.10[-0.40,+0.18]f  K10 -1.51[-2.23,-0.97]f  K100 -0.85[-1.23,-0.58]f  K1000 -0.99[-1.60,-0.55]f | L7 swap fixed
+  g380  gap +1.47 bar 0.25 | written +0.08[-0.01,+0.17]f  K10 -0.62[-0.86,-0.40]f  K100 -0.53[-0.67,-0.40]f  K1000 -0.53[-0.68,-0.38]f | L7 swap bursts
+  g397  gap +1.98 bar 0.53 | written +0.15[+0.04,+0.27]f  K10 -0.35[-0.50,-0.19]f  K100 -0.18[-0.27,-0.10]f  K1000 -0.17[-0.24,-0.09]f | L7 allfood cycle; L7 swap fixed
+  g384  nothing to judge at 1000 s (gap -0.47)
+  g352  gap +1.29 bar 0.28 | written +0.48[+0.39,+0.56]p  K10 +0.39[+0.27,+0.49]u  K100 +0.29[+0.10,+0.42]u  K1000 +0.33[+0.15,+0.47]u | L7 satiety cycle
+  g171  nothing to judge at 1000 s (gap +0.02)
+  g144  nothing to judge at 1000 s (gap +0.06)
+  g305  nothing to judge at 1000 s (gap +0.08)
+  g398  gap +0.51 bar 0.79 | written +0.93[+0.70,+1.39]u  K10 +0.93[+0.60,+1.36]u  K100 +0.92[+0.66,+1.35]u  K1000 +0.82[+0.55,+1.21]u | L6 bruise bursts
+  g256  nothing to judge at 1000 s (gap +0.23)
+  g264  nothing to judge at 1000 s (gap -0.31)
+  g399  nothing to judge at 1000 s (gap -0.41)
+  g281  gap +0.15 bar 0.25 | written +0.10[-2.88,+1.60]u  K10 +0.12[-2.75,+1.72]u  K100 +0.12[-2.75,+1.72]u  K1000 +0.12[-2.75,+1.72]u | L3 clumps fixed
+  written  {'pass': 4, 'fail': 10, 'unclear': 3}
+  K10      {'fail': 12, 'unclear': 5}
+  K100     {'fail': 13, 'pass': 1, 'unclear': 3}
+  K1000    {'fail': 13, 'unclear': 4}

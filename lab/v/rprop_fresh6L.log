@@ -1,0 +1,8 @@
+== plain, 10000 s, 10 pairs (last third)
+  base   2.466   minus old +0.314 [+0.087,+0.552]
+  old    2.153   minus base -0.314 [-0.552,-0.087]
+  sized6 2.220   minus base -0.246 [-0.328,-0.170]   minus old +0.067 [-0.133,+0.287]
+== nearplain, 10000 s, 10 pairs (last third)
+  base   2.326   minus old +0.052 [-0.222,+0.347]
+  old    2.275   minus base -0.052 [-0.347,+0.222]
+  sized6 2.280   minus base -0.046 [-0.213,+0.145]   minus old +0.005 [-0.193,+0.248]

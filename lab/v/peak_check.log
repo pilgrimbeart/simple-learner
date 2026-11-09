@@ -1,0 +1,24 @@
+double, step 1.25 ms, held at s(.69 + d), 40 lives; right sign + in 40%
+  d -0.15   pulses a drive 2.687   gain 0.291
+  d -0.05   pulses a drive 3.046   gain 0.372
+  d -0.02   pulses a drive 3.160   gain 0.405
+  d +0.00   pulses a drive 3.177   gain 0.392
+  d +0.02   pulses a drive 3.151   gain 0.393
+  d +0.05   pulses a drive 3.062   gain 0.366
+  d +0.15   pulses a drive 2.666   gain 0.235
+plain, step 1.25 ms, held at d, 40 lives
+  d -0.15   pulses a drive 3.074   gain 0.247
+  d -0.05   pulses a drive 3.871   gain 0.414
+  d -0.02   pulses a drive 4.049   gain 0.406
+  d +0.00   pulses a drive 4.224   gain 0.418
+  d +0.02   pulses a drive 3.901   gain 0.381
+  d +0.05   pulses a drive 3.629   gain 0.341
+  d +0.15   pulses a drive 2.975   gain 0.224
+plain, step 0.625 ms, held at d, 40 lives
+  d -0.15   pulses a drive 3.041   gain 0.238
+  d -0.05   pulses a drive 3.857   gain 0.400
+  d -0.02   pulses a drive 3.972   gain 0.413
+  d +0.00   pulses a drive 4.228   gain 0.421
+  d +0.02   pulses a drive 3.842   gain 0.384
+  d +0.05   pulses a drive 3.659   gain 0.330
+  d +0.15   pulses a drive 2.933   gain 0.220

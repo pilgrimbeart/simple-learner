@@ -1,0 +1,8 @@
+double, held at s(.69 + d), 40 lives of 300 s; right sign + in 40%
+  d -0.69 (x 0.00)   drives 11677   pulses a drive 1.726 +- 0.011   spread 1.17   gain -0.089
+  d -0.54 (x 0.15)   drives 13139   pulses a drive 1.911 +- 0.012   spread 1.39   gain -0.093
+  d -0.39 (x 0.30)   drives 13575   pulses a drive 2.156 +- 0.014   spread 1.60   gain -0.017
+  d -0.24 (x 0.45)   drives 13528   pulses a drive 2.501 +- 0.017   spread 1.93   gain 0.148
+  d -0.09 (x 0.60)   drives 12578   pulses a drive 2.923 +- 0.021   spread 2.40   gain 0.335
+  d +0.00 (x 0.69)   drives 11665   pulses a drive 3.162 +- 0.025   spread 2.66   gain 0.392
+  d +0.15 (x 0.84)   drives 13406   pulses a drive 2.663 +- 0.018   spread 2.07   gain 0.235

@@ -1,0 +1,4 @@
+== thrusters, 1000 s, 10 pairs (last third)
+  old    1.783
+  sized3 1.461   minus old -0.323 [-0.647,+0.020]
+  sized3f 1.417   minus old -0.366 [-0.736,+0.028]

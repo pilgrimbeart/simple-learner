@@ -1,0 +1,24 @@
+== plain, 100 s, 30 pairs (whole life)
+  base    2.465   minus old +0.213 [+0.030,+0.401]   minus v7 +1.303 [+1.066,+1.538]
+  old     2.252   minus base -0.213 [-0.401,-0.030]   minus v7 +1.090 [+0.855,+1.324]
+  v7      1.162   minus base -1.303 [-1.538,-1.066]   minus old -1.090 [-1.324,-0.855]   at 100 s: wobble 0.150 (median), |x| 0.03, events 1.1
+  nomove  1.269   minus base -1.195 [-1.424,-0.957]   minus old -0.983 [-1.218,-0.754]   minus v7 +0.107 [+0.017,+0.221]   at 100 s: wobble 0.150 (median), |x| 0.00, events 1.1
+  v9a     1.269   minus base -1.195 [-1.424,-0.957]   minus old -0.983 [-1.218,-0.754]   minus v7 +0.107 [+0.017,+0.221]   at 100 s: wobble 0.150 (median), |x| 0.00, events 1.1
+  v9b     1.450   minus base -1.014 [-1.234,-0.785]   minus old -0.802 [-1.043,-0.565]   minus v7 +0.288 [+0.104,+0.479]   at 100 s: wobble 0.075 (median), |x| 0.00, events 1.1
+  v7D1    1.931   minus base -0.534 [-0.705,-0.348]   minus old -0.321 [-0.486,-0.149]   minus v7 +0.769 [+0.563,+0.975]   at 100 s: wobble 0.100 (median), |x| 0.01, events 0.7
+== g402, 100 s, 30 pairs (whole life)
+  base    2.486   minus old +0.169 [-0.009,+0.342]   minus v7 +1.202 [+0.994,+1.421]
+  old     2.317   minus base -0.169 [-0.342,+0.009]   minus v7 +1.033 [+0.846,+1.239]
+  v7      1.284   minus base -1.202 [-1.421,-0.994]   minus old -1.033 [-1.239,-0.846]   at 100 s: wobble 0.150 (median), |x| 0.03, events 1.3
+  nomove  1.477   minus base -1.009 [-1.214,-0.816]   minus old -0.840 [-1.047,-0.642]   minus v7 +0.193 [+0.051,+0.373]   at 100 s: wobble 0.150 (median), |x| 0.00, events 1.0
+  v9a     1.477   minus base -1.009 [-1.214,-0.816]   minus old -0.840 [-1.047,-0.642]   minus v7 +0.193 [+0.051,+0.373]   at 100 s: wobble 0.150 (median), |x| 0.00, events 1.0
+  v9b     1.634   minus base -0.853 [-1.084,-0.622]   minus old -0.684 [-0.909,-0.462]   minus v7 +0.350 [+0.171,+0.548]   at 100 s: wobble 0.075 (median), |x| 0.00, events 0.9
+  v7D1    2.019   minus base -0.467 [-0.643,-0.297]   minus old -0.298 [-0.454,-0.148]   minus v7 +0.735 [+0.562,+0.920]   at 100 s: wobble 0.100 (median), |x| 0.01, events 0.6
+== thrusters, 100 s, 30 pairs (whole life)
+  base    0.432   minus old -0.002 [-0.126,+0.116]   minus v7 -0.118 [-0.311,+0.077]
+  old     0.434   minus base +0.002 [-0.116,+0.126]   minus v7 -0.116 [-0.315,+0.106]
+  v7      0.550   minus base +0.118 [-0.077,+0.311]   minus old +0.116 [-0.106,+0.315]   at 100 s: wobble 0.300 (median), |x| 0.08, events 0.9
+  nomove  0.525   minus base +0.093 [-0.085,+0.271]   minus old +0.091 [-0.126,+0.290]   minus v7 -0.025 [-0.102,+0.052]   at 100 s: wobble 0.300 (median), |x| 0.00, events 0.4
+  v9a     0.542   minus base +0.110 [-0.067,+0.285]   minus old +0.108 [-0.110,+0.305]   minus v7 -0.008 [-0.079,+0.063]   at 100 s: wobble 0.300 (median), |x| 0.03, events 0.5
+  v9b     0.540   minus base +0.108 [-0.063,+0.285]   minus old +0.106 [-0.078,+0.285]   minus v7 -0.010 [-0.130,+0.106]   at 100 s: wobble 0.300 (median), |x| 0.03, events 0.4
+  v7D1    0.437   minus base +0.005 [-0.136,+0.152]   minus old +0.003 [-0.163,+0.175]   minus v7 -0.113 [-0.329,+0.107]   at 100 s: wobble 0.100 (median), |x| 0.03, events 0.5

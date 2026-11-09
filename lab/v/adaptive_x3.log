@@ -1,0 +1,3 @@
+a0 1.0 avg 0: last third's gain per second 0.352; |the gains' centre| at the end 0.070; the learner's own measure (food pulses a drive, its running mean) 3.72
+   corr(|x|, gain) -0.79; corr(|x|, pulses a drive) -0.43; corr(pulses a drive, gain) +0.35
+a0 0.0 avg 0: last third's gain per second 0.421; |the gains' centre| at the end 0.000; the learner's own measure (food pulses a drive, its running mean) 4.76

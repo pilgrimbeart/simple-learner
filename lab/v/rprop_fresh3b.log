@@ -1,0 +1,10 @@
+== thrusters, 100 s, 30 pairs (whole life)
+  base   0.580   minus old -0.026 [-0.141,+0.101]
+  old    0.606   minus base +0.026 [-0.101,+0.141]
+  sized3 0.600   minus base +0.020 [-0.223,+0.268]   minus old -0.006 [-0.246,+0.222]
+  never  0.630   minus base +0.050 [-0.082,+0.174]   minus old +0.024 [-0.002,+0.063]
+== thrusters, 1000 s, 10 pairs (last third)
+  base   0.333   minus old -1.450 [-2.253,-0.679]
+  old    1.783   minus base +1.450 [+0.679,+2.253]
+  sized3 1.461   minus base +1.128 [+0.504,+1.753]   minus old -0.323 [-0.647,+0.020]
+  never  0.376   minus base +0.043 [-0.127,+0.197]   minus old -1.408 [-2.219,-0.617]

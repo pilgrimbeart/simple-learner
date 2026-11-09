@@ -1,0 +1,15 @@
+offset d   drives  f(d) mean pulses a drive   s(d) spread   gain a second   (40 lives each)
+  -0.60    14481   1.841 +- 0.011   1.28   -0.088
+  -0.30    15883   2.452 +- 0.015   1.91   0.054
+  -0.15    14584   3.087 +- 0.020   2.46   0.262
+  +0.00    11159   4.162 +- 0.033   3.49   0.411
+  +0.15    12361   2.967 +- 0.022   2.48   0.233
+  +0.30    12830   2.595 +- 0.019   2.11   0.118
+  +0.60    13200   2.135 +- 0.014   1.57   -0.003
+fit f(d) = 3.271 +0.213 d -3.868 d^2; spread 2.19 a drive
+  ideal two-point design, trials at +-0.1: drives for a standard error of 0.05 in x: 3,198
+  ideal two-point design, trials at +-0.1: drives for a standard error of 0.1 in x: 800
+  ideal two-point design, trials at +-0.2: drives for a standard error of 0.05 in x: 800
+  ideal two-point design, trials at +-0.2: drives for a standard error of 0.1 in x: 200
+  ideal two-point design, trials at +-0.3: drives for a standard error of 0.05 in x: 355
+  ideal two-point design, trials at +-0.3: drives for a standard error of 0.1 in x: 89

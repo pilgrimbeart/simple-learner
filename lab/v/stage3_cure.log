@@ -1,0 +1,189 @@
+cure: v7; worlds run 184 of 184
+  g143  learn   bankS - bank -0.159 [-0.269,-0.051]   bank x +0.33[-0.48,+1.01]u   bankS x -0.71[-2.18,-0.08]f | L1 flaky fixed
+  g144  learn   bankS - bank -0.389 [-0.525,-0.255]   bank x +0.44[+0.14,+0.70]u   bankS x -0.41[-0.97,-0.07]f | L7 lie fixed
+  g146  nothing bankS - bank -0.038 [-0.131,+0.056] | L1 flaky fixed
+  g148  nothing bankS - bank -0.932 [-1.078,-0.793] | L7 keylock bursts
+  g149  learn   bankS - bank +0.061 [-0.066,+0.192]   bank x -1.85[-2.26,-1.52]f   bankS x -1.74[-2.08,-1.48]f | L7 allfood fixed; L7 region fixed
+  g150  nothing bankS - bank +1.392 [+1.142,+1.652] | L7 allbad fixed; L7 allbad from
+  g151  learn   bankS - bank -0.177 [-0.314,-0.045]   bank x -0.34[-2.49,+0.33]u   bankS x -1.46[-6.64,-0.39]f | L6 mouth fixed; L1 flaky fixed
+  g152  nothing bankS - bank -0.869 [-1.004,-0.729] | L2 spinbias fixed
+  g153  nothing bankS - bank -0.300 [-0.339,-0.262] | L9 thrustcost fixed; L7 allfood from
+  g155  learn   bankS - bank -0.861 [-0.997,-0.723]   bank x -0.03[-0.96,+0.59]u   bankS x -4.49[-9.24,-2.74]f | L2 spinbias fixed
+  g156  nothing bankS - bank -0.841 [-0.985,-0.690] | L1 spurious fixed
+  g157  learn   bankS - bank -1.039 [-1.164,-0.920]   bank x +0.62[+0.36,+0.91]p   bankS x -2.18[-3.26,-1.54]f | L5 noisy fixed
+  g158  nothing bankS - bank -1.042 [-1.194,-0.892] | L5 sense fixed
+  g159  nothing bankS - bank -0.986 [-1.147,-0.828] | L2 current fixed
+  g160  nothing bankS - bank -1.189 [-1.352,-1.026] | L3 clumps fixed
+  g162  nothing bankS - bank +0.267 [+0.153,+0.376] | L1 gain_one fixed
+  g164  nothing bankS - bank -1.018 [-1.161,-0.881] | L9 cost fixed
+  g167  nothing bankS - bank -0.772 [-0.887,-0.660] | L6 bounce fixed
+  g169  nothing bankS - bank -1.060 [-1.294,-0.826] | L7 allfood fixed; L2 spinbias fixed
+  g170  learn   bankS - bank -0.877 [-1.092,-0.665]   bank x +0.49[+0.40,+0.59]p   bankS x -0.03[-0.14,+0.06]f | L4 dimall bursts; L7 alternate fixed
+  g171  learn   bankS - bank -0.420 [-0.575,-0.261]   bank x +0.36[-0.02,+0.69]u   bankS x -0.55[-1.22,-0.10]f | L3 onescarce fixed; L4 cross fixed
+  g172  nothing bankS - bank -0.863 [-1.000,-0.725] | L5 sense fixed
+  g174  learn   bankS - bank -0.203 [-0.352,-0.056]   bank x -0.00[-0.07,+0.06]f   bankS x -0.11[-0.17,-0.06]f | L7 satiety fixed
+  g175  nothing bankS - bank -1.006 [-1.137,-0.879] | L1 mirror fixed; L1 mirror fixed
+  g176  nothing bankS - bank -1.638 [-1.817,-1.463] | L1 gain_both fixed
+  g178  nothing bankS - bank -1.026 [-1.185,-0.876] | L3 moving from
+  g182  learn   bankS - bank -0.332 [-0.437,-0.226]   bank x -0.03[-0.77,+0.46]u   bankS x -1.63[-3.27,-0.78]f | L3 moving from; L3 onescarce fixed; L1 spurious fixed
+  g183  learn   bankS - bank -0.058 [-0.206,+0.091]   bank x -1.29[-2.00,-0.82]f   bankS x -1.40[-2.07,-0.98]f | L7 lie fixed; L7 satiety from
+  g184  nothing bankS - bank +1.341 [+1.094,+1.585] | L6 bruise from; L6 bruise fixed
+  g185  learn   bankS - bank -0.538 [-0.661,-0.417]   bank x +0.45[-1.27,+1.96]u   bankS x -4.76[-22.39,-2.10]f | L4 dim from; L7 nth fixed
+  g187  nothing bankS - bank -1.701 [-1.904,-1.493] | L7 allfood until; L7 allfood until
+  g188  learn   bankS - bank -0.530 [-0.692,-0.372]   bank x +0.67[+0.29,+1.08]p   bankS x -0.94[-1.95,-0.39]f | L7 lie from
+  g189  nothing bankS - bank +0.436 [+0.229,+0.645] | L7 allbad cycle; L5 weak fixed
+  g190  learn   bankS - bank -0.692 [-0.817,-0.568]   bank x +0.26[-1.61,+1.44]u   bankS x -5.07[-21.19,-2.43]f | L2 current fixed
+  g192  learn   bankS - bank -0.095 [-0.151,-0.037]   bank x -0.08[-0.39,+0.14]f   bankS x -0.46[-0.87,-0.18]f | L7 satiety from; L3 blocks fixed
+  g193  nothing bankS - bank +0.031 [-0.068,+0.125] | L1 lag fixed
+  g194  nothing bankS - bank -0.033 [-0.139,+0.074] | L1 lag fixed
+  g195  nothing bankS - bank -1.385 [-1.534,-1.239] | L7 keylock bursts; L7 keylock fixed
+  g196  learn   bankS - bank -0.080 [-0.190,+0.027]   bank x +0.06[-0.93,+0.64]u   bankS x -0.49[-2.14,+0.31]u | L1 flaky fixed
+  g198  learn   bankS - bank -0.906 [-1.064,-0.750]   bank x +0.28[-1.37,+1.88]u   bankS x -7.84[-28.44,-4.01]f | L2 spinbias fixed
+  g199  learn   bankS - bank -0.998 [-1.150,-0.850]   bank x +0.33[-1.25,+1.18]u   bankS x -5.93[-19.21,-3.04]f | L3 clumps fixed
+  g200  nothing bankS - bank -1.053 [-1.199,-0.909] | L2 spinbias fixed
+  g201  nothing bankS - bank -0.804 [-0.950,-0.651] | L5 sense fixed; L3 moving fixed
+  g202  nothing bankS - bank -0.280 [-0.321,-0.241] | L9 thrustcost fixed
+  g204  nothing bankS - bank -0.616 [-0.718,-0.516] | L2 drag from; L9 thrustcost fixed
+  g205  nothing bankS - bank -0.970 [-1.112,-0.825] | L5 sense fixed
+  g206  nothing bankS - bank -0.644 [-0.791,-0.494] | L4 reach fixed
+  g207  nothing bankS - bank -0.650 [-0.725,-0.574] | L1 gain_both fixed
+  g208  nothing bankS - bank +0.014 [-0.006,+0.035] | L1 fail fixed; L2 spinbias fixed
+  g209  nothing bankS - bank -0.529 [-0.608,-0.455] | L9 thrustcost fixed
+  g210  nothing bankS - bank -0.945 [-1.085,-0.807] | L4 dimall cycle
+  g212  learn   bankS - bank -0.894 [-1.003,-0.788]   bank x +0.81[+0.16,+2.64]u   bankS x -6.75[-23.50,-3.57]f | L2 drag bursts
+  g213  nothing bankS - bank -0.662 [-0.762,-0.569] | L9 thrustcost fixed
+  g214  learn   bankS - bank -0.626 [-0.783,-0.470]   bank x -0.12[-3.02,+0.84]u   bankS x -4.87[-18.79,-2.33]f | L5 weak fixed
+  g216  nothing bankS - bank -0.639 [-0.777,-0.499] | L1 spurious fixed
+  g217  learn   bankS - bank -0.739 [-0.848,-0.627]   bank x +0.35[-0.29,+0.98]u   bankS x -4.07[-8.56,-2.46]f | L3 onescarce fixed
+  g218  nothing bankS - bank -1.385 [-1.534,-1.239] | L7 keylock fixed
+  g219  nothing bankS - bank -0.208 [-0.327,-0.090] | L1 lag fixed
+  g220  nothing bankS - bank +0.058 [-0.056,+0.176] | L1 mirror fixed; L7 region fixed; L1 mirror fixed
+  g223  nothing bankS - bank +0.014 [-0.060,+0.089] | L6 mouth fixed; L1 lag fixed; L4 dim fixed
+  g224  nothing bankS - bank -0.215 [-0.325,-0.105] | L1 flaky fixed
+  g225  nothing bankS - bank -0.310 [-0.358,-0.262] | L1 gain_both fixed; L9 thrustcost fixed
+  g226  learn   bankS - bank -0.083 [-0.207,+0.039]   bank x -0.59[-0.69,-0.50]f   bankS x -0.67[-0.75,-0.59]f | L6 bounce until; L7 swap fixed; L5 sense fixed
+  g227  learn   bankS - bank -0.891 [-1.032,-0.752]   bank x -0.25[-0.40,-0.12]f   bankS x -1.17[-1.44,-0.94]f | L7 swap fixed
+  g228  nothing bankS - bank -0.995 [-1.134,-0.859] | L1 mirror fixed
+  g229  nothing bankS - bank -0.323 [-0.398,-0.250] | L1 spurious fixed; L1 gain_both fixed
+  g230  nothing bankS - bank -0.649 [-0.743,-0.559] | L9 cost fixed; L2 push fixed
+  g231  learn   bankS - bank -1.038 [-1.229,-0.854]   bank x +0.98[+0.08,+3.80]u   bankS x -5.07[-22.77,-2.29]f | L1 gain_both fixed; L4 cross fixed
+  g233  nothing bankS - bank -0.802 [-0.937,-0.676] | L9 cost fixed; L7 nth fixed
+  g238  learn   bankS - bank -0.266 [-0.353,-0.176]   bank x +0.08[-0.69,+0.70]u   bankS x -2.26[-5.11,-1.20]f | L1 mirror fixed; L3 blocks fixed
+  g239  nothing bankS - bank +1.391 [+1.180,+1.605] | L6 bruise fixed
+  g240  nothing bankS - bank -0.358 [-0.451,-0.263] | L2 push fixed; L4 dimall fixed
+  g242  nothing bankS - bank -0.500 [-0.566,-0.434] | L9 thrustcost fixed; L4 reach fixed
+  g244  learn   bankS - bank -0.053 [-0.181,+0.078]   bank x -0.03[-0.09,+0.02]f   bankS x -0.06[-0.11,-0.01]f | L7 satiety fixed
+  g245  learn   bankS - bank +0.109 [-0.086,+0.298]   bank x -0.44[-0.51,-0.38]f   bankS x -0.40[-0.45,-0.35]f | L7 alternate cycle
+  g251  nothing bankS - bank -1.701 [-1.904,-1.493] | L7 allfood until
+  g252  learn   bankS - bank -0.073 [-0.162,+0.018]   bank x +0.11[-1.52,+1.37]u   bankS x -0.60[-5.11,+0.25]f | L7 lie from; L3 onescarce fixed; L1 lag fixed
+  g253  nothing bankS - bank -1.415 [-1.639,-1.203] | L9 feast fixed
+  g254  learn   bankS - bank -0.186 [-0.309,-0.067]   bank x -1.05[-6.00,-0.02]f   bankS x -2.29[-9.97,-0.84]f | L2 drag from; L7 lie until
+  g255  nothing bankS - bank -0.338 [-0.517,-0.157] | L2 drag fixed
+  g256  learn   bankS - bank -0.998 [-1.223,-0.775]   bank x +0.37[-0.61,+1.37]u   bankS x -3.50[-10.29,-1.87]f | L3 clumps fixed
+  g257  nothing bankS - bank -1.581 [-1.793,-1.379] | L9 feast fixed; L4 reach fixed
+  g258  nothing bankS - bank -0.235 [-0.269,-0.203] | L7 allfood from; L9 thrustcost fixed
+  g259  nothing bankS - bank -0.960 [-1.110,-0.807] | L9 cost fixed; L3 clumps fixed; L5 weak fixed
+  g260  nothing bankS - bank -1.018 [-1.166,-0.867] | L5 weak fixed
+  g261  learn   bankS - bank -0.609 [-0.921,-0.288]   bank x +0.06[-0.04,+0.17]f   bankS x -0.22[-0.31,-0.12]f | L7 alternate fixed; L7 satiety until
+  g262  nothing bankS - bank -1.125 [-1.272,-0.979] | L4 reach fixed
+  g264  learn   bankS - bank -0.712 [-0.875,-0.552]   bank x -0.20[-1.60,+0.36]u   bankS x -3.41[-8.57,-1.86]f | L4 cross fixed
+  g265  nothing bankS - bank -0.009 [-0.139,+0.119] | L2 spinbias fixed; L1 lag fixed
+  g267  learn   bankS - bank -0.399 [-0.512,-0.285]   bank x -0.20[-1.90,+0.55]u   bankS x -3.37[-10.20,-1.57]f | L1 flaky fixed
+  g268  learn   bankS - bank -0.545 [-0.683,-0.411]   bank x +0.34[+0.26,+0.42]p   bankS x -0.06[-0.22,+0.06]f | L7 satiety from; L1 mirror fixed
+  g270  nothing bankS - bank -0.520 [-0.635,-0.408] | L6 bounce fixed
+  g271  nothing bankS - bank -1.172 [-1.339,-1.004] | L4 dimall from; L9 feast fixed
+  g273  nothing bankS - bank -0.293 [-0.335,-0.252] | L9 thrustcost fixed
+  g274  nothing bankS - bank -1.145 [-1.280,-1.005] | L5 noisy fixed
+  g275  nothing bankS - bank -0.902 [-1.064,-0.740] | L5 noisy fixed; L5 weak fixed
+  g276  nothing bankS - bank -0.453 [-0.582,-0.323] | L4 reach fixed
+  g277  nothing bankS - bank -0.983 [-1.137,-0.830] | L5 blind fixed; L7 keylock until
+  g279  nothing bankS - bank -0.433 [-0.540,-0.331] | L5 sense fixed; L6 bounce from
+  g280  learn   bankS - bank -0.027 [-0.122,+0.068]   bank x -0.68[-0.88,-0.52]f   bankS x -0.73[-0.90,-0.58]f | L5 weak fixed; L7 region bursts; L3 blocks fixed
+  g281  learn   bankS - bank -1.182 [-1.389,-0.972]   bank x +0.05[-1.38,+1.03]u   bankS x -5.56[-22.73,-2.75]f | L3 clumps fixed
+  g283  nothing bankS - bank -1.106 [-1.215,-1.000] | L3 blocks fixed
+  g284  learn   bankS - bank -0.999 [-1.170,-0.830]   bank x +0.52[+0.47,+0.58]p   bankS x +0.10[+0.05,+0.15]f | L7 alternate from; L2 drag from
+  g285  nothing bankS - bank -0.975 [-1.172,-0.783] | L1 mirror fixed; L9 cost fixed
+  g286  nothing bankS - bank +1.292 [+1.078,+1.512] | L1 mirror fixed; L6 bruise fixed
+  g288  learn   bankS - bank -1.318 [-1.527,-1.101]   bank x -0.02[-3.44,+1.08]u   bankS x -6.95[-40.87,-2.78]f | L3 clumps fixed; L1 mirror fixed
+  g289  nothing bankS - bank -1.496 [-1.665,-1.329] | L7 allfood fixed; L6 bounce from
+  g291  nothing bankS - bank -0.949 [-1.100,-0.798] | L6 mouth fixed
+  g294  learn   bankS - bank -1.167 [-1.307,-1.026]   bank x +0.71[+0.47,+0.97]p   bankS x -1.94[-2.69,-1.43]f | L5 noisy fixed; L4 reach fixed
+  g296  learn   bankS - bank -0.712 [-0.864,-0.562]   bank x +0.03[-0.11,+0.14]f   bankS x -0.54[-0.69,-0.42]f | L7 swap fixed; L7 allfood from; L3 moving until
+  g302  learn   bankS - bank +0.159 [-0.012,+0.332]   bank x -2.59[-3.21,-2.12]f   bankS x -2.26[-2.75,-1.89]f | L3 blocks fixed; L7 region fixed; L2 push fixed
+  g303  learn   bankS - bank -0.684 [-0.800,-0.566]   bank x +0.30[-0.77,+1.30]u   bankS x -5.32[-20.20,-2.63]f | L3 onescarce fixed
+  g304  nothing bankS - bank -0.051 [-0.105,+0.004] | L2 drag until; L1 gain_one fixed
+  g305  learn   bankS - bank -0.389 [-0.525,-0.255]   bank x +0.44[+0.14,+0.70]u   bankS x -0.41[-0.97,-0.07]f | L7 lie fixed
+  g309  nothing bankS - bank -0.348 [-0.493,-0.198] | L4 cross fixed
+  g310  nothing bankS - bank -1.069 [-1.233,-0.914] | L3 blocks fixed
+  g311  learn   bankS - bank -0.942 [-1.101,-0.785]   bank x +0.51[+0.45,+0.58]p   bankS x +0.04[-0.04,+0.11]f | L7 alternate from
+  g313  nothing bankS - bank -1.081 [-1.237,-0.929] | L3 moving from
+  g314  learn   bankS - bank -1.465 [-1.625,-1.303]   bank x +2.57[+2.14,+3.18]p   bankS x +0.94[+0.71,+1.23]f | L5 noisy fixed; L7 allfood fixed
+  g315  nothing bankS - bank +0.044 [-0.077,+0.164] | L5 blind fixed; L1 gain_one fixed; L1 lag fixed
+  g316  nothing bankS - bank +0.001 [-0.002,+0.003] | L5 blind fixed
+  g317  learn   bankS - bank -0.600 [-0.709,-0.489]   bank x +0.66[-0.09,+1.68]u   bankS x -3.11[-12.19,-1.42]f | L7 lie fixed
+  g318  nothing bankS - bank +1.106 [+0.857,+1.369] | L7 allbad fixed; L7 nth until
+  g319  nothing bankS - bank -0.929 [-1.084,-0.780] | L7 nth from
+  g320  nothing bankS - bank -0.354 [-0.441,-0.266] | L4 dim fixed; L4 reach fixed; L6 mouth fixed
+  g321  nothing bankS - bank -1.530 [-1.676,-1.383] | L3 blocks fixed; L2 current from; L7 keylock fixed
+  g322  nothing bankS - bank -0.983 [-1.127,-0.844] | L5 sense fixed
+  g323  nothing bankS - bank -0.774 [-1.140,-0.395] | L7 lie cycle; L9 feast fixed
+  g325  nothing bankS - bank -1.385 [-1.534,-1.239] | L7 keylock fixed
+  g326  nothing bankS - bank -0.897 [-1.068,-0.725] | L4 cross fixed
+  g327  learn   bankS - bank -0.825 [-0.950,-0.702]   bank x -0.19[-2.09,+0.60]u   bankS x -5.48[-17.76,-2.90]f | L5 weak fixed
+  g328  learn   bankS - bank -0.191 [-0.285,-0.096]   bank x -0.18[-0.26,-0.11]f   bankS x -0.37[-0.44,-0.31]f | L2 push fixed; L7 swap fixed; L5 noisy fixed
+  g330  nothing bankS - bank -1.168 [-1.321,-1.012] | L6 mouth fixed
+  g331  learn   bankS - bank -0.807 [-0.951,-0.661]   bank x +0.49[-0.13,+1.23]u   bankS x -3.73[-8.14,-2.18]f | L9 feast fixed; L5 weak fixed
+  g332  nothing bankS - bank -0.756 [-0.899,-0.608] | L5 weak fixed
+  g333  nothing bankS - bank +0.003 [-0.004,+0.015] | L5 blind fixed; L5 sense fixed
+  g334  nothing bankS - bank -0.816 [-0.944,-0.691] | L2 push fixed
+  g335  learn   bankS - bank -0.943 [-1.118,-0.771]   bank x -0.35[-0.58,-0.16]f   bankS x -1.71[-2.17,-1.36]f | L7 swap bursts; L2 drag fixed
+  g336  nothing bankS - bank -0.659 [-0.769,-0.550] | L6 bounce cycle
+  g337  learn   bankS - bank -0.086 [-0.136,-0.037]   bank x -0.15[-0.66,+0.21]f   bankS x -0.86[-1.62,-0.42]f | L7 lie fixed; L2 drag fixed; L3 blocks fixed
+  g339  nothing bankS - bank -0.614 [-0.749,-0.484] | L7 nth from
+  g341  nothing bankS - bank -0.588 [-0.692,-0.479] | L6 bounce fixed
+  g344  learn   bankS - bank -0.484 [-0.574,-0.392]   bank x -0.56[-2.61,+0.15]f   bankS x -4.08[-12.40,-2.12]f | L2 drag fixed; L3 onescarce fixed; L5 sense fixed
+  g346  nothing bankS - bank -1.060 [-1.220,-0.908] | L9 cost fixed
+  g347  learn   bankS - bank -0.969 [-1.104,-0.837]   bank x +0.16[-1.60,+1.20]u   bankS x -7.40[-26.91,-3.87]f | L3 moving cycle
+  g348  nothing bankS - bank +0.037 [-0.078,+0.153] | L5 blind fixed; L5 noisy fixed
+  g349  learn   bankS - bank -0.952 [-1.097,-0.799]   bank x +0.70[-0.73,+3.57]u   bankS x -8.19[-44.97,-3.53]f | L3 moving from; L5 weak fixed
+  g352  learn   bankS - bank -0.334 [-0.502,-0.170]   bank x +0.26[+0.18,+0.33]u   bankS x +0.08[-0.01,+0.15]f | L7 satiety cycle
+  g353  nothing bankS - bank -0.738 [-0.852,-0.623] | L1 gain_both fixed
+  g355  nothing bankS - bank -0.899 [-1.037,-0.757] | L7 allfood from; L2 current cycle
+  g356  nothing bankS - bank -0.799 [-0.937,-0.659] | L4 cross fixed
+  g357  nothing bankS - bank +0.772 [+0.614,+0.932] | L1 gain_one fixed
+  g359  nothing bankS - bank -0.267 [-0.389,-0.144] | L3 clumps fixed; L6 bounce fixed
+  g360  learn   bankS - bank -0.279 [-0.397,-0.162]   bank x +0.50[-0.38,+1.40]u   bankS x -1.19[-3.66,-0.35]f | L7 nth fixed
+  g361  learn   bankS - bank -0.909 [-1.072,-0.749]   bank x -0.36[-0.54,-0.21]f   bankS x -1.68[-2.18,-1.31]f | L7 swap fixed
+  g363  learn   bankS - bank -1.109 [-1.252,-0.970]   bank x +0.76[+0.53,+1.02]p   bankS x -1.28[-1.77,-0.93]f | L3 blocks fixed; L5 noisy fixed
+  g364  nothing bankS - bank -0.269 [-0.309,-0.232] | L9 thrustcost fixed
+  g367  nothing bankS - bank -1.124 [-1.301,-0.945] | L6 mouth fixed
+  g368  nothing bankS - bank -0.750 [-0.880,-0.632] | L6 bounce bursts
+  g369  nothing bankS - bank -1.180 [-1.403,-0.967] | L9 cost fixed
+  g370  nothing bankS - bank +0.180 [+0.008,+0.347] | L6 bruise from
+  g374  nothing bankS - bank -0.236 [-0.270,-0.203] | L9 thrustcost fixed
+  g375  nothing bankS - bank -0.469 [-0.640,-0.296] | L6 bruise from
+  g376  nothing bankS - bank -1.008 [-1.159,-0.862] | L7 allfood from
+  g379  learn   bankS - bank -0.562 [-0.692,-0.428]   bank x -0.02[-2.03,+0.92]u   bankS x -4.47[-20.15,-2.05]f | L1 flaky fixed; L2 current fixed
+  g380  learn   bankS - bank -1.085 [-1.238,-0.928]   bank x -0.02[-0.13,+0.07]f   bankS x -0.87[-1.09,-0.69]f | L7 swap bursts
+  g382  nothing bankS - bank -0.531 [-0.619,-0.441] | L6 bounce cycle; L6 bounce bursts
+  g383  learn   bankS - bank -1.508 [-1.735,-1.282]   bank x +8.22[+4.96,+22.50]p   bankS x -1.11[-4.23,+0.12]f | L7 alternate bursts; L7 keylock fixed
+  g384  learn   bankS - bank -0.586 [-0.743,-0.425]   bank x +0.22[+0.16,+0.28]u   bankS x -0.09[-0.14,-0.04]f | L3 blocks fixed; L7 alternate until
+  g386  nothing bankS - bank -0.967 [-1.131,-0.813] | L7 nth from
+  g389  nothing bankS - bank -1.873 [-2.204,-1.538] | L9 feast bursts
+  g390  nothing bankS - bank -0.862 [-1.011,-0.711] | L2 current bursts
+  g391  nothing bankS - bank -0.628 [-0.722,-0.533] | L6 bounce fixed
+  g392  nothing bankS - bank -0.242 [-0.277,-0.208] | L9 thrustcost fixed
+  g393  nothing bankS - bank -1.053 [-1.174,-0.925] | L3 blocks fixed
+  g394  nothing bankS - bank -0.249 [-0.420,-0.074] | L4 cross fixed
+  g395  learn   bankS - bank -0.812 [-0.972,-0.652]   bank x -0.15[-3.18,+0.74]u   bankS x -5.41[-23.68,-2.62]f | L4 cross fixed
+  g396  nothing bankS - bank +0.037 [-0.088,+0.166] | L5 noisy fixed; L1 lag fixed; L7 region bursts
+  g397  learn   bankS - bank -0.945 [-1.120,-0.770]   bank x +0.20[+0.13,+0.27]u   bankS x -0.26[-0.35,-0.19]f | L7 allfood cycle; L7 swap fixed
+  g398  learn   bankS - bank -0.217 [-0.381,-0.059]   bank x +0.91[+0.41,+1.46]u   bankS x +0.18[-0.90,+0.76]u | L6 bruise bursts
+  g399  learn   bankS - bank -0.659 [-0.770,-0.549]   bank x +0.16[-0.41,+0.67]u   bankS x -2.94[-5.57,-1.80]f | L3 blocks fixed; L3 clumps fixed; L3 blocks fixed
+  g400  nothing bankS - bank -0.724 [-0.828,-0.617] | L1 gain_both fixed; L2 push fixed
+  g401  nothing bankS - bank +0.001 [-0.002,+0.003] | L5 blind fixed
+  g402  nothing bankS - bank -1.110 [-1.272,-0.948] | L4 reach fixed
+learn: 66 worlds, bankS - bank mean -0.604; surely better 0, surely worse 57 (by more than .1: 49), can't tell 9
+nothing: 118 worlds, bankS - bank mean -0.607; surely better 9, surely worse 95 (by more than .1: 93), can't tell 14
+  bank   on the worlds with something to learn (60 pairs, the first pass's bar): pass 10, fail 19, can't tell 37
+  bankS  on the worlds with something to learn (60 pairs, the first pass's bar): pass 0, fail 64, can't tell 2

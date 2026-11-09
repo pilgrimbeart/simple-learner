@@ -1,0 +1,2 @@
+a0 1.0 avg 2: last third's gain per second 0.405; |the gains' centre| at the end 0.000; the learner's own measure (food pulses a drive, its running mean) 4.09
+/home/pilgrim/git/simple-learner/.venv/lib/python3.12/site-packages/numpy/lib/_function_base_impl.py:3037: RuntimeWarning: invalid value encountered in divide
