@@ -1,0 +1,17 @@
+== teach: seq ladder, 20 pairs, 2.5 ms, seeds 84000+; x [95%] against base and told; * solved (surely above .5); grow's final ring lengths (median, range)
+-- rung 1, 100 s: base 2.47 told 2.50
+   lock | P240 -0.25 [-0.42,-0.10] good,taste |
+-- rung 2, 100 s: base -2.97 told 2.36
+   lock | P240 +0.87 [+0.80,+0.93]* good |
+-- rung 3, 100 s: base -2.36 told 2.27
+   lock | P240 +0.82 [+0.75,+0.90]* good |
+-- rung 5, 100 s: base -1.88 told 2.56
+   lock | P240 +0.76 [+0.70,+0.81]* good |
+-- rung 7, 100 s: base -1.95 told 2.54
+   lock | P240 +0.72 [+0.68,+0.77]* good |
+-- rung 11, 300 s: base -1.90 told 2.40
+   lock | P240 +0.93 [+0.87,+0.99]* good |
+-- rung 13, 300 s: base -2.14 told 2.36
+   lock | P240 +0.94 [+0.90,+0.99]* good |
+-- rung 17, 300 s: base -1.94 told 2.30
+   lock | P240 +0.93 [+0.86,+1.01]* good |

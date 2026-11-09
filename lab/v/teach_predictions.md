@@ -97,3 +97,21 @@ clock's register, x about .3 to .4.
 14. Time: barely moves with P from 240 to 480 (four clocks either way; P only lengthens look-backs, already long enough to rung 7).
     So this is not yet a climb with material: more clocks, not longer registers, would be the material that helps.
 15. Seq at P 240 (40 a register): solves to rung 13, as `events` at 160 did (32 a register); plain still costs about .1.
+**Scored 13-15 (`lab/v/teach_lock_time.log`, `teach_lock_seq.log`).** 13 right: time x .30 to .51 at every rung from 2 to 13, surely
+above base everywhere, solved nowhere (best rung 6 at P 120, .51 [.41,.59]). And flat across rungs: locking, not the word's length, is
+the limit. Many chosen clocks sit at the 60 s cap: the period rule drifts to long periods. 14 right: flat in P (even a little lower at
+480). 15 better than predicted: seq at P 240 solves every rung to 17 (40 a register reaches look-back 20). Plain costs more: -.25
+[-.42,-.10]. Cause (a probe, seeds 84000-84005): 1 to 5 trusted bads a life in plain, each now flipping the colour at once, since a
+step's own letter overrides the prediction; base and the designed brain need two contradictions.
+16. With a step's own letter overriding the copies only after two trusted bads at that step: plain not surely below 0; seq unchanged;
+    time a little lower (one more poison at each change a clock fails to anticipate).
+**16 not run as written:** with the two-bad trust, the worst plain life (84000) still lost 19. Traced: in its first 10 s a misread left
+no candidate with a positive score, so it flipped on one bad, then followed "5 good meals back" on a few chance agreements. The record
+lacked the bank's two protections. Now: a default (keep the colour, two contradictions to flip, the designed brain's), and a candidate
+followed only once it has beaten the default by the Occam bar for its number of candidates (`rivals.occam`: E +1 where it is right and the
+default wrong, -1 the other way, clipped at 0 and the cap); among those past the bar, the best long-run record (agreements - 4
+disagreements). Smoke (6 lives): plain lives identical to base; seq 13 solved, look-back 13; time 5 about .45.
+17. Plain: x not surely below 0 on either ladder. Seq (P 240): every rung solved, as before. Time (P 120, 240): x above step B's at
+    most rungs, about .4 to .6; solved at a few low rungs at most. Still flat across rungs.
+**17: aborted by the user** after its first rung (`lab/v/teach_lock2_seq.log`, partial): plain on seq x +.00 [+.00,+.00] at P 240,
+identical to base on all 40 lives, so the plain cost is cured. The rest of 17 is unscored; only the 6-life smoke stands for it.

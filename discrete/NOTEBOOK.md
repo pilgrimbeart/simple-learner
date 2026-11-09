@@ -12,7 +12,12 @@ per meal spent resting, moving and thinking), gain rate (meals per 10 s), food, 
 
 - **Stage 0, the ruler** (D37, 2026-11-09): three ladders on today's senses (sequences, timing, combinations), with 7, 6 and 5 certified
   rungs; they test different things; random rivals added to the bank help only on sequences, while the answer is on their menu. Open:
-  rung lives must grow smoothly with what each rung asks, or the scaling curve misreads a climb.
+  rung lives must grow smoothly with what each rung asks, or the scaling curve misreads a climb (the user: revisit only if needed).
+- **Stage 1, the first climb** (D38, 2026-11-09): a record of the letters each trusted taste reveals, with one comparing unit per
+  look-back, climbs the sequence ladder: doubling the material doubles the rung (17 at 320 units). Several registers moved by different
+  events (good meals, tastes, the brain's own clocks) pick the right one themselves. On timing, clocks that lock on to surprises beat base
+  at every rung but solve none: locking is the limit. Plain now costs nothing (the bank's default and Occam bar). Next: lock better
+  (more clocks), then the combination ladder by a growing context tree.
 - **The balance learner that sizes itself** (D36, night of 2026-11-08): the old learner's fixed gate (wobble below 15 good tastes per 32 s,
   a rate the body supplies) replaced by rules a block keeps for itself: it moves its balance a step when the sum of its drives' evidence
   is significant, doubles the step while moves agree and halves it when they reverse, and halves its wobble when its wobble surely hurts
@@ -2857,3 +2862,24 @@ from rung 4. A free-running clock can't line up with a slot of unknown length: t
 copies further back slide out of step, and the chooser prefers "the same as a moment ago". Next: a clock reset by surprises (a trusted
 bad after goods), so its beats are set by the world's changes, which is the lock-on problem in another form. Plain costs again (-.11 to
 -.15): the three-copy vote that time needed undid the record arm's protection against misreads; both needs to be reconciled.
+**Stage 2, step B: clocks that lock on** (the user's idea: phase set by surprises, a PLL; Large & Kolen 1994; `lab/teach.py` lock;
+`lab/v/teach_lock_*.log`, predictions 13-15). Four adaptive clocks (3, 6, 12, 24 s to start) pulled in phase and period by each trusted
+bad, each moving a register. First, the scoring made fair: every register and look-back scored on what it would have predicted for each
+taste, as the bank's rivals are (scoring at recording gave a clock one comparison a beat, the taste register one a taste, so "the same as
+a moment ago" always won). Time: x .30 to .51 at every rung from 2 to 13, surely above base, never solved; flat in rung and in material,
+so the lock is the limit, and many chosen clocks run to the 60 s cap. Seq at P 240: every rung solved. Plain -.25: a single misread now
+flips the colour; to be given the designed brain's two-contradiction trust. Literature for the lock (the user asked): Large & Kolen 1994,
+Large & Jones 1999, Righetti, Buchli & Ijspeert 2006 (adaptive-frequency oscillators by a local rule), Scheirer 1998 (a bank of
+resonators), Matell & Meck 2004; for sequences, context tree weighting (Willems, Shtarkov & Tjalkens 1995), which the user observed
+is a growing tree that "add more brain" could supply: a node recruits children when splitting beats it, by its own Occam test.
+**The cost in plain cured, the last full run aborted** (predictions 16, 17). Two causes traced in plain lives: one misread flipping the
+colour (a step's own letter overrode the copies), and, early in a life, a candidate followed on a few chance agreements. The record now
+has the bank's protections: a default (keep the colour, two contradictions to flip) and the Occam bar for its number of candidates
+(`rivals.occam`), choosing among those past the bar by long-run record. Plain on seq, 40 lives at P 240: identical to base (the run
+aborted by the user after that rung, `lab/v/teach_lock2_seq.log`). In 6-life smokes: seq 5 and 13 solved at the right look-back; time 2
+and 5 above step B (rung 5 about .45). Not yet measured in full: the time ladder with these protections, and seq above rung 1.
+**Where stage 1 and 2 stand.** A design that climbs one ladder by adding material exists (the record, and its several-register form,
+which picks the good-meal register itself): stage 1's bar of three doublings is met on seq (rung 3, 7, 13, 17 at P 40 to 320, step A).
+On time it beats base at every rung but solves none, flat in rung and material: the lock is the limit. Next, in order: the full run
+of 17; better locking (more clocks as the material, a period rule that doesn't run to the cap, Righetti's adaptive-frequency rule); the
+combo ladder, which needs a register read as a context (the growing context tree); then stage 2's claim across all three.

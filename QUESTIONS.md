@@ -4,6 +4,18 @@ What we'd like to know and haven't tested, roughly most valuable first. A questi
 rather than chased; one answered leaves, its answer recorded in its line's notebook. Each: the question, who raised it
 and when, why it matters, the line it belongs to, and the experiment that would answer it.
 
+## Scaling (the user's goal, 2026-11-09; `PROGRAMME.md`)
+
+- **How should a brain lock on to a rhythm it doesn't know?** (the user, 2026-11-09: phase set by surprises, a PLL.) The adaptive
+  clocks (D38) beat base but solve no timing rung, and many run to their 60 s cap. Try: more clocks as the material (Scheirer's bank),
+  Righetti, Buchli & Ijspeert's adaptive-frequency rule, a period rule that can't run away. Answered by the timing ladder's curve.
+- **Can a growing context tree be built from simple units?** (the user, 2026-11-09: a growing tree is what "add more brain" could
+  supply.) Context tree weighting (Willems, Shtarkov & Tjalkens 1995) predicts sequences of unknown order nearly as well as if told the
+  tree; a node recruits children only when splitting beats it by its own Occam test. First as the yardstick on the combination ladder,
+  then as a design.
+- **Must rung lives grow smoothly with what a rung asks?** (D37) Seq's 100 s and 300 s rungs make "hardest rung solved" misread a
+  climb. The user: revisit only if it gets in the way.
+
 ## The plan (the user, 2026-10-29)
 
 1. **Which level to think at**: done for B (`discrete/NOTEBOOK.md`, D14): blocks fastest to design in and realised

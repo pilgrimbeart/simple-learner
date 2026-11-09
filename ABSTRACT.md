@@ -84,4 +84,7 @@ reveal. When a part should explore at all is now an open question (`discrete/NOT
 
 **Against the goal (2026-11-09).** Nothing here passes the scaling test (`README.md`). This programme measured how far one
 fixed design covers new worlds, not what more material buys, and where more was tried it bought nothing: sure passes stayed
-at 9, 9 and 10 of 55 with 10, 100 and 1000 random rivals (D36). A strategy towards the test is next.
+at 9, 9 and 10 of 55 with 10, 100 and 1000 random rivals (D36). Since then (D37, D38): a ruler of three ladders, and a first climb
+on one of them. A register of the letters the tastes reveal, read by one comparing unit per look-back, learns a hidden word twice as
+long for each doubling of its material, and picks for itself which kind of event should move it. Timing is not yet solved: clocks
+that lock on to surprises beat the starting brain at every rung but solve none.

@@ -108,13 +108,12 @@ we check that a brain can be made in real components.
    (the bank, wobbling), but as a method it is open-ended. We now understand the problem and the goal well enough to
    design a coherent strategy towards the scaling test.
 
-**Where we are** (`PROGRAMME.md`; a summary in `ABSTRACT.md`). Nothing yet passes the scaling test. It hasn't been run,
-since no ladder exists yet, and a strategy towards it is the next thing to agree. Where more material has been tried, it
-hasn't bought more ability. Random detectors beside a brain, on lopsided bodies, scored about as the brain alone at 20
-and far worse at 50 and 200 (`discrete/NOTEBOOK.md`, D16). The bank's rivals drawn at random from simple parts surely
-passed 9, 9 and 10 of 55 worlds at 10, 100 and 1000 rivals, where the 7 we wrote passed 10 (D36). The recruitment series
-and the grower have the right shape, recruiting on frustration and growing nothing in all-food lives, but only a recruit
-or two, from a menu (`experiments/NOTEBOOK.md`; D17).
+**Where we are** (`PROGRAMME.md`; a summary in `ABSTRACT.md`). The ruler exists: three ladders on today's senses
+(sequences, timing, combinations), certified rung by rung, with a held-out fourth sealed (`discrete/NOTEBOOK.md`, D37).
+The first climb exists too, on one ladder: a brain that records the letters its tastes reveal, with one small comparing
+unit per look-back, learns hidden words twice as long each time its material doubles (D38). Given several registers,
+each moved by a different kind of event, it picks the right one itself. On timing it beats the starting brain but
+solves no rung: its clocks don't yet lock on to the world's rhythm well enough. Combinations are untried.
 
 What the manual designs have taught: a life offers about 50 bits of evidence, but writing down a world's rule takes
 hundreds, so no brain learns a world from nothing in one life: it can only choose among what its structure already makes
@@ -138,6 +137,14 @@ Three lines of work so far:
 ## What we've learned
 
 The findings that changed the direction of the work, each told in full in the notebook named.
+
+- **More brain can buy more ability, when the unit records rather than guesses.** Trying every hypothesis at once
+  needs material growing as the square of the problem; growing one structure by trial needs time growing as its
+  square. A register of what the tastes revealed, with a simple comparator for each look-back, needs both only in
+  proportion: double the units and it learns a hidden word twice as long, in the same life. What moves the register
+  matters as much as what reads it (the user's insight): sparse events (meals, surprises) let a few units span minutes,
+  and the brain can pick the right kind of event itself. Candidates must still beat a cautious default by an Occam
+  bar, or chance agreements early in a life cost more than they earn (`discrete/NOTEBOOK.md`, D38).
 
 - **The body must never do the brain's job.** Early on the body was changed to give food or poison only to the
   sensor whose colour was eaten. It looked like a simplification, since four mechanisms in the brain could go, but
@@ -568,6 +575,10 @@ valuable first, in [`QUESTIONS.md`](QUESTIONS.md).
 
 **Units** (the axioms: `units.py`)
 
+- **Register, look-back, record** (D38): a register is a row of units each holding one letter (which colour was food at a step),
+  moved on one place by some kind of event (a good meal, a taste, a beat of a clock); a look-back k compares each step with the
+  one k places back. The record is the brain built from them, following the best register and look-back once it beats a cautious
+  default by the Occam bar.
 - **Real units**: everything in SI, every number that can be derived derived from a few axioms (`units.py`).
 - **Tick**: the simulation's step. In the live view and the circuit brains, 10 ms for the body, with the circuit
   integrated in steps of 0.125 ms, 80 to a tick. In the programme's engine (`lab/stage2_lang/`) everything happens at

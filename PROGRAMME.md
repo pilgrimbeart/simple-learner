@@ -19,6 +19,14 @@ Build the ruler first. After that, nothing is worked on unless it can move the s
 
 **Run** (`discrete/NOTEBOOK.md`, D38): on the sequence ladder, sums replaced arms 1 and 3 (credit doesn't interfere when a taste reveals the answer; the eyes carry nothing about the word). A bank of every ring length climbs as the square root of its material; one ring growing on frustration uses only what it needs but takes about n^2/2 tastes against an ideal n + log2 n.
 
+### Where stages 1 and 2 stand (`discrete/NOTEBOOK.md`, D38)
+
+- **Stage 1's bar is met on the sequence ladder.** A record of the letters each trusted taste reveals, with one comparing unit per look-back, doubles its rung with each doubling of material (rungs 2, 3, 7, 13, 17 at 4 to 64 units).
+- **What moves the register is learned** (the user's insight: sparse events shift it, and the circuit can learn which). Several registers moved by good meals, tastes and the brain's own clocks: on seq it picks good meals itself.
+- **Timing isn't solved.** Clocks that lock on to surprises (the user's PLL idea; Large & Kolen 1994) beat base at every rung (x .3 to .5) but solve none, flat in rung and material: locking is the limit.
+- **Plain costs nothing now**, with the bank's default and Occam bar (40 lives, the last full run aborted after that rung by the user).
+- **Next:** the full run of the protected design on time; better locking (more clocks as the material); the combination ladder via a growing context tree (CTW, Willems et al. 1995; the user: a growing tree is what "add more brain" could supply); then stage 2 across all three.
+
 As planned:
 
 A taste reaches every unit at full strength, but it is one score for what they all did, and it carries at most a bit. So units varying at once are noise to each other, and N units that must each learn something different need at least N tastes, however they are organised. Three arms on the sequence ladder, doubling the material:

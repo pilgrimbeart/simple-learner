@@ -124,9 +124,19 @@ def events_cls():
             r = np.random.default_rng([int(seed), 13])
             self.crng = r
             Pr = max(2, self.P // len(KINDS))
-            self.regs = [dict(kind=k, Pr=Pr, rec={}, agree=[0] * (Pr // 2 + 1), dis=[0] * (Pr // 2 + 1),
+            self.regs = [dict(kind=k, Pr=Pr, rec={}, agree=[0] * (Pr // 2 + 1), dis=[0] * (Pr // 2 + 1), nb={},
                               ph=(r.uniform(0, k) if not isinstance(k, str) else 0.0), tl=0.0) for k in KINDS]
             self.nt, self.best = 0, None
+            self.dl, self.dt = self.food, 0
+            self.setbar()
+
+        def setbar(self):
+            """The Occam bar to follow a candidate, and its cap, rising with log2 of the number of candidates (lab/rivals.py, occam)."""
+            for R in self.regs:
+                R["E"] = [0.0] * len(R["agree"])
+            import rivals as RV
+            o = RV.occam(sum(len(R["agree"]) - 1 for R in self.regs))
+            self.bar, self.Emax = o["theta"], o["Emax"]
 
         def index(self, R):
             k = R["kind"]
@@ -144,16 +154,19 @@ def events_cls():
             """What register R, read k back, says this step's letter is: its own letter if revealed, else a vote of the three most recent
             copies k, 2k, ... back (one misread can't outvote two), ties to the most recent; None if it has none."""
             rec = R["rec"]
-            if i in rec:
-                return rec[i]
             got = [b for b in (rec.get(h) for h in range(i - k, i - R["Pr"], -k)) if b is not None][:3]
+            own = rec.get(i)
             if not got:
-                return None
+                return own
             v = sum(1 if b else -1 for b in got)
-            return 1 if v > 0 else 0 if v < 0 else got[0]
+            c = 1 if v > 0 else 0 if v < 0 else got[0]
+            if own is None or own == c or R["nb"].get(i, 0) < 2:   # the copies' letter stands until two trusted bads at this step say otherwise
+                return c                                          # (the designed brain's trust: one misread doesn't flip it)
+            return own
 
         def predict(self):
             if self.best is None:
+                self.food = self.dl
                 return
             R, k = self.best
             b = self.vote(R, self.index(R), k)
@@ -162,31 +175,43 @@ def events_cls():
 
         def taste(self, value, at):
             if self.vouched():                          # every register and look-back scored on what it would have predicted for this taste,
-                letter = self.food if value > 0 else 1 - self.food      # as the bank's rivals are; then the letter recorded
+                letter = self.food if value > 0 else 1 - self.food      # against the default (keep the colour, two contradictions to flip),
+                dhit = self.dl == letter                                # as the bank's rivals are; then the letter recorded
                 bs, best = 0, None
                 for R in self.regs:
                     i = self.index(R)
-                    for k in range(1, len(R["agree"])):
+                    E = R["E"]
+                    for k in range(1, len(E)):
                         b = self.vote(R, i, k)
-                        if b is not None:
-                            if b == letter:
+                        hit = (b == letter) if b is not None else dhit
+                        E[k] = min(self.Emax, max(0.0, E[k] + (1.0 if hit > dhit else -1.0 if hit < dhit else 0.0)))
+                        if b is not None:                # the long-run record, which chooses among those past the bar
+                            if hit:
                                 R["agree"][k] += 1
                             else:
                                 R["dis"][k] += 1
                         sc = R["agree"][k] - 4 * R["dis"][k]
-                        if R["agree"][k] and sc > bs:
+                        if E[k] >= self.bar and (best is None or sc > bs):
                             bs, best = sc, (R, k)
                     rec = R["rec"]
                     rec[i] = letter
+                    if value < 0:
+                        R["nb"][i] = R["nb"].get(i, 0) + 1
                     for old in [h for h in rec if h <= i - R["Pr"]]:
                         del rec[old]
+                        R["nb"].pop(old, None)
                 self.best = best
                 self.nt += 1
+                if value > 0:                           # the default: one letter for every step, with a tally of trust (the designed brain's)
+                    self.dt = max(-1, self.dt - 1) if self.dl == letter else self.dt
+                if self.dl != letter:
+                    self.dt += 1
+                    if self.dt >= 1:
+                        self.dl, self.dt = letter, 0
             if value > 0:
                 self.g += 1
-            if self.best is None and self.vouched() and value < 0:
-                self.food = 1 - self.food
             self.predict()
+
     return Events
 
 
@@ -203,11 +228,12 @@ def lock_cls():
             super().__init__(seed, p)
             r = self.crng
             Pr = max(2, self.P // (2 + len(T0)))
-            self.regs = [dict(kind=k, Pr=Pr, rec={}, agree=[0] * (Pr // 2 + 1), dis=[0] * (Pr // 2 + 1)) for k in ("good", "taste")]
+            self.regs = [dict(kind=k, Pr=Pr, rec={}, agree=[0] * (Pr // 2 + 1), dis=[0] * (Pr // 2 + 1), nb={}) for k in ("good", "taste")]
             for T in T0:
                 T = T * float(np.exp(r.normal(0, 0.1)))
-                self.regs.append(dict(kind=("lock", T), Pr=Pr, rec={}, agree=[0] * (Pr // 2 + 1), dis=[0] * (Pr // 2 + 1),
+                self.regs.append(dict(kind=("lock", T), Pr=Pr, rec={}, agree=[0] * (Pr // 2 + 1), dis=[0] * (Pr // 2 + 1), nb={},
                                       T=T, a=r.uniform(-T, 0), n=0, tl=0.0))
+            self.setbar()
 
         def advance(self, R):
             if R["kind"] in ("good", "taste"):
