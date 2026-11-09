@@ -87,7 +87,7 @@ and when, why it matters, the line it belongs to, and the experiment that would 
    surprise, and rhythms with one partner over many cycles (a gait, the arena's pursuits).
 
 4. **How can a brain realise it isn't solving the problem, and recruit more neurons to do so?** (the user,
-   2026-10-30: the most interesting question; work through several cases until the generic answer shows.) At the
+   2026-10-30: the most interesting question, and since 2026-11-09 the heart of the goal, `README.md`; work through several cases until the generic answer shows.) At the
    block level, growth the one declared primitive, judged robustly with all-food lives as the control, no SPICE or
    physical plausibility until a case works. A candidate generic answer, to test case by case: predict (units learn
    what their own signals say about outcomes, through fading tags); notice the gap (frustration: a bad outcome
@@ -289,6 +289,6 @@ and when, why it matters, the line it belongs to, and the experiment that would 
 
 ## Self-optimisation
 
-- **The project's real goal: self-optimisation from local signals.** Every unit a fast bistable and a slow
+- **One design idea for the goal (`README.md`): self-optimisation from local signals.** Every unit a fast bistable and a slow
   integrator, each slow variable outlasting the loop it closes, each tuning its own time constant from its own signals
   (D13).

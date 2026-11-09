@@ -1,17 +1,93 @@
-# simple-learner: circuit brains that learn
+# simple-learner: intelligence that scales
 
 (Split from [nca-learn](https://github.com/pilgrimbeart/nca-learn) on 2026-11-02, with its history. The sheet brain,
 a sheet of identical cells that grows its own nervous system, lives on there as a small self-contained demo; this
 repository carries on the circuit brains.)
 
-## The quest
+## The goal: intelligence that scales
 
-How can useful, complex behaviour emerge in a brain from simple parts acting locally? We explore it by simulation, in
-the simplest scenarios we can make: a small creature with two eyes, two thrusters and one sense of taste, in a world
-of red and blue blocks, one colour food and the other poison. Its brain must learn, within one short life, which is
-which: one bit. Every part acts only on what it can sense locally: nothing places its parts, no unit sees the whole,
-and no god decides. And because a theory that can't be built is no use, we keep the brain simple and efficient to
-build too, and check that it can be made in real components.
+**To solve a bigger problem, just add more brain.** We are looking for a design of brain component(s) with this
+property: from a simple starting design, a brain recognises when it isn't solving a problem well and adjusts itself to
+do better, recruiting new components to the cause as necessary. The new components are generic raw material, either
+already there and unused or added on demand, and nothing godlike decides when or where they go. So all it takes to make
+a brain step up to a problem it couldn't solve is more of that raw material, with no redesign (the user, 2026-11-09).
+
+- **It is a brain for a robot.** It must solve real-world, embodied, real-time problems, not abstract ones. The body has
+  its own dynamics and flaws, the senses are noisy, and the world doesn't wait while the brain thinks.
+- **Anything may happen before a life, but the improving must happen in it.** Evolution, searches and our own designs
+  may all shape the component. A solution designed by hand isn't a solution in itself, though it may give insight into
+  how to design a brain that improves itself in its life.
+- **No central decider, and locality because of scale.** Nothing may decide from outside or above what is recruited, when
+  or where. A small brain may have any number of connections. But big brains can't have everything broadcasting to
+  everything else, so as a brain grows its parts must come to sense and act locally. The strong suspicion is that this
+  takes bottom-up, emergent behaviour. That may be wrong, and the results can say so.
+- **A component may be quite complex, but we stay parsimonious.** Simplicity isn't the aim in itself. We press for it so
+  that simulation stays quick, we can think clearly, and we have some chance of understanding the result. We may not
+  understand it beforehand. A massive network or hairball might work, but we'd still need to simulate it fast enough to
+  prove that it scales.
+- **Lives and senses may grow with the challenges.** Lives may have to get longer as challenges get more complex, and
+  eventually we will have to add more senses, though there is still a lot to learn with the present ones.
+
+### How we'll know: the scaling test
+
+The test is one curve, the **scaling curve**: the hardest challenge a brain solves, against how much raw material it is
+given, with its design frozen.
+
+- **Raw material**: how many generic, uncommitted components a brain has, unused at birth or added in its life, with
+  nothing saying where they go. The **starting brain** is the design with none spare. A component is **committed** once
+  it affects behaviour.
+- **A ladder**: a series of challenges for the robot in its body, each a **rung** bigger than the last in one way: more to
+  remember, a longer sequence, signals that mean something only in combination, finer timing, more kinds of thing to tell
+  apart. There are at least three ladders of different kinds, so that no design passes by having one ladder's answer
+  built in.
+- **A certified rung** is one that counts. The starting brain surely falls short of a **yardstick** on it by at least
+  .25 in body efficiency, and the yardstick (a brain told the answer, an ideal learner with the same senses, or a brain
+  designed by hand for that rung) shows that it can be done with this body and these senses. A rung may set a longer life,
+  as long as it needs, and every brain on it lives that long.
+- **Solved**: closing at least half the gap between the starting brain and the yardstick, surely (the lower end of the
+  95% interval), on seeds the design's search never saw.
+
+The goal is met when all seven of these hold:
+
+| | test | passes when |
+|---|---|---|
+| 1 | **It climbs** | On every ladder, the highest rung solved keeps rising over at least three doublings of raw material, to at least three rungs above what the starting brain solves. Extra material may cost something on simpler tasks (the cost curve, below), but doesn't cause a collapse. |
+| 2 | **One design, on challenges it never saw** | One description across the whole curve, with nothing in it depending on the amount of material, the rung or the life's length. A held-out ladder, kept from the design's search and its designers, climbs too. |
+| 3 | **It improves in the life** | On every rung credited to it, the brain is surely better than itself with recruitment switched off (the same material present but inert), on the same lives. |
+| 4 | **It recruits only when needed** | Where nothing needs recruiting (plain worlds, all-food lives, rungs already solved), under a tenth of the material is committed. Harder rungs commit more. |
+| 5 | **Nothing central decides, and it stays local as it grows** | Every recruitment traces to signals at the units involved. A small brain may have any number of connections, but big brains can't have everything broadcasting to everything else, so the average connections per unit must level off as the brain grows. |
+| 6 | **It works in a body, in real time** | All of this holds closed loop in the robot's body, under every ground rule (`AGENTS.md`: noise, tolerances, bodies that vary, no clock). The world doesn't wait, so what growing costs is charged in the score on each rung, the power of all the material included. A bigger brain may react more slowly: that's fine if it is better on balance. |
+| 7 | **It is parsimonious** | Parsimonious enough that we have some chance of understanding the result, and can simulate it fast enough to prove that it scales. |
+
+**The price of size is measured, not assumed.** A bigger brain will probably do worse on simple tasks, through slower
+reactions, false starts and the power of its spare material. How much worse is one of the things we're looking for, so
+no bar is set in advance. We may discover a scaling law: for instance, that each doubling of ability makes simple tasks
+log(N) worse. So the **cost curve**, the score on simple tasks against raw material, is measured beside the scaling curve,
+and the two together say whether a bigger brain is better on balance. Higher rungs usually need the brain to stay good at
+the simple things, such as driving to blocks, so a brain that lost them would fail those rungs anyway (the user,
+2026-11-09). But keep an eye on **catastrophic forgetting**, where learning something new destroys what was already
+learned (McCloskey and Cohen 1989): simple skills are also rechecked after recruitment, in the same life.
+
+**What doesn't count:** a bigger brain designed or searched for each rung, however well it does; a design with one
+ladder's answer built in; anything that decides for the units from outside them; a result only in an abstract task with
+no body.
+
+**Reported beside the curve**, for each rung: the evidence it needs and the evidence a life supplies, in bits; the
+material it takes, against the best brain designed by hand for that rung; the power; the reaction time; and the connections per unit. More brain adds capacity, not
+information: a clean 100 s life offers about 50 bits (`discrete/NOTEBOOK.md`, D31), about 25 weights' worth at 2 bits a
+weight (`BOUNDS.md`), so a rung that needs more evidence than its life supplies isn't certified until its life is longer.
+
+(The test's wording and numbers are the main session's draft of the user's goal, 2026-11-09, for the user's review: three
+ladders, three doublings, three rungs, .25, a half and a tenth. They are to be fixed before the test's first
+run and not moved after it.)
+
+## How we explore it
+
+We work by simulation, in the simplest setting we can make: a small robot, the *creature*, with two eyes, two thrusters
+and one sense of taste, in a world of red and blue blocks, one colour food and the other poison. Its canonical first
+lesson is to learn, within one short life, which is which: one bit. Every part acts only on what it can sense locally:
+nothing places its parts, no unit sees the whole, and no god decides. And because a theory that can't be built is no use,
+we check that a brain can be made in real components.
 
 **How we got here.**
 1. **The sheet brain** (in [nca-learn](https://github.com/pilgrimbeart/nca-learn)): a sheet of identical cells that
@@ -21,21 +97,30 @@ build too, and check that it can be made in real components.
    in real components (transistors, resistors, capacitors), lived in the circuit simulator SPICE, to check it is
    grounded in reality. It is. But SPICE is far too slow for experiments, so we now work in a fast model of the
    circuit's blocks, each block's numbers measured in SPICE.
-3. **Towards a brain that optimises itself.** Now the aim is a general recipe: circuits that (a) notice, by
+3. **Towards a brain that optimises itself.** Then the aim became a general recipe: circuits that (a) notice, by
    themselves, that they are not doing well for the creature, and (b) put it right, from local parts, ideally by
    emergence rather than by our design. So we gave the same small brain many different mismatches with its world
    (unequal thrusters, a noisy eye, food whose colour swaps), cured each by hand, and looked for what the cures have
    in common. One circuit, the *bank of predictors*, does the job of many: it keeps several rival ideas of what taste
    means, scores them all on every taste, and follows the best. We then tested it on worlds drawn at random, so as
    not to mark our own homework.
+4. **The goal, stated** (the user, 2026-11-09). Those manual designs gave us a handle on the problem, and themes emerged
+   (the bank, wobbling), but as a method it is open-ended. We now understand the problem and the goal well enough to
+   design a coherent strategy towards the scaling test.
 
-**Where we are** (`PROGRAMME.md`; a summary in `ABSTRACT.md`). A life offers about 50 bits of evidence, but writing
-down a world's rule takes hundreds, so no brain learns a world from nothing in one life: it can only choose among
-what its structure already makes cheap. The bank copes with between a fifth and three fifths of the random worlds that
-have something to learn, and uses its evidence almost as well as an ideal judge would. Where it fails, it lacks the
-idea, mostly an idea about *time* (when the colours swap, how soon after a meal another turns bad). But its ideas
-are ones we wrote in. The next step is a bank that makes its own rivals, out of many simple circuits connected in
-various ways, so that the ideas come from simple repeated parts rather than from us.
+**Where we are** (`PROGRAMME.md`; a summary in `ABSTRACT.md`). Nothing yet passes the scaling test. It hasn't been run,
+since no ladder exists yet, and a strategy towards it is the next thing to agree. Where more material has been tried, it
+hasn't bought more ability. Random detectors beside a brain, on lopsided bodies, scored about as the brain alone at 20
+and far worse at 50 and 200 (`discrete/NOTEBOOK.md`, D16). The bank's rivals drawn at random from simple parts surely
+passed 9, 9 and 10 of 55 worlds at 10, 100 and 1000 rivals, where the 7 we wrote passed 10 (D36). The recruitment series
+and the grower have the right shape, recruiting on frustration and growing nothing in all-food lives, but only a recruit
+or two, from a menu (`experiments/NOTEBOOK.md`; D17).
+
+What the manual designs have taught: a life offers about 50 bits of evidence, but writing down a world's rule takes
+hundreds, so no brain learns a world from nothing in one life: it can only choose among what its structure already makes
+cheap. The bank copes with between a fifth and three fifths of the random worlds that have something to learn, and uses
+its evidence almost as well as an ideal judge would. Where it fails, it lacks the idea, mostly an idea about *time* (when
+the colours swap, how soon after a meal another turns bad). But its ideas are ones we wrote in.
 
 Three lines of work so far:
 
@@ -294,7 +379,7 @@ everything is explicit circuit, with noise modelled on biology's built into the 
 
 ## The creature and its world
 
-A disc whose front point is the mouth, with eyes looking ahead (one sensor for each colour) and a forward thruster on
+The creature is our robot, in simulation: a disc whose front point is the mouth, with eyes looking ahead (one sensor for each colour) and a forward thruster on
 each side of its rear rim: both thrusters together drive it straight ahead, one alone makes it veer. (It was a triangle
 until 2026-10-31; the disc keeps the mouth where the point was, so every life is unchanged.) Red and blue blocks lie
 about the world; one colour is poison, alternating from life to life. A brain fires its two motors and is told only what
@@ -476,6 +561,10 @@ The current programme, its stages and decisions, is in [`PROGRAMME.md`](PROGRAMM
 valuable first, in [`QUESTIONS.md`](QUESTIONS.md).
 
 ## Terms
+
+**The goal** (defined above, How we'll know: the scaling test)
+
+- **Scaling test, scaling curve, cost curve, catastrophic forgetting, raw material, starting brain, committed, ladder, rung, certified rung, yardstick, solved.**
 
 **Units** (the axioms: `units.py`)
 

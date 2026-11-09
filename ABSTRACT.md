@@ -1,10 +1,12 @@
 # How many ideas must a small brain be born with?
 
-*The programme so far, as an abstract (2026-11-07). Details and every number's source: `discrete/NOTEBOOK.md`
+*The programme so far, as an abstract (2026-11-07; its aim restated 2026-11-09). Details and every number's source: `discrete/NOTEBOOK.md`
 (D31-D35), `PROGRAMME.md`, `STORIES.md`. Figures marked ? are not yet known.*
 
-**Aim.** We want to know how useful behaviour can emerge from simple parts acting locally, and we study it in the
-simplest setting we could build. A simulated creature has two eyes, two thrusters and one sense of taste (+1 food,
+**Aim.** The goal is intelligence that scales, in a brain for a robot: generic components such that a brain that isn't
+coping improves itself by recruiting raw material, so that to solve a bigger problem you just add more brain, with nothing
+central deciding where it goes (`README.md`, The goal, with the test for it). We study it in the simplest setting we
+could build. A simulated creature has two eyes, two thrusters and one sense of taste (+1 food,
 -1 poison). It lives in a world of red and blue blocks, and must learn within one 100 s life which colour is poison:
 one bit. A first brain, a sheet of identical cells that assembles itself, learned the bit, but each cell was complex.
 A second, a small circuit built by hand, learned it too, and was built in real transistors and lived in SPICE to
@@ -79,3 +81,7 @@ emerging. If it needs one part per world, then we have hand-designed everything.
 learner, which wears the bank down over 10,000 s. A version that sizes its own steps and quiets its own wobble lifts long lives surely
 in 12 of 13 worlds, but costs .6 in 100 s lives: exploring a body whose thrusters are equal costs more than a short life's drives can
 reveal. When a part should explore at all is now an open question (`discrete/NOTEBOOK.md`, D36).
+
+**Against the goal (2026-11-09).** Nothing here passes the scaling test (`README.md`). This programme measured how far one
+fixed design covers new worlds, not what more material buys, and where more was tried it bought nothing: sure passes stayed
+at 9, 9 and 10 of 55 with 10, 100 and 1000 random rivals (D36). A strategy towards the test is next.

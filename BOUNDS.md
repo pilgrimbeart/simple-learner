@@ -63,10 +63,14 @@ mechanism (AGENTS.md, Mind the noise wall).
 - **Too little signal for the life** (Shannon): taste carries at most so many bits per second about the body. If a
   life ends before enough arrive, no learner finds the change. Track signal to noise per second for each candidate,
   Delta^2 / sigma^2, against the life's length.
-- **Credit colliding** (as ALOHA's packets do: its throughput peaks at an offered load of 1/(2e) and collapses past
-  it): explorers share the one taste within a credit window (about 2 s), and when two explore at once a meal's
-  credit can't be told apart. D16's continuation collapsed from 20 random detectors (about B) to 50 and 200 (-0.65,
-  -0.84). Track explorers per credit window.
+- **Credit interfering** (one score for a group effort): a taste reaches every unit at full strength, but it is one
+  number about what they all did. To a unit trying a change, the others' changes are noise, so with N varying at once
+  each needs about N times as many tastes to see its own effect; taking turns costs the same. This slows learning
+  gradually, once their combined variation rivals the world's own luck; it isn't a cliff, as an earlier form of this
+  note's comparison with ALOHA's packets implied. It doesn't bind where every unit needs the same fact, and idle units
+  add nothing. D16's collapse (20 random detectors about B, 50 and 200 at -0.65 and -0.84) had other causes as well: the
+  direct harm of exploring, and a floor on what was learned that turned noise into growth. Track explorers per credit
+  window.
 - **Too little room to store it** (Cover 1965; MacKay, chapter 40, below): a unit of K weights read by one threshold
   holds about 2K bits, with a sharp edge. For a random reservoir this wall is far off: meals deliver far fewer bits
   than its weights can hold, so the binding wall there is Shannon's.

@@ -10,6 +10,9 @@ per meal spent resting, moving and thinking), gain rate (meals per 10 s), food, 
 
 ## Where it stands
 
+- **Stage 0, the ruler** (D37, 2026-11-09): three ladders on today's senses (sequences, timing, combinations), with 7, 6 and 5 certified
+  rungs; they test different things; random rivals added to the bank help only on sequences, while the answer is on their menu. Open:
+  rung lives must grow smoothly with what each rung asks, or the scaling curve misreads a climb.
 - **The balance learner that sizes itself** (D36, night of 2026-11-08): the old learner's fixed gate (wobble below 15 good tastes per 32 s,
   a rate the body supplies) replaced by rules a block keeps for itself: it moves its balance a step when the sum of its drives' evidence
   is significant, doubles the step while moves agree and halves it when they reverse, and halves its wobble when its wobble surely hurts
@@ -2793,3 +2796,64 @@ Decision: the bank keeps the old learner and its gate as the default (safe at 10
 (`lab/rprop.py`) is kept as the long-life version. Not done, parked in `QUESTIONS.md`: the floor (the least an ideal learner pays to
 tell plain from lopsided), best computed on a small surrogate of the drives rather than by more lives, and whether "do no harm" should be
 judged against that floor rather than as a tie with base (the user's decision).
+## D37: stage 0, the ruler (2026-11-09)
+
+The ladders (`lab/ladders.py`; predictions first, `lab/v/ladders_predictions.md`; logs `lab/v/ladders_certify_*.log`,
+`ladders_cross.log`, `ladders_baseline_*.log`, seeds 83000+, 2.5 ms). Three ladders on today's senses: **seq n**, a hidden word of n
+colours advanced by good meals; **time n**, the food colour following a hidden word in time slots; **combo k**, a meal's meaning
+set by the last k colours eaten. A rung is certified if a brain told the answer beats the starting brain surely by .25 or more, and a
+brain designed by hand for the rung, told its structure but not its letters, surely closes half of that gap.
+
+**The user's catch: world and brain shared a clock.** The first version began time's slots at t = 0, and its designed brain read the
+world's own clock: godlike. Every periodic thing now draws its phase and its slot length (log-uniform 5 to 20 s) each life, the
+designed brain keeps its own drifting oscillator, told the slot length but never the phase, and seq and combo start at a drawn place.
+All numbers below are from the corrected worlds; the first run's are superseded (AGENTS.md, Gotcha: no shared clock).
+
+**Certified rungs** (40 pairs). Seq: 2, 3, 5, 7, 11, 13, 17 (designed x .87 to .98). Combo: 1, 3, 4, 5, 6 (x .60 to .81); 2 isn't,
+since its gap is small (1.26) and noisy. Time: 2, 3, 5, 7 (x .82 to .61), not 11 and 13 (.46, .38), where the designed brain's own
+clock drifts across a long slot. Rungs 4 and 6, added, certify too (x .72, .69; `lab/v/ladders_certify_time46.log`): six.
+**The ruler's first bar is met**: three ladders with five or more certified rungs each (7, 5, 6), and a baseline curve.
+
+**Do the ladders differ?** Each designed brain on the others' middle rungs: combo's closes .39 of seq's gap (a good eater goes round a
+short cycle of histories, which looks like a word), everything else under .05 or negative. They differ.
+
+**The baseline** (the bank with K = 10, 100, 1000 random rivals, 20 pairs). Time: no K reaches half anywhere, and from rung 5 every K
+is at or below 0. Combo: flat in K and below half everywhere. Seq: more K climbs while the answer is on the menu (rung 13: .16, .68,
+.91), and fails at 17, where the word outgrows the rivals' counters (2 to 16). A ready-made menu holding the answer is what K buys.
+
+**A flaw in the ruler.** On seq, K = 1000 solves 2, 3, 11, 13 but not 5 and 7: those have 100 s lives and 11 and 13 have 300 s. A
+rung is harder than the one below only if its life grows no faster than what it asks, so the scaling curve's "hardest rung solved"
+misreads a climb. To fix before stage 1: lives grown smoothly with each rung's bits (as time's already are), or the curve read as
+the rungs solved in a row from the bottom.
+## D38: stage 1's first experiment, who teaches the raw material? (2026-11-09)
+
+`lab/teach.py`, predictions first (`lab/v/teach_predictions.md`), results `lab/v/teach.log` (20 pairs, seeds 84000+, the sequence
+ladder's lives unchanged by the user's decision). Raw material counted in units, one letter each.
+
+**Two of the three planned arms changed by sums before any life.** Units teaching each other can't help on this ladder: the blocks'
+colours are random, so the eyes carry nothing about the word. And credit doesn't interfere: a vouched taste says which colour was food, so
+every unit can be scored on it at once, counterfactually. The danger of one score for a group effort belongs to ladders where units act
+on the body jointly. So the real choice was material against time.
+
+**All at once** (the bank with a ring of every length up to M, P = M(M+1)/2 units): solves up to rung 2, 3, 5, 7, 7 at P = 4, 8, 16, 32,
+64. It climbs as the square root of its material.
+**A few at a time** (one ring growing a unit when its confirmed letters keep being contradicted): costs nothing in plain (x exactly 0;
+it stays at 1 or 2 units with letters copied round) and uses only the material it needs (P 16 to 64 identical), but it is slow: about
+n^2/2 tastes to try every length up to n. In the ladder's lives it solves rungs 2 and 3 only; 11 at .38 with final lengths 10 to 12.
+**Neither is "add more brain and it climbs".** The bank needs material growing as n^2, growing needs time growing as n^2, where an ideal
+learner needs about n + log2 n tastes. The waste is in how a wrong length is found out: a ring must be filled and then contradicted.
+**The record arm: the first climb** (the user agreed; `lab/v/teach_record.log`, predictions 5-7). P units hold the last P letters revealed,
+each at its good-meal count; one comparing unit per look-back k up to P/2 counts agreements and disagreements; the brain follows the
+letter k back for the best k. Solved up to rung 2, 3, 7, 13, 17 at P = 4, 8, 16, 32, 64: doubling the material doubles the rung, in the
+ladder's own lives, x .66 to .93. But in plain it costs (x -.11 to -.17, surely): suspected, its lack of a tally of trust (one misread
+taste overwrites a letter). The user's observation: this heads towards a time-delay network over a shift register (keep each unit a
+plain comparator), and its key is that sparse events move the register, events the circuit could learn to choose, as it learns what to
+do with the states: good meals for seq, a clock for time, each colour eaten for combo. Proposed as stage 2's design.
+**Stage 2, step A: registers moved by different events** (the user agreed; `lab/teach.py` events; `lab/v/teach_events_*.log`;
+predictions 10-12). Five registers moved by good meals, any trusted taste, and the brain's own clocks of 1, 2, 4 s (random phase,
+drifting), each P/5 units with look-back comparators; the best register and look-back followed. Seq: it picks the good-meal register
+itself and climbs (rung 3, 7, 13, 17 at P 40 to 320). Time: rung 2 .58 at P 320, above the random rivals' .24 but not solved; nothing
+from rung 4. A free-running clock can't line up with a slot of unknown length: the pattern is rarely a whole number of beats long, so
+copies further back slide out of step, and the chooser prefers "the same as a moment ago". Next: a clock reset by surprises (a trusted
+bad after goods), so its beats are set by the world's changes, which is the lock-on problem in another form. Plain costs again (-.11 to
+-.15): the three-copy vote that time needed undid the record arm's protection against misreads; both needs to be reconciled.

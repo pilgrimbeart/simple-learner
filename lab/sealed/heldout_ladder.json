@@ -1,0 +1,43 @@
+{
+ "name": "hidden_contexts",
+ "kind": "Recurring hidden contexts, each flagged only by a background rate on the eyes and each with its own secret food colour, so a bigger rung needs more context-to-colour associations kept apart and retained across returns.",
+ "source": "outside_set2 29 (hidden context with a covert cue), 12 (Continual World: recurrence and forgetting), 27 (Harlow learning sets); outside_set 20 (renewal), 14 (Continual World), 33 (volatility)",
+ "rungs": [
+  {
+   "size": 1,
+   "seconds": 1000,
+   "text": "(world (meta (group heldout))\n (let K 1) (let i 0) (let j 0) (let s 0) (let ctx 0) (let visit 0) (let cur P)\n (table rule K 1 P) (table hop 2048 1 (int (max 1 (- K 1))))\n (told cur)\n (on birth\n  (repeat K (put rule i (if (= (mod i 2) 0) P F)) (set i (+ i 1)))\n  (repeat K (set i (- i 1)) (set j (int (+ i 1))) (set s (at rule i)) (put rule i (at rule j)) (put rule j s))\n  (set ctx (int K)) (set cur (at rule ctx)))\n (on tick\n  (if (chance (* 0.1 TICK)) (do (set ctx (mod (+ ctx 1 (at hop (mod visit 2048))) K)) (set visit (+ visit 1))))\n  (set cur (at rule ctx)) (set poison cur)\n  (repeat (poisson (* (pow 3 (mod ctx 3)) TICK)) (pulse 0))\n  (repeat (poisson (* (pow 3 (floor (/ ctx 3))) TICK)) (pulse 1))))",
+   "desc": "1 hidden context(s), recurring at random (exponential dwell, mean 10 s, always moving to a different context when K > 1). Each context shows as a steady background pulse rate on the two eyes (each 1, 3 or 9 per second, by context number) and has its own secret food colour, half the contexts each way, drawn at birth and independent of the cue. Mapping to learn: 1.0 bits; cue reading about 1 nat/s at worst; about 400 tastes per context before the last third of the life. Told arm: told the poison colour of the moment."
+  },
+  {
+   "size": 2,
+   "seconds": 1000,
+   "text": "(world (meta (group heldout))\n (let K 2) (let i 0) (let j 0) (let s 0) (let ctx 0) (let visit 0) (let cur P)\n (table rule K 1 P) (table hop 2048 1 (int (max 1 (- K 1))))\n (told cur)\n (on birth\n  (repeat K (put rule i (if (= (mod i 2) 0) P F)) (set i (+ i 1)))\n  (repeat K (set i (- i 1)) (set j (int (+ i 1))) (set s (at rule i)) (put rule i (at rule j)) (put rule j s))\n  (set ctx (int K)) (set cur (at rule ctx)))\n (on tick\n  (if (chance (* 0.1 TICK)) (do (set ctx (mod (+ ctx 1 (at hop (mod visit 2048))) K)) (set visit (+ visit 1))))\n  (set cur (at rule ctx)) (set poison cur)\n  (repeat (poisson (* (pow 3 (mod ctx 3)) TICK)) (pulse 0))\n  (repeat (poisson (* (pow 3 (floor (/ ctx 3))) TICK)) (pulse 1))))",
+   "desc": "2 hidden context(s), recurring at random (exponential dwell, mean 10 s, always moving to a different context when K > 1). Each context shows as a steady background pulse rate on the two eyes (each 1, 3 or 9 per second, by context number) and has its own secret food colour, half the contexts each way, drawn at birth and independent of the cue. Mapping to learn: 1.0 bits; cue reading about 1 nat/s at worst; about 200 tastes per context before the last third of the life. Told arm: told the poison colour of the moment."
+  },
+  {
+   "size": 3,
+   "seconds": 1000,
+   "text": "(world (meta (group heldout))\n (let K 3) (let i 0) (let j 0) (let s 0) (let ctx 0) (let visit 0) (let cur P)\n (table rule K 1 P) (table hop 2048 1 (int (max 1 (- K 1))))\n (told cur)\n (on birth\n  (repeat K (put rule i (if (= (mod i 2) 0) P F)) (set i (+ i 1)))\n  (repeat K (set i (- i 1)) (set j (int (+ i 1))) (set s (at rule i)) (put rule i (at rule j)) (put rule j s))\n  (set ctx (int K)) (set cur (at rule ctx)))\n (on tick\n  (if (chance (* 0.1 TICK)) (do (set ctx (mod (+ ctx 1 (at hop (mod visit 2048))) K)) (set visit (+ visit 1))))\n  (set cur (at rule ctx)) (set poison cur)\n  (repeat (poisson (* (pow 3 (mod ctx 3)) TICK)) (pulse 0))\n  (repeat (poisson (* (pow 3 (floor (/ ctx 3))) TICK)) (pulse 1))))",
+   "desc": "3 hidden context(s), recurring at random (exponential dwell, mean 10 s, always moving to a different context when K > 1). Each context shows as a steady background pulse rate on the two eyes (each 1, 3 or 9 per second, by context number) and has its own secret food colour, half the contexts each way, drawn at birth and independent of the cue. Mapping to learn: 2.58 bits; cue reading about 1 nat/s at worst; about 133 tastes per context before the last third of the life. Told arm: told the poison colour of the moment."
+  },
+  {
+   "size": 4,
+   "seconds": 1000,
+   "text": "(world (meta (group heldout))\n (let K 4) (let i 0) (let j 0) (let s 0) (let ctx 0) (let visit 0) (let cur P)\n (table rule K 1 P) (table hop 2048 1 (int (max 1 (- K 1))))\n (told cur)\n (on birth\n  (repeat K (put rule i (if (= (mod i 2) 0) P F)) (set i (+ i 1)))\n  (repeat K (set i (- i 1)) (set j (int (+ i 1))) (set s (at rule i)) (put rule i (at rule j)) (put rule j s))\n  (set ctx (int K)) (set cur (at rule ctx)))\n (on tick\n  (if (chance (* 0.1 TICK)) (do (set ctx (mod (+ ctx 1 (at hop (mod visit 2048))) K)) (set visit (+ visit 1))))\n  (set cur (at rule ctx)) (set poison cur)\n  (repeat (poisson (* (pow 3 (mod ctx 3)) TICK)) (pulse 0))\n  (repeat (poisson (* (pow 3 (floor (/ ctx 3))) TICK)) (pulse 1))))",
+   "desc": "4 hidden context(s), recurring at random (exponential dwell, mean 10 s, always moving to a different context when K > 1). Each context shows as a steady background pulse rate on the two eyes (each 1, 3 or 9 per second, by context number) and has its own secret food colour, half the contexts each way, drawn at birth and independent of the cue. Mapping to learn: 2.58 bits; cue reading about 1 nat/s at worst; about 100 tastes per context before the last third of the life. Told arm: told the poison colour of the moment."
+  },
+  {
+   "size": 6,
+   "seconds": 1000,
+   "text": "(world (meta (group heldout))\n (let K 6) (let i 0) (let j 0) (let s 0) (let ctx 0) (let visit 0) (let cur P)\n (table rule K 1 P) (table hop 2048 1 (int (max 1 (- K 1))))\n (told cur)\n (on birth\n  (repeat K (put rule i (if (= (mod i 2) 0) P F)) (set i (+ i 1)))\n  (repeat K (set i (- i 1)) (set j (int (+ i 1))) (set s (at rule i)) (put rule i (at rule j)) (put rule j s))\n  (set ctx (int K)) (set cur (at rule ctx)))\n (on tick\n  (if (chance (* 0.1 TICK)) (do (set ctx (mod (+ ctx 1 (at hop (mod visit 2048))) K)) (set visit (+ visit 1))))\n  (set cur (at rule ctx)) (set poison cur)\n  (repeat (poisson (* (pow 3 (mod ctx 3)) TICK)) (pulse 0))\n  (repeat (poisson (* (pow 3 (floor (/ ctx 3))) TICK)) (pulse 1))))",
+   "desc": "6 hidden context(s), recurring at random (exponential dwell, mean 10 s, always moving to a different context when K > 1). Each context shows as a steady background pulse rate on the two eyes (each 1, 3 or 9 per second, by context number) and has its own secret food colour, half the contexts each way, drawn at birth and independent of the cue. Mapping to learn: 4.32 bits; cue reading about 1 nat/s at worst; about 67 tastes per context before the last third of the life. Told arm: told the poison colour of the moment."
+  },
+  {
+   "size": 8,
+   "seconds": 1000,
+   "text": "(world (meta (group heldout))\n (let K 8) (let i 0) (let j 0) (let s 0) (let ctx 0) (let visit 0) (let cur P)\n (table rule K 1 P) (table hop 2048 1 (int (max 1 (- K 1))))\n (told cur)\n (on birth\n  (repeat K (put rule i (if (= (mod i 2) 0) P F)) (set i (+ i 1)))\n  (repeat K (set i (- i 1)) (set j (int (+ i 1))) (set s (at rule i)) (put rule i (at rule j)) (put rule j s))\n  (set ctx (int K)) (set cur (at rule ctx)))\n (on tick\n  (if (chance (* 0.1 TICK)) (do (set ctx (mod (+ ctx 1 (at hop (mod visit 2048))) K)) (set visit (+ visit 1))))\n  (set cur (at rule ctx)) (set poison cur)\n  (repeat (poisson (* (pow 3 (mod ctx 3)) TICK)) (pulse 0))\n  (repeat (poisson (* (pow 3 (floor (/ ctx 3))) TICK)) (pulse 1))))",
+   "desc": "8 hidden context(s), recurring at random (exponential dwell, mean 10 s, always moving to a different context when K > 1). Each context shows as a steady background pulse rate on the two eyes (each 1, 3 or 9 per second, by context number) and has its own secret food colour, half the contexts each way, drawn at birth and independent of the cue. Mapping to learn: 6.13 bits; cue reading about 1 nat/s at worst; about 50 tastes per context before the last third of the life. Told arm: told the poison colour of the moment."
+  }
+ ]
+}

@@ -1,131 +1,59 @@
 # The programme
 
-One page to keep us on track. If work doesn't serve the question below, it is parked in `QUESTIONS.md`. `GRAMMAR.md` holds the detail.
+One page to keep us on track. The goal and its test are in `README.md`, The goal. If work can't move the scaling curve, it is parked in `QUESTIONS.md`.
 
-## Why (the quest, `README.md`)
+## The strategy: ruler first, then climb (agreed by the user, 2026-11-09)
 
-We want a general recipe for a brain that optimises itself: circuits that notice, by themselves, that they aren't doing well for the creature, and put it right, from simple local parts, ideally by emergence rather than by our design. Ten mismatches cured by hand (`STORIES.md`) gave one circuit that does the job of many, the bank of predictors: rival ideas of what taste means, all scored on every taste, the best followed. This programme asks whether that is a general principle or ten cures glued together.
-
-## The question
-
-**Does a brain facing many more challenges need proportionally more hand-built detectors, or do fewer general ones emerge?**
-
-If it needs one for each, we have just hand-designed everything, and nothing interesting is emerging. If fewer will do, what are they, and why? Then: can hierarchy (detectors that learn about detectors) make the circuit find them itself, rather than us?
-
-**In bits.** A life offers about 50 bits of evidence (D31), but a world's rule takes hundreds to write down (D33), so a brain can only learn what its structure already makes cheap: learning in a life is choosing and tuning within a repertoire. The question becomes how small a repertoire, made of how simple parts, covers how much. A repertoire of K rivals costs about log2 K bits of evidence to choose from (the Occam factor), and its description can be tiny if the rivals are drawn by a simple rule from simple parts, though it still costs parts and power to build.
-
-## Where we are
-
-**Decision B taken (the user, 2026-11-07): the bank makes its own rivals.** Stage 3 is done and checked independently: on fresh random worlds the bank's hand-written repertoire surely covers 11 of the 61 with something to learn and surely fails 24, coverage between .18 and .61; its failures are missing ideas, mostly about timing (at 1000 s an ideal judge with timing ideas learns swaps the bank can't); one part (the eye filter, tuned to the eyes' usual rate) does harm where the eyes are more sensitive, and the bank costs a little (about .07) in many worlds with nothing to learn (`discrete/NOTEBOOK.md`, D35; `ABSTRACT.md`). **Next: stage R**, below, in place of stage 4's hand-made cures.
-
-**Next (the user, 2026-11-09; not started): the paired-blocks world**, below. The balance learner is closed (`discrete/NOTEBOOK.md`, D36). This comes ahead of stage R's remaining steps.
-
-**Gates, fixed before the results.** A gate that fails stops the work there, and it is reported, not argued round.
-
-- **1c to 2:** (a) stage 1b's headline numbers replicate on fresh development seeds, or the differences are recorded and explained; (b) whether the bank's forgetting pays is settled by a measurement either way; (c) the taste limit is an upper bound with a proof, or called an estimate everywhere; (d) a pass definition is chosen on synthetic data, with its false yes and false no rates, before any real world runs.
-- **2 to 3:** an independent check of the engine: with every change off, a world reproduces the unmodified lives exactly; each hand-written world behaves as its description says; each world's evidence is measured in bits, and how well planted near-duplicates are told apart is measured.
-- **3 to B:** coverage on fresh worlds, in bits and with intervals, checked by an agent that didn't produce it. Held-out seeds and sealed sets stay closed: stage 3 uses neither the sealed sets nor anything but development draws until the user decides at B.
-
-## The stages
-
-Each ends with a result and a decision by the user. **No stage starts without that decision.** We commit only to reaching decision B; the rest is a sketch.
+Build the ruler first. After that, nothing is worked on unless it can move the scaling curve.
 
 | stage | what | ends when | what it decides |
 |---|---|---|---|
-| 0 | Settle the primary result; seal an outside test set and a held-out split | all written down | A: start |
-| 1 | Synthetic controls: test the analysis on invented data with known answers | it recovers the known answers, or we learn it can't | stop, or change the analysis, or go on |
-| 1b | **The budget in bits**: what a life can supply, and the bank against an ideal Bayesian learner | we know how much of each world is learnable in principle, and how much the bank wastes | whether stage 2's worlds need reshaping |
-| 1c | **Repeat what 1b assumed**: ideal learners that allow change, the bank's floor where a rule starts mid-life, a proven limit on tastes, synthetic worlds that can't be fully passed | the gate above | the labels and pass bar stage 2 uses |
-| 2a | A minimal language and engine; about 30 worlds by hand, each labelled in bits | the engine is proven against the unmodified world | go on to random worlds, or fix the language |
-| 2b | The frozen reference; about 100 random worlds; near-duplicates; real sigma and cost per world | we know what share of random worlds are learnable, and the cost per world | whether random worlds are worth using at all |
-| 3 | **The present circuit, unchanged, on fresh worlds; then longer lives on about 30** | a coverage number exists | **B: the main decision.** What's uncovered, and is it worth continuing? |
-| R | **Rivals made, not written** (decision B): the bank's rivals assembled from many simple parts connected in various ways, hierarchies included (counters of toggles, an oscillator driving a toggle, a timer gating a counter); first drawn at birth, then grown in the life where no rival predicts | below | whether a repertoire from simple parts covers what the written one does and more, at what cost in evidence and parts |
-| 4 | (parked at B) Add cures, by a separate designer, to the largest groups of failures | | |
-| 5 | The rule-changing worlds; types | to be planned later | |
+| **0. The ruler** | Ladders on today's senses: sequences, timing, combinations (body mismatches last), and a held-out ladder written and sealed by a fresh agent. Rungs certified and counted in bits. Today's brains measured on both curves. | At least three ladders with at least five certified rungs each, or a measured reason why not; a baseline curve exists | Whether the ladders are really different; whether a ladder needs more senses (the user's decision) |
+| **1. One climb** | Any frozen design that climbs one ladder by recruiting in its life. A hand-designed recruiter is legal, being one design for every rung. Starts: D27's `GrowSeq`, stage R's R3. First experiment below. | Three doublings climbed, or a measured reason why not | Which kind of unit and teaching to build |
+| **2. Generality** | The same frozen design on the other ladders. A search across lifetimes joins, starting from stage 1's design: fitness the climb itself, trained at small sizes, judged at larger ones. | It climbs at least three ladders | Whether one component will do |
+| **3. The claim** | The held-out ladder, the cost curve, forgetting, locality at large sizes, under full rigour; then `mixed_feedback.py` and SPICE. | All seven tests pass, or how far it got is reported | Whether the goal is met |
 
-## Next: blocks in pairs (not started)
+**Raw material is block-level for now** (the user, 2026-11-09; `discrete/NOTEBOOK.md`, D14: fastest to design in). Sepulchre's parts stay parked as a later comparison.
 
-**The world.** Each food block has one poison block beside it, at a set gap; nothing else changes: the same body, eyes, taste and worth of a block, written in the language (an eaten block must reappear beside a partner, or the pairs dissolve). The one setting is the gap: wide (should be as easy as plain), medium (avoidable with care), too close (impossible, a control).
+### The first experiment: who teaches the raw material?
 
-**Why this world.** It asks about space and skill, with no memory or sequence: "food in view" is no longer enough, the right rule being "food in view and no poison in view". That is a combination of two inputs, so perhaps the simplest test of whether a second layer is needed. It also tests attention: `designed-circuit` silences the other eye while it heeds one colour (by its description, untested here; B's and the bank's behaviour unchecked), which would blind it to the poison beside its food. By the code's description the eyes' corridor is what the mouth will sweep, so a silent poison eye should mean a safe drive; a near block's shadow can break that.
+**Run** (`discrete/NOTEBOOK.md`, D38): on the sequence ladder, sums replaced arms 1 and 3 (credit doesn't interfere when a taste reveals the answer; the eyes carry nothing about the word). A bank of every ring length climbs as the square root of its material; one ring growing on frustration uses only what it needs but takes about n^2/2 tastes against an ideal n + log2 n.
 
-**Why pairs and not clusters (the user).** With blocks abutting, a food block with poison to its left, right and behind sits in a U of poison, and the creature has no reverse: it can't eat the food without being trapped. A very competent brain might solve that (drive right round the cluster to judge whether it is viable), but that is far beyond what we have. Pairs have no such trap.
+As planned:
 
-**First steps, before any long runs:**
-1. The geometry, from the body's numbers (`world.py`: mouth, corridor, turning, momentum): which gaps can any brain separate, and at what aim? A failure at an impossible gap says nothing.
-2. A yardstick: knowing the colours doesn't help here, so the usual told arm won't do. A hand-written cautious policy ("drive only when the poison eye is silent") measures what caution is worth at each gap.
-3. Show the world live, for the user to judge, before anything is run at length.
+A taste reaches every unit at full strength, but it is one score for what they all did, and it carries at most a bit. So units varying at once are noise to each other, and N units that must each learn something different need at least N tastes, however they are organised. Three arms on the sequence ladder, doubling the material:
 
-**To score with care.** Eating the poison to clear the way may be the best move where food is worth more than poison costs: that would be a smart answer, not a failure. Predictions and gates to be written before the lives, as always.
+1. **All explore at once, taught by taste.** Expected to collapse, mainly from the direct harm of exploring (`discrete/NOTEBOOK.md`, D16).
+2. **A few at a time, taught by taste**: idle until recruited, or only recently active units credited. Expected to scale, with life length growing with what must be learned.
+3. **Units also teach each other**, predicting their senses and neighbours. The open question: does it beat taste's bits on today's eyes?
 
-## Stage R: rivals made, not written
+### Where stage 0 stands
 
-**What a rival is.** Every rival in today's bank is a *context* and a *table*: a signal that takes one of k values (the count of good tastes mod n), and a learned bit for each value saying which colour is food then, with a tally of trust. A made rival keeps the table and builds the context from simple parts, each a block a circuit can hold:
-- a **toggle** (flips on each input event), so a chain of toggles is a binary counter (k = 2, 4, 8);
-- a **counter that resets** at n (k = n), for counts not a power of two;
-- an **oscillator** of period T, read in phase bins (k bins), so a toggle driven by it has period 2T;
-- a **timer** since an event (a taste, a good taste), read as before or after its delay;
-- a **conjunction** of two contexts (their product: k1 x k2 values), the way hierarchies form.
-
-Inputs are only what a brain already has: tastes, good tastes, its own clock (oscillators and timers in seconds, never ticks), with each part's own mismatch and the oscillators' phase noise. A rival is scored exactly as today's are (evidence where it disagrees with the default), so it is judged on every taste without being acted on.
-
-**Steps, each with its predictions written first and its gate:**
-1. **R1, the parts reproduce the bank.** Today's seven rivals rebuilt from these parts give identical lives. Gate: identical.
-2. **R2, drawn at birth.** K rivals drawn at random by a fixed rule (parts and depth, periods and delays log-uniform over ranges fixed in seconds before any run), the bar to adopt a rival rising with log2 K as the Occam factor requires, derived, not tuned. Measured on stage 3's worlds (development: base, told and reference lives already exist on the same seeds): coverage, doing no harm, and false picks against K (1, 10, 100, 1000), with the number of matching rivals a world needs worked out first. Gate: a K is found that covers surely more than the written bank with no harm, or the reason none can is measured.
-3. **R3, grown in the life.** Start with few parts; where the followed rival keeps being contradicted (frustration), grow a new rival by connecting a part to an existing rival's context (function-preserving: it starts with no evidence). Compared with R2 at equal parts. Gate: grown ties or beats drawn at equal parts, or the reason is measured.
-4. **R4, judged on worlds never seen**: a fresh draw from stage 3's generator (development numbers 300-499, fixed now), then, at the user's decision, the sealed outside set and held-out seeds.
-
-**In bits, for every step:** the evidence each world offers about its rule (the told arm's tastes), the Occam cost of K, how many of the K rivals fit each world, and the parts and power of the repertoire. The eye filter's fault (D35) is left as it is in R, so comparisons stay with the written bank; it is the next cure.
-
-## The primary result
-
-Chosen before any data, the one result we judge by. Everything else explains it and can't overturn it. Stage 1 showed the first wording couldn't tell the truth (`discrete/NOTEBOOK.md`, D30).
-
-**The design is fixed, and the circuit still learns.** Every life starts fresh and adapts in that life; what's held fixed is only what a designer may change between worlds. To test any level, hold fixed the level above it: a circuit's state adapts with its design fixed; a design adapts with the paradigm fixed.
-
-- **F_novel:** on challenges the design never saw, the pass rate above the base circuit's, as a share of what the base circuit leaves.
-- **R:** the description added by the cures, against what one fixed-size cure per challenge would cost.
-- **A pass:** a world passes if x > max(.5 r, .25). x is the circuit's fraction of the gap, measured from the larger of base and 0 (so standing still gains nothing) up to a policy told the rule; r is the same for a **reference**, a Bayesian learner frozen before any world it judges runs, its family, prior in bits, likelihood and tie rule all written down. The gap to told is always reported beside it. A told bar alone makes a yes nearly unreachable; a reference alone can be gamed by one cheap half-working cure; hence the .25 (D32). Worlds the reference can't help fail at the floor: this errs towards no.
-- **Doing no harm:** in a world with nothing to learn, the lower 95% bound of (circuit - base) stays above -.1 efficiency. The -.1 is a choice, about the interval's half-width at 200 pairs. Scoring above base there isn't counted as learning.
-- **Measurement:** the verdict needs about se .1 per world, about four times the lives planned (D32). Real sigma comes from stage 2.
-- **The verdict rests on the sealed outside set.** A grammar of K bits can be built into a circuit of about K bits however many worlds it generates, so a yes on our own worlds is guaranteed in principle and proves nothing. Our own worlds are for development, and their numbers are reported as such.
-- **Yes:** on the outside set, the 95% lower bound of F_novel is above a half, and the upper bound of R below a half, with at least 30 novel challenges.
-- **No:** the upper bound of F_novel is below 0.2.
-- **In between:** anything else, reported as measured.
-- **Same shape, retuned by hand:** R below a half without F_novel. Not a yes, but a finding of its own: those settings are what a higher level could learn. If the circuit retunes the shape itself, it passes F_novel and counts.
-
-**In bits, for every world**, as the explanation: the evidence available on the wires; how much the circuit used; what an ideal Bayesian learner with the same evidence would do; and bits built in by design against bits gathered in life. A life has a budget: at most a bit a taste, truly 0.25-0.83, about 15-50 bits at the bank's rate of tastes, and several times more for a brain that eats faster, since the body has no firing cap; telling N worlds apart takes at least log2 N bits (D31, D32). Say "too short at this rate", not "for any brain", unless a difference never shows within the life. A world outside a learner's prior costs extra evidence, about log2 of one over its prior probability, so "we built detectors for the grammar" has a graded measure: how many extra bits does an outside world take?
-
-Description length: LZMA size, given a frozen corpus, of a canonical form (D30). The vocabulary is invented so far, and to be fixed before any real world runs.
-
-## Keeping it simple as we go (stage 4)
-
-We boil down during the search, not at the end, when nobody could reason about the result.
-
-1. **Widen first.** Before building a new part, try extending an existing one. A new part must show that widening can't do the job.
-2. **Merge at three.** When three cures share a shape, stop and try to merge them. The merged version must tie with the originals. Two may be a coincidence.
-3. **Cap the motifs.** A low limit on distinct kinds of mechanism, so adding one means retiring or merging another.
-4. **Prune after every addition**, removing anything that costs nothing to remove, then re-run all earlier worlds and the unmodified world.
-
-## Sealed before anything is built
-
-- **The outside test set:** two files. `lab/sealed/outside_set2.md`, the primary, written under the tighter seal on Sonnet (`lab/blind_agents.sh`; reply in `lab/v/outside_set2_reply.log`): SHA-256 `2050ebb03183f0343a6e3c1f94934452aaa1c8d07f001b9f3b36b1b31ae93368`, 45 entries, 36 keeping the current rules; several sources confirmed from search results only. `lab/sealed/outside_set.md`, a second test, by a fresh agent from outside sources. **Nobody building the language, the engine or the cures reads it** until stage 4 ends. SHA-256 `f72a1addf3347b2779b7e2c6e62432fd01bea2254a50d8e39038fcf21c95db13`; 44 entries, 37 keeping the current rules. **The seal isn't perfect:** the agent opened no repository files, but the harness gave it `AGENTS.md`, the memory index and a git status at the start, so it saw the rules and some file names. Many older papers are confirmed by bibliographic record only; each entry says what was checked.
-- **The held-out worlds:** world number n, from any sampler, is held out if the first byte of SHA-256 of `world:n` is divisible by 4 (a quarter of them). Fixed now, so that it can't be chosen later.
-- **Seeds for lives:** development 60000-69999 (spent by stage 2c), then 80000-89999 (opened 2026-11-06 for stage 3); held out 70000-79999. Seeds below 60000 are spent.
+Bar met (`discrete/NOTEBOOK.md`, D37): seq 7 certified rungs, combo 5, time 6; the ladders differ (combo's brain closes .39 of seq's gap, the rest nothing); baseline curve measured (random rivals help only on seq, while the answer is on their menu). Open before stage 1: rung lives don't grow smoothly with what a rung asks, so "hardest rung solved" can misread a climb (seq: 11 and 13 solved, 5 and 7 not).
 
 ## How we work
 
-- **The main session** keeps this page, talks with the user, makes judgements, and since 2026-11-06 does the work itself (the user: sub-agents cost too many tokens and fought for the cores).
-- **An agent only where independence is the point** (a gate's check, the sealed set's author, the cure designer), with a written brief, asked of the user first; it reports in under a page, with file paths and what it found surprising.
-- **Agents kept apart for honesty**: the outside test set's author and the cure designer see only what their brief gives them.
-- **Going off the brief:** an agent stops and reports. It doesn't chase what it finds. New questions go to `QUESTIONS.md`.
-- **The test before starting anything:** which row of the stages table does this serve? If none, park it.
+- **Every run is a point on a curve, or it's parked.** Say which belief it could move, and do the sum before spending CPU. Stop and rethink at a mechanism's second version. If a confound blocks a test, switch it off rather than curing it.
+- **Rigour comes in tiers.** Exploration uses the 10 ms tick where it is good enough, and few lives. The full rules (fresh seeds, halved steps, intervals, SPICE) apply to claims, as SPICE already did.
+- **Predictions are written before lives**, and scored after.
+- **The main session** keeps this page, talks with the user, makes judgements and does the work itself. **An agent only where independence is the point** (a gate's check, a sealed set's author), with a written brief, asked of the user first; it reports in under a page.
+- **Going off the brief:** an agent stops and reports. New questions go to `QUESTIONS.md`.
 - **The existing rules hold** (`AGENTS.md`): one long job at a time; push only on the user's "Push"; show working behaviour live before reporting; record findings in the notebook.
+
+## Sealed
+
+- **The outside test set:** two files. `lab/sealed/outside_set2.md`, the primary, written under the tighter seal on Sonnet (`lab/blind_agents.sh`; reply in `lab/v/outside_set2_reply.log`): SHA-256 `2050ebb03183f0343a6e3c1f94934452aaa1c8d07f001b9f3b36b1b31ae93368`, 45 entries, 36 keeping the current rules; several sources confirmed from search results only. `lab/sealed/outside_set.md`, a second test, by a fresh agent from outside sources. **Nobody building the language, the engine or the cures reads it** until the claim (stage 3 above). SHA-256 `f72a1addf3347b2779b7e2c6e62432fd01bea2254a50d8e39038fcf21c95db13`; 44 entries, 37 keeping the current rules. **The seal isn't perfect:** the agent opened no repository files, but the harness gave it `AGENTS.md`, the memory index and a git status at the start, so it saw the rules and some file names. Many older papers are confirmed by bibliographic record only; each entry says what was checked.
+- **The held-out ladder:** `lab/sealed/heldout_ladder.json`, by a fresh agent from the outside sets (2026-11-09), told only the kinds of the other ladders: SHA-256 `8c7ae3373d33385361f2b5da7445b01e09e3073041c859778d77966187d09943`, 6 rungs, all compiled, no lives run. Unread until the design is frozen (stage 3 above). The harness gave the agent `AGENTS.md` and the memory index, as above, and it has read the outside sets, so the sets' seal is as it was for the main session.
+- **The held-out worlds:** world number n, from any sampler, is held out if the first byte of SHA-256 of `world:n` is divisible by 4 (a quarter of them). Fixed now, so that it can't be chosen later.
+- **Seeds for lives:** development 60000-69999 (spent by stage 2c), then 80000-89999 (opened 2026-11-06 for stage 3); held out 70000-79999. Seeds below 60000 are spent.
 
 ## Decisions (add as made)
 
 | date | decision | by |
 |---|---|---|
+| 2026-11-09 | The strategy above replaces the earlier stages: four ladders starting with today's senses, body mismatches last; raw material block-level for now; a fresh agent writes the held-out ladder; paired blocks becomes a rung, not a line of its own | the user |
+| 2026-11-09 | The goal: intelligence that scales, in a brain for a robot (`README.md`, The goal). Lives may lengthen as challenges grow; more senses eventually, with much still to learn from these; anything may happen before a life, but a solution designed by hand is insight, not the solution; a component may be quite complex, staying parsimonious for fast simulation, clear thinking and some chance of understanding the result; a small brain may have any number of connections, locality coming from scale, since big brains can't have everything broadcasting to everything else; a bigger brain may react more slowly if it is better on balance, and what size costs on simple tasks is explored, perhaps as a scaling law, not barred in advance | the user |
+| 2026-11-09 | The scaling test's wording and provisional numbers, drafted for the user's review | main session |
 | 2026-11-09 | The balance learner closed; next, the paired-blocks world, pairs before clusters (a U of poison traps a creature with no reverse); written up, not started | the user |
 | 2026-11-04 | Rule-changing worlds only after testing within the current constraints | the user |
 | 2026-11-04 | Marks left in the world: not yet | the user |
@@ -173,3 +101,109 @@ We boil down during the search, not at the end, when nobody could reason about t
   at random with random weights, and above all with mechanisms that tune the weights themselves. Everything stage R measures (coverage
   on stage 3's worlds, no harm in plain, life lengths up to 10,000 s), so the two kinds of part are compared on the same lives. These
   blocks have rhythm, phase reset and entrainment built in, which stage R's free-running oscillators lack.
+### Blocks in pairs (a rung of the combinations ladder, once its geometry is checked)
+
+**The world.** Each food block has one poison block beside it, at a set gap; nothing else changes: the same body, eyes, taste and worth of a block, written in the language (an eaten block must reappear beside a partner, or the pairs dissolve). The one setting is the gap: wide (should be as easy as plain), medium (avoidable with care), too close (impossible, a control).
+
+**Why this world.** It asks about space and skill, with no memory or sequence: "food in view" is no longer enough, the right rule being "food in view and no poison in view". That is a combination of two inputs, so perhaps the simplest test of whether a second layer is needed. It also tests attention: `designed-circuit` silences the other eye while it heeds one colour (by its description, untested here; B's and the bank's behaviour unchecked), which would blind it to the poison beside its food. By the code's description the eyes' corridor is what the mouth will sweep, so a silent poison eye should mean a safe drive; a near block's shadow can break that.
+
+**Why pairs and not clusters (the user).** With blocks abutting, a food block with poison to its left, right and behind sits in a U of poison, and the creature has no reverse: it can't eat the food without being trapped. A very competent brain might solve that (drive right round the cluster to judge whether it is viable), but that is far beyond what we have. Pairs have no such trap.
+
+**First steps, before any long runs:**
+1. The geometry, from the body's numbers (`world.py`: mouth, corridor, turning, momentum): which gaps can any brain separate, and at what aim? A failure at an impossible gap says nothing.
+2. A yardstick: knowing the colours doesn't help here, so the usual told arm won't do. A hand-written cautious policy ("drive only when the poison eye is silent") measures what caution is worth at each gap.
+3. Show the world live, for the user to judge, before anything is run at length.
+
+**To score with care.** Eating the poison to clear the way may be the best move where food is worth more than poison costs: that would be a smart answer, not a failure. Predictions and gates to be written before the lives, as always.
+
+
+## Before the goal: the earlier programme (2026-11-04 to 11-09)
+
+Kept for reference. Its question, stages and primary result judged whether the bank of predictors is a general principle or ten cures glued together; the results are in `discrete/NOTEBOOK.md`, D30-D36, and `ABSTRACT.md`. The pass rule and its terms are still used by the certifying of rungs. Stage R's R2 and R4 are parked; R3 is a start for stage 1.
+
+### The question
+
+**Does a brain facing many more challenges need proportionally more hand-built detectors, or do fewer general ones emerge?**
+
+If it needs one for each, we have just hand-designed everything, and nothing interesting is emerging. If fewer will do, what are they, and why? Then: can hierarchy (detectors that learn about detectors) make the circuit find them itself, rather than us?
+
+**In bits.** A life offers about 50 bits of evidence (D31), but a world's rule takes hundreds to write down (D33), so a brain can only learn what its structure already makes cheap: learning in a life is choosing and tuning within a repertoire. The question becomes how small a repertoire, made of how simple parts, covers how much. A repertoire of K rivals costs about log2 K bits of evidence to choose from (the Occam factor), and its description can be tiny if the rivals are drawn by a simple rule from simple parts, though it still costs parts and power to build.
+
+### Where we are
+
+**Decision B taken (the user, 2026-11-07): the bank makes its own rivals.** Stage 3 is done and checked independently: on fresh random worlds the bank's hand-written repertoire surely covers 11 of the 61 with something to learn and surely fails 24, coverage between .18 and .61; its failures are missing ideas, mostly about timing (at 1000 s an ideal judge with timing ideas learns swaps the bank can't); one part (the eye filter, tuned to the eyes' usual rate) does harm where the eyes are more sensitive, and the bank costs a little (about .07) in many worlds with nothing to learn (`discrete/NOTEBOOK.md`, D35; `ABSTRACT.md`). **Next: stage R**, below, in place of stage 4's hand-made cures.
+
+**Next (the user, 2026-11-09; not started): the paired-blocks world**, below. The balance learner is closed (`discrete/NOTEBOOK.md`, D36). This comes ahead of stage R's remaining steps.
+
+**Gates, fixed before the results.** A gate that fails stops the work there, and it is reported, not argued round.
+
+- **1c to 2:** (a) stage 1b's headline numbers replicate on fresh development seeds, or the differences are recorded and explained; (b) whether the bank's forgetting pays is settled by a measurement either way; (c) the taste limit is an upper bound with a proof, or called an estimate everywhere; (d) a pass definition is chosen on synthetic data, with its false yes and false no rates, before any real world runs.
+- **2 to 3:** an independent check of the engine: with every change off, a world reproduces the unmodified lives exactly; each hand-written world behaves as its description says; each world's evidence is measured in bits, and how well planted near-duplicates are told apart is measured.
+- **3 to B:** coverage on fresh worlds, in bits and with intervals, checked by an agent that didn't produce it. Held-out seeds and sealed sets stay closed: stage 3 uses neither the sealed sets nor anything but development draws until the user decides at B.
+
+### The stages
+
+Each ends with a result and a decision by the user. **No stage starts without that decision.** We commit only to reaching decision B; the rest is a sketch.
+
+| stage | what | ends when | what it decides |
+|---|---|---|---|
+| 0 | Settle the primary result; seal an outside test set and a held-out split | all written down | A: start |
+| 1 | Synthetic controls: test the analysis on invented data with known answers | it recovers the known answers, or we learn it can't | stop, or change the analysis, or go on |
+| 1b | **The budget in bits**: what a life can supply, and the bank against an ideal Bayesian learner | we know how much of each world is learnable in principle, and how much the bank wastes | whether stage 2's worlds need reshaping |
+| 1c | **Repeat what 1b assumed**: ideal learners that allow change, the bank's floor where a rule starts mid-life, a proven limit on tastes, synthetic worlds that can't be fully passed | the gate above | the labels and pass bar stage 2 uses |
+| 2a | A minimal language and engine; about 30 worlds by hand, each labelled in bits | the engine is proven against the unmodified world | go on to random worlds, or fix the language |
+| 2b | The frozen reference; about 100 random worlds; near-duplicates; real sigma and cost per world | we know what share of random worlds are learnable, and the cost per world | whether random worlds are worth using at all |
+| 3 | **The present circuit, unchanged, on fresh worlds; then longer lives on about 30** | a coverage number exists | **B: the main decision.** What's uncovered, and is it worth continuing? |
+| R | **Rivals made, not written** (decision B): the bank's rivals assembled from many simple parts connected in various ways, hierarchies included (counters of toggles, an oscillator driving a toggle, a timer gating a counter); first drawn at birth, then grown in the life where no rival predicts | below | whether a repertoire from simple parts covers what the written one does and more, at what cost in evidence and parts |
+| 4 | (parked at B) Add cures, by a separate designer, to the largest groups of failures | | |
+| 5 | The rule-changing worlds; types | to be planned later | |
+
+### Stage R: rivals made, not written
+
+**What a rival is.** Every rival in today's bank is a *context* and a *table*: a signal that takes one of k values (the count of good tastes mod n), and a learned bit for each value saying which colour is food then, with a tally of trust. A made rival keeps the table and builds the context from simple parts, each a block a circuit can hold:
+- a **toggle** (flips on each input event), so a chain of toggles is a binary counter (k = 2, 4, 8);
+- a **counter that resets** at n (k = n), for counts not a power of two;
+- an **oscillator** of period T, read in phase bins (k bins), so a toggle driven by it has period 2T;
+- a **timer** since an event (a taste, a good taste), read as before or after its delay;
+- a **conjunction** of two contexts (their product: k1 x k2 values), the way hierarchies form.
+
+Inputs are only what a brain already has: tastes, good tastes, its own clock (oscillators and timers in seconds, never ticks), with each part's own mismatch and the oscillators' phase noise. A rival is scored exactly as today's are (evidence where it disagrees with the default), so it is judged on every taste without being acted on.
+
+**Steps, each with its predictions written first and its gate:**
+1. **R1, the parts reproduce the bank.** Today's seven rivals rebuilt from these parts give identical lives. Gate: identical.
+2. **R2, drawn at birth.** K rivals drawn at random by a fixed rule (parts and depth, periods and delays log-uniform over ranges fixed in seconds before any run), the bar to adopt a rival rising with log2 K as the Occam factor requires, derived, not tuned. Measured on stage 3's worlds (development: base, told and reference lives already exist on the same seeds): coverage, doing no harm, and false picks against K (1, 10, 100, 1000), with the number of matching rivals a world needs worked out first. Gate: a K is found that covers surely more than the written bank with no harm, or the reason none can is measured.
+3. **R3, grown in the life.** Start with few parts; where the followed rival keeps being contradicted (frustration), grow a new rival by connecting a part to an existing rival's context (function-preserving: it starts with no evidence). Compared with R2 at equal parts. Gate: grown ties or beats drawn at equal parts, or the reason is measured.
+4. **R4, judged on worlds never seen**: a fresh draw from stage 3's generator (development numbers 300-499, fixed now), then, at the user's decision, the sealed outside set and held-out seeds.
+
+**In bits, for every step:** the evidence each world offers about its rule (the told arm's tastes), the Occam cost of K, how many of the K rivals fit each world, and the parts and power of the repertoire. The eye filter's fault (D35) is left as it is in R, so comparisons stay with the written bank; it is the next cure.
+
+### The primary result
+
+This section judged the earlier question; its idea of challenges the design never saw lives on in the test's held-out ladder. Chosen before any data, the one result this programme judges by. Everything else explains it and can't overturn it. Stage 1 showed the first wording couldn't tell the truth (`discrete/NOTEBOOK.md`, D30).
+
+**The design is fixed, and the circuit still learns.** Every life starts fresh and adapts in that life; what's held fixed is only what a designer may change between worlds. To test any level, hold fixed the level above it: a circuit's state adapts with its design fixed; a design adapts with the paradigm fixed.
+
+- **F_novel:** on challenges the design never saw, the pass rate above the base circuit's, as a share of what the base circuit leaves.
+- **R:** the description added by the cures, against what one fixed-size cure per challenge would cost.
+- **A pass:** a world passes if x > max(.5 r, .25). x is the circuit's fraction of the gap, measured from the larger of base and 0 (so standing still gains nothing) up to a policy told the rule; r is the same for a **reference**, a Bayesian learner frozen before any world it judges runs, its family, prior in bits, likelihood and tie rule all written down. The gap to told is always reported beside it. A told bar alone makes a yes nearly unreachable; a reference alone can be gamed by one cheap half-working cure; hence the .25 (D32). Worlds the reference can't help fail at the floor: this errs towards no.
+- **Doing no harm:** in a world with nothing to learn, the lower 95% bound of (circuit - base) stays above -.1 efficiency. The -.1 is a choice, about the interval's half-width at 200 pairs. Scoring above base there isn't counted as learning.
+- **Measurement:** the verdict needs about se .1 per world, about four times the lives planned (D32). Real sigma comes from stage 2.
+- **The verdict rests on the sealed outside set.** A grammar of K bits can be built into a circuit of about K bits however many worlds it generates, so a yes on our own worlds is guaranteed in principle and proves nothing. Our own worlds are for development, and their numbers are reported as such.
+- **Yes:** on the outside set, the 95% lower bound of F_novel is above a half, and the upper bound of R below a half, with at least 30 novel challenges.
+- **No:** the upper bound of F_novel is below 0.2.
+- **In between:** anything else, reported as measured.
+- **Same shape, retuned by hand:** R below a half without F_novel. Not a yes, but a finding of its own: those settings are what a higher level could learn. If the circuit retunes the shape itself, it passes F_novel and counts.
+
+**In bits, for every world**, as the explanation: the evidence available on the wires; how much the circuit used; what an ideal Bayesian learner with the same evidence would do; and bits built in by design against bits gathered in life. A life has a budget: at most a bit a taste, truly 0.25-0.83, about 15-50 bits at the bank's rate of tastes, and several times more for a brain that eats faster, since the body has no firing cap; telling N worlds apart takes at least log2 N bits (D31, D32). Say "too short at this rate", not "for any brain", unless a difference never shows within the life. A world outside a learner's prior costs extra evidence, about log2 of one over its prior probability, so "we built detectors for the grammar" has a graded measure: how many extra bits does an outside world take?
+
+Description length: LZMA size, given a frozen corpus, of a canonical form (D30). The vocabulary is invented so far, and to be fixed before any real world runs.
+
+### Keeping it simple as we go (stage 4)
+
+We boil down during the search, not at the end, when nobody could reason about the result.
+
+1. **Widen first.** Before building a new part, try extending an existing one. A new part must show that widening can't do the job.
+2. **Merge at three.** When three cures share a shape, stop and try to merge them. The merged version must tie with the originals. Two may be a coincidence.
+3. **Cap the motifs.** A low limit on distinct kinds of mechanism, so adding one means retiring or merging another.
+4. **Prune after every addition**, removing anything that costs nothing to remove, then re-run all earlier worlds and the unmodified world.
+

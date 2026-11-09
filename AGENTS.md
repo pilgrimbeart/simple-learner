@@ -1,7 +1,7 @@
 # Agent notes
 
-The rules, for agents and people alike: how to work here, and the constraints every brain keeps. The quest, the big
-picture and what has been learned are in the README; the history behind each rule is in the notebooks. Each fact in
+The rules, for agents and people alike: how to work here, and the constraints every brain keeps. The goal and its test, the
+big picture and what has been learned are in the README; the history behind each rule is in the notebooks. Each fact in
 this repository lives in one place (below); other files link to it.
 
 This project was split on 2026-11-02 from [nca-learn](https://github.com/pilgrimbeart/nca-learn) (`../nca-learn`),
@@ -21,13 +21,14 @@ the cheats a grid invites) is in nca-learn's `NOTEBOOK.md`, worth reading before
   derived from the axioms in `units.py`; a design's own choices stay with the design, in SI. Rates are per 10 s, a
   life lasts 100 s, or 1000 s in a test that says so (the user, 2026-11-06: some evidence is too scarce for 100 s), or
   10,000 s in a test of how results scale with life length (the user, 2026-11-07: long lives may be our equivalent of
-  deep learning's scale). A long life is judged on its last third, against the told arm, as 1000 s lives are.
+  deep learning's scale), or as long as a rung of the scaling test needs (the user, 2026-11-09: lives may have to get
+  longer as challenges get more complex). A long life is judged on its last third, against the told arm, as 1000 s lives are.
 - **Each fact in one place**; link, don't copy:
 
   | what | where |
   |---|---|
   | the rules | this file |
-  | the quest, what has been learned (each finding explained for a newcomer), an overview of each line of work, how to run things, the terms | `README.md` (define a new term in its Terms when it first appears in a user-facing document) |
+  | the goal and its test, what has been learned (each finding explained for a newcomer), an overview of each line of work, how to run things, the terms | `README.md` (define a new term in its Terms when it first appears in a user-facing document) |
   | each line of work's current state ("Where it stands", rewritten as it changes), then its dated history, methods, results and dead ends | the body and the circuit simulator: `NOTEBOOK.md`; recruitment: `experiments/NOTEBOOK.md`; the minimal search: `minimal/NOTEBOOK.md`; discrete circuits: `discrete/NOTEBOOK.md` |
   | the axioms: physical constants, scales, units | `units.py` |
   | the noise model | `mixed_feedback.py`'s docstring |
@@ -55,7 +56,7 @@ the cheats a grid invites) is in nca-learn's `NOTEBOOK.md`, worth reading before
 - **Measure in bits** (the user, 2026-11-04, David MacKay's rigour): for any claim about learning or adapting, say how many bits are needed, how many the wires supply and how many were used, against an ideal Bayesian learner with the same evidence. Stay sceptical: a result a design could achieve by building in its test's description proves nothing.
 - **Mind the noise wall** (the user, 2026-11-01): for a learning experiment, estimate its signal to noise per second
   against the life's length, and its explorers per credit window, before reading a result; a negative result where
-  learning was impossible (too little signal, or credit colliding as ALOHA's packets do) says nothing about the
+  learning was impossible (too little signal, or credit interfering among units varying at once) says nothing about the
   mechanism (`BOUNDS.md`, The walls).
 - **The user is colour-blind**: use colour, never as the only cue (pair it with shape, line style or a label), and no
   hues hard to tell apart, such as red and green (Okabe-Ito).
@@ -76,7 +77,8 @@ the cheats a grid invites) is in nca-learn's `NOTEBOOK.md`, worth reading before
 
 ## Ground rules for every brain
 
-The point is a brain that learns in situ, so the brain must do the work.
+The goal is intelligence that scales, in a brain for a robot (`README.md`, The goal): a brain that improves itself in
+situ, so the brain must do the work.
 
 - **The interface.** The body (`world.py`) and `Life` (`creature.py`) talk to a brain only through sensors 0 and 1,
   motors 0 and 1, and one taste (`stimulate`, `taste`, `step`). Taste is +1 (food) or -1 (poison) at the moment (one 10 ms step) a
@@ -98,12 +100,17 @@ The point is a brain that learns in situ, so the brain must do the work.
   user, 2026-11-06): no delay, rate, window or event counted in ticks, in a body, world or brain. Keep the
   simulator's error control tight enough that the step doesn't matter (`discrete/NOTEBOOK.md`, D7); for an optimised
   circuit, limits on time constants and gains against the step.
+- **Gotcha: no shared clock, phase or frequency** (the user, 2026-11-09). A world and a brain share nothing about time. Anything periodic in a
+  world draws its phase and its frequency afresh each life, and a brain's clocks start at their own random phase and drift. Otherwise a brain
+  can read the world's timing from its own birth or from a built-in constant, which is godlike. The same goes for any fixed starting place,
+  such as the first position in a hidden pattern. A yardstick may be told a frequency, if it says so; a brain never.
 - **Circuit noise is a substrate's, and the simulator's alone** (the user's decisions): shot noise, resting noise,
   mismatch and pulses at random moments, for biology or silicon, as `mixed_feedback.py`'s docstring specifies, each
   derived from `units.py`. It lives in the one integration step every simulation calls (`_step`) and in how the
   arrays are built, with no switch to turn it off (`mixed_feedback.SUBSTRATES`). Never add a way round it, and keep
   `test_compiled.py` checking that it is the same at any step and can't be dodged.
-- **Local only, no god.** A unit knows only its own state and its neighbours' signals. It may draw from its own noise,
+- **Local only, no god.** (No god is part of the goal. Locality comes from scale: a small brain may have any number of
+  connections, but big brains can't have everything broadcasting to everything else, the user, 2026-11-09.) A unit knows only its own state and its neighbours' signals. It may draw from its own noise,
   but a choice among units comes from their local competition, never from outside. No unit knows it is optimally
   tuned: "finished" means its own adjustment has stalled while its own discomfort persists.
 - **No magic knowledge, no hidden size** (learned on the sheet brain, nca-learn): a grown unit finds its target by a
