@@ -12,6 +12,8 @@ do better, recruiting new components to the cause as necessary. The new componen
 already there and unused or added on demand, and nothing godlike decides when or where they go. So all it takes to make
 a brain step up to a problem it couldn't solve is more of that raw material, with no redesign (the user, 2026-11-09).
 
+- **Adjust first, recruit second.** Turning a knob the brain already has costs no material, so it is always the cheap option; new
+  components are for what no setting of the existing ones can do (the user, 2026-11-10).
 - **It is a brain for a robot.** It must solve real-world, embodied, real-time problems, not abstract ones. The body has
   its own dynamics and flaws, the senses are noisy, and the world doesn't wait while the brain thinks.
 - **Anything may happen before a life, but the improving must happen in it.** Evolution, searches and our own designs
@@ -115,6 +117,18 @@ unit per look-back, learns hidden words twice as long each time its material dou
 each moved by a different kind of event, it picks the right one itself. On timing it beats the starting brain but
 solves no rung: its clocks don't yet lock on to the world's rhythm well enough. Combinations are untried.
 
+Since 2026-11-10 the work is run for understanding, with light rigour: about 5 pairs of lives a run, a prediction and how sure written
+first, a ledger of what each run cost and whether it surprised us, and designs taken from the ideal learner and the literature before
+anything is invented (`PROGRAMME.md`, How we work). In that mode (D39): the three ladders turn out to be one problem, whose known answer is
+a context tree; a bank of fixed clocks now solves timing's first rung and reaches a hand-designed brain's level at its third; and a world
+of touching pairs of blocks costs a cautious brain a quarter of its food, which turns out to be lost to what these eyes can't see, not to skill (D41). The tree, built
+(D40), climbs sequences and combinations with material, with no setting changed between them, and solves timing's first rung.
+A weak thruster turned out to need no new part at all: one knob, set from a measurement of the creature's own turning (D43).
+
+**Next** (the user, 2026-11-10; planned, not started): a *dancing brain*. A simple brain behaves too narrowly to gather the evidence a
+new trick needs. So begin with a brain driven by many cycles of different timings, each checking its own prediction of what its
+movement will make the eyes see, and let the cycles settle on what works (`PROGRAMME.md`, The next phase).
+
 What the manual designs have taught: a life offers about 50 bits of evidence, but writing down a world's rule takes
 hundreds, so no brain learns a world from nothing in one life: it can only choose among what its structure already makes
 cheap. The bank copes with between a fifth and three fifths of the random worlds that have something to learn, and uses
@@ -138,6 +152,39 @@ Three lines of work so far:
 
 The findings that changed the direction of the work, each told in full in the notebook named.
 
+- **Lock a clock to the world's changes, not to your own surprises, and move it no further than the evidence says.** Our first
+  clocks reset themselves whenever the brain's guess was wrong. But a wrong guess isn't a change in the world, and a brain that guesses
+  well stops being surprised, so those clocks wandered off. What works is to watch what the tastes reveal: when the food colour is seen
+  to change (and the next taste confirms it), the change happened somewhere between two tastes. A clock that already ticks in that gap is
+  left alone; any other is nudged to the gap's nearer edge. Clocks of fixed period, set only this way, went from solving no timing
+  challenge to matching a brain that is told the rhythm's period, provided one of them runs within about 3% of the true period, which
+  takes many clocks. The same day's other lesson is about method: each of these steps took minutes and five pairs of lives, because the
+  sum was done first and each failure traced in single lives (`discrete/NOTEBOOK.md`, D39).
+- **Turn a knob before adding anything, and give the knob something to measure.** A creature with one weak thruster curves when it
+  means to go straight. The cure is one setting, how much faster to pulse one motor than the other. Finding it by trial and error
+  (nudge it, see if things went better) takes about a thousand seconds, because nothing tells the knob which way to turn and each
+  try's result is mostly luck. Finding it by measurement takes a few minutes: spin on one thruster and count your own pulses until the
+  view comes round again; the count says how strong that thruster is. And the counting can be done by the same simple recording unit
+  that learns hidden sequences, here recording what the eyes saw at each of the brain's own pulses. So this problem needed no new kind
+  of part: a knob the brain already had, and a measurement (the user's rule, knobs first; `discrete/NOTEBOOK.md`, D43).
+- **One kind of unit now climbs two kinds of challenge and has a foothold on the third.** The unit is a node in a tree. It stands for
+  one situation ("the last two things eaten were red, then blue") and counts which colour was food then. When a node has been proved
+  wrong both ways and meets a situation one step more detailed than it knows, it takes a spare node for it. That is all: no setting says
+  which challenge is being faced. With more spare nodes it learns longer hidden sequences (up to 17) and deeper hidden combinations (up
+  to 6, where nothing we had built before learned any), and with a set of clocks feeding it, the simplest hidden rhythm. In the plain
+  world it takes no nodes and costs nothing. It is a known algorithm from data compression, found by asking what the ideal learner would
+  do, not by emergence; and harder rhythms are still only half learned (`discrete/NOTEBOOK.md`, D40).
+- **Our three kinds of challenge are one problem, and its answer is known.** A hidden sequence, a hidden rhythm and a hidden
+  combination each make the food colour depend on a context: how many good meals so far, which beat of a rhythm, the last few colours
+  eaten. The ideal learner for all three keeps a tree of contexts, deepening it where a context turns out to hide two cases. This is an
+  old idea from data compression (context trees), and it also says when to add brain: where something new arrives beneath a part that has
+  been contradicted. Built the same day (D40, above) (`discrete/NOTEBOOK.md`, D39).
+- **A cautious brain pays in food, not poison.** With each food block touching a poison block, we expected the creature to eat poison
+  with its food. It doesn't: seeing poison ahead already stops its drive, so it gives up about a quarter of its food instead. What it
+  lacks is skill, coming at the food from its clear side: the first challenge here about acting, where there is nothing new to know.
+  But two drivers written by hand couldn't win the food back. The second stops to look before driving on, and judges well, yet the
+  looking costs as much as it earns: the eyes deliver too few pulses to say quickly where across its path a block lies. So the food is
+  lost to missing information, not missing skill, the same limit of these eyes met before (`discrete/NOTEBOOK.md`, D39 to D41, D21).
 - **More brain can buy more ability, when the unit records rather than guesses.** Trying every hypothesis at once
   needs material growing as the square of the problem; growing one structure by trial needs time growing as its
   square. A register of what the tastes revealed, with a simple comparator for each look-back, needs both only in
@@ -575,6 +622,14 @@ valuable first, in [`QUESTIONS.md`](QUESTIONS.md).
 
 **Units** (the axioms: `units.py`)
 
+- **Dancing brain** (planned, `PROGRAMME.md`): a brain whose movement is driven from birth by many cycles of different timings, which
+  settle on those that work. A **cycle** is one repeating pattern of movement with a recorder of what the senses did during it.
+- **Knob** (D43; AGENTS.md, Knobs first): a setting the brain already has (a rate, a balance, a threshold). The **balance** is how much
+  faster one motor pulses than the other; the **tempo**, one factor on every rate, which cures unusual drag.
+- **Context tree** (D39): a tree of units, each holding which colour was food in one context (say, "the last two letters were red,
+  blue"); a unit whose context turns out to hide two cases gets children that look one step further back. The known local form of the
+  ideal learner for our ladders (context tree weighting, PPM).
+- **Ledger** (`lab/v/LEDGER.md`): one line per run: its cost, the belief it could move, the prediction, and whether it surprised us.
 - **Register, look-back, record** (D38): a register is a row of units each holding one letter (which colour was food at a step),
   moved on one place by some kind of event (a good meal, a taste, a beat of a clock); a look-back k compares each step with the
   one k places back. The record is the brain built from them, following the best register and look-back once it beats a cautious

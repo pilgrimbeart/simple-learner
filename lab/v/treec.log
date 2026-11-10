@@ -1,0 +1,15 @@
+== teach: time ladder, 5 pairs, 2.5 ms, seeds 84000+; x [95%] against base and told; * solved (surely above .5); grow's final ring lengths (median, range)
+-- rung 1, 100 s: base 2.27 told 2.50
+   treec| P992 +0.00 [+0.00,+0.00] - nodes 6 | P1984 +0.00 [+0.00,+0.00] - nodes 6 |
+-- rung 2, 300 s: base -0.25 told 2.19
+   treec| P992 +0.94 [+0.76,+1.17]* clock15.7,clock14.1 nodes 12 | P1984 +0.94 [+0.76,+1.17]* clock15.7,clock14.1 nodes 12 |
+-- rung 5, 750 s: base 0.58 told 2.57
+   treec| P992 +0.42 [+0.17,+0.64]  clock10.4,clock5.6 nodes 16 | P1984 +0.45 [+0.30,+0.63]  clock10.4,clock13.4 nodes 32 |
+-- rung 7, 1050 s: base 0.90 told 2.54
+   treec| P992 +0.34 [+0.02,+0.74]  clock12.7,clock6.8 nodes 16 | P1984 +0.51 [+0.10,+0.72]  clock8.6,clock6.8 nodes 28 |
+== teach: seq ladder, 5 pairs, 2.5 ms, seeds 84000+; x [95%] against base and told; * solved (surely above .5); grow's final ring lengths (median, range)
+-- rung 11, 300 s: base -2.01 told 2.26
+   treec| P1984 +0.89 [+0.80,+0.98]* good,clock7.1 nodes 32 |
+== teach: combo ladder, 5 pairs, 2.5 ms, seeds 84000+; x [95%] against base and told; * solved (surely above .5); grow's final ring lengths (median, range)
+-- rung 3, 300 s: base -1.29 told 2.19
+   treec| P1984 +0.74 [+0.49,+0.92]  eaten,- nodes 32 |

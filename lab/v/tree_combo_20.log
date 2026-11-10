@@ -1,0 +1,11 @@
+== teach: combo ladder, 20 pairs, 2.5 ms, seeds 84000+; x [95%] against base and told; * solved (surely above .5); grow's final ring lengths (median, range)
+-- rung 1, 100 s: base -1.33 told 2.48
+   tree | P16 +0.68 [+0.58,+0.75]* eaten,- nodes 8 | P64 +0.67 [+0.58,+0.74]* eaten,good nodes 8 | P256 +0.67 [+0.58,+0.74]* eaten,good nodes 8 |
+-- rung 3, 300 s: base -0.94 told 2.42
+   tree | P16 +0.62 [+0.48,+0.72]  eaten,- nodes 8 | P64 +0.64 [+0.50,+0.72]* eaten,- nodes 32 | P256 +0.56 [+0.40,+0.67]  eaten,- nodes 46 |
+-- rung 4, 300 s: base -0.65 told 2.36
+   tree | P16 +0.39 [+0.21,+0.54]  eaten,good nodes 8 | P64 +0.62 [+0.46,+0.74]  eaten,good nodes 32 | P256 +0.51 [+0.36,+0.62]  eaten,- nodes 50 |
+-- rung 5, 1000 s: base -0.62 told 2.14
+   tree | P16 +0.45 [+0.32,+0.55]  eaten,good nodes 8 | P64 +0.60 [+0.47,+0.72]  eaten,good nodes 32 | P256 +0.70 [+0.58,+0.79]* eaten,good nodes 128 |
+-- rung 6, 1000 s: base -1.21 told 2.37
+   tree | P16 +0.31 [+0.21,+0.41]  eaten,good nodes 8 | P64 +0.38 [+0.29,+0.46]  eaten nodes 32 | P256 +0.58 [+0.50,+0.65]* eaten nodes 128 |

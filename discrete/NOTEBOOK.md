@@ -10,6 +10,33 @@ per meal spent resting, moving and thinking), gain rate (meals per 10 s), food, 
 
 ## Where it stands
 
+- **Next, planned and not started: a dancing brain** (the user, 2026-11-10; `PROGRAMME.md`, The next phase): many movement cycles from
+  birth, each judged by its own prediction of what its movement makes the senses do, settling on those that work. First step, D0: count
+  the bits a second each of a handful of hand-written cycles yields about the body, against ordinary foraging.
+- **Knobs first** (D43, 2026-11-10; the user's rule): compensating for a weak thruster is one knob. Turned by trial and error it takes
+  about 1000 s to close half the gap, since nothing tells it which way to turn; set from a measurement (a revolution timed with one
+  motor) it closes three quarters or more by 300 s. The measurement can be made by D38's recording unit clocked by the brain's own beats
+  (2.37 against 2.46 set right, at 300 s), with no counters in seconds. Next: a measurer for the tempo knob (drag); the tree's trail on
+  timing rung 5.
+- **The lopsided body as the acting ladder** (D42, 2026-11-10): of the body's numbers drawn per life, only two cost the starting brain
+  anything: the balance between the thrusters (.94 against plain's 2.52; told, 2.46) and, at the ends of its range only, drag (cured
+  by one tempo for every rate). Strength and the eyes' sensitivity cost nothing. One sure rung and one weak one; the user to decide
+  how to get more (wider drag, or body numbers that depend on a context).
+- **No acting rung at touching pairs** (D41, 2026-11-10): stopping to look before driving on judges well (9 commits a life, 8 clean) but
+  scores below the told arm, since a look gathers 3 to 5 pulses an eye and the starting brain gets most of those foods by trying again.
+  The loss at pairs is missing information (where across the corridor a block lies: D21's wall), not skill. The lopsided body is the
+  better acting rung: its gap, yardstick and learners exist (D19, D20).
+- **A context tree over registers** (D40, 2026-11-10): one kind of node, recruited where a new context arrives beneath a contradicted
+  node, with no setting changed between ladders. Sequences: rungs 11 and 17 solved. Combinations, where nothing climbed before: rungs
+  1, 3, 5, 6 solved at 20 pairs, higher rungs needing more nodes. With D39's clocks as a third kind of register: timing's rung 2 at .94,
+  rungs 5 and 7 near half, the other two ladders unharmed, plain exactly 0. Pairs' yardstick (a careful driver by hand) failed. Next:
+  why the tree trails look-backs at time 5; the three doublings read off on each ladder; fewer clocks.
+- **The lock, the ideal learner and pairs** (D39, 2026-11-10; light rigour, 5 pairs): the three ladders are one problem, a letter as a
+  function of a context moved on by some kind of event, whose ideal learner's known local form is a context tree over a register
+  (the record is such a tree of depth one). A bank of fixed clocks, their phase set by the world's changes and no further than the
+  evidence says, solves timing's rung 2 and reaches .63 at rung 5 with 60 clocks, about the designed brain's level (D38's lock: .3 to .5).
+  Touching pairs of blocks cost the starting brain a quarter of its food, declined rather than poisoned: a rung for driving, with no
+  yardstick yet. Next: the context tree over registers on the combination ladder; a careful driver as pairs' yardstick.
 - **Stage 0, the ruler** (D37, 2026-11-09): three ladders on today's senses (sequences, timing, combinations), with 7, 6 and 5 certified
   rungs; they test different things; random rivals added to the bank help only on sequences, while the answer is on their menu. Open:
   rung lives must grow smoothly with what each rung asks, or the scaling curve misreads a climb (the user: revisit only if needed).
@@ -2883,3 +2910,164 @@ which picks the good-meal register itself): stage 1's bar of three doublings is 
 On time it beats base at every rung but solves none, flat in rung and material: the lock is the limit. Next, in order: the full run
 of 17; better locking (more clocks as the material, a period rule that doesn't run to the cap, Righetti's adaptive-frequency rule); the
 combo ladder, which needs a register read as a context (the growing context tree); then stage 2's claim across all three.
+## D39: the ideal learner written down, the lock by a bank of clocks, and pairs as a rung for driving (2026-11-10)
+
+After a review of the strategy (the user's answers, `PROGRAMME.md`, How we work): light rigour, about 5 pairs a run, predictions with how
+sure, a ledger (`lab/v/LEDGER.md`), and designing down from the ideal learner. This whole entry cost 0.4 CPU hours.
+
+**The three ladders are one problem.** Each trusted taste reveals a letter (which colour was food), and every ladder says the letter is a
+function of a context the brain could compute from its own history: seq n, the count of good meals mod n; time n, which slot of the
+world's rhythm it is, mod n; combo k, the last k colours eaten. They differ only in which events move the context on.
+**The ideal learner.** It holds every such rule (ladder, size, and for time a slot length and phase) with a prior of two to the minus its
+description's bits, each context's letter unknown and each reading wrong about one time in twenty (plain's trusted bads, D38), and predicts
+with the posterior mix. A context with a goods for one letter and b for the other has evidence (1/2)[(1-e)^a e^b + e^a (1-e)^b]. Each
+taste carries about .7 bit, so it needs about (contexts + log2 of the rules held) / .7 tastes: 20 or so for seq 11, against the record's
+2n good meals and a 300 s life's 200 tastes. Not built: the designed brains, told each rung's structure, already close .87 to .98 of seq's
+gap and .60 to .81 of combo's, so on those ladders it would add little as a yardstick; time is where it differs (below).
+**Its local forms, already known.** (Hoeffding trees, context tree weighting, Miall and the generate-and-test paper confirmed by search,
+2026-11-10; the rest from memory, to check before relying on them.)
+- A context tree: Rissanen 1983; prediction by the longest context seen, PPM (Cleary & Witten 1984); context tree weighting (Willems,
+  Shtarkov & Tjalkens 1995), where each node mixes its own estimate with its children's, so the whole Bayes mixture over trees is computed
+  from node to node.
+- A tree that grows on evidence: the Hoeffding tree (Domingos & Hulten 2000). A leaf keeps counts for each feature it might split on and
+  splits when the best beats the next by a bound. That is recruitment by a local test; a leaf that keeps being contradicted is frustration.
+- Rhythm: a bank of oscillators read by coincidence, their phases reset by events (Miall 1989; Matell & Meck 2004; Scheirer 1998).
+- Features proposed at random and kept by usefulness (Mahmood & Sutton 2013): D36's random rivals, which bought only a menu.
+- Cascade correlation (Fahlman & Lebiere 1990): one unit recruited at a time, trained on what the rest still gets wrong.
+**What that says about our designs.** The record (D38) is a tree of depth one over a register: it picks one feature, the letter k back.
+Combo needs depth k (2^k leaves), which is why the bank and the record don't touch it. So one design may serve all three: a register for
+each kind of event, a context tree over each, and the bank's scoring to choose among the trees. And it says when to recruit. Growing a
+level only after a node has been contradicted (D38's grow, R3) costs about a period of the word per level, 12n to 40n good meals by my
+sum against lives of 8n to 12n; giving a contradicted node's new context its node at once, as PPM and CTW do, costs about 6n and n log n
+nodes. Recruit on novelty beneath a contradiction, and let evidence weigh the result. Proposed as the next design; not built.
+
+**The lock** (`lab/teach.py clocks`; predictions and their scores `lab/v/clocks_predictions.md`; logs `lab/v/clocks_time*.log`; 5 pairs,
+seeds 84000+, 2.5 ms). Sums first: evidence isn't short (3 to 13 tastes a slot); the designed brain fades up the ladder because its one
+clock, a whole word long, is never corrected (out by .8n s at the end of a life); and D38's lock ran away because its surprises were the
+brain's mispredictions, not the world's changes, each moving the period by a random share of a beat. So: a bank of clocks of fixed
+period, only their phase set, by changes in the revealed letter (whatever the brain predicted), each confirmed by the next trusted taste
+(a misread sets nothing and is never recorded), and a register's letters written one taste late, in the beat their own moment fell in.
+- **First version** (the nearest beat moved to the midpoint of the two tastes either side of a change; 24 clocks, 10% apart): rung 2
+  solved (x .69 to .72, where D38's lock had .40 to .50), plain exactly 0, but rung 5 at .02 to .27 and rung 11 at -.10 to .33. My
+  prediction that a rung n is solved once a register holds 2n letters was wrong.
+- **Traced** (`lab/clocks_probe.py`). The bar is steep: a poison costs 4 meals, so following the wrong colour a share w of the time
+  scores about 1 - 5w of told. The starting brain is already right .71 to .85 of the last third (it flips on one vouched bad), the
+  designed brain .89 to .97, the clocks .82 to .91. And beats slipped: a clock 1.3% off gained two beats in 71.
+- **Second version** (a clock is moved only as far as the evidence says: one with a beat already between the two tastes is left alone,
+  any other has its nearest beat moved to the gap's nearer end): rung 2 at .74 and .83, rung 5 at .50 [.40, .60] with registers of 16.
+  A clock within 3% of the slot's length now keeps count (71 beats to 71 slots, 99 to 100); one further off doesn't.
+- **Spacing** (60 clocks, 4% apart, nothing else changed): rung 5 at .63 [.42, .82], about the designed brain's .69, which is told the
+  slot's length. Not surely solved at 5 pairs.
+So timing was limited by the lock, as D38 said, and the cure is in what sets the phase (the world's changes, not the brain's surprises)
+and how far (no further than the evidence). The rung sets a register's length; the range of rhythms covered sets the number of clocks,
+a fixed cost, and a large one: 62 registers. A clock that trimmed its own period within its band would need fewer. Not run: rungs
+above 5 with 60 clocks; whether a counting clock's remaining 12% of disagreements are the registers' or the phase's.
+
+**Pairs: a rung for driving** (`lab/pairs.py`; `lab/v/pairs_predictions.md`, `pairs.log`; 5 pairs of 100 s lives, seeds 85000+). Each red
+block has a blue partner at a set gap; when either is eaten the pair moves. Down to 4 mm between centres nothing is lost (plain 2.34 for
+the starting brain, 2.28 told). At 3 mm a little (told 1.88). Touching, at 2 mm: 1.20 and 1.56. I predicted poison eaten with the food.
+Wrong: poison stays at 8 a life, as in plain, and food falls from 53 to 40. The poison eye ends the drive, so the starting brain already
+keeps "food in view and no poison in view", and pays for it in food declined. What is left to learn is how to approach, from the side
+where the food isn't beside its poison: skill in acting, with nothing new to know. Not yet certified: no yardstick shows the food can be had.
+
+## D40: a context tree over registers, on all three ladders (2026-11-10)
+
+`lab/tree.py`, through `lab/teach.py tree` and `treec`; predictions and scores `lab/v/tree_predictions.md`; logs `lab/v/tree_seq.log`,
+`tree_combo.log`, `tree_combo_20.log`, `treec.log`; seeds 84000+, 2.5 ms, 5 pairs unless said. D39's proposal, built in its plainest form.
+**The design.** A register per kind of event holds its last 16 symbols: the letter revealed at each good-meal count; the colour eaten
+at each taste; and, in `treec`, the letter of each beat of each of D39's 60 clocks. Over each register, a tree of identical nodes. A
+node stands for one context (the last d symbols) and counts which colour was food there. A trusted taste adds its letter to every node
+on the current context's path. The deepest node on the path, if it has seen both letters and material remains, recruits one child for
+the context one symbol longer. The deepest node whose counts lean one way says the letter. Each tree is scored on every trusted taste
+against a default (keep the colour, two contradictions to flip) with the Occam bar for the number of trees, as the bank scores rivals.
+Raw material is nodes, shared equally among the trees. Nothing is told of the ladder, its size or the life's length, and no setting
+changes between ladders.
+**Sequences.** Rung 11 solved with 32 nodes a tree (x .90) and rung 17 with 128 (.83, using 43; .36 with 32). Rung 5 at .54: its 100 s
+life holds about 43 good meals and the tree takes about 6n to grow. Plain exactly 0, 6 nodes used.
+**Combinations**, where nothing of ours climbed (the bank .04 to .28, D37): at 20 pairs, rung 1 solved at every size (.67), rung 3 with
+32 nodes a tree (.64 [.50, .72]), rungs 5 and 6 with 128 (.70 [.58, .79], .58 [.50, .65]; .60 and .38 with 32, .45 and .31 with 8).
+Rung 4 at .62 [.46, .74], not sure. About the designed brain's level (.60 to .81), which is told k. Two things the sums missed: a tree
+too small still earns a good deal (rung 3 at .62 with 8 nodes for a full tree of 15), since a good eater meets only some histories; and
+spare nodes cost a little (rungs 3 and 4 fall from .64 and .62 to .56 and .51 with four times the nodes), growing on misreads and on
+colours guessed at untrusted tastes.
+**With clocks, all three at once** (62 trees, 16 or 32 nodes each): time 2 at .94 [.76, 1.17], above the designed brain's .82; time 5 at
+.42 and .45, time 7 at .34 and .51 [.10, .72]; seq 11 still solved (.89) and combo 3 at .74 [.49, .92], each life following its own
+ladder's register; plain exactly 0.
+**Where that leaves the scaling test.** One description now climbs two ladders with material (seq to 17, combo to 6, each needing more
+nodes for a higher rung and using few when the rung is low) and has a foothold on the third (time 2 solved, 5 and 7 near half). It
+recruits nothing in plain. Not shown: three doublings on combo and time read off cleanly; why the tree beats look-backs at time 2 and
+trails them at time 5 (.45 against .63); the held-out ladder. And the unit is a counter in a tree addressed by context, which is a
+known algorithm's node (D39), not something that emerged. Fan-in is one symbol a node. The 60 clocks are a large fixed cost.
+
+**Pairs' yardstick failed** (`lab/pairs.py careful`; `lab/v/pairs_careful.log`): a careful driver by hand, told the colour, that heeds
+poison only when the poison eye is at least a set share as busy as the food eye, and may stop at a good taste. Best 1.72 against 1.56
+at 2 mm, within the noise; heeding less poison eats more of it and wins no food. So the eyes' pulse rates don't separate a partner beside
+the path from one in it, and pairs are not yet a rung these eyes can be shown to climb.
+
+## D41: no acting rung at touching pairs, with these eyes (2026-11-10)
+
+`lab/pairs.py looker`, `lab/pairs_probe.py`; `lab/v/pairs_predictions.md` (the trace, the sums, predictions 8 to 10 and their scores),
+`lab/v/pairs_looker.log`; 5 pairs, told the colour. The manoeuvre the user chose after D40's careful driver failed.
+**Traced first.** At 2 mm a poison pulse ends 45 drives a life with food ahead. In a third of them carrying on would have eaten clean
+(14 a life, as many as the 13 foods lost); in a quarter the partner is hidden behind the food; in a quarter it is in the way. The
+careful driver failed because it compared the eyes over .1 s, one to three pulses each.
+**Look before you leap.** On a poison pulse during a drive the brain stands still and counts both eyes for .15 or .3 s, then drives on
+(heeding no poison, stopping at the good taste) or turns away. Its judgement is good: 9 commits a life, 7.7 ending in food alone, and it
+almost never commits with the partner in the way. But it scores 1.01 to 1.43 against the told arm's 1.56. A look gathers only 3 to 5
+pulses an eye, the looks and turnings-away take 17 s of a 100 s life, and the starting brain, scanning on and trying again at once,
+gets most of those foods anyway. By the sum redone with these numbers, looking wins at most 8 foods and costs 4 before anything else:
+a tie at best. Stopped there.
+**What it means.** The food of a touching pair is lost to missing information, not missing skill: where across the corridor each block
+lies, which these eyes deliver at a few bits a second. That is D21's and D22's wall met again. So touching pairs are not an acting rung
+on today's body. Candidates instead: the lopsided body (D19, D20: a certified gap, 2.2 to under .8, a yardstick told its body, and
+learners that close 37% and 93% of it), which is a challenge about acting whose evidence comes from the brain's own movement; or the
+split eye (D24), a change to the body and so the user's decision.
+
+## D42: the lopsided body as the acting ladder: one sure rung, one weak (2026-11-10)
+
+`lab/bodyladder.py`; `lab/v/body_predictions.md`, `body_which.log`, `body_rungs.log`; 5 pairs of 300 s lives judged on the last third,
+seeds 86000+. The user's ladder: rungs by how many of the body's numbers are drawn afresh each life (each between a half and twice).
+**Which numbers cost the starting brain anything** (plain 2.52). Each thruster's strength separately: .94, and told its balance 2.46,
+everything back. Both thrusters together: 2.59, nothing. Both eyes' sensitivity, or one eye's: 2.48, 2.20, nothing. Drag at a half or
+twice: 1.53 (at .7 or 1.4 times, nothing), which D5 hadn't found.
+**Drag's cure** is one number too. Speed goes as firing rate over drag, so scaling every rate (scan, drive, run) by the drag gives 2.54 at
+half drag and 1.98 at twice (the rest is the price of firing more). Call it the tempo. Single knobs do less.
+**As rungs.** Both drawn: .86 against 2.48 told both, a gap of 1.6, nearly all of it the balance's. Drag alone, drawn between a half and
+twice: 1.96, and told its tempo 1.92, no better at 5 pairs: only the ends of the range hurt. The bank, with D19's learner inside, closes
+almost nothing in 300 s (1.02 against .94 on thrusters, 1.07 against .86 on both).
+**So** this body has one number worth learning (the balance), a second at the extremes (the tempo), and nothing else: an acting ladder
+of body numbers is one sure rung and one weak one, where the scaling test wants five. And the balance's best learner (D20's sweeps, 93%)
+is a mechanism made for it, not generic material. Ways on, for the user: draw drag more widely (a third to three times) to make the
+second rung real; make the body's numbers depend on a context (a balance or tempo that follows a hidden word or rhythm, so that a tree's
+nodes would hold a setting each, not a letter); or take two rungs as what this body offers and say so.
+
+## D43: knobs first: the balance knob set by trial, by D20's counters, and by the generic register (2026-11-10)
+
+The user's rule (AGENTS.md, Knobs first, recruits last): turning a knob the brain has is the cheap option; recruit only if that fails.
+Compensating for a weak thruster is one knob, the balance between the two motors' rates; the brain told its body is the starting brain
+with that knob set right. `lab/body_knob.py`; `lab/v/body_predictions.md`, `body_knob*.log`; unequal thrusters (each a half to twice), 5
+pairs, seeds 86000+, the last third of each life.
+
+| life | knob untouched | set right | trial: D19's learner (in the bank) | trial: D36's self-sizing | measured: D20's 192 counters | measured: a register in beats |
+|---|---|---|---|---|---|---|
+| 100 s | .49 | 2.42 | .33 | .14 | 1.78 [.45, 3.04] | .89 [.41, 1.41] |
+| 300 s | .94 | 2.46 | 1.02 | .65 | 2.08 [1.71, 2.33] | 2.37 [1.76, 2.81] |
+| 1000 s | .74 | 2.36 | 1.62 | 1.50 | 2.05 [1.60, 2.51] | 2.01 [1.27, 2.48] |
+
+**Why trial is slow.** The knob gets no hint of which way to turn: both eyes look down one corridor, so a drive that curves and loses its
+block doesn't say which way it curved (D13's dead ends: the time to find the block again is shortest at the right balance, an extremum;
+a zigzag within a drive shows nothing until the block is lost). So the learner nudges and compares outcomes that are mostly luck, at
+about a drive a second: hundreds of drives. A measurement has the sign and the size at once: turning with one motor alone, what the
+eyes see comes round once a revolution, and a revolution's length goes as 1 over that thruster's strength (D20). In bits, a revolution
+timed to a beat in 20 is about 4 bits; a drive's outcome is a small fraction of one.
+**The generic unit as the measurer.** D20 used a bank of 96 to 192 counters over intervals in seconds. Here: a register that takes one
+cell per beat of the brain's own motor during a sweep (did an eye pulse since the last beat?), and a comparing unit per look-back up to
+64 that counts coincidences against chance. That is D38's record, moved by a new kind of event, the brain's own beat. The best look-back
+is the beats in a revolution (10 to 40); the knob is set to the log of the two motors' ratio. No clock is needed: the beats are the
+ruler. Sweeps' timing, gating by frustration and stalling are D20's, unchanged. It does as well as the counters (2.37 against 2.08 at
+300 s, 94% of the gap) with no sure cost on an ordinary body (2.37 [1.68, 3.06] against 2.52).
+**What it says.** For this shortfall nothing needed recruiting beyond what the sequence ladder already uses: a knob the brain had, and
+the recording unit pointed at the brain's own movement. Not shown: the 100 s gap between the two measurers (.89 against 1.78, intervals
+overlapping); the same for drag's tempo knob, which has no measurer yet; that the register is recruited only when the knob's own
+adjusting has stalled, which here is D20's gate written by hand.
+

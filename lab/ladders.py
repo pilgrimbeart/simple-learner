@@ -243,6 +243,8 @@ def cross(pairs=40, dt=2.5, workers=7, seed0=SEEDS0):
 
 
 if __name__ == "__main__":
+    import ledger
+    ledger.start()
     a = sys.argv[1:]
     if a[0] == "certify":
         certify(a[1], int(a[2]) if len(a) > 2 else 20, float(a[3]) if len(a) > 3 else 2.5, sizes=[int(x) for x in a[4].split(",")] if len(a) > 4 else None)

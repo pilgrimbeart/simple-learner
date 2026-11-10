@@ -88,3 +88,24 @@ at 9, 9 and 10 of 55 with 10, 100 and 1000 random rivals (D36). Since then (D37,
 on one of them. A register of the letters the tastes reveal, read by one comparing unit per look-back, learns a hidden word twice as
 long for each doubling of its material, and picks for itself which kind of event should move it. Timing is not yet solved: clocks
 that lock on to surprises beat the starting brain at every rung but solve none.
+
+**Since (2026-11-10, D39; light rigour, 5 pairs a run).** The three ladders are one problem (the food colour as a function of a context
+moved on by some kind of event), and its ideal learner's known local form is a context tree over a register; the record is such a tree
+of depth one. Proposed as the one design; not built. On timing, a bank of fixed clocks whose phase is set by the world's changes, no
+further than the evidence says, solves the first rung and reaches .63 at the third with 60 clocks, about the level of a designed brain
+told the period. And touching pairs of blocks cost the starting brain a quarter of its food, declined rather than poisoned: the first
+rung about acting, still without a yardstick.
+**The tree built (D40).** One kind of node, recruited where a new context arrives beneath a contradicted node, no setting changed between
+ladders: sequences to rung 17; combinations, where nothing climbed before, rungs 1, 3, 5 and 6 at 20 pairs, higher rungs needing more
+nodes; with clocks as registers, timing's rung 2 at .94 and rungs 5 and 7 near half; plain exactly 0. Pairs' hand-made yardstick failed.
+**Acting, and knobs first (D41 to D43).** Touching pairs are no acting challenge for these eyes: a driver that stops to look judges
+well but the looking costs what it earns, the eyes giving too few pulses to say where across its path a block lies. Of the body's
+numbers drawn afresh each life, only the balance between the thrusters matters much, and drag at its extremes. The user's rule: turn a
+knob before recruiting anything. The balance knob turned by trial and error closes half the gap in 1000 s; set from a measurement (the
+creature's own pulses counted through one revolution on one thruster, by the same recording unit that learns sequences) it closes over
+three quarters in 300 s.
+
+**Next (planned, not started): a dancing brain** (the user, 2026-11-10; `PROGRAMME.md`). A simple brain's behaviour produces too little
+information to find anything new. So start with many movement cycles of different timings, each judged by its own prediction of what
+its movement makes the senses do, and let them settle on what works. First, count the bits each kind of movement yields.
+

@@ -6,13 +6,28 @@ and when, why it matters, the line it belongs to, and the experiment that would 
 
 ## Scaling (the user's goal, 2026-11-09; `PROGRAMME.md`)
 
-- **How should a brain lock on to a rhythm it doesn't know?** (the user, 2026-11-09: phase set by surprises, a PLL.) The adaptive
-  clocks (D38) beat base but solve no timing rung, and many run to their 60 s cap. Try: more clocks as the material (Scheirer's bank),
-  Righetti, Buchli & Ijspeert's adaptive-frequency rule, a period rule that can't run away. Answered by the timing ladder's curve.
-- **Can a growing context tree be built from simple units?** (the user, 2026-11-09: a growing tree is what "add more brain" could
-  supply.) Context tree weighting (Willems, Shtarkov & Tjalkens 1995) predicts sequences of unknown order nearly as well as if told the
-  tree; a node recruits children only when splitting beats it by its own Occam test. First as the yardstick on the combination ladder,
-  then as a design.
+- **Does a dancing brain produce evidence a simple one doesn't?** (the user, 2026-11-10; `PROGRAMME.md`, The next phase.) Many cycles of
+  different timings driving movement from birth, settling on what works. The first measurement (D0): bits a second about the balance,
+  the drag and a block's place across the corridor, from each of a handful of movement cycles, against ordinary foraging, and the food
+  each costs. Judged by each cycle's own prediction, not by taste, or D16's wall returns.
+
+- **Why does the tree trail look-backs on timing's rung 5, and beat them on rung 2?** (D40: .45 against .63; .94 against .83.) Suspects:
+  beats with no taste, filled in by the tree's own guess; 16 or 32 nodes against a word needing depth 2 log2 n in a noisy register.
+  Trace in single lives (`lab/clocks_probe.py`) before changing anything.
+- **How does the acting ladder get more than two rungs?** (D42) Of the body's numbers only the balance matters much, and drag at its
+  extremes. Options: drag drawn a third to three times; a balance or tempo that follows a hidden context, so a tree's nodes hold a
+  setting each (and many units share one score, the hard case); or two rungs, said plainly. The user's decision.
+- **What measures the tempo knob?** (D42, D43) Drag at its extremes is cured by one tempo for every rate. The balance has a measurer
+  (beats in a revolution). What does the brain's own movement say about drag: how far a block moves across the view per beat, or how
+  long a coast lasts? Knobs first: find the measurement before adding anything.
+- **When does a knob call for a measurement?** (D43) The sweeps start when meals are short (D20's gate, by hand). The rule should be
+  the knob's own: its adjusting has stalled while its discomfort persists (AGENTS.md, no unit knows it is tuned).
+- **Do spare nodes always cost?** (D40) Four times the nodes a rung needs lost about .1 on combo 3 and 4, growing on misreads and guessed
+  colours. A node could ask for two contradictions, or forget; the cost curve should say how much it matters.
+- **Can a clock trim its own period within a band?** (D39) Fixed clocks must lie within about 3% of the slot's length, so 60 are needed
+  from 3 to 30 s. With each period nudged by the signed phase error at a confirmed change, and held within its band, a dozen might do.
+- **What are a counting clock's last 12% of disagreements?** (D39) The registers' letters, or the phase near a change? It decides whether
+  timing above rung 5 needs better registers or better clocks.
 - **Must rung lives grow smoothly with what a rung asks?** (D37) Seq's 100 s and 300 s rungs make "hardest rung solved" misread a
   climb. The user: revisit only if it gets in the way.
 

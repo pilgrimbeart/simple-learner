@@ -1,0 +1,7 @@
+== which of the body's numbers matter: 5 pairs, 300 s (judged on the last third), 2.5 ms, seeds 86000+; efficiency [95%]
+ plain | circuit +2.52 [+1.98,+2.94] | bank +2.33 [+1.86,+2.75] |
+ thr   | circuit +0.94 [+0.43,+1.43] | toldbody +2.46 [+2.28,+2.66] | bank +1.02 [+0.38,+1.60] |
+ str   | circuit +2.59 [+2.31,+2.98] | bank +2.11 [+1.64,+2.50] |
+ eyes  | circuit +2.48 [+2.01,+2.82] | bank +2.16 [+1.93,+2.40] |
+ eye1  | circuit +2.20 [+1.93,+2.47] | bank +2.20 [+1.88,+2.53] |
+ drag  | circuit +1.53 [+1.29,+1.80] | bank +1.53 [+1.26,+1.81] |

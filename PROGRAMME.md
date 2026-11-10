@@ -2,7 +2,28 @@
 
 One page to keep us on track. The goal and its test are in `README.md`, The goal. If work can't move the scaling curve, it is parked in `QUESTIONS.md`.
 
-## The strategy: ruler first, then climb (agreed by the user, 2026-11-09)
+## The next phase: a dancing brain (the user, 2026-11-10; planned, not started)
+
+**The criticism** (the user). We have been designing a simple, clunky brain and expecting something clever to come of it. But a brain that only scans, drives and runs meets a narrow slice of what its body and world can do, so its behaviour doesn't produce enough information to find a new stratagem. Better to start with a brain that is creative from birth: many cycles of different timings driving its movement, erratic to look at, which gives it evidence about what works; the cycles then settle on the ones that do. Rhythms, coupled cycles and knobs that retune them are in the spirit of Sepulchre (`MIXED_FEEDBACK.md`; whether he argues for learning by exploring is to be checked, not assumed).
+
+**What the record says.** For: the weak thruster's knob was set in minutes only once the creature did something unusual on purpose, spinning on one thruster, and watched what came of it (D20, D43). Against, as stated: variety isn't yet evidence. Judged by taste, many things varying at once are noise to each other (one score, under a bit a second): 200 random detectors each nudging a motor cost food and learned little even in very long lives (D16); exploring wildly early in a life hurt (D15); a small wobble cost a tenth of the food and took fifteen times a short life's drives to notice (D36).
+
+**The form to test.** Each cycle is judged by its own prediction, not by taste: "when I move like this, the view should do that". That error is there at every moment, belongs to one cycle alone, and carries far more bits a second than taste. Cycles whose movement makes the senses predictable settle and keep their timing; the rest fade; taste only chooses among the settled. The brain must know what it did (its own beats are the ruler, D43). Dancing costs food, so it belongs to the young and the frustrated.
+
+**Stages**, each with its predictions and how sure written first, about 5 pairs, a ledger line (How we work, below):
+
+| stage | what | ends when | what it decides |
+|---|---|---|---|
+| **D0. Count the bits** | A handful of movement cycles written by hand (spin on one motor, on the other, alternate, burst and coast, zigzag at a few periods, stop and look), each with its own recorder (a register moved by the brain's own beats, D43). For each, and for ordinary foraging: bits a second an ideal observer gains about each thing worth knowing (the balance, the drag, where across the corridor a block lies), and the food it costs. | A table of bits a second and food lost, per cycle and per thing | Whether dancing yields information that foraging doesn't, and about what. If it doesn't, stop here. |
+| **D1. One cycle that settles itself** | The best cycle of D0 starts when a knob's own adjusting has stalled while things go badly, sets the knob from what it measured, and stops when its estimate stops moving. No hand-written gate. | It matches D43's measurer on unequal thrusters and costs nothing on an ordinary body | Whether a cycle can govern itself |
+| **D2. Several cycles at once** | Two, four, eight cycles together, each judged by its own prediction. Do they spoil each other's evidence? The many-units question, with prediction as the teacher instead of taste. | A curve: time to set each knob against the number of cycles | Whether prediction escapes the wall taste hits (D16) |
+| **D3. Settling** | Cycles that predict nothing fade; those that do keep their timing; taste chooses among them. Born dancing, on plain, lopsided and dragging bodies. | The dance ends by itself where there is nothing to learn, and the brain ties the starting brain there | Whether "erratic, then settled" beats "simple, then patched", on the same lives |
+
+**What would count against it.** The cycles yield no more bits than foraging about the things that matter; or dancing loses more food than the knobs win back within a life; or cycles judged by prediction still interfere as those judged by taste did.
+
+**What stays.** The goal and its scaling test (`README.md`); the ground rules (`AGENTS.md`: the interface, no shared clock, seconds, knobs first); the body as it is. The ladders and the tree (D37 to D40) stand as they are, and the dance is tried first where they are weakest: on acting.
+
+## The strategy so far: ruler first, then climb (agreed by the user, 2026-11-09)
 
 Build the ruler first. After that, nothing is worked on unless it can move the scaling curve.
 
@@ -25,7 +46,14 @@ Build the ruler first. After that, nothing is worked on unless it can move the s
 - **What moves the register is learned** (the user's insight: sparse events shift it, and the circuit can learn which). Several registers moved by good meals, tastes and the brain's own clocks: on seq it picks good meals itself.
 - **Timing isn't solved.** Clocks that lock on to surprises (the user's PLL idea; Large & Kolen 1994) beat base at every rung (x .3 to .5) but solve none, flat in rung and material: locking is the limit.
 - **Plain costs nothing now**, with the bank's default and Occam bar (40 lives, the last full run aborted after that rung by the user).
-- **Next:** the full run of the protected design on time; better locking (more clocks as the material); the combination ladder via a growing context tree (CTW, Willems et al. 1995; the user: a growing tree is what "add more brain" could supply); then stage 2 across all three.
+- **Timing, since** (D39, 5 pairs): a bank of fixed clocks whose phase is set by the world's changes, and moved no further than the evidence says, solves rung 2 (x .74 to .83) and reaches .63 at rung 5 with 60 clocks, about the designed brain's .69. The number of clocks is a fixed cost set by the range of rhythms; the rung sets a register's length. Not run above rung 5.
+- **One problem, one design proposed** (D39): every ladder's letter is a function of a context moved on by some kind of event, and the ideal learner's known local form is a context tree over a register (PPM, context tree weighting, Hoeffding trees). The record is such a tree of depth one; combinations need depth k. Recruit on novelty beneath a contradicted node; growing a level per contradiction is too slow for these lives.
+- **An acting rung** (D39): touching pairs of blocks cost the starting brain a quarter of its food, declined rather than poisoned. Needs a yardstick (a careful driver) before it is a certified rung.
+- **The tree built** (D40): a context tree over registers, one kind of node, no setting changed between ladders. Seq 11 and 17 solved; combo 1, 3, 5, 6 solved at 20 pairs, higher rungs needing more nodes; with the clocks as registers, time 2 at .94 and 5 and 7 near half, the other ladders unharmed, plain exactly 0. Stage 2's bar (one frozen design climbing three ladders) is met on two and begun on the third.
+- **No acting rung at pairs** (D40, D41): a careful driver and a stop-and-look manoeuvre, both by hand and told the colour, win none of the food back. The loss is information these eyes don't give (D21's wall), not skill. The lopsided body (D19, D20) is the acting rung that already has a gap, a yardstick and learners.
+- **The body ladder measured** (D42): one sure rung (the balance: .94 against 2.46 told) and one weak (drag, cured by a tempo, hurting only at a half or twice). Strength and eyes cost nothing. How to get more rungs is the user's to decide.
+- **Knobs first** (D43): the balance knob, turned by trial, closes half the gap in 1000 s; set from a measurement, three quarters or more in 300 s; and the measurement can be made by the record's own unit, a register moved by the brain's beats (2.37 of 2.46). No new kind of unit was needed.
+- **Next:** why the tree trails look-backs at time 5 (.45 against .63); the three doublings read off on each ladder with lives that suit the tree's growing; clocks that trim their own period, so fewer are needed; the lopsided body made the acting ladder (rungs by how many of the body's numbers are drawn, or how far), or the split eye, the user's decision.
 
 As planned:
 
@@ -42,8 +70,13 @@ Bar met (`discrete/NOTEBOOK.md`, D37): seq 7 certified rungs, combo 5, time 6; t
 ## How we work
 
 - **Every run is a point on a curve, or it's parked.** Say which belief it could move, and do the sum before spending CPU. Stop and rethink at a mechanism's second version. If a confound blocks a test, switch it off rather than curing it.
-- **Rigour comes in tiers.** Exploration uses the 10 ms tick where it is good enough, and few lives. The full rules (fresh seeds, halved steps, intervals, SPICE) apply to claims, as SPICE already did.
-- **Predictions are written before lives**, and scored after.
+- **This is for understanding, so rigour is light until there is a claim** (the user, 2026-11-10: an itch to scratch; it needn't be of academic quality, nor physically realisable yet). Day to day: paired lives, a prediction written first, about 5 pairs, one step (2.5 ms). **A principle worth having shows in about 5 pairs**; an effect that needs 40 to see is parked. Held-out seeds, halved steps, sealed sets, independent checks, `mixed_feedback.py` and SPICE wait for a final claim, if we ever want one. `AGENTS.md`'s ground rules for a brain (the interface, no god, no shared clock, seconds not ticks) are not rigour and always hold.
+- **Predictions are written before lives, each with how sure**, and scored after. Over 90% sure: don't run it, or run a smoke of one or two pairs. A run we could have predicted told us nothing.
+- **The ledger** (`lab/ledger.py`, `lab/v/LEDGER.md`): every run adds a line: what it cost in CPU, the belief it could move, the prediction, and afterwards whether it surprised us. Read it weekly: where the CPU went, and what share of runs told us nothing.
+- **Design down from the ideal learner** (the user, 2026-11-10: find the answer, whatever it is, even if it is already known). Before a mechanism is invented, write the ideal learner for the problem and look in the literature for its local form; the experiments are for the gap between a known algorithm and a local, noisy, embodied version of it.
+- **Measure in bits on both axes**: what a rung asks, what the material can hold, what the life supplies. Efficiency in evidence (tastes used against an ideal learner's) and in storage should stay bounded as material grows; a climb that only stores more is memory, not learning.
+- **Knobs first, recruits last** (the user, 2026-11-10; `AGENTS.md`). A brain that isn't coping first adjusts what it has; it recruits only where no setting of its knobs will do. Every challenge is tried with knob-turning before any unit is added, and a climb credited to recruitment is compared with knobs alone. The scaling work of D37 to D40 only ever added units; acting challenges start from the knobs.
+- **The body stays** (the user, 2026-11-10: grounded in a tangible, physical world, toy or not), and stays the simplest one until it has taught all it can. So the ladders must include rungs where acting well is the problem, early, not last.
 - **The main session** keeps this page, talks with the user, makes judgements and does the work itself. **An agent only where independence is the point** (a gate's check, a sealed set's author), with a written brief, asked of the user first; it reports in under a page.
 - **Going off the brief:** an agent stops and reports. New questions go to `QUESTIONS.md`.
 - **The existing rules hold** (`AGENTS.md`): one long job at a time; push only on the user's "Push"; show working behaviour live before reporting; record findings in the notebook.
@@ -59,6 +92,10 @@ Bar met (`discrete/NOTEBOOK.md`, D37): seq 7 certified rungs, combo 5, time 6; t
 
 | date | decision | by |
 |---|---|---|
+| 2026-11-10 | A new phase: a dancing brain, creative from birth, whose many cycles produce the evidence and then settle. Written up as stages D0 to D3 (the form judged by each cycle's own prediction is the main session's, from the record); not started | the user |
+| 2026-11-10 | Knobs first, recruits last: turning an existing knob is always the cheap option; recruit only if that fails | the user |
+| 2026-11-10 | The acting rung: not touching pairs (the eyes can't tell enough, D41) but the lopsided body (D42) | the user |
+| 2026-11-10 | The work is for the user's own understanding: light rigour until a claim (about 5 pairs, predictions with how sure, a ledger of runs); find the answer whatever it is, known algorithms included, designing down from the ideal learner; the body stays, grounded and as simple as it is, so an acting rung comes forward (paired blocks first) | the user (the wording and the rules that follow from it the main session's, after its review of the strategy) |
 | 2026-11-09 | The strategy above replaces the earlier stages: four ladders starting with today's senses, body mismatches last; raw material block-level for now; a fresh agent writes the held-out ladder; paired blocks becomes a rung, not a line of its own | the user |
 | 2026-11-09 | The goal: intelligence that scales, in a brain for a robot (`README.md`, The goal). Lives may lengthen as challenges grow; more senses eventually, with much still to learn from these; anything may happen before a life, but a solution designed by hand is insight, not the solution; a component may be quite complex, staying parsimonious for fast simulation, clear thinking and some chance of understanding the result; a small brain may have any number of connections, locality coming from scale, since big brains can't have everything broadcasting to everything else; a bigger brain may react more slowly if it is better on balance, and what size costs on simple tasks is explored, perhaps as a scaling law, not barred in advance | the user |
 | 2026-11-09 | The scaling test's wording and provisional numbers, drafted for the user's review | main session |

@@ -1,0 +1,4 @@
+== unequal thrusters, 5 pairs, seeds 86000+: efficiency in the last third [95%]
+   100 s | beats +0.89 [+0.41,+1.41] |
+   300 s | beats +2.37 [+1.76,+2.81] |
+  1000 s | beats +2.01 [+1.27,+2.48] |

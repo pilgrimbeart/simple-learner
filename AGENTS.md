@@ -109,6 +109,11 @@ situ, so the brain must do the work.
   derived from `units.py`. It lives in the one integration step every simulation calls (`_step`) and in how the
   arrays are built, with no switch to turn it off (`mixed_feedback.SUBSTRATES`). Never add a way round it, and keep
   `test_compiled.py` checking that it is the same at any step and can't be dodged.
+- **Knobs first, recruits last** (the user, 2026-11-10). Turning a knob the brain already has (a rate, a balance, a threshold, a time
+  constant) is always the cheap option: it costs no material. So for any shortfall, first ask which existing knob could cure it and
+  what would tell that knob which way to turn, and try that. Recruiting new units is for what no setting of the existing knobs can do
+  (something more to remember or tell apart), and a result that credits recruitment must show the knobs alone fall short on the same
+  lives. A measurement that sets a knob directly beats trial and error on outcomes, when the brain's own senses can make it.
 - **Local only, no god.** (No god is part of the goal. Locality comes from scale: a small brain may have any number of
   connections, but big brains can't have everything broadcasting to everything else, the user, 2026-11-09.) A unit knows only its own state and its neighbours' signals. It may draw from its own noise,
   but a choice among units comes from their local competition, never from outside. No unit knows it is optimally

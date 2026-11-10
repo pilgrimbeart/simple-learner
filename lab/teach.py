@@ -5,7 +5,11 @@ lab/v/teach_predictions.md. On the sequence ladder (lab/ladders.py), raw materia
   events stage 2 step A: several registers, each moved by its own kind of event (good meals, trusted tastes, own clocks)
   record the last P letters revealed, and a comparing unit for each look-back k up to P/2 (the user agreed, 2026-11-09)
 
-    OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python lab/teach.py [PAIRS] [ARMS, e.g. bank,grow,record] [LADDER] [Ps, e.g. 40,80]"""
+  lock   stage 2 step B: four clocks that adapt phase and period to surprises
+  clocks D39: a bank of fixed clocks, only their phase set, by confirmed changes in the revealed letter
+
+    OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python lab/teach.py [PAIRS] [ARMS, e.g. bank,grow,record] [LADDER] [Ps, e.g. 40,80] [RUNGS, e.g. 2,5]
+    (BELIEF=... PREDICT=... before it: lab/ledger.py)"""
 import math
 import sys
 import time
@@ -271,6 +275,133 @@ def lock_cls():
     return Lock
 
 
+def clocks_cls():
+    E = events_cls()
+    import os
+    NC, TLO, THI = int(os.environ.get("NC", 24)), 3.0, 30.0     # a bank of fixed clocks, log-spaced (24: about 10% apart; NC=60: 4%), each with its own tolerance
+
+    class Clocks(E):
+        """D39: the lock by a bank instead of by adapting. Clocks of fixed period, never tuned; what the world's changes set is only each
+        clock's phase. A change is the revealed letter differing from the last confirmed one, whatever the brain predicted, confirmed by
+        the next trusted taste agreeing (so a misread sets nothing, and is never recorded); the boundary lies somewhere between the last
+        taste of the old letter and the first of the new, so a clock with a beat in that gap is left alone and any other has its nearest
+        beat moved to the gap's nearer end (the first version moved it to the midpoint: p midpoint). A clock register's letters are
+        written one taste late, at the beat their own moment falls in, so a change's first taste lands in the new beat. Each clock still
+        drifts (.02 a cycle). Registers: good meals, trusted tastes, and one per clock; all scored as Events scores them."""
+
+        def __init__(self, seed, p):
+            super().__init__(seed, p)
+            r = self.crng
+            Pr = max(2, self.P // (2 + NC))
+            new = lambda kind: dict(kind=kind, Pr=Pr, rec={}, agree=[0] * (Pr // 2 + 1), dis=[0] * (Pr // 2 + 1), nb={})
+            self.regs = [new("good"), new("taste")]
+            for j in range(NC):
+                T = TLO * (THI / TLO) ** (j / (NC - 1)) * float(np.exp(r.normal(0, 0.03)))
+                self.regs.append(dict(new(("clock", T)), T=T, a=r.uniform(-T, 0), n=0, tl=0.0))
+            self.cur, self.tcur, self.pend = None, 0.0, None
+            self.setbar()
+
+        def advance(self, R):
+            c = (self.t - R["tl"]) / R["T"]
+            if c > 0:
+                R["a"] += self.crng.normal(0.0, 0.02 * R["T"] * math.sqrt(c))
+                R["tl"] = self.t
+            while self.t >= R["a"] + R["T"]:
+                R["a"] += R["T"]
+                R["n"] += 1
+
+        def index(self, R):
+            if R["kind"] in ("good", "taste"):
+                return super().index(R)
+            self.advance(R)
+            return R["n"]
+
+        def index_at(self, R, t):
+            """The beat a past moment fell in, by the clock as it now stands."""
+            self.advance(R)
+            return R["n"] if t >= R["a"] else R["n"] - int(math.ceil((R["a"] - t) / R["T"]))
+
+        def put(self, R, i, letter, bad):
+            rec = R["rec"]
+            rec[i] = letter
+            if bad:
+                R["nb"][i] = R["nb"].get(i, 0) + 1
+            for old in [h for h in rec if h <= i - R["Pr"]]:
+                del rec[old]
+                R["nb"].pop(old, None)
+
+        def settle(self, letter):
+            """The taste before this one, now that this one says what it was: written, moved with the boundary, or dropped as a misread."""
+            if self.pend is None:
+                return
+            t0, l0, bad0 = self.pend
+            self.pend = None
+            if self.cur is not None and l0 != self.cur:
+                if letter != l0:
+                    return                              # not confirmed: a misread, never recorded
+                lo, hi = self.tcur, t0                  # confirmed: the boundary lies between these two tastes, and that is all they say
+                for R in self.regs[2:]:
+                    self.advance(R)
+                    if self.p.get("midpoint"):          # the first version: every clock's nearest beat moved to the midpoint
+                        tb = (lo + hi) / 2
+                        if tb - R["a"] > R["T"] / 2:
+                            R["n"] += 1
+                        R["a"] = tb
+                        continue
+                    a, T = R["a"], R["T"]               # a clock with a beat already between them is left alone; else its nearest
+                    b = min((a - T, a, a + T), key=lambda x: 0.0 if lo <= x <= hi else min(abs(x - lo), abs(x - hi)))   # beat goes to the nearer end
+                    if lo <= b <= hi:
+                        continue
+                    s = (lo if b < lo else hi) - b
+                    R["a"] = a + s
+                    if R["a"] > self.t:                 # the current beat hasn't begun after all
+                        R["a"] -= T
+                        R["n"] -= 1
+                    elif R["a"] + T <= self.t:          # the next one already has
+                        R["a"] += T
+                        R["n"] += 1
+            self.cur, self.tcur = l0, t0
+            for R in self.regs[2:]:
+                self.put(R, self.index_at(R, t0), l0, bad0)
+
+        def taste(self, value, at):
+            if self.vouched():
+                letter = self.food if value > 0 else 1 - self.food
+                self.settle(letter)
+                dhit = self.dl == letter
+                bs, best = 0, None
+                for R in self.regs:
+                    i = self.index(R)
+                    E = R["E"]
+                    for k in range(1, len(E)):
+                        b = self.vote(R, i, k)
+                        hit = (b == letter) if b is not None else dhit
+                        E[k] = min(self.Emax, max(0.0, E[k] + (1.0 if hit > dhit else -1.0 if hit < dhit else 0.0)))
+                        if b is not None:
+                            if hit:
+                                R["agree"][k] += 1
+                            else:
+                                R["dis"][k] += 1
+                        sc = R["agree"][k] - 4 * R["dis"][k]
+                        if E[k] >= self.bar and (best is None or sc > bs):
+                            bs, best = sc, (R, k)
+                    if R["kind"] in ("good", "taste"):
+                        self.put(R, i, letter, value < 0)
+                self.pend = (self.t, letter, value < 0)
+                self.best = best
+                self.nt += 1
+                if value > 0:
+                    self.dt = max(-1, self.dt - 1) if self.dl == letter else self.dt
+                if self.dl != letter:
+                    self.dt += 1
+                    if self.dt >= 1:
+                        self.dl, self.dt = letter, 0
+            if value > 0:
+                self.g += 1
+            self.predict()
+    return Clocks
+
+
 def rings(M):
     import rivals as RV
     return lambda r, src: [(RV.Count(n, src["good"]), 1) for n in range(2, M + 1)]
@@ -292,16 +423,18 @@ def job(j):
     if arm == "bank":
         M = M_of(P)
         lf = RV.make(w, seed, first, {"rivals": rings(M), **RV.occam(max(M - 1, 1))})
-    elif arm in ("grow", "record"):
+    elif arm in ("grow", "record", "tree"):
         if arm not in _C:
-            _C[arm] = fast.fast_cls(grow_cls() if arm == "grow" else record_cls())
+            import tree as TR
+            _C[arm] = fast.fast_cls({"grow": grow_cls, "record": record_cls, "tree": TR.tree_cls}[arm]())
         q = T.numbers(seed, {"P": P})
         q["P"] = P
         lf = WLife(seed, first, (lambda s: _C[arm](s, q)), w, seconds=True)
-    elif arm in ("events", "lock"):
+    elif arm in ("events", "lock", "clocks", "treec"):
         from stage2_lang.seconds import seconds_cls          # its clocks change the colour between tastes, so not the compiled step
         if arm not in _C:
-            _C[arm] = seconds_cls(events_cls() if arm == "events" else lock_cls())
+            import tree as TR
+            _C[arm] = seconds_cls({"events": events_cls, "lock": lock_cls, "clocks": clocks_cls, "treec": TR.treec_cls}[arm]())
         q = T.numbers(seed, {"P": P})
         q["P"] = P
         lf = WLife(seed, first, (lambda s: _C[arm](s, q)), w, seconds=True)
@@ -312,20 +445,27 @@ def job(j):
     g = [a - COST * b for a, b, _ in l]
     sp = spent(l)
     n = getattr(lf.brain, "n", None) if arm == "grow" else None
-    if arm in ("events", "lock"):
+    if arm in ("tree", "treec"):
+        b = lf.brain
+        n = ((b.best["kind"] if isinstance(b.best["kind"], str) else f"clock{b.best['T']:.1f}") if b.best else "-", max(len(R["nodes"]) for R in b.regs) if b.best is None else len(b.best["nodes"]))
+    elif arm in ("events", "lock", "clocks"):
         n = (lf.brain.best[0]["kind"], lf.brain.best[1]) if lf.brain.best else None
+        if arm == "clocks" and n and isinstance(n[0], tuple):
+            n = (f"clock{n[0][1]:.1f}", n[1])
         if arm == "lock" and n and isinstance(n[0], tuple):
             n = (f"lock{n[0][1]:.0f}>{lf.brain.best[0]['T']:.1f}", n[1])
     return (sum(g), sp, g[2], sp * l[2][2] / sum(t for _, _, t in l), sum(a + b for a, b, _ in l), time.perf_counter() - t0, n)
 
 
-def run(pairs=20, dt=2.5, workers=7, seed0=L.SEEDS0 + 1000, arms=("bank", "grow"), name="seq", Ps=PS):
+def run(pairs=20, dt=2.5, workers=7, seed0=L.SEEDS0 + 1000, arms=("bank", "grow"), name="seq", Ps=PS, rungs=None):
     I = R.boot(pairs)
     seeds = range(seed0, seed0 + pairs)
     print(f"== teach: {name} ladder, {pairs} pairs, {dt} ms, seeds {seed0}+; x [95%] against base and told; * solved (surely above .5); "
           f"grow's final ring lengths (median, range)", flush=True)
     with ProcessPoolExecutor(workers, initializer=R._init, initargs=(dt / 1000, False)) as ex:
         for size, secs in L.LADDERS[name]["rungs"]:
+            if rungs and size not in rungs:
+                continue
             text = L.LADDERS[name]["world"](size)
             run1 = lambda arm, P=0: list(ex.map(job, [(text, arm, P, s, c, float(secs)) for s in seeds for c in COL]))
             b, t = L.scored(run1("circuit"), secs, I), L.scored(run1("vtold"), secs, I)
@@ -336,7 +476,7 @@ def run(pairs=20, dt=2.5, workers=7, seed0=L.SEEDS0 + 1000, arms=("bank", "grow"
                 for P in Ps:
                     res = run1(arm, P)
                     e = L.scored(res, secs, I)
-                    if size == 1:
+                    if size == (0 if name == "combo" else 1):       # the plain world: the difference itself, there being no gap
                         line += f" P{P} {e[0] - b[0]:+.2f} [{R.ci(e[1] - b[1])[0]:+.2f},{R.ci(e[1] - b[1])[1]:+.2f}]"
                     else:
                         lo, hi = R.ci((e[1] - b[1]) / (t[1] - b[1]))
@@ -344,9 +484,13 @@ def run(pairs=20, dt=2.5, workers=7, seed0=L.SEEDS0 + 1000, arms=("bank", "grow"
                     if arm == "grow":
                         ns = [x[6] for x in res]
                         line += f" n{int(np.median(ns))}({min(ns)}-{max(ns)})"
-                    if arm in ("events", "lock"):
+                    if arm in ("tree", "treec"):
                         from collections import Counter
-                        line += " " + ",".join(f"{a}" for a, _ in Counter(str(x[6][0]) if x[6] else "-" for x in res).most_common(2))
+                        line += " " + ",".join(f"{a}" for a, _ in Counter(x[6][0] for x in res).most_common(2)) + f" nodes {int(np.median([x[6][1] for x in res]))}"
+                    if arm in ("events", "lock", "clocks"):
+                        from collections import Counter
+                        line += " " + ",".join(f"{a}" for a, _ in Counter(f"{x[6][0]}/{x[6][1]}" if x[6] else "-" for x in res).most_common(2))
+                        line += f" {np.mean([x[5] for x in res]):.0f}s"
                     line += " |"
                 print(line, flush=True)
 
@@ -354,6 +498,8 @@ def run(pairs=20, dt=2.5, workers=7, seed0=L.SEEDS0 + 1000, arms=("bank", "grow"
 COL = L.COL
 
 if __name__ == "__main__":
+    import ledger
+    ledger.start()
     a = sys.argv[1:]
     run(int(a[0]) if a else 20, arms=tuple(a[1].split(",")) if len(a) > 1 else ("bank", "grow"), name=a[2] if len(a) > 2 else "seq",
-        Ps=tuple(int(x) for x in a[3].split(",")) if len(a) > 3 else PS)
+        Ps=tuple(int(x) for x in a[3].split(",")) if len(a) > 3 else PS, rungs=[int(x) for x in a[4].split(",")] if len(a) > 4 else None)

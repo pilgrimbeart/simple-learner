@@ -1,0 +1,5 @@
+== teach: time ladder, 5 pairs, 2.5 ms, seeds 84000+; x [95%] against base and told; * solved (surely above .5); grow's final ring lengths (median, range)
+-- rung 2, 300 s: base -0.25 told 2.19
+   clocks| P208 +0.74 [+0.51,+0.94]* clock15.9/2,clock11.2/2 2s | P416 +0.83 [+0.72,+0.91]* clock16.3/2,clock11.2/2 2s |
+-- rung 5, 750 s: base 0.58 told 2.57
+   clocks| P208 +0.03 [-0.24,+0.34]  clock17.1/4,clock13.7/3 5s | P416 +0.50 [+0.40,+0.60]  clock10.3/5,clock7.7/5 6s |
