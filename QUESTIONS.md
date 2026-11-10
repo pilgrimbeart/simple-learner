@@ -6,20 +6,24 @@ and when, why it matters, the line it belongs to, and the experiment that would 
 
 ## Scaling (the user's goal, 2026-11-09; `PROGRAMME.md`)
 
-- **Does a dancing brain produce evidence a simple one doesn't?** (the user, 2026-11-10; `PROGRAMME.md`, The next phase.) Many cycles of
-  different timings driving movement from birth, settling on what works. The first measurement (D0): bits a second about the balance,
-  the drag and a block's place across the corridor, from each of a handful of movement cycles, against ordinary foraging, and the food
-  each costs. Judged by each cycle's own prediction, not by taste, or D16's wall returns.
-
+- **Does organising without reward make later learning fast?** (the user, 2026-11-10; README, What we've learned: latent learning.)
+  The test: a life where the world first offers nothing to learn by taste (all food), then poison begins at a random moment. Does a
+  brain that spent the quiet time predicting its own senses learn the change in fewer tastes than one that only foraged, counted
+  against an ideal learner's tastes? If yes, "organise first, reward only chooses" is a measurable property, and could sit beside the
+  scaling curve.
+- **Would an observer that knows a zigzag's physics find what sweeps do?** (D44) Zigzags gave .8 bits on the balance to a generic decoder
+  (median error .2), sweeps 1.1 to a physical one (.04). A zigzag's spin rate is k0 r0 - k1 r1 in each half, two equations for two
+  unknowns, so an observer timing each half's recurrence might match sweeps while eating as it goes. Decides whether D2's cycles can
+  forage while they measure.
 - **Why does the tree trail look-backs on timing's rung 5, and beat them on rung 2?** (D40: .45 against .63; .94 against .83.) Suspects:
   beats with no taste, filled in by the tree's own guess; 16 or 32 nodes against a word needing depth 2 log2 n in a noisy register.
   Trace in single lives (`lab/clocks_probe.py`) before changing anything.
 - **How does the acting ladder get more than two rungs?** (D42) Of the body's numbers only the balance matters much, and drag at its
   extremes. Options: drag drawn a third to three times; a balance or tempo that follows a hidden context, so a tree's nodes hold a
   setting each (and many units share one score, the hard case); or two rungs, said plainly. The user's decision.
-- **What measures the tempo knob?** (D42, D43) Drag at its extremes is cured by one tempo for every rate. The balance has a measurer
-  (beats in a revolution). What does the brain's own movement say about drag: how far a block moves across the view per beat, or how
-  long a coast lasts? Knobs first: find the measurement before adding anything.
+- **Does the stride's measurement set the tempo knob in a life?** (D44 answered what measures it: the mean of the two motors' beats a
+  revolution in a sweep, the same sweep as the balance's, to a median 3% by 100 s; strength and drag are one number to the eyes, so drag
+  needn't be measured on its own.) Untried: the tempo set from it, on bodies with drag a third to three times.
 - **When does a knob call for a measurement?** (D43) The sweeps start when meals are short (D20's gate, by hand). The rule should be
   the knob's own: its adjusting has stalled while its discomfort persists (AGENTS.md, no unit knows it is tuned).
 - **Do spare nodes always cost?** (D40) Four times the nodes a rung needs lost about .1 on combo 3 and 4, growing on misreads and guessed

@@ -105,7 +105,9 @@ knob before recruiting anything. The balance knob turned by trial and error clos
 creature's own pulses counted through one revolution on one thruster, by the same recording unit that learns sequences) it closes over
 three quarters in 300 s.
 
-**Next (planned, not started): a dancing brain** (the user, 2026-11-10; `PROGRAMME.md`). A simple brain's behaviour produces too little
+**Next: a dancing brain** (the user, 2026-11-10; `PROGRAMME.md`). A simple brain's behaviour produces too little
 information to find anything new. So start with many movement cycles of different timings, each judged by its own prediction of what
-its movement makes the senses do, and let them settle on what works. First, count the bits each kind of movement yields.
+its movement makes the senses do, and let them settle on what works. The first count (D44): of nine movements, only spinning on one
+thruster at a time tells the body better than foraging (to about 4% in 100 s, against 27%), and it measures both knobs, the balance and
+how far a beat carries; mixing the motors smears that evidence, and no movement tells where a block lies across the path.
 

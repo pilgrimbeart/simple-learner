@@ -125,9 +125,11 @@ of touching pairs of blocks costs a cautious brain a quarter of its food, which 
 (D40), climbs sequences and combinations with material, with no setting changed between them, and solves timing's first rung.
 A weak thruster turned out to need no new part at all: one knob, set from a measurement of the creature's own turning (D43).
 
-**Next** (the user, 2026-11-10; planned, not started): a *dancing brain*. A simple brain behaves too narrowly to gather the evidence a
-new trick needs. So begin with a brain driven by many cycles of different timings, each checking its own prediction of what its
-movement will make the eyes see, and let the cycles settle on what works (`PROGRAMME.md`, The next phase).
+**Next** (the user, 2026-11-10): a *dancing brain*. A simple brain behaves too narrowly to gather the evidence a new trick needs. So
+begin with a brain driven by many cycles of different timings, each checking its own prediction of what its movement will make the eyes
+see, and let the cycles settle on what works (`PROGRAMME.md`, The next phase). The first step counted what each movement tells (D44):
+only spinning on one thruster at a time, long enough to see the view come round, tells the creature about its body better than
+foraging does, and no movement tells it where a block lies across its path.
 
 What the manual designs have taught: a life offers about 50 bits of evidence, but writing down a world's rule takes
 hundreds, so no brain learns a world from nothing in one life: it can only choose among what its structure already makes
@@ -152,6 +154,27 @@ Three lines of work so far:
 
 The findings that changed the direction of the work, each told in full in the notebook named.
 
+- **Play: a brain should spend effort organising itself before any reward asks it to** (the user's insight, 2026-11-10, prompted by
+  D44). A brain can make behaviours that win no food now, such as spinning on one thruster to watch the view come round, but that tune it
+  to its body and world, and that pays off for the rest of its life. In D44 the spinning eats nothing while foraging eats, yet the knob
+  it sets wins back most of what a lopsided body loses for the rest of the life (D20). The user's picture: a real rat, with millions of
+  sensors and billions of neurons, wanders among red and blue blocks. If tasting poison meant training all those neurons to steer it
+  away, as in a deep network trained from scratch, it would take millions of trials. But if its brain has already organised itself to
+  that world, and already has "blocks", "red" and "blue", then the poison needs only a small adjustment: one-shot learning, quick and
+  cheap. In bits: a taste carries at most one bit, and a life about 50 (D31), so a brain can only learn quickly what its own
+  organisation has already made cheap to say. That organisation can be gathered without reward, from what the senses do, which offers
+  far more bits than taste. This is old in psychology as *latent learning*: rats left to wander a maze with no food learned its layout
+  anyway, and used it at once when food appeared (Tolman 1948). For our goal it means that reward should only choose and tune, while
+  most of a growing brain's organising comes from predicting its own senses (`PROGRAMME.md`, The next phase). The user's name for it is
+  *play*, the same word as Der and Martius's *The Playful Machine* (2012), whose robots explore by their own prediction error.
+- **Variety isn't evidence: one clean movement tells the body, a jumble doesn't.** We wrote nine ways of moving and asked how much
+  each tells an observer about the creature's body (how its two thrusters compare, how far a beat carries it). Spinning on one thruster
+  at a time, long enough to see the view come round again and again, pins both to within about 4% in 100 s; ordinary foraging gets
+  only to about 27%. Driving straight or in bursts tells nothing, and zigzags, which use both thrusters at once, tell only a little,
+  because mixing the motors smears the one clean repetition. Nothing tells much within 30 s, and no movement tells where a block lies
+  across the creature's path: the eyes give too few pulses for that. So a dancing brain must take its moves in turns, not all at once.
+  A surprise in the physics: a stronger thruster and a lighter drag look the same to the eyes, so the creature needs to learn only how
+  far a beat carries it, and the same spin measures that too (`discrete/NOTEBOOK.md`, D44).
 - **Lock a clock to the world's changes, not to your own surprises, and move it no further than the evidence says.** Our first
   clocks reset themselves whenever the brain's guess was wrong. But a wrong guess isn't a change in the world, and a brain that guesses
   well stops being surprised, so those clocks wandered off. What works is to watch what the tastes reveal: when the food colour is seen
@@ -622,10 +645,14 @@ valuable first, in [`QUESTIONS.md`](QUESTIONS.md).
 
 **Units** (the axioms: `units.py`)
 
-- **Dancing brain** (planned, `PROGRAMME.md`): a brain whose movement is driven from birth by many cycles of different timings, which
+- **Play** (the user, 2026-11-10): activity with no goal and no reward, which lets a brain organise itself to its body and world, so
+  that later learning from reward is quick (README, What we've learned). The dancing brain is a brain that plays.
+- **Dancing brain** (`PROGRAMME.md`; D0 done, D44): a brain whose movement is driven from birth by many cycles of different timings, which
   settle on those that work. A **cycle** is one repeating pattern of movement with a recorder of what the senses did during it.
 - **Knob** (D43; AGENTS.md, Knobs first): a setting the brain already has (a rate, a balance, a threshold). The **balance** is how much
-  faster one motor pulses than the other; the **tempo**, one factor on every rate, which cures unusual drag.
+  faster one motor pulses than the other; the **tempo**, one factor on every rate, which cures unusual drag. The **stride** (D44) is how
+  far one beat carries the body, a thruster's strength over the drag: the eyes can't tell a strong thruster from light drag, so the
+  stride is what the tempo cures.
 - **Context tree** (D39): a tree of units, each holding which colour was food in one context (say, "the last two letters were red,
   blue"); a unit whose context turns out to hide two cases gets children that look one step further back. The known local form of the
   ideal learner for our ladders (context tree weighting, PPM).

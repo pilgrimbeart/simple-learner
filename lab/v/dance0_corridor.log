@@ -1,0 +1,11 @@
+where across the corridor the nearest block lies (its side, in the brain's frame), from the last 0.5 s of pulses and beats
+cycle     | in view | bits a look | bits a second
+forage    |    0.42 |       0.015 |          0.01
+still     |    0.29 |       0.004 |          0.00
+spin0     |    0.36 |       0.021 |          0.01
+sweeps    |    0.36 |       0.029 |          0.02
+straight  |    0.37 |       0.000 |          0.00
+burst     |    0.39 |       0.000 |          0.00
+zig0.5    |    0.34 |       0.003 |          0.00
+zig2      |    0.32 |       0.003 |          0.00
+zig8      |    0.36 |       0.004 |          0.00

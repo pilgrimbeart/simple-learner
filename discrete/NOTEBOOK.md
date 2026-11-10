@@ -10,9 +10,11 @@ per meal spent resting, moving and thinking), gain rate (meals per 10 s), food, 
 
 ## Where it stands
 
-- **Next, planned and not started: a dancing brain** (the user, 2026-11-10; `PROGRAMME.md`, The next phase): many movement cycles from
-  birth, each judged by its own prediction of what its movement makes the senses do, settling on those that work. First step, D0: count
-  the bits a second each of a handful of hand-written cycles yields about the body, against ordinary foraging.
+- **The dancing brain, D0 done** (D44, 2026-11-10; the user's phase, `PROGRAMME.md`): of nine hand-written movement cycles, only one
+  motor at a time (D20's sweeps) tells the body better than foraging (median error .04 against .27 on the balance at 100 s, and the
+  same on the stride, how far a beat carries); nothing knows much at 30 s; straight runs and bursts tell nothing, zigzags a little; no
+  movement tells where across the corridor a block lies. Strength and drag are one number to the eyes, the stride, and the sweep that
+  sets the balance measures it too. Next: the user's decision on D1 (a sweep that starts and stops itself, setting both knobs).
 - **Knobs first** (D43, 2026-11-10; the user's rule): compensating for a weak thruster is one knob. Turned by trial and error it takes
   about 1000 s to close half the gap, since nothing tells it which way to turn; set from a measurement (a revolution timed with one
   motor) it closes three quarters or more by 300 s. The measurement can be made by D38's recording unit clocked by the brain's own beats
@@ -3071,3 +3073,45 @@ the recording unit pointed at the brain's own movement. Not shown: the 100 s gap
 overlapping); the same for drag's tempo knob, which has no measurer yet; that the register is recruited only when the knob's own
 adjusting has stalled, which here is D20's gate written by hand.
 
+
+## D44: the dancing brain's D0: what each movement cycle tells, in bits (2026-11-10)
+
+`lab/dance0.py`; `lab/v/dance_predictions.md` (predictions 1-10 and their scores), `dance0_report.log`, `dance0_corridor.log` (the
+lives' pickles in `lab/v/`, out of git). The user's new phase (`PROGRAMME.md`, The next phase), its first stage: before building a
+dancing brain, does dancing produce evidence that foraging doesn't, and about what? 600 bodies a cycle, each thruster and the drag drawn
+(a half to twice), 100 s lives, seeds 87000+. Ten arms: the starting brain foraging, and nine open-loop cycles (still; one motor
+spinning at the scan's rate, either; D20's sweeps, 8 s on each motor; both at the drive's rate; 0.1 s bursts each second; zigzags of
+.5, 2, 8 s, one motor at the drive's rate and the other at half, swapping).
+
+**The sum first.** A beat moves the body k PUSH / (d DRAG) and turns it k TURN / (d DRAG), so a thruster's strength k and the drag d are
+one number to the eyes, except through a coast's time course (10 to 40 ms, against eye pulses at most 50 a second). So the things worth
+knowing are the balance log(k0 / k1) and the **stride** log(sqrt(k0 k1) / d), how far a beat carries the body; drag on its own is
+nearly unknowable, and needn't be known, since the tempo knob (D42) cures the stride.
+
+**The observer needed mending.** A ridge decoder scored by squared error found almost nothing even on sweeps. Traced: the beat-clocked
+register (D43) gives a motor's beats a revolution exactly when right (20.3 against 20.4) but slips to a half, a third or a far multiple
+in some lives, and squared error lets the slips swamp everything. Bits are now mutual information with the truth in 12 equal-count bins,
+bias-corrected (a lower bound, capped at 3.6), from the better of the ridge decoder and a physical estimator (beats a revolution per
+motor, the fundamental chosen by excess summed over all its multiples over their number's square root: 72% of motors within 5% after
+50 s of spinning).
+
+| arm (100 s) | balance: bits (median error) | stride | drag | gain a 10 s |
+|---|---|---|---|---|
+| foraging | .5 (.27) | .5 (.25) | .2 | +.61 |
+| still | 0 | 0 | .1 | 0 |
+| one motor | .1 | .5 (.25) | .3 | 0 |
+| sweeps | 1.1 (**.04**) | 1.1 (**.03**) | .4 | -.03 |
+| zigzags | .7 to .8 (.20) | .5 to .6 (.22) | .3 | -.4 to -.7 |
+| straight, burst | .1 to .2 | .1 to .2 | 0 to .2 | -.2, -.1 |
+
+At 30 s no arm knows much (sweeps .4 bits, median error .62; foraging .3). **Where across the corridor a block lies** (every .25 s, the
+nearest block's side in the brain's frame, from the last .5 s of pulses and beats, a linear decoder): at most .02 bits a second in any
+arm, zigzags included. A block crossing the corridor gives one to five pulses: D21's and D41's wall, which movement doesn't breach.
+
+**What it says.** Dancing does yield what foraging doesn't, but only about the body, and only from one kind of cycle: one motor at a
+time, long enough for the view to come round several times. That is D20's sweep, already known. The rest of the variety we wrote tells
+these observers nothing new (straight, burst) or a little, coarsely (zigzags, which mix both motors and so smear the one clean
+recurrence), and costs food (zigzags meet blocks at random, and poison costs double). The same sweep that sets the balance also gives
+the stride (the mean of the two motors' beats a revolution), so **the tempo knob already has a measurer** (QUESTIONS.md: what measures
+the tempo knob?). Not shown: what an observer that knows a zigzag's physics would get; that the stride's estimate sets the tempo well in a
+life. For D2: cycles that mix motors spoil the evidence that matters here, so "many cycles at once" must at least take turns.

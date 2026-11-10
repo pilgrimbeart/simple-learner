@@ -5,3 +5,4 @@ venv/
 frames/
 experiments/results/*.pkl
 minimal/results/league_cache.json
+lab/v/*.pkl
