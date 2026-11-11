@@ -1,0 +1,6 @@
+forage  last third: efficiency +0.33 [+0.01,+0.70]
+play    last third: efficiency +0.41 [+0.09,+0.77]
+play ended by itself in 100% of lives; when: median 275 s, quartiles 258, 289 s
+play time beyond the first trial against the unit's ruler: rank correlation +0.33
+ruler bits per second of play: as played 0.81; every unit alike 0.80
+most played: u12 9 s (ruler 0.74), u19 8 s (ruler 0.94), u2 8 s (ruler 0.62), u18 8 s (ruler 0.94), u30 8 s (ruler 0.94), u32 8 s (ruler 0.88), u11 8 s (ruler 0.93), u24 8 s (ruler 0.71)

@@ -6,6 +6,15 @@ and when, why it matters, the line it belongs to, and the experiment that would 
 
 ## Scaling (the user's goal, 2026-11-09; `PROGRAMME.md`)
 
+- **Does boredom from certainty hold on fresh seeds, and on harder bodies?** (D48: designed and run on one seed set, +1.1 at once,
+  +2.1 after.) Then drag drawn too (the stride is in the same records), and more motors.
+- **Can the steady-view link match partners without assuming matching pairs?** (D47) Gaze stabilisation (set the drive where a forward
+  model predicts the view stays still) assumes nothing about the body's plan, but on cheap statistics its knob error was .17 to .29,
+  and more play made it worse (the statistic is biased). With each mix's turning read from beat-clocked records (as partners reads each
+  motor's), it might match partners and extend to any number of motors.
+- **Is the partners link acceptable as a mechanism?** (D47; the user's to judge) "Paired effectors equalise their effect a beat" is a
+  prior about the body's plan, generic to bilateral bodies, but it is also D43's formula in another form.
+- **Does play's payoff scale?** (D47) More body numbers drawn (drag: the stride is in the same records), more units, more motors.
 - **Does organising without reward make later learning fast?** (the user, 2026-11-10; README, What we've learned: latent learning.)
   The test: a life where the world first offers nothing to learn by taste (all food), then poison begins at a random moment. Does a
   brain that spent the quiet time predicting its own senses learn the change in fewer tastes than one that only foraged, counted

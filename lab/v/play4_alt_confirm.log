@@ -1,0 +1,4 @@
+gain a 10 s from the challenge's start [95%], and paired against forage | knob error: median, share within .2
+forage                 | 0-100 s +0.64 [+0.02,+1.31] | 100-300 s +0.96 [+0.39,+1.58]
+partners:beats         | 0-100 s +2.15 [+1.41,+2.91] vs forage +1.51 [+0.59,+2.43] | 100-300 s +2.12 [+1.39,+2.85] vs forage +1.15 [+0.23,+2.00] | knob 0.07, 53%
+partnersalt:beats      | 0-100 s +0.63 [+0.37,+0.89] vs forage -0.02 [-0.69,+0.60] | 100-300 s +2.57 [+1.94,+3.16] vs forage +1.60 [+0.76,+2.42] | knob 0.04, 70%

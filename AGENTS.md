@@ -114,6 +114,10 @@ situ, so the brain must do the work.
   what would tell that knob which way to turn, and try that. Recruiting new units is for what no setting of the existing knobs can do
   (something more to remember or tell apart), and a result that credits recruitment must show the knobs alone fall short on the same
   lives. A measurement that sets a knob directly beats trial and error on outcomes, when the brain's own senses can make it.
+- **Mechanisms, not features** (the user, 2026-11-10). Propose generic mechanisms that could produce a behaviour (rhythms, randomness,
+  self-judging banks), never the behaviour we have seen work ("build in a sweep"): the aim is a brain that tunes and modifies itself
+  with no understanding from us of why a circuit works, at far larger scales. A behaviour written by hand is a ruler (what information
+  exists), never the design; nor is a formula from a measurement to a knob, or a gate or rate tuned to this world.
 - **Local only, no god.** (No god is part of the goal. Locality comes from scale: a small brain may have any number of
   connections, but big brains can't have everything broadcasting to everything else, the user, 2026-11-09.) A unit knows only its own state and its neighbours' signals. It may draw from its own noise,
   but a choice among units comes from their local competition, never from outside. No unit knows it is optimally

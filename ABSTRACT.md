@@ -109,5 +109,5 @@ three quarters in 300 s.
 information to find anything new. So start with many movement cycles of different timings, each judged by its own prediction of what
 its movement makes the senses do, and let them settle on what works. The first count (D44): of nine movements, only spinning on one
 thruster at a time tells the body better than foraging (to about 4% in 100 s, against 27%), and it measures both knobs, the balance and
-how far a beat carries; mixing the motors smears that evidence, and no movement tells where a block lies across the path.
+how far a beat carries; no movement tells where a block lies across the path. A first verdict that driving straight tells nothing was our observer's blindness, not the movement's. Then, in the user's frame of play first and the challenge later (D47): a brain that played at random through a quiet spell, with nothing to taste, starts the challenge surely ahead of one that only foraged (+1.5 at once, about half the way to a brain told its body), by reading each motor's own beat-clocked record and making the two motors' effects equal; taste is best used to choose among play's few guesses.
 

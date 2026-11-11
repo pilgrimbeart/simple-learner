@@ -129,7 +129,8 @@ A weak thruster turned out to need no new part at all: one knob, set from a meas
 begin with a brain driven by many cycles of different timings, each checking its own prediction of what its movement will make the eyes
 see, and let the cycles settle on what works (`PROGRAMME.md`, The next phase). The first step counted what each movement tells (D44):
 only spinning on one thruster at a time, long enough to see the view come round, tells the creature about its body better than
-foraging does, and no movement tells it where a block lies across its path.
+foraging does (driving straight tells it too, which our first observer missed), and no movement tells it where a block lies
+across its path.
 
 What the manual designs have taught: a life offers about 50 bits of evidence, but writing down a world's rule takes
 hundreds, so no brain learns a world from nothing in one life: it can only choose among what its structure already makes
@@ -154,6 +155,15 @@ Three lines of work so far:
 
 The findings that changed the direction of the work, each told in full in the notebook named.
 
+- **Play pays later.** We gave the creature a quiet spell first, in which nothing it ate tasted of anything, and a lopsided body
+  (one thruster stronger than the other). Then, at a moment it couldn't know, food and poison began. A brain that spent the quiet
+  playing (moving in random rhythms, with no goal) started the challenge already compensating for its lopsided body, and ate surely
+  more from the first moment than one that had only foraged: about half the way to a brain told its body. What did the work was
+  simple: for each motor, a record of what the eyes saw at each of that motor's own beats, whenever it happened to be the only one
+  beating. That says how far one beat of that motor turns the creature, and the brain sets its two motors to match. Nothing chose the
+  movements, and taste was never used. When play wasn't sure (a period can be mistaken for its double), the best use of taste was to
+  choose among play's own few guesses. Without play, a brain searching by taste after the challenge began was surely worse off, since
+  it paid for its search while the food was on (`discrete/NOTEBOOK.md`, D47).
 - **Play: a brain should spend effort organising itself before any reward asks it to** (the user's insight, 2026-11-10, prompted by
   D44). A brain can make behaviours that win no food now, such as spinning on one thruster to watch the view come round, but that tune it
   to its body and world, and that pays off for the rest of its life. In D44 the spinning eats nothing while foraging eats, yet the knob
@@ -167,14 +177,16 @@ The findings that changed the direction of the work, each told in full in the no
   anyway, and used it at once when food appeared (Tolman 1948). For our goal it means that reward should only choose and tune, while
   most of a growing brain's organising comes from predicting its own senses (`PROGRAMME.md`, The next phase). The user's name for it is
   *play*, the same word as Der and Martius's *The Playful Machine* (2012), whose robots explore by their own prediction error.
-- **Variety isn't evidence: one clean movement tells the body, a jumble doesn't.** We wrote nine ways of moving and asked how much
-  each tells an observer about the creature's body (how its two thrusters compare, how far a beat carries it). Spinning on one thruster
-  at a time, long enough to see the view come round again and again, pins both to within about 4% in 100 s; ordinary foraging gets
-  only to about 27%. Driving straight or in bursts tells nothing, and zigzags, which use both thrusters at once, tell only a little,
-  because mixing the motors smears the one clean repetition. Nothing tells much within 30 s, and no movement tells where a block lies
-  across the creature's path: the eyes give too few pulses for that. So a dancing brain must take its moves in turns, not all at once.
-  A surprise in the physics: a stronger thruster and a lighter drag look the same to the eyes, so the creature needs to learn only how
-  far a beat carries it, and the same spin measures that too (`discrete/NOTEBOOK.md`, D44).
+- **What a movement tells about the body, and how our own observer can miss it.** We wrote nine ways of moving and asked how much
+  each tells about the creature's body (how its two thrusters compare, how far a beat carries it). Spinning on one thruster at a time,
+  long enough to see the view come round again and again, pins both to within about 4% in 100 s; ordinary foraging gets only to about
+  27%. Nothing tells much within 30 s, and no movement tells where a block lies across the creature's path: the eyes give too few pulses
+  for that. We first concluded that driving straight tells nothing, but that was our observer's blindness: a lopsided creature driven
+  straight goes round in circles, and how often its view repeats gives away how unequal its thrusters are. The observer we built from
+  our own understanding knew only about spins. That is the user's point about method in miniature: a measure that knows nothing of the
+  physics (how much the brain's own beats make its senses predictable) saw what our understanding missed. A surprise in the physics:
+  a stronger thruster and a lighter drag look the same to the eyes, so the creature needs to learn only how far a beat carries it
+  (`discrete/NOTEBOOK.md`, D44).
 - **Lock a clock to the world's changes, not to your own surprises, and move it no further than the evidence says.** Our first
   clocks reset themselves whenever the brain's guess was wrong. But a wrong guess isn't a change in the world, and a brain that guesses
   well stops being surprised, so those clocks wandered off. What works is to watch what the tastes reveal: when the food colour is seen
@@ -647,6 +659,10 @@ valuable first, in [`QUESTIONS.md`](QUESTIONS.md).
 
 - **Play** (the user, 2026-11-10): activity with no goal and no reward, which lets a brain organise itself to its body and world, so
   that later learning from reward is quick (README, What we've learned). The dancing brain is a brain that plays.
+- **Boredom** (the user, 2026-11-11): the switch between playing and working, set by whether learning or eating still pays. Bored
+  of play, a brain stops when it has stopped learning (D46: play ends by itself when no unit's predictions are improving beyond their
+  noise); bored of working, it plays when the world gives nothing (D47); the starting brain's own *bored* timer (running after some
+  seconds without food) is the same signal at a smaller scale. The flip side of curiosity (Schmidhuber; Oudeyer and Kaplan).
 - **Dancing brain** (`PROGRAMME.md`; D0 done, D44): a brain whose movement is driven from birth by many cycles of different timings, which
   settle on those that work. A **cycle** is one repeating pattern of movement with a recorder of what the senses did during it.
 - **Knob** (D43; AGENTS.md, Knobs first): a setting the brain already has (a rate, a balance, a threshold). The **balance** is how much

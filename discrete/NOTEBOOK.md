@@ -10,11 +10,17 @@ per meal spent resting, moving and thinking), gain rate (meals per 10 s), food, 
 
 ## Where it stands
 
-- **The dancing brain, D0 done** (D44, 2026-11-10; the user's phase, `PROGRAMME.md`): of nine hand-written movement cycles, only one
-  motor at a time (D20's sweeps) tells the body better than foraging (median error .04 against .27 on the balance at 100 s, and the
-  same on the stride, how far a beat carries); nothing knows much at 30 s; straight runs and bursts tell nothing, zigzags a little; no
-  movement tells where across the corridor a block lies. Strength and drag are one number to the eyes, the stride, and the sweep that
-  sets the balance measures it too. Next: the user's decision on D1 (a sweep that starts and stops itself, setting both knobs).
+- **Play pays later** (D45 to D47, 2026-11-10, the night's work): with a quiet spell first (meals worth nothing) and the challenge
+  (lopsided thrusters, food and poison) from a moment drawn each life, a brain that played at random in the quiet starts the challenge
+  surely ahead of one that only foraged: +1.5 at once and +1.2 after, on development and fresh seeds (told +3). What carried it: each
+  motor's own record clocked by its beats, pooled over whatever random movements used that motor alone, and a partners link making
+  the two motors' effects equal. Taste picking among play's own top hypotheses mends some period slips (+1.6 after, surely). Taste
+  alone, searching during the challenge, is surely behind; play by learning progress ends by itself but spreads thin; the steady-view
+  link on cheap statistics is close but not sure. Open: a steady-view link as good, without the partners assumption.
+- **Boredom from certainty** (D48, 2026-11-11): stopping play when the estimate stops moving is fooled by confident slips; stopping
+  when play's best guess clearly beats its rival, steering play to what raises that certainty and handing what doubt remains to taste,
+  sets the knob to .01 (90% within .2) and starts the challenge +1.1 at once and +2.1 after, surely (exploratory; to confirm on fresh
+  seeds).
 - **Knobs first** (D43, 2026-11-10; the user's rule): compensating for a weak thruster is one knob. Turned by trial and error it takes
   about 1000 s to close half the gap, since nothing tells it which way to turn; set from a measurement (a revolution timed with one
   motor) it closes three quarters or more by 300 s. The measurement can be made by D38's recording unit clocked by the brain's own beats
@@ -3115,3 +3121,139 @@ recurrence), and costs food (zigzags meet blocks at random, and poison costs dou
 the stride (the mean of the two motors' beats a revolution), so **the tempo knob already has a measurer** (QUESTIONS.md: what measures
 the tempo knob?). Not shown: what an observer that knows a zigzag's physics would get; that the stride's estimate sets the tempo well in a
 life. For D2: cycles that mix motors spoil the evidence that matters here, so "many cycles at once" must at least take turns.
+
+**Corrected (same day, D1's smoke):** straight runs do tell the body. A lopsided body driven straight circles, and the recurrence
+period of its view, in its own beats, tracks 1 / |k0 - k1|: 76% of bodies within 10%, where the period fits in 127 beats (two thirds
+of them). The observer missed it because its physical estimator knew only spins: the observer built from our understanding was the
+limit, not the movement. So "variety isn't evidence" overstates D0: other movements carry the body too, in forms our observer
+couldn't read. D1's ruler is physics-free for this reason (`lab/play1.py`).
+
+## D45: the playing brain's D1, step 1: a unit's own judgement doesn't find what tells the body (2026-11-10)
+
+`lab/play1.py`; `lab/v/dance_predictions.md` (11-16 and scores), `play1.log`, `dance0_confirm.log`. Also D44 confirmed: its mended
+observer, frozen, on fresh seeds (89000+) gives the same (sweeps' median error .05 and .04 at 100 s, foraging .23; every arm's bits
+within .3), so D44 stands as more than exploration (PROGRAMME.md, How we work: forking paths).
+
+The question (PROGRAMME.md, D1): can a generic self-judge find informative movement unaided? 40 rhythm units drawn at random (a square
+wave of period .2 to 20 s, any duty, rate 5 to 50 a second, random weights onto each motor in each part) and D0's four, each alone on
+300 bodies (thrusters and drag drawn), 100 s. Each unit's self-score: bits a second its own beats make the eyes predictable (its
+beat-clocked register: how much a cell k beats back tells about this one, the best k; and the same beyond the last beat's). The ruler:
+bits about the balance (or its size) and the stride, by an observer that knows no physics (D44's features plus each motor's recurrence
+period). Made physics-free after the smoke showed D44's observer blind to straight runs.
+
+**No.** The self-scores' rank correlation with the ruler is -.02 and -.22; none of the ruler's top five is among the self-judge's. The
+self-judge ranks highest one motor alone, steady or nearly (.8 to .9 bits a second): the most regular world a movement can make, which
+tells one thruster over the drag and nothing about the balance. The ruler ranks highest units that switch between the motors within a
+second or two (.7 to .9 bits on the balance) and sweeps for the stride (.95); switching makes each motor's register less regular, so
+they score low on the self-judge.
+
+**What it means.** Predictability isn't information about what varies. A unit judging itself rewards the movement that makes its world
+most regular, the stereotyped one. What tells the body is a contrast: the balance is the difference between what each motor does to
+the view, so no unit that drives one motor can see it, however well it predicts. The knowledge is in the comparison between units,
+not in any one. Not tried, and the next candidates (generic, none encodes the body): units judged by learning progress (how fast their
+predictions improve, which a stereotyped unit exhausts quickly), not by how predictable their world is; units judged by how much their
+predictions differ from their neighbours' (a contrast between units, made locally); the bank judged by how well its units' predictions
+let it predict an outcome that matters (D2's link).
+
+## D46: play first, the challenge later: what learning progress chooses (2026-11-10)
+
+`lab/play2.py`; `lab/v/dance_predictions.md` (17-19), `play2.log`. The user's frame: play is an investment, so a life of play first and
+the challenge later, judged by what play pays then. This step builds the play and asks what it chooses; no knob is set yet. D45's 40
+random units as a bank; each turn of 3 s goes to the unit whose own predictions are improving fastest (learning progress, Oudeyer and
+Kaplan 2007), in bits a second of play, its latest turn against its one before; each unit is tried twice first; play ends when no unit
+improves beyond twice its noise; then the starting brain forages. 900 s lives, thrusters and drag drawn, 20 pairs.
+
+Two traces before it ran: progress counted in a unit's own cells let units beating once a second hog play for 100 s each (they need
+that long to show anything), and "not yet known" read as "no progress" ended play after one turn each. Counted in bits a second of
+play, the currency play spends, both went.
+
+**Play ends by itself** in every life, at a median 275 s. **But it doesn't concentrate**: the most played unit gets 9 s, most get 7, and
+ruler bits a second as played are .81 against .80 for all units alike. Turn-on-turn progress is mostly noise, so each unit gets two or
+three turns and then none improves beyond its noise: learning progress as built samples everything briefly. Last third .41 against the
+starting brain's .33, tied, as expected with no knob set. In D44's terms 7 s of any movement tells next to nothing (sweeps needed about
+100 s), so play spread this thin gathers little about the body unless the link pools across units.
+
+## D47: play first, the challenge later: three links from play to the knob, and taste's search (night of 2026-11-10)
+
+`lab/play3.py`, `lab/play4.py`; `lab/v/dance_predictions.md` (20-32), `play3.log`, `play4.log`, `play4_confirm.log`,
+`play4_untaste.log`. The user asked for all three links (PROGRAMME.md, D2), then any other experiments. D46's play on lopsided bodies;
+what play leaves is each steady motor mix it played and the eye pulses during it. Two statistics of a mix: the view's recurrence period
+(precise, D44, but needs whole revolutions within one stretch) and new sightings a second (rises with how fast the mix turns the view,
+from any stretch; rank correlation .45 to .7 with the true turning rate across a life's mixes).
+
+**Why recurrence starves.** Play spreads over about 70 mixes, a median 3.7 s each in .65 s stretches; a mix that got time had its period
+right (2.34 against 2.26 s), but most never show a revolution. Banks of 4 or 10 units with 10 s turns didn't change that: a random bank
+rarely holds one motor alone for long.
+
+**The links** (900 s lives, last third; play3, 20 pairs; forage .62, told 2.31):
+- steady (gaze stabilisation: a forward model of how fast each mix turns the view, from sightings; the drive set where it predicts no
+  turning): knob error .26, gain +.01. Close, but the score is steep in the balance.
+- partners (each motor's effect from the mixes that beat it alone, made equal): error .56, -.06.
+- taste picks (five balances, 30 s each twice, the best kept; nothing from play): **+1.06 [+.61, +1.53]**, 75% within .2. Trial is
+  fast when it compares a few settings outright, not when it nudges (D19, D43: about 1000 s).
+
+**The user's frame: play first, the challenge later** (play4: meals worth nothing until a moment drawn at 400 to 600 s; scored from
+then). Taste can't search before the challenge, so it searches during it: **-1.04 and -.82 surely below forage** in the 300 s after
+onset on two seed sets, though it ends with a good knob. Steady, set by play before onset: +.76 and +.79 (the latter sure) on the
+development seeds, **+.54 and +.39 on fresh seeds, not sure** (knob error .17, then .29). Play's estimate then a short taste search
+near it (steadytaste): +.62 and **+.86 surely** in 100-300 s. So play pays later in sign, roughly: it saves taste most of its search.
+
+**Two dead ends.** Practice (the model learning on from foraging's scans and runs) drove the knob off by .4 to .7: a scan ends when
+something comes into view, so the scans that run their course saw little; closed-loop behaviour is biased evidence for an open-loop
+model. Playing on whenever nothing tastes (through the whole quiet spell) made the estimate worse (.27 against .17): the sightings
+model is biased, so more of its evidence doesn't help.
+
+**Where it leaves play.** The head start is real but small, limited by how well a random bank's short stretches can say how each mix
+turns the view. The precise statistic (recurrence) needs long single-mix stretches, which random rhythms rarely give; the cheap one is
+biased. What would make play pay well is a generic way to get long, clean stretches, or an estimator of turning that works on short
+ones. Taste comparing a few settings is the strong mechanism here, and play's best role is narrowing its search.
+
+**Then the precise statistic, from each motor's own record** (same night; `lab/v/play4_beats.log`, `play4_beats_confirm.log`,
+`play4_alt.log`, `play4_alt_confirm.log`; dance_predictions 33 to 37). One more cheap statistic failed first: one over a sighting's
+length (knob error .46). Then D43's record, generically: for each motor, every run of beats in which it alone beat, whichever random
+unit made it, as a record clocked by its own beats (rate changes within a run don't matter: the beats are the ruler), pooled over runs;
+each motor's beats a revolution by D44's rule; the partners link makes the two motors' effects equal. Nothing chooses a sweep: the
+evidence comes from the random units that happen to use one motor.
+- Play first, the challenge later (play4): **+1.55 [+.51, +2.62] at once and +1.23 [+.24, +2.30] after, surely**; on fresh seeds
+  **+1.51 [+.59, +2.43] and +1.15 [+.23, +2.00], surely** (told +2.9 to +3.3). Knob median error .07 to .10, but only 53 to 65% within .2:
+  19 of 30 bodies within .1, about 6 off by a doubled or halved period in one motor, a few by a factor 3 or 4 (D20's slips).
+- **Taste picks among play's own hypotheses** (each motor's best period and its best rival, the comb's runner-up; three candidate
+  balances, 30 s each from the first taste): costs the first 100 s (-.14, -.02) and pays after: **+1.97 and, on fresh seeds, +1.60
+  [+.76, +2.42] surely**, 70 to 72% within .2. About even with play's best guess over the 300 s; better for anything longer.
+
+**So play pays later.** A life of random rhythmic play, with no goal and nothing to taste, leaves each motor's own record; a generic
+partners link turns it into the balance knob before the challenge begins, and the creature starts the challenge with about half the gap
+to a brain told its body already closed. Taste's role is to choose among play's few hypotheses. What carried it: the record clocked by
+the brain's own beats (rate-free, gap-free), pooled across whatever random movements happened to use one motor; not learning progress
+(which only ended play), and not the steady-view model on cheap statistics. The partners link assumes the body comes in matching
+pairs; the steady-view link, which doesn't, needs a turning estimator as good as the record (QUESTIONS.md).
+
+## D48: boredom: bored when the estimate stops moving? (2026-11-11)
+
+`lab/play3.py` (stall, mover), `lab/v/play4_bore.log`; dance_predictions 38 to 40. The user: we have met boredom, playing until you stop
+learning (README, Terms). D46's boredom was learning progress (prediction improving turn on turn): it ended play well (~280 s) but
+couldn't steer it. The alternative tried, AGENTS.md's own "finished means its adjustment has stalled": play is over when the knob's
+estimate (D47's partners record) has its last five readings within .05; `stall` plays the units in a shuffled cycle, `mover` gives each
+turn to the unit whose last turn moved the estimate most. A first version ended play at 39 to 75 s, because turns that added no
+evidence left the estimate still: only turns that added a single-motor run count. 20 pairs, play4's frame.
+
+Mover plays half as long (median 135 s against 285), but its knob is worse (.26, 45% within .2, against .10, 65%) and its head start
+smaller and unsure (+.82 against +1.55 at once); stall is worse still (.32). **An estimate that has stopped moving isn't one that is
+right**: the comb's best period is sticky, so a slip (a doubled period), once on top, survives five more turns of evidence. Boredom
+from stillness is fooled by confident mistakes; learning progress, by playing longer, gathered enough to avoid more of them. What
+boredom should read instead is the estimate's uncertainty: how clearly play's best hypothesis beats its rival (the margin D47's taste
+choice already uses), bored when the margin is clear, and handing the rivals to taste when it isn't.
+
+**Then boredom from certainty** (same day; `lab/v/play4_certain.log`; dance_predictions 41, 42). Each motor's record gives play's best
+period, its strongest rival (another peak of the comb, not within a quarter) and the margin between them, in chance's spread. Bored when
+both margins reach 3, or when a taste ends play; a motor still in doubt hands its rival to taste (30 s a candidate). Traced first:
+rivals taken from the best's own shoulder gave margins of .1 to .4 always; a mover that found nothing raising certainty replayed one
+unit that never eats (ties now go to the least recently played). 20 pairs, development seeds:
+- `certainmover` (each turn to the unit whose last turn raised the certainty most): knob median error .01, 90% within .2; **+1.14 [+.26,
+  +1.92] at once and +2.05 [+1.27, +2.84] after, surely** (learning progress's partners +1.55, +1.23; told +2.87, +3.01). Certain and done
+  before the challenge in 20% of lives; otherwise it played on until food came (median 502 s) and taste settled the last doubt.
+- `certain` (units in a shuffled cycle): as accurate (90%) but never certain before the challenge, so taste always had a search to make
+  (-.28 at once, +1.78 after).
+So boredom should read certainty, not stillness: play on while the best guess doesn't clearly beat its rival, steer play to what raises
+that certainty, and hand what doubt remains to taste. One rule now covers when to stop playing and what taste is for. Exploratory
+(designed on these seeds): to confirm on fresh ones.
