@@ -159,6 +159,51 @@ Three lines of work so far:
 
 The findings that changed the direction of the work, each told in full in the notebook named.
 
+- **Growing freely and clearing out copies lets a brain keep learning** (confirmed on fresh creatures). Following your idea after
+  Dan Goodman's talk, we built a network of little detectors that grows by itself. Whenever a guess about which colour is food fails,
+  a new detector is made, joining the one that guessed wrong with one that was active just before it, so detectors build on
+  detectors. Two detectors that always fire together are copies, and one is removed; a detector nobody uses fades. The test was the
+  lesson where which colour is food follows a secret repeating pattern of colours, moving on at each good meal. The network
+  learns it as well as our hand-built learner, and better on the longest pattern. When the secret pattern changes halfway through
+  life, the network learns the new one almost fully, while the hand-built learner, and the same network without clearing, stay stuck on
+  the old one. Removing copies, not fading, does the work. Growth keeps making detectors the brain already has, because the same
+  mistake in the same situation makes the same new detector again; uncleared, the copies use up all the material and nothing is left
+  to learn with. Copies are easy to spot at once and locally (two neighbours always firing together), while being useless only shows
+  over a long time, so clearing copies is the fast way to keep room free. It also replaces a check no local brain can make: a new
+  detector can't look across the whole brain to see whether its twin already exists, but it can be made anyway and pruned when it
+  turns out to fire like its neighbour. Growing too much and pruning back is how young animal brains develop too
+  (`discrete/NOTEBOOK.md`, D59).
+- **A small economy can do the clearing out by itself.** Instead of written rules for removing copies and fading, each detector earns
+  when it guesses right and passes part of its earnings to the detectors it is built from; a new detector is paid for from its
+  parent's savings, and every detector pays a little rent to exist; one in debt is recycled. A copy never gets to guess (its twin
+  does), so it earns nothing and is evicted. When the secret pattern changes, this matches the written rules and beats our
+  hand-built learner (confirmed on fresh creatures); when nothing changes it costs a little. One lesson: charging detectors for being
+  active backfired, because the busiest detectors are the general ones everything else is built on (`discrete/NOTEBOOK.md`, D59).
+- **A bigger problem needs only more raw material, and the growing network takes only what it needs.** Making the secret pattern
+  longer (2 to 17 steps, each step red or blue) grows more detectors (17 up to about 50), with no one telling it the pattern's
+  length. Given more material it learns the long pattern better, until it has all it needs; beyond that, extra material simply goes
+  unused (`discrete/NOTEBOOK.md`, D59). This is the first time our goal, intelligence that scales, has been met in miniature.
+- **Knowledge makes skill worth having** (suggestive: the same size on two sets of creatures, sure on one). We gave the creature a
+  hidden rule to learn (which colour is food changes with a hidden word) and, in the same life, new parts to take up (the split eye and
+  small thrusters). The new parts let it steer better towards whatever it *believes* is food. For a brain that hasn't learned the rule,
+  and so is wrong about food half the time, steering better is worth nothing, or even harms: it steers more efficiently into poison.
+  For a brain that has learned the rule, the same new skill helps. So a skill is worth what the knowledge directing it is worth
+  (`discrete/NOTEBOOK.md`, D58).
+- **Hunger should say how much you're eating, not how it compares with your past.** In a world where eaten food grows back only
+  slowly (the user's idea), food runs short and rushing about wastes energy. A creature that slows down when it has been eating less
+  than some built-in sense of "normal" surely does better there, and loses nothing sure in an ordinary world. A creature that compares
+  its recent food only with its own recent past barely gains: once a lean world has lasted a while, lean feels normal. So the work
+  divides: making seeing and doing fit together settles *how* to move; hunger settles *how hard* (`discrete/NOTEBOOK.md`, D56). But on
+  fresh creatures the built-in "normal" was too high for many, which then went hungry in an ordinary world and lost food: the sense of
+  normal must fit the world, and how a creature could get it right by itself is still open.
+- **A slightly richer body can beat a much bigger brain** (the user's hypothesis, 2026-11-12, supported so far). Behind today's
+  eyes, a brain told where every block is (a full map) would forage nearly twice as well (D21), but the best a brain can infer from these
+  eyes gains nothing (D41): the information isn't there, so no amount of brain finds it. Split each eye into a left and a right half,
+  add small thrusters, and a reflex of a few parts, wired by the brain itself in play, gains about 40% (D55). Extra thrusters alone were
+  worth little: a body change pays when it supplies what is missing. This is a known idea: Pfeifer and Scheier's principle of
+  *ecological balance* (sensors, motors and brain matched in complexity) and *morphological computation* (the body sharing the work),
+  Wehner's *matched filters* (sensors shaped so the brain needn't model the world), and Braitenberg's vehicles (our split-eye reflex is
+  his vehicle 2b). For our goal, add more brain, it is a qualifier: no brain can find information its senses don't deliver.
 - **A brain can take up a new sense and new limbs in its life, if it plays with them first.** Part-way through life we gave the
   creature a new sense (each eye split into a left and a right half, on new wires it isn't told about) and new, smaller thrusters on
   new motor wires. Used well, they make it about a third better at foraging. Trying each possible new connection and judging it by food
@@ -168,6 +213,10 @@ The findings that changed the direction of the work, each told in full in the no
   The brain then connects each half of the new eye to the thruster that turns towards it, and gains surely on creatures it had never
   met. The new parts calibrate each other before food has any say (`discrete/NOTEBOOK.md`, D55). Two weak points remain: the reflex is
   simple, and play favours the thrusters whose effect it sees most clearly rather than those that steer best.
+  It scales in getting the wiring right (one, two or four new thrusters a side all surely help), but not in time: play tries one
+  thruster at a time, so learning takes longer the more parts there are, and over a whole life the cost grew faster than the gain
+  (D57). Playing only until it knows what it needs (one good thruster for each half of the new eye, not everything about every part)
+  surely helps at every size and keeps play short up to two new thrusters a side; at four it is still slow.
 - **Parts of a brain that tune themselves together must take turns.** Split the coupling search between the two motors, each tuning
   its own rate, and it fails if both adjust at once: neither can tell whose change made things better. Make them take turns, as two
   neurons in a Sepulchre half-centre do (one active while it holds the other quiet, until it tires and hands over), and the same two

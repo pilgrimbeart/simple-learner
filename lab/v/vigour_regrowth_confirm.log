@@ -1,0 +1,4 @@
+== hunger sets the tempo, in worlds where eaten food regrows after a delay; 10 pairs, 900 s, last third [95%]
+  plain     fixed +2.49 | slow +2.06 (-0.43 [-0.58,-0.27]) | hunger +2.30 (-0.19 [-0.37,-0.01]) | hungerabs +2.08 (-0.40 [-0.71,-0.11]) | hungerabs' tempo: median -0.22, quartiles -0.56, +0.05
+  regrow60  fixed +0.52 | slow +0.75 (+0.24 [+0.08,+0.38]) | hunger +0.54 (+0.03 [-0.16,+0.17]) | hungerabs +0.69 (+0.18 [-0.01,+0.32]) | hungerabs' tempo: median -1.00, quartiles -1.00, -1.00
+  regrow120 fixed -0.06 | slow +0.23 (+0.28 [+0.15,+0.38]) | hunger +0.03 (+0.09 [-0.04,+0.19]) | hungerabs +0.28 (+0.34 [+0.19,+0.44]) | hungerabs' tempo: median -1.00, quartiles -1.00, -1.00

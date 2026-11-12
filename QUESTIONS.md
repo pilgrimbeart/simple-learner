@@ -6,6 +6,22 @@ and when, why it matters, the line it belongs to, and the experiment that would 
 
 ## Scaling (the user's goal, 2026-11-09; `PROGRAMME.md`)
 
+- **How does a growing network find which clock matters?** (D59, stage 5.) Given its senses as separate lines, a block can keep time by
+  any of them (every taste, good meals, bad meals...). On the pattern lessons only good meals carry the pattern; blocks drawing other
+  clocks start lineages that crowd out the useful one. Candidates: a clock is itself a unit, kept or evicted by the economy; or clocks
+  compete by how much they reduce surprise (Plan2Explore's and our coupling's measure) before blocks are built on them.
+- **How should a shared energy supply be split so that rivals compete but parts of one chain don't?** (D59, the user's
+  blood-supply idea.) Shared by use, the copies starve, as hoped, but so do specialists beside the shorter blocks they're built from,
+  which always fire with them. Candidates: share only among blocks with no part in common; or let support flow down from users to parts
+  (trophic) with the supply buying firing rather than survival.
+- **What should hunger measure against?** (D56) Against a fixed normal it helps in lean worlds but costs where the normal is set too
+  high (fresh seeds: -.40 in the plain world); against the creature's own past it fails in a world lean all along. Candidate: meals per
+  pulse spent, against the exchange rate of a meal for pulses (an energy fact evolution knows), so a creature eats enough for its effort.
+- **How much brain does the map route need, against the body route?** (the user's hypothesis, 2026-11-12: a simple body limits a
+  simple brain, and a little more body buys what only a lot more brain could; ecological balance, Pfeifer and Scheier 1999; matched
+  filters, Wehner 1987.) Measure both in the same currency: the parts and bits of a brain that reaches D21's map level from today's
+  eyes (if any can), against the parts of the split-eye reflex (D55), on the same lives; and whether the scaling curve bends when the
+  body grows with the brain.
 - **How do units each judging by their own coupling avoid spoiling each other's comparisons?** (D52's end) One global search on one
   knob works; split across two motor units it fails three ways (rewarding slowness in fixed bins, cured by normalising; small nudges
   too weak to feel; overlapping wide searches). Candidates: a unit searches only while its own coupling has fallen (frustration), so

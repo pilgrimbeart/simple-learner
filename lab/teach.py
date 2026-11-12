@@ -430,6 +430,23 @@ def job(j):
         q = T.numbers(seed, {"P": P})
         q["P"] = P
         lf = WLife(seed, first, (lambda s: _C[arm](s, q)), w, seconds=True)
+    elif arm in ("net", "nonet", "netnf", "netnd", "neteco", "eco1", "net1", "net2", "eco2") or arm.startswith("netE"):
+        from stage2_lang.seconds import seconds_cls
+        if arm not in _C:
+            import grownet as GN
+            if arm in ("neteco", "eco1"):
+                _C[arm] = seconds_cls(GN.net_cls(prune=False, economy=True, one=arm == "eco1"))
+            elif arm == "net1":
+                _C[arm] = seconds_cls(GN.net_cls(one=True))
+            elif arm in ("net2", "eco2"):                    # separate sense lines with clocks
+                _C[arm] = seconds_cls(GN.net_cls(prune=arm == "net2", economy=arm == "eco2", one=True, lines=True))
+            elif arm.startswith("netE"):
+                _C[arm] = seconds_cls(GN.net_cls(prune=False, supply=float(arm[4:])))
+            else:
+                _C[arm] = seconds_cls(GN.net_cls(prune=arm != "nonet", fade=arm != "netnf", dup=arm != "netnd"))
+        q = T.numbers(seed, {"P": P})
+        q["P"] = P
+        lf = WLife(seed, first, (lambda s: _C[arm](s, q)), w, seconds=True)
     elif arm in ("events", "lock", "clocks", "treec"):
         from stage2_lang.seconds import seconds_cls          # its clocks change the colour between tastes, so not the compiled step
         if arm not in _C:
@@ -448,6 +465,10 @@ def job(j):
     if arm in ("tree", "treec"):
         b = lf.brain
         n = ((b.best["kind"] if isinstance(b.best["kind"], str) else f"clock{b.best['T']:.1f}") if b.best else "-", max(len(R["nodes"]) for R in b.regs) if b.best is None else len(b.best["nodes"]))
+    elif arm in ("net", "nonet", "netnf", "netnd", "neteco", "eco1", "net1", "net2", "eco2") or arm.startswith("netE"):
+        b = lf.brain
+        n = (b.best.kind if b.best else "-", b.alive()[b.nets.index(b.best)] if b.best else max(b.alive()),
+             sum(N.births for N in b.nets), sum(N.fades + N.starved for N in b.nets), sum(N.dups for N in b.nets))
     elif arm in ("events", "lock", "clocks"):
         n = (lf.brain.best[0]["kind"], lf.brain.best[1]) if lf.brain.best else None
         if arm == "clocks" and n and isinstance(n[0], tuple):
@@ -484,6 +505,10 @@ def run(pairs=20, dt=2.5, workers=7, seed0=L.SEEDS0 + 1000, arms=("bank", "grow"
                     if arm == "grow":
                         ns = [x[6] for x in res]
                         line += f" n{int(np.median(ns))}({min(ns)}-{max(ns)})"
+                    if arm in ("net", "nonet", "neteco", "eco1", "net1", "net2", "eco2") or arm.startswith("netE"):
+                        from collections import Counter
+                        line += " " + ",".join(f"{a}" for a, _ in Counter(x[6][0] for x in res).most_common(2))
+                        line += f" blocks {int(np.median([x[6][1] for x in res]))} born {int(np.median([x[6][2] for x in res]))} faded {int(np.median([x[6][3] for x in res]))} dup {int(np.median([x[6][4] for x in res]))}"
                     if arm in ("tree", "treec"):
                         from collections import Counter
                         line += " " + ",".join(f"{a}" for a, _ in Counter(x[6][0] for x in res).most_common(2)) + f" nodes {int(np.median([x[6][1] for x in res]))}"

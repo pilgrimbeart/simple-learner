@@ -418,7 +418,7 @@ class WLife:
         self.grow_at = None
         if WLife.extra:                                  # the new parts' wiring and growth, from their own stream (base lives unchanged)
             erng = np.random.default_rng(seed + 52_000_003)
-            self.wire_m = self.wire_m + [int(2 + i) for i in erng.permutation(4)]   # thrusters 2..5 (left/right at a half, a quarter)
+            self.wire_m = self.wire_m + [int(2 + i) for i in erng.permutation(2 * len(EXTRA))]   # thrusters 2.. (left, right at each strength)
             self.grow_at = float(erng.uniform(*GROW))
             self.fire_weight = 0.0
         if WLife.split:                                  # the new sense's wiring, growth and draws, from its own stream

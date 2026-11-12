@@ -1,0 +1,7 @@
+== body and rule in one life: seq rung 11, new parts at 100 to 300 s; 10 pairs, 1200 s, last third [95%]
+  circuit       -1.77 [-2.21,-1.16] | whole life -1.83 | meals 774
+  circuit+play  -2.02 [-2.58,-1.28]  vs circuit -0.26 [-0.47,-0.08] | whole life -1.81 | meals 734
+  tree          +1.33 [+1.01,+1.64]  vs circuit +3.10 [+2.48,+3.60] | whole life +1.03 | meals 774
+  tree+play     +1.46 [+1.13,+1.76]  vs circuit +3.22 [+2.71,+3.68] | whole life +0.95 | meals 686
+  tree+told     +1.22 [+0.77,+1.70]  vs circuit +2.98 [+2.51,+3.42] | whole life +1.25 | meals 835
+  do they add up? tree's gain + play's gain = +2.84; both together +3.22; interaction +0.38 [-0.15,+0.88]

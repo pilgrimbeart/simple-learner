@@ -54,6 +54,8 @@ def _init(dt, inst):
     sim.WLife.muscle = os.environ.get("MUSCLE") == "1"    # the muscle-like body for every life in this worker (PROGRAMME.md)
     sim.WLife.extra = os.environ.get("EXTRA") == "1"      # the new parts (two more thrusters a side) for every life in this worker
     sim.WLife.split = os.environ.get("SPLIT") == "1"      # the new sense (each eye split across the corridor) for every life
+    if os.environ.get("EXTRA_N"):                        # how many new thrusters a side (G3: does taking up new parts scale?)
+        sim.EXTRA = {"1": (0.5,), "2": (0.5, 0.25), "4": (0.5, 0.35, 0.25, 0.18)}[os.environ["EXTRA_N"]]
 
 
 def one(job):

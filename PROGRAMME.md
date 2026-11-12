@@ -4,7 +4,31 @@ One page to keep us on track. The goal and its test are in `README.md`, The goal
 
 **Our question, in one line** (adopted from the review of 2026-11-11, `lab/v/review_2026-11-11.md`): can compact, local, reusable mechanisms learn to predict through action, use sparse rewards to select useful behaviour, and grow their capacity without anything allocating it from outside? Its ingredients have names already (learning by exploring before reward: Plan2Explore, Sekar et al. 2020; information-driven, decentralised control of a body: Martius, Der and Ay 2013); what would be ours is doing it locally, compactly and with growth.
 
-## Next: a brain that takes up new parts (the user, 2026-11-12)
+## Now: the growing network (the user, 2026-11-12)
+
+The user's idea, after Dan Goodman's talk and Béna & Goodman 2025 (*Nature Communications*, "Dynamics of specialization in neural
+modules under resource constraints"): little blocks appear locally, each learns to detect a situation; duplicates are found and one
+removed; other blocks build on them, each kept distinct; growth has no goal and is limited only by the resources available; a block whose
+output is never used fades, and its fading prunes back everything only it supported. It subsumes the plan to bolt coupling, turns, play
+and hunger into one brain: they become things such a network might grow. Built as `lab/grownet.py` (predictions
+`lab/v/grownet_predictions.md`), first on the sequence ladder against D40's tree, which is the hand-shaped case (its recruits' partners
+fixed, never pruned).
+
+From the paper, three measures: specialisation measured, not assumed (bits each block carries about each feature: separate blocks don't
+guarantee separate jobs); it should appear only when the world's features are separable and supply is tight; jobs may shift over time, so
+nothing is frozen, and a block whose job moves elsewhere loses its users and is recycled. From the talk (the user): competition for energy,
+the blood supply, encourages modularity (one module very active leaves less for others; the sheet brain's idea, nca-learn): a variant in
+which the blocks firing at a moment share a fixed supply for learning and growth.
+
+**Since**: (4) size follows the problem: blocks 17 to 48 for patterns 2 to 17 steps long, and the share learned rises with material to about 50 blocks, then levels; the economy (conserved credit along the graph, rent, parents funding newborns) does the clearing out the written rules did when the world changes; (5) without our chosen streams: one stream of every taste ties on the combination lessons and loses on the pattern lessons; separate sense lines with clocks lose further: finding which clock matters is the open problem.
+
+**So far** (D59): (1) matches the tree, and is solved on 17 letters where the tree isn't; (3) relearns a changed word (+1.01 against the tree's -.34, fresh seeds), and removing duplicates, not fading, does it. Next: (2) the energy supply.
+
+Stages: (1) the network on the sequence ladder, against the tree, with material plentiful and scarce; (2) the energy supply; (3) the
+world changing mid-life (a new hidden word): do the old blocks fade and new ones grow; (4) does block count follow the bits the world
+needs, rung by rung; (5) the same blocks over the body's senses and actions (the new parts, D55 to D58).
+
+## Before: a brain that takes up new parts (the user, 2026-11-12)
 
 **The question.** So far the brain has met mismatches with its world or flaws in its body. Now: given a new actuator (later, a new
 sensor) part-way through life, can it incorporate it by itself: recruit connections to it, perhaps new blocks, and retune? Evolution
@@ -20,6 +44,10 @@ its strength (assumptions to confirm with the user).
 | G1 | The yardstick: a hand-designed brain told the wiring, using the new thrusters, against the starting brain, on plain and lopsided bodies and touching pairs | A certified gap somewhere, or a measured reason why none: if none, the parts add nothing to learn |
 | G2 | Incorporation in life, from generic mechanisms only: each new motor a unit, connected to the existing rhythms (scan, drive, run) by gains born at zero, tuned by D54's turn-taking units judged by coupling, with an Occam default of "not connected"; taste where speed is traded against care (D54's limit) | It closes half the yardstick's gap surely, and leaves the brain as it was where the parts don't help |
 | G3 | Fresh seeds; then more parts, to see whether turn-taking scales | |
+
+**Since** (D56, D57): hunger sets how hard to act, but its sense of normal must fit the world (fresh seeds: a fixed normal cost -.40 in the plain world); play in the lean spells changed nothing in a world lean most of the time; uptake by play scales in correctness (surely above base with 1, 2 or 4 new thrusters a side) but not in time (play 141, 243, 446 s; whole life -.15 to -.73), since interfering parts must take turns. Next: play that learns more per kick, or parts that don't interfere; then one brain with coupling, turns, play and hunger on the ladders.
+
+**Then** (D57, D58): play until it knows what it needs (one sure thruster for each new eye line) surely helps over the whole life at every size and keeps play short up to two new thrusters a side; body and rule in one life: a new skill is worth what the knowledge directing it is worth (the interaction +.40, +.38 on two seed sets, sure on one; play surely harms a brain wrong about food). Next, for the user: whether to make the integrated brain (coupling, turns, play, hunger, the tree) the next stage, on the ladders with an acting component.
 
 **Results so far** (`discrete/NOTEBOOK.md`, D55; `lab/v/newparts_predictions.md`). G0 built (both parts behind switches; off: identical lives). G1: the small thrusters alone are worth about 15% (the eyes are the limit); with the user's choice of a split eye as well, up to +1.0 (+45% plain, +75% touching pairs). G2: arcs judged by food fail, even over 3000 s; play first (still, one new thruster at a time, watched through the new eye) wires the arcs and surely gains on fresh seeds (+.39, with lateral inhibition between the new lines), matching the told arcs. Next: a richer reflex form (the told split-eye reflex is worth twice the arcs), play that values steering over visibility, and more parts (G3).
 

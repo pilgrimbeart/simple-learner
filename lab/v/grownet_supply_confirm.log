@@ -1,0 +1,3 @@
+== the hidden word changes mid-life: seq 11, a new word at 500 to 700 s; 10 pairs, 1500 s, last third, paired [95%]
+  unchanged P64  circuit -2.03 | tree +1.25 | net +1.22 | netE3 +0.88 | net-tree -0.03 [-0.22,+0.18] | net-netE3 +0.35 [+0.02,+0.65] | net blocks 30 faded 37 dup 164
+  changed   P64  circuit -2.04 | tree -0.80 | net +0.80 | netE3 +0.97 | net-tree +1.61 [+1.26,+1.85] | net-netE3 -0.16 [-0.43,+0.09] | net blocks 30 faded 36 dup 133

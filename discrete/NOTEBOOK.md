@@ -3651,3 +3651,193 @@ reaching what the reflex form gives told the wiring. What carried it: play judge
 3000 s), with the old behaviour paused so that one kick at a time is the only motion. What limits it: the reflex form (a kick per food
 pulse, worth +.13 to +.42 told, against D24's tuned reflex at +.8 to +.9), and a preference for the half thrusters, whose effect play
 sees most clearly, where quarters steer better.
+
+**Play's candidates chosen by coupling** (learn3c; smoke, 3 lives). Play's sure candidates are only ever the half thrusters (the
+quarters' effects too small to be sure of in the time), and joint coupling preferred no steering arc to a right half one (4.56 against
+5.79; 3.07 against 4.36), though such arcs surely raise food. A steering kick makes the drive less steady; coupling values steadiness,
+steering trades some for food: the tempo lesson of D54 again, a choice for the outcome, and food was too slow a judge here. Stopped at the
+smoke; play-then-wire-the-surest stays the learner. Where it leaves the principle: coupling sets what makes behaviour coherent (the
+balance, which motor turns which way); how much to trade steadiness for food (tempo, steering strength) needs a reward signal faster
+than whole-life food, which we don't yet have.
+
+## D56: hunger sets how fast to act; a world whose food regrows slowly (2026-11-12)
+
+`lab/vigour.py`; `lab/v/vigour*.log`; newparts_predictions V1 to V5. Coupling settles what makes behaviour coherent but can't settle how
+fast to act (D54). The user asked whether we have hunger (only a fixed boredom timer in the starting brain, and a hunger node in the
+minimal-circuit line), and proposed a world where eaten food regrows only after a delay, so that rich and lean spells alternate. The
+known answer: vigour follows the reward rate against the cost of effort (Niv, Daw, Joel and Dayan 2007); foraging theory's marginal value
+theorem (Charnov 1976) likewise turns on intake against its average.
+
+- **Food constant, drag drawn** (the tempo searched over 40 s windows by recent food, or by coupling): neither tracks the drag (correlations
+  +.19, +.18); recent food is too noisy a judge there (about 16 +-5 net a window). Coupling's preference for slowness costs less in
+  efficiency than in food per second, since slowness saves energy (+.19 surely above fixed).
+- **Regrowth delayed** (food hidden for 60 or 120 s once eaten; 3 to 9, or 0 to 2, of 18 food blocks alive): simply going slower surely
+  saves (+.21, +.24). Hunger as recent food against the creature's own long-run average helps little (+.08, +.05): it detects changes,
+  but a world lean all along comes to feel normal. **Hunger as recent food against a fixed, inherited "normal"** (the plain world's rate)
+  surely pays, +.33 and +.36, above always-slow, and costs nothing sure in the plain world (-.10). It sits at its slowest bound nearly
+  all life in the lean worlds, so part of the gain is plain slowness.
+So the two signals divide the work: coupling, what makes action coherent; hunger, measured against an inherited sense of normal, how
+vigorously to act. Not yet: play in the lean spells, or speed varying within a life as food comes and goes (the trace shows hunger pinned).
+
+**Fresh seeds** (108000+, 10 pairs; `lab/v/vigour_regrowth_confirm.log`; V6 wrong): hunger against the fixed normal surely *costs* in
+the plain world (-.40 [-.71, -.11]), helps surely only at 120 s regrowth (+.34; at 60 s +.18, not sure). Its normal (.6 meals a second)
+is too high for many of these creatures, which feel hungry in a world that is fine. Not tuned on these seeds (forking paths). The
+difficulty is real: a fixed normal must match the world; a normal learned from one's own past fails in a world lean all along. Parked:
+food per unit of effort (meals per pulse against the exchange rate of a meal for pulses, which evolution knows) as the yardstick.
+
+## D57: play in the lean spells, and whether taking up new parts scales (2026-11-12)
+
+`lab/uptake.py` (`UPTAKE_WORLD=regrow60`, arm leanlearn3bI; `EXTRA_N` for 1, 2 or 4 new thrusters a side); `lab/v/uptake_lean.log`,
+`uptake_scale_*.log`; newparts_predictions V7, G1, G2. The user's suggestion, joining D55 and D56: play when food is scarce, when there
+is little to lose. In the 60 s regrowth world, with the new eye and thrusters growing at 100 to 300 s (10 pairs, 900 s): playing at once
+(D55's learner) +.20 [+.09, +.33] above base in the last third, playing only while recent food is below its long-run average +.14 [+.04,
++.24]; over the whole life both below base (-.12, -.14): play's time has not paid back within 900 s. Playing only when lean changed
+nothing, since after the first minute food is scarce most of the time in this world (play finished 285 and 315 s after growth). When to
+play mattered less than how long play takes, which is the scaling question below.
+
+**Does it scale?** (G3; 1, 2 or 4 new thrusters a side, at strengths from a half down to .18; 1200 s lives, 10 pairs, plain world):
+
+| new thrusters a side | play done after growth | last third vs base | whole life vs base |
+|---|---|---|---|
+| 1 | 141 s | +.33 [+.16, +.52] | -.15 |
+| 2 | 243 s | +.33 [+.20, +.45] | -.36 |
+| 4 | 446 s | +.46 [+.10, +.76] (told arcs +.34) | -.73 |
+
+Play takes up the new parts correctly at every size and surely gains afterwards, but its time grows in proportion to the parts (1 : 1.7 :
+3.2): it tries one thruster at a time, as it must, since every new thruster moves the same view and their effects interfere (D54).
+Over a whole life its cost grows faster than its gain. So, as built, uptake by play scales in correctness but not in time. It would
+scale where parts don't interfere (tried at once, D54's prediction for independent parts) or if play learned more per kick (a side's
+thrusters all move the view the same way, so one kick could teach about its neighbours).
+**Play bored from certainty, per motor** (`lab/v/uptake_scale_4B.log`; G4): a motor sure at 3 standard errors played no more. No gain at
+4 a side (play 489 s after growth against 446; whole life -.74 against -.73; both lines right in 10% against 35%): the kicks only move to
+the quarters, which never become sure. Learning more per kick needs another idea.
+
+**b. Play until you know what you need** (the user: try b, then a; arms ending N; `lab/v/uptake_need_*.log`; G5, G6). Play ends as soon
+as each new eye line has a thruster surely moving activity out of its half, not when every thruster is known; the surest is wired.
+
+| new thrusters a side | median play after growth (all known) | whole life vs base (all known) | until needed vs all known, paired |
+|---|---|---|---|
+| 1 | 121 s (141) | -.02 (-.15) | +.13 [+.05, +.22] |
+| 2 | 110 s (243) | -.06 (-.36) | +.30 [+.17, +.44] |
+| 4 | 373 s (446) | -.52 (-.73) | +.21 [+.04, +.37] |
+
+Learning what the wiring needs, rather than everything about every part, surely helps at every size, makes play flat in time up to two
+parts a side (where it now nearly pays for itself within a life, and wires the right sides in 80%), but not at four, where each kick is
+spread over more thrusters and the strong ones take longer to become sure. The principle is boredom from certainty applied to the goal
+(a usable connection), not to each part.
+
+## D58: body and rule in one life: knowledge makes skill worth having (2026-11-12)
+
+`lab/mixed.py`; `lab/v/mixed_seq11.log`, `mixed_seq11_confirm.log`; newparts_predictions M1 to M3. The user's option a: a challenge where
+both matter in one life. A rung of the sequence ladder (a hidden word of 11 letters: the food colour follows it, learned from taste by
+D40's tree) and the new parts (split eye, two more thrusters a side, growing at 100 to 300 s, taken up by play until needed, with lateral
+inhibition). 1200 s lives, 10 pairs, efficiency in the last third against the starting brain:
+
+| arm | development seeds | fresh seeds |
+|---|---|---|
+| starting brain + play | -.06 | -.26 [-.47, -.08] |
+| tree (the rule) | +2.99 | +3.10 |
+| tree + play | +3.34 | +3.22 |
+| tree + told arcs | +3.22 | +2.98 |
+| interaction: both, less the sum of each alone | **+.40 [+.03, +.80]** | +.38 [-.15, +.88] |
+
+The gains don't simply add. Play's new steering reflex turns the creature towards whatever it believes is food, so for a brain wrong
+about food half the time (the starting brain on this rung) better steering is worth nothing, or surely harms (fresh seeds: -.26), while
+for the tree, which knows the rule, it helps. The interaction keeps its size on both seed sets (+.40, +.38), sure on one: suggestive, not
+established. If it holds, it says something about growing brains: a new skill is worth what the knowledge directing it is worth, so
+skills and knowledge should grow together, and taking up a new part is best judged after the brain knows what to use it for.
+
+## D59: the growing network (2026-11-12)
+
+The user's idea, after Dan Goodman's talk and Béna & Goodman 2025 (`PROGRAMME.md`, Now). `lab/grownet.py` (arms in `lab/teach.py`),
+`lab/grownet_switch.py`; `lab/v/grownet_seq.log`, `grownet_switch.log`, `grownet_switch_ablate.log`; predictions R1 to R7. Blocks born
+beneath contradictions joining any two units active together (senses or blocks: sequences of sequences); a readout on each; use flowing
+back from right guesses to the blocks each is made of; blocks unused for 200 s fade, taking their dependants; two blocks firing alike over
+30 steps lose the less used. D40's tree is the hand-shaped case (each recruit's partner fixed, nothing pruned).
+
+**On the sequence ladder** (20 pairs, unpaired intervals): it matches the tree on 5 and 11 letters (.57 both; .84 against .73) and is
+solved on 17 letters where the tree is not (.62 [.55, .69] against .50 [.42, .58], P 64). With P 16 all fill their material and tie.
+Its blocks rise with the word: 8, 27, 30 (material 30 a stream).
+
+**When the hidden word changes mid-life** (11 letters, a new word at 500 to 700 s, 1500 s lives, last third, paired, P 64):
+
+| | development seeds | fresh seeds |
+|---|---|---|
+| tree | -.46 | -.34 |
+| net | **+1.15** (unchanged word: +1.34) | **+1.01** |
+| net, no fading | | +.78 (-.24 [-.02, +.49]) |
+| net, no duplicate removal | | +.07 (-.94, sure) |
+| net, neither | -.44 | |
+| net - tree | +1.61 [+1.18, +2.03] | +1.36 [+.94, +1.77] |
+
+The growing network relearns a changed world; the tree and the unpruned network stay stuck on the old word. The work is done by removing
+duplicates, not by fading (R7 the wrong way round): births keep remaking blocks already there (about 140 removed a life, 35 faded), and
+left alone they fill the material. Recycling the redundant keeps material free for whatever comes next, Dohare's finding in a new form.
+With P 32 neither word is learned by anyone.
+
+Why removing copies works (the user asked, 2026-11-12): the same mistake in the same situation makes the same new block again, so
+growth by local rules makes copies; copies add nothing but hold material. Redundancy shows at once and locally (two blocks firing alike),
+uselessness only over a long time, so clearing copies keeps room free far faster than fading. And it stands in for a check no local
+brain can make: a newborn can't search the brain for its twin, but it can be made and pruned when it fires like a neighbour. Grow freely,
+prune copies: the local alternative to looking before you grow (as young brains overproduce and prune). The finding depends on this
+growth rule making copies; one that never made them would need no removal, but only by a check that isn't local.
+
+**The blood supply, first look** (smoke, 2 pairs; `lab/v/grownet_predictions.md`, stage 2): blocks firing at the same moment share a
+supply by their use; a block whose store runs out is recycled; no explicit fading or duplicate removal. It relearns a changed word about
+half as well as the full network (212 against 417, summed). The supply's size hardly matters (it rarely runs short); what acts is the
+zero-sum split among blocks firing together. Its newborn's store sets turnover against keeping: small, and newborns die before they prove
+themselves; large, and copies fill the material as with no removal. Open: a split that protects the young (a newborn's share from its
+parents' use, say) without a tuned store.
+
+**Competition for a supply** (the user's blood-supply idea; `lab/v/grownet_predictions.md` R8 to R12; `grownet_supply*.log`,
+`grownet_why*.log`). Blocks firing at the same moment share a supply; a block whose store runs out is recycled; no written fading or copy
+removal. Version 1, sharing by use with newborns inheriting their weaker parent's standing: ties the written rules when the pattern
+changes (+1.19 against +1.15; fresh seeds +.97 against +.80, and +1.77 above the tree) but surely costs when it doesn't (-.35): a block
+that looks far back fires only beside its shorter parents, which hold more credit (their descendants' successes pass down to them), so
+the specialist starves beside its own parents. Version 2, parents fed by their dependants and the rest sharing by their own record: worse
+(turnover collapsed). Its supply from 1 down to .03 a second: best near .3, never tying. In versions 1 and 2 at 1 a second or more the pool
+never ran short, so the "competition" was only a zero-sum split of what the firing blocks needed. Parked, with the question: how should a
+supply be shared so that rivals compete but parts of one chain don't? (QUESTIONS.md.)
+
+**Does its size follow the problem?** (`lab/grownet_scale.py`; `lab/v/grownet_scale.log`, `grownet_material_*.log`; R13 to R15.) Patterns
+2 to 17 steps long (each step red or blue), material plentiful (128 a stream), 1500 s lives: share of the gap closed .91, .95, .89, .88, .88,
+.82, .81; blocks alive 17, 20, 28, 40, 44, 43, 48 (about 15 plus 2 a step, far below the material). On the pattern 17 steps long, fresh
+seeds, material from 16 to 512: share .32, .31, .60, .86, .85, .85, blocks 6, 14, 30, 45, 49, 49. A bigger problem needs only more raw
+material, and the network takes what it needs and no more; nobody tells it the problem's size.
+
+References for the supply question (checked 2026-11-12): van Ooyen & Willshaw 1999, Proc. R. Soc. B 266:883 (competition for neurotrophic
+factor; and with Ramakers 2000, inputs spread apart on a target's dendrites compete less and coexist); Baum 1999, "Toward a model of
+intelligence as an economy of agents", Machine Learning 35:155 (credit must be conserved, or parasites multiply); Carandini & Heeger 2012,
+Nat. Rev. Neurosci. 13:51 (normalisation pools). Version 1's fault in Baum's terms: credit was copied in full to every ancestor, not paid.
+
+**The economy** (the user: competition defined by the graph; R16 to R18; `lab/v/grownet_economy*.log`, `grownet_why3.log`). No written
+fading or copy removal: a right guess earns 1; a block keeps half and pays the rest to the two units it is made of, which do the same, so
+credit is conserved along a chain (Baum); a parent funds its newborn from its savings, so only blocks that have earned can reproduce; every
+block pays rent to exist; a block in debt is recycled with its dependants. A copy never guesses (its older twin does), earns nothing and
+is evicted; a specialist pays its parents instead of competing with them. A first version also charged for each firing: it starved the
+general blocks (short look-backs fire at nearly every step but earn only shares), whose recycling took their specialists with them
+(-.54 when the pattern doesn't change). With rent alone:
+
+| | development seeds | fresh seeds |
+|---|---|---|
+| pattern changes: economy, written rules, tree | +1.02, +1.15, -.46 | +.91, +.89, -.38 (economy - tree +1.29 [+.92, +1.59]) |
+| pattern unchanged: economy, written rules, tree | +1.13, +1.34, (+1.25 elsewhere) | +1.18, +1.50, +1.27 |
+
+So one generic mechanism, a conserved economy along the graph, does what two written rules did when the world changes, at a cost of .2
+to .3 when it doesn't (sure on one seed set). The charge for activity, the user's blood-supply idea in its first form, was what hurt: in
+this network the most active blocks are the general ones everything rests on. A supply limiting activity may still make sense among rivals
+(siblings), not along a chain.
+
+**Stage 5, taking away the streams we chose** (`lab/v/grownet_predictions.md` R19 and after; `grownet_one_*.log`; bench
+`lab/grownet_bench.py`). The two streams were our choice, and one, the food colour at each good meal, moves exactly as the pattern
+lesson does. One stream of every taste (four symbols: colour eaten, good or bad): ties the two streams on the combination lessons (food
+by the last colours eaten) but surely loses on the pattern lessons (.38 against .56 at 5 steps, .50 against .77 at 11): a bad meal doesn't
+move the pattern on, so bad tastes break up the run a block must recognise. A version with separate sense lines, where each block keeps
+time by a clock of its own (every taste, or one sense line's firings) so it could count good meals by itself, does worse still; on a
+bench without a body it reaches 84% where the two-stream net reaches 98%. Most new blocks draw a clock that carries nothing, and the
+lineages they start are the ones that grow. Parked: how a network finds which clock matters, by local rules.
+On the bench, the clock was not the limit: with the useful clock forced the separate-lines net still reached only 84%. Two senses fire at
+each taste (good, and the colour eaten), and growth kept happening beneath "good", a sense right 80% of the time on its own, so blocks
+never took in the colour just eaten. Joining units at the same moment, and growing beneath the most specific unit while the surest
+speaks, lift it to 70-89% (patterns 5 steps) and 66-73% (11), against the two-stream net's 98% and 91-94%. Open: which unit should grow,
+and which speak, when several senses fire at once.

@@ -16,9 +16,14 @@ learn3: play first (the user: an instinct to play with its senses and body first
 in view on the new lines, one new motor's kick or none, in turn, then a pause for its motion to fade; a look-around beat of the scanning
 motor when nothing has been in view for a while; each motor's effect is how it moves activity between the two new lines (the new sense teaching the new
 actuator, no food involved); a line's candidates are the motors that surely move activity out of its half (turning towards what is
-there); then taste chooses among those few, as learn2. learn3b: play's surest candidate per line wired at once, no taste. Arms
+there); then taste chooses among those few, as learn2. leanlearn3bI: as learn3bI, but playing only while food is scarcer than usual
+(recent FAST s of good meals below the long-run SLOW s), foraging as usual otherwise. Arms ending B: play bored from certainty (a
+motor sure at PLAY_BORED standard errors, after PLAY_MIN kicks, is played no more; play ends when every motor is sure or has PLAY_N). Arms ending N: play
+until each new line has a motor surely moving activity out of its half (all the wiring needs), then the surest wired.
+learn3b: play's surest candidate per line wired at once, no taste. Arms
 ending I: the arcs with lateral inhibition between the two new lines (an arc fires only if its line saw more food pulses than the other
-in the last INHIB_W s: D24's condition, as one line suppressing the other).
+in the last INHIB_W s: D24's condition, as one line suppressing the other). learn3c: play's candidates (and none) for each line in turn,
+CHOOSE_W s windows twice each, the one with most joint coupling kept (Occam against none): steering judged by coupling, not visibility.
 Arms: base (the original parts only), told (D24's reflex with a quarter
 kick, told the map, from the growth), toldarcs (the learner's arc form with the right arcs on, told: does the form suffice?), learn.
 
@@ -35,11 +40,17 @@ import newparts as NP
 import stage3_random as R
 
 import os
+WORLDS = {"plain": "(world)", "regrow60": "(world (on meal (if (= colour F) (do (hide block) (after 60 (show block))))))"}
+WORLD_TEXT = WORLDS[os.environ.get("UPTAKE_WORLD", "plain")]   # UPTAKE_WORLD=regrow60: food regrows only 60 s after it is eaten (D56)
+FAST, SLOW = 20.0, 200.0                        # s: playlean's two running averages of good meals (lean: recent below long-run)
 SECS = float(os.environ.get("UPTAKE_SECS", 900.0))      # (UPTAKE_SECS: longer lives, for an evidence-starved learner)
 BIN = 0.05
 TRY = 10.0
+CHOOSE_W = 20.0                                 # learn3c: s a window in the choice among play's candidates, by coupling
 INHIB_W = 0.2                                   # s: lateral inhibition between the new lines (arms ending I): an arc fires only if
                                                 # its line saw more food pulses than the other line in the last INHIB_W s
+PLAY_BORED = 3.0                                # bored play (arms ending B): a motor sure at this many standard errors is played no more
+PLAY_MIN = 20                                   # ... once it has at least this many kicks (and the control as many)
 PLAY_N = 120                                     # learn3: probes per new motor (and of the control) in play
 SETTLE = 0.15                                   # learn3: s for a kick's motion to fade before the next
 LOOK = 0.5                                      # learn3: s with nothing in view before a look-around beat
@@ -50,15 +61,19 @@ SURE, MAXV = 2.0, 6                             # an arc is decided when its mea
                                                 # (at least 3 visits); still unsure after MAXV visits, it stays off (Occam)
 REFRACT = 0.2
 OCCAM = 1.05
-ARCS = [(line, motor) for line in (2, 3) for motor in (2, 3, 4, 5)]
+MOTORS = [2, 3, 4, 5]                           # the new motor lines (set from sim.EXTRA in _init: 2 per new strength)
+ARCS = [(line, motor) for line in (2, 3) for motor in MOTORS]
 
 
 def _init():
+    global MOTORS, ARCS
     R._init(0.0025, False)
     from stage2_lang import sim
     sim.WLife.extra = True
     sim.WLife.split = True
     sim.GROW = (100.0, 300.0)
+    MOTORS = list(range(2, 2 + 2 * len(sim.EXTRA)))
+    ARCS = [(line, motor) for line in (2, 3) for motor in MOTORS]
 
 
 def _mi(J):
@@ -87,16 +102,25 @@ def arcs_cls(cls):
             self.diffs, self.decided = {a: [] for a in ARCS}, {}
             self.open, self.out, self.turn, self.choice = [], {a: [] for a in ARCS + [(2, None), (3, None)]}, {2: 0, 3: 0}, {}
             self.lines, self.play_open, self.play_turn, self.play_last, self.last_line = [], [], 0, -1e9, -1e9
-            self.shift, self.effect = {m: [] for m in (2, 3, 4, 5, None)}, None
+            self.shift, self.effect = {m: [] for m in list(MOTORS) + [None]}, None
+            self.lean_only = mode.startswith("lean")    # leanI: play only while food is scarcer than usual (the user: play in the lean spells)
+            mode = mode[4:] if self.lean_only else mode
+            self.fast = self.slow = 0.0
+            self.need_play = mode.endswith("N")         # arms ending N: play until each new line has a sure motor, no longer
+            mode = mode[:-1] if self.need_play else mode
+            self.bored_play = mode.endswith("B")        # arms ending B: boredom from certainty in play (D48)
+            self.sure = set()
+            mode = mode[:-1] if self.bored_play else mode
             self.inhib = mode.endswith("I")
             self.rl = []
             mode = mode[:-1] if self.inhib else mode
             self.mode = mode
             self.on = set(right or []) if mode == "toldarcs" else set()
             self.mode3b = mode == "learn3b"
-            if mode == "learn3b":
+            self.mode3c = mode == "learn3c"
+            if mode in ("learn3b", "learn3c"):
                 self.mode = mode = "learn3"
-            self.cands = None if mode == "learn3" else {2: [2, 3, 4, 5], 3: [2, 3, 4, 5]}
+            self.cands = None if mode == "learn3" else {2: list(MOTORS), 3: list(MOTORS)}
             self.rng_arcs = np.random.default_rng(int(self.t * 1000) + 7)
 
         def stimulate(self, sensor, at):
@@ -142,7 +166,9 @@ def arcs_cls(cls):
             if self.play_open or self.t < self.play_last + PRE + SETTLE:
                 return []
             if self.t - self.last_line < 0.1:
-                opts = [2, 3, 4, 5, None]
+                opts = list(MOTORS) + [None]
+                if self.bored_play:                     # boredom from certainty: motors already sure are played no more
+                    opts = [m for m in MOTORS if m not in self.sure] + [None]
                 m = opts[self.play_turn % len(opts)]
                 self.play_turn += 1
                 self.play_last = self.t
@@ -164,17 +190,55 @@ def arcs_cls(cls):
                     keep.append([m, t0])
             self.play_open = keep
             self.lines = [x for x in self.lines if x[0] > self.t - 2 * PRE - 0.1]
-            if all(len(self.shift[m]) >= PLAY_N for m in (2, 3, 4, 5, None)):
+            if self.need_play and len(self.shift[None]) >= PLAY_MIN:   # play until each new line has a sure motor (all it needs)
+                ctrl = np.array(self.shift[None], float)
+                z = {}
+                for m in MOTORS:
+                    x = np.array(self.shift[m], float)
+                    if len(x) >= PLAY_MIN:
+                        se = math.sqrt(x.var(ddof=1) / len(x) + ctrl.var(ddof=1) / len(ctrl)) + 1e-9
+                        z[m] = (x.mean() - ctrl.mean()) / se
+                if any(v >= SURE for v in z.values()) and any(v <= -SURE for v in z.values()):
+                    self.effect = {m: z.get(m, 0.0) for m in MOTORS}
+                    self.cands = {2: [m for m in MOTORS if self.effect[m] >= SURE], 3: [m for m in MOTORS if self.effect[m] <= -SURE]}
+                    self.log.append((round(self.t), "play done", {m: round(v, 1) for m, v in self.effect.items()}, self.cands))
+                    if self.mode3b:
+                        for line in (2, 3):
+                            m = max(self.cands[line], key=lambda mm: abs(self.effect[mm]))
+                            self.choice[line] = (line, m)
+                            self.on.add((line, m))
+                    return
+            if self.bored_play and len(self.shift[None]) >= PLAY_MIN:
+                ctrl = np.array(self.shift[None], float)
+                for m in MOTORS:
+                    x = np.array(self.shift[m], float)
+                    if m not in self.sure and len(x) >= PLAY_MIN:
+                        se = math.sqrt(x.var(ddof=1) / len(x) + ctrl.var(ddof=1) / len(ctrl)) + 1e-9
+                        if abs((x.mean() - ctrl.mean()) / se) >= PLAY_BORED:
+                            self.sure.add(m)
+            done = all(len(self.shift[m]) >= PLAY_N for m in list(MOTORS) + [None])
+            if self.bored_play:
+                done = all(m in self.sure or len(self.shift[m]) >= PLAY_N for m in MOTORS) and len(self.shift[None]) >= PLAY_MIN
+            if done:
                 ctrl = np.array(self.shift[None], float)
                 self.effect = {}
-                for m in (2, 3, 4, 5):
+                for m in MOTORS:
                     x = np.array(self.shift[m], float)
                     se = math.sqrt(x.var(ddof=1) / len(x) + ctrl.var(ddof=1) / len(ctrl)) + 1e-9
                     self.effect[m] = ((x.mean() - ctrl.mean()) / se)
                 # a line's candidates: the motors that surely move activity out of its half (towards the other line)
-                self.cands = {2: [m for m in (2, 3, 4, 5) if self.effect[m] >= SURE],
-                              3: [m for m in (2, 3, 4, 5) if self.effect[m] <= -SURE]}
+                self.cands = {2: [m for m in MOTORS if self.effect[m] >= SURE],
+                              3: [m for m in MOTORS if self.effect[m] <= -SURE]}
                 self.log.append((round(self.t), "play done", {m: round(v, 1) for m, v in self.effect.items()}, self.cands))
+                if self.mode3c:                         # learn3c: choose among play's candidates by joint coupling, line by line, in turns
+                    self.sched = []
+                    for line in (2, 3):
+                        opts = sorted(self.cands[line]) + [None]
+                        self.choice[line] = None
+                        if len(opts) > 1:
+                            self.sched += [(line, o) for o in opts * 2]
+                    self.cscore = {}
+                    self.cwin = None
                 if self.mode3b:                         # learn3b: play's surest candidate per line wired at once (its certainty is the Occam bar)
                     for line in (2, 3):
                         c = self.cands[line]
@@ -184,6 +248,49 @@ def arcs_cls(cls):
                             self.on.add((line, m))
                         else:
                             self.choice[line] = None
+
+        def _choose_by_coupling(self):
+            """learn3c: windows of CHOOSE_W s, each with one candidate (or none) for one line, the joint coupling of the eyes with the
+            original motors counted (D51); when a line's windows are done, its best option kept (a change from none must beat it by
+            OCCAM)."""
+            if self.t >= self.next_bin:
+                if self.prev is not None and self.cwin is not None:
+                    self.J[0][self.prev[1], self.s_bin] += 1
+                    self.J[1][self.prev[0], self.a_bin] += 1
+                self.prev, self.s_bin, self.a_bin = (self.s_bin, self.a_bin), 0, 0
+                self.next_bin += BIN
+            if self.cwin is not None and self.t < self.cwin[2]:
+                return
+            if self.cwin is not None:
+                line, opt, _ = self.cwin
+                self.cscore.setdefault((line, opt), []).append((_mi(self.J[0]) + _mi(self.J[1])) / BIN)
+                if not any(x[0] == line for x in self.sched):          # this line's windows done: keep its best
+                    sc = {o: np.mean(v) for (l, o), v in self.cscore.items() if l == line}
+                    best = max(sc, key=sc.get)
+                    if best is not None and sc[best] > OCCAM * sc.get(None, 0.0):
+                        self.choice[line] = (line, best)
+                        self.on.add((line, best))
+                    else:
+                        self.choice[line] = None
+                    self.log.append((round(self.t), "chose", line, best, {o: round(v, 2) for o, v in sc.items()}))
+            self.J[0][:], self.J[1][:] = 0, 0
+            if self.sched:
+                line, opt = self.sched.pop(0)
+                self.choice[line] = (line, opt) if opt is not None else None
+                self.cwin = (line, opt, self.t + CHOOSE_W)
+            else:
+                self.cwin = None
+                self.mode3c = False                     # done: work with the choices
+
+        def taste(self, value, at):
+            if value > 0:
+                self.fast = getattr(self, "fast", 0.0) + 1.0 / FAST
+                self.slow = getattr(self, "slow", 0.0) + 1.0 / SLOW
+            super().taste(value, at)
+
+        def lean(self):
+            wf, ws = 1.0 - math.exp(-self.t / FAST), 1.0 - math.exp(-self.t / SLOW)
+            return self.fast / max(wf, 1e-9) < self.slow / max(ws, 1e-9)
 
         def _free(self, line):
             """Lateral inhibition (arms ending I): the line fires only if it saw more recent food pulses than the other new line."""
@@ -255,6 +362,9 @@ def arcs_cls(cls):
 
         def step(self):
             out = super().step()
+            if getattr(self, "lean_only", False):
+                self.fast *= math.exp(-0.0025 / FAST)
+                self.slow *= math.exp(-0.0025 / SLOW)
             beats = list(getattr(self, "beats", None) or [])
             for m, _ in beats:
                 if m < 2:
@@ -263,13 +373,16 @@ def arcs_cls(cls):
                 beats += self.pending
                 self.pending = []
             self.beats = beats
-            if self.mode == "learn2" or (self.mode == "learn3" and self.cands is not None):
+            if self.mode3c and self.cands is not None:
+                self._choose_by_coupling()
+            elif self.mode == "learn2" or (self.mode == "learn3" and self.cands is not None):
                 self._close_probes()
             elif self.mode == "learn3" and self.woke is not None:
                 self._close_play()
-                if self.cands is None:                  # still playing: the base behaviour's beats are withheld
+                if self.cands is None and (not self.lean_only or self.lean()):   # still playing (when lean, for playlean)
                     beats = self._play()
                     self.beats = beats
+                    self.played = getattr(self, "played", 0.0) + self.p.get("_dt", 0.0025)
             if self.mode == "learn" and self.woke is not None:
                 if self.t >= self.next_bin:
                     if self.prev is not None:
@@ -313,12 +426,12 @@ def make(arm, seed, first):
         return NP.make("plain", "splitQ", seed, first)
     q = T.numbers(seed, {"sync": 1})
     cls = seconds_cls(T.Circuit) if arm == "base" else arcs_cls(seconds_cls(T.Circuit))
-    lf = WLife(seed, first, (lambda s: cls(s, q)), S.world_of("(world)"), seconds=True)
-    if arm in ("learn", "toldarcs", "learn2", "learn3", "learn3b", "toldarcsI", "learn3bI"):
+    lf = WLife(seed, first, (lambda s: cls(s, q)), S.world_of(WORLD_TEXT), seconds=True)
+    if arm in ("learn", "toldarcs", "learn2", "learn3", "learn3b", "toldarcsI", "learn3bI", "learn3c", "learn3cI", "leanlearn3bI", "learn3bIB", "learn3bIN"):
         right = []
         for h in (0, 1):                                # a block in the right half (1): the left side's quarter turns it right
             side = 0 if h == 1 else 1
-            right.append((lf.wire_h[h], lf.wire_m[4 + side]))
+            right.append((lf.wire_h[h], lf.wire_m[len(lf.wire_m) - 2 + side]))      # the smallest new thruster on that side
         lf.brain.setup(arm, right)
         lf.right_arcs = right
     return lf
@@ -333,8 +446,10 @@ def job(j):
     g = [a - COST * c for a, c, _ in l]
     sp = spent(l)
     b = lf.brain
-    sides = {lf.wire_m[th]: th % 2 for th in range(2, 6)}
+    sides = {lf.wire_m[th]: th % 2 for th in range(2, len(lf.wire_m))}
+    play_done = next((e[0] for e in getattr(b, "log", []) if len(e) > 1 and e[1] == "play done"), None)
     return dict(arm=arm, seed=seed, eff=(0.0, 0.0, g[2], sp * l[2][2] / sum(t for _, _, t in l)), grow=lf.grow_at, sides=sides,
+                play_done=play_done, whole=(sum(g), sp),
                 on=sorted(getattr(b, "on", set()) or []), right=sorted(getattr(lf, "right_arcs", [])), log=getattr(b, "log", []))
 
 
@@ -350,23 +465,30 @@ def report(rows, arms):
         line = f"  {a:9s} {e[0]:+.2f} [{np.percentile(e[1], 2.5):+.2f},{np.percentile(e[1], 97.5):+.2f}]"
         if a != "base":
             line += f"  vs base {e[0] - base[0]:+.2f} [{np.percentile(d, 2.5):+.2f},{np.percentile(d, 97.5):+.2f}]"
-        if a in ("learn", "learn2", "learn3", "learn3b", "learn3bI"):
+        if a in ("learn", "learn2", "learn3", "learn3b", "learn3bI", "learn3c", "learn3cI", "leanlearn3bI", "learn3bIB", "learn3bIN"):
             side = lambda arcs, r: {(l, r["sides"].get(m)) for l, m in arcs}
             exact = np.mean([set(map(tuple, r["on"])) == set(map(tuple, r["right"])) for r in rs])
             sideok = np.mean([side(map(tuple, r["on"]), r) == side(map(tuple, r["right"]), r) for r in rs])
             has = np.mean([set(map(tuple, r["right"])) <= set(map(tuple, r["on"])) for r in rs])
             wrong = np.mean([len(set(map(tuple, r["on"])) - set(map(tuple, r["right"]))) for r in rs])
             line += f" | arcs exactly the told two {exact:.0%}; right side for both lines {sideok:.0%}; told two on {has:.0%}; others on, mean {wrong:.1f}"
+            pd = [r["play_done"] - r["grow"] for r in rs if r.get("play_done") is not None]
+            if pd:
+                line += f" | play done {np.median(pd):.0f} s after growth (median), in {len(pd)} of {len(rs)} lives"
+        if a != "base":
+            wb = np.array([r["whole"][0] for r in rows if r["arm"] == "base"]).sum() / np.array([r["whole"][1] for r in rows if r["arm"] == "base"]).sum()
+            wa = np.array([r["whole"][0] for r in rs]).sum() / np.array([r["whole"][1] for r in rs]).sum()
+            line += f" | whole life {wa - wb:+.2f}"
         print(line, flush=True)
 
 
-ARMS = ("base", "told", "toldarcs", "learn", "learn2", "learn3", "learn3b", "toldarcsI", "learn3bI")
+ARMS = ("base", "told", "toldarcs", "learn", "learn2", "learn3", "learn3b", "toldarcsI", "learn3bI", "learn3c", "learn3cI", "leanlearn3bI", "learn3bIB", "learn3bIN")
 
 if __name__ == "__main__":
     a = sys.argv[1:]
     n = int(a[0]) if a and a[0].isdigit() else 10
     s0 = next((int(x[1:]) for x in a if x.startswith("s") and x[1:].isdigit()), 103000)
-    out = f"/home/pilgrim/git/simple-learner/lab/v/uptake_{n}_s{s0}_{int(SECS)}s.pkl"
+    out = f"/home/pilgrim/git/simple-learner/lab/v/uptake_{n}_s{s0}_{int(SECS)}s{os.environ.get('UPTAKE_WORLD', '')}{'_x' + os.environ['EXTRA_N'] if os.environ.get('EXTRA_N') else ''}.pkl"
     if "report" not in a:
         import ledger
         ledger.start()
