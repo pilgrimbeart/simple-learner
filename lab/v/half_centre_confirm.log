@@ -1,0 +1,12 @@
+== lopsided: 20 pairs; gain from onset, a 10 s, vs forage [95%] | knob: median error, within .2 | search done (median s; before onset)
+forage          | +1.07, +0.00 [+0.00,+0.00] | +1.16, +0.00 [+0.00,+0.00]
+couple:occam    | +2.59, +1.53 [+0.85,+2.29] | +3.21, +2.06 [+1.43,+2.68] | 0.09, 82% | 510 s; 50%
+local:halfj     | +3.08, +2.01 [+1.21,+2.82] | +2.87, +1.71 [+0.99,+2.45] | 0.07, 90% | 400 s; 100%
+local:turnsj    | +1.31, +0.25 [-0.38,+0.85] | +1.53, +0.37 [-0.19,+0.98] | 0.21, 45%
+== plain: 10 pairs; gain from onset, a 10 s, vs forage [95%] | knob: median error, within .2 | search done (median s; before onset)
+forage          | +4.33, +0.00 [+0.00,+0.00] | +4.31, +0.00 [+0.00,+0.00]
+couple:occam    | +4.37, +0.04 [-0.66,+0.78] | +4.26, -0.04 [-0.35,+0.25] | 0.00, 100% | 510 s; 50%
+local:halfj     | +4.20, -0.13 [-0.76,+0.57] | +4.07, -0.24 [-0.69,+0.18] | 0.00, 100% | 400 s; 100%
+local:turnsj    | +1.84, -2.49 [-3.86,-1.20] | +1.81, -2.49 [-3.69,-1.19] | 0.14, 50%
+local:halfj: the units' mean log rate (tempo) at the end: median +0.00, quartiles +0.00, +0.02
+local:turnsj: the units' mean log rate (tempo) at the end: median -0.05, quartiles -0.35, +0.33

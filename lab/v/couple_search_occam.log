@@ -1,0 +1,6 @@
+== lopsided: 20 pairs; gain from onset, a 10 s, vs forage [95%] | knob: median error, within .2 | search done (median s; before onset)
+forage          | +0.82, +0.00 [+0.00,+0.00] | +1.04, +0.00 [+0.00,+0.00]
+couple:occam    | +2.13, +1.32 [+0.51,+2.15] | +2.36, +1.32 [+0.59,+2.13] | 0.13, 70% | 510 s; 30%
+== plain: 10 pairs; gain from onset, a 10 s, vs forage [95%] | knob: median error, within .2 | search done (median s; before onset)
+forage          | +4.09, +0.00 [+0.00,+0.00] | +4.26, +0.00 [+0.00,+0.00]
+couple:occam    | +3.52, -0.56 [-1.16,-0.03] | +4.12, -0.14 [-0.82,+0.47] | 0.00, 95% | 510 s; 40%

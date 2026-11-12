@@ -1,0 +1,7 @@
+== both: 20 pairs; gain from onset, a 10 s, vs forage [95%] | knob: median error, within .2 | search done (median s; before onset)
+forage          | +0.39, +0.00 [+0.00,+0.00] | +0.52, +0.00 [+0.00,+0.00]
+told            | +4.17, +3.78 [+3.04,+4.49] | +4.06, +3.54 [+2.97,+4.07]
+couple:occam    | +1.81, +1.43 [+0.65,+2.28] | +2.18, +1.66 [+0.94,+2.46] | 0.09, 72% | 510 s; 40%
+local:halfj     | +1.93, +1.54 [+0.65,+2.36] | +2.24, +1.72 [+0.96,+2.47] | 0.11, 75% | 400 s; 100%
+local:halfj: tempo against the drag (log rate against log drag, the told tempo): median error 0.35, within .2 25%; correlation +0.21
+local:halfj: the units' mean log rate (tempo) at the end: median -0.02, quartiles -0.15, +0.18

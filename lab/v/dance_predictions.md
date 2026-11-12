@@ -218,3 +218,173 @@ lives): every knob within .05; certainmover certain and done by itself in 3 of 4
 (-.18) at once; told +2.87, +3.01. certain (no steering) never became certain before the challenge (its doubts went to taste: -.28 at
 once, +1.78 after); certainmover did in 20% of lives, and otherwise played until food came (median 502 s). Exploratory: designed on
 these seeds; to confirm on fresh ones.
+**Confirmation** (`lab/play4.py 30 ... s93000`, frozen):
+43. certainmover surely above forage in both windows on fresh seeds, and 80% or more within .2. 65%.
+**Scored 43** (`lab/v/play4_certain_confirm.log`, seeds 93000+, 30 pairs): mostly right. 90% within .2 (median .01); +2.24 [+1.40,
++3.06] after, surely (told +2.98: three quarters of the gap); at once +.74 [-.18, +1.68], not sure (taste's last search falls there).
+
+# P1: explain the play result (the review of 2026-11-11). Predictions (main session, 2026-11-11), before the lives
+`lab/p1.py 30 s94000` (fresh seeds, the design frozen in its docstring): four arms with 400 s of play each (no other end), the same
+estimator and hand-over to taste; play4's world. Measured: gain from onset against forage; knob error after taste; each motor's best
+guess at play's end within 10%; calibration (motors that say sure, margin >= 3: how many wrong by >10%, how many by a doubled or halved
+period); play's motor beats.
+44. With play time equal, certainty-directed play is not surely better than uniform play on knob error or gain (D48's edge was mostly
+    longer play and taste's choice). 65%.
+45. Learning progress with 400 s of play does at least as well as it did with ~285 s (knob within .2 above 65%). 60%.
+46. Of motors that say sure, at least 15% are wrong by more than 10%: the margin is not calibrated. 55%.
+47. Every play arm surely above forage in 100-300 s. 80%.
+**Scored 44-47** (`lab/v/p1.log`, seeds 94000+, 30 pairs). 44 wrong, the good way: at equal play time and similar motor beats (4529,
+4942, 4652), certainty-directed play surely beats uniform play: gain +.94 [+.35, +1.57] at once and +.74 [+.21, +1.30] after, and
+motors within 10% +18 points [+8, +28] (93% against 75%). Against learning progress it is ahead but not surely (+.41 [-.16, +1.01], +.43
+[-.06, +.93]; +5 points [-5, +15]). 45 right: learning progress with 400 s, knob within .2 in 92%. 46 wrong: of motors that say sure, none
+was wrong (0%), but few say sure (3% uniform, 12% lp, 28% certain): the margin is conservative, not overconfident. 47 right: every play
+arm surely above forage in 100-300 s (+1.43, +1.74, +2.17).
+
+# P2, route A: taste discovers how to use play's records. Predictions (main session, 2026-11-11), before the lives
+The user: try all three routes (taste picks the readout; evolution learns it; play that feeds a mix model), then abstract. Route A:
+after play (learning progress, D46), each motor's best period from its own record (D47); nine readouts, every signed combination of
+the two measures (ours, the first minus the second, among them); taste tries each 20 s from the first taste and keeps the best. The
+discovery costs log2 9 = 3.2 bits of choice, paid in food. Smoke: two lives, both picked ours. play4's frame, 20 pairs, seeds 92000+.
+48. readout's knob within .2 in at least 60% of lives (ours, partners, 65%). 60%.
+49. readout below partners in 0-100 s (its trials), and in 100-300 s within .5 of partners. 55%.
+50. readout above taste alone (five knobs, 30 s twice) in 100-300 s. 60%.
+**Scored 48-50** (`lab/v/p2a.log`): 48 wrong: readout's knob within .2 in 48% (median error .60). 49 half right: below partners at once
+(-1.01 [-1.67, -.37] against forage, surely worse than no play), but far below partners after (-.11 against +1.23). 50 right in letter:
+above taste alone after (-.11 against -1.04), both paying for their search. Nine readouts at 20 s each is too little food to tell them
+apart: discovering the link in life by taste costs more than it wins within 300 s.
+
+# P2, route B: evolution learns the readout. Predictions (main session, 2026-11-11), before the lives
+`lab/p2b.py train 20`: training bodies 92000+; features from learning-progress play; each body's food from onset at 17 knobs; the
+readout w0 b0 + w1 b1 + c searched on a grid, judged only by food.
+51. The search finds a readout within .3 of ours in each weight (+1, -1, 0). 70%.
+52. Its training food within 10% of our formula's. 75%.
+**Scored 51-52** (`lab/v/p2b_train.log`, 40 training lives): the search's readout is +1.00 b0 - .70 b1 - .80: the same shape as ours (a
+difference of the two motors' measures), w1 within .3, but an offset of -.8 (51 wrong in c). Training food 68.4 against our formula's 58.0
+and each life's best knob 105.8 (52 wrong: 18% above ours, likely fitting the training lives' slips).
+53. On fresh seeds (95000+, 30 pairs, real play, the readout frozen), the evolved readout is not surely better than ours in 100-300 s,
+    and not surely worse. 60%.
+**Scored 53** (`lab/v/p2b_test.log`, fresh seeds 95000+, 30 pairs): wrong. The evolved readout is surely above forage (+1.40 [+.71,
++2.12], +1.33 [+.65, +2.03]) but surely below our formula (-.65 [-1.11, -.17], -.87 [-1.29, -.46]); knob .18 (53% within .2) against
+ours .02 (67%). The shape transferred; the offset fitted the 40 training lives.
+54. Retrained on 60 bodies (seeds 92000-92059; first void run aside, no other change), the offset shrinks below .4 in size. 55%.
+**Scored 54** (`lab/v/p2b_train60.log`, 120 training lives): wrong. The same readout (+1.00, -.70, -.80), training food 52.1 against
+our formula's 50.2: the offset is stable, not noise. But on fresh lives with real play it was surely worse than ours (53). Evolution's
+fitness (a forager set to the knob from birth, then the challenge) scores our formula at about 1.7 a 10 s, real lives at 2.5 to 2.8: the
+proxy disagrees with real use, and evolution found what the proxy rewards. Not chased further.
+
+# P2, route C: play that feeds a model of mixed commands. Predictions (main session, 2026-11-11), before the lives
+`lab/p2c.py 20` (seeds 92000+): the slow bank (periods 8 to 60 s, 20 s turns, 400 s of play in a shuffled cycle); each mix's own
+record gives its turning a beat; the drive's knob at the minimum of turning against knob (a V fitted, generic minimisation; the
+steady-view goal inherited); taste picks among the minimum and +- .3. Traced first: mixed records give the right period (29.2 against
+29.4 beats) with small margins; a first rule keyed on margins threw them away. Arms: forage; partners (our formula, on the same slow
+play); steady. Smoke (3 lives): two within .2, one off by 2.
+55. steady's knob within .2 in at least 50% of lives. 50%. Surely above forage in 100-300 s. 55%.
+56. partners on slow play at least as accurate as on the fast bank (within .2 in 65% or more). 65%.
+**Scored 55-56** (`lab/v/p2c.log`, 20 pairs): 55 wrong: steady's knob within .2 in 32% (median .81); -.34, +.22 against forage, not
+sure. Mixed records are often right but ten noisy points don't pin the minimum, and the true turning against knob is not a symmetric V.
+56 right, strongly: partners on the slow bank, 85% within .2 (median .01), +2.43 [+1.33, +3.42] and +2.32 [+1.16, +3.36]: slow rhythms
+give long single-motor runs.
+
+# Understanding as coupling (the user's principle, 2026-11-11): does coupling peak at the right knob? Predictions, before the lives
+`lab/couple.py 20`: the starting brain with its balance knob fixed at 17 settings; play4's quiet spell (no taste at all), 50 to 400 s;
+I(A_t; S_t+1) + I(S_t; A_t+1) at the interface in 50 ms bins (4 states each), bits a second. 20 lopsided bodies, 10 plain. Smoke (one
+body, right knob -1.13): 4.7 bits a second at -1.0, 2.3 at 0, 1.3 at +1.2.
+57. On lopsided bodies, the knob of most coupling is within .4 of the right one in at least 70% of bodies. 60%.
+58. On plain bodies, it is within .4 of 0 in at least 70%. 65%.
+59. The policy term (senses to actions) carries most of it. 70%.
+**Scored 57-59** (`lab/v/couple.log`, seeds 97000+): all right, more strongly than predicted. Lopsided bodies: the knob of most coupling
+within .2 of the right one in 95%, within .4 in 100%, median error .07, correlation +1.00 across 20 bodies. Plain bodies: at 0 in all
+10. The peak is sharp (+1.94 bits a second above a body's mean at the right knob, +.76 and +.42 at .4 either side). Policy (senses to
+actions) 3.3 bits a second, forward .2.
+**How fast coupling tells settings apart** (the same lives re-run keeping each life's bins, windows from 50 s):
+60. In 30 s of foraging the right knob beats one .4 off in at least 80% of comparisons. 55%. The best of 17 settings is within .2 of
+    right in at least half of bodies by 60 s. 50%.
+**Scored 60** (`lab/v/couple_speed.log`): right. The right knob beats one .4 off in 75% of comparisons at 10 s, 88% at 30 s, 98% at 60 s;
+the best of 17 settings within .2 of right in 60%, 80%, 95% of bodies at 10, 30, 60 s. (The rerun's totals: `couple_rerun.log`.)
+
+# Coupling as a mechanism: the knob searched by the brain's own coupling. Predictions (main session, 2026-11-11), before the lives
+`lab/couple_search.py 20` (fresh seeds 98000+): the starting brain forages from birth; a 4 x 4 counter at its interface; a golden-
+section search over the knob, each setting judged by 30 s of coupling, done when the bracket is under .3 (about 180 s, before the
+earliest onset). Arms: forage, told, partners (play + our formula), couple; plain bodies: forage, couple. Scored from onset (play4).
+Smoke (4 lives): done at 180 s, knob errors .27, .12, .06; plain -.06.
+61. couple's knob within .2 in at least 70% of lopsided bodies. 60%.
+62. couple surely above forage in both windows, and not surely below partners. 60%.
+63. On plain bodies couple ties forage (no sure cost). 75%.
+**Scored 61-63** (`lab/v/couple_search.log`, 20 pairs): 61 right: couple's knob within .2 in 80% (median .09), done at 180 s, before
+onset in every life. 62 right: surely above forage (+1.55 [+.74, +2.40], +1.71 [+.87, +2.52]); partners +2.13, +1.91. 63 wrong: on plain
+bodies couple is surely below forage (-1.38, -1.45) though its knob ends .06 from 0. Traced: not an artefact of the drive's two
+oscillators (a paired drive doesn't help: plain body at knob .1, 2.49 unpaired, 2.26 paired, against 4.2 at 0); the score is that
+steep in the knob (.03 costs .9, .1 costs 1.7, .3 costs 3.3), and foraging's default 0 is exactly right on a plain body by construction.
+The search must be more precise.
+64. couple:fine (bracket to .1, 60 s judgements once under .5; exploratory, same seeds) halves plain's cost and is within .5 of partners
+    on lopsided bodies in both windows. 50%.
+**Scored 64** (`lab/v/couple_search_fine.log`): half right. On lopsided bodies couple:fine ties partners (+2.14, +1.96 against +2.13,
++1.91; 80% within .2): the formula-free search matches our formula. On plain bodies the cost stays (-1.22, -1.40; error .08): longer
+judgements didn't buy precision.
+65. couple:fit (the parabola's top through all judgements near the bracket) brings the median knob error below .05 on both bodies.
+    40%. Plain cost under -.7. 40%.
+**Scored 65** (`lab/v/couple_search_fit.log`): wrong. couple:fit median error .09 lopsided, .05 plain; plain cost -1.12, -1.47.
+Traced why plain is unforgiving: each beat is a kick of about 18 degrees; at equal rates every beat pairs with the other motor's and
+the kicks cancel; at a 3% difference an unpaired kick comes every 30 or so beats and loses the block. So equal rates is a knife-edge
+sweet spot, which foraging sits on by construction and no continuous search lands on exactly.
+66. couple:occam (the default, no adjustment, kept unless the answer's coupling is 10% higher, 60 s each) removes most of the plain
+    cost (better than -.5 in both windows) and costs under .3 on lopsided bodies against couple:fit. 50%.
+**Scored 66** (`lab/v/couple_search_occam.log`): half right. Plain: -.56 at once, -.14 [-.82, +.47] after (tied), knob exactly 0 in 95%.
+But the search and check take a median 510 s, done before onset in only 30 to 40% of lives, and on lopsided bodies it falls to +1.32,
++1.32 (couple:fit +1.92, +1.86; knob .13, 70%). The Occam check buys the plain body back at the price of time.
+**Confirmation on fresh seeds** (99000+, 20 pairs, frozen): forage, told, partners, couple:fine, couple:occam.
+67. couple:fine ties partners on lopsided bodies (difference's interval includes 0) in both windows. 60%.
+68. couple:occam ties forage on plain bodies in 100-300 s. 60%.
+**Scored 67-68** (`lab/v/couple_search_confirm.log`, fresh seeds 99000+, 20 pairs): 67 right: couple:fine ties partners (+.60 [-.60,
++1.80], +.58 [-.74, +1.82]). 68 right: couple:occam ties forage on plain bodies (+.04, -.04; knob exactly 0 in 100%). And more:
+couple:occam is surely above partners in 100-300 s (+1.01 [+.23, +1.85]; +.52 [-.28, +1.44] at once), 82% within .2, 72% of told's
+gap there (-.81 [-1.19, -.41] against told).
+
+# Is precise timing of the kicks worth learning? (the user, 2026-11-11). Predictions (main session), before the lives
+`lab/kick_timing.py 20` (seeds 98000+; play4's frame): the told brain two ways: the rate knob (each motor its own rate) against equal
+rates with a scheduler that, at each pair of beats, fires both or drops one, whichever leaves the heading's accumulated turn nearest
+straight (error diffusion). Two bugs traced in the smoke (the scheduler only ever dropped one motor; an empty tick reset its account).
+69. The scheduler is not surely better than the rate knob on lopsided bodies: the kick's size, not its timing, is the limit. 55%.
+**Scored 69** (`lab/v/kick_timing.log`): right. The scheduler is slightly worse than the rate knob (-.35 [-.74, +.03], -.54 [-.83, -.22]);
+and the told rate knob on lopsided bodies (+3.85, +4.11) already equals foraging on a plain body (+3.98, +4.16): no headroom for timing.
+
+# Taking turns: Sepulchre's half-centre as two motor units searching in turn (the user, 2026-11-12). Predictions, before the lives
+`lab/couple_local.py 20 forage couple:occam local:turns local:turnsj local:half local:halfj` (dev seeds 98000+; play4's frame). Each
+motor unit has its own gain; a unit's search (golden section on its own gain, 20 s a point, an Occam check at the end) is its turn;
+while it searches the other holds (inhibition); at the end it is bored (fatigue) and, if it moved, the other rebounds. Judged either by
+the unit's own coupling (half, turns) or by the joint coupling of the eyes with both units' beats, which each unit sees from its
+neighbour (halfj, turnsj). turns/turnsj: both units searching at once, from random starts (no turn-taking). Smoke (5 lives): halfj
+within .2 in 4 of 5 lopsided bodies and exact on plain; half (own signal) mostly stuck at 0: a unit's own coupling rises with its own
+rate whatever the balance (traced: unit 1 favoured +.79 where -.64 was right).
+70. halfj within .2 of right in at least 70% of lopsided bodies, and ties couple:occam (the global search) in 100-300 s. 55%.
+71. turnsj (the same joint signal, both at once) surely worse than halfj in 100-300 s: taking turns is what makes the local version work. 60%.
+72. half and turns (own signals) fail, whatever the timing. 75%.
+**Scored 70-72** (`lab/v/half_centre.log`, `half_centre_merged.log`; turnsj first run void: an edit routed it to the half-centre with own
+signals, fixed and rerun on the same lives): 70 right: halfj within .2 in 80% (median .11), +1.74 [+.91, +2.57] and +1.50 [+.75, +2.26],
+ahead of the global search (+.42, +.18, not surely), done at 400 s, before onset in every life; plain bodies left exactly alone (100%).
+71 right: both units at once by the same joint signal (turnsj) +.54, +.33, 40% within .2, wrecking plain bodies (-3.1); halfj surely
+above it (+1.20 [+.33, +2.13], +1.18 [+.29, +2.11]). Taking turns is what makes the local search work. 72 right: by their own signals,
+in turns or at once, the units fail (0% and 20% within .2).
+73. Confirmation on fresh seeds (99000+, 20 pairs): halfj surely above forage in both windows, and surely above turnsj in 100-300 s. 70%.
+**Scored 73** (`lab/v/half_centre_confirm.log`, fresh seeds 99000+, 20 pairs): right. halfj +2.01 [+1.21, +2.82], +1.71 [+.99, +2.45],
+90% within .2 (median .07), done at 400 s before onset in every life; surely above turnsj (+1.76 [+.89, +2.63], +1.34 [+.65, +2.02]);
+tied with the global search (+.48, -.34); plain bodies alone (-.13, -.24, exact 0 in 100%).
+
+# Two dimensions: the balance and the tempo, by turn-taking units (`lab/couple_local.py 20 forage told couple:occam local:halfj both`)
+Thrusters and drag drawn (a half to twice each), play4's quiet spell; told: the balance and the tempo (bodyladder's toldbody). Each unit's
+gain is its own rate, so two units set the balance (their difference) and the tempo (their sum); nothing in them knows of drag.
+74. halfj's balance within .2 in at least 60% of bodies (drag makes the coupling landscape harder). 55%.
+75. halfj's tempo tracks the drag (correlation of the units' mean log rate with log drag above +.3). 35%: the bracket of a unit's later
+    turns (+-.5) and the Occam check bias it to stay near 1, and coupling may not care much about speed.
+**Scored 74-75** (`lab/v/half_centre_both.log`, 20 pairs): 74 right: halfj's balance within .2 in 75%, +1.54 [+.65, +2.36], +1.72 [+.96,
++2.47], tied with the global search (+1.43, +1.66); told +3.78, +3.54. 75 as doubted: the units' tempo hardly tracks the drag
+(correlation +.21, 25% within .2 of the told tempo): the gap to told is the tempo.
+76. (`lab/couple_tempo.py 12`) Coupling peaks at the right tempo (log drag) with no reward: correlation of the tempo of most coupling
+    with log drag above +.5. 45%. And food peaks there (it must, by the told arm). 80%.
+**Scored 76** (`lab/v/couple_tempo.log`): half right. Coupling's tempo correlates +.52 with log drag but sits about .7 below it (peak at
+-.8: half the right speed); food peaks at the right tempo or a little above (correlation +.90). Likely the binned yes-or-no measure
+(slower beating makes beat-or-not more variable).
+77. Coupling from beat counts (0 to 3 a bin) instead of yes-or-no peaks within .3 of the right tempo (median). 40%.
+**Scored 77** (`lab/v/couple_tempo2.log`): wrong. Coupling from beat counts sits as far below the right tempo (median error .66, peak at
+-.8) as from yes-or-no: not an artefact. Coupling and food genuinely disagree about tempo: a slower creature's seeing and doing go
+together more tightly, a faster one eats more. Tempo trades speed against control, and coupling values only control.

@@ -1,0 +1,4 @@
+== uptake of new parts: 10 pairs, 900 s lives (parts grow at 100 to 300 s), efficiency in the last third [95%]
+  base      +2.47 [+2.33,+2.60]
+  toldarcsI +2.86 [+2.69,+3.02]  vs base +0.39 [+0.21,+0.58]
+  learn3bI  +2.86 [+2.74,+2.98]  vs base +0.39 [+0.22,+0.58] | arcs exactly the told two 0%; right side for both lines 35%; told two on 0%; others on, mean 1.1

@@ -1,0 +1,7 @@
+== pairs: 5 pairs of lives, 100 s, 2.5 ms, seeds 85000+; efficiency [95%], food and poison meals a life
+ plain       | circuit +1.43 [+1.28,+1.58] food  35.9 poison   6.6 | vtold +1.49 [+1.35,+1.59] food  35.4 poison   5.8 |
+ gap 10.0 mm | circuit +1.63 [+1.51,+1.73] food  37.4 poison   5.6 | vtold +1.45 [+1.20,+1.63] food  35.5 poison   6.2 |
+ gap  6.0 mm | circuit +1.46 [+1.15,+1.78] food  31.4 poison   4.3 | vtold +1.34 [+1.14,+1.59] food  29.2 poison   4.2 |
+ gap  4.0 mm | circuit +1.10 [+0.88,+1.30] food  29.3 poison   6.1 | vtold +1.27 [+1.11,+1.44] food  29.1 poison   4.7 |
+ gap  3.0 mm | circuit +1.18 [+0.85,+1.50] food  29.8 poison   5.8 | vtold +1.19 [+0.97,+1.42] food  31.2 poison   6.4 |
+ gap  2.0 mm | circuit +0.74 [+0.62,+0.94] food  23.5 poison   6.1 | vtold +0.83 [+0.72,+0.94] food  23.5 poison   5.5 |

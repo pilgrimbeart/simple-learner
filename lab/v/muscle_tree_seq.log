@@ -1,0 +1,9 @@
+== teach: seq ladder, 5 pairs, 2.5 ms, seeds 84000+; x [95%] against base and told; * solved (surely above .5); grow's final ring lengths (median, range)
+-- rung 1, 100 s: base 1.58 told 1.45
+   tree | P16 +0.00 [+0.00,+0.00] - nodes 5 | P64 +0.00 [+0.00,+0.00] - nodes 5 | P256 +0.00 [+0.00,+0.00] - nodes 5 |
+-- rung 5, 100 s: base -1.54 told 1.57
+   tree | P16 +0.53 [+0.43,+0.62]  good,eaten nodes 8 | P64 +0.48 [+0.35,+0.59]  good,eaten nodes 10 | P256 +0.48 [+0.35,+0.59]  good,eaten nodes 10 |
+-- rung 11, 300 s: base -1.27 told 0.64
+   tree | P16 +0.50 [+0.25,+0.66]  eaten,good nodes 8 | P64 +1.21 [+1.12,+1.30]* good nodes 25 | P256 +1.26 [+1.14,+1.42]* good nodes 25 |
+-- rung 17, 300 s: base -1.09 told 0.77
+   tree | P16 +0.37 [+0.01,+0.65]  eaten nodes 8 | P64 +0.51 [+0.23,+0.79]  good,eaten nodes 32 | P256 +0.84 [+0.69,+1.10]* good nodes 37 |

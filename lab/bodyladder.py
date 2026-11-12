@@ -50,10 +50,19 @@ def make(text, arm, seed, first):
     if hasattr(lf, "v_a") and hasattr(lf, "v_b"):       # told its thrusters (a yardstick's privilege): motor m drives the thruster wired to it
         k = {lf.wire_m[th]: g for th, g in ((0, lf.v_a), (1, lf.v_b))}
         right = math.log(k[1] / k[0])
+        from stage2_lang import sim
+        if sim.WLife.muscle:                            # thrust isn't proportional to rate on the muscle-like body
+            import sigmoid_body as SB
+            right = SB.told_balance(k[0], k[1], p["drive"])
         p["g0"], p["g1"] = math.exp(right / 2), math.exp(-right / 2)
     if hasattr(lf, "v_d"):                              # told its drag: every rate scaled by it (the tempo)
+        from stage2_lang import sim
         for r in ("scan", "drive", "run"):
-            p[r] *= lf.v_d
+            if sim.WLife.muscle:                        # thrust isn't proportional to rate: the factor that scales thrust by the drag
+                import sigmoid_body as SB
+                p[r] *= SB.told_tempo(lf.v_d, p[r])
+            else:
+                p[r] *= lf.v_d
     return lf
 
 

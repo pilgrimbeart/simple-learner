@@ -23,11 +23,14 @@ The links (none is told anything about this body):
   taste     taste picks: after play, the forager tries each of five balances spanning the prior (-1 to 1) for SLOT s, twice round, and
             keeps the one that ate most (good meals less poisoned ones); play itself proposes nothing (taste's own power, in the same time).
   steadytaste  taste picks among the steady link's estimate and that +- .3.
+Links added for P2: readout (taste tries nine signed combinations of the two motors' measures), readw (a
+readout w0 b0 + w1 b1 + c learned across lives, as readw:beats:w=w0/w1/c).
 Options, as arm:option: stall (units in a shuffled cycle; play over when the knob's estimate has stopped moving, its
 last five within .05; a taste ends play too), mover (the same end; each turn to the unit whose last turn moved the estimate most),
 certain (units in a shuffled cycle; bored when each motor's best period beats its rival by SURE; a taste
 ends play too; a motor still in doubt hands its rival to taste, 30 s a candidate), certainmover (the same; each turn to the unit whose
-last turn raised the certainty most), untaste (forage, but play another round whenever 30 s pass with no taste at all; the first taste
+last turn raised the certainty most), for400 (play exactly 400 s, no other end: P1), handoff (the certainty hand-off whoever chose the turns),
+untaste (forage, but play another round whenever 30 s pass with no taste at all; the first taste
 ends play: play whenever nothing better is on), practice (the steady model keeps learning after play from the forager's scans and runs,
 refitted every 30 s), n10 (a bank of 10 units, the life's own draw from the 40), t10 (turns of 10 s).
 Arms beside them: forage (the starting brain all life, no play), told (the knob set right: a yardstick's privilege), play (play, knob
@@ -51,6 +54,7 @@ WORLD = BL.WORLDS["thr"][0]                     # each thruster's strength drawn
 EDGES = np.geomspace(0.05, 10.0, 61)            # s: lag bins for a mix's recurrence
 STRONG = 3.0                                    # excess (in chance's spread, summed over multiples) for a mix's period to count
 SLOT = 30.0                                     # s: a taste trial of one balance
+RSLOT = 20.0                                    # s: a taste trial of one readout (P2, route A: nine of them)
 GRID = (-1.0, -0.5, 0.0, 0.5, 1.0)
 SURE = 3.0                                      # certain: a motor's best period beats its rival by this (in chance's spread)
 STALL, STALL_N = 0.05, 5                        # bore: play is over when the last STALL_N estimates span under STALL
@@ -229,7 +233,11 @@ class Play3(P2.PlayBrain):
         self.practice = p.get("practice", False)
         self.untaste = p.get("untaste", False)          # forage, but play another round whenever QUIET s pass with no taste
         self.stop_play, self.tasted, self.forage_since = False, False, None
-        self.bore = p.get("bore")                      # None (learning progress), "stall" or "mover"
+        self.bore = p.get("bore")
+        self.playfor = p.get("playfor")                 # P1: play exactly this long, then forage
+        self.handoff = p.get("handoff", False)          # the certainty hand-off at play's end, whoever chose the turns
+        self.end_lN, self.play_beats = None, None
+        self.w = p.get("w", (1.0, -1.0, 0.0))                      # None (learning progress), "stall" or "mover"
         self.hist, self.moved, self._last_fed, self.last_play = [], {}, False, {}
         self.cycle_rng = np.random.default_rng(seed + 88_000_013)
         self.win, self.prac, self.next_fit = None, {}, None
@@ -266,8 +274,9 @@ class Play3(P2.PlayBrain):
             else:
                 mixes.append((r0, r1) + sightings(pulses, st))
         self.mixes = mixes
-        if self.stat == "beats" and self.bore in ("certain", "certainmover"):
+        if self.stat == "beats" and (self.bore in ("certain", "certainmover") or self.handoff):
             lN = beat_runs(sorted(self.beat_log), pulses)
+            self.end_lN, self.play_beats = lN, len(self.beat_log)
             if None in lN:
                 return
             opts = [[b] if mg >= SURE else [b, r] for b, r, mg in lN]     # a motor in doubt hands its rival to taste
@@ -276,6 +285,28 @@ class Play3(P2.PlayBrain):
             self.set_balance(cands[0])
             if len(cands) > 1:
                 self.trials, self.trial_end = cands, None
+            return
+        if self.stat == "beats" and self.link == "readw":
+            lN = beat_runs(sorted(self.beat_log), pulses)       # P2, route B: a readout learned across lives (evolution's), frozen
+            self.end_lN = lN
+            if None in lN:
+                return
+            w0, w1, c = self.w
+            self.est = w0 * lN[0][0] + w1 * lN[1][0] + c
+            self.set_balance(self.est)
+            return
+        if self.stat == "beats" and self.link == "readout":
+            lN = beat_runs(sorted(self.beat_log), pulses)       # P2, route A: taste discovers how to use play's records
+            self.end_lN = lN
+            if None in lN:
+                return
+            b0, b1 = lN[0][0], lN[1][0]
+            self.readouts = [(x, y) for x in (-1, 0, 1) for y in (-1, 0, 1)]      # every signed combination of the two measures
+            self.trials = [x * b0 + y * b1 for x, y in self.readouts]
+            self.slot = RSLOT
+            self.est = self.trials[0]
+            self.set_balance(self.trials[0])
+            self.trial_end = None
             return
         if self.stat == "beats" and self.link == "partnersalt":
             lN = beat_runs(sorted(self.beat_log), pulses)
@@ -289,6 +320,7 @@ class Play3(P2.PlayBrain):
             return
         if self.stat == "beats" and self.link in ("partners", "partnerstaste"):
             lN = beat_runs(sorted(self.beat_log), pulses)
+            self.end_lN = lN
             est = lN[0][0] - lN[1][0] if None not in lN else None     # k goes as 1 / beats a revolution; equal effect: log(k1 / k0)
             self.est = est
             if est is not None and self.link == "partners":
@@ -340,8 +372,19 @@ class Play3(P2.PlayBrain):
         return None if None in lN else lN[0][0] - lN[1][0]
 
     def choose(self):
+        if self.playfor and self.clock >= self.playfor:  # P1: every arm plays exactly playfor s
+            if self.cur is not None:
+                for pr in self.pred[self.cur]:
+                    pr.turn_over()
+            return None
         if not self.bore:
-            return super().choose()
+            u = super().choose()
+            if u is None and self.playfor:              # learning progress has nothing to say: the least recently played unit
+                u = min(self.allowed, key=lambda v: self.last_play.get(v, -1.0))
+                self.mark = [len(pr.loss) for pr in self.pred[u]]
+            if u is not None:
+                self.last_play[u] = self.clock
+            return u
         if self.cur is not None:                        # file the turn just ended, and how far it moved the estimate
             for pr in self.pred[self.cur]:
                 pr.turn_over()
@@ -361,7 +404,9 @@ class Play3(P2.PlayBrain):
                 self.lp_log.append((self.clock, e))
             else:
                 self.moved[self.cur] = 0.0
-        if self.bore in ("certain", "certainmover"):
+        if self.playfor:
+            pass                                        # P1: no early end
+        elif self.bore in ("certain", "certainmover"):
             m = self.margins()
             if m is not None and min(m) >= SURE:
                 return None                             # bored: play's best guesses clearly beat their rivals
@@ -389,7 +434,7 @@ class Play3(P2.PlayBrain):
                 self.stop_play = True                   # the world has begun to matter
         super().taste(value, at)
         if not self.playing and self.trials and self.trial_end is None and value != 0:
-            self.trial_end = self.clock + SLOT
+            self.trial_end = self.clock + getattr(self, "slot", SLOT)
         if not self.playing and self.trials:
             k = self.trials[0]
             self.tally[k] = self.tally.get(k, 0.0) + (1.0 if value > 0 else -2.0 if value < 0 else 0.0)
@@ -451,7 +496,7 @@ class Play3(P2.PlayBrain):
             self.trials.pop(0)
             if self.trials:
                 self.set_balance(self.trials[0])
-                self.trial_end = self.clock + SLOT
+                self.trial_end = self.clock + getattr(self, "slot", SLOT)
             else:
                 best = max(self.tally, key=self.tally.get)
                 self.est = best
@@ -471,6 +516,10 @@ def make(arm, seed, first):
         if arm == "told":
             k = {lf.wire_m[th]: g for th, g in ((0, lf.v_a), (1, lf.v_b))}
             right = math.log(k[1] / k[0])
+            from stage2_lang import sim
+            if sim.WLife.muscle:                        # thrust isn't proportional to rate on the muscle-like body
+                import sigmoid_body as SB
+                right = SB.told_balance(k[0], k[1], lf.brain.p["drive"])
             lf.brain.p["g0"], lf.brain.p["g1"] = math.exp(right / 2), math.exp(-right / 2)
         return lf
     parts = arm.split(":")                              # e.g. steady:recur:n10:t10
@@ -488,6 +537,12 @@ def make(arm, seed, first):
             p["untaste"] = True
         elif x in ("stall", "mover", "certain", "certainmover"):
             p["bore"] = x
+        elif x.startswith("w="):                        # readw's weights: w=w0/w1/c
+            p["w"] = tuple(float(v) for v in x[2:].split("/"))
+        elif x.startswith("for"):
+            p["playfor"] = float(x[3:])
+        elif x == "handoff":
+            p["handoff"] = True
     return WLife(seed, first, (lambda s: Play3(s, p)), w, seconds=True)
 
 
@@ -501,7 +556,7 @@ def job(j):
     g = [a - COST * b for a, b, _ in l]
     sp = spent(l)
     b = lf.brain
-    return dict(arm=arm, seed=seed, g3=g[2], sp3=sp * l[2][2] / sum(t for _, _, t in l), right=math.log(k[1] / k[0]),
+    return dict(arm=arm, seed=seed, g3=g[2], sp3=sp * l[2][2] / sum(t for _, _, t in l), right=__import__('sigmoid_body').right_knob(k[0], k[1], __import__('table').numbers(seed, {})['drive']),
                 est=getattr(b, "est", None), play_end=getattr(b, "play_end", None), nmix=len(getattr(b, "mixes", []) or []))
 
 
@@ -539,6 +594,7 @@ if __name__ == "__main__":
     n = int(a[0]) if a else 20
     arms = a[1].split(",") if len(a) > 1 and a[1] != "report" else ARMS
     out = f"/home/pilgrim/git/simple-learner/lab/v/play3_{n}.pkl"
+    out = out.replace(".pkl", "_muscle.pkl") if __import__("os").environ.get("MUSCLE") == "1" else out   # (the new body's lives apart)
     if "report" in a:
         report(pickle.load(open(out, "rb")), arms)
         sys.exit()

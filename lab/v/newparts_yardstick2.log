@@ -1,0 +1,4 @@
+== G1, the yardstick: designs told the wiring, the new parts from birth; 10 pairs, 300 s, efficiency in the last third [95%]
+ plain    | base +2.18 | driveH +2.49 (+0.31 [+0.03,+0.59]) | splitBig +2.87 (+0.69 [+0.35,+1.06]) | splitH +2.83 (+0.65 [+0.41,+0.90]) | splitQ +3.12 (+0.94 [+0.69,+1.22]) | splitQ+driveH +3.14 (+0.96 [+0.79,+1.14])
+ lopsided | base +2.09 | driveH +2.11 (+0.02 [-0.30,+0.37]) | splitBig +2.69 (+0.60 [+0.23,+0.97]) | splitH +2.19 (+0.10 [-0.39,+0.50]) | splitQ +2.81 (+0.72 [+0.51,+0.92]) | splitQ+driveH +2.77 (+0.68 [+0.30,+1.04])
+ pairs2   | base +1.42 | driveH +1.46 (+0.04 [-0.19,+0.25]) | splitBig +1.95 (+0.53 [+0.27,+0.77]) | splitH +2.00 (+0.58 [+0.38,+0.77]) | splitQ +2.06 (+0.64 [+0.39,+0.91]) | splitQ+driveH +2.50 (+1.07 [+0.76,+1.39])

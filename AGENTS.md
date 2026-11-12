@@ -71,7 +71,7 @@ the cheats a grid invites) is in nca-learn's `NOTEBOOK.md`, worth reading before
   row tries every class of `PARTS.md`, section 5, tuned, or records why a class can't apply; the row's cure is the simplest
   tied with the best. Its automatic version must tie with the base brain in the unmodified world. Re-validation in
   `mixed_feedback.py` waits until the table is complete, and then covers only the rows or universal circuit we keep.
-- **Long runs** share one laptop: one job at a time. **One maths thread per worker**: set `OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1` for anything with a process pool (8 threads per worker made one arm 50 times slower, 2026-11-05). Kill processes only by explicit PID, never by a pattern. To pause
+- **Long runs** share one laptop: one job at a time. **One maths thread per worker**: set `OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1` for anything with a process pool (8 threads per worker made one arm 50 times slower, 2026-11-05). Kill processes only by explicit PID, never by a pattern; and wait on a job by its PID (captured when it starts) or a line in its log, never by `pgrep -f` (a pattern matches the waiting shell's own command line, so the wait never ends or the wrong process dies). To pause
   a run, stop (SIGSTOP) only its pool's workers, never a shell or a process the harness waits on. Don't change code a
   running job will import later.
 
@@ -109,8 +109,10 @@ situ, so the brain must do the work.
   derived from `units.py`. It lives in the one integration step every simulation calls (`_step`) and in how the
   arrays are built, with no switch to turn it off (`mixed_feedback.SUBSTRATES`). Never add a way round it, and keep
   `test_compiled.py` checking that it is the same at any step and can't be dodged.
-- **Knobs first, recruits last** (the user, 2026-11-10). Turning a knob the brain already has (a rate, a balance, a threshold, a time
-  constant) is always the cheap option: it costs no material. So for any shortfall, first ask which existing knob could cure it and
+- **Knobs first, recruits last** (the user, 2026-11-10; a default, not a law, 2026-11-11). Turning a knob the brain already has (a rate, a
+  balance, a threshold, a time constant) costs no material, so it is the default; but it can cost exploring time or overwrite a skill
+  that was useful, and then a protected new unit may be cheaper overall. Recycling weak units (Dohare et al. 2024) is the comparator
+  to growing new ones. So for any shortfall, first ask which existing knob could cure it and
   what would tell that knob which way to turn, and try that. Recruiting new units is for what no setting of the existing knobs can do
   (something more to remember or tell apart), and a result that credits recruitment must show the knobs alone fall short on the same
   lives. A measurement that sets a knob directly beats trial and error on outcomes, when the brain's own senses can make it.

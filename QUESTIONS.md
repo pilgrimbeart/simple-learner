@@ -6,14 +6,24 @@ and when, why it matters, the line it belongs to, and the experiment that would 
 
 ## Scaling (the user's goal, 2026-11-09; `PROGRAMME.md`)
 
-- **Does boredom from certainty hold on fresh seeds, and on harder bodies?** (D48: designed and run on one seed set, +1.1 at once,
-  +2.1 after.) Then drag drawn too (the stride is in the same records), and more motors.
+- **How do units each judging by their own coupling avoid spoiling each other's comparisons?** (D52's end) One global search on one
+  knob works; split across two motor units it fails three ways (rewarding slowness in fixed bins, cured by normalising; small nudges
+  too weak to feel; overlapping wide searches). Candidates: a unit searches only while its own coupling has fallen (frustration), so
+  units rarely search at once; units judge only the part of their activity they control (motor 0's scanning confounds its signal);
+  a shared slow signal (how coupled the whole brain is) that each unit reads locally, as taste is read now.
+- **Does the growing tree lose by capacity or by how it combines evidence?** (the review, 2026-11-11) Compare it with genuine
+  context-tree weighting (Willems, Shtarkov and Tjalkens 1995) on identical histories: CTW mixes predictions across all tree shapes
+  with coding guarantees that ours, growing on contradictions and predicting from the deepest populated context, doesn't inherit.
+- **Ladders that grow through reusable structure** (the review): an arbitrary mapping of k binary inputs has 2^k free outputs, which no
+  recruiting rule can compress; include rungs whose complexity grows by reusing structure, beside random mappings that resist it.
+- **Is learning progress wrong, or only our estimate of it?** (the review) D46 measured it as one 3 s turn's loss against the one before;
+  model improvement measured properly (Hou, An and Du 2026, separating improvement from expected error) is the fair test.
+- **Does boredom from certainty hold on harder bodies?** (D48, confirmed on fresh seeds.) Drag drawn too (the stride is in the same
+  records), more motors, and a challenge that comes sooner (before play is certain).
 - **Can the steady-view link match partners without assuming matching pairs?** (D47) Gaze stabilisation (set the drive where a forward
   model predicts the view stays still) assumes nothing about the body's plan, but on cheap statistics its knob error was .17 to .29,
   and more play made it worse (the statistic is biased). With each mix's turning read from beat-clocked records (as partners reads each
   motor's), it might match partners and extend to any number of motors.
-- **Is the partners link acceptable as a mechanism?** (D47; the user's to judge) "Paired effectors equalise their effect a beat" is a
-  prior about the body's plan, generic to bilateral bodies, but it is also D43's formula in another form.
 - **Does play's payoff scale?** (D47) More body numbers drawn (drag: the stride is in the same records), more units, more motors.
 - **Does organising without reward make later learning fast?** (the user, 2026-11-10; README, What we've learned: latent learning.)
   The test: a life where the world first offers nothing to learn by taste (all food), then poison begins at a random moment. Does a

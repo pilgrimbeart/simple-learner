@@ -1,0 +1,10 @@
+288 of 288 lives identical; wall 41 s
+  differing by mode: {'False': 0, 'True': 0}
+  bank seconds=False 10 ms         0.454 -> 0.338 s a life (1.3x)
+  bank seconds=False 2.5 ms        1.545 -> 1.404 s a life (1.1x)
+  bank seconds=True 10 ms          0.506 -> 0.445 s a life (1.1x)
+  bank seconds=True 2.5 ms         1.945 -> 1.729 s a life (1.1x)
+  circuit seconds=False 10 ms      0.387 -> 0.500 s a life (0.8x)
+  circuit seconds=False 2.5 ms     1.491 -> 1.214 s a life (1.2x)
+  circuit seconds=True 10 ms       0.568 -> 0.439 s a life (1.3x)
+  circuit seconds=True 2.5 ms      1.830 -> 1.594 s a life (1.1x)

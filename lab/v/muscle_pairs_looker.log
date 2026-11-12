@@ -1,0 +1,13 @@
+== look before you leap, told the colour: 5 pairs, 100 s, seeds 85000+; efficiency [95%], food, poison
+ plain:
+   the told arm           +1.49 [+1.35,+1.59] food  35.4 poison   5.8
+   look 0.15 ratio 0.4    +1.55 [+1.26,+1.77] food  35.5 poison   5.6
+   look 0.15 ratio 0.7    +1.53 [+1.35,+1.68] food  36.4 poison   6.1
+   look 0.3 ratio 0.4     +1.43 [+1.12,+1.66] food  31.5 poison   4.7
+   look 0.3 ratio 0.7     +1.48 [+1.20,+1.68] food  32.1 poison   4.6
+ gap  2.0 mm:
+   the told arm           +0.83 [+0.72,+0.94] food  23.5 poison   5.5
+   look 0.15 ratio 0.4    +0.66 [+0.53,+0.80] food  18.4 poison   4.4
+   look 0.15 ratio 0.7    +0.67 [+0.40,+0.90] food  19.3 poison   4.8
+   look 0.3 ratio 0.4     +0.65 [+0.50,+0.80] food  19.0 poison   4.8
+   look 0.3 ratio 0.7     +0.90 [+0.66,+1.10] food  21.2 poison   4.1

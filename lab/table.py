@@ -693,9 +693,21 @@ def arms():
     return {**Lad.ARMS, **ARMS}
 
 
+_MUSCLE_X = None
+
+
 def numbers(seed, kw):
     p, spread = M.from_bench()
     q = dict(M.drawn(p, spread, seed), use=0, trust=1, run_max=1.0)
+    from stage2_lang import sim
+    if sim.WLife.muscle and not kw.get("raw"):          # the muscle-like body's own starting brain (lab/retune.py, frozen in
+        global _MUSCLE_X                                 # lab/v/retune_muscle.json): evolution's retuning, applied before kw
+        if _MUSCLE_X is None:
+            import json
+            d = json.load(open("/home/pilgrim/git/simple-learner/lab/v/retune_muscle.json"))
+            _MUSCLE_X = dict(zip(d["keys"], d["x"]))
+        for k, v in _MUSCLE_X.items():
+            q[k] *= 2.0 ** v
     for k, v in kw.items():
         if k.endswith("_x"):
             q[k[:-2]] *= v

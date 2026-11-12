@@ -1,0 +1,8 @@
+== lopsided: 20 bodies; coupling in bits a second (forward + policy), knob grid -1.6 to 1.6
+   the knob of most coupling against the right knob: median error 0.07, within .2 95%, within .4 100%; correlation +1.00
+   coupling (less each body's mean) against knob minus right: -2.0: -0.68, -1.6: -0.56, -1.2: -0.96, -0.8: -0.23, -0.4: +0.76, +0.0: +1.94, +0.4: +0.42, +0.8: -0.54, +1.2: -0.44, +1.6: -0.21, +2.0: -0.66
+   mean forward 0.18, policy 3.30 bits a second
+== plain: 10 bodies; coupling in bits a second (forward + policy), knob grid -1.6 to 1.6
+   the knob of most coupling against the right knob: median error 0.00, within .2 100%, within .4 100%; correlation +nan
+   coupling (less each body's mean) against knob minus right: -1.6: -1.08, -1.2: -1.36, -0.8: -0.52, -0.4: +0.42, +0.0: +1.78, +0.4: +0.22, +0.8: -0.08, +1.2: -0.55, +1.6: -0.55
+   mean forward 0.17, policy 3.34 bits a second

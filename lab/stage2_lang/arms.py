@@ -82,7 +82,8 @@ def live(lf, seconds=100.0):
         lf.step()
     b = lf.brain
     l = Lived(lf.thirds(ticks))
-    l.power, l.firings, l.substrate = 3.7e-9, lf.THRUST0 * SPAN * len(lf.firings) / seconds, "silicon"
+    nf = lf.fire_weight if getattr(lf, "grow_at", None) is not None else len(lf.firings)   # (new parts: weighted by strength)
+    l.power, l.firings, l.substrate = 3.7e-9, lf.THRUST0 * SPAN * nf / seconds, "silicon"
     l.rows = np.array(b.rows, dtype=float) if getattr(b, "rows", None) else np.zeros((0, len(B.COLS)))
     l.picks = list(getattr(b, "picks", ()))
     l.seed, l.first = lf.seed, lf.first

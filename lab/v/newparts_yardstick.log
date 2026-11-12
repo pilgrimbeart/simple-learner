@@ -1,0 +1,3 @@
+== G1, the yardstick: designs told the wiring, the new parts from birth; 10 pairs, 300 s, efficiency in the last third [95%]
+ plain    | base +2.18 | scanQ +2.46 (+0.28 [-0.12,+0.66]) | scanH +2.38 (+0.20 [-0.13,+0.57]) | driveH +2.49 (+0.31 [+0.03,+0.59]) | driveQ +2.47 (+0.30 [+0.02,+0.56]) | fine +2.34 (+0.16 [-0.20,+0.46])
+ lopsided | base +2.09 | scanQ +2.48 (+0.38 [+0.12,+0.66]) | scanH +2.42 (+0.32 [-0.02,+0.62]) | driveH +2.11 (+0.02 [-0.30,+0.37]) | driveQ +2.25 (+0.16 [-0.28,+0.64]) | fine +2.44 (+0.35 [+0.03,+0.65])

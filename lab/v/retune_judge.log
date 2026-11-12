@@ -1,0 +1,5 @@
+== the retuned starting brain, [-0.29, -0.17, -0.07, 0.18, 0.23] (log2 factors on ('scan', 'drive', 'run', 'hold', 'bored')), fresh seeds 64000+, 30 pairs, 100 s
+  world.py    body, old numbers: efficiency +2.41 [+2.29,+2.53]
+  world.py    body, retuned    : efficiency +2.39 [+2.25,+2.53]
+  muscle-like body, old numbers: efficiency +1.51 [+1.38,+1.63]
+  muscle-like body, retuned    : efficiency +1.49 [+1.38,+1.60]

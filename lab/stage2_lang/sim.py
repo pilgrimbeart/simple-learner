@@ -37,6 +37,9 @@ from stage2_lang.fast import step as _brain_step
 
 COLOURS = W0.COLOURS
 THRUSTERS = W0.THRUSTERS
+EXTRA = (0.5, 0.25)                                     # the new thrusters' strengths, against the original's 1 (WLife.extra)
+GROW = (100.0, 300.0)                                   # s: the new parts come alive at a moment drawn uniformly in this range
+MUSCLE_STEP = 0.0005                                    # s: the muscle-like body's sub-step while a thruster's activation lasts
 
 
 @njit(cache=True)
@@ -290,6 +293,7 @@ class Body:
         self.speed, self.spin = np.zeros(2), 0.0
         self._fh = None                                  # forward() cached for this heading
         self.kind = np.repeat(np.arange(2), K.BLOCKS)
+        self.muscle, self.act, self.kg = False, [0.0, 0.0], [1.0, 1.0]
         self.n = len(self.kind)
         self.look = self.kind.copy()
         self.bright = np.ones(self.n)
@@ -340,6 +344,14 @@ class Body:
     def sees(self):
         return self.sees2()[0]
 
+    def halves(self):
+        """Light at each eye from each half of the corridor (rays across < 0: half 0, the left; > 0: half 1): [half][colour]."""
+        K = self.K
+        h = self.head_xy()
+        far, hit = _look(self.xy, self.alive, h, (self._fc, self._fs), K.WORLD, K.BLOCK, K.RANGE, K.EAT, self.across)
+        return [_sees(far, np.where(mask, hit, -1), self.look, self.bright, self.share, K.REACH)
+                for mask in (self.across < 0, self.across > 0)]
+
     def sees2(self, watch=True):
         """(light at each eye as the blocks look, light by each block's kind as world.py would show it): the second is watching only,
         and None when nothing watches."""
@@ -353,9 +365,15 @@ class Body:
         return seen, _sees(far, hit, bykind, np.ones(self.n), self.share, K.REACH)
 
     def fire(self, thruster, k):
+        if self.muscle:                                 # a pulse raises the thruster's activation; its strength k scales its thrust
+            self.act[thruster] += 1.0
+            self.kg[thruster] = k
+            return
         K = self.K
+        if thruster >= 2:                               # a new part (WLife.extra): its strength, on its side
+            k = k * EXTRA[thruster // 2 - 1]
         self.speed += k * K.PUSH * self.forward()
-        self.spin += k * K.TURN if thruster == 1 else -(k * K.TURN)   # the left one (0) turns it right, the right one left
+        self.spin += k * K.TURN if thruster % 2 == 1 else -(k * K.TURN)   # the left one (0) turns it right, the right one left
 
 
 class WLife:
@@ -366,6 +384,11 @@ class WLife:
 
     dt = units.TICK
     seconds = True
+    split = False                                        # a new sense (the user, 2026-11-12): each eye split across the corridor; a pulse's half
+                                                         # arrives on line 2 or 3 (wired at random), alive from GROW, to brains with split_lines
+    extra = False                                        # new parts (the user, 2026-11-12): two more thrusters a side, at EXTRA strengths, on
+                                                         # motor lines 2 to 5 wired at random, alive from a moment drawn each life (GROW)
+    muscle = False                                       # the muscle-like body (lab/sigmoid_body.py; the user, 2026-11-11): off by default
     instruments = True                                   # False: nothing recorded for the stage-5 labels (hand worlds already vetted)
 
     def __init__(self, seed, first, brain, world, stream=None, trace=False, seconds=None):
@@ -389,8 +412,21 @@ class WLife:
             raise Refused(f"COST {self.COST}, THRUST {self.THRUST} at birth: poison must cost, a firing can't pay")
         self.COST0, self.THRUST0 = float(self.COST), float(self.THRUST)       # fixed at birth: the score uses these
         self.body = Body(self.rng, self)
+        self.body.muscle = WLife.muscle
         s, m = (0, 1)[:: self.rng.choice((1, -1))], (0, 1)[:: self.rng.choice((1, -1))]
         self.wire_s, self.wire_m = list(s), list(m)      # colour -> sensor, thruster -> motor
+        self.grow_at = None
+        if WLife.extra:                                  # the new parts' wiring and growth, from their own stream (base lives unchanged)
+            erng = np.random.default_rng(seed + 52_000_003)
+            self.wire_m = self.wire_m + [int(2 + i) for i in erng.permutation(4)]   # thrusters 2..5 (left/right at a half, a quarter)
+            self.grow_at = float(erng.uniform(*GROW))
+            self.fire_weight = 0.0
+        if WLife.split:                                  # the new sense's wiring, growth and draws, from its own stream
+            self.srng = np.random.default_rng(seed + 53_000_011)
+            self.wire_h = [int(2 + i) for i in self.srng.permutation(2)]          # half -> line
+            self.split_at = float(self.srng.uniform(*GROW))
+            if self.grow_at is not None:                 # both parts on: one growth event
+                self.split_at = self.grow_at
         self.t = 0
         self.meals, self.firings, self.scored = [], [], []
         self.moving = None
@@ -577,7 +613,9 @@ class WLife:
         if self.moving is None:
             self.moving = self.t
         self.body.fire(th, gain)
-        self.firings.append((self.t, THRUSTERS[th]))
+        self.firings.append((self.t, THRUSTERS[th % 2]))
+        if self.grow_at is not None:                    # a firing costs in proportion to its thruster's strength
+            self.fire_weight += 1.0 if th < 2 else EXTRA[th // 2 - 1]
         self.inst.fired(th, self._cmd)
         if self.tr is not None:
             self.tr.firings.append((self.t, th, self.wire_m[th], gain, int(by_rule)))
@@ -590,7 +628,7 @@ class WLife:
         if self.secs:
             if self._fast is None:
                 self._fast = (self.f_see is None and self.f_pulse is None and self.f_fire is None and self.f_move is None
-                              and self.tr is None and not self.inst.on)
+                              and self.tr is None and not self.inst.on and not self.body.muscle and not WLife.extra and not WLife.split)
                 self._hits = np.zeros((2, 4 * self.body.n + 8))
                 if self._fast:
                     from stage2_lang.fast import FastModel
@@ -747,6 +785,14 @@ class WLife:
             if tr is not None:
                 tr.pulses.append((self.t, eye, c, at, 1))
             brain.stimulate(eye, at)
+            if WLife.split and c >= 0 and getattr(brain, "split_lines", False) and t0 + at >= self.split_at:
+                hv = self._halves if getattr(self, "_halves_t", None) == self.t else None
+                if hv is None:
+                    hv, self._halves_t = body.halves(), self.t
+                    self._halves = hv
+                sL, sR = hv[0][c], hv[1][c]                # the pulse's half, by each half's share of this colour's light
+                half = 0 if self.srng.random() * (sL + sR) < sL else 1
+                brain.stimulate(self.wire_h[half], at)
             self.inst.pulse(eye)
         self.now, self._at = t0, None
         motors = brain.step() or []
@@ -778,8 +824,10 @@ class WLife:
             self.now, self._at = t0 + at, at
             if kind == "beat":
                 m = x[0]
-                for th in (0, 1):
+                for th in range(len(self.wire_m)):
                     if self.wire_m[th] != m:
+                        continue
+                    if th >= 2 and t0 + at < self.grow_at:  # not yet grown: the command reaches nothing, and costs nothing
                         continue
                     gain = 1.0
                     self._cmd = m
@@ -1008,7 +1056,28 @@ class WLife:
             self._bounced = set()
 
     def _advance(self, a, b):
-        """The body from moment a to b of this tick, exactly (drag an exponential), the mouth's path checked for meals."""
+        """The body from moment a to b of this tick: exactly (drag an exponential) for world.py's body; for the muscle-like body
+        (WLife.muscle), in sub-steps of at most MUSCLE_STEP while a thruster's activation lasts, its sigmoid thrust applied at each."""
+        body = self.body
+        if body.muscle and (body.act[0] > 1e-4 or body.act[1] > 1e-4):
+            import sigmoid_body as SB
+            n = max(1, int(math.ceil((b - a) / MUSCLE_STEP - 1e-9)))
+            h = (b - a) / n
+            fp, ft = SB.F_PUSH * self.PUSH / W0.PUSH, SB.F_TURN * self.TURN / W0.TURN
+            dec = math.exp(-h / SB.TAU_A)
+            for i in range(n):
+                f0, f1 = body.kg[0] * SB.f_of(body.act[0]), body.kg[1] * SB.f_of(body.act[1])
+                fw = body.forward()
+                body.speed[0] += (f0 + f1) * fp * h * fw[0]
+                body.speed[1] += (f0 + f1) * fp * h * fw[1]
+                body.spin += (f1 - f0) * ft * h          # the left thruster (0) turns it right, as fire()
+                body.act[0] *= dec
+                body.act[1] *= dec
+                self._advance_exact(a + i * h, a + (i + 1) * h)
+            return
+        self._advance_exact(a, b)
+
+    def _advance_exact(self, a, b):
         dtau = b - a
         if dtau <= 0:
             return

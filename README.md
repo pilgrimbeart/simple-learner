@@ -76,8 +76,10 @@ no body.
 
 **Reported beside the curve**, for each rung: the evidence it needs and the evidence a life supplies, in bits; the
 material it takes, against the best brain designed by hand for that rung; the power; the reaction time; and the connections per unit. More brain adds capacity, not
-information: a clean 100 s life offers about 50 bits (`discrete/NOTEBOOK.md`, D31), about 25 weights' worth at 2 bits a
-weight (`BOUNDS.md`), so a rung that needs more evidence than its life supplies isn't certified until its life is longer.
+information: a clean 100 s life's tastes offer about 50 bits (`discrete/NOTEBOOK.md`, D31), about 25 weights' worth at 2 bits a
+weight (`BOUNDS.md`); the eyes offer more, about whatever the brain's own actions expose (D44, D47). A rung is certified for the
+evidence its unknown needs, given the life's observations and how the brain gathers them, I(unknown; observations | policy, prior),
+not for the length of our description of the world; one that needs more than its life supplies waits for a longer life.
 
 (The test's wording and numbers are the main session's draft of the user's goal, 2026-11-09, for the user's review: three
 ladders, three doublings, three rungs, .25, a half and a tenth. They are to be fixed before the test's first
@@ -132,9 +134,11 @@ only spinning on one thruster at a time, long enough to see the view come round,
 foraging does (driving straight tells it too, which our first observer missed), and no movement tells it where a block lies
 across its path.
 
-What the manual designs have taught: a life offers about 50 bits of evidence, but writing down a world's rule takes
-hundreds, so no brain learns a world from nothing in one life: it can only choose among what its structure already makes
-cheap. The bank copes with between a fifth and three fifths of the random worlds that have something to learn, and uses
+What the manual designs have taught: learning in a life is fast when the distinctions that matter are cheap under the learner's
+prior and its actions expose them (the review of 2026-11-11, `lab/v/review_2026-11-11.md`). We first put this too strongly, as "a
+life's tastes offer about 50 bits but writing down a world takes hundreds, so no brain learns a world in one life": that mixed the
+length of our description of a world with what the creature must resolve to act well, and with what its senses, not only its
+taste, can tell it. Play showed the eyes can supply far more than taste's bits (D47). The bank copes with between a fifth and three fifths of the random worlds that have something to learn, and uses
 its evidence almost as well as an ideal judge would. Where it fails, it lacks the idea, mostly an idea about *time* (when
 the colours swap, how soon after a meal another turns bad). But its ideas are ones we wrote in.
 
@@ -155,15 +159,60 @@ Three lines of work so far:
 
 The findings that changed the direction of the work, each told in full in the notebook named.
 
+- **A brain can take up a new sense and new limbs in its life, if it plays with them first.** Part-way through life we gave the
+  creature a new sense (each eye split into a left and a right half, on new wires it isn't told about) and new, smaller thrusters on
+  new motor wires. Used well, they make it about a third better at foraging. Trying each possible new connection and judging it by food
+  failed even over very long lives: one small steering kick changes whether food stays in view too little to show. What worked is what
+  a young animal does (the user's instinct to play with its senses and body first): stop, keep still, kick one new thruster at a time,
+  and watch through the new eye where the view moves. That tells each new thruster's direction within minutes, with no food involved.
+  The brain then connects each half of the new eye to the thruster that turns towards it, and gains surely on creatures it had never
+  met. The new parts calibrate each other before food has any say (`discrete/NOTEBOOK.md`, D55). Two weak points remain: the reflex is
+  simple, and play favours the thrusters whose effect it sees most clearly rather than those that steer best.
+- **Parts of a brain that tune themselves together must take turns.** Split the coupling search between the two motors, each tuning
+  its own rate, and it fails if both adjust at once: neither can tell whose change made things better. Make them take turns, as two
+  neurons in a Sepulchre half-centre do (one active while it holds the other quiet, until it tires and hands over), and the same two
+  local parts match the whole-brain search, on fresh creatures too. A part that has moved wakes its partner to check again; when
+  neither has anything left to change, both rest. One limit found: coupling chose a creature moving at half the best speed, because
+  slow, careful movement makes seeing and doing go together more tightly while fast movement eats more. Choosing between speed and care
+  needs the food itself (`discrete/NOTEBOOK.md`, D54).
+- **A principle survives a change of body; a formula doesn't.** We gave the creature muscle-like thrusters (the user's idea): each
+  pulse raises a thruster's activation, and thrust grows in an S-shape with it, so a lone pulse only nudges while a fast burst pushes
+  hard. Every rule we had written that assumed thrust simply proportional to pulse rate became wrong on this body, including the
+  yardstick we judge by and the two learners that had worked best before (they measured the body correctly, then converted the
+  measurement with the old physics). The coupling principle needed no conversion: with no food at all, how tightly seeing and doing go
+  together still peaked at this body's own right setting, and the search guided by it beat the old formula (`discrete/NOTEBOOK.md`, D53).
+  A surprise: the new body is not more forgiving of a wrong setting but less, because its thrust changes steeply with pulse rate.
+- **Understanding as coupling: the right setting is where senses and actions go together most.** The user proposed that a brain
+  should seek the simplest connection between what it senses and what it does, in both directions: in bits, how much its inputs and
+  outputs tell about each other. Unlike "make the world predictable", which a creature could satisfy by sitting still, this needs a world
+  that answers its actions and actions that answer its world. We tested it first on the lopsided body, with no food anywhere: for every
+  setting of the balance knob, how tightly do the eye pulses and the motor beats go together? The answer peaked at the right setting
+  in 95% of bodies (within .2), and at zero for every normal body. With the balance right, seeing food starts a drive and the drive keeps
+  the food in view; with it wrong, the drive loses the block and the link between seeing and doing keeps breaking. So the knob our
+  formula used to set can be set by a principle that knows nothing about thrusters (`discrete/NOTEBOOK.md`, D51). Then as a
+  mechanism (D52): the brain tries settings of its knob, about half a minute each, keeps whichever makes seeing and doing go together
+  more, and stops when the choice is narrow; and it keeps its default unless a change is clearly better (for a normal body, equal rates
+  are exactly right, and an error of a tenth costs about a quarter of the food). With no food and no formula, it beat the rule we had designed, on fresh
+  creatures, and left normal ones exactly alone.
 - **Play pays later.** We gave the creature a quiet spell first, in which nothing it ate tasted of anything, and a lopsided body
   (one thruster stronger than the other). Then, at a moment it couldn't know, food and poison began. A brain that spent the quiet
   playing (moving in random rhythms, with no goal) started the challenge already compensating for its lopsided body, and ate surely
   more from the first moment than one that had only foraged: about half the way to a brain told its body. What did the work was
   simple: for each motor, a record of what the eyes saw at each of that motor's own beats, whenever it happened to be the only one
   beating. That says how far one beat of that motor turns the creature, and the brain sets its two motors to match. Nothing chose the
-  movements, and taste was never used. When play wasn't sure (a period can be mistaken for its double), the best use of taste was to
+  movements, and taste was never used. But the last step, turning the two measurements into motor settings, is a rule we wrote from
+  our own understanding of the body (the review of 2026-11-11): play learned to *measure* the body; it did not discover how to *use*
+  the measurement. That discovery is the next experiment. When play wasn't sure (a period can be mistaken for its double), the best use of taste was to
   choose among play's own few guesses. Without play, a brain searching by taste after the challenge began was surely worse off, since
   it paid for its search while the food was on (`discrete/NOTEBOOK.md`, D47).
+- **Boredom should read certainty, not stillness.** When should play stop? Our first answer, "when the creature's estimate of its body
+  stops changing", stopped too soon: a wrong guess (a period mistaken for its double) can sit unchallenged while evidence comes in.
+  What works is to stop when the best guess clearly beats its strongest rival, to spend play on whatever movements raise that
+  certainty, and to leave whatever doubt remains for taste to settle once food arrives. Then the creature had its body right in 90% of
+  lives, and from 100 s into the challenge ate surely more, three quarters of the way to a brain told its body, on fresh seeds too
+  (`discrete/NOTEBOOK.md`, D48). Then tested fairly, every brain given the same 400 s of play (D49): steering play towards certainty surely beats
+  playing at random (18 points more of its guesses within 10%, and surely more food), but only matches play steered by learning
+  progress; and a guess it calls sure was never wrong, though few reach sure. Part of the first result was just playing longer.
 - **Play: a brain should spend effort organising itself before any reward asks it to** (the user's insight, 2026-11-10, prompted by
   D44). A brain can make behaviours that win no food now, such as spinning on one thruster to watch the view come round, but that tune it
   to its body and world, and that pays off for the rest of its life. In D44 the spinning eats nothing while foraging eats, yet the knob
@@ -171,8 +220,8 @@ The findings that changed the direction of the work, each told in full in the no
   sensors and billions of neurons, wanders among red and blue blocks. If tasting poison meant training all those neurons to steer it
   away, as in a deep network trained from scratch, it would take millions of trials. But if its brain has already organised itself to
   that world, and already has "blocks", "red" and "blue", then the poison needs only a small adjustment: one-shot learning, quick and
-  cheap. In bits: a taste carries at most one bit, and a life about 50 (D31), so a brain can only learn quickly what its own
-  organisation has already made cheap to say. That organisation can be gathered without reward, from what the senses do, which offers
+  cheap. In bits: a taste carries at most one bit, and a life's tastes about 50 (D31), so from taste alone a brain can only learn
+  quickly what its own organisation has already made cheap to say. That organisation can be gathered without reward, from what the senses do, which offers
   far more bits than taste. This is old in psychology as *latent learning*: rats left to wander a maze with no food learned its layout
   anyway, and used it at once when food appeared (Tolman 1948). For our goal it means that reward should only choose and tune, while
   most of a growing brain's organising comes from predicting its own senses (`PROGRAMME.md`, The next phase). The user's name for it is

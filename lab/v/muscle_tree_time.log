@@ -1,0 +1,9 @@
+== teach: time ladder, 5 pairs, 2.5 ms, seeds 84000+; x [95%] against base and told; * solved (surely above .5); grow's final ring lengths (median, range)
+-- rung 1, 100 s: base 1.58 told 1.45
+   treec| P992 +0.00 [+0.00,+0.00] - nodes 5 | P1984 +0.00 [+0.00,+0.00] - nodes 5 |
+-- rung 2, 300 s: base -0.45 told 0.65
+   treec| P992 +0.67 [+0.30,+1.32]  clock15.7,clock11.4 nodes 9 | P1984 +0.93 [+0.53,+1.82]* clock15.7,clock11.4 nodes 9 |
+-- rung 5, 750 s: base -0.20 told 0.43
+   treec| P992 +1.53 [+0.95,+5.22]* clock10.4,clock6.0 nodes 16 | P1984 +1.12 [+0.75,+3.00]* clock10.4,clock19.3 nodes 31 |
+-- rung 7, 1050 s: base 0.40 told 0.53
+   treec| P992 +2.98 [-20.70,+8.72]  clock12.7,clock19.3 nodes 16 | P1984 +4.01 [-40.64,+7.81]  clock21.4,clock12.7 nodes 32 |

@@ -33,3 +33,17 @@ def start():
         with open(PATH, "a") as f:
             f.write(f"| {datetime.date.today()} | `{run}` | {(time.time() - t0) / 60:.1f} | {cpu / 3600:.2f} | {belief} | {predict} | |\n")
     atexit.register(done)
+
+
+def fill(match, text):
+    """Fill the "surprised?" column of the latest unfilled row whose run contains `match`. Usage:
+    .venv/bin/python -c "import sys; sys.path.insert(0, 'lab'); import ledger; ledger.fill('couple.py 20', 'no: as predicted')"."""
+    rows = open(PATH).read().rstrip("\n").split("\n")
+    for i in range(len(rows) - 1, -1, -1):
+        r = rows[i]
+        if r.startswith("| 20") and match in r and r.endswith("| |"):
+            rows[i] = r[:-1] + text.replace("|", "/") + " |"         # "... | prediction | |" -> "... | prediction | text |"
+            assert rows[i].count("|") == 8, rows[i]
+            open(PATH, "w").write("\n".join(rows) + "\n")
+            return True
+    return False

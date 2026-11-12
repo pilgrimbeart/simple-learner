@@ -1,0 +1,7 @@
+== 12 bodies (thrusters and drag drawn), balance told, tempo e^s over -1.0 to 1.0
+  tempo of most coupling against log drag: median error 0.68, correlation +0.52
+  ... coupling from beat counts:            median error 0.66, correlation +0.55
+  tempo of most food against log drag:     median error 0.30, correlation +0.90
+  coupling (less body mean) against tempo minus log drag: -1.6: +0.53, -1.2: +1.27, -0.8: +1.41, -0.4: +0.80, +0.0: -0.04, +0.4: -0.98, +0.8: -1.40, +1.2: -1.61
+  coupling from counts (less body mean) against tempo minus log drag: -1.6: +0.12, -1.2: +1.04, -0.8: +1.33, -0.4: +0.82, +0.0: +0.07, +0.4: -0.83, +0.8: -1.35, +1.2: -1.70
+  food a 10 s (less body mean) against tempo minus log drag: -1.6: -1.53, -1.2: -1.22, -0.8: -0.67, -0.4: +0.15, +0.0: +0.90, +0.4: +1.17, +0.8: +0.00, +1.2: -1.34

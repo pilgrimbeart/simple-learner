@@ -17,10 +17,43 @@ per meal spent resting, moving and thinking), gain rate (meals per 10 s), food, 
   the two motors' effects equal. Taste picking among play's own top hypotheses mends some period slips (+1.6 after, surely). Taste
   alone, searching during the challenge, is surely behind; play by learning progress ends by itself but spreads thin; the steady-view
   link on cheap statistics is close but not sure. Open: a steady-view link as good, without the partners assumption.
+- **Taking up new parts** (D55, 2026-11-12; the user's new kind of experiment): new thrusters alone are worth little (about 15%:
+  the eyes are the limit); a split eye with small thrusters about +1.0. Given them part-way through life, a brain that plays still with
+  them, watching through the new eye what each new thruster does, wires them itself and surely gains on fresh creatures (+.39); food
+  as the teacher fails even over 3000 s. Limits: the reflex form, and a preference for the thrusters play sees best.
+- **Taking turns** (D54, 2026-11-12; the user: a Sepulchre theme): two motor units in a half-centre (one searches its own gain while
+  the other holds; fatigue hands over; a unit that moved wakes the other), each judging by the joint coupling it sees with its
+  neighbour, match the global coupling search (90% within .2 on fresh seeds) and are surely better than the same units searching at
+  once (+1.76, +1.34). With drag drawn too they find the balance but not the tempo: coupling prefers half the right speed, food the
+  right one. Coupling sets what makes behaviour coherent; speed against care needs taste.
+- **The muscle-like body** (D53, 2026-11-11, night; the user's paradigm, opt-in): a pulse raises a thruster's activation (30 ms) and
+  thrust is a sigmoid of it. The starting brain forages at 63% of the old body's level; the told yardstick and every formula that
+  assumed thrust proportional to rate had to be recomputed, and the measurers built on such formulas (D20, D43, partners) fail on it,
+  while coupling still peaks at the body's own right knob (95%) and the coupling search surely beats the formula there. The body is
+  steeper in the knob, not gentler (a 10% rate error is about 25% in thrust), and D52's knife-edge at 0 doesn't appear in this frame on
+  the old body either. The ladders certify much as before and the tree still climbs them; D52's knife-edge was an over-reading (the cost grows smoothly).
+- **The knob set by coupling** (D52, 2026-11-11): a generic search over the balance knob judged only by the brain's own sense-action
+  coupling, with an Occam preference for no change, beats our formula on fresh seeds (+2.06 against +1.04 after onset; surely, +1.01)
+  and leaves normal bodies exactly alone; no food, no formula, no body model. Plain bodies are a knife-edge (equal rates pair every
+  kick; corrected in D53: not a knife-edge, the cost grows smoothly and steeply by .1), which the Occam default handles. Precise timing of the kicks gains nothing (told on a lopsided body already equals a
+  plain one). Locality, three tries (D52's end): per-unit coupling in fixed bins rewards slowing down (normalising cures that); small
+  perturbations are too weak to feel; units' own wide searches spoil each other's judgements. The many-units problem, with coupling as
+  teacher.
+- **Understanding as coupling** (D51, 2026-11-11; the user's principle): with no reward, the coupling between senses and actions at
+  the brain's interface peaks at the right balance knob (95% within .2 on lopsided bodies, 0 on plain ones, correlation +1.00): no
+  formula, no model of the body. Next: how fast it tells settings apart, and a knob moved by it in life.
+- **P2: three routes to the knob without our formula** (D50, 2026-11-11): taste choosing among nine readouts in life costs more food
+  than it wins; evolution judged by food finds the right shape (a difference of the two motors' measures) but its calibration follows
+  its fitness proxy, below ours on real lives; steady view over mixed commands, from slow play, fails (32% within .2). By-product: slow
+  play makes our partners link the best yet (85% within .2). Abstraction: the link is a homeostatic motif, equalise what your own
+  records measure, not physics.
+- **The review and P1** (D49, 2026-11-11): an outside review, adopted: D47 is estimation plus a designed rule, P2 removes the rule.
+  P1, at equal play time on fresh seeds: steering play towards certainty surely beats random play (+18 points of guesses within 10%,
+  surely more food) and ties learning-progress play; D48's edge was mostly playing longer; "sure" is conservative, never wrong.
 - **Boredom from certainty** (D48, 2026-11-11): stopping play when the estimate stops moving is fooled by confident slips; stopping
   when play's best guess clearly beats its rival, steering play to what raises that certainty and handing what doubt remains to taste,
-  sets the knob to .01 (90% within .2) and starts the challenge +1.1 at once and +2.1 after, surely (exploratory; to confirm on fresh
-  seeds).
+  sets the knob to .01 (90% within .2); from 100 s into the challenge it is surely ahead, +2.1 and on fresh seeds +2.2, three quarters of
+  the way to a brain told its body; at once +1.1 and +.7 (sure on one seed set), while taste settles the last doubt.
 - **Knobs first** (D43, 2026-11-10; the user's rule): compensating for a weak thruster is one knob. Turned by trial and error it takes
   about 1000 s to close half the gap, since nothing tells it which way to turn; set from a measurement (a revolution timed with one
   motor) it closes three quarters or more by 300 s. The measurement can be made by D38's recording unit clocked by the brain's own beats
@@ -3257,3 +3290,364 @@ unit that never eats (ties now go to the least recently played). 20 pairs, devel
 So boredom should read certainty, not stillness: play on while the best guess doesn't clearly beat its rival, steer play to what raises
 that certainty, and hand what doubt remains to taste. One rule now covers when to stop playing and what taste is for. Exploratory
 (designed on these seeds): to confirm on fresh ones.
+
+## D49: an outside review, and P1: what steering play buys at equal time (2026-11-11)
+
+**The review** (`lab/v/review_2026-11-11.md`, by another agent at the user's request, of commit d96b215; adopted in full by the user).
+Its main points, and what changed: our bits accounting conflated the length of our description of a world with what the creature must
+resolve and with what all its senses can supply (README and ABSTRACT corrected: learning is fast when the distinctions that matter are
+cheap under the prior and the actions expose them); D47's partners rule is our understanding of the body, so D47 shows estimation from
+unrewarded play plus a designed rule, not discovery of the rule (README corrected; P2 removes it); predictability, surprise,
+information gain and decision value are different objectives (MacKay 1992, active data selection), and D46's learning progress was a
+rough estimator, not a verdict on the principle; D48's certainty is a margin, not a calibrated probability, and its arm played longer;
+the work's ingredients have names (Plan2Explore; Martius, Der and Ay) and its own question is doing them locally, compactly and with
+growth (adopted as the programme's one line); the tree is not context-tree weighting (parked: compare them); report state, experience,
+computation and communication apart; knobs first is a default, not a law (AGENTS.md), with recycling (Dohare et al. 2024) the comparator
+to growth. PROGRAMME.md's stages P1 to P4 replace D1 to D3.
+
+**P1** (`lab/p1.py`, `lab/v/p1.log`; dance_predictions 44 to 47; fresh seeds 94000+, 30 pairs, the design frozen before). Four arms each
+with exactly 400 s of play (ending before the earliest onset), the same estimator (D47's records) and the same hand-over (D48's: a motor
+not yet sure hands its rival to taste), so they differ only in which data play gathered: uniform turns, learning-progress turns, turns
+to the unit that last raised certainty most; and no play.
+
+| arm | gain from onset vs forage, 0-100 s | 100-300 s | knob within .2 | motors' best guess within 10% | sure: share; wrong |
+|---|---|---|---|---|---|
+| uniform | -.51 | +1.43 | 75% | 75% | 3%; 0 |
+| learning progress | +.02 | +1.74 | 92% | 88% | 12%; 0 |
+| certainty-directed | +.43 | +2.17 | 92% | 93% | 28%; 0 |
+
+Paired: certainty-directed above uniform surely (+.94 [+.35, +1.57], +.74 [+.21, +1.30]; +18 points of motors within 10% [+8, +28]),
+above learning progress but not surely (+.41, +.43; +5 points [-5, +15]). Motor beats in play alike (4529, 4942, 4652), so the gain is
+per second and per joule. So steering play does gather better evidence than playing at random; learning progress, given the same
+time, steers about as well; and D48's edge over learning progress was mostly that it played longer. "Sure" (margin 3) is
+conservative: never wrong in 90 motors' claims, but reached by few. The same-observations ablation is built in: every arm used the
+same estimator, so the differences are the data.
+
+## D50: P2, three routes from play's records to the knob with no formula of ours (2026-11-11)
+
+`lab/play3.py` (readout, readw), `lab/p2b.py`, `lab/p2c.py`; `lab/v/p2a.log`, `p2b_train.log`, `p2b_train60.log`, `p2b_test.log`,
+`p2c.log`; dance_predictions 48 to 56. The user: try all three routes, then abstract, so that we haven't just evolved (designed) the
+solution. Play4's frame throughout (a quiet spell, then the challenge); gains against forage, from the challenge's onset.
+
+- **A. Taste discovers the readout in life.** After play, nine readouts (every signed combination of the two motors' measures, ours
+  among them), 20 s each by taste: knob within .2 in 48%, and surely worse than no play at once (-1.01): log2 9 = 3.2 bits of choice is
+  cheap in bits but dear in food, since 20 s of eating barely tells two readouts apart.
+- **B. Evolution learns the readout across lives**, judged only by food (each training body's food at 17 knobs, a readout searched over
+  them): it finds the same shape as ours, the difference of the two measures (+1.00 b0 - .70 b1 - .80), on 40 and again on 120 lives,
+  tied with ours there. On fresh lives with real play it transfers (surely above forage, +1.40, +1.33) but is surely below ours (-.65,
+  -.87). Its fitness, a forager set to the knob from birth, rates our formula at 1.7 a 10 s where real lives give 2.5 to 2.8: evolution
+  found what its measure rewarded.
+- **C. Slow play feeds a model of mixed commands, and the steady-view goal chooses the drive** (each mix's turning a beat from its own
+  record; the minimum over the knob found by a fitted V; taste among it and +- .3): 32% within .2, no sure gain. Mixed records are
+  often right (29.2 against 29.4 beats) but ten noisy points don't pin the minimum, and the true curve is no symmetric V.
+- **By-product:** with the slow bank (periods 8 to 60 s, 20 s turns), our partners link is the best yet: 85% within .2, +2.43 and +2.32
+  (20 pairs; to confirm on fresh seeds).
+
+**The abstraction.** What made partners work wasn't knowledge of thrusters but two generic things: each motor's effect measured by its
+own record, in the brain's own currency (beats until the view comes round), and an invariance asked of those measurements: partners
+should have equal effect (or, for steady view, a drive should leave the view still). Partners' "formula" is the fixed point of a
+comparator loop: nudge the two gains until the two measured effects per second agree; it needs only that a gain moves an effect one
+way. So the inherited part is a homeostatic motif (equalise what your own records measure) plus the brain's knowledge of its own
+settings, not physics. The three routes show how such a link can be acquired: designed (best), evolved (right shape, calibration only
+as good as evolution's measure of fitness), or discovered in life by taste (honest, but too dear in food with these slow tastes). And
+the evidence that carries it is the clean, long, single-action record: slow play supplies it, short mixed play starves any model.
+
+## D51: understanding as coupling: the right knob is where senses and actions couple most (2026-11-11)
+
+`lab/couple.py`, `lab/v/couple.log`; dance_predictions 57 to 59. The user's principle (PROGRAMME.md, the guiding principle): a brain
+optimises for the simplest connection between its inputs and its actions in both directions; in bits, I(S; A) as small local
+predictors capture it, which, unlike predictability alone, has no dark room (standing still or spinning makes the senses predictable
+but the actions constant). First, before any mechanism: does it point at the right knob? The starting brain with its balance knob
+fixed at 17 settings (-1.6 to 1.6), in play4's quiet spell (no taste at all), 50 to 400 s; at the interface in 50 ms bins, S (which
+eyes pulsed) and A (which motors beat), coupling I(A_t; S_t+1) + I(S_t; A_t+1) from 4 x 4 tables, bias-corrected, in bits a second.
+Fresh seeds 97000+, 20 lopsided bodies and 10 plain.
+
+**Yes, sharply.** On lopsided bodies the knob of most coupling is within .2 of the right one in 95%, within .4 in all, median error .07,
+correlation +1.00; on plain bodies it is 0 in all ten. Coupling against the knob's distance from right: +1.94 bits a second above a
+body's mean at 0, +.76 and +.42 at .4 either side, below the mean beyond. Nearly all of it is the policy direction (senses to actions,
+3.3 bits a second; actions to senses .2): with the balance right, seeing food starts a drive and the drive keeps the food in view, so the
+senses go on governing the actions; with it wrong, the drive loses the block and the link breaks. No reward, no formula, no model of
+thrusters: only how tightly the brain's own inputs and outputs go together. Not yet a mechanism: each point is 350 s at a fixed knob.
+**How fast** (`lab/v/couple_speed.log`; the same lives, keeping each one's bins): the right knob beats one .4 off in 75% of
+comparisons from 10 s of foraging, 88% from 30 s, 98% from 60 s; the best of 17 settings is within .2 of right in 60%, 80% and 95% of
+bodies at 10, 30 and 60 s. Taste needed 300 s of trials and paid in food (D47); coupling needs no food, so a brain can search its knob by
+coupling in the quiet, before reward exists, and again whenever rewards fall. Next: that search as a mechanism, in life.
+
+## D52: the knob set by the brain's own coupling: no formula, no food, and better than ours (2026-11-11)
+
+`lab/couple_search.py`; `lab/v/couple_search*.log`; dance_predictions 61 to 68. D51 as a mechanism. The starting brain forages from
+birth; a counter at its interface (4 x 4 counts of which eyes pulsed and which motors beat, 50 ms bins, both directions) measures its
+coupling over each 30 s; a golden-section search moves the balance knob by that alone (generic one-dimensional optimisation over the
+brain's own setting), done when the bracket is narrow (bored: certain). No reward, no record of the body, no formula. Play4's frame
+(a quiet spell, then the challenge from 400 to 600 s), scored from onset.
+
+Steps, each traced (development seeds 98000+, 20 pairs): **as first built** (done at 180 s) surely above forage on lopsided bodies
+(+1.55, +1.71; 80% within .2), but surely below forage on plain bodies (-1.4) though its knob ended .06 from 0. Traced: not an artefact
+(a paired drive doesn't help); the score is that steep near 0 (.03 costs .9, .1 costs 1.7), because each beat is a kick of about 18
+degrees: at exactly equal rates every kick pairs with the other motor's and cancels, while at a 3% difference an unpaired kick comes
+every 30 or so beats and loses the block. Equal rates is a knife-edge, which foraging sits on by construction. **Judging longer near
+the end** (bracket to .1, 60 s judgements) tied partners on lopsided bodies but bought no precision; **the top of a parabola through all
+judgements** added nothing. **MacKay's Occam factor** did: the default (no adjustment) judged against the search's answer, 60 s each,
+the answer kept only if its coupling is 10% higher. The plain body's cost went (-.14 after), at the price of time (done at a median
+510 s, before onset in 30 to 50% of lives).
+
+**On fresh seeds** (99000+, 20 pairs, frozen):
+
+| arm | gain from onset vs forage, 0-100 s | 100-300 s | knob |
+|---|---|---|---|
+| told | +3.12 | +2.86 | |
+| partners (play + our formula) | +1.01 | +1.04 | .09, 65% within .2 |
+| coupling, finer | +1.61 | +1.63 | .05, 75% |
+| **coupling + Occam** | **+1.53** | **+2.06** | .09, 82% |
+| plain bodies: coupling + Occam | +.04 | -.04 | exactly 0 in 100% |
+
+Coupling + Occam is surely above our formula in 100-300 s (+1.01 [+.23, +1.85]), and leaves normal bodies exactly as they were.
+
+**What it means.** The knob that our formula set, and that taste and evolution could only roughly find, is set better by a principle
+that knows nothing of thrusters, needs no food and no model of the body: make what you sense and what you do go together as tightly as
+your small counters can tell, and don't move from your default unless the evidence clearly says so. The pieces are generic: a local
+measure of coupling (the user's principle, D51), a generic search over one's own settings, boredom when the bracket is narrow, and an
+Occam preference for no change. Not yet local in the strong sense: one counter and one search for the whole brain; and the search runs
+from birth, not re-entered on clues (the user's suggestion), which needs something to change mid-life.
+
+**Is precise timing of the kicks worth learning?** (the user, after D52's knife-edge; `lab/kick_timing.py`, `lab/v/kick_timing.log`;
+dance_predictions 69.) A yardstick question: the told brain with equal rates and a scheduler that, at each pair of beats, fires both or
+drops one, whichever keeps the heading's accumulated turn nearest straight (error diffusion), against the told rate knob. No: the
+scheduler is slightly worse (-.35, -.54 surely in 100-300 s; dropped beats lose thrust), and the told rate knob on lopsided bodies
+(+3.85, +4.11) already equals foraging on a plain body (+3.98, +4.16): there is no headroom for timing. The kicks are large, but at the
+right rates they already spread finely enough; what learners lack is precision in the knob itself (D52). Two bugs traced in the smoke:
+the scheduler only ever dropped one motor's beat, and an empty tick reset its account. (The script was first written over lab/timing.py,
+D22's; restored from git at once, and this one named kick_timing.py.)
+
+**Locality, first tries** (`lab/couple_local.py`; smokes of 4 to 5 lives; offline checks on D51's saved bins). Each motor a unit with
+its own gain and its own counter (its own beats against the eyes). Offline: motor 1's own coupling peaks at the right balance in every
+body from 60 s; motor 0's in 40 to 55% (it also does all the scanning). **Weight perturbation** (each unit tries +-.15 on its own gain
+each 20 s and moves by the change in its own coupling): both units slowed down (mean log rate -.2 to -.8) instead of balancing.
+Traced: in fixed 50 ms bins a unit beating at 50 a second beats in nearly every bin, so its activity carries little information and its
+coupling is small; slowing raises it for no good reason. **Normalised** (coupling as a share of the unit's own activity's entropy, the
+uncertainty coefficient): the slowing stopped and the normalised coupling still peaks right for motor 1 in every body, but a +-.15
+nudge changes it far less than a 20 s window's noise, so 20 windows moved the gains nowhere useful (D16's and D19's wall for
+perturbation learning). The global search worked by comparing settings far apart; a local one must too, without units spoiling each
+other's comparisons.
+**Each unit its own wide search, started at its own random moment** (golden section on its own log rate, judged by its own normalised
+coupling; no coordinator): in a smoke of five lives, two lopsided bodies right (-.81 against -.68; .06 against .12), two wrong (0 against
+.64; -1.15 against 1.23), and a plain body pushed to -1.85. The searches overlap and spoil each other's judgements, and motor 0's own
+signal is weak. Stopped here, before tuning on smokes. **Where locality stands:** the coupling principle works when one search moves one
+knob (D52); split across units that each judge by their own activity, it needs (a) a measure that doesn't reward a rate for its own sake
+(normalising helps), (b) large comparisons rather than small nudges, and (c) units that don't disturb each other's comparisons. (c) is
+the many-units problem again (D16), now with coupling as the teacher instead of taste.
+
+## D53: the muscle-like body, and the experiments repeated on it (2026-11-11, night)
+
+`lab/sigmoid_body.py`, `lab/drive.py`, `lab/retune.py`, `lab/knife.py`; the engine's switch (`lab/stage2_lang/sim.py`, `WLife.muscle`;
+`MUSCLE=1` in every worker); `lab/v/muscle_predictions.md` (M1 on, with scores); PROGRAMME.md, Next. The user's paradigm: a pulse raises
+a thruster's activation (decaying), and thrust is a sigmoid of it, so a lone pulse nudges and a fast burst builds to strong thrust, as
+muscles grade force. Felt by hand first (`lab/drive.py`; keys scanned each tick, "." the left thruster turning right, "," the right).
+
+**Step 0, the engine.** The reference path integrates thrust in sub-steps of .5 ms while an activation lasts; the compiled paths are
+off when the body is on. With the switch off every life is identical (`lab/speed_fingerprint.py check`: 288 of 288). About 20% slower.
+
+**Step 1, the body's tuning and the starting brain.** With activation decaying in 60 ms a lone pulse turns 4 degrees (the old body: 23),
+but the starting brain, even retuned, lost half its food (efficiency 1.12 against 2.2): thrust builds and lingers about 60 ms, and a
+reflex brain (see food, drive at once, stop on poison) overshoots. At 30 ms a lone pulse turns 7 degrees and it does better (1.62); the
+user chose 30 ms. The retuning's gains didn't hold on fresh seeds (1.49 retuned, 1.51 old numbers, 30 pairs), so the starting brain is
+the same on both bodies; on the new body it scores 1.51 against the old body's 2.41 (63%).
+
+**Step 2, yardsticks and the body ladder** (D42's seeds, 5 pairs, 300 s). The told balance assumed thrust proportional to rate
+(log k1/k0); on this body thrust is a sigmoid of rate, so the yardstick was wrong (told did no better than the starting brain). Recomputed
+as the knob giving equal mean thrust at the drive's rate (`sigmoid_body.told_balance`: for a strength ratio of 2, .33 instead of .69), and
+the tempo likewise. Then: plain 1.74, lopsided 0.23, told 1.60 (old body: 2.52, .94, 2.46): the balance still matters most and a told
+brain recovers it. Drag drawn costs .33 (old .56).
+
+**The knife-edge, measured** (`lab/knife.py`, 10 pairs, 300 s, efficiency in the last third against the knob's error from right):
+
+| error | 0 | .03 | .1 | .2 | .4 |
+|---|---|---|---|---|---|
+| old body, plain | 2.52 | 2.49 | 1.94 | 1.09 | -.12 |
+| new body, plain | 1.65 | 1.21 | .27 | -.21 | .06 |
+| old body, lopsided | 2.31 | 2.27 | 1.47 | .83 | -.08 |
+| new body, lopsided | 1.66 | 1.24 | .32 | -.27 | .14 |
+
+The new body is steeper in the knob, not gentler: the knob sets rates, and its thrust is steep in rate (mean thrust .07, .27, .87 at 25,
+50, 100 pulses a second), so a 10% rate error is about a 25% thrust error. In thrust terms the two bodies ask about the same precision.
+**A correction to D52:** here the old body shows no knife-edge at 0 (an error of .03 costs nothing; the cost grows smoothly), where D52's
+frame had .03 costing .9. The unpaired-kick account of D52 looks overstated: what costs is the drive's curvature, growing smoothly with
+the error. The muscle-like body's premise (that coarse kicks make the balance a knife-edge) is therefore weaker than it seemed.
+
+**Step 3, knob learners** (`lab/body_knob.py`, D43's seeds, 5 pairs, efficiency in the last third; `lab/v/muscle_body_knob.log`):
+
+| learner | 100 s | 300 s | 1000 s | (old body, 300 s) |
+|---|---|---|---|---|
+| starting brain | .34 | .23 | .32 | .94 |
+| told | 1.25 | 1.60 | 1.75 | 2.46 |
+| trial: the bank (D19) | -.09 | .59 | .48 | 1.02 |
+| trial: self-sizing (D36) | -.32 | .09 | .51 | .65 |
+| measured: D20's counters | .23 | -.14 | .08 | 2.08 |
+| measured: D43's beat register | .24 | -.05 | .24 | 2.37 |
+
+The measurers, the old body's best, fail: they measure each motor's turning correctly, then convert it to a knob with the old body's
+linear formula, wrong for this one. Trial by taste needs no formula and closes a little.
+
+**Step 4, coupling.** Coupling's peak (`lab/couple.py`, `lab/v/muscle_couple.log`) is within .2 of the new body's own right knob in 95%
+of lopsided bodies (median .10, correlation +.98), at 0 on every plain body: the principle needs no conversion. The coupling search
+against partners on fresh seeds (`lab/couple_search.py ... s99000`, `lab/v/muscle_couple_search.log`, 20 pairs, gain from onset vs
+forage): told +1.83, +1.85; partners (the old formula) -.16, -.17 (knob error .36); coupling, finer +.46, +.80; coupling + Occam +.32, +.77
+(90% within .2), surely above partners in 100-300 s (+.95 [+.43, +1.47]); plain bodies left alone after the search. On the new body
+coupling + Occam reaches 42% of told's gap in 100-300 s (old body 72%): the steeper knob asks more precision. **So the formula breaks
+when the physics changes, and the principle doesn't.** P1's play arms not rerun (all use the partners formula).
+
+**Step 5, touching pairs** (`lab/pairs.py`, D41's seeds, 5 pairs; `lab/v/muscle_pairs*.log`): touching pairs cost the told arm 44% on
+the new body (1.49 to .83; old body 29%), declined rather than poisoned; the best careful driver wins +.24 over told (old +.16), the best
+looker +.07 (old: below told); intervals overlap. Finer control helps a little, not surely; the loss is still mostly information.
+
+**Step 6, the ladders and the tree** (`lab/ladders.py certify`, 10 pairs; D40's `teach.py` runs, 5 pairs; `lab/v/muscle_cert_*.log`,
+`muscle_tree_*.log`). Rungs certified on the new body: seq 2, 3, 5, 7, 11, 13, 17 (seven, as on the old body); combo 1, 4, 5, 6 (old five);
+time 2, 3, 6, 11 (old six). The tree solves seq 11 and 17, combo 1, 3, 5, 6 (4 not), time 2 and 5 (old: time 5 at .45, unsolved); seq 5
+unsolved, as before. Its x often exceeds 1: the told arm (told the colour, driving as the starting brain) is weaker on this body, so read
+solved rungs against that weaker yardstick. The scaling line's results hold on the new body.
+
+**D52's knife-edge, checked** (`lab/knife_play4.py`, D52's own frame, fresh seeds, 20 pairs, both signs; `lab/v/knife_play4.log`): a
+plain body's knob off by .03 costs .19 (not sure), by .1 costs 1.11 (sure). D52's ".03 costs .9" was its 10 pairs and one sign, and the
+unpaired-kick account built on it an over-reading: the cost grows smoothly, steeply by .1. The Occam check still earned its place (the
+search's errors were .05 to .1). This weakens the premise of the muscle-like body: the old body's sensitivity is steep, not a knife-edge.
+
+**What D53 says.** The muscle-like body changes the physics, and with it every rule we had written from the old physics: the told
+yardstick and the formula-based learners. The coupling principle carries over untouched (its peak at the body's own right knob, the
+search guided by it beating the formula). Everything else of substance holds: the balance is still the body's one big number, touching
+pairs still lose to missing information, the ladders certify much as before and the tree still climbs them. The new body forages at
+about two thirds of the old one's level with the same starting brain and is steeper in its knob. Whether to adopt it is the user's call;
+on this evidence it teaches mainly the formula-versus-principle lesson.
+
+**Locality, a fourth try** (after D53; `lab/couple_local.py`, `local:drive`; smoke, 5 lives, the old body): each unit's own wide search,
+started at its own random moment, counting only the bins while it is driving (a motor unit knows that from its own drive input), so
+motor 0's scanning no longer confounds its signal. Still poor: one of four lopsided bodies roughly right, two with the wrong sign, a plain
+body pushed to -.91. The units' searches (about 250 s each, within a 400 s quiet spell) overlap, so each judges its own setting while the
+other's is moving. What would cure it is units that take turns or don't disturb each other's judgements: a design question, left for the
+user rather than tuned at night.
+
+## D54: taking turns: Sepulchre's half-centre makes the local coupling search work (2026-11-12)
+
+`lab/couple_local.py` (`HalfCentre`; arms local:halfj, local:half, local:turnsj), `lab/couple_tempo.py`; `lab/v/half_centre*.log`,
+`couple_tempo*.log`; dance_predictions 70 to 77. The user: taking turns is a Sepulchre theme. The locality tries of D52's end failed
+because two units changed their settings at once, so neither could tell whose change moved the coupling (D16's credit problem). In a
+half-centre two units inhibit each other, and fatigue hands the activity over, with no coordinator. Mapped: a unit's turn is its search
+(golden section on its own gain, 20 s a point, an Occam check at the end); while it searches the other holds (inhibition); at the end it
+is bored (fatigue: D48's certainty); if it moved, the other's landscape has changed, so the other rebounds and takes the next turn;
+play ends when no unit has drive left, or at the first taste.
+
+**The signal matters first.** By its own coupling (its own beats against the eyes, normalised, counted while driving) a unit fails even
+taking turns: its own coupling rises with its own rate whatever the balance (traced: unit 1 favoured +.79 where -.64 was right). The
+balance is a property of the joint behaviour, so each unit judges by the joint coupling of the eyes with both units' beats, which it
+sees from its neighbour: local within the half-centre, D51's measure.
+
+**Then turns are what make it work** (play4's frame, 20 pairs; gain from onset against forage):
+
+| arm | dev seeds: 0-100 s | 100-300 s | within .2 | fresh seeds: 0-100 s | 100-300 s | within .2 |
+|---|---|---|---|---|---|---|
+| global search + Occam (D52) | +1.32 | +1.32 | 70% | +1.53 | +2.06 | 82% |
+| **two units taking turns, joint signal** | **+1.74** | **+1.50** | **80%** | **+2.01** | **+1.71** | **90%** |
+| both at once, joint signal | +.54 | +.33 | 40% | +.25 | +.37 | 45% |
+| taking turns, own signals | -1.38 | -1.28 | 0% | | | |
+| both at once, own signals | -.27 | -.38 | 20% | | | |
+
+Taking turns is surely better than searching at once with the same signal (dev +1.20, +1.18; fresh +1.76, +1.34), ties the global
+search, finishes before food in every life (400 s), and leaves plain bodies exactly alone (100%). So the credit problem among units
+judged by one shared signal is solved by alternation, as in Sepulchre's circuits, not by a coordinator.
+
+**Two knobs: balance and tempo** (thrusters and drag both drawn; told knows both). The units set their own rates, so between them the
+balance (difference) and the tempo (sum). The balance is found (75% within .2; +1.54, +1.72, tied with the global search), the tempo not
+(correlation with the drag +.21), and told stays far ahead (+3.78, +3.54). **Why: coupling and food disagree about tempo** (the balance
+told, the tempo on a grid, no reward): coupling peaks at about half the right speed (-.8 in log), food at the right one or a little
+faster (correlation with log drag +.90). Not the binning (beat counts give the same). A slower creature's seeing and doing go together
+more tightly; a faster one eats more. Tempo trades speed against control, and coupling values only control. So the principle sets the
+knobs that make behaviour coherent (the balance); a trade-off between speed and care needs the outcome, taste (the review's point:
+predictability, information and decision value are different objectives).
+
+## D55: a brain that takes up new parts: first, is there anything to gain? (2026-11-12)
+
+`lab/newparts.py`, the engine's switch (`sim.WLife.extra`, `EXTRA=1`: two more thrusters a side at a half and a quarter of the
+original's strength, on motor lines 2 to 5 wired at random, alive from a moment drawn each life, each firing costing in proportion to its
+strength; off, every life identical: 288 of 288); `lab/v/newparts_predictions.md` (N1 to N3), `newparts_yardstick*.log`. The user's new
+kind of experiment: not mismatches with the world or flaws in the body, but new parts given part-way through life, to be taken up in it.
+First the yardstick (as for any rung): hand-designed brains told the wiring, the parts alive from birth, routing the starting brain's
+beats to the new thrusters (a finer scan on the quarter at 4 times the rate, a finer drive on the halves or quarters, both), 10 pairs,
+300 s, efficiency in the last third:
+
+| world | starting brain | best design | gain |
+|---|---|---|---|
+| plain | 2.18 | drive on the halves (or quarters) | +.31 [+.03, +.59] |
+| lopsided, told its balance | 2.09 | scan on the quarter | +.38 [+.12, +.66] |
+| touching pairs (2 mm) | 1.42 | scan on the half | +.11 [-.15, +.36] |
+
+Finer control buys about 15% at most: real, but below a rung's bar (a gap surely above .25), and nothing where precision should matter
+most. The same answer as D41 and D53 from a third direction: this creature is limited by what its eyes can tell it (where across the
+corridor a block lies, D21), not by the size of its kick. So new thrusters leave little for in-life learning to find; a new sense would
+leave much more (D21's yardstick: what knowing where blocks are is worth; D24 prepared a split eye).
+
+**Then a new sense with the new thrusters** (the user's choice: the split eye and the small thrusters; `lab/v/newparts_yardstick2.log`;
+N4 to N6). The split eye in the engine (`sim.WLife.split`, `SPLIT=1`): each eye pulse's half of the corridor, drawn by each half's
+share of that colour's light from its own stream, arrives on line 2 or 3, wired at random, alive from a moment drawn each life, only to
+a brain with inputs for it (off: identical lives, 288 of 288). Designs told the map: D24's reflex (while driving, food pulses from one
+half and not the other turn the body towards it) steering with the big thruster (D24's partner beat 10 ms late) or one small kick:
+
+| world | base | steer, big | steer, half kick | steer, quarter kick | quarter steer + drive on the halves |
+|---|---|---|---|---|---|
+| plain | 2.18 | +.69 | +.65 | +.94 [+.69, +1.22] | +.96 [+.79, +1.14] |
+| lopsided (told its balance) | 2.09 | +.60 | +.10 | +.72 [+.51, +.92] | +.68 |
+| touching pairs | 1.42 | +.53 | +.58 | +.64 | +1.07 [+.76, +1.39] |
+
+The new sense is worth about +.6 with the old kick and up to +1.0 (45% on a plain body, 75% in touching pairs, where knowing which side
+the poison lies on finally pays) with a small kick to act on it; the small thrusters alone almost nothing. Sense and fine actuator are
+worth most together: certified gaps for in-life uptake (G2) to find.
+
+**G2, taking up the parts in life: first tries** (`lab/uptake.py`; smokes; N7 running). One growth event: the split eye and the new
+thrusters come alive together at a moment drawn between 100 and 300 s; food from birth; 900 s lives. Raw material: a reflex arc from
+each new sensor line to each new motor line (2 x 4), born off; an arc that is on fires one kick of its motor at each food pulse on its
+line while driving (a new input attached to an existing behaviour; nothing says which line or thruster is which); the clue to start is
+the new lines beginning to carry pulses. Told the two right arcs, a life ate 151 against the base's 103: the arc form suffices.
+- Each arc tried on and off for 15 s, judged by joint coupling, Occam default off: wrong choices; one window each is noise (1.3 to 7.6
+  bits a second).
+- On, off, on, off, evidence per arc, decided at two standard errors: about two visits per arc fit in a life; by the sum, an hour needed.
+- Each kick a probe (one of a line's arcs or none, in turn; outcome the food pulses in the next .3 s): the right arc highest on one line
+  in both lives traced, not on the other; each outcome's spread about 2.5 against differences of about .4, so about 150 probes per arc
+  are needed and a life gives about 80. Starved, not wrong.
+Food is a poor teacher for a new steering arc: one kick changes whether food stays in view only a little, and the count is noisy.
+
+**Then play first, judged by the new sense** (the user: the brain needs an instinct to play with its senses and body first; learn3,
+learn3b in `lab/uptake.py`; `lab/v/uptake_3000.log`, `uptake_play.log`; N7 to N10). First, food as the teacher fails even in 3000 s lives
+(learn -.03, learn2 -.28 against base, told +.69): it is not only evidence; a steering kick's effect on food is too small and noisy to
+show within a life. Play instead, with the new sense watching the new motors: once the new lines wake, the base behaviour pauses; still,
+whenever something is in view on the new lines, one new motor's kick or none, in turn, then a pause for the motion to fade (a
+look-around beat of the scanning motor when nothing is in view); each motor's effect is how it moves activity between the two new
+lines. A line's candidates are the motors that surely move activity out of its half (towards what is there). Traced first: played while
+scanning, the kicks' effects drowned in the scan's own 18-degree beats (none sure in 120 kicks each); played still, the sides group
+correctly and the half thrusters stand out (-3.5, +3.3 standard errors), and a sure candidate was always on the right side.
+
+| 10 pairs, 900 s, parts at 100 to 300 s | efficiency | vs base |
+|---|---|---|
+| base (ignores the new parts) | 2.54 | |
+| told: the split-eye reflex | 3.34 | +.79 |
+| told arcs (the learner's own form at its best) | 2.96 | +.42 |
+| **play, then the surest candidate wired (learn3b)** | **2.91** | **+.37 [+.17, +.57]** |
+| play, then taste confirms (learn3) | 2.68 | +.14 |
+
+A brain given a new sense and new thrusters part-way through life wires them up by itself, by playing still with them and watching
+what each new motor does through the new eye, and surely gains: 88% of what its reflex form gives told the right arcs. Taste confirming
+made it worse: food is the weaker teacher again. Right side on both lines in 40% of lives; elsewhere one line, or a half thruster where
+the told arcs use a quarter. Senses and actions calibrated against each other first, food only after: the user's embryology picture.
+Fresh-seed confirmation running.
+**Fresh seeds** (104000+, 10 pairs; `lab/v/uptake_play_confirm.log`): play-then-wire +.11 [-.12, +.34], not sure; but the told arcs
+themselves only +.13 [-.06, +.30] there (+.42 on the development seeds). The learner reaches about 85% of its arc form on both seed sets
+(right side on both lines in 50% here); the form's worth varies, and is far below the told split-eye reflex (+.79 to +.94), which steers
+only when one half sees food and the other doesn't. The weak link is the arc form, not the learning. Next: lateral inhibition between the
+two new sensor lines (an arc fires only while the other line is quiet), a generic local motif, into the arcs.
+
+**With lateral inhibition between the new lines** (an arc fires only if its line saw more food pulses than the other in the last .2 s:
+D24's condition as one line suppressing the other; `lab/v/uptake_inhib*.log`; N11, N12). Development seeds (103000+): play-then-wire
++.46 [+.30, +.63] above base (the told arcs +.42; with inhibition, oddly, +.22). **Fresh seeds (105000+): +.39 [+.22, +.58], surely**,
+tied with the told arcs with inhibition (+.39). So a brain given a new eye and new thrusters part-way through life, playing still with
+them and wiring the motor that moves activity out of each new line's half to that line, surely takes them up, on creatures it never saw,
+reaching what the reflex form gives told the wiring. What carried it: play judged by the new sense, not by food (food failed even over
+3000 s), with the old behaviour paused so that one kick at a time is the only motion. What limits it: the reflex form (a kick per food
+pulse, worth +.13 to +.42 told, against D24's tuned reflex at +.8 to +.9), and a preference for the half thrusters, whose effect play
+sees most clearly, where quarters steer better.

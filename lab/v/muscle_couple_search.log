@@ -1,0 +1,10 @@
+== lopsided: 20 pairs; gain from onset, a 10 s, vs forage [95%] | knob: median error, within .2 | search done (median s; before onset)
+forage          | +0.61, +0.00 [+0.00,+0.00] | +0.56, +0.00 [+0.00,+0.00]
+told            | +2.44, +1.83 [+1.42,+2.22] | +2.41, +1.85 [+1.52,+2.16]
+partners:beats  | +0.45, -0.16 [-0.70,+0.37] | +0.39, -0.17 [-0.61,+0.27] | 0.36, 35%
+couple:fine     | +1.07, +0.46 [-0.26,+1.15] | +1.36, +0.80 [+0.10,+1.54] | 0.07, 65% | 390 s; 100%
+couple:occam    | +0.93, +0.32 [-0.11,+0.83] | +1.34, +0.77 [+0.32,+1.31] | 0.07, 90% | 510 s; 50%
+== plain: 10 pairs; gain from onset, a 10 s, vs forage [95%] | knob: median error, within .2 | search done (median s; before onset)
+forage          | +2.75, +0.00 [+0.00,+0.00] | +2.67, +0.00 [+0.00,+0.00]
+couple:fine     | +1.05, -1.70 [-2.37,-1.01] | +1.06, -1.60 [-2.24,-0.96] | 0.22, 50% | 390 s; 100%
+couple:occam    | +1.99, -0.76 [-1.22,-0.38] | +2.53, -0.14 [-0.65,+0.34] | 0.00, 95% | 510 s; 50%

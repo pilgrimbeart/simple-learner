@@ -37,7 +37,7 @@ def job(j):
         good = sum(am for t, bad, am in lf.scored if lo <= t < hi and not bad)
         badm = sum(am for t, bad, am in lf.scored if lo <= t < hi and bad)
         out.append((good - 2.0 * badm) / (z - a) * 10)
-    return dict(arm=arm, seed=seed, win=out, right=math.log(k[1] / k[0]), onset=q, est=getattr(b, "est", None),
+    return dict(arm=arm, seed=seed, win=out, right=__import__('sigmoid_body').right_knob(k[0], k[1], __import__('table').numbers(seed, {})['drive']), onset=q, est=getattr(b, "est", None),
                 play_end=getattr(b, "play_end", None))
 
 
@@ -70,6 +70,7 @@ if __name__ == "__main__":
     arms = a[1].split(",") if len(a) > 1 and a[1] != "report" else ("forage", "told", "play", "steady", "taste", "steadytaste")
     s0 = next((int(x[1:]) for x in a if x.startswith("s") and x[1:].isdigit()), SEEDS0)   # s93000: fresh seeds
     out = f"/home/pilgrim/git/simple-learner/lab/v/play4_{n}{'' if s0 == SEEDS0 else f'_s{s0}'}.pkl"
+    out = out.replace(".pkl", "_muscle.pkl") if __import__("os").environ.get("MUSCLE") == "1" else out   # (the new body's lives apart)
     if "report" in a:
         report(pickle.load(open(out, "rb")), arms)
         sys.exit()

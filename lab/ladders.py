@@ -183,7 +183,9 @@ def certify(name, pairs=20, dt=2.5, only_secs=None, workers=7, seed0=SEEDS0, siz
                   f"{xv['designed'][0]:+.2f} [{xv['designed'][1][0]:+.2f},{xv['designed'][1][1]:+.2f}] | {xv['bank'][0]:+.2f} [{xv['bank'][1][0]:+.2f},{xv['bank'][1][1]:+.2f}] | "
                   f"{tastes:.2f}  {need:.1f}/{tastes * secs:.0f} | {cpu:.1f}s | {'yes' if cert else 'no'}", flush=True)
             out[str(size)] = dict(secs=secs, base=b[0], told=t[0], gap=g0, gap_ci=gi, designed=xv["designed"], bank=xv["bank"], tastes=tastes, need=need, cert=bool(cert))
-    json.dump(out, open(f"/home/pilgrim/git/simple-learner/lab/v/ladders_{name}_{pairs}p_{dt}ms.json", "w"), indent=1)
+    import os
+    tag = "_muscle" if os.environ.get("MUSCLE") == "1" else ""             # (the new body's certification apart)
+    json.dump(out, open(f"/home/pilgrim/git/simple-learner/lab/v/ladders_{name}_{pairs}p_{dt}ms{tag}.json", "w"), indent=1)
 
 
 def baseline(name, pairs=20, dt=2.5, workers=7, seed0=SEEDS0):

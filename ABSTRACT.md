@@ -17,7 +17,9 @@ itself right.
 clean life supplies about 50 bits, and a world where one taste in five lies supplies about 15. A creature that eats
 faster can buy several times more, paid for in poison. The base task needs one bit. But the worlds we care about
 change the rules (colours that swap, meals that turn bad when eaten too soon, tastes that lie), and writing down such
-a rule takes 100 to 400 bits or more. So no brain can learn such a world from nothing within a life. It can only
+a rule takes 100 to 400 bits or more. (We first concluded that no brain can learn such a world within a life; the review of
+2026-11-11 showed that conflates our description of a world with what the creature must resolve, and with what all its senses,
+not only taste, can supply: D47's play draws far more from the eyes.) Taste alone can only
 choose among possibilities its structure already makes cheap, and choosing among K of them costs about log2 K bits of
 evidence (MacKay's Occam factor). Learning in a life is selection within a repertoire. The real question is how
 small a repertoire, made of how simple parts, covers how much of what worlds ask.
@@ -111,3 +113,20 @@ its movement makes the senses do, and let them settle on what works. The first c
 thruster at a time tells the body better than foraging (to about 4% in 100 s, against 27%), and it measures both knobs, the balance and
 how far a beat carries; no movement tells where a block lies across the path. A first verdict that driving straight tells nothing was our observer's blindness, not the movement's. Then, in the user's frame of play first and the challenge later (D47): a brain that played at random through a quiet spell, with nothing to taste, starts the challenge surely ahead of one that only foraged (+1.5 at once, about half the way to a brain told its body), by reading each motor's own beat-clocked record and making the two motors' effects equal; taste is best used to choose among play's few guesses.
 
+**The muscle-like body** (the user, 2026-11-11; D53). Thrusters made muscle-like (a pulse raises an activation, thrust a sigmoid of it):
+every rule written from the old physics broke (the told yardstick, the measurers, the partners formula), while the coupling principle
+carried over untouched and beat the formula there. The ladders certify much as before and the tree still climbs them. The new body
+forages at about two thirds of the old one's level and is steeper in its knob; D52's "knife-edge" turned out an over-reading.
+
+**Since 2026-11-10: play, coupling, and taking turns** (`discrete/NOTEBOOK.md`, D44 to D54). (1) *Play pays later*: a brain that moved
+at random in a quiet spell, with nothing to taste, started a later challenge ahead of one that only foraged; but the step from what play
+measured to how to act was, at first, a formula of ours (D47). (2) *Understanding as coupling* (the user's principle): a brain should
+seek the simplest connection between its inputs and its actions in both directions, in bits their mutual information. With no reward,
+coupling peaks at the body's right setting, and a search guided by it, keeping its default unless a change clearly wins (MacKay's
+Occam factor), beat our designed formula and left normal bodies alone (D51, D52). (3) *A principle survives a change of body, a formula
+doesn't*: on muscle-like thrusters every rule written from the old physics broke, while coupling carried over untouched (D53). (4)
+*Parts must take turns*: the coupling search split between the two motors works only when they take turns, as in a Sepulchre half-
+centre (one tunes while the other holds, tiring hands over, a part that moved wakes its partner), matching the whole-brain search on
+fresh creatures; adjusting at once, they can't tell whose change helped (D54). (5) *A limit*: coupling prefers slow, careful movement,
+food a faster one; trading speed against care needs taste (D54). Mistakes caught on the way: an observer blind to what it didn't
+understand (D44), a "knife-edge" that was ten pairs' noise (D52, corrected in D53).
