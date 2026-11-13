@@ -1,0 +1,5 @@
+== movements grown on the new parts: 10 pairs, 1200 s, original body; last third [95%]
+  base       +2.46 [+2.37,+2.56]
+  toldarcsI  +3.05 [+2.96,+3.13]  vs base +0.59 [+0.46,+0.73]
+  learn3bIN  +2.75 [+2.63,+2.85]  vs base +0.29 [+0.17,+0.41]
+  moveG      +2.54 [+2.30,+2.80]  vs base +0.08 [-0.14,+0.27] | movements' length 1.4 (mean); a movement for both lines 25%; play done 200 s after growth

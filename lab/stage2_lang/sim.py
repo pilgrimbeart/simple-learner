@@ -366,8 +366,11 @@ class Body:
 
     def fire(self, thruster, k):
         if self.muscle:                                 # a pulse raises the thruster's activation; its strength k scales its thrust
+            while len(self.act) <= thruster:            # the new parts (WLife.extra) are muscles too
+                self.act.append(0.0)
+                self.kg.append(1.0)
             self.act[thruster] += 1.0
-            self.kg[thruster] = k
+            self.kg[thruster] = k * (EXTRA[thruster // 2 - 1] if thruster >= 2 else 1.0)
             return
         K = self.K
         if thruster >= 2:                               # a new part (WLife.extra): its strength, on its side
@@ -1059,20 +1062,24 @@ class WLife:
         """The body from moment a to b of this tick: exactly (drag an exponential) for world.py's body; for the muscle-like body
         (WLife.muscle), in sub-steps of at most MUSCLE_STEP while a thruster's activation lasts, its sigmoid thrust applied at each."""
         body = self.body
-        if body.muscle and (body.act[0] > 1e-4 or body.act[1] > 1e-4):
+        if body.muscle and any(x > 1e-4 for x in body.act):
             import sigmoid_body as SB
             n = max(1, int(math.ceil((b - a) / MUSCLE_STEP - 1e-9)))
             h = (b - a) / n
             fp, ft = SB.F_PUSH * self.PUSH / W0.PUSH, SB.F_TURN * self.TURN / W0.TURN
             dec = math.exp(-h / SB.TAU_A)
             for i in range(n):
-                f0, f1 = body.kg[0] * SB.f_of(body.act[0]), body.kg[1] * SB.f_of(body.act[1])
+                if len(body.act) == 2:
+                    f0, f1 = body.kg[0] * SB.f_of(body.act[0]), body.kg[1] * SB.f_of(body.act[1])
+                else:                                   # every thruster on its side (even: the left, as thruster 0)
+                    f0 = sum(body.kg[j] * SB.f_of(body.act[j]) for j in range(0, len(body.act), 2))
+                    f1 = sum(body.kg[j] * SB.f_of(body.act[j]) for j in range(1, len(body.act), 2))
                 fw = body.forward()
                 body.speed[0] += (f0 + f1) * fp * h * fw[0]
                 body.speed[1] += (f0 + f1) * fp * h * fw[1]
                 body.spin += (f1 - f0) * ft * h          # the left thruster (0) turns it right, as fire()
-                body.act[0] *= dec
-                body.act[1] *= dec
+                for j in range(len(body.act)):
+                    body.act[j] *= dec
                 self._advance_exact(a + i * h, a + (i + 1) * h)
             return
         self._advance_exact(a, b)

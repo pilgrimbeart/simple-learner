@@ -160,3 +160,84 @@ M3. Confirmation on fresh seeds (112000+, 10 pairs, frozen): the interaction sur
 **Scored M3** (`lab/v/mixed_seq11_confirm.log`, fresh seeds 112000+): wrong in letter. The interaction holds its size (+.38) but not
 surely ([-.15, +.88]). On these seeds play surely harms the starting brain (-.26 [-.47, -.08]: steering better into what it wrongly
 believes is food) and adds +.13 to the tree (not sure). Two seed sets, the same estimate (+.40, +.38): suggestive, not established.
+
+# A baseline for growing the new parts' wiring (the user, 2026-11-13: option A): on the muscle-like body, where a kick's effect
+depends on what came just before (a lone pulse barely moves; pulses close together add), does the hand-built play still take them up?
+(MUSCLE=1 UPTAKE_SECS=1200 lab/uptake.py 10 base toldarcsI learn3bIN s110000)
+U1. learn3bIN surely above base, and within .2 of toldarcsI, on the muscle body. 45%.
+(First attempt crashed: the muscle body had no activations for the new thrusters; the engine now gives them muscles too, the fingerprint unchanged, 288 of 288.)
+**Scored U1** (`lab/v/uptake_muscle.log`, muscle body, 10 pairs): wrong. On the muscle body even the told arcs gain little: +.15
+[-.01, +.31] over base (on the old body +.40 to +.59); the hand-built play +.09 [-.03, +.20], the right side on both lines in 20%. A
+reflex that answers each pulse of the new eye with one pulse of a new thruster moves a muscle-like body little: the yardstick itself is
+weak here, so there is no gap for a grown wiring to close.
+
+# A, for thoroughness (the user, 2026-11-13): the new parts' wiring by a growing network, on the original body (arm learn3bING: play
+as learn3bIN; each trial a step of a growing network's stream, its symbol the kick, its letter which way activity moved; done when each
+line has a kick surely moving activity out of its half against no kick, by the network's own counts; as the hand-built play, at most
+PLAY_N kicks each). Smoke: one life wired the same as learn3bIN; another never finished (fixed: the same limit as the hand-built play).
+In this body a kick's effect doesn't depend on context, so blocks should add nothing: the network reduces to its kick units.
+A1. (10 pairs, 1200 s, two new thrusters a side, seeds 110000+) learn3bING within .1 of learn3bIN, both surely above base. 65%.
+**Scored A1** (`lab/v/uptake_grown.log`): mostly right. The growing network's play +.39 [+.19, +.61] above base in the last third, the
+hand-built +.29 [+.17, +.41]: both surely above, the grown about .1 higher (unpaired). But it plays longer (265 s after growth against
+110) and wires the right sides less often (40% against 80%), so over the whole life -.27 against -.06. It counts only which way activity
+moved after each kick, where the hand-built test weighs how far: in bits it throws away the size of each shift, so it needs more kicks.
+
+# B: movements grown on the muscle body (lab/movement.py, arm moveG; the user, 2026-11-13)
+Play kicks one new motor (or none) in a burst of 1 to BURST pulses 20 ms apart; each pulse a step of a growing network's stream, so
+blocks grow over runs of kicks; the surest unit (a kick or a run) for each line becomes the movement played when that line pulses.
+Smoke: bursts up to 4 moved the muscle body too little to see (every kick unit at the no-kick rate, .42); up to 12: motor 2 single kick
+.22, runs of 6 to 8 .15 to .17, against no kick .38: longer runs surely more effective, the context growth is for. One life ran out of
+play before both lines had a sure movement.
+B1. (MUSCLE=1, 1200 s, 10 pairs, seeds 110000+; base, toldarcsI, learn3bIN, moveG) moveG surely above base and above toldarcsI (+.15). 35%.
+**Scored B1** (`lab/v/movement_muscle.log`): wrong, badly. moveG -1.58 below base: play ran on until 881 s after growth (median), so the
+creature sat still through most of the scored third; a movement for both lines in 5% of lives. Bursts of 1 to 12 pulses spread play's
+evidence thin, and waiting for both lines before stopping kept it playing. Not yet a test of grown movements: a test of a play that
+never ends. Next: wire each line as soon as it has a sure movement, cap play's time as the hand-built play's, and draw burst lengths
+from fewer values.
+Fixes (the user agreed): each line wired as soon as it has a sure movement; play capped at 200 s after the parts wake; burst lengths 1, 3,
+6 or 12. Output kept apart (the first run's log moved to movement_muscle_v1.log).
+B2. (as B1) moveG surely above base, within .15 of toldarcsI or above. 35%.
+**Scored B2** (`lab/v/movement_muscle.log`): partly. No longer harmful: moveG -.09 [-.28, +.09] against base (a tie), play ending at the
+cap (201 s after growth). But in 200 s it found a sure movement for both lines in no life (one line at most; movements 1.9 kicks on
+average). On the muscle body a movement's effect on the new eye is too faint to be sure of within a short play, and even the told wiring
+gains only .15: the body offers little here for any wiring, grown or told.
+B3. On the original body (where the told wiring gains .4 to .6), moveG surely above base. 50%.
+**Scored B3** (`lab/v/movement_original.log`, original body): wrong. moveG -.18 [-.40, +.03] against base, where the hand-built play
+gains +.29 and the told wiring +.59; a sure movement for both lines in 5% of lives within the 200 s cap. The grown movement learner is
+far less efficient with evidence than the hand-built play: it counts only the direction of each shift (A's weakness), and spreads its
+trials over four burst lengths. Its failure is evidence efficiency, not the idea of grown movements.
+
+# Graded readouts (every unit keeps the count, mean and spread of what followed it; decisions by the difference of means against no
+kick, in standard errors, as the hand-built play's): A as learn3bINGV, B as moveG with GRADED=1.
+Smoke (A, two lives): one identical to the hand-built play (74 s, the same arcs), the other a line more wired.
+A2. (original body, 10 pairs, 1200 s) learn3bINGV within .1 of learn3bIN, its play no longer (median within 50 s). 60%.
+B4. (original body, GRADED=1) moveG surely above base, within .15 of learn3bIN. 40%. (muscle body after, if B4 holds)
+**Scored A2** (`lab/v/uptake_graded.log`): right. With graded readouts the growing network's play matches the hand-built play: +.25
+[+.13, +.38] against +.29, play done 110 s after growth for both, the right sides in 85% (80%), whole life -.09 (-.06).
+**Scored B4** (`lab/v/movement_original_graded.log`): wrong. Grown movements still -.18 [-.49, +.10] against base (a sure movement for
+both lines in 15% of lives, from 5%). Grading cured A, not B. Not traced; likely: on the original body a burst of several full pulses
+turns the creature far, sweeping the view past both lines, so the shift after a long burst is large and erratic and its spread swamps
+its mean; and the runs (blocks) are born only beneath contradictions, slowly, so few movements have enough trials in 200 s.
+B5. (the user: try both) Gentler play on the original body: bursts of 1, 2 or 3 pulses (LENGTHS=1,2,3), graded readouts. moveG surely
+    above base and within .15 of learn3bIN. 40%.
+**Scored B5** (`lab/v/movement_original_short.log`): wrong. Bursts of 1 to 3: moveG +.08 [-.14, +.27] against base (from -.18), a sure
+movement for both lines in 25% of lives, play always reaching its 200 s cap; the hand-built play +.29, done by 110 s. With mostly single
+kicks it should match A's graded play (+.25) and doesn't: something in the movement machinery itself (trials, its stop rule over all
+units) is slower. Not traced. B parked.
+Traced (`lab/movement_trace.py`, `lab/v/movement_trace.log`; the user asked): a bug. Play's stop rule returned early until the no-kick
+trials had 20 results with a nonzero shift, and the time cap sat after that return, so in lives where few no-kick trials moved anything
+play never ended and the creature sat still all life (unfinished lives have no finish time, so the median of 200 s hid them). In a life
+where it ends, the movement play is no slower than A's (done at 50 s against 75). Secondary: pooling bursts of 1 to 3 in one kick unit
+weakens its evidence (life 110000). Fixed: the cap ends play whatever the evidence.
+B6. (rerun of B5's settings) moveG surely above base and within .1 of learn3bIN. 50%.
+Correction (same hour): the saved B5 lives show none stuck (play ended in 20 of 20). The stop-rule fault is real but did not act there;
+the trace's missing finish rows came from its own 600 s limit (parts waking late). What the trace does show: in some lives the movement
+play's evidence for a motor is far weaker than A's (110000: -0.4 against -2.1 standard errors) while with single kicks it matches
+(110002). Likely: bursts of 2 or 3 pulses overshoot on this body and blur each kick unit's evidence.
+B7. moveG with single kicks only (LENGTHS=1, GRADED=1) within .1 of learn3bINGV's +.25. 65%.
+**Scored B6** (`lab/v/movement_original_short_fixed.log`): see the line above in that log; as expected with no stuck lives, the fix
+changes little.
+**Scored B6** (`lab/v/movement_original_short_fixed.log`): moveG +.12 [-.11, +.31] (bursts of 1 to 3, the fix in): about as before.
+**Scored B7** (`lab/v/movement_original_single.log`): right. With single kicks only, the movement play matches: +.28 [+.12, +.43] against
+the hand-built +.29 (both lines sure in 55% of lives, done 176 s after growth). The machinery is sound; on the original body bursts are
+what hurt: longer movements overshoot and blur the evidence, so offering them costs, and the brain gains nothing from them here.

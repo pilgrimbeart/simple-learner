@@ -1,0 +1,4 @@
+== uptake of new parts: 10 pairs, 1200 s lives (parts grow at 100 to 300 s), efficiency in the last third [95%]
+  base      +2.46 [+2.37,+2.56]
+  learn3bIN +2.75 [+2.63,+2.85]  vs base +0.29 [+0.17,+0.41] | arcs exactly the told two 0%; right side for both lines 80%; told two on 0%; others on, mean 1.5 | play done 110 s after growth (median), in 20 of 20 lives | whole life -0.06
+  learn3bINGV +2.71 [+2.60,+2.82]  vs base +0.25 [+0.13,+0.38] | arcs exactly the told two 0%; right side for both lines 85%; told two on 0%; others on, mean 1.6 | play done 110 s after growth (median), in 20 of 20 lives | whole life -0.09

@@ -106,6 +106,14 @@ def arcs_cls(cls):
             self.lean_only = mode.startswith("lean")    # leanI: play only while food is scarcer than usual (the user: play in the lean spells)
             mode = mode[4:] if self.lean_only else mode
             self.fast = self.slow = 0.0
+            self.graded = mode.endswith("V")            # arms ending GV: the network's graded readouts (how far, not only which way)
+            mode = mode[:-1] if self.graded else mode
+            self.grown = mode.endswith("G")             # arms ending G: play's evidence kept by a growing network (D59), its counts deciding
+            mode = mode[:-1] if self.grown else mode
+            if self.grown:
+                import grownet as GN
+                self.gnet = GN.Net("kick", 40, np.random.default_rng(int(self.t * 1000) + 11), alphabet=len(MOTORS) + 1, strict=True)
+                self.gi = 0
             self.need_play = mode.endswith("N")         # arms ending N: play until each new line has a sure motor, no longer
             mode = mode[:-1] if self.need_play else mode
             self.bored_play = mode.endswith("B")        # arms ending B: boredom from certainty in play (D48)
@@ -190,6 +198,8 @@ def arcs_cls(cls):
                     keep.append([m, t0])
             self.play_open = keep
             self.lines = [x for x in self.lines if x[0] > self.t - 2 * PRE - 0.1]
+            if getattr(self, "grown", False) and self.cands is None:
+                return self._close_grown()
             if self.need_play and len(self.shift[None]) >= PLAY_MIN:   # play until each new line has a sure motor (all it needs)
                 ctrl = np.array(self.shift[None], float)
                 z = {}
@@ -248,6 +258,61 @@ def arcs_cls(cls):
                             self.on.add((line, m))
                         else:
                             self.choice[line] = None
+
+        def _close_grown(self):
+            """Play's trials as a stream for a growing network: each trial a step, its symbol the kick (or none), its letter whether
+            activity moved towards line 3 (1) or line 2 (0); blocks may grow over sequences of kicks. Done when each line has a kick
+            whose own unit surely moves activity out of its half against the no-kick unit (two-proportion test, SURE); the surest wired."""
+            N = self.gnet
+            for m in list(MOTORS) + [None]:
+                xs = self.shift[m]
+                while len(xs) > getattr(self, "fed", {}).get(m, 0):
+                    x = xs[getattr(self, "fed", {}).get(m, 0)]
+                    self.fed = getattr(self, "fed", {})
+                    self.fed[m] = self.fed.get(m, 0) + 1
+                    sym = len(MOTORS) if m is None else MOTORS.index(m)
+                    N.write(self.gi, sym)
+                    k, f = N.says(self.gi)
+                    if getattr(self, "graded", False):
+                        N.add_value(f, float(x))
+                    if x != 0:
+                        N.learn(self.gi, int(x > 0), self.t, k, f)
+                        if k is not None:
+                            N.credit(k, self.t)
+                    N.tidy(self.gi, self.t)
+                    self.gi += 1
+            sense = {x["sym"]: x["n"] for x in N.units.values() if x["sym"] is not None}
+            c = sense[len(MOTORS)]
+            nc = c[0] + c[1]
+            if nc < PLAY_MIN:
+                return
+            z = {}
+            if getattr(self, "graded", False):          # graded readouts: how far activity moved, against no kick
+                vals = {x["sym"]: x.get("val") for x in N.units.values() if x["sym"] is not None}
+                for i, m in enumerate(MOTORS):
+                    if vals.get(i) and vals[i][0] >= PLAY_MIN:
+                        z[m] = N.welch(vals[i], vals.get(len(MOTORS)))
+            for i, m in enumerate(MOTORS if not getattr(self, "graded", False) else []):
+                a = sense[i]
+                na = a[0] + a[1]
+                if na < PLAY_MIN:
+                    continue
+                pa, pc = a[1] / na, c[1] / nc
+                pp = (a[1] + c[1]) / (na + nc)
+                z[m] = (pa - pc) / (math.sqrt(max(pp * (1 - pp), 1e-6) * (1 / na + 1 / nc)))
+            enough = all(sum(sense[i]) >= PLAY_N for i in range(len(MOTORS)))   # as the hand-built play: stop at PLAY_N kicks each
+            if (any(v >= SURE for v in z.values()) and any(v <= -SURE for v in z.values())) or enough:
+                self.effect = {m: z.get(m, 0.0) for m in MOTORS}
+                self.cands = {2: [m for m in MOTORS if self.effect[m] >= SURE], 3: [m for m in MOTORS if self.effect[m] <= -SURE]}
+                blocks = sum(1 for x in N.units.values() if x["sym"] is None)
+                self.log.append((round(self.t), "play done", {m: round(v, 1) for m, v in self.effect.items()}, self.cands, blocks))
+                for line in (2, 3):
+                    if self.cands[line]:
+                        m = max(self.cands[line], key=lambda mm: abs(self.effect[mm]))
+                        self.choice[line] = (line, m)
+                        self.on.add((line, m))
+                    else:
+                        self.choice[line] = None
 
         def _choose_by_coupling(self):
             """learn3c: windows of CHOOSE_W s, each with one candidate (or none) for one line, the joint coupling of the eyes with the
@@ -427,7 +492,7 @@ def make(arm, seed, first):
     q = T.numbers(seed, {"sync": 1})
     cls = seconds_cls(T.Circuit) if arm == "base" else arcs_cls(seconds_cls(T.Circuit))
     lf = WLife(seed, first, (lambda s: cls(s, q)), S.world_of(WORLD_TEXT), seconds=True)
-    if arm in ("learn", "toldarcs", "learn2", "learn3", "learn3b", "toldarcsI", "learn3bI", "learn3c", "learn3cI", "leanlearn3bI", "learn3bIB", "learn3bIN"):
+    if arm in ("learn", "toldarcs", "learn2", "learn3", "learn3b", "toldarcsI", "learn3bI", "learn3c", "learn3cI", "leanlearn3bI", "learn3bIB", "learn3bIN", "learn3bING", "learn3bINGV"):
         right = []
         for h in (0, 1):                                # a block in the right half (1): the left side's quarter turns it right
             side = 0 if h == 1 else 1
@@ -465,7 +530,7 @@ def report(rows, arms):
         line = f"  {a:9s} {e[0]:+.2f} [{np.percentile(e[1], 2.5):+.2f},{np.percentile(e[1], 97.5):+.2f}]"
         if a != "base":
             line += f"  vs base {e[0] - base[0]:+.2f} [{np.percentile(d, 2.5):+.2f},{np.percentile(d, 97.5):+.2f}]"
-        if a in ("learn", "learn2", "learn3", "learn3b", "learn3bI", "learn3c", "learn3cI", "leanlearn3bI", "learn3bIB", "learn3bIN"):
+        if a in ("learn", "learn2", "learn3", "learn3b", "learn3bI", "learn3c", "learn3cI", "leanlearn3bI", "learn3bIB", "learn3bIN", "learn3bING", "learn3bINGV"):
             side = lambda arcs, r: {(l, r["sides"].get(m)) for l, m in arcs}
             exact = np.mean([set(map(tuple, r["on"])) == set(map(tuple, r["right"])) for r in rs])
             sideok = np.mean([side(map(tuple, r["on"]), r) == side(map(tuple, r["right"]), r) for r in rs])
@@ -482,7 +547,7 @@ def report(rows, arms):
         print(line, flush=True)
 
 
-ARMS = ("base", "told", "toldarcs", "learn", "learn2", "learn3", "learn3b", "toldarcsI", "learn3bI", "learn3c", "learn3cI", "leanlearn3bI", "learn3bIB", "learn3bIN")
+ARMS = ("base", "told", "toldarcs", "learn", "learn2", "learn3", "learn3b", "toldarcsI", "learn3bI", "learn3c", "learn3cI", "leanlearn3bI", "learn3bIB", "learn3bIN", "learn3bING", "learn3bINGV")
 
 if __name__ == "__main__":
     a = sys.argv[1:]

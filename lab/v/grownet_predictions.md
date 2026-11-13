@@ -506,3 +506,10 @@ R68. Sequences: highest solved rises to 17 by 4480. Combinations: rises to at le
 **Scored R68** (`lab/v/grownet_one_curve_*.log`, fresh seeds 103000+): partly. Sequences: highest solved 3, 11, 17, 17 at 560 to 4480.
 Combinations: 1 at every size, though every rung rises with material (3: .36 to .63, 5: .16 to .56, neither surely above .5). Timing:
 rung 2 .37 to .54, rung 5 .38 to .48, rising, not solved. The one design climbs one ladder outright and rises on the other two.
+
+# Plan B2 on the body, first step: a taste is about the eye the brain was following (its own action), not the eye that pulsed last;
+no vouching (arms net5a, net5at with the symmetry told; recycling on demand, strict copies, every agreeing source scored).
+Smoke (2 pairs, last third summed; net10X alongside): plain 23 and 27 (36); pattern 11: -9, -12 (95); combination 3: 5, 28 (95). Far
+worse. Its own action is a poor witness of what it ate: the creature often eats the other colour by accident while approaching one,
+and those tastes then count against the eye it was following. The eye that pulsed last at the moment of eating is a sense, and it is
+what makes the earlier versions work (net5v, without vouching, lost only .1 in the plain world). Not run at scale.

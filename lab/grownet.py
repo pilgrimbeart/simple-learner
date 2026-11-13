@@ -72,6 +72,27 @@ class Net:
                 self.units[p]["kids"].add(k)
         return k
 
+    def add_value(self, firing, x):
+        """Graded readouts (2026-11-13): every unit firing keeps the count, sum and sum of squares of the value that followed, so its
+        evidence includes how far, not only which way."""
+        for k in firing:
+            u = self.units.get(k)
+            if u is not None:
+                v = u.setdefault("val", [0, 0.0, 0.0])
+                v[0] += 1
+                v[1] += x
+                v[2] += x * x
+
+    @staticmethod
+    def welch(a, c):
+        """Standard errors between two units' mean values (a against the control c); 0 with too few."""
+        if a is None or c is None or a[0] < 3 or c[0] < 3:
+            return 0.0
+        ma, mc = a[1] / a[0], c[1] / c[0]
+        va = max(a[2] / a[0] - ma * ma, 0.0) * a[0] / (a[0] - 1)
+        vc = max(c[2] / c[0] - mc * mc, 0.0) * c[0] / (c[0] - 1)
+        return (ma - mc) / (math.sqrt(va / a[0] + vc / c[0]) + 1e-9)
+
     def _descends(self, a, b):
         """Whether a is built (at any depth) on b."""
         x = self.units.get(a)
@@ -689,6 +710,12 @@ class NetC(Net):
             return
         d = self.units[deep]
         rich = not self.economy or d["sym"] is not None or d["cash"] >= GRANT
+        if getattr(self, "ondemand", False) and rich and min(d["m"][eye]) >= 1 and len(self.units) >= self.P:
+            leaves = [k for k, x in self.units.items() if x["sym"] is None and not x["kids"] and k != deep]
+            if leaves:
+                pick = [leaves[int(self.rng.integers(len(leaves)))] for _ in range(4)]
+                self._remove(min(pick, key=lambda k: self._trace(self.units[k], t)))
+                self.fades += 1
         if not (rich and min(d["m"][eye]) >= 1 and len(self.units) < self.P):
             return
         span = d["span"]
@@ -715,7 +742,9 @@ class NetCT(NetC):
     SYM = "always"                                  # told: B1's machinery with the symmetry given (an ablation)
 
 
-def netc_cls(prune=True, economy=False, sym=False, told=False, agree=False, novouch=False):
+def netc_cls(prune=True, economy=False, sym=False, told=False, agree=False, novouch=False, action=False):
+    """action (plan B2): what a taste is about is the eye the brain was following (its own action), never which eye pulsed last; every
+    taste counts (no vouching); recycling on demand and strict copies, the overnight best."""
     """Plan B1: a stream for every sense line (as net_cls(senses=True)), with NetC's readouts: no symmetry told. The default (keep the
     eye; two bad tastes on it to change) and the gate are judged only on tastes of the eye they would have chosen."""
     G = net_cls(prune=prune, economy=economy, senses=True)
@@ -728,6 +757,9 @@ def netc_cls(prune=True, economy=False, sym=False, told=False, agree=False, novo
             rng = np.random.default_rng([int(seed), 77])
             self.NC = NetCT if told else NetCS if sym else NetC
             self.nets = [self.NC(k, P, rng, prune, prune, prune, 0.0, economy, 4) for k in self.KINDS]
+            if action:
+                for N in self.nets:
+                    N.fade, N.ondemand, N.strict = False, True, True
             self.trng = np.random.default_rng([int(seed), 78])     # the brain's own noise, for choosing who steers
 
         def predict(self):
@@ -748,8 +780,8 @@ def netc_cls(prune=True, economy=False, sym=False, told=False, agree=False, novo
             self.best = next((N for N in self.nets if N.kind == src), None)
 
         def taste(self, value, at):
-            v = True if novouch else self.vouched()
-            eaten = int(self.last[1] > self.last[0]) if novouch else self.food if v else int(self.last[1] > self.last[0])
+            v = True if (novouch or action) else self.vouched()
+            eaten = self.food if action else int(self.last[1] > self.last[0]) if novouch else self.food if v else int(self.last[1] > self.last[0])
             good = value > 0
             if v and getattr(self, "src", None) is not None:
                 if agree:                               # every source whose choice was the eye eaten learns from this taste

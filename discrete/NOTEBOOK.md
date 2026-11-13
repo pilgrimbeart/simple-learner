@@ -4017,3 +4017,34 @@ The one design's scaling curve (R68, fresh seeds 103000+, material 560 to 4480):
 size, rungs 3 and 5 rising (.36 to .63, .16 to .56) without surely passing half; timing rung 2 rising .37 to .54, rung 5 .38 to .48. Every
 rung of every ladder improves with material up to 1120 or 2240 and then holds; only the sequences cross the bar. With one design, the
 scaling test's first part passes on one ladder, and the other two climb short of it.
+
+**On the body, first step** (smoke, `lab/v/grownet_predictions.md` after R68): learning from the brain's own action (the eye it was
+following) instead of the eye that pulsed last at the moment of eating fails badly (pattern 11: -9 against 95): accidental meals of the
+other colour are blamed on the eye followed. What the eyes report at the moment of eating is the witness the brain needs; the last-eye
+reading is a sense, not a rule to remove, while the vouching windows were (D59, R25).
+New parts on the muscle body (`lab/v/uptake_muscle.log`; the engine now gives the new thrusters muscles, fingerprint unchanged): even
+the told wiring gains only .15 (not sure) over the base brain, the hand-built play .09; one pulse per eye pulse moves a muscle-like
+body little. No gap there for a grown wiring to close.
+
+**Movements grown, first try** (plan B, `lab/movement.py`, `lab/v/movement_muscle.log`). On the muscle body play kicks a new motor in
+bursts of random length, each pulse a step of a growing network's stream. The network does find that longer runs move the view more
+surely (a single kick .22 against no kick .38; runs of 6 to 8, .15 to .17): context, as hoped. But play never finished (881 s after the
+parts grew) and the creature sat still: -1.58 against base. A play that waits for certainty on both lines, its evidence spread over a
+dozen burst lengths, is too slow. Next: wire each line once sure, and cap play's time.
+With the fixes (each line wired once sure, play capped at 200 s, bursts of 1, 3, 6 or 12): on the muscle body moveG ties base (-.09)
+and finds a sure movement for both lines in no life; on the original body -.18 (both lines in 5%), where the hand-built play gains .29.
+The growing network's readouts count only which way each shift went; the hand-built test weighs how far. In bits, a direction is at
+most one bit a trial while the size of the shift carries more, so the network needs several times the trials, and spreading them over
+burst lengths makes it worse. Next: readouts that keep the size of what follows (a running mean and spread), a generic change to every
+unit, before more movement experiments.
+**Graded readouts** (2026-11-13; `lab/v/uptake_graded.log`, `movement_original_graded.log`): every unit of the growing network now
+keeps the count, mean and spread of what followed it. With them the grown play for new parts (A) matches the hand-built play exactly
+(+.25 against +.29, both done 110 s after growth, the right sides 85%): the gap was the bits thrown away by counting directions. Grown
+movements (B) still fail (-.18; a sure movement for both lines in 15% of lives): on the original body a long burst sweeps the view past
+both lines, so its effect is erratic, and runs are born too slowly to gather trials in 200 s. B parked at this point.
+Short bursts (1 to 3 pulses, graded): +.08, not sure; both lines sure in 25% of lives; always the full 200 s of play. Slower than A's graded play with the same kicks, for a reason not traced. B parked.
+Traced (the user asked; `lab/movement_trace.py`, `lab/v/movement_trace.log`, `movement_original_single.log`): with single kicks only,
+the movement play matches the hand-built play (+.28 against +.29). A stop-rule fault was found and fixed but had not acted (no life
+stuck). What made B worse is the bursts themselves: on the original body two or three pulses overshoot, so a kick unit pooling them
+gives blurred evidence (one life: -0.4 against -2.1 standard errors for the same motor). Offering longer movements costs where the body
+doesn't reward them; whether the brain could learn to stop offering them (play's repertoire pruned by its own evidence) is open.

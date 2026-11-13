@@ -430,7 +430,7 @@ def job(j):
         q = T.numbers(seed, {"P": P})
         q["P"] = P
         lf = WLife(seed, first, (lambda s: _C[arm](s, q)), w, seconds=True)
-    elif arm in ("net", "nonet", "netnf", "netnd", "neteco", "eco1", "net1", "net2", "eco2", "net5", "eco5", "net5c", "eco5c", "net5s", "net5t", "net5c2", "net5t2", "net5v", "net5cv") or arm.startswith("netE") or arm.startswith("netL") or arm.startswith("net5Lu") or arm.startswith("net5k") or arm.startswith("net10kc") or arm in ("netR", "net5R", "net10R", "net10M", "net10F", "net10S", "net5S", "net10X", "netX", "netRX"):
+    elif arm in ("net", "nonet", "netnf", "netnd", "neteco", "eco1", "net1", "net2", "eco2", "net5", "eco5", "net5c", "eco5c", "net5s", "net5t", "net5c2", "net5t2", "net5v", "net5cv", "net5a", "net5at") or arm.startswith("netE") or arm.startswith("netL") or arm.startswith("net5Lu") or arm.startswith("net5k") or arm.startswith("net10kc") or arm in ("netR", "net5R", "net10R", "net10M", "net10F", "net10S", "net5S", "net10X", "netX", "netRX"):
         from stage2_lang.seconds import seconds_cls
         if arm not in _C:
             import grownet as GN
@@ -438,6 +438,8 @@ def job(j):
                 _C[arm] = seconds_cls(GN.net_cls(prune=False, economy=True, one=arm == "eco1"))
             elif arm == "net1":
                 _C[arm] = seconds_cls(GN.net_cls(one=True))
+            elif arm in ("net5a", "net5at"):                  # plan B2: tastes about the eye followed (own action), no vouching (at: symmetry told)
+                _C[arm] = seconds_cls(GN.netc_cls(agree=True, action=True, told=arm == "net5at"))
             elif arm in ("net5c", "eco5c", "net5s", "net5t", "net5c2", "net5t2", "net5cv"):   # plan B1 (s: learnt; t: told; 2: every agreeing source scored; cv: and no vouching)
                 _C[arm] = seconds_cls(GN.netc_cls(prune=arm != "eco5c", economy=arm == "eco5c", sym=arm == "net5s", told=arm.startswith("net5t"),
                                                   agree=arm.endswith("2") or arm == "net5cv", novouch=arm == "net5cv"))
@@ -486,7 +488,7 @@ def job(j):
     if arm in ("tree", "treec"):
         b = lf.brain
         n = ((b.best["kind"] if isinstance(b.best["kind"], str) else f"clock{b.best['T']:.1f}") if b.best else "-", max(len(R["nodes"]) for R in b.regs) if b.best is None else len(b.best["nodes"]))
-    elif arm in ("net", "nonet", "netnf", "netnd", "neteco", "eco1", "net1", "net2", "eco2", "net5", "eco5", "net5c", "eco5c", "net5s", "net5t", "net5c2", "net5t2", "net5v", "net5cv") or arm.startswith("netE") or arm.startswith("netL") or arm.startswith("net5Lu") or arm.startswith("net5k") or arm.startswith("net10kc") or arm in ("netR", "net5R", "net10R", "net10M", "net10F", "net10S", "net5S", "net10X", "netX", "netRX"):
+    elif arm in ("net", "nonet", "netnf", "netnd", "neteco", "eco1", "net1", "net2", "eco2", "net5", "eco5", "net5c", "eco5c", "net5s", "net5t", "net5c2", "net5t2", "net5v", "net5cv", "net5a", "net5at") or arm.startswith("netE") or arm.startswith("netL") or arm.startswith("net5Lu") or arm.startswith("net5k") or arm.startswith("net10kc") or arm in ("netR", "net5R", "net10R", "net10M", "net10F", "net10S", "net5S", "net10X", "netX", "netRX"):
         b = lf.brain
         n = (b.best.kind if b.best else "-", b.alive()[b.nets.index(b.best)] if b.best else max(b.alive()),
              sum(N.births for N in b.nets), sum(N.fades + N.starved for N in b.nets), sum(N.dups for N in b.nets))
