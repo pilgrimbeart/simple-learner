@@ -20,6 +20,23 @@ nothing is frozen, and a block whose job moves elsewhere loses its users and is 
 the blood supply, encourages modularity (one module very active leaves less for others; the sheet brain's idea, nca-learn): a variant in
 which the blocks firing at a moment share a fixed supply for learning and growth.
 
+**Plan: the growing network on the body** (the user, 2026-11-12: "build the plan and execute"). Peel away, one at a time, what we
+still hand the network, each step judged on the same lessons (patterns 5 and 11 steps long, the last 2 and 3 colours eaten, and the plain
+world) against the step before, with the same material:
+- B1, no symmetry told. Today a taste is translated for the network: a bad taste of one colour is read as "the other is food", which
+  builds in that exactly one colour is food. Instead each block keeps a small table of what each choice led to (which eye it followed,
+  good or bad) and prefers the eye with the better record. It must learn from experience what the other eye would have given.
+- B2, events in continuous time. Streams tick not only at tastes but at the body's own pulses (each eye's, each motor's), so a block can
+  learn what comes before a taste (which eye was firing on the approach), instead of our rule "what was eaten is the eye that pulsed
+  last".
+- B3, steering grown. The block that wins says which eye to approach today; next, its readouts drive the motors directly, with play to
+  explore, replacing the starting brain's fixed approach circuit (the new parts of D55 to D58 come back here).
+Each step keeps the previous result if it costs nothing on the lessons, and is recorded (and parked) if it does.
+B1 done (D59): untold the symmetry, the network first never steered (an explore-or-exploit problem the hint had hidden); choosing who steers by sampling each source's record cures that; the remaining cost, .1 to .27, is the halved evidence. Parked as a measured price; B2 builds on the told version.
+B1 revised (R22-R23): the price was the change of steering, not the readouts; scoring every source whose choice was eaten makes told and untold equal, leaving the price of exploring (.05 to .15; plain world -.10). The user's local competition (R28-R32): siblings share their parent's supply, standing including credit passed down from users (trophic): ties the written clean-up rules in both worlds on two seed sets, the first generic clearer with no stable-world cost. B2's first step (R25-R26): the vouching rule isn't needed (-.10 in the plain world); with both hints gone the lessons hold but the plain world costs .37 (false poisons feed exploring).
+
+**Then**: a stream for every sense line (every taste, good, bad, red eaten, blue eaten): the network picks the right one for each lesson and matches our chosen streams with the same material each (R20). Next: the growing network on the body (senses, taste and thruster pulses), its guesses steering.
+
 **Since**: (4) size follows the problem: blocks 17 to 48 for patterns 2 to 17 steps long, and the share learned rises with material to about 50 blocks, then levels; the economy (conserved credit along the graph, rent, parents funding newborns) does the clearing out the written rules did when the world changes; (5) without our chosen streams: one stream of every taste ties on the combination lessons and loses on the pattern lessons; separate sense lines with clocks lose further: finding which clock matters is the open problem.
 
 **So far** (D59): (1) matches the tree, and is solved on 17 letters where the tree isn't; (3) relearns a changed word (+1.01 against the tree's -.34, fresh seeds), and removing duplicates, not fading, does it. Next: (2) the energy supply.
@@ -27,6 +44,10 @@ which the blocks firing at a moment share a fixed supply for learning and growth
 Stages: (1) the network on the sequence ladder, against the tree, with material plentiful and scarce; (2) the energy supply; (3) the
 world changing mid-life (a new hidden word): do the old blocks fade and new ones grow; (4) does block count follow the bits the world
 needs, rung by rung; (5) the same blocks over the body's senses and actions (the new parts, D55 to D58).
+
+**Overnight, 2026-11-12/13** (D59, D60): the best generic brain so far is ten streams (every kind of event times one recorded sense), recycling on demand, strict copies (a fault in spotting copies found and fixed; it had been doing the clearing credited to copy removal). It climbs sequences to 17 and combinations to 5 of 6 as material grows, relearns a changed pattern at no loss (beating the tree by 2.2), does no harm where nothing is to be learned, and works on the muscle body; given 60 own clocks re-phased by revealed changes it reached timing rung 2 on development seeds but not on fresh ones (.37 to .47). One design holding every stream and the clocks comes within .15 of each ladder's specialist (R67). With recruitment off it is surely worse on sequences (part 3). Not told the symmetry, it pays only the cost of exploring; the vouching rule is unnecessary.
+
+**The scaling curve** (D60): the generic brain climbs the sequence ladder as material doubles, 3 to 13 to 17 (fresh seeds), the scaling test's first part passing on one ladder; combinations climb once and stall; timing nothing (no clock set by the world's changes). Next: what combinations and timing need (a block joining two streams; clocks whose phase the world's changes set), within the same generic brain.
 
 ## Before: a brain that takes up new parts (the user, 2026-11-12)
 

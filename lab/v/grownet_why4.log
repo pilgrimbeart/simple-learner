@@ -1,0 +1,6 @@
+  90000 net   last third good-bad +192 | pattern stream right 684 wrong 73 | spoke 259 times late, look-back median 8, chosen 98% | born 157 gone 102 alive 27
+  90000 netL1 last third good-bad +145 | pattern stream right 630 wrong 124 | spoke 226 times late, look-back median 4, chosen 100% | born 173 gone 18 alive 23
+  90001 net   last third good-bad +187 | pattern stream right 790 wrong 100 | spoke 290 times late, look-back median 4, chosen 97% | born 154 gone 107 alive 30
+  90001 netL1 last third good-bad +169 | pattern stream right 744 wrong 127 | spoke 310 times late, look-back median 4, chosen 98% | born 187 gone 25 alive 23
+  90002 net   last third good-bad +232 | pattern stream right 684 wrong 94 | spoke 269 times late, look-back median 6, chosen 100% | born 149 gone 97 alive 30
+  90002 netL1 last third good-bad +146 | pattern stream right 708 wrong 136 | spoke 284 times late, look-back median 4, chosen 100% | born 199 gone 22 alive 13

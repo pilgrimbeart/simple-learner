@@ -148,3 +148,361 @@ but a block could join only units at different ticks, and the sense "good" (righ
 almost always, so every block's newest part was "good", never the colour just eaten. Fixes: a block may join two units at the same tick
 (a coincidence), and growth goes beneath the most specific contradicted unit while the surest speaks: .70-.89 and .66-.73. Better, not
 there. Parked here, with the bench (lab/grownet_bench.py) as the place to continue.
+
+# A stream for every sense line (arms net5, eco5; the user agreed, 2026-11-12): streams ticking at every taste, good taste, bad taste,
+red eaten, blue eaten, each recording the same four symbols; the gate chooses among them by their record. None is ours.
+Smoke (2 pairs, last third summed; net = our two streams at P 64): the gate picks the good-meal stream on the pattern lessons and the
+every-taste stream on the combination lesson, by itself. Pattern 5: net 45, net5 34 (P 64) and 37 (P 160), eco5 59; pattern 11: 103,
+14, 59, -4; combination 3: 137, 61, 105, 87. Below our streams with the same material each (P 160 is 32 a stream, as net's P 64): our
+good-meal stream also wrote the food colour learned from a bad taste (a bad red means blue is food) into the current place of the
+pattern, a second hint; net5's good-meal stream sees only good meals.
+R20. (teach.py 10 net,net5,eco5, seq 5,11 and combo 2,3, P 64 and 160) the gate picks the good-meal stream in most pattern lives and the
+     every-taste stream in most combination lives. 75%. net5 at P 160 within .15 of net at P 64 on every rung. 35%.
+**Scored R20** (`lab/v/grownet_five_seq.log`, `grownet_five_combo.log`, 10 pairs, unpaired): right. The gate picks the good-meal stream
+on the pattern lessons and the every-taste stream on the combination lessons. With the same material a stream (P 160, against our two
+streams at P 64): pattern 5 steps .56 against .56, 11 steps .76 against .77, combination 2 .49 against .64 (intervals wide and
+overlapping), combination 3 .70 against .79. At P 64 (13 a stream) it falls short on 11 steps (.49). The economy version a little lower
+(.52, .63, .48, .71). So the network finds the stream that matters among five, at the price of material for all five; our stream's
+second hint (bad tastes written into the pattern's place) mattered little.
+
+# Plan B1: no symmetry told (arms net5c; PROGRAMME.md, the plan)
+Each unit's readout is a table of what each eye led to (good or bad), not the food colour; a taste teaches only about the eye eaten.
+First smoke: the network never steered (the gate scored a stream only on tastes where its choice was eaten, and the creature always ate
+the default's choice, so a stream that disagreed could never prove itself): the explore-or-exploit problem the told symmetry had hidden.
+Who steers is now chosen by sampling each source's record when followed (Thompson sampling: the brain's own noise). Smoke (2 pairs, P 160,
+last third summed; net5 alongside): plain 35 (36), pattern 5: 10 (37), pattern 11: 95 (59), combination 3: 113 (105).
+R21. (teach.py 10 net5,net5c, seq 1,5,11 and combo 2,3, P 160) net5c within .15 of net5 on every rung, the plain world included. 45%.
+**Scored R21** (`lab/v/grownet_b1_*.log`, 10 pairs, P 160): mostly right. Without the symmetry told: plain world -.10 [-.19, -.03] (the
+cost of trying the other eye now and then), pattern 5 steps .45 against .56, 11 steps .65 against .76 (still solved), combination 2 .22
+against .49 (the one rung beyond .15), combination 3 .57 against .70. A cost of .1 to .27 everywhere. In bits: told the symmetry, every
+taste says something about both eyes; untold, only about the eye eaten, so it needs about twice the tastes, and must spend some on
+trying. Kept as the honest baseline for B2 and B3? Not yet: parked as a measured price, with the question whether a network can learn
+the symmetry itself (that the two eyes' outcomes are opposite) and so earn back the evidence.
+
+# B1 continued: can each unit learn the symmetry? (arm net5s)
+Each unit compares, on its own record, the evidence that the two eyes are opposites (one chance: eye 0 good is the same news as eye 1
+bad) against independent (a chance each): MacKay's Occam factor, uniform priors, even odds; it pools when opposites wins. In the
+all-food world opposites should lose. Smoke (2 pairs, P 160, last third summed; net5 told, net5c untold): plain 36, 35, 35; all-food
+52, 52, 52; pattern 11: 59, 95, 54; combination 2: 60, 124, 124 (2 pairs: noise).
+R22. (teach.py 10 net5,net5c,net5s; seq 1,5,11; combo 2,3; P 160) net5s above net5c on the pattern and combination rungs on average,
+     earning back at least half the price of not being told. 45%.
+**Scored R22** (`lab/v/grownet_sym_*.log`): wrong. Learned symmetry no better than none (pattern 5: .42 against .45; 11: .61 against .65;
+combination 2: .42 against .22, wide; 3: .61 against .57). Before guessing why, which part of B1 costs: the readouts (no symmetry), or
+the change to who steers (sampling instead of the Occam gate) and to the default (judged only on its own eye)? Arm net5t: B1's machinery
+with the symmetry always pooled (told): net5 - net5t is the cost of the steering change, net5t - net5c the cost of the readouts.
+**Ablation** (`lab/v/grownet_t_*.log`, net5t: B1's steering, symmetry told): pattern 5 .44, 11 .60, combination 2 .54, 3 .67, plain
+-.10. So on the pattern lessons the whole price of B1 is the change of steering (sampling who steers, the default judged on its own eye),
+not the readouts (net5c .45, .65); on the combination lessons the told readouts do help (.54 against .22, .67 against .57; intervals
+wide). My "halved evidence" explanation was wrong for the pattern lessons. Next: score every source on each taste where its choice was
+the eye eaten, not only the one steering, so sources earn records without steering (arm net5c2).
+Smoke (3 pairs, last third summed; net5, net5c, net5c2, net5t2): plain 62, 64, 88, 88; pattern 5: 55, 31, 50, 35; 11: 105, 164, 105, 100.
+R23. (teach.py 10 net5c2,net5t2, same rungs) net5c2 within .1 of net5 (told, Occam gate) on the pattern rungs and the plain world. 45%.
+**Scored R23** (`lab/v/grownet_c2_*.log`): partly. With every agreeing source scored, told and untold readouts are now equal (pattern 5
+.52 and .53, 11 .64 and .66, combination 2 .31 and .33, 3 .61 and .55): the symmetry in the readouts no longer matters. Against net5
+(told, Occam gate): pattern 5 -.04, 11 -.12, combination 2 -.18 and 3 -.09 (wide), plain -.10. The rest is the price of exploring: a
+brain not told that the other colour is food when this one is poison must sometimes try the other to find out, and in the plain world
+that costs .1. Told, it never needs to. B1 closed: the told symmetry was worth .05 to .15, all as exploring it spared.
+R24. (paired, fresh seeds 91000+, pattern 17 steps long, 1500 s, P 64; lab/grownet_switch.py with WORLDS=unchanged N=17) net surely above
+     the tree (D59's unpaired .62 against .50). 60%.
+**Scored R24** (`lab/v/grownet_17_paired.log`, fresh seeds 91000+, paired, 1500 s, P 64): wrong. Pattern 17 steps long, unchanged: net
++.40, the tree +.40, difference .00 [-.35, +.38]. D59's unpaired "solved where the tree is not" (.62 against .50, 300 s lives) does not
+hold up paired on fresh seeds: the two tie. (The run also did the changed world, through a bug in WORLDS's matching, "changed" being in
+"unchanged", now fixed: there net +.37 [-.02, +.76] above the tree, not sure.)
+
+# Plan B2, first step: no vouching (arm net5v): learn from every taste, what was eaten taken as the eye that pulsed last; no hand rule
+for which tastes the eyes vouch for (followed eye pulsed within the hold, the other not since).
+R25. (teach.py 10 net5,net5v; seq 1,5,11; combo 2,3; P 160) net5v within .15 of net5 on every rung. 40%.
+**Scored R25** (`lab/v/grownet_v_*.log`, after a misrouted first run, `_misrouted`, void): right. Learning from every taste, without the
+hand rule for which tastes to trust: pattern 5 .58 (net5 .56), 11 .70 (.76), combination 2 .52 (.49), 3 .74 (.70); plain -.10 [-.24,
+.00] (net5 .00). The vouching rule is not needed by the growing network, at a small cost in the plain world.
+R26. Both removed at once (untold symmetry with every agreeing source scored, and no vouching; arm net5cv): within .15 of net5 on every
+     rung. 45%.
+**Scored R26** (`lab/v/grownet_cv_*.log`): partly. Lessons within .15 of net5 (pattern 5 .50, 11 .66, combination 2 .38, 3 .69), but the
+plain world surely costs: -.37 [-.65, -.11]. Cause (three plain lives, traced): without vouching, a taste of the other colour eaten by
+accident counts against the sources that chose the eye that pulsed last, so the records of all sources pick up false poisons, and
+sampling who steers then sometimes follows a wrong eye late in life (2 of 21 tastes in one life). Each removal alone costs .1 in the
+plain world; together the false evidence feeds the exploring.
+
+# Confirming the stream-per-sense result paired, on fresh seeds (lab/grownet_pair.py, seeds 92000+, 10 pairs)
+R27. net5 at P 160 against net (our two streams) at P 64: the paired difference's interval includes 0 on pattern 5 and 11 and on
+     combination 2 and 3. 55%.
+**Scored R27** (`lab/v/grownet_pair_*.log`, paired, fresh seeds 92000+): right. A stream for every sense (P 160) against our two (P 64):
+pattern 5 -.05 [-.12, +.01], 11 -.10 [-.19, +.04], combination 2 -.01 [-.25, +.29], 3 -.04 [-.22, +.16]. Confirmed: none surely worse.
+
+# The user's local competition: siblings share their parent's pool (arms netL<r>; no written fading or copy removal)
+Every unit holds a pool refilled at r a second; blocks built on it (their v) that fire together share it by their own record; a block
+never competes with its parents nor with blocks under another parent; resting burns; the starved are recycled with their dependants;
+newborns inherit the weaker parent's record. Smoke (2 pairs, P 64, last third summed; net 456 unchanged, 417 changed): r .3: 289, 190;
+r 1: 493, 355; r 3: 422, 345.
+R28. (seeds 85000+, 10 pairs, both worlds) netL1 ties net in the unchanged world (unlike the earlier supply, which cost .35 there), and
+     is within .3 of it in the changed world. 45%.
+**Scored R28** (`lab/v/grownet_local.log`): half. Changed world: netL1 +1.09 against net +1.15 (-.06 [-.26, +.38]): a tie; unchanged
++1.13 against +1.34, -.21 [+.02, +.43]: just surely below (netL3 alike). The same as the economy on these seeds (+1.02, +1.13).
+R29. (fresh seeds 90000+, where the economy was confirmed) netL1 ties net in the changed world and is within .3 in the unchanged. 55%.
+**Scored R29** (`lab/v/grownet_local_confirm.log`, fresh seeds 90000+): partly. Changed: netL1 +1.14 against net +.89 (+.25 [-.04, +.53]
+in its favour, not sure). Unchanged: +1.06 against +1.50, -.45 [-.72, -.18]: sure, and more than the economy's -.33 here.
+Both generic clearers (economy, local competition) keep paying a turnover cost when nothing changes. Idea (the user's earlier thought:
+go back to organising when rewards stop): let the pressure to recycle follow surprise. Each block's resting burn scaled by its stream's
+recent rate of wrong guesses (twice it, so chance is the full burn): low when the world is learned, high after a change. Arm netLs1.
+R30. (seeds 85000+ and 90000+, both worlds) netLs1 within .15 of net in the unchanged world on both seed sets, and still ties it in the
+     changed. 40%.
+**Scored R30** (`lab/v/grownet_surprise*.log`): wrong. Unchanged: -.41 [+.18, +.61] below net on seeds 85000 (worse than netL1's -.21),
+-.26 [-.01, +.53] on 90000 (better than -.45); changed: ties. No clear gain: the turnover cost isn't the resting burn. Tracing it.
+Cause (`lab/v/grownet_why4.log`, three unchanged lives, seeds 90000+): under sibling competition the blocks alive fall to 13 to 23 of 30,
+the look-back to 4 (net 4 to 8), wrong guesses up by a third. A block in the middle of a chain seldom speaks (its children do), so its
+own record is poor; it starves among its siblings, and its recycling takes every specialist below it. Fix (trophic): siblings compete
+on standing that includes credit passed down from the blocks built on them, and newborns inherit it (arm netLu). Smoke (3 pairs, seeds
+90000+, last third summed): unchanged net 741, netL1 465, netLu1 610; changed 403, 550, 588 (newborns inheriting: 606, 535).
+R31. (seeds 90000+, 10 pairs) netLu1 or netLu3 within .2 of net in the unchanged world and tied or above in the changed. 40%.
+**Scored R31** (`lab/v/grownet_trophic.log`, seeds 90000+): right. Supply 3: unchanged +1.39 against net +1.50 (-.11 [-.23, +.03], a
+tie), changed +1.12 against +.89 (+.23 [-.17, +.60]); supply 1: unchanged -.19 [-.32, -.06], changed +.32 [+.03, +.63] surely above the
+written rules. Siblings competing on credit that flows down from their users nearly closes the stable-world cost and beats the written
+rules when the world changes.
+R32. Confirmation on fresh seeds 93000+ (10 pairs; circuit, tree, net, netLu1, netLu3): netLu3 within .15 of net unchanged, and netLu1
+     or netLu3 at least level with net when the pattern changes; both surely above the tree when it changes. 50%.
+**Scored R32** (`lab/v/grownet_trophic_confirm.log`, fresh seeds 93000+): mostly right. Supply 3: unchanged +1.17 against net +1.23
+(-.06 [-.26, +.18]); changed +.79 against +1.02 (-.23 [-.59, +.17]), neither sure; above the tree when the pattern changes, +1.47
+[+1.09, +1.76] (supply 1: +1.52). On two seed sets it is never surely below the written rules, and on one surely above at supply 1.
+
+# Does energy alone limit size? (lab/grownet_scale.py 10 1024, seeds 88000+, ARMS circuit,vtold,net,netLu3; patterns 2 to 17 steps)
+With material all but unlimited (512 a stream), the written rules have only fading and copy removal to hold size; the trophic version
+also its supply.
+R33. netLu3's blocks rise with the pattern and stay far below the material (under 120 at 17), and its share closed is within .1 of the
+     run at P 256 (D59: .81 to .95). 50%. net's blocks also stay bounded (copy removal and fading). 60%.
+**Scored R33** (`lab/v/grownet_scale_1024.log`): partly. With material unlimited, the written rules' network is exactly as at P 256
+(17 to 48 blocks; fading and copy removal bound it). The trophic version is bounded by its supply alone and grows with the pattern, 14 to
+28 blocks, but smaller than needed for the long ones: share .93 to .70, against .91 to .81 (13 steps .72 against .82, 17 steps .70
+against .81). Its supply (3 a second) now sets its size, as material did.
+R34. (patterns 11 and 17, P 1024, supply 10 and 30) more supply, more blocks and a higher share, approaching net's. 60%.
+**Scored R34** (`lab/v/grownet_scale_supply.log`): wrong. Supply 10 and 30: the same shares (.82, .69) and sizes (25 to 29) as 3. Above
+about 3 a second the pool never runs short, so what bounds size is the split among siblings firing together (zero-sum), not the supply:
+the size is set by the competition itself, with no rate to tune, but it comes out a little small for the longest patterns.
+
+# The generic brain so far: a stream for every sense, cleared by trophic sibling competition (arm net5Lu3), against net5 (every sense,
+written rules), paired (lab/grownet_pair.py, seeds 92000+, P 160)
+R35. net5Lu3 within .1 of net5 on patterns 5 and 11 and combinations 2 and 3 (none surely below). 45%.
+**Scored R35** (`lab/v/grownet_generic_*.log`, paired): mostly right. Pattern 5 +.01 [-.02, +.03], 11 -.03 [-.17, +.10], combination 2
++.10 [-.02, +.24], combination 3 -.14 [-.39, -.02] (the one sure shortfall, small). Every sense a stream, cleared by trophic sibling
+competition, with no rule written for which stream or which block to keep, does about as well as the written rules.
+
+# The growing network on the muscle-like body (MUSCLE=1; D53), unchanged, paired against the tree (lab/grownet_pair.py, seeds 92000+)
+R36. On the muscle body, net (P 64) and net5Lu3 (P 160) each within .15 of the tree (P 64) or above on patterns 5 and 11 and combinations
+     2 and 3. 60%.
+**Scored R36** (`lab/v/grownet_muscle_*.log`, muscle body, paired against the tree): right. Pattern 5: net +.11 [+.06, +.19] and
+net5Lu3 +.09 [.00, +.17] above the tree; 11: -.04 and -.12, ties; combination 3: +.18 and +.07, ties; combination 2 unreadable (on this
+body the told brain barely beats the starting one, so shares of the gap explode). The growing network carries over to the muscle body
+unchanged, as the coupling principle did (D53).
+
+# The timing ladder (food colour changes with time slots, whatever the creature does): the growing network has no clock among its
+streams, so it should fail where D40's tree with clocks (treec) climbs. A measurement of what's missing, not a hope.
+R37. (teach.py 10 tree,treec,net5,net5Lu3 time 160 2,3) net5 and net5Lu3 far below treec at both rungs (under .2 where treec is above .5). 80%.
+**Scored R37** (`lab/v/grownet_time.log`, unpaired): wrong. On the timing ladder the growing networks do better than the tree with clocks
+here: rung 2 net5 .33, net5Lu3 .40, treec .28, tree .22; rung 3 .19, .25, -.08, -.09. None solves either rung. They lean on the
+every-taste and bad-taste streams: a bad taste marks a swap, so the run of tastes since the last bad one stands in for a clock. (treec
+far below D40's .94 at rung 2; its clock bank and material differ here; not pursued.)
+The brain's own clocks offered as streams (net5k8: 8 clocks, periods 3 to 30 s, random phase, drifting; each recording what was last
+tasted since its last beat): smoke only (2 pairs): timing rung 2: 61 against net5's 73; rung 3: 12 against 20; pattern 5: 19 against 37
+(first version, with a bug in what each clock recorded, fixed). No gain: an unlocked clock drifts against the world's slots, so its
+contexts smear; D39 found the phase must be set by the world's changes. Parked, not run at scale.
+
+# The generic brain when the pattern changes (lab/grownet_switch.py, fresh seeds 94000+; circuit, tree P 64, net5 P 160, net5Lu3 P 160)
+R38. Changed world: net5Lu3 surely above the tree, and within .3 of net5. Unchanged: within .2 of net5. 55%.
+**Scored R38** (`lab/v/grownet_generic_switch_report.log`, fresh seeds 94000+; the script's own report failed with no plain net among
+the arms, fixed): right. Changed: net5Lu3 +.83, net5 +.65, the tree -.53: net5Lu3 above the tree by +1.36 [+1.00, +1.70], tied with
+net5 (+.18 [-.30, +.63]). Unchanged: .91, 1.05, 1.00: ties (-.13 [-.46, +.20] against net5). The generic brain relearns a changed pattern.
+
+# Remembering: pattern A, then B (400 to 500 s), then A again (900 to 1000 s); scored on the last third (A's return)
+(lab/grownet_switch.py WORLDS=changed,aba, fresh seeds 95000+; circuit, tree, nonet, net, net5Lu3). The tree and nonet keep everything
+but filled their material on A; net and net5Lu3 cleared A's blocks while B ruled, if unused for long enough (200 s fading; B rules 400
+to 600 s), so they must relearn A as if new.
+R39. In the A-B-A world, net and net5Lu3 score about as in the changed world (relearning, not remembering): within .3 of their changed-
+     world scores; the tree and nonet do better than in the changed world (A is back in their memory). 50%.
+**Scored R39** (`lab/v/grownet_aba.log`, fresh seeds 95000+): right. A-B-A, last third (A back): the tree +.78 and nonet +.81 (A still in
+their memory; they never learned B: changed world -.52, -.67); net +.86, about its changed-world +.75 (relearning A); net5Lu3 +1.13,
+above its changed-world +.76 and surely above net (+.27 [+.00, +.55]): the generic brain keeps some of A through B, or relearns it
+faster. No brain loses to the tree when A returns, and the growing ones gain 1.3 to 1.4 when the pattern changes for good.
+Traced (`lab/v/grownet_memory.log`, three lives): the generic brain's +1.13 is fast relearning, not memory: none of its blocks alive at
+the end was born before 400 s. The written-rules net keeps 10 to 17 of 30 from A's first spell, without scoring better for it.
+
+# The scaling curve (README, the scaling test 1 and 4) for the generic brain (net5Lu3: every sense a stream, trophic sibling competition)
+teach.py 10 net5Lu3 on every rung of all three ladders, material 40, 80, 160, 320, 640 (8 to 128 a stream), development seeds 84000+.
+R40. Sequences: the highest rung solved rises with material over at least two doublings (e.g. 5 at 40, 11 or more at 160+). 55%.
+R41. Combinations: rises with material, at least two rungs between the smallest and largest. 45%.
+R42. Timing: no rung above 2 solved at any material (no clocks). 75%.
+R43. Plain world (sequence rung 1): blocks alive under a tenth of the material at every size. 50%.
+**Scored R40-R43** (`lab/v/grownet_curve_*.log`, 10 pairs, development seeds): R40 right, more than predicted: on sequences the
+highest rung solved goes 3, 5, 11, 17, 17 with material 40, 80, 160, 320, 640 (the ladder's top reached at 320); at 320 and 640 rungs 11,
+13, 17 at .78 to .89. R41 partly: combinations 1, 1, 3, 3, 3 (rises once, rungs 4 to 6 unsolved at any size; 4 reaches .61 at 640, not
+surely). R42 right: timing solves nothing above rung 1 (rung 2 best .48 at 40), and more material does worse there (rung 6: .44 at 40,
+.12 to .18 above): the cost of size, measured. R43: the plain world's score is exactly 0 at every size, the gate never adopting a
+stream, so no material is committed (affects behaviour) where nothing is to be learned.
+R44. Confirmation on fresh seeds 96000+ (sequences, material 40, 80, 160, 320): highest rung solved rises over the three doublings to at
+     least 11 at 320. 65%.
+**Scored R44** (`lab/v/grownet_curve_seq_fresh.log`, fresh seeds 96000+): right. Highest rung solved 3, 3, 13, 17 with material 40,
+80, 160, 320; at 320 rungs 11, 13, 17 at .91, .77, .68. Rungs 5 and 7 (100 s lives) are solved at no size (.58, .49 at best): the
+ladder's 100 s rungs are harder for this brain than its 300 s ones; their lives may be too short for it (AGENTS: a rung's life as long
+as it needs).
+
+# Why combinations stall: the size cap of sibling competition? (D59: about 28 blocks a stream whatever the supply; rung 5 needs 32
+contexts, rung 6 64). teach.py 10 net5 combo 320,640 4,5,6 (written rules, no such cap), against D60's net5Lu3.
+R45. net5 surely above net5Lu3's D60 shares on rungs 5 and 6 at 640 (e.g. .5 or more against .32 and .17). 50%.
+**Scored R45** (`lab/v/grownet_combo_cap.log`): wrong. Without the cap (written rules, 45 to 74 blocks) the combinations stall just the
+same: rung 4 .46, .47 (net5Lu3 .53, .61), rung 5 .41, .44 (.47, .32), rung 6 .25, .21 (.09, .17). The size cap is not the bottleneck.
+Not traced; candidates: evidence (rung 6 has 64 contexts, and a life of 1000 s gives a few hundred trusted tastes, spread unevenly since
+the creature's own choices shape which histories occur), or the every-taste stream's symbols (good and bad tastes break a history of
+colours eaten into four symbols where two would do).
+R46. (the four-symbol hypothesis) teach.py 10 tree,net combo 320,640 5,6: the two-symbol eaten stream (net) and the tree (D40: rungs 5
+     and 6 climbed at 20 pairs) surely above net5 on rungs 5 and 6. 50%.
+**Scored R46** (`lab/v/grownet_combo_sym.log`, unpaired): partly. The two-symbol eaten stream: rung 5 .55, rung 6 .35 (net5 .44, .21):
+higher, not surely. The tree does best, .65 (solved at 320) and .55, holding 160 to 206 nodes: it never prunes. Two things seem to hold
+the growing networks back on combinations: four symbols where two would do, and pruning: of 64 contexts, the rarely visited ones go
+unused longer than the fading horizon (200 s) and are recycled, where the tree keeps them.
+
+# Recycling on demand (arm netR; Dohare et al. 2024's comparator): no fading; copies removed; when a birth is due and material is full,
+the least used of four blocks drawn at random (with nothing built on them) is recycled. Rare contexts survive unless room is needed.
+Smoke (2 pairs, last third summed; net, netR): combination 5 (P 320): 179, 209; changed pattern (P 64): 262, 530; unchanged: 449, 541.
+R47. (10 pairs) netR above net on combinations 4 to 6 (P 320), and at least ties it in both worlds of the changing pattern (P 64). 45%.
+**Scored R47** (`lab/v/grownet_ondemand_*.log`): half. Combinations (P 320): no gain (rung 4 .56 against .54, 5 .55 both, 6 .38 against
+.35): pruning by fading was not what held them back after all. The changing pattern (P 64): netR surely above net in both worlds,
+unchanged +1.69 against +1.34 (+.35 [+.17, +.53]), changed +1.57 against +1.15 (+.42 [+.11, +.75]); above the tree by about 2 when the
+pattern changes. Where material is short, recycling only when room is needed keeps what works and still frees room for what's new.
+R48. Confirmation on fresh seeds 97000+ (circuit, tree, net, netR): netR surely above net in at least one world and not below in either. 60%.
+**Scored R48** (`lab/v/grownet_ondemand_confirm.log`, fresh seeds 97000+): right, strongly. netR above net in both worlds: unchanged
++1.67 against +1.14 (+.53 [+.25, +.79]), changed +1.48 against +.73 (+.74 [+.49, +1.06]); above the tree by +.73 unchanged and +2.30
+changed. Recycling only when room is needed is the best clearer so far.
+R49. The generic brain with recycling on demand (net5R: every sense a stream) on the sequence curve, fresh seeds 96000+ (as D60's
+     net5Lu3: 3, 3, 13, 17 at 40 to 320): solves the same or higher rungs with the same material, at least one rung higher at 80. 50%.
+**Scored R49** (`lab/v/grownet_curve_R_fresh.log`, fresh seeds 96000+): partly. net5R's highest rung solved 3, 3, 17, 17 with material
+40, 80, 160, 320 (net5Lu3: 3, 3, 13, 17): it reaches the ladder's top with half the material; not higher at 80.
+R50. (development seeds) net5R on combinations 40 to 320 and timing 40 and 160: combinations no higher than net5Lu3's (3); timing nothing. 70%.
+**Scored R50** (`lab/v/grownet_curve_R_combo.log`, `_time.log`): right. Combinations 1, 1, 3, 3 at 40 to 320 (rung 2 .72 at 320, not
+sure); timing nothing (rung 2 .42 at best), more material again a little worse.
+
+# Streams that record one sense each (arm net10R): every clock (every taste, good, bad, red, blue) times every recorded sense (the
+colour eaten; good or bad), ten streams of two symbols each, instead of five of four. Generic (no choice of what to record), and lets a
+combination lesson read colours alone.
+R51. (development seeds, P 640 = 64 a stream) net10R on combinations 4 to 6 above net5R at 320 (.44, .46, .22) by .1 or more on at
+     least two rungs; on sequences 11 and 17 no worse than net5R at 320 by more than .1. 40%.
+Smoke (2 pairs): picks every:colour on combination 4 (24 against net5R's 18) and good:colour on sequence 11 (107 against 72).
+**Scored R51** (`lab/v/grownet_split_*.log`, unpaired): right. Combinations at 640: rung 4 .57 (net5R at 320 .44), 5 .49 (.46), 6 .36
+(.22); sequences 11 .76 (.76), 17 .72 (.65). Better on combinations 4 and 6 by .13 and .14, no worse on sequences; no new rung solved
+(4's interval starts at .46). Still below the never-pruning tree on 5 and 6 (.65, .55).
+R52. Paired on fresh seeds 98000+ (combinations 4, 5, 6; net5R at 320 against net10R at 640, the same material a stream): net10R above
+     on at least two rungs, surely on one. 45%.
+**Scored R52** (`lab/v/grownet_split_pair.log`, fresh seeds 98000+, paired): right. Rung 4 +.19 [+.02, +.39] (.59 against .40); 5
++.02, 6 +.03, ties. One sense a stream surely helps the combination of four, not yet the longer ones.
+R53. Are rungs 5 and 6 short of evidence? The same rungs in lives three times as long (3000 s, judged on the last third; tree P 320,
+     net10R P 640, paired, seeds 98000+): both rise by .15 or more. 55%.
+**Scored R53** (`lab/v/grownet_combo_long.log`, 3000 s, paired): half. The tree rises to .76 and .72 (solves both); net10R only to .49
+and .38, surely below the tree by .28 and .34. Not evidence alone. Traced (two lives, combination 6, 3000 s): net10R makes about 9000
+blocks a life but keeps 60 to 70, even with 256 a stream: removing a copy recycled every block built on it, though its twin fires alike.
+Fix: merge copies (the copy's dependants handed to its twin; arm net10M). Two lives: 119 to 184 blocks kept at 256 a stream (the tree
+160), last third 12 and 125 (net10R -24, -66; tree 203, 183).
+R54. (3000 s, paired, seeds 98000+; tree P 320, net10M P 2560) net10M within .15 of the tree on combinations 5 and 6. 35%.
+**Scored R54** (`lab/v/grownet_merge_long.log`): wrong. Merged copies, 256 a stream: .38 and .36, the tree .76 and .72. Keeping more
+blocks did not help. Likely cause (not yet traced): churn. The network grows a block beneath every contradiction, about 9000 a life,
+recycling to make room; the tree stops growing when its material is full and keeps counting. With 32 or 64 contexts, many rarely seen,
+a block is often recycled before it has counted enough to be right. Open: growth that slows when it stops paying (boredom, D46), e.g.
+a parent grows a child only when its own record is surely worse than chance after its last child had time to prove itself.
+Smokes on churn (two lives, combination 6, 3000 s, 64 a stream): growth stopping when full (net10F, no evictions, copies merged):
+111, -76; 252 kept at 256 a stream: 20, -27 (copies still born and removed by the thousand). The simplest partner (one step longer, as
+the tree): -133, -105, worse (sequence 11 alike). Not run at scale. Parked: what the tree does that these don't, on many rare contexts.
+
+# A fault in copy removal (bench, `lab/v/grownet_bench_combo.log`): a parent and its child fire alike while the parent's other branches
+rest, so over a 30-step window they look like copies and one is removed (and with it its dependants). On the combination bench (no
+body, 3000 tastes, 128 units) the network with no pruning is right 99-100% with about 100 blocks and no copies at all; with copy removal
+93% and 800 blocks born, 450 "copies" removed. Strict copies (never a block and its own ancestor or descendant): 97-99%, 100 to 280 born.
+Every D59 result with written rules used the faulty rule; "copy removal does the work" (R7) partly measured freeing material by this
+fault. To be rechecked with strict copies.
+R55. (3000 s, paired, seeds 98000+) net10X (ten streams, recycling on demand, strict copies) on combinations 5 and 6 within .15 of the tree. 45%.
+**Scored R55** (`lab/v/grownet_strict_long.log`): wrong in letter, a large step. Strict copies: .60 and .51 (from .49 and .38), the
+tree .76 and .72: the gap halved (-.17 [-.27, -.10], -.21 [-.27, -.17]) but still sure. At 64 a stream the material is full and
+recycling on demand churns; the tree has 160 a register.
+R56. net10X with 256 a stream (P 2560): within .1 of the tree on both rungs. 45%.
+**Scored R56** (`lab/v/grownet_strict_big.log`): right. With 256 a stream, strict copies: combination 5 .67 [.54, .77], 6 .62 [.56, .68],
+both solved; the tree .76 and .72; differences -.09 and -.10 (sure, small). The growing network now solves the combinations of 5 and 6.
+R57. Rechecking D59 with strict copies (changing pattern, fresh seeds 99000+, P 64): netX (fading, strict copies) and netRX (on demand,
+     strict) relearn a changed pattern as well as their faulty forms did (net, netR), within .3, and above the tree. 60%.
+**Scored R57** (`lab/v/grownet_strict_switch.log`, fresh seeds 99000+): half, and a correction. Recycling on demand doesn't depend on the
+fault: netRX +1.64 unchanged, +1.69 changed (netR +1.62, +1.70). But fading with strict copies (netX) is stuck when the pattern changes
+(.00, against net's 1.04; unchanged .87 against 1.36): the faulty copy rule, by recycling parents and children it took for copies, was
+doing the clearing D59 credited to copy removal. Corrected in D59 and the README: what lets the network relearn is recycling to keep
+room free; with true copies only, fading by a timer is too slow, and recycling on demand does it.
+
+# The scaling curve of the best generic brain so far (net10X: ten streams, recycling on demand, strict copies), fresh seeds 96000+
+(sequences, as D60's fresh run) and development seeds 84000+ (combinations, as D60), material 40 to 640.
+R58. Sequences: reaches 17 by 320 at the latest. Combinations: highest rung solved rises above D60's 3 (at least 4) by 640. 50%.
+**Scored R58** (`lab/v/grownet_curve_X_*.log`): right. Sequences (fresh seeds): 3, 3, 11, 17 at 40, 80, 160, 320 (17 at .69 [.58,
+.78]). Combinations (development seeds): 1, 3, 5, 3 at 40, 160, 640, 2560 (rung 5 .63 [.54, .73] at 640; at 2560 .58 [.41, .68], not
+sure; rung 4, a 300 s life, .60 to .65, never surely). Highest combination solved rises from D60's 3 to 5.
+
+# Timing: clocks restarted by surprise (arm net5kr8: five sense streams and 8 own clocks, periods 3 to 30 s, each restarted at every
+bad taste so its beats count time since the last surprise; recycling on demand, strict copies). A bad taste is the brain's own sense;
+nothing about the world's timing is told. Smoke (2 pairs, last third summed; net10X alongside): rung 2: 81 (80); 3: 86 (32); 5: 154 (114).
+R59. (teach.py 10 net10X,net5kr8 time, rungs 2, 3, 5, 7) net5kr8 solves at least one timing rung, and is above net10X on at least two. 35%.
+**Scored R59** (`lab/v/grownet_reset_time*.log`, unpaired): half. Clocks restarted by surprise: rung 2 .40 (net10X .28), 3 .34 (.12),
+5 .14 (.21), 7 .34 (.32); above on two rungs, none solved. Timing parked: the growing brain's best is about a third of the gap.
+
+# Doing no harm (README scaling test 4) for net10X: the plain world (sequence rung 1) and the all-food world, material 40 to 2560,
+paired against the starting brain (lab/grownet_pair.py won't do all-food; inline, logged to lab/v/grownet_noharm.log).
+R60. Plain and all-food: net10X within .1 of the starting brain at every size (in raw efficiency). 60%.
+**Scored R60** (`lab/v/grownet_noharm.log`, 20 pairs): right, exactly. Plain and all-food, material 40 to 2560: lives identical to the
+starting brain's (difference .00): the gate never hands the steering to a stream, so behaviour is the starting brain's. Caveat: the
+material's power is not charged in these scores (the scaling test's sixth part asks that it be).
+
+# The best generic brain on the changing pattern (lab/grownet_switch.py, fresh seeds 100000+; circuit, tree P 64, netRX P 64, net10X P 640)
+R61. net10X surely above the tree when the pattern changes and within .3 of netRX in both worlds. 60%.
+**Scored R61** (`lab/v/grownet_best_switch.log`, fresh seeds 100000+): right. net10X +1.77 unchanged (above the tree by +.53 [+.33,
++.74]), +1.75 changed (above the tree by +2.20 [+1.83, +2.48], and netRX by +.28 [+.04, +.49]): the best generic brain loses almost
+nothing when the pattern changes.
+
+# The best generic brain when an old pattern returns (A-B-A; fresh seeds 101000+; circuit, tree P 64, net10X P 640)
+R62. net10X at least ties the tree when A returns (the tree never learned B and keeps A). 55%.
+**Scored R62** (`lab/v/grownet_best_aba.log`, fresh seeds 101000+): right, more than predicted. When A returns, net10X +1.55 against the
+tree's +.70 (+.86 [+.49, +1.22]); when the change is for good, +1.67 against -.49. The best generic brain handles a returning pattern
+better than the brain that never forgets (whether by memory or by relearning fast, not traced).
+
+# Sequence rungs 5 and 7 in longer lives (300 s, as rungs 11 to 17; fresh seeds 96000+, net10X at 160 and 320, paired against circuit)
+R63. Both solved at 160 or 320 given 300 s (they were .57 and .46 in 100 s). 60%.
+**Scored R63** (`lab/v/grownet_seq_long57.log`, fresh seeds 96000+): right. In 300 s lives rungs 5 and 7 are solved at 160 and 320
+(.96, .97; .84, .90): the 100 s life was the limit, not the brain. With lives as long as the larger rungs', every sequence rung is
+solved by 160 to 320 units.
+
+# The scaling test's third part: recruitment switched off (net10X with 20 units, two a stream: only its senses, no block can be born)
+against on (320), paired, fresh seeds 96000+ (sequences 11, 17) and 98000+ (combination 3).
+R64. Surely better with recruitment on, on every rung. 85%.
+**Scored R64** (`lab/v/grownet_recruit_off_*.log`): mostly right. Recruitment on against off: sequence 11 +.46 [+.29, +.63], 17 +.37
+[+.26, +.46], sure; combination 3 +.17 [-.05, +.35], not sure (with only its senses the brain already reads one colour back, half the
+lesson).
+
+# The best generic brain on the muscle-like body (MUSCLE=1, paired against the tree, seeds 92000+; sequences 5 and 11, combination 3)
+R65. net10X (320) at or above the tree (64) on all three, none surely below. 65%.
+**Scored R65** (`lab/v/grownet_best_muscle_*.log`): right. On the muscle body net10X ties the tree on all three (+.04, -.08, +.01, none
+sure).
+
+# Timing with D39's clocks in the growing brain (arm net5kc60: five sense streams and 60 own clocks, periods 3 to 30 s, each re-phased
+when the revealed food colour changes, a beat recording the food colour last revealed, held; recycling on demand, strict copies). The
+clocked tree (treec) solved timing rung 2 in D40 with about 1000 units. Smoke (2 pairs, last third summed; treec 992 alongside):
+recording the last taste or "nothing" at a beat: rung 2 75 (149); recording the held colour: rung 2 112 (149), rung 5 181 (256).
+R66. (paired, 10 pairs, seeds 84000+, rungs 2, 5, 7; treec 992, net5kc60 1040) net5kc60 within .2 of treec on each, and solves rung 2. 35%.
+**Scored R66** (`lab/v/grownet_clocks_time.log`, paired): right. net5kc60 solves timing rung 2 (.64 [.53, .75]; the clocked tree .81),
+and is within .2 of the tree on 5 (.41 against .35) and 7 (.31 against .40). The growing brain's first timing rung.
+
+# One design for all three ladders (arm net10kc60: ten sense streams and 60 clocks re-phased by revealed changes; recycling on demand,
+strict copies; the README's scaling test, part 2: one description across the curve). Smoke (2 pairs): it picks good:colour on
+sequence 11 (150), every:colour on combination 3 (86), a clock on timing 2 (71), by itself.
+R67. (fresh seeds 102000+, paired; net10kc60 at 2240 against each ladder's specialist: net10X 320 on sequences 11 and 17, net10X 640
+     on combinations 3 and 5, net5kc60 1040 on timing 2) the one design solves sequence 11 and 17, combination 3 and timing 2, and is
+     within .15 of each specialist. 40%.
+**Scored R67** (`lab/v/grownet_one_design_*.log`, fresh seeds 102000+): partly. The one design is within .15 of each specialist
+everywhere (sequences -.06, -.01; combinations -.09, -.11; timing +.10) and solves sequences 11 and 17 (.83, .65), but not combination 3
+(.50 [.20, .71]) nor 5 (.48), nor timing 2 (.47). And on these fresh seeds the timing specialist itself reaches only .37 [.23, .51]:
+R66's solved timing rung (.64 on development seeds) does not hold on fresh ones. README corrected.
+
+# The one design's scaling curve on all three ladders (net10kc60, material 560, 1120, 2240, 4480 = 8 to 64 a stream; fresh seeds
+103000+; sequences 3, 5, 11, 17 at their own lives; combinations 1 to 5; timing 2 and 5).
+R68. Sequences: highest solved rises to 17 by 4480. Combinations: rises to at least 3. Timing: rung 2 solved at no size (fresh seeds).
+     Overall: the scaling test's first part on two of three ladders with one design. 40%.
+**Scored R68** (`lab/v/grownet_one_curve_*.log`, fresh seeds 103000+): partly. Sequences: highest solved 3, 11, 17, 17 at 560 to 4480.
+Combinations: 1 at every size, though every rung rises with material (3: .36 to .63, 5: .16 to .56, neither surely above .5). Timing:
+rung 2 .37 to .54, rung 5 .38 to .48, rising, not solved. The one design climbs one ladder outright and rises on the other two.

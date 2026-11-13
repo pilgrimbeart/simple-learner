@@ -3841,3 +3841,179 @@ each taste (good, and the colour eaten), and growth kept happening beneath "good
 never took in the colour just eaten. Joining units at the same moment, and growing beneath the most specific unit while the surest
 speaks, lift it to 70-89% (patterns 5 steps) and 66-73% (11), against the two-stream net's 98% and 91-94%. Open: which unit should grow,
 and which speak, when several senses fire at once.
+
+**A stream for every sense line** (`lab/v/grownet_five_*.log`; R20). Five streams, ticking at every taste, good taste, bad taste, red
+eaten, blue eaten, each recording the same four symbols (colour eaten, good or bad), with the same network on each and the gate choosing
+by record. None is ours. The gate picks the good-meal stream on the pattern lessons and the every-taste stream on the combination
+lessons, by itself; with the same material a stream as our two (32), it matches them: .56 and .76 on patterns 5 and 11 steps long (ours
+.56, .77), .49 and .70 on the combination lessons (ours .64, .79, intervals overlapping). The price is material for all five streams. So
+the scaling result no longer rests on a stream we chose; it rests on our having offered every sense as a clock, which is generic.
+
+**Plan B1: no symmetry told** (`lab/v/grownet_b1_*.log`; R21). Until now every brain read a bad taste of one colour as "the other is
+food", which builds in that exactly one colour is food. Without it (each block keeping a table of what each eye led to), the network at
+first never steered: the creature always ate the default's choice, so a stream that disagreed could never show it was better. The
+told symmetry had hidden an explore-or-exploit problem. With who steers chosen by sampling each source's record (Thompson sampling, from
+the brain's own noise) it learns every lesson, at a cost of .1 to .27 of the gap (pattern 11 steps .65 against .76; combination 3 .57
+against .70; plain world -.10). As expected in bits: untold, a taste speaks only of the eye eaten, so learning needs about twice the
+tastes, some spent trying. Open (QUESTIONS.md): can a network learn the symmetry itself and earn the evidence back?
+Then (R22 to R23): each unit learning the symmetry by Bayesian model comparison earned nothing back; an ablation (B1's steering with the
+symmetry told) showed that on the pattern lessons the whole price was the change of steering, not the readouts, correcting the
+explanation above. Scoring every source whose choice was the eye eaten (not only the one steering) makes told and untold readouts equal;
+what remains, .05 to .15 below the told brain with its Occam gate and -.10 in the plain world, is exploring: untold, a brain must
+sometimes try the other colour to learn what it gives. B1 closed: the told symmetry was worth that exploring.
+
+**Checked paired** (R24, `lab/v/grownet_17_paired.log`, fresh seeds 91000+, 1500 s, P 64): on the pattern 17 steps long the network
+ties the tree (+.40 both; .00 [-.35, +.38]). The first, unpaired reading (solved where the tree was not) does not hold; the network's
+advantages that stand are relearning a changed pattern and needing no hand-fixed recruiting rule.
+
+**Plan B2, first step: no vouching** (R25, R26; `lab/v/grownet_v_*.log`, `grownet_cv_*.log`). Every brain so far learned only from
+tastes its eyes vouched for (a hand rule: the followed eye pulsed within the hold, the other not since). The growing network learning
+from every taste, what was eaten taken as the eye that pulsed last, matches it on the lessons (pattern 5 .58, 11 .70; combinations .52,
+.74) at -.10 in the plain world. With the symmetry untold too, the lessons still hold (.50 to .69) but the plain world costs .37: false
+poisons (the other colour eaten by accident) enter every source's record and feed the exploring. Each hint alone was worth little; the
+two together guard the plain world.
+
+**The user's local competition, made trophic** (R28 to R32; `lab/v/grownet_local*.log`, `grownet_surprise*.log`, `grownet_why4.log`,
+`grownet_trophic*.log`). Every unit holds a pool refilled at a fixed rate; the blocks built on it that fire together share it; a block
+never competes with its parents nor with blocks under another parent; the starved are recycled with their dependants; no written fading
+or copy removal. Sharing by each block's own record ties the written rules when the pattern changes (+1.09 against +1.15; fresh +1.14
+against +.89) but costs .2 to .45 when it doesn't; recycling pressure scaled by surprise didn't cure it. Traced: a block in the middle of
+a chain seldom speaks (its children do), so on its own record it starves among its siblings and takes its specialists with it (13 to 23
+blocks alive of 30). Sharing instead by standing that includes credit passed down from the blocks built on it (support flowing from users
+to parts, as in trophic theory), newborns inheriting it:
+
+| supply 3 a second | seeds 90000+ | fresh seeds 93000+ |
+|---|---|---|
+| unchanged, against the written rules | -.11 [-.23, +.03] | -.06 [-.26, +.18] |
+| changed, against the written rules | +.23 [-.17, +.60] (supply 1: +.32, sure) | -.23 [-.59, +.17] |
+| changed, against the tree | | +1.47 [+1.09, +1.76] |
+
+Never surely below the written rules on either set: the first generic clearer with no cost in a world that doesn't change. Competition
+among siblings, support flowing from users to parts: the two together are the answer to the question parked above (QUESTIONS.md).
+With material unlimited (R33, R34), the trophic version's size is set by the competition among siblings, not by its supply (3, 10, 30 a
+second the same): it grows with the pattern, 14 to 28 blocks, a little small for the longest (.70 against .81 at 17 steps). Every sense a
+stream and cleared this way (R35, paired, fresh seeds 92000+): within noise of the written rules on three lessons, .14 short on one
+(combination 3). The generic brain so far: no stream chosen, no rule for what to keep.
+
+**Robustness** (R36, R37). On the muscle-like body, unchanged, the growing networks match or beat the tree (pattern 5 surely above;
+others tied): like coupling (D53), the mechanism carries over. On the timing ladder, with no clock among its streams, they still beat
+the tree with clocks at rungs 2 and 3 (.33 to .40 and .19 to .25 against .28 and -.08; none solved): bad tastes mark the swaps, so a
+stream of tastes stands in for a clock. A clock stream (the brain's own oscillators, phase drifting, never shared with the world) is
+the obvious next part to offer it.
+**The generic brain on a changing pattern** (R38, fresh seeds 94000+): every sense a stream, cleared by trophic sibling competition,
+relearns a changed pattern of 11 steps (+.83, against the tree's -.53: +1.36 [+1.00, +1.70]) and ties the written rules and the tree
+when nothing changes. Every property of D59 so far holds with no stream chosen and no clearing rule written.
+**Remembering** (R39, A-B-A world: pattern A, then B at 400 to 500 s, then A again at 900 to 1000 s; fresh seeds 95000+). When A returns
+the tree and the unpruned net do well (+.78, +.81), having never learned B; the growing net relearns A (+.86, as when a pattern changes
+for good); the generic brain (every sense a stream, trophic competition) does best, +1.13, surely above the growing net. Traced
+(`lab/grownet_memory.py`, `lab/v/grownet_memory.log`, three lives): not memory. The generic brain keeps none of A's blocks through B
+(every block alive at the end was born after A's return); it relearns quickly. The growing net with written rules keeps 10 to 17 of its
+30 from A's first spell, yet scores no better than when the change is for good. Clearing out cost nothing here, and bought 1.3 to 1.4 when
+the change is for good; real remembering (old blocks kept and reused when their world returns) is not yet shown by any of them.
+
+## D60: the scaling curve of the generic growing brain (2026-11-12)
+
+README's scaling test, its first and fourth parts, for the generic brain (every sense a stream, trophic sibling competition, no rule
+written for which stream or which block to keep; arm net5Lu3). `lab/teach.py`; `lab/v/grownet_curve_*.log`; predictions R40 to R44. All
+rungs of the three ladders, material 40 to 640, 10 pairs:
+
+| material | 40 | 80 | 160 | 320 | 640 |
+|---|---|---|---|---|---|
+| sequences, highest rung solved (development seeds) | 3 | 5 | 11 | 17 | 17 |
+| sequences, fresh seeds 96000+ | 3 | 3 | 13 | 17 | |
+| combinations | 1 | 1 | 3 | 3 | 3 |
+| timing | none | | none | | none |
+
+On sequences it climbs over three doublings of material to the ladder's top (17, three rungs above the starting brain's 1 at least),
+confirmed on fresh seeds: the first ladder on which the scaling test's first part holds. On combinations it climbs once (1 to 3) and
+stalls (rung 4 .61 at 640, not sure; 5 and 6 .1 to .47). On timing it solves nothing, and more material does worse (rung 6: .44 at 40,
+.12 to .18 above): the cost of size, measured, where the brain lacks the part the ladder needs (a clock set by the world's changes, D39).
+In the plain world its score is exactly 0 at every size: the gate never adopts a stream, so nothing is committed where nothing is to be
+learned (part 4). Rungs 5 and 7 of the sequence ladder, with 100 s lives, are solved at no size on fresh seeds (.58, .49): too short a
+life for this brain, though shorter patterns.
+Why combinations stall (R45, `lab/v/grownet_combo_cap.log`): not the size cap. The written-rules network, growing 45 to 74 blocks, stalls
+the same (rung 5 .44, rung 6 .21 at 640). Open: evidence for 64 contexts in a 1000 s life, or the four-symbol stream splitting histories.
+On combinations 5 and 6 (R46): two symbols (net's eaten stream) .55 and .35, four (net5) .44 and .21, the never-pruning tree .65
+(solved) and .55. Clearing out has a price where many contexts recur rarely: a context unused for longer than the fading horizon is
+recycled though it will be needed again. The stability-plasticity trade, here in the open: the tree remembers and can't relearn (D59's
+changed pattern), the growing network relearns and forgets the rare.
+
+**Recycling on demand** (R47, R48; `lab/v/grownet_ondemand_*.log`; Dohare et al. 2024's comparator). No fading; copies still removed;
+when a block is due and material is full, the least used of four blocks drawn at random (nothing built on them) is recycled: a local
+contest, not a search. On the changing pattern (P 64) it surely beats recycling by a timer on both seed sets and in both worlds:
+
+| | seeds 85000+ | fresh seeds 97000+ |
+|---|---|---|
+| unchanged: on demand, by timer, tree | +1.69, +1.34, +1.13 | +1.67, +1.14, +.94 |
+| changed: on demand, by timer, tree | +1.57, +1.15, -.46 | +1.48, +.73, -.82 |
+
+A timer recycles blocks that are still useful but resting; on demand, only when room is needed, and then the least used. It keeps what
+works and still frees room for what's new: in the changed world it nearly holds its unchanged score. On combinations (P 320, room
+enough) no difference.
+
+**With recycling on demand** (R49, fresh seeds 96000+): the generic brain with every sense a stream and recycling on demand (net5R)
+solves 3, 3, 17, 17 at material 40, 80, 160, 320: the sequence ladder's top with half the material that trophic competition needed.
+
+**Streams that record one sense each** (R50 to R52; `lab/v/grownet_split_*.log`). Ten streams (every clock times either the colour
+eaten or good-or-bad) instead of five of four symbols: the brain picks "colour at every taste" for combinations and "colour at good
+meals" for sequences by itself; on fresh seeds, paired, combination 4 surely better (+.19, .59 against .40), 5 and 6 tied (.36, .26),
+sequences no worse. Generic (no choice of what to record), and better.
+**Combinations 5 and 6 against the tree** (R53, R54, 3000 s lives, paired, fresh seeds 98000+). Lives three times as long lift the tree
+to .76 and .72 (both solved) and the growing network only to .49 and .38. It makes about 9000 blocks a life and keeps 60 to 70; merging
+copies (a copy's dependants handed to its twin) keeps 120 to 180, as many as the tree, but scores no better (.38, .36). Suspected: churn,
+a block grown beneath every contradiction and others recycled to make room, so rare contexts never count long enough; the tree stops
+growing when full. Growth that slows when it stops paying is the candidate.
+
+**A fault in copy removal, and what it changes** (2026-11-13; `lab/v/grownet_bench_combo.log`, `grownet_strict_*.log`; R55 to R57).
+Copies were found by firing alike over the last 30 steps. A block and its own ancestor do so whenever the ancestor's other branches
+rest, so parents and children were taken for copies and recycled, with their dependants. On a bench without a body, the combination of
+6 is learned 99-100% with no pruning (about 100 blocks, no copies) and 93% with the faulty rule (800 born, 450 "copies" removed). Strict
+copies (never a block and its ancestor or descendant): 97-99%. Consequences:
+- Combinations: with strict copies, ten streams and 256 a stream, the network solves combinations 5 and 6 in 3000 s lives (.67, .62;
+  the tree .76, .72).
+- The changing pattern: recycling on demand does not depend on the fault (+1.69 with strict copies, +1.70 without, when the pattern
+  changes; fresh seeds 99000+). But fading with strict copies is stuck when the pattern changes (.00 against 1.04): the fault, recycling
+  parents and children, was doing the clearing credited above (R7) to copy removal. Corrected: what lets the network relearn is
+  recycling that keeps room free; a timer is too slow; recycling on demand does it. The earlier results with written rules (net, net5,
+  and the scaling curve's comparisons) used the faulty rule; the trophic and on-demand results are the ones that stand.
+
+**The scaling curve again, for the best generic brain so far** (R58; `lab/v/grownet_curve_X_*.log`): ten streams (every clock times
+one recorded sense), recycling on demand, strict copies (net10X).
+
+| material | 40 | 80 | 160 | 320 | 640 | 2560 |
+|---|---|---|---|---|---|---|
+| sequences, highest rung solved (fresh seeds 96000+) | 3 | 3 | 11 | 17 | | |
+| combinations (development seeds 84000+) | 1 | | 3 | | 5 | 3 (5 at .58, not sure) |
+
+Two ladders now climb with material: sequences to the top, combinations from 1 to 5 (D60's trophic brain stalled at 3). Rung 4 of the
+combinations (a 300 s life) is solved at no size (.60 to .65) while rung 5 (1000 s) is: rung 4's life is short for 16 contexts. Timing
+still nothing (no clock set by the world's changes).
+Timing with the brain's own clocks restarted at every bad taste (R59): rungs 2 and 3 a little better (.40, .34 against .28, .12), none
+solved. Timing stays the ladder the growing brain can't climb.
+Doing no harm (R60, 20 pairs): in the plain and all-food worlds the best generic brain's lives are identical to the starting brain's at
+every size from 40 to 2560 (the gate never adopts a stream). The material's power is not yet charged.
+The best generic brain on the changing pattern (R61, fresh seeds 100000+): +1.77 when the pattern stays, +1.75 when it changes; the
+tree +1.25 and -.45. It loses almost nothing to a change, and beats the tree surely in both worlds.
+When an old pattern returns (R62, A-B-A, fresh seeds 101000+): the best generic brain +1.55, the never-forgetting tree +.70 (+.86 [+.49,
++1.22]). Whatever it forgets, it gets back faster than the tree, which never learned B, recovers A.
+Sequence rungs 5 and 7 in 300 s lives (R63, fresh seeds): solved at 160 and 320 (.84 to .97). The 100 s life was the limit; every
+sequence rung is solved by 160 to 320 units given lives of 300 s.
+Recruitment switched off (R64; the same brain with only its senses, two units a stream): sequences 11 and 17 surely worse without it
+(+.46, +.37 for recruitment), combination 3 not surely (+.17 [-.05, +.35]). The scaling test's third part holds on the sequence rungs.
+On the muscle body (R65) the best generic brain ties the tree on sequences 5 and 11 and combination 3.
+
+**Timing with clocks in the growing brain** (R59, R66; `lab/v/grownet_clocks_time.log`). Sixty of the brain's own clocks offered as
+streams (periods 3 to 30 s, drawn per life), each re-phased when the food colour a taste reveals differs from the last revealed (D39's
+trigger: half a period after the change), a beat recording the colour last revealed, held. Paired against the clocked tree (both about
+1000 units): timing rung 2 solved, .64 [.53, .75] (tree .81); rung 5 .41 (.35), rung 7 .31 (.40). Clocks restarted by every bad taste
+did worse (.40 at rung 2): mistakes restart them too. Recording "nothing" at beats without a taste split the contexts (rung 2 smoke 75
+against 112). Note: the revealed colour uses the told symmetry, as every told brain does.
+
+**One design for all three ladders** (R67, fresh seeds 102000+, paired): ten sense streams and 60 clocks re-phased by revealed changes
+(net10kc60, 2240 units) comes within .15 of each ladder's specialist (sequences -.06, -.01; combinations -.09, -.11; timing +.10), solving
+sequences 11 and 17 (.83, .65), not combinations 3 and 5 (.50, .48) nor timing 2 (.47). On these fresh seeds the timing specialist
+reaches only .37: R66's solved timing rung held on development seeds only.
+The one design's scaling curve (R68, fresh seeds 103000+, material 560 to 4480): sequences 3, 11, 17, 17; combinations rung 1 at every
+size, rungs 3 and 5 rising (.36 to .63, .16 to .56) without surely passing half; timing rung 2 rising .37 to .54, rung 5 .38 to .48. Every
+rung of every ladder improves with material up to 1120 or 2240 and then holds; only the sequences cross the bar. With one design, the
+scaling test's first part passes on one ladder, and the other two climb short of it.

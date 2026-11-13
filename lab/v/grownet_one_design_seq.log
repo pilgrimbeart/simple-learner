@@ -1,0 +1,3 @@
+== paired: seq ladder, 10 pairs, seeds 102000+; share of the gap closed [95%], and each arm against net10X
+  rung 11: net10X:320 +0.89 [+0.77,+1.02] | net10kc60:2240 +0.83 [+0.72,+0.95] (vs net10X -0.06 [-0.11,-0.01]) |
+  rung 17: net10X:320 +0.66 [+0.53,+0.76] | net10kc60:2240 +0.65 [+0.57,+0.72] (vs net10X -0.01 [-0.13,+0.14]) |

@@ -16,7 +16,7 @@ def life(arm, seed, first):
     from stage2_lang.seconds import seconds_cls
     import grownet as GN
     import table as T
-    cls = seconds_cls(GN.net_cls(prune=arm == "net", supply=3.0 if arm == "netE3" else 0.0, economy=arm == "neteco"))
+    cls = seconds_cls(GN.net_cls(prune=arm == "net", supply=1.0 if arm == "netL1" else 3.0 if arm == "netE3" else 0.0, economy=arm == "neteco", local=arm == "netL1"))
     q = T.numbers(seed, {"P": 64})
     q["P"] = 64
     lf = WLife(seed, first, (lambda s: cls(s, q)), S.world_of(L.seq(11)), seconds=True)
@@ -41,7 +41,7 @@ if __name__ == "__main__":
     R._init(0.0025, False)
     seeds = [int(x) for x in sys.argv[1].split(",")] if len(sys.argv) > 1 else [87000, 87001, 87002]
     for s in seeds:
-        for arm in ("net", "neteco"):
+        for arm in ("net", "netL1"):
             r = life(arm, s, "red")
             sp = r["spans"]
             print(f"  {s} {arm:5s} last third good-bad {r['third']:+4.0f} | pattern stream right {r['agree']} wrong {r['dis']} | spoke {len(sp)}"

@@ -1,0 +1,3 @@
+== does the network's size follow the pattern? 10 pairs, 1500 s, P 1024; share of the gap from the starting brain to the told one closed in the last third [95%]; blocks alive at the end on the stream chosen (median, quartiles)
+  pattern of 11: starting -2.34 told +2.19 | netLu10 +0.82 [+0.77,+0.89] blocks 27 (18-34) | netLu30 +0.82 [+0.78,+0.88] blocks 25 (18-34)
+  pattern of 17: starting -2.20 told +2.38 | netLu10 +0.69 [+0.66,+0.73] blocks 28 (24-36) | netLu30 +0.69 [+0.66,+0.73] blocks 29 (24-37)

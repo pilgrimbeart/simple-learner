@@ -1,0 +1,3 @@
+== paired: seq ladder, 10 pairs, seeds 92000+; share of the gap closed [95%], and each arm against tree
+  rung  5: tree +0.46 [+0.39,+0.52] | net +0.57 [+0.52,+0.62] (vs tree +0.11 [+0.06,+0.19]) | net5Lu3 +0.55 [+0.47,+0.60] (vs tree +0.09 [+0.00,+0.17]) |
+  rung 11: tree +1.11 [+0.93,+1.30] | net +1.07 [+0.99,+1.15] (vs tree -0.04 [-0.20,+0.12]) | net5Lu3 +0.99 [+0.81,+1.17] (vs tree -0.12 [-0.35,+0.09]) |

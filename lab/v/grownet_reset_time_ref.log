@@ -1,0 +1,9 @@
+== teach: time ladder, 10 pairs, 2.5 ms, seeds 84000+; x [95%] against base and told; * solved (surely above .5); grow's final ring lengths (median, range)
+-- rung 2, 300 s: base -0.41 told 2.48
+   net10X| P640 +0.28 [+0.11,+0.47]  |
+-- rung 3, 450 s: base 0.25 told 2.58
+   net10X| P640 +0.12 [-0.01,+0.21]  |
+-- rung 5, 750 s: base 0.67 told 2.46
+   net10X| P640 +0.21 [+0.12,+0.30]  |
+-- rung 7, 1050 s: base 0.71 told 2.57
+   net10X| P640 +0.32 [+0.24,+0.39]  |

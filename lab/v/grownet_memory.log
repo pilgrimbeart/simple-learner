@@ -1,0 +1,6 @@
+  95000 net     chosen eaten  | alive at the end, born (before 400 s, 400 to 1000 s, after): good (10, 5, 15); eaten (11, 3, 16)
+  95000 net5Lu3 chosen good   | alive at the end, born (before 400 s, 400 to 1000 s, after): every (0, 1, 19); good (0, 2, 13); bad (0, 0, 20); red (0, 1, 27); blue (0, 0, 28)
+  95001 net     chosen good   | alive at the end, born (before 400 s, 400 to 1000 s, after): good (12, 8, 10); eaten (11, 4, 15)
+  95001 net5Lu3 chosen good   | alive at the end, born (before 400 s, 400 to 1000 s, after): every (0, 1, 27); good (0, 2, 15); bad (0, 2, 26); red (0, 0, 28); blue (0, 0, 28)
+  95002 net     chosen good   | alive at the end, born (before 400 s, 400 to 1000 s, after): good (17, 6, 7); eaten (14, 3, 12)
+  95002 net5Lu3 chosen good   | alive at the end, born (before 400 s, 400 to 1000 s, after): every (0, 1, 27); good (0, 1, 27); bad (0, 0, 28); red (0, 0, 27); blue (0, 1, 27)

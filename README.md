@@ -159,30 +159,53 @@ Three lines of work so far:
 
 The findings that changed the direction of the work, each told in full in the notebook named.
 
-- **Growing freely and clearing out copies lets a brain keep learning** (confirmed on fresh creatures). Following your idea after
-  Dan Goodman's talk, we built a network of little detectors that grows by itself. Whenever a guess about which colour is food fails,
-  a new detector is made, joining the one that guessed wrong with one that was active just before it, so detectors build on
-  detectors. Two detectors that always fire together are copies, and one is removed; a detector nobody uses fades. The test was the
-  lesson where which colour is food follows a secret repeating pattern of colours, moving on at each good meal. The network
-  learns it as well as our hand-built learner, and better on the longest pattern. When the secret pattern changes halfway through
-  life, the network learns the new one almost fully, while the hand-built learner, and the same network without clearing, stay stuck on
-  the old one. Removing copies, not fading, does the work. Growth keeps making detectors the brain already has, because the same
-  mistake in the same situation makes the same new detector again; uncleared, the copies use up all the material and nothing is left
-  to learn with. Copies are easy to spot at once and locally (two neighbours always firing together), while being useless only shows
-  over a long time, so clearing copies is the fast way to keep room free. It also replaces a check no local brain can make: a new
-  detector can't look across the whole brain to see whether its twin already exists, but it can be made anyway and pruned when it
-  turns out to fire like its neighbour. Growing too much and pruning back is how young animal brains develop too
-  (`discrete/NOTEBOOK.md`, D59).
+- **Recycle only when room is needed** (confirmed on fresh creatures). Clearing out unused detectors on a timer throws away
+  detectors that are still useful but happen to be resting. Instead, when a new detector is due and the brain is full, the least
+  used of a few detectors picked at random is recycled. This keeps what works and still frees room for what's new: it beats the timer
+  whether or not the secret pattern changes (by .5 and .7), and beats our hand-built learner by 2.3 when it changes. This is the
+  recycling of weak units that Dohare and colleagues (2024) found keeps deep networks able to learn. The best version so far (a
+  stream for every combination of event and sense, recycling on demand) scores the same whether the pattern changes or not, beating
+  the hand-built learner in both cases (`discrete/NOTEBOOK.md`, D59, D60).
+- **Two ladders climbed as material doubles, and a foothold on the third** (the climbs confirmed on fresh creatures). The most generic growing
+  brain (a stream for every sense, with no rule of ours for which stream or which detector to keep) was given 40, 80, 160 and 320
+  units of material. On the secret-pattern lessons, the longest pattern it learns goes from 3 steps to 11 or 13 and then 17, the top
+  of the ladder: the first part of our scaling test passing on one ladder. On the lessons where food depends on the last few colours
+  eaten, a later version (each stream recording one sense, recycling only when room is needed, a fault in spotting copies fixed)
+  climbs from 1 to 5 of 6. On the timing lessons it learned nothing until it was given clocks of its own whose rhythm restarts when
+  the food colour is seen to change; then it reached the first timing rung on one set of creatures (close to our hand-built learner
+  with clocks), but not on fresh ones (about .4 of the gap): a foothold, not yet a climb. One design holding all of this, every stream
+  and the clocks together, comes within .15 of each ladder's specialist. Where there is
+  nothing to learn it changes nothing, at any size (`discrete/NOTEBOOK.md`, D60).
+- **A growing brain keeps learning only if it keeps room free** (corrected 2026-11-13). Following your idea after Dan Goodman's
+  talk, we built a network of little detectors that grows by itself. Whenever a guess about which colour is food fails, a new detector
+  is made, joining the one that guessed wrong with one that was active just before, so detectors build on detectors. When the secret
+  pattern changes halfway through life, the network learns the new one, while our hand-built learner stays stuck on the old one. We
+  first credited this to removing copies of detectors. A fault turned up: two detectors that fire alike only because one is built on
+  the other were being taken for copies, and that fault was doing the clearing. With true copies only, clearing unused detectors on a
+  timer is too slow, and the network gets stuck too; what works is recycling the least used detectors whenever room is needed (below).
+  Growing too much and pruning back is how young animal brains develop too (`discrete/NOTEBOOK.md`, D59).
 - **A small economy can do the clearing out by itself.** Instead of written rules for removing copies and fading, each detector earns
   when it guesses right and passes part of its earnings to the detectors it is built from; a new detector is paid for from its
   parent's savings, and every detector pays a little rent to exist; one in debt is recycled. A copy never gets to guess (its twin
   does), so it earns nothing and is evicted. When the secret pattern changes, this matches the written rules and beats our
   hand-built learner (confirmed on fresh creatures); when nothing changes it costs a little. One lesson: charging detectors for being
   active backfired, because the busiest detectors are the general ones everything else is built on (`discrete/NOTEBOOK.md`, D59).
+- **Competition among siblings, support flowing back from users, does the clearing out at no cost.** Your idea: competition for energy
+  should be local in the network. Each detector holds a small supply that the detectors built on it share when they fire together;
+  a detector never competes with the ones it is built from, nor with detectors in another branch; one that starves is recycled. At
+  first, middle detectors starved (they rarely guess themselves; their more specific children do), taking their children with them.
+  Measuring a detector's standing by the success of everything built on it, as nerve cells are kept alive by the cells they feed,
+  cured that: it matches the written clean-up rules whether the pattern changes or not (two sets of creatures), and beats our
+  hand-built learner by 1.5 when the pattern changes. Put together with a stream for every sense, it still relearns a changed
+  pattern (confirmed on fresh creatures): no stream chosen by us, and no clean-up rule written (`discrete/NOTEBOOK.md`, D59).
 - **A bigger problem needs only more raw material, and the growing network takes only what it needs.** Making the secret pattern
   longer (2 to 17 steps, each step red or blue) grows more detectors (17 up to about 50), with no one telling it the pattern's
   length. Given more material it learns the long pattern better, until it has all it needs; beyond that, extra material simply goes
   unused (`discrete/NOTEBOOK.md`, D59). This is the first time our goal, intelligence that scales, has been met in miniature.
+  At first the network read a stream of events we had picked for it (the food colour at each good meal), which suited the pattern
+  lessons. Given instead a stream for every sense (every taste, every good meal, every bad meal, every red eaten, every blue eaten),
+  it picks the useful one by itself, a different one for each kind of lesson, and does as well (confirmed on fresh creatures),
+  at the cost of material for all five.
 - **Knowledge makes skill worth having** (suggestive: the same size on two sets of creatures, sure on one). We gave the creature a
   hidden rule to learn (which colour is food changes with a hidden word) and, in the same life, new parts to take up (the split eye and
   small thrusters). The new parts let it steer better towards whatever it *believes* is food. For a brain that hasn't learned the rule,
@@ -755,6 +778,15 @@ valuable first, in [`QUESTIONS.md`](QUESTIONS.md).
 
 **Units** (the axioms: `units.py`)
 
+- **Growing network** (the user, 2026-11-12; D59): a brain of small detectors (*blocks*) that grows by local rules. A block is born
+  where a guess about the food colour keeps failing, joining two units that were active together, so blocks build on blocks; each
+  learns what came next when it fired. *Copies* (two blocks firing alike) and unused blocks are cleared, by written rules or by
+  competition for energy.
+- **Stream**: one of the growing network's records of events, each ticking on one kind of event (every taste, every good meal, every
+  bad meal, every red or blue eaten); a block counts time in its stream's ticks.
+- **Trophic support** (after neurotrophic theory): a block kept alive by the success of the blocks built on it, as nerve cells are
+  kept alive by the cells they feed. With competition only among *siblings* (blocks built on the same parent), it lets energy do
+  the clearing out (D59).
 - **Play** (the user, 2026-11-10): activity with no goal and no reward, which lets a brain organise itself to its body and world, so
   that later learning from reward is quick (README, What we've learned). The dancing brain is a brain that plays.
 - **Boredom** (the user, 2026-11-11): the switch between playing and working, set by whether learning or eating still pays. Bored

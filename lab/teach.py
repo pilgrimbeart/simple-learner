@@ -430,7 +430,7 @@ def job(j):
         q = T.numbers(seed, {"P": P})
         q["P"] = P
         lf = WLife(seed, first, (lambda s: _C[arm](s, q)), w, seconds=True)
-    elif arm in ("net", "nonet", "netnf", "netnd", "neteco", "eco1", "net1", "net2", "eco2") or arm.startswith("netE"):
+    elif arm in ("net", "nonet", "netnf", "netnd", "neteco", "eco1", "net1", "net2", "eco2", "net5", "eco5", "net5c", "eco5c", "net5s", "net5t", "net5c2", "net5t2", "net5v", "net5cv") or arm.startswith("netE") or arm.startswith("netL") or arm.startswith("net5Lu") or arm.startswith("net5k") or arm.startswith("net10kc") or arm in ("netR", "net5R", "net10R", "net10M", "net10F", "net10S", "net5S", "net10X", "netX", "netRX"):
         from stage2_lang.seconds import seconds_cls
         if arm not in _C:
             import grownet as GN
@@ -438,10 +438,31 @@ def job(j):
                 _C[arm] = seconds_cls(GN.net_cls(prune=False, economy=True, one=arm == "eco1"))
             elif arm == "net1":
                 _C[arm] = seconds_cls(GN.net_cls(one=True))
+            elif arm in ("net5c", "eco5c", "net5s", "net5t", "net5c2", "net5t2", "net5cv"):   # plan B1 (s: learnt; t: told; 2: every agreeing source scored; cv: and no vouching)
+                _C[arm] = seconds_cls(GN.netc_cls(prune=arm != "eco5c", economy=arm == "eco5c", sym=arm == "net5s", told=arm.startswith("net5t"),
+                                                  agree=arm.endswith("2") or arm == "net5cv", novouch=arm == "net5cv"))
+            elif arm in ("net5", "eco5", "net5v"):           # a stream for every sense line (net5v: no vouching, plan B2)
+                _C[arm] = seconds_cls(GN.net_cls(prune=arm != "eco5", economy=arm == "eco5", senses=True, novouch=arm == "net5v"))
             elif arm in ("net2", "eco2"):                    # separate sense lines with clocks
                 _C[arm] = seconds_cls(GN.net_cls(prune=arm == "net2", economy=arm == "eco2", one=True, lines=True))
             elif arm.startswith("netE"):
                 _C[arm] = seconds_cls(GN.net_cls(prune=False, supply=float(arm[4:])))
+            elif arm in ("net10X", "netX", "netRX"):          # strict copies (never a block and its ancestor); 10X: ten streams, on demand; RX: two streams, on demand
+                _C[arm] = seconds_cls(GN.net_cls(fade=arm == "netX", ondemand=arm != "netX", senses=arm == "net10X", split=arm == "net10X", strict=True))
+            elif arm in ("net10S", "net5S"):                  # recycling on demand, and the simplest partner (one step longer)
+                _C[arm] = seconds_cls(GN.net_cls(fade=False, ondemand=True, senses=True, split=arm == "net10S", simplest=True))
+            elif arm in ("netR", "net5R", "net10R", "net10M", "net10F"):   # recycling on demand: no fading; copies removed (M: merged); the least used of a few evicted when room is needed (F: none, growth stops when full)
+                _C[arm] = seconds_cls(GN.net_cls(fade=False, ondemand=arm != "net10F", senses=arm != "netR", split=arm.startswith("net10"), merge=arm in ("net10M", "net10F")))
+            elif arm.startswith("net10kc"):                  # one design for all three ladders: ten sense streams and K clocks re-phased by revealed changes
+                _C[arm] = seconds_cls(GN.net_cls(senses=True, split=True, clocks=int(arm[7:]), reset="change", fade=False, ondemand=True, strict=True))
+            elif arm.startswith("net5k"):                     # every sense a stream, and K of the brain's own clocks (net5k8: 8; net5kr8: reset by each bad taste)
+                r = "change" if arm.startswith("net5kc") else arm.startswith("net5kr")
+                _C[arm] = seconds_cls(GN.net_cls(senses=True, clocks=int(arm[6:] if r else arm[5:]), reset=r, fade=False, ondemand=True, strict=True))
+            elif arm.startswith("net5Lu"):                   # every sense a stream, and trophic sibling competition: the generic brain so far
+                _C[arm] = seconds_cls(GN.net_cls(prune=False, supply=float(arm[6:]), local=True, trophic=True, senses=True))
+            elif arm.startswith("netL"):                     # the user's local competition: siblings share their parent's pool (Ls: burn by surprise)
+                _C[arm] = seconds_cls(GN.net_cls(prune=False, supply=float(arm[5:] if arm[4] in "su" else arm[4:]), local=True,
+                                                 surprise=arm.startswith("netLs"), trophic=arm.startswith("netLu")))
             else:
                 _C[arm] = seconds_cls(GN.net_cls(prune=arm != "nonet", fade=arm != "netnf", dup=arm != "netnd"))
         q = T.numbers(seed, {"P": P})
@@ -465,7 +486,7 @@ def job(j):
     if arm in ("tree", "treec"):
         b = lf.brain
         n = ((b.best["kind"] if isinstance(b.best["kind"], str) else f"clock{b.best['T']:.1f}") if b.best else "-", max(len(R["nodes"]) for R in b.regs) if b.best is None else len(b.best["nodes"]))
-    elif arm in ("net", "nonet", "netnf", "netnd", "neteco", "eco1", "net1", "net2", "eco2") or arm.startswith("netE"):
+    elif arm in ("net", "nonet", "netnf", "netnd", "neteco", "eco1", "net1", "net2", "eco2", "net5", "eco5", "net5c", "eco5c", "net5s", "net5t", "net5c2", "net5t2", "net5v", "net5cv") or arm.startswith("netE") or arm.startswith("netL") or arm.startswith("net5Lu") or arm.startswith("net5k") or arm.startswith("net10kc") or arm in ("netR", "net5R", "net10R", "net10M", "net10F", "net10S", "net5S", "net10X", "netX", "netRX"):
         b = lf.brain
         n = (b.best.kind if b.best else "-", b.alive()[b.nets.index(b.best)] if b.best else max(b.alive()),
              sum(N.births for N in b.nets), sum(N.fades + N.starved for N in b.nets), sum(N.dups for N in b.nets))
@@ -505,7 +526,7 @@ def run(pairs=20, dt=2.5, workers=7, seed0=L.SEEDS0 + 1000, arms=("bank", "grow"
                     if arm == "grow":
                         ns = [x[6] for x in res]
                         line += f" n{int(np.median(ns))}({min(ns)}-{max(ns)})"
-                    if arm in ("net", "nonet", "neteco", "eco1", "net1", "net2", "eco2") or arm.startswith("netE"):
+                    if arm in ("net", "nonet", "neteco", "eco1", "net1", "net2", "eco2", "net5", "eco5", "net5c", "eco5c", "net5s", "net5t", "net5c2", "net5t2", "net5v") or arm.startswith("netE"):
                         from collections import Counter
                         line += " " + ",".join(f"{a}" for a, _ in Counter(x[6][0] for x in res).most_common(2))
                         line += f" blocks {int(np.median([x[6][1] for x in res]))} born {int(np.median([x[6][2] for x in res]))} faded {int(np.median([x[6][3] for x in res]))} dup {int(np.median([x[6][4] for x in res]))}"
@@ -527,4 +548,5 @@ if __name__ == "__main__":
     ledger.start()
     a = sys.argv[1:]
     run(int(a[0]) if a else 20, arms=tuple(a[1].split(",")) if len(a) > 1 else ("bank", "grow"), name=a[2] if len(a) > 2 else "seq",
-        Ps=tuple(int(x) for x in a[3].split(",")) if len(a) > 3 else PS, rungs=[int(x) for x in a[4].split(",")] if len(a) > 4 else None)
+        Ps=tuple(int(x) for x in a[3].split(",")) if len(a) > 3 else PS, rungs=[int(x) for x in a[4].split(",")] if len(a) > 4 and a[4][0].isdigit() else None,
+        seed0=next((int(x[1:]) for x in a if x.startswith("s") and x[1:].isdigit()), L.SEEDS0 + 1000))   # s96000: fresh seeds

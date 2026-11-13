@@ -1,0 +1,7 @@
+== teach: combo ladder, 10 pairs, 2.5 ms, seeds 84000+; x [95%] against base and told; * solved (surely above .5); grow's final ring lengths (median, range)
+-- rung 5, 1000 s: base -0.97 told 2.16
+   tree | P320 +0.65 [+0.53,+0.73]* eaten nodes 160 | P640 +0.58 [+0.43,+0.72]  eaten nodes 187 |
+   net  | P320 +0.55 [+0.40,+0.68]  eaten blocks 49 born 632 faded 52 dup 171 | P640 +0.55 [+0.40,+0.68]  eaten blocks 49 born 632 faded 52 dup 171 |
+-- rung 6, 1000 s: base -1.21 told 2.36
+   tree | P320 +0.55 [+0.41,+0.65]  eaten nodes 160 | P640 +0.48 [+0.33,+0.59]  eaten nodes 206 |
+   net  | P320 +0.35 [+0.22,+0.44]  eaten blocks 48 born 678 faded 43 dup 165 | P640 +0.35 [+0.22,+0.44]  eaten blocks 48 born 678 faded 43 dup 165 |

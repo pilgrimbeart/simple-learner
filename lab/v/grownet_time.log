@@ -1,0 +1,11 @@
+== teach: time ladder, 10 pairs, 2.5 ms, seeds 84000+; x [95%] against base and told; * solved (surely above .5); grow's final ring lengths (median, range)
+-- rung 2, 300 s: base -0.41 told 2.48
+   tree | P160 +0.22 [+0.06,+0.34]  good,- nodes 57 |
+   treec| P160 +0.28 [+0.04,+0.48]  clock16.1,clock11.0 nodes 2 |
+   net5 | P160 +0.33 [+0.19,+0.45]  every,bad blocks 28 born 199 faded 10 dup 22 |
+   net5Lu3| P160 +0.40 [+0.24,+0.56]  |
+-- rung 3, 450 s: base 0.25 told 2.58
+   tree | P160 -0.09 [-0.28,+0.10]  good,- nodes 80 |
+   treec| P160 -0.08 [-0.30,+0.11]  -,good nodes 2 |
+   net5 | P160 +0.19 [+0.00,+0.30]  every,bad blocks 28 born 265 faded 20 dup 48 |
+   net5Lu3| P160 +0.25 [+0.11,+0.42]  |

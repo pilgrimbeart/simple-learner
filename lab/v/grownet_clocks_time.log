@@ -1,0 +1,4 @@
+== paired: time ladder, 10 pairs, seeds 84000+; share of the gap closed [95%], and each arm against treec
+  rung  2: treec:992 +0.81 [+0.67,+0.98] | net5kc60:1040 +0.64 [+0.53,+0.75] (vs treec -0.16 [-0.38,-0.01]) |
+  rung  5: treec:992 +0.35 [+0.16,+0.53] | net5kc60:1040 +0.41 [+0.29,+0.56] (vs treec +0.06 [-0.08,+0.19]) |
+  rung  7: treec:992 +0.40 [+0.23,+0.58] | net5kc60:1040 +0.31 [+0.20,+0.42] (vs treec -0.09 [-0.22,+0.06]) |

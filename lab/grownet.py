@@ -19,6 +19,8 @@ each taste. On each stream:
     back from the behaviour). Use is a trace fading with time constant FADE seconds.
   - Fading: a block older than FADE whose trace is below DIE is recycled, and with it every block made from it.
   - Duplicates: two blocks firing on exactly the same steps over the last DUP steps they could both fire on: the less used is recycled.
+    FAULT (found 2026-11-13): a block and its own ancestor fire alike while the ancestor's other branches rest, so they were taken for
+    copies; strict=True excludes them (D59). The default keeps the fault so that earlier arms reproduce.
 Material: P units a stream, the senses included. Choosing between streams and the default (keep the colour, two contradictions to flip)
 as the tree does, with its Occam bar. Told nothing of the ladder, its size or the life's length.
 
@@ -46,8 +48,9 @@ HIST = 96                                       # steps of history kept on a str
 
 
 class Net:
-    def __init__(self, kind, P, rng, prune=True, fade=True, dup=True, supply=0.0, economy=False, alphabet=2):
+    def __init__(self, kind, P, rng, prune=True, fade=True, dup=True, supply=0.0, economy=False, alphabet=2, strict=False):
         self.kind, self.P, self.rng, self.prune = kind, P, rng, prune
+        self.strict = strict                            # copies: never a block and its own ancestor (the fix of 2026-11-13)
         self.economy = economy
         self.fade, self.dup = fade and prune, dup and prune
         self.supply, self.pool, self.tp = supply, 0.0, 0.0          # supply: the blood's refill, per s (0: off); the pool holds 10 s of it
@@ -68,6 +71,13 @@ class Net:
             if p is not None:
                 self.units[p]["kids"].add(k)
         return k
+
+    def _descends(self, a, b):
+        """Whether a is built (at any depth) on b."""
+        x = self.units.get(a)
+        if x is None or x["sym"] is not None:
+            return False
+        return x["u"] == b or x["v"] == b or self._descends(x["u"], b) or self._descends(x["v"], b)
 
     def _remove(self, k):
         if k not in self.units:
@@ -154,16 +164,29 @@ class Net:
         # birth beneath a contradiction: the deepest firing unit, if it has seen both letters
         deep = max(firing, key=lambda k: self.units[k]["span"], default=None)
         rich = deep is not None and (not self.economy or self.units[deep]["sym"] is not None or self.units[deep]["cash"] >= GRANT)
+        if getattr(self, "ondemand", False) and deep is not None and rich and min(self.units[deep]["n"]) >= 1 and len(self.units) >= self.P:
+            # recycling on demand (Dohare et al. 2024's comparator): a birth is due and material is full, so the least used of a few
+            # blocks drawn at random (with no blocks built on them, and not the one about to be built on) is recycled
+            leaves = [k for k, x in self.units.items() if x["sym"] is None and not x["kids"] and k != deep]
+            if leaves:
+                pick = [leaves[int(self.rng.integers(len(leaves)))] for _ in range(4)]
+                self._remove(min(pick, key=lambda k: self._trace(self.units[k], t)))
+                self.fades += 1
         if deep is not None and rich and min(self.units[deep]["n"]) >= 1 and len(self.units) < self.P:
             span = self.units[deep]["span"]
             before, _ = self.firing(i - span)
+            if before and getattr(self, "simplest", False):  # simplest first: the partner is one of the shortest units active then
+                m = min(self.units[k]["span"] for k in before)
+                before = [k for k in before if self.units[k]["span"] == m]
             if before:
                 u = before[int(self.rng.integers(len(before)))]
                 if self.units[u]["span"] + span <= HIST // 2:
                     k = self._add(u, deep, self.units[u]["span"] + span, t)
-                    if self.supply > 0:                 # the young are protected by their parents' standing: the weaker parent's record
+                    if self.supply > 0 or getattr(self, "local", False):   # the young are protected by their parents' standing: the weaker parent's record
                         pu, pv = self.units[u], self.units[deep]
                         self.units[k]["own"] = min(pu["own"] * math.exp(-(t - pu["to"]) / FADE), pv["own"] * math.exp(-(t - pv["to"]) / FADE))
+                        if getattr(self, "trophic", False):
+                            self.units[k]["use"], self.units[k]["tu"] = min(self._trace(pu, t), self._trace(pv, t)), t
                     self.units[k]["n"][letter] = 1        # it fired now, and saw this letter
                     self.births += 1
                     if self.economy:                    # the parent funds its newborn from its savings (the senses from the world)
@@ -198,7 +221,57 @@ class Net:
                 self._remove(k)
                 self.starved += 1
 
+    def err(self, t):
+        """The stream's recent rate of wrong guesses (a trace with time constant FADE), .5 before any."""
+        w = math.exp(-(t - getattr(self, "te", t)) / FADE)
+        a, d = getattr(self, "ra", 0.0) * w, getattr(self, "rd", 0.0) * w
+        return (d + 1.0) / (a + d + 2.0)
+
+    def guessed(self, right, t):
+        w = math.exp(-(t - getattr(self, "te", t)) / FADE)
+        self.ra, self.rd, self.te = getattr(self, "ra", 0.0) * w + right, getattr(self, "rd", 0.0) * w + (not right), t
+
+    def feed_local(self, i, t):
+        """The user's local competition (2026-11-12): every unit holds a pool refilled at `supply` a second (10 s of it at most); when
+        blocks built on it (its children, it their v) fire together, they share its pool by their own record of being right, each
+        needing 1; a block never competes with its parents, nor with blocks under another parent. All blocks burn REST a second; a
+        block whose store runs out is recycled with its dependants."""
+        f, _ = self.firing(i)
+        groups = {}
+        for k in f:
+            x = self.units[k]
+            if x["sym"] is None:
+                groups.setdefault(x["v"], []).append(k)
+        burn = REST * (2.0 * self.err(t) if getattr(self, "surprise", False) else 1.0)
+        for k, x in self.units.items():
+            if x["sym"] is None:
+                x["h"] -= burn * (t - x["th"])
+                x["th"] = t
+        for par, kids in groups.items():
+            P_ = self.units.get(par)
+            if P_ is None:
+                continue
+            P_["pool"] = min(10.0 * self.supply, P_.get("pool", 0.0) + self.supply * (t - P_.get("tp", t)))
+            P_["tp"] = t
+            if getattr(self, "trophic", False):          # standing includes credit passed down from the blocks built on it
+                w = {k: self._trace(self.units[k], t) + 0.1 for k in kids}
+            else:
+                w = {k: self.units[k]["own"] * math.exp(-(t - self.units[k]["to"]) / FADE) + 0.1 for k in kids}
+            W = sum(w.values())
+            give = min(P_["pool"], float(len(kids)))
+            for k in kids:
+                self.units[k]["h"] += give * w[k] / W - 1.0
+            P_["pool"] -= give
+        for k in list(self.units):
+            x = self.units.get(k)
+            if x is not None and x["sym"] is None and x["h"] <= 0:
+                self._remove(k)
+                self.starved += 1
+
     def tidy(self, i, t):
+        if getattr(self, "local", False):
+            self.feed_local(i, t)
+            return
         if self.economy:
             self.tnow = t
             self.bill(i)
@@ -225,8 +298,22 @@ class Net:
             if not any(s):
                 continue
             j = seen.get(s)
+            if j is not None and j in self.units and getattr(self, "strict", False) and (self._descends(j, k) or self._descends(k, j)):
+                continue                                # a block and its own ancestor fire alike while its other branches rest: not copies
             if j is not None and j in self.units:
                 a, b = (j, k) if self._trace(self.units[j], t) >= self._trace(self.units[k], t) else (k, j)
+                if getattr(self, "merge", False) and not self._descends(a, b):
+                    # copies merged: the blocks built on the copy are handed to its twin (they fire alike), not recycled with it
+                    for c in list(self.units[b]["kids"]):
+                        x = self.units.get(c)
+                        if x is None:
+                            continue
+                        if x["u"] == b:
+                            x["u"] = a
+                        if x["v"] == b:
+                            x["v"] = a
+                        self.units[a]["kids"].add(c)
+                    self.units[b]["kids"] = set()
                 self._remove(b)
                 self.dups += 1
                 if a in self.units:
@@ -241,13 +328,19 @@ class Net:
         self.hist.pop(i - HIST, None)
 
 
-def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=False, lines=False):
-    """one: a single stream, every taste, its symbol the colour eaten and whether it was good (four symbols): no stream chosen by us."""
+def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=False, lines=False, senses=False, novouch=False, local=False,
+            surprise=False, trophic=False, clocks=0, ondemand=False, split=False, merge=False, simplest=False, strict=False, reset=False):
+    """one: a single stream, every taste, its symbol the colour eaten and whether it was good (four symbols): no stream chosen by us.
+    senses: a stream for every sense line, each ticking when its line fires (every taste, a good taste, a bad taste, red eaten, blue
+    eaten), each recording the same four symbols at its ticks; none chosen by us, the gate choosing among them by their record."""
+    TICKS = {"every": lambda good, eaten: True, "good": lambda good, eaten: good, "bad": lambda good, eaten: not good,
+             "red": lambda good, eaten: eaten == 0, "blue": lambda good, eaten: eaten == 1}
     D = L.designed_cls()
     import rivals as RV
 
     class GrowNet(D):
-        KINDS = ("taste",) if one or lines else ("good", "eaten")
+        KINDS = (tuple(f"{c}:{f}" for c in TICKS for f in ("colour", "outcome")) + tuple(f"clock{c}" for c in range(clocks)) if split else
+                 (tuple(TICKS) + tuple(f"clock{c}" for c in range(clocks))) if senses else ("taste",) if one or lines else ("good", "eaten"))
 
         def __init__(self, seed, p):
             super().__init__(seed, dict(p, lad="seq", size=1))
@@ -256,14 +349,29 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
             if lines:                                   # separate sense lines with clocks (Net2)
                 self.nets = [Net2("taste", P, rng, prune=prune, fade=fade, dup=dup, supply=supply, economy=economy)]
             else:
-                self.nets = [Net(k, P, rng, prune, fade, dup, supply, economy, 4 if k == "taste" else 2) for k in self.KINDS]
+                self.nets = [Net(k, P, rng, prune, fade, dup, supply, economy,
+                                 5 if k.startswith("clock") else 2 if split else 4 if k == "taste" or senses else 2, strict=strict) for k in self.KINDS]
+            for N in self.nets:
+                N.local, N.surprise, N.trophic, N.ondemand, N.merge, N.simplest = local, surprise, trophic, ondemand, merge, simplest
+                if trophic:
+                    pass
             self.na = 0
+            self.cnt = {k: 0 for k in self.KINDS}
+            # the brain's own clocks (clocks > 0): periods log-uniform 3 to 30 s, random phase, drifting; never told the world's
+            crng = np.random.default_rng([int(seed), 79])
+            self.clk = [dict(T=float(np.exp(crng.uniform(np.log(3.0), np.log(30.0))))) for _ in range(clocks)]
+            for c in self.clk:
+                c["next"] = float(crng.uniform(0.0, c["T"]))
+            self.crng, self.lastsym = crng, 4
+            self.byk = None
             o = RV.occam(len(self.nets))
             self.bar, self.Emax = o["theta"], o["Emax"]
             self.best = None
             self.dl, self.dt = self.food, 0
 
         def place(self, N):
+            if senses:
+                return self.cnt[N.kind]
             return int(self.g) if N.kind == "good" else self.na
 
         def predict(self):
@@ -275,8 +383,8 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
             self.food = self.dl if k is None else int(N.units[k]["n"][1] > N.units[k]["n"][0])
 
         def taste(self, value, at):
-            v = self.vouched()
-            eaten = self.food if v else int(self.last[1] > self.last[0])
+            v = True if novouch else self.vouched()         # novouch (plan B2): learn from every taste, what was eaten the eye that pulsed last
+            eaten = int(self.last[1] > self.last[0]) if novouch else self.food if v else int(self.last[1] > self.last[0])
             letter = eaten if value > 0 else 1 - eaten
             if v:
                 dhit = self.dl == letter
@@ -288,6 +396,7 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
                     hit = (b == letter) if b is not None else dhit
                     N.E = min(self.Emax, max(0.0, N.E + (1.0 if hit > dhit else -1.0 if hit < dhit else 0.0)))
                     if b is not None:
+                        N.guessed(hit, self.t)
                         if hit:
                             N.agree += 1
                             N.credit(k, self.t)
@@ -307,6 +416,32 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
                     self.dt += 1
                     if self.dt >= 1:
                         self.dl, self.dt = letter, 0
+            if senses:
+                self.lastsym = 2 * eaten + (value > 0)
+                for c in self.clk:
+                    c["sym"] = self.lastsym
+                    if reset == "change":                   # D39's trigger: the food colour this taste reveals differs from the last revealed
+                        pass
+                    elif reset and value < 0:               # a surprise restarts every clock: its next beat one period from now
+                        c["next"] = self.t + c["T"]
+                if reset == "change":
+                    letter = eaten if value > 0 else 1 - eaten
+                    if getattr(self, "lastletter", letter) != letter:
+                        for c in self.clk:
+                            c["next"] = self.t + c["T"] / 2.0       # the change lies between tastes: a slot boundary half a period back
+                    self.lastletter = letter
+                for N in self.nets:
+                    clk, _, rec = N.kind.partition(":")
+                    if clk in TICKS and TICKS[clk](value > 0, eaten):
+                        c = self.cnt[N.kind]
+                        N.write(c, (eaten if rec == "colour" else int(value > 0)) if rec else 2 * eaten + (value > 0))
+                        N.tidy(c, self.t)
+                        self.cnt[N.kind] = c + 1
+                self.na += 1
+                if value > 0:
+                    self.g += 1
+                self.predict()
+                return
             if one:
                 if lines:
                     self.nets[0].write(self.na, (0 if value > 0 else 1, 2 + eaten))
@@ -330,6 +465,24 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
 
         def alive(self):
             return [sum(1 for x in N.units.values() if x["sym"] is None) for N in self.nets]
+
+        def step(self):
+            if clocks and self.byk is None:
+                self.byk = {N.kind: N for N in self.nets}
+            if clocks:
+                for j, c in enumerate(self.clk):
+                    if self.t >= c["next"]:                 # a beat: write what was last tasted since the last beat (4: nothing)
+                        kind = f"clock{j}"
+                        N = self.byk[kind]
+                        k = self.cnt[kind]
+                        N.write(k, getattr(self, "lastletter", 0) if reset == "change" else c.get("sym", 4))   # change mode: the food colour last revealed, held
+                        N.tidy(k, self.t)
+                        self.cnt[kind] = k + 1
+                        c["T"] *= float(np.exp(self.crng.normal(0.0, 0.01)))   # drift
+                        c["next"] += c["T"]
+                        c["sym"] = 4                            # nothing tasted since this clock's beat, until a taste
+                        self.predict()
+            return super().step()
 
     return GrowNet
 
@@ -480,3 +633,171 @@ class Net2(Net):
             if d["sym"] is None:
                 d["cash"] -= GRANT
             self.units[k]["cash"] = GRANT
+
+
+class NetC(Net):
+    """No symmetry told (plan B1): a unit's readout is a table of what each choice led to, m[eye] = [bad, good], not a tally of the food
+    colour; it prefers the eye with the better record ((good + 1) / (all + 2)) and leans when the two differ. A taste teaches only about
+    the eye eaten. Contradicted: some eye has led both to good and to bad."""
+
+    def _add(self, u, v, span, t, sym=None):
+        k = super()._add(u, v, span, t, sym)
+        self.units[k]["m"] = [[0, 0], [0, 0]]
+        return k
+
+    SYM = False                                     # NetCS: each unit may learn that the two eyes are opposites
+
+    @classmethod
+    def choice(cls, m):
+        if cls.SYM == "always" or (cls.SYM and cls.opposite(m)):
+            s, f = m[0][1] + m[1][0], m[0][0] + m[1][1]   # pooled: eye 0 good and eye 1 bad are the same news
+            p0 = (s + 1) / (s + f + 2)
+            p = [p0, 1.0 - p0]
+        else:
+            p = [(m[e][1] + 1) / (m[e][0] + m[e][1] + 2) for e in (0, 1)]
+        return None if p[0] == p[1] else int(p[1] > p[0]), abs(p[1] - p[0])
+
+    @staticmethod
+    def opposite(m):
+        """MacKay's Occam factor on the unit's own record: the evidence that the two eyes are opposites (one chance, eye 0 good
+        meaning eye 1 bad) against independent (a chance each), uniform priors, even odds."""
+        from math import lgamma
+
+        def lb(a, b):
+            return lgamma(a + 1) + lgamma(b + 1) - lgamma(a + b + 2)
+        ind = lb(m[0][1], m[0][0]) + lb(m[1][1], m[1][0])
+        opp = lb(m[0][1] + m[1][0], m[0][0] + m[1][1])
+        return opp > ind
+
+    def says(self, i):
+        f, _ = self.firing(i)
+        best, key = None, None
+        for k in f:
+            c, gap = self.choice(self.units[k]["m"])
+            if c is not None:
+                kk = (self.units[k]["span"], gap)
+                if key is None or kk > key:
+                    best, key = k, kk
+        return best, f
+
+    def learn(self, i, obs, t, speaker, firing):
+        eye, good = obs
+        for k in firing:
+            self.units[k]["m"][eye][int(good)] += 1
+        deep = max(firing, key=lambda k: self.units[k]["span"], default=None)
+        if deep is None:
+            return
+        d = self.units[deep]
+        rich = not self.economy or d["sym"] is not None or d["cash"] >= GRANT
+        if not (rich and min(d["m"][eye]) >= 1 and len(self.units) < self.P):
+            return
+        span = d["span"]
+        before, _ = self.firing(i - span)
+        if not before:
+            return
+        u = before[int(self.rng.integers(len(before)))]
+        if self.units[u]["span"] + span > HIST // 2:
+            return
+        k = self._add(u, deep, self.units[u]["span"] + span, t)
+        self.units[k]["m"][eye][int(good)] = 1
+        self.births += 1
+        if self.economy:
+            if d["sym"] is None:
+                d["cash"] -= GRANT
+            self.units[k]["cash"] = GRANT
+
+
+class NetCS(NetC):
+    SYM = True
+
+
+class NetCT(NetC):
+    SYM = "always"                                  # told: B1's machinery with the symmetry given (an ablation)
+
+
+def netc_cls(prune=True, economy=False, sym=False, told=False, agree=False, novouch=False):
+    """Plan B1: a stream for every sense line (as net_cls(senses=True)), with NetC's readouts: no symmetry told. The default (keep the
+    eye; two bad tastes on it to change) and the gate are judged only on tastes of the eye they would have chosen."""
+    G = net_cls(prune=prune, economy=economy, senses=True)
+    import rivals as RV
+
+    class GrowNetC(G):
+        def __init__(self, seed, p):
+            super().__init__(seed, p)
+            P = max(3, int(p["P"]) // len(self.KINDS))
+            rng = np.random.default_rng([int(seed), 77])
+            self.NC = NetCT if told else NetCS if sym else NetC
+            self.nets = [self.NC(k, P, rng, prune, prune, prune, 0.0, economy, 4) for k in self.KINDS]
+            self.trng = np.random.default_rng([int(seed), 78])     # the brain's own noise, for choosing who steers
+
+        def predict(self):
+            """Who steers: the default and each stream whose speaker leans, chosen by sampling each one's record of good and bad meals
+            when it was followed (Thompson sampling): an untried source is sometimes tried, which is how it can prove itself without
+            being told that one colour's poison means the other's food."""
+            rec = getattr(self, "rec", None)
+            if rec is None:
+                rec = self.rec = {"default": [0, 0]}
+            opts = [("default", self.dl)]
+            for N in self.nets:
+                k, _ = N.says(self.place(N) - 1)
+                if k is not None:
+                    opts.append((N.kind, self.NC.choice(N.units[k]["m"])[0]))
+            draws = [self.trng.beta(rec.get(src, [0, 0])[1] + 1, rec.get(src, [0, 0])[0] + 1) for src, _ in opts]
+            src, eye = opts[int(np.argmax(draws))]
+            self.src, self.food, self.opts = src, eye, opts
+            self.best = next((N for N in self.nets if N.kind == src), None)
+
+        def taste(self, value, at):
+            v = True if novouch else self.vouched()
+            eaten = int(self.last[1] > self.last[0]) if novouch else self.food if v else int(self.last[1] > self.last[0])
+            good = value > 0
+            if v and getattr(self, "src", None) is not None:
+                if agree:                               # every source whose choice was the eye eaten learns from this taste
+                    for src in {s_ for s_, e in self.opts if e == eaten}:
+                        self.rec.setdefault(src, [0, 0])[int(good)] += 1
+                else:
+                    self.rec.setdefault(self.src, [0, 0])[int(good)] += 1
+            if v:
+                dhit = good if eaten == self.dl else None
+                bs, best = 0, None
+                for N in self.nets:
+                    i = self.place(N) - 1
+                    k, f = N.says(i)
+                    b = None if k is None else self.NC.choice(N.units[k]["m"])[0]
+                    hit = (good if eaten == b else None) if b is not None else dhit
+                    if hit is not None and dhit is not None:
+                        N.E = min(self.Emax, max(0.0, N.E + (1.0 if hit > dhit else -1.0 if hit < dhit else 0.0)))
+                    if b is not None and eaten == b:
+                        if good:
+                            N.agree += 1
+                            N.credit(k, self.t)
+                            N.own_credit(k, self.t)
+                            if N.economy:
+                                N.pay(k, 1.0)
+                        else:
+                            N.dis += 1
+                    sc = N.agree - 4 * N.dis
+                    if N.E >= self.bar and (best is None or sc > bs):
+                        bs, best = sc, N
+                    N.learn(i, (eaten, good), self.t, k, f)
+                self.best = best
+                if eaten == self.dl:
+                    if good:
+                        self.dt = max(-1, self.dt - 1)
+                    else:
+                        self.dt += 1
+                        if self.dt >= 1:
+                            self.dl, self.dt = 1 - self.dl, 0
+            for N in self.nets:
+                if N.kind in ("every",) or (N.kind == "good" and good) or (N.kind == "bad" and not good) or \
+                        (N.kind == "red" and eaten == 0) or (N.kind == "blue" and eaten == 1):
+                    c = self.cnt[N.kind]
+                    N.write(c, 2 * eaten + int(good))
+                    N.tidy(c, self.t)
+                    self.cnt[N.kind] = c + 1
+            self.na += 1
+            if good:
+                self.g += 1
+            self.predict()
+
+    return GrowNetC

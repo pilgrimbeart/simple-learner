@@ -6,14 +6,21 @@ and when, why it matters, the line it belongs to, and the experiment that would 
 
 ## Scaling (the user's goal, 2026-11-09; `PROGRAMME.md`)
 
+- **Why does the tree beat the growing network on combinations of 5 and 6?** (D59, D60.) In 3000 s lives the tree solves both (.76,
+  .72), the network reaches .38 to .49 whatever was tried: more material, merging copies, growth stopping when full, the simplest
+  partner. The network makes thousands of blocks a life (copies by the thousand); the tree makes one child per contradicted context and
+  keeps counting. Trace it on the bench (lab/grownet_bench.py) with a combination stream before more variants.
+- **How could a growing network remember a world that returns?** (D59, A-B-A.) The written-rules network keeps a third of its old
+  blocks through a change, yet gains nothing when the old world returns: every block keeps counting while it fires, so B's evidence
+  overwrites A's in the same blocks (catastrophic interference, McCloskey and Cohen 1989). The generic brain simply relearns. Candidates:
+  a block that stops learning once sure and starts a sibling when contradicted (keeping the old one for when it is right again).
+- **Can a network learn that one colour's poison means the other's food?** (D59, plan B1.) Told it, every taste informs about both
+  eyes; untold, the growing network pays .1 to .27 of the gap. A unit that notices the two eyes' records are always opposite could
+  pool them, earning the evidence back, and a world where both could be food (the all-food control) would teach it not to.
 - **How does a growing network find which clock matters?** (D59, stage 5.) Given its senses as separate lines, a block can keep time by
   any of them (every taste, good meals, bad meals...). On the pattern lessons only good meals carry the pattern; blocks drawing other
   clocks start lineages that crowd out the useful one. Candidates: a clock is itself a unit, kept or evicted by the economy; or clocks
   compete by how much they reduce surprise (Plan2Explore's and our coupling's measure) before blocks are built on them.
-- **How should a shared energy supply be split so that rivals compete but parts of one chain don't?** (D59, the user's
-  blood-supply idea.) Shared by use, the copies starve, as hoped, but so do specialists beside the shorter blocks they're built from,
-  which always fire with them. Candidates: share only among blocks with no part in common; or let support flow down from users to parts
-  (trophic) with the supply buying firing rather than survival.
 - **What should hunger measure against?** (D56) Against a fixed normal it helps in lean worlds but costs where the normal is set too
   high (fresh seeds: -.40 in the plain world); against the creature's own past it fails in a world lean all along. Candidate: meals per
   pulse spent, against the exchange rate of a meal for pulses (an energy fact evolution knows), so a creature eats enough for its effort.

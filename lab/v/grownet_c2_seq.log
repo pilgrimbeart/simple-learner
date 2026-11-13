@@ -1,0 +1,10 @@
+== teach: seq ladder, 10 pairs, 2.5 ms, seeds 84000+; x [95%] against base and told; * solved (surely above .5); grow's final ring lengths (median, range)
+-- rung 1, 100 s: base 2.40 told 2.51
+   net5c2| P160 -0.10 [-0.26,+0.04] blue,every blocks 2 born 6 faded 0 dup 0 |
+   net5t2| P160 -0.10 [-0.26,+0.04] blue,every blocks 2 born 6 faded 0 dup 0 |
+-- rung 5, 100 s: base -1.91 told 2.48
+   net5c2| P160 +0.52 [+0.44,+0.60]  good,every blocks 11 born 83 faded 0 dup 0 |
+   net5t2| P160 +0.53 [+0.45,+0.60]  good,every blocks 10 born 81 faded 0 dup 0 |
+-- rung 11, 300 s: base -1.97 told 2.52
+   net5c2| P160 +0.64 [+0.56,+0.73]* good,red blocks 27 born 208 faded 13 dup 25 |
+   net5t2| P160 +0.66 [+0.60,+0.74]* good,every blocks 28 born 203 faded 10 dup 24 |

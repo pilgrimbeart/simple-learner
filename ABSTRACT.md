@@ -130,3 +130,32 @@ centre (one tunes while the other holds, tiring hands over, a part that moved wa
 fresh creatures; adjusting at once, they can't tell whose change helped (D54). (5) *A limit*: coupling prefers slow, careful movement,
 food a faster one; trading speed against care needs taste (D54). Mistakes caught on the way: an observer blind to what it didn't
 understand (D44), a "knife-edge" that was ten pairs' noise (D52, corrected in D53).
+
+**Since 2026-11-12: new parts, hunger, and the growing network** (`discrete/NOTEBOOK.md`, D55 to D59). (1) *New parts taken up by
+play*: given a split eye and smaller thrusters mid-life, a brain that plays with the new parts, judged by the new sense, wires them and
+surely gains; playing only until each new eye line has one sure thruster keeps it short up to two new thrusters a side (D55, D57). (2)
+*Knowledge makes skill worth having*: the new steering helps a brain that knows which colour is food and harms one that doesn't (D58,
+suggestive). (3) *Hunger* helps in lean worlds but needs a sense of normal that fits the world (D56). (4) *The growing network* (the
+user's idea, after Béna & Goodman 2025): detectors grow where guesses fail, built on detectors active together; copies removed, unused
+ones fade. It meets the scaling test in miniature: patterns 2 to 17 steps long grow 17 to 48 detectors with nobody told the size, and
+more material helps until it has what it needs, then goes unused. It relearns a changed pattern where the hand-built tree stays stuck
+(+1.0 to +1.6, two seed sets); removing copies is what keeps room free. Given a stream for every sense instead of one we chose, it picks
+the useful one for each kind of lesson and matches ours (confirmed paired). The written clean-up rules can be replaced by the user's local
+competition for energy, among siblings only, with a detector's standing including the success of the detectors built on it (trophic
+support): no cost in a world that doesn't change, and beats the tree by 1.5 when it does. Still handed to it: that one colour's poison is
+the other's food (worth .05 to .15, all in exploring spared), and our rule for which eye was eaten; next, the network on the body's own
+pulses.
+
+**The scaling curve (D60).** The most generic growing brain (every sense a stream, cleared by trophic sibling competition) climbs the
+sequence ladder as material doubles, longest pattern solved 3, 13, 17 (fresh seeds): the scaling test's first part on one ladder. It
+climbs the combination ladder once (rung 1 to 3) and stalls, solves no timing rung (more material slightly worse there), and commits
+nothing where there is nothing to learn.
+
+**Overnight, 2026-11-12/13 (D59, D60).** A fault in spotting copies (a detector and its own ancestor taken for copies) had been doing the
+clearing credited to copy removal; fixed, the clearing that works is recycling the least used detectors whenever room is needed, which
+beats the tree by 2.2 when the pattern changes and loses nothing when it doesn't. The best generic brain (a stream for every kind of
+event and sense, recycling on demand) climbs sequences to 17 and combinations to 5 of 6 as material grows (fresh seeds for the
+sequences), does no harm where nothing is to be learned, and is surely worse with recruitment switched off. Timing: with clocks of its
+own re-phased when the food colour is seen to change, a foothold (rung 2 on development seeds, about .4 on fresh). One design holding
+it all comes within .15 of each ladder's specialist. Not told that one colour's poison is the other's food, it pays only the cost of
+exploring; the rule for trusting tastes is unnecessary.
