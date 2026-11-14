@@ -1,0 +1,4 @@
+element bias      1 pA: element 0.0036 nW; block (4 elements) 0.014 nW; with a follower 0.554 nW
+element bias     10 pA: element 0.0360 nW; block (4 elements) 0.144 nW; with a follower 0.684 nW
+element bias    100 pA: element 0.3600 nW; block (4 elements) 1.440 nW; with a follower 1.980 nW
+element bias   1000 pA: element 3.6000 nW; block (4 elements) 14.400 nW; with a follower 14.940 nW

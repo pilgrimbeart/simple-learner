@@ -457,10 +457,11 @@ def job(j):
                 _C[arm] = seconds_cls(GN.net_cls(fade=False, ondemand=arm != "net10F", senses=arm != "netR", split=arm.startswith("net10"), merge=arm in ("net10M", "net10F")))
             elif arm.startswith("net10kc"):                  # one design for all three ladders: ten sense streams and K clocks re-phased by revealed changes (e: and 3 eye clocks an eye)
                 tail = arm[7:].lstrip("0123456789")
-                ey, av, jo, vo, wm, co = "e" in tail, "a" in tail, "j" in tail, "v" in tail, "m" in tail, "c" in tail
-                _C[arm] = seconds_cls(GN.net_cls(senses=True, split=True, clocks=int(arm[7:].rstrip("eajvmc")), reset="change", fade=False, ondemand=True,
+                ey, av, jo, vo, wm, co, aa, si = "e" in tail, "a" in tail or "A" in tail, "j" in tail, "v" in tail, ("spec" if "S" in tail else "m" in tail), "c" in tail, "A" in tail, "Z" in tail
+                _C[arm] = seconds_cls(GN.net_cls(senses=True, split=True, clocks=int(arm[7:].rstrip("eajvmcSAZ")), reset="change", fade=False, ondemand=True,
                                                  strict=True, eyes=3 if ey else 0, avgs=3 if av else 0, joint=True if jo else 0, vote=vo, wmaj=wm,
-                                                 counters=int(arm[7:].rstrip("eajvmc")) if co else 0))
+                                                 counters=int(arm[7:].rstrip("eajvmcSAZ")) if co else 0, allavg=aa,
+                                                 since=int(arm[7:].rstrip("eajvmcSAZ")) if si else 0))
             elif arm.startswith("net5k"):                     # every sense a stream, and K of the brain's own clocks (net5k8: 8; net5kr8: reset by each bad taste)
                 r = "change" if arm.startswith("net5kc") else arm.startswith("net5kr")
                 _C[arm] = seconds_cls(GN.net_cls(senses=True, clocks=int(arm[6:] if r else arm[5:]), reset=r, fade=False, ondemand=True, strict=True))

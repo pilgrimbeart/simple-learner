@@ -4128,3 +4128,43 @@ its place in the whole cycle and keeps one letter per place; the growing brain r
 beat with no taste in its slot records a stale colour. The missing part is a count of place (beats modulo a cycle), a counter, not a
 better clock.
 Counters as streams (smoke): no gain on timing 3 and 5; a counter's cycle slides against the world's, its count never re-aligned by the changes. Parked.
+
+## D62: the frozen design's curve, and the second held-out ladder (2026-11-14)
+
+**The frozen design** (PROGRAMME.md, Decisions 2026-11-14: `net10kc60S`, every kind of event times one sense as a stream, sixty clocks
+re-phased by revealed changes, recycling on demand, strict copies, the steering chosen by a weighted majority of specialists), fresh seeds
+120000+, lives set per ladder before any life (`lab/v/frozen_curve_*.log`): sequences solved to 5, 11, 17, 17 at 560, 1120, 2240, 4480
+units (the top by 2240); combinations rise with material on every rung, rung 5 solved at 4480 (.67), none below; timing rung 2 solved
+from 1120 (.53 to .56), rungs 3, 5, 7 rise to .4 to .5.
+
+**A tighter seal for blind agents** (the user: enforce it). `lab/sealed_agent.sh` runs an agent in a bubblewrap sandbox holding only the
+system, a fresh home with a copied credential, the `claude` program, its own Python environment and its work folder; tested by an agent
+told to escape: no repository, no user home, no memory. `lab/seal_bundle.py` copies the engine files a checker needs into the folder.
+(Rule in AGENTS.md.) The second held-out ladder was written before this sandbox existed, under the older seal (requested, not enforced).
+
+**The second held-out ladder** (`lab/sealed/heldout_ladder2.json`, by a blind author; opened after the freeze; held-out seeds 71000+;
+`lab/v/heldout_ladder2.log`): "satiety". After k good meals in quick succession (a hidden leaky tally of good meals past a threshold k),
+the food colour turns poison until the tally decays on a time scale drawn per life; rungs k = 1, 2, 3, 4, 6, 8. The frozen design closes
+about .3 of the gap on rung 1 and .17 to .34 on the others, flat with material, above the tree (which falls to 0 on the larger rungs), and
+solves none. The scaling test's second part fails on a second unseen ladder. Read afterwards, the reason is plain: the rule is a leaky
+tally of recent good meals, a running average of the food rate, and the design has running averages only of the eyes. The user's
+principle (2026-11-13: a running average is a measure to try for any signal) was applied to one signal, not to every one. This ladder is
+now spent: anything built for it is development.
+Development on the spent satiety ladder (no verdict): running averages of every signal (eyes, good and bad tastes, motors) don't help in a smoke (40 against 77 for satiety 3) and, traced, predict no better than the other streams (about 80%): read as thirds of its own history, an average doesn't mark the rule's threshold of k recent meals.
+Beats since the last revealed change, as streams (smoke): no gain on timing 3 and 5. Parked.
+
+**What a block might cost on a chip** (step 5; an estimate from chip.py's own rules, `lab/v/block_power.log`; not built or simulated).
+A growing-network block holds two inputs' coincidence (a gate), a short hold (its latch), two tallies (memory nodes, SONOS: nothing drawn
+at rest) and a readout comparison: say four elements and two memories. An element draws about twice its bias across the 1.8 V supply.
+At 1 pA biases (the chip's floor) a block draws about .014 nW; at 10 pA .14 nW; at 100 pA 1.4 nW (plus .5 nW for a follower if one is
+needed). The break-even for growing from 560 to 2240 units was 1.7 to 2 nW a unit, to 4480 about .6 (D61): blocks biased at 10 pA or
+less would leave a bigger brain worth growing to 4480 units and beyond; at 100 pA, only to about 2240. Whether a block works at such small
+currents (its speed: a block reacts at the pace of tastes, about a second, so slow currents should do) is for SPICE, not done.
+
+**The steering grown, first build** (`lab/steer.py`; smokes in `lab/v/grownet_predictions.md`). The starting circuit's drive removed;
+play tries each thruster, both or none, and graded readouts of each eye's pulse change after each (context, option) pair decide the
+reflexes. Play finds the scans (spinning on a thruster raises that thruster's eye when nothing is seen) but not the approach: a block is
+in view in few random trials, and going straight raises an eye's rate only over a second or more, while a short trial can't tell it from
+standing still. With no approach the grown brain eats nothing in the last third. Next: learn the pairs through the whole life, so that
+its own driving supplies trials with a block in view, and judge options over a longer horizon or by taste.
+Learning the pairs through the whole life: still nothing eaten (smokes). The value chased, an eye's rate within a second, is wrong: straight-on pays at a taste seconds later. The steering needs value over seconds, a taste credited back to the options that led to it (an eligibility trace). Parked for review.

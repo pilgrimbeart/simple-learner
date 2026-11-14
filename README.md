@@ -159,6 +159,12 @@ Three lines of work so far:
 
 The findings that changed the direction of the work, each told in full in the notebook named.
 
+- **A second unseen ladder, and the same lesson.** A blind author wrote a new sealed ladder: food turns to poison after a few good
+  meals in quick succession, and recovers with time (satiety). The frozen growing brain got a quarter to a third of the way, better
+  than our hand-built learner, but solved no rung and didn't improve with more material. The rule needs a running average of the food
+  rate, and the brain had running averages only of its eyes: a generic measure applied to one signal instead of all of them. Both
+  unseen ladders so far failed for the same kind of reason: the brain lacked a general way to sense its own recent history
+  (`discrete/NOTEBOOK.md`, D62).
 - **A bigger brain pays only while its parts are nearly free.** Counting the energy every unit of material draws, growing from 560 to
   2240 units pays while each draws under about 2 nanowatts (the creature at rest burns 1000), and doubling again pays only under
   about half a nanowatt. So the brain's best size depends on how cheap its parts can be made (`discrete/NOTEBOOK.md`, D61).

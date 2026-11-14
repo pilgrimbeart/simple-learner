@@ -71,6 +71,13 @@ the cheats a grid invites) is in nca-learn's `NOTEBOOK.md`, worth reading before
   row tries every class of `PARTS.md`, section 5, tuned, or records why a class can't apply; the row's cure is the simplest
   tied with the best. Its automatic version must tie with the base brain in the unmodified world. Re-validation in
   `mixed_feedback.py` waits until the table is complete, and then covers only the rows or universal circuit we keep.
+- **Blind agents are sealed by enforcement, never by request** (the user, 2026-11-14: agents have repeatedly read what they shouldn't).
+  Any agent writing a sealed test, or anything else that must not see the project, runs through `lab/sealed_agent.sh`: a bubblewrap
+  sandbox whose filesystem holds only the system, a fresh empty home with a copy of the login credential, the `claude` program, its own
+  Python environment and its work folder; the repository, the user's home, memory and transcripts do not exist inside it (tested by an
+  agent asked to escape, 2026-11-14). Everything it may use is copied into its work folder (`lab/seal_bundle.py` for engine files);
+  nothing points at the repository; a bundle holds the engine, the starting brain and the older modules it imports, never a current
+  design. Its own claims about what it read are not evidence.
 - **Long runs** share one laptop: one job at a time. **One maths thread per worker**: set `OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1` for anything with a process pool (8 threads per worker made one arm 50 times slower, 2026-11-05). Kill processes only by explicit PID, never by a pattern; and wait on a job by its PID (captured when it starts) or a line in its log, never by `pgrep -f` (a pattern matches the waiting shell's own command line, so the wait never ends or the wrong process dies). To pause
   a run, stop (SIGSTOP) only its pool's workers, never a shell or a process the harness waits on. Don't change code a
   running job will import later.

@@ -357,7 +357,7 @@ class Net:
 
 def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=False, lines=False, senses=False, novouch=False, local=False,
             surprise=False, trophic=False, clocks=0, ondemand=False, split=False, merge=False, simplest=False, strict=False, reset=False,
-            eyes=0, avgs=0, joint=0, vote=False, wmaj=False, counters=0):
+            eyes=0, avgs=0, joint=0, vote=False, wmaj=False, counters=0, allavg=False, since=0):
     """eyes (2026-11-13): for each eye, `eyes` clocks of its own (periods 0.5 to 10 s, drawn per life); at each beat the stream records
     how many pulses that eye gave since the last beat (0, 1-2, 3-8, 9 or more), so blocks can grow over recent eye activity.
     avgs (the user, 2026-11-13: a running average is a measure to try for any signal): for each eye, `avgs` running averages of its pulse
@@ -366,6 +366,7 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
     """one: a single stream, every taste, its symbol the colour eaten and whether it was good (four symbols): no stream chosen by us.
     senses: a stream for every sense line, each ticking when its line fires (every taste, a good taste, a bad taste, red eaten, blue
     eaten), each recording the same four symbols at its ticks; none chosen by us, the gate choosing among them by their record."""
+    ALINES = (0, 1, "good", "bad", "m0", "m1") if allavg else (0, 1)   # allavg (2026-11-14): a running average of every signal, not only the eyes
     TICKS = {"every": lambda good, eaten: True, "good": lambda good, eaten: good, "bad": lambda good, eaten: not good,
              "red": lambda good, eaten: eaten == 0, "blue": lambda good, eaten: eaten == 1}
     D = L.designed_cls()
@@ -373,8 +374,9 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
 
     class GrowNet(D):
         KINDS = (tuple(f"{c}:{f}" for c in TICKS for f in ("colour", "outcome")) + tuple(f"clock{c}" for c in range(clocks))
-                 + tuple(f"eye{e}c{j}" for e in (0, 1) for j in range(eyes)) + tuple(f"avg{e}c{j}" for e in (0, 1) for j in range(avgs))
-                 + tuple(f"cnt{j}n{m}" for j in range(min(counters, clocks)) for m in range(2, 9)) if split else
+                 + tuple(f"eye{e}c{j}" for e in (0, 1) for j in range(eyes)) + tuple(f"avg{e}c{j}" for e in ALINES for j in range(avgs))
+                 + tuple(f"cnt{j}n{m}" for j in range(min(counters, clocks)) for m in range(2, 9))
+                 + tuple(f"since{j}" for j in range(min(since, clocks))) if split else
                  (tuple(TICKS) + tuple(f"clock{c}" for c in range(clocks))) if senses else ("taste",) if one or lines else ("good", "eaten"))
 
         def __init__(self, seed, p):
@@ -385,7 +387,7 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
                 self.nets = [Net2("taste", P, rng, prune=prune, fade=fade, dup=dup, supply=supply, economy=economy)]
             else:
                 self.nets = [Net(k, P, rng, prune, fade, dup, supply, economy,
-                                 int(k.split("n")[-1]) if k.startswith("cnt") else 3 if k.startswith("avg") else 4 if k.startswith("eye") else 5 if k.startswith("clock") else 2 if split else 4 if k == "taste" or senses else 2,
+                                 9 if k.startswith("since") else int(k.split("n")[-1]) if k.startswith("cnt") else 3 if k.startswith("avg") else 4 if k.startswith("eye") else 5 if k.startswith("clock") else 2 if split else 4 if k == "taste" or senses else 2,
                                  strict=strict) for k in self.KINDS]
             for N in self.nets:
                 N.local, N.surprise, N.trophic, N.ondemand, N.merge, N.simplest = local, surprise, trophic, ondemand, merge, simplest
@@ -408,8 +410,8 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
             self.eclk = [dict(e=e, j=j, T=float(np.exp(erng.uniform(np.log(0.5), np.log(10.0)))), n=0) for e in (0, 1) for j in range(eyes)]
             for c in self.eclk:
                 c["next"] = float(erng.uniform(0.0, c["T"]))
-            self.aclk = [dict(e=e, j=j, T=float(np.exp(erng.uniform(np.log(0.5), np.log(10.0)))), r=0.0, tr=0.0, hist=[])
-                         for e in (0, 1) for j in range(avgs)]
+            self.aclk = [dict(e=e, j=j, T=float(np.exp(erng.uniform(np.log(0.5), np.log(30.0 if allavg else 10.0)))), r=0.0, tr=0.0, hist=[])
+                         for e in ALINES for j in range(avgs)]
             for c in self.aclk:
                 c["next"] = float(erng.uniform(0.0, c["T"]))
             o = RV.occam(len(self.nets))
@@ -456,6 +458,8 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
             self.food = self.dl if k is None else int(N.units[k]["n"][1] > N.units[k]["n"][0])
 
         def taste(self, value, at):
+            if avgs and allavg:
+                self._bump("good" if value > 0 else "bad")
             v = True if novouch else self.vouched()         # novouch (plan B2): learn from every taste, what was eaten the eye that pulsed last
             eaten = int(self.last[1] > self.last[0]) if novouch else self.food if v else int(self.last[1] > self.last[0])
             letter = eaten if value > 0 else 1 - eaten
@@ -471,7 +475,7 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
                     N.E = min(self.Emax, max(0.0, N.E + (1.0 if hit > dhit else -1.0 if hit < dhit else 0.0)))
                     if wmaj and b is not None:
                         spoke.append((N, hit))
-                    if wmaj and b is not None and not hit and not WM_SPEC:
+                    if wmaj and b is not None and not hit and not (WM_SPEC or wmaj == "spec"):
                         N.w = getattr(N, "w", 1.0) * WM_BETA
                     if b is not None:
                         N.guessed(hit, self.t)
@@ -488,7 +492,7 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
                         bs, best = sc, N
                     N.learn(i, letter, self.t, k, f)
                 self.best = best
-                if wmaj and WM_SPEC:                    # specialists (Freund, Schapire, Singer & Warmuth 1997): only those that spoke are updated,
+                if wmaj and (WM_SPEC or wmaj == "spec"):   # specialists (Freund, Schapire, Singer & Warmuth 1997): only those that spoke are updated,
                     W0 = getattr(self, "w_def", 1.0) + sum(getattr(N, "w", 1.0) for N, _ in spoke)   # their total weight kept the same
                     self.w_def = getattr(self, "w_def", 1.0) * (1.0 if self.dl == letter else WM_BETA)
                     for N, hit in spoke:
@@ -532,6 +536,8 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
                                     c["T"] += LOCK * (d / m - c["T"])
                             c["next"] = self.t + c["T"] / 2.0       # the change lies between tastes: a slot boundary half a period back
                         self.lastchange = self.t
+                        for c in self.clk:
+                            c["since"] = 0
                     self.lastletter = letter
                 for N in self.nets:
                     clk, _, rec = N.kind.partition(":")
@@ -572,12 +578,15 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
         def alive(self):
             return [sum(1 for x in N.units.values() if x.get("sym") is None) for N in self.nets]
 
+        def _bump(self, line):
+            for c in self.aclk:
+                if c["e"] == line:                      # a leaky average of the line's rate (events a second), decayed lazily
+                    c["r"] = c["r"] * math.exp(-(self.t - c["tr"]) / c["T"]) + 1.0 / c["T"]
+                    c["tr"] = self.t
+
         def stimulate(self, sensor, at):
             if avgs and sensor in (0, 1):
-                for c in self.aclk:
-                    if c["e"] == sensor:                # a leaky average of the pulse rate (pulses a second), decayed lazily
-                        c["r"] = c["r"] * math.exp(-(self.t - c["tr"]) / c["T"]) + 1.0 / c["T"]
-                        c["tr"] = self.t
+                self._bump(sensor)
             if eyes and sensor in (0, 1):
                 for c in self.eclk:
                     if c["e"] == sensor:
@@ -631,6 +640,13 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
                             c["T"] *= float(np.exp(self.crng.normal(0.0, 0.01)))   # drift
                         c["next"] += c["T"]
                         c["sym"] = 4                            # nothing tasted since this clock's beat, until a taste
+                        if j < since:                       # beats since the food colour was last seen to change (2026-11-14): a count the
+                            c["since"] = c.get("since", 0) + 1   # world's changes reset, recorded up to 8 (9 symbols)
+                            Ns = self.byk[f"since{j}"]
+                            ks = self.cnt[Ns.kind]
+                            Ns.write(ks, min(c["since"], 8))
+                            Ns.tidy(ks, self.t)
+                            self.cnt[Ns.kind] = ks + 1
                         if j < counters:                    # counters (2026-11-14): this clock's beats counted modulo 2 to 8, each a stream
                             c["beats"] = c.get("beats", 0) + 1
                             for m in range(2, 9):
@@ -640,7 +656,12 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
                                 Nc.tidy(kc, self.t)
                                 self.cnt[Nc.kind] = kc + 1
                         self.predict()
-            return super().step()
+            out = super().step()
+            if avgs and allavg and out:
+                for m in out:
+                    if m in (0, 1):
+                        self._bump(f"m{m}")
+            return out
 
     return GrowNet
 

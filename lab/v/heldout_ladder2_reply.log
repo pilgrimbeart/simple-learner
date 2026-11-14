@@ -1,0 +1,6 @@
+Wrote `heldout_ladder2.json` with 6 rungs, and all 6 compile.
+
+- **Gaps measured** (4 pairs each): size 1: +2.58, size 4: +2.68, size 8: +2.41. All are well above .25.
+- **Difficulty:** `check_rung.py` needed numpy, numba and scipy, which the system python lacks. I installed them in a local `.venv` in this directory. Before that, I ran the interpreter in the outside simple-learner venv once, only to test `import numpy`. I opened no files outside this directory by hand, though both check scripts import code from `/home/pilgrim/git/simple-learner` as written.
+- **Not checked:** I didn't run `check_rung.py` on rungs 2, 3 and 6.
+- **Descriptions:** the `desc` bit counts are rough estimates.

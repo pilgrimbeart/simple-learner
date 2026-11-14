@@ -657,3 +657,44 @@ Counters as streams (smoke, 2 pairs, 3000 s; arm net10kc20c: 20 clocks, each wit
 against 1096 without; 5: 916 against 1000. The gate sometimes follows a counter, without gain: a counter's cycle (n beats of a clock a few
 percent off the slot) slides against the world's within a few cycles, and re-phasing the clock at changes doesn't re-align its count.
 A counter would need its count, not only its beat, set by the world's changes. Parked at the smoke.
+
+# The frozen design's scaling curve (net10kc60S; PROGRAMME.md, Decisions 2026-11-14), fresh seeds 120000+, material 560 to 4480;
+sequences 3, 5, 7, 11, 13, 17 in 300 s lives; combinations 2 to 6 and timing 2, 3, 5, 7 in 3000 s lives.
+F1. Sequences: highest solved rises to 17. Combinations: rises to at least 5. Timing: rung 2 only. 50%.
+**Scored F1** (`lab/v/frozen_curve_*.log`, the frozen design, fresh seeds 120000+): right. Sequences: highest solved 5, 11, 17, 17 at 560
+to 4480 (300 s). Combinations (3000 s): rung 5 solved at 4480 (.67), every rung rising with material (2: .34 to .62, 3: .29 to .54, 4: .31
+to .54, 6: .19 to .38), none surely solved below. Timing (3000 s): rung 2 solved from 1120 (.53 to .56); rungs 3, 5, 7 rise to .4-.5.
+
+# The second held-out ladder (sealed, lab/sealed/heldout_ladder2.json; opened now, after freezing net10kc60S; held-out seeds 71000+;
+the tree P 64 as reference; material 560 to 4480; each rung's own life)
+H2. The frozen design solves at least one rung and rises with material on at least half the rungs. 40%.
+**Scored H2** (`lab/v/heldout_ladder2.log`, held-out seeds 71000+): wrong. On the second sealed ladder the frozen design solves no rung:
+rung 1 closes about .3 of the gap (raw +.84 to +1.05 on a gap of 3.5; the tree +.92), rungs 2 to 8 .17 to .34, flat with material
+(no climb), above the tree on rungs 3, 4, 6 and 8 (tree .16 to -.09). The scaling test's second part is not met on a second unseen
+ladder either. (The ladder read only now, after this verdict.)
+
+# Development on the spent satiety ladder: running averages of every signal (arm net10kc60SA: the frozen design plus three averages of
+each of the eyes, good tastes, bad tastes and each motor, time constants .5 to 30 s, read low, middle or high against their history).
+Smoke (2 pairs): satiety 3 40 (frozen design 77); sequence 11 118 (86). Traced (one satiety-3 life): every stream predicts the food
+colour about 80% of the time (the best, "outcome at each blue eaten", 81%); the good-meal averages (time constants 1.4, 10, 17 s; the
+world's 21 s) are not among the best ten. Read as thirds of its own history, a leaky average doesn't mark the threshold (k recent
+meals) that the rule turns on. Not run at scale; recorded as development, since the ladder is spent.
+Beats since the food colour last changed, a count the world's changes reset (arm net10kc20SZ; smoke, 2 pairs, 3000 s): timing 3: 936
+(975 without); 5: 883 (920); the gate sometimes follows a "since" stream, without gain. Parked; timing's open question stands.
+
+# The steering grown, first build (lab/steer.py; G1-G2 of PROGRAMME.md's design): the starting circuit's drive removed; play tries
+thruster 0, thruster 1, both or none in random trials; graded readouts of each eye's pulse change after each (context, option) pair
+(the sixteen pairs present from birth); reflexes wired where an option surely raises the eye that matters against none.
+Smokes (plain world, 300 s, three lives; last third; circuit 30, 39, 41): play 60 s, trials of .3 s: scans found (spinning on one
+thruster raises that thruster's eye when nothing is seen), no approach: grown 0 food in the last third. Trials of .3 s are too short to
+see straight-on approach raise an eye's rate (it rises only as the distance shrinks), while turning loses the block at once. Play 120 s,
+trials 1 s: fewer trials (about six a pair), even fewer reflexes, grown 0 again. The evidence is the limit: in random play a block is in
+view in few trials, and an approach shows only over a second or more.
+Not run at scale. Next for the steering: keep learning the pairs during the whole life (not only in play), the creature's own driving
+then supplying trials with a block in view; and judge an option by what follows over a longer horizon (the eye's rate over seconds, or
+a taste), as the hand-built drive's hold does.
+Lifelong (LIFELONG=1: after play every moment a trial, the best option so far in its context taken, another one time in ten): smokes
+(three plain lives, last third) -5, 0, -5: no better. The value chased (an eye's rate within a second) is the wrong one: driving straight
+pays when the block is reached, seconds later, at a taste; the hand-built drive solves this by holding its course (its hold timer). The
+steering needs value over seconds: a taste credited back to the options that led to it (an eligibility trace), the growing network's
+pairs carrying it. Parked for review.

@@ -6,6 +6,10 @@ and when, why it matters, the line it belongs to, and the experiment that would 
 
 ## Scaling (the user's goal, 2026-11-09; `PROGRAMME.md`)
 
+- **How should grown steering credit a taste seconds after the actions that led to it?** (D62.) Play finds what each thruster does to
+  each eye (the scans) but not the approach: going straight pays only at a taste seconds later. Candidates: an eligibility trace on each
+  (context, option) pair, the taste paid back along it; or an option held while its context lasts (as the hand-built drive's hold),
+  judged by the taste that ends it.
 - **How can a growing brain count its place in a cycle?** (D61.) Timing plateaus near half; a brain told the slot length reaches .8,
   but telling the growing brain's clock the exact period doesn't help: the designed brain counts its place in the whole cycle, the
   growing brain reads stale letters at past beats. Candidate: blocks that are counters (a chain of toggles, beats modulo n) offered as

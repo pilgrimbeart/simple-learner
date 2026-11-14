@@ -1,0 +1,43 @@
+{
+ "name": "Satiety",
+ "kind": "A resource that turns bad the more of it has recently been taken, and recovers on a hidden time scale.",
+ "source": "Negative frequency dependence, patch depletion and marginal value (foraging ecology); satiation and habituation/recovery in animal learning; leaky-integrator non-stationarity in bandits.",
+ "rungs": [
+  {
+   "size": 1,
+   "seconds": 300,
+   "text": "(world (meta (link L7) (q S) (cap Ladder) (group satiety)) (let b 0) (let tau (exp (uniform (log 3.60) (log 9.60)))) (on tick (set b (* b (exp (/ (- TICK) tau)))) (set poison (if (>= b 1) F P))) (on score (if (= colour F) (set b (+ b 1)))) (told (if (>= b 1) F P)))",
+   "desc": "Hidden leaky tally of recent good meals with threshold 1; past it the good colour turns poison until the tally decays (time scale drawn per life). Learn: which colour is food (1 bit), the threshold (~1.0 bits plus its count tracking), the recovery time scale (~3 bits), and that eating itself causes the flip, so switch after ~1 meals and return after the wait."
+  },
+  {
+   "size": 2,
+   "seconds": 400,
+   "text": "(world (meta (link L7) (q S) (cap Ladder) (group satiety)) (let b 0) (let tau (exp (uniform (log 6.00) (log 16.00)))) (on tick (set b (* b (exp (/ (- TICK) tau)))) (set poison (if (>= b 2) F P))) (on score (if (= colour F) (set b (+ b 1)))) (told (if (>= b 2) F P)))",
+   "desc": "Hidden leaky tally of recent good meals with threshold 2; past it the good colour turns poison until the tally decays (time scale drawn per life). Learn: which colour is food (1 bit), the threshold (~1.6 bits plus its count tracking), the recovery time scale (~3 bits), and that eating itself causes the flip, so switch after ~2 meals and return after the wait."
+  },
+  {
+   "size": 3,
+   "seconds": 600,
+   "text": "(world (meta (link L7) (q S) (cap Ladder) (group satiety)) (let b 0) (let tau (exp (uniform (log 8.40) (log 22.40)))) (on tick (set b (* b (exp (/ (- TICK) tau)))) (set poison (if (>= b 3) F P))) (on score (if (= colour F) (set b (+ b 1)))) (told (if (>= b 3) F P)))",
+   "desc": "Hidden leaky tally of recent good meals with threshold 3; past it the good colour turns poison until the tally decays (time scale drawn per life). Learn: which colour is food (1 bit), the threshold (~2.0 bits plus its count tracking), the recovery time scale (~3 bits), and that eating itself causes the flip, so switch after ~3 meals and return after the wait."
+  },
+  {
+   "size": 4,
+   "seconds": 900,
+   "text": "(world (meta (link L7) (q S) (cap Ladder) (group satiety)) (let b 0) (let tau (exp (uniform (log 12.00) (log 32.00)))) (on tick (set b (* b (exp (/ (- TICK) tau)))) (set poison (if (>= b 4) F P))) (on score (if (= colour F) (set b (+ b 1)))) (told (if (>= b 4) F P)))",
+   "desc": "Hidden leaky tally of recent good meals with threshold 4; past it the good colour turns poison until the tally decays (time scale drawn per life). Learn: which colour is food (1 bit), the threshold (~2.3 bits plus its count tracking), the recovery time scale (~3 bits), and that eating itself causes the flip, so switch after ~4 meals and return after the wait."
+  },
+  {
+   "size": 6,
+   "seconds": 1500,
+   "text": "(world (meta (link L7) (q S) (cap Ladder) (group satiety)) (let b 0) (let tau (exp (uniform (log 18.00) (log 48.00)))) (on tick (set b (* b (exp (/ (- TICK) tau)))) (set poison (if (>= b 6) F P))) (on score (if (= colour F) (set b (+ b 1)))) (told (if (>= b 6) F P)))",
+   "desc": "Hidden leaky tally of recent good meals with threshold 6; past it the good colour turns poison until the tally decays (time scale drawn per life). Learn: which colour is food (1 bit), the threshold (~2.8 bits plus its count tracking), the recovery time scale (~3 bits), and that eating itself causes the flip, so switch after ~6 meals and return after the wait."
+  },
+  {
+   "size": 8,
+   "seconds": 2400,
+   "text": "(world (meta (link L7) (q S) (cap Ladder) (group satiety)) (let b 0) (let tau (exp (uniform (log 24.00) (log 64.00)))) (on tick (set b (* b (exp (/ (- TICK) tau)))) (set poison (if (>= b 8) F P))) (on score (if (= colour F) (set b (+ b 1)))) (told (if (>= b 8) F P)))",
+   "desc": "Hidden leaky tally of recent good meals with threshold 8; past it the good colour turns poison until the tally decays (time scale drawn per life). Learn: which colour is food (1 bit), the threshold (~3.2 bits plus its count tracking), the recovery time scale (~3 bits), and that eating itself causes the flip, so switch after ~8 meals and return after the wait."
+  }
+ ]
+}

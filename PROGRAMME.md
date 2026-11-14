@@ -52,12 +52,26 @@ needs, rung by rung; (5) the same blocks over the body's senses and actions (the
 | | test | where it stands |
 |---|---|---|
 | 1 | It climbs | Sequences: to the top (3, 11, 17) as material doubles. Combinations: 3, 4, 6 as material grows to 2560, in 3000 s lives. Timing: rung 2 only, higher rungs rising to about half. Two of three. |
-| 2 | One design, unseen challenges | One design within .15 of each ladder's specialist. The held-out ladder: a third of the gap, no climb; most of its gap is beyond any learner from these senses (D61). Not met. |
+| 2 | One design, unseen challenges | One design within .15 of each ladder's specialist. Held-out ladder 1 (hidden contexts): a third of the gap, no climb (D61). Held-out ladder 2 (satiety), frozen design: a quarter to a third, no rung, no climb; it needs a running average of the food rate, which the design lacks (D62). Not met. |
 | 3 | Improves in the life | Surely worse with recruitment off on sequences 11 and 17 (+.46, +.37); combination 3 not sure. |
 | 4 | Recruits only when needed | Lives identical to the starting brain's in plain and all-food worlds at every size (no stream adopted). Commitment by count of blocks not yet measured. |
 | 5 | Local, levelling connections | Every block has two inputs and one readout; competition and recycling are local draws. The gate that picked which stream steers (an argmax over all streams) can be replaced by a weighted majority of specialists, each stream's weight moved only by its own guesses, at no cost (D61). Holds. |
-| 6 | In a body, real time, cost charged | Runs closed loop in the body under the ground rules; the material's power: extra material pays under about 1 to 2 nW a unit (D61). Partly. |
+| 6 | In a body, real time, cost charged | Runs closed loop in the body under the ground rules; the material's power: extra material pays under about 1 to 2 nW a unit (D61); by chip.py's rules a block biased at 10 pA would draw about .14 nW, well under (an estimate, not built; D62). Partly. |
 | 7 | Parsimonious | A few hundred lines; one kind of block; fast enough for thousands of lives a night. |
+
+**Next: the steering grown** (step 4 of the plan agreed 2026-11-14; a design, not yet built). Today the growing network learns *which
+colour* to approach; the approach itself is the starting circuit's (scan, then fire the thruster that turns towards the followed eye,
+with knobs set by coupling, D51-D54). To grow it:
+- G1, effects of the body's own actions, from play (D47, D55, D57 graded): during play, kicks of each motor are steps of a growing
+  network's stream, their graded readouts how each eye's pulse rate changed after; blocks over runs of kicks and preceding pulses (where
+  the block was in view). This already works for new thrusters (A, graded: as good as the hand-built play).
+- G2, reflexes from readouts: for each eye, the movement whose readout surely raises that eye's rate becomes its approach reflex, played
+  when the eye pulses while that eye is the one followed; scanning (a movement that raises any eye's rate when nothing is seen) the same
+  way. Judged against the starting circuit with its drive intact, and the starting circuit with the drive removed (`T.Unwired`).
+- G3, rule and steering together: the growing network's choice of colour (as now) feeding the grown reflexes; on the ladders, then the
+  muscle body (where bursts may matter, B's lesson) and new parts.
+The yardstick at each step: the hand-built drive. The mechanism must be the same growing network (streams, blocks, graded readouts,
+recycling on demand, specialists), with no reflex written by hand.
 
 **Night of 2026-11-13/14**: the gate replaced by a weighted majority of specialists at no cost (the scaling test's part 5 now holds); timing's plateau near half traced to representation (not a ceiling: told the period, a designed brain reaches .8; not drift, nor period locking, nor a told period for the growing brain): it lacks a count of its place in the cycle; counters as streams tried (smoke), sliding against the world. Next for timing: counters whose count, not only beat, the world's changes set.
 
@@ -214,10 +228,24 @@ Bar met (`discrete/NOTEBOOK.md`, D37): seq 7 certified rungs, combo 5, time 6; t
 
 - **The outside test set:** two files. `lab/sealed/outside_set2.md`, the primary, written under the tighter seal on Sonnet (`lab/blind_agents.sh`; reply in `lab/v/outside_set2_reply.log`): SHA-256 `2050ebb03183f0343a6e3c1f94934452aaa1c8d07f001b9f3b36b1b31ae93368`, 45 entries, 36 keeping the current rules; several sources confirmed from search results only. `lab/sealed/outside_set.md`, a second test, by a fresh agent from outside sources. **Nobody building the language, the engine or the cures reads it** until the claim (stage 3 above). SHA-256 `f72a1addf3347b2779b7e2c6e62432fd01bea2254a50d8e39038fcf21c95db13`; 44 entries, 37 keeping the current rules. **The seal isn't perfect:** the agent opened no repository files, but the harness gave it `AGENTS.md`, the memory index and a git status at the start, so it saw the rules and some file names. Many older papers are confirmed by bibliographic record only; each entry says what was checked.
 - **The held-out ladder:** `lab/sealed/heldout_ladder.json`, by a fresh agent from the outside sets (2026-11-09), told only the kinds of the other ladders: SHA-256 `8c7ae3373d33385361f2b5da7445b01e09e3073041c859778d77966187d09943`, 6 rungs, all compiled, no lives run. Unread until the design is frozen (stage 3 above). The harness gave the agent `AGENTS.md` and the memory index, as above, and it has read the outside sets, so the sets' seal is as it was for the main session.
+- **The second held-out ladder:** `lab/sealed/heldout_ladder2.json` (2026-11-14), by a fresh agent under the tighter seal
+  (`lab/blind_heldout2.sh`: an empty directory, no project instructions, memory or git status; a brief with the creature, the language
+  and the existing ladders' kinds; checkers that compile a world and live the starting and told brains): SHA-256
+  `a225967739965681404b1a1dfac49bb226c44172425d8afe87e04b6a892d4298`, 6 rungs, all compiled, gaps measured on three (+2.4 to +2.7). Its
+  reply (`lab/v/heldout_ladder2_reply.log`): it opened no outside files by hand, but its checkers import the engine by path, and it ran
+  the project's Python once: its seal was requested, not enforced (the sandbox, `lab/sealed_agent.sh`, came after). Unread until the
+  design is frozen.
 - **The held-out worlds:** world number n, from any sampler, is held out if the first byte of SHA-256 of `world:n` is divisible by 4 (a quarter of them). Fixed now, so that it can't be chosen later.
 - **Seeds for lives:** development 60000-69999 (spent by stage 2c), then 80000-89999 (opened 2026-11-06 for stage 3); held out 70000-79999. Seeds below 60000 are spent.
 
 ## Decisions (add as made)
+
+- **The design frozen for the second held-out ladder** (2026-11-14, under the user's agreement to the order of next steps): arm
+  `net10kc60S` of `lab/teach.py` (`lab/grownet.py` as committed with this decision): ten sense streams (every kind of event times one
+  recorded sense), sixty own clocks re-phased by revealed changes, recycling on demand, strict copies, and the choice of which stream
+  steers by a weighted majority of specialists (beta .5). Material 560, 1120, 2240, 4480. Lives: as long as each rung needs, set per
+  ladder before any life (sequences 300 s, combinations and timing 3000 s, the held-out ladder its own). Fresh seeds 120000+ for the
+  curve; held-out seeds 71000+ for the sealed ladder.
 
 - **The design frozen for the held-out ladder** (2026-11-13, my decision under the user's "continue making sensible decisions"): the one
   generic growing brain, arm `net10kc60` of `lab/teach.py` (`lab/grownet.py` at commit e0f76be: ten sense streams, every kind of event
