@@ -1,0 +1,6 @@
+== the steering grown: plain, 10 pairs, 1200 s, last third [95%]
+Traceback (most recent call last):
+  File "/home/pilgrim/git/simple-learner/lab/steer.py", line 470, in <module>
+    d = e[arm][1] - e["circuit"][1]
+                    ~^^^^^^^^^^^
+KeyError: 'circuit'

@@ -159,6 +159,12 @@ Three lines of work so far:
 
 The findings that changed the direction of the work, each told in full in the notebook named.
 
+- **Steering can be grown when choices are held while the situation lasts** (confirmed on fresh creatures). With the hand-built
+  driving taken away, the brain learns to steer from taste alone, but only if a choice (turn this way, that way, go straight, stop)
+  is held until what it sees changes, and judged by how that episode ended and how long it took. Choosing afresh every fraction of a
+  second, with any credit rule we tried, never got above zero; held choices reached half the hand-built driving, learning by
+  themselves to go straight at food, scan when nothing is in view, and turn away from poison. Charging each choice for its length
+  matters: otherwise standing still is a safe zero (`discrete/NOTEBOOK.md`, D63).
 - **A second unseen ladder, and the same lesson.** A blind author wrote a new sealed ladder: food turns to poison after a few good
   meals in quick succession, and recovers with time (satiety). The frozen growing brain got a quarter to a third of the way, better
   than our hand-built learner, but solved no rung and didn't improve with more material. The rule needs a running average of the food

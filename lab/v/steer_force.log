@@ -1,0 +1,3 @@
+== the steering grown: plain, 10 pairs, 1200 s, last third [95%]
+  circuit  +2.39 [+2.27,+2.51]
+  opt      +0.42 [+0.16,+0.69]  vs circuit -1.96 [-2.27,-1.65] | best option by context (0 none, 1 followed eye, 2 other, 3 both): {0: 1, 1: 2, 2: 1, 3: 1} x10, {0: 1, 1: 0, 2: 1, 3: 1} x8, {0: 1, 1: 2, 2: 1, 3: 0} x2

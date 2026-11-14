@@ -4168,3 +4168,73 @@ in view in few random trials, and going straight raises an eye's rate only over 
 standing still. With no approach the grown brain eats nothing in the last third. Next: learn the pairs through the whole life, so that
 its own driving supplies trials with a block in view, and judge options over a longer horizon or by taste.
 Learning the pairs through the whole life: still nothing eaten (smokes). The value chased, an eye's rate within a second, is wrong: straight-on pays at a taste seconds later. The steering needs value over seconds, a taste credited back to the options that led to it (an eligibility trace). Parked for review.
+**The eligibility trace** (`lab/steer.py` arm traced; `lab/v/steer_traced_plain.log`). Every .3 s a choice of option for the context
+(the followed eye, the other, seen within the circuit's own hold); each (context, option) pair's mark fades over 3 s and a taste (+1, -1)
+is credited to the marked pairs; a pair's value is the reward credited per use. It finds by itself, in most lives, to go straight when the
+followed eye has just pulsed, the approach no shorter credit could find. But as a whole it forages barely above zero (+.07 [-.09, +.26]
+against the hand-built drive's +2.36, plain world, 10 pairs): with nothing in view it settles on standing still, spinning or going
+straight, by life, and never on the hand-built drive's habit of running off when bored; with the other colour seen it doesn't reliably
+turn away. The approach is learnable from taste with delayed credit; finding food across the world (where a taste follows a choice by many
+seconds) is not, at a 3 s trace.
+**Longer credit, tried rigorously** (the user; `lab/v/steer_credit*.log`, `steer_td*.log`; L1 to L5; 10 pairs, paired, development seeds
+131000+). Marks at four time constants (1 to 30 s), a learned worth for the cue (the followed eye starting to pulse), both, temporal
+differences (SARSA), and average-reward TD: none above zero in the last third, in 300 s or 1200 s lives (-.32 to +.04; the hand-built drive
++2.25 and +2.39). Longer lives don't help, so it is stuck, not starved. Traced: the approach is learned (most meals come from going
+straight with the followed colour in view), the colour followed is right; the poison comes with the other colour in view, where every
+rule learns to stand still or to drift rather than to turn away, and with nothing in view standing still is a safe zero that TD settles
+on. Learning steering from taste alone, with a few contexts and options chosen every .3 s, is not enough here; what the hand-built drive
+has that these lack is a held course (it keeps driving after a pulse and stops at the other colour) and a reason to move when nothing is
+seen (boredom, then running). Open (QUESTIONS.md).
+
+## D63: the steering grown by options held while their context lasts (2026-11-14)
+
+`lab/steer.py` arm opt; `lab/v/steer_opt*.log`; predictions O1 to O6. After every per-moment credit rule failed (D62), the steering is
+grown as options in the sense of Sutton, Precup and Singh (1999): when the context changes (whether the followed eye, and the other, pulsed
+within the starting circuit's own hold), at a taste, or at random (mean 2 s, the termination probability), an option is chosen (one
+thruster, the other, both, or none) and held, a latch set at the context's start and reset at its end. The episode just ended moves its
+pair by semi-Markov TD towards the taste that ended it, less its length times the creature's own running reward rate, plus the value of
+the option now chosen. Nothing is written about which thruster does what or when to go straight.
+
+| plain world, last third | 300 s (seeds 131000+) | 1200 s (131000+) | 1200 s, fresh (133000+) |
+|---|---|---|---|
+| the hand-built drive | +2.25 | +2.39 | +2.47 |
+| options held, charged for their length | +.99 | +1.27 | +1.32 |
+| the same, not charged | +.31 | +.83 | +.80 |
+| a trace, every .3 s | -.13 | +.04 | -.01 |
+| TD, every .3 s | -.22 | -.03 | |
+
+Held options surely beat every per-moment rule (+1.1 to +1.3); the charge for length surely matters (+.44 to +.68): without it, standing
+still is a safe zero; and without random ending, standing still with nothing in view never ends at all. In every life they learn, by
+themselves: straight with the followed colour in view, a spin with nothing in view, a spin away from the other colour. They reach about
+half the hand-built drive: traced, they eat about two thirds of its meals and a little more poison, spending a fifth of the time with the
+other colour in view. Options carrying their own rate (eight instead of four) don't help (-.16 to -.22). What the hand-built drive still
+has is speed: it was tuned by evolution's stand-in, a search; these were learned in one life.
+**Closing the gap, hypotheses tested** (O5, O7 to O11; `lab/v/steer_opt*.log`; 1200 s, 10 pairs, paired against opt +1.27). Options
+carrying their own rate, eight or twelve (-.16 to -.24): more choices cost more learning. A longer "in view" (.5 s, 1 s: -.55, -1.08): a
+stale context blurs situations. Less exploration, fixed (.03) or fading with each context's uses: no change (+.05, -.02). Time by context
+is nearly the circuit's (nothing in view .55, the followed colour .17 against .22, the other .22 against .18): the gap is in what is done
+there, not where the time goes. On the muscle body (where the hand-built drive is untuned: its frozen retune is zeros) the learned steering
+reaches the same half (+.75 against +1.53). The grown rule with grown steering (G3): .58 to .64 of the hand-built drive's gain on
+sequences 5 and 11. Still open: the other half.
+**Where the other half went, traced** (O13 to O16; `lab/v/steer_opt_4800.log`, `steer_optB.log`, `steer_force*.log`). Held options stop
+improving by 1200 s (+1.25 at 4800 s) and settle on the circuit's own policy. Forced to carry out the circuit's policy, unlearned, the
+options machinery scores only +.42: the gap was in the carrying out, not the learning. The circuit, bored (nothing of its colour for its
+bored time), runs straight at its run rate, for at most its run_max, then scans again: it relocates. Adding that to the forced policy
+gives +1.65; boredom as a context bit for the learner gives +1.37 (+.10 over opt, not sure), .83 of the forced policy. So: about a sixth of
+the remaining gap is the cost of learning; most of the rest is the circuit's tuned scan-and-run rhythm, which contexts without time can't
+express. A context that carries time (how long nothing has been seen, in a few steps, or the brain's own clocks) is the generic next step.
+**A law of the held options** (O5, O9, O12, O14, O17). Every added distinction (options at more rates, eight or twelve; finer contexts by
+pulse count, nine; contexts carrying time, sixteen) does worse, by .2 to .6, except one bit (boredom, +.10, not sure): each value is learned
+alone, so each new context starts from nothing and splits the evidence. The circuit's rhythm needs time in the context, and time in the
+context costs more evidence than it gains. What would break the law is sharing: a value learned in one context informing its neighbours,
+as the growing network's blocks share their parents (a longer context is a child of a shorter one, and starts from it). That is the next
+mechanism to try for the steering (QUESTIONS.md).
+Values shared from coarse to fine contexts (O18: a fine context's value pulled to its parent's until ten uses of its own) don't rescue the
+time contexts (+1.03, as without). A confound remains: in the time contexts every option runs at the circuit's run rate, a spin included,
+so a fast spin may be what costs there. Parked: the steering stands at held options with boredom (+1.37, about 57% of the hand-built
+drive, 83% of that drive's own policy carried out by the same machinery).
+
+**Correction to the law** (O19, `lab/v/steer_optT_natrate.log`): with the confound removed (the time contexts' options at the scan rate,
+not the run rate) the time contexts tie the plain options (+1.35, +.08 [-.09, +.24]): their loss had been the fast rate, not the splitting.
+The law holds for added options (eight or twelve) and the pulse-count contexts; sharing as built (shrinking to the parent) still costs
+(-.20). Time in the context neither helps nor harms here: the circuit's rhythm isn't recovered by it either.

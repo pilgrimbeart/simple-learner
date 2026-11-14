@@ -698,3 +698,144 @@ Lifelong (LIFELONG=1: after play every moment a trial, the best option so far in
 pays when the block is reached, seconds later, at a taste; the hand-built drive solves this by holding its course (its hold timer). The
 steering needs value over seconds: a taste credited back to the options that led to it (an eligibility trace), the growing network's
 pairs carrying it. Parked for review.
+
+# The eligibility trace (lab/steer.py, arm traced; the user: implement it, 2026-11-14): every .3 s a choice for the context (followed
+eye, other eye, seen within the circuit's own hold); each (context, option) pair's mark fades over 3 s; a taste (+1, -1) credited to the
+marked pairs; value = reward credited per use; best value chosen, untried first, random one time in ten (always in the first 60 s).
+Smoke (three plain lives): in every life it learned by itself to go straight when the followed eye has just pulsed; in one life traced,
+after play: followed eye seen, straight (.59 a use); nothing seen, spin on one thruster (.31, a scan); only the other colour seen, spin
+away (.30); 38 good meals and 13 bad in 180 s. Last thirds 5, -4, -3 against the circuit's 30 to 41: it eats, but less and worse; it
+never runs off to new places when bored, as the hand-built drive does.
+E1. (plain world, 10 pairs, 300 s; circuit, traced, still) traced surely above still (0) and surely below the circuit. 80%.
+**Scored E1** (`lab/v/steer_traced_plain.log`, 10 pairs): wrong in letter. traced +.07 [-.09, +.26] against the circuit's +2.36; still
+eats nothing (its efficiency undefined, nothing spent). Not surely above zero: in most lives the trace finds "straight when the followed
+eye has just pulsed" by itself (seven of the ten pairs' best options shown agree), but what it does with nothing in view (stand still,
+spin, or go straight, by life) and with the other colour seen varies, and the food it finds barely covers its poison.
+
+# Longer credit, two generic ways (the user: try both rigorously; lab/steer.py arms tracedM, tracedQ, tracedMQ)
+M: marks at four time constants drawn per life (1 to 30 s), value the mean over them of credit per use. Q: "the followed eye starts
+pulsing" (after a silence of the circuit's hold) an event with marks of its own, credited by tastes, paying its learned worth to the
+pairs marked when it happens (secondary reinforcement). Checked: M's time constants and values do differ (one life: 1.5, 1.6, 6.6, 23 s);
+in that life the options' ranking didn't, so its choices matched the single trace's.
+Run: plain world, 300 s, 10 pairs, development seeds 131000+, paired on the same lives: circuit, traced, tracedM, tracedQ, tracedMQ.
+L1. tracedM surely above traced. 40%. L2. tracedQ surely above traced. 45%. L3. the best of them surely above zero and within 1.0 of the
+    circuit (+2.4). 25%.
+**Scored L1-L3** (`lab/v/steer_credit.log`, development seeds 131000+, paired): all wrong. traced -.13 [-.34, +.07]; multiple traces
+-.32 (-.19 against traced, [-.46, +.11]); the cue's learned worth -.24 (-.11, [-.49, +.26]); both -.32 (-.19). None better, none above
+zero; the circuit +2.25. Which option each life ends up preferring varies widely (on these seeds even the approach is found in only
+some). Likely starved of evidence: in 300 s a learner from scratch gets few tastes.
+L4. (the same arms, lives four times as long, 1200 s, judged on the last third; 10 pairs, same seeds) traced and its variants improve
+    with life (above their 300 s levels by .3 or more), and one is surely above zero. 45%.
+**Scored L4** (`lab/v/steer_credit_long.log`, 1200 s): wrong. No improvement with life: traced +.04, multiple traces -.16, cue -.11, both
+-.26 (circuit +2.39). Not starved of experience: stuck. Traced (two lives, 600 s): the colour followed is right all the time (so the
+steering, not the colour, fails); most meals come from going straight with the followed colour in view (31 and 51), but most poison is
+eaten with the other colour in view, where the trace learned "stand still" as least bad, turning away being blamed for poisons that come
+seconds later (credit blurred by marks).
+TD (SARSA, arm td: each pair moves towards the tastes since it began plus the discounted value of the next pair) learns to stand still
+when nothing is in view (no taste, value 0: a trap); average-reward TD (AVGR=1, Schwartz 1993: each choice judged against the creature's
+own running reward rate, so idling falls below the usual) smokes mixed.
+L5. (1200 s, 10 pairs, seeds 131000+, paired; circuit, traced, td, td with AVGR as a separate run) TD or average-reward TD surely above
+    traced. 35%.
+**Scored L5** (`lab/v/steer_td.log`, `steer_td_avgr.log`, 1200 s, paired): wrong. TD -.03 [-.13, +.07], average-reward TD -.12 [-.23,
+-.01], the trace +.04, the circuit +2.39. No credit rule tried (one trace, four traces, a learned cue, TD, average-reward TD) gets the
+grown steering above zero. Parked for review.
+
+# Options held while their context lasts (the user: build it, test every hypothesis; lab/steer.py arms opt, optN)
+An option chosen when the context changes (or at a taste, or at random, mean 2 s) and held until then; the ended episode updates its pair
+by semi-Markov TD: Q += .1 (R - rho d + Q(next) - Q); opt charges each episode its length at the creature's running reward rate (rho,
+forgetting over 100 s); optN doesn't. First smoke: without random ending, standing still with nothing in view never ended (no choice
+again): the idling trap. With it (three plain lives, 300 s, last third): opt 29, 30, 18 (the circuit 30 to 40 on such lives); optN -2, 4,
+0. Learned in every opt life, nothing written: straight with the followed colour in view; with nothing in view a spin; with the other
+colour, a spin away in two of three.
+O1. (300 s, 10 pairs, seeds 131000+, paired) opt surely above traced and td. 75%.
+O2. opt surely above optN: the duration charge is needed. 75%.
+O3. opt within .5 of the circuit. 35%.
+O4. (1200 s) opt's gap to the circuit narrower than at 300 s. 50%.
+**Scored O1-O4** (`lab/v/steer_opt.log`, `steer_opt_long.log`, paired): O1 right: opt +.99 (300 s) and +1.27 (1200 s), above traced by
++1.12 [+.73, +1.47] and +1.24, above td by +1.21 and +1.30. O2 right: above optN by +.68 [+.42, +.93] and +.44 [+.11, +.79]. O3 wrong:
+the circuit +2.25 and +2.39, opt about half. O4 right, narrowly: the gap -1.26 at 300 s, -1.11 at 1200 s.
+Traced (two lives, after 400 s of 1200): opt 291 and 262 good meals, 75 and 65 bad; the circuit 466 and 404, 57 and 52. opt spends 22%
+of its time with the other colour in view (turning away at the slow scan rate) and 16% with the followed one. The pairing of rate with
+context (drive when the followed eye is seen, scan otherwise) is the last thing written by hand: opt8 lets each option carry either rate
+(eight options), chosen like the rest.
+O5. (300 and 1200 s, 10 pairs, paired) opt8 surely above opt. 45%.
+**Scored O5** (`lab/v/steer_opt8*.log`): wrong. Options with their own rate: -.22 [-.60, +.18] (300 s) and -.16 [-.33, .00] (1200 s)
+against opt: no gain; twice the choices to learn. The four-option version stays.
+O6. Confirmation on fresh seeds 133000+ (1200 s, 10 pairs; circuit, traced, opt, optN): opt surely above traced and above optN. 70%.
+**Scored O6** (`lab/v/steer_opt_fresh.log`, fresh seeds 133000+, 1200 s): right. opt +1.32 [+1.14, +1.50], above traced by +1.33
+[+1.19, +1.47] and above optN by +.52 [+.23, +.80]; the circuit +2.47.
+
+# G3: the growing network's choice of colour with grown steering (lab/steer.py arms net: net10kc60S with the hand-built drive; netopt:
+the same with held options; opt: held options with the starting circuit's colour). Smoke (sequence 5, 1200 s, one life, last third): net
+142, netopt 28, opt -8: the two grown halves work together, at a fifth of the network with the hand-built drive.
+G3a. (sequences 5 and 11, 1200 s, 10 pairs, seeds 131000+, paired) netopt surely above opt and above the circuit on both. 60%.
+G3b. netopt reaches at least a third of net's gain over the circuit. 40%.
+**Scored G3a-G3b** (`lab/v/steer_g3_*.log`, 1200 s, paired): right. netopt above opt by +.66 [+.29, +1.01] (sequence 5) and +.35 [+.12,
++.60] (11), above the circuit by +2.58 and +2.11; it takes .64 and .58 of the network-with-hand-built-drive's gain over the circuit (net
++1.90 and +1.73, netopt +.46 and +.19). The grown rule and the grown steering work together; the shortfall is the steering's.
+O7. Is the context too brief? "In view" lasts the circuit's hold (.17 s) after a pulse, so a distant block's sparse pulses keep ending
+    the option. With in view lasting .5 s or 1 s (OPTW; plain, 1200 s, 10 pairs, seeds 131000+), opt surely higher. 45%.
+**Scored O7** (`lab/v/steer_optw*.log`): wrong. Longer "in view" is worse: .5 s -.55 [-.75, -.36], 1 s -1.08 [-1.26, -.91] against the
+hold (+1.27): a stale context blurs situations. The hold stays.
+O8. Exploration costs a trained creature: EPS .1 for the whole life. Exploration fading with experience (each context's chance of a random
+    option 1/sqrt(1 + its uses / 10); EXPL=fade) or a fixed .03 (EPS=0.03): opt surely higher than with .1. 45%.
+**Scored O8** (`lab/v/steer_expl_fade.log`, `steer_eps03.log`): wrong. Fading exploration -.02 [-.18, +.15], a fixed .03 +.05 [-.09, +.19]:
+exploration isn't what costs.
+Traced (two lives, after 400 s): time by context, circuit / opt: nothing in view .55 / .55, followed colour .22 / .17, other .18 / .22,
+both .05 / .06: nearly the same; the gap is in what is done there. The circuit runs off at its run rate when bored; opt has only the scan
+and drive rates. opt12: each pattern at any of the circuit's three rates (scan, drive, run), twelve options, chosen like the rest.
+O9. (1200 s, 10 pairs, seeds 131000+) opt12 surely above opt. 35%.
+**Scored O9** (`lab/v/steer_opt12.log`): wrong. Twelve options -.24 [-.38, -.11] against four: like eight (O5), more choices cost more
+learning. Neither the repertoire, the exploration, nor the context's length is the gap.
+O10. On the muscle-like body (MUSCLE=1; the circuit with its frozen muscle retune, table.numbers), 1200 s, 10 pairs, seeds 131000+:
+     opt's gap to the circuit smaller than on the original body (-1.11). 50%.
+**Scored O10** (`lab/v/steer_opt_muscle.log`): right in letter. On the muscle body opt +.75, the retuned circuit +1.53: the gap -.78
+(original body -1.11), but in proportion the same (about half).
+O11. The hand-built drive without its muscle retune (circraw: as if the body changed after birth; the retune was found by search) on the
+     muscle body, against opt (which adapts by itself): opt surely above circraw. 40%.
+**Scored O11** (`lab/v/steer_opt_muscle_raw.log`; its report crashed for want of a circuit arm, the pairing done after): void as framed:
+the frozen muscle retune (`lab/v/retune_muscle.json`) is all zeros (the search found nothing to change), so circraw is the circuit and
+O10 already compared the learned steering with an untuned hand-built drive. On a body the drive was never tuned for, it still beats the
+learned steering two to one (+1.53 against +.75).
+O12. Finer contexts (optF: each eye's pulses within the hold counted none, one or several, a rough near and far; nine contexts instead of
+     four): 1200 s, 10 pairs, seeds 131000+: surely above opt. 35%. (Smoke, one life, 300 s: last third 9.)
+**Scored O12** (`lab/v/steer_optF.log`): wrong. Finer contexts -.63 [-.78, -.49]. Every added option or distinction has cost (O5, O9,
+O12): the gap looks like the price of learning from scratch in one life.
+O13. (4800 s, judged on the last third; 10 pairs, seeds 131000+) opt keeps rising with experience (300 s .99, 1200 s 1.27): above 1.5. 45%.
+**Scored O13** (`lab/v/steer_opt_4800.log`): wrong. At 4800 s opt +1.25, as at 1200 s (+1.27): it has stopped learning, not run short.
+The policies it settles on are the circuit's own (straight with the followed colour, spin with nothing, spin away from the other, in
+most of the twenty lives); what the circuit has besides is time: bored (no food for its bored timer) it runs straight to somewhere new.
+The options' contexts have no time in them, so "nothing in view" for a moment and for twenty seconds are one.
+O14. Boredom as context (optB: a fifth bit, no followed-colour pulse or food for longer than the circuit's own bored timer): 1200 s, 10
+     pairs, seeds 131000+: surely above opt. 50%.
+Smoke (one life, 1200 s): optB last third 86 (efficiency 1.54); it learned by itself, bored with nothing in view: go straight (the circuit's run).
+**Scored O14** (`lab/v/steer_optB.log`): wrong in letter: boredom as context +.10 [-.06, +.25] above opt (+1.37), not sure. A small part.
+O15. (a diagnosis) The options machinery carrying out the circuit's own policy, forced (FORCE=1: nothing in view, spin on thruster 0;
+     the followed colour, straight; the other or both, spin), no learning or play: if near the circuit (+2.4), the gap is what is learned;
+     if near opt (+1.3), it is the machinery (episodes, random endings, rates). Expect: near the circuit. 55%.
+**Scored O15** (`lab/v/steer_force.log`, diagnosis): wrong, and decisive. Carried out by the options machinery, the circuit's own policy
+(forced, no learning) scores +.42, below the learned options (+1.27) and far below the circuit (+2.39): the gap is not in what is
+learned. Checked and ruled out: the step's length (2.5 ms, as the circuit's), a balance between the thrusters (the circuit has none here).
+Left: the circuit runs straight at its run rate when bored, the other colour in view or not.
+O16. (diagnosis, FORCE=2: the forced policy with optB's bored contexts running straight at the run rate) near the circuit. 50%.
+**Scored O16** (`lab/v/steer_force2.log`, diagnosis): partly. With running when bored, the circuit's policy forced through the options
+machinery scores +1.65 (from +.42 without): relocation was most of the machinery's gap. Still -.73 below the circuit: the circuit's run
+lasts at most its run_max (1 s), then scanning resumes for its bored time; here a bored run goes on until something is seen. The learned
+version with boredom as context (optB, +1.37) reaches .83 of the forced policy: learning costs about a sixth; the rest is the circuit's
+tuned timing (its scan-run rhythm), found by search, not learnable from these contexts.
+O17. Contexts carrying time (optT: when the followed colour isn't in view, how long since it was last seen, under 1 s, 1-4, 4-16, over 16;
+     beyond the first step options run at the run rate, a choice still learned): 1200 s, 10 pairs, seeds 131000+: surely above opt, and
+     at least optB's +1.37. 45%.
+**Scored O17** (`lab/v/steer_optT.log`): wrong. Contexts carrying time: +1.07, -.20 [-.48, +.10] against opt, -.30 [-.56, -.01] against
+optB. Sixteen contexts split the evidence four ways where it mattered.
+O18. Shared values (optTS: optT's sixteen contexts, each fine context's value pulled towards its coarse parent's until it has ten uses of
+     its own; the parent learns from every episode): 1200 s, 10 pairs, seeds 131000+: surely above optT, and at least opt. 50%.
+**Scored O18** (`lab/v/steer_optTS.log`): wrong. Shared values: +1.03, as optT (-.04 [-.33, +.25]), below opt (-.24 [-.44, -.09]). Sharing
+didn't rescue the time contexts. (A confound noted: in optT and optTS every option beyond the first time step runs at the run rate, a
+spin included; optB's single bored bit does the same; the rate mapping may be what costs, not the splitting.)
+O19. The confound removed (NATRATE=1: time contexts' options at the scan rate, as plain opt's): optT and optTS at 1200 s, 10 pairs, seeds
+     131000+. If the fast rate was what cost, both rise to at least opt's +1.27; if the splitting, they stay below. Expect: they rise. 45%.
+**Scored O19** (`lab/v/steer_optT_natrate.log`): partly right, and a correction. Without the fast rate the time contexts tie opt (+1.35,
++.08 [-.09, +.24]): their earlier loss (O17) was the rate, not the splitting. Shared values still cost (-.20 [-.33, -.06]). So the "law"
+(every added distinction costs) was partly the confound for the time contexts; it stands for the extra options (O5, O9) and the
+pulse-count contexts (O12, whose rates were the circuit's), and for sharing as built.

@@ -73,6 +73,8 @@ with knobs set by coupling, D51-D54). To grow it:
 The yardstick at each step: the hand-built drive. The mechanism must be the same growing network (streams, blocks, graded readouts,
 recycling on demand, specialists), with no reflex written by hand.
 
+**The steering grown** (D63): G1-G2 done. Per-moment credit (traces at one or four scales, a learned cue, TD, average-reward TD) fails; options held while their context lasts, charged for their length, grow a working steering by themselves, half the hand-built drive (confirmed on fresh seeds). Next: G3, the growing network's choice of colour with grown steering, on the ladders.
+
 **Night of 2026-11-13/14**: the gate replaced by a weighted majority of specialists at no cost (the scaling test's part 5 now holds); timing's plateau near half traced to representation (not a ceiling: told the period, a designed brain reaches .8; not drift, nor period locking, nor a told period for the growing brain): it lacks a count of its place in the cycle; counters as streams tried (smoke), sliding against the world. Next for timing: counters whose count, not only beat, the world's changes set.
 
 **Late 2026-11-13**: with lives as long as they need, combinations climb on fresh seeds too (3, 4, 6 at 160 to 2560 units, 3000 s); two ladders pass the first part. Hidden contexts traced: the growing brain heads right 85% of the time and follows changes in a second; the starting brain heads right 84% (its own rule tracks ten-second contexts), so the gap is mostly unreachable from the senses (a told yardstick no learner can match). Running averages of every eye and joint detectors across streams added as general parts; neither helps there, neither harms.

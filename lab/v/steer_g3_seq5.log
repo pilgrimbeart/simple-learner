@@ -1,0 +1,5 @@
+== the steering grown: seq5, 10 pairs, 1200 s, last third [95%]
+  circuit  -2.12 [-2.56,-1.65]
+  net      +1.90 [+1.76,+2.02]  vs circuit +4.02 [+3.63,+4.39]
+  opt      -0.20 [-0.24,-0.17]  vs circuit +1.92 [+1.43,+2.37] | best option by context (0 none, 1 followed eye, 2 other, 3 both): {0: 2, 1: 3, 2: 3, 3: 3} x2, {0: 1, 1: 0, 2: 0, 3: 0} x1, {0: 3, 1: 1, 2: 3, 3: 0} x1
+  netopt   +0.46 [+0.11,+0.78]  vs circuit +2.58 [+2.06,+3.03]

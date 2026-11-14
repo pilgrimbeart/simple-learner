@@ -6,10 +6,13 @@ and when, why it matters, the line it belongs to, and the experiment that would 
 
 ## Scaling (the user's goal, 2026-11-09; `PROGRAMME.md`)
 
-- **How should grown steering credit a taste seconds after the actions that led to it?** (D62.) Play finds what each thruster does to
-  each eye (the scans) but not the approach: going straight pays only at a taste seconds later. Candidates: an eligibility trace on each
-  (context, option) pair, the taste paid back along it; or an option held while its context lasts (as the hand-built drive's hold),
-  judged by the taste that ends it.
+- **What closes the rest of the gap to the hand-built drive?** (D63.) Options held while their context lasts reach half of it (+1.3
+  against +2.4), on the muscle body too. Ruled out: more options (with rates), longer contexts, less exploration; where the time goes is
+  the circuit's. Traced (O13-O16): the gap is mostly the circuit's scan-and-run rhythm when bored (relocation), which contexts without
+  time can't express; learning costs about a sixth. Contexts carrying time were tried (O17) and lost: each added context splits the evidence (a law of the held options, D63). Next:
+  values shared across contexts, a finer context starting from its coarser parent (the growing network's blocks). Earlier candidates: the value's resolution (each option's value per context is one number, over very different moments: the
+  block's distance, its bearing), so options that are themselves grown over finer contexts (the growing network's blocks over eye
+  pulses); boredom (D46) for moving on; credit from the eyes.
 - **How can a growing brain count its place in a cycle?** (D61.) Timing plateaus near half; a brain told the slot length reaches .8,
   but telling the growing brain's clock the exact period doesn't help: the designed brain counts its place in the whole cycle, the
   growing brain reads stale letters at past beats. Candidate: blocks that are counters (a chain of toggles, beats modulo n) offered as
