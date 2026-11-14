@@ -159,3 +159,11 @@ sequences), does no harm where nothing is to be learned, and is surely worse wit
 own re-phased when the food colour is seen to change, a foothold (rung 2 on development seeds, about .4 on fresh). One design holding
 it all comes within .15 of each ladder's specialist. Not told that one colour's poison is the other's food, it pays only the cost of
 exploring; the rule for trusting tastes is unnecessary.
+
+**2026-11-13 (D61).** The held-out ladder, opened after freezing the design: a third of the gap, no climb; traced, the growing brain
+heads for the food colour 85% of the time and follows changes within a second, the starting brain 84% (its own rule tracks contexts
+that last ten seconds), so most of that ladder's gap is beyond any learner from these senses (its yardstick is told what no sense
+reveals in time). The price of size: extra material pays while a unit draws under 1 to 2 nW. With lives as long as each rung needs, two
+ladders climb on fresh creatures (sequences to 17; combinations 3, 4, 6 as material grows to 2560) and timing solves its first rung,
+higher rungs rising to about half. The growing network also takes up new body parts as well as our hand-built play, once its readouts
+keep the size of what follows and not only its direction; grown movements (bursts) don't pay on these bodies.

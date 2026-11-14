@@ -6,6 +6,10 @@ and when, why it matters, the line it belongs to, and the experiment that would 
 
 ## Scaling (the user's goal, 2026-11-09; `PROGRAMME.md`)
 
+- **How can a growing brain count its place in a cycle?** (D61.) Timing plateaus near half; a brain told the slot length reaches .8,
+  but telling the growing brain's clock the exact period doesn't help: the designed brain counts its place in the whole cycle, the
+  growing brain reads stale letters at past beats. Candidate: blocks that are counters (a chain of toggles, beats modulo n) offered as
+  streams, their phase set by revealed changes; D39's stage R proposed such parts.
 - **Why does the tree beat the growing network on combinations of 5 and 6?** (D59, D60.) In 3000 s lives the tree solves both (.76,
   .72), the network reaches .38 to .49 whatever was tried: more material, merging copies, growth stopping when full, the simplest
   partner. The network makes thousands of blocks a life (copies by the thousand); the tree makes one child per contradicted context and

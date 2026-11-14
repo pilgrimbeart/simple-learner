@@ -1,0 +1,3 @@
+== paired: combo ladder, 10 pairs, seeds 84000+; share of the gap closed [95%], and each arm against net10kc60
+  rung  3: net10kc60:2240 +0.75 [+0.62,+0.87] | net10kc60m:2240 +0.76 [+0.64,+0.87] (vs net10kc60 +0.01 [-0.11,+0.17]) |
+  rung  5: net10kc60:2240 +0.50 [+0.32,+0.61] | net10kc60m:2240 +0.52 [+0.32,+0.64] (vs net10kc60 +0.02 [-0.08,+0.12]) |

@@ -455,8 +455,12 @@ def job(j):
                 _C[arm] = seconds_cls(GN.net_cls(fade=False, ondemand=True, senses=True, split=arm == "net10S", simplest=True))
             elif arm in ("netR", "net5R", "net10R", "net10M", "net10F"):   # recycling on demand: no fading; copies removed (M: merged); the least used of a few evicted when room is needed (F: none, growth stops when full)
                 _C[arm] = seconds_cls(GN.net_cls(fade=False, ondemand=arm != "net10F", senses=arm != "netR", split=arm.startswith("net10"), merge=arm in ("net10M", "net10F")))
-            elif arm.startswith("net10kc"):                  # one design for all three ladders: ten sense streams and K clocks re-phased by revealed changes
-                _C[arm] = seconds_cls(GN.net_cls(senses=True, split=True, clocks=int(arm[7:]), reset="change", fade=False, ondemand=True, strict=True))
+            elif arm.startswith("net10kc"):                  # one design for all three ladders: ten sense streams and K clocks re-phased by revealed changes (e: and 3 eye clocks an eye)
+                tail = arm[7:].lstrip("0123456789")
+                ey, av, jo, vo, wm, co = "e" in tail, "a" in tail, "j" in tail, "v" in tail, "m" in tail, "c" in tail
+                _C[arm] = seconds_cls(GN.net_cls(senses=True, split=True, clocks=int(arm[7:].rstrip("eajvmc")), reset="change", fade=False, ondemand=True,
+                                                 strict=True, eyes=3 if ey else 0, avgs=3 if av else 0, joint=True if jo else 0, vote=vo, wmaj=wm,
+                                                 counters=int(arm[7:].rstrip("eajvmc")) if co else 0))
             elif arm.startswith("net5k"):                     # every sense a stream, and K of the brain's own clocks (net5k8: 8; net5kr8: reset by each bad taste)
                 r = "change" if arm.startswith("net5kc") else arm.startswith("net5kr")
                 _C[arm] = seconds_cls(GN.net_cls(senses=True, clocks=int(arm[6:] if r else arm[5:]), reset=r, fade=False, ondemand=True, strict=True))
@@ -470,6 +474,12 @@ def job(j):
         q = T.numbers(seed, {"P": P})
         q["P"] = P
         lf = WLife(seed, first, (lambda s: _C[arm](s, q)), w, seconds=True)
+        import os
+        if os.environ.get("TOLDT") == "1" and arm.startswith("net10kc"):   # a diagnosis only: clock 0 told the world's slot length
+            def tell(W):
+                if hasattr(W, "v_tau") and W.brain.clk:
+                    W.brain.clk[0]["T"] = W.v_tau
+            lf.tell = tell
     elif arm in ("events", "lock", "clocks", "treec"):
         from stage2_lang.seconds import seconds_cls          # its clocks change the colour between tastes, so not the compiled step
         if arm not in _C:
@@ -510,6 +520,8 @@ def run(pairs=20, dt=2.5, workers=7, seed0=L.SEEDS0 + 1000, arms=("bank", "grow"
         for size, secs in L.LADDERS[name]["rungs"]:
             if rungs and size not in rungs:
                 continue
+            import os
+            secs = float(os.environ.get("SECS", secs))      # SECS: every rung this long (a rung's life as long as it needs)
             text = L.LADDERS[name]["world"](size)
             run1 = lambda arm, P=0: list(ex.map(job, [(text, arm, P, s, c, float(secs)) for s in seeds for c in COL]))
             b, t = L.scored(run1("circuit"), secs, I), L.scored(run1("vtold"), secs, I)

@@ -4048,3 +4048,83 @@ the movement play matches the hand-built play (+.28 against +.29). A stop-rule f
 stuck). What made B worse is the bursts themselves: on the original body two or three pulses overshoot, so a kick unit pooling them
 gives blurred evidence (one life: -0.4 against -2.1 standard errors for the same motor). Offering longer movements costs where the body
 doesn't reward them; whether the brain could learn to stop offering them (play's repertoire pruned by its own evidence) is open.
+
+## D61: the held-out ladder, and the price of size (2026-11-13)
+
+**The held-out ladder** (`lab/sealed/heldout_ladder.json`, opened after freezing the design, PROGRAMME.md Decisions; `lab/heldout_run.py`,
+`lab/v/heldout_ladder.log`; held-out seeds 70000+, 10 pairs). "Hidden contexts": each context shows only as a background pulse rate on
+the eyes and has its own secret food colour; contexts recur at random (about 10 s each); rung K has K contexts. The frozen design closes
+about a third of the gap on rungs 2 to 6 (.28 to .36 at 560 to 2240 units), surely above the starting brain on 2 to 4 and above the tree,
+which loses (-.14 to -.31), but solves none, doesn't climb with material, and does worse at 4480 (.12 to .24). Rung 1 has no gap (the told
+brain below the starting one); rung 8's is too small to read. What it reads is recent tastes (a context persists for seconds); what would
+tell the contexts apart, the background rate on each eye, is in no stream. The scaling test's second part: not met. The missing piece is
+the one plan B2 named: streams over the eyes' own pulses, not only over tastes.
+
+**The price of size** (`lab/sizecost.py`, `lab/v/sizecost.log`; paired lives of the frozen design at 560 to 4480 units, sequences 11 and
+17, seeds 103000+). The break-even power a unit may draw for the extra material still to pay (extra meals in the last third against the
+extra units' energy): to 1120 units 3.1 and .5 nW; to 2240, 2.0 and 1.7 nW; to 4480, .7 and .6 nW. The creature rests at 1000 nW. So a
+unit of this brain must cost under about a nanowatt or two, and the brain at its best size (2240) under about four times the body's
+resting burn; beyond that size, more material pays only if nearly free. Whether a unit (a counter with a few tallies and two inputs) can
+be built that cheaply is for chip.py: a SONOS memory read without writing draws next to nothing, so it seems plausible, not shown.
+**Timing with longer lives** (`lab/v/timing_long*.log`, fresh seeds 104000+, paired): the frozen design solves timing rung 2 in 900 s
+lives (.57 [.54, .60], the clocked tree .60); rung 3 in 1350 s reaches .39 (tree .47). Timing's first rung was short of evidence, not
+of mechanism; the second needs more than time.
+**Streams over the eyes' pulses, first look** (smoke; `lab/v/grownet_predictions.md` after T1): the brain's own clocks recording each
+eye's pulse count per beat. On the opened held-out ladder (development only now) the gate never chose an eye stream; on sequence 11 it
+cost (99 against 150, 2 pairs). The pulses of approaching a block probably swamp the background rate that marks a context. Parked.
+**Running averages for every eye** (the user's suggestion, 2026-11-13: a measure to try for any signal). Each eye gets three running
+averages of its pulse rate (time constants drawn per life), each read as low, middle or high against its own history. They carry the
+hidden context (right about 70% of the time in a hidden-context life) but never win the gate there, the best taste stream being right 77%:
+a block can't join an eye's average with recent tastes, since blocks live within one stream. Next: blocks joining units of different
+streams that are active at the same moment.
+**Joint detectors across streams** (JointNet; `lab/v/joint_*.log`): units joining one unit of one stream with one of another, co-active,
+as one more stream for the gate. No gain on the spent hidden-context ladder (development seeds; .16 to .21 against .19 to .25), no harm
+on sequences and combinations. Traced: the joint stream is right 77% of the time, but holds only 17 units (most lost when their parts are
+recycled in their own streams) and pairs mostly clocks; the best stream there is a clock re-phased by revealed changes, right 85%. The
+brain already tracks hidden contexts best by noticing changes of the food colour; what keeps it at a third of the gap is still open.
+**Why a third, traced** (`lab/hidden_trace.py`, `lab/v/hidden_trace.log`; spent ladder, development seeds, rung 3). In the last third the
+growing brain heads for the food colour 82 to 89% of the time and follows a change within about a second (median 1.0 s, 90th 3.6). But
+the starting brain heads right 84% too: its own rule, change colour after a poison, already tracks contexts that last about ten seconds;
+it follows more slowly (1.9 s, 90th 6) and misses more changes outright (14 to 16 of about 70, against 8 to 12). The growing brain's third
+of the gap is that quicker following. A learner from tastes must eat poison to find most changes (about 70 a life); only reading the
+eyes' background rate could anticipate a change, and at 1, 3 or 9 pulses a second (the ladder's own estimate: about 1 nat a second at
+worst) the eyes tell a change hardly faster than a taste does. The told yardstick, given the food colour at every moment, is beyond any
+learner here: most of this ladder's gap can't be closed by reading the senses. A lesson for ladders: a yardstick told what no sense
+could reveal in time makes a gap that isn't there to close.
+
+**Combinations on fresh seeds** (C1, `lab/v/grownet_curve_X_combo_fresh.log`, seeds 105000+): the best generic brain (net10X) solves only
+rung 1 surely at any size; rungs 4 to 6 rise with material (5: .29 to .61 at 640, not sure; 6: .19 to .45). D60's "1 to 5" was on
+development seeds; on fresh ones the combination ladder rises but isn't climbed. One ladder (sequences) passes the scaling test's first
+part on fresh seeds; combinations and timing rise short of it.
+
+**Combinations with lives as long as they need** (C2, 3000 s, fresh seeds 106000+): the highest combination rung solved goes 3, 4, 6 at
+160, 640, 2560 units (none at 40; rung 5 .58, not sure, at 2560). With long enough lives the combination ladder climbs with material on
+fresh seeds: two ladders now pass the scaling test's first part (sequences in 300 s lives, combinations in 3000 s), timing reaches its
+first rung in 900 s lives.
+**Timing with lives as long as they need** (T2, 3000 s, fresh seeds 107000+, the one design): rung 2 solved at 1120 and 2240 units (.55,
+.58); rungs 3, 5, 7 rise with material to about .5 (5 at 2240: .53 [.49, .56]) without surely passing. Timing rises with material and
+life, short of a climb: the clocks re-phased by revealed changes carry the first rung, not the longer words in time.
+More clocks (T3: 120 at 4480 units) don't lift timing rungs 3 and 5 (.52, .48 against .51, .53): the plateau near half is not the number of clocks; the phase, re-set only at changes of the revealed colour, likely drifts through runs of one letter.
+
+**Replacing the gate** (V1 to V4; `lab/v/vote_*.log`, `wmaj*_*.log`). The gate that picks which stream steers is the design's one central
+choice. A plain vote (every stream adds its evidence over the default) loses badly (sequence 11 .28 against .91): many middling streams
+outvote the best. A weighted majority (Littlestone & Warmuth 1994: each stream's weight multiplied by beta at each of its own wrong guesses,
+the default an expert too) comes close: ties on combination 3 and timing 2, .14 to .27 below on sequences at beta .25, .5 or .8 (.5 the
+best). Local, nearly as good, not yet as good: the gate's Occam bar (keep the default until a stream clearly wins) and its judging only
+leaning streams are what the weighted majority lacks. Parked (QUESTIONS.md).
+With the gate's caution (a stream votes only once its weight beats the default's, V5) the weighted majority still trails on sequences by .16 and .17: not the bar.
+**The gate replaced: a weighted majority of specialists** (V6, V7; `lab/v/wmajspec_*.log`). Traced first: in a plain weighted majority
+weights only fall at mistakes, so streams that rarely speak keep high weight (two clocks with one right and one wrong at .5, the best
+stream at 5e-7). Specialists (Freund, Schapire, Singer & Warmuth 1997): at each taste only the streams that spoke (and the default) are
+updated, a wrong one's weight halved, and their total kept the same, so reliable speakers gain on the rest and silent ones neither gain
+nor lose. It ties the gate everywhere: sequences 11 and 17 (-.08, -.01; fresh seeds +.03, -.03), combinations 3 and 5 (+.01, +.02),
+timing 2 (-.01). Each stream's weight moves only with its own guesses and their neighbours' total: the design's last central choice made
+local, at no cost. (Arm net10kc60m with WM_SPEC=1; beta .5.)
+Diagnosis (T4): clocks without drift leave timing rungs 3 and 5 at .51 and .51 (with drift .51, .53): not the drift. Candidates: the nearest clock's period mismatch, or a ceiling at slot boundaries against a yardstick told the moment.
+**Timing's plateau, traced to representation** (T5 to T8; `lab/v/timing_ceiling.log`, `timing_lock*.log`, `timing_toldT.log`). A brain
+told the slot length reaches .83 and .78 on rungs 3 and 5 (3000 s), so it isn't a ceiling. But neither removing drift, nor period
+locking (wide or narrow), nor telling one clock the exact slot length moves the growing brain from about .5. The designed brain counts
+its place in the whole cycle and keeps one letter per place; the growing brain reads the letters seen at its clocks' past beats, and a
+beat with no taste in its slot records a stale colour. The missing part is a count of place (beats modulo a cycle), a counter, not a
+better clock.
+Counters as streams (smoke): no gain on timing 3 and 5; a counter's cycle slides against the world's, its count never re-aligned by the changes. Parked.

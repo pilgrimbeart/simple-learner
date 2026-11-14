@@ -47,6 +47,24 @@ needs, rung by rung; (5) the same blocks over the body's senses and actions (the
 
 **Overnight, 2026-11-12/13** (D59, D60): the best generic brain so far is ten streams (every kind of event times one recorded sense), recycling on demand, strict copies (a fault in spotting copies found and fixed; it had been doing the clearing credited to copy removal). It climbs sequences to 17 and combinations to 5 of 6 as material grows, relearns a changed pattern at no loss (beating the tree by 2.2), does no harm where nothing is to be learned, and works on the muscle body; given 60 own clocks re-phased by revealed changes it reached timing rung 2 on development seeds but not on fresh ones (.37 to .47). One design holding every stream and the clocks comes within .15 of each ladder's specialist (R67). With recruitment off it is surely worse on sequences (part 3). Not told the symmetry, it pays only the cost of exploring; the vouching rule is unnecessary.
 
+**The scaling test, scored for the growing brain** (2026-11-13; README, How we'll know; D59 to D61; fresh seeds unless said):
+
+| | test | where it stands |
+|---|---|---|
+| 1 | It climbs | Sequences: to the top (3, 11, 17) as material doubles. Combinations: 3, 4, 6 as material grows to 2560, in 3000 s lives. Timing: rung 2 only, higher rungs rising to about half. Two of three. |
+| 2 | One design, unseen challenges | One design within .15 of each ladder's specialist. The held-out ladder: a third of the gap, no climb; most of its gap is beyond any learner from these senses (D61). Not met. |
+| 3 | Improves in the life | Surely worse with recruitment off on sequences 11 and 17 (+.46, +.37); combination 3 not sure. |
+| 4 | Recruits only when needed | Lives identical to the starting brain's in plain and all-food worlds at every size (no stream adopted). Commitment by count of blocks not yet measured. |
+| 5 | Local, levelling connections | Every block has two inputs and one readout; competition and recycling are local draws. The gate that picked which stream steers (an argmax over all streams) can be replaced by a weighted majority of specialists, each stream's weight moved only by its own guesses, at no cost (D61). Holds. |
+| 6 | In a body, real time, cost charged | Runs closed loop in the body under the ground rules; the material's power: extra material pays under about 1 to 2 nW a unit (D61). Partly. |
+| 7 | Parsimonious | A few hundred lines; one kind of block; fast enough for thousands of lives a night. |
+
+**Night of 2026-11-13/14**: the gate replaced by a weighted majority of specialists at no cost (the scaling test's part 5 now holds); timing's plateau near half traced to representation (not a ceiling: told the period, a designed brain reaches .8; not drift, nor period locking, nor a told period for the growing brain): it lacks a count of its place in the cycle; counters as streams tried (smoke), sliding against the world. Next for timing: counters whose count, not only beat, the world's changes set.
+
+**Late 2026-11-13**: with lives as long as they need, combinations climb on fresh seeds too (3, 4, 6 at 160 to 2560 units, 3000 s); two ladders pass the first part. Hidden contexts traced: the growing brain heads right 85% of the time and follows changes in a second; the starting brain heads right 84% (its own rule tracks ten-second contexts), so the gap is mostly unreachable from the senses (a told yardstick no learner can match). Running averages of every eye and joint detectors across streams added as general parts; neither helps there, neither harms.
+
+**2026-11-13, the programme's remaining items** (D61): the held-out ladder, opened after freezing the design: a third of the gap, above the tree, no climb, worse at the largest size; it never reads the eyes' background rates, which tell its contexts apart (the scaling test's second part not met). The price of size: extra material pays while a unit draws under about 2 nW (to 2240 units) or .6 nW (to 4480). Timing rung 2 solved on fresh seeds in 900 s lives. Grown movements: the machinery matches the hand-built play with single kicks; bursts don't pay on these bodies. Next: streams over the eyes' own pulses (B2 proper), judged on the three development ladders and new worlds, the held-out ladder now spent.
+
 **The scaling curve** (D60): the generic brain climbs the sequence ladder as material doubles, 3 to 13 to 17 (fresh seeds), the scaling test's first part passing on one ladder; combinations climb once and stall; timing nothing (no clock set by the world's changes). Next: what combinations and timing need (a block joining two streams; clocks whose phase the world's changes set), within the same generic brain.
 
 ## Before: a brain that takes up new parts (the user, 2026-11-12)
@@ -200,6 +218,12 @@ Bar met (`discrete/NOTEBOOK.md`, D37): seq 7 certified rungs, combo 5, time 6; t
 - **Seeds for lives:** development 60000-69999 (spent by stage 2c), then 80000-89999 (opened 2026-11-06 for stage 3); held out 70000-79999. Seeds below 60000 are spent.
 
 ## Decisions (add as made)
+
+- **The design frozen for the held-out ladder** (2026-11-13, my decision under the user's "continue making sensible decisions"): the one
+  generic growing brain, arm `net10kc60` of `lab/teach.py` (`lab/grownet.py` at commit e0f76be: ten sense streams, every kind of event
+  times one recorded sense; sixty own clocks re-phased by revealed changes; recycling on demand; strict copies; graded readouts unused
+  on the ladders), material 560, 1120, 2240, 4480, each rung's life as its ladder sets, judged on held-out seeds 70000+. Nothing changed
+  after the seal is opened; the verdict stands as run.
 
 | date | decision | by |
 |---|---|---|

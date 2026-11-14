@@ -44,6 +44,12 @@ FIRE_COST = 0.0                                 # economy variant: what a block 
 RENT = 0.005                                    # economy variant: per s, what every block pays to exist (a grant lasts 200 s unearned)
 GRANT = 1.0                                     # economy variant: what a parent gives a newborn from its savings
 KEEP = 0.5                                      # economy variant: the share of an income a block keeps; the rest is paid to its parts
+WM_BETA = float(__import__("os").environ.get("WM_BETA", 0.5))   # weighted majority: a wrong guess multiplies a stream's weight by this
+WM_BAR = __import__("os").environ.get("WM_BAR") == "1"   # weighted majority: only streams whose weight beats the default's vote
+WM_SPEC = __import__("os").environ.get("WM_SPEC") == "1"   # weighted majority of specialists: only speakers updated, their total kept
+NODRIFT = __import__("os").environ.get("NODRIFT") == "1"   # a diagnosis: the brain's clocks without drift (not allowed in a design)
+LOCK = float(__import__("os").environ.get("LOCK", 0.0))   # clocks' period locking rate (0: off), 2026-11-13
+LOCK_WIN = float(__import__("os").environ.get("LOCK_WIN", 0.5))   # ... only clocks whose period is within this fraction of the interval
 HIST = 96                                       # steps of history kept on a stream (spans beyond it can't fire)
 
 
@@ -350,7 +356,13 @@ class Net:
 
 
 def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=False, lines=False, senses=False, novouch=False, local=False,
-            surprise=False, trophic=False, clocks=0, ondemand=False, split=False, merge=False, simplest=False, strict=False, reset=False):
+            surprise=False, trophic=False, clocks=0, ondemand=False, split=False, merge=False, simplest=False, strict=False, reset=False,
+            eyes=0, avgs=0, joint=0, vote=False, wmaj=False, counters=0):
+    """eyes (2026-11-13): for each eye, `eyes` clocks of its own (periods 0.5 to 10 s, drawn per life); at each beat the stream records
+    how many pulses that eye gave since the last beat (0, 1-2, 3-8, 9 or more), so blocks can grow over recent eye activity.
+    avgs (the user, 2026-11-13: a running average is a measure to try for any signal): for each eye, `avgs` running averages of its pulse
+    rate, each with its own time constant (0.5 to 10 s, drawn per life), sampled at a beat of that period; the stream records whether the
+    average is low, middle or high against the thirds of what that average has read so far in the life (nothing told of the world's rates)."""
     """one: a single stream, every taste, its symbol the colour eaten and whether it was good (four symbols): no stream chosen by us.
     senses: a stream for every sense line, each ticking when its line fires (every taste, a good taste, a bad taste, red eaten, blue
     eaten), each recording the same four symbols at its ticks; none chosen by us, the gate choosing among them by their record."""
@@ -360,7 +372,9 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
     import rivals as RV
 
     class GrowNet(D):
-        KINDS = (tuple(f"{c}:{f}" for c in TICKS for f in ("colour", "outcome")) + tuple(f"clock{c}" for c in range(clocks)) if split else
+        KINDS = (tuple(f"{c}:{f}" for c in TICKS for f in ("colour", "outcome")) + tuple(f"clock{c}" for c in range(clocks))
+                 + tuple(f"eye{e}c{j}" for e in (0, 1) for j in range(eyes)) + tuple(f"avg{e}c{j}" for e in (0, 1) for j in range(avgs))
+                 + tuple(f"cnt{j}n{m}" for j in range(min(counters, clocks)) for m in range(2, 9)) if split else
                  (tuple(TICKS) + tuple(f"clock{c}" for c in range(clocks))) if senses else ("taste",) if one or lines else ("good", "eaten"))
 
         def __init__(self, seed, p):
@@ -371,13 +385,18 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
                 self.nets = [Net2("taste", P, rng, prune=prune, fade=fade, dup=dup, supply=supply, economy=economy)]
             else:
                 self.nets = [Net(k, P, rng, prune, fade, dup, supply, economy,
-                                 5 if k.startswith("clock") else 2 if split else 4 if k == "taste" or senses else 2, strict=strict) for k in self.KINDS]
+                                 int(k.split("n")[-1]) if k.startswith("cnt") else 3 if k.startswith("avg") else 4 if k.startswith("eye") else 5 if k.startswith("clock") else 2 if split else 4 if k == "taste" or senses else 2,
+                                 strict=strict) for k in self.KINDS]
             for N in self.nets:
                 N.local, N.surprise, N.trophic, N.ondemand, N.merge, N.simplest = local, surprise, trophic, ondemand, merge, simplest
                 if trophic:
                     pass
             self.na = 0
             self.cnt = {k: 0 for k in self.KINDS}
+            if joint:                                   # coincidences across streams, one more stream for the gate (JointNet)
+                self.nets.append(JointNet(self, max(3, int(p["P"]) // len(self.KINDS)) if joint is True else joint, np.random.default_rng([int(seed), 83])))
+                self.cnt["joint"] = 1
+                o = RV.occam(len(self.nets))
             # the brain's own clocks (clocks > 0): periods log-uniform 3 to 30 s, random phase, drifting; never told the world's
             crng = np.random.default_rng([int(seed), 79])
             self.clk = [dict(T=float(np.exp(crng.uniform(np.log(3.0), np.log(30.0))))) for _ in range(clocks)]
@@ -385,6 +404,14 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
                 c["next"] = float(crng.uniform(0.0, c["T"]))
             self.crng, self.lastsym = crng, 4
             self.byk = None
+            erng = np.random.default_rng([int(seed), 81])
+            self.eclk = [dict(e=e, j=j, T=float(np.exp(erng.uniform(np.log(0.5), np.log(10.0)))), n=0) for e in (0, 1) for j in range(eyes)]
+            for c in self.eclk:
+                c["next"] = float(erng.uniform(0.0, c["T"]))
+            self.aclk = [dict(e=e, j=j, T=float(np.exp(erng.uniform(np.log(0.5), np.log(10.0)))), r=0.0, tr=0.0, hist=[])
+                         for e in (0, 1) for j in range(avgs)]
+            for c in self.aclk:
+                c["next"] = float(erng.uniform(0.0, c["T"]))
             o = RV.occam(len(self.nets))
             self.bar, self.Emax = o["theta"], o["Emax"]
             self.best = None
@@ -396,6 +423,31 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
             return int(self.g) if N.kind == "good" else self.na
 
         def predict(self):
+            if wmaj:                                    # weighted majority (Littlestone & Warmuth 1994): each stream's own weight, halved at
+                wd = getattr(self, "w_def", 1.0)          # each of its wrong guesses; the default an expert too
+                tot = wd * (1 if self.dl == 1 else -1)
+                for N in self.nets:
+                    if WM_BAR and getattr(N, "w", 1.0) <= wd:
+                        continue                        # (WM_BAR) a stream votes only once its record beats the default's
+                    k, _ = N.says(self.place(N) - 1)
+                    if k is not None:
+                        n = N.units[k]["n"]
+                        if n[0] != n[1]:
+                            tot += getattr(N, "w", 1.0) * (1 if n[1] > n[0] else -1)
+                self.food = int(tot > 0)
+                return
+            if vote:                                    # no gate: every stream adds its own evidence over the default for its guess
+                tot = 0.0
+                for N in self.nets:
+                    if N.E <= 0:
+                        continue
+                    k, _ = N.says(self.place(N) - 1)
+                    if k is not None:
+                        n = N.units[k]["n"]
+                        if n[0] != n[1]:
+                            tot += N.E * (1 if n[1] > n[0] else -1)
+                self.food = self.dl if abs(tot) < self.bar else int(tot > 0)
+                return
             if self.best is None:
                 self.food = self.dl
                 return
@@ -410,12 +462,17 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
             if v:
                 dhit = self.dl == letter
                 bs, best = 0, None
+                spoke = []
                 for N in self.nets:
                     i = self.place(N) - 1
                     k, f = N.says(i)
                     b = None if k is None else int(N.units[k]["n"][1] > N.units[k]["n"][0])
                     hit = (b == letter) if b is not None else dhit
                     N.E = min(self.Emax, max(0.0, N.E + (1.0 if hit > dhit else -1.0 if hit < dhit else 0.0)))
+                    if wmaj and b is not None:
+                        spoke.append((N, hit))
+                    if wmaj and b is not None and not hit and not WM_SPEC:
+                        N.w = getattr(N, "w", 1.0) * WM_BETA
                     if b is not None:
                         N.guessed(hit, self.t)
                         if hit:
@@ -431,6 +488,24 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
                         bs, best = sc, N
                     N.learn(i, letter, self.t, k, f)
                 self.best = best
+                if wmaj and WM_SPEC:                    # specialists (Freund, Schapire, Singer & Warmuth 1997): only those that spoke are updated,
+                    W0 = getattr(self, "w_def", 1.0) + sum(getattr(N, "w", 1.0) for N, _ in spoke)   # their total weight kept the same
+                    self.w_def = getattr(self, "w_def", 1.0) * (1.0 if self.dl == letter else WM_BETA)
+                    for N, hit in spoke:
+                        N.w = getattr(N, "w", 1.0) * (1.0 if hit else WM_BETA)
+                    W1 = self.w_def + sum(N.w for N, _ in spoke)
+                    if W1 > 0:
+                        self.w_def *= W0 / W1
+                        for N, _ in spoke:
+                            N.w *= W0 / W1
+                elif wmaj and self.dl != letter:
+                    self.w_def = getattr(self, "w_def", 1.0) * WM_BETA
+                if wmaj:                                # keep the weights in range (a common rescaling, no information lost)
+                    top = max([getattr(N, "w", 1.0) for N in self.nets] + [getattr(self, "w_def", 1.0)])
+                    if top < 1e-6:
+                        for N in self.nets:
+                            N.w = getattr(N, "w", 1.0) / top
+                        self.w_def = getattr(self, "w_def", 1.0) / top
                 if value > 0:
                     self.dt = max(-1, self.dt - 1) if self.dl == letter else self.dt
                 if self.dl != letter:
@@ -448,8 +523,15 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
                 if reset == "change":
                     letter = eaten if value > 0 else 1 - eaten
                     if getattr(self, "lastletter", letter) != letter:
+                        tl = getattr(self, "lastchange", None)
                         for c in self.clk:
+                            if LOCK and tl is not None:     # period locking: nudge T toward the interval since the last change over its
+                                d = self.t - tl             # nearest whole number of beats (the noticing delay cancels between changes)
+                                m = max(1, round(d / c["T"]))
+                                if abs(d / (m * c["T"]) - 1.0) < LOCK_WIN:
+                                    c["T"] += LOCK * (d / m - c["T"])
                             c["next"] = self.t + c["T"] / 2.0       # the change lies between tastes: a slot boundary half a period back
+                        self.lastchange = self.t
                     self.lastletter = letter
                 for N in self.nets:
                     clk, _, rec = N.kind.partition(":")
@@ -458,6 +540,9 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
                         N.write(c, (eaten if rec == "colour" else int(value > 0)) if rec else 2 * eaten + (value > 0))
                         N.tidy(c, self.t)
                         self.cnt[N.kind] = c + 1
+                for N in self.nets:
+                    if N.kind == "joint":
+                        N.tidy(0, self.t)
                 self.na += 1
                 if value > 0:
                     self.g += 1
@@ -485,11 +570,54 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
             self.predict()
 
         def alive(self):
-            return [sum(1 for x in N.units.values() if x["sym"] is None) for N in self.nets]
+            return [sum(1 for x in N.units.values() if x.get("sym") is None) for N in self.nets]
+
+        def stimulate(self, sensor, at):
+            if avgs and sensor in (0, 1):
+                for c in self.aclk:
+                    if c["e"] == sensor:                # a leaky average of the pulse rate (pulses a second), decayed lazily
+                        c["r"] = c["r"] * math.exp(-(self.t - c["tr"]) / c["T"]) + 1.0 / c["T"]
+                        c["tr"] = self.t
+            if eyes and sensor in (0, 1):
+                for c in self.eclk:
+                    if c["e"] == sensor:
+                        c["n"] += 1
+            return super().stimulate(sensor, at)
 
         def step(self):
-            if clocks and self.byk is None:
+            if (clocks or eyes or avgs) and self.byk is None:
                 self.byk = {N.kind: N for N in self.nets}
+            if avgs:
+                for c in self.aclk:
+                    if self.t >= c["next"]:             # a beat: the average against the thirds of its own history
+                        r = c["r"] * math.exp(-(self.t - c["tr"]) / c["T"])
+                        h = c["hist"]
+                        if len(h) >= 3:
+                            lo, hi = np.percentile(h, [33.3, 66.7])
+                            sym = 0 if r < lo else 2 if r > hi else 1
+                        else:
+                            sym = 1
+                        h.append(r)
+                        del h[:-300]
+                        N = self.byk[f"avg{c['e']}c{c['j']}"]
+                        k = self.cnt[N.kind]
+                        N.write(k, sym)
+                        N.tidy(k, self.t)
+                        self.cnt[N.kind] = k + 1
+                        c["next"] += c["T"]
+                        self.predict()
+            if eyes:
+                for c in self.eclk:
+                    if self.t >= c["next"]:             # a beat: how many pulses this eye gave since the last
+                        N = self.byk[f"eye{c['e']}c{c['j']}"]
+                        k = self.cnt[N.kind]
+                        sym = 0 if c["n"] == 0 else 1 if c["n"] <= 2 else 2 if c["n"] <= 8 else 3
+                        N.write(k, sym)
+                        N.tidy(k, self.t)
+                        self.cnt[N.kind] = k + 1
+                        c["n"] = 0
+                        c["next"] += c["T"]
+                        self.predict()
             if clocks:
                 for j, c in enumerate(self.clk):
                     if self.t >= c["next"]:                 # a beat: write what was last tasted since the last beat (4: nothing)
@@ -499,9 +627,18 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
                         N.write(k, getattr(self, "lastletter", 0) if reset == "change" else c.get("sym", 4))   # change mode: the food colour last revealed, held
                         N.tidy(k, self.t)
                         self.cnt[kind] = k + 1
-                        c["T"] *= float(np.exp(self.crng.normal(0.0, 0.01)))   # drift
+                        if not NODRIFT:                     # (NODRIFT: a diagnosis only, never a design: AGENTS, a brain's clocks drift)
+                            c["T"] *= float(np.exp(self.crng.normal(0.0, 0.01)))   # drift
                         c["next"] += c["T"]
                         c["sym"] = 4                            # nothing tasted since this clock's beat, until a taste
+                        if j < counters:                    # counters (2026-11-14): this clock's beats counted modulo 2 to 8, each a stream
+                            c["beats"] = c.get("beats", 0) + 1
+                            for m in range(2, 9):
+                                Nc = self.byk[f"cnt{j}n{m}"]
+                                kc = self.cnt[Nc.kind]
+                                Nc.write(kc, c["beats"] % m)
+                                Nc.tidy(kc, self.t)
+                                self.cnt[Nc.kind] = kc + 1
                         self.predict()
             return super().step()
 
@@ -833,3 +970,90 @@ def netc_cls(prune=True, economy=False, sym=False, told=False, agree=False, novo
             self.predict()
 
     return GrowNetC
+
+
+class JointNet:
+    """Coincidences across streams (2026-11-13; the user: crack on): units that join one unit of one stream with one of another, firing
+    when both are active at the same moment (each stream's units as they stand at its latest step). One more stream for the gate: the
+    same interface as Net (says, learn, credit), so it competes as any stream does. Births beneath its own contradictions, or when nothing
+    of its own spoke: the deepest unit active in one stream (drawn at random) joined to the deepest active in another (drawn at random),
+    co-active now. Material P; recycling on demand (the least used of four drawn at random)."""
+
+    def __init__(self, brain, P, rng):
+        self.brain, self.P, self.rng = brain, P, rng
+        self.kind, self.units, self.next = "joint", {}, 0
+        self.E, self.agree, self.dis, self.economy = 0.0, 0, 0, False
+        self.births = self.fades = self.dups = self.starved = 0
+
+    def _active(self):
+        b, act = self.brain, {}
+        for N in b.nets:
+            if N is self:
+                continue
+            f, _ = N.firing(b.place(N) - 1)
+            act[N.kind] = (N, set(f))
+        return act
+
+    def says(self, i):
+        act = self._active()
+        self._act = act
+        f = [k for k, x in self.units.items() if x["a"] in act[x["A"]][1] and x["b"] in act[x["B"]][1]]
+        best, key = None, None
+        for k in f:
+            n = self.units[k]["n"]
+            if n[0] != n[1]:
+                kk = ((max(n) + 1) / (n[0] + n[1] + 2), n[0] + n[1])
+                if key is None or kk > key:
+                    best, key = k, kk
+        return best, f
+
+    def credit(self, k, t, w=1.0):
+        x = self.units.get(k)
+        if x is not None:
+            x["use"] = x["use"] * math.exp(-(t - x["tu"]) / FADE) + w
+            x["tu"] = t
+
+    def own_credit(self, k, t):
+        pass
+
+    def guessed(self, right, t):
+        pass
+
+    def learn(self, i, letter, t, speaker, firing):
+        for k in firing:
+            self.units[k]["n"][letter] += 1
+        wrong = speaker is None or int(self.units[speaker]["n"][1] > self.units[speaker]["n"][0]) != letter
+        if not wrong:
+            return
+        act = getattr(self, "_act", None) or self._active()
+        cands = []
+        for kind, (N, f) in act.items():
+            deep = [k for k in f if N.units[k]["sym"] is None] or list(f)
+            if deep:
+                top = max(N.units[k]["span"] for k in deep)
+                deep = [k for k in deep if N.units[k]["span"] == top]
+                cands.append((kind, deep[int(self.rng.integers(len(deep)))]))
+        if len(cands) < 2:
+            return
+        i1, i2 = self.rng.choice(len(cands), 2, replace=False)
+        (A, a), (B, bb) = cands[int(i1)], cands[int(i2)]
+        if any((x["A"], x["a"], x["B"], x["b"]) in ((A, a, B, bb), (B, bb, A, a)) for x in self.units.values()):
+            return
+        if len(self.units) >= self.P:
+            ks = list(self.units)
+            pick = [ks[int(self.rng.integers(len(ks)))] for _ in range(4)]
+            gone = min(pick, key=lambda k: self.units[k]["use"] * math.exp(-(t - self.units[k]["tu"]) / FADE))
+            del self.units[gone]
+            self.fades += 1
+        n = [0, 0]
+        n[letter] = 1
+        self.units[self.next] = dict(A=A, a=a, B=B, b=bb, n=n, use=0.0, tu=t, born=t)
+        self.next += 1
+        self.births += 1
+
+    def tidy(self, i, t):
+        """Units whose parts were recycled in their own streams go too."""
+        b = self.brain
+        alive = {N.kind: N.units for N in b.nets if N is not self}
+        for k in [k for k, x in self.units.items() if x["a"] not in alive.get(x["A"], {}) or x["b"] not in alive.get(x["B"], {})]:
+            del self.units[k]

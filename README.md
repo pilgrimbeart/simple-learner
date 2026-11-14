@@ -159,6 +159,18 @@ Three lines of work so far:
 
 The findings that changed the direction of the work, each told in full in the notebook named.
 
+- **A bigger brain pays only while its parts are nearly free.** Counting the energy every unit of material draws, growing from 560 to
+  2240 units pays while each draws under about 2 nanowatts (the creature at rest burns 1000), and doubling again pays only under
+  about half a nanowatt. So the brain's best size depends on how cheap its parts can be made (`discrete/NOTEBOOK.md`, D61).
+- **No central chooser needed.** The last central piece of the design picked which stream steers. A vote in which each stream's say
+  shrinks whenever it guesses wrong (and only when it actually spoke, so silent streams don't win by saying nothing) does the job as
+  well, on every ladder and on fresh creatures. Each stream's weight depends only on its own record (`discrete/NOTEBOOK.md`, D61).
+- **On a ladder it had never seen, the growing brain gets a third of the way and doesn't climb.** We froze the design and only then
+  opened the sealed held-out ladder: food depends on a hidden situation that changes every ten seconds or so and shows only as a
+  steady background flicker on the eyes. The brain closes about a third of the gap (better than our hand-built learner, which loses),
+  by remembering recent tastes; but more material doesn't help, and the most does worse. It never reads the eyes' background
+  flicker, which is what would tell the situations apart: its streams are all built from tastes. That is the next thing to grow
+  (`discrete/NOTEBOOK.md`, D61).
 - **Recycle only when room is needed** (confirmed on fresh creatures). Clearing out unused detectors on a timer throws away
   detectors that are still useful but happen to be resting. Instead, when a new detector is due and the brain is full, the least
   used of a few detectors picked at random is recycled. This keeps what works and still frees room for what's new: it beats the timer
@@ -166,14 +178,15 @@ The findings that changed the direction of the work, each told in full in the no
   recycling of weak units that Dohare and colleagues (2024) found keeps deep networks able to learn. The best version so far (a
   stream for every combination of event and sense, recycling on demand) scores the same whether the pattern changes or not, beating
   the hand-built learner in both cases (`discrete/NOTEBOOK.md`, D59, D60).
-- **Two ladders climbed as material doubles, and a foothold on the third** (the climbs confirmed on fresh creatures). The most generic growing
+- **Two ladders climbed as material grows, and a foothold on the third** (checked on fresh creatures). The most generic growing
   brain (a stream for every sense, with no rule of ours for which stream or which detector to keep) was given 40, 80, 160 and 320
   units of material. On the secret-pattern lessons, the longest pattern it learns goes from 3 steps to 11 or 13 and then 17, the top
   of the ladder: the first part of our scaling test passing on one ladder. On the lessons where food depends on the last few colours
   eaten, a later version (each stream recording one sense, recycling only when room is needed, a fault in spotting copies fixed)
-  climbs from 1 to 5 of 6. On the timing lessons it learned nothing until it was given clocks of its own whose rhythm restarts when
-  the food colour is seen to change; then it reached the first timing rung on one set of creatures (close to our hand-built learner
-  with clocks), but not on fresh ones (about .4 of the gap): a foothold, not yet a climb. One design holding all of this, every stream
+  climbs too, on fresh creatures, once each rung gets a life as long as it needs (3000 s): the hardest rung solved goes 3, 4, then
+  6 of 6 as material grows from 160 to 2560 units (with the ladder's shorter lives it only rises). On the timing lessons it learned nothing until it was given clocks of its own whose rhythm restarts when
+  the food colour is seen to change; then it solves the first timing rung on fresh creatures when given lives three times as long
+  (900 s), level with our hand-built learner with clocks; the second timing rung it doesn't: a foothold, not yet a climb. One design holding all of this, every stream
   and the clocks together, comes within .15 of each ladder's specialist. Where there is
   nothing to learn it changes nothing, at any size (`discrete/NOTEBOOK.md`, D60).
 - **A growing brain keeps learning only if it keeps room free** (corrected 2026-11-13). Following your idea after Dan Goodman's

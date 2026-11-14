@@ -1,0 +1,5 @@
+== hidden contexts, rung 3 (spent ladder, development seeds): in the last third, the share of time heading for the food colour; how often a stream steers; after each change of the food colour, the brain's delay to follow (median, 90th)
+  84001 base: heading right 84% of the time | a stream steering 0% | food colour changed 70 times, median dwell 9.1 s | delay to follow 1.9 s (90th 6.3), never followed before the next change 14
+  84001 net : heading right 89% of the time | a stream steering 100% | food colour changed 70 times, median dwell 9.1 s | delay to follow 1.0 s (90th 3.6), never followed before the next change 8
+  84002 base: heading right 84% of the time | a stream steering 0% | food colour changed 75 times, median dwell 8.7 s | delay to follow 1.8 s (90th 5.4), never followed before the next change 16
+  84002 net : heading right 82% of the time | a stream steering 100% | food colour changed 75 times, median dwell 8.7 s | delay to follow 0.9 s (90th 3.6), never followed before the next change 12
