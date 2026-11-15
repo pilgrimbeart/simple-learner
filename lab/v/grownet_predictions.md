@@ -839,3 +839,220 @@ O19. The confound removed (NATRATE=1: time contexts' options at the scan rate, a
 +.08 [-.09, +.24]): their earlier loss (O17) was the rate, not the splitting. Shared values still cost (-.20 [-.33, -.06]). So the "law"
 (every added distinction costs) was partly the confound for the time contexts; it stands for the extra options (O5, O9) and the
 pulse-count contexts (O12, whose rates were the circuit's), and for sharing as built.
+
+## The habit space's ceiling (2026-11-14 evening, `lab/habits.py`)
+H3. Screening all 256 forced habits (5 pairs, 300 s, seeds 132000+): the best is the circuit's own habit or its mirror (0200 / 1200 and
+    variants differing only where it matters little, contexts 2 and 3). 55%.
+H4. Re-judged (top 10, 10 pairs, 1200 s, seeds 131000+): the best forced habit without boredom within .2 of opt (+1.27): learning costs
+    under .2 of the space's ceiling. 50%. With bored extensions: the best near the forced circuit-plus-run (+1.65), and above optB surely. 60%.
+
+## The rhythm's settings learned (knobs first; `lab/steer.py` optK*, D64)
+Bits: five settings (scan, drive and run rates, bored time, run length), each over a 16-fold range at a factor 1.41: 8 levels, 3 bits
+each, 15 bits. Noise wall: an epoch of 20 s holds 3 to 8 meals (Poisson sd 2 to 3); a 1.41-fold change in one setting moves the meal rate
+perhaps 5 to 10%, .3 to .6 meals; five settings perturbed at once share each pair's difference, so a pair carries a signal to noise of
+about .1 per setting; a 4800 s life has 115 pairs after play, so about 1 (sd) of evidence per setting: barely enough to move from a bad
+start, not to fine-tune. Taste only: the learner doesn't feel what its firings cost (a third of what it spends).
+K1. (4800 s, 10 pairs, seeds 131000+) from random starts, tuned (optK) surely above the same starts untuned (optK0). 55%.
+K2. From the circuit's values, tuned (optKw) ties untuned (optKw0): no gain, no harm. 60%.
+K3. optKw0 (optB plus the circuit's run length) surely above optB. 50%.
+**Scored H3** (`lab/v/habits_screen.log`, 6 min): partly. The best screened habits all go straight with the followed colour in view (2 in
+the second place) and spin with nothing in view; but the circuit's own (0200) is not in the top 20: the best (1203, 0212) spin one way with
+nothing in view and the other way, or stop, with the other colour in view. 5 pairs of 300 s lives are noisy (intervals .4 to .9 wide).
+**Scored H4** (`lab/v/habits_top.log`, `habits_top10_10_1200s_bored.pkl`): first part about right (the best habit without boredom, 1203,
++1.49 against opt's +1.27: learning costs .22 of a ceiling of 1.49); second part wrong in the useful direction: with the bored contexts
+the best forced habit (0203 2223: nothing in view spin, the followed colour straight, the other spin, both stop; bored, nothing in view,
+straight at the run rate) scores +2.36 [+2.21, +2.54], the circuit's own level (+2.39). The habit space holds the circuit's performance;
+the earlier forced version (FORCE=2, +1.65) differed in one choice (both colours in view: spin rather than stop). So D63's "the rest is
+the circuit's tuned rhythm, not expressible" is wrong: the remaining gap (optB +1.37 against 2.36) is the cost of learning, a full 1.0.
+In bits: the space is 4^6 (12 bits, contexts 5 and 7 never occur); the learner gets the followed colour (straight, 20 of 20) but the bored
+choice (straight) in 10 of 20 lives and "both: stop" in 10 of 20. Suspect: the fixed step (ALPHA .1) keeps only the last ten or so
+episodes' evidence in each value, so its noise never falls with experience (and the 4800 s plateau).
+O20. Values as averages (optBn: each pair's step 1/n, floor .01, so a value keeps all its evidence): 1200 s, 10 pairs, seeds 131000+:
+     surely above optB. 55%. And at 4800 s, higher than at 1200 s. 55%.
+**Scored O20** (`lab/v/steer_optBn.log`): wrong. Averaged values -.20 [-.42, +.03]: early play's random episodes stay in the averages.
+Per life (optB): lives ending on a habit whose forced score is 2.2 (0203 2_1_) score 1.1 to 1.6 in their last third, so the loss is not
+mainly the final choice but how it is carried out while learning: exploration, or the habit flickering as values move.
+O21. (diagnosis) optB greedy after play (EPS=0): if exploration is the cost, near the forced 2.2; if flicker, unchanged. Expect: unchanged
+     (EPS .03 didn't move opt). 60%.
+**Scored O21** (`lab/v/steer_optB_eps0.log`): right that exploration isn't the cost: greedy after play is worse (+1.15): some lives lock
+into a bad habit (stop with nothing in view: 0.0). Lives ending on a good habit (0203 20__, forced 2.33) still score 1.7: the loss is in
+how the habit changes over the life (flicker), measured next (the habit's changes over the last third, at 10 s looks).
+Flicker measured (`lab/v/steer_optB_flicker.log`): the best option of some context changes 19 times in the last third's 40 looks (7 to
+30): a fixed step .1 holds about 19 episodes' evidence per value (an average's effective count (2 - a)/a), too few to separate close
+options, so the habit wanders and the life is spent half on worse habits.
+O22. A step shrinking with each pair's uses after play (optBa: 1/(n + 10), floor .01): 1200 s, 10 pairs, seeds 131000+: surely above optB,
+     and flicker at least halved. 55%.
+**Scored O22** (`lab/v/steer_optBa.log`): wrong in its score, right in its flicker: a shrinking step cuts flicker 19 to 4, gains nothing
+(+.01 [-.19, +.19]). Replay (`lab/v/habit_replay_optBa.log`, `lab/habit_replay.py`): each life's final habit forced on the same life
+scores +1.35 against the learned +1.38: carrying out costs nothing; the whole loss is which habit is learned. The habits missed: "both in
+view: stop" (3 of 20 lives) and the spin with nothing in view matching the spin with the other colour in view (sweeping on past it,
+rather than back into it); both pay late (the next many seconds), so one-step credit (Q of the next episode only) can't see them.
+O23. Credit reaching back over earlier episodes (optBl: SMDP TD(lambda) over options, lambda .5 and .8): 1200 s, 10 pairs, seeds
+     131000+: at least one surely above optBa. 40%.
+**Scored O23** (`lab/v/steer_optBl.log`): wrong. Credit over earlier episodes costs: lambda .5 -.48 [-.75, -.25], .8 -.67 [-.91, -.41]:
+later episodes' noise swamps each choice's own effect.
+O24. Habit search (optH: the values learn as optBa until 400 s; then the habit is fixed to their best, and one change at a time is tried
+     in alternate 20 s epochs against it, kept when its mean difference in tastes beats twice its standard error over at least 3 pairs).
+     Bits: a pair of epochs carries ~.4 bits on a big change, ~.05 on a small one; 1200 s leaves 20 pairs, so few changes are decided.
+     1200 s, 10 pairs: ties optBa. 50%. 4800 s: surely above optBa at 4800 s. 45%.
+**Scored O24** (`lab/v/steer_optH*.log`): first part right (1200 s: -.19 [-.41, +.05], a tie), second wrong (4800 s: -.02 [-.35, +.30]).
+Single changes don't reach the best habit: its two late-paying choices interact (both in view stop pays only with bored straight: 0203
+without the bored run scores .05, the worst of the screened top), so from most learned habits each change alone is neutral or worse, a
+valley a one-change search can't cross. The good habit is a joint change of two choices: 4 x 4 = 16 pairs per two contexts, 15 pairs of
+contexts, 240 joint changes, each needing several epoch pairs; out of reach of a life's evidence at this rate.
+
+## Counting place in the cycle (step 3; D61's open question)
+Bits: timing rung n needs the word (n bits), the brain's place in the cycle (log2 n bits, renewed whenever the count slips) and the slot
+length (continuous). D61: told the slot length, the designed brain (which counts place) reaches .8; the growing brain told one clock's
+slot length stays at .5, and counters on drifting clocks gave nothing (smoke). The clean diagnosis is both together.
+T9. (diagnosis; TOLDT=1, clock 0 told the slot length; NCOUNT=1: that clock's beats counted modulo 2 to 8, each a stream; 10 pairs, 3000 s,
+    seeds 107000+, 2240 units, the frozen design net10kc60S against itself with counters) rungs 3 and 5: counters surely above, by .15
+    or more. If yes, place is the missing representation and the period is the remaining bits to learn; if no, the readout can't use a
+    count. 45%.
+**Scored K1-K3** (`lab/v/steer_knobs_4800.log`): all wrong. Tuning from random starts costs (-.22 [-.41, -.08]); from the circuit's values
+it costs more (-.55 [-.69, -.43]); the run length alone ties (+.05 [-.02, +.11]). The settings random-walk: from the circuit's values they
+end about 1 (log2) away, which is what a step of .1 over 115 pairs of pure noise gives (.1 x sqrt(115) = 1.07); scan and drive rates drift
+up (+.7, +.5 on average: taste only, the firings' cost unfelt). The noise wall as estimated: about one standard deviation of evidence per
+setting in a 4800 s life, so the steps follow noise. Knob tuning by perturbation is evidence-starved here; the settings' bits are
+evolution's to supply, or a measurement's (D44: the stride measured by sweeps), not trial and error's.
+**Scored T9** (`lab/v/timing_count_toldT.log`): wrong. Counters on the told clock: rung 3 .48 (without .51), rung 5 .46 (.49): no gain.
+Traced (`lab/count_trace.py`, `lab/v/count_trace_3*.log`): by the life's second third each count sees a mix of colours (purity .67 for
+rung 3, near chance), even with the count read from time since an anchor (.67). The clock is re-phased at every revealed change
+(next beat half a period on), so its beats fall anywhere in a slot, and a taste in the slot's first part reads the count of the slot
+before: the brain's place in the cycle (log2 n bits) is lost at each change. A place needs a phase that is never re-phased, read finely.
+T10. (diagnosis; TOLDT=1, PHASES=1: a clock of a fifth of the told slot length, never re-phased, its beats counted modulo 5m for m = 2 to
+     8, each a stream of 5m symbols: a place in a cycle of m slots, five bins a slot, as the designed brain's) rungs 3 and 5, 10 pairs,
+     3000 s, seeds 107000+: surely above the frozen design, by .15 or more. 55%.
+Smoke (one life, rung 3, 1500 s): last third 213 food-gain on 91.9 spent (2.32; the told brain 2.33); the trusted stream ph6.
+**Scored T10** (`lab/v/timing_phase_toldT.log`, diagnosis): right, strongly. With a phase that is never re-phased (period told), the
+frozen design closes .96 [.86, 1.09] and .91 [.84, .98] of the gap on rungs 3 and 5 (without: .51, .49; the designed brain told the slot
+length .83, .78). Timing's plateau was the missing place in the cycle. What's left to learn is the period: the slot length (5 to 20 s) to
+about a bin's worth over the stretch the readouts use, roughly 1%: log2(4 / .01) = 8.6 bits, against the revealed changes' timing.
+T11. (generic: PHASES=2, six oscillators of drawn slot lengths 3 to 30 s, never jumped, drifting 1% a slot; at each revealed change each
+     nudges its slot length a fifth toward the interval since the last change over its nearest whole number of slots (within 25%) and
+     its phase .3 toward a slot's start; five bins a slot counted modulo 5m, m 2 to 8) rungs 3 and 5, 10 pairs, 3000 s, seeds 107000+:
+     surely above the frozen design (.51, .49), and at least one solved. 45%.
+**Scored T11** (`lab/v/timing_phase_pll.log`): wrong. Locking oscillators (gain .2, drift 1% a slot): .53 and .46, no gain. Traced
+(`lab/osc_trace.py`, `lab/v/osc_trace_3.log`): few lock; the near ones 2% off. In bits: a revealed change marks a boundary only to within
+the wait for the next taste (seconds), but a life's ~100 changes over ~250 slots fix the slot length to about .03% by a fit of them all;
+a gain of .2 keeps only the last five intervals, and a drift of 1% a slot erases the rest.
+Averaging (step 1/(n+2), floor .02; `lab/v/osc_trace_3_avg.log`): at drift 1% the nearest oscillators 1 to 4% off; at .1% drift four of
+seven lives lock within .4% (two to .2%), and those lives trust the phase streams.
+T12. (PLL_AVG=1, PDRIFT=.001; otherwise T11) rungs 3 and 5: surely above the frozen design. 50%. (How much a brain's clock may drift is a
+     substrate's number, not yet the user's decision; 1% a slot was my choice for the clocks.)
+**Scored T12** (`lab/v/timing_phase_avg.log`): wrong. Averaging oscillators at .1% drift: .50, .45, no gain, though traced lives lock.
+T13. (diagnosis: TOLDT=1 TOLDT_AT=1000, PHASES=1: the told phase, but only from 1000 s; before, clock 0's own drawn period) If the
+     readouts' tallies (never forgetting) are polluted by what the phase streams wrote before locking, rungs 3 and 5 stay near .5; if
+     late locking is harmless, near T10's .9. Expect near .5. 60%.
+**Scored T13** (`lab/v/timing_phase_late.log`, diagnosis): right. Told only from 1000 s, the phase barely helps (.54, .58 against .96,
+.91 told from birth). Evidence from before a stream became right is never forgotten: the weighted majority halves a stream's weight at
+each wrong guess (a stream wrong for 1000 s ends near 2^-300, unrecoverable), and the readouts' tallies keep every count.
+T14. Fixed share among the speakers (WM_SHARE=.01: after each update, 1% of the speakers' weight returned to them evenly; Herbster &
+     Warmuth 1998, tracking a best expert that changes) on the late-told diagnosis (T13's setting): rungs 3 and 5 surely above T13. 50%.
+**Scored T14** (`lab/v/timing_phase_late_share.log`): right. With fixed share (.01) the late-told phase closes .90 [.78, 1.03] and .88
+[.76, 1.01], both solved (without .54, .58; told from birth .96, .91). The weights were the block, not the tallies.
+T15. (generic, nothing told: PHASES=2 PLL_AVG=1 PDRIFT=.001 WM_SHARE=.01) rungs 3 and 5 surely above the frozen design, and both
+     solved. 50%.
+**Scored T15** (`lab/v/timing_phase_generic.log`): wrong. Generic (averaging oscillators, .1% drift, fixed share): .53, .51.
+Traced (`lab/phase_trace.py`, `lab/v/phase_trace_3.log`, last thirds of 3000 s lives): in 5 of 7 lives an oscillator locks (slot within
+.1 to 3.5%) and its place tells the colour with purity .82 to .94 (no information .67); so the place is there, unused. Suspect: material.
+Six oscillators x seven cycles add 42 streams; the fixed material (2240) split evenly leaves ~20 units a stream, against phase streams of
+up to 40 symbols (T10 added 7 streams: ~30 units each).
+T16. (T15 at 4480 units) rungs 3 and 5 surely above the frozen design at 4480. 50%.
+**Scored T16** (`lab/v/timing_phase_generic_4480.log`): mostly wrong: at 4480 units rung 3 .59 (just solved), rung 5 .52. Not material.
+Per life (`lab/v/phase_trace_3b.log`, rung 3, 3000 s, red): where a phase stream is the most trusted (3 of 7 lives) the last third's
+gain is 295, 282, 246 against the frozen design's 258, 203, 249 and the told brain's 450, 248, 431: sometimes the told level, sometimes
+none, though the place's purity is .83 to .94. A difference from the told phase: a correction pulling the phase back repeats bins (7, 8,
+7, 8), breaking the regular sequence the network's contexts are built on.
+T17. (T15 plus PMONO=1: a bin written only when the phase moves on past it) rungs 3 and 5 at 2240: surely above the frozen design. 40%.
+**Scored T17** (`lab/v/timing_phase_mono.log`): wrong: .57, .54 (not surely above .51, .49).
+T18. (bridge diagnosis: TOLDT=1 POSC_TOLD=1 PHN=1 PHASES=2 PMONO=1 WM_SHARE=.01: one locking oscillator told the slot length, its phase
+     set by locking to the changes; seven phase streams as in T10) If near T10's .9, the period's estimate is what fails in the generic
+     version; if near .5, the phase locking itself (jitter of the changes) spoils the place. 50/50.
+**Scored T18** (`lab/v/timing_phase_bridge.log`, diagnosis): told the slot length, with the phase set by locking to the changes, .77
+[.64, .89] and .84 [.72, .96], both solved: phase locking works; the generic failure is the period's estimate.
+In bits: averaging intervals between successive changes (each error the difference of two noticing delays) throws information away;
+the errors telescope, so the span since the first change over its whole number of slots has error ~(delay sd) / span: ~.1% after 250
+slots, against ~1.5% for an average of 100 intervals.
+T19. (generic: PLL_SPAN=1, PMONO=1, WM_SHARE=.01, PDRIFT=.001, six oscillators) rungs 3 and 5 surely above the frozen design, both
+     solved. 50%.
+**T19, traced instead of run** (`lab/v/phase_trace_3_span.log`): the span estimator (bootstrapped from ten averaged intervals) locks no
+better (nearest 1.5 to 7% off in most lives; two lives .94, .95 purity late, still untrusted). In bits: a change is noticed only at the
+next telling taste, seconds after the boundary, sometimes falsely; for slots of 5 to 20 s each change places a boundary only to a third
+or half a slot, with outliers, so the whole number of slots in a span is often ambiguous. A robust estimator over all changes (a
+resonator: the circular mean of change times at a trial period, tuned by its drift) is the next candidate. Open.
+F2. Fixed share among the speakers (WM_SHARE=.01) on the frozen design, nothing else changed, fresh seeds 136000+, 10 pairs, 2240 units:
+    sequences 11 (300 s), combinations 3 (3000 s), timing 2 (900 s): no rung surely worse; at least one surely better. 40%.
+**Scored F2** (`lab/v/fshare_*.log`, fresh seeds 136000+): half right. Fixed share costs nothing anywhere: sequences 11 +.06 [-.04, +.16],
+timing 2 +.06 [-.00, +.14], combinations 3 -.00 [-.10, +.11]; none surely better (timing 2 at the edge).
+T20. (traced first) The resonator (PLL_RES=1 after ten averaged intervals: phase never moved, the rate corrected by the slide of the
+     changes' forgetting circular mean): the best oscillator within .5% in most traced lives and purity above .85 in at least 4 of 7. 40%.
+**Scored T20** (`lab/v/phase_trace_3_res.log`): wrong. The resonator (rate only, phase never nudged) is worse: even an oscillator .36% off
+tells the colour at .69 (chance .67), since .36% slips a third of a slot over the last third's 80 slots. A place needs the phase held
+too; the period line is parked here (D65, QUESTIONS.md).
+F3. Fixed share on the two opened held-out ladders (development seeds 137000+, 10 pairs, 2240 units, every rung, its own life): on the
+    first (hidden contexts) surely better on at least two rungs; on the second (satiety) no change (its rule needs a count no stream
+    carries). 35%.
+**Scored F3** (`lab/v/fshare_heldout*.log`, development seeds 137000+): wrong on the first ladder (no rung surely better; its gaps are so
+small that rungs 1, 6 and 8 have intervals wider than 1), right on the second (no change, -.05 to +.06).
+T21. (fresh-seed confirmation of T10, 138000+, paired: the frozen design with and without the told steady phase, rungs 3 and 5, 3000 s)
+     the phase surely above on both. 85%.
+**Scored T21** (`lab/v/timing_phase_toldT_fresh_paired.log`, fresh seeds 138000+): right. Told steady phase .93 [.84, 1.02] and .90
+[.87, .95] against .50 and .42; paired +.43 [+.34, +.52] and +.49 [+.42, +.56].
+S1. (development, the opened satiety ladder, seeds 137000+, 10 pairs, 2240, ACOUNT=1: running averages of every signal read as whole
+    counts of recent events, 0 to 4+; arm net10kc60SA against net10kc60S, paired) surely better on at least two rungs. 35%.
+**Scored S1** (`lab/v/satiety_counts.log`): wrong: no rung surely better (-.04 to +.04). Reading the opened ladder (now spent): the rule is
+a leaky tally of meals of the food colour (recovery 3.6 to 9.6 s). The brain's averages covered eyes, good and bad tastes and motors,
+not meals of each colour (a good-taste average mixes both colours), and were read at their own beats, up to 30 s stale.
+S2. (ACOUNT=1 now also: a leaky count of meals of each colour, and every average's count written at each taste) on the same ladder and
+    seeds: surely better on at least two rungs. 45%. Smoke (rung 1, 300 s, one life): trusts the red-meal count; last third +1 against -9
+    (told 44).
+**Scored S2** (`lab/v/satiety_counts2.log`): wrong: rung 4 +.06 [+.01, +.13], the rest within -.02 to +.03. A fault found in the build:
+the counts were updated and written before the taste was learned from, so the brain learned "a context already counting this meal means
+this colour", while at the moment of choosing the count hadn't included it. Moved to just after the learning.
+S3. (S2 with the fault fixed) surely better on at least two rungs. 45%.
+**Scored S3** (`lab/v/satiety_counts3.log`): wrong: +.06 at most (rung 1), none sure. Traced (`lab/count_purity.py`,
+`lab/v/count_purity_1.log`, rung 1): at the time constant nearest the world's recovery, a colour's meal count tells the poison colour with
+purity .8 to .9 (base rates .56 to .76) and is among the most trusted streams in 5 of 7 lives; the information is there and used, the gain
+small. Suspect (untested): acting on it, steering to the other colour within the few seconds before recovery.
+T22. (told steady phase, scaling) timing rung 7 (3000 s, 10 pairs, seeds 107000+) at 2240 and 4480 units: solved at 4480, and higher
+     than at 2240. 45%.
+**Scored T22** (`lab/v/timing_phase_toldT_r7.log`): half right. Rung 7 solved at both sizes (.90 [.79, 1.03] at 2240, .80 [.64, .93] at
+4480); no climb with material (lower at 4480, not surely). Without the phase rung 7 rose only to about .5 (D61).
+T23. (told steady phase, cycles up to 13 slots, PH_MAX=13) rungs 11 and 13 (3000 s, 10 pairs, seeds 107000+) at 2240 and 4480: at
+     least one solved at 4480. 40%.
+**Scored T23** (`lab/v/timing_phase_toldT_r11.log`): right. With the told phase (cycles to 13 slots) rungs 11 and 13 are solved at both
+sizes: 11 1.00 [.88, 1.17] and .99 [.90, 1.12]; 13 .89 [.78, .96] and .91 [.85, .97]. Every timing rung tested (3 to 13) is solved once
+the brain has a steady place in the cycle; the only part not grown is the slot length (about 8.6 bits).
+T24. (fresh-seed confirmation of T14, 138000+, paired by seed across two runs: late-told phase with and without fixed share, rungs 3 and 5) fixed share surely above on both. 80%.
+**Scored T24** (`lab/v/timing_late_share_fresh_paired.log`, fresh seeds 138000+): right. Phase told from 1000 s: with fixed share .83 and
+.82, without .51 and .50; paired +.32 [+.21, +.43] and +.33 [+.25, +.42].
+
+## Bits as the currency (the user, 2026-11-15: agreed; D67)
+Each speaking stream predicts a probability (its unit's KT estimate, Krichevsky & Trofimov 1981); the default predicts from its own record
+of the last letter repeating; the brain mixes the speakers by Bayes (weights times each one's probability for what happened, over the
+speakers' mixture: sleeping experts, total kept), with fixed share .01; it chooses the colour more likely food. Each taste costs the brain
+-log2 P(what happened) bits (prequential code length), and each stream's bits saved over the default are kept. Arm suffix B (net10kc60SFB).
+Smoke (sequence 11, 300 s, one life): last third 29 against 10; .72 bits a taste over the life.
+B1. Fresh seeds 139000+, 10 pairs, 2240, paired against net10kc60S: sequences 11 (300 s), combinations 3 (3000 s), timing 2 (900 s): no
+    rung surely worse, at least one surely better. 45%. On the two opened held-out ladders (development seeds 137000+): no rung surely
+    worse. 60%. And the brain's bits a taste fall rung by rung where the gap closed rises (the currency tracks the score). 70%.
+The leaky-integrator bank (arm letter L; Shankar & Howard 2012): every event type (each eye's pulses, good and bad tastes, meals of each
+colour, each motor's firings), integrators at 1, 4, 16 and 64 s, read at each taste (after learning) as a recent count on a log scale
+(eight symbols), each a stream. Smoke (satiety rung 1, 300 s, one life): the blue-meal count at 4 s leads; last third -2 against 4,
+.98 bits a taste against .87 (one life).
+L1. (after B1; net10kc60SFBL against net10kc60SFB, paired, same seeds and ladders as B1) on the opened satiety ladder surely better on at
+    least two rungs, and fewer bits a taste there; elsewhere no rung surely worse. 40%.
+**Scored B1** (`lab/v/bayes_*.log`): mostly right. Bayes mixing ties the weighted majority: no rung surely worse (sequences 11 -.06
+[-.12, +.02] at the edge); one surely better (held-out 1 rung 4, +.21 [+.03, +.40]); not one on the three main ladders. Bits a taste (the
+brain's prequential code length, whole lives): combinations 3 .51, sequences 11 .65, timing 2 .63; the opened satiety ladder .77 to .87,
+near the 1 bit of knowing nothing, where the gap closed is .2: the currency reads the brain's ignorance where the score does.
+**Scored L1** (`lab/v/bank_*.log`): partly. The bank: held-out 1 rung 3 +.30 [+.08, +.53] surely, rung 6 +.46 [-.07, +1.71]; satiety rung 3
++.06 [+.01, +.10] surely, the rest ties; sequences 11 -.05, timing 2 +.04 (ties). Bits a taste on satiety fall only .00 to .04 (to .81 on
+rung 1), though one meal-count stream alone (purity ~.85) would be worth ~.61 bits a taste: the information is there, not taken up.
+L2. (trace, satiety rung 3, 7 lives, the bank brain) the best single stream in hindsight saves at least .1 bits a taste over the
+    mixture: the loss is in the mixing, not the streams. 50%.
+**Scored L2** (`lab/v/bits_split_sat3.log`, `lab/bits_split.py`): wrong. The mixture is within ~.02 bits a taste of the best single stream
+in hindsight (default minus mixture .07 to .18; best stream's saving .09 to .21): Bayes mixing loses almost nothing. The best streams are
+the bank's meal counts in 5 of 7 lives (lbc0/lbc1 at 4 or 16 s): the bank found the right memory by itself. The limit is what each stream
+extracts: ~.15 to .2 bits a taste saved, with the brain at .64 to .92 bits a taste.

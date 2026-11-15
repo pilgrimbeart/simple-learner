@@ -1,0 +1,7 @@
+== T24: phase told from 1000 s, with and without fixed share, fresh seeds 138000+, 10 pairs, 3000 s; share of the gap closed
+  rung 3 share: +0.83 [+0.75,+0.90]
+  rung 3 none: +0.51 [+0.41,+0.60]
+  rung 3 share - none: +0.32 [+0.21,+0.43]
+  rung 5 share: +0.82 [+0.76,+0.89]
+  rung 5 none: +0.50 [+0.46,+0.54]
+  rung 5 share - none: +0.33 [+0.25,+0.42]

@@ -1,0 +1,28 @@
+seed 107000: slot 14.67 s; best purity 0.83; last third gain 295.0; trusted ['pq0n6', 'clock9', 'clock33']; (oscillator slot / world's, puri
+seed 107001: slot 12.39 s; best purity 0.88; last third gain 226.0; trusted ['clock14', 'clock32', 'clock29']; (oscillator slot / world's, p
+seed 107002: slot 8.16 s; best purity 0.94; last third gain 282.0; trusted ['pq4n3', 'pq4n6', 'clock21']; (oscillator slot / world's, purity
+seed 107003: slot 18.28 s; best purity 0.67; last third gain 300.0; trusted ['red:outcome', 'clock44', 'clock29']; (oscillator slot / world'
+seed 107004: slot 17.75 s; best purity 0.86; last third gain 264.0; trusted ['clock12', 'clock5', 'clock24']; (oscillator slot / world's, pu
+seed 107005: slot 5.46 s; best purity 0.92; last third gain 246.0; trusted ['pq3n3', 'pq3n6', 'clock17']; (oscillator slot / world's, purity
+seed 107006: slot 8.63 s; best purity 0.73; last third gain 221.0; trusted ['clock50', 'clock45', 'clock51']; (oscillator slot / world's, pu
+baseline net10kc60S 107000 last third gain 258.0
+baseline net10kc60S 107001 last third gain 277.0
+baseline net10kc60S 107002 last third gain 203.0
+baseline net10kc60S 107003 last third gain 316.0
+baseline net10kc60S 107004 last third gain 319.0
+baseline net10kc60S 107005 last third gain 249.0
+baseline net10kc60S 107006 last third gain 156.0
+baseline vtold 107000 last third gain 450.0
+baseline vtold 107001 last third gain 468.0
+baseline vtold 107002 last third gain 248.0
+baseline vtold 107003 last third gain 438.0
+baseline vtold 107004 last third gain 268.0
+baseline vtold 107005 last third gain 431.0
+baseline vtold 107006 last third gain 269.0
+baseline circuit 107000 last third gain 162.0
+baseline circuit 107001 last third gain 143.0
+baseline circuit 107002 last third gain 23.0
+baseline circuit 107003 last third gain 202.0
+baseline circuit 107004 last third gain 204.0
+baseline circuit 107005 last third gain -151.0
+baseline circuit 107006 last third gain 26.0

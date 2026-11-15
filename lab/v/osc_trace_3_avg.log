@@ -1,0 +1,16 @@
+== PDRIFT 0.01
+seed 107000: slot 14.666 s; oscillators [7.155, 24.032, 14.125, 13.345, 14.088, 24.856]; nearest ratio 0.963; trusted ['clock4', 'clock58', 'clock33']
+seed 107001: slot 12.389 s; oscillators [20.51, 24.059, 6.419, 11.489, 2.814, 11.957]; nearest ratio 0.965; trusted ['clock44', 'clock11', 'clock22']
+seed 107002: slot 8.160 s; oscillators [3.179, 3.623, 25.125, 7.346, 8.598, 7.448]; nearest ratio 1.054; trusted ['clock31', 'clock33', 'clock2']
+seed 107003: slot 18.284 s; oscillators [7.323, 4.782, 4.579, 7.994, 5.805, 6.887]; nearest ratio 0.250; trusted ['clock47', 'clock2', 'clock55']
+seed 107004: slot 17.754 s; oscillators [31.984, 13.677, 6.805, 3.442, 18.314, 3.315]; nearest ratio 1.032; trusted ['clock50', 'pq4n3', 'clock1']
+seed 107005: slot 5.456 s; oscillators [11.721, 9.523, 8.874, 5.789, 11.091, 12.754]; nearest ratio 2.033; trusted ['clock11', 'clock3', 'clock0']
+seed 107006: slot 8.631 s; oscillators [9.317, 4.91, 3.575, 17.131, 17.377, 4.442]; nearest ratio 2.013; trusted ['clock34', 'clock21', 'clock52']
+== PDRIFT 0.001
+seed 107000: slot 14.666 s; oscillators [7.407, 25.304, 14.987, 14.427, 12.744, 25.31]; nearest ratio 0.984; trusted ['clock58', 'clock11', 'clock39']
+seed 107001: slot 12.389 s; oscillators [22.769, 23.591, 6.234, 11.901, 3.309, 12.335]; nearest ratio 0.996; trusted ['pq5n6', 'pq5n3', 'bad:colour']
+seed 107002: slot 8.160 s; oscillators [3.859, 3.355, 19.851, 8.147, 8.274, 5.168]; nearest ratio 0.998; trusted ['clock45', 'clock20', 'clock3']
+seed 107003: slot 18.284 s; oscillators [6.783, 4.415, 6.4, 6.774, 6.254, 6.901]; nearest ratio 0.342; trusted ['clock18', 'clock28', 'clock5']
+seed 107004: slot 17.754 s; oscillators [32.432, 16.606, 10.04, 3.3, 17.128, 3.222]; nearest ratio 0.965; trusted ['pq4n3', 'clock50', 'clock13']
+seed 107005: slot 5.456 s; oscillators [11.773, 9.601, 9.791, 5.614, 10.32, 12.88]; nearest ratio 1.029; trusted ['clock3', 'clock0', 'clock49']
+seed 107006: slot 8.631 s; oscillators [8.68, 4.132, 3.714, 17.296, 18.032, 4.666]; nearest ratio 2.004; trusted ['pq0n3', 'pq0n6', 'clock47']

@@ -457,11 +457,17 @@ def job(j):
                 _C[arm] = seconds_cls(GN.net_cls(fade=False, ondemand=arm != "net10F", senses=arm != "netR", split=arm.startswith("net10"), merge=arm in ("net10M", "net10F")))
             elif arm.startswith("net10kc"):                  # one design for all three ladders: ten sense streams and K clocks re-phased by revealed changes (e: and 3 eye clocks an eye)
                 tail = arm[7:].lstrip("0123456789")
+                fs = "F" in tail                             # F: fixed share among the speakers, .01 (Herbster & Warmuth 1998; D65)
+                by = "B" in tail                             # B: the speakers mixed as Bayes (probabilities, weights by bits; D67)
+                lb = "L" in tail                             # L: the leaky-integrator bank on every event type (D67)
+                tail = tail.replace("F", "").replace("B", "").replace("L", "")
                 ey, av, jo, vo, wm, co, aa, si = "e" in tail, "a" in tail or "A" in tail, "j" in tail, "v" in tail, ("spec" if "S" in tail else "m" in tail), "c" in tail, "A" in tail, "Z" in tail
-                _C[arm] = seconds_cls(GN.net_cls(senses=True, split=True, clocks=int(arm[7:].rstrip("eajvmcSAZ")), reset="change", fade=False, ondemand=True,
+                _C[arm] = seconds_cls(GN.net_cls(senses=True, split=True, clocks=int(arm[7:].rstrip("eajvmcSAZFBL")), reset="change", fade=False, ondemand=True,
                                                  strict=True, eyes=3 if ey else 0, avgs=3 if av else 0, joint=True if jo else 0, vote=vo, wmaj=wm,
-                                                 counters=int(arm[7:].rstrip("eajvmcSAZ")) if co else 0, allavg=aa,
-                                                 since=int(arm[7:].rstrip("eajvmcSAZ")) if si else 0))
+                                                 counters=int(__import__("os").environ.get("NCOUNT", arm[7:].rstrip("eajvmcSAZFBL"))) if co else 0, allavg=aa,
+                                                 since=int(arm[7:].rstrip("eajvmcSAZFBL")) if si else 0, lbank=lb))
+                if fs or by:
+                    _C[arm] = type(_C[arm].__name__, (_C[arm],), dict(({"SHARE": 0.01} if fs else {}), **({"BAYES": True} if by else {})))
             elif arm.startswith("net5k"):                     # every sense a stream, and K of the brain's own clocks (net5k8: 8; net5kr8: reset by each bad taste)
                 r = "change" if arm.startswith("net5kc") else arm.startswith("net5kr")
                 _C[arm] = seconds_cls(GN.net_cls(senses=True, clocks=int(arm[6:] if r else arm[5:]), reset=r, fade=False, ondemand=True, strict=True))
@@ -478,8 +484,8 @@ def job(j):
         import os
         if os.environ.get("TOLDT") == "1" and arm.startswith("net10kc"):   # a diagnosis only: clock 0 told the world's slot length
             def tell(W):
-                if hasattr(W, "v_tau") and W.brain.clk:
-                    W.brain.clk[0]["T"] = W.v_tau
+                if hasattr(W, "v_tau") and W.brain.clk and W.t * W.dt >= float(os.environ.get("TOLDT_AT", 0)):
+                    W.brain.clk[0]["T"] = W.v_tau       # (TOLDT_AT: told only from then on, a diagnosis of late locking)
             lf.tell = tell
     elif arm in ("events", "lock", "clocks", "treec"):
         from stage2_lang.seconds import seconds_cls          # its clocks change the colour between tastes, so not the compiled step
@@ -509,7 +515,9 @@ def job(j):
             n = (f"clock{n[0][1]:.1f}", n[1])
         if arm == "lock" and n and isinstance(n[0], tuple):
             n = (f"lock{n[0][1]:.0f}>{lf.brain.best[0]['T']:.1f}", n[1])
-    return (sum(g), sp, g[2], sp * l[2][2] / sum(t for _, _, t in l), sum(a + b for a, b, _ in l), time.perf_counter() - t0, n)
+    b_ = getattr(lf.brain, "pbits", None)               # (D67) the brain's prequential code length a taste, where it keeps one
+    return (sum(g), sp, g[2], sp * l[2][2] / sum(t for _, _, t in l), sum(a + b for a, b, _ in l), time.perf_counter() - t0, n,
+            None if b_ is None else b_ / max(lf.brain.ntaste, 1))
 
 
 def run(pairs=20, dt=2.5, workers=7, seed0=L.SEEDS0 + 1000, arms=("bank", "grow"), name="seq", Ps=PS, rungs=None):

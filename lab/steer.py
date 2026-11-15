@@ -64,7 +64,58 @@ def td_cls(base):
                 self.lastpulse[sensor] = self.t + at
             return super().stimulate(sensor, at)
 
+        def _search(self):
+            """Habit search (O24): after play the habit is the values' best per context; then, pair after pair of HE s epochs, one change
+            (a context, another option) is tried in one epoch and the kept habit in the other (order random); each change keeps its
+            differences in meals (tastes, +1 food, -1 poison) and is kept once its mean beats twice its standard error (at least 3
+            pairs), dropped after 8 pairs or once surely worse."""
+            if self.t < HSTART:
+                return
+            if self.H is None:
+                nopt = len(OPTIONS)
+                self.H = [max(range(nopt), key=lambda o: self.Q.get((c, o), 0.0)) for c in range(8)]
+                self.Hcur, self.ht0 = list(self.H), self.t
+                return
+            if self.t - self.ht0 < HE:
+                return
+            if self.hph == 0:                           # a new pair: draw a change among those not yet dropped
+                cands = [(c, o) for c in (0, 1, 2, 3, 4, 6) for o in range(len(OPTIONS)) if o != self.H[c]
+                         and self.hst.get((c, o), [0])[0] >= 0]
+                if not cands:                           # every change dropped: all may be tried again
+                    self.hst = {}
+                    cands = [(c, o) for c in (0, 1, 2, 3, 4, 6) for o in range(len(OPTIONS)) if o != self.H[c]]
+                self.hcand = cands[int(self.srng.integers(len(cands)))] if cands else None
+                self.horder = int(self.srng.integers(2))
+                self.hph, self.hr = 1, 0.0
+            elif self.hph == 1:
+                self.hA, self.hr, self.hph = self.hr, 0.0, 2
+            else:
+                trial, kept = (self.hA, self.hr) if self.horder == 0 else (self.hr, self.hA)
+                if self.hcand is not None:
+                    st = self.hst.setdefault(self.hcand, [0, 0.0, 0.0])
+                    d = trial - kept
+                    st[0] += 1; st[1] += d; st[2] += d * d
+                    n, m = st[0], st[1] / st[0]
+                    se = math.sqrt(max(st[2] / n - m * m, 1e-9) / n) if n > 1 else 1e9
+                    if n >= 3 and m > 2 * se:           # surely better: kept; the context's other trials start afresh
+                        c, o = self.hcand
+                        self.H[c] = o
+                        self.hst = {k: v for k, v in self.hst.items() if k[0] != c}
+                    elif n >= 8 or (n >= 3 and m < -2 * se):
+                        st[0] = -1                      # dropped
+                self.hph = 0
+            trial_now = (self.hph == 1 and self.horder == 0) or (self.hph == 2 and self.horder == 1)
+            self.Hcur = list(self.H)
+            if trial_now and self.hcand is not None:
+                c, o = self.hcand
+                self.Hcur[c] = o
+                if c in (1, 3):
+                    self.Hcur[c + 4] = o
+            self.ht0 = self.t
+
         def taste(self, value, at):
+            if search:
+                self.hr += 1.0 if value > 0 else -1.0
             self.r += 1.0 if value > 0 else -1.0
             return super().taste(value, at)
 
@@ -103,7 +154,7 @@ ALPHA = 0.1                                     # TD: a value's step towards eac
 GAMMA = math.exp(-DECIDE / TAU_E)               # TD: a choice's discount, the trace's own time constant over a choice's length
 
 
-def option_cls(base, cost=True, rates=False, fine=False, bored=False, timed=False, share=False):
+def option_cls(base, cost=True, rates=False, fine=False, bored=False, timed=False, share=False, knobs=None, avg=False, lam=0.0, search=False):
     """rates: False, the circuit's pairing of rate with context; 2, each pattern at scan or drive rate (eight options); 3, at scan, drive
     or run rate (twelve)."""
     """Options held while their context lasts (the options framework, Sutton, Precup & Singh 1999; semi-Markov TD). The context
@@ -128,6 +179,16 @@ def option_cls(base, cost=True, rates=False, fine=False, bored=False, timed=Fals
             self.cuses = {}
             self.recent = []
             self.N = {}
+            self.elig = []
+            self.H, self.Hcur, self.hph, self.ht0, self.hr, self.hst, self.hcand, self.horder = None, None, 0, 0.0, 0.0, {}, None, 0
+            self.lastrun = -1e9                         # with knobs: when the last bored run ended (a run lasts at most runlen)
+            if knobs:                                   # the rhythm's settings as knobs (log2 multipliers of the circuit's own values), each
+                kr = np.random.default_rng([int(seed), 202])   # tuned by antithetic perturbation against the taste (lab/v D64)
+                self.th = {k: (float(kr.uniform(-2, 2)) if knobs != "warm" else 0.0) for k in KNOBS}
+                self.th0 = dict(self.th)
+                self.xi = {k: 0.0 for k in KNOBS}
+                self.kph, self.kt0, self.kr, self.kRA, self.gs = 0, 0.0, 0.0, 0.0, 1e-3
+                self.base = {k: (p["run_max"] if k == "runlen" else p[k]) for k in KNOBS}
 
         def stimulate(self, sensor, at):
             if sensor in (0, 1):
@@ -136,8 +197,88 @@ def option_cls(base, cost=True, rates=False, fine=False, bored=False, timed=Fals
                     self.recent.append((self.t + at, sensor))
             return super().stimulate(sensor, at)
 
+        def kv(self, k):
+            if not knobs:
+                return self.p["run_max"] if k == "runlen" else self.p[k]
+            return self.base[k] * 2.0 ** (self.th[k] + self.xi[k])
+
+        def _knobs(self):
+            """Antithetic perturbation (a pair of epochs, +xi then -xi, each KE s): every knob moves by ETA_K times its own perturbation's
+            sign times the normalised difference of taste between the two epochs. Local: a knob knows its own perturbation and the taste."""
+            if self.t - self.kt0 < KE or self.t < PLAY:
+                return
+            if self.kph == 0:                           # a new pair: draw each knob's perturbation, run +xi
+                self.xi = {k: SIG_K * (1 if self.srng.random() < 0.5 else -1) for k in KNOBS}
+                self.kph, self.kr = 1, 0.0
+            elif self.kph == 1:                         # first half done: remember its taste, run -xi
+                self.kRA, self.kr = self.kr, 0.0
+                self.xi = {k: -v for k, v in self.xi.items()}
+                self.kph = 2
+            else:                                       # pair done: move
+                g = (self.kRA - self.kr) / 2.0
+                self.gs = 0.95 * self.gs + 0.05 * g * g
+                z = g / math.sqrt(self.gs + 1e-9)
+                for k in KNOBS:
+                    self.th[k] = float(np.clip(self.th[k] - ETA_K * z * np.sign(self.xi[k]), -4, 4))   # xi now holds -xi
+                self.xi = {k: 0.0 for k in KNOBS}
+                self.kph = 0
+            self.kt0 = self.t
+
+        def _search(self):
+            """Habit search (O24): after play the habit is the values' best per context; then, pair after pair of HE s epochs, one change
+            (a context, another option) is tried in one epoch and the kept habit in the other (order random); each change keeps its
+            differences in meals (tastes, +1 food, -1 poison) and is kept once its mean beats twice its standard error (at least 3
+            pairs), dropped after 8 pairs or once surely worse."""
+            if self.t < HSTART:
+                return
+            if self.H is None:
+                nopt = len(OPTIONS)
+                self.H = [max(range(nopt), key=lambda o: self.Q.get((c, o), 0.0)) for c in range(8)]
+                self.Hcur, self.ht0 = list(self.H), self.t
+                return
+            if self.t - self.ht0 < HE:
+                return
+            if self.hph == 0:                           # a new pair: draw a change among those not yet dropped
+                cands = [(c, o) for c in (0, 1, 2, 3, 4, 6) for o in range(len(OPTIONS)) if o != self.H[c]
+                         and self.hst.get((c, o), [0])[0] >= 0]
+                if not cands:                           # every change dropped: all may be tried again
+                    self.hst = {}
+                    cands = [(c, o) for c in (0, 1, 2, 3, 4, 6) for o in range(len(OPTIONS)) if o != self.H[c]]
+                self.hcand = cands[int(self.srng.integers(len(cands)))] if cands else None
+                self.horder = int(self.srng.integers(2))
+                self.hph, self.hr = 1, 0.0
+            elif self.hph == 1:
+                self.hA, self.hr, self.hph = self.hr, 0.0, 2
+            else:
+                trial, kept = (self.hA, self.hr) if self.horder == 0 else (self.hr, self.hA)
+                if self.hcand is not None:
+                    st = self.hst.setdefault(self.hcand, [0, 0.0, 0.0])
+                    d = trial - kept
+                    st[0] += 1; st[1] += d; st[2] += d * d
+                    n, m = st[0], st[1] / st[0]
+                    se = math.sqrt(max(st[2] / n - m * m, 1e-9) / n) if n > 1 else 1e9
+                    if n >= 3 and m > 2 * se:           # surely better: kept; the context's other trials start afresh
+                        c, o = self.hcand
+                        self.H[c] = o
+                        self.hst = {k: v for k, v in self.hst.items() if k[0] != c}
+                    elif n >= 8 or (n >= 3 and m < -2 * se):
+                        st[0] = -1                      # dropped
+                self.hph = 0
+            trial_now = (self.hph == 1 and self.horder == 0) or (self.hph == 2 and self.horder == 1)
+            self.Hcur = list(self.H)
+            if trial_now and self.hcand is not None:
+                c, o = self.hcand
+                self.Hcur[c] = o
+                if c in (1, 3):
+                    self.Hcur[c + 4] = o
+            self.ht0 = self.t
+
         def taste(self, value, at):
+            if search:
+                self.hr += 1.0 if value > 0 else -1.0
             self.r += 1.0 if value > 0 else -1.0
+            if knobs:
+                self.kr += 1.0 if value > 0 else -1.0
             self.tasted = True
             return super().taste(value, at)
 
@@ -150,6 +291,11 @@ def option_cls(base, cost=True, rates=False, fine=False, bored=False, timed=Fals
             return (n * self.Q.get((ctx, o), 0.0) + SHARE_K * self.Q.get((("c", ctx % 4), o), 0.0)) / (n + SHARE_K)
 
         def _choose(self, ctx):
+            if search and self.H is not None:           # habit search (O24): after play, the habit on trial or the kept one
+                return self.Hcur[ctx]
+            fp = getattr(self, "FP", None)              # a habit forced (lab/habits.py): one option per context, no learning, no play
+            if fp:
+                return fp[ctx] if ctx < len(fp) else fp[ctx % 4]
             if FORCE:                                   # a diagnosis: the circuit's own policy forced, no learning, no play
                 if FORCE2 and ctx >= 4:                 # (FORCE=2, with bored: the circuit's run, straight at its run rate)
                     return 2
@@ -178,8 +324,15 @@ def option_cls(base, cost=True, rates=False, fine=False, bored=False, timed=Fals
             if timed and not (ctx & 1):                 # contexts carrying time: since the followed colour was last seen, in steps of four
                 since = self.t - self.lastpulse[f]      # (under 1 s, 1 to 4, 4 to 16, over 16)
                 ctx += 4 * (0 if since < 1.0 else 1 if since < 4.0 else 2 if since < 16.0 else 3)
-            if bored and self.t - max(self.lastpulse[f], self.last_food) > p["bored"]:
+            if knobs:
+                self._knobs()
+            if search:
+                self._search()
+            if bored and self.t - max(self.lastpulse[f], self.last_food, self.lastrun) > self.kv("bored"):
                 ctx += 4                                # bored: nothing of the followed colour for longer than the circuit's own timer
+                if knobs and self.t - max(self.lastpulse[f], self.last_food, self.lastrun) > self.kv("bored") + self.kv("runlen"):
+                    self.lastrun = self.t               # with knobs, a bored run lasts runlen, then the bored timer restarts
+                    ctx -= 4
             ended = self.srng.random() < 0.0025 / T_END    # an option also ends at random (termination probability, mean T_END s)
             if ctx != self.ctx or self.tasted or ended:
                 o = self._choose(ctx)
@@ -190,7 +343,21 @@ def option_cls(base, cost=True, rates=False, fine=False, bored=False, timed=Fals
                     rho = self.R / self.D if cost else 0.0
                     q = self.Q.get(self.prev, 0.0)
                     nxt = self._q(ctx, o)
-                    self.Q[self.prev] = q + ALPHA * (self.r - rho * d + nxt - q)
+                    if avg == "post":                   # a step shrinking with the pair's own uses after play: 1/(n + 10), from ALPHA down
+                        if self.t >= PLAY:
+                            self.N[self.prev] = self.N.get(self.prev, 0) + 1
+                        al = max(1.0 / (self.N.get(self.prev, 0) + 1.0 / ALPHA), AFLOOR)
+                    elif avg:                           # a value as an average of all its evidence: step 1/n (floor AFLOOR)
+                        self.N[self.prev] = self.N.get(self.prev, 0) + 1
+                        al = max(1.0 / self.N[self.prev], AFLOOR)
+                    else:
+                        al = ALPHA
+                    delta = self.r - rho * d + nxt - q
+                    self.Q[self.prev] = q + al * delta
+                    if lam:                             # the error reaches back over earlier episodes, each by lam per episode since (SMDP TD(lam))
+                        for pr, w in self.elig:
+                            self.Q[pr] = self.Q.get(pr, 0.0) + al * w * delta
+                        self.elig = [(pr, w * lam) for pr, w in [(self.prev, 1.0)] + self.elig if w * lam > 0.02][:30]
                     if share:                           # the coarse parent learns from every episode too
                         cp = (("c", self.prev[0] % 4), self.prev[1])
                         qc = self.Q.get(cp, 0.0)
@@ -202,7 +369,7 @@ def option_cls(base, cost=True, rates=False, fine=False, bored=False, timed=Fals
                 rate = p[("scan", "drive", "run")[self.cur // len(OPTIONS)]]
                 pat = OPTIONS[self.cur % len(OPTIONS)]
             else:
-                rate = p["drive"] if ((ctx % 3) > 0 if fine else (ctx & 1)) else p["run"] if ((bored or (timed and not NATRATE)) and ctx >= 4) else p["scan"]
+                rate = self.kv("drive") if ((ctx % 3) > 0 if fine else (ctx & 1)) else self.kv("run") if ((bored or (timed and not NATRATE)) and ctx >= 4) else self.kv("scan")
                 pat = OPTIONS[self.cur]
             self.ph += rate * 0.0025
             n = int(self.ph)
@@ -211,6 +378,16 @@ def option_cls(base, cost=True, rates=False, fine=False, bored=False, timed=Fals
                 self._logt = self.t
                 nopt = len(OPTIONS) * (int(rates) if rates else 1)
                 self.log_reflex = {c: max(range(nopt), key=lambda o: self.Q.get((c, o), 0.0)) for c in range(16 if timed else 8 if bored else 4)}
+                if knobs:
+                    self.log_reflex["knobs"] = (dict(self.th0), dict(self.th))
+                if search and self.H is not None:
+                    self.log_reflex.update({c: self.H[c] for c in range(8)})
+                if self.t > 800.0:                      # flicker: how often the best option per context changed over the last third (10 s looks)
+                    lr = getattr(self, "_lastlr", None)
+                    if lr is not None:
+                        self._flick = getattr(self, "_flick", 0) + sum(1 for c in lr if isinstance(c, int) and lr[c] != self.log_reflex[c])
+                    self.log_reflex["flicker"] = getattr(self, "_flick", 0)
+                self._lastlr = dict(self.log_reflex)
             return list(pat) * n
     return Opt
 
@@ -220,6 +397,13 @@ OPTW = float(__import__("os").environ.get("OPTW", 0.0))   # s: "in view" after a
 FORCE = __import__("os").environ.get("FORCE") in ("1", "2")
 FORCE2 = __import__("os").environ.get("FORCE") == "2"   # a diagnosis: options carry out the circuit's policy, unlearned
 NATRATE = __import__("os").environ.get("NATRATE") == "1"   # time contexts keep the natural rate (scan), the confound of O17-O18 removed
+KNOBS = ("scan", "drive", "run", "bored", "runlen")   # the rhythm's settings a learner may tune (D64)
+KE = float(__import__("os").environ.get("KE", 20.0))  # s: an epoch of one perturbation
+SIG_K = 0.5                                     # log2: a perturbation's size (a factor 1.41)
+ETA_K = float(__import__("os").environ.get("ETA_K", 0.1))  # log2: a knob's step per pair, at a one-sigma difference
+HE = float(__import__("os").environ.get("HE", 20.0))   # s: an epoch of habit search (O24)
+HSTART = float(__import__("os").environ.get("HSTART", 400.0))   # s: habit search starts (the values' learning before it)
+AFLOOR = float(__import__("os").environ.get("AFLOOR", 0.01))   # averaged values: the smallest step
 SHARE_K = 10.0                                  # uses' worth of prior a fine context takes from its coarse parent
 RHO_T = 100.0                                   # s: the running reward rate forgets over this
 
@@ -469,6 +653,22 @@ def job(j):
             elif arm in ("opt", "optN", "opt8", "opt12", "optF", "optB", "optT", "optTS"):
                 _C[arm] = seconds_cls(option_cls(base, cost=arm != "optN", rates={"opt8": 2, "opt12": 3}.get(arm, False), fine=arm == "optF",
                                                  bored=arm == "optB", timed=arm in ("optT", "optTS"), share=arm == "optTS"))
+            elif arm == "optH":                         # O24: habit search after play, over optBa's values
+                _C[arm] = seconds_cls(option_cls(base, bored=True, avg="post", search=True))
+            elif arm.startswith("optBl"):               # O23: optBa with the error reaching back over earlier episodes (optBl8: lam .8)
+                _C[arm] = seconds_cls(option_cls(base, bored=True, avg="post", lam=int(arm[5:]) / 10.0))
+            elif arm in ("optBn", "optn", "optBa"):     # values as averages of all their evidence (O20); a: counted after play (O22)
+                _C[arm] = seconds_cls(option_cls(base, bored=arm != "optn", avg="post" if arm == "optBa" else True))
+            elif arm in ("optK", "optKw", "optK0", "optKw0"):   # optB with the rhythm's knobs: tuned from a random start (K), from the
+                kn = "warm" if "w" in arm else "rand"   # circuit's values (Kw); 0: the same start, never tuned
+                C = option_cls(base, bored=True, knobs=kn)
+                if arm.endswith("0"):
+                    C = type("Fixed", (C,), {"_knobs": lambda self: None})
+                _C[arm] = seconds_cls(C)
+            elif arm.startswith("pol"):                 # "pol0200": a habit forced, options for contexts 0-3; "pol0200xx": with bored (4-7)
+                digits = tuple(int(c) for c in arm[3:])
+                C = option_cls(base, bored=len(digits) > 4)
+                _C[arm] = seconds_cls(type("Pol", (C,), {"FP": digits}))
             elif arm == "td":
                 _C[arm] = seconds_cls(td_cls(base))
             elif arm.startswith("traced"):
@@ -509,7 +709,7 @@ if __name__ == "__main__":
         line = f"  {arm:8s} {e[arm][0]:+.2f} [{np.percentile(e[arm][1], 2.5):+.2f},{np.percentile(e[arm][1], 97.5):+.2f}]"
         if arm != "circuit":
             line += f"  vs circuit {e[arm][0] - e['circuit'][0]:+.2f} [{np.percentile(d, 2.5):+.2f},{np.percentile(d, 97.5):+.2f}]"
-        if arm.startswith("grown") or arm.startswith("traced") or arm in ("td", "opt", "optN", "opt8", "opt12", "optF", "optB", "optT", "optTS"):
+        if arm.startswith("grown") or arm.startswith("traced") or arm in ("td", "opt", "optN", "opt8", "opt12", "optF", "optB", "optT", "optTS", "optBn", "optn", "optBa", "optH") or arm.startswith("optBl"):
             from collections import Counter
             line += " | best option by context (0 none, 1 followed eye, 2 other, 3 both): " + ", ".join(f"{k} x{v}" for k, v in Counter(str(r["reflex"]) for r in rows if r["arm"] == arm).most_common(3))
         print(line, flush=True)

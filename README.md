@@ -159,6 +159,25 @@ Three lines of work so far:
 
 The findings that changed the direction of the work, each told in full in the notebook named.
 
+- **What the timing worlds need is a sense of place in the cycle, and trust that can come back.** In the worlds where food follows
+  a secret pattern in time, the growing brain had stalled halfway. Its clocks are reset whenever it sees the pattern move on, so their
+  beats fall anywhere within a time slot and it loses count of where in the cycle it is. Given a steady rhythm that is never reset
+  (told the slot's length, as a diagnosis), it solves both rungs tested, better than our designed brain (confirmed on fresh
+  creatures: nine tenths of the gap closed instead of a half), and with it every rung tested, patterns up to 13 slots long. Told only late in life, the
+  rhythm is useless until one more piece is added: the brain must be able to trust a stream again after distrusting it, which a
+  standard trick from online learning gives (each update returns a little weight to every stream, Herbster and Warmuth's fixed share).
+  Finding the rhythm's length unaided is still open: each change is noticed only at the next telling meal, seconds late, too blurred
+  for simple locking (`discrete/NOTEBOOK.md`, D65).
+
+- **The learned steering's shortfall is two choices that pay late, not anything it can't express.** Forcing every habit the held
+  choices can form (4,096 of them, 12 bits) onto the same creatures, the best one drives as well as the hand-built circuit. The learner
+  gets the plain habit nearly right (within a fifth of its best) but in most lives misses two choices whose reward comes many seconds
+  later: stop when both colours are in view, and when bored run straight; each is worthless without the other, so trying one change at
+  a time can't find them. Its loss is wholly which habit it settles on, not how it carries it out. Tuning its rhythm's settings (rates,
+  timers) by trial and error in a life fails for want of evidence: about one standard deviation's worth per setting in a long life,
+  so the settings just wander. Bits like these, rare, late and interacting, are evolution's to supply, or a measurement's
+  (`discrete/NOTEBOOK.md`, D64).
+
 - **Steering can be grown when choices are held while the situation lasts** (confirmed on fresh creatures). With the hand-built
   driving taken away, the brain learns to steer from taste alone, but only if a choice (turn this way, that way, go straight, stop)
   is held until what it sees changes, and judged by how that episode ended and how long it took. Choosing afresh every fraction of a

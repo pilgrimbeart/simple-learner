@@ -46,7 +46,24 @@ GRANT = 1.0                                     # economy variant: what a parent
 KEEP = 0.5                                      # economy variant: the share of an income a block keeps; the rest is paid to its parts
 WM_BETA = float(__import__("os").environ.get("WM_BETA", 0.5))   # weighted majority: a wrong guess multiplies a stream's weight by this
 WM_BAR = __import__("os").environ.get("WM_BAR") == "1"   # weighted majority: only streams whose weight beats the default's vote
+WM_SHARE = float(__import__("os").environ.get("WM_SHARE", 0.0))   # fixed share among the speakers (2026-11-15)
 WM_SPEC = __import__("os").environ.get("WM_SPEC") == "1"   # weighted majority of specialists: only speakers updated, their total kept
+PHASES = __import__("os").environ.get("PHASES", "")   # "1" (diagnosis): phase streams on clock 0's told period; "2": phase oscillators locking to changes
+PH_MAX = int(__import__("os").environ.get("PH_MAX", 8))   # the longest cycle a told phase offers (PHASES=1)
+PHN = int(__import__("os").environ.get("PHN", 6))   # phase oscillators (PHASES=2)
+PLL_AVG = __import__("os").environ.get("PLL_AVG") == "1"   # oscillators average their accepted intervals (T12)
+PLL_FLOOR, PLL_P2 = float(__import__("os").environ.get("PLL_FLOOR", 0.02)), 0.15
+LB_LINES = ("e0", "e1", "good", "bad", "c0", "c1", "m0", "m1")   # (D67) the bank's event types: every signal there is
+LB_T = (1.0, 4.0, 16.0, 64.0)                   # s: its time constants, log-spaced
+ACOUNT = __import__("os").environ.get("ACOUNT") == "1"   # running averages read as whole counts of recent events
+PLL_RES = __import__("os").environ.get("PLL_RES") == "1"   # a resonator after capture: rate corrected by the slide of the changes' mean phase
+RES_L, RES_EVERY, RES_G = 0.9, 5, 0.7
+PLL_SPAN = __import__("os").environ.get("PLL_SPAN") == "1"   # slot length from the whole span since the first change (T19)
+POSC_TOLD = __import__("os").environ.get("POSC_TOLD") == "1"
+PMONO = __import__("os").environ.get("PMONO") == "1"
+PDRIFT = float(__import__("os").environ.get("PDRIFT", 0.01))   # an oscillator's drift a slot (log)
+PLL_S, PLL_P, PLL_WIN = 0.2, 0.3, 0.25          # an oscillator's slot-length and phase steps toward a revealed change, and its window
+CPHASE = __import__("os").environ.get("CPHASE") == "1"   # counters read from time since an anchor (a diagnosis, 2026-11-14)
 NODRIFT = __import__("os").environ.get("NODRIFT") == "1"   # a diagnosis: the brain's clocks without drift (not allowed in a design)
 LOCK = float(__import__("os").environ.get("LOCK", 0.0))   # clocks' period locking rate (0: off), 2026-11-13
 LOCK_WIN = float(__import__("os").environ.get("LOCK_WIN", 0.5))   # ... only clocks whose period is within this fraction of the interval
@@ -357,7 +374,7 @@ class Net:
 
 def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=False, lines=False, senses=False, novouch=False, local=False,
             surprise=False, trophic=False, clocks=0, ondemand=False, split=False, merge=False, simplest=False, strict=False, reset=False,
-            eyes=0, avgs=0, joint=0, vote=False, wmaj=False, counters=0, allavg=False, since=0):
+            eyes=0, avgs=0, joint=0, vote=False, wmaj=False, counters=0, allavg=False, since=0, lbank=False):
     """eyes (2026-11-13): for each eye, `eyes` clocks of its own (periods 0.5 to 10 s, drawn per life); at each beat the stream records
     how many pulses that eye gave since the last beat (0, 1-2, 3-8, 9 or more), so blocks can grow over recent eye activity.
     avgs (the user, 2026-11-13: a running average is a measure to try for any signal): for each eye, `avgs` running averages of its pulse
@@ -366,7 +383,7 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
     """one: a single stream, every taste, its symbol the colour eaten and whether it was good (four symbols): no stream chosen by us.
     senses: a stream for every sense line, each ticking when its line fires (every taste, a good taste, a bad taste, red eaten, blue
     eaten), each recording the same four symbols at its ticks; none chosen by us, the gate choosing among them by their record."""
-    ALINES = (0, 1, "good", "bad", "m0", "m1") if allavg else (0, 1)   # allavg (2026-11-14): a running average of every signal, not only the eyes
+    ALINES = ((0, 1, "good", "bad", "m0", "m1") + (("c0", "c1") if ACOUNT else ())) if allavg else (0, 1)   # allavg (2026-11-14): a running average of every signal, not only the eyes
     TICKS = {"every": lambda good, eaten: True, "good": lambda good, eaten: good, "bad": lambda good, eaten: not good,
              "red": lambda good, eaten: eaten == 0, "blue": lambda good, eaten: eaten == 1}
     D = L.designed_cls()
@@ -376,18 +393,21 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
         KINDS = (tuple(f"{c}:{f}" for c in TICKS for f in ("colour", "outcome")) + tuple(f"clock{c}" for c in range(clocks))
                  + tuple(f"eye{e}c{j}" for e in (0, 1) for j in range(eyes)) + tuple(f"avg{e}c{j}" for e in ALINES for j in range(avgs))
                  + tuple(f"cnt{j}n{m}" for j in range(min(counters, clocks)) for m in range(2, 9))
-                 + tuple(f"since{j}" for j in range(min(since, clocks))) if split else
+                 + tuple(f"since{j}" for j in range(min(since, clocks))) + (tuple(f"ph{m}" for m in range(2, PH_MAX + 1)) if PHASES == "1" and clocks else ())
+                 + (tuple(f"pq{i}n{m}" for i in range(PHN) for m in range(2, 9)) if PHASES == "2" and clocks else ())
+                 + (tuple(f"lb{ln}t{j}" for ln in LB_LINES for j in range(len(LB_T))) if lbank else ()) if split else
                  (tuple(TICKS) + tuple(f"clock{c}" for c in range(clocks))) if senses else ("taste",) if one or lines else ("good", "eaten"))
 
         def __init__(self, seed, p):
             super().__init__(seed, dict(p, lad="seq", size=1))
+            self.seed_ = seed
             P = max(3, int(p["P"]) // len(self.KINDS))
             rng = np.random.default_rng([int(seed), 77])
             if lines:                                   # separate sense lines with clocks (Net2)
                 self.nets = [Net2("taste", P, rng, prune=prune, fade=fade, dup=dup, supply=supply, economy=economy)]
             else:
                 self.nets = [Net(k, P, rng, prune, fade, dup, supply, economy,
-                                 9 if k.startswith("since") else int(k.split("n")[-1]) if k.startswith("cnt") else 3 if k.startswith("avg") else 4 if k.startswith("eye") else 5 if k.startswith("clock") else 2 if split else 4 if k == "taste" or senses else 2,
+                                 8 if k.startswith("lb") else 5 * int(k[2:]) if k.startswith("ph") else 5 * int(k.split("n")[-1]) if k.startswith("pq") else 9 if k.startswith("since") else int(k.split("n")[-1]) if k.startswith("cnt") else (5 if ACOUNT else 3) if k.startswith("avg") else 4 if k.startswith("eye") else 5 if k.startswith("clock") else 2 if split else 4 if k == "taste" or senses else 2,
                                  strict=strict) for k in self.KINDS]
             for N in self.nets:
                 N.local, N.surprise, N.trophic, N.ondemand, N.merge, N.simplest = local, surprise, trophic, ondemand, merge, simplest
@@ -424,7 +444,55 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
                 return self.cnt[N.kind]
             return int(self.g) if N.kind == "good" else self.na
 
+        def _lb(self, line):
+            """(D67) the leaky-integrator bank: every event type, time constants LB_T (scale-invariant memory of recent history, Shankar &
+            Howard 2012); an event adds 1 to each integrator of its line, each decaying with its own time constant."""
+            if not lbank:
+                return
+            b = self.__dict__.setdefault("lbr", {})
+            for j, T in enumerate(LB_T):
+                r, tr = b.get((line, j), (0.0, self.t))
+                b[(line, j)] = (r * math.exp(-(self.t - tr) / T) + 1.0, self.t)
+
+        def _lb_write(self):
+            """Each integrator read as a recent count on a log scale (0, 1, 2-3, 4-7, ..., 64+: eight symbols), written to its stream."""
+            b = self.__dict__.setdefault("lbr", {})
+            for ln in LB_LINES:
+                for j, T in enumerate(LB_T):
+                    r, tr = b.get((ln, j), (0.0, self.t))
+                    c = r * math.exp(-(self.t - tr) / T)
+                    sym = min(int(math.log2(1.0 + c)), 7)
+                    N = self.byk[f"lb{ln}t{j}"]
+                    k = self.cnt[N.kind]
+                    N.write(k, sym)
+                    N.tidy(k, self.t)
+                    self.cnt[N.kind] = k + 1
+
+        def _pdef(self, letter):
+            """The default's probability for a letter: its own KT record of how often the last revealed letter came again."""
+            h, n = getattr(self, "dkt", (0, 0))
+            q = (h + 0.5) / (n + 1.0)
+            return q if letter == self.dl else 1.0 - q
+
+        @staticmethod
+        def _pk(N, k, letter):
+            """A speaking unit's probability for a letter: the KT estimate from its tallies (Krichevsky & Trofimov 1981)."""
+            n = N.units[k]["n"]
+            return (n[letter] + 0.5) / (n[0] + n[1] + 1.0)
+
         def predict(self):
+            if wmaj and getattr(self, "BAYES", False):  # (2026-11-15) Bayesian mixture of the speakers and the default, each predicting a
+                wd = getattr(self, "w_def", 1.0)        # probability (prequential: judged in bits before each outcome); sleepers abstain
+                num, den = wd * self._pdef(1), wd
+                for N in self.nets:
+                    k, _ = N.says(self.place(N) - 1)
+                    if k is not None:
+                        w = getattr(N, "w", 1.0)
+                        num += w * self._pk(N, k, 1)
+                        den += w
+                self.p1 = num / den
+                self.food = int(self.p1 > 0.5)
+                return
             if wmaj:                                    # weighted majority (Littlestone & Warmuth 1994): each stream's own weight, halved at
                 wd = getattr(self, "w_def", 1.0)          # each of its wrong guesses; the default an expert too
                 tot = wd * (1 if self.dl == 1 else -1)
@@ -462,6 +530,12 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
                 self._bump("good" if value > 0 else "bad")
             v = True if novouch else self.vouched()         # novouch (plan B2): learn from every taste, what was eaten the eye that pulsed last
             eaten = int(self.last[1] > self.last[0]) if novouch else self.food if v else int(self.last[1] > self.last[0])
+            if lbank:                                   # the bank: this taste's events (good or bad, a meal of this colour), written after learning
+                self._lb("good" if value > 0 else "bad")
+                self._lb(f"c{eaten}")
+                self._lbpend = True
+            if avgs and allavg and ACOUNT:              # (2026-11-15) a leaky count of meals of each colour; every average's count written
+                self._pend = eaten                      # just after this taste is learned from (next step), fresh for the next guess
             letter = eaten if value > 0 else 1 - eaten
             if v:
                 dhit = self.dl == letter
@@ -474,7 +548,7 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
                     hit = (b == letter) if b is not None else dhit
                     N.E = min(self.Emax, max(0.0, N.E + (1.0 if hit > dhit else -1.0 if hit < dhit else 0.0)))
                     if wmaj and b is not None:
-                        spoke.append((N, hit))
+                        spoke.append((N, hit) if not getattr(self, "BAYES", False) else (N, hit, self._pk(N, k, letter)))
                     if wmaj and b is not None and not hit and not (WM_SPEC or wmaj == "spec"):
                         N.w = getattr(N, "w", 1.0) * WM_BETA
                     if b is not None:
@@ -492,7 +566,26 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
                         bs, best = sc, N
                     N.learn(i, letter, self.t, k, f)
                 self.best = best
-                if wmaj and (WM_SPEC or wmaj == "spec"):   # specialists (Freund, Schapire, Singer & Warmuth 1997): only those that spoke are updated,
+                if wmaj and getattr(self, "BAYES", False):   # Bayes over the speakers: each weight times its probability for what happened, over
+                    pd = self._pdef(letter)                     # the speakers' mixture (their total kept: sleeping experts); bits counted
+                    W0 = getattr(self, "w_def", 1.0) + sum(getattr(N, "w", 1.0) for N, _, _ in spoke)
+                    pm = (getattr(self, "w_def", 1.0) * pd + sum(getattr(N, "w", 1.0) * q for N, _, q in spoke)) / W0
+                    self.pbits = getattr(self, "pbits", 0.0) - math.log2(max(pm, 1e-12))   # the brain's prequential code length
+                    self.ntaste = getattr(self, "ntaste", 0) + 1
+                    self.w_def = getattr(self, "w_def", 1.0) * pd / pm
+                    for N, _, q in spoke:
+                        N.w = getattr(N, "w", 1.0) * q / pm
+                        N.saved = getattr(N, "saved", 0.0) + math.log2(q / pd)   # bits this stream saved over the default when it spoke
+                    sh = getattr(self, "SHARE", WM_SHARE)
+                    if sh and spoke:
+                        k = len(spoke) + 1
+                        even = sh * W0 / k
+                        self.w_def = (1.0 - sh) * self.w_def + even
+                        for N, _, _ in spoke:
+                            N.w = (1.0 - sh) * N.w + even
+                    h, n = getattr(self, "dkt", (0, 0))
+                    self.dkt = (h + int(letter == self.dl), n + 1)
+                elif wmaj and (WM_SPEC or wmaj == "spec"):   # specialists (Freund, Schapire, Singer & Warmuth 1997): only those that spoke are updated,
                     W0 = getattr(self, "w_def", 1.0) + sum(getattr(N, "w", 1.0) for N, _ in spoke)   # their total weight kept the same
                     self.w_def = getattr(self, "w_def", 1.0) * (1.0 if self.dl == letter else WM_BETA)
                     for N, hit in spoke:
@@ -502,6 +595,13 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
                         self.w_def *= W0 / W1
                         for N, _ in spoke:
                             N.w *= W0 / W1
+                    sh = getattr(self, "SHARE", WM_SHARE)
+                    if sh and spoke:              # fixed share among those that spoke (Herbster & Warmuth 1998): a share of their weight
+                        k = len(spoke) + 1              # returned evenly, so a stream that becomes right can recover (tracking a changing best)
+                        even = sh * W0 / k
+                        self.w_def = (1.0 - sh) * self.w_def + even
+                        for N, _ in spoke:
+                            N.w = (1.0 - sh) * N.w + even
                 elif wmaj and self.dl != letter:
                     self.w_def = getattr(self, "w_def", 1.0) * WM_BETA
                 if wmaj:                                # keep the weights in range (a common rescaling, no information lost)
@@ -535,6 +635,45 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
                                 if abs(d / (m * c["T"]) - 1.0) < LOCK_WIN:
                                     c["T"] += LOCK * (d / m - c["T"])
                             c["next"] = self.t + c["T"] / 2.0       # the change lies between tastes: a slot boundary half a period back
+                        if PHASES == "2" and hasattr(self, "posc"):   # each oscillator locks to the revealed changes: its slot length
+                            for o in self.posc:         # nudged toward the interval since the last change over its nearest whole number of
+                                if PLL_RES and o.get("n", 0) >= 10:   # a resonator (T20): the phase never moved; a forgetting circular mean of
+                                    o["th"] += (self.t - o["tl"]) / o["S"]   # where in its slot each change falls; its slide per slot is the rate's
+                                    o["tl"] = self.t                         # error, and only the rate is corrected
+                                    a = 2.0 * math.pi * (o["th"] % 1.0)
+                                    o["rc"] = RES_L * o.get("rc", 0.0) + math.cos(a)
+                                    o["rs"] = RES_L * o.get("rs", 0.0) + math.sin(a)
+                                    o["rn"] = RES_L * o.get("rn", 0.0) + 1.0
+                                    o["nc"] = o.get("nc", 0) + 1
+                                    if o["nc"] % RES_EVERY == 0:
+                                        mu = math.atan2(o["rs"], o["rc"]) / (2.0 * math.pi)
+                                        R_ = math.hypot(o["rc"], o["rs"]) / o["rn"]
+                                        if "mu" in o and R_ > 0.3:
+                                            dmu = (mu - o["mu"] + 0.5) % 1.0 - 0.5
+                                            dk = o["th"] - o["thm"]
+                                            if dk > 0:
+                                                o["S"] *= 1.0 + RES_G * dmu / dk
+                                        o["mu"], o["thm"] = mu, o["th"]
+                                    continue
+                                if PLL_SPAN and o.get("n", 0) >= 10:   # the span since an anchor over its whole number of slots (the delays
+                                    o.setdefault("ta", self.t)          # telescope: error falls as 1 / span); first the intervals' average
+                                    D = self.t - o["ta"]                # sets the slot, then the anchor is the change that reached ten
+                                    m = round(D / o["S"])
+                                    if m >= 1 and abs(D / o["S"] - m) < 0.4:
+                                        o["S"] = D / m
+                                elif tl is not None:    # slots (the noticing delays cancel), its phase nudged toward a slot's start
+                                    d = self.t - tl
+                                    m = max(1, round(d / o["S"]))
+                                    if abs(d / (m * o["S"]) - 1.0) < PLL_WIN:
+                                        if PLL_AVG:     # an average of the accepted intervals (step 1/(n+2), floor PLL_FLOOR): keeps the evidence
+                                            o["n"] = o.get("n", 0) + 1
+                                            o["S"] += max(1.0 / (o["n"] + 2), PLL_FLOOR) * (d / m - o["S"])
+                                        else:
+                                            o["S"] += PLL_S * (d / m - o["S"])
+                                o["th"] += (self.t - o["tl"]) / o["S"]
+                                o["tl"] = self.t
+                                e = o["th"] - round(o["th"])
+                                o["th"] -= (PLL_P2 if PLL_AVG else PLL_P) * e
                         self.lastchange = self.t
                         for c in self.clk:
                             c["since"] = 0
@@ -585,6 +724,8 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
                     c["tr"] = self.t
 
         def stimulate(self, sensor, at):
+            if lbank and sensor in (0, 1):
+                self._lb(f"e{sensor}")
             if avgs and sensor in (0, 1):
                 self._bump(sensor)
             if eyes and sensor in (0, 1):
@@ -594,14 +735,31 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
             return super().stimulate(sensor, at)
 
         def step(self):
-            if (clocks or eyes or avgs) and self.byk is None:
+            if (clocks or eyes or avgs or lbank) and self.byk is None:
                 self.byk = {N.kind: N for N in self.nets}
-            if avgs:
+            if lbank and getattr(self, "_lbpend", False) and self.byk is not None:
+                self._lbpend = False
+                self._lb_write()
+                self.predict()
+            if avgs and ACOUNT and getattr(self, "_pend", None) is not None and self.byk is not None:
+                self._bump(f"c{self._pend}")
+                self._pend = None
+                for c in self.aclk:
+                    r = c["r"] * math.exp(-(self.t - c["tr"]) / c["T"])
+                    N = self.byk[f"avg{c['e']}c{c['j']}"]
+                    k = self.cnt[N.kind]
+                    N.write(k, min(int(round(r * c["T"])), 4))
+                    N.tidy(k, self.t)
+                    self.cnt[N.kind] = k + 1
+                self.predict()
+            if avgs and not ACOUNT:
                 for c in self.aclk:
                     if self.t >= c["next"]:             # a beat: the average against the thirds of its own history
                         r = c["r"] * math.exp(-(self.t - c["tr"]) / c["T"])
                         h = c["hist"]
-                        if len(h) >= 3:
+                        if ACOUNT:                      # (2026-11-15) the average read as a whole count of recent events (rate x time
+                            sym = min(int(round(r * c["T"])), 4)   # constant: 0 to 4 or more), not against the thirds of its own history
+                        elif len(h) >= 3:
                             lo, hi = np.percentile(h, [33.3, 66.7])
                             sym = 0 if r < lo else 2 if r > hi else 1
                         else:
@@ -627,6 +785,42 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
                         c["n"] = 0
                         c["next"] += c["T"]
                         self.predict()
+            if PHASES == "1" and clocks:                # (diagnosis) a phase: a clock of a fifth of clock 0's period, never re-phased or
+                if not hasattr(self, "pnext"):          # drifting, its beats counted modulo 5m: the place in a cycle of m slots, 5 bins each
+                    self.pnext, self.pk = self.t, 0
+                if self.t >= self.pnext:
+                    self.pk += 1
+                    self.pnext += self.clk[0]["T"] / 5.0
+                    for m in range(2, PH_MAX + 1):
+                        N = self.byk[f"ph{m}"]
+                        k = self.cnt[N.kind]
+                        N.write(k, self.pk % (5 * m))
+                        N.tidy(k, self.t)
+                        self.cnt[N.kind] = k + 1
+                    self.predict()
+            if PHASES == "2" and clocks:                # phase oscillators (2026-11-15): never jumped; each a slot length S (drawn, drifting) and a
+                if not hasattr(self, "posc"):           # phase th in slots; five bins a slot, each bin's beat counted modulo 5m (m = 2 to 8)
+                    orng = np.random.default_rng([int(self.seed_), 85])
+                    self.posc = [dict(S=float(np.exp(orng.uniform(np.log(3.0), np.log(30.0)))), th=float(orng.uniform(0, 1)), k=0,
+                                      tl=self.t) for _ in range(PHN)]
+                    self.orng = orng
+                if POSC_TOLD:                           # (diagnosis) oscillator 0 told the slot length (via TOLDT's clock 0), phase still locked
+                    self.posc[0]["S"] = self.clk[0]["T"]
+                for i, o in enumerate(self.posc):
+                    o["th"] += (self.t - o["tl"]) / o["S"]
+                    o["tl"] = self.t
+                    kb = int(math.floor(o["th"] * 5.0))
+                    if (kb > o["k"]) if PMONO else (kb != o["k"]):   # PMONO: a bin written only when the phase moves on past it
+                        if kb // 5 != o["k"] // 5:      # a slot passed: the oscillator drifts (a brain's clocks drift)
+                            o["S"] *= float(np.exp(self.orng.normal(0.0, PDRIFT)))
+                        o["k"] = kb
+                        for m in range(2, 9):
+                            N = self.byk[f"pq{i}n{m}"]
+                            k = self.cnt[N.kind]
+                            N.write(k, kb % (5 * m))
+                            N.tidy(k, self.t)
+                            self.cnt[N.kind] = k + 1
+                        self.predict()
             if clocks:
                 for j, c in enumerate(self.clk):
                     if self.t >= c["next"]:                 # a beat: write what was last tasted since the last beat (4: nothing)
@@ -648,7 +842,11 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
                             Ns.tidy(ks, self.t)
                             self.cnt[Ns.kind] = ks + 1
                         if j < counters:                    # counters (2026-11-14): this clock's beats counted modulo 2 to 8, each a stream
-                            c["beats"] = c.get("beats", 0) + 1
+                            if CPHASE:                      # (diagnosis) the count read from time since an anchor, so re-phasing can't slip it
+                                c.setdefault("anchor", self.t)
+                                c["beats"] = int(round((self.t - c["anchor"]) / c["T"]))
+                            else:
+                                c["beats"] = c.get("beats", 0) + 1
                             for m in range(2, 9):
                                 Nc = self.byk[f"cnt{j}n{m}"]
                                 kc = self.cnt[Nc.kind]
@@ -657,6 +855,10 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
                                 self.cnt[Nc.kind] = kc + 1
                         self.predict()
             out = super().step()
+            if lbank and out:
+                for m in out:
+                    if m in (0, 1):
+                        self._lb(f"m{m}")
             if avgs and allavg and out:
                 for m in out:
                     if m in (0, 1):

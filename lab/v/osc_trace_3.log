@@ -1,0 +1,7 @@
+seed 107000: slot 14.666 s; oscillators [7.892, 27.232, 14.345, 11.212, 14.425, 23.06]; nearest ratio 0.984; trusted ['clock4', 'clock27', 'clock23']
+seed 107001: slot 12.389 s; oscillators [16.491, 16.83, 3.691, 7.015, 2.654, 10.039]; nearest ratio 0.566; trusted ['clock30', 'clock4', 'clock44']
+seed 107002: slot 8.160 s; oscillators [2.533, 1.629, 24.808, 7.885, 8.613, 4.1]; nearest ratio 0.200; trusted ['clock15', 'clock20', 'clock18']
+seed 107003: slot 18.284 s; oscillators [6.515, 4.564, 3.544, 7.335, 6.669, 6.13]; nearest ratio 0.250; trusted ['clock58', 'clock49', 'clock20']
+seed 107004: slot 17.754 s; oscillators [31.129, 9.036, 7.538, 2.707, 15.608, 2.287]; nearest ratio 0.509; trusted ['clock50', 'clock4', 'clock16']
+seed 107005: slot 5.456 s; oscillators [12.246, 10.11, 6.938, 6.362, 7.127, 23.615]; nearest ratio 1.853; trusted ['clock19', 'clock48', 'clock30']
+seed 107006: slot 8.631 s; oscillators [7.56, 3.693, 3.921, 15.543, 16.353, 5.172]; nearest ratio 1.895; trusted ['clock13', 'clock46', 'clock45']

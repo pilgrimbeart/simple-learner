@@ -1,0 +1,7 @@
+== the steering grown: plain, 10 pairs, 4800 s, last third [95%]
+  circuit  +2.46 [+2.41,+2.51]
+  optB     +1.27 [+1.18,+1.37]  vs circuit -1.19 [-1.27,-1.11] | best option by context (0 none, 1 followed eye, 2 other, 3 both): {0: 1, 1: 2, 2: 0, 3: 0, 4: 1, 5: 0, 6: 1, 7: 0, 'flicker': 253} x1, {0: 1, 1: 2, 2: 1, 3: 3, 4: 1, 5: 0, 6: 1, 7: 0, 'flicker': 213} x1, {0: 0, 1: 2, 2: 3, 3: 1, 4: 2, 5: 0, 6: 0, 7: 0, 'flicker': 207} x1
+  optKw0   +1.32 [+1.25,+1.40]  vs circuit -1.14 [-1.21,-1.07]
+  optKw    +0.77 [+0.63,+0.88]  vs circuit -1.69 [-1.84,-1.55]
+  optK0    +0.86 [+0.66,+1.05]  vs circuit -1.60 [-1.76,-1.44]
+  optK     +0.64 [+0.42,+0.86]  vs circuit -1.82 [-2.03,-1.61]

@@ -6,17 +6,20 @@ and when, why it matters, the line it belongs to, and the experiment that would 
 
 ## Scaling (the user's goal, 2026-11-09; `PROGRAMME.md`)
 
-- **What closes the rest of the gap to the hand-built drive?** (D63.) Options held while their context lasts reach half of it (+1.3
-  against +2.4), on the muscle body too. Ruled out: more options (with rates), longer contexts, less exploration; where the time goes is
-  the circuit's. Traced (O13-O16): the gap is mostly the circuit's scan-and-run rhythm when bored (relocation), which contexts without
-  time can't express; learning costs about a sixth. Contexts carrying time were tried (O17) and lost: each added context splits the evidence (a law of the held options, D63). Next:
-  values shared across contexts, a finer context starting from its coarser parent (the growing network's blocks). Earlier candidates: the value's resolution (each option's value per context is one number, over very different moments: the
-  block's distance, its bearing), so options that are themselves grown over finer contexts (the growing network's blocks over eye
-  pulses); boredom (D46) for moving on; credit from the eyes.
-- **How can a growing brain count its place in a cycle?** (D61.) Timing plateaus near half; a brain told the slot length reaches .8,
-  but telling the growing brain's clock the exact period doesn't help: the designed brain counts its place in the whole cycle, the
-  growing brain reads stale letters at past beats. Candidate: blocks that are counters (a chain of toggles, beats modulo n) offered as
-  streams, their phase set by revealed changes; D39's stage R proposed such parts.
+- **Why does a used, informative count gain so little on satiety?** (D66.) A leaky count of each colour's meals, written at each taste,
+  tells the poison colour with purity .8 to .9 (base .56 to .76) and is trusted, yet closes at most .06 more of the gap. Suspect: acting
+  on it (finding the other colour within the seconds before recovery). Test: the same lives with the told colour given only to the
+  steering, against the count-using brain, to split knowing from doing.
+- **How can a learner find choices that pay late and only together?** (D64.) The held options' habit space holds the hand-built
+  drive's level (+2.36); the learner reaches +1.37, missing two interacting late-paying choices (both in view: stop; bored: run). Ruled
+  out: exploration, flicker, averaging, TD(lambda) over episodes, one-change habit search, knob tuning by perturbation. Candidates: a
+  model of what follows each choice (a forward model of the next situations, so late effects are computed, not waited for); joint
+  changes proposed by the growing network's blocks (a sequence of choices as one option); or evolution's start, refined in a life.
+- **How can a brain find a rhythm's length from blurred, late events?** (D65.) With a steady phase (slot length told) and fixed share,
+  timing rungs 3 and 5 are solved (.77 to .96); unaided, oscillators locking to revealed changes end .1 to 3.5% off and don't help
+  (.53 to .59). Each change places a slot boundary only to a third or half a slot (noticed at the next telling meal, sometimes falsely).
+  Candidates: a resonator over all changes (circular mean of change times at a trial period, tuned by its own drift; robust to false
+  changes); or a sharper marker of the boundary than the next meal. Bits: about 8.6 for the slot length; the life's changes carry far more.
 - **Why does the tree beat the growing network on combinations of 5 and 6?** (D59, D60.) In 3000 s lives the tree solves both (.76,
   .72), the network reaches .38 to .49 whatever was tried: more material, merging copies, growth stopping when full, the simplest
   partner. The network makes thousands of blocks a life (copies by the thousand); the tree makes one child per contradicted context and

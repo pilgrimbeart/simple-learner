@@ -1,0 +1,6 @@
+rung 3, seed 107001, 1500 s: clock 0 period 12.389 s, the world's slot 12.389203500480829
+  count 0: poison colours seen at its beats {0: 18, 1: 9}  purity 0.67
+  count 1: poison colours seen at its beats {0: 14, 1: 13}  purity 0.52
+  count 2: poison colours seen at its beats {0: 22, 1: 5}  purity 0.81
+  overall purity 0.67
+  most trusted streams: [('clock3', '74'), ('clock1', '2.5'), ('clock34', '0.87'), ('clock8', '0.64'), ('clock4', '0.15'), ('clock32', '0.072')]

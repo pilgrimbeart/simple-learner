@@ -167,3 +167,11 @@ reveals in time). The price of size: extra material pays while a unit draws unde
 ladders climb on fresh creatures (sequences to 17; combinations 3, 4, 6 as material grows to 2560) and timing solves its first rung,
 higher rungs rising to about half. The growing network also takes up new body parts as well as our hand-built play, once its readouts
 keep the size of what follows and not only its direction; grown movements (bursts) don't pay on these bodies.
+
+**2026-11-14 (D62 to D64).** A second sealed ladder (satiety) was not climbed either: the rule turns on a count of recent good meals,
+which no stream carried. Blind agents now run in an enforced sandbox. Steering, grown from taste with the hand-built driving removed:
+choices held while the situation lasts, charged for their length, reach about half the hand-built drive. In bits: the space of such
+habits is 12 bits (4,096 habits), and its best habit, forced, drives as well as the hand-built circuit; the learner gets the plain 8 bits
+to within a fifth of their ceiling but misses two choices that pay many seconds late and only together (about 4 bits), and trying one
+change at a time can't cross to them. The rhythm's settings, tuned by trial and error, get about one standard deviation of evidence each
+in a long life and wander. Rare, late, interacting bits look like evolution's to supply, or a measurement's.
