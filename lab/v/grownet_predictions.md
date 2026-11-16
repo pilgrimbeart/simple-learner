@@ -1056,3 +1056,105 @@ L2. (trace, satiety rung 3, 7 lives, the bank brain) the best single stream in h
 in hindsight (default minus mixture .07 to .18; best stream's saving .09 to .21): Bayes mixing loses almost nothing. The best streams are
 the bank's meal counts in 5 of 7 lives (lbc0/lbc1 at 4 or 16 s): the bank found the right memory by itself. The limit is what each stream
 extracts: ~.15 to .2 bits a taste saved, with the brain at .64 to .92 bits a taste.
+**The yardstick** (`lab/ideal_satiety.py`, `lab/v/ideal_satiety.log`; development seeds 137000+, 4 seeds x 2 colours): an ideal Bayesian
+learner over the rule's family (usual colour, threshold 1 to 10, recovery 2 to 70 s: 800 hypotheses, 9.6 bits to name one), on the same
+meals: .17 bits a meal on rung 1, .25 on rung 3; the bank brain .88 and .82. About .6 bits a taste, 150 to 250 bits a life, left unused.
+Within a life the usual colour is fixed, so one count of its meals would carry the rule, but the bank's reading can't resolve the
+threshold: log-scale bins lump 2 with 3, and time constants a factor 4 apart mismatch the recovery (4 s against 6.7).
+L3. (LB_FINE=1: time constants a factor 2 apart, 1 to 64 s; counts exact to 7, then log) on satiety rungs 1 and 3 (4 seeds x 2): the
+    brain's bits a taste fall by at least .1 from the coarse bank's (.88, .82). 45%.
+**Scored L3** (`lab/v/ideal_satiety_fine.log`): wrong: the finer bank lowers the brain's bits only .05 (.83, .77). Speaking through the
+unit with the most evidence (SAYS_N) is slightly worse (.87, .80; `ideal_satiety_saysn.log`). The brain knows which colour it ate 94-96%
+of the time (`lab/eaten_check.py`, `eaten_check.log`): not the loss.
+The split (`lab/v/ideal_satiety_bank.log`): ideal .21 and .24 bits a meal; the bank's own streams at their best (true colours, exact
+counts, a table each, Bayes-mixed) .50 and .38; the brain .83 and .77. The representation costs .3 and .14 bits (the bank's time
+constants against the world's recovery); the brain's machinery a further .35.
+L4. (the machinery's share is material: ~120 streams share 2240 units, under 20 a stream) at 8960 units the brain's bits on rungs 1 and 3
+    fall by at least .1. 45%.
+**Scored L4** (`lab/v/ideal_satiety_8960.log`): wrong: at 8960 units the brain's bits are slightly worse (.87, .81). Not material.
+Found by comparing the offline streams with the brain's: the offline counts decay to each meal's moment; the brain's bank streams write
+just after a taste and are silent until the next, so at the moment of choosing the brain reads a count seconds stale, from before any
+recovery: the rule's whole content.
+L5. (LB_LIVE=1: send-on-delta, a bank stream writes whenever its decaying reading changes, checked every .1 s) on satiety rungs 1 and 3 the
+    brain's bits fall by at least .15 (from .83, .77). 55%.
+**Scored L5** (`lab/v/ideal_satiety_live.log`): partly: bits fall .14 and .07 (to .69, .69).
+L6. (paired, same seeds as L1: the fine, live bank net10kc60SFBL with LB_FINE=1 LB_LIVE=1 against net10kc60SFB) satiety: surely better on
+    at least two rungs; held-out 1, sequences 11, timing 2: no rung surely worse. 45%.
+**Scored L6** (`lab/v/bank2_*.log`): right on satiety, wrong elsewhere. The fine live bank: satiety every rung surely better (+.31, +.27,
++.21, +.24, +.11; rung 8 +.06 at the edge), rung 1 now .58 of the gap; bits .87 to .70. But sequences 11 -.14 [-.23, -.05] surely (bits .65
+to .78) and held-out 1 rung 8 -.24 [-.65, -.02]. Suspect: the even split of material, 56 more streams leaving the sequence stream ~17
+units instead of ~32.
+L7. (a shared pool, arm letter Q: each stream starts with half its even share, the rest pooled; a stream may grow beyond its share while
+    it has saved at least 1 bit over the default for each unit beyond it: an MDL price) three arms paired (SFB, SFBL, SFBLQ; LB_FINE,
+    LB_LIVE) on satiety, held-out 1, sequences 11, timing 2: SFBLQ keeps the bank's satiety gains (surely above SFB on at least four rungs)
+    and is not surely below SFB anywhere. 35%.
+**Scored L7** (`lab/v/pool_*.log`): wrong. The bits-gated pool keeps the cost on sequences 11 (-.12 [-.22, -.01]) and trims the bank's
+satiety gains (rungs 1-3 +.20, +.22, +.17 surely; rungs 4-8 lost); held-out 1 rung 4 -.18. Material is not the cause of the bank's cost on
+sequences (bits there .65, bank .78, pool .74: the bank makes the predictions worse).
+Bits split on sequences 11 (`lab/v/bits_split_seq11.log`, 7 lives each): the mixture loses nothing in either brain; the sequence stream
+(good:colour) itself saves less with the bank present (.21 to .33 bits a taste against .29 to .52): its own material, about 17 units
+instead of 32 under the even split (the pool halved its start further).
+L8. (the bank brain at 4480 units, its sequence stream back to ~35, against the plain Bayes brain at 2240; sequences 11, 10 pairs, fresh
+    seeds 139000+) no longer surely worse. 65%.
+**Scored L8** (`lab/v/bank_seq11_4480.log`): right. At 4480 units the bank brain ties the plain one on sequences 11 (+.04 [-.04, +.12]):
+its cost there was the even split of material.
+L9. (a market, arm letter M: every stream keeps its full even share at birth; a stream that has saved at least a bit over the default
+    for each unit beyond its share may take a unit of capacity from a stream that has saved nothing, recycling its least used leaf of
+    four drawn) net10kc60SFBLM against net10kc60SFB, paired, 2240 units, LB_FINE, LB_LIVE, the same four comparisons: satiety surely
+    better on at least four rungs; nowhere surely worse. 45%. Smoke (sequences 11, one life): the sequence stream grows to 41 units (15
+    without), .66 bits a taste against .77, last third 37 against 25.
+**Scored L9** (`lab/v/market_*.log`): mostly right. The market brain against the plain Bayes brain: nowhere surely worse; satiety surely
+better on rungs 1, 3 and 4 (+.10, +.14, +.10; rung 2 +.14 [-.02, +.30], rung 6 +.07); held-out 1 rung 3 +.25 [+.07, +.46]; sequences 11
+-.04 and timing 2 +.06 (ties). Bits a taste: satiety .71 to .74 (from .76 to .87), sequences .66 (.65). Smaller satiety gains than the bank
+alone (+.10 against +.31 on rung 1): the market takes capacity from bank streams before they have shown savings.
+
+## Rhythm trackers from theory (D68; the user: PLL theory, a detector per nested rhythm, redundant ones pruned)
+Recorded (`lab/change_times.py`, `lab/v/change_times.pkl`, 14 timing lives): .7 to 1.6 noticed changes a slot (about half false), placed
+a quarter of the way into the slot on median, quartiles .1 to .6. Offline (`lab/rhythm.py`): acquisition by resonators (forgetting
+circular means at 120 trial slot lengths), then a tracker at each of the six strongest distinct peaks (Kalman phase and rate, gated);
+in 13 of 14 lives one tracker locks within .01 to .2% and its place fixes the world's place with purity .81 to .98 (chance .2 to .4); others
+lock to nested rhythms (the word's period, 3.001 slots; half slots). In the brain (arm letter R: the trackers' places, five bins a slot
+counted modulo 2 to 8, as streams; with the market): smoke, rung 3, 1500 s: last third 238 against 107; trusted stream rt0n3.
+T25. (development seeds 107000+, 10 pairs, 3000 s, 2240 units; net10kc60SFBMR against net10kc60SFB) rungs 3 and 5 surely better and both
+     solved. 50%.
+**Scored T25** (`lab/v/rhythm_time.log`): right. Rhythm trackers, nothing told: rung 3 .75 [.64, .85], rung 5 .87 [.73, 1.01], both solved;
+paired +.21 [+.10, +.32] and +.34 [+.21, +.49] over the Bayes brain without them (.55, .52).
+T26. (fresh seeds 140000+, 10 pairs, 3000 s, rungs 3, 5, 7) the trackers surely better on all three and at least two solved. 70%.
+**Scored T26** (`lab/v/rhythm_time_fresh.log`, fresh seeds 140000+): right. Rungs 3, 5, 7: .79, .69, .76 with the trackers (all solved)
+against .58, .44, .46; paired +.20 [+.09, +.30], +.24 [+.18, +.35], +.31 [+.18, +.43].
+D1. (the whole candidate: net10kc60SFBLMR with LB_FINE, LB_LIVE: Bayes mixing in bits, fixed share, the live bank, the market, the
+    trackers; against net10kc60SFB; fresh seeds 141000+ for sequences 11 (300 s), combinations 3 (3000 s), timing 2 (900 s); development
+    seeds 137000+ on the two opened ladders) nowhere surely worse; satiety and timing surely better. 50%.
+**Scored D1** (`lab/v/cand_*.log`): right. The whole candidate against the Bayes brain: nowhere surely worse; timing 2 +.20 [+.11, +.27]
+(solved, .76), satiety rungs 1, 2, 3, 4, 6 surely better (+.07 to +.19); sequences 11 -.04, combinations 3 +.01, held-out 1 no sure
+change. Frozen (PROGRAMME.md, Decisions 2026-11-15).
+
+## The third held-out ladder (sealed, lab/sealed/heldout_ladder3.json; the design frozen first: PROGRAMME.md, Decisions 2026-11-15)
+H3. The frozen design (net10kc60SFBLMR, LB_FINE, LB_LIVE), held-out seeds 72000+, 10 pairs, 560 to 4480 units, each rung's own life:
+    solves at least one rung, and on at least half the rungs is higher at 4480 than at 560. 35%. Beside it, the previous frozen design
+    (net10kc60S) on the same lives: the new one higher on at least half the rungs at 2240. 55%.
+**Scored H3** (`lab/v/heldout_ladder3.log`, held-out seeds 72000+): wrong. The frozen design solves no rung and doesn't climb: shares of
+the gap from -1.25 to +.59, mostly near or below 0, the gaps small (.36 to .76) and rungs 5 and 12 unreadable (intervals wider than 10);
+on rungs 28 to 42 both designs often below the starting circuit. Against the previous frozen design at 2240: higher on 3 of 6 rungs, no
+difference. The scaling test's unseen-worlds part is not met on a third ladder. (The ladder read only now, after this verdict.)
+Yardstick (`lab/v/drift_yardstick.log`): an ideal filter steering the told body closes nothing on rungs 5-28 and +.41, +.54 on rungs 35,
+42: the ladder holds two learnable rungs. Bits: brain .59/.89/1.00, ideal .46/.81/.97 a taste on rungs 5/20/35 (`ideal_drift.log`).
+D2. (development, the opened drift ladder rungs 35 and 42, seeds 137000+, 10 pairs; LB_JOINT=1: the bank also counts each colour with
+    each outcome, "red good", "red bad", "blue good", "blue bad"; the frozen design otherwise; paired by seed against the frozen design)
+    surely better on both rungs; no sure cost on satiety 1-4 and sequences 11. 40%.
+**Scored D2** (`lab/v/joint_paired.log`): wrong. Colour-and-outcome counts: drift rung 35 +.23 [-.11, +.58], rung 42 -.09; satiety -.03 to
++.08; sequences -.02; nothing sure. The evidence a filter averages is now in streams; the brain still doesn't act as a filter (traced
+next, in daylight).
+F4. (the frozen design's scaling curve: net10kc60SFBLMR, LB_FINE, LB_LIVE; fresh seeds 142000+, 10 pairs; 560, 1120, 2240, 4480 units;
+    sequences 5, 11, 17 at 300 s, combinations 3, 5 at 3000 s, timing 3, 5, 7 at 3000 s) timing's highest solved rung rises with
+    material (none at 560, 7 at 4480); sequences reach 17 and combinations 5 at 4480 as the previous design did. 40%.
+**Scored F4** (`lab/v/frozen3_*.log`, fresh seeds 142000+): mostly right. Highest rung solved (lower 95% bound above .5) at 560, 1120,
+2240, 4480 units: sequences none, 11, 11, 17 (17 at 4480: .81 [.74, .88]); timing none, 7, 5, 7 (rung 3 from 1120; rung 5 from 1120; rung
+7 at 1120 and 4480, .51 [.31, .69] at 560); combinations none surely at any size (rung 3 .43 to .67, rung 5 .37 to .61 [.46, .73] at
+4480), each rung rising from 560. Every rung higher at 4480 than at 560, surely (+.11 to +.51 paired), except timing 7 (+.11, not sure).
+D3. (drift rungs 35 and 42, development seeds 137000+, 10 pairs, paired by seed: the frozen design with LB_LETTER, GRADED, DVOTE at beta
+    .95, against the frozen design (the D2 run without)) surely better on both. 35%. Decision accuracy on rung 35 (state_bits, 8 lives):
+    70% at beta .8 and .95 (ideal .75, .78); the vote's weights end nearly uniform: experts 76 to 80% right about the state and others 62
+    to 67% agree with 35%-false tastes 58% against 55% of the time, too close to tell apart in a life.
+**Scored D3** (`lab/v/dvote_paired.log`): half right. Rung 35 +.25 [+.02, +.49] surely better (with .06, without -.19 of the gap; the ideal
+filter +.41); rung 42 +.02 [-.22, +.28], a tie.

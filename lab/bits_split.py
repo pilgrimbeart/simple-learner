@@ -39,9 +39,14 @@ def one(j):
 
 if __name__ == "__main__":
     lad, n, arm, s0, k = sys.argv[1], int(sys.argv[2]), sys.argv[3], int(sys.argv[4]), int(sys.argv[5])
-    d = json.load(open(lad))
-    r = next(x for x in d["rungs"] if x["size"] == n)
-    jobs = [(r["text"], arm, 2240, s, "red", float(r["seconds"])) for s in range(s0, s0 + k)]
+    if lad.endswith(".json"):
+        d = json.load(open(lad))
+        r = next(x for x in d["rungs"] if x["size"] == n)
+        text, secs = r["text"], float(r["seconds"])
+    else:                                               # a built-in ladder by name (seq, time, combo), its rung's own life
+        import ladders as L
+        text, secs = L.LADDERS[lad]["world"](n), float(dict(L.LADDERS[lad]["rungs"])[n])
+    jobs = [(text, arm, 2240, s, "red", secs) for s in range(s0, s0 + k)]
     with ProcessPoolExecutor(7, initializer=R._init, initargs=(0.0025, False)) as ex:
         for j, (mix, dflt, sv, nt) in zip(jobs, ex.map(one, jobs)):
             print(f"seed {j[3]}: tastes {nt}; mixture {mix:.3f} bits a taste; default about {dflt:.3f}; best streams' saving a taste "

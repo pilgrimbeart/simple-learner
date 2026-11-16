@@ -460,14 +460,18 @@ def job(j):
                 fs = "F" in tail                             # F: fixed share among the speakers, .01 (Herbster & Warmuth 1998; D65)
                 by = "B" in tail                             # B: the speakers mixed as Bayes (probabilities, weights by bits; D67)
                 lb = "L" in tail                             # L: the leaky-integrator bank on every event type (D67)
-                tail = tail.replace("F", "").replace("B", "").replace("L", "")
+                po = "Q" in tail                             # Q: half the material pooled, drawn by streams saving bits (D67)
+                mk = "M" in tail                             # M: a market, capacity moved from streams saving nothing to those saving bits (D67)
+                rt = "R" in tail                             # R: rhythm trackers on the noticed changes, their places as streams (D68)
+                tail = tail.replace("F", "").replace("B", "").replace("L", "").replace("Q", "").replace("M", "").replace("R", "")
                 ey, av, jo, vo, wm, co, aa, si = "e" in tail, "a" in tail or "A" in tail, "j" in tail, "v" in tail, ("spec" if "S" in tail else "m" in tail), "c" in tail, "A" in tail, "Z" in tail
-                _C[arm] = seconds_cls(GN.net_cls(senses=True, split=True, clocks=int(arm[7:].rstrip("eajvmcSAZFBL")), reset="change", fade=False, ondemand=True,
+                _C[arm] = seconds_cls(GN.net_cls(senses=True, split=True, clocks=int(arm[7:].rstrip("eajvmcSAZFBLQMR")), reset="change", fade=False, ondemand=True,
                                                  strict=True, eyes=3 if ey else 0, avgs=3 if av else 0, joint=True if jo else 0, vote=vo, wmaj=wm,
-                                                 counters=int(__import__("os").environ.get("NCOUNT", arm[7:].rstrip("eajvmcSAZFBL"))) if co else 0, allavg=aa,
-                                                 since=int(arm[7:].rstrip("eajvmcSAZFBL")) if si else 0, lbank=lb))
-                if fs or by:
-                    _C[arm] = type(_C[arm].__name__, (_C[arm],), dict(({"SHARE": 0.01} if fs else {}), **({"BAYES": True} if by else {})))
+                                                 counters=int(__import__("os").environ.get("NCOUNT", arm[7:].rstrip("eajvmcSAZFBLQMR"))) if co else 0, allavg=aa,
+                                                 since=int(arm[7:].rstrip("eajvmcSAZFBLQMR")) if si else 0, lbank=lb, rhythm=rt))
+                if fs or by or po or mk:
+                    _C[arm] = type(_C[arm].__name__, (_C[arm],), dict(({"SHARE": 0.01} if fs else {}), **({"BAYES": True} if by else {}),
+                                                                     **({"POOL": True} if po else {}), **({"MARKET": True} if mk else {})))
             elif arm.startswith("net5k"):                     # every sense a stream, and K of the brain's own clocks (net5k8: 8; net5kr8: reset by each bad taste)
                 r = "change" if arm.startswith("net5kc") else arm.startswith("net5kr")
                 _C[arm] = seconds_cls(GN.net_cls(senses=True, clocks=int(arm[6:] if r else arm[5:]), reset=r, fade=False, ondemand=True, strict=True))

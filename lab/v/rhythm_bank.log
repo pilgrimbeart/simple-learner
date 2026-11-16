@@ -1,0 +1,15 @@
+rung 3 seed 107000: trackers' slot / world's [1.0016, 1.4962, np.float64(0.3335), 0.7599]; best place purity 0.92 (by tracker at 1.0016, cycle 6); chance 0.35
+rung 3 seed 107001: trackers' slot / world's [1.0001, np.float64(0.4613), 0.7467, np.float64(0.3058)]; best place purity 0.92 (by tracker at 1.0001, cycle 3); chance 0.34
+rung 3 seed 107002: trackers' slot / world's [0.9997, np.float64(0.616), 0.7129, 0.5489]; best place purity 0.92 (by tracker at 0.9997, cycle 3); chance 0.37
+rung 3 seed 107003: trackers' slot / world's [0.4255, 1.3017, np.float64(0.2274), 1.0955]; best place purity 0.81 (by tracker at 0.4255, cycle 7); chance 0.35
+rung 3 seed 107004: trackers' slot / world's [1.0001, np.float64(0.7017), np.float64(0.6176)]; best place purity 0.94 (by tracker at 1.0001, cycle 3); chance 0.37
+rung 3 seed 107005: trackers' slot / world's [0.9997, np.float64(3.001), 0.754, np.float64(0.8012)]; best place purity 0.98 (by tracker at 0.9997, cycle 3); chance 0.35
+rung 3 seed 107006: trackers' slot / world's [1.0006, 0.3743, 0.4998, 1.5152]; best place purity 0.98 (by tracker at 0.4998, cycle 6); chance 0.36
+rung 5 seed 107000: trackers' slot / world's [0.9999, np.float64(0.5879), np.float64(5.537), 0.8183]; best place purity 0.95 (by tracker at 0.9999, cycle 5); chance 0.22
+rung 5 seed 107001: trackers' slot / world's [np.float64(1.6681), 0.4075, 1.0298, 2.028]; best place purity 0.90 (by tracker at 1.6681, cycle 3); chance 0.21
+rung 5 seed 107002: trackers' slot / world's [1.0005, 1.64, 0.384, np.float64(0.6998)]; best place purity 0.93 (by tracker at 1.0005, cycle 5); chance 0.21
+rung 5 seed 107003: trackers' slot / world's [1.5105, 1.6797, 0.9001, 4.2135]; best place purity 0.40 (by tracker at 1.6797, cycle 6); chance 0.21
+rung 5 seed 107004: trackers' slot / world's [1.0001, np.float64(0.8017), np.float64(0.6246), 1.0893]; best place purity 0.95 (by tracker at 0.6246, cycle 8); chance 0.22
+rung 5 seed 107005: trackers' slot / world's [np.float64(0.6205), np.float64(1.2325), 1.7783, 0.6955]; best place purity 0.65 (by tracker at 0.6205, cycle 8); chance 0.22
+rung 5 seed 107006: trackers' slot / world's [np.float64(1.1976), 0.3313, np.float64(0.4553), 0.5547]; best place purity 0.39 (by tracker at 0.5547, cycle 6); chance 0.21
+mean best purity 0.83

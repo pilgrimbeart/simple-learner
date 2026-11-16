@@ -1,0 +1,7 @@
+== paired: heldout_ladder2 ladder, 10 pairs, seeds 137000+; share of the gap closed [95%], and each arm against net10kc60SFB
+  rung  1: net10kc60SFB:2240 +0.27 [+0.19,+0.34] | net10kc60SFBLM:2240 +0.37 [+0.30,+0.45] (vs net10kc60SFB +0.10 [+0.04,+0.16]) |
+  rung  2: net10kc60SFB:2240 +0.20 [+0.12,+0.29] | net10kc60SFBLM:2240 +0.35 [+0.22,+0.47] (vs net10kc60SFB +0.14 [-0.02,+0.30]) |
+  rung  3: net10kc60SFB:2240 +0.19 [+0.15,+0.23] | net10kc60SFBLM:2240 +0.33 [+0.24,+0.42] (vs net10kc60SFB +0.14 [+0.05,+0.23]) |
+  rung  4: net10kc60SFB:2240 +0.22 [+0.16,+0.28] | net10kc60SFBLM:2240 +0.32 [+0.21,+0.40] (vs net10kc60SFB +0.10 [+0.02,+0.16]) |
+  rung  6: net10kc60SFB:2240 +0.17 [+0.10,+0.22] | net10kc60SFBLM:2240 +0.24 [+0.08,+0.35] (vs net10kc60SFB +0.07 [-0.03,+0.15]) |
+  rung  8: net10kc60SFB:2240 +0.20 [+0.16,+0.25] | net10kc60SFBLM:2240 +0.21 [+0.12,+0.29] (vs net10kc60SFB +0.01 [-0.07,+0.07]) |

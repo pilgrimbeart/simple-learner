@@ -1,0 +1,8 @@
+== sequences 11, 300 s life, material 2240
+  streams {'sense': 10, 'clock': 60, 'bank': 56}; clocks 60; leaky integrators 56
+  birth: sense units {'sense': 20, 'clock': 300, 'bank': 672}, grown blocks 0
+  end:   sense units 992, grown blocks {'sense': 150, 'clock': 549, 'bank': 280} (total 979)
+== satiety rung 3, 600 s life, material 2240
+  streams {'sense': 10, 'clock': 60, 'bank': 56}; clocks 60; leaky integrators 56
+  birth: sense units {'sense': 20, 'clock': 300, 'bank': 672}, grown blocks 0
+  end:   sense units 992, grown blocks {'sense': 150, 'clock': 654, 'bank': 280} (total 1084)

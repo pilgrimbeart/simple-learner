@@ -1,0 +1,6 @@
+rung 5: compiles, life 300 s; starting +1.64, told +1.97, gap +0.33 [-0.23, +0.78]; ideal filter +1.46, closing -0.54 [-8.24, +11.31]
+rung 12: compiles, life 400 s; starting +0.77, told +1.47, gap +0.70 [+0.25, +1.17]; ideal filter +0.73, closing -0.06 [-1.38, +0.39]
+rung 20: compiles, life 600 s; starting -0.10, told +0.52, gap +0.62 [+0.48, +0.74]; ideal filter -0.08, closing +0.03 [-0.77, +0.84]
+rung 28: compiles, life 800 s; starting -0.60, told -0.09, gap +0.51 [+0.22, +0.82]; ideal filter -0.65, closing -0.09 [-1.29, +0.32]
+rung 35: compiles, life 1000 s; starting -1.37, told -0.51, gap +0.86 [+0.59, +1.14]; ideal filter -1.02, closing +0.41 [+0.03, +0.64]
+rung 42: compiles, life 1500 s; starting -1.74, told -0.89, gap +0.85 [+0.73, +0.97]; ideal filter -1.28, closing +0.54 [+0.34, +0.72]

@@ -1,0 +1,4 @@
+K=4 acquire after 80 changes: mean best purity 0.809 lives >= .8: 10 of 14  worst 0.32
+K=6 acquire after 40 changes: mean best purity 0.883 lives >= .8: 13 of 14  worst 0.39
+K=6 acquire after 80 changes: mean best purity 0.833 lives >= .8: 10 of 14  worst 0.47
+K=8 acquire after 60 changes: mean best purity 0.884 lives >= .8: 12 of 14  worst 0.53

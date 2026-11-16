@@ -1,0 +1,18 @@
+seed 137000 red: meals 183; brain 0.980 bits a taste; ideal learner 0.204 bits a meal
+seed 137000 blue: meals 222; brain 0.843 bits a taste; ideal learner 0.174 bits a meal
+seed 137001 red: meals 197; brain 0.901 bits a taste; ideal learner 0.135 bits a meal
+seed 137001 blue: meals 239; brain 0.897 bits a taste; ideal learner 0.210 bits a meal
+seed 137002 red: meals 187; brain 0.880 bits a taste; ideal learner 0.081 bits a meal
+seed 137002 blue: meals 193; brain 0.771 bits a taste; ideal learner 0.137 bits a meal
+seed 137003 red: meals 181; brain 0.925 bits a taste; ideal learner 0.175 bits a meal
+seed 137003 blue: meals 233; brain 0.834 bits a taste; ideal learner 0.263 bits a meal
+rung 1: brain 0.879, ideal 0.173 bits a taste (means of 8 lives)
+seed 137000 red: meals 374; brain 0.917 bits a taste; ideal learner 0.280 bits a meal
+seed 137000 blue: meals 390; brain 0.933 bits a taste; ideal learner 0.414 bits a meal
+seed 137001 red: meals 420; brain 0.702 bits a taste; ideal learner 0.052 bits a meal
+seed 137001 blue: meals 422; brain 0.648 bits a taste; ideal learner 0.065 bits a meal
+seed 137002 red: meals 397; brain 0.782 bits a taste; ideal learner 0.379 bits a meal
+seed 137002 blue: meals 397; brain 0.842 bits a taste; ideal learner 0.350 bits a meal
+seed 137003 red: meals 408; brain 0.838 bits a taste; ideal learner 0.204 bits a meal
+seed 137003 blue: meals 388; brain 0.926 bits a taste; ideal learner 0.228 bits a meal
+rung 3: brain 0.824, ideal 0.247 bits a taste (means of 8 lives)

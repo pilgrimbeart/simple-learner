@@ -175,3 +175,17 @@ habits is 12 bits (4,096 habits), and its best habit, forced, drives as well as 
 to within a fifth of their ceiling but misses two choices that pay many seconds late and only together (about 4 bits), and trying one
 change at a time can't cross to them. The rhythm's settings, tuned by trial and error, get about one standard deviation of evidence each
 in a long life and wander. Rare, late, interacting bits look like evolution's to supply, or a measurement's.
+
+**2026-11-15/16 (D65 to D71).** *Timing*: what the growing brain lacked was a steady place in the cycle (its clocks were reset at every
+noticed change); told the slot length it solves every timing rung tested, and with rhythm trackers designed from theory (resonators to find
+candidate rhythms, a gated Kalman loop locking onto each, one per nested rhythm, the user's suggestion) it finds the rhythm itself: patterns
+of 3, 5 and 7 slots solved on fresh creatures. *Bits as the currency*: streams are now mixed by Bayes and scored in bits, so each life says
+how much the brain knows; ideal learners on the same meals are the yardsticks. A leaky-integrator bank on every event type let the brain find
+by itself the recent counts satiety needed; a market moves material to the streams that save bits, so such additions cost nothing
+elsewhere. Frozen a third time, the design climbs sequences (to 17) and timing (to 7) with material on fresh creatures; combinations rise
+without passing. *Unseen worlds*: a third sealed ladder, written in the enforced sandbox, was not climbed; read afterwards it turned out
+mostly unlearnable (a hidden bit flipping at random, reported by tastes that often lie; an ideal filter closes only its two top rungs).
+There the brain holds the right evidence (a running sum of what tastes revealed chooses as well as the ideal) but cannot single it out among
+some 260 candidates, because noisy feedback makes good and middling experts agree with the tastes almost equally often. The lesson, in
+MacKay's terms: a large hypothesis space costs evidence (an Occam factor), and in a noisy world the feedback that judges hypotheses is
+weak; fewer, better primitives, or richer evidence (the eyes), come next.

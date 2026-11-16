@@ -1,0 +1,10 @@
+== drift (rungs 35, 42)
+  rung 35: with +0.03, without -0.19; with - without +0.23 [-0.11, +0.58]
+  rung 42: with +0.03, without +0.11; with - without -0.09 [-0.34, +0.17]
+== satiety (rungs 1-4)
+  rung 1: with +0.49, without +0.41; with - without +0.08 [-0.03, +0.21]
+  rung 2: with +0.36, without +0.40; with - without -0.03 [-0.21, +0.12]
+  rung 3: with +0.32, without +0.31; with - without +0.01 [-0.07, +0.10]
+  rung 4: with +0.34, without +0.34; with - without +0.00 [-0.07, +0.08]
+== sequences 11
+  rung 11: with +0.82, without +0.84; with - without -0.02 [-0.11, +0.10]

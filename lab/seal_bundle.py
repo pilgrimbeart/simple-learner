@@ -55,7 +55,9 @@ if __name__ == "__main__":
                     dst = os.path.join(work, "engine", os.path.relpath(ref, R))
                     os.makedirs(os.path.dirname(dst), exist_ok=True)
                     shutil.copy2(ref, dst)
-            open(fp, "w").write(t.replace(R + "/", "/home/agent/work/engine/").replace('"' + R + '"', '"/home/agent/work/engine"'))
+            t = t.replace(R + "/", "/home/agent/work/engine/").replace('"' + R + '"', '"/home/agent/work/engine"')
+            t = t.replace("/home/pilgrim/", "/home/agent/work/engine/_outside/")   # any other path into the user's home: a dead path
+            open(fp, "w").write(t)                                                    # inside the bundle (2026-11-15)
     # data named by file name beside a module (os.path.join(os.path.dirname(__file__), "results", "x.json")): found under the module's
     # own folder in the repository and copied to the same place in the bundle
     names = re.compile(r"[\"']([A-Za-z0-9_.-]+\.(?:json|txt|csv|npy|npz))[\"']")

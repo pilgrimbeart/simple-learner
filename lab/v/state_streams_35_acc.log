@@ -1,0 +1,13 @@
+  choosing by each stream's own sign, share of meals right (the ideal filter: 0.77):
+    RAW_ld4        0.77
+    RAW_ld3        0.74
+    RAW_ld5        0.74
+    clock43        0.71
+    _def           0.71
+    clock58        0.71
+    RAW_ld2        0.71
+    lbldt4         0.70
+    raw evidence sums: [('RAW_ld4', 0.77), ('RAW_ld3', 0.74), ('RAW_ld5', 0.74), ('RAW_ld2', 0.71), ('RAW_ld1', 0.67), ('RAW_ld6', 0.67), ('RAW_ld0', 0.64)]
+  best single streams when they speak (bits, share of meals spoken at):
+    RAW_ld3        0.783  1.00
+    RAW_ld4        0.830  1.00

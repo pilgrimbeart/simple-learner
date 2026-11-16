@@ -53,8 +53,25 @@ PH_MAX = int(__import__("os").environ.get("PH_MAX", 8))   # the longest cycle a 
 PHN = int(__import__("os").environ.get("PHN", 6))   # phase oscillators (PHASES=2)
 PLL_AVG = __import__("os").environ.get("PLL_AVG") == "1"   # oscillators average their accepted intervals (T12)
 PLL_FLOOR, PLL_P2 = float(__import__("os").environ.get("PLL_FLOOR", 0.02)), 0.15
-LB_LINES = ("e0", "e1", "good", "bad", "c0", "c1", "m0", "m1")   # (D67) the bank's event types: every signal there is
-LB_T = (1.0, 4.0, 16.0, 64.0)                   # s: its time constants, log-spaced
+DVOTE = __import__("os").environ.get("DVOTE") == "1"   # (D71) the colour chosen by a vote of experts judged on their choices
+DV_BETA = float(__import__("os").environ.get("DV_BETA", 0.8))   # a wrong recommendation's weight factor
+BT = float(__import__("os").environ.get("BT", 1.0))   # (D70) the Bayes weights' temper: likelihood ratios raised to this power
+GRADED = __import__("os").environ.get("GRADED") == "1"   # (D70) graded readouts on every bank integrator, in the Bayes mixture
+GR_ETA = float(__import__("os").environ.get("GR_ETA", 0.05))
+LMIX = __import__("os").environ.get("LMIX") == "1"   # (D70) the colour chosen by logistic mixing of the streams' log-odds
+LMIX_ETA = float(__import__("os").environ.get("LMIX_ETA", 0.02))   # its learning rate
+SURP = __import__("os").environ.get("SURP") == "1"   # (D70) surprise-driven change detection in every block's tallies
+SURP_A, SURP_B = 1.0, 100.0                     # its prior on the rate of changes: 1 in 100 tastes, learned from experienced change probabilities
+RT_K, RT_ACQ = 6, 40                            # (D68) rhythm trackers: how many, after how many noticed changes
+RT_GRID = np.exp(np.linspace(np.log(3.0), np.log(30.0), 120))   # s: the acquiring resonators' trial slot lengths
+LB_JOINT = __import__("os").environ.get("LB_JOINT") == "1"   # (D69) the bank also counts each colour with each outcome
+LB_LETTER = __import__("os").environ.get("LB_LETTER") == "1"   # (D70) a signed leaky sum of the revealed letter, at every time constant
+LB_LINES = ("e0", "e1", "good", "bad", "c0", "c1", "m0", "m1") + (("c0g", "c0b", "c1g", "c1b") if LB_JOINT else ()) + (("ld",) if LB_LETTER else ())   # (D67) every signal
+SAYS_N = __import__("os").environ.get("SAYS_N") == "1"   # (D67) a stream speaks through its firing unit with the most evidence
+POOL_BITS = float(__import__("os").environ.get("POOL_BITS", 1.0))   # bits saved a stream must show for each unit beyond its share
+LB_LIVE = __import__("os").environ.get("LB_LIVE") == "1"   # (D67) bank streams write whenever their reading changes, not only at tastes
+LB_FINE = __import__("os").environ.get("LB_FINE") == "1"   # (D67) a finer bank: time constants a factor 2 apart, counts exact to 7
+LB_T = (1.0, 2.0, 4.0, 8.0, 16.0, 32.0, 64.0) if LB_FINE else (1.0, 4.0, 16.0, 64.0)   # s: its time constants, log-spaced
 ACOUNT = __import__("os").environ.get("ACOUNT") == "1"   # running averages read as whole counts of recent events
 PLL_RES = __import__("os").environ.get("PLL_RES") == "1"   # a resonator after capture: rate corrected by the slide of the changes' mean phase
 RES_L, RES_EVERY, RES_G = 0.9, 5, 0.7
@@ -149,13 +166,36 @@ class Net:
         memo = {}
         return [k for k in self.units if self.fires(k, i, memo)], memo
 
+    def _room(self):
+        """Room to grow: under its own share, or (a shared pool, D67) the pool has material free and this stream is saving bits over the
+        default: material goes to the streams that pay in bits. Market (D67): a stream that has saved POOL_BITS a unit beyond its share
+        takes a unit of capacity from a stream that has saved nothing (its least used leaf of a few drawn, recycled)."""
+        if len(self.units) < self.P:
+            return True
+        mk = getattr(self, "market", None)
+        if mk is not None and getattr(self, "saved", 0.0) > POOL_BITS * (len(self.units) - self.base + 1):
+            poor = [N for N in mk.nets if N is not self and getattr(N, "saved", 0.0) <= 0.0 and N.P > 3]
+            if poor:
+                v = poor[int(self.rng.integers(len(poor)))]
+                leaves = [k for k, x in v.units.items() if x["sym"] is None and not x["kids"]]
+                if leaves:
+                    t = getattr(mk, "t", 0.0)
+                    pick = [leaves[int(self.rng.integers(len(leaves)))] for _ in range(4)]
+                    v._remove(min(pick, key=lambda k: v._trace(v.units[k], t)))
+                v.P -= 1
+                self.P += 1
+                return True
+        mp = getattr(self, "mpool", None)
+        return mp is not None and mp.free() > 0 and getattr(self, "saved", 0.0) > POOL_BITS * (len(self.units) - self.P + 1)   # each extra
+        # unit paid for by POOL_BITS bits saved (an MDL price: material earned by compression)
+
     def says(self, i):
         f, _ = self.firing(i)
         best, key = None, None
         for k in f:
             n = self.units[k]["n"]
             if n[0] != n[1]:
-                kk = (self.units[k]["span"], abs(n[1] - n[0]) / (n[0] + n[1]))
+                kk = (n[0] + n[1],) if SAYS_N else (self.units[k]["span"], abs(n[1] - n[0]) / (n[0] + n[1]))   # SAYS_N: the most evidence
                 if key is None or kk > key:
                     best, key = k, kk
         return best, f
@@ -204,11 +244,21 @@ class Net:
 
     def learn(self, i, letter, t, speaker, firing):
         for k in firing:
-            self.units[k]["n"][letter] += 1
+            x = self.units[k]
+            n = x["n"]
+            if SURP and n[0] + n[1] > 0:               # (D70, the user: surprise, not forgetting) the block's change probability from
+                q = (n[letter] + 0.5) / (n[0] + n[1] + 1.0)   # its own surprise against its own learned rate of changes (Nassar et al.
+                h = (x.get("cs", 0.0) + SURP_A) / (x.get("cn", 0) + SURP_B)   # 2010; Adams & MacKay 2007): old tallies discounted by it
+                cpp = h * 0.5 / (h * 0.5 + (1.0 - h) * q)
+                x["cs"], x["cn"] = x.get("cs", 0.0) + cpp, x.get("cn", 0) + 1
+                n[0] *= 1.0 - cpp
+                n[1] *= 1.0 - cpp
+            n[letter] += 1
         # birth beneath a contradiction: the deepest firing unit, if it has seen both letters
         deep = max(firing, key=lambda k: self.units[k]["span"], default=None)
         rich = deep is not None and (not self.economy or self.units[deep]["sym"] is not None or self.units[deep]["cash"] >= GRANT)
-        if getattr(self, "ondemand", False) and deep is not None and rich and min(self.units[deep]["n"]) >= 1 and len(self.units) >= self.P:
+        room = self._room()
+        if getattr(self, "ondemand", False) and deep is not None and rich and min(self.units[deep]["n"]) >= 1 and not room:
             # recycling on demand (Dohare et al. 2024's comparator): a birth is due and material is full, so the least used of a few
             # blocks drawn at random (with no blocks built on them, and not the one about to be built on) is recycled
             leaves = [k for k, x in self.units.items() if x["sym"] is None and not x["kids"] and k != deep]
@@ -216,7 +266,7 @@ class Net:
                 pick = [leaves[int(self.rng.integers(len(leaves)))] for _ in range(4)]
                 self._remove(min(pick, key=lambda k: self._trace(self.units[k], t)))
                 self.fades += 1
-        if deep is not None and rich and min(self.units[deep]["n"]) >= 1 and len(self.units) < self.P:
+        if deep is not None and rich and min(self.units[deep]["n"]) >= 1 and (room or len(self.units) < self.P):
             span = self.units[deep]["span"]
             before, _ = self.firing(i - span)
             if before and getattr(self, "simplest", False):  # simplest first: the partner is one of the shortest units active then
@@ -374,7 +424,7 @@ class Net:
 
 def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=False, lines=False, senses=False, novouch=False, local=False,
             surprise=False, trophic=False, clocks=0, ondemand=False, split=False, merge=False, simplest=False, strict=False, reset=False,
-            eyes=0, avgs=0, joint=0, vote=False, wmaj=False, counters=0, allavg=False, since=0, lbank=False):
+            eyes=0, avgs=0, joint=0, vote=False, wmaj=False, counters=0, allavg=False, since=0, lbank=False, rhythm=False):
     """eyes (2026-11-13): for each eye, `eyes` clocks of its own (periods 0.5 to 10 s, drawn per life); at each beat the stream records
     how many pulses that eye gave since the last beat (0, 1-2, 3-8, 9 or more), so blocks can grow over recent eye activity.
     avgs (the user, 2026-11-13: a running average is a measure to try for any signal): for each eye, `avgs` running averages of its pulse
@@ -395,7 +445,8 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
                  + tuple(f"cnt{j}n{m}" for j in range(min(counters, clocks)) for m in range(2, 9))
                  + tuple(f"since{j}" for j in range(min(since, clocks))) + (tuple(f"ph{m}" for m in range(2, PH_MAX + 1)) if PHASES == "1" and clocks else ())
                  + (tuple(f"pq{i}n{m}" for i in range(PHN) for m in range(2, 9)) if PHASES == "2" and clocks else ())
-                 + (tuple(f"lb{ln}t{j}" for ln in LB_LINES for j in range(len(LB_T))) if lbank else ()) if split else
+                 + (tuple(f"lb{ln}t{j}" for ln in LB_LINES for j in range(len(LB_T))) if lbank else ())
+                 + (tuple(f"rt{i}n{m}" for i in range(RT_K) for m in range(2, 9)) if rhythm else ()) if split else
                  (tuple(TICKS) + tuple(f"clock{c}" for c in range(clocks))) if senses else ("taste",) if one or lines else ("good", "eaten"))
 
         def __init__(self, seed, p):
@@ -407,10 +458,19 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
                 self.nets = [Net2("taste", P, rng, prune=prune, fade=fade, dup=dup, supply=supply, economy=economy)]
             else:
                 self.nets = [Net(k, P, rng, prune, fade, dup, supply, economy,
-                                 8 if k.startswith("lb") else 5 * int(k[2:]) if k.startswith("ph") else 5 * int(k.split("n")[-1]) if k.startswith("pq") else 9 if k.startswith("since") else int(k.split("n")[-1]) if k.startswith("cnt") else (5 if ACOUNT else 3) if k.startswith("avg") else 4 if k.startswith("eye") else 5 if k.startswith("clock") else 2 if split else 4 if k == "taste" or senses else 2,
+                                 5 * int(k.split("n")[-1]) if k.startswith("rt") else (15 if k.startswith("lbld") else 12 if LB_FINE else 8) if k.startswith("lb") else 5 * int(k[2:]) if k.startswith("ph") else 5 * int(k.split("n")[-1]) if k.startswith("pq") else 9 if k.startswith("since") else int(k.split("n")[-1]) if k.startswith("cnt") else (5 if ACOUNT else 3) if k.startswith("avg") else 4 if k.startswith("eye") else 5 if k.startswith("clock") else 2 if split else 4 if k == "taste" or senses else 2,
                                  strict=strict) for k in self.KINDS]
             for N in self.nets:
                 N.local, N.surprise, N.trophic, N.ondemand, N.merge, N.simplest = local, surprise, trophic, ondemand, merge, simplest
+            if getattr(self, "MARKET", False):          # (D67) capacity moves from streams that save no bits to those that do
+                for N in self.nets:
+                    N.market, N.base = self, N.P
+            if getattr(self, "POOL", False):            # (D67) half of each stream's share pooled; drawn only by streams saving bits
+                total = int(p["P"])
+                for N in self.nets:
+                    N.P = max(3, N.P // 2)
+                    N.mpool = self
+                self._ptotal = total
                 if trophic:
                     pass
             self.na = 0
@@ -444,7 +504,61 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
                 return self.cnt[N.kind]
             return int(self.g) if N.kind == "good" else self.na
 
-        def _lb(self, line):
+        def _rt_change(self, t):
+            """(D68) the rhythm trackers hear a noticed change. Before acquisition: resonators across slot lengths 3 to 30 s (forgetting
+            circular means of change times); after RT_ACQ changes, a tracker at each of the RT_K strongest distinct peaks. Each tracker: a
+            Kalman filter on phase (in slots) and rate, gated (Gardner; Bar-Shalom); a change should sit at a whole number of slots."""
+            if not hasattr(self, "rtz"):
+                self.rtz, self.rtn, self.rts = np.zeros(len(RT_GRID), complex), 0, []
+            self.rtn += 1
+            if not self.rts:
+                self.rtz = 0.98 * self.rtz + np.exp(2j * np.pi * t / RT_GRID)
+                if self.rtn >= RT_ACQ:
+                    R = np.abs(self.rtz)
+                    peaks = [i for i in range(1, len(R) - 1) if R[i] >= R[i - 1] and R[i] >= R[i + 1] and R[i] >= 0.5 * R.max()]
+                    peaks.sort(key=lambda i: -R[i])
+                    chosen = []
+                    for i in peaks:
+                        if all(abs(RT_GRID[i] / RT_GRID[j] - 1) > 0.1 for j in chosen):
+                            chosen.append(i)
+                        if len(chosen) == RT_K:
+                            break
+                    for i in chosen:
+                        T_ = float(RT_GRID[i])
+                        self.rts.append(dict(f=1.0 / T_, th=float(round(t / T_)), tl=t, P=np.diag([0.05, (0.02 / T_) ** 2]), k=None))
+                return
+            for x in self.rts:
+                dt = t - x["tl"]
+                F = np.array([[1.0, dt], [0.0, 1.0]])
+                th, f = x["th"] + x["f"] * dt, x["f"]
+                Pp = F @ x["P"] @ F.T + np.diag([0.0, 1e-11 * dt])
+                e = th - round(th)
+                x["tl"] = t
+                if abs(e) > 0.3:                        # gated: taken as a false change
+                    x["th"], x["f"], x["P"] = th, f, Pp
+                    continue
+                K = Pp[:, 0] / (Pp[0, 0] + 0.04)
+                x["th"], x["f"] = th - K[0] * e, f - K[1] * e
+                x["P"] = Pp - np.outer(K, Pp[0, :])
+
+        def _rt_step(self):
+            """Each tracker's place: five bins a slot; a bin written (modulo 5m, m 2 to 8) when the phase moves on past it."""
+            for i, x in enumerate(getattr(self, "rts", [])):
+                kb = int(math.floor(5.0 * (x["th"] + x["f"] * (self.t - x["tl"]))))
+                if x["k"] is None or kb > x["k"]:
+                    x["k"] = kb
+                    for m in range(2, 9):
+                        N = self.byk[f"rt{i}n{m}"]
+                        k = self.cnt[N.kind]
+                        N.write(k, kb % (5 * m))
+                        N.tidy(k, self.t)
+                        self.cnt[N.kind] = k + 1
+                    self.predict()
+
+        def free(self):
+            return self._ptotal - sum(len(N.units) for N in self.nets)
+
+        def _lb(self, line, amount=1.0):
             """(D67) the leaky-integrator bank: every event type, time constants LB_T (scale-invariant memory of recent history, Shankar &
             Howard 2012); an event adds 1 to each integrator of its line, each decaying with its own time constant."""
             if not lbank:
@@ -452,21 +566,47 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
             b = self.__dict__.setdefault("lbr", {})
             for j, T in enumerate(LB_T):
                 r, tr = b.get((line, j), (0.0, self.t))
-                b[(line, j)] = (r * math.exp(-(self.t - tr) / T) + 1.0, self.t)
+                b[(line, j)] = (r * math.exp(-(self.t - tr) / T) + amount, self.t)
 
-        def _lb_write(self):
-            """Each integrator read as a recent count on a log scale (0, 1, 2-3, 4-7, ..., 64+: eight symbols), written to its stream."""
+        def _lb_write(self, changed_only=False):
+            """Each integrator read as a recent count on a log scale (0, 1, 2-3, 4-7, ..., 64+: eight symbols), written to its stream.
+            changed_only (LB_LIVE, send-on-delta): only the streams whose reading has changed since they last wrote."""
             b = self.__dict__.setdefault("lbr", {})
+            last = self.__dict__.setdefault("lbs", {})
+            wrote = False
             for ln in LB_LINES:
                 for j, T in enumerate(LB_T):
                     r, tr = b.get((ln, j), (0.0, self.t))
                     c = r * math.exp(-(self.t - tr) / T)
-                    sym = min(int(math.log2(1.0 + c)), 7)
+                    if ln == "ld":                      # (D70) the signed evidence line: its leaky sum rounded, -7 to +7 (15 symbols)
+                        sym = int(min(max(round(c), -7), 7)) + 7
+                    elif LB_FINE:                       # exact counts up to 7, then a log scale (8-15, 16-31, 32-63, 64+): 12 symbols
+                        cr = int(round(c))
+                        sym = cr if cr < 8 else min(8 + int(math.log2(cr / 8.0)), 11)
+                    else:
+                        sym = min(int(math.log2(1.0 + c)), 7)
+                    if changed_only and last.get((ln, j)) == sym:
+                        continue
+                    last[(ln, j)] = sym
+                    wrote = True
                     N = self.byk[f"lb{ln}t{j}"]
                     k = self.cnt[N.kind]
                     N.write(k, sym)
                     N.tidy(k, self.t)
                     self.cnt[N.kind] = k + 1
+            return wrote
+
+        def _gr_vals(self):
+            """(D70) every bank integrator's current value (decayed to now): the graded readouts' inputs."""
+            out = {}
+            for (ln, j), (r, tr) in getattr(self, "lbr", {}).items():
+                out[(ln, j)] = r * math.exp(-(self.t - tr) / LB_T[j])
+            return out
+
+        def _gr_p1(self, key, v):
+            a, c = self.__dict__.setdefault("gr", {}).get(key, (0.0, 0.0))
+            z = a * v + c
+            return 1.0 / (1.0 + math.exp(-max(min(z, 30.0), -30.0)))
 
         def _pdef(self, letter):
             """The default's probability for a letter: its own KT record of how often the last revealed letter came again."""
@@ -480,7 +620,50 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
             n = N.units[k]["n"]
             return (n[letter] + 0.5) / (n[0] + n[1] + 1.0)
 
+        def _lmix_inputs(self):
+            """(D70) the logistic mixer's inputs: each stream's log-odds for letter 1 (0 when silent), the default's, and a bias."""
+            st = lambda q: math.log(min(max(q, 1e-4), 1 - 1e-4) / (1 - min(max(q, 1e-4), 1 - 1e-4)))
+            xs = {"_bias": 1.0, "_def": st(self._pdef(1))}
+            for N in self.nets:
+                k, _ = N.says(self.place(N) - 1)
+                xs[N.kind] = st(self._pk(N, k, 1)) if k is not None else 0.0
+            return xs
+
+        def _dv_recs(self):
+            """(D71) each expert's recommended letter: the default's, each speaking stream's, each graded readout's (values as now)."""
+            recs = {"_def": self.dl}
+            for N in self.nets:
+                k, _ = N.says(self.place(N) - 1)
+                if k is not None:
+                    n = N.units[k]["n"]
+                    recs[N.kind] = int(n[1] > n[0])
+            if GRADED:
+                for key, v in getattr(self, "_gv", {}).items():
+                    p1 = self._gr_p1(key, v)
+                    if p1 != 0.5:
+                        recs[key] = int(p1 > 0.5)
+            return recs
+
         def predict(self):
+            if DVOTE and getattr(self, "BAYES", False):   # (D71) the colour chosen by a vote judged on choices: Bayes kept for the bits
+                self._bayes_predict()
+                recs = self._dv_recs()
+                w = self.__dict__.setdefault("dvw", {})
+                tot = sum(w.get(k, 1.0) * (1 if r == 1 else -1) for k, r in recs.items())
+                self._recs = recs
+                self.food = int(tot > 0) if tot != 0 else self.dl
+                return
+            self._bayes_predict()
+
+        def _bayes_predict(self):
+            if LMIX and getattr(self, "BAYES", False):  # (D70) logistic mixing (PAQ's context mixing; a product of experts): log-odds summed
+                xs = self._lmix_inputs()                 # with learned weights, so independent weak evidence adds up
+                w = self.__dict__.setdefault("lw", {})
+                z = sum(w.get(k, 1.0 if k == "_def" else 0.0) * v for k, v in xs.items())
+                self.p1 = 1.0 / (1.0 + math.exp(-max(min(z, 30.0), -30.0)))
+                self._lxs = xs
+                self.food = int(self.p1 > 0.5)
+                return
             if wmaj and getattr(self, "BAYES", False):  # (2026-11-15) Bayesian mixture of the speakers and the default, each predicting a
                 wd = getattr(self, "w_def", 1.0)        # probability (prequential: judged in bits before each outcome); sleepers abstain
                 num, den = wd * self._pdef(1), wd
@@ -489,6 +672,13 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
                     if k is not None:
                         w = getattr(N, "w", 1.0)
                         num += w * self._pk(N, k, 1)
+                        den += w
+                if GRADED:                              # (D70) graded readouts: a logistic predictor on each bank integrator's value
+                    gw = self.__dict__.setdefault("grw", {})
+                    self._gv = self._gr_vals()          # the values this prediction used: the next taste is scored against them, not
+                    for key, v in self._gv.items():     # against values that already include that taste
+                        w = gw.get(key, 1.0)
+                        num += w * self._gr_p1(key, v)
                         den += w
                 self.p1 = num / den
                 self.food = int(self.p1 > 0.5)
@@ -533,6 +723,10 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
             if lbank:                                   # the bank: this taste's events (good or bad, a meal of this colour), written after learning
                 self._lb("good" if value > 0 else "bad")
                 self._lb(f"c{eaten}")
+                if LB_JOINT:
+                    self._lb(f"c{eaten}{'g' if value > 0 else 'b'}")
+                if LB_LETTER:                           # (D70) the brain's own teaching signal as an event: +1 when a taste reveals letter 1
+                    self._lb("ld", 1.0 if (eaten if value > 0 else 1 - eaten) == 1 else -1.0)   # as food, -1 for letter 0
                 self._lbpend = True
             if avgs and allavg and ACOUNT:              # (2026-11-15) a leaky count of meals of each colour; every average's count written
                 self._pend = eaten                      # just after this taste is learned from (next step), fresh for the next guess
@@ -566,16 +760,52 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
                         bs, best = sc, N
                     N.learn(i, letter, self.t, k, f)
                 self.best = best
+                if LMIX and getattr(self, "BAYES", False) and getattr(self, "_lxs", None) is not None:
+                    y = float(letter)                   # each weight nudged by its own input's share of the error (gradient of the log loss)
+                    err = y - self.p1
+                    w = self.__dict__.setdefault("lw", {})
+                    for kk, v in self._lxs.items():
+                        w[kk] = w.get(kk, 1.0 if kk == "_def" else 0.0) + LMIX_ETA * err * v
+                    self.lbits = getattr(self, "lbits", 0.0) - math.log2(max(self.p1 if letter == 1 else 1 - self.p1, 1e-12))
+                if DVOTE and getattr(self, "BAYES", False) and getattr(self, "_recs", None):
+                    w = self.__dict__.setdefault("dvw", {})   # specialists judged on choices: the speakers' weights times DV_BETA when
+                    recs = self._recs                         # wrong, their total kept, then a fixed share among them
+                    W0 = sum(w.get(k_, 1.0) for k_ in recs)
+                    for k_, r_ in recs.items():
+                        w[k_] = w.get(k_, 1.0) * (1.0 if r_ == letter else DV_BETA)
+                    W1 = sum(w[k_] for k_ in recs)
+                    even = 0.01 * W0 / len(recs)
+                    for k_ in recs:
+                        w[k_] = 0.99 * w[k_] * W0 / W1 + even
+                    top = max(w.values())
+                    if top < 1e-6 or top > 1e6:
+                        for k_ in w:
+                            w[k_] /= top
                 if wmaj and getattr(self, "BAYES", False):   # Bayes over the speakers: each weight times its probability for what happened, over
                     pd = self._pdef(letter)                     # the speakers' mixture (their total kept: sleeping experts); bits counted
-                    W0 = getattr(self, "w_def", 1.0) + sum(getattr(N, "w", 1.0) for N, _, _ in spoke)
-                    pm = (getattr(self, "w_def", 1.0) * pd + sum(getattr(N, "w", 1.0) * q for N, _, q in spoke)) / W0
+                    gq = {}
+                    if GRADED:
+                        gw = self.__dict__.setdefault("grw", {})
+                        for key, v in getattr(self, "_gv", {}).items():
+                            p1 = self._gr_p1(key, v)
+                            gq[key] = (p1 if letter == 1 else 1.0 - p1, v, p1)
+                    W0 = getattr(self, "w_def", 1.0) + sum(getattr(N, "w", 1.0) for N, _, _ in spoke) + sum(gw.get(k_, 1.0) for k_ in gq) if GRADED else \
+                        getattr(self, "w_def", 1.0) + sum(getattr(N, "w", 1.0) for N, _, _ in spoke)
+                    pm = (getattr(self, "w_def", 1.0) * pd + sum(getattr(N, "w", 1.0) * q for N, _, q in spoke)
+                          + (sum(gw.get(k_, 1.0) * g[0] for k_, g in gq.items()) if GRADED else 0.0)) / W0
                     self.pbits = getattr(self, "pbits", 0.0) - math.log2(max(pm, 1e-12))   # the brain's prequential code length
                     self.ntaste = getattr(self, "ntaste", 0) + 1
-                    self.w_def = getattr(self, "w_def", 1.0) * pd / pm
+                    self.w_def = getattr(self, "w_def", 1.0) * (pd / pm) ** BT
                     for N, _, q in spoke:
-                        N.w = getattr(N, "w", 1.0) * q / pm
+                        N.w = getattr(N, "w", 1.0) * (q / pm) ** BT
                         N.saved = getattr(N, "saved", 0.0) + math.log2(q / pd)   # bits this stream saved over the default when it spoke
+                    if GRADED:
+                        gp = self.__dict__.setdefault("gr", {})
+                        for k_, (q, v, p1) in gq.items():
+                            gw[k_] = gw.get(k_, 1.0) * (q / pm) ** BT
+                            a, c = gp.get(k_, (0.0, 0.0))   # the readout's two numbers moved down the gradient of its own log loss
+                            e = float(letter) - p1
+                            gp[k_] = (a + GR_ETA * e * v / (1.0 + abs(v)), c + GR_ETA * e)
                     sh = getattr(self, "SHARE", WM_SHARE)
                     if sh and spoke:
                         k = len(spoke) + 1
@@ -583,6 +813,9 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
                         self.w_def = (1.0 - sh) * self.w_def + even
                         for N, _, _ in spoke:
                             N.w = (1.0 - sh) * N.w + even
+                        if GRADED and gq:               # (the graded readouts share too; the even share recomputed over all)
+                            for k_ in gq:
+                                gw[k_] = (1.0 - sh) * gw.get(k_, 1.0) + even
                     h, n = getattr(self, "dkt", (0, 0))
                     self.dkt = (h + int(letter == self.dl), n + 1)
                 elif wmaj and (WM_SPEC or wmaj == "spec"):   # specialists (Freund, Schapire, Singer & Warmuth 1997): only those that spoke are updated,
@@ -674,6 +907,8 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
                                 o["tl"] = self.t
                                 e = o["th"] - round(o["th"])
                                 o["th"] -= (PLL_P2 if PLL_AVG else PLL_P) * e
+                        if rhythm:
+                            self._rt_change(self.t)
                         self.lastchange = self.t
                         for c in self.clk:
                             c["since"] = 0
@@ -735,12 +970,16 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
             return super().stimulate(sensor, at)
 
         def step(self):
-            if (clocks or eyes or avgs or lbank) and self.byk is None:
+            if (clocks or eyes or avgs or lbank or rhythm) and self.byk is None:
                 self.byk = {N.kind: N for N in self.nets}
             if lbank and getattr(self, "_lbpend", False) and self.byk is not None:
                 self._lbpend = False
                 self._lb_write()
                 self.predict()
+            elif lbank and LB_LIVE and self.byk is not None and self.t - getattr(self, "_lbt", -1.0) >= 0.1:
+                self._lbt = self.t                      # send-on-delta: every .1 s, a stream whose decaying count has moved writes it
+                if self._lb_write(changed_only=True):
+                    self.predict()
             if avgs and ACOUNT and getattr(self, "_pend", None) is not None and self.byk is not None:
                 self._bump(f"c{self._pend}")
                 self._pend = None
@@ -854,6 +1093,8 @@ def net_cls(prune=True, fade=True, dup=True, supply=0.0, economy=False, one=Fals
                                 Nc.tidy(kc, self.t)
                                 self.cnt[Nc.kind] = kc + 1
                         self.predict()
+            if rhythm and self.byk is not None:
+                self._rt_step()
             out = super().step()
             if lbank and out:
                 for m in out:

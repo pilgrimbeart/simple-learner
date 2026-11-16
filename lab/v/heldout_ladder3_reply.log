@@ -1,0 +1,13 @@
+I wrote `heldout_ladder3.json` with 6 rungs, sizes 5, 12, 20, 28, 35 and 42. All 6 compile.
+
+Gaps measured with `check_rung.py`, by rung size, as 4 or 8 pairs of lives:
+- 5: +1.11 (4 pairs)
+- 12: +0.50 (8 pairs, after the edit below)
+- 20: +0.67 (8 pairs, after the edit below)
+- 28: +0.67 (8 pairs)
+- 35: +0.54 (8 pairs)
+- 42: +0.98 (4 pairs)
+
+All six are at least .25, but several intervals are wide. The 95% interval on rungs 12 and 35 starts at about +0.1 to +0.2.
+
+Difficulty: rungs 12 and 20 first measured +0.26 and +0.26, which is too close to the .25 bar. I edited both texts to be harder and re-ran them, which gave the numbers above. Rungs 5, 28, 35 and 42 were not re-run after those edits, so their gaps rest on the earlier runs.

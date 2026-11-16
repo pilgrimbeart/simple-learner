@@ -1,0 +1,7 @@
+SURP=0: rung 35, net10kc60SFBLMR: bits about the state a meal (last two thirds): brain 0.895, ideal filter 0.577 (knowing nothing: 1); last-third gain -89.4 (8 lives)
+SURP=1: rung 35, net10kc60SFBLMR: bits about the state a meal (last two thirds): brain 0.912, ideal filter 0.654 (knowing nothing: 1); last-third gain -85.0 (8 lives)
+LMIX=1: rung 35, net10kc60SFBLMR: bits about the state a meal (last two thirds): brain 1.161, ideal filter 0.613 (knowing nothing: 1); last-third gain -106.9 (8 lives)
+LMIX=1 SURP=1: rung 35, net10kc60SFBLMR: bits about the state a meal (last two thirds): brain 1.166, ideal filter 0.626 (knowing nothing: 1); last-third gain -103.0 (8 lives)
+LMIX eta 0.002, default first: rung 35, net10kc60SFBLMR: bits about the state a meal (last two thirds): brain 0.940, ideal filter 0.656 (knowing nothing: 1); last-third gain -80.4 (8 lives)
+LMIX eta 0.0005, default first: rung 35, net10kc60SFBLMR: bits about the state a meal (last two thirds): brain 0.903, ideal filter 0.618 (knowing nothing: 1); last-third gain -73.0 (8 lives)
+LB_LETTER=1: rung 35, net10kc60SFBLMR: bits about the state a meal (last two thirds): brain 0.901, ideal filter 0.697 (knowing nothing: 1); last-third gain -88.5 (8 lives)

@@ -1,0 +1,16 @@
+== net10kc60SFB
+seed 139000: tastes 148; mixture 0.760 bits a taste; default about 0.999; best streams' saving a taste over the default: [('good:colour', 0.31), ('every:colour', -0.002), ('clock52', -0.016), ('clock58', -0.018)]
+seed 139001: tastes 151; mixture 0.538 bits a taste; default about 0.957; best streams' saving a taste over the default: [('good:colour', 0.492), ('every:colour', 0.058), ('clock39', -0.02), ('clock43', -0.056)]
+seed 139002: tastes 181; mixture 0.687 bits a taste; default about 0.959; best streams' saving a taste over the default: [('good:colour', 0.32), ('clock30', 0.013), ('clock23', 0.001), ('clock11', 0.001)]
+seed 139003: tastes 151; mixture 0.554 bits a taste; default about 0.995; best streams' saving a taste over the default: [('good:colour', 0.522), ('every:colour', 0.127), ('clock53', 0.009), ('clock18', 0.006)]
+seed 139004: tastes 140; mixture 0.787 bits a taste; default about 0.999; best streams' saving a taste over the default: [('good:colour', 0.285), ('every:colour', 0.22), ('clock34', 0.006), ('clock42', -0.012)]
+seed 139005: tastes 174; mixture 0.713 bits a taste; default about 0.995; best streams' saving a taste over the default: [('good:colour', 0.344), ('every:colour', 0.214), ('clock2', 0.015), ('clock10', 0.014)]
+seed 139006: tastes 177; mixture 0.607 bits a taste; default about 0.972; best streams' saving a taste over the default: [('good:colour', 0.432), ('every:colour', -0.005), ('clock18', -0.013), ('clock9', -0.023)]
+== net10kc60SFBL
+seed 139000: tastes 184; mixture 0.770 bits a taste; default about 0.998; best streams' saving a taste over the default: [('good:colour', 0.298), ('lbm0t0', 0.038), ('lbc1t1', 0.033), ('lbe1t1', 0.027)]
+seed 139001: tastes 175; mixture 0.804 bits a taste; default about 0.980; best streams' saving a taste over the default: [('good:colour', 0.253), ('every:colour', 0.052), ('lbc1t1', 0.017), ('lbc0t4', 0.006)]
+seed 139002: tastes 166; mixture 0.806 bits a taste; default about 0.973; best streams' saving a taste over the default: [('good:colour', 0.218), ('lbc0t1', 0.066), ('every:colour', 0.06), ('lbc0t2', 0.057)]
+seed 139003: tastes 182; mixture 0.752 bits a taste; default about 0.999; best streams' saving a taste over the default: [('good:colour', 0.324), ('every:colour', 0.128), ('lbc1t0', 0.055), ('lbc0t2', 0.047)]
+seed 139004: tastes 150; mixture 0.842 bits a taste; default about 1.000; best streams' saving a taste over the default: [('good:colour', 0.222), ('every:colour', 0.166), ('lbc0t0', 0.129), ('lbc0t1', 0.093)]
+seed 139005: tastes 176; mixture 0.853 bits a taste; default about 0.999; best streams' saving a taste over the default: [('good:colour', 0.212), ('every:colour', 0.191), ('lbc1t0', 0.1), ('lbc1t1', 0.076)]
+seed 139006: tastes 213; mixture 0.713 bits a taste; default about 0.981; best streams' saving a taste over the default: [('good:colour', 0.333), ('every:colour', 0.077), ('lbc0t0', 0.001), ('clock9', 0.0)]

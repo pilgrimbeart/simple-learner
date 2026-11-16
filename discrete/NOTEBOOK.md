@@ -10,6 +10,23 @@ per meal spent resting, moving and thinking), gain rate (meals per 10 s), food, 
 
 ## Where it stands
 
+- **The growing brain, frozen a third time** (D67, D68, PROGRAMME.md Decisions 2026-11-15): streams of every sense and own clocks, mixed
+  by Bayes and scored in bits (fixed share), a leaky-integrator bank on every event type read live, a market moving material to the
+  streams that save bits, and rhythm trackers (resonators, then gated Kalman loops) whose places in the cycle are streams. Scaling curve
+  on fresh creatures (D69): highest rung solved at 560, 1120, 2240, 4480 units: sequences none, 11, 11, 17; timing none, 7, 5, 7 (rung 2
+  only before the trackers); combinations rising, none surely solved at 3000 s lives. Nowhere surely worse than the design before.
+- **Unseen worlds: not yet** (D61, D62, D69). Three sealed ladders, none climbed. Hidden contexts: mostly unreachable from the senses in
+  time. Satiety: needed recent counts (now in the bank, partly used). Drift (volatile reversals with false tastes): only its two top
+  rungs are learnable at all (an ideal filter closes +.41, +.54); the brain follows the true colour at 70% of meals against the ideal's
+  77 to 83%. The evidence sum the ideal uses is now in the brain and chooses as well as the ideal when read raw (77%), but the brain
+  can't pick it out of ~260 candidates: judged against tastes that lie 35% of the time, a 78%-right expert and a 65%-right one agree
+  with the tastes 58% and 55% of the time, too close to separate in a life (D70, D71); a vote judged on choices gains +.25 surely on rung
+  35 (a tie on 42). Next: fewer, better candidates, or experts judged on richer evidence (the eyes' pulses, as rates).
+- **Bits as the currency** (D67): every life reports the brain's prequential code length a taste; ideal learners on the same meals are the
+  yardsticks (satiety, drift). In noisy worlds, judge decisions by choices or by bits about the hidden state above the noise floor.
+- **Steering grown from taste** (D63, D64): held options charged for their length reach about half the hand-built drive; the habit space
+  holds the drive's level (+2.36), and the learner misses two late, interacting choices. Parked.
+
 - **Play pays later** (D45 to D47, 2026-11-10, the night's work): with a quiet spell first (meals worth nothing) and the challenge
   (lopsided thrusters, food and poison) from a moment drawn each life, a brain that played at random in the quiet starts the challenge
   surely ahead of one that only foraged: +1.5 at once and +1.2 after, on development and fresh seeds (told +3). What carried it: each
@@ -4351,3 +4368,118 @@ bits a taste of the best single stream in hindsight, and the best streams are th
 itself the memory we had added by hand in D66. What limits it is what one stream extracts (.15 to .2 bits a taste over the default; the
 brain still at .64 to .92 bits a taste). The rule is a conjunction (which colour is food, and how many of its meals lately); each stream
 holds one of them.
+
+**The yardstick, and where the bits go** (`lab/ideal_satiety.py`; development seeds 137000+, 4 seeds x 2 colours, satiety rungs 1 and 3).
+An ideal Bayesian learner over the rule's family (usual colour, threshold 1 to 10, recovery 2 to 70 s: 800 hypotheses, 9.6 bits to name
+one) on the same meals: .21 and .24 bits a meal. The brain (bank, Bayes): .83 and .77 (fine bank). Split:
+- the bank's representation: its own streams at their best (true colours, exact counts, a table each, mixed) .50 and .38: .3 and .14 bits
+  lost to time constants on a fixed grid against the world's recovery time;
+- the brain's machinery: a further ~.35 bits. Not which colour it thinks it ate (right 94-96%, `lab/eaten_check.py`), not the choice of
+  speaking unit (most evidence instead of most decisive: slightly worse), not material (8960 units: slightly worse). Found: the bank's
+  streams wrote only at tastes, so at the moment of choosing the brain read a count seconds stale, from before any recovery. Written
+  whenever a decaying reading changes (send-on-delta, checked every .1 s): .69 and .69 bits (`ideal_satiety_live.log`).
+**The live bank on the scores** (L6, `lab/v/bank2_*.log`; time constants a factor 2 apart, 1 to 64 s; counts exact to 7; written
+whenever a reading changes). Satiety: every rung surely better than the Bayes brain without it (+.31, +.27, +.21, +.24, +.11; rung 8 +.06
+at the edge); rung 1 closes .58 of the gap (was .27); bits a taste .87 to .70. The first held-out ladder rung 3 +.18 surely. Costs:
+sequences 11 -.14 surely (bits .65 to .78) and held-out 1 rung 8 -.24. Suspect: material split evenly over ~126 streams, the sequence
+stream left with about half what it had. Next: material earned by bits saved (a shared pool).
+**Material by bits: a market** (L7 to L9; `lab/v/pool_*.log`, `bits_split_seq11.log`, `bank_seq11_4480.log`, `market_*.log`). The
+bank's cost on sequences (-.14) was material: the mixture lost nothing (`bits_split_seq11.log`), but the sequence stream itself saved
+less (.21 to .33 bits a taste against .29 to .52) with ~17 units instead of ~32 under the even split; at 4480 units the cost vanished
+(+.04). A pool (half of every share held back, drawn by streams saving a bit for each unit beyond their share) starved useful streams
+at the start: no fix (-.12), and it trimmed the satiety gains. A market (full shares at birth; a stream that has saved a bit for each
+unit beyond its share takes a unit of capacity from a stream that has saved nothing, recycling that stream's least used leaf): nowhere
+surely worse; satiety surely better on rungs 1, 3, 4 (+.10 to +.14); held-out 1 rung 3 +.25; sequences -.04, timing +.06 (ties). Bits
+a taste on satiety .71 to .74 (the ideal learner .2). The best design so far by the scorecard's rule (gains, no sure loss): Bayes mixing
+in bits, fixed share, the fine live bank, the market (net10kc60SFBLM, LB_FINE=1, LB_LIVE=1).
+
+## D68: rhythm trackers designed from theory (2026-11-15; the user: PLL theory, one detector per nested rhythm, redundant ones pruned)
+
+**The evidence** (`lab/change_times.py`, `lab/v/change_times.pkl`, `rhythm_describe.log`; 14 timing lives). The brain notices .7 to 1.6
+changes a slot, about half false (a random word changes at about half its boundaries); a true one is noticed a quarter of a slot late on
+median, the middle half from .1 to .6 of a slot. One change says little about a boundary; a life holds 220 to 510.
+
+**The design** (`lab/rhythm.py`, offline first; then in the brain, arm letter R). Theory: tracking a rhythm's phase and rate from noisy
+events is estimation, and its optimum is a Kalman filter on (phase, rate) (Gardner's type-2 loop with optimal gains); false events are
+dropped by a validation gate (Bar-Shalom); acquisition and tracking are separate jobs (as in GPS and radar). So: resonators at 120 trial
+slot lengths, 3 to 30 s (forgetting circular means of change times), and after 40 changes a tracker at each of the six strongest distinct
+peaks, each a gated Kalman loop; each tracker's place (five bins a slot, written as the phase moves on, modulo 2 to 8 slots) a stream.
+Several trackers lock to nested rhythms: the slot, half slots, the word's own period (3.001 slots).
+Offline: in 13 of 14 lives one tracker ends within .01 to .2% of the slot and its place fixes the world's with purity .81 to .98 (chance
+.2 to .4). A single tracker on the largest strong peak locked to the word's period or half-slots in half the lives: one detector per
+peak, the bits to choose, is what works.
+
+**In the brain** (T25, `lab/v/rhythm_time.log`, development seeds 107000+; with the market): timing rung 3 .75, rung 5 .87, both solved,
++.21 and +.34 surely over the same brain without the trackers. The first timing rungs beyond 2 solved by a brain told nothing about time.
+**Confirmed on fresh seeds** (T26, `lab/v/rhythm_time_fresh.log`, 140000+): rungs 3, 5 and 7 .79, .69, .76, all solved, against .58, .44,
+.46 without the trackers (paired +.20, +.24, +.31, all sure).
+
+## D69: the third held-out ladder (drift), and what any learner could close (2026-11-15/16)
+
+**Verdict** (`lab/v/heldout_ladder3.log`, held-out seeds 72000+, the design frozen 2026-11-15): no rung solved, no climb; both frozen
+designs near or below the starting circuit (shares -1.25 to +.59, rungs 5 and 12 unreadable). Read after the verdict: the ladder is
+volatile reversal learning with false tastes (which colour is poison flips about every 80 s; each taste false with a chance rising from
+.05 to about .4 up the rungs; Behrens et al. 2007, change-point detection).
+**What could be closed** (`lab/drift_filter.py`, arm vfilt: the told body steered by an ideal learner's belief, a mixture over flip rate
+and false-taste rate of two-state forward filters, from its own meals; `lab/v/drift_yardstick.log`, development seeds 137000+, 8
+pairs): rungs 5 to 28 nothing (-.54 to +.03): their gaps are the told brain knowing what no taste reveals in time, and the starting
+circuit (flip after a poison) is already as good as possible there. Rungs 35 and 42: the ideal closes +.41 [+.03, +.64] and +.54 [+.34,
++.72], by refusing to flip on isolated false tastes; the frozen designs closed -.2 to -.3. So the ladder holds two real rungs, failed.
+In bits (`lab/ideal_drift.py`, `lab/v/ideal_drift.log`): brain .59, .89, 1.00 bits a taste on rungs 5, 20, 35, the ideal .46, .81, .97:
+nearly all of the high rungs' bits are the false tastes' irreducible noise, yet the .03 bits a taste above it are worth half the gap in
+food. For decisions, what counts is information about the hidden state, not about the noisy outcome: bits should be reported above the
+noise floor (the ideal's).
+**Counting the evidence isn't enough** (D2, `lab/v/joint_paired.log`): leaky counts of each colour with each outcome (the statistics a
+filter averages) bring no sure gain on drift's two learnable rungs (+.23, -.09) or elsewhere. Open: why the brain, given the evidence in
+its streams, doesn't act as a filter (QUESTIONS.md).
+
+**The new frozen design's scaling curve** (F4, `lab/v/frozen3_*.log`, fresh seeds 142000+, 10 pairs): highest rung solved at 560, 1120,
+2240, 4480 units: sequences none, 11, 11, 17; timing none, 7, 5, 7 (the previous design: rung 2 only); combinations none surely at
+3000 s lives, every rung rising from 560 (rung 5 .61 at 2240 and 4480). Every rung tested is surely higher at 4480 than at 560 but timing
+7. Timing joins sequences in the scaling test's first part (climbs on fresh creatures); combinations rise without passing at these lives.
+
+## D70: surprise, not forgetting (2026-11-16; the user: a confident prediction proved wrong should open the brain to new learning)
+
+Measured in bits about the hidden state, not the noisy taste (`lab/state_bits.py`, `lab/v/state_bits_35.log`; drift rung 35, development
+seeds 137000+, 8 lives; at each meal in the last two thirds, -log2 of the probability given just before to the true food colour; 1 bit
+is knowing nothing): the frozen design .90 a meal, the ideal filter .58 to .66 on the same meals.
+- **Surprise-driven change in every block** (SURP: each block's change probability from its own surprise against its own learned rate
+  of changes, its old tallies discounted by it; Nassar et al. 2010, Adams & MacKay 2007; in a stable world nothing is forgotten): .91,
+  no change.
+- **Diagnosis in bits:** the brain mixes its streams by Bayes, a weighted average, which picks the one right stream but cannot add
+  independent weak evidence (three 60% hints average to 60%; a filter sums their log-odds). So without a stream that holds the whole
+  state, the mixture stays near the best single stream.
+- **Logistic mixing** (LMIX: PAQ's context mixing, a product of experts: the streams' log-odds summed with weights learned by each
+  input's share of the error): with every weight starting at .3 over ~200 streams, wildly overconfident (1.16 bits, worse than nothing);
+  started from the default alone and learning slowly (.002, .0005), .90 to .94: no gain.
+Open: whether any stream, or any sum of streams, holds the state at all (a per-stream measure of state bits is next); if none, the
+evidence a filter sums isn't in the streams in a form that adds.
+**Where the drift evidence is lost** (`lab/state_streams.py`, `lab/v/state_streams_35*.log`, `state_decide_35.log`; rung 35, development
+seeds). Measured by choices (share of meals at which the followed colour is the true food), not by bits about the noisy taste: a
+predictor of a taste that lies 35% of the time can honestly say only 65% even knowing the state, so state bits from taste predictors
+are biased against the brain. Brain 70%, the ideal filter 77 to 83% on the same meals.
+- No single stream holds the state (best .88 bits); a weighted sum of all 197 streams fitted in-sample .62 bits, but one life left out
+  .82: the information is there in combination, too thinly spread to learn 197 weights in one life.
+- A signed leaky sum of the revealed letter (+1 letter 1, -1 letter 0; LB_LETTER), at each bank time constant: read raw by its sign, the
+  16 s sum chooses right 77%, the ideal's level. Read through the network's blocks (each rounded value a separate symbol, contexts of
+  symbols, a speaker chosen by decisiveness), 70%.
+- Graded readouts (GRADED: a two-number logistic predictor on each bank integrator's value, in the Bayes mixture): first with a leak
+  (scored on values already including the taste, so the 1 s sum took 97% of the weight), then fixed (scored on the values the prediction
+  used): 71%. The weight spreads thin (the best expert 5%): at 35% false tastes even the best taste predictor saves only ~.03 bits a taste
+  over a coin, so Bayes weights judged on the taste separate experts slowly and the mixture of weak predictions doesn't commit.
+  Tempering the weights (likelihood ratios to a power 5, 20) is worse (64%; 20 breaks numerically).
+Lesson: in a noisy world, judging experts by their predictions of the noisy outcome is the wrong test for choosing; judge them by their
+choices.
+
+## D71: a vote judged on choices (2026-11-16; the user agreed: bits for belief, choices for whom to follow)
+
+Beside the Bayes mixture (kept for the bits and the market), the colour followed is a vote of experts (the default, every speaking stream,
+every graded readout), each weight times .8 or .95 when its recommended colour proves wrong, the speakers' total kept, a fixed share among
+them (DVOTE, with GRADED and LB_LETTER). Decision accuracy on drift rung 35 (`lab/v/state_decide_35.log`): 70% at either strength (the
+ideal .75, .78 on those lives). Inside a life the weights end nearly uniform (the best expert .6%): dozens of experts are 76 to 80% right
+about the hidden state and others 62 to 67%, but judged against tastes that lie 35% of the time they agree with the tastes 58% and 55% of
+the time, a difference that takes about a thousand tastes to see. On food, paired by seed against the frozen design (`lab/v/dvote_paired.log`,
+development seeds 137000+, 10 pairs): rung 35 +.25 [+.02, +.49] surely better (.06 of the gap, the ideal .41), rung 42 +.02, a tie.
+The lesson, in MacKay's terms: the brain's repertoire is an Occam factor (about 260 candidates, 8 bits) paid in evidence, and noisy
+feedback supplies that evidence slowly; the ideal filter pays nothing because its model is built in. Fewer, better primitives, or
+richer evidence (the eyes), are the ways forward (QUESTIONS.md).

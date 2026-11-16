@@ -47,15 +47,15 @@ needs, rung by rung; (5) the same blocks over the body's senses and actions (the
 
 **Overnight, 2026-11-12/13** (D59, D60): the best generic brain so far is ten streams (every kind of event times one recorded sense), recycling on demand, strict copies (a fault in spotting copies found and fixed; it had been doing the clearing credited to copy removal). It climbs sequences to 17 and combinations to 5 of 6 as material grows, relearns a changed pattern at no loss (beating the tree by 2.2), does no harm where nothing is to be learned, and works on the muscle body; given 60 own clocks re-phased by revealed changes it reached timing rung 2 on development seeds but not on fresh ones (.37 to .47). One design holding every stream and the clocks comes within .15 of each ladder's specialist (R67). With recruitment off it is surely worse on sequences (part 3). Not told the symmetry, it pays only the cost of exploring; the vouching rule is unnecessary.
 
-**The scaling test, scored for the growing brain** (2026-11-13; README, How we'll know; D59 to D61; fresh seeds unless said):
+**The scaling test, scored for the growing brain** (2026-11-13, updated 2026-11-16; README, How we'll know; D59 to D71; fresh seeds unless said):
 
 | | test | where it stands |
 |---|---|---|
-| 1 | It climbs | Sequences: to the top (3, 11, 17) as material doubles. Combinations: 3, 4, 6 as material grows to 2560, in 3000 s lives. Timing: rung 2 only, higher rungs rising to about half. Two of three. |
-| 2 | One design, unseen challenges | One design within .15 of each ladder's specialist. Held-out ladder 1 (hidden contexts): a third of the gap, no climb (D61). Held-out ladder 2 (satiety), frozen design: a quarter to a third, no rung, no climb; it needs a running average of the food rate, which the design lacks (D62). Not met. |
+| 1 | It climbs | The design frozen 2026-11-15 (D69): sequences none, 11, 11, 17 at 560 to 4480 units; timing none, 7, 5, 7 (rung 2 only before the rhythm trackers, D68); combinations rising from 560 on every rung, none surely solved at 3000 s (the earlier design solved 3, 4, 6 to 2560 units). Sequences and timing climb; combinations rise short of passing. |
+| 2 | One design, unseen challenges | One design on every ladder. Held-out ladder 1 (hidden contexts): a third of the gap, no climb (D61). Held-out ladder 2 (satiety): a quarter to a third, no rung, no climb (D62); the counts it needed are now in the bank (D67). Held-out ladder 3 (drift, the design frozen 2026-11-15): no rung, no climb; only its two top rungs are learnable at all (an ideal filter +.41, +.54), and there the brain can't pick the right evidence out of ~260 candidates from tastes that lie 35% of the time (D69 to D71). Not met. |
 | 3 | Improves in the life | Surely worse with recruitment off on sequences 11 and 17 (+.46, +.37); combination 3 not sure. |
 | 4 | Recruits only when needed | Lives identical to the starting brain's in plain and all-food worlds at every size (no stream adopted). Commitment by count of blocks not yet measured. |
-| 5 | Local, levelling connections | Every block has two inputs and one readout; competition and recycling are local draws. The gate that picked which stream steers (an argmax over all streams) can be replaced by a weighted majority of specialists, each stream's weight moved only by its own guesses, at no cost (D61). Holds. |
+| 5 | Local, levelling connections | Every block has two inputs and one readout; competition and recycling are local draws. The central gate is gone: a weighted majority of specialists (D61), now a Bayes mixture of the speakers scored in bits with fixed share (D67); the market moves capacity between streams by their own bits saved. Holds. |
 | 6 | In a body, real time, cost charged | Runs closed loop in the body under the ground rules; the material's power: extra material pays under about 1 to 2 nW a unit (D61); by chip.py's rules a block biased at 10 pA would draw about .14 nW, well under (an estimate, not built; D62). Partly. |
 | 7 | Parsimonious | A few hundred lines; one kind of block; fast enough for thousands of lives a night. |
 
@@ -237,10 +237,29 @@ Bar met (`discrete/NOTEBOOK.md`, D37): seq 7 certified rungs, combo 5, time 6; t
   reply (`lab/v/heldout_ladder2_reply.log`): it opened no outside files by hand, but its checkers import the engine by path, and it ran
   the project's Python once: its seal was requested, not enforced (the sandbox, `lab/sealed_agent.sh`, came after). Unread until the
   design is frozen.
+- **The third held-out ladder:** `lab/sealed/heldout_ladder3.json` (2026-11-15), by a fresh agent inside the enforced sandbox
+  (`lab/blind_heldout3.sh`: `lab/sealed_agent.sh`, its checkers' engine bundled by `lab/seal_bundle.py`, no path into the user's home,
+  no brain design bundled; the brief names the kinds taken, satiety among them): SHA-256
+  `50ea2b195d706b162fba4e75a41739cf9ecad284b00ad61b730b99c25aa3493f`, 6 rungs (sizes 5 to 42, lives 300 to 1500 s), all compile. Its
+  gaps verified here without reading the rules (`lab/verify_sealed.py`, `lab/v/heldout_ladder3_verify.log`, 8 pairs, seeds 200000+):
+  +.50 to +.85, every one surely above 0. Opened only after the design was frozen (Decisions, 2026-11-15).
+- **For the next sealed ladder's brief** (the third's lessons, D69; the user agreed, with a caveat, 2026-11-16): a rung counts only if an
+  ideal learner over the world's own family of rules, from the same senses, closes a real part of its gap (a told brain that knows what
+  no sense reveals in time made most of the third ladder's gap unclosable); rungs grow by learnable structure (more to remember or tell
+  apart, which may include rules that change and return, the user's caveat), not by noise alone.
 - **The held-out worlds:** world number n, from any sampler, is held out if the first byte of SHA-256 of `world:n` is divisible by 4 (a quarter of them). Fixed now, so that it can't be chosen later.
 - **Seeds for lives:** development 60000-69999 (spent by stage 2c), then 80000-89999 (opened 2026-11-06 for stage 3); held out 70000-79999. Seeds below 60000 are spent.
 
 ## Decisions (add as made)
+
+- **The design frozen for the third held-out ladder** (2026-11-15, the user agreed the plan: freeze, then a third sealed ladder): arm
+  `net10kc60SFBLMR` of `lab/teach.py` with `LB_FINE=1 LB_LIVE=1` (`lab/grownet.py` sha256 0a9c54bbcd48ca04..., `lab/teach.py`
+  c377e37fbdeeafa5... at freezing): `net10kc60S`'s streams and clocks; the speakers mixed by Bayes, scored in bits, with fixed share .01
+  (D65, D67); a leaky-integrator bank on every event type, time constants 1 to 64 s a factor 2 apart, counts exact to 7 then log,
+  written whenever a reading changes (D67); capacity moved by a market from streams saving no bits to streams saving a bit a unit (D67);
+  six rhythm trackers on the noticed changes, resonators then gated Kalman loops, their places as streams (D68). Passed against the
+  Bayes brain without the additions on every ladder with nothing surely worse (`lab/v/cand_*.log`). Material 560, 1120, 2240, 4480;
+  each rung's own life; held-out seeds 72000+ for the sealed ladder. Nothing changed after the seal is opened.
 
 - **The design frozen for the second held-out ladder** (2026-11-14, under the user's agreement to the order of next steps): arm
   `net10kc60S` of `lab/teach.py` (`lab/grownet.py` as committed with this decision): ten sense streams (every kind of event times one

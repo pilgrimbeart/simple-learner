@@ -159,6 +159,28 @@ Three lines of work so far:
 
 The findings that changed the direction of the work, each told in full in the notebook named.
 
+- **A third unseen ladder, and the price of many candidates in a noisy world.** A blind agent, sealed in the sandbox, wrote a ladder in
+  which which colour is poison flips at random and tastes sometimes lie. Neither frozen brain climbed it. Read afterwards, most of it
+  turned out unlearnable: an ideal learner, using the same tastes, could close only its two hardest rungs (the yardstick brain was told
+  the hidden answer, which no sense reveals in time; future ladders will be measured against an ideal learner instead). On those rungs
+  our brain now holds the right evidence (a running sum of what its tastes revealed chooses as well as the ideal learner), but cannot
+  single it out from among some 260 candidates it also holds: with a third of tastes lying, a good candidate and a middling one agree
+  with the tastes almost equally often, so a life is too short to tell them apart. A large repertoire costs evidence to choose from, and
+  noisy feedback makes that evidence scarce (`discrete/NOTEBOOK.md`, D69 to D71).
+
+- **The brain finds a world's rhythm by itself** (confirmed on fresh creatures). In worlds where food follows a secret pattern in time,
+  the brain now listens to its own noticed changes, finds the strong rhythms in them, and locks a tracker onto each, using the textbook
+  design for locking onto a rhythm from noisy, missing and false events (a Kalman-filter phase-locked loop with a gate). Each tracker
+  offers its count of place in the cycle as something to learn from. Patterns 3, 5 and 7 slots long are all solved, with nothing told
+  about time; before, none above 2 was. Some trackers lock onto a rhythm within the rhythm (the whole pattern's length), and what helps
+  prediction is kept (`discrete/NOTEBOOK.md`, D68). On fresh creatures the frozen design with the trackers solves timing patterns up to
+  7 slots from 1120 units of material up, sequences up to 17 at 4480 (D69).
+- **Bits as the currency, and a memory of recent events on every signal.** Each part of the brain is now judged by how many bits it
+  saves in predicting taste, and the brain's own bits a taste say how much it knows (1 bit: nothing; the ideal learner's, a yardstick).
+  Given leaky counts of every kind of event at several time scales, the brain found by itself the memory a world of satiety needed (how
+  many meals of a colour lately), which we had earlier added by hand. Material moves to the parts that save bits (a market), so adding
+  such memory costs nothing elsewhere (`discrete/NOTEBOOK.md`, D67).
+
 - **What the timing worlds need is a sense of place in the cycle, and trust that can come back.** In the worlds where food follows
   a secret pattern in time, the growing brain had stalled halfway. Its clocks are reset whenever it sees the pattern move on, so their
   beats fall anywhere within a time slot and it loses count of where in the cycle it is. Given a steady rhythm that is never reset

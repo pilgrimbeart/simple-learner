@@ -1,0 +1,4 @@
+== paired: time ladder, 10 pairs, seeds 140000+; share of the gap closed [95%], and each arm against net10kc60SFB
+  rung  3: net10kc60SFB:2240 +0.58 [+0.52,+0.69] | net10kc60SFBMR:2240 +0.79 [+0.73,+0.84] (vs net10kc60SFB +0.20 [+0.09,+0.30]) |
+  rung  5: net10kc60SFB:2240 +0.44 [+0.36,+0.53] | net10kc60SFBMR:2240 +0.69 [+0.56,+0.85] (vs net10kc60SFB +0.24 [+0.18,+0.35]) |
+  rung  7: net10kc60SFB:2240 +0.46 [+0.42,+0.49] | net10kc60SFBMR:2240 +0.76 [+0.65,+0.88] (vs net10kc60SFB +0.31 [+0.18,+0.43]) |

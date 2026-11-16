@@ -1,0 +1,43 @@
+{
+ "name": "drift",
+ "kind": "A hidden two-state truth that flips at random times and is reported only through tastes that are sometimes false; the rung's size is the share of false tastes, so the brain must average evidence over several meals while still forgetting fast enough to follow a flip.",
+ "source": "Restless/volatile bandits and reversal learning with probabilistic feedback (Behrens et al. 2007 volatility learning; Bayesian change-point detection; signal-detection with noisy reinforcers; Kalman-style forgetting versus averaging trade-off in animal learning).",
+ "rungs": [
+  {
+   "size": 5,
+   "seconds": 300,
+   "text": "(world (meta (link L7) (q T) (cap Ladder) (group drift)) (let s (int 2)) (told (if (= s 0) P F)) (on tick (if (chance (* TICK 0.0125)) (set s (- 1 s))) (set poison (if (= s 0) P F))) (on meal (if (chance 0.05) (set worth (- worth)))))",
+   "desc": "Which colour is poison flips at a random moment (about every 80 s) and each meal's taste is false with chance 0.05. Learn: the colour's current meaning, 1 bit held by a running estimate over the last ~tens of tastes; each taste carries only 0.71 bits about it, so about 1.4 meals per bit; the learner must also hold the flip rate (~1 bit per 80 s) tradeoff between averaging and forgetting."
+  },
+  {
+   "size": 12,
+   "seconds": 400,
+   "text": "(world (meta (link L7) (q T) (cap Ladder) (group drift)) (let s (int 2)) (told (if (= s 0) P F)) (on tick (if (chance (* TICK 0.025)) (set s (- 1 s))) (set poison (if (= s 0) P F))) (on meal (if (chance 0.12) (set worth (- worth)))))",
+   "desc": "Which colour is poison flips at a random moment (about every 40 s) and each meal's taste is false with chance 0.12. Learn: the colour's current meaning, 1 bit held by a running estimate over the last ~tens of tastes; each taste carries only 0.47 bits about it, so about 2.1 meals per bit; the learner must also hold the flip rate (~1 bit per 40 s) tradeoff between averaging and forgetting."
+  },
+  {
+   "size": 20,
+   "seconds": 600,
+   "text": "(world (meta (link L7) (q T) (cap Ladder) (group drift)) (let s (int 2)) (told (if (= s 0) P F)) (on tick (if (chance (* TICK 0.025)) (set s (- 1 s))) (set poison (if (= s 0) P F))) (on meal (if (chance 0.2) (set worth (- worth)))))",
+   "desc": "Which colour is poison flips at a random moment (about every 40 s) and each meal's taste is false with chance 0.2. Learn: the colour's current meaning, 1 bit held by a running estimate over the last ~tens of tastes; each taste carries only 0.28 bits about it, so about 3.6 meals per bit; the learner must also hold the flip rate (~1 bit per 40 s) tradeoff between averaging and forgetting."
+  },
+  {
+   "size": 28,
+   "seconds": 800,
+   "text": "(world (meta (link L7) (q T) (cap Ladder) (group drift)) (let s (int 2)) (told (if (= s 0) P F)) (on tick (if (chance (* TICK 0.0125)) (set s (- 1 s))) (set poison (if (= s 0) P F))) (on meal (if (chance 0.28) (set worth (- worth)))))",
+   "desc": "Which colour is poison flips at a random moment (about every 80 s) and each meal's taste is false with chance 0.28. Learn: the colour's current meaning, 1 bit held by a running estimate over the last ~tens of tastes; each taste carries only 0.14 bits about it, so about 6.9 meals per bit; the learner must also hold the flip rate (~1 bit per 80 s) tradeoff between averaging and forgetting."
+  },
+  {
+   "size": 35,
+   "seconds": 1000,
+   "text": "(world (meta (link L7) (q T) (cap Ladder) (group drift)) (let s (int 2)) (told (if (= s 0) P F)) (on tick (if (chance (* TICK 0.0125)) (set s (- 1 s))) (set poison (if (= s 0) P F))) (on meal (if (chance 0.35) (set worth (- worth)))))",
+   "desc": "Which colour is poison flips at a random moment (about every 80 s) and each meal's taste is false with chance 0.35. Learn: the colour's current meaning, 1 bit held by a running estimate over the last ~tens of tastes; each taste carries only 0.07 bits about it, so about 15.2 meals per bit; the learner must also hold the flip rate (~1 bit per 80 s) tradeoff between averaging and forgetting."
+  },
+  {
+   "size": 42,
+   "seconds": 1500,
+   "text": "(world (meta (link L7) (q T) (cap Ladder) (group drift)) (let s (int 2)) (told (if (= s 0) P F)) (on tick (if (chance (* TICK 0.0125)) (set s (- 1 s))) (set poison (if (= s 0) P F))) (on meal (if (chance 0.42) (set worth (- worth)))))",
+   "desc": "Which colour is poison flips at a random moment (about every 80 s) and each meal's taste is false with chance 0.42. Learn: the colour's current meaning, 1 bit held by a running estimate over the last ~tens of tastes; each taste carries only 0.02 bits about it, so about 53.9 meals per bit; the learner must also hold the flip rate (~1 bit per 80 s) tradeoff between averaging and forgetting."
+  }
+ ]
+}

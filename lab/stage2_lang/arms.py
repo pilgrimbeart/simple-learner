@@ -42,7 +42,7 @@ def make(world, arm, seed, first, kw=None, trace=False, tap=None, seconds=None):
         q, cls = T.numbers(seed, {**V7, **FROZEN}), (ref_seconds() if secs else Ref)
     else:
         q = T.numbers(seed, {**V7, **kw})
-        cls = {"bank": B.Recorder, "fix": B.Fix, "vtold": B.VTold, "vtoldw": B.VTold}[arm]
+        cls = {"bank": B.Recorder, "fix": B.Fix, "vtold": B.VTold, "vtoldw": B.VTold, "vfilt": B.VTold}[arm]
     if secs:
         from stage2_lang import fast
         cls = fast.fast_cls(cls) if (FAST and arm in ("circuit", "bank") and not tap and not trace) else seconds_cls(cls)
@@ -61,6 +61,21 @@ def make(world, arm, seed, first, kw=None, trace=False, tap=None, seconds=None):
             eaten = lf.wire_s[cs[0]] if cs and cs[0] < 2 and len(set(cs)) == 1 else -1
             return eaten, rule_food(lf), int(bool(cs and cs[0] == lf.poison))
         b.spy = spy
+    if arm == "vfilt":                                  # (D69) a yardstick: the told body steered by the ideal filter's belief, from its own meals
+        from drift_filter import Filter
+        flt, seen = Filter(), [0]
+
+        def tell(W):
+            ms = W.meals
+            while seen[0] < len(ms) and seen[0] < len(W.scored):
+                t, col = ms[seen[0]]
+                if col in ("red", "blue"):
+                    flt.meal(t * W.dt, 0 if col == "red" else 1, W.scored[seen[0]][1])
+                seen[0] += 1
+            pc = flt.poison(W.t * W.dt)
+            b.told_food = W.wire_s[1 - pc]
+            b.food = b.told_food
+        lf.tell = tell
     if arm in ("vtold", "vtoldw"):
         wrong = int(kw.get("wrong", 0))
         wait = world.fn.get("told_wait") if arm == "vtoldw" else None

@@ -6,6 +6,13 @@ and when, why it matters, the line it belongs to, and the experiment that would 
 
 ## Scaling (the user's goal, 2026-11-09; `PROGRAMME.md`)
 
+- **How can a brain pick the right evidence from many candidates when its feedback is noisy?** (D70, D71.) On drift's top rung the
+  signed evidence sum, read raw, chooses as well as the ideal filter (77%), and dozens of the brain's experts are 76 to 80% right about
+  the hidden state; but judged against tastes that lie 35% of the time, they agree with the tastes 58% against weaker experts' 55%, too
+  close to tell apart in a life, so Bayes weights (judged on bits) and a vote judged on choices both end near uniform (70%). Candidates:
+  fewer, better candidate primitives (an Occam factor of log2 260 = 8 bits is itself a cost); experts judged on richer evidence (the eyes'
+  pulses, predicted as rates, give tens of events a second against one taste every few seconds); or structure that ties the evidence
+  sums to the choice directly (a primitive whose output is a belief about the hidden state, as the filter's is).
 - **Why does a used, informative count gain so little on satiety?** (D66.) A leaky count of each colour's meals, written at each taste,
   tells the poison colour with purity .8 to .9 (base .56 to .76) and is trusted, yet closes at most .06 more of the gap. Suspect: acting
   on it (finding the other colour within the seconds before recovery). Test: the same lives with the told colour given only to the
@@ -15,15 +22,23 @@ and when, why it matters, the line it belongs to, and the experiment that would 
   out: exploration, flicker, averaging, TD(lambda) over episodes, one-change habit search, knob tuning by perturbation. Candidates: a
   model of what follows each choice (a forward model of the next situations, so late effects are computed, not waited for); joint
   changes proposed by the growing network's blocks (a sequence of choices as one option); or evolution's start, refined in a life.
-- **How can a brain find a rhythm's length from blurred, late events?** (D65.) With a steady phase (slot length told) and fixed share,
-  timing rungs 3 and 5 are solved (.77 to .96); unaided, oscillators locking to revealed changes end .1 to 3.5% off and don't help
-  (.53 to .59). Each change places a slot boundary only to a third or half a slot (noticed at the next telling meal, sometimes falsely).
-  Candidates: a resonator over all changes (circular mean of change times at a trial period, tuned by its own drift; robust to false
-  changes); or a sharper marker of the boundary than the next meal. Bits: about 8.6 for the slot length; the life's changes carry far more.
 - **Why does the tree beat the growing network on combinations of 5 and 6?** (D59, D60.) In 3000 s lives the tree solves both (.76,
   .72), the network reaches .38 to .49 whatever was tried: more material, merging copies, growth stopping when full, the simplest
   partner. The network makes thousands of blocks a life (copies by the thousand); the tree makes one child per contradicted context and
   keeps counting. Trace it on the bench (lab/grownet_bench.py) with a combination stream before more variants.
+- **Can a deeper layer turn cycling hypotheses into a meta-hypothesis?** (the user, 2026-11-15.) In a world that switches between
+  rules over long periods, the brain grows the new hypothesis, lets the old one fade, and regrows it when it returns, paying its
+  learning bits (K) at every return. A brain that keeps A dormant and recognises its return pays only the bits to tell A from B, and
+  if the switches are rhythmic, fewer still: MDL favours the meta-hypothesis after two or three returns. Candidates: return weight to
+  streams that were good before (mixing past posteriors, Bousquet & Warmuth 2002) instead of evenly (fixed share); blocks that paid fall
+  dormant rather than being recycled (storage apart from expression, as in COIN: Heald, Lengyel & Wolpert 2021); the brain's own
+  signals (which stream holds the weight, growth and recycling) fed as event types to the same primitives (bank, rhythm detectors), so
+  a rhythm in its own hypotheses is found by the machinery that finds rhythms in the world. Test: an A-B-A-B world with slow, rhythmic
+  switches; relearning cost per return, in bits, for the plain brain against each candidate. Long-term memory (the user): a block
+  judged on two records, recent bits saved (active: expressed, live material) and lifetime bits saved (kept dormant, protected from
+  recycling, at a small keep); worth integrated at several time scales, so protection comes in degrees (Benna & Fusi 2016's cascade;
+  synaptic tagging and capture, Frey & Morris 1997; complementary learning systems, McClelland et al. 1995; EWC, Kirkpatrick et al.
+  2017); dormant blocks recycled by least lifetime saving per unit of age.
 - **How could a growing network remember a world that returns?** (D59, A-B-A.) The written-rules network keeps a third of its old
   blocks through a change, yet gains nothing when the old world returns: every block keeps counting while it fires, so B's evidence
   overwrites A's in the same blocks (catastrophic interference, McCloskey and Cohen 1989). The generic brain simply relearns. Candidates:

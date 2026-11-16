@@ -1,0 +1,7 @@
+rung 35, net10kc60SFBLMR: 3600 meals; ideal filter 0.671 bits about the state a meal; knowing nothing 1
+  best single streams when they speak (bits, share of meals spoken at):
+  best weighted sum of all 197 streams' log-odds, fitted in-sample: 0.617 bits a meal
+  weighted sum, one life left out each time (L2 1): 1.158 bits a meal
+  weighted sum, one life left out each time (L2 30): 0.898 bits a meal
+  weighted sum, one life left out each time (L2 300): 0.821 bits a meal
+  its largest weights: [('lbm1t4', 3.19), ('lbm0t6', -2.47), ('good:outcome', -2.04), ('lbe0t6', 1.47), ('lbe1t6', -1.42), ('red:colour', -1.21), ('lbm0t5', -1.08), ('lbm1t5', 1.03)]
