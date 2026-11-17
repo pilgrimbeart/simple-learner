@@ -1,0 +1,7 @@
+seq rows 360 highest historical passing rung {560: None, 1120: 11, 2240: 11, 4480: 17}
+time rows 360 highest historical passing rung {560: None, 1120: 7, 2240: 5, 4480: 7}
+combo rows 240 highest historical passing rung {560: None, 1120: None, 2240: None, 4480: None}
+PASS: every median and interval reproduces the kept printed logs at their original precision
+Criterion preserved: lower paired-bootstrap 95% bound of final-third gap closure > .5
+No total-allocation histories in these eight-field candidate records; growth/removal event counters do not count cascading removals
+wall_seconds 0.03372134699020535 cpu_seconds 0.033720333

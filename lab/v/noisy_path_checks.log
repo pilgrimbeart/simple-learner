@@ -1,0 +1,30 @@
+PASS: known-parameter filter matches exhaustive hidden-state path enumeration; target conversion checked
+PASS: all 8 full-life fingerprints identical after adding score and deletion observers
+PASS: exact selector and recorded loss replay; prefix invariance for selectors and both online readouts
+scored predictions changed by same-taste structural updates: 69 / 4734 ; accepted tastes with cross-stream deletions: 342
+Approximation only: stationary exogenous Poisson accepted meals, independent errors, symmetric Markov state
+accepted meals/s 0.59175 SNR-maximising linear memory seconds 17.439834168893277
+R_tau=sum(exp(-age/tau)*signed_letter); E[R_tau|state=+1]=rate*a*tau/(1+b*tau)
+Var(R_tau|state)=rate*tau/2 + rate**2*a**2*tau**2*b*tau/(1+b*tau)**2
+This maximises mean/sd, not a proven decision-accuracy optimum, and is not fitted or given to a brain.
+Native stored-symbol readout: two groups minus fifteen independent bins, paired by seed
+whole {'mean': 0.7327526438410008, 'ci95': [0.05389451499688419, 0.07681540618566807], 'difference': 0.06535496059127613}
+last_third {'mean': 0.7607681671476225, 'ci95': [0.036845444705706665, 0.08350573038073034], 'difference': 0.05826444914925363}
+Native signed sum versus causal shadow reconstruction: largest error 0.0
+Baseline final-third mean noisy-label log losses (accepted tastes):
+brain 1.0000458615399765
+inferred_gated 0.9805864735737937
+actual_all 0.9734153141855988
+Baseline final-third calibration to the accepted inferred letter: bin lower edge, n, mean forecast, observed frequency
+0.1 3 0.1830362538174027 0.6666666666666666
+0.2 20 0.26518194035565656 0.4
+0.3 117 0.36254537393107766 0.4017094017094017
+0.4 652 0.4557778065356987 0.4601226993865031
+0.5 560 0.5460563426143071 0.5285714285714286
+0.6 203 0.636472915512164 0.5763546798029556
+0.7 55 0.7408715283475023 0.5636363636363636
+0.8 10 0.836338605160892 0.7
+Signed-condition final-third mean noisy-label log losses (accepted tastes):
+brain 0.9977747156835984
+native_pooled_16s 0.9796168186049059
+native_root_16s 0.9997018755128705

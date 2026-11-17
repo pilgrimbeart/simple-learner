@@ -1,0 +1,11 @@
+
+== stage2 seq rung 17, 300 s, seeds 176000-176009
+  E                      +0.29 [+0.21,+0.37]  units   2209 peak   2209  grown event 10 clock 59 integrator 56 rhythm 42  transfers 0 contests 0 won 0 evictions 0  cpu 12 s
+  W                      +0.57 [+0.45,+0.69]  units   2300 peak   2300  grown event 54 clock 47 integrator 121 rhythm 36  transfers 0 contests 16756 won 5164 evictions 0  cpu 14 s
+  W-E                    +0.28 [+0.12,+0.45]
+
+== stage2 time rung 3, 3000 s, seeds 176000-176009
+  E                      +0.68 [+0.55,+0.80]  units   2210 peak   2210  grown event 10 clock 60 integrator 56 rhythm 42  transfers 0 contests 0 won 0 evictions 0  cpu 273 s
+  W                      +0.68 [+0.61,+0.78]  units   2300 peak   2300  grown event 6 clock 55 integrator 33 rhythm 164  transfers 0 contests 221176 won 34256 evictions 0  cpu 259 s
+  W-E                    +0.00 [-0.09,+0.13]
+wall_seconds 1577.5371159380302

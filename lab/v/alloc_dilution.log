@@ -1,0 +1,11 @@
+PASS: all 16 lives equal the confirmation's
+W     event      streams  10 family weight share 0.860  median stream share 0.00027  grown    121  saved   -156.2 b
+W     clock      streams  60 family weight share 0.029  median stream share 0.00030  grown    271  saved  -1154.3 b
+W     integrator streams  56 family weight share 0.085  median stream share 0.00030  grown    522  saved  -1209.3 b
+W     rhythm     streams  42 family weight share 0.025  median stream share 0.00026  grown     85  saved   -520.8 b
+W     default    streams   1 family weight share 0.000  median stream share 0.00028  grown      0  saved      0.0 b
+none  event      streams  10 family weight share 0.918  median stream share 0.00054  grown    270  saved   -112.6 b
+none  clock      streams  60 family weight share 0.035  median stream share 0.00039  grown   1025  saved  -1407.7 b
+none  integrator streams  56 family weight share 0.031  median stream share 0.00049  grown    783  saved  -1049.1 b
+none  rhythm     streams  42 family weight share 0.015  median stream share 0.00032  grown    202  saved   -615.3 b
+none  default    streams   1 family weight share 0.001  median stream share 0.00054  grown      0  saved      0.0 b

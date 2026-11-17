@@ -1,0 +1,64 @@
+whole
+  brain                            accuracy 0.6805; difference +0.0000, CI [0.0, 0.0]
+  no_share                         accuracy 0.6837; difference +0.0031, CI [-0.02461531081953927, 0.030884892146719356]
+  score_before_learning            accuracy 0.6805; difference +0.0000, CI [0.0, 0.0]
+  raw_all_16s                      accuracy 0.7700; difference +0.0895, CI [0.04714288944347711, 0.13181350243009554]
+  rounded_all_16s                  accuracy 0.7672; difference +0.0867, CI [0.04610962069902469, 0.12722252955613572]
+  raw_gated_16s                    accuracy 0.7546; difference +0.0740, CI [0.03686591448888571, 0.11265370930653423]
+  rounded_gated_16s                accuracy 0.7532; difference +0.0727, CI [0.036268919488948725, 0.11181359235313776]
+  all_sign_16s                     accuracy 0.7353; difference +0.0548, CI [0.016576235895653935, 0.09350129461793857]
+  all_bins_16s                     accuracy 0.6691; difference -0.0114, CI [-0.039896261891668394, 0.014344296393674544]
+  gated_sign_16s                   accuracy 0.7303; difference +0.0498, CI [0.025826438131859752, 0.07375051529322146]
+  gated_bins_16s                   accuracy 0.6436; difference -0.0369, CI [-0.0780215593478979, 0.004123656495044259]
+  gated_sign_bank_share0           accuracy 0.7249; difference +0.0444, CI [0.021911214353762754, 0.06747751261089166]
+  gated_sign_bank_share0.01        accuracy 0.7105; difference +0.0300, CI [0.01371332574828657, 0.04697382047792792]
+  gated_sign_added_to_full         accuracy 0.6906; difference +0.0101, CI [0.006934938621025621, 0.013195743001578247]
+  gated_bins_bank_share0.01        accuracy 0.6523; difference -0.0282, CI [-0.05995407580650211, -0.005912483378499811]
+  gated_bins_added_to_full         accuracy 0.6822; difference +0.0017, CI [-0.002524818060056333, 0.006467286746907636]
+native_symbol_16s {'mean': 0.7672787086315409, 'minus_brain': 0.08675447682489282, 'ci95': [0.046286424093649914, 0.12722252955613572]}
+native_root_16s {'mean': 0.6673976832497246, 'minus_brain': -0.01312654855692344, 'ci95': [-0.04247601723048705, 0.01632943953194163]}
+native_selected_16s {'mean': 0.6673976832497246, 'minus_brain': -0.01312654855692344, 'ci95': [-0.04247601723048705, 0.01632943953194163]}
+native_pooled_16s {'mean': 0.7327526438410008, 'minus_brain': 0.05222841203435269, 'ci95': [0.016861134307703113, 0.08112439838550228]}
+last_two_thirds
+  brain                            accuracy 0.6807; difference +0.0000, CI [0.0, 0.0]
+  no_share                         accuracy 0.6828; difference +0.0021, CI [-0.038117011403158874, 0.04234702286398673]
+  score_before_learning            accuracy 0.6807; difference +0.0000, CI [0.0, 0.0]
+  raw_all_16s                      accuracy 0.7656; difference +0.0849, CI [0.03416311520724424, 0.13554812547873174]
+  rounded_all_16s                  accuracy 0.7596; difference +0.0789, CI [0.030160495787234343, 0.12761905189082762]
+  raw_gated_16s                    accuracy 0.7580; difference +0.0773, CI [0.03727357259323022, 0.11803467406541304]
+  rounded_gated_16s                accuracy 0.7515; difference +0.0708, CI [0.021275441610641155, 0.11773641122524559]
+  all_sign_16s                     accuracy 0.7492; difference +0.0684, CI [0.02566769186628315, 0.11123178923955546]
+  all_bins_16s                     accuracy 0.6822; difference +0.0015, CI [-0.026302781050712182, 0.01658533875162821]
+  gated_sign_16s                   accuracy 0.7354; difference +0.0547, CI [0.02802134287153865, 0.08063343433459874]
+  gated_bins_16s                   accuracy 0.6618; difference -0.0189, CI [-0.05114740131141582, 0.015234666434869037]
+  gated_sign_bank_share0           accuracy 0.7386; difference +0.0579, CI [0.034134500372890925, 0.0813636299866003]
+  gated_sign_bank_share0.01        accuracy 0.7167; difference +0.0360, CI [0.025633832246442778, 0.047529022862304676]
+  gated_sign_added_to_full         accuracy 0.6961; difference +0.0154, CI [0.011944536234556047, 0.01975398786667007]
+  gated_bins_bank_share0.01        accuracy 0.6568; difference -0.0239, CI [-0.045308776378959636, -0.00046979106946090643]
+  gated_bins_added_to_full         accuracy 0.6830; difference +0.0023, CI [-0.002896888711607537, 0.007968996760028546]
+native_symbol_16s {'mean': 0.7594508959134132, 'minus_brain': 0.0787486903175863, 'ci95': [0.030160495787234343, 0.12733688484793826]}
+native_root_16s {'mean': 0.6799777908931599, 'minus_brain': -0.0007244147026669312, 'ci95': [-0.02929301245984922, 0.017806399173533383]}
+native_selected_16s {'mean': 0.6799777908931599, 'minus_brain': -0.0007244147026669312, 'ci95': [-0.02929301245984922, 0.017806399173533383]}
+native_pooled_16s {'mean': 0.7378498478764199, 'minus_brain': 0.05714764228059302, 'ci95': [0.016689807412336194, 0.10024477032391466]}
+last_third
+  brain                            accuracy 0.6698; difference +0.0000, CI [0.0, 0.0]
+  no_share                         accuracy 0.6660; difference -0.0039, CI [-0.06783730560904469, 0.04745746438352366]
+  score_before_learning            accuracy 0.6698; difference +0.0000, CI [0.0, 0.0]
+  raw_all_16s                      accuracy 0.7746; difference +0.1048, CI [0.0633555764619464, 0.14626132421507476]
+  rounded_all_16s                  accuracy 0.7649; difference +0.0951, CI [0.058441972865506286, 0.13184415222458704]
+  raw_gated_16s                    accuracy 0.7439; difference +0.0741, CI [0.03637704384986998, 0.11827283474072253]
+  rounded_gated_16s                accuracy 0.7354; difference +0.0656, CI [0.0400432181480454, 0.10340217602445864]
+  all_sign_16s                     accuracy 0.7724; difference +0.1026, CI [0.05898876423487215, 0.14626132421507476]
+  all_bins_16s                     accuracy 0.7053; difference +0.0354, CI [0.02635573751958792, 0.046905508873303636]
+  gated_sign_16s                   accuracy 0.7400; difference +0.0701, CI [0.03637704384986998, 0.1063410165589043]
+  gated_bins_16s                   accuracy 0.6905; difference +0.0207, CI [-0.00789340470614508, 0.04932856998074392]
+  gated_sign_bank_share0           accuracy 0.7367; difference +0.0669, CI [0.0029547717328440026, 0.1109331188135537]
+  gated_sign_bank_share0.01        accuracy 0.7163; difference +0.0465, CI [0.027757594447848255, 0.06517051788790923]
+  gated_sign_added_to_full         accuracy 0.6856; difference +0.0158, CI [0.0053157498991600605, 0.024034203517899172]
+  gated_bins_bank_share0.01        accuracy 0.6718; difference +0.0019, CI [-0.013545396929177445, 0.021674503488048058]
+  gated_bins_added_to_full         accuracy 0.6735; difference +0.0037, CI [-0.00087792642140469, 0.012027485951380978]
+native_symbol_16s {'mean': 0.7649189545546258, 'minus_brain': 0.09510622010121653, 'ci95': [0.058441972865506286, 0.13271220778014262]}
+native_root_16s {'mean': 0.7025037179983689, 'minus_brain': 0.03269098354495964, 'ci95': [0.023521342774475595, 0.041860624315443684]}
+native_selected_16s {'mean': 0.7025037179983689, 'minus_brain': 0.03269098354495964, 'ci95': [0.023521342774475595, 0.041860624315443684]}
+native_pooled_16s {'mean': 0.7607681671476225, 'minus_brain': 0.09095543269421327, 'ci95': [0.06036678748018226, 0.12211208702748011]}
+replay_max_error 1.9984014443252818e-15

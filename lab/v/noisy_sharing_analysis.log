@@ -1,0 +1,25 @@
+Same recorded symbols: cumulative evidence for the supplied sign partition versus a single probability
+137000 red labels 575 sign versus one bits 2.099 posterior supplied sign partition {'uniform_options': 0.0385, 'half_stop': 0.0524}
+137000 blue labels 608 sign versus one bits 9.938 posterior supplied sign partition {'uniform_options': 0.0861, 'half_stop': 0.1196}
+137001 red labels 602 sign versus one bits 2.99 posterior supplied sign partition {'uniform_options': 0.0001, 'half_stop': 0.0001}
+137001 blue labels 613 sign versus one bits 5.698 posterior supplied sign partition {'uniform_options': 0.0239, 'half_stop': 0.0319}
+137002 red labels 612 sign versus one bits 9.406 posterior supplied sign partition {'uniform_options': 0.218, 'half_stop': 0.3036}
+137002 blue labels 576 sign versus one bits -0.421 posterior supplied sign partition {'uniform_options': 0.0083, 'half_stop': 0.0097}
+137003 red labels 562 sign versus one bits 8.376 posterior supplied sign partition {'uniform_options': 0.1814, 'half_stop': 0.2975}
+137003 blue labels 612 sign versus one bits 0.537 posterior supplied sign partition {'uniform_options': 0.0019, 'half_stop': 0.003}
+Prior odds sign partition / single group are 1/56 in BOTH tested priors: a 5.807-bit evidence hurdle.
+This is an odds scale, not a performance guarantee or a stopping threshold supplied to a brain.
+PASS: independent Beta-integrated likelihood equals causal sequential loss; mixture regret within declared prior bound
+shifted_boundary 1000 uniform_options cumulative extra bits over independent mean/max -18.89 -9.563
+shifted_boundary 1000 half_stop cumulative extra bits over independent mean/max -20.753 -10.714
+shifted_boundary 10000 uniform_options cumulative extra bits over independent mean/max -39.428 -32.157
+shifted_boundary 10000 half_stop cumulative extra bits over independent mean/max -41.798 -34.378
+alternating 1000 uniform_options cumulative extra bits over independent mean/max 0.673 5.697
+alternating 1000 half_stop cumulative extra bits over independent mean/max 1.937 10.534
+alternating 10000 uniform_options cumulative extra bits over independent mean/max 7.978 7.978
+alternating 10000 half_stop cumulative extra bits over independent mean/max 14.0 14.0
+no_signal 1000 uniform_options cumulative extra bits over independent mean/max -25.173 -17.591
+no_signal 1000 half_stop cumulative extra bits over independent mean/max -28.0 -20.356
+no_signal 10000 uniform_options cumulative extra bits over independent mean/max -49.557 -40.695
+no_signal 10000 half_stop cumulative extra bits over independent mean/max -52.449 -43.577
+PASS: all artificial streams satisfy the pointwise mixture bound, including short alternating failures

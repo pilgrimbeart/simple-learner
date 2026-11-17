@@ -1,0 +1,46 @@
+Candidate Circuit versus reference VTold parameter differences, seed 137000
+Emax candidate None reference 10.0
+P candidate 2240 reference None
+bankk candidate None reference 0
+bk candidate None reference 19.0
+d candidate None reference 3.0
+down candidate None reference 1.0
+gate candidate None reference 15.0
+hyst candidate None reference 1.0
+late candidate None reference 1.0
+learn candidate None reference 1.0
+margin_e candidate None reference 3.0
+margin_p candidate None reference 1.2
+mtop candidate None reference 4.0
+off candidate None reference 0.5
+open candidate None reference 0
+pen candidate None reference 3.0
+stair candidate None reference 1.25
+tau_E candidate None reference 0.0
+tau_hold candidate None reference 600.0
+tau_p candidate None reference 150.0
+theta candidate None reference 2.0
+theta_n candidate None reference 1.0
+theta_off candidate None reference 1.0
+theta_p candidate None reference 2.0
+up candidate None reference 0.03
+win candidate None reference 200.0
+win_p candidate None reference 1.2
+Filter: uniform prior over 64 (mean dwell, error) pairs; state prior [0.5,0.5]
+mean dwell seconds [10.000000000000002, 18.11447328527813, 32.81341424030552, 59.43977156547795, 107.67201541058847, 195.042184672716, 353.3086443756197, 639.9999999999999]
+false-taste probabilities [0.01, 0.0642857142857143, 0.1285714285714286, 0.1928571428571429, 0.2571428571428572, 0.32142857142857145, 0.3857142857142858, 0.45]
+Reference also receives actual eaten colour and sensor wiring via arms.make.tell; no latent state.
+VTold disables colour-bank selection/opening, but inherits adaptive pausing and jitter from universal_v.V/universal.U.
+The candidate uses story1.Circuit movement; their closed-loop action kernels are not identical.
+H2(e) and maximum expected scored gain per meal, with poison penalty 2:
+{"e": 0.05, "channel_bits": 0.7136030428840437, "best_meal_gain": 0.85, "worst_meal_gain": -1.85, "bits_per_s_at_0_68525_meals": 0.488996485136291}
+{"e": 0.12, "channel_bits": 0.47063913471263563, "best_meal_gain": 0.64, "worst_meal_gain": -1.6400000000000001, "bits_per_s_at_0_68525_meals": 0.3225054670618336}
+{"e": 0.2, "channel_bits": 0.2780719051126377, "best_meal_gain": 0.3999999999999999, "worst_meal_gain": -1.4, "bits_per_s_at_0_68525_meals": 0.19054877297843498}
+{"e": 0.28, "channel_bits": 0.14454918943986939, "best_meal_gain": 0.15999999999999992, "worst_meal_gain": -1.16, "bits_per_s_at_0_68525_meals": 0.0990523320636705}
+{"e": 0.35, "channel_bits": 0.06593194462450902, "best_meal_gain": -0.04999999999999982, "worst_meal_gain": -0.9500000000000002, "bits_per_s_at_0_68525_meals": 0.04517986505394481}
+{"e": 0.42, "channel_bits": 0.018546104966346455, "best_meal_gain": -0.26, "worst_meal_gain": -0.74, "bits_per_s_at_0_68525_meals": 0.012708718428188909}
+For hidden food probability p, P(positive worth)=e+(1-2e)*p.
+If forced to choose one of two equally costly colours, choose p>1/2.
+If abstention is available, positive expected meal gain requires e+(1-2e)*p>2/3.
+At e>=1/3 no p<=1 yields strictly positive expected scored meal gain.
+This concerns the existing food-minus-two-poison numerator, not a new survival objective.

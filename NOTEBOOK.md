@@ -8,12 +8,18 @@ they were written with: the "mixed-signal brain" is the designed circuit, and th
 
 ## Where it stands
 
-- **The body** is a disc with its mouth at the front of its rim and two thrusters on its rear rim (`world.py`), in real
-  units since 2026-10-22; earlier bodies capped every brain (below: Telling food from poison).
-- **The circuit simulator** (`mixed_feedback.py`) carries noise and mismatch as a substrate makes them (silicon,
-  biology, twice biology), with no way round them; under biology's, every hand-built circuit brain falls to about 1
-  food for each poison (below: Noise as biology makes it).
-- Open questions: `QUESTIONS.md`.
+Reviewed 2026-11-16. The default body remains the disc in `world.py`, with the interface and ground rules in
+[AGENTS.md](AGENTS.md). Later explicitly authorised muscle-like and split-eye variants belong to their named
+experiments (discrete notebook D53–D58); they do not replace the default or authorise further body changes.
+
+The circuit simulator implements substrate-specific noise and mismatch. The failure under biological mismatch
+reported below concerns the early hand-built excitable-neuron circuits, not every subsequent circuit design.
+The minimal search and discrete line have their own dated validation records. A change in noise or numerical
+integration can change the scientific conclusion, so compare records only under their stated models.
+
+The [current programme](PROGRAMME.md) keeps sensory limitations as questions requiring evidence. A successful
+informed policy establishes an opportunity; a failed observer does not prove that the body must change.
+The dated record below is preserved. Open questions are in [QUESTIONS.md](QUESTIONS.md).
 
 ## Lessons from these lines, in full
 
@@ -328,3 +334,10 @@ which subthreshold silicon shares (Sarpeshkar, Delbrueck and Mead 1993), and the
   31-74), but food:poison barely moves (1.11 against 0.97; sensors only 0.92). A rate can't tell a spike the eye
   caused from one of the neuron's own, so a dull sensor is woken until noise fills its quota. The minimal search's
   winners escape all of this: their sensors are leaky integrators, not spiking relays, so mismatch only rescales them.
+
+
+## Interpretation note (2026-11-16)
+
+The current-state section was revised in the approved documentary review. Historical experiments and numbers
+are unchanged. Bounds and references require declared assumptions; an unsuccessful method does not prove
+impossibility, and an interval spanning zero does not establish equivalence. See [the review](lab/v/review_2026-11-16.md).

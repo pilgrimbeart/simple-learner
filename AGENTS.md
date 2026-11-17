@@ -37,7 +37,7 @@ the cheats a grid invites) is in nca-learn's `NOTEBOOK.md`, worth reading before
   | the lab: one-off experiment scripts and their logs, cited by the notebooks (paths absolute to this machine) | `lab/`, `lab/v/` |
   | the interventions phase's results, one page per performance issue | `STORIES.md` |
   | background reading | `MIXED_FEEDBACK.md`, `RECRUITMENT.md`, `BOUNDS.md`, `PARTS.md` |
-  | the current programme: its question, stages, how we work, decisions; check work against it before starting | `PROGRAMME.md` |
+  | the current programme: its question, competing hypotheses, conditional investigations and decisions; check work against it before starting | `PROGRAMME.md` |
   | the programme so far in one page, as an abstract (a summary that links, rewritten as results change) | `ABSTRACT.md` |
   | the grammar of challenges and the experiment's detail | `GRAMMAR.md` |
   | open questions, most valuable first | `QUESTIONS.md` |
@@ -53,7 +53,12 @@ the cheats a grid invites) is in nca-learn's `NOTEBOOK.md`, worth reading before
   terms a newcomer understands, with a link to the notebook. Keep each notebook's "Where it stands" current.
 - **Measure, and trace each failure to a cause before fixing it.** **Show a working behaviour live**
   (`python creature.py`, `python -m discrete.watch`) before reporting it.
-- **Measure in bits** (the user, 2026-11-04, David MacKay's rigour): for any claim about learning or adapting, say how many bits are needed, how many the wires supply and how many were used, against an ideal Bayesian learner with the same evidence. Stay sceptical: a result a design could achieve by building in its test's description proves nothing.
+- **Measure in bits** (the user, 2026-11-04; qualified by the approved review, 2026-11-16): for a learning claim,
+  identify the unknown, the prior, the evidence available in time, and what was learned. Compare with an ideal
+  Bayesian learner under stated assumptions where tractable; otherwise give the best justified bound or reference
+  and say what remains unknown. Do not invent bit counts or delay useful exploration until an exact ideal exists.
+  The same sensory interface does not imply the same prior knowledge or the same observations in a closed loop.
+  A hand-informed learner is a reference, not automatically a bound on every possible brain. See `BOUNDS.md`.
 - **Mind the noise wall** (the user, 2026-11-01): for a learning experiment, estimate its signal to noise per second
   against the life's length, and its explorers per credit window, before reading a result; a negative result where
   learning was impossible (too little signal, or credit interfering among units varying at once) says nothing about the
@@ -81,6 +86,56 @@ the cheats a grid invites) is in nca-learn's `NOTEBOOK.md`, worth reading before
 - **Long runs** share one laptop: one job at a time. **One maths thread per worker**: set `OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1` for anything with a process pool (8 threads per worker made one arm 50 times slower, 2026-11-05). Kill processes only by explicit PID, never by a pattern; and wait on a job by its PID (captured when it starts) or a line in its log, never by `pgrep -f` (a pattern matches the waiting shell's own command line, so the wait never ends or the wrong process dies). To pause
   a run, stop (SIGSTOP) only its pool's workers, never a shell or a process the harness waits on. Don't change code a
   running job will import later.
+
+## Research discipline
+
+Approved in the research review, 2026-11-16. These rules apply to investigation as well as implementation.
+The programme is open-ended; an implementation is evidence, not a scientific explanation by itself.
+
+- **Return to the goal at the start and end of each investigation.** Read the current programme and the relevant
+  notebook's current state. State which uncertainty about reusable, local, economical in-life adaptation this work
+  addresses. Keep user requirements and preferences separate from conjectures, including the user's conjectures.
+- **Diagnose before constructing.** Trace the failure through observations, representation, learning, selection
+  and action. State competing explanations and what would distinguish them. Start with existing traces, a bound,
+  an ablation or a deliberately informed comparator where useful. If diagnosis needs a prototype, explain the
+  uncertainty it tests. After two mechanism variants without a clearer explanation, return to diagnosis and theory.
+- **Use the literature to choose, not decorate, a mechanism.** Search primary sources before substantial new
+  construction and again when the diagnosis changes. Record the standard name, assumptions, closest alternatives,
+  and what this project would add. Distinguish a paper read from an abstract or search excerpt; verify consequential
+  claims in the source. A familiar mechanism or biological analogy is not evidence that it fits this problem.
+- **One compact investigation record in the line's notebook.** Before work: problem and its relevance, competing
+  explanations, source links, discriminating comparison, predicted outcomes (with uncertainty), analysis, stopping
+  rule and effort budget. Afterwards: observation, inference, limitations, changed belief and next branch. Link the
+  existing prediction file and ledger rather than copying them. Small diagnostics need only a short record.
+  Keep a concise problem–mechanism–evidence–limits account for each retained capability, so its purpose survives
+  context loss. Preserve surprising observations and rejected explanations that could justify a reframing.
+- **Make claims traceable.** A reported comparison links the script, configuration, seed/world sets, life length,
+  simulator/body version, metric and analysis, and raw output. Record the code revision and any uncommitted changes
+  needed to reproduce it; if old provenance is missing, label it missing. Trace headline claims to code and logs,
+  not another agent's summary. An error or incomplete run is not a negative scientific result.
+- **Match rigour to the claim.** Exploratory runs may be small; label them and record analysis changes. Freeze a
+  confirmatory comparison before fresh data. Keep failed cases and denominators visible, account for selection
+  among variants, and distinguish fresh seeds from new problem families. Never silently change a metric, reference,
+  stopping rule or success threshold to rescue a result. Sealed evaluation remains sealed until its agreed stage.
+- **Uncertainty is not equivalence.** An interval containing zero is inconclusive about equality. Claims of a tie,
+  no harm or no cost require a justified, predeclared practical margin and an appropriate interval/test. Report
+  reward, activity, material and communication separately: identical behaviour need not have identical cost.
+  Preserve historical pass labels as historical; qualify their interpretation rather than rewriting the data.
+- **Understanding is productive work.** Diagnosis, mathematical analysis, source checking, calibration,
+  replication and testing a counterexample need not improve a score or add a point to a scaling curve. A predicted
+  result may still be a necessary check. Judge progress by explanations and decisions changed, not runs completed.
+- **Continue within the authorised scope.** Keep the conditional programme and ranked questions usable while the
+  user is away. When one branch finishes or blocks, take the next useful authorised task; do not stop merely to
+  report completion of a run or request routine implementation choices. Ask when a needed decision changes the
+  goal, body/interface, protected evaluation, or authorised scope, and continue independent useful work meanwhile.
+  Respect explicit stops, budgets and the one-job rule. Do not launch another agent without the user's permission.
+- **Make reports understandable without a glossary.** Lead with what we learned and its implications for the goal,
+  then evidence, uncertainty and the next investigation. Use established terms, explained inline at first use;
+  add recurring terms to README's Terms. Keep arm codes in provenance, with a plain-language name beside them.
+  An overnight report must not require the user to decode newly invented shorthand.
+- **Preserve history; keep current guidance current.** Rewrite current summaries as evidence changes; add dated
+  corrections to historical conclusions and link them near consequential overclaims. Do not rewrite old predictions
+  or logs to fit hindsight. Historical snapshots are labelled records, never a second set of current instructions.
 
 ## Ground rules for every brain
 

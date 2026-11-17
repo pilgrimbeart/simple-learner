@@ -1,0 +1,10 @@
+  design560              +0.31 [+0.25,+0.37]  units 2052 peak 2052 grown event 10 clock 0 integrator 0 rhythm 0
+  design4480             +0.70 [+0.58,+0.80]  units 4275 peak 4280 grown event 260 clock 984 integrator 789 rhythm 200
+  E2228                  +0.38 [+0.31,+0.44]  units 4053 peak 4054 grown event 130 clock 657 integrator 727 rhythm 497
+  W1000                  +0.70 [+0.61,+0.78]  units 3041 peak 3042 grown event 122 clock 219 integrator 566 rhythm 92
+  W2228                  +0.72 [+0.65,+0.78]  units 4269 peak 4270 grown event 261 clock 514 integrator 1352 rhythm 99
+  design4480-design560   +0.38 [+0.28,+0.50]
+  W2228-design4480       +0.03 [-0.11,+0.14]
+  W1000-design4480       +0.01 [-0.10,+0.10]
+  E2228-design4480       -0.31 [-0.43,-0.22]
+wall_seconds 160.66790597396903

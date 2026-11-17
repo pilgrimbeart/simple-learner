@@ -1,0 +1,9 @@
+PASS: all 16 lives equal the confirmation's (the step wrapper only reads)
+W       0- 30 s  top 0.04 default 0.00  event 0.09 clock 0.35 integrator 0.32 rhythm 0.25  top stream's family: {np.str_('clock'): np.int64(3), np.str_('event'): np.int64(3), np.str_('integrator'): np.int64(9), np.str_('rhythm'): np.int64(9)}
+W      30-100 s  top 0.30 default 0.00  event 0.26 clock 0.24 integrator 0.25 rhythm 0.24  top stream's family: {np.str_('clock'): np.int64(10), np.str_('event'): np.int64(25), np.str_('integrator'): np.int64(21)}
+W     100-200 s  top 0.58 default 0.00  event 0.58 clock 0.14 integrator 0.06 rhythm 0.23  top stream's family: {np.str_('clock'): np.int64(11), np.str_('event'): np.int64(67), np.str_('integrator'): np.int64(2)}
+W     200-300 s  top 0.79 default 0.00  event 0.74 clock 0.04 integrator 0.12 rhythm 0.09  top stream's family: {np.str_('event'): np.int64(71), np.str_('integrator'): np.int64(9)}
+none    0- 30 s  top 0.04 default 0.00  event 0.09 clock 0.35 integrator 0.32 rhythm 0.25  top stream's family: {np.str_('clock'): np.int64(3), np.str_('event'): np.int64(3), np.str_('integrator'): np.int64(9), np.str_('rhythm'): np.int64(9)}
+none   30-100 s  top 0.26 default 0.00  event 0.26 clock 0.26 integrator 0.22 rhythm 0.26  top stream's family: {np.str_('clock'): np.int64(10), np.str_('event'): np.int64(31), np.str_('integrator'): np.int64(15)}
+none  100-200 s  top 0.62 default 0.00  event 0.62 clock 0.10 integrator 0.07 rhythm 0.20  top stream's family: {np.str_('clock'): np.int64(1), np.str_('event'): np.int64(75), np.str_('integrator'): np.int64(4)}
+none  200-300 s  top 0.88 default 0.00  event 0.88 clock 0.04 integrator 0.02 rhythm 0.05  top stream's family: {np.str_('event'): np.int64(80)}

@@ -6,26 +6,24 @@ opening); the printed results in `results/` call the baseline circuit "minimal".
 
 ## Where it stands
 
-- **A brain can grow, in its life and by local means, the link that lets its knowledge act** (rung 1, E1-E7): the
-  recruiting circuit grows exactly the structure an oracle would place in about 62 of 64 poison lives, and nothing in
-  all-food lives.
-- **A recruit that knows nothing of the circuit can find that link too** (the H series): the healing circuit chooses
-  from a menu of actions by win-stay lose-shift and matched the guided bridge; when the first recruit can't reach the
-  cure, a cascade grows a second one step further out (best: +0.66 net food over the knowing circuit, H11).
-- **All of it under the earlier noise.** Under noise and mismatch as biology makes them, these hand-built neurons fire
-  on their own or miss pulses, and every circuit brain falls to about 1 food for each poison: the results stand only
-  for the earlier simulator until the brains are rebuilt on a neuron that survives mismatch.
-- Open questions: `QUESTIONS.md`.
+Reviewed 2026-11-16. The E and H series show local repair in a deliberately restricted task under the simulator
+used before 2026-10-20. E1–E7 grow a useful missing link; H1–H11 explore a recruit's finite menu and a cascade.
+The all-food controls are important evidence for the tested trigger. The numerical results and protocols remain
+in the dated entries below and the generated leaderboard.
 
-Rung 1 (RECRUITMENT.md): the knowing circuit (brains/knowing.py) learns what predicts pain in its taste neuron T, but T
-has no outputs. Can it grow, in its life and by local means only, the link that lets that knowledge change behaviour?
-Everything is circuit (mixed_feedback.py) except growth, the one declared primitive (brains/recruiting.py).
+The later biological noise and mismatch break the early neurons' operation. Therefore the old positive results
+have not established the same repair under that later model, or general growth on unfamiliar challenges. They
+identify possible mechanisms and useful controls. Rebuilding this substrate is parked unless the current
+[programme](../PROGRAMME.md) needs it; the plan below is the original experiment sequence, not a live queue.
 
-Units (converted to seconds on 2026-11-06, the user's rule): a tick was the world's step, 10 ms, and a circuit tick 2.5 ms; "per 1,000 ticks" is per 10 s; a count in circuit ticks keeps its original beside it. Conventions. A condition is 64 lives of 100 s: 32 seeds, each run once with red and once with blue as
-poison, and the same 64 in all-food lives. Food:poison is pooled over lives, with a bootstrap 95% interval over
-lives. Comparisons between variants are *paired*: the same seeds and, with per-node noise streams (below), the same
-noise, so a difference is caused by the variant; the measure is net food (food minus poison) per 10 s after
-the creature starts moving. Scripts: `python -m experiments.e<N>_...`; raw records in experiments/results/.
+**What the experiment establishes:** a construction can link locally available predictive information to action.
+**What remains open:** discovering useful new representations, judging growth against tuning/recycling, and
+retaining a scalable local mechanism under the relevant noise and full resource accounting. See
+[QUESTIONS.md](../QUESTIONS.md).
+
+The original series used 64 lives per condition (32 seeds, each poison colour), generally 100 s unless stated.
+Comparisons are paired as described in the dated methods. Older unit conventions and names remain historical;
+new experiments use seconds and the current ground rules. Scripts and raw records remain under `experiments/`.
 
 ## Plan
 
@@ -1001,3 +999,10 @@ menu (inhibit or excite each attached neuron, turn down a synapse) and a local r
   (winner-take-all with adaptation, the textbook rivalry circuit). The test: rebuild the healing circuit from the
   catalogue and check it still learns, then redraw the block view to match, before a harder test bed makes the
   structural choices real.
+
+
+## Interpretation note (2026-11-16)
+
+The current-state section was revised in the approved documentary review. Historical experiments and numbers
+are unchanged. Bounds and references require declared assumptions; an unsuccessful method does not prove
+impossibility, and an interval spanning zero does not establish equivalence. See [the review](../lab/v/review_2026-11-16.md).

@@ -7,11 +7,15 @@ exploring it with mixed-feedback circuits (`MIXED_FEEDBACK.md`). Written from a 
 mostly from abstracts and summaries; check details against the papers before relying on them. References are
 numbered at the end.
 
-**Status (2026-10-22).** Rungs 0 and 1 were built and measured (below; the record in `experiments/NOTEBOOK.md`, the
-lessons in `NOTEBOOK.md` and `experiments/NOTEBOOK.md`), all under the earlier noise. Under noise and mismatch as biology makes them (2026-10-20)
-every hand-built circuit brain falls to about 1 food for each poison, because its excitable neurons don't survive 10%
-mismatch; the recruitment machinery itself does. So the next step for recruitment is a neuron that survives mismatch,
-then re-running the ladder.
+**Status (reviewed 2026-11-16).** Rungs 0 and 1 were built under the earlier noise model; the scope and limits
+are in [the recruitment notebook](experiments/NOTEBOOK.md#where-it-stands). Their later mismatch failure concerns
+the early neurons and does not establish that recruitment generally fails. Rebuilding that substrate is parked
+unless needed by the current [programme](PROGRAMME.md). The plan below is historical, not the next work queue.
+
+The locality labels below are preliminary classifications from the original literature survey, not verified
+end-to-end guarantees. Check what selects a winner, aggregates errors, allocates resources and broadcasts signals.
+In particular, choosing the globally largest error is not made local merely by storing errors at individual units.
+The 2026-11-16 review has not reverified every paper in this bibliography.
 
 ## Three timescales, and which may have a god
 
@@ -44,7 +48,7 @@ evolve the *rule* by which cells recruit.
 | neurogenesis [21] | new, highly excitable neurons | preferential recruitment of young neurons | yes |
 | evolved developmental programs [22, 23, 24] | the evolved rule's own signals | growth and rewiring by local rules | yes: evolution supplies only the rule |
 
-## Insights
+## Working hypotheses from the literature
 
 1. **The common pattern is random variation plus local selection.** Almost every local mechanism generates
    candidates at random and selects them locally: Ashby's random parameter jumps, kept if stable [6]; Valiant's
@@ -64,14 +68,16 @@ evolve the *rule* by which cells recruit.
    ones [2, 3], an intrinsic property, not a synaptic one. That fits Sepulchre's emphasis on intrinsic conductances
    and Drion's nodal and network modes (`MIXED_FEEDBACK.md`): a free unit is recruited when an intrinsic switch takes
    it from silent or relaying into firing with an ensemble. Mixed feedback is a natural vocabulary for recruitment.
-5. **Recruitment pays only when demand varies.** If every life poses the same task, evolution simply builds the
-   right size of brain. Structural plasticity helps most where rewards change [24]. So the experiments need lives
-   that differ in what they demand, and an energy cost for every active unit, so that a fixed large brain loses.
+5. **Variable demand is a useful test of recruitment's value.** It may favour allocating capacity only when
+   needed, but does not guarantee a gain; a fixed large brain might still be cheaper or learn faster. Compare
+   growth, tuning and fixed-size reuse under actual costs rather than setting costs to make growth win.
+   Recruitment may also alter search and learning dynamics within a fixed task, so varying demand is not a
+   logically necessary condition for it to help.
 6. **Richer units need less recruitment.** XOR is hard for a monotone unit, not for one with amplitude-localised
    feedback, which can respond to "exactly one input"; real dendrites compute XOR [20]. Sometimes the answer to "I
    can't solve this" is more feedback inside the unit.
 
-## The plan
+## The historical plan (October 2026)
 
 **Step 0: the baseline, and the trigger.** Keep the one-bit task: it already contains the recruitment problem. A
 brain with no learning machinery approaches every block; to do better it needs units that detect "*this* sensor was
@@ -104,8 +110,10 @@ recruited.
    the cure is k hops from T, distractor branches; vary k and branching; compare walking (gradient or random), waves
    and attaching widely by success, time to cure, energy and wire length.
 
-Honesty test throughout: spare units generic and identical, one rule that knows nothing of roles. Dormant
-pre-designed circuits switched on when needed would be design smuggled in.
+Honesty test for that series: spare units generic and identical, one rule that knows nothing of roles.
+For the current programme, rich innate structure is allowed and must be declared. Activating a dormant unit
+is not by itself cheating; supplying a bespoke answer to each evaluation problem fails the generality claim.
+Count the dormant repertoire and test transfer beyond the problems that shaped it.
 
 **Phase A: the minimal learner (evolution may be the god).** Done differently, as the minimal circuit search
 (`minimal/NOTEBOOK.md`): hand designs, CMA-ES polishing, pruning, and evolution over topologies, under the honesty

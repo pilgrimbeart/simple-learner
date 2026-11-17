@@ -1,0 +1,13 @@
+  E258         +0.29 [+0.21,+0.37]  cap 2300 units 2209 grown event 10 clock 59 integrator 56 rhythm 42 won 0 cpu 17 s
+  W258         +0.57 [+0.45,+0.69]  cap 2300 units 2300 grown event 54 clock 47 integrator 121 rhythm 36 won 5164 cpu 19 s
+  W258-E258    +0.28 [+0.12,+0.45]
+  E1000        +0.32 [+0.26,+0.36]  cap 3042 units 2857 grown event 50 clock 278 integrator 280 rhythm 207 won 0 cpu 28 s
+  W1000        +0.70 [+0.61,+0.78]  cap 3042 units 3041 grown event 122 clock 219 integrator 566 rhythm 92 won 6169 cpu 28 s
+  W1000-E1000  +0.39 [+0.29,+0.46]
+  E2228        +0.38 [+0.31,+0.44]  cap 4270 units 4053 grown event 130 clock 657 integrator 727 rhythm 497 won 0 cpu 37 s
+  W2228        +0.72 [+0.65,+0.78]  cap 4270 units 4269 grown event 261 clock 514 integrator 1352 rhythm 99 won 5030 cpu 37 s
+  W2228-E2228  +0.35 [+0.25,+0.43]
+  W1000-W258   +0.13 [-0.01,+0.28]
+  W2228-W1000  +0.03 [-0.10,+0.13]
+  E2228-E258   +0.09 [+0.02,+0.16]
+wall_seconds 448.1192659200169

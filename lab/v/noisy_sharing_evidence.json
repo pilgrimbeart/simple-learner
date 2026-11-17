@@ -1,0 +1,106 @@
+[
+  {
+    "seed": 137000,
+    "first": "red",
+    "labels": 575,
+    "one_group_bits": 573.9229152083681,
+    "sign_group_bits": 571.8236629198749,
+    "independent_bits": 593.7901557475101,
+    "evidence_bits_sign_over_one": 2.099252288493176,
+    "posterior_sign_partition": {
+      "uniform_options": 0.03851803228810637,
+      "half_stop": 0.0523812896157494
+    }
+  },
+  {
+    "seed": 137000,
+    "first": "blue",
+    "labels": 608,
+    "one_group_bits": 609.4861247038971,
+    "sign_group_bits": 599.5485135961335,
+    "independent_bits": 626.8746684756435,
+    "evidence_bits_sign_over_one": 9.937611107763587,
+    "posterior_sign_partition": {
+      "uniform_options": 0.08609891045419661,
+      "half_stop": 0.11963018346587276
+    }
+  },
+  {
+    "seed": 137001,
+    "first": "red",
+    "labels": 602,
+    "one_group_bits": 605.7155699357638,
+    "sign_group_bits": 602.7257346874901,
+    "independent_bits": 615.033650458029,
+    "evidence_bits_sign_over_one": 2.989835248273721,
+    "posterior_sign_partition": {
+      "uniform_options": 6.105750840189401e-05,
+      "half_stop": 0.00010617281986334454
+    }
+  },
+  {
+    "seed": 137001,
+    "first": "blue",
+    "labels": 613,
+    "one_group_bits": 616.8248701800826,
+    "sign_group_bits": 611.1266636854457,
+    "independent_bits": 638.5085764961294,
+    "evidence_bits_sign_over_one": 5.698206494636906,
+    "posterior_sign_partition": {
+      "uniform_options": 0.02393106899861691,
+      "half_stop": 0.03191437743250173
+    }
+  },
+  {
+    "seed": 137002,
+    "first": "red",
+    "labels": 612,
+    "one_group_bits": 612.9840240244392,
+    "sign_group_bits": 603.5782992123139,
+    "independent_bits": 632.9225603364047,
+    "evidence_bits_sign_over_one": 9.4057248121253,
+    "posterior_sign_partition": {
+      "uniform_options": 0.21800062713090923,
+      "half_stop": 0.303646520563458
+    }
+  },
+  {
+    "seed": 137002,
+    "first": "blue",
+    "labels": 576,
+    "one_group_bits": 578.4844465375032,
+    "sign_group_bits": 578.9052870469282,
+    "independent_bits": 604.7916770577467,
+    "evidence_bits_sign_over_one": -0.42084050942492013,
+    "posterior_sign_partition": {
+      "uniform_options": 0.008332765323628788,
+      "half_stop": 0.009680715063191138
+    }
+  },
+  {
+    "seed": 137003,
+    "first": "red",
+    "labels": 562,
+    "one_group_bits": 565.0387633703814,
+    "sign_group_bits": 556.663003319797,
+    "independent_bits": 581.8367567177806,
+    "evidence_bits_sign_over_one": 8.375760050584404,
+    "posterior_sign_partition": {
+      "uniform_options": 0.18139640095475093,
+      "half_stop": 0.2975354754734914
+    }
+  },
+  {
+    "seed": 137003,
+    "first": "blue",
+    "labels": 612,
+    "one_group_bits": 616.7852917672591,
+    "sign_group_bits": 616.2486024312369,
+    "independent_bits": 634.1977257302186,
+    "evidence_bits_sign_over_one": 0.5366893360221638,
+    "posterior_sign_partition": {
+      "uniform_options": 0.001886756453695967,
+      "half_stop": 0.0030211376519519257
+    }
+  }
+]

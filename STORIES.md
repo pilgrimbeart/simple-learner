@@ -1,5 +1,16 @@
 # Stories
 
+**Historical intervention phase, reviewed 2026-11-16.** These records preserve the original table, protocol,
+scores and predictions. The current programme is [PROGRAMME.md](PROGRAMME.md). “Universal” below names the
+ambition of that phase, not an established property of the resulting circuit. The broader random-world test
+in discrete notebook D35 exposed substantial failures and unresolved cases; see [the review](discrete/NOTEBOOK.md#review-2026-11-16).
+
+**Statistical qualification:** “ties” and the original plain-test rule below often mean only that a difference
+was not detected. They do not establish practical equality or no cost. The numerical labels remain as historical
+results; future no-harm claims require a predeclared margin and suitable uncertainty analysis as specified in
+[GRAMMAR.md](GRAMMAR.md#interpreting-an-evaluation). A successful manual cure establishes an opportunity under
+its supplied knowledge, not that the brain can discover it. The simplest cure found is not proved globally simplest.
+
 One page per performance issue X, each with the same five stages: a brain with no concept of X; the gap to X solved
 perfectly; manual interventions; how the brain could detect the gap; the simplest circuit that detects and resolves it
 in a life. General observations come once there are several. The rules of this phase are in `AGENTS.md`, the taxonomy in

@@ -1,0 +1,107 @@
+seq17 560 red identical historical: True cpu 10.0/7.1 s
+seq17 560 blue identical historical: True cpu 10.1/7.1 s
+seq17 4480 red identical historical: True cpu 19.0/14.3 s
+seq17 4480 blue identical historical: True cpu 20.4/15.6 s
+allfood 560 red identical historical: None cpu 8.9/5.7 s
+allfood 560 blue identical historical: None cpu 8.7/5.9 s
+allfood 4480 red identical historical: None cpu 7.8/5.4 s
+allfood 4480 blue identical historical: None cpu 6.8/4.8 s
+
+== seq17 P=560 red: gain -61, last third -18, bits/taste 0.995
+  units: initial 2042 peak 2052 final 2052 mean 2052; allowance 504->504
+  births 503 removed: on demand 493 duplicate 0 market 0 | market transfers 0
+  writes: tally 24678 history 25006 integrator 86198 weights 20193
+  prediction: calls 5664 firing scans 1005119 units scanned 12275225 evaluations 12321649 speakers/prediction 118.88
+  messages: forecasts->mixer 673337 letters->streams 28056 part reads 57819 credit 11272 market reads 23016 global stream scans 951552
+  clock      streams  60 fixed   300 final   300 grown     0 unit-s     90000 births     0 spoke  305723/ 349860 saved   -359.1 b (0 +) quota gained 0
+  event      streams  10 fixed    20 final    30 grown    10 unit-s      8905 births   503 spoke   55640/  58310 saved    -73.4 b (1 +) quota gained 0
+  integrator streams  56 fixed   672 final   672 grown     0 unit-s    201600 births     0 spoke  284988/ 326536 saved   -413.4 b (2 +) quota gained 0
+  rhythm     streams  42 fixed  1050 final  1050 grown     0 unit-s    315000 births     0 spoke   47012/ 244902 saved   -166.1 b (11 +) quota gained 0
+  heaviest streams [('rt5n7', 45.02749329634977), ('rt0n5', 19.00366169920146), ('rt5n8', 11.700198762602438)] best rt0n5
+
+== seq17 P=560 blue: gain -46, last third -9, bits/taste 0.981
+  units: initial 2042 peak 2052 final 2052 mean 2052; allowance 504->504
+  births 493 removed: on demand 483 duplicate 0 market 0 | market transfers 0
+  writes: tally 23768 history 24200 integrator 86324 weights 19424
+  prediction: calls 5632 firing scans 998597 units scanned 12194678 evaluations 12238079 speakers/prediction 118.78
+  messages: forecasts->mixer 668952 letters->streams 27720 part reads 57555 credit 10880 market reads 50064 global stream scans 946176
+  clock      streams  60 fixed   300 final   300 grown     0 unit-s     90000 births     0 spoke  308910/ 347820 saved   -382.2 b (2 +) quota gained 0
+  event      streams  10 fixed    20 final    30 grown    10 unit-s      8916 births   493 spoke   56280/  57970 saved    -70.4 b (1 +) quota gained 0
+  integrator streams  56 fixed   672 final   672 grown     0 unit-s    201600 births     0 spoke  282176/ 324632 saved   -426.9 b (1 +) quota gained 0
+  rhythm     streams  42 fixed  1050 final  1050 grown     0 unit-s    315000 births     0 spoke   40845/ 243474 saved   -158.3 b (3 +) quota gained 0
+  heaviest streams [('lbc0t4', 90.23238905166592), ('bad:colour', 18.23379248870011), ('rt2n8', 9.191123033267457)] best bad:colour
+
+== seq17 P=4480 red: gain +17, last third +6, bits/taste 0.825
+  units: initial 2042 peak 4271 final 4270 mean 3665; allowance 4368->4368
+  births 7664 removed: on demand 5314 duplicate 35 market 87 | market transfers 115
+  writes: tally 74337 history 19805 integrator 79849 weights 15788
+  prediction: calls 5246 firing scans 933289 units scanned 20463782 evaluations 30270797 speakers/prediction 118.79
+  messages: forecasts->mixer 623166 letters->streams 22176 part reads 12930898 credit 141407 market reads 19320 global stream scans 881328
+  clock      streams  60 fixed   300 final  1501 grown  1201 unit-s    324193 births  2698 spoke  302825/ 322680 saved   -675.1 b (0 +) quota gained 57
+  event      streams  10 fixed    20 final   270 grown   250 unit-s     60062 births   569 spoke   52324/  53780 saved    -84.6 b (2 +) quota gained 22
+  integrator streams  56 fixed   672 final  1436 grown   764 unit-s    400332 births  4384 spoke  277111/ 301168 saved   -909.6 b (2 +) quota gained 35
+  rhythm     streams  42 fixed  1050 final  1063 grown    13 unit-s    315054 births    13 spoke    6562/ 225876 saved     56.7 b (35 +) quota gained 1
+  heaviest streams [('good:colour', 80.0404421076232), ('rt3n8', 3.607430984052676), ('rt3n7', 3.607430984052676)] best good:colour
+
+== seq17 P=4480 blue: gain +34, last third +42, bits/taste 0.724
+  units: initial 2042 peak 4326 final 4325 mean 3652; allowance 4368->4368
+  births 8804 removed: on demand 6342 duplicate 49 market 130 | market transfers 157
+  writes: tally 101560 history 22971 integrator 88179 weights 20192
+  prediction: calls 5535 firing scans 991775 units scanned 21797672 evaluations 32759881 speakers/prediction 127.44
+  messages: forecasts->mixer 705374 letters->streams 26880 part reads 13908056 credit 192611 market reads 26376 global stream scans 929880
+  clock      streams  60 fixed   300 final  1399 grown  1099 unit-s    309281 births  2906 spoke  327577/ 341700 saved   -408.8 b (9 +) quota gained 86
+  event      streams  10 fixed    20 final   271 grown   251 unit-s     61918 births   657 spoke   55614/  56950 saved    -86.7 b (1 +) quota gained 24
+  integrator streams  56 fixed   672 final  1428 grown   756 unit-s    403375 births  4988 spoke  299294/ 318920 saved   -910.2 b (0 +) quota gained 40
+  rhythm     streams  42 fixed  1050 final  1227 grown   177 unit-s    321148 births   253 spoke   42921/ 239190 saved    -96.9 b (13 +) quota gained 7
+  heaviest streams [('good:colour', 163.980075967653), ('rt0n7', 0.06740840975595785), ('rt0n8', 0.06187418809528015)] best rt4n7
+
+== allfood P=560 red: gain +202, last third +65, bits/taste 0.035
+  units: initial 2042 peak 2042 final 2042 mean 2042; allowance 504->504
+  births 0 removed: on demand 0 duplicate 0 market 0 | market transfers 0
+  writes: tally 21903 history 21887 integrator 87297 weights 21702
+  prediction: calls 5236 firing scans 931439 units scanned 11290974 evaluations 11290974 speakers/prediction 119.85
+  messages: forecasts->mixer 627559 letters->streams 29904 part reads 0 credit 21524 market reads 0 global stream scans 879648
+  clock      streams  60 fixed   300 final   300 grown     0 unit-s     90000 births     0 spoke  316368/ 324840 saved    -70.7 b (0 +) quota gained 0
+  event      streams  10 fixed    20 final    20 grown     0 unit-s      6000 births     0 spoke   42066/  54140 saved     -9.2 b (0 +) quota gained 0
+  integrator streams  56 fixed   672 final   672 grown     0 unit-s    201600 births     0 spoke  290649/ 303184 saved   -264.0 b (0 +) quota gained 0
+  rhythm     streams  42 fixed  1050 final  1050 grown     0 unit-s    315000 births     0 spoke       0/ 227388 saved      0.0 b (0 +) quota gained 0
+  heaviest streams [('lbbadt6', 1.5920844218645567), ('lbbadt5', 1.5920844218645567), ('lbbadt4', 1.5920844218645567)] best None
+
+== allfood P=560 blue: gain +202, last third +65, bits/taste 0.035
+  units: initial 2042 peak 2042 final 2042 mean 2042; allowance 504->504
+  births 0 removed: on demand 0 duplicate 0 market 0 | market transfers 0
+  writes: tally 21903 history 21887 integrator 87297 weights 21702
+  prediction: calls 5236 firing scans 931439 units scanned 11290974 evaluations 11290974 speakers/prediction 119.85
+  messages: forecasts->mixer 627559 letters->streams 29904 part reads 0 credit 21524 market reads 0 global stream scans 879648
+  clock      streams  60 fixed   300 final   300 grown     0 unit-s     90000 births     0 spoke  316368/ 324840 saved    -70.7 b (0 +) quota gained 0
+  event      streams  10 fixed    20 final    20 grown     0 unit-s      6000 births     0 spoke   42066/  54140 saved     -9.2 b (0 +) quota gained 0
+  integrator streams  56 fixed   672 final   672 grown     0 unit-s    201600 births     0 spoke  290649/ 303184 saved   -264.0 b (0 +) quota gained 0
+  rhythm     streams  42 fixed  1050 final  1050 grown     0 unit-s    315000 births     0 spoke       0/ 227388 saved      0.0 b (0 +) quota gained 0
+  heaviest streams [('lbbadt6', 1.5920844218645567), ('lbbadt5', 1.5920844218645567), ('lbbadt4', 1.5920844218645567)] best None
+
+== allfood P=4480 red: gain +202, last third +65, bits/taste 0.035
+  units: initial 2042 peak 2042 final 2042 mean 2042; allowance 4368->4368
+  births 0 removed: on demand 0 duplicate 0 market 0 | market transfers 0
+  writes: tally 21903 history 21887 integrator 87297 weights 21702
+  prediction: calls 5236 firing scans 931439 units scanned 11290974 evaluations 11290974 speakers/prediction 119.85
+  messages: forecasts->mixer 627559 letters->streams 29904 part reads 0 credit 21524 market reads 0 global stream scans 879648
+  clock      streams  60 fixed   300 final   300 grown     0 unit-s     90000 births     0 spoke  316368/ 324840 saved    -70.7 b (0 +) quota gained 0
+  event      streams  10 fixed    20 final    20 grown     0 unit-s      6000 births     0 spoke   42066/  54140 saved     -9.2 b (0 +) quota gained 0
+  integrator streams  56 fixed   672 final   672 grown     0 unit-s    201600 births     0 spoke  290649/ 303184 saved   -264.0 b (0 +) quota gained 0
+  rhythm     streams  42 fixed  1050 final  1050 grown     0 unit-s    315000 births     0 spoke       0/ 227388 saved      0.0 b (0 +) quota gained 0
+  heaviest streams [('lbbadt6', 1.5920844218645567), ('lbbadt5', 1.5920844218645567), ('lbbadt4', 1.5920844218645567)] best None
+
+== allfood P=4480 blue: gain +202, last third +65, bits/taste 0.035
+  units: initial 2042 peak 2042 final 2042 mean 2042; allowance 4368->4368
+  births 0 removed: on demand 0 duplicate 0 market 0 | market transfers 0
+  writes: tally 21903 history 21887 integrator 87297 weights 21702
+  prediction: calls 5236 firing scans 931439 units scanned 11290974 evaluations 11290974 speakers/prediction 119.85
+  messages: forecasts->mixer 627559 letters->streams 29904 part reads 0 credit 21524 market reads 0 global stream scans 879648
+  clock      streams  60 fixed   300 final   300 grown     0 unit-s     90000 births     0 spoke  316368/ 324840 saved    -70.7 b (0 +) quota gained 0
+  event      streams  10 fixed    20 final    20 grown     0 unit-s      6000 births     0 spoke   42066/  54140 saved     -9.2 b (0 +) quota gained 0
+  integrator streams  56 fixed   672 final   672 grown     0 unit-s    201600 births     0 spoke  290649/ 303184 saved   -264.0 b (0 +) quota gained 0
+  rhythm     streams  42 fixed  1050 final  1050 grown     0 unit-s    315000 births     0 spoke       0/ 227388 saved      0.0 b (0 +) quota gained 0
+  heaviest streams [('lbbadt6', 1.5920844218645567), ('lbbadt5', 1.5920844218645567), ('lbbadt4', 1.5920844218645567)] best None
+
+PASS: observation leaves every life identical; seq-17 lives reproduce the historical record
+wall_seconds 22.776344254030846

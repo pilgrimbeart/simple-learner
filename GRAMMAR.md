@@ -1,4 +1,97 @@
-# A grammar of challenges (fifth draft, for discussion)
+# Challenge grammar and evaluation protocols
+
+**Status, 2026-11-16.** This page owns protocol detail. The [research goal](README.md#the-goal-intelligence-that-scales)
+and [current programme](PROGRAMME.md) distinguish ultimate success from the historical milestones below.
+The language and catalogue further down are the fifth draft and its subsequent recorded development, not a new
+instruction to execute all its stages. In particular, its instruction to open an outside set does not override
+[the current exposure register](PROGRAMME.md#sealed).
+
+## Interpreting an evaluation
+
+Name the protocol and frozen design being evaluated. Preserve its original thresholds, denominators and pass labels;
+add qualifications when the inference is too strong. For future confirmatory claims:
+
+- Distinguish development instances, fresh seeds from a known family, and genuinely unfamiliar families. Record
+  when a test was opened. The three previously opened ladders are development material now.
+- Describe what each comparator is told: state, model family, parameters, body, prior and future information.
+  A told controller demonstrates an informed opportunity; it is not automatically attainable by a learner with
+  these observations in this life. A reference's failure does not prove no opportunity exists.
+- Report absolute performance and paired differences alongside gap fractions. When a reference gap is small or
+  uncertain, the ratio can be unstable; retain the result and label that problem rather than excluding a failure.
+- A confidence interval spanning zero is not evidence of equivalence. Before claiming no harm or a practical tie,
+  choose and justify a margin and an appropriate analysis; do not retrofit one to old results. See
+  [Lakens (2017)](https://pure.tue.nl/ws/portalfiles/portal/80918653/lakeequi2017.pdf).
+- Keep the existing last-third score for its protocol, but report whole-life learning costs and time to useful
+  performance alongside it. Include initial and spare machinery, memory, activity, communication and latency;
+  state which are measured and which are estimates or unaccounted.
+- Freeze analysis, comparisons, stopping rule and exposure sets before confirmation. An exploratory analysis
+  changed after observing data remains exploratory until checked on fresh data. Preserve errors, inconclusive
+  results and non-compiling challenges separately from scientific failures.
+
+The 2026-11-09 numerical milestone is reproduced below without changing its numerical bars. Its “solved” means
+passing that particular gap criterion, not near-optimality. Its certification needs the comparator qualification
+above: the original wording grouped differently informed controllers together. No new near-optimality margin,
+equivalence margin or resource trade-off is chosen by this documentation review.
+
+## Scaling milestone recorded on 2026-11-09
+
+The test is one curve, the **scaling curve**: the hardest challenge a brain solves, against how much raw material it is
+given, with its design frozen.
+
+- **Raw material**: how many generic, uncommitted components a brain has, unused at birth or added in its life, with
+  nothing saying where they go. The **starting brain** is the design with none spare. A component is **committed** once
+  it affects behaviour.
+- **A ladder**: a series of challenges for the robot in its body, each a **rung** bigger than the last in one way: more to
+  remember, a longer sequence, signals that mean something only in combination, finer timing, more kinds of thing to tell
+  apart. There are at least three ladders of different kinds, so that no design passes by having one ladder's answer
+  built in.
+- **A certified rung** is one that counts. The starting brain surely falls short of a **yardstick** on it by at least
+  .25 in body efficiency, and the yardstick (a brain told the answer, an ideal learner with the same senses, or a brain
+  designed by hand for that rung) shows that it can be done with this body and these senses. A rung may set a longer life,
+  as long as it needs, and every brain on it lives that long.
+- **Solved**: closing at least half the gap between the starting brain and the yardstick, surely (the lower end of the
+  95% interval), on seeds the design's search never saw.
+
+The historical milestone requires all seven conditions below. It is not the ultimate near-optimality claim:
+
+| | test | passes when |
+|---|---|---|
+| 1 | **It climbs** | On every ladder, the highest rung solved keeps rising over at least three doublings of raw material, to at least three rungs above what the starting brain solves. Extra material may cost something on simpler tasks (the cost curve, below), but doesn't cause a collapse. |
+| 2 | **One design, on challenges it never saw** | One description across the whole curve, with nothing in it depending on the amount of material, the rung or the life's length. A held-out ladder, kept from the design's search and its designers, climbs too. |
+| 3 | **It improves in the life** | On every rung credited to it, the brain is surely better than itself with recruitment switched off (the same material present but inert), on the same lives. |
+| 4 | **It recruits only when needed** | Where nothing needs recruiting (plain worlds, all-food lives, rungs already solved), under a tenth of the material is committed. Harder rungs commit more. |
+| 5 | **Nothing central decides, and it stays local as it grows** | Every recruitment traces to signals at the units involved. A small brain may have any number of connections, but big brains can't have everything broadcasting to everything else, so the average connections per unit must level off as the brain grows. |
+| 6 | **It works in a body, in real time** | All of this holds closed loop in the robot's body, under every ground rule (`AGENTS.md`: noise, tolerances, bodies that vary, no clock). The world doesn't wait, so what growing costs is charged in the score on each rung, the power of all the material included. A bigger brain may react more slowly: that's fine if it is better on balance. |
+| 7 | **It is parsimonious** | Parsimonious enough that we have some chance of understanding the result, and can simulate it fast enough to prove that it scales. |
+
+**The price of size is measured, not assumed.** A bigger brain will probably do worse on simple tasks, through slower
+reactions, false starts and the power of its spare material. How much worse is one of the things we're looking for, so
+no bar is set in advance. We may discover a scaling law: for instance, that each doubling of ability makes simple tasks
+log(N) worse. So the **cost curve**, the score on simple tasks against raw material, is measured beside the scaling curve,
+and the two together say whether a bigger brain is better on balance. Higher rungs usually need the brain to stay good at
+the simple things, such as driving to blocks, so a brain that lost them would fail those rungs anyway (the user,
+2026-11-09). But keep an eye on **catastrophic forgetting**, where learning something new destroys what was already
+learned (McCloskey and Cohen 1989): simple skills are also rechecked after recruitment, in the same life.
+
+**What doesn't count:** a bigger brain designed or searched for each rung, however well it does; a design with one
+ladder's answer built in; anything that decides for the units from outside them; a result only in an abstract task with
+no body.
+
+**Reported beside the curve**, for each rung: the evidence it needs and the evidence a life supplies, in bits; the
+material it takes, against the best brain designed by hand for that rung; the power; the reaction time; and the connections per unit. More capacity does not itself supply evidence. The old conversion of taste bits into a universal number of learnable weights is withdrawn; see [BOUNDS.md](BOUNDS.md). A rung is certified for the
+evidence its unknown needs, given the life's observations and how the brain gathers them, I(unknown; observations | policy, prior),
+not for the length of our description of the world; one that needs more than its life supplies waits for a longer life.
+
+(The test's wording and numbers are the main session's draft of the user's goal, 2026-11-09, for the user's review: three
+ladders, three doublings, three rungs, .25, a half and a tenth. They are to be fixed before the test's first
+run and not moved after it.)
+
+## Historical grammar and development
+
+The material below retains its dated catalogue, predictions and stage-3 protocol. Later findings and protocol
+qualifications are above and in the line notebooks. References to “next” or “still open” below are historical.
+
+### A grammar of challenges (fifth draft, for discussion)
 
 The next step after the universal circuit (`STORIES.md`): many more challenges, to see whether the detectors needed grow more slowly
 than the challenges. The danger, as the user put it: after much grinding we may only have built detectors for our own grammar. So this

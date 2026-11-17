@@ -1,5 +1,10 @@
 # Parts and interventions
 
+**Status, 2026-11-16.** This is a provisional design taxonomy, not a proof that its catalogue is complete or
+that a brain can discover its parts. The current question and work order are in [PROGRAMME.md](PROGRAMME.md).
+The intervention results are historical evidence in [STORIES.md](STORIES.md); each retained capability needs
+a problem, mechanism, evidence and limits, as recorded in [D72](discrete/NOTEBOOK.md#review-2026-11-16).
+
 Once a brain works well enough to learn, many kinds of change could make it better: turning a knob, removing a part
 that tuning made redundant, adding a memory, a sequence detector, a rhythm. Each needs something to notice that it is
 wanted, to choose it among the others, and to judge whether it helped. This is a map of that space, from the
@@ -17,7 +22,8 @@ studied apart. They fall along four questions about any intervention: **what cha
 
 ## 1. The operation: what changes
 
-From the cheapest and most reversible to the most drastic:
+A useful ordering to investigate, not a universal ranking of cost. Tuning can overwrite a skill or consume
+more exploration than a protected new unit; count time, energy, storage and communication as well as parts:
 
 | | operation | example | reversible? |
 |---|---|---|---|
@@ -31,10 +37,12 @@ From the cheapest and most reversible to the most drastic:
 
 Two ideas from the literature govern growth and pruning:
 
-- **Function-preserving growth** [4, 5]: a part added with its effect at zero leaves the brain exactly as good as it
-  was, and is then tuned in. A brain never pays for trying a part; it is the structural form of safe policy
-  improvement (`BOUNDS.md`, Watching and intervening). A duplicate is function-preserving if the copies share the
-  original's output between them.
+- **Function-preserving growth** [4, 5]: under the transformation's assumptions, insertion preserves the old
+  input–output function. Zero initial output can help, but resource sharing, noise or timing can still change
+  behaviour in a dynamical circuit. Material and computation cost from allocation, and subsequent exploration
+  can reduce reward. This is not a guarantee of safe policy improvement. Sharing a duplicate's output preserves
+  a sum only when the rest of the dynamics and accounting permit it. Net2Net's primary-source abstract was
+  checked in this review; see [Chen, Goodfellow and Shlens](https://arxiv.org/abs/1511.05641).
 - **Constructive or selective.** Grow when needed, or overproduce and keep what is used (selective stabilisation [6];
   neural Darwinism [7]; the lottery ticket [8]). The user's plan for the ideal observer (a strong meta-brain, then
   pruned: `QUESTIONS.md`, step 3) is the selective one. Pruning by what a part's removal would cost is classical in
@@ -61,7 +69,8 @@ decision; slow negative feedback, adaptation; fast positive with slow negative, 
 order and interval. That is Tyson, Chen and Novák's sniffers (adaptation), buzzers (oscillators), toggles (switches)
 and blinkers [14], the network motifs of cells [15, 16], and Sepulchre's mixed feedback (`MIXED_FEEDBACK.md`), whose
 one circuit element with loops of either sign at several timescales makes each of them by its settings. A brain that
-grows its own parts needs only the grammar's few elements and a way to set them, not the catalogue built in.
+grows its own parts might use such a grammar instead of a built-in catalogue. Whether local rules can discover,
+tune and connect useful compositions within a life is the open question; expressibility does not establish learnability.
 
 **Neurons themselves sort the same way**: by the bifurcation at which they start firing, into integrators (a rate
 that grows from zero with the input: a memory of evidence) and resonators (firing at their own frequency, picking out
@@ -79,7 +88,9 @@ What tells a brain that an intervention is wanted:
   rhythm by mode locking).
 - **To prune**, each a part's own local evidence: its output constant (always silent or always on); its output the
   same as another part's (correlated: one is spare); its effect tuned to about zero downstream; or its removal, tried
-  for a while, unnoticed. Homeostatic and structural plasticity are local triggers of this kind [18, 19].
+  for a while, unnoticed. These are candidate signals, not proofs of redundancy: a constant output may matter in
+  another context, and correlated units may carry distinct future roles. The locality of the complete decision
+  still needs checking. Homeostatic and structural plasticity provide related mechanisms [18, 19].
 - **To modulate**: a context that changes what is wanted (one circuit, several functions, chosen by a modulator [1]).
 
 **Choosing among interventions** is the open question. A natural order is by cost: tune first, then modulate, then
@@ -134,10 +145,12 @@ would need, from the four axes:
 1. **A substrate that is the grammar**: free units, each a node with loops of either sign at several timescales,
    plus delays and coincidences, whose settings make it any part of section 2. Sepulchre's element is close to this,
    and `RECRUITMENT.md`'s insight 6 (richer units need less recruitment) points the same way.
-2. **Insertion that preserves function**: a recruit joins with its effect at zero, so trying it costs nothing.
+2. **Insertion that preserves function**: a recruit initially changes behaviour as little as possible, with its
+   allocation, activity and later exploration costs still counted.
 3. **Triggers, local**: per section 3, including those for pruning, each from a unit's own state.
-4. **Credit, local and fast**: each unit judged by the fastest signal it has access to (its own efference and the
-   senses' reply, then prediction, then outcomes), so that most learning never waits for meals.
+4. **Credit, local and informative**: each unit judged by a signal that distinguishes the alternatives relevant
+   to its action. A fast signal is useful only if it supplies that evidence; no fixed ordering of sensory,
+   predictive and reward signals is established.
 5. **A choice among interventions**: by cost, with the plateau-or-ceiling question (section 3) as its open core.
 
 The test of the map's completeness: every working brain in this project (B, D20's balance learner, D24's steer)
@@ -146,7 +159,10 @@ that could have tuned it in the credits. Open questions in `QUESTIONS.md`.
 
 ## References
 
-Cited from memory, to check before relying on details.
+These were originally cited from memory. The 2026-11-16 review checked Net2Net's primary-source abstract and
+qualified its use above; it did not verify this entire bibliography. Check the primary text and assumptions of
+any other mechanism before relying on it. The catalogue and information-based triggers are this project's
+working hypotheses, not results proved by the cited papers.
 
 1. E. Marder, "Neuromodulation of neuronal circuits: back to the future", Neuron 76, 2012.
 2. K. O. Stanley, R. Miikkulainen, "Evolving neural networks through augmenting topologies", Evolutionary

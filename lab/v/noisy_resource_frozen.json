@@ -1,0 +1,4225 @@
+{
+  "condition": "frozen",
+  "constructor_world": "(world)",
+  "simulator_steps": 0,
+  "dt_s": 0.0025,
+  "constructor_seed": 137000,
+  "snapshots": [
+    {
+      "nominal_P": 560,
+      "streams": {
+        "event_context": 10,
+        "clock_context": 60,
+        "event_integrator": 56,
+        "rhythm_context": 42
+      },
+      "fixed_units": {
+        "event_context": 20,
+        "clock_context": 300,
+        "event_integrator": 672,
+        "rhythm_context": 1050
+      },
+      "quotas": {
+        "event_context": 30,
+        "clock_context": 180,
+        "event_integrator": 168,
+        "rhythm_context": 126
+      },
+      "total_streams": 168,
+      "total_fixed_units": 2042,
+      "total_quota": 504,
+      "units_over_own_quota": 1548,
+      "immediate_unused_quota": 10,
+      "fixed_plus_immediate_unused": 2052,
+      "independent_clocks": 60,
+      "per_stream": [
+        {
+          "stream": "every:colour",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 3
+        },
+        {
+          "stream": "every:outcome",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 3
+        },
+        {
+          "stream": "good:colour",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 3
+        },
+        {
+          "stream": "good:outcome",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 3
+        },
+        {
+          "stream": "bad:colour",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 3
+        },
+        {
+          "stream": "bad:outcome",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 3
+        },
+        {
+          "stream": "red:colour",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 3
+        },
+        {
+          "stream": "red:outcome",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 3
+        },
+        {
+          "stream": "blue:colour",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 3
+        },
+        {
+          "stream": "blue:outcome",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 3
+        },
+        {
+          "stream": "clock0",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock1",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock2",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock3",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock4",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock5",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock6",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock7",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock8",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock9",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock10",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock11",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock12",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock13",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock14",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock15",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock16",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock17",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock18",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock19",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock20",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock21",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock22",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock23",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock24",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock25",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock26",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock27",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock28",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock29",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock30",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock31",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock32",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock33",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock34",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock35",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock36",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock37",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock38",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock39",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock40",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock41",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock42",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock43",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock44",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock45",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock46",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock47",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock48",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock49",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock50",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock51",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock52",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock53",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock54",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock55",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock56",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock57",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock58",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "clock59",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 3
+        },
+        {
+          "stream": "lbe0t0",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbe0t1",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbe0t2",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbe0t3",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbe0t4",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbe0t5",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbe0t6",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbe1t0",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbe1t1",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbe1t2",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbe1t3",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbe1t4",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbe1t5",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbe1t6",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbgoodt0",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbgoodt1",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbgoodt2",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbgoodt3",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbgoodt4",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbgoodt5",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbgoodt6",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbbadt0",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbbadt1",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbbadt2",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbbadt3",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbbadt4",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbbadt5",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbbadt6",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbc0t0",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbc0t1",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbc0t2",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbc0t3",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbc0t4",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbc0t5",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbc0t6",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbc1t0",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbc1t1",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbc1t2",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbc1t3",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbc1t4",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbc1t5",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbc1t6",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbm0t0",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbm0t1",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbm0t2",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbm0t3",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbm0t4",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbm0t5",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbm0t6",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbm1t0",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbm1t1",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbm1t2",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbm1t3",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbm1t4",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbm1t5",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "lbm1t6",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 3
+        },
+        {
+          "stream": "rt0n2",
+          "family": "rhythm_context",
+          "fixed_units": 10,
+          "quota": 3
+        },
+        {
+          "stream": "rt0n3",
+          "family": "rhythm_context",
+          "fixed_units": 15,
+          "quota": 3
+        },
+        {
+          "stream": "rt0n4",
+          "family": "rhythm_context",
+          "fixed_units": 20,
+          "quota": 3
+        },
+        {
+          "stream": "rt0n5",
+          "family": "rhythm_context",
+          "fixed_units": 25,
+          "quota": 3
+        },
+        {
+          "stream": "rt0n6",
+          "family": "rhythm_context",
+          "fixed_units": 30,
+          "quota": 3
+        },
+        {
+          "stream": "rt0n7",
+          "family": "rhythm_context",
+          "fixed_units": 35,
+          "quota": 3
+        },
+        {
+          "stream": "rt0n8",
+          "family": "rhythm_context",
+          "fixed_units": 40,
+          "quota": 3
+        },
+        {
+          "stream": "rt1n2",
+          "family": "rhythm_context",
+          "fixed_units": 10,
+          "quota": 3
+        },
+        {
+          "stream": "rt1n3",
+          "family": "rhythm_context",
+          "fixed_units": 15,
+          "quota": 3
+        },
+        {
+          "stream": "rt1n4",
+          "family": "rhythm_context",
+          "fixed_units": 20,
+          "quota": 3
+        },
+        {
+          "stream": "rt1n5",
+          "family": "rhythm_context",
+          "fixed_units": 25,
+          "quota": 3
+        },
+        {
+          "stream": "rt1n6",
+          "family": "rhythm_context",
+          "fixed_units": 30,
+          "quota": 3
+        },
+        {
+          "stream": "rt1n7",
+          "family": "rhythm_context",
+          "fixed_units": 35,
+          "quota": 3
+        },
+        {
+          "stream": "rt1n8",
+          "family": "rhythm_context",
+          "fixed_units": 40,
+          "quota": 3
+        },
+        {
+          "stream": "rt2n2",
+          "family": "rhythm_context",
+          "fixed_units": 10,
+          "quota": 3
+        },
+        {
+          "stream": "rt2n3",
+          "family": "rhythm_context",
+          "fixed_units": 15,
+          "quota": 3
+        },
+        {
+          "stream": "rt2n4",
+          "family": "rhythm_context",
+          "fixed_units": 20,
+          "quota": 3
+        },
+        {
+          "stream": "rt2n5",
+          "family": "rhythm_context",
+          "fixed_units": 25,
+          "quota": 3
+        },
+        {
+          "stream": "rt2n6",
+          "family": "rhythm_context",
+          "fixed_units": 30,
+          "quota": 3
+        },
+        {
+          "stream": "rt2n7",
+          "family": "rhythm_context",
+          "fixed_units": 35,
+          "quota": 3
+        },
+        {
+          "stream": "rt2n8",
+          "family": "rhythm_context",
+          "fixed_units": 40,
+          "quota": 3
+        },
+        {
+          "stream": "rt3n2",
+          "family": "rhythm_context",
+          "fixed_units": 10,
+          "quota": 3
+        },
+        {
+          "stream": "rt3n3",
+          "family": "rhythm_context",
+          "fixed_units": 15,
+          "quota": 3
+        },
+        {
+          "stream": "rt3n4",
+          "family": "rhythm_context",
+          "fixed_units": 20,
+          "quota": 3
+        },
+        {
+          "stream": "rt3n5",
+          "family": "rhythm_context",
+          "fixed_units": 25,
+          "quota": 3
+        },
+        {
+          "stream": "rt3n6",
+          "family": "rhythm_context",
+          "fixed_units": 30,
+          "quota": 3
+        },
+        {
+          "stream": "rt3n7",
+          "family": "rhythm_context",
+          "fixed_units": 35,
+          "quota": 3
+        },
+        {
+          "stream": "rt3n8",
+          "family": "rhythm_context",
+          "fixed_units": 40,
+          "quota": 3
+        },
+        {
+          "stream": "rt4n2",
+          "family": "rhythm_context",
+          "fixed_units": 10,
+          "quota": 3
+        },
+        {
+          "stream": "rt4n3",
+          "family": "rhythm_context",
+          "fixed_units": 15,
+          "quota": 3
+        },
+        {
+          "stream": "rt4n4",
+          "family": "rhythm_context",
+          "fixed_units": 20,
+          "quota": 3
+        },
+        {
+          "stream": "rt4n5",
+          "family": "rhythm_context",
+          "fixed_units": 25,
+          "quota": 3
+        },
+        {
+          "stream": "rt4n6",
+          "family": "rhythm_context",
+          "fixed_units": 30,
+          "quota": 3
+        },
+        {
+          "stream": "rt4n7",
+          "family": "rhythm_context",
+          "fixed_units": 35,
+          "quota": 3
+        },
+        {
+          "stream": "rt4n8",
+          "family": "rhythm_context",
+          "fixed_units": 40,
+          "quota": 3
+        },
+        {
+          "stream": "rt5n2",
+          "family": "rhythm_context",
+          "fixed_units": 10,
+          "quota": 3
+        },
+        {
+          "stream": "rt5n3",
+          "family": "rhythm_context",
+          "fixed_units": 15,
+          "quota": 3
+        },
+        {
+          "stream": "rt5n4",
+          "family": "rhythm_context",
+          "fixed_units": 20,
+          "quota": 3
+        },
+        {
+          "stream": "rt5n5",
+          "family": "rhythm_context",
+          "fixed_units": 25,
+          "quota": 3
+        },
+        {
+          "stream": "rt5n6",
+          "family": "rhythm_context",
+          "fixed_units": 30,
+          "quota": 3
+        },
+        {
+          "stream": "rt5n7",
+          "family": "rhythm_context",
+          "fixed_units": 35,
+          "quota": 3
+        },
+        {
+          "stream": "rt5n8",
+          "family": "rhythm_context",
+          "fixed_units": 40,
+          "quota": 3
+        }
+      ]
+    },
+    {
+      "nominal_P": 1120,
+      "streams": {
+        "event_context": 10,
+        "clock_context": 60,
+        "event_integrator": 56,
+        "rhythm_context": 42
+      },
+      "fixed_units": {
+        "event_context": 20,
+        "clock_context": 300,
+        "event_integrator": 672,
+        "rhythm_context": 1050
+      },
+      "quotas": {
+        "event_context": 60,
+        "clock_context": 360,
+        "event_integrator": 336,
+        "rhythm_context": 252
+      },
+      "total_streams": 168,
+      "total_fixed_units": 2042,
+      "total_quota": 1008,
+      "units_over_own_quota": 1134,
+      "immediate_unused_quota": 100,
+      "fixed_plus_immediate_unused": 2142,
+      "independent_clocks": 60,
+      "per_stream": [
+        {
+          "stream": "every:colour",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 6
+        },
+        {
+          "stream": "every:outcome",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 6
+        },
+        {
+          "stream": "good:colour",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 6
+        },
+        {
+          "stream": "good:outcome",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 6
+        },
+        {
+          "stream": "bad:colour",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 6
+        },
+        {
+          "stream": "bad:outcome",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 6
+        },
+        {
+          "stream": "red:colour",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 6
+        },
+        {
+          "stream": "red:outcome",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 6
+        },
+        {
+          "stream": "blue:colour",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 6
+        },
+        {
+          "stream": "blue:outcome",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 6
+        },
+        {
+          "stream": "clock0",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock1",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock2",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock3",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock4",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock5",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock6",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock7",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock8",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock9",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock10",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock11",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock12",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock13",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock14",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock15",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock16",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock17",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock18",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock19",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock20",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock21",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock22",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock23",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock24",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock25",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock26",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock27",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock28",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock29",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock30",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock31",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock32",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock33",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock34",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock35",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock36",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock37",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock38",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock39",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock40",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock41",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock42",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock43",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock44",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock45",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock46",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock47",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock48",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock49",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock50",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock51",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock52",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock53",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock54",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock55",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock56",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock57",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock58",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "clock59",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 6
+        },
+        {
+          "stream": "lbe0t0",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbe0t1",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbe0t2",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbe0t3",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbe0t4",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbe0t5",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbe0t6",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbe1t0",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbe1t1",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbe1t2",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbe1t3",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbe1t4",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbe1t5",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbe1t6",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbgoodt0",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbgoodt1",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbgoodt2",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbgoodt3",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbgoodt4",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbgoodt5",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbgoodt6",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbbadt0",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbbadt1",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbbadt2",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbbadt3",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbbadt4",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbbadt5",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbbadt6",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbc0t0",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbc0t1",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbc0t2",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbc0t3",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbc0t4",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbc0t5",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbc0t6",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbc1t0",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbc1t1",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbc1t2",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbc1t3",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbc1t4",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbc1t5",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbc1t6",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbm0t0",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbm0t1",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbm0t2",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbm0t3",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbm0t4",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbm0t5",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbm0t6",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbm1t0",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbm1t1",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbm1t2",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbm1t3",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbm1t4",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbm1t5",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "lbm1t6",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 6
+        },
+        {
+          "stream": "rt0n2",
+          "family": "rhythm_context",
+          "fixed_units": 10,
+          "quota": 6
+        },
+        {
+          "stream": "rt0n3",
+          "family": "rhythm_context",
+          "fixed_units": 15,
+          "quota": 6
+        },
+        {
+          "stream": "rt0n4",
+          "family": "rhythm_context",
+          "fixed_units": 20,
+          "quota": 6
+        },
+        {
+          "stream": "rt0n5",
+          "family": "rhythm_context",
+          "fixed_units": 25,
+          "quota": 6
+        },
+        {
+          "stream": "rt0n6",
+          "family": "rhythm_context",
+          "fixed_units": 30,
+          "quota": 6
+        },
+        {
+          "stream": "rt0n7",
+          "family": "rhythm_context",
+          "fixed_units": 35,
+          "quota": 6
+        },
+        {
+          "stream": "rt0n8",
+          "family": "rhythm_context",
+          "fixed_units": 40,
+          "quota": 6
+        },
+        {
+          "stream": "rt1n2",
+          "family": "rhythm_context",
+          "fixed_units": 10,
+          "quota": 6
+        },
+        {
+          "stream": "rt1n3",
+          "family": "rhythm_context",
+          "fixed_units": 15,
+          "quota": 6
+        },
+        {
+          "stream": "rt1n4",
+          "family": "rhythm_context",
+          "fixed_units": 20,
+          "quota": 6
+        },
+        {
+          "stream": "rt1n5",
+          "family": "rhythm_context",
+          "fixed_units": 25,
+          "quota": 6
+        },
+        {
+          "stream": "rt1n6",
+          "family": "rhythm_context",
+          "fixed_units": 30,
+          "quota": 6
+        },
+        {
+          "stream": "rt1n7",
+          "family": "rhythm_context",
+          "fixed_units": 35,
+          "quota": 6
+        },
+        {
+          "stream": "rt1n8",
+          "family": "rhythm_context",
+          "fixed_units": 40,
+          "quota": 6
+        },
+        {
+          "stream": "rt2n2",
+          "family": "rhythm_context",
+          "fixed_units": 10,
+          "quota": 6
+        },
+        {
+          "stream": "rt2n3",
+          "family": "rhythm_context",
+          "fixed_units": 15,
+          "quota": 6
+        },
+        {
+          "stream": "rt2n4",
+          "family": "rhythm_context",
+          "fixed_units": 20,
+          "quota": 6
+        },
+        {
+          "stream": "rt2n5",
+          "family": "rhythm_context",
+          "fixed_units": 25,
+          "quota": 6
+        },
+        {
+          "stream": "rt2n6",
+          "family": "rhythm_context",
+          "fixed_units": 30,
+          "quota": 6
+        },
+        {
+          "stream": "rt2n7",
+          "family": "rhythm_context",
+          "fixed_units": 35,
+          "quota": 6
+        },
+        {
+          "stream": "rt2n8",
+          "family": "rhythm_context",
+          "fixed_units": 40,
+          "quota": 6
+        },
+        {
+          "stream": "rt3n2",
+          "family": "rhythm_context",
+          "fixed_units": 10,
+          "quota": 6
+        },
+        {
+          "stream": "rt3n3",
+          "family": "rhythm_context",
+          "fixed_units": 15,
+          "quota": 6
+        },
+        {
+          "stream": "rt3n4",
+          "family": "rhythm_context",
+          "fixed_units": 20,
+          "quota": 6
+        },
+        {
+          "stream": "rt3n5",
+          "family": "rhythm_context",
+          "fixed_units": 25,
+          "quota": 6
+        },
+        {
+          "stream": "rt3n6",
+          "family": "rhythm_context",
+          "fixed_units": 30,
+          "quota": 6
+        },
+        {
+          "stream": "rt3n7",
+          "family": "rhythm_context",
+          "fixed_units": 35,
+          "quota": 6
+        },
+        {
+          "stream": "rt3n8",
+          "family": "rhythm_context",
+          "fixed_units": 40,
+          "quota": 6
+        },
+        {
+          "stream": "rt4n2",
+          "family": "rhythm_context",
+          "fixed_units": 10,
+          "quota": 6
+        },
+        {
+          "stream": "rt4n3",
+          "family": "rhythm_context",
+          "fixed_units": 15,
+          "quota": 6
+        },
+        {
+          "stream": "rt4n4",
+          "family": "rhythm_context",
+          "fixed_units": 20,
+          "quota": 6
+        },
+        {
+          "stream": "rt4n5",
+          "family": "rhythm_context",
+          "fixed_units": 25,
+          "quota": 6
+        },
+        {
+          "stream": "rt4n6",
+          "family": "rhythm_context",
+          "fixed_units": 30,
+          "quota": 6
+        },
+        {
+          "stream": "rt4n7",
+          "family": "rhythm_context",
+          "fixed_units": 35,
+          "quota": 6
+        },
+        {
+          "stream": "rt4n8",
+          "family": "rhythm_context",
+          "fixed_units": 40,
+          "quota": 6
+        },
+        {
+          "stream": "rt5n2",
+          "family": "rhythm_context",
+          "fixed_units": 10,
+          "quota": 6
+        },
+        {
+          "stream": "rt5n3",
+          "family": "rhythm_context",
+          "fixed_units": 15,
+          "quota": 6
+        },
+        {
+          "stream": "rt5n4",
+          "family": "rhythm_context",
+          "fixed_units": 20,
+          "quota": 6
+        },
+        {
+          "stream": "rt5n5",
+          "family": "rhythm_context",
+          "fixed_units": 25,
+          "quota": 6
+        },
+        {
+          "stream": "rt5n6",
+          "family": "rhythm_context",
+          "fixed_units": 30,
+          "quota": 6
+        },
+        {
+          "stream": "rt5n7",
+          "family": "rhythm_context",
+          "fixed_units": 35,
+          "quota": 6
+        },
+        {
+          "stream": "rt5n8",
+          "family": "rhythm_context",
+          "fixed_units": 40,
+          "quota": 6
+        }
+      ]
+    },
+    {
+      "nominal_P": 2240,
+      "streams": {
+        "event_context": 10,
+        "clock_context": 60,
+        "event_integrator": 56,
+        "rhythm_context": 42
+      },
+      "fixed_units": {
+        "event_context": 20,
+        "clock_context": 300,
+        "event_integrator": 672,
+        "rhythm_context": 1050
+      },
+      "quotas": {
+        "event_context": 130,
+        "clock_context": 780,
+        "event_integrator": 728,
+        "rhythm_context": 546
+      },
+      "total_streams": 168,
+      "total_fixed_units": 2042,
+      "total_quota": 2184,
+      "units_over_own_quota": 522,
+      "immediate_unused_quota": 664,
+      "fixed_plus_immediate_unused": 2706,
+      "independent_clocks": 60,
+      "per_stream": [
+        {
+          "stream": "every:colour",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 13
+        },
+        {
+          "stream": "every:outcome",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 13
+        },
+        {
+          "stream": "good:colour",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 13
+        },
+        {
+          "stream": "good:outcome",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 13
+        },
+        {
+          "stream": "bad:colour",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 13
+        },
+        {
+          "stream": "bad:outcome",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 13
+        },
+        {
+          "stream": "red:colour",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 13
+        },
+        {
+          "stream": "red:outcome",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 13
+        },
+        {
+          "stream": "blue:colour",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 13
+        },
+        {
+          "stream": "blue:outcome",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 13
+        },
+        {
+          "stream": "clock0",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock1",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock2",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock3",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock4",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock5",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock6",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock7",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock8",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock9",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock10",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock11",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock12",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock13",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock14",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock15",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock16",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock17",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock18",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock19",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock20",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock21",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock22",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock23",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock24",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock25",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock26",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock27",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock28",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock29",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock30",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock31",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock32",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock33",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock34",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock35",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock36",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock37",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock38",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock39",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock40",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock41",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock42",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock43",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock44",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock45",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock46",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock47",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock48",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock49",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock50",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock51",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock52",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock53",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock54",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock55",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock56",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock57",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock58",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "clock59",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 13
+        },
+        {
+          "stream": "lbe0t0",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbe0t1",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbe0t2",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbe0t3",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbe0t4",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbe0t5",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbe0t6",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbe1t0",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbe1t1",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbe1t2",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbe1t3",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbe1t4",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbe1t5",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbe1t6",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbgoodt0",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbgoodt1",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbgoodt2",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbgoodt3",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbgoodt4",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbgoodt5",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbgoodt6",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbbadt0",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbbadt1",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbbadt2",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbbadt3",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbbadt4",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbbadt5",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbbadt6",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbc0t0",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbc0t1",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbc0t2",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbc0t3",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbc0t4",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbc0t5",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbc0t6",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbc1t0",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbc1t1",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbc1t2",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbc1t3",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbc1t4",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbc1t5",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbc1t6",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbm0t0",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbm0t1",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbm0t2",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbm0t3",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbm0t4",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbm0t5",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbm0t6",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbm1t0",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbm1t1",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbm1t2",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbm1t3",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbm1t4",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbm1t5",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "lbm1t6",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 13
+        },
+        {
+          "stream": "rt0n2",
+          "family": "rhythm_context",
+          "fixed_units": 10,
+          "quota": 13
+        },
+        {
+          "stream": "rt0n3",
+          "family": "rhythm_context",
+          "fixed_units": 15,
+          "quota": 13
+        },
+        {
+          "stream": "rt0n4",
+          "family": "rhythm_context",
+          "fixed_units": 20,
+          "quota": 13
+        },
+        {
+          "stream": "rt0n5",
+          "family": "rhythm_context",
+          "fixed_units": 25,
+          "quota": 13
+        },
+        {
+          "stream": "rt0n6",
+          "family": "rhythm_context",
+          "fixed_units": 30,
+          "quota": 13
+        },
+        {
+          "stream": "rt0n7",
+          "family": "rhythm_context",
+          "fixed_units": 35,
+          "quota": 13
+        },
+        {
+          "stream": "rt0n8",
+          "family": "rhythm_context",
+          "fixed_units": 40,
+          "quota": 13
+        },
+        {
+          "stream": "rt1n2",
+          "family": "rhythm_context",
+          "fixed_units": 10,
+          "quota": 13
+        },
+        {
+          "stream": "rt1n3",
+          "family": "rhythm_context",
+          "fixed_units": 15,
+          "quota": 13
+        },
+        {
+          "stream": "rt1n4",
+          "family": "rhythm_context",
+          "fixed_units": 20,
+          "quota": 13
+        },
+        {
+          "stream": "rt1n5",
+          "family": "rhythm_context",
+          "fixed_units": 25,
+          "quota": 13
+        },
+        {
+          "stream": "rt1n6",
+          "family": "rhythm_context",
+          "fixed_units": 30,
+          "quota": 13
+        },
+        {
+          "stream": "rt1n7",
+          "family": "rhythm_context",
+          "fixed_units": 35,
+          "quota": 13
+        },
+        {
+          "stream": "rt1n8",
+          "family": "rhythm_context",
+          "fixed_units": 40,
+          "quota": 13
+        },
+        {
+          "stream": "rt2n2",
+          "family": "rhythm_context",
+          "fixed_units": 10,
+          "quota": 13
+        },
+        {
+          "stream": "rt2n3",
+          "family": "rhythm_context",
+          "fixed_units": 15,
+          "quota": 13
+        },
+        {
+          "stream": "rt2n4",
+          "family": "rhythm_context",
+          "fixed_units": 20,
+          "quota": 13
+        },
+        {
+          "stream": "rt2n5",
+          "family": "rhythm_context",
+          "fixed_units": 25,
+          "quota": 13
+        },
+        {
+          "stream": "rt2n6",
+          "family": "rhythm_context",
+          "fixed_units": 30,
+          "quota": 13
+        },
+        {
+          "stream": "rt2n7",
+          "family": "rhythm_context",
+          "fixed_units": 35,
+          "quota": 13
+        },
+        {
+          "stream": "rt2n8",
+          "family": "rhythm_context",
+          "fixed_units": 40,
+          "quota": 13
+        },
+        {
+          "stream": "rt3n2",
+          "family": "rhythm_context",
+          "fixed_units": 10,
+          "quota": 13
+        },
+        {
+          "stream": "rt3n3",
+          "family": "rhythm_context",
+          "fixed_units": 15,
+          "quota": 13
+        },
+        {
+          "stream": "rt3n4",
+          "family": "rhythm_context",
+          "fixed_units": 20,
+          "quota": 13
+        },
+        {
+          "stream": "rt3n5",
+          "family": "rhythm_context",
+          "fixed_units": 25,
+          "quota": 13
+        },
+        {
+          "stream": "rt3n6",
+          "family": "rhythm_context",
+          "fixed_units": 30,
+          "quota": 13
+        },
+        {
+          "stream": "rt3n7",
+          "family": "rhythm_context",
+          "fixed_units": 35,
+          "quota": 13
+        },
+        {
+          "stream": "rt3n8",
+          "family": "rhythm_context",
+          "fixed_units": 40,
+          "quota": 13
+        },
+        {
+          "stream": "rt4n2",
+          "family": "rhythm_context",
+          "fixed_units": 10,
+          "quota": 13
+        },
+        {
+          "stream": "rt4n3",
+          "family": "rhythm_context",
+          "fixed_units": 15,
+          "quota": 13
+        },
+        {
+          "stream": "rt4n4",
+          "family": "rhythm_context",
+          "fixed_units": 20,
+          "quota": 13
+        },
+        {
+          "stream": "rt4n5",
+          "family": "rhythm_context",
+          "fixed_units": 25,
+          "quota": 13
+        },
+        {
+          "stream": "rt4n6",
+          "family": "rhythm_context",
+          "fixed_units": 30,
+          "quota": 13
+        },
+        {
+          "stream": "rt4n7",
+          "family": "rhythm_context",
+          "fixed_units": 35,
+          "quota": 13
+        },
+        {
+          "stream": "rt4n8",
+          "family": "rhythm_context",
+          "fixed_units": 40,
+          "quota": 13
+        },
+        {
+          "stream": "rt5n2",
+          "family": "rhythm_context",
+          "fixed_units": 10,
+          "quota": 13
+        },
+        {
+          "stream": "rt5n3",
+          "family": "rhythm_context",
+          "fixed_units": 15,
+          "quota": 13
+        },
+        {
+          "stream": "rt5n4",
+          "family": "rhythm_context",
+          "fixed_units": 20,
+          "quota": 13
+        },
+        {
+          "stream": "rt5n5",
+          "family": "rhythm_context",
+          "fixed_units": 25,
+          "quota": 13
+        },
+        {
+          "stream": "rt5n6",
+          "family": "rhythm_context",
+          "fixed_units": 30,
+          "quota": 13
+        },
+        {
+          "stream": "rt5n7",
+          "family": "rhythm_context",
+          "fixed_units": 35,
+          "quota": 13
+        },
+        {
+          "stream": "rt5n8",
+          "family": "rhythm_context",
+          "fixed_units": 40,
+          "quota": 13
+        }
+      ]
+    },
+    {
+      "nominal_P": 4480,
+      "streams": {
+        "event_context": 10,
+        "clock_context": 60,
+        "event_integrator": 56,
+        "rhythm_context": 42
+      },
+      "fixed_units": {
+        "event_context": 20,
+        "clock_context": 300,
+        "event_integrator": 672,
+        "rhythm_context": 1050
+      },
+      "quotas": {
+        "event_context": 260,
+        "clock_context": 1560,
+        "event_integrator": 1456,
+        "rhythm_context": 1092
+      },
+      "total_streams": 168,
+      "total_fixed_units": 2042,
+      "total_quota": 4368,
+      "units_over_own_quota": 162,
+      "immediate_unused_quota": 2488,
+      "fixed_plus_immediate_unused": 4530,
+      "independent_clocks": 60,
+      "per_stream": [
+        {
+          "stream": "every:colour",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 26
+        },
+        {
+          "stream": "every:outcome",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 26
+        },
+        {
+          "stream": "good:colour",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 26
+        },
+        {
+          "stream": "good:outcome",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 26
+        },
+        {
+          "stream": "bad:colour",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 26
+        },
+        {
+          "stream": "bad:outcome",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 26
+        },
+        {
+          "stream": "red:colour",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 26
+        },
+        {
+          "stream": "red:outcome",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 26
+        },
+        {
+          "stream": "blue:colour",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 26
+        },
+        {
+          "stream": "blue:outcome",
+          "family": "event_context",
+          "fixed_units": 2,
+          "quota": 26
+        },
+        {
+          "stream": "clock0",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock1",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock2",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock3",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock4",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock5",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock6",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock7",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock8",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock9",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock10",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock11",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock12",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock13",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock14",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock15",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock16",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock17",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock18",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock19",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock20",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock21",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock22",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock23",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock24",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock25",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock26",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock27",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock28",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock29",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock30",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock31",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock32",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock33",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock34",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock35",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock36",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock37",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock38",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock39",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock40",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock41",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock42",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock43",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock44",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock45",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock46",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock47",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock48",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock49",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock50",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock51",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock52",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock53",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock54",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock55",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock56",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock57",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock58",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "clock59",
+          "family": "clock_context",
+          "fixed_units": 5,
+          "quota": 26
+        },
+        {
+          "stream": "lbe0t0",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbe0t1",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbe0t2",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbe0t3",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbe0t4",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbe0t5",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbe0t6",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbe1t0",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbe1t1",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbe1t2",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbe1t3",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbe1t4",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbe1t5",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbe1t6",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbgoodt0",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbgoodt1",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbgoodt2",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbgoodt3",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbgoodt4",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbgoodt5",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbgoodt6",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbbadt0",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbbadt1",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbbadt2",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbbadt3",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbbadt4",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbbadt5",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbbadt6",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbc0t0",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbc0t1",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbc0t2",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbc0t3",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbc0t4",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbc0t5",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbc0t6",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbc1t0",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbc1t1",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbc1t2",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbc1t3",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbc1t4",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbc1t5",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbc1t6",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbm0t0",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbm0t1",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbm0t2",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbm0t3",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbm0t4",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbm0t5",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbm0t6",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbm1t0",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbm1t1",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbm1t2",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbm1t3",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbm1t4",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbm1t5",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "lbm1t6",
+          "family": "event_integrator",
+          "fixed_units": 12,
+          "quota": 26
+        },
+        {
+          "stream": "rt0n2",
+          "family": "rhythm_context",
+          "fixed_units": 10,
+          "quota": 26
+        },
+        {
+          "stream": "rt0n3",
+          "family": "rhythm_context",
+          "fixed_units": 15,
+          "quota": 26
+        },
+        {
+          "stream": "rt0n4",
+          "family": "rhythm_context",
+          "fixed_units": 20,
+          "quota": 26
+        },
+        {
+          "stream": "rt0n5",
+          "family": "rhythm_context",
+          "fixed_units": 25,
+          "quota": 26
+        },
+        {
+          "stream": "rt0n6",
+          "family": "rhythm_context",
+          "fixed_units": 30,
+          "quota": 26
+        },
+        {
+          "stream": "rt0n7",
+          "family": "rhythm_context",
+          "fixed_units": 35,
+          "quota": 26
+        },
+        {
+          "stream": "rt0n8",
+          "family": "rhythm_context",
+          "fixed_units": 40,
+          "quota": 26
+        },
+        {
+          "stream": "rt1n2",
+          "family": "rhythm_context",
+          "fixed_units": 10,
+          "quota": 26
+        },
+        {
+          "stream": "rt1n3",
+          "family": "rhythm_context",
+          "fixed_units": 15,
+          "quota": 26
+        },
+        {
+          "stream": "rt1n4",
+          "family": "rhythm_context",
+          "fixed_units": 20,
+          "quota": 26
+        },
+        {
+          "stream": "rt1n5",
+          "family": "rhythm_context",
+          "fixed_units": 25,
+          "quota": 26
+        },
+        {
+          "stream": "rt1n6",
+          "family": "rhythm_context",
+          "fixed_units": 30,
+          "quota": 26
+        },
+        {
+          "stream": "rt1n7",
+          "family": "rhythm_context",
+          "fixed_units": 35,
+          "quota": 26
+        },
+        {
+          "stream": "rt1n8",
+          "family": "rhythm_context",
+          "fixed_units": 40,
+          "quota": 26
+        },
+        {
+          "stream": "rt2n2",
+          "family": "rhythm_context",
+          "fixed_units": 10,
+          "quota": 26
+        },
+        {
+          "stream": "rt2n3",
+          "family": "rhythm_context",
+          "fixed_units": 15,
+          "quota": 26
+        },
+        {
+          "stream": "rt2n4",
+          "family": "rhythm_context",
+          "fixed_units": 20,
+          "quota": 26
+        },
+        {
+          "stream": "rt2n5",
+          "family": "rhythm_context",
+          "fixed_units": 25,
+          "quota": 26
+        },
+        {
+          "stream": "rt2n6",
+          "family": "rhythm_context",
+          "fixed_units": 30,
+          "quota": 26
+        },
+        {
+          "stream": "rt2n7",
+          "family": "rhythm_context",
+          "fixed_units": 35,
+          "quota": 26
+        },
+        {
+          "stream": "rt2n8",
+          "family": "rhythm_context",
+          "fixed_units": 40,
+          "quota": 26
+        },
+        {
+          "stream": "rt3n2",
+          "family": "rhythm_context",
+          "fixed_units": 10,
+          "quota": 26
+        },
+        {
+          "stream": "rt3n3",
+          "family": "rhythm_context",
+          "fixed_units": 15,
+          "quota": 26
+        },
+        {
+          "stream": "rt3n4",
+          "family": "rhythm_context",
+          "fixed_units": 20,
+          "quota": 26
+        },
+        {
+          "stream": "rt3n5",
+          "family": "rhythm_context",
+          "fixed_units": 25,
+          "quota": 26
+        },
+        {
+          "stream": "rt3n6",
+          "family": "rhythm_context",
+          "fixed_units": 30,
+          "quota": 26
+        },
+        {
+          "stream": "rt3n7",
+          "family": "rhythm_context",
+          "fixed_units": 35,
+          "quota": 26
+        },
+        {
+          "stream": "rt3n8",
+          "family": "rhythm_context",
+          "fixed_units": 40,
+          "quota": 26
+        },
+        {
+          "stream": "rt4n2",
+          "family": "rhythm_context",
+          "fixed_units": 10,
+          "quota": 26
+        },
+        {
+          "stream": "rt4n3",
+          "family": "rhythm_context",
+          "fixed_units": 15,
+          "quota": 26
+        },
+        {
+          "stream": "rt4n4",
+          "family": "rhythm_context",
+          "fixed_units": 20,
+          "quota": 26
+        },
+        {
+          "stream": "rt4n5",
+          "family": "rhythm_context",
+          "fixed_units": 25,
+          "quota": 26
+        },
+        {
+          "stream": "rt4n6",
+          "family": "rhythm_context",
+          "fixed_units": 30,
+          "quota": 26
+        },
+        {
+          "stream": "rt4n7",
+          "family": "rhythm_context",
+          "fixed_units": 35,
+          "quota": 26
+        },
+        {
+          "stream": "rt4n8",
+          "family": "rhythm_context",
+          "fixed_units": 40,
+          "quota": 26
+        },
+        {
+          "stream": "rt5n2",
+          "family": "rhythm_context",
+          "fixed_units": 10,
+          "quota": 26
+        },
+        {
+          "stream": "rt5n3",
+          "family": "rhythm_context",
+          "fixed_units": 15,
+          "quota": 26
+        },
+        {
+          "stream": "rt5n4",
+          "family": "rhythm_context",
+          "fixed_units": 20,
+          "quota": 26
+        },
+        {
+          "stream": "rt5n5",
+          "family": "rhythm_context",
+          "fixed_units": 25,
+          "quota": 26
+        },
+        {
+          "stream": "rt5n6",
+          "family": "rhythm_context",
+          "fixed_units": 30,
+          "quota": 26
+        },
+        {
+          "stream": "rt5n7",
+          "family": "rhythm_context",
+          "fixed_units": 35,
+          "quota": 26
+        },
+        {
+          "stream": "rt5n8",
+          "family": "rhythm_context",
+          "fixed_units": 40,
+          "quota": 26
+        }
+      ]
+    }
+  ],
+  "integrator_design_slots": 56,
+  "acquisition_complex_resonators": 120,
+  "eventual_trackers": 6,
+  "existing_1000s_allocations": [
+    {
+      "seed": 137000,
+      "first": "red",
+      "allocated": 2738,
+      "outer_predictor_slots": 169
+    },
+    {
+      "seed": 137000,
+      "first": "blue",
+      "allocated": 2735,
+      "outer_predictor_slots": 169
+    },
+    {
+      "seed": 137001,
+      "first": "red",
+      "allocated": 2745,
+      "outer_predictor_slots": 169
+    },
+    {
+      "seed": 137001,
+      "first": "blue",
+      "allocated": 2781,
+      "outer_predictor_slots": 169
+    },
+    {
+      "seed": 137002,
+      "first": "red",
+      "allocated": 2739,
+      "outer_predictor_slots": 169
+    },
+    {
+      "seed": 137002,
+      "first": "blue",
+      "allocated": 2741,
+      "outer_predictor_slots": 169
+    },
+    {
+      "seed": 137003,
+      "first": "red",
+      "allocated": 2722,
+      "outer_predictor_slots": 169
+    },
+    {
+      "seed": 137003,
+      "first": "blue",
+      "allocated": 2764,
+      "outer_predictor_slots": 169
+    }
+  ],
+  "source_record_sha256": "7334b2a461f699184028d4ec6bc3410b5e68ecb3fe198c84b776cb7d52a943d6",
+  "revision": "9099ade2fdf7a14b3e02630b7b28906b0d937b79",
+  "dirty": " M ABSTRACT.md\n M AGENTS.md\n M BOUNDS.md\n M GRAMMAR.md\n M MIXED_FEEDBACK.md\n M NOTEBOOK.md\n M PARTS.md\n M PROGRAMME.md\n M QUESTIONS.md\n M README.md\n M RECRUITMENT.md\n M STORIES.md\n M discrete/NOTEBOOK.md\n M experiments/NOTEBOOK.md\n M lab/v/LEDGER.md\n M minimal/NOTEBOOK.md\n?? lab/noisy_path_audit.py\n?? lab/noisy_path_checks.py\n?? lab/noisy_path_replay.py\n?? lab/noisy_redundancy.py\n?? lab/noisy_reference_inventory.py\n?? lab/noisy_resource_audit.py\n?? lab/noisy_sharing.py\n?? lab/noisy_sharing_analysis.py\n?? lab/noisy_weights_check.py\n?? lab/v/noisy_path_analysis.log\n?? lab/v/noisy_path_audit.json\n?? lab/v/noisy_path_checks.log\n?? lab/v/noisy_path_collect.log\n?? lab/v/noisy_path_identity.log\n?? lab/v/noisy_path_identity_error.log\n?? lab/v/noisy_path_identity_frozen.log\n?? lab/v/noisy_path_replay.json\n?? lab/v/noisy_path_replay.log\n?? lab/v/noisy_path_replay_ordering_error.log\n?? lab/v/noisy_redundancy.json\n?? lab/v/noisy_redundancy.log\n?? lab/v/noisy_reference_inventory.log\n?? lab/v/noisy_resource_frozen.log\n?? lab/v/noisy_scoring_collect.log\n?? lab/v/noisy_scoring_identity.log\n?? lab/v/noisy_sharing.json\n?? lab/v/noisy_sharing.log\n?? lab/v/noisy_sharing_analysis.log\n?? lab/v/noisy_sharing_checks.log\n?? lab/v/noisy_sharing_evidence.json\n?? lab/v/noisy_signed_collect.log\n?? lab/v/noisy_signed_identity.log\n?? lab/v/noisy_signed_replay.json\n?? lab/v/noisy_signed_replay.log\n?? lab/v/noisy_weights_check.log\n?? lab/v/programme_before_review_2026-11-16.md\n?? lab/v/questions_before_review_2026-11-16.md\n?? lab/v/review_2026-11-16.md\n",
+  "hashes": {
+    "lab/noisy_resource_audit.py": "5ee86f0607c8a5cfef58f48c6bd75a9ec252adea1575eb2a22dcce9949df2484",
+    "lab/grownet.py": "1a550553b1244368ed0ca6fa59cce3e94a9badd5e5d1e801953aa42974874f0f",
+    "lab/teach.py": "c377e37fbdeeafa5a155735ba58e4afa3acad97b14b10ce292478f5845ba6b5f",
+    "lab/stage2_lang/seconds.py": "d9300c87e60fa6d18369f65d57eca3ff6be73e5474aedecd3515cc84e26fa669"
+  },
+  "wall_seconds": 0.3544983749743551,
+  "cpu_seconds": 0.334071481
+}

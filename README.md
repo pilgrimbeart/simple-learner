@@ -1,657 +1,156 @@
 # simple-learner: intelligence that scales
 
-(Split from [nca-learn](https://github.com/pilgrimbeart/nca-learn) on 2026-11-02, with its history. The sheet brain,
-a sheet of identical cells that grows its own nervous system, lives on there as a small self-contained demo; this
-repository carries on the circuit brains.)
+An open-ended research programme on emergent systems operating in real time. We use a small simulated robot
+to investigate how a brain could improve its own organisation during life. The [abstract](ABSTRACT.md) gives
+the present research position; [PROGRAMME.md](PROGRAMME.md) gives the next investigations.
+
+Split from [nca-learn](https://github.com/pilgrimbeart/nca-learn) on 2026-11-02. That repository retains the sheet
+of identical cells; this one carries the circuit and growing-network investigations.
 
 ## The goal: intelligence that scales
 
-**To solve a bigger problem, just add more brain.** We are looking for a design of brain component(s) with this
-property: from a simple starting design, a brain recognises when it isn't solving a problem well and adjusts itself to
-do better, recruiting new components to the cause as necessary. The new components are generic raw material, either
-already there and unused or added on demand, and nothing godlike decides when or where they go. So all it takes to make
-a brain step up to a problem it couldn't solve is more of that raw material, with no redesign (the user, 2026-11-09).
+**To solve a bigger problem, just add more brain.** We seek one reusable component type, or a small repertoire,
+from which a simple robot brain can recognise an improvable shortfall and organise additional capacity when
+useful. The component design may contain substantial innate structure. The designer must not need to invent
+new machinery for each unfamiliar evaluation problem.
 
-- **Adjust first, recruit second.** Turning a knob the brain already has costs no material, so it is always the cheap option; new
-  components are for what no setting of the existing ones can do (the user, 2026-11-10).
-- **It is a brain for a robot.** It must solve real-world, embodied, real-time problems, not abstract ones. The body has
-  its own dynamics and flaws, the senses are noisy, and the world doesn't wait while the brain thinks.
-- **Anything may happen before a life, but the improving must happen in it.** Evolution, searches and our own designs
-  may all shape the component. A solution designed by hand isn't a solution in itself, though it may give insight into
-  how to design a brain that improves itself in its life.
-- **No central decider, and locality because of scale.** Nothing may decide from outside or above what is recruited, when
-  or where. A small brain may have any number of connections. But big brains can't have everything broadcasting to
-  everything else, so as a brain grows its parts must come to sense and act locally. The strong suspicion is that this
-  takes bottom-up, emergent behaviour. That may be wrong, and the results can say so.
-- **A component may be quite complex, but we stay parsimonious.** Simplicity isn't the aim in itself. We press for it so
-  that simulation stays quick, we can think clearly, and we have some chance of understanding the result. We may not
-  understand it beforehand. A massive network or hairball might work, but we'd still need to simulate it fast enough to
-  prove that it scales.
-- **Lives and senses may grow with the challenges.** Lives may have to get longer as challenges get more complex, and
-  eventually we will have to add more senses, though there is still a lot to learn with the present ones.
+The eventual output should be an academic paper that explains the mechanism and its scientific significance
+in simple terms, with its relationship to prior work, evidence and limits made explicit. Novel implementation
+alone is not the breakthrough; the explanation and demonstrated generality must earn that claim.
+
+Success means that, after launch into an unfamiliar simulated environment, the brain learns during that life
+to approach the best brain we can hand-design for that problem, or a tighter information-theoretic performance
+limit where one can be justified. It should do so parsimoniously, accounting for evidence, learning time,
+energy, material, communication and response speed. A precise near-optimality margin must be declared for a
+particular claim; passing an exploratory milestone below is not that claim.
+
+A module acts on its state and signals received through explicit connections. Small brains may be densely
+connected; as they grow, communication must remain affordable. A few explicit shared signals may be considered,
+but their availability and costs cannot be hidden. Detecting that more capacity would help is itself a central
+research question, not an ability we may assume the module already has.
+
+Recruitment can mean creating, activating or reorganising capacity. Tuning existing machinery is the default
+comparison, but can cost exploration or overwrite useful knowledge. Compare growth with reuse, recycling and
+retention; neither growth nor tuning is always cheaper.
+
+We keep the body and environment simple for fast simulation and clear explanations. Finite evidence and
+resources can make some tasks unattainable. A failure under specified constraints, or a discovery about the
+trade-off between body and brain, can therefore be valuable progress. Body and interface changes still require
+the user's agreement; failure of one learner does not establish that such a change is necessary.
 
 ### How we'll know: the scaling test
 
-The test is one curve, the **scaling curve**: the hardest challenge a brain solves, against how much raw material it is
-given, with its design frozen.
+Freeze one design and measure what increasing resources buys across several challenge families, including
+families not seen by its designers. Compare in-life adaptation with appropriate fixed, tuning and recycling
+controls. Measure the costs and the retention of simpler skills as well as the hardest challenge passed.
 
-- **Raw material**: how many generic, uncommitted components a brain has, unused at birth or added in its life, with
-  nothing saying where they go. The **starting brain** is the design with none spare. A component is **committed** once
-  it affects behaviour.
-- **A ladder**: a series of challenges for the robot in its body, each a **rung** bigger than the last in one way: more to
-  remember, a longer sequence, signals that mean something only in combination, finer timing, more kinds of thing to tell
-  apart. There are at least three ladders of different kinds, so that no design passes by having one ladder's answer
-  built in.
-- **A certified rung** is one that counts. The starting brain surely falls short of a **yardstick** on it by at least
-  .25 in body efficiency, and the yardstick (a brain told the answer, an ideal learner with the same senses, or a brain
-  designed by hand for that rung) shows that it can be done with this body and these senses. A rung may set a longer life,
-  as long as it needs, and every brain on it lives that long.
-- **Solved**: closing at least half the gap between the starting brain and the yardstick, surely (the lower end of the
-  95% interval), on seeds the design's search never saw.
+The [2026-11-09 scaling milestone](GRAMMAR.md#scaling-milestone-recorded-on-2026-11-09) retains its original
+numbers: three ladders, three resource doublings, three additional rungs, a .25 efficiency gap, at least half
+that gap closed with its stated confidence criterion, and under a tenth of spare material committed where
+recruitment is unnecessary. These were an operational draft, subsequently used in experiments. They are
+preserved for interpreting those experiments, not silently promoted into proof of near-optimal intelligence.
 
-The goal is met when all seven of these hold:
+Report each result's scope: exploration, frozen comparison on fresh seeds, transfer to a new family, or a
+physical implementation check. Describe what the comparison brain knows. The same sensor interface does not
+remove an advantage from a supplied model family, prior or hidden state. An oracle or successful hand design
+shows an achievable informed behaviour; an unsuccessful reference does not prove impossibility.
 
-| | test | passes when |
-|---|---|---|
-| 1 | **It climbs** | On every ladder, the highest rung solved keeps rising over at least three doublings of raw material, to at least three rungs above what the starting brain solves. Extra material may cost something on simpler tasks (the cost curve, below), but doesn't cause a collapse. |
-| 2 | **One design, on challenges it never saw** | One description across the whole curve, with nothing in it depending on the amount of material, the rung or the life's length. A held-out ladder, kept from the design's search and its designers, climbs too. |
-| 3 | **It improves in the life** | On every rung credited to it, the brain is surely better than itself with recruitment switched off (the same material present but inert), on the same lives. |
-| 4 | **It recruits only when needed** | Where nothing needs recruiting (plain worlds, all-food lives, rungs already solved), under a tenth of the material is committed. Harder rungs commit more. |
-| 5 | **Nothing central decides, and it stays local as it grows** | Every recruitment traces to signals at the units involved. A small brain may have any number of connections, but big brains can't have everything broadcasting to everything else, so the average connections per unit must level off as the brain grows. |
-| 6 | **It works in a body, in real time** | All of this holds closed loop in the robot's body, under every ground rule (`AGENTS.md`: noise, tolerances, bodies that vary, no clock). The world doesn't wait, so what growing costs is charged in the score on each rung, the power of all the material included. A bigger brain may react more slowly: that's fine if it is better on balance. |
-| 7 | **It is parsimonious** | Parsimonious enough that we have some chance of understanding the result, and can simulate it fast enough to prove that it scales. |
-
-**The price of size is measured, not assumed.** A bigger brain will probably do worse on simple tasks, through slower
-reactions, false starts and the power of its spare material. How much worse is one of the things we're looking for, so
-no bar is set in advance. We may discover a scaling law: for instance, that each doubling of ability makes simple tasks
-log(N) worse. So the **cost curve**, the score on simple tasks against raw material, is measured beside the scaling curve,
-and the two together say whether a bigger brain is better on balance. Higher rungs usually need the brain to stay good at
-the simple things, such as driving to blocks, so a brain that lost them would fail those rungs anyway (the user,
-2026-11-09). But keep an eye on **catastrophic forgetting**, where learning something new destroys what was already
-learned (McCloskey and Cohen 1989): simple skills are also rechecked after recruitment, in the same life.
-
-**What doesn't count:** a bigger brain designed or searched for each rung, however well it does; a design with one
-ladder's answer built in; anything that decides for the units from outside them; a result only in an abstract task with
-no body.
-
-**Reported beside the curve**, for each rung: the evidence it needs and the evidence a life supplies, in bits; the
-material it takes, against the best brain designed by hand for that rung; the power; the reaction time; and the connections per unit. More brain adds capacity, not
-information: a clean 100 s life's tastes offer about 50 bits (`discrete/NOTEBOOK.md`, D31), about 25 weights' worth at 2 bits a
-weight (`BOUNDS.md`); the eyes offer more, about whatever the brain's own actions expose (D44, D47). A rung is certified for the
-evidence its unknown needs, given the life's observations and how the brain gathers them, I(unknown; observations | policy, prior),
-not for the length of our description of the world; one that needs more than its life supplies waits for a longer life.
-
-(The test's wording and numbers are the main session's draft of the user's goal, 2026-11-09, for the user's review: three
-ladders, three doublings, three rungs, .25, a half and a tenth. They are to be fixed before the test's first
-run and not moved after it.)
+The evidence budget concerns the unknowns needed for good action, not the number of bits in our world-generating
+program. [BOUNDS.md](BOUNDS.md) explains conditional information bounds and their limits. Formal protocols and
+test exposure are in [GRAMMAR.md](GRAMMAR.md) and [PROGRAMME.md](PROGRAMME.md#sealed).
 
 ## How we explore it
 
-We work by simulation, in the simplest setting we can make: a small robot, the *creature*, with two eyes, two thrusters
-and one sense of taste, in a world of red and blue blocks, one colour food and the other poison. Its canonical first
-lesson is to learn, within one short life, which is which: one bit. Every part acts only on what it can sense locally:
-nothing places its parts, no unit sees the whole, and no god decides. And because a theory that can't be built is no use,
-we check that a brain can be made in real components.
+Manual solutions are probes: they show an opportunity and help identify the capability it requires. The research
+then asks how a reusable mechanism could acquire that capability autonomously, why it works, and where it fails.
+An experiment is useful when it distinguishes explanations, checks a premise, reveals a mechanism or opens a
+new direction, even if it does not raise a score.
 
-**How we got here.**
-1. **The sheet brain** (in [nca-learn](https://github.com/pilgrimbeart/nca-learn)): a sheet of identical cells that
-   differentiates and assembles a brain that learns the bit. It worked, and gave us the simplest possible body and
-   world, made to run fast. But each cell needed complex circuitry inside, so the parts weren't simple.
-2. **The circuit brain** (this repository): a small brain built by hand that learns the bit in a short life. Then built
-   in real components (transistors, resistors, capacitors), lived in the circuit simulator SPICE, to check it is
-   grounded in reality. It is. But SPICE is far too slow for experiments, so we now work in a fast model of the
-   circuit's blocks, each block's numbers measured in SPICE.
-3. **Towards a brain that optimises itself.** Then the aim became a general recipe: circuits that (a) notice, by
-   themselves, that they are not doing well for the creature, and (b) put it right, from local parts, ideally by
-   emergence rather than by our design. So we gave the same small brain many different mismatches with its world
-   (unequal thrusters, a noisy eye, food whose colour swaps), cured each by hand, and looked for what the cures have
-   in common. One circuit, the *bank of predictors*, does the job of many: it keeps several rival ideas of what taste
-   means, scores them all on every taste, and follows the best. We then tested it on worlds drawn at random, so as
-   not to mark our own homework.
-4. **The goal, stated** (the user, 2026-11-09). Those manual designs gave us a handle on the problem, and themes emerged
-   (the bank, wobbling), but as a method it is open-ended. We now understand the problem and the goal well enough to
-   design a coherent strategy towards the scaling test.
-
-**Where we are** (`PROGRAMME.md`; a summary in `ABSTRACT.md`). The ruler exists: three ladders on today's senses
-(sequences, timing, combinations), certified rung by rung, with a held-out fourth sealed (`discrete/NOTEBOOK.md`, D37).
-The first climb exists too, on one ladder: a brain that records the letters its tastes reveal, with one small comparing
-unit per look-back, learns hidden words twice as long each time its material doubles (D38). Given several registers,
-each moved by a different kind of event, it picks the right one itself. On timing it beats the starting brain but
-solves no rung: its clocks don't yet lock on to the world's rhythm well enough. Combinations are untried.
-
-Since 2026-11-10 the work is run for understanding, with light rigour: about 5 pairs of lives a run, a prediction and how sure written
-first, a ledger of what each run cost and whether it surprised us, and designs taken from the ideal learner and the literature before
-anything is invented (`PROGRAMME.md`, How we work). In that mode (D39): the three ladders turn out to be one problem, whose known answer is
-a context tree; a bank of fixed clocks now solves timing's first rung and reaches a hand-designed brain's level at its third; and a world
-of touching pairs of blocks costs a cautious brain a quarter of its food, which turns out to be lost to what these eyes can't see, not to skill (D41). The tree, built
-(D40), climbs sequences and combinations with material, with no setting changed between them, and solves timing's first rung.
-A weak thruster turned out to need no new part at all: one knob, set from a measurement of the creature's own turning (D43).
-
-**Next** (the user, 2026-11-10): a *dancing brain*. A simple brain behaves too narrowly to gather the evidence a new trick needs. So
-begin with a brain driven by many cycles of different timings, each checking its own prediction of what its movement will make the eyes
-see, and let the cycles settle on what works (`PROGRAMME.md`, The next phase). The first step counted what each movement tells (D44):
-only spinning on one thruster at a time, long enough to see the view come round, tells the creature about its body better than
-foraging does (driving straight tells it too, which our first observer missed), and no movement tells it where a block lies
-across its path.
-
-What the manual designs have taught: learning in a life is fast when the distinctions that matter are cheap under the learner's
-prior and its actions expose them (the review of 2026-11-11, `lab/v/review_2026-11-11.md`). We first put this too strongly, as "a
-life's tastes offer about 50 bits but writing down a world takes hundreds, so no brain learns a world in one life": that mixed the
-length of our description of a world with what the creature must resolve to act well, and with what its senses, not only its
-taste, can tell it. Play showed the eyes can supply far more than taste's bits (D47). The bank copes with between a fifth and three fifths of the random worlds that have something to learn, and uses
-its evidence almost as well as an ideal judge would. Where it fails, it lacks the idea, mostly an idea about *time* (when
-the colours swap, how soon after a meal another turns bad). But its ideas are ones we wrote in.
-
-Three lines of work so far:
-
-- **The circuit brains** are small circuits of excitable neurons built from one mixed-feedback element (Ribar and
-  Sepulchre). The recruitment series among them grows while it acts: it starts with too little and recruits more in
-  the life, where and when a local signal calls for it. A neuron that knows something but can't act on it is
-  *frustrated*, and its frustration grows the link that lets the knowledge act. A circuit designed by hand is kept
-  for comparison.
-- **The minimal circuit search** drops every architectural constraint (no neurons, locality or growth) and asks how
-  simple a circuit can be that learns the bit, and how well a circuit can drive the body, searching by hand and by
-  optimisation.
-- **Discrete circuits** ask the same of common parts (transistors, resistors, capacitors, diodes) on a coin cell,
-  living closed loop in SPICE: first the simplest that forages, then one that learns the bit.
+Before substantial construction we diagnose the failure and consult primary literature. Afterwards we state
+what changed in our understanding and in the route to the goal. The [working discipline](AGENTS.md#research-discipline)
+keeps requirements, preferences, conjectures and observations distinct, and provides for continued useful work
+while the user is unavailable.
 
 ## What we've learned
 
-The findings that changed the direction of the work, each told in full in the notebook named.
+The detailed evidence and qualifications are in the notebooks. The [2026-11-16 review](discrete/NOTEBOOK.md#review-2026-11-16)
+connects the major experiment families to the goal; it is a review of existing records, not new experimental data.
 
-- **A third unseen ladder, and the price of many candidates in a noisy world.** A blind agent, sealed in the sandbox, wrote a ladder in
-  which which colour is poison flips at random and tastes sometimes lie. Neither frozen brain climbed it. Read afterwards, most of it
-  turned out unlearnable: an ideal learner, using the same tastes, could close only its two hardest rungs (the yardstick brain was told
-  the hidden answer, which no sense reveals in time; future ladders will be measured against an ideal learner instead). On those rungs
-  our brain now holds the right evidence (a running sum of what its tastes revealed chooses as well as the ideal learner), but cannot
-  single it out from among some 260 candidates it also holds: with a third of tastes lying, a good candidate and a middling one agree
-  with the tastes almost equally often, so a life is too short to tell them apart. A large repertoire costs evidence to choose from, and
-  noisy feedback makes that evidence scarce (`discrete/NOTEBOOK.md`, D69 to D71).
+**A local repair is possible in a restricted setting.** The earlier recruitment experiments grew a link that
+allowed learned information to affect action. They also tested a generic recruit's menu of operations. Those
+results belong to the earlier noise model and limited repair task; they do not establish general self-improvement.
+[Recruitment notebook](experiments/NOTEBOOK.md#where-it-stands).
 
-- **The brain finds a world's rhythm by itself** (confirmed on fresh creatures). In worlds where food follows a secret pattern in time,
-  the brain now listens to its own noticed changes, finds the strong rhythms in them, and locks a tracker onto each, using the textbook
-  design for locking onto a rhythm from noisy, missing and false events (a Kalman-filter phase-locked loop with a gate). Each tracker
-  offers its count of place in the cycle as something to learn from. Patterns 3, 5 and 7 slots long are all solved, with nothing told
-  about time; before, none above 2 was. Some trackers lock onto a rhythm within the rhythm (the whole pattern's length), and what helps
-  prediction is kept (`discrete/NOTEBOOK.md`, D68). On fresh creatures the frozen design with the trackers solves timing patterns up to
-  7 slots from 1120 units of material up, sequences up to 17 at 4480 (D69).
-- **Bits as the currency, and a memory of recent events on every signal.** Each part of the brain is now judged by how many bits it
-  saves in predicting taste, and the brain's own bits a taste say how much it knows (1 bit: nothing; the ideal learner's, a yardstick).
-  Given leaky counts of every kind of event at several time scales, the brain found by itself the memory a world of satiety needed (how
-  many meals of a colour lately), which we had earlier added by hand. Material moves to the parts that save bits (a market), so adding
-  such memory costs nothing elsewhere (`discrete/NOTEBOOK.md`, D67).
+**Small circuits can learn and act, but their physical accounting matters.** The minimal search found compact
+solutions to the food distinction. Later transistor and supply-power accounting changed their apparent size and
+cost substantially. A software block count is not a physical resource budget, and a search result is not proof
+of minimum possible size. [Minimal notebook](minimal/NOTEBOOK.md#where-it-stands).
 
-- **What the timing worlds need is a sense of place in the cycle, and trust that can come back.** In the worlds where food follows
-  a secret pattern in time, the growing brain had stalled halfway. Its clocks are reset whenever it sees the pattern move on, so their
-  beats fall anywhere within a time slot and it loses count of where in the cycle it is. Given a steady rhythm that is never reset
-  (told the slot's length, as a diagnosis), it solves both rungs tested, better than our designed brain (confirmed on fresh
-  creatures: nine tenths of the gap closed instead of a half), and with it every rung tested, patterns up to 13 slots long. Told only late in life, the
-  rhythm is useless until one more piece is added: the brain must be able to trust a stream again after distrusting it, which a
-  standard trick from online learning gives (each update returns a little weight to every stream, Herbster and Warmuth's fixed share).
-  Finding the rhythm's length unaided is still open: each change is noticed only at the next telling meal, seconds late, too blurred
-  for simple locking (`discrete/NOTEBOOK.md`, D65).
+**Useful evidence depends on what the robot does.** Body-learning experiments show that movements can expose
+information that sparse reward does not reveal quickly. Sensory predictability alone selected unhelpful behaviour;
+sensory–motor coupling helped balance but failed to choose the best tempo. Prediction and information need a
+specified target and a connection to action value. [Discrete notebook, D44–D54](discrete/NOTEBOOK.md#review-2026-11-16).
 
-- **The learned steering's shortfall is two choices that pay late, not anything it can't express.** Forcing every habit the held
-  choices can form (4,096 of them, 12 bits) onto the same creatures, the best one drives as well as the hand-built circuit. The learner
-  gets the plain habit nearly right (within a fifth of its best) but in most lives misses two choices whose reward comes many seconds
-  later: stop when both colours are in view, and when bored run straight; each is worthless without the other, so trying one change at
-  a time can't find them. Its loss is wholly which habit it settles on, not how it carries it out. Tuning its rhythm's settings (rates,
-  timers) by trial and error in a life fails for want of evidence: about one standard deviation's worth per setting in a long life,
-  so the settings just wander. Bits like these, rare, late and interacting, are evolution's to supply, or a measurement's
-  (`discrete/NOTEBOOK.md`, D64).
+**More capacity helps some challenges; general scaling remains unproved.** Frozen sequence comparisons show
+substantial gains. Timing gains are less regular, and combined challenges remain below their stated passing
+criterion in the latest comparison. The current capacity number controls stream allowances, rather than
+total allocated material: fixed units can exceed it at birth, and later allocations exceed it too. Those
+curves need an actual resource account before they establish economical material scaling.
+[Scaling assessment](discrete/NOTEBOOK.md#review-2026-11-16),
+[resource audit, D76](discrete/NOTEBOOK.md#d76-resource-floor).
 
-- **Steering can be grown when choices are held while the situation lasts** (confirmed on fresh creatures). With the hand-built
-  driving taken away, the brain learns to steer from taste alone, but only if a choice (turn this way, that way, go straight, stop)
-  is held until what it sees changes, and judged by how that episode ended and how long it took. Choosing afresh every fraction of a
-  second, with any credit rule we tried, never got above zero; held choices reached half the hand-built driving, learning by
-  themselves to go straight at food, scan when nothing is in view, and turn away from poison. Charging each choice for its length
-  matters: otherwise standing still is a safe zero (`discrete/NOTEBOOK.md`, D63).
-- **A second unseen ladder, and the same lesson.** A blind author wrote a new sealed ladder: food turns to poison after a few good
-  meals in quick succession, and recovers with time (satiety). The frozen growing brain got a quarter to a third of the way, better
-  than our hand-built learner, but solved no rung and didn't improve with more material. The rule needs a running average of the food
-  rate, and the brain had running averages only of its eyes: a generic measure applied to one signal instead of all of them. Both
-  unseen ladders so far failed for the same kind of reason: the brain lacked a general way to sense its own recent history
-  (`discrete/NOTEBOOK.md`, D62).
-- **A bigger brain pays only while its parts are nearly free.** Counting the energy every unit of material draws, growing from 560 to
-  2240 units pays while each draws under about 2 nanowatts (the creature at rest burns 1000), and doubling again pays only under
-  about half a nanowatt. So the brain's best size depends on how cheap its parts can be made (`discrete/NOTEBOOK.md`, D61).
-- **No central chooser needed.** The last central piece of the design picked which stream steers. A vote in which each stream's say
-  shrinks whenever it guesses wrong (and only when it actually spoke, so silent streams don't win by saying nothing) does the job as
-  well, on every ladder and on fresh creatures. Each stream's weight depends only on its own record (`discrete/NOTEBOOK.md`, D61).
-- **On a ladder it had never seen, the growing brain gets a third of the way and doesn't climb.** We froze the design and only then
-  opened the sealed held-out ladder: food depends on a hidden situation that changes every ten seconds or so and shows only as a
-  steady background flicker on the eyes. The brain closes about a third of the gap (better than our hand-built learner, which loses),
-  by remembering recent tastes; but more material doesn't help, and the most does worse. It never reads the eyes' background
-  flicker, which is what would tell the situations apart: its streams are all built from tastes. That is the next thing to grow
-  (`discrete/NOTEBOOK.md`, D61).
-- **Recycle only when room is needed** (confirmed on fresh creatures). Clearing out unused detectors on a timer throws away
-  detectors that are still useful but happen to be resting. Instead, when a new detector is due and the brain is full, the least
-  used of a few detectors picked at random is recycled. This keeps what works and still frees room for what's new: it beats the timer
-  whether or not the secret pattern changes (by .5 and .7), and beats our hand-built learner by 2.3 when it changes. This is the
-  recycling of weak units that Dohare and colleagues (2024) found keeps deep networks able to learn. The best version so far (a
-  stream for every combination of event and sense, recycling on demand) scores the same whether the pattern changes or not, beating
-  the hand-built learner in both cases (`discrete/NOTEBOOK.md`, D59, D60).
-- **Two ladders climbed as material grows, and a foothold on the third** (checked on fresh creatures). The most generic growing
-  brain (a stream for every sense, with no rule of ours for which stream or which detector to keep) was given 40, 80, 160 and 320
-  units of material. On the secret-pattern lessons, the longest pattern it learns goes from 3 steps to 11 or 13 and then 17, the top
-  of the ladder: the first part of our scaling test passing on one ladder. On the lessons where food depends on the last few colours
-  eaten, a later version (each stream recording one sense, recycling only when room is needed, a fault in spotting copies fixed)
-  climbs too, on fresh creatures, once each rung gets a life as long as it needs (3000 s): the hardest rung solved goes 3, 4, then
-  6 of 6 as material grows from 160 to 2560 units (with the ladder's shorter lives it only rises). On the timing lessons it learned nothing until it was given clocks of its own whose rhythm restarts when
-  the food colour is seen to change; then it solves the first timing rung on fresh creatures when given lives three times as long
-  (900 s), level with our hand-built learner with clocks; the second timing rung it doesn't: a foothold, not yet a climb. One design holding all of this, every stream
-  and the clocks together, comes within .15 of each ladder's specialist. Where there is
-  nothing to learn it changes nothing, at any size (`discrete/NOTEBOOK.md`, D60).
-- **A growing brain keeps learning only if it keeps room free** (corrected 2026-11-13). Following your idea after Dan Goodman's
-  talk, we built a network of little detectors that grows by itself. Whenever a guess about which colour is food fails, a new detector
-  is made, joining the one that guessed wrong with one that was active just before, so detectors build on detectors. When the secret
-  pattern changes halfway through life, the network learns the new one, while our hand-built learner stays stuck on the old one. We
-  first credited this to removing copies of detectors. A fault turned up: two detectors that fire alike only because one is built on
-  the other were being taken for copies, and that fault was doing the clearing. With true copies only, clearing unused detectors on a
-  timer is too slow, and the network gets stuck too; what works is recycling the least used detectors whenever room is needed (below).
-  Growing too much and pruning back is how young animal brains develop too (`discrete/NOTEBOOK.md`, D59).
-- **A small economy can do the clearing out by itself.** Instead of written rules for removing copies and fading, each detector earns
-  when it guesses right and passes part of its earnings to the detectors it is built from; a new detector is paid for from its
-  parent's savings, and every detector pays a little rent to exist; one in debt is recycled. A copy never gets to guess (its twin
-  does), so it earns nothing and is evicted. When the secret pattern changes, this matches the written rules and beats our
-  hand-built learner (confirmed on fresh creatures); when nothing changes it costs a little. One lesson: charging detectors for being
-  active backfired, because the busiest detectors are the general ones everything else is built on (`discrete/NOTEBOOK.md`, D59).
-- **Competition among siblings, support flowing back from users, does the clearing out at no cost.** Your idea: competition for energy
-  should be local in the network. Each detector holds a small supply that the detectors built on it share when they fire together;
-  a detector never competes with the ones it is built from, nor with detectors in another branch; one that starves is recycled. At
-  first, middle detectors starved (they rarely guess themselves; their more specific children do), taking their children with them.
-  Measuring a detector's standing by the success of everything built on it, as nerve cells are kept alive by the cells they feed,
-  cured that: it matches the written clean-up rules whether the pattern changes or not (two sets of creatures), and beats our
-  hand-built learner by 1.5 when the pattern changes. Put together with a stream for every sense, it still relearns a changed
-  pattern (confirmed on fresh creatures): no stream chosen by us, and no clean-up rule written (`discrete/NOTEBOOK.md`, D59).
-- **A bigger problem needs only more raw material, and the growing network takes only what it needs.** Making the secret pattern
-  longer (2 to 17 steps, each step red or blue) grows more detectors (17 up to about 50), with no one telling it the pattern's
-  length. Given more material it learns the long pattern better, until it has all it needs; beyond that, extra material simply goes
-  unused (`discrete/NOTEBOOK.md`, D59). This is the first time our goal, intelligence that scales, has been met in miniature.
-  At first the network read a stream of events we had picked for it (the food colour at each good meal), which suited the pattern
-  lessons. Given instead a stream for every sense (every taste, every good meal, every bad meal, every red eaten, every blue eaten),
-  it picks the useful one by itself, a different one for each kind of lesson, and does as well (confirmed on fresh creatures),
-  at the cost of material for all five.
-- **Knowledge makes skill worth having** (suggestive: the same size on two sets of creatures, sure on one). We gave the creature a
-  hidden rule to learn (which colour is food changes with a hidden word) and, in the same life, new parts to take up (the split eye and
-  small thrusters). The new parts let it steer better towards whatever it *believes* is food. For a brain that hasn't learned the rule,
-  and so is wrong about food half the time, steering better is worth nothing, or even harms: it steers more efficiently into poison.
-  For a brain that has learned the rule, the same new skill helps. So a skill is worth what the knowledge directing it is worth
-  (`discrete/NOTEBOOK.md`, D58).
-- **Hunger should say how much you're eating, not how it compares with your past.** In a world where eaten food grows back only
-  slowly (the user's idea), food runs short and rushing about wastes energy. A creature that slows down when it has been eating less
-  than some built-in sense of "normal" surely does better there, and loses nothing sure in an ordinary world. A creature that compares
-  its recent food only with its own recent past barely gains: once a lean world has lasted a while, lean feels normal. So the work
-  divides: making seeing and doing fit together settles *how* to move; hunger settles *how hard* (`discrete/NOTEBOOK.md`, D56). But on
-  fresh creatures the built-in "normal" was too high for many, which then went hungry in an ordinary world and lost food: the sense of
-  normal must fit the world, and how a creature could get it right by itself is still open.
-- **A slightly richer body can beat a much bigger brain** (the user's hypothesis, 2026-11-12, supported so far). Behind today's
-  eyes, a brain told where every block is (a full map) would forage nearly twice as well (D21), but the best a brain can infer from these
-  eyes gains nothing (D41): the information isn't there, so no amount of brain finds it. Split each eye into a left and a right half,
-  add small thrusters, and a reflex of a few parts, wired by the brain itself in play, gains about 40% (D55). Extra thrusters alone were
-  worth little: a body change pays when it supplies what is missing. This is a known idea: Pfeifer and Scheier's principle of
-  *ecological balance* (sensors, motors and brain matched in complexity) and *morphological computation* (the body sharing the work),
-  Wehner's *matched filters* (sensors shaped so the brain needn't model the world), and Braitenberg's vehicles (our split-eye reflex is
-  his vehicle 2b). For our goal, add more brain, it is a qualifier: no brain can find information its senses don't deliver.
-- **A brain can take up a new sense and new limbs in its life, if it plays with them first.** Part-way through life we gave the
-  creature a new sense (each eye split into a left and a right half, on new wires it isn't told about) and new, smaller thrusters on
-  new motor wires. Used well, they make it about a third better at foraging. Trying each possible new connection and judging it by food
-  failed even over very long lives: one small steering kick changes whether food stays in view too little to show. What worked is what
-  a young animal does (the user's instinct to play with its senses and body first): stop, keep still, kick one new thruster at a time,
-  and watch through the new eye where the view moves. That tells each new thruster's direction within minutes, with no food involved.
-  The brain then connects each half of the new eye to the thruster that turns towards it, and gains surely on creatures it had never
-  met. The new parts calibrate each other before food has any say (`discrete/NOTEBOOK.md`, D55). Two weak points remain: the reflex is
-  simple, and play favours the thrusters whose effect it sees most clearly rather than those that steer best.
-  It scales in getting the wiring right (one, two or four new thrusters a side all surely help), but not in time: play tries one
-  thruster at a time, so learning takes longer the more parts there are, and over a whole life the cost grew faster than the gain
-  (D57). Playing only until it knows what it needs (one good thruster for each half of the new eye, not everything about every part)
-  surely helps at every size and keeps play short up to two new thrusters a side; at four it is still slow.
-- **Parts of a brain that tune themselves together must take turns.** Split the coupling search between the two motors, each tuning
-  its own rate, and it fails if both adjust at once: neither can tell whose change made things better. Make them take turns, as two
-  neurons in a Sepulchre half-centre do (one active while it holds the other quiet, until it tires and hands over), and the same two
-  local parts match the whole-brain search, on fresh creatures too. A part that has moved wakes its partner to check again; when
-  neither has anything left to change, both rest. One limit found: coupling chose a creature moving at half the best speed, because
-  slow, careful movement makes seeing and doing go together more tightly while fast movement eats more. Choosing between speed and care
-  needs the food itself (`discrete/NOTEBOOK.md`, D54).
-- **A principle survives a change of body; a formula doesn't.** We gave the creature muscle-like thrusters (the user's idea): each
-  pulse raises a thruster's activation, and thrust grows in an S-shape with it, so a lone pulse only nudges while a fast burst pushes
-  hard. Every rule we had written that assumed thrust simply proportional to pulse rate became wrong on this body, including the
-  yardstick we judge by and the two learners that had worked best before (they measured the body correctly, then converted the
-  measurement with the old physics). The coupling principle needed no conversion: with no food at all, how tightly seeing and doing go
-  together still peaked at this body's own right setting, and the search guided by it beat the old formula (`discrete/NOTEBOOK.md`, D53).
-  A surprise: the new body is not more forgiving of a wrong setting but less, because its thrust changes steeply with pulse rate.
-- **Understanding as coupling: the right setting is where senses and actions go together most.** The user proposed that a brain
-  should seek the simplest connection between what it senses and what it does, in both directions: in bits, how much its inputs and
-  outputs tell about each other. Unlike "make the world predictable", which a creature could satisfy by sitting still, this needs a world
-  that answers its actions and actions that answer its world. We tested it first on the lopsided body, with no food anywhere: for every
-  setting of the balance knob, how tightly do the eye pulses and the motor beats go together? The answer peaked at the right setting
-  in 95% of bodies (within .2), and at zero for every normal body. With the balance right, seeing food starts a drive and the drive keeps
-  the food in view; with it wrong, the drive loses the block and the link between seeing and doing keeps breaking. So the knob our
-  formula used to set can be set by a principle that knows nothing about thrusters (`discrete/NOTEBOOK.md`, D51). Then as a
-  mechanism (D52): the brain tries settings of its knob, about half a minute each, keeps whichever makes seeing and doing go together
-  more, and stops when the choice is narrow; and it keeps its default unless a change is clearly better (for a normal body, equal rates
-  are exactly right, and an error of a tenth costs about a quarter of the food). With no food and no formula, it beat the rule we had designed, on fresh
-  creatures, and left normal ones exactly alone.
-- **Play pays later.** We gave the creature a quiet spell first, in which nothing it ate tasted of anything, and a lopsided body
-  (one thruster stronger than the other). Then, at a moment it couldn't know, food and poison began. A brain that spent the quiet
-  playing (moving in random rhythms, with no goal) started the challenge already compensating for its lopsided body, and ate surely
-  more from the first moment than one that had only foraged: about half the way to a brain told its body. What did the work was
-  simple: for each motor, a record of what the eyes saw at each of that motor's own beats, whenever it happened to be the only one
-  beating. That says how far one beat of that motor turns the creature, and the brain sets its two motors to match. Nothing chose the
-  movements, and taste was never used. But the last step, turning the two measurements into motor settings, is a rule we wrote from
-  our own understanding of the body (the review of 2026-11-11): play learned to *measure* the body; it did not discover how to *use*
-  the measurement. That discovery is the next experiment. When play wasn't sure (a period can be mistaken for its double), the best use of taste was to
-  choose among play's own few guesses. Without play, a brain searching by taste after the challenge began was surely worse off, since
-  it paid for its search while the food was on (`discrete/NOTEBOOK.md`, D47).
-- **Boredom should read certainty, not stillness.** When should play stop? Our first answer, "when the creature's estimate of its body
-  stops changing", stopped too soon: a wrong guess (a period mistaken for its double) can sit unchallenged while evidence comes in.
-  What works is to stop when the best guess clearly beats its strongest rival, to spend play on whatever movements raise that
-  certainty, and to leave whatever doubt remains for taste to settle once food arrives. Then the creature had its body right in 90% of
-  lives, and from 100 s into the challenge ate surely more, three quarters of the way to a brain told its body, on fresh seeds too
-  (`discrete/NOTEBOOK.md`, D48). Then tested fairly, every brain given the same 400 s of play (D49): steering play towards certainty surely beats
-  playing at random (18 points more of its guesses within 10%, and surely more food), but only matches play steered by learning
-  progress; and a guess it calls sure was never wrong, though few reach sure. Part of the first result was just playing longer.
-- **Play: a brain should spend effort organising itself before any reward asks it to** (the user's insight, 2026-11-10, prompted by
-  D44). A brain can make behaviours that win no food now, such as spinning on one thruster to watch the view come round, but that tune it
-  to its body and world, and that pays off for the rest of its life. In D44 the spinning eats nothing while foraging eats, yet the knob
-  it sets wins back most of what a lopsided body loses for the rest of the life (D20). The user's picture: a real rat, with millions of
-  sensors and billions of neurons, wanders among red and blue blocks. If tasting poison meant training all those neurons to steer it
-  away, as in a deep network trained from scratch, it would take millions of trials. But if its brain has already organised itself to
-  that world, and already has "blocks", "red" and "blue", then the poison needs only a small adjustment: one-shot learning, quick and
-  cheap. In bits: a taste carries at most one bit, and a life's tastes about 50 (D31), so from taste alone a brain can only learn
-  quickly what its own organisation has already made cheap to say. That organisation can be gathered without reward, from what the senses do, which offers
-  far more bits than taste. This is old in psychology as *latent learning*: rats left to wander a maze with no food learned its layout
-  anyway, and used it at once when food appeared (Tolman 1948). For our goal it means that reward should only choose and tune, while
-  most of a growing brain's organising comes from predicting its own senses (`PROGRAMME.md`, The next phase). The user's name for it is
-  *play*, the same word as Der and Martius's *The Playful Machine* (2012), whose robots explore by their own prediction error.
-- **What a movement tells about the body, and how our own observer can miss it.** We wrote nine ways of moving and asked how much
-  each tells about the creature's body (how its two thrusters compare, how far a beat carries it). Spinning on one thruster at a time,
-  long enough to see the view come round again and again, pins both to within about 4% in 100 s; ordinary foraging gets only to about
-  27%. Nothing tells much within 30 s, and no movement tells where a block lies across the creature's path: the eyes give too few pulses
-  for that. We first concluded that driving straight tells nothing, but that was our observer's blindness: a lopsided creature driven
-  straight goes round in circles, and how often its view repeats gives away how unequal its thrusters are. The observer we built from
-  our own understanding knew only about spins. That is the user's point about method in miniature: a measure that knows nothing of the
-  physics (how much the brain's own beats make its senses predictable) saw what our understanding missed. A surprise in the physics:
-  a stronger thruster and a lighter drag look the same to the eyes, so the creature needs to learn only how far a beat carries it
-  (`discrete/NOTEBOOK.md`, D44).
-- **Lock a clock to the world's changes, not to your own surprises, and move it no further than the evidence says.** Our first
-  clocks reset themselves whenever the brain's guess was wrong. But a wrong guess isn't a change in the world, and a brain that guesses
-  well stops being surprised, so those clocks wandered off. What works is to watch what the tastes reveal: when the food colour is seen
-  to change (and the next taste confirms it), the change happened somewhere between two tastes. A clock that already ticks in that gap is
-  left alone; any other is nudged to the gap's nearer edge. Clocks of fixed period, set only this way, went from solving no timing
-  challenge to matching a brain that is told the rhythm's period, provided one of them runs within about 3% of the true period, which
-  takes many clocks. The same day's other lesson is about method: each of these steps took minutes and five pairs of lives, because the
-  sum was done first and each failure traced in single lives (`discrete/NOTEBOOK.md`, D39).
-- **Turn a knob before adding anything, and give the knob something to measure.** A creature with one weak thruster curves when it
-  means to go straight. The cure is one setting, how much faster to pulse one motor than the other. Finding it by trial and error
-  (nudge it, see if things went better) takes about a thousand seconds, because nothing tells the knob which way to turn and each
-  try's result is mostly luck. Finding it by measurement takes a few minutes: spin on one thruster and count your own pulses until the
-  view comes round again; the count says how strong that thruster is. And the counting can be done by the same simple recording unit
-  that learns hidden sequences, here recording what the eyes saw at each of the brain's own pulses. So this problem needed no new kind
-  of part: a knob the brain already had, and a measurement (the user's rule, knobs first; `discrete/NOTEBOOK.md`, D43).
-- **One kind of unit now climbs two kinds of challenge and has a foothold on the third.** The unit is a node in a tree. It stands for
-  one situation ("the last two things eaten were red, then blue") and counts which colour was food then. When a node has been proved
-  wrong both ways and meets a situation one step more detailed than it knows, it takes a spare node for it. That is all: no setting says
-  which challenge is being faced. With more spare nodes it learns longer hidden sequences (up to 17) and deeper hidden combinations (up
-  to 6, where nothing we had built before learned any), and with a set of clocks feeding it, the simplest hidden rhythm. In the plain
-  world it takes no nodes and costs nothing. It is a known algorithm from data compression, found by asking what the ideal learner would
-  do, not by emergence; and harder rhythms are still only half learned (`discrete/NOTEBOOK.md`, D40).
-- **Our three kinds of challenge are one problem, and its answer is known.** A hidden sequence, a hidden rhythm and a hidden
-  combination each make the food colour depend on a context: how many good meals so far, which beat of a rhythm, the last few colours
-  eaten. The ideal learner for all three keeps a tree of contexts, deepening it where a context turns out to hide two cases. This is an
-  old idea from data compression (context trees), and it also says when to add brain: where something new arrives beneath a part that has
-  been contradicted. Built the same day (D40, above) (`discrete/NOTEBOOK.md`, D39).
-- **A cautious brain pays in food, not poison.** With each food block touching a poison block, we expected the creature to eat poison
-  with its food. It doesn't: seeing poison ahead already stops its drive, so it gives up about a quarter of its food instead. What it
-  lacks is skill, coming at the food from its clear side: the first challenge here about acting, where there is nothing new to know.
-  But two drivers written by hand couldn't win the food back. The second stops to look before driving on, and judges well, yet the
-  looking costs as much as it earns: the eyes deliver too few pulses to say quickly where across its path a block lies. So the food is
-  lost to missing information, not missing skill, the same limit of these eyes met before (`discrete/NOTEBOOK.md`, D39 to D41, D21).
-- **More brain can buy more ability, when the unit records rather than guesses.** Trying every hypothesis at once
-  needs material growing as the square of the problem; growing one structure by trial needs time growing as its
-  square. A register of what the tastes revealed, with a simple comparator for each look-back, needs both only in
-  proportion: double the units and it learns a hidden word twice as long, in the same life. What moves the register
-  matters as much as what reads it (the user's insight): sparse events (meals, surprises) let a few units span minutes,
-  and the brain can pick the right kind of event itself. Candidates must still beat a cautious default by an Occam
-  bar, or chance agreements early in a life cost more than they earn (`discrete/NOTEBOOK.md`, D38).
+**Most of what extra capacity buys comes from a small part of it.** On the hardest tested sequence, the brain
+with eight times the allowance builds about 2200 extra memory units. 85% of them go to clock and integrator
+streams that predict little. Giving room only to the ten streams that track the colours eaten builds about
+200 units and recovers most of the improvement. With nothing to learn, the brain builds nothing at any
+setting. The waste lies in where material is sent, so the next change belongs in how material is allocated,
+not in what the streams represent. [Resource observation, D77](discrete/NOTEBOOK.md#d77-resource-observation).
 
-- **The body must never do the brain's job.** Early on the body was changed to give food or poison only to the
-  sensor whose colour was eaten. It looked like a simplification, since four mechanisms in the brain could go, but
-  those mechanisms were the brain working out which sensor a taste was about (credit assignment), the hardest part
-  of the task. The body was doing it instead. So whenever a change to the body lets the brain drop machinery, we ask
-  where that machinery's job went (`NOTEBOOK.md`, Lessons).
-- **Rules kept only in prose drift, so the code enforces them.** The sheet brain's central rule (in nca-learn) is
-  that a cell sees only the average of what its neighbours show. Earlier experiments quietly broke it (reading one
-  neighbour on its own), and nothing stopped them. Now each rule is built into the code's structure and tested, so
-  breaking it fails loudly: the circuit brains' circuits, the minimal search's `check` (`NOTEBOOK.md`, Lessons).
-- **In a circuit brain, nothing may happen outside the circuit.** The first recruitment rules were small programs
-  running beside the circuit (keeping traces, thresholds, writing its settings from outside), so the program, not
-  the circuit, did part of the work. The test now is: for every number that affects behaviour, which node holds it
-  and which elements move it? If the answer is "the program", it isn't the circuit (`experiments/NOTEBOOK.md`,
-  Lessons).
-- **Find what the body allows before blaming the brain.** A scripted policy that is told the answer from birth and
-  sees only what a brain would see shows the best any brain could do with that body. Twice this showed that the body,
-  not the brain, was the limit: an early square body capped every brain, and the best circuits were driving the body
-  badly (`NOTEBOOK.md`, The body; `minimal/NOTEBOOK.md`, M11).
-- **Match the brain's speed to the body's.** A far block shows up as about one flash as the creature's narrow gaze
-  sweeps past it, and the body keeps spinning for a while after a thruster stops. A brain that reacts briefly to each
-  flash has lost the block before it can act. What works is a slow memory of the sighting that keeps the creature
-  driving towards it for a fraction of a second (a *hold*), plus a timer that sends it off to explore after a long
-  spell of seeing nothing (a *roam*). That more than doubled the best energy efficiency (`minimal/NOTEBOOK.md`, M11).
-- **An average over lives hides the lives that fail.** The best circuits of one search ate plenty on average, yet in
-  a fifth of their lives the creature ate what was near, then spun on the spot for the rest of its life (*stranding*);
-  the other lives' meals hid it. It was found only by watching one life. Now each third of each life is charged for
-  its own shortfall, the job limits stranded lives to 5%, and a behaviour is watched live before it is reported
-  (`minimal/NOTEBOOK.md`, M8).
-- **Noise costs no parts, so a search will use it.** Searching for the fewest parts, twice a part's job was handed to
-  noise instead: a rhythm or an urge to explore that came from random jitter, not a clock. Such circuits work only
-  at the noise level they were tuned at. So every circuit is judged with three noises: silicon's (about 280 times
-  quieter than biology's at these currents, where any design that leans on noise fails), biology's, and twice
-  biology's (`minimal/NOTEBOOK.md`, M7 and M12).
-- **The body must vary from life to life, as the parts do.** Each life's circuit is built from parts with their own
-  tolerances, so no design can lean on one exact resistor. The body had no such spread: every creature had the same
-  strength, eyes and drag, and its two thrusters were identical to the last digit. An optimiser used that. A tuned
-  9-part circuit that ignores its eyes, firing both thrusters 300 times a second, drove dead straight and ate four
-  times as fast as any sighted circuit; with the thrusters 1% unequal, as any real pair would be, it drives in
-  circles. The other way round, a learning circuit's straight run, pointed by chance along the world's axis, retraced
-  one column it had eaten clear for its last 48 s, a stranding no built body would suffer. A circuit tuned on one
-  exact body may be tuned to that body's accidents, so the body's dynamics need a spread of their own, like noise;
-  and for every perfect symmetry in the simulation, ask whether a real body would have it (`discrete/NOTEBOOK.md`,
-  D5, D9).
-- **Declining poison isn't avoiding it, and an eaten-out patch needs leaving.** The learning circuit's only defence
-  against poison was not to approach it; its mouth still ate whatever lay in its path. And eaten food reappears
-  elsewhere, so a creature that eats every food near it and refuses the poison turns its patch into a poison patch,
-  then circles there for the rest of its life. Both were found only by recording the nodes of the lives that failed.
-  Two small additions cured both: the silenced eye's current, which had gone to ground, now turns the creature
-  aside, and a few seconds with nothing seen sends it off straight (`discrete/NOTEBOOK.md`, D8).
-- **A scripted policy ranks structures, not a circuit's values.** Rules that see only what a brain sees cost
-  seconds a life against a circuit's minutes, and they ranked the ideas correctly: avoid poison, give up on an empty
-  patch. Told the answer from birth, they also give a ceiling to measure a brain against. But their best speeds made
-  the circuit worse, because a circuit's hold and drive don't behave like the rule's: values have to be found in
-  the circuit itself (`discrete/NOTEBOOK.md`, D8).
-- **Spinning faster doesn't see more.** The learning circuit scans by firing one thruster 54 times a second, which
-  spins it nearly three turns a second. Each firing moves it along the same small circle whatever the rate, so it
-  keeps re-sweeping the same view, and blocks flash past too fast for the eyes to fire. It sights food no more often
-  than a policy scanning at 16 a second, so a quarter of its firings buy nothing. The circuit learns and approaches as
-  well as the best policy; it loses on spending (`discrete/NOTEBOOK.md`, D10).
-- **Design in a fast model of the circuit's blocks; use SPICE to check it's real.** A circuit lived in SPICE with
-  real chip transistors takes minutes a life. Instead each block of the circuit (a timer, the oscillator, the
-  learning node) is measured once on SPICE's bench and copied into a simple model as a few numbers, which lives a
-  whole life in about a second, some 300 times faster. Its best design, built in transistors and lived in SPICE
-  without retuning, did the job, at 80% of the score the model predicted; the gap was one timing quirk where two blocks
-  meet (a thruster firing alone as a drive began), which no single block's bench showed. Close enough: ideas are
-  tried, searched and judged in the model, and SPICE checks that a design is physically realisable, retuning it only
-  when realism matters (`discrete/NOTEBOOK.md`, D12, D13).
-- **Give every simulated life its own flaws, or an optimiser will find a knife-edge.** In the model every copy of a
-  circuit was first identical. A search then set the learning threshold a hair below the most the learning node can
-  ever reach: perfect in the model, but in real silicon each chip's parts differ a little, and in a quarter of the
-  lives the bit could never flip. Now each life draws its own parts' errors (their spread measured in SPICE), and
-  that design lost half its score while a sounder one lost nothing (`discrete/NOTEBOOK.md`, D13).
-- **The same brain built of neuron-like elements costs 8 times the power of logic gates.** One design (B) was built
-  three ways: as abstract blocks (timers, an oscillator, a tally), as Sepulchre's neuron-like elements (leaky nodes
-  with fast positive and slow negative feedback), and as logic gates. Both lower levels did what the blocks
-  predicted, so designing with blocks loses little and is fastest. But the neuron-like version needed 841 parts and
-  31 nW against the gates' 151 and 3.7 nW: each element is an amplifier drawing current all the time, and its slow
-  analogue signals are easily disturbed by noise, where gates swing rail to rail. What the elements offer instead is
-  knobs a brain could turn to tune itself (`discrete/NOTEBOOK.md`, D14).
-- **Within a life, the best tuning is small careful steps; the big search is evolution's.** A brain born with its
-  spending settings (how long to chase, when to give up and explore) up to 3 times wrong can nudge each setting and
-  keep the nudges that bring more meals per unit of energy, with no coordinator (each setting wiggling at its own
-  moments and noticing whether things then went better than usual), and it recovers a third of what was lost in a
-  long life. Hoping to find the best possible, we gave an idealised learner the same information (only its meals, what it
-  saw and its own effort) and unlimited computing power to explore cleverly. It did no better, and worse where the
-  settings matter little: meals come too rarely to tell good settings from bad ones far apart, so it kept exploring
-  and paying for it. Exploring wildly early in life (annealing) hurt the simple tuner too. Finding good designs from
-  scratch is for a search across many lives (evolution, or this project's searches); a life can only polish what it
-  was born with, or rescue itself when something is badly wrong, like a lopsided body. So each problem has its
-  solver (the user, 2026-10-30): what is the same in every life (how often meals come, how fast the body turns) is
-  best set by evolution or design; what differs between lives but shows clearly in experience (which colour is
-  food, a lopsided body) is best learned in the life; and what differs but barely shows (spending near its best) is
-  best made not to matter: a design whose best is broad, as B's turned out to be (`discrete/NOTEBOOK.md`, D15).
-- **A brain can grow a new reflex in its life, when something hurts that no sense predicts but an action can stop.** In
-  an *arena* of robots that eat each other by biting tails, being bitten hurts (a bad taste), and the biter is behind,
-  out of sight, so no sense can warn of it (the user's insight). Beside a brain evolution would build (one that steers
-  towards tails), a generic *grower*, told nothing of what it is for, notices bad tastes no sense predicted, grows one
-  new link from taste to the motors, and tries the simplest responses (fire one motor, the other, both, nothing),
-  judging each by the taste of the moment after it. It found a turn, which breaks a bite at once, in 97% of lives, and
-  gained three quarters of what the best designed reflex gains, judged on fresh arenas. Two things made it work: judging
-  every bite rather than whole trials (lives are short), and a predictor that compares what follows a sense with what
-  comes anyway. The obvious answer, speeding away, was worse than nothing: the biter just follows. Nor does it need a
-  menu holding the answer: a recruit of two knobs (how hard to fire each motor when bitten), jittered at each bite and
-  nudged towards whatever jitter tasted better, reached 86 to 97% of the best designed reflex, depending on where it
-  started. (Those figures left out what firing costs. Since 2026-10-31 the robots are discs and firing is charged.
-  Escape still grows and nets about as much as the best designed burst against the old tracker, and its control, pain
-  no action can stop, now costs; but against a tracker whose fixed habits are tuned for the arena (evolution's part)
-  it barely pays, +0.03 meals a 10 s: most of its value was the baseline's waste. A growth case must be judged against
-  a well-tuned baseline: `discrete/NOTEBOOK.md`, D18.)
-- **Learning which colour is food is a running tally of evidence, and in an unchanging world it shouldn't forget.**
-  The learning node ("doubt") adds a step for each poison and takes one away for each food, and flips the creature's
-  guess when the tally passes a threshold. Read as probability, each taste adds its evidence (the logarithm of how
-  much likelier it is if the guess is wrong than if it's right), and the threshold is a decision. Since which colour
-  is food never changes within a life, the tally should keep the trust that meals have built rather than leak it
-  away: the version that keeps it was surely best, needed no time constant at all, and costs only 0.15 against being
-  told the answer from birth (`discrete/NOTEBOOK.md`, D13).
-- **A lopsided body defeats every fixed brain.** With each thruster drawn between half and twice its usual strength,
-  every design, from either line, fell from about 2.2 to below 0.8 and stranded up to a quarter of its lives: a drive
-  meant to go straight circles past its food. Told its body, the same brain recovers nearly everything by balancing its
-  two thrusters, one number; but eight local rules for finding that number fell far short, because both eyes look down
-  one corridor and nothing in it shows which way the creature curves (`discrete/NOTEBOOK.md`, D13;
-  `minimal/NOTEBOOK.md`, M16). What does work, partly, is judging every drive rather than every meal: jitter the balance
-  a little at each drive, and keep moving it the way the drives that kept their block in view longer went. That closes
-  over a third of the gap in a short life, surely better than learning from meals (`discrete/NOTEBOOK.md`, D19). Far
-  better still is learning a model of the body by prediction: turning with one thruster alone, the creature sees the
-  same things come round again once a revolution, and how long a revolution takes says how strong that thruster is. With
-  a few minutes of such sweeps, deliberate experiments of its own, it finds its body almost exactly and closes some 90%
-  of the gap, surely beating every learner judged by outcomes. Sweeping only when it is eating badly costs an ordinary
-  body nothing: it never sweeps, and once a lopsided body's drive is fixed the meals rise and the sweeps stop of
-  themselves (`discrete/NOTEBOOK.md`, D20).
-- **Behind these eyes, intelligence is worth about twice today's brains; the rest is what the eyes can't see.** A
-  brain told every block's place does ten times better than our best. One told only the places of blocks its eyes
-  have already seen, and remembering them, does twice as well: that is the most memory and reasoning can buy here.
-  The rest is coverage: an eye sees a corridor 2 mm wide, so most blocks are never seen (`discrete/NOTEBOOK.md`, D13).
-  And most of that doubling is information the eyes don't deliver: a block anywhere across the corridor gives nearly
-  the same pulses, but the mouth eats only within 1 mm of it. Told places only as well as the pulses tell them, the
-  remembering brain is barely better than B. The headroom is in sensing where across the corridor a block is, by
-  moving, not in remembering (`discrete/NOTEBOOK.md`, D21). With these eyes even moving doesn't get it: wiggling to
-  probe makes the side only a little readable, and no wiggling policy used it, so B is already near what this body
-  allows for finding food (D22). An eye split into left and right halves would give the side directly: with it, B
-  plus a small steering reflex, its wiring learned from its own scan, finds 21% more food, held out (D24, prepared
-  for the user's decision; the body is unchanged).
-- **What a brain counts as evidence can matter more than how much it remembers.** B, our best forager, kept a running
-  tally of poisons to work out which colour is food, and lost about a tenth of its score to being told the answer. It
-  raised false alarms and was slow to notice real ones, because it also counted poison merely bumped into while scanning:
-  a poison tasted while driving at what it thinks is food says nearly everything, one tasted otherwise says little. Remembering more didn't help. Counting a taste only
-  while driving, one small change using a signal B already had, closes the whole gap: the creature finds the colour in a
-  second or two, and scores as if told. Measuring the information first is what showed the room was there: its senses
-  carry about 3 bits a second about a one-bit question, far more than B was using (`STORIES.md`, 1).
-- **One warning signal, and its context says which cure.** Tasting poison while driving at what it thinks is food tells a brain something is wrong, but not what. Given harder worlds (colours that
-  must alternate, a pattern, colours that swap), we found small cures for each, such as a counter that every good taste advances, holding a few bits of what to follow next. Applied to the wrong world a cure hurts.
-  But how many good meals came before the poison tells a sequence from a swap: one brain reading that picks the right cure itself, surely better than its starting point in five of eight tests, and doing no harm on plain
-  (`STORIES.md`).
-- **Time is where a small brain computes** (the user's insight, 2026-11-01). Deep networks come from a world without
-  time: a mapping from input to output. A small creature's brain is a dynamical system whose computation is its
-  timing (oscillators, delays, phase, coincidences), with the loop through its body and the world doing half the
-  work. Where a block lies across the eyes' corridor isn't in how many pulses arrive but in when, against the
-  creature's own movement: a rat reads where a whisker touched from the phase of its whisk, and B's scan already
-  whisks. So the bounds should be reckoned on timing, not counts; credit by meals, slow and averaged, can't judge a
-  trick that is right within one sweep; and a tiny circuit with Sepulchre's feedback motifs, evolved in the loop,
-  may find sideways sensing for itself, as a dozen neurons evolved to scan and tell shapes apart in Beer's agents
-  (`BOUNDS.md`, Time).
-- **Check the simulator, not just the circuit.** A circuit simulator chooses its own time steps, within error limits.
-  With ngspice's default limits, a transistor sitting right at its switch-on point turned on or not depending on
-  where the steps happened to land, so results seemed to change with the step size. With the limits tightened,
-  every step size agrees. Check that results converge in both step and error tolerance, on the first design that
-  works, and distrust any design whose behaviour hangs on a knife-edge (`discrete/NOTEBOOK.md`, D7).
-- **Real units show what abstract ones hide.** Written in seconds, amperes and farads, the circuits turned out to
-  have a chip's sizes but biology's noise, a contradiction invisible while the units were abstract. Real units also
-  give quick sanity checks (a chip can't make a resistance above about 100 GOhm) and a meaning to every number
-  (`NOTEBOOK.md`, Lessons; `units.py`).
-- **Count the cost as built.** The simulator first counted a circuit's power as the currents reaching its nodes. Built
-  in real transistors, the same circuit drew 150 times as much, because every amplifier's bias and every mirrored copy
-  of a current also flows from the supply. An optimiser told the wrong price buys the wrong things, so the price now
-  comes from the transistor build, checked against SPICE (`minimal/NOTEBOOK.md`, M15).
-- **Compare designs on the same lives, with an interval on the difference.** Lives vary a lot by luck. Two designs are
-  compared on the same worlds (the same seeds), and one counts as better only if the 95% interval of their
-  difference excludes zero; otherwise they are tied, and no order is claimed (`experiments/NOTEBOOK.md`, E0;
-  `minimal/NOTEBOOK.md`, M9).
+**How material is shared out matters as much as how much there is, and the brain can't yet judge it.** With
+the total number of memory units truly capped, splitting new units equally among streams does far worse than
+the original design, which by accident gave more room to streams with small alphabets. Letting streams
+compete pairwise by their standing in the brain's prediction mix does much better than an equal split on fresh
+lives, but not as well as the original design. The reason: that standing is winner-take-all. One stream ends
+with about 90% of the weight and every other stream sits at the same minimum, so the brain cannot tell which
+of the rest are worth feeding. The missing piece is a measure of how much each stream adds to the brain's
+predictions. [Allocation rules, D78](discrete/NOTEBOOK.md#d78-allocation-rules).
 
-- **Most mismatches between a brain and its world have a small cure, but one that stays out of the way is harder.** We
-  gave the same small learning brain ten different problems, such as unequal thrusters, a noisy eye and food that must be
-  eaten in sequence. All have a cure by hand that is surely better, one of them tiny, and judging evidence better was the
-  commonest. Eight have an automatic version that helps and costs nothing we can measure when the problem is absent. The trick
-  was mostly stopping false alarms from feeding themselves: for instance, acting only once a shortage has lasted two checks running.
-  The automatic versions pay in the time they take to notice (`STORIES.md`, the table).
-- **Several ideas about the world can be tested at once, without acting on any of them, but not everything can be tested that way.**
-  We looked for one circuit that cures all ten problems. Stacking each problem's cure with its own alarm went poorly, because the
-  alarms read one another's problems. Trying changes at random and keeping what helped failed too: there is too little signal in a
-  life, and it does harm when nothing is wrong. What worked was noticing that once a taste is trusted, it reveals which colour was food,
-  whatever the creature was doing at the time. So it can keep several rival ideas of what taste means (it never changes, it changes
-  often, it alternates, it repeats in threes), score them all on every taste, and follow whichever predicts best. In a world with nothing
-  wrong, no rival ever gets ahead, so nothing changes. One setting of this circuit helps surely in 8 of the 10 problems and in 13 of 14
-  combinations it was never tuned on. It is still partly a failure: it is worse than three problems' own cures, it can only choose among
-  ideas it already holds, and it can't judge the eyes or the thrusters, since no taste says how to reach a block. Those need other
-  evidence, so the honest answer is three loops rather than one (`STORIES.md`, One universal circuit; `discrete/NOTEBOOK.md`, D29).
-- **In a clean world the limit is what the brain can imagine, not how much evidence it gets.** We counted what a life can teach. A taste that
-  never lies carries nearly a bit, so at our circuit's pace a life offers about 50 bits, and it only needs about one to learn which colour is food. If one taste
-  in five lies, the offer falls to about 15, though a creature that eats faster can buy several times more, at the cost of eating more poison. Compared with an ideal
-  judge of the same ideas, our circuit is close to right on when to change its mind if rules can change, and we can improve on it, but the largest gaps aren't in
-  judging at all. They come from worlds none of its ideas describes. Food that swaps every 10 s is the clearest: a learner told only that swaps happen barely helps,
-  while one choosing among hundreds of possible timings, about 14 bits of ideas, closes half the gap. Knowing *when* is what's missing (`discrete/NOTEBOOK.md`, D31, D32).
-- **On worlds we didn't choose, the bank covers what its ideas describe, and no more.** To judge whether the bank is
-  general rather than tuned to the problems we built it for, a program drew worlds at random from our grammar of
-  challenges, fixed before we saw any. Only about a third have anything to learn. Of those, the bank surely copes with
-  about a fifth and surely fails two fifths; the rest are too close to call. Where an ideal judge holding
-  thousands of ideas succeeds, the bank nearly always does too, and where the bank fails, mostly so does that judge:
-  the failures are missing ideas, chiefly about timing (colours that swap at some period, a meal soon after the last
-  being bad) and place. A ten times longer life rescues a few of the meal-timing worlds and none of the swaps,
-  though in a life that long the ideal judge, which holds ideas about timing, does learn several swaps. One
-  part did harm: the eye filter, tuned for the eyes' usual pulse rate, costs a lot when the eyes are more sensitive. So
-  the bank's principle (rival predictors judged on every taste) works, but its repertoire is ours, which is why the
-  next step is rivals the brain makes itself (`discrete/NOTEBOOK.md`, D35).
-- **Trying things out has a price, and in a short life the brain may not be able to see it.** To learn how to balance
-  a lopsided body, a part of the brain wobbles its balance a little on each drive and keeps what goes better. We gave
-  it rules of its own: a bigger step while its moves agree, a smaller one when they reverse, and a quieter wobble once
-  the wobble hurts whichever way it goes (the sign of standing on a peak). In long lives this works well, and it
-  rescued much of what long lives had seemed to lose. But on a body whose thrusters are exactly equal, even a tiny
-  wobble costs a tenth of the food, and spotting that cost from the drives themselves takes about fifteen times more
-  drives than a short life has. The older design was safe in short lives only because it never wobbled while it was
-  eating well. When to explore at all is still open (`discrete/NOTEBOOK.md`, D36).
-- **Adaptability costs** (the user's insight, 2026-11-09). We keep what is built before a life (evolution, or our
-  design) apart from what is learned in it, but the two can't be fully separated: whatever is built in fits some
-  range of worlds. And there is a second-order effect: a brain built to cope with very varied worlds must spend
-  something (trials, wobbles, evidence) finding out which world it is in, so on a short, easy trial it does worse than
-  a brain built for exactly that world, which needs to find out nothing. The balance learner shows it: in long lives
-  its exploring pays, but on a body with equal thrusters, in a 100 s life, it costs a fifth to a half of the food,
-  where a brain that assumes equal thrusters loses nothing (`discrete/NOTEBOOK.md`, D36). So how well a brain should
-  adapt depends on how varied its worlds are and how long it has to live in them.
+**Separating failure causes made timing progress possible.** The timing investigations distinguished missing
+cycle position, recovery of trust in predictors that improve late, and period estimation. Acquisition and tracking
+then supplied a useful literature-informed mechanism, confirmed on fresh seeds. Its range of generality remains
+to be established. [Timing assessment](discrete/NOTEBOOK.md#review-2026-11-16).
+
+**Useful evidence can survive; how cheaply its readout can be learned is still open.** In the noisy
+changing-world diagnostic, a stored numerical summary retains a useful choice signal. Supplying a grouping of
+related values helps its readout learn. Two priors over one family of learned groupings (exact Bayesian
+averaging over ordered intervals) did not establish a decision gain. Their uncertainty does not exclude
+recovering most of the supplied advantage. A strong sharing assumption can substantially delay learning when
+neighbouring values need different answers. This tested two assumptions, not readout learning in general:
+it does not show that discovering a useful readout is inherently hard.
+[Information-path audit, D73](discrete/NOTEBOOK.md#d73-noisy-evidence),
+[learned grouping and counterexample, D74](discrete/NOTEBOOK.md#d74-learned-sharing).
+
+**Copying a predictor can change its influence without adding information.** The present selector gives
+each predictor an initial weight and repeatedly redistributes weight among them. Copies receive extra
+influence unless both allocations are divided between them. This exposes an accounting requirement for
+a growing repertoire; it does not justify discarding partially overlapping predictors.
+[Controlled duplication, D75](discrete/NOTEBOOK.md#d75-redundant-selection).
+
+**An informative task need not reward acting.** The drift reference receives actual eaten colours that the brain
+must infer. Its hardest noise conditions also randomise the scored meal value, so even choosing the favourable
+colour has negative expected gain. These cases remain useful inference tests, but improved colour choice does
+not demonstrate economical foraging. [Reference and reward audit, D73](discrete/NOTEBOOK.md#d73-noisy-evidence).
+
+**Simulator checks and negative results change the science.** Tightening numerical integration overturned an
+early learning result; later interface checks exposed shortcuts; correcting a duplicate-removal bug changed the
+interpretation of growth. These are reasons to trace claims to configurations and logs. [Discrete notebook](discrete/NOTEBOOK.md#review-2026-11-16)
+and [body/simulator notebook](NOTEBOOK.md#where-it-stands).
 
 ## The ground rules, for every brain
 
-Every brain keeps the same ground rules, set out in `AGENTS.md`: the body talks to the brain only through two
-sensors, two motors and one taste that never says which sensor it is about, and never does the brain's work (credit
-assignment, timing, filtering); nor does the simulator, so there is no clock or lockstep, noise is everywhere, and a
-result must hold at a finer step and on fresh lives; everything is local, with no god; and in a circuit brain
-everything is explicit circuit, with noise modelled on biology's built into the simulator (Terms).
+[AGENTS.md](AGENTS.md#ground-rules-for-every-brain) owns the interface, locality, noise, timing, comparison and
+physical-validation rules. The body and simulator must not perform the brain's learning or credit assignment.
+Exploratory block models and physically validated circuits are different levels of evidence; label them.
 
 ## The creature and its world
 
@@ -715,164 +214,106 @@ In the live view:
 
 ## The circuit brains
 
-Built from the one element of Ribar and Sepulchre's [Neuromorphic Control](https://arxiv.org/abs/2011.04441)
-(`mixed_feedback.py`; the approach and its literature in `MIXED_FEEDBACK.md`): leaky nodes, and elements that each put
-a current into a node, a sigmoid of a filtered voltage, with a sign (positive or negative feedback) and a timescale,
-perhaps gated by another node. Level 0 is nodes and elements; level 1, the motifs built from them (neurons, synapses,
-the states they hold), as the block view draws them. A memory node (a knob) holds its value, noisy only when written.
-Every circuit brain shares two sensor neurons, two motor neurons and a taste node (`brains/circuit.py`), is integrated
-in steps of 0.125 ms (80 to each 10 ms tick of the world), and has noise and mismatch as a substrate makes them
-(Terms). Each eye fires at random moments, at a rate set by what it sees, and each pulse (a taste too) starts at a
-moment of its own within the tick. Compiled with numba, with the world, a life of 100 s takes about a second.
-
-**Under biological noise every hand-built circuit brain falls to about 1 food for each poison** (2026-10-20): 10%
-mismatch pushes a share of their excitable neurons into firing on their own or missing pulses, and none was built to
-survive it (`NOTEBOOK.md`, Noise as biology makes it). The results in this section were measured with the earlier
-noise (a fixed noise per node, no mismatch), and stand only for it until these brains are rebuilt on a neuron that
-survives mismatch.
-
-### The designed circuit, for comparison
-
-Designed by hand rather than grown (`python creature.py --brain designed-circuit`; its schematic: `s` in the live view,
-or `media/designed_circuit.png`), it says what growing costs. Four excitable neurons, alike: two sensors and two motors.
-Each sensor excites the motor on its side (a coin toss at birth) through a synapse that relays every spike, and the
-other through a plastic synapse whose strength p sets: at p = 1 it relays nearly every spike, at 0 none, in between
-noise decides. The sensors hush each other: a sensor's spikes charge a node that for about 0.1 s holds the other
-sensor down, so the creature heeds one colour at a time. Its spikes come often and each kick is small. Learning is three
-factors, all in the circuit: each sensor's spikes charge its eligibility node, which leaks away over 0.1 s, and empty
-the other sensor's (cross-inhibition, so only the sensor that fired last is eligible); one taste node, driven by the
-same taste input, charges or empties a capacitor holding p while taste is good or bad, as fast as eligibility allows. p
-sets the plastic synapse's strength. Noise on every node makes the odd spontaneous spike, so a creature that sees
-nothing still moves.
-
-Under the earlier noise, on the same 32 lives as the sheet brain (nca-learn; `--measure 32`), it learned in 28
-(median 36 s) and ate 2.2, 5.9 and 4.6 food for each poison by thirds of life, netting about twice the sheet brain's
-food: it moves from the first tick (the sheet spends about 6 s building itself), reacts at once where a pulse takes
-about 0.13 s to cross the sheet, and its sensors hush each other. So building costs time, and a big brain is slow.
-
-### Recruitment: growing in the life
-
-The recruitment series (the ideas and plan in `RECRUITMENT.md`; the experiments in `experiments/NOTEBOOK.md`) climbs a
-ladder from a brain that can't learn at all, each step measured against the one below:
-
-| brain | what it is |
-|---|---|
-| baseline circuit (`brains/baseline.py`) | the designed circuit's four neurons alone, each sensor driving both motors, taste going nowhere: drives at every block (the baseline) |
-| adjusting circuit (`brains/adjusting.py`) | rung 0: each neuron adjusts its own excitability from taste (a knob); cuts poison by a third, by ignoring rather than avoiding |
-| knowing circuit (`brains/knowing.py`) | the starting animal: the baseline circuit plus a taste neuron, T, that learns what predicts pain but has no outputs; it knows, but behaves exactly as the baseline circuit |
-| recruiting circuit (`brains/recruiting.py`) | rung 1, guided: T's frustration grows a *bridge* on the poison sensor's pathway that lets the knowledge act |
-| healing circuit (`brains/healing.py`) | rung 1 by a generic recruit that knows nothing of the circuit, choosing among actions on what it is attached to |
-| healing cascade (the same file) | the first recruit can't reach the cure; frustrated itself, it grows a second, one step further out, which can |
-
-Under the earlier noise (`experiments/LEADERBOARD.md`), a recruit that knows nothing of what the circuit does matched
-the guided bridge, and settled better: it found the bridge's function ("gate the poison eye's synapse to a motor") out
-of its menu in every life. The cascade found the cure one step further out in about 60% of lives, and nothing grew in
-all-food lives.
+These use the mixed-feedback elements described in [MIXED_FEEDBACK.md](MIXED_FEEDBACK.md). The designed,
+baseline, adjusting, knowing, recruiting and healing variants remain available through `creature.py`.
+Their early recruitment results used fixed per-node noise without the later mismatch model. Do not read their
+historical scores as current-substrate validation. [Current state and history](experiments/NOTEBOOK.md).
 
 ## The minimal circuit search
 
-How simple can a circuit be that learns the bit, and how well can a circuit drive the body? No neurons, locality or
-growth are required: a circuit is any nodes and elements of `mixed_feedback.py`, written as a plain description (a
-spec, `minimal/spec.py`), its parts counted as it is built in transistors on a 1.8 V supply (`chip.py`; SPICE checks
-the build, `minimal/spice.py`). The task, body, interface and noise
-are every brain's, and the rules against cheating the simulator are enforced in code (`AGENTS.md`). Circuits are
-designed by hand, tuned (a polish, `minimal/search.py`), pruned part by part (`minimal/prune.py`) and searched by
-evolution over topologies (`minimal/evolve.py`), all judged on fresh seeds with the noise of silicon, biology and
-twice biology's (Terms: substrate).
-
-What counts, among the circuits that do the job (learn the bit, eat enough, rarely strand): performance first (the
-best driver for energy, body efficiency, and the best for speed and accuracy, gain rate, never traded against each
-other), then power and area; the simplest brain behind them (Terms: what counts). The league (`minimal/LEAGUE.md`,
-generated) names the best at each and how sure that is; the notebook (`minimal/NOTEBOOK.md`) tells how they were
-found.
-
-What it has found so far:
-
-- **Built in transistors, a circuit costs what its supply delivers, 150 times what reached its nodes.** Lived closed
-  loop in SPICE as SKY130 transistors, HR_31p_pol behaved as in the simulator, but its +-3 V supply delivered 1.76 uW,
-  where the simulator had counted 12 nW: thinking cost more than moving. Now the simulator reckons the build's power
-  (`chip.py`: element by element within 1% of SPICE, and a closed-loop life at 1.8 V 131 nW in SPICE against 130 in
-  the simulator, behaviour tied) on SKY130's own 1.8 V supply, the memory is a SONOS cell that
-  holds its bit (a capacitor written by transistors leaked it away in seconds), and parts are counted in transistors
-  (`minimal/NOTEBOOK.md`, M15).
-- **The simplest circuit that does the job, robustly, had 30 parts (counted as elements, before M15), and it is also among the best drivers.** Judged at
-  one noise level, circuits of about 22 parts seemed to do it: the bit a perfect integrator (a floating gate) written
-  by a three-factor rule (what was seen, times the taste), the creature spinning until food is in view. But their
-  rhythm came from noise: in silicon, about 280 times quieter, they never get moving. Only the hold-and-roam circuit,
-  whose scan is an oscillator and whose roam is a timer, does the job in silicon, biology and at twice biology's noise
-  (35 parts: HR_si); open searches from it, within a chip's limits, took parts of its motor stage away and retuned the
-  rest, and a polish and pruning one more: HR_31p_pol_pruned (30 parts, `media/HR_31p_pol_pruned.svg`, its
-  signal-flow graph and schematic), with HR_31p_pol (31) the best driver yet (`minimal/NOTEBOOK.md`, M12-M14).
+This line asks how small a circuit can be that learns the basic food distinction and drives effectively, without
+requiring growth or a particular neural architecture. Search, pruning and physical accounting are documented in
+[its notebook](minimal/NOTEBOOK.md). [The league](minimal/LEAGUE.md) is generated; its historical names and
+rankings are interpreted under the notebook's dated scoring and part-count conventions.
 
 ## Discrete circuits
 
-Before getting clever about food and poison, what is the simplest circuit of common parts (2N3904 and 2N3906
-transistors, resistors, capacitors, low-leakage diodes) that drives the body to food, and then the simplest that also
-learns the bit? Each circuit is a netlist living closed loop in ngspice beside the body (`discrete/life.py`), each
-seed with its own parts' tolerances, judged as the minimal search judges (`discrete/judge.py`, `discrete/poison.py`).
-The notebook (`discrete/NOTEBOOK.md`) tells how they were found.
-
-- **All food, 14 parts**: hold and drive (`media/hold_drive_14.svg`): an oscillator of a PNP and an NPN scans with
-  one thruster; each pulse from an eye charges a hold capacitor through an emitter follower, and while it is charged
-  the second thruster fires too, straight at the block. Efficiency 6.9, 72 nW. Fewer parts cost: 12 parts 6.6, 10
-  parts (counter-turning, no hold) 4.3.
-- **Blind, 9 parts**: an oscillator firing both thrusters 300 times a second eats four times as fast, as efficiently,
-  but only because the simulated thrusters are identical (What we've learned).
-- **A circuit doesn't need to tune itself to its body**, as far as tried: across bodies built differently (strength,
-  eyes, drag, unequal thrusters) the best settings hardly move, except for unequal thrusters, and a trim for those
-  can't be learned from a life's 200 meals more cheaply than it costs. Driving only while the eyes still see the
-  block copes with them instead.
-- **One bit, 46 parts** (`learn_avoid`, `media/learn_avoid.svg`): the eyes gated by a latch that two poisons in
-  quick succession flip; once the eye it follows has seen nothing for a few seconds, both thrusters drive straight
-  until the next sighting (giving up on an empty patch); and the eye it silences empties the hold, so poison ahead
-  turns the creature aside. Held out (160 lives) it surely does the job: efficiency 1.78, gain 4.7 meals per 10 s,
-  food:poison 4.7 in the last third, none stranded, 130 nW. Pruning took it from 48 parts and made it surely better
-  on both measures. Its predecessor (`learn_hold`, 49 parts, a roam on a clock) stranded 3 lives in 64 and was
-  surely less efficient (1.17). The same rules as policies, told the answer from birth, reach 2.7, and 2.3
-  learning: the ceiling for this kind of brain on this body.
+This line began with common electronic parts in SPICE and developed the fast block model used by the current
+learning experiments. Its notebook contains the control baselines, manual interventions, prediction, exploration,
+growth and timing investigations. Read [Where it stands](discrete/NOTEBOOK.md#where-it-stands) before using an
+old result or executing an old “next” instruction. A block-model success does not automatically establish a
+physical circuit with the same learning, power or noise performance.
 
 ## Next
 
-The current programme, its stages and decisions, is in [`PROGRAMME.md`](PROGRAMME.md); the open questions, most
-valuable first, in [`QUESTIONS.md`](QUESTIONS.md).
+[PROGRAMME.md](PROGRAMME.md#conditional-programme) owns the conditional work plan;
+[QUESTIONS.md](QUESTIONS.md) owns the ranked questions and discriminating investigations.
 
 ## Terms
 
-**The goal** (defined above, How we'll know: the scaling test)
+**Research and evaluation**
 
-- **Scaling test, scaling curve, cost curve, catastrophic forgetting, raw material, starting brain, committed, ladder, rung, certified rung, yardstick, solved.**
+- **Scaling curve**: performance or the hardest challenge passed against available brain resources, with the design fixed.
+  A **cost curve** records what those resources cost on simpler tasks.
+- **Ladder / rung**: a family of challenges ordered along a declared difficulty dimension / one level in it.
+  **Certified** and **solved** are protocol-specific labels; the historical thresholds are in [GRAMMAR.md](GRAMMAR.md#scaling-milestone-recorded-on-2026-11-09).
+- **Raw material**: generic spare capacity. **Starting brain**: the declared initial design. **Committed**: affecting
+  behaviour in the historical milestone; allocation, activity and retention must also be counted separately.
+  **Nominal P** in the growing-network code sets stream allowances; it is not measured total material or
+  an enforced total-unit cap ([D76](discrete/NOTEBOOK.md#d76-resource-floor)).
+- **Yardstick / reference**: a comparison method whose supplied information must be declared. A **told** controller
+  receives information the candidate must infer. Neither is automatically an optimal achievable controller.
+- **Catastrophic forgetting**: learning a new task damages an earlier skill. Retaining an old unit is not sufficient
+  evidence that its skill can be recalled.
+- **Log loss**: minus the base-2 logarithm of the probability assigned to the observed target, measured in bits.
+  State the target: a noisy taste is different from the hidden food state. **Calibration**: whether stated
+  probabilities agree with observed frequencies. **Proper scoring rule**: one that rewards an honest probability
+  forecast in expectation; see [BOUNDS.md](BOUNDS.md#prediction-belief-and-action).
+- **Phase-locked loop (PLL)**: feedback that adjusts an oscillator to track an observed rhythm. **Acquisition**
+  finds a plausible rhythm; **tracking** follows it. A **Kalman filter** estimates a changing state under an explicit
+  dynamical and observation model; its optimality is conditional on that model.
+- **Fixed share**: redistribution of some predictor weight so previously unsuccessful predictors can recover when
+  conditions change. It does not itself preserve the knowledge inside those predictors.
+- **Hidden Markov model**: a model in which an unobserved state changes probabilistically and generates noisy
+  observations. A filter estimates the current state from observations so far; knowing the model is different
+  from learning it.
+- **Evidence pooling**: using observations from several related cases to learn shared parameters. It can reduce
+  the data needed, but can mislead if those cases require different predictions.
+- **Context weighting**: averaging predictions over possible groupings of observed contexts, using how well
+  each grouping predicted past outcomes. The grouping prior and permitted distinctions must be stated.
+- **Model evidence**: the probability a model assigns to the observed sequence after averaging over its
+  unknown parameters. Ratios of model evidence update prior odds; they are not counts of learned state bits.
 
-**Units** (the axioms: `units.py`)
+**Mechanisms and historical names**
 
-- **Growing network** (the user, 2026-11-12; D59): a brain of small detectors (*blocks*) that grows by local rules. A block is born
+- **Growing network** (the user, 2026-11-12; D59): a brain of small detectors (*blocks*) with proposed local growth rules. A block is born
   where a guess about the food colour keeps failing, joining two units that were active together, so blocks build on blocks; each
   learns what came next when it fired. *Copies* (two blocks firing alike) and unused blocks are cleared, by written rules or by
-  competition for energy.
+  competition for a modelled resource budget. The locality and physical cost of the whole system remain to be audited.
 - **Stream**: one of the growing network's records of events, each ticking on one kind of event (every taste, every good meal, every
-  bad meal, every red or blue eaten); a block counts time in its stream's ticks.
-- **Trophic support** (after neurotrophic theory): a block kept alive by the success of the blocks built on it, as nerve cells are
-  kept alive by the cells they feed. With competition only among *siblings* (blocks built on the same parent), it lets energy do
-  the clearing out (D59).
-- **Play** (the user, 2026-11-10): activity with no goal and no reward, which lets a brain organise itself to its body and world, so
-  that later learning from reward is quick (README, What we've learned). The dancing brain is a brain that plays.
+  bad meal, every red or blue eaten); contexts count events in that stream; elapsed time is always in seconds, never simulator ticks.
+- **Stream allowance** (D76, D77): how many memory units a stream may hold before a new one must recycle an old one; the setting P is
+  divided equally among the 168 streams of the frozen design, and the market can move allowance between them. It is not a cap on total material.
+- **Weight contest** (D78, lab rule `W`): an allocation rule under a total cap. When the shared supply of units is used up, a stream
+  that needs a new unit compares its weight in the prediction mix with one other stream chosen at random, and takes a little-used unit
+  from it if that stream's weight is lower; otherwise it recycles one of its own.
+- **Trophic support** (D59, biological analogy): a block receives credit from successful blocks built on it.
+  **Siblings** are blocks built on the same parent. Competition for the modelled budget can remove blocks;
+  this is not by itself a physical energy measurement or evidence of biological equivalence.
+- **Play**: exploratory activity intended to gather useful evidence before or alongside pursuit of food. Its later
+  benefit is a hypothesis to test at matched time and energy, not a consequence of calling it play.
 - **Boredom** (the user, 2026-11-11): the switch between playing and working, set by whether learning or eating still pays. Bored
   of play, a brain stops when it has stopped learning (D46: play ends by itself when no unit's predictions are improving beyond their
   noise); bored of working, it plays when the world gives nothing (D47); the starting brain's own *bored* timer (running after some
   seconds without food) is the same signal at a smaller scale. The flip side of curiosity (Schmidhuber; Oudeyer and Kaplan).
-- **Dancing brain** (`PROGRAMME.md`; D0 done, D44): a brain whose movement is driven from birth by many cycles of different timings, which
+- **Dancing brain** (historical proposal; D44–D54): a brain whose movement is driven from birth by many cycles of different timings, which
   settle on those that work. A **cycle** is one repeating pattern of movement with a recorder of what the senses did during it.
-- **Knob** (D43; AGENTS.md, Knobs first): a setting the brain already has (a rate, a balance, a threshold). The **balance** is how much
-  faster one motor pulses than the other; the **tempo**, one factor on every rate, which cures unusual drag. The **stride** (D44) is how
-  far one beat carries the body, a thruster's strength over the drag: the eyes can't tell a strong thruster from light drag, so the
-  stride is what the tempo cures.
+- **Knob** (D43): a setting the brain already has, such as a rate or threshold. **Balance** controls the relative
+  rates of the motors; **tempo** scales their rates together. **Stride** names the movement produced by a beat
+  in the body-learning experiments. How those quantities relate to thrust and drag depends on the body model;
+  D53 shows why a formula for one body need not transfer to another.
 - **Context tree** (D39): a tree of units, each holding which colour was food in one context (say, "the last two letters were red,
-  blue"); a unit whose context turns out to hide two cases gets children that look one step further back. The known local form of the
-  ideal learner for our ladders (context tree weighting, PPM).
+  blue"); a unit whose context turns out to hide two cases gets children that look one step further back.
+  Related to context-tree methods and prediction by partial matching; the implementation is not thereby
+  established to be exact context-tree weighting or an ideal learner.
 - **Ledger** (`lab/v/LEDGER.md`): one line per run: its cost, the belief it could move, the prediction, and whether it surprised us.
 - **Register, look-back, record** (D38): a register is a row of units each holding one letter (which colour was food at a step),
   moved on one place by some kind of event (a good meal, a taste, a beat of a clock); a look-back k compares each step with the
   one k places back. The record is the brain built from them, following the best register and look-back once it beats a cautious
-  default by the Occam bar.
+  default by the **Occam bar**, the historical name for an evidence threshold favouring the default.
+
+**Units** (the axioms: `units.py`)
+
 - **Real units**: everything in SI, every number that can be derived derived from a few axioms (`units.py`).
 - **Tick**: the simulation's step. In the live view and the circuit brains, 10 ms for the body, with the circuit
   integrated in steps of 0.125 ms, 80 to a tick. In the programme's engine (`lab/stage2_lang/`) everything happens at
@@ -966,7 +407,7 @@ valuable first, in [`QUESTIONS.md`](QUESTIONS.md).
 - **Policy**: a brain written as a few rules in code, not a circuit (`discrete/policies.py`): it gets the eyes'
   pulses and the taste and fires the thrusters, as any brain, with no parts, power or noise of its own. A life costs
   about a second against a circuit's minutes in SPICE, so policies rank ideas cheaply; told from birth which colour is
-  food (`oracle`), a policy gives the ceiling for its kind of brain on this body. A rule's own values don't transfer to a
+  food (`oracle`), a policy provides an informed comparison, not a proven ceiling. A rule's own values don't transfer to a
   circuit; a **fast model** does: a policy whose every part is a block of the circuit with the numbers measured on
   SPICE's bench, checked against the circuit's own lives (`discrete/NOTEBOOK.md`, D13).
 - **Robust judging**: in the fast model, each life draws its own parts' errors (their spread over chips measured in
@@ -985,33 +426,40 @@ valuable first, in [`QUESTIONS.md`](QUESTIONS.md).
   manual interventions and how a brain could detect it, to the simplest circuit that does (`STORIES.md`).
 - **Bank of predictors**: several rival models of what taste means, all kept up to date and scored on every taste, with the creature
   following whichever has earned the most evidence over the default (`STORIES.md`, One universal circuit).
-- **Off-policy scoring**: judging a model on what happened while something else was in charge, so it can be judged without being
-  tried. **On-policy** is the opposite: a change is judged only by acting on it, as jitter is.
+- **Off-policy scoring**: judging a predictor on observations generated while something else was in charge.
+  Estimating the return of a different policy additionally needs appropriate coverage and causal assumptions;
+  prediction scoring alone does not do that. **On-policy** evaluation observes the policy's own behaviour.
 - **World** (in the programme): a rule changing the creature's world, written in a small language (`lab/stage2_lang/`),
   for instance "the colours swap every 12 s" or "a meal soon after the last is bad". The language can't touch the
   brain or break the interface. A **generator** draws worlds at random from it, frozen before any draw.
-- **Arm**: one brain run on the same lives as the others, so they compare fairly. **Base**: the existing circuit;
+- **Arm**: one comparison condition, run on matched seeds and exogenous conditions; actions can still create different histories.
+  The following base/bank/reference names describe the historical stage-3 protocol. **Base**: the existing circuit;
   **bank**: base with the bank of predictors; **told**: the bank's own parts told the right colour at every moment, a
-  yardstick, not a brain; **reference**: a frozen ideal learner holding 12,591 ideas, the bar's other half.
-- **Gap**: how much better the told arm does than base (or than standing still, if base is below that). A world has
+  yardstick, not a brain; **reference**: the historical frozen learner holding 12,591 supplied hypotheses, not an unrestricted optimum.
+- **Gap** (historical stage-3 definition): how much better the told arm does than base (or than standing still, if base is below that). A world has
   **something to learn** if its gap is at least .1 and surely above 0. **x**: the share of the gap the bank closes;
-  **r**: the same for the reference. A world **passes** if x is above a quarter and above half of r (`PROGRAMME.md`).
+  **r**: the same for the reference. A world **passes** if x is above a quarter and above half of r ([historical protocol](lab/v/programme_before_review_2026-11-16.md#the-primary-result)).
 - **Coverage**: the share of worlds with something to learn that the bank passes. With uncertain worlds it is a range:
   sure passes at the low end, sure passes plus those too close to call at the high end.
-- **Doing no harm**: in a world with nothing to learn, the bank is never surely more than .1 below base.
+- **Doing no harm**: a claim that harm larger than a declared practical margin has been excluded. The historical
+  stage-3 rule, “never surely more than .1 below base”, was weaker: failure to detect harm does not exclude it.
 - **Pair**: two lives on one seed, red then blue as poison, so a brain that ignores taste scores 0 on average; intervals
   are taken over pairs.
 - **Sampler**: a program that draws random worlds from a grammar with chosen probabilities, and so decides what "most worlds" means (`GRAMMAR.md`).
 - **F_novel**: on challenges a circuit's design never saw, its pass rate above the base circuit's, as a share of what the base circuit leaves. The design is fixed; the circuit still learns in each life (`PROGRAMME.md`).
-- **Description length**: how many bits it takes to write a thing down in its most compact form, so that repeated motifs cost little (`PROGRAMME.md`).
-- **Occam factor** (MacKay): the extra evidence a choice among more models needs, about log2 of their number, which is why a bigger bank picks more slowly and falsely more often.
-- **Bits per taste**: how much one taste can tell a brain, 1 - H(e) for a taste that misleads with chance e: 0.83 at 2.5%, 0.25 at 21%. A life's bits are that times its tastes: a ceiling on the evidence, not what was learned.
+- **Description length**: bits under a specified encoding or model class. It depends on the code and prior;
+  it is not automatically the evidence the robot must acquire to act well.
+- **Occam factor**: the marginal-likelihood penalty arising from averaging a model over its parameter prior.
+  Distinguish it from the log2(K) prior cost of one of K equally weighted hypotheses; see [BOUNDS.md](BOUNDS.md#how-long-a-life-must-be).
+- **Bits per taste**: target- and model-dependent information, not simply a pulse count. For a binary symmetric
+  channel with independent error probability e, capacity is 1 - H2(e) bits per use; correlations and the robot's
+  sampling policy matter. Do not equate channel capacity, realised learning and decision value.
 - **Run detector** (Page's CUSUM): a score that rises on wins, falls on losses and stops at a floor of zero, so it reacts to a recent run and forgets what came before. It is the standard test for a change at an unknown time. The bank's entry rule is one, and its picks resemble those of an exact posterior that expects frequent change.
-- **Function-preserving growth**: adding a part with its effect at zero, so the brain is exactly as good as before,
-  then tuning it in: trying a part costs nothing (`PARTS.md`).
+- **Function-preserving growth**: preserving the input–output function at insertion under stated assumptions.
+  It does not eliminate material, power, communication or subsequent learning costs ([PARTS.md](PARTS.md)).
 - **Ideal observer** (Geisler's term, the user's choice, 2026-11-01): a brain of unlimited reasoning but only the
-  senses, beats and tastes a real one has; not omniscient. What it could do bounds what any brain could learn
-  (`BOUNDS.md`).
+  senses, beats and tastes a real one has; not omniscient. An optimal observer/controller bounds performance only within its stated model, prior,
+  information and objective; an implemented approximation is a reference ([BOUNDS.md](BOUNDS.md)).
 
 **Names**: in prose "the designed circuit", "the knowing circuit"; on the command line `designed-circuit`,
 `knowing-circuit` and so on. Recruitment's baseline, the **baseline circuit**, was called the
@@ -1088,13 +536,13 @@ python creature.py --record frames  # save a life's frames as PNGs, headless (me
 | `schematic.py` | draws `media/designed_circuit.svg` and `.png`, the designed circuit's schematic (by hand: redraw it when it changes) |
 | `AGENTS.md` | the rules, for agents and people: principles, honesty, every brain's constraints, how to work here |
 | `lab/` | one-off experiment scripts and their logs (`lab/v/`), cited by the notebooks; run from the repository's root. `lab/universal_v.py`: the bank of predictors; `lab/stage2_lang/`: the language for worlds and its engine, in seconds |
-| `PROGRAMME.md` | the current programme: its question, stages, gates and decisions |
+| `PROGRAMME.md` | the current programme: its question, hypotheses, conditional investigations and decisions |
 | `ABSTRACT.md` | the programme so far, in one page |
 | `GRAMMAR.md` | the grammar of challenges the worlds are drawn from, and how they are judged |
 | `QUESTIONS.md` | the open questions, most valuable first: parked mid-quest, removed when answered |
 | `NOTEBOOK.md` | the lab notebook of the body and the circuit simulator: what was tried, what failed and why |
 | `MIXED_FEEDBACK.md` | the mixed-feedback approach (Sepulchre and colleagues): what is new in it, the literature, and what it suggests here |
-| `RECRUITMENT.md` | how a brain might recruit more computational power locally, with no god: the literature, insights and plan |
+| `RECRUITMENT.md` | local recruitment: literature leads, hypotheses and the historical plan |
 | `BOUNDS.md` | what limits how well and how fast any brain could learn in a life: the ideal observer, watching against intervening, the walls, MacKay |
 | `STORIES.md` | one page per performance issue: the gap, the interventions tried, how a brain could detect it, the simplest circuit that does |
 | `PARTS.md` | the ways a working brain could change itself (tune, modulate, rewire, prune, duplicate, add), a catalogue of parts by what they do in time, what triggers each change and what signal judges it; towards a universal circuit |

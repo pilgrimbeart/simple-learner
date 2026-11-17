@@ -1,0 +1,42 @@
+neutral 560 red reproduces record
+neutral 560 blue reproduces record
+neutral 4480 red reproduces record
+neutral 4480 blue reproduces record
+
+== stage1 seq rung 17, 300 s, seeds 142000-142009
+  E                      +0.19 [+0.11,+0.29]  units   2207 peak   2207  grown event 10 clock 59 integrator 56 rhythm 39  transfers 0 contests 0 won 0 evictions 0  cpu 8 s
+  M                      +0.35 [+0.24,+0.45]  units   2205 peak   2206  grown event 27 clock 37 integrator 47 rhythm 51  transfers 241 contests 0 won 0 evictions 0  cpu 10 s
+  W                      +0.61 [+0.42,+0.76]  units   2300 peak   2300  grown event 50 clock 61 integrator 102 rhythm 45  transfers 0 contests 18346 won 5442 evictions 0  cpu 11 s
+  U                      +0.29 [+0.21,+0.36]  units   2300 peak   2300  grown event 35 clock 52 integrator 143 rhythm 28  transfers 0 contests 0 won 0 evictions 17873  cpu 21 s
+  R                      +0.54 [+0.46,+0.63]  units   2288 peak   2288  grown event 246 clock 0 integrator 0 rhythm 0  transfers 0 contests 0 won 0 evictions 0  cpu 13 s
+  hist_P560              +0.29 [+0.19,+0.39]
+  hist_P4480             +0.81 [+0.74,+0.88]
+  M-E                    +0.15 [-0.00,+0.31]
+  W-E                    +0.41 [+0.25,+0.53]
+  U-E                    +0.09 [-0.00,+0.19]
+  R-E                    +0.35 [+0.25,+0.47]
+  hist_P560-E            +0.10 [-0.01,+0.21]
+  hist_P4480-E           +0.61 [+0.53,+0.72]
+  E-hist_P4480           -0.61 [-0.72,-0.53]
+  M-hist_P4480           -0.46 [-0.61,-0.32]
+  W-hist_P4480           -0.20 [-0.41,-0.03]
+  U-hist_P4480           -0.52 [-0.62,-0.44]
+  R-hist_P4480           -0.26 [-0.38,-0.15]
+
+== stage1 time rung 3, 3000 s, seeds 142000-142009
+  E                      +0.67 [+0.56,+0.77]  units   2209 peak   2209  grown event 10 clock 60 integrator 56 rhythm 41  transfers 0 contests 0 won 0 evictions 0  cpu 132 s
+  M                      +0.68 [+0.60,+0.76]  units   2208 peak   2208  grown event 32 clock 126 integrator 1 rhythm 6  transfers 246 contests 0 won 0 evictions 0  cpu 125 s
+  W                      +0.72 [+0.59,+0.83]  units   2300 peak   2300  grown event 5 clock 50 integrator 29 rhythm 174  transfers 0 contests 236752 won 36899 evictions 0  cpu 265 s
+  U                      +0.70 [+0.65,+0.78]  units   2300 peak   2300  grown event 40 clock 47 integrator 137 rhythm 34  transfers 0 contests 0 won 0 evictions 241740  cpu 322 s
+  hist_P560              +0.65 [+0.44,+0.84]
+  hist_P2240             +0.82 [+0.74,+0.91]
+  M-E                    +0.00 [-0.14,+0.19]
+  W-E                    +0.04 [-0.13,+0.24]
+  U-E                    +0.03 [-0.10,+0.19]
+  hist_P560-E            -0.03 [-0.23,+0.23]
+  hist_P2240-E           +0.14 [+0.02,+0.30]
+  E-hist_P2240           -0.14 [-0.30,-0.02]
+  M-hist_P2240           -0.14 [-0.22,-0.05]
+  W-hist_P2240           -0.10 [-0.24,+0.01]
+  U-hist_P2240           -0.11 [-0.20,-0.03]
+wall_seconds 2381.962108114036

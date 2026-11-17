@@ -1,0 +1,457 @@
+{
+  "script_sha256": "ea34a02e47c39f3a90a451258c8726aac8e85bc2192598c92a1b976be3880dda",
+  "bootstrap": {
+    "pairs": 10,
+    "replicates": 2000,
+    "seed": 0
+  },
+  "results": {
+    "seq": {
+      "path": "/home/pilgrim/git/simple-learner/lab/v/grownet_pair300_seq_5-11-17_10_s142000_net10kc60SFBLMR560-net10kc60SFBLMR1120-net10kc60SFBLMR2240-net10kc60SFBLMR4480.pkl",
+      "sha256": "999f7d9350f435479c8443944fefaad9da8f86bfc2f46d7595aca7557f8dad9c",
+      "rows": 360,
+      "seconds_from_protocol": 300.0,
+      "seeds": [
+        142000,
+        142009
+      ],
+      "pairs": 10,
+      "highest_historical_pass": {
+        "560": null,
+        "1120": 11,
+        "2240": 11,
+        "4480": 17
+      },
+      "comparisons": [
+        {
+          "rung": 5,
+          "P": 560,
+          "median": 0.49091470293728867,
+          "ci95": [
+            0.3508992331816453,
+            0.6104324281416272
+          ],
+          "historical_pass": false,
+          "nonpositive_gap_bootstraps": 0
+        },
+        {
+          "rung": 5,
+          "P": 1120,
+          "median": 0.8528017886511021,
+          "ci95": [
+            0.7687617900627095,
+            0.9367614616384672
+          ],
+          "historical_pass": true,
+          "nonpositive_gap_bootstraps": 0
+        },
+        {
+          "rung": 5,
+          "P": 2240,
+          "median": 0.8769826208633856,
+          "ci95": [
+            0.8148482995953636,
+            0.9491814226851518
+          ],
+          "historical_pass": true,
+          "nonpositive_gap_bootstraps": 0
+        },
+        {
+          "rung": 5,
+          "P": 4480,
+          "median": 0.8486416588991359,
+          "ci95": [
+            0.7943216228163787,
+            0.9072452624418983
+          ],
+          "historical_pass": true,
+          "nonpositive_gap_bootstraps": 0
+        },
+        {
+          "rung": 11,
+          "P": 560,
+          "median": 0.40245541222058145,
+          "ci95": [
+            0.2886010132985661,
+            0.5160261296763884
+          ],
+          "historical_pass": false,
+          "nonpositive_gap_bootstraps": 0
+        },
+        {
+          "rung": 11,
+          "P": 1120,
+          "median": 0.6578930236245044,
+          "ci95": [
+            0.5182406887939665,
+            0.7792306026352126
+          ],
+          "historical_pass": true,
+          "nonpositive_gap_bootstraps": 0
+        },
+        {
+          "rung": 11,
+          "P": 2240,
+          "median": 0.8768910116394675,
+          "ci95": [
+            0.7932946093849134,
+            0.9837170910738418
+          ],
+          "historical_pass": true,
+          "nonpositive_gap_bootstraps": 0
+        },
+        {
+          "rung": 11,
+          "P": 4480,
+          "median": 0.8256608518780186,
+          "ci95": [
+            0.739177975726136,
+            0.9218972025773388
+          ],
+          "historical_pass": true,
+          "nonpositive_gap_bootstraps": 0
+        },
+        {
+          "rung": 17,
+          "P": 560,
+          "median": 0.2945386463056159,
+          "ci95": [
+            0.19084871792937924,
+            0.38921428087882864
+          ],
+          "historical_pass": false,
+          "nonpositive_gap_bootstraps": 0
+        },
+        {
+          "rung": 17,
+          "P": 1120,
+          "median": 0.4310332229887019,
+          "ci95": [
+            0.320169284587064,
+            0.5343919725187617
+          ],
+          "historical_pass": false,
+          "nonpositive_gap_bootstraps": 0
+        },
+        {
+          "rung": 17,
+          "P": 2240,
+          "median": 0.5775547875997985,
+          "ci95": [
+            0.4961377148408785,
+            0.6673212810468557
+          ],
+          "historical_pass": false,
+          "nonpositive_gap_bootstraps": 0
+        },
+        {
+          "rung": 17,
+          "P": 4480,
+          "median": 0.8111730089834235,
+          "ci95": [
+            0.7390456004109258,
+            0.875837404181851
+          ],
+          "historical_pass": true,
+          "nonpositive_gap_bootstraps": 0
+        }
+      ],
+      "stored_cost_information": "Spending proxy and execution time; best/max stream grown count and event counters in candidate diagnostic tuple",
+      "missing": [
+        "total final allocation",
+        "peak allocation",
+        "allocation time integral",
+        "per-stream allocation history",
+        "fixed/reserved material accounting",
+        "messages and wiring",
+        "memory writes and decision latency",
+        "measured energy of the growing brain",
+        "embedded original code hashes and environment flags"
+      ]
+    },
+    "time": {
+      "path": "/home/pilgrim/git/simple-learner/lab/v/grownet_pair3000_time_3-5-7_10_s142000_net10kc60SFBLMR560-net10kc60SFBLMR1120-net10kc60SFBLMR2240-net10kc60SFBLMR4480.pkl",
+      "sha256": "81c5bc1133f626e1c8d81e702ae4269c401af7fd3eb70270fc67cb0bfd833402",
+      "rows": 360,
+      "seconds_from_protocol": 3000.0,
+      "seeds": [
+        142000,
+        142009
+      ],
+      "pairs": 10,
+      "highest_historical_pass": {
+        "560": null,
+        "1120": 7,
+        "2240": 5,
+        "4480": 7
+      },
+      "comparisons": [
+        {
+          "rung": 3,
+          "P": 560,
+          "median": 0.6524807256191365,
+          "ci95": [
+            0.44464210049043756,
+            0.8397602070948168
+          ],
+          "historical_pass": false,
+          "nonpositive_gap_bootstraps": 0
+        },
+        {
+          "rung": 3,
+          "P": 1120,
+          "median": 0.6885552246162455,
+          "ci95": [
+            0.5780973157242935,
+            0.8018642680414609
+          ],
+          "historical_pass": true,
+          "nonpositive_gap_bootstraps": 0
+        },
+        {
+          "rung": 3,
+          "P": 2240,
+          "median": 0.8171227361802788,
+          "ci95": [
+            0.7392804891223831,
+            0.9117267900057238
+          ],
+          "historical_pass": true,
+          "nonpositive_gap_bootstraps": 0
+        },
+        {
+          "rung": 3,
+          "P": 4480,
+          "median": 0.8092134052373909,
+          "ci95": [
+            0.7294968565603104,
+            0.9437035469499765
+          ],
+          "historical_pass": true,
+          "nonpositive_gap_bootstraps": 0
+        },
+        {
+          "rung": 5,
+          "P": 560,
+          "median": 0.571310125586919,
+          "ci95": [
+            0.4497899061981956,
+            0.6827853502573078
+          ],
+          "historical_pass": false,
+          "nonpositive_gap_bootstraps": 0
+        },
+        {
+          "rung": 5,
+          "P": 1120,
+          "median": 0.6335330301254837,
+          "ci95": [
+            0.5198583551397061,
+            0.7227419799639946
+          ],
+          "historical_pass": true,
+          "nonpositive_gap_bootstraps": 0
+        },
+        {
+          "rung": 5,
+          "P": 2240,
+          "median": 0.6573260850965259,
+          "ci95": [
+            0.550240633077901,
+            0.7436544270881762
+          ],
+          "historical_pass": true,
+          "nonpositive_gap_bootstraps": 0
+        },
+        {
+          "rung": 5,
+          "P": 4480,
+          "median": 0.7008052823381328,
+          "ci95": [
+            0.6019219171286856,
+            0.7792463090187932
+          ],
+          "historical_pass": true,
+          "nonpositive_gap_bootstraps": 0
+        },
+        {
+          "rung": 7,
+          "P": 560,
+          "median": 0.509170847538582,
+          "ci95": [
+            0.3142005055431579,
+            0.6930170256223732
+          ],
+          "historical_pass": false,
+          "nonpositive_gap_bootstraps": 0
+        },
+        {
+          "rung": 7,
+          "P": 1120,
+          "median": 0.74224577229449,
+          "ci95": [
+            0.6448619135331157,
+            0.844956322466241
+          ],
+          "historical_pass": true,
+          "nonpositive_gap_bootstraps": 0
+        },
+        {
+          "rung": 7,
+          "P": 2240,
+          "median": 0.6583035370818833,
+          "ci95": [
+            0.4939285063433566,
+            0.7910940250254832
+          ],
+          "historical_pass": false,
+          "nonpositive_gap_bootstraps": 0
+        },
+        {
+          "rung": 7,
+          "P": 4480,
+          "median": 0.6192993876997583,
+          "ci95": [
+            0.5306378969711691,
+            0.7096329573111254
+          ],
+          "historical_pass": true,
+          "nonpositive_gap_bootstraps": 0
+        }
+      ],
+      "stored_cost_information": "Spending proxy and execution time; best/max stream grown count and event counters in candidate diagnostic tuple",
+      "missing": [
+        "total final allocation",
+        "peak allocation",
+        "allocation time integral",
+        "per-stream allocation history",
+        "fixed/reserved material accounting",
+        "messages and wiring",
+        "memory writes and decision latency",
+        "measured energy of the growing brain",
+        "embedded original code hashes and environment flags"
+      ]
+    },
+    "combo": {
+      "path": "/home/pilgrim/git/simple-learner/lab/v/grownet_pair3000_combo_3-5_10_s142000_net10kc60SFBLMR560-net10kc60SFBLMR1120-net10kc60SFBLMR2240-net10kc60SFBLMR4480.pkl",
+      "sha256": "378750682709ad2143aa98408be499e7f7e50196d3bc21c73b596ff3745c87e5",
+      "rows": 240,
+      "seconds_from_protocol": 3000.0,
+      "seeds": [
+        142000,
+        142009
+      ],
+      "pairs": 10,
+      "highest_historical_pass": {
+        "560": null,
+        "1120": null,
+        "2240": null,
+        "4480": null
+      },
+      "comparisons": [
+        {
+          "rung": 3,
+          "P": 560,
+          "median": 0.43073144708740413,
+          "ci95": [
+            0.28977517374397316,
+            0.5388692523363502
+          ],
+          "historical_pass": false,
+          "nonpositive_gap_bootstraps": 0
+        },
+        {
+          "rung": 3,
+          "P": 1120,
+          "median": 0.6594214316705764,
+          "ci95": [
+            0.42317162808333486,
+            0.7560597067557324
+          ],
+          "historical_pass": false,
+          "nonpositive_gap_bootstraps": 0
+        },
+        {
+          "rung": 3,
+          "P": 2240,
+          "median": 0.6702704382301672,
+          "ci95": [
+            0.4635080227111295,
+            0.7712849495484848
+          ],
+          "historical_pass": false,
+          "nonpositive_gap_bootstraps": 0
+        },
+        {
+          "rung": 3,
+          "P": 4480,
+          "median": 0.6570743975273594,
+          "ci95": [
+            0.42391300072865273,
+            0.7570104466841783
+          ],
+          "historical_pass": false,
+          "nonpositive_gap_bootstraps": 0
+        },
+        {
+          "rung": 5,
+          "P": 560,
+          "median": 0.36941295639123317,
+          "ci95": [
+            0.2508178219369112,
+            0.4700156947100849
+          ],
+          "historical_pass": false,
+          "nonpositive_gap_bootstraps": 0
+        },
+        {
+          "rung": 5,
+          "P": 1120,
+          "median": 0.4861478927020298,
+          "ci95": [
+            0.33492299732960834,
+            0.6165727970641129
+          ],
+          "historical_pass": false,
+          "nonpositive_gap_bootstraps": 0
+        },
+        {
+          "rung": 5,
+          "P": 2240,
+          "median": 0.6115808469317277,
+          "ci95": [
+            0.48918746177712225,
+            0.7292991432390383
+          ],
+          "historical_pass": false,
+          "nonpositive_gap_bootstraps": 0
+        },
+        {
+          "rung": 5,
+          "P": 4480,
+          "median": 0.6131865574796314,
+          "ci95": [
+            0.464449756448935,
+            0.7312848363646977
+          ],
+          "historical_pass": false,
+          "nonpositive_gap_bootstraps": 0
+        }
+      ],
+      "stored_cost_information": "Spending proxy and execution time; best/max stream grown count and event counters in candidate diagnostic tuple",
+      "missing": [
+        "total final allocation",
+        "peak allocation",
+        "allocation time integral",
+        "per-stream allocation history",
+        "fixed/reserved material accounting",
+        "messages and wiring",
+        "memory writes and decision latency",
+        "measured energy of the growing brain",
+        "embedded original code hashes and environment flags"
+      ]
+    }
+  },
+  "wall_seconds": 0.03372134699020535,
+  "cpu_seconds": 0.033720333
+}

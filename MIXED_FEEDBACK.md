@@ -1,5 +1,12 @@
 # Mixed feedback
 
+**Status, 2026-11-16.** This is background and a source of candidate mechanisms. The core paper's
+[primary record](https://arxiv.org/abs/2011.04441) supports multiscale mixed feedback as a circuit design and
+control approach. It does not establish this project's autonomous learning or economical growth goal. The
+research priorities live in [PROGRAMME.md](PROGRAMME.md); the suggestions below are historical proposals.
+The original reading-depth statement below remains applicable. This review did not reverify every reference
+or update the survey into an exhaustive account of the field.
+
 What the "mixed-feedback" approach of Rodolphe Sepulchre and colleagues is, what is new and valuable in it, what is
 not, and what it suggests for this project. Written from a literature search in October 2026. The core paper
 (Ribar and Sepulchre 2021) was read in full; most others from their abstracts or summaries, so details of those
@@ -228,7 +235,7 @@ Closest in spirit to evolving such circuits:
   unconnected cells and the chip's physics [35]; Jakobi's "radical envelope of noise" hid what a simulation models
   badly inside noise, so evolved controllers couldn't exploit it [36]. Both bear on the defences in `AGENTS.md` (the ground rules).
 
-## What it suggests for this project
+## What it suggested for this project (historical proposals)
 
 Written before the circuit work; what has come of each, as of 2026-10-22:
 

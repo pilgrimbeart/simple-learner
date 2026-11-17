@@ -1,396 +1,135 @@
 # Open questions
 
-What we'd like to know and haven't tested, roughly most valuable first. A question raised mid-quest is parked here
-rather than chased; one answered leaves, its answer recorded in its line's notebook. Each: the question, who raised it
-and when, why it matters, the line it belongs to, and the experiment that would answer it.
+Current priorities after the 2026-11-17 investigations. This page owns unresolved questions and candidate discriminating
+investigations; [PROGRAMME.md](PROGRAMME.md#conditional-programme) owns their order and hand-offs.
+Answers belong in the relevant notebook, with evidence and limitations, and leave this list when resolved.
+The [previous question list](lab/v/questions_before_review_2026-11-16.md) preserves origins, abandoned suggestions
+and earlier answers; its many “next” instructions are historical, not a second work queue.
 
-## Scaling (the user's goal, 2026-11-09; `PROGRAMME.md`)
+## 1. Which relations between representations make noisy evidence economical to learn?
 
-- **How can a brain pick the right evidence from many candidates when its feedback is noisy?** (D70, D71.) On drift's top rung the
-  signed evidence sum, read raw, chooses as well as the ideal filter (77%), and dozens of the brain's experts are 76 to 80% right about
-  the hidden state; but judged against tastes that lie 35% of the time, they agree with the tastes 58% against weaker experts' 55%, too
-  close to tell apart in a life, so Bayes weights (judged on bits) and a vote judged on choices both end near uniform (70%). Candidates:
-  fewer, better candidate primitives (an Occam factor of log2 260 = 8 bits is itself a cost); experts judged on richer evidence (the eyes'
-  pulses, predicted as rates, give tens of events a second against one taste every few seconds); or structure that ties the evidence
-  sums to the choice directly (a primitive whose output is a belief about the hidden state, as the filter's is).
-- **Why does a used, informative count gain so little on satiety?** (D66.) A leaky count of each colour's meals, written at each taste,
-  tells the poison colour with purity .8 to .9 (base .56 to .76) and is trusted, yet closes at most .06 more of the gap. Suspect: acting
-  on it (finding the other colour within the seconds before recovery). Test: the same lives with the told colour given only to the
-  steering, against the count-using brain, to split knowing from doing.
-- **How can a learner find choices that pay late and only together?** (D64.) The held options' habit space holds the hand-built
-  drive's level (+2.36); the learner reaches +1.37, missing two interacting late-paying choices (both in view: stop; bored: run). Ruled
-  out: exploration, flicker, averaging, TD(lambda) over episodes, one-change habit search, knob tuning by perturbation. Candidates: a
-  model of what follows each choice (a forward model of the next situations, so late effects are computed, not waited for); joint
-  changes proposed by the growing network's blocks (a sequence of choices as one option); or evolution's start, refined in a life.
-- **Why does the tree beat the growing network on combinations of 5 and 6?** (D59, D60.) In 3000 s lives the tree solves both (.76,
-  .72), the network reaches .38 to .49 whatever was tried: more material, merging copies, growth stopping when full, the simplest
-  partner. The network makes thousands of blocks a life (copies by the thousand); the tree makes one child per contradicted context and
-  keeps counting. Trace it on the bench (lab/grownet_bench.py) with a combination stream before more variants.
-- **Can a deeper layer turn cycling hypotheses into a meta-hypothesis?** (the user, 2026-11-15.) In a world that switches between
-  rules over long periods, the brain grows the new hypothesis, lets the old one fade, and regrows it when it returns, paying its
-  learning bits (K) at every return. A brain that keeps A dormant and recognises its return pays only the bits to tell A from B, and
-  if the switches are rhythmic, fewer still: MDL favours the meta-hypothesis after two or three returns. Candidates: return weight to
-  streams that were good before (mixing past posteriors, Bousquet & Warmuth 2002) instead of evenly (fixed share); blocks that paid fall
-  dormant rather than being recycled (storage apart from expression, as in COIN: Heald, Lengyel & Wolpert 2021); the brain's own
-  signals (which stream holds the weight, growth and recycling) fed as event types to the same primitives (bank, rhythm detectors), so
-  a rhythm in its own hypotheses is found by the machinery that finds rhythms in the world. Test: an A-B-A-B world with slow, rhythmic
-  switches; relearning cost per return, in bits, for the plain brain against each candidate. Long-term memory (the user): a block
-  judged on two records, recent bits saved (active: expressed, live material) and lifetime bits saved (kept dormant, protected from
-  recycling, at a small keep); worth integrated at several time scales, so protection comes in degrees (Benna & Fusi 2016's cascade;
-  synaptic tagging and capture, Frey & Morris 1997; complementary learning systems, McClelland et al. 1995; EWC, Kirkpatrick et al.
-  2017); dormant blocks recycled by least lifetime saving per unit of age.
-- **How could a growing network remember a world that returns?** (D59, A-B-A.) The written-rules network keeps a third of its old
-  blocks through a change, yet gains nothing when the old world returns: every block keeps counting while it fires, so B's evidence
-  overwrites A's in the same blocks (catastrophic interference, McCloskey and Cohen 1989). The generic brain simply relearns. Candidates:
-  a block that stops learning once sure and starts a sibling when contradicted (keeping the old one for when it is right again).
-- **Can a network learn that one colour's poison means the other's food?** (D59, plan B1.) Told it, every taste informs about both
-  eyes; untold, the growing network pays .1 to .27 of the gap. A unit that notices the two eyes' records are always opposite could
-  pool them, earning the evidence back, and a world where both could be food (the all-food control) would teach it not to.
-- **How does a growing network find which clock matters?** (D59, stage 5.) Given its senses as separate lines, a block can keep time by
-  any of them (every taste, good meals, bad meals...). On the pattern lessons only good meals carry the pattern; blocks drawing other
-  clocks start lineages that crowd out the useful one. Candidates: a clock is itself a unit, kept or evicted by the economy; or clocks
-  compete by how much they reduce surprise (Plan2Explore's and our coupling's measure) before blocks are built on them.
-- **What should hunger measure against?** (D56) Against a fixed normal it helps in lean worlds but costs where the normal is set too
-  high (fresh seeds: -.40 in the plain world); against the creature's own past it fails in a world lean all along. Candidate: meals per
-  pulse spent, against the exchange rate of a meal for pulses (an energy fact evolution knows), so a creature eats enough for its effort.
-- **How much brain does the map route need, against the body route?** (the user's hypothesis, 2026-11-12: a simple body limits a
-  simple brain, and a little more body buys what only a lot more brain could; ecological balance, Pfeifer and Scheier 1999; matched
-  filters, Wehner 1987.) Measure both in the same currency: the parts and bits of a brain that reaches D21's map level from today's
-  eyes (if any can), against the parts of the split-eye reflex (D55), on the same lives; and whether the scaling curve bends when the
-  body grows with the brain.
-- **How do units each judging by their own coupling avoid spoiling each other's comparisons?** (D52's end) One global search on one
-  knob works; split across two motor units it fails three ways (rewarding slowness in fixed bins, cured by normalising; small nudges
-  too weak to feel; overlapping wide searches). Candidates: a unit searches only while its own coupling has fallen (frustration), so
-  units rarely search at once; units judge only the part of their activity they control (motor 0's scanning confounds its signal);
-  a shared slow signal (how coupled the whole brain is) that each unit reads locally, as taste is read now.
-- **Does the growing tree lose by capacity or by how it combines evidence?** (the review, 2026-11-11) Compare it with genuine
-  context-tree weighting (Willems, Shtarkov and Tjalkens 1995) on identical histories: CTW mixes predictions across all tree shapes
-  with coding guarantees that ours, growing on contradictions and predicting from the deepest populated context, doesn't inherit.
-- **Ladders that grow through reusable structure** (the review): an arbitrary mapping of k binary inputs has 2^k free outputs, which no
-  recruiting rule can compress; include rungs whose complexity grows by reusing structure, beside random mappings that resist it.
-- **Is learning progress wrong, or only our estimate of it?** (the review) D46 measured it as one 3 s turn's loss against the one before;
-  model improvement measured properly (Hou, An and Du 2026, separating improvement from expected error) is the fair test.
-- **Does boredom from certainty hold on harder bodies?** (D48, confirmed on fresh seeds.) Drag drawn too (the stride is in the same
-  records), more motors, and a challenge that comes sooner (before play is certain).
-- **Can the steady-view link match partners without assuming matching pairs?** (D47) Gaze stabilisation (set the drive where a forward
-  model predicts the view stays still) assumes nothing about the body's plan, but on cheap statistics its knob error was .17 to .29,
-  and more play made it worse (the statistic is biased). With each mix's turning read from beat-clocked records (as partners reads each
-  motor's), it might match partners and extend to any number of motors.
-- **Does play's payoff scale?** (D47) More body numbers drawn (drag: the stride is in the same records), more units, more motors.
-- **Does organising without reward make later learning fast?** (the user, 2026-11-10; README, What we've learned: latent learning.)
-  The test: a life where the world first offers nothing to learn by taste (all food), then poison begins at a random moment. Does a
-  brain that spent the quiet time predicting its own senses learn the change in fewer tastes than one that only foraged, counted
-  against an ideal learner's tastes? If yes, "organise first, reward only chooses" is a measurable property, and could sit beside the
-  scaling curve.
-- **Would an observer that knows a zigzag's physics find what sweeps do?** (D44) Zigzags gave .8 bits on the balance to a generic decoder
-  (median error .2), sweeps 1.1 to a physical one (.04). A zigzag's spin rate is k0 r0 - k1 r1 in each half, two equations for two
-  unknowns, so an observer timing each half's recurrence might match sweeps while eating as it goes. Decides whether D2's cycles can
-  forage while they measure.
-- **Why does the tree trail look-backs on timing's rung 5, and beat them on rung 2?** (D40: .45 against .63; .94 against .83.) Suspects:
-  beats with no taste, filled in by the tree's own guess; 16 or 32 nodes against a word needing depth 2 log2 n in a noisy register.
-  Trace in single lives (`lab/clocks_probe.py`) before changing anything.
-- **How does the acting ladder get more than two rungs?** (D42) Of the body's numbers only the balance matters much, and drag at its
-  extremes. Options: drag drawn a third to three times; a balance or tempo that follows a hidden context, so a tree's nodes hold a
-  setting each (and many units share one score, the hard case); or two rungs, said plainly. The user's decision.
-- **Does the stride's measurement set the tempo knob in a life?** (D44 answered what measures it: the mean of the two motors' beats a
-  revolution in a sweep, the same sweep as the balance's, to a median 3% by 100 s; strength and drag are one number to the eyes, so drag
-  needn't be measured on its own.) Untried: the tempo set from it, on bodies with drag a third to three times.
-- **When does a knob call for a measurement?** (D43) The sweeps start when meals are short (D20's gate, by hand). The rule should be
-  the knob's own: its adjusting has stalled while its discomfort persists (AGENTS.md, no unit knows it is tuned).
-- **Do spare nodes always cost?** (D40) Four times the nodes a rung needs lost about .1 on combo 3 and 4, growing on misreads and guessed
-  colours. A node could ask for two contradictions, or forget; the cost curve should say how much it matters.
-- **Can a clock trim its own period within a band?** (D39) Fixed clocks must lie within about 3% of the slot's length, so 60 are needed
-  from 3 to 30 s. With each period nudged by the signed phase error at a confirmed change, and held within its band, a dozen might do.
-- **What are a counting clock's last 12% of disagreements?** (D39) The registers' letters, or the phase near a change? It decides whether
-  timing above rung 5 needs better registers or better clocks.
-- **Must rung lives grow smoothly with what a rung asks?** (D37) Seq's 100 s and 300 s rungs make "hardest rung solved" misread a
-  climb. The user: revisit only if it gets in the way.
+**Origin:** D69–D71's noisy-feedback shortfall; narrowed by the
+[D73 information-path audit](discrete/NOTEBOOK.md#d73-noisy-evidence), 2026-11-16. Useful evidence remains after
+matching inferred colours and the learning gate. Most of the signed sum's choice signal survives its stored
+symbols. Supplying a useful grouping improves the learned readout. But
+[D74](discrete/NOTEBOOK.md#d74-learned-sharing) tested exact learning of the grouping under two priors of one
+model family: no decision gain was established (the interval does not exclude most of the supplied advantage),
+and inappropriate sharing delays necessary distinctions. Other readout families and priors are untested. The grouping,
+numerical order and memory scale are different kinds of supplied knowledge, with different learning costs.
 
-## The plan (the user, 2026-10-29)
+**Unresolved distinctions:** which useful relations can a generic component exploit from its local inputs;
+what must be learned rather than supplied; whether the evidence can pay for discovering that relation
+within a life. Exact-copy weighting is explained by [D75](discrete/NOTEBOOK.md#d75-redundant-selection),
+but detecting approximate redundancy without erasing complementary information remains open. Neither
+fewer primitives nor a choice vote is established as the answer.
 
-1. **Which level to think at**: done for B (`discrete/NOTEBOOK.md`, D14): blocks fastest to design in and realised
-   faithfully below; gates cheapest (8 times less power than Sepulchre's elements); Sepulchre's elements the knobs.
-   The user's choice (2026-10-29): blocks for now, the fastest to iterate in.
-2. **Then, at that level: how can a brain know it isn't doing a good job, and compensate**, by tuning itself or by
-   recruiting more neurons? Testbeds: adapting to the body, and spending (both below). Tuning towards better
-   outcomes (food or sightings per firing), never to a setpoint: no internal clock is better than its parts, and the
-   body is no reference (AGENTS.md). First: spending, knobs mistuned at birth, a hill-climb on meals per energy
-   spent, lives of 2,000 s, against the floor (fixed, mistuned) and the ceiling (fixed, searched).
-   Since (D15): a tuner with no coordinator (each knob wiggling at its own moments against a broadcast "better than
-   usual") closes a third of the gap from floor to ceiling in 10,000 s, ties a Bayesian optimiser given the same
-   information and unlimited computation on lopsided bodies and beats it on the standard one; annealing hurts.
-   Within a life, perfect is local. Slope-following, so it could stall on a plateau or a local peak.
-   Shadows that compete (the user's idea) were tried for the hold and failed (D15): off-policy judging needs a choice
-   whose alternative leaves what is seen unchanged, and stopping a drive changes it.
-   **Layers that learn how to learn** (the user, 2026-10-30): front-line units experimenting (combinations of inputs,
-   outputs, timescales), units behind them judging the results and turning knobs, and perhaps more behind, since how
-   fast to turn the knobs is itself to be learned (with few signals, slowly). D15 already shows the second order
-   matters: a tuner's rate 0.03 was worse than none, 0.01 best, and lopsided bodies (a steep knob) wanted faster than
-   spending (flat ones). Known local forms: each knob its own rate, raised while its successive steps agree in sign and
-   lowered while they alternate (delta-bar-delta, Jacobs 1988; IDBD, Sutton 1992); the rate as the ratio of uncertainty
-   to noise (a Kalman gain; people adjust their learning rate to a world's volatility, Behrens et al. 2007);
-   neuromodulators as such meta-parameters (Doya 2002: acetylcholine the rate, noradrenaline the exploration). Each
-   layer up needs more experience to judge, so the tower is short: a top layer fixed by evolution. Since (D15):
-   delta-bar-delta per knob gained nothing (with a fresh memory every rate ran away; delayed beyond the steps'
-   correlation, the rates stayed put). There was no headroom (a faster balance by hand loses), and the rate chosen on
-   training seeds is the same, 0.01. In a world with a third of the blocks (D15) no rate recovers much (0.32 against
-   the floor's 0.29; B's untuned knobs 0.45), nor do windows three or six times slower (0.34, 0.30): the
-   information, not the rate, runs out when meals are sparse; food sightings weighted more don't help (heavily
-   weighted they hurt). Open: a proxy for spending, seen every moment, that tracks meals.
-3. **Can a brain learn tricks nobody designed?** (the user, 2026-10-29) An omniscient brain's mapping is too godlike;
-   instead, a grown network always "wondering about times and sequences" (a hairball of random delays and sequence
-   detectors), each part keeping a fading tag of its recent activity, so that when taste reports food or poison the
-   still-tagged parts are credited: "THAT's the trick that worked". Known as reward-modulated learning on a
-   reservoir: eligibility traces and three-factor rules (Sutton 1988, TD(lambda); Izhikevich 2007, the distal reward
-   problem; Fremaux and Gerstner 2016; synaptic tagging, Frey and Morris 1997), random recurrent networks with fading
-   memory (Maass 2002; Jaeger 2001; Izhikevich 2006, polychronization), the cerebellum's expansion and error signal
-   (Marr 1969, Albus 1971). In blocks: a slow tag node and a write gated by taste per part. Slow (sparse, mostly
-   unearned meals: long lives); taste's broadcast is legal in a circuit. Tricks to
-   find: a lopsided body's steering (credit the motor patterns before meals), sweeping back for a block just lost,
-   and ones we haven't thought of. Phase 2's recruitment route, after self-tuning on spending. Since
-   (`discrete/NOTEBOOK.md`, D16 and its continuation, 2026-10-30 to 11-01): random detectors learned by taste rescue
-   a lopsided body without steering it; a planted right steer pays and is learned from meals with one exploring coin
-   per burst, but among random detectors little is found (50 reach 0.24 against the planted steer's 0.70 in 100,000 s lives). Open: why, against the bounds below.
-   **First, the bounds** (the user, 2026-11-01; the theory in `BOUNDS.md`): what could an ideal observer do, granted
-   every node of a primitive brain that is failing? From lives: meals' spread per unit time on each body; Delta for
-   the planted steer and for a sample of random detectors at fixed odds, learning off; how much each detector's
-   natural firing predicts meals with nobody exploring; the bits per second taste carries about the body; explorers
-   per credit window. Each kind of trick then sorts into learnable from meals, learnable only with free signals
-   (prediction), or not within a life (evolution's), telling steps 3 to 5 where to look. Plan (2026-11-01): an exact
-   Bayesian ideal observer over the body's wiring and strengths with B's knobs as its levers first; a strong learner
-   (a network, trained across lives as evolution, run within one) only if a large gap remains; then the cheapest
-   process reaching most of the best one's gain.
-   Since (`discrete/NOTEBOOK.md`, D21): the first yardstick, the seer told places only as well as pulses tell
-   them, says a memory of where blocks are adds little over B (2.8 at best against 2.54) because the eyes don't say
-   where across their corridor a block lies. Open: is that offset worth getting by moving (active sensing), and what
-   would an ideal observer that senses actively reach? Next (the user, 2026-11-01: let it emerge, not forced; time is
-   where a small brain computes, `BOUNDS.md`, Time): does a tiny dynamical circuit evolved in the loop (Beer 2003;
-   Sepulchre's motifs) scan and steer by the phase of its pulses, and what of that could a life learn? First, whether
-   the minimal search's evolved circuits already do. Since (D22): none do; an evolved network didn't either, and these
-   eyes and this body don't offer it (the pulses' timing carries little about a block's offset even when probing, and
-   no wiggling policy used what there is). **For the user**: the headroom (B 2.5, a perfect
-   memory of seen places 4.5) needs information across the corridor; an eye split across it (left and right halves
-   for each colour) or finer turning would offer it. A body change, the user's to decide. The yardstick values a
-   split eye at 3.95 (the range roughly known) or 3.15 (not), against B's 2.54 (D21). Since (D24, prepared, the body
-   unchanged): with a split eye, B plus a reflex of a few parts (steer towards the half that lit, by a beat with its
-   partner 10 ms later, 7 degrees; which motor is which learned from its own scan) reaches 3.02 against 2.49 held
-   out (+21%), 2.71 against 2.32 on lopsided bodies told their balance. Finer turning needs no body change (timing
-   gives it); the split eye does. Yours to decide.
-   **Rhythm by mode locking** (the user, 2026-11-01): oscillators entrained to each other, each at half the last (a
-   binary count of a signal's period); if the signal's period is 1.5 times one of theirs, can that emerge? Nonlinear
-   oscillators lock at simple ratios (3:2 among them; Arnold tongues, widest for the simplest), and a bank of them
-   resonates at a rhythm's period, its multiples and simple ratios (Large's neural resonance: Large and Kolen 1994;
-   Large, Almonte and Velasco 2010). A repeating mismatch (the signal at phases 0, 2/3, 1/3 of an oscillator) is
-   structured surprise, where a grower could recruit an adaptive oscillator that tunes itself to lock; a bank summing
-   each period's multiples is D20's subharmonic summation in oscillators. Locking needs many cycles of one rhythm
-   (D23), so test on long steady sweeps: does a bank find the period with fewer parts than D20's 192 counters?
-   Since (D23): on 60 s spins, 96 resonators with harmonics summed read the period sooner than the histogram but
-   plateau lower, for as many parts; entraining limit cycles did worse. Open: a ternary recruit grown on structured
-   surprise, and rhythms with one partner over many cycles (a gait, the arena's pursuits).
+**Next discriminator:** first measure question 2's resource account, as D76 changes what can be called
+economical. Then contrast the same relation when supplied, discovered and inappropriate, accounting for
+both model-identification evidence and parameter learning. Do not add another partition variant without
+a reason the present failure would change. A duplication test must conserve both initial and redistributed
+weight if it claims to change only representation. Correct forecast/scoring order before a new design freeze.
 
-4. **How can a brain realise it isn't solving the problem, and recruit more neurons to do so?** (the user,
-   2026-10-30: the most interesting question, and since 2026-11-09 the heart of the goal, `README.md`; work through several cases until the generic answer shows.) At the
-   block level, growth the one declared primitive, judged robustly with all-food lives as the control, no SPICE or
-   physical plausibility until a case works. A candidate generic answer, to test case by case: predict (units learn
-   what their own signals say about outcomes, through fading tags); notice the gap (frustration: a bad outcome
-   predicted and happening anyway; no reference outside the brain); experiment there (grow experimenters attached to
-   the predicting signal, not at random as in D16); keep what helps (credit through the tags), prune the rest; stop
-   when the predicted bad outcome stops. A case must be one the brain can't solve whatever the tuning of its parts
-   (the user, 2026-10-30: the XOR problem for one layer), so that only new structure helps. Cases: (1) taste wired to
-   nothing (B without its learning; the recruitment series' rung 1 went one step easier, the prediction already wired:
-   `experiments/NOTEBOOK.md`); (2) left and right in the eyes, with no path from side to motor (a body change: the
-   user's decision); (3) a conjunction, a colour's meaning depending on another signal (a world change: the user's);
-   (4) a memory or timing the brain can't hold. (A lopsided body is not one: one more knob, a gain per motor, solves
-   it, D15.) After each: what did the grower need that it didn't have?
-   Kinds of growth (the user, 2026-10-30): a path where there was none (case 1), a knob where there was none (a
-   lopsided body), a decider where the existing one can't compute the answer (XOR), and perhaps a memory. Worlds that
-   demand them (the user's ideas): blocks overlapping is a trade-off a weighted sum solves, but pairs that mean
-   something other than their parts (red and blue together food, either alone poison) are XOR; food behind poison
-   (the rays stop at the first block, so the food is hidden while faced) needs a detour, so a memory of where the food
-   was, which B lacks; then clusters, food that drifts. Certify each world first: B's knobs searched robustly can't
-   solve it, and a scripted policy with the extra structure, on the same body and eyes, can.
-   Since (D17): case 1 works: grown in every poison life on the poison eye, in no all-food life, tied with B's
-   designed learning (1.80 against 2.01) once the recruit tries every operation before keeping the best (win-stay
-   alone settled on the first improvement). A menu that doesn't already hold the answer: done in the arena (D18):
-   two knobs (each motor's rate in the response) tuned by per-bite perturbation reach 86 to 97% of the best scripted
-   reflex.
-   Since (D18, the arena): escape from bites works, a path where there was none (taste to motors) for pain no sense
-   predicts but an action stops (the user's case): grown in every life, a turn kept in 97%, three quarters of the best
-   scripted reflex, judged held out; in the control (pain no response stops) its gain vanishes and its choices fall near
-   chance. What it needed: a predictor comparing what follows a sense with what comes anyway, and judging each try at
-   once (lives of 96 s leave no room for trials). Steering grown failed to pay (the wrong sign's trial costs what the
-   right one gains), and the user judged the colour and the wiring evolution's here. Next case, candidates: (a) the arms
-   race in the arena (step 6): escape frustrates the biter (a good taste ended by nothing it did), so the same grower on
-   the biter's side, growing pursuit of a turning tail; (b) a decider: some robots' tails bitter (a body trait,
-   differing between robots, shown by colour pairs), so whom to chase is a conjunction; (c) a memory: a robot bitten
-   recently is likelier bitten again (a hunter nearby), so the right response depends on the recent past. (a) tried
-   first and failed its certification: no scripted response to a bite ending pays (D18), so there is nothing for the
-   biter to grow. (c) failed too: no response to a recent bite (keep moving, keep still) pays (D18). (b) changes the
-   world (the user's to decide). Since (2026-10-31): the robots are discs, and firing is now charged (it wasn't: every
-   arena figure before ignored it). Escape still grows and pays against the plain tracker (+0.14 a 10 s), but against a
-   tracker with its standing policy tuned for the arena only +0.03; (a) and (c) still fail; the best standing policy
-   depends on the population (keeping still pays among escapers, costs among trackers). The arena, as it is, has
-   little left for a life to learn. Open (a world change, the user's): inheritance in the arena (newborns taking the
-   standing knobs of the best-fed, mutated), to see where the arms race settles and whether in-life growth pays there.
+**Control boundary:** the original drift filter receives actual eaten colours, and its noisy worlds change
+scored reward as well as taste. The highest-noise rungs are useful inference tests with negative expected
+gain even for correctly targeted meals. Do not infer profitable adaptation from their colour accuracy or
+gap closure. Use an existing profitable condition for the subsequent control test; no interface change is implied.
 
-5. **Learn from predicting, not only from taste?** (the user, 2026-10-30, after the neocortex's columns: Mountcastle's
-   repeated column; Hawkins' Thousand Brains theory, 2021: some 150,000 alike columns, each modelling the world from
-   its own sensory and motor activity, voting on the best.) Every limit found today is information: meals are
-   sparse (D15, D16). A column learns from predicting its own next input, a signal all the time, and reward has only to
-   choose among models already good. Here: a unit predicting what its eyes do after its own motors' beats (a turn
-   moves a block across the gaze) could learn a lopsided body from every beat, not from meals; units with different
-   hypotheses (delays, which motor) voting by how well each predicted. Questions: is the repeated unit a neuron or
-   something column-sized; does two pulse streams in and two motors out leave enough to predict (the
-   body's bandwidth: the body question above). (Steering by a model learned in the life is allowed: the goal, "keep
-   what is chased ahead", is the same in every life, so evolution's to supply, and no property of the body is the
-   reference; the model of this body is the life's to learn.) Experiment: case 2 of step 4 both ways, from taste
-   alone and with prediction.
-   Since (D19): a first step, not yet prediction: the lopsided body's balance jittered at each drive and judged by the
-   food pulses that drive saw (a fixed proxy, every drive a lesson) closes 40% of the gap in 2,000 s held out, surely
-   above D15's meal-judged tuner (+0.26 [+0.07, +0.45]). Its limits: the jitter's own cost on a steep knob, and lives
-   that strand before they learn. Then (D20), prediction proper: what it sees comes round again once a revolution
-   while one motor turns it, so sweeps of its own and coincidence counters find each thruster's strength: 83% of the
-   gap closed held out, surely above every outcome-judged learner; 8 s sweeps cost 0.18 on the standard body, a cost
-   gone when it sweeps only while frustrated (fewer than 8 meals in 32 s: 2.47, tied with B; lopsided 1.68), and,
-   sweeping from birth and more often until the evidence is in, 93% of the gap (1.81). Open:
-   B's own scans made usable; the same idea in the arena; and a circuit for the counters and the period-finder (a
-   delay line of coincidence units, the largest winning). Since (D20): 96 log-spaced counters, chance from their
-   neighbours and a fixed comb tie the exact histogram held out, so the open part is the delay line holding a
-   sweep's pulses for up to 8 s; each stage need hold only up to 3 pulses (tied with the bank held out; one-bit
-   stages lose 0.14 on lopsided bodies); 192 counters with such stages tie the exact histogram held out on every body
-   (lopsided 1.93, 88% of the gap). Open: those blocks in transistors.
+## 2. What does additional brain material actually buy, and cost?
 
-6. **An adversary instead of hand-made worlds** (the user, 2026-10-30, after GANs: food and creature out-thinking each
-   other). Known as self-play and arms races (Sims 1994; POET, Wang et al. 2019; PAIRED, Dennis et al. 2020). The
-   pitfall is an adversary that makes worlds no brain can solve; PAIRED's fix is to reward it for regret, how much
-   better a stronger brain with the same body does than the simple one, which is this plan's certification
-   (step 4) automated. Two flavours: across lives, an adversary setting world statistics (guards, clusters,
-   pairings, drift) to maximise the regret between B and a richer brain (told the colour; with a memory); within a
-   life, blocks with small brains of their own, co-evolved, acting only through the world and sensing only what a
-   block could (never the brain's insides). With today's eyes it may mostly find what the eyes can't see: itself an
-   answer to the body question. First: the across-lives adversary in the fast model, CMA-ES over a few statistics.
-   With the same brain and grower on both sides (the user, 2026-10-30), an adversary that wins is our approach
-   winning, and each side's improvement frustrates the other: the arms race as the engine of recruitment. Conditions:
-   matched bodies (a win must come from the brain, not speed or eyes); no total wins, which end the race by silencing
-   the loser's signal (balance, opponents drawn from past versions); progress measured against a frozen gallery of
-   past opponents (self-play can cycle). The roles: food wants not to be eaten (flees), poison wants to be eaten
-   (approaches, mimics food), so the creature must tell them by behaviour: a decider, memory, prediction. Smallest
-   start: the food a creature (B's brain, the grower, an urge not to be eaten), the poison fixed.
-7. **Map every way a brain could change itself, then a universal circuit** (the user, 2026-11-02: even the simplest
-   body, world and brain offer a rich set of interventions; map it logically, with discipline, then perhaps one
-   circuit that can do them all). The map so far is `PARTS.md`: what changes (state, tune, modulate, rewire, prune,
-   duplicate, add), which part (a catalogue by what it does in time, all made of feedback loops of either sign at
-   several timescales, delays and coincidences), when (each change's local trigger) and how it is judged (its
-   fastest credit signal: the brain's own movement in seconds, a missed prediction in tens, outcomes in 10,000 or
-   more). Open: what signal says "no setting of these knobs will do, a new kind of part is needed" (a plateau told
-   from a ceiling); which parts can be judged faster than meals (those worth adding); and whether one free unit, a
-   node of the grammar's elements inserted at zero effect, can become each part by local rules. First, the map's
-   test: express every working brain here (B, D20's balance learner, D24's steer) in it, with each part's
-   cost in SKY130 and the signal that could have tuned it; a brain that doesn't fit shows what the map lacks.
-   Since (the user, 2026-11-02): done as stories, one per performance issue (`STORIES.md`), general observations after
-   several, and the universal circuit only if they earn it. Done: which colour is food (D25); unequal thrusters, block level (D26: 192 counters still far from the simplest);
-   the table of rows (D28; `STORIES.md`), judged; a universal circuit, the bank of predictors (D29), judged, partly a success.
-   Open from D29, most valuable first: re-validate it in `mixed_feedback.py` once kept; what could add a model to the bank, or say that it holds none that fits (a bank is
-   still a menu: taken up as stage R, `PROGRAMME.md`, which also answers part of step 3's hairball of delays and sequence detectors, now scored on every taste rather than credited by meals); swap 50 s, where it costs surely, and the untraced half of swap 10 s's shortfall; a relative shortage in place of the absolute gate; sweeps in place of jitter; the bank's cost in parts, and whether tables can share a counter;
-   noisy eye + thrusters at long lengths; whether eye thresholds and balance can share one on-policy loop;
-   the ladder of harder tests (D27): swaps, sequences, digest, one brain choosing cures. Open from D27: a clock told the period (is it the estimate or the phase?); undoing a growth that didn't help;
-   a brain that knows it has no cure; re-validating the ladder at component level; this patch is empty; how fast to spend (the likely
-   honest negative). Open from D25: what would tell a world where nothing can be learned from one merely hard? In it
-   the circuit flips 16.5 times a life where doing nothing scores best.
+**Origin:** the user's scaling goal, D59–D62 and D67–D69. Different allocation settings improve sequences;
+the other curves differ. [D76](discrete/NOTEBOOK.md#d76-resource-floor) establishes that the current P is
+not total material or an enforced allocation cap. The earlier [resource count](lab/v/size_count.log) concerns
+an older arm; it omits the later rhythm repertoire.
 
-8. **Left over from stage 1c** (`discrete/NOTEBOOK.md`, D32; 2026-11-05). What does the floor's gain consist of: forgetting, or undoing its own -3? Ablate rivals to see. Could a circuit hold a family of periods at about 13 bits, the one thing that closed half of swap's gap? Can a bank learn the lie rate, since every mixture is fixed at one value? Is there a tighter proof of the limit on tastes, and should the body have a firing cap at all? Can q=.7 ever reach a yes?
+**Unknowns:** how much comes from additional representation, how much from search or redundancy; whether
+communication and selection remain local as size grows; whether quiet behaviour means low activity, low allocated
+memory, or neither. No current scalar “material” count settles all of these.
 
-## The body (`NOTEBOOK.md`, The body)
+**Partly answered by [D77](discrete/NOTEBOOK.md#d77-resource-observation)** (sequence rung 17 only): most of
+the gain is room in the colour-event streams; 85% of the extra growth goes elsewhere; all-food lives grow
+nothing; mixer communication is set by the repertoire's breadth, not P.
+[D78](discrete/NOTEBOOK.md#d78-allocation-rules): under a real cap, a pairwise weight contest beats an equal split
+(+.28 on fresh sequences, no harm on timing) but not the original design, and plateaus. Mixture weight is
+winner-take-all and bits saved over the default are negative everywhere, so neither ranks the non-dominant
+streams. **Next discriminator:** what makes a stream marginally useful? Trace weights through life, and run a
+leave-out replay of the mixture, before proposing a marginal-contribution signal. Partly answered: clock,
+integrator and rhythm streams carry three quarters of the mix for the first 100 s, before one event stream
+dominates, so end-of-life weight misstates usefulness. Whether early growth in them causes the later result
+is not yet traced.
+Compare equal allowance, market, bits-saved allocation, tuning, fixed capacity, recycling and growth on matched lives
+under the same account before another sweep. [Dohare et al.](https://www.nature.com/articles/s41586-024-07711-7)
+provide a recycling precedent, not evidence that their method meets our locality constraints.
 
-- **Would evolving the body pay more than evolving the brain?** (the user, 2026-10-30) Every limit found so far is
-  information: sparse meals for tuning (D15), a far block one flash as the gaze sweeps past (README, Match the
-  brain's speed to the body's), and the ceilings (D13: omniscient about 20, a perfect memory 4.5, B 2.5). Sharper
-  or wider eyes might buy more than any brain. A body change that adds information differs from one that does the
-  brain's work (credit assignment, filtering, timing: never, AGENTS.md); and the body's organs are the user's ground
-  rules, so any such experiment is the user's decision. Experiment: the ceilings and B with eyes of several widths
-  and resolutions, each eye's cost (its pulses) counted, against a brain made cleverer.
+**What changes our view:** an advantage disappearing after fair accounting would weaken the growth explanation;
+a reproducible advantage attributable to new representation would strengthen it. Improvements that plateau or
+cost more than they return define useful boundaries even without satisfying the scaling milestone.
 
-## Discrete circuits (`discrete/NOTEBOOK.md`)
+## 3. Which part of the timing mechanism generalises?
 
-- **Can a brain adapt its reflexes to its body?** (the user, 2026-10-28; the body left as it is, 2026-10-29: learning a
-  lopsided body likely takes more than a life, and better eyes) Open: with each thruster 0.5 to 2 (`bodies.THRUSTERS`),
-  the best fixed design (B) falls from 2.38 to 0.32, 11% stranded (D13). First the best fixed design searched on such
-  bodies (robust judge); then a brain that tunes itself in its life (its drive's balance between thrusters, its rates),
-  each unit from its own signals; the gap between them prices adaptation. Since (D13): the oracle (told its body, the
-  drive balanced) gets 1.92 held out (2.15 with the drive started in step, D20), the best fixed design 0.76; tried and
-  short of it: extremum seeking (about 0.5), re-find time as a sign, sightings per firing, sweeping back. Next ideas:
-  the extremum seeker with a better reward (the pulse rate rising as it nears); given three lives' time it only reaches
-  0.8 (D13), so the signal, not the time, is short. A zigzag within the drive failed (an eye's corridor shows nothing of
-  a block's place within it). Since (D19, D20): judging each drive by the food it saw closes 37% of the gap; a model
-  learned by prediction (sweeps with one motor, the period of what comes round again giving each thruster's strength)
-  closes 93% held out, and, sweeping only while it eats badly, costs the standard body nothing.
-- **B's drive starts cleanly, in transistors** (D13; only when B's physical realism matters): the second thruster
-  fires alone at a drive's first beat in over half the drives, costing about 20% of its score in SPICE; a latch on
-  the beat halved it, but motor A still misses some first beats (its starved inverter, which also drives the
-  oscillator, is the suspect).
-- **What biology's noise costs at Sepulchre's level** (D14; parked by the user, 2026-10-31: a side-quest done, to return to if it matters): no setting of B's knobs survives biology's noise, but
-  size does: four times the capacitance (and currents) on the bit's chain does the job with it for 48 nW. Twice
-  biology's noise fails at any size: the inputs' noise (taste, eyes), which size can't reach and faster input leaks
-  don't fix. Open: B's doubt with the minimal leaders' bit (a perfect integrator written by seen times taste, where
-  noise averages out) in place of a thresholded tally, judged at all three noises.
-- **Can a memory node take the sized balance learner's small writes?** (the user's question, 2026-11-08, on noise; D36, v6-v7) The
-  learner's balance moves in steps down to .0125 and its wobble down to .05 (v6) or .005 (v7), plain numbers in the block model. Silicon's
-  noise is far below them (a memory node is still unless written, its write rough by one electron an event), but a write below
-  `chip.DEAD` (1% of its full current) doesn't tunnel at all. Whether the smallest steps survive depends on how the write is built: for
-  the re-validation in `mixed_feedback.py`.
-- **When should a block explore at all?** (main session, night of 2026-11-08; D36, the cure in 100 s lives) In plain a wobble of .05
-  costs 11% of the food, and a drive's outcome needs about 1,400 drives to show it; a 100 s life has about 96. The sized learner pays
-  back in long lives (judged on their last third, so early exploring is nearly free) but costs .6 at 100 s; the old bank's fixed gate is
-  safe at 100 s only by never wobbling, and is a rate the body supplies. What local evidence could tell a block, early, that its balance
-  is worth exploring: a sign of lopsidedness that needs no wobble (none found yet: a drive's length is unsigned), or a rule weighing
-  the wobble's cost against the life still ahead? Experiment: in the thrusters and plain at 100 s, the information per drive about
-  |right| available without wobbling, against the 96 drives a life gives. The thruster line is closed (the user, 2026-11-09); what is
-  left is the floor: the least an ideal learner pays to tell plain from lopsided, at 100 s and 10,000 s, solved on a small surrogate
-  of the drives (the outcome's mean and noise against the balance, drives a second, the cost spilling into later drives), checked
-  against v7's lives, rather than by more lives. And whether "do no harm" is then judged against that floor (the user's decision).
-- **Can surprise teach before reward, and is that attention?** (the user and main session, 2026-11-09) A world whose consequences
-  come only after a sequence of actions (a block that turns to food after the right moves) shows almost nothing to a first-layer
-  learner: one action's correlation with food is near zero. A second-layer unit that notices "this sequence changed what I see",
-  before any food, has a much denser signal; attending to what surprised it narrows what to try. Talk the world through first,
-  as simple as possible (the user).
-- High-value resistors (500 MOhm to 1 GOhm) are rarely better than 5% and leak across a board's surface: the bipolar
-  circuits' 1% (`life.TOL`) was optimistic.
+**Origin:** D23 and D65–D68; the user's request to use phase-locked-loop theory, 2026-11-15.
 
-## Every brain
+**Unknown:** whether the gain comes from a reusable separation of acquisition and tracking, or depends strongly
+on supplied time ranges, event definitions, discretisation and the mixture's ability to select a useful tracker.
+D23's unsuccessful entrainment and D68's success used different evidence regimes; they do not rank all counters
+against all oscillators.
 
-- **How much could a clever brain gain?** (the user, 2026-10-28) A ladder of ceilings on the same lives, each a policy
-  in Python (a second a life or so): omniscient (knows every block and its own body: the absolute ceiling); a mapping
-  brain (legal inputs only, but unlimited memory and thought: it learns its body, integrates its own path from what it
-  fired, takes a bearing from its heading and a range from the pulse rate at each sighting, keeps a map and plans);
-  short memory (where it last saw food: object persistence, below); the best reactive policy (2.3-2.7); our circuits.
-  The gaps price each ability in meals, so they say which are worth a brain's cost, and which small circuit (a ring
-  attractor for heading, as in insects' path integration) would capture most of it. Done: the omniscient rung, a
-  crude one, about efficiency 20 and 58 food per 10 s (`discrete/NOTEBOOK.md`, D13): ten times B. Next the mapping
-  rung. A short memory (the heading where food was last seen) is worse than none: a heading without a range rarely
-  points at the block (D13); learning the colour costs B only 0.15 against being told it. The seer (a perfect map of
-  what it has seen) gets 4.5: intelligence is worth at most about twice B here, the rest (to 20) is the eyes' coverage.
-  Open: a mapper that infers places from pulses (ranging by moving) to see how much of the 2x a real brain reaches.
+**First discriminator:** match each stage to its assumptions in estimation and synchronisation theory; inspect
+what each controlled intervention already isolated. Choose a development test that varies one such assumption
+(period range, drift, missing or false events, or nested rhythms) while keeping an achievable comparator.
+Predeclare whether the test is about acquisition, tracking or downstream use. Preserve any unexpected successful
+transfer rather than forcing it into the original explanation. New sealed evaluation waits for a frozen claim.
 
-## The minimal search (`minimal/NOTEBOOK.md`)
+## 4. Why does composition lag, and why is old knowledge not reused?
 
-- **Object persistence** (the user): a creature that has just lost sight of food sweeps back for it (the body can
-  turn both ways); the bottom rung of the ladder above.
-- **Reversal**: every minimal circuit learns only from food, so none unlearns when the poison colour swaps. The
-  discrete line's B (doubt a bounded tally) reverses well (D13): its doubt could go into a minimal design.
-- **A smaller robust circuit still**: the open search again, from HR_31p_pol_pruned.
-- **Sepulchre's discipline**: do circuits of mixed-feedback components (every node leaky, events from positive
-  feedback) do the job as simply? The first three-arm experiment settled nothing (`MIXED_FEEDBACK.md`): it needs a
-  start built of his components.
+**Origin:** D59–D60's combination gap and A–B–A experiments; the user's returning-world question, 2026-11-15.
 
-## Recruitment (`experiments/NOTEBOOK.md`)
+**Competing explanations:** useful combinations never form; duplicate blocks waste evidence; credit fails to
+reach useful parents; old counts are overwritten; useful blocks are removed; preserved knowledge is not selected.
+The earlier duplicate-removal bug makes code-to-result provenance particularly important here.
 
-- **Recruitment under biological noise**, on a neuron that survives mismatch; de-recruitment (retiring a recruit
-  failed in every form, H11); a recruit that walks (`RECRUITMENT.md`).
-- **Level 1 has no rules** (the user, 2026-10-20): the parts built from nodes and elements are invented as needed,
-  about eight unnamed kinds (`experiments/NOTEBOOK.md`).
+**First discriminator:** trace a short recorded case and locate the earliest divergence from a successful
+reference. For returning worlds, distinguish retaining a representation, recognising the return and relearning
+from scratch. Compare learning cost on first exposure and return, with storage and ongoing activity charged.
+A targeted interruption of writing, retention or selection should separate causes before a new memory hierarchy.
 
-## Self-optimisation
+## 5. What local signal identifies an improvable shortfall?
 
-- **One design idea for the goal (`README.md`): self-optimisation from local signals.** Every unit a fast bistable and a slow
-  integrator, each slow variable outlasting the loop it closes, each tuning its own time constant from its own signals
-  (D13).
+**Origin:** the user's core question, recruitment E/H series, D15–D18 and the intervention stories.
+
+Surprise, pain, stalled adjustment and low reward are candidate signals, not certificates that new capacity is
+needed. A noisy but well-controlled world, a world with no useful action, a tunable mismatch and a genuine memory
+shortfall can all produce persistent errors.
+
+**First discriminator:** construct a matched development comparison of those cases within existing ground rules;
+establish each case's opportunity with an explicitly informed comparator. Ask what the proposed local signal
+can distinguish before choosing its threshold. Measure unnecessary growth and missed opportunities as well as
+reward. A proof of indistinguishability under particular local observations would be a valuable negative result.
+
+## 6. When do prediction and exploration improve control?
+
+**Origin:** D44–D54, D63–D66. Sensory predictability, information about an unknown body, sensory–motor coupling,
+and food gained are different quantities. Coupling helped balance but not tempo; a useful satiety count still
+bought little improvement; the steering learner missed interacting choices with delayed consequences.
+
+**First discriminator:** state the unknown and the decision it affects. For satiety, compare knowing the relevant
+state with being able to act on it on the same lives. For steering, trace which delayed effects are absent from
+the learner's evidence or representation; failed searches alone do not rule out their algorithm classes.
+For exploration, compare evidence about the unknown at matched time and energy before comparing eventual return.
+A richer sensor stream is useful only if it informs the decision; pulse count alone is not information gain.
+
+## Parked questions and boundaries
+
+These remain worthwhile but do not displace the investigations above without new evidence:
+
+| question | why parked / when to return | record |
+|---|---|---|
+| Can existing eyes and actions support a better spatial model? | Failed observers do not prove sensory impossibility. Revisit when the representation audit identifies a spatial bottleneck; no body change without the user. | discrete notebook D21–D24, D41 |
+| How much should a brain spend on learning early in life? | Last-third performance hides some acquisition cost. Report whole-life costs alongside the existing score before inventing a new optimisation objective. | discrete notebook D36, D56–D57 |
+| Can a small number of explicit global signals coexist with scalable local operation? | First inventory actual dependencies and communication in question 2; changing the interface requires the user. | AGENTS, ground rules |
+| Which retained mechanisms survive circuit implementation and its noise? | Apply physical checks at the relevant claim stage; do not reopen SPICE for every exploratory variant. | minimal notebook M14–M16; discrete notebook D7, D13–D14, D36 |
+| Can the earlier recruiting neurons survive the later mismatch model? | That line's old results are scoped to its old simulator. Revisit if it supplies a needed mechanism. | experiments notebook E/H series |
+| Can self-play, inheritance or environmental memory expand the challenge set? | These alter the research setting or previously restricted capabilities; they require a specific proposal and user decision. | historical questions and programme decisions |
+
+The question of one rich module versus several simpler types remains open across all six investigations.
+A candidate must earn its added functionality through an explanation and a discriminating result; familiarity
+from biology, or a working hand-designed cure, does not by itself establish necessity or sufficiency.

@@ -10,237 +10,56 @@ per meal spent resting, moving and thinking), gain rate (meals per 10 s), food, 
 
 ## Where it stands
 
-- **The growing brain, frozen a third time** (D67, D68, PROGRAMME.md Decisions 2026-11-15): streams of every sense and own clocks, mixed
-  by Bayes and scored in bits (fixed share), a leaky-integrator bank on every event type read live, a market moving material to the
-  streams that save bits, and rhythm trackers (resonators, then gated Kalman loops) whose places in the cycle are streams. Scaling curve
-  on fresh creatures (D69): highest rung solved at 560, 1120, 2240, 4480 units: sequences none, 11, 11, 17; timing none, 7, 5, 7 (rung 2
-  only before the trackers); combinations rising, none surely solved at 3000 s lives. Nowhere surely worse than the design before.
-- **Unseen worlds: not yet** (D61, D62, D69). Three sealed ladders, none climbed. Hidden contexts: mostly unreachable from the senses in
-  time. Satiety: needed recent counts (now in the bank, partly used). Drift (volatile reversals with false tastes): only its two top
-  rungs are learnable at all (an ideal filter closes +.41, +.54); the brain follows the true colour at 70% of meals against the ideal's
-  77 to 83%. The evidence sum the ideal uses is now in the brain and chooses as well as the ideal when read raw (77%), but the brain
-  can't pick it out of ~260 candidates: judged against tastes that lie 35% of the time, a 78%-right expert and a 65%-right one agree
-  with the tastes 58% and 55% of the time, too close to separate in a life (D70, D71); a vote judged on choices gains +.25 surely on rung
-  35 (a tie on 42). Next: fewer, better candidates, or experts judged on richer evidence (the eyes' pulses, as rates).
-- **Bits as the currency** (D67): every life reports the brain's prequential code length a taste; ideal learners on the same meals are the
-  yardsticks (satiety, drift). In noisy worlds, judge decisions by choices or by bits about the hidden state above the noise floor.
-- **Steering grown from taste** (D63, D64): held options charged for their length reach about half the hand-built drive; the habit space
-  holds the drive's level (+2.36), and the learner misses two late, interacting choices. Parked.
+Current assessment, 2026-11-17: [D73](#d73-noisy-evidence) audits the noisy-feedback information path;
+[D74–D76](#d74-learned-sharing) test learning the readout, redundant selection and actual resource accounting;
+[D77](#d77-resource-observation) observes what extra allowance buys; [D78](#d78-allocation-rules) compares
+allocation rules under an enforced cap.
+[D72](#review-2026-11-16) is the preceding evidence review. The programme is
+[PROGRAMME.md](../PROGRAMME.md); [QUESTIONS.md](../QUESTIONS.md) owns the next discriminating investigations.
 
-- **Play pays later** (D45 to D47, 2026-11-10, the night's work): with a quiet spell first (meals worth nothing) and the challenge
-  (lopsided thrusters, food and poison) from a moment drawn each life, a brain that played at random in the quiet starts the challenge
-  surely ahead of one that only foraged: +1.5 at once and +1.2 after, on development and fresh seeds (told +3). What carried it: each
-  motor's own record clocked by its beats, pooled over whatever random movements used that motor alone, and a partners link making
-  the two motors' effects equal. Taste picking among play's own top hypotheses mends some period slips (+1.6 after, surely). Taste
-  alone, searching during the challenge, is surely behind; play by learning progress ends by itself but spreads thin; the steady-view
-  link on cheap statistics is close but not sure. Open: a steady-view link as good, without the partners assumption.
-- **Taking up new parts** (D55, 2026-11-12; the user's new kind of experiment): new thrusters alone are worth little (about 15%:
-  the eyes are the limit); a split eye with small thrusters about +1.0. Given them part-way through life, a brain that plays still with
-  them, watching through the new eye what each new thruster does, wires them itself and surely gains on fresh creatures (+.39); food
-  as the teacher fails even over 3000 s. Limits: the reflex form, and a preference for the thrusters play sees best.
-- **Taking turns** (D54, 2026-11-12; the user: a Sepulchre theme): two motor units in a half-centre (one searches its own gain while
-  the other holds; fatigue hands over; a unit that moved wakes the other), each judging by the joint coupling it sees with its
-  neighbour, match the global coupling search (90% within .2 on fresh seeds) and are surely better than the same units searching at
-  once (+1.76, +1.34). With drag drawn too they find the balance but not the tempo: coupling prefers half the right speed, food the
-  right one. Coupling sets what makes behaviour coherent; speed against care needs taste.
-- **The muscle-like body** (D53, 2026-11-11, night; the user's paradigm, opt-in): a pulse raises a thruster's activation (30 ms) and
-  thrust is a sigmoid of it. The starting brain forages at 63% of the old body's level; the told yardstick and every formula that
-  assumed thrust proportional to rate had to be recomputed, and the measurers built on such formulas (D20, D43, partners) fail on it,
-  while coupling still peaks at the body's own right knob (95%) and the coupling search surely beats the formula there. The body is
-  steeper in the knob, not gentler (a 10% rate error is about 25% in thrust), and D52's knife-edge at 0 doesn't appear in this frame on
-  the old body either. The ladders certify much as before and the tree still climbs them; D52's knife-edge was an over-reading (the cost grows smoothly).
-- **The knob set by coupling** (D52, 2026-11-11): a generic search over the balance knob judged only by the brain's own sense-action
-  coupling, with an Occam preference for no change, beats our formula on fresh seeds (+2.06 against +1.04 after onset; surely, +1.01)
-  and leaves normal bodies exactly alone; no food, no formula, no body model. Plain bodies are a knife-edge (equal rates pair every
-  kick; corrected in D53: not a knife-edge, the cost grows smoothly and steeply by .1), which the Occam default handles. Precise timing of the kicks gains nothing (told on a lopsided body already equals a
-  plain one). Locality, three tries (D52's end): per-unit coupling in fixed bins rewards slowing down (normalising cures that); small
-  perturbations are too weak to feel; units' own wide searches spoil each other's judgements. The many-units problem, with coupling as
-  teacher.
-- **Understanding as coupling** (D51, 2026-11-11; the user's principle): with no reward, the coupling between senses and actions at
-  the brain's interface peaks at the right balance knob (95% within .2 on lopsided bodies, 0 on plain ones, correlation +1.00): no
-  formula, no model of the body. Next: how fast it tells settings apart, and a knob moved by it in life.
-- **P2: three routes to the knob without our formula** (D50, 2026-11-11): taste choosing among nine readouts in life costs more food
-  than it wins; evolution judged by food finds the right shape (a difference of the two motors' measures) but its calibration follows
-  its fitness proxy, below ours on real lives; steady view over mixed commands, from slow play, fails (32% within .2). By-product: slow
-  play makes our partners link the best yet (85% within .2). Abstraction: the link is a homeostatic motif, equalise what your own
-  records measure, not physics.
-- **The review and P1** (D49, 2026-11-11): an outside review, adopted: D47 is estimation plus a designed rule, P2 removes the rule.
-  P1, at equal play time on fresh seeds: steering play towards certainty surely beats random play (+18 points of guesses within 10%,
-  surely more food) and ties learning-progress play; D48's edge was mostly playing longer; "sure" is conservative, never wrong.
-- **Boredom from certainty** (D48, 2026-11-11): stopping play when the estimate stops moving is fooled by confident slips; stopping
-  when play's best guess clearly beats its rival, steering play to what raises that certainty and handing what doubt remains to taste,
-  sets the knob to .01 (90% within .2); from 100 s into the challenge it is surely ahead, +2.1 and on fresh seeds +2.2, three quarters of
-  the way to a brain told its body; at once +1.1 and +.7 (sure on one seed set), while taste settles the last doubt.
-- **Knobs first** (D43, 2026-11-10; the user's rule): compensating for a weak thruster is one knob. Turned by trial and error it takes
-  about 1000 s to close half the gap, since nothing tells it which way to turn; set from a measurement (a revolution timed with one
-  motor) it closes three quarters or more by 300 s. The measurement can be made by D38's recording unit clocked by the brain's own beats
-  (2.37 against 2.46 set right, at 300 s), with no counters in seconds. Next: a measurer for the tempo knob (drag); the tree's trail on
-  timing rung 5.
-- **The lopsided body as the acting ladder** (D42, 2026-11-10): of the body's numbers drawn per life, only two cost the starting brain
-  anything: the balance between the thrusters (.94 against plain's 2.52; told, 2.46) and, at the ends of its range only, drag (cured
-  by one tempo for every rate). Strength and the eyes' sensitivity cost nothing. One sure rung and one weak one; the user to decide
-  how to get more (wider drag, or body numbers that depend on a context).
-- **No acting rung at touching pairs** (D41, 2026-11-10): stopping to look before driving on judges well (9 commits a life, 8 clean) but
-  scores below the told arm, since a look gathers 3 to 5 pulses an eye and the starting brain gets most of those foods by trying again.
-  The loss at pairs is missing information (where across the corridor a block lies: D21's wall), not skill. The lopsided body is the
-  better acting rung: its gap, yardstick and learners exist (D19, D20).
-- **A context tree over registers** (D40, 2026-11-10): one kind of node, recruited where a new context arrives beneath a contradicted
-  node, with no setting changed between ladders. Sequences: rungs 11 and 17 solved. Combinations, where nothing climbed before: rungs
-  1, 3, 5, 6 solved at 20 pairs, higher rungs needing more nodes. With D39's clocks as a third kind of register: timing's rung 2 at .94,
-  rungs 5 and 7 near half, the other two ladders unharmed, plain exactly 0. Pairs' yardstick (a careful driver by hand) failed. Next:
-  why the tree trails look-backs at time 5; the three doublings read off on each ladder; fewer clocks.
-- **The lock, the ideal learner and pairs** (D39, 2026-11-10; light rigour, 5 pairs): the three ladders are one problem, a letter as a
-  function of a context moved on by some kind of event, whose ideal learner's known local form is a context tree over a register
-  (the record is such a tree of depth one). A bank of fixed clocks, their phase set by the world's changes and no further than the
-  evidence says, solves timing's rung 2 and reaches .63 at rung 5 with 60 clocks, about the designed brain's level (D38's lock: .3 to .5).
-  Touching pairs of blocks cost the starting brain a quarter of its food, declined rather than poisoned: a rung for driving, with no
-  yardstick yet. Next: the context tree over registers on the combination ladder; a careful driver as pairs' yardstick.
-- **Stage 0, the ruler** (D37, 2026-11-09): three ladders on today's senses (sequences, timing, combinations), with 7, 6 and 5 certified
-  rungs; they test different things; random rivals added to the bank help only on sequences, while the answer is on their menu. Open:
-  rung lives must grow smoothly with what each rung asks, or the scaling curve misreads a climb (the user: revisit only if needed).
-- **Stage 1, the first climb** (D38, 2026-11-09): a record of the letters each trusted taste reveals, with one comparing unit per
-  look-back, climbs the sequence ladder: doubling the material doubles the rung (17 at 320 units). Several registers moved by different
-  events (good meals, tastes, the brain's own clocks) pick the right one themselves. On timing, clocks that lock on to surprises beat base
-  at every rung but solve none: locking is the limit. Plain now costs nothing (the bank's default and Occam bar). Next: lock better
-  (more clocks), then the combination ladder by a growing context tree.
-- **The balance learner that sizes itself** (D36, night of 2026-11-08): the old learner's fixed gate (wobble below 15 good tastes per 32 s,
-  a rate the body supplies) replaced by rules a block keeps for itself: it moves its balance a step when the sum of its drives' evidence
-  is significant, doubles the step while moves agree and halves it when they reverse, and halves its wobble when its wobble surely hurts
-  whichever way it goes (the mark of standing on a peak). It balances a lopsided body surely faster than the old learner (|x| ahead at
-  100-300 s), and in the 10,000 s scaling test it lifts the written bank surely in 12 of 13 worlds (+.10 to +.69 in x; the swaps from sure
-  fails to can't tell). But in 100 s lives it costs .6 on average over stage 3's worlds: a learner born exploring pays for its wobble, in
-  plain 11% of the food at a wobble of only .05, and a drive's outcome needs about 1,400 drives to show that cost (a 100 s life has
-  about 96). The old bank is safe at 100 s only because its gate never opens there. In plain at 10,000 s the new learner is no better
-  than the old on average (-.12 against base, 30 pairs), only steadier. Open: when to explore at all (`QUESTIONS.md`).
-- **Stage 3, the bank on fresh random worlds** (D35, checked independently): 35% have something to learn; the bank's coverage of those lies between .18 and .61 (11 sure passes, 24 sure fails, 26 too close to call); its failures are ideas it lacks, mostly about timing, and at 1000 s an ideal judge with timing ideas learns the swaps the bank can't; it does no harm in 79 of 113 nothing-to-learn worlds, harms surely in 2 (its eye filter, where the eyes are more sensitive), and costs a little (about .07) in many. Next, by the user's decision B: stage R, rivals made from simple parts (`PROGRAMME.md`).
-- **The budget in bits** (D31, D32): at the bank's rate of tastes a life offers about 50 bits in a clean world and 15 with one lie in five, but a brain may buy several times more by eating faster. The bank's picks resemble a comparison expecting frequent change; its floor pays among counters, though a vote that never forgets does better still. Swap's gap is about when, and a learner holding about 14 bits of periods closes half of it. In clean worlds the wall is the models held, not bits.
-- **Worlds as programs** (D33): a small language writes 40 worlds; its engine reproduces the unmodified lives exactly. The fast model's lives move when the tick is halved (plain -.17), whether through the body's tick or the brain model's is untested: the user's to decide.
-- **Fine enough** (D34): with everything in seconds, results settle by about 1.25 ms (a sixteenth of the body's fastest time constant); the old tick-locked loop was off by up to .8 at 10 ms. The engine is now about 7x faster, lives unchanged.
-- **Random worlds** (D34): of 100 drawn at random, 38 have something to learn, 14 a clear gap, and a frozen ideal learner holding 12,591 hypotheses closes a quarter of the gap in only 3: most of what the worlds ask lies outside every hypothesis our learners hold.
-- **Foraging, all food**: hold and drive, 14 parts, efficiency about 7 at 72 nW (D3, D4): an oscillator scans with one
-  thruster, and each pulse from an eye charges a hold capacitor that fires the second thruster too while it lasts. A
-  9-part blind oscillator is as efficient and four times as fast, but only on a body whose two thrusters are exactly
-  equal (D5).
-- **Self-tuning to the body**: not found worth it yet. Bodies built differently barely move the best settings, except
-  unequal thrusters, and no in-life tuning from meals beat a fixed circuit; driving only while the eyes still see the
-  block copes instead (D5). A richer body (an eye on each side for each colour) is held off: the user prefers to
-  learn what extreme simplicity gives first.
-- **Learning the bit**: `learn_avoid`, 46 parts, surely does the job held out (160 lives): efficiency 1.78, gain
-  4.7, food:poison 4.7 in the last third, none stranded, 130 nW (D8, D9). It gives up on an empty patch (both
-  thrusters straight once the followed eye has seen nothing for a few seconds) and turns from poison ahead (the
-  silenced eye empties the hold). Pruned from 48 parts (D9), and surely better than them. Its predecessor
-  `learn_hold` (49 parts, D6) stranded: it circled in patches it had eaten clear of food.
-- **The ceiling** for this kind of brain on this body, as policies: 2.7 told the answer from birth, 2.3 learning
-  (D8, D10). The circuit's gap isn't in learning or approaching but in spending: it scans at 54 per s for no more
-  sightings than at 16, and its giving-up run is fast and runs into poison (D10). Two speeds fight the bipolars'
-  collapsing gain at nanoamps (D11).
-- **In SKY130 CMOS** (D12): a copy of the best policy, about 130 parts, works at a twelfth of `learn_avoid`'s power
-  but is surely worse (gain about 0.8): its drive hold was 63 ms where the policy's is 0.2 s, and its doubt couldn't
-  flip back for 3.6 s.
-- **The fast model** (D13; `model.py`, its numbers benched by `blocks.py` on `cmos.py`'s circuit B): the circuit's
-  blocks as their measured numbers, a life in a second, tied with ngspice on
-  the circuit's own lives; judged robustly (each life its own parts' errors), which exposed a knife-edge the nominal
-  searches exploited. Its best design, **B**: doubt a bounded tally (+ a poison, - a food, no leak, the bit flipping
-  at a threshold and the tally then reset), 2.38 held out with tolerances, learning costing it 0.15 against being told
-  the colour. Built in transistors (151 parts, 3.7 nW), benched on 32 seeds, its score predicted before ngspice
-  lived it: 2.03 predicted, **1.65 [1.47, 1.84] lived** (held out, 64 lives, the job done, none stranded): 80% of the
-  prediction. The gap is one quirk between blocks (the second thruster firing alone as a drive begins); with it in the
-  model they tie. **The method is close enough** (the user, 2026-10-29): design in the model, check in SPICE that it
-  is realisable, retune there only when realism matters.
-- **Which level to think at** (D14): B at three levels. Tuned in its own simulator, B built of Sepulchre's elements
-  ties with the block model (2.06 against 2.03) but costs 8 times the power of gates (31 nW, 841 parts, against 3.7 nW,
-  151) and fails with biology's noise, which no setting of its knobs survives but size does: four times the capacitance on the bit's chain does the job with it for 48 nW (twice biology's still fails). Blocks are the fastest place to design, and both levels below realise them
-  faithfully; gates are cheapest; Sepulchre's elements have the knobs a self-tuning brain would turn.
-- **Self-tuning** (D15): B's knobs mistuned at birth (up to 3 times off), tuned from its own outcomes (taste and its
-  own firings) in 10,000 s lives. A tuner with no coordinator (each knob wiggling at its own moments, correlating
-  its wiggle with a broadcast "better than usual") reaches 1.98 against the floor's 1.74 and the ceiling's 2.47
-  (+0.24 [+0.15, +0.34]), and on lopsided bodies, the balance a sixth knob, 0.90 against 0.19 and 1.94. A Bayesian
-  optimiser with the same information and unlimited computation does no better (1.61, never converging; 0.92 on
-  lopsided bodies), and annealing hurts: within a life, perfect is local; the global search is evolution's.
-- **Tricks nobody designed** (D16): 200 random sequence detectors beside B, each adding a beat to a motor, credited
-  by taste through fading tags. On lopsided bodies +0.30 [+0.16, +0.44] over B (0.59, stranding 61% to 14%), by
-  learning (+0.71 over the same detectors not learning), but not by steering: it prunes the harmful random beats and
-  keeps those that unstrand. On the standard body it costs 0.26.
-  Taken apart (D16, continued): the right steer, planted, pays (0.68, job done, against B's 0.11), and meals credit
-  it only if exploring runs at the outcome's timescale (one coin per burst: 0.67, job done); among random detectors
-  50 find a little steering in 100,000 s lives (0.24 against B's 0.11, unpaired), far below the planted steer alone
-  (0.70), their exploring spoiling B's colour choices, and credit colliding as they multiply.
-- **Recruitment, case 1** (D17): with taste wired to nothing, a generic grower (predict what follows each eye, grow a
-  recruit where a bad outcome is predicted and happens anyway, let it try the pathway's operations) grows in every
-  poison life on the poison eye, in no all-food life, and, trying every operation once before keeping the best,
-  reaches 1.80, tied with B's designed learning (2.01; the unwired -3.35).
-- **The arena** (D18): ten robots that eat each other by biting tails, being bitten a bad taste; each robot a disc
-  since 2026-10-31 (the triangle's colliding discs hooked each other; the figures below are the triangle's; on the
-  disc, with firing charged (uncharged before: every earlier arena figure ignored firing's cost), escape grown nets
-  +0.14, matching the best scripted burst, but against a tracker whose standing policy is tuned for the arena only
-  +0.03; no pursuit or memory pays; what standing policy pays depends on the population). Beside the tracker
-  (a Braitenberg steerer, evolution's design here), a grower told nothing of its purpose grows escape from bites, a
-  pain no sense predicts: a recruit of two knobs (each motor's rate when bitten), jittered at each bite and judged by
-  the taste just after, reaches 86-97% of the best scripted reflex held out (+0.22 to +0.25 meals a 10 s net, the
-  ceiling +0.25); its gain vanishes when no response can stop the pain. Steering, pursuit and a memory of recent
-  bites failed to certify as growth cases.
-- **A lopsided body learned from every drive** (D19): the drive's balance jittered at each drive and judged by the
-  food pulses that drive saw, the jitter shrinking with experience: 0.98 [0.78, 1.17] held out in 2,000 s lives
-  (floor 0.36, ceiling 1.92), surely above D15's meal-judged tuner on the same lives (+0.26 [+0.07, +0.45]). On the
-  drive started in step (D20): 1.02 against the tuner's 0.80 (+0.21 [+0.02, +0.40]), ceiling 2.15: 37% of the gap.
-- **The body learned by prediction** (D20): scanning with one motor turns the body steadily, so what it sees comes round
-  once a revolution, and the period gives that thruster's strength. Sweeps of its own (5 s with one motor, every 20 s
-  until its estimate stalls) and a bank of coincidence counters find both periods: 1.66 [1.55, 1.76] held out on
-  lopsided bodies, 83% of the gap closed, surely above every outcome-judged learner (+0.68 over D19's); with 8 s
-  sweeps 1.71 (87%), costing 0.18 on the standard body (2.46 to 2.27), all of it in the first minutes. Sweeping
-  only when frustrated (fewer than 8 meals in the last 32 s) removes that cost (2.47, tied with B) and keeps the gain
-  (1.68 on lopsided bodies, 85% of the gap, 5 sweeps instead of 12; 1.39 on fully varied ones). A bank of 96
-  log-spaced coincidence counters, chance from their neighbours (lateral inhibition) and a fixed comb does as well as
-  the exact histogram held out: what is left for a circuit is the delay line holding a sweep's pulses. Sweeping at birth and every 12 s until the evidence is in, gated by the meal rate on a
-  clock that stops while sweeping: lopsided 1.81 held out, 93% of the gap; standard 2.48, tied with B. A balanced
-  drive used to start out of step (each motor its own oscillator, motor 1's stale from the last drive), costing
-  ceilings and learners alike; started in step (`sync=1`): ceiling 2.15, learner **2.03 held out, 93% of the gap**,
-  standard body 2.45, tied with B; fully varied: ceiling 1.94, learner 1.59. In counters on the fixed drive, lopsided:
-  the bank 1.92 (87% of the gap, a little below the exact histogram, -0.11 [-0.25, -0.01]), its delay line's stages
-  holding up to 3 pulses (2 bits) 1.88, tied with the bank; one-bit stages 1.78 (79%), probably below it. Restricted
-  to what a circuit could hold (192 counters, 2-bit stages; still blocks, nothing built in transistors): lopsided 1.93 (88%), fully varied 1.68, standard 2.49, each
-  tied with the exact histogram.
-- **What placing blocks could be worth** (D21): the seer told each block's place only as well as pulses tell it
-  falls from 4.5 to 2.8 (offset across unknown, range +-50%) or 2.1 (neither), against B's 2.54: the eyes don't say
-  where across their corridor a block is, so a memory of places adds little unless the brain senses across by
-  moving.
-- **Sideways sensing, evolved?** (D22): a 6-node continuous-time network evolved in the loop, told the colour,
-  reaches 2.03 held out (B told the colour 2.54) and forages as B does, eating blocks only within the mouth's 1 mm
-  of its path: no sideways sensing emerged. Under B's movements the pulses' timing says almost nothing about a
-  block's offset (R2 0.02; the side no better than the sweep's bias); probing by wiggling makes it a little readable
-  (the side right in 77% of pulses against 56%), but no dance-like policy uses it (all below B, 0.8-1.9 against
-  2.6). These eyes don't offer sideways sensing; B is near what they allow, and the headroom needs a body change
-  (the user's; D24 prepares a split eye). (A beat's 18 degree turn, thought too coarse, can be cut to 7 by timing,
-  D24.)
-- **The dance form** (D23): D20's period found by an entraining oscillator fails (sweeps of 4 revolutions, 5 blocks
-  each: it never locks); a bank of 96 resonators with harmonics summed reads a 20 s spin's period better than the
-  intervals' histogram (69% against 53%) but plateaus lower (69% against 88% at 40 s), for as many parts.
-- **A split eye, prepared for the user's decision** (D24; world.py unchanged, the split made in an experiment's
-  wrapper): each eye's pulses tagged by which half of the corridor saw them, the halves wired at random. B told the
-  colour, plus a reflex: one food pulse or more from one half and at most one from the other in 0.2 s turns it
-  towards that half, by one beat with its partner 10 ms later (7 degrees, not a lone beat's 18: finer turning by
-  timing, no body change). Which motor turns towards which half is learned from its own scan in a median 12 s
-  (right in 254 of 256 lives by the end). Held out on fresh seeds: **3.02 [2.92, 3.11] against B's 2.49 [2.40,
-  2.58]** (+21%; told the map, 3.14); on lopsided bodies told their balance, 2.71 against 2.32 (+17%).
-- **The first story** (D25; `STORIES.md`): B's doubt written only while a drive is on closes the whole gap to being told
-  the colour (2.50 against 2.49 held out, B 2.21), and stands at component level with silicon's noise (2.15, B 1.84).
-- **The second story** (D26): unequal thrusters, its baseline and target measured: immune to 1%, half the score gone by
-  x1.25; on the usual bodies 0.21 against 2.56, one number of about 3.7 bits.
-- **The interventions table** (D28; `STORIES.md`): ten mismatches against story 1's circuit, judged on fresh seeds. Each has a sure manual cure, though row 9's is tiny and the rest of its gap was never there. Eight have an automatic version that helps and ties with the base brain in the plain world; row 6's costs 0.02.
-- **A universal circuit** (D29; `STORIES.md`): a bank of predictors, one setting in every world, block model only. Surely above base in 8 of 10 rows and 13 of 14 combinations, plain tied at 100, 400 and 1,000 s; surely below its row's own version on thrusters, swaps and digest; not watched on screen.
-- **The ladder of harder tests** (D27; `STORIES.md`): swaps, sequences, a rule about time. A sequence memory grown when frustrated solves alternate and pattern; one brain reading the run of goods before each poison chooses between cures, surely above the baseline on five tests of eight, tied on three (plain, slow swaps, and digest, which its menu cannot cure).
-- **Bodies** (D13): with each thruster 0.5-2, every fixed design collapses (B 0.32, the best searched on such bodies
-  0.76); told its balance, B gets 1.92 (2.15 with its drive started in step, D20); eight local rules for finding the balance reach at most 0.8; judging each
-  drive does better (D19), and a model learned from its own turning far better (D20).
-- **Ceilings** (D13): omniscient about 20, a perfect memory of what it has seen 4.5, B told the colour 2.54.
-- Values not yet tuned for `learn_avoid` (its values are learn_hold's and the prototype's). A pruned circuit
-  must be judged held out: pruning's last cut, "not surely worse" on 12 seeds, was surely worse held out (D9).
-- **The simulator** is checked in both step and tolerance: ngspice's error control is tightened in every netlist
-  (D7).
-- Queue 7 re-judged every circuit with the tightened control (D7) and re-tuned learn_hold (noise, no trend: its
-  output kept as `results/learn_hold_tune_q7.json`, never judged); the foraging circuits' re-tunes were cancelled
-  (their results stand, D7).
-- Open questions: `QUESTIONS.md`.
+- **Useful but incomplete scaling evidence.** The third frozen growing network improves with capacity on the
+  sequence tests. Timing benefits from rhythm trackers, but its highest passing rung is not monotonic across the
+  tested sizes. Combined challenges improve without passing the declared criterion at the tested life length.
+  No previously sealed ladder demonstrated the intended climb at its first frozen evaluation.
+- **Useful evidence survives; the cost of learning its readout is unresolved.** D73's supplied grouping
+  improves decoding of the brain's stored signals. D74 tested two priors within one family of learned
+  groupings: no decision gain established, an interval that does not exclude most of the supplied
+  advantage, and a counterexample showing short-life harm from an inappropriate sharing prior. It does not
+  show readout discovery is inherently hard (dated correction in D74). D75 isolates a smaller selector effect: extra copies
+  receive extra influence unless initial and redistributed weight are conserved. No new controller is claimed.
+  The reference also receives actual eaten colours, and the highest-noise worlds make even favourable-colour
+  meals lose expected scored value.
+- **Timing is the best recent causal investigation.** D65 separates phase information and trust recovery; D68
+  builds acquisition and tracking informed by theory and confirms gains on fresh seeds. Its imposed ranges,
+  initial machinery, generality and cost remain to be assessed.
+- **The current capacity axis is not total material.** D76 finds 2042 fixed categorical units at birth even
+  at nominal P=560; P controls stream allowances and does not cap total allocation. Clocks, integrators,
+  acquisition and communication add further costs.
+- **What extra allowance buys is concentrated; where the allocator sends it is not** ([D77](#d77-resource-observation)).
+  Observation leaves lives bit-identical. On sequence rung 17, P=560 recycles 98% of its births and is
+  effectively fixed. At P=4480, 85% of the growth is in clock, integrator and rhythm streams. Yet room in
+  the ten event streams alone (214 grown units) closes +.71 of the gap, against +.81 at full P (ten pairs;
+  difference +.10 [−.04,+.26], unresolved). All-food lives grow nothing. Mixer communication and global
+  scans are set by the 168-stream repertoire, not by P. The next change belongs in resource allocation.
+- **Allocation is a large lever; the brain lacks a signal to steer it** ([D78](#d78-allocation-rules)). Under a
+  real total cap, equal growth allowance does far worse than the unchanged design's tilt toward
+  small-alphabet streams (−.31 at the same material). A pairwise contest by mixture weight beats equal
+  allowance on fresh seeds (+.28 [+.12,+.45], sequences) and does no harm on timing beyond the margin. It
+  still falls short of the unchanged design (−.11 sequences; −.07 [−.18,+.04] timing) and plateaus with
+  material. Mixture weight is winner-take-all: one stream holds about 90% and all others sit at the
+  fixed-share floor at the end; bits saved over the default are negative everywhere. Through life the
+  picture shifts: for the first 100 s clock, integrator and rhythm streams carry three quarters of the
+  weight, and one event stream takes over later. A usable signal must be marginal and integrated over time.
+  Next: re-read Dohare et al.'s utility, then a leave-out replay of marginal contribution, before any further rule.
+- **Earlier results keep their conditions.** B's circuit and fast model, the intervention bank, body-learning,
+  exploration and growth experiments answer different questions under different protocols. Their strongest
+  lessons and limitations are summarised in D72. Physical validation of an earlier circuit does not transfer
+  automatically to a later learning algorithm.
+
+Dated entries below retain their original wording, predictions and figures. “Next”, “solved”, “tie”, “ideal”
+and “ceiling” must be read in their dated protocol and with the qualifications in D72; they are not new instructions.
+The replaced current-state summary is available in repository history at commit
+`9099ade2fdf7a14b3e02630b7b28906b0d937b79`.
 
 ## D1: the problem, from above (2026-10-26)
 
@@ -2695,6 +2514,8 @@ After the fixes: lives in the tick-locked mode unchanged (144 of 144 of the fing
 
 ## D35: stage 3, the present circuit on fresh random worlds (2026-11-07)
 
+*Interpretation qualified by the [2026-11-16 review](#review-2026-11-16); original record retained.*
+
 `PROGRAMME.md`'s stage 3: the bank (`lab/universal_v.py`, `lab/v/universal_v7.json`), unchanged, on worlds from `lab/stage3_gen.py` (stage 2b's generator in the stage-2c language, the body fixed from birth by the user's rule; frozen, SHA `a24140a7`, before any draw), development world numbers and seeds 80000-89999 only; in seconds at 1.25 ms (the reference at 2.5 ms, on worlds with a gap only, the user's decision). `redo`: stage 2b's 100 draws again; `fresh`: 200 new ones, the coverage set. Scripts `lab/stage3_random.py`, `lab/stage3_summary.py`; logs `lab/v/stage3_*.log`; lives `/home/pilgrim/nca-scratch-backup/stage3/`. Rules fixed before the lives: a world is out (stage 5's kinds) if 3 or more of 16 labelling lives carry a stage-5 label; a world has something to learn if told minus max(base, 0) is at least .1 with its 95% interval above 0; it passes if x > max(.5 r, .25).
 
 **First pass, 60 pairs a world** (`lab/v/stage3_analyse.log`, read with uncertainty in `lab/v/stage3_summary.log`). The generator repeats itself: of 200 fresh draws, 6 repeat another fresh one and 7 a redo draw, leaving 187 distinct; 3 are out (stage 5's kinds); 184 judged. **66 of 184 (.36 [.29,.43]) have something to learn. Of those, the bank surely passes 10, surely fails 19, and 37 can't be told at 60 pairs** (their gaps are small, so x's interval is wide): coverage between .15 and .71. The redo set agrees (29 of 96 with a gap; 3 sure passes, 12 sure fails, 14 can't tell). The analyse log's own count, "30 of 69 pass", took x's point value and counted duplicates: it overstates.
@@ -3544,6 +3365,8 @@ user rather than tuned at night.
 
 ## D54: taking turns: Sepulchre's half-centre makes the local coupling search work (2026-11-12)
 
+*Interpretation qualified by the [2026-11-16 review](#review-2026-11-16); original record retained.*
+
 `lab/couple_local.py` (`HalfCentre`; arms local:halfj, local:half, local:turnsj), `lab/couple_tempo.py`; `lab/v/half_centre*.log`,
 `couple_tempo*.log`; dance_predictions 70 to 77. The user: taking turns is a Sepulchre theme. The locality tries of D52's end failed
 because two units changed their settings at once, so neither could tell whose change moved the coupling (D16's credit problem). In a
@@ -4352,6 +4175,8 @@ Fixed share confirmed on fresh seeds (T24, `lab/v/timing_late_share_fresh_paired
 
 ## D67: bits as the currency, and a memory bank on every signal (2026-11-15; the user agreed the plan)
 
+*Interpretation qualified by the [2026-11-16 review](#review-2026-11-16); original record retained.*
+
 **Bayesian mixing, scored in bits** (B1, `lab/v/bayes_*.log`; arm letters F and B). Each speaking stream predicts a probability (its
 unit's KT estimate); the default predicts from its own record of the last revealed colour repeating; the speakers are mixed by Bayes
 (each weight times its probability for what happened, over the speakers' mixture: sleeping experts) with fixed share; the colour more
@@ -4395,6 +4220,8 @@ in bits, fixed share, the fine live bank, the market (net10kc60SFBLM, LB_FINE=1,
 
 ## D68: rhythm trackers designed from theory (2026-11-15; the user: PLL theory, one detector per nested rhythm, redundant ones pruned)
 
+*Interpretation qualified by the [2026-11-16 review](#review-2026-11-16); original record retained.*
+
 **The evidence** (`lab/change_times.py`, `lab/v/change_times.pkl`, `rhythm_describe.log`; 14 timing lives). The brain notices .7 to 1.6
 changes a slot, about half false (a random word changes at about half its boundaries); a true one is noticed a quarter of a slot late on
 median, the middle half from .1 to .6 of a slot. One change says little about a boundary; a life holds 220 to 510.
@@ -4415,6 +4242,12 @@ peak, the bits to choose, is what works.
 .46 without the trackers (paired +.20, +.24, +.31, all sure).
 
 ## D69: the third held-out ladder (drift), and what any learner could close (2026-11-15/16)
+
+*Interpretation qualified by the [2026-11-16 review](#review-2026-11-16); original record retained.*
+*Later code/evidence correction: [D73](#d73-noisy-evidence) identifies privileged eaten-colour observations
+and noise that changes the scored reward; “two real rungs” does not mean two profitable foraging tasks.*
+*Resource-axis correction, 2026-11-17: [D76](#d76-resource-floor) shows nominal P is a stream-allocation
+setting, not a cap on total units. The scores below remain observations; their axis is not measured material.*
 
 **Verdict** (`lab/v/heldout_ladder3.log`, held-out seeds 72000+, the design frozen 2026-11-15): no rung solved, no climb; both frozen
 designs near or below the starting circuit (shares -1.25 to +.59, rungs 5 and 12 unreadable). Read after the verdict: the ladder is
@@ -4439,6 +4272,10 @@ its streams, doesn't act as a filter (QUESTIONS.md).
 7. Timing joins sequences in the scaling test's first part (climbs on fresh creatures); combinations rise without passing at these lives.
 
 ## D70: surprise, not forgetting (2026-11-16; the user: a confident prediction proved wrong should open the brain to new learning)
+
+*Interpretation qualified by the [2026-11-16 review](#review-2026-11-16); original record retained.*
+*Later experiment: [D73](#d73-noisy-evidence) separates rounding from learned decoding on identical stored
+symbols. Proper noisy-label prediction improves along with choices; the final scoring-rule lesson below is withdrawn.*
 
 Measured in bits about the hidden state, not the noisy taste (`lab/state_bits.py`, `lab/v/state_bits_35.log`; drift rung 35, development
 seeds 137000+, 8 lives; at each meal in the last two thirds, -log2 of the probability given just before to the true food colour; 1 bit
@@ -4473,6 +4310,10 @@ choices.
 
 ## D71: a vote judged on choices (2026-11-16; the user agreed: bits for belief, choices for whom to follow)
 
+*Interpretation qualified by the [2026-11-16 review](#review-2026-11-16); original record retained.*
+*Later audit: [D73](#d73-noisy-evidence) shows the filter learns parameter weights as well as state, receives
+extra observations, and does not establish that fewer primitives are necessary.*
+
 Beside the Bayes mixture (kept for the bits and the market), the colour followed is a vote of experts (the default, every speaking stream,
 every graded readout), each weight times .8 or .95 when its recommended colour proves wrong, the speakers' total kept, a fixed share among
 them (DVOTE, with GRADED and LB_LETTER). Decision accuracy on drift rung 35 (`lab/v/state_decide_35.log`): 70% at either strength (the
@@ -4483,3 +4324,1087 @@ development seeds 137000+, 10 pairs): rung 35 +.25 [+.02, +.49] surely better (.
 The lesson, in MacKay's terms: the brain's repertoire is an Occam factor (about 260 candidates, 8 bits) paid in evidence, and noisy
 feedback supplies that evidence slowly; the ideal filter pays nothing because its model is built in. Fewer, better primitives, or
 richer evidence (the eyes), are the ways forward (QUESTIONS.md).
+
+
+<a id="review-2026-11-16"></a>
+## D72: evidence review and revised research interpretation (2026-11-16)
+
+**Question.** What has this line taught us about reusable, local, economical adaptation during life, how strong
+are those inferences, and which investigations should follow? The user approved the review and documentation
+rewrite. This entry analyses existing records; it adds no new simulations, independent replication or source-code
+certification. [Review coverage and literature](../lab/v/review_2026-11-16.md); the new
+[conditional programme](../PROGRAMME.md#conditional-programme) replaces the older current-phase summaries.
+
+### What the major investigations teach
+
+| experiments | supported lesson | strength and limit | consequence for the programme |
+|---|---|---|---|
+| D1–D14: circuits, simulator and robust judging | Small embodied controllers can learn the basic distinction; simulation accuracy and tolerances change apparent success. D7 overturned an earlier learning result. | Physical checks support the specific circuits and conditions tested. They neither prove minimum possible size nor validate later block-model growth. | Keep provenance and claim-specific physical validation; do not use an old circuit result as a general hardware guarantee. |
+| D15–D16: reward-driven tuning and detectors | Small effects, sparse rewards and simultaneous changes can make credit assignment expensive; candidate actions can themselves cause harm. | Negative results concern the tested learners, signals and lifetimes. A successful informed intervention shows an opportunity, not that the proposed learner can identify it. | Estimate candidate-specific evidence and trace the failure before expanding a detector bank. |
+| D17–D18: local recruitment and the arena | Local signals can recruit a useful response in particular constructed cases; some proposed opportunities disappeared after a stronger baseline or cost correction. | A restricted repair and finite menu are not a general discovery procedure. A failed scripted cure does not rule out every cure. | Keep certification of an opportunity separate from autonomous discovery of it. |
+| D19–D24: body prediction, spatial information and timing | Acting can expose useful body information; readout and timing matter. Short sweeps with multiple objects defeated the tested entrainment scheme. | Formula-based solutions and privileged spatial observers have extra structure. Failure of particular decoders does not prove the sensors contain no information. | Compare information available under specific actions and priors; treat body changes as a separate user decision. |
+| D25–D29: intervention stories and predictor bank | A shared prediction/selection mechanism handles several curated mismatches. | The repertoire was supplied by the designer; the table's historical “ties” were often lack of detected difference. | A useful unifying mechanism is not yet open-ended generality. Seek failures outside the curated repertoire. |
+| D30–D36: references, random worlds and generated rivals | Broader evaluation exposes coverage gaps, harm and effects of life length that the curated stories missed. D35's final count is 11 passes, 24 failures and 26 unresolved among 61 qualifying worlds. | Coverage is conditional on the sampler, reference and pass rule. Joint failure of bank and reference does not prove all possible models fail. | Keep uncertainty, denominator and reference assumptions visible. Diagnose missing representation separately from slow selection. |
+| D37–D43: ladders, registers and context trees | Additional memory and context can improve sequence and combination learning; a body mismatch may instead need a knob adjustment. | These are family-specific constructions and supplied representations. The implemented tree is not thereby exact context-tree weighting or an optimal controller. | Use growth, tuning and fixed-capacity comparisons to identify what extra material contributes. |
+| D44–D54: exploration and coupling | Predictability can favour uninformative behaviour. Appropriate actions expose body parameters; alternation reduces interference in the tested two-unit search. Coupling helped balance but not tempo. | D54's controlled comparisons support a specific interference explanation. They do not establish a universal coupling objective or solve coordination at arbitrary scale. | Specify the unknown and its decision value. Compare mechanisms under matched time and energy. |
+| D55–D58: new parts, hunger and joint body/rule learning | Added actuators and sensors offer opportunities in explicitly authorised alternative bodies; useful knowledge and control can depend on each other. | These variants change the available information or action resolution. They are separate conditions, not evidence that the original body is impossible. | Keep the body distinction explicit; do not transfer the brain's job into a new signal. |
+| D59–D62: generic growth, recycling and first sealed tests | Growing representations improve some sequence tasks; changing worlds expose forgetting and selection problems. Correcting duplicate removal changed the explanation of an apparent benefit. | Local generation alone does not certify local allocation, low cost or retained knowledge. The first frozen evaluations did not demonstrate the intended unfamiliar-family climb. | Trace retention, overwriting and reuse separately; account for initial machinery and all communication. |
+| D63–D64: steering and delayed interacting choices | The supplied option space contains better behaviour than the tested learner finds. | The successful policy establishes opportunity within that space. Failed variants do not exclude entire algorithm classes or prove that the behaviour must be innate. | Trace delayed credit and interaction before proposing more options or a new hierarchy. |
+| D65–D68: phase, memory streams and rhythm tracking | Controlled interventions isolate missing phase, recovery of predictor weight and period estimation; theory-informed acquisition/tracking improves fresh timing lives. | Causal evidence is stronger than a sequence of unexplained score improvements. Optimality and transfer beyond the implemented ranges remain unproved. | Use this diagnostic sequence as a model, and test the mechanism's assumptions next. |
+| D69–D71: noisy changing feedback | An informed filter improves two tested drift rungs; useful information in a raw statistic is poorly used by the network. A choice vote improves one tested case. | A prior-informed filter is not an unrestricted bound; representation, selection, noise and action remain confounded. | Resolve those alternatives before adopting “judge choices” or “fewer primitives” as the explanation. |
+
+### Corrections to consequential claims
+
+**1. Scaling is partial, not the complete milestone.** The original logs
+([sequences](../lab/v/frozen3_seq.log), [timing](../lab/v/frozen3_time.log),
+[combinations](../lab/v/frozen3_combo.log)) compare 560, 1120, 2240 and 4480 units on fresh seeds.
+Under the recorded half-gap criterion, D69 reports highest passing sequence rungs none, 11, 11, 17 and timing
+rungs none, 7, 5, 7; no combination rung passes surely at 3000 s. Sequence gains are substantial, but neither list
+establishes a highest rung rising at every doubling. Untested higher rungs remain untested, not failures.
+These results do not satisfy all seven conditions of the [historical milestone](../GRAMMAR.md#scaling-milestone-recorded-on-2026-11-09),
+still less the ultimate near-optimality goal. This qualifies D69's “first part” wording without changing its scores.
+
+**2. “No difference detected” is not “no cost”.** The resource-allocation comparison on sequence rung 11 is
+−.04 [−.16, +.09] ([log](../lab/v/market_seq11.log)); the opened first ladder's rung 8 is
+−.12 [−.59, +.26] ([log](../lab/v/market_heldout1.log)). These leave meaningful losses possible.
+The phrase “nowhere surely worse” reports a detection result, not non-inferiority. For a new claim choose a
+practical margin before confirmation; do not retrofit it to these data. Physical cost is a separate issue.
+[Statistical rationale: Lakens](https://pure.tue.nl/ws/portalfiles/portal/80918653/lakeequi2017.pdf).
+
+**3. A reference is not automatically a bound.** The
+[drift reference](../lab/v/drift_yardstick.log) is a mixture of filters over a supplied two-state model family,
+with an informed steering policy. Its failure to improve the lower rungs does not establish that the starting
+brain is “as good as possible”, nor that only two rungs are learnable. The justified result is that this reference
+showed gains on two tested rungs under its assumptions. Success demonstrates an opportunity with that prior;
+failure requires further analysis. The same qualification applies to D35's joint-failure interpretation and
+D61's sensory-limit language. Predicting a recorded history is also different from choosing actions that change
+what is observed. See [BOUNDS.md](../BOUNDS.md#the-ideal-observer).
+
+*Later on 2026-11-16, [D73](#d73-noisy-evidence) audits the implementation: this reference also receives
+actual eaten colours and uses different control machinery. Its advantage is not just a prior difference.*
+
+**4. Noisy prediction and useful decisions are distinct, not opposed.** D70 compared probabilities for a noisy
+taste with the hidden colour state; these are different targets. Under a symmetric flip model with error e,
+P(taste good | history) = e + (1 − 2e) P(state good | history). This identity is a model-specific derivation,
+not a new empirical finding. A calibrated predictor may therefore be uncertain about taste while knowing state.
+Proper log scoring remains appropriate for the stated observable target; it need not quickly select the action
+with greatest value. A vote judged on the same false tastes does not remove that noise.
+[Proper-scoring theory](https://sites.stat.washington.edu/raftery/Research/PDF/Gneiting2007jasa.pdf).
+D71's [paired result](../lab/v/dvote_paired.log) is +.25 [+.02, +.49] on rung 35 and +.02 [−.22, +.28]
+on rung 42. The second is unresolved, not an established tie. The first is a development result, not general
+validation of choice scoring. The raw statistic's usefulness narrows the explanation; it does not establish
+why the online learner fails to exploit it. Candidate counts alone do not prove a sample-complexity lower bound.
+
+**5. Timing supports a mechanism, not unconditional optimality.** D65's
+[late-phase experiment](../lab/v/timing_late_share_fresh_paired.log) gains .32 and .33 of the gap when a fixed
+share lets late-improving predictors regain weight. This has a standard relative in
+[tracking the best expert](https://mwarmuth.bitbucket.io/pubs/J39.pdf).
+D68's [fresh comparison](../lab/v/rhythm_time_fresh.log) gains .20, .24 and .31 on timing rungs 3, 5 and 7,
+with the reported paired intervals above zero. A Kalman filter's optimality depends on its state/noise model;
+gating false events and acquiring an initially unknown rhythm introduce further assumptions. D68's 120 trial
+periods between 3 and 30 s, six candidate peaks and discrete phase readouts are supplied structure. The claim
+that this is *the* optimum for noisy events is withdrawn; its useful empirical result stands. D23 and D68 differ
+in observation duration and ambiguity, so their comparison does not prove one entire timing approach superior.
+
+**6. Starting resources and locality remain unverified at scale.** The
+[size count](../lab/v/size_count.log) reports 992 sense units at birth, before 979 or 1084 grown blocks in the
+examples. This is not a final physical parts count. The all-food control's unchanged behaviour does not show
+that resources are unallocated or quiescent. Readouts, normalisation, resource redistribution, updates and wires
+must be accounted for alongside per-block inputs. This review identifies an audit requirement; it does not claim
+a code-level violation has been proved. The illustrative block-power calculation cannot price the whole design.
+
+### What changes in our picture
+
+The reusable module is not yet identified. Current evidence supports useful components and several local causal
+explanations, not a universal selection, growth or control principle. The immediate question is where evidence
+becomes unusable in the noisy-feedback case; its answer may favour a better representation, a different prior,
+a selection mechanism, better exploration, or a limit on what this life can teach.
+
+Keep a concise account of each retained capability:
+
+| problem | candidate capability and evidence | unresolved limit |
+|---|---|---|
+| Past events affect what food means | Registers, context trees and growing combinations; D38–D40, D59–D62 | How generic composition discovers the useful context economically |
+| Useful predictors improve after initially failing | Fixed share restores weight; D65 intervention | Retaining their internal knowledge across changes is a separate problem |
+| Event timing encodes a rule | Acquisition followed by tracking; D68 fresh comparison | Imposed ranges, ambiguous rhythms, resource cost and transfer |
+| Reward is too sparse to tune body parameters quickly | Action-dependent sensory evidence; D19–D20, D44–D54 | Identifying a useful objective without a hand-supplied formula |
+| A prior skill should survive a new task | Dormancy/protection/reuse are candidates; return experiments expose the gap | No retained mechanism has yet established economical recall here |
+| Noisy outcomes hide useful evidence | Filtering or a better evidence representation; D69–D71 | How to learn the relevant structure and choose actions without the reference's prior |
+
+Next branches are in [QUESTIONS.md](../QUESTIONS.md). A result that narrows these limits or changes which
+capability we think is needed is progress even if the next brain has no additional component.
+
+<a id="d73-noisy-evidence"></a>
+## D73: auditing the noisy-feedback information path (2026-11-16)
+
+**Before work.** Question 1 asks whether reusable local components need better evidence, representation,
+selection or control. The first code audit finds that D69's filter reads actual eaten colours from `W.meals`,
+whereas the candidate infers an eaten eye and only learns its predictors on vouched tastes. Thus even replaying
+the filter on the candidate's meals does not yet match their observations. No new test is opened: the third
+ladder was already opened in D69. All other reserved artifacts remain untouched.
+
+**Discriminator and predictions.** Record the frozen candidate immediately before each taste update on
+development rung 35 (1000 s, ordinary body, 2.5 ms integration). Replay identical two-state filter priors on
+(a) actual eaten colours, (b) the brain's inferred colours on every taste, (c) inferred colours only on vouched
+tastes, and (d) actual colours only on those same vouched tastes. Compare before-update hidden-state accuracy,
+properly targeted noisy-letter loss, calibration and learning rates; also inspect actual stream predictions,
+weights, raw signed sums and the executed food choice. If (a) beats (b), colour attribution matters; if (b)
+beats (c), gating loses useful evidence; if (c) still beats the network, information available to its learning
+rule is being lost downstream. Expected: some reference advantage is supplied information, but a residual
+representation/readout gap remains (moderate confidence). The 16 s sum is an explicitly informed diagnostic
+chosen by previous development, not a newly discovered autonomous brain.
+
+**Analysis and budget.** Start with an instrumentation identity check, then 4 paired seeds 137000–137003,
+already used in development. Keep whole-life and final-third metrics, pair-level differences and all failures.
+No equivalence or generalisation claim from this small diagnostic. Up to 45 minutes investigation and 15
+minutes simulation wall time, one job with at most four workers and one maths thread each; stop the simulation
+branch if measurement changes behaviour or its cost exceeds this envelope. Use replay rather than further
+closed-loop lives when it can separate the next alternatives. No architectural search. The historical rate
+is about .685 meals/s: at false-taste probability .35, the binary symmetric channel has capacity .0659 bits
+per correctly attributed taste, at most .045 bits/s under independent errors and exogenous sampling. An 80 s
+mean state dwell therefore offers only about 3.6 capacity-bits, not 3.6 guaranteed learned bits. Attribution,
+gating and correlated/selected histories can reduce this. There are no additional behavioural explorers;
+all diagnostic predictors observe one fixed action history.
+
+**Primary sources checked.** Rabiner (1989), forward recurrence §III.A, equations 19–21
+([paper](https://www.cs.umb.edu/~rvetro/vetroBioComp/HMM/Rabiner1989%20A%20Tutorial%20on%20Hidden%20Markov%20Models%20and%20Selected%20Applications%20in%20Speech%20Recognition.pdf));
+Gneiting & Raftery (2007), §2 and §3 example 3, proper log score and KL divergence
+([paper](https://sites.stat.washington.edu/raftery/Research/PDF/Gneiting2007jasa.pdf));
+Herbster & Warmuth (1998), figure 1 and §5, fixed share tracks changes of *expert identity*
+([paper](https://mwarmuth.bitbucket.io/pubs/J39.pdf)). Relevant sections of the papers, not merely abstracts,
+were inspected. A changing hidden food state need not mean the best filtering expert changes. Bayes filtering,
+learning a readout and tracking an expert are different operations. None of these papers establishes that
+the current implementation is optimal or local.
+
+**First observation and next discriminator (before replay).** Eight full recordings reproduce D70's roughly
+70% decision accuracy. Final-third accuracy is .704 for the candidate, .808 for the filter on its inferred,
+vouched inputs, and .849 for the filter on actual colours at all meals. The information mismatch is real but
+does not explain most of this gap. Snapshot predictions agree with the probabilities used for learning to
+2.2e-15; no stale prediction was detected. The observer identity check passed; its first attempt failed only
+while formatting spending (a scalar treated as a list), corrected before collection, with the error log kept.
+
+Next, spend at most 10 minutes on replay, no further lives: hold every existing expert's predictions fixed and
+remove only the .01 weight sharing; compare this with learning a two-category or fifteen-category readout
+of the same signed evidence sum, using only past vouched inferred labels. Each readout starts with symmetric
+half-counts, not hidden-state supervision. This distinguishes selector dynamics from learning a useful mapping
+across many independent contexts. Also compare the raw sign with its rounded version, which distinguishes
+literal information destruction by quantisation from an inefficient learned readout. Expected: no-sharing
+alone will not recover the full gap; sharing evidence across related values will help (moderate confidence).
+These are explanatory probes with supplied features, not accepted generic components or return estimates.
+
+**Replay audit and refinement (before the next lives).** The first selector replay failed its identity check.
+Cause: `Net.learn` may buy capacity by deleting another stream's block before that later stream is scored.
+Its scored prediction then differs from its before-taste prediction. A second read-only recording captures
+the probabilities actually scored and the cross-stream deletions; all eight behavioural fingerprints remain
+identical. Replaying those probabilities reproduces the brain to 2.4e-15. Scoring the originally issued
+predictions instead changes whole-life decision accuracy by only .0003 on these fixed histories, with no
+final-third action change. This is a real scoring-order defect, not an explanation for the observed .10 gap.
+No production fix is included in this diagnostic.
+
+The two-category readout learns effectively on the same inputs (.807 final-third accuracy, brain .704);
+fifteen independent categories reach .766. Removing weight sharing alone reaches .717, with an inconclusive
+interval. To distinguish information that could be computed from information actually held, next record the
+existing D70 signed-integrator condition (`LB_LETTER=1`, no graded/voting additions), the same four pairs.
+Its signed value, last written symbol, single-symbol predictor and selected context predictor will be compared
+on the same events. This spends at most another 3 minutes simulation time within the 15-minute envelope.
+It tests literal rounding loss versus learned decoding and selection; it does not test a new architecture.
+
+### What each learner knows, and when
+
+| stage | candidate | D69 reference |
+|---|---|---|
+| Supplied structure | Complementary food colours; a fixed movement controller; event/context representations, seven bank memory scales from 1 to 64 s, clocks and rhythm acquisition; independent half-count priors for each predictor; likelihood mixing with .01 weight sharing. | A symmetric two-state Markov family; constant flip and independent observation-error rates drawn from a supplied 8 × 8 grid (mean dwell 10–640 s, errors .01–.45); uniform model and state priors. |
+| Observations | Eye pulses, taste sign and its own signals. At a taste, it infers the eaten eye from the followed eye if driving, otherwise the latest eye to pulse. Only driving-qualified tastes update predictor counts and weights; all tastes update event streams and the optional signed sum. | Every meal's actual colour from `W.meals`, its scored sign, and `wire_s` to translate its chosen colour to an eye. Thus this reference is **not** restricted to the candidate's sensory information. |
+| Information acquired in life | Counts of inferred next food letters in each context; which predictors deserve weight; grown contexts and timing estimates. No explicit learned separation of latent state, error rate and reversal rate. | The posterior over state and over the 64 parameter pairs. The state is not supplied; the model family is. Contrary to D71, it does pay evidence to learn its parameters. |
+| Prediction timing | The current readout selects the followed eye before the incoming taste is learned. The signed sum is updated at taste delivery, written into symbols subsequently; code can also change contexts while scoring, as diagnosed above. | The live arm consumes completed meal-log entries at the next tick's `tell` hook. Earlier replay used tick-rounded meal times; D73 uses exact delivered event times and predicts before updating. |
+| Action | `food = int(p1 > .5)`, then the existing hold/scan/run controller drives. There is no probabilistic reluctance to act when p1 is near .5. | The posterior's more likely food colour steers `VTold`. Colour-bank selection and opening are disabled, but V7's adaptive pausing and jitter remain. Its closed-loop return is not a controller-matched comparison. |
+
+The implementation inventory is [`noisy_reference_inventory.py`](/home/pilgrim/git/simple-learner/lab/noisy_reference_inventory.py),
+with [output](/home/pilgrim/git/simple-learner/lab/v/noisy_reference_inventory.log).
+The filter on inferred labels is deliberately informed about the model family and treats attributed colours
+as certain; it is a useful reference, not an exact observer for the robot's uncertain perceptions.
+
+### Results and causal interpretation
+
+On the frozen candidate's eight histories, 5,482 meals supplied 4,734 accepted learning events: 6.85 meals/10 s,
+5.92 accepted/10 s. Eaten-colour inference was wrong on 5.1% of all meals and 3.1% of accepted meals; 13.7% of
+tastes were excluded from predictor learning. These numbers distinguish sensory attribution from outcome noise.
+
+Final-third hidden-food accuracy, each diagnostic evaluated **before** the next taste on the same histories:
+
+| method | accuracy | difference from the candidate, paired bootstrap 95% interval |
+|---|---:|---:|
+| Candidate's issued choice | .704 | reference |
+| Filter, same inferred colours and accepted tastes | .808 | +.105 [.065, .145] |
+| Filter, inferred colours at every taste | .826 | +.122 [.088, .157] |
+| Filter, actual colours at every taste | .849 | +.146 [.110, .181] |
+| Existing expert predictions, weight sharing removed | .717 | +.014 [−.015, .052] |
+| 16 s signed sum of accepted inferred letters, sign supplied as the choice | .810 | +.107 [.083, .143] |
+| Same sum, two probabilities learned from past accepted labels | .807 | +.104 [.079, .140] |
+
+This rejects **complete lack of distinguishing evidence** as the explanation on these lives. Colour
+attribution and gating matter, but a substantial gap survives matched inputs. Removing sharing alone is
+inconclusive and does not recover the gap in this replay. The sixteen-second feature and its zero boundary
+are informed development choices; neither its success nor its fitted orientation is an autonomous discovery.
+
+The signed-integrator condition supplies the tighter representation test. Its action history differs, so its
+numbers must not be subtracted from the preceding table. On its own eight lives, final-third accuracy was:
+
+| readout of the existing 16 s integrator | accuracy |
+|---|---:|
+| Sign of the unrounded stored value | .775 |
+| Sign of the last written symbol, a neutral coin on the zero symbol | .765 |
+| Actual learned fifteen-symbol readout | .703 |
+| Same stored symbols, two groups with probabilities learned online | .761 |
+| Whole brain's mixed choice | .670 |
+
+The observer's reconstructed sum is **identical** to the stored value. Replaying independent fifteen-bin
+counts reproduces the native readout exactly. Its selected context and single-symbol readout also coincide
+on these events, so blaming a preference for longer contexts would be wrong here. The two-group readout
+improves over the native readout by .058 [.037, .084], without hidden-state training or additional observations.
+Most of the useful choice signal survives rounding. The clearer failure is **statistical inefficiency of the
+readout**: related numerical values are learned as separate cases, diluting limited evidence. Pooling supplies
+a useful prior about which values may share a prediction; it would be biased on a mapping that violates it.
+
+Selection contributes as well. On the frozen histories, seven causal two-group readouts over the bank's
+memory scales reach .780 when mixed alone, but .725 when inserted into the existing full mixture, with their
+individual predictions unchanged. This isolates an effect of the population's weight allocation, not proof
+that the brain needs fewer primitives. Correlated experts, their prior mass and their calibration require
+separate treatment. The native mixture also loses accuracy relative to its signed predictor on the second
+set of histories. No selector intervention here estimates its resulting closed-loop food return.
+
+**Proper prediction remains useful.** The matched-input filter improves final-third noisy-letter loss from
+1.000 to .981 bits on accepted tastes. On the signed histories, pooling lowers the native readout's loss
+from 1.000 to .980 bits, alongside its decision improvement. D70's conclusion that noisy-outcome prediction
+is the wrong scoring objective is not supported. Under common symmetric noise the action boundary is
+preserved; the [derivation and assumptions](../BOUNDS.md#prediction-belief-and-action) explain why.
+The recorded calibration bins also do not support a blanket claim of insufficient confidence: forecasts
+averaging .456 correspond to .460 observed letter frequency (652 accepted final-third tastes), whereas
+forecasts averaging .741 correspond to .564 (55 tastes). The latter is a sparse, correlated descriptive
+bin, not a calibration significance test. Strong forecasts can be too confident as well as weak ones unhelpful.
+
+**Two additional corrections.** The market's scoring-order defect changes issued versus scored predictions
+on 69/4,734 accepted tastes (342 tastes have cross-stream deletions). Correcting only the replay's scoring
+order has no final-third choice effect here; it remains a defect to repair before a new design claim.
+Separately, the drift world flips `worth`, and `_score` uses that same worth. Noise therefore changes the
+reward, not merely its report. At error .35 even the favourable colour has expected scored gain −.05 per
+meal; at .42 it is −.26. These are inference/less-harm tests, not demonstrations of profitable foraging.
+The action space and metric's abstention option must be acknowledged. No body, reward or interface was changed.
+
+### What this teaches about reusable components
+
+Distinguish **estimating a changing state**, **learning a mapping**, and **choosing among mappings**. The
+reference supplies the first problem's model, whereas the network pays to learn many separate mappings.
+After this diagnosis, the relevant primary source is
+[Veliz-Cuba, Kilpatrick & Josić (2016), §3.1, especially equation 3.4](https://www.colorado.edu/amath/sites/default/files/attached-files/velizcuba_siamrev16.pdf),
+read in the paper: a known changing-state model discounts evidence nonlinearly; a leaky sum is an approximation.
+It does not prescribe a universal module or teach the unknown model for us. A retrospective Poisson/Markov
+calculation gives a useful linear-memory scale around 17 s at the measured accepted rate; the assumptions,
+moment formulas and limits are in the check log, not a proposed tuned circuit.
+The channel-capacity calculation uses independent binary errors, as in
+[Shannon (1948), §12's binary-error example](https://web.mit.edu/6.441/spring05/reading/shannon1948.pdf),
+checked in the paper; it is not an estimate of information actually learned from the robot's correlated
+history. The reference's continuous hazard also approximates the world's Bernoulli flips at .0025 s steps;
+uncertain colour attribution and its finite parameter grid are larger unquantified model limitations.
+
+Our changed belief is specific: the useful statistic can survive in the representation while the learned
+readout fails to exploit its order and common structure. More capacity for independent cases can worsen
+the evidence burden. The next branch is **how local units learn when to share evidence across related
+values, while retaining distinctions when sharing is wrong**, followed by how selection distributes weight
+among redundant representations. A boundary supplied by us is a comparator, not the answer. Use opened
+development cases and counterexamples before proposing a component; preserve sealed evaluation.
+
+**Limits.** Four previously used seed pairs, one world family and one noise level; intervals are exploratory,
+not equivalence tests or a fresh confirmation. All online decoders use only past accepted labels, but the
+feature and memory scale were informed by earlier development. Fixed-history replays do not establish
+return under changed actions. No new circuit, physical cost or working control behaviour is claimed, so no
+new live behaviour demonstration or timestep-convergence claim is made. The original body and production
+brain files are unchanged. Current guidance now separates inference from profitable control on these rungs.
+
+**Reproduction and effort.** Base revision `9099ade2fdf7a14b3e02630b7b28906b0d937b79`; the pre-existing dirty
+changes were documentation/review files. Production source hashes, exact world text, flags and seed pairs
+are retained in [the audit JSON](/home/pilgrim/git/simple-learner/lab/v/noisy_path_audit.json). The final
+diagnostic source extends the initial recorder with score and native-symbol observers; all eight frozen
+fingerprints agree across the two recordings. Commands, collection times and failures are in
+[collection](/home/pilgrim/git/simple-learner/lab/v/noisy_path_collect.log),
+[scoring collection](/home/pilgrim/git/simple-learner/lab/v/noisy_scoring_collect.log),
+[signed collection](/home/pilgrim/git/simple-learner/lab/v/noisy_signed_collect.log),
+[initial formatting error](/home/pilgrim/git/simple-learner/lab/v/noisy_path_identity_error.log) and
+[replay mismatch](/home/pilgrim/git/simple-learner/lab/v/noisy_path_replay_ordering_error.log).
+Use `OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 LB_FINE=1 LB_LIVE=1 .venv/bin/python lab/noisy_path_audit.py collect`; the signed condition additionally needs `LB_LETTER=1`
+and `--signed --out lab/v/noisy_path_signed`. All three recordings use .0025 s, 1000 s lives, seed pairs
+137000–137003 and four workers, sequential jobs: 69.24 + 68.29 + 58.17 = 195.70 s wall time.
+Raw event records remain out of git at `/home/pilgrim/git/simple-learner/lab/v/noisy_path_{audit,scoring,signed}.pkl`
+(approximately 31–43 MB each). The notebooks cite reproducible kept scripts and small results:
+[recorder/analysis](/home/pilgrim/git/simple-learner/lab/noisy_path_audit.py),
+[replay](/home/pilgrim/git/simple-learner/lab/noisy_path_replay.py),
+[baseline replay results](/home/pilgrim/git/simple-learner/lab/v/noisy_path_replay.json),
+[signed replay results](/home/pilgrim/git/simple-learner/lab/v/noisy_signed_replay.json),
+[weight diagnosis](/home/pilgrim/git/simple-learner/lab/noisy_weights_check.py), and
+[checks](/home/pilgrim/git/simple-learner/lab/noisy_path_checks.py) / [check log](/home/pilgrim/git/simple-learner/lab/v/noisy_path_checks.log).
+Checks cover observer identity, exact scoring replay, prefix invariance (later data cannot affect earlier
+predictions), native-bin reconstruction and independent exhaustive state-path enumeration of the filter.
+`noisy_path_audit.py analyse` writes the baseline JSON; `noisy_path_replay.py` reads the scoring recording
+by default. For the signed replay use `--record lab/v/noisy_path_signed.pkl --out lab/v/noisy_signed_replay.json`.
+The common harness's recorded spending uses its nominal power allowance; it does not measure the new
+readouts' physical or communication cost. Those costs have not been compared here.
+The bounded diagnostic branch stops here: the input mismatch, stored information, learned readout and
+selection effects have been separated sufficiently to choose the next question. A larger sweep or another
+mechanism would not establish how the successful sharing assumption is learned.
+
+<a id="d74-learned-sharing"></a>
+## D74: can a readout learn which values should share evidence? (2026-11-17)
+
+**Before work.** D73's supplied sign grouping improves decoding, but does not explain how a reusable local
+component discovers useful sharing. Competing explanations are (a) learning a grouping from the available
+tastes is already feasible given numerical order, (b) the supplied boundary did most of the work, or (c)
+the result depends mainly on a strong preference for few parameters. A counterexample must also expose
+the cost of sharing when neighbouring values need different predictions. No brain or body change is proposed.
+
+**Sources and comparison.** Read Willems, Shtarkov & Tjalkens
+[1995, definition 6 and theorem 2](https://pure.tue.nl/ws/portalfiles/portal/1383848/Metis122608.pdf), and
+[1996, §§I–III, especially class II and equation 13](https://pure.tue.nl/ws/files/1481823/Metis122606.pdf).
+Their context weighting combines a shared Bernoulli parameter with finer partitions using sequential
+model evidence. It separates the cost of learning parameters from the cost of identifying a grouping.
+The 1996 ordered-interval construction is the diagnostic here; this is not a claim of a new algorithm.
+The project would add a bounded, physically local way to discover and maintain useful sharing, if justified.
+The earlier D40 longest-context heuristic is not this Bayesian weighting rule.
+
+Use the eight **existing signed-condition histories**, their exact 16 s native symbols, inferred labels
+and learning gate. Predict before each accepted label. Compare independent Beta(1/2,1/2) counts, D73's
+supplied two groups, and Bayesian averaging over contiguous partitions, with no boundary or orientation
+supplied. For an interval of m values the paper assigns equal prior mass 1/m to stopping and each split;
+also predeclare a stronger sharing prior: probability 1/2 of stopping, the remaining half uniform over
+the m−1 splits. These two priors, not a tuned sweep, distinguish order from a preference for simplicity.
+One fixed random permutation of the value order is an ablation, using the same observations and capacity.
+
+**Counterexamples and information budget.** These are artificial readout streams, not new robot worlds:
+15 uniformly sampled values arrive as a Poisson process at 0.6/s; the target is either a shifted threshold
+(index ≥4), alternating labels (index modulo 2), or an independent fair bit. A random orientation per seed
+is hidden from learners. Labels of the first two targets are flipped independently with probability .35;
+no hidden target enters learning. Use 24 seeds 174000–174023, 1000 s and a shared-prefix extension to
+10,000 s, and the same predictors without retuning. At .35 error the maximum binary-channel information
+is 1−H2(.35)=.0659 bits/label, about .0396 bits/s before further limitations; 600 labels spread over 15
+independent cases give only about 40 labels/case. No active exploration or interfering credit windows
+exist in this passive test. The fair-bit control has zero learnable target information.
+
+**Analysis, prediction and stopping rule.** Report causal noisy-label loss in bits and hidden-target
+decision accuracy separately, final third and whole life, with paired seed intervals; reused robot histories
+remain exploratory. Record posterior split weights, effective group count and exact count/update/wiring
+requirements. Validate against explicit enumeration on a small alphabet, check prefix causality and verify
+native independent-count reconstruction. Moderate-confidence prediction: ordered sharing recovers part of
+D73's advantage, permutation reduces it, and alternating labels penalise excessive sharing until enough
+evidence arrives. Null control should supply no persistent predictive gain. Exact Bayesian arithmetic is
+a reference, not a noise-surviving circuit or a control result. Budget: 35 minutes investigation, at most
+5 minutes single-job replay/benchmark compute, no simulator runs. Stop after these two priors and
+counterexamples; diagnose surprises before adding a mechanism. Then take the separate redundancy/weight
+branch analytically on recorded predictions if useful.
+
+**Observation.** The calculation passes independent enumeration on five symbols, likelihood identity,
+prefix causality and reconstruction of all eight native readouts. The declared job took 10.52 s wall,
+10.51 s CPU (including compilation/cache loading and checks), single process. Final-third results:
+
+| readout on the same native symbols | hidden-colour accuracy | noisy-label bits per accepted taste |
+|---|---:|---:|
+| independent probabilities | .7025 | .9997 |
+| supplied sign grouping, orientation learned | .7608 | .9796 |
+| learned partitions, paper's prior | .7206 | .9893 |
+| learned partitions, stronger sharing prior | .7185 | .9890 |
+| stronger sharing prior, scrambled value order | .5736 | .9943 |
+
+The learned paper-prior improvement over independent counts is +.0181, paired seed 95% interval
+[−.0183,.0512]; the stronger prior gives +.0160 [−.0227,.0492]. Neither establishes an accuracy gain.
+Both improve noisy-label loss by about .0105 bits/taste on these reused histories (intervals exclude zero),
+which does not establish better decisions. The supplied grouping's larger advantage remains unexplained
+by simply implementing exact Bayesian partition learning.
+
+The artificial cases expose the assumption. At 1000 s, a shifted boundary is learned: paper-prior accuracy
+.9809, independent .9620, fixed sign groups .7335. For alternating labels, independent counts reach .9597;
+the paper's sharing prior reaches .8069 and the stronger one .7034. The latter deficit is −.2562
+[−.2930,−.2177], paired over all 24 seeds. At 10,000 s the independent and both learned-partition readouts
+make no final-third errors on these sampled alternating streams; fixed sign grouping remains .5287.
+This is observed recovery, not an equivalence or universal guarantee. The fair-bit control stays near .5
+accuracy and 1 bit/taste; pooling reduces the independent counts' estimation loss without discovering signal.
+
+**Challenge to the explanation.** Could this be a broken Bayesian implementation or insufficient capacity?
+The mixture has every contiguous partition, including all independent values. It obeys its exact cumulative
+log-loss bound relative to independent counts on every recorded and artificial stream: at most 7.978 extra
+bits for the paper prior or 14 for the stronger sharing prior. Yet short-life decision accuracy can be much
+worse. The bound concerns total probabilistic loss, not decision accuracy in the final third. A small
+probability change across .5 can reverse an action without much change in that loss.
+
+Exact integrated likelihoods give a second check. For the supplied sign partition versus one pooled
+probability, both priors begin with odds 1:56: 5.807 bits of evidence are needed merely to make their
+posterior odds equal. The eight histories supply respectively 2.10, 9.94, 2.99, 5.70, 9.41, −.42, 8.38
+and .54 bits for that comparison over the **whole** life. Five do not overcome that prior odds scale;
+other possible boundaries also compete. These are model evidence ratios, not the amount of hidden-state
+information learned. The brain's state can be informative while identifying how to read it remains costly.
+The stronger sharing prior finishes with an expected 1.35–2.43 groups; scrambling order mostly favours
+one group. More groups alone therefore do not describe what is missing.
+
+**Cost and changed belief.** This exact diagnostic needs 120 interval records and 560 possible split
+products for 15 values; an observation touches up to 64 interval records, versus one of 15 independent
+count pairs. Each interval stores counts and two log likelihoods. Candidate splits require child-to-parent
+messages; exact arithmetic, state precision, routing, latency and physical energy are not costed. It can
+be expressed as a connected calculation, but does not meet the project's economical local-component claim.
+The supplied feature order is a substantial prior: its random permutation keeps all input information
+while making a useful grouping harder to express and learn. These results weaken the proposition that
+adding adaptive pooling alone is a sufficient cure. We now need an explanation of **how a useful ordering
+or relation between representations is made available cheaply**, and of the finite-life cost of learning
+that relation. Do not keep adding partition variants. Continue with the separately authorised selection
+and redundancy diagnosis; it needs no new readout or simulator run.
+
+*Correction, 2026-11-17 (D77): the conclusion above is narrower than "learning the readout is costly".
+D74 tested two priors within one model family, Bayesian averaging over contiguous intervals of the
+supplied value order, plus one scrambled-order ablation, on eight reused histories. Neither prior
+established a decision gain. That is all it shows. The paper-prior interval [−.018,.051] does not
+exclude recovering most of the supplied grouping's +.058, and the learned-versus-supplied difference was
+never tested directly. The 1:56 prior odds and the ~6-bit evidence requirement are properties of these
+two priors, not of the problem. Untested families include a monotone or threshold readout of the
+ordered value, a logistic readout of the raw sum (D70's graded readouts are one such family, under
+different conditions), and priors shared or learned across streams. Whether discovering a useful
+readout is inherently difficult remains open.*
+
+**Limits and reproduction.** These are passive, causal replays and artificial conditional-label streams,
+not changed robot lives. The real histories have correlated observations and a potentially misspecified
+stationary readout model; the artificial streams satisfy the declared conditional model. A single scrambled
+order is an ablation, not a distributional assessment of order dependence. No architectural, noise-survival,
+profitable-control or physical-cost claim follows. The 24 seeds and two priors were declared before results;
+there is no fresh-family confirmation. The earlier [D73 provenance](#d73-noisy-evidence) defines the robot
+recordings, while the synthetic configuration is fully specified above and in the script.
+Run `OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python lab/noisy_sharing.py`.
+Kept artifacts: [script](/home/pilgrim/git/simple-learner/lab/noisy_sharing.py),
+[results and source hashes](/home/pilgrim/git/simple-learner/lab/v/noisy_sharing.json),
+[run log](/home/pilgrim/git/simple-learner/lab/v/noisy_sharing.log),
+[post-run evidence checks](/home/pilgrim/git/simple-learner/lab/noisy_sharing_analysis.py),
+[check log](/home/pilgrim/git/simple-learner/lab/v/noisy_sharing_analysis.log) and
+[per-life evidence](/home/pilgrim/git/simple-learner/lab/v/noisy_sharing_evidence.json).
+
+<a id="d75-redundant-selection"></a>
+## D75: does copying a predictor change what the brain believes? (2026-11-17)
+
+**Before work.** D73 separated a further loss in the selector. Does multiplying a representation increase
+its influence without adding observations or predictive information? The alternatives are genuine new
+evidence, a prior-weight effect, and the ongoing redistribution of weight to predictors. The smallest
+diagnostic copies a predictor's exact recorded forecasts and sleep/wake pattern; no information is added.
+On the eight signed-condition histories copy either the default or the 16 s signed predictor into eight
+identical instances. Compare the existing equal-weight rule, dividing only initial weight among copies,
+and dividing both initial weight and subsequent redistributed weight. Preserve all recorded scored
+probabilities to separate this from D73's scoring-order defect. Assess probabilities, action changes,
+hidden-colour accuracy and noisy-label loss; no closed-loop claim.
+
+**Theory, predictions and budget.** Specialist weighting is the standard model for sleeping predictors
+([Freund et al., 1997](https://cseweb.ucsd.edu/~yfreund/papers/SpecializedExperts.pdf)); priors over redundant
+models are a known issue ([George, 2010](https://doi.org/10.1214/10-IMSCOLL611)).
+For identical copies, their aggregate likelihood update is unchanged if their total initial weight is
+preserved. Uniform fixed sharing among individual instances breaks that invariance unless the shares
+are divided too. Eight equal-weight copies have three extra bits of prior odds against an uncopied
+competitor when all are awake; this is not eight independent pieces of evidence. Predict exact invariance
+when both masses are conserved, including with sleepers; uncertainty concerns the practical effect's
+size and sign on these histories. First verify the algebra on a small independently calculated example,
+then replay. Budget 15 minutes analysis/code, at most 1 minute single-process compute. Stop after these
+two copied predictors; do not infer how to recognise approximate duplicates from exact-copy invariance.
+
+**Observation and inference.** All eight original selectors reconstruct exactly. Eight copies of the default
+change 3.53% of final-third choices; eight copies of the signed 16 s predictor change 3.40%. Signed-copy
+accuracy rises from .6698 to .6802 (+.0104 [.0081,.0124]); default-copy accuracy rises .0060 with an
+interval crossing zero. Dividing initial mass alone leaves almost the same final-third effect. Dividing
+initial **and redistributed** mass gives the original predictions within 8.9e-16 and no changed final-third
+choices. Independent arithmetic and a random sleeping-predictor example confirm this identity. Without
+redistribution, conserving initial mass alone suffices. The final job took .91 s wall and .91 s CPU; an
+earlier identical numerical run took .97 s while its provenance label was subsequently clarified.
+
+This establishes a prior/redistribution effect without new information; it is small on these examples and
+does not explain the full noisy-feedback gap. It does not justify fewer predictors or deletion of correlated
+ones: partially overlapping predictors can supply complementary evidence. Exact clone identity was supplied.
+Also, the current network allocates selector weights **per stream**, not per grown block. Growing a block
+within a stream does not itself add an outer weight. This result concerns additions to the repertoire and
+the meaning of evidence weights, not an explanation of all previous capacity-scaling curves.
+
+**Source limits and next branch.** Freund et al. §3.1 and figure 2 were read to verify awake-only updates
+and conservation of the awake weight total. George's primary abstract was accessible, but the full-text
+fetch failed; only the existence and purpose of dilution priors are attributed to that source. The exact-copy
+algebra and tests here do not depend on unverified details of those proposed priors. No new live controller
+or circuit is claimed. The generic requirement is to distinguish new representation from a new grant of
+prior influence, while charging the cost of deciding what is redundant. The next useful work is the
+programme's resource audit: which costs and allocation limits actually change as the present capacity
+knob increases? This can begin from constructor code and existing recordings, without a performance sweep.
+
+Reproduce with `OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python lab/noisy_redundancy.py`.
+[Script](/home/pilgrim/git/simple-learner/lab/noisy_redundancy.py),
+[raw comparison and provenance](/home/pilgrim/git/simple-learner/lab/v/noisy_redundancy.json),
+[run/check log](/home/pilgrim/git/simple-learner/lab/v/noisy_redundancy.log).
+Its common summariser calls the reference `independent`; the file explicitly identifies this as the
+unmodified selector, not D74's independent symbol counts. Fixed histories, one family and four reused
+seed pairs remain the scope. Conservation is an algebraic/numerical identity, not a statistical tie claim.
+
+<a id="d76-resource-floor"></a>
+## D76: what does the current capacity number count? (2026-11-17)
+
+**Before work.** Return to the goal of economical local adaptation with additional resources. D74's exact
+sharing calculation carries substantial machinery; D75 shows that extra predictors can also alter priors.
+The next question is whether the existing scaling axis measures total material, learnable capacity or an
+allocation preference. The older `size_count.py` result concerns an earlier arm without rhythm trackers;
+do not transfer its counts to the current design.
+
+Inspect constructors, learning/allocation and selection code, then instantiate (without taking a simulator
+step) the frozen `net10kc60SFBLMR` at P=560,1120,2240,4480 with `LB_FINE=1 LB_LIVE=1`, and the D70/D73
+signed variant with `LB_LETTER=1`. Count fixed categorical units, per-stream capacities, immediate free
+slots and over-capacity units separately; state uncounted clocks, integrators and acquisition state.
+Use D73's already recorded final allocations as an independent check. Code inspection predicts a fixed
+birth cost that can exceed small nominal P, because categorical units are constructed regardless of their
+stream's capacity. Check this rather than reading P as hardware size. Also identify communication that
+currently requires global scans. Budget 10 minutes static audit and at most 1 minute constructor/check
+compute, single job, no simulation or sealed reads. Stop at a corrected resource interpretation; redesigning
+allocation and claiming new scaling require a separately frozen comparison.
+
+**Observation.** Independent alphabet arithmetic agrees with actual constructor objects. The frozen arm
+has 10 event streams (20 categorical units), 60 clock streams (300), 56 integrator streams (672) and
+42 rhythm streams (1050): **2042 fixed units before any learning**, at all four nominal capacities.
+
+| nominal P | sum of initial stream allowances | already allocated categorical units | immediately unused allowance |
+|---:|---:|---:|---:|
+| 560 | 504 | 2042 | 10 |
+| 1120 | 1008 | 2042 | 100 |
+| 2240 | 2184 | 2042 | 664 |
+| 4480 | 4368 | 2042 | 2488 |
+
+Unused allowance is summed only where a stream's allowance exceeds its existing units. It cannot be
+obtained by subtracting the two middle columns: other streams already exceed their allowances. It is
+an instantaneous growth opportunity, not a global material reserve. The signed variant adds 105 fixed
+units and seven streams; its 2147-unit birth cost is also independent of nominal P. Adding this feature
+also changes the division of P among streams, so its effects are not a pure addition at fixed resources.
+
+The eight existing 1000 s frozen recordings at P=2240 end with 2722–2781 allocated units; the signed
+recordings end with 2702–2839. No extra life was run. These confirm that P is not an enforced total cap.
+`Net.__init__` creates every categorical unit regardless of its quota. `_room` moves quotas through the
+market; it can take quota from a stream with no grown leaf to remove. It never checks a global unit count
+for this arm. The separate `POOL` mode's global check is not enabled here. Thus the explanation is in
+allocation semantics, not stochastic uncertainty about how many units exist.
+
+**Other costs and locality.** The count excludes 60 independently maintained clocks, 56 (signed: 63)
+integrators, the 120 complex resonators allocated at acquisition, up to six phase/rate trackers and their
+covariances, default/controller state, stream histories, indices and connectivity. Categorical units also
+carry counts and bookkeeping; a unit is not a physical bit or transistor. The recorded harness's nominal
+brain power does not measure this machinery. The current code scans every stream for prediction and
+learning, reduces active weights globally, scans other streams when allocating capacity, and ranks
+acquisition peaks globally. Some work might be distributed across local connections, but the wires,
+messages, response latency and energy of doing so are not accounted for by the present implementation.
+
+**Changed interpretation and next branch.** The observed performance gains remain evidence for more useful
+learned representation under different stream allowances. They do not establish the advertised doubling
+of total material or economy. A fixed starting cost does not invalidate all scaling, but changes the axis
+and the small-brain comparison substantially. The next useful investigation is an explicit resource
+contract for the existing design: initial state, reserved capacity, live allocation and communication
+must remain distinct, and any total cap must actually constrain every allocation. Before another curve,
+reconcile retained frozen comparisons with actual resources and their original success criteria. If those
+logs lack allocation/activity histories, mark the evidence missing and design only the smallest paired
+instrumented replay required. Do not quietly relabel old P values as measured material or silently fix
+allocation while comparing against old lives. No architecture or body change is selected by this audit.
+
+**Provenance.** Base revision remains `9099ade2fdf7a14b3e02630b7b28906b0d937b79`; production files are
+unchanged. [Constructor audit](/home/pilgrim/git/simple-learner/lab/noisy_resource_audit.py) captures the
+brain before `Life.step`, using `(world)` only to construct the existing body. The seed is 137000, ordinary
+body, .0025 s configuration, **zero simulator steps**. Run with the three maths-thread variables set to 1,
+then `.venv/bin/python lab/noisy_resource_audit.py`, and separately the same command with `--signed`.
+[Frozen JSON](/home/pilgrim/git/simple-learner/lab/v/noisy_resource_frozen.json) and
+[signed JSON](/home/pilgrim/git/simple-learner/lab/v/noisy_resource_signed.json) retain all per-stream counts,
+source hashes and the existing-record hashes; [frozen log](/home/pilgrim/git/simple-learner/lab/v/noisy_resource_frozen.log)
+and [signed log](/home/pilgrim/git/simple-learner/lab/v/noisy_resource_signed.log) record checks and times.
+Constructor/check work took .35 + .33 s wall, .33 + .32 s CPU. The earlier `size_count.log` remains correct
+for its stated earlier arm; it is not evidence for these later birth counts.
+
+**Frozen-record reconciliation, within the same audit budget.** The kept sequence, timing and combination
+pickles contain 360, 360 and 240 lives respectively, including references. Recomputing their original paired
+bootstrap reproduces every displayed median and interval. The original criterion (lower 95% bound of
+final-third gap closure above .5) still yields highest sequence rungs none/11/11/17, timing none/7/5/7,
+and no passing combination rung across the four P values. Thus the performance summary survives this
+audit; the material interpretation does not. The candidate's eight-field result stores a spending proxy,
+execution time, a best/max **single-stream** grown count, births/removal-event counters and label loss.
+It contains no total or peak allocation history, communication count or measured brain energy. Cascading
+removals are not fully counted by those event totals, so total allocation cannot be reconstructed by
+subtracting them from births. Original code hashes and flags are also not embedded in these old pickles;
+the freeze prediction record supplies the reported flags, not an independently verified source snapshot.
+[Reconciliation script](/home/pilgrim/git/simple-learner/lab/noisy_resource_records.py),
+[raw-file hashes and all comparisons](/home/pilgrim/git/simple-learner/lab/v/noisy_resource_records.json),
+[check log](/home/pilgrim/git/simple-learner/lab/v/noisy_resource_records.log); .034 s wall and CPU.
+
+**Resource contract for the next comparison.** Count every allocated categorical unit, including fixed
+symbols, through actual creation and removal, with recursive removals counted individually. Record initial,
+maximum, final and time-integrated allocation (unit-seconds), plus a separate provisioned reserve. Count
+other state (clocks, integrators, acquisition, trackers, histories and connections) separately; do not call
+a unit a physical bit or convert software operations to joules without a substrate model. Record prediction
+calls, active readouts, count writes, allocation searches and inter-unit messages separately from reward.
+An unchanged-behaviour observer must preserve full-life fingerprints before any comparison uses it.
+If a later design claims total capacity B, initial construction must fit B and every creation must reserve
+space before it happens; quota transfers are not reclaimed material. A configuration below its fixed
+requirements is infeasible under that contract, not a smaller successful brain. The next discriminating
+run is one matched seed pair at the low and high historical allocation settings on an already-opened
+sequence case, plus the all-food control, measuring this account before changing the allocator. That is
+development instrumentation, not a new scaling curve or a licence to alter the previous frozen results.
+
+<a id="d77-resource-observation"></a>
+## D77: what do the extra resources buy? (2026-11-17)
+
+**Before work.** The goal is economical in-life adaptation that uses additional resources. The decision this
+cycle serves: should the next change go in the **representation** (what the streams can express), its
+**learning rule** (how readouts and weights learn from what is expressed), or **resource allocation** (where
+units go and what they cost)? D74 is first narrowed (dated correction there): it tested two priors in one
+model family and did not establish that discovering a useful readout is inherently difficult. So it does not
+by itself point to the learning rule. D76 showed nominal P is a stream-allowance setting. Here we finish its
+resource contract by observing the existing brain. No brain, body or allocator change.
+
+Competing explanations for the frozen sequence gain from P=560 to P=4480 (rung 17, 300 s: gap closed
++.29 to +.81):
+(a) *allocation of useful representation*: extra allowance becomes grown blocks in the streams that end up
+speaking and saving bits, so unit-seconds where predictions come from should scale with P;
+(b) *indiscriminate growth*: most extra units go to streams that rarely speak or save no bits, so material
+and activity scale with P while useful representation grows little, and the all-food control (nothing to
+learn) grows almost as much;
+(c) *learning, not material*: comparable allocation in useful streams at both P, with the gain coming from
+changed learning dynamics, such as the market moving allowance or different selector histories.
+Distinguishing measures: the family breakdown of allocated units, unit-seconds and births/removals; the
+speaking share and bits saved over the default by family; all-food growth against sequence growth;
+writes, prediction evaluations and messages against P.
+
+**Design.** One matched seed pair (seed 142000, red then blue as poison) from the already-opened frozen
+sequence record. Seq rung 17 (300 s) and the all-food control world (`stage2_lang/worlds.py` `allfood`,
+300 s) at P=560 and P=4480, arm `net10kc60SFBLMR`, `LB_FINE=1 LB_LIVE=1`, .0025 s step. Each life runs
+twice, observed and unobserved; observation only wraps methods to count. **Identity check:** full-life
+state fingerprint and result tuple equal between observed and unobserved runs, and the seq-17 tuples equal
+the historical pickle (all fields except wall time). Any mismatch voids the measurement. Counts follow
+D76's contract. Allocated categorical units through every creation and removal, recursive removals
+individually, with cause (on-demand recycling, duplicate removal, a market transfer from another stream).
+Initial, peak, final and time-integrated allocation (unit-seconds). Sum of stream allowances
+(provisioned reserve). Tally writes, history writes, integrator and weight updates. Prediction calls,
+firing evaluations, speakers per prediction. Messages: stream to mixer, mixer to stream, unit to part
+(firing reads, credit), cross-stream allocation reads, and global scans. A software count is not a
+physical bit or joule.
+
+**Predictions (before running).** Fingerprints identical (high confidence). Peak allocation about 2042 plus
+~500 at P=560 and plus several thousand at P=4480 (historical births 503 and 7664; moderate). Prediction:
+(b) dominates. Most extra units sit in clock, rhythm and integrator streams. The all-food lives at P=4480
+grow at least half as much as the sequence lives (contradictions arise from noise and eaten-colour changes
+too). Firing evaluations scale roughly with allocated units (60% confidence for all three). If instead the
+extra units concentrate in the streams that speak, (a) gains support.
+
+**Budget and stopping rule.** 16 lives, about 6 min compute as one job (8 workers, one maths thread each),
+60 min investigation. Stop after this pair. Any allocator change or new curve needs a separate frozen
+comparison. Exploratory, n=1 pair: no statistical claim across seeds.
+
+**Follow-up declared after seeing the first observation (exploratory).** On the same seq-17 pair, two allowance
+ablations, applied after construction and before the first step (stream allowance and market base both set).
+(A) Low setting overall, but the 10 event streams get the high setting's allowance (26 each instead of 3).
+(B) High setting overall, but the event streams are held to the low setting's 3. If A comes close to P=4480
+and B close to P=560, the gain is bought by event-stream growth and the remaining ~1350 extra units buy
+nothing on this pair. A hand-set allowance is a ruler, not a design. Four lives, observed, under 1 min.
+
+**Second follow-up, declared after the one-pair ablation (exploratory).** One pair cannot separate the
+ablation's pattern from life-to-life noise. Rerun the four allowance settings (low, A, B, high) on all ten
+historical seq-17 pairs (142000–142009, already opened). Score them with the original metric (share of the
+base-circuit-to-told-colour gap closed in final-third efficiency, paired bootstrap over seed pairs, 2000
+replicates, using the recorded circuit and told lives). Readings: A's interval overlapping high and excluding
+low means event-stream room suffices; B near high means the growth elsewhere carries it; both
+intermediate means an interaction. 40 lives; the low and high lives must reproduce the record.
+
+**Observation.** *Identity:* all eight lives are bit-identical observed and unobserved (state fingerprint
+and result tuple). The four seq-17 lives reproduce the historical record in every behavioural field.
+One life's bits-per-taste diagnostic differs from the record by 1 ulp (.8250735388177708 then, ...709
+now; cause not traced, plausibly floating-point evaluation order). After the first execution the check
+was changed to compare that diagnostic within 1e-12; the first execution's failure is kept in this note.
+The ten-pair rerun reproduces all 40 historical low/high lives in every behavioural field.
+
+*What the matched pair shows (seq 17, means over red/blue):*
+
+| measure, 300 s life | P=560 | P=4480 | all-food, either P |
+|---|---:|---:|---:|
+| units at birth / peak / time-averaged | 2042 / 2052 / 2052 | 2042 / 4299 / 3658 | 2042 / 2042 / 2042 |
+| births / recycled on demand / duplicates / taken by the market | 498 / 488 / 0 / 0 | 8234 / 5828 / 42 / 109 | 0 |
+| grown at end: event / clock / integrator / rhythm streams | 10 / 0 / 0 / 0 | 250 / 1150 / 760 / 95 | 0 |
+| tally writes / history writes / integrator updates | 24k / 25k / 86k | 88k / 21k / 84k | 22k / 22k / 87k |
+| prediction calls / units scanned / firing evaluations | 5.6k / 12.2M / 12.3M | 5.4k / 21.1M / 31.5M | 5.2k / 11.3M / 11.3M |
+| messages: forecasts to mixer / part-to-block reads / credit | 671k / 58k / 11k | 664k / 13.4M / 167k | 628k / 0 / 22k |
+| global scans of all 168 streams | 949k | 905k | 880k |
+| gain over life / last third; bits per accepted taste | −54 / −14; .988 | +26 / +24; .775 | +202 / +65; .035 |
+
+At P=560 the brain is effectively fixed. Each stream's allowance is 3, so 98% of births are recycled
+almost immediately and only 10 grown units survive. At P=4480, 85% of the surviving growth is in clock,
+integrator and rhythm streams. All-food lives grow nothing at either setting and are identical across P.
+Their accepted taste always confirms the brain's own colour, so no unit is ever contradicted. Extra
+allowance therefore costs nothing when nothing is surprising. Communication with the mixer (about 2,200
+forecasts a second, about 120 of 168 streams speaking at every prediction) and global stream scans are
+set by the fixed repertoire, not by P. P buys more evaluations (2.6×), tally writes (3.6×), part reads
+(230×) and credit messages (15×); CPU rose 1.9–2.2×.
+
+*Which part of the extra material buys the gain?* With one pair, event-stream room alone (A) looked
+useless. Over ten pairs (original metric, share of gap closed, 95% interval):
+
+| allowance setting | gap closed | units at end | grown in event / other streams |
+|---|---:|---:|---:|
+| P=560 | +.29 [+.19,+.39] | 2052 | 10 / 0 |
+| A: P=560, event streams at 26 | +.71 [+.54,+.85] | 2266 | 214 / 10 |
+| B: P=4480, event streams at 3 | +.47 [+.28,+.63] | 4104 | 44 / 2017 |
+| P=4480 | +.81 [+.74,+.88] | 4270 | 262 / 1966 |
+
+A − low +.41 [+.24,+.59]; high − A +.10 [−.04,+.26], which is inconclusive and not a tie. B − low +.17
+[+.06,+.29]; high − B +.34 [+.16,+.55]. About four-fifths of the high setting's improvement is reached
+by 214 units in event streams, about a tenth of its extra material. The other ~2000 grown units help
+measurably only when event streams are starved (B), and add an unresolved +.10 on top of them.
+
+**Inference.** On this sequence family, what extra resources buy is mainly room in the few streams whose
+contexts match the task. The current allocator gives every stream an equal allowance. Growth follows
+contradiction, which arises in every stream, and the market moves little (115–157 transfers a life). So
+most material and most per-step work go where little is saved. This points the next change at
+**resource allocation**: material directed by measured usefulness, under a real total cap. It does not
+point at the representation's content (the useful streams already exist and use room well) or at the
+readout's learning rule (D74's correction leaves that open, and nothing here implicates it). The
+representation's breadth is a separate, P-independent cost. All 168 streams are scanned and about 120
+forecast at every prediction, even in all-food lives, and that matters for scaling communication.
+
+*Correction, later the same day ([D78](#d78-allocation-rules)): "what extra resources buy is mainly room in
+the event streams" is too strong. A weight contest gave fewer than 60 event units and still beat the
+event-only ruler, and the unchanged design's large clock growth helps for reasons not yet explained.
+Event-stream room is sufficient for much of the gain, not the only useful place. The direction (allocation)
+stands.*
+
+**Limits.** Exploratory: one family, one rung, 300 s, development seeds already opened, two follow-ups
+declared after seeing data. Which streams are useful is task-specific: on the timing ladder clocks or
+rhythm trackers should be. So the hand-set allowance is a ruler; the generic question is whether a local
+measure of usefulness can steer material as well. Software counts are not physical bits, wires or
+energy; the bits-saved signal the market uses already exists but has not been tested as an allocator.
+
+**Changed belief and next branch.** Before: extra P mostly buys indiscriminate growth (partly right for
+material, wrong for benefit), and the all-food control grows too (wrong). Now: the gain is concentrated,
+and the waste is in where the allocator sends material. Next, under PROGRAMME branch 2: freeze a comparison
+of allocation rules under an enforced total cap (equal allowance; the existing market; allocation by bits
+saved; recycling), with the hand-set allowance as a ruler. Run it on seq and timing together, because a rule
+tuned to one family would just hard-code A. Predeclare the margin for "as good as P=4480 with less material".
+
+**Provenance.** Base revision `9099ade`; production code unchanged; uncommitted documentation and lab
+scripts as `git status` shows. [Observer](/home/pilgrim/git/simple-learner/lab/noisy_resource_observe.py),
+[log](/home/pilgrim/git/simple-learner/lab/v/noisy_resource_observe.log),
+[raw counts and hashes](/home/pilgrim/git/simple-learner/lab/v/noisy_resource_observe.json);
+[one-pair ablation](/home/pilgrim/git/simple-learner/lab/noisy_resource_ablate.py) and
+[log](/home/pilgrim/git/simple-learner/lab/v/noisy_resource_ablate.log);
+[ten-pair ablation](/home/pilgrim/git/simple-learner/lab/noisy_resource_ablate10.py),
+[log](/home/pilgrim/git/simple-learner/lab/v/noisy_resource_ablate10.log),
+[JSON](/home/pilgrim/git/simple-learner/lab/v/noisy_resource_ablate10.json). Run each with the three
+maths-thread variables set to 1. Walls: 23 s (16 lives, 8 workers), 13 s, 166 s (80 lives).
+
+<a id="d78-allocation-rules"></a>
+## D78: can a local usefulness signal direct material as well as the hand-set ruler? (2026-11-17)
+
+**Before work.** The goal is a brain that uses additional resources economically, with no designer deciding
+where. D77 found that most of the sequence gain comes from room in ten event streams, while equal
+allowances send 85% of the material elsewhere. Can a generic, local rule, told nothing about which streams
+matter, put material where it pays, under a total cap that is actually enforced?
+
+*Diagnosis of the current allocator (code, `grownet.Net.learn` and `_room`).* A stream grows whenever its own
+deepest firing unit has seen both letters, whether or not its forecast affected the brain's choice. Every
+stream learns at every accepted taste, so growth demand is spread over all 168 streams, and equal
+allowances turn stream counts into material. Clocks (60 streams) and integrators (56) take most of it.
+The existing market moves allowance only to a stream whose cumulative bits saved over the default exceed
+one bit per extra unit. That rarely happens: in D77's ablation the stream carrying the mixture (weight
+about 92 against under 1.5 for the others) had saved −5.5 and +10.6 bits. The market can also transfer
+allowance without removing a unit, which is why P is no cap (D76). Two candidate signals already exist:
+the stream's **mixture weight** (its predictive record relative to the other forecasters and the default),
+and each unit's **use trace** (credit when its stream spoke and was right).
+
+*Sources.* Dekel, Shalev-Shwartz & Singer,
+[2009, §V](https://oferdekel.github.io/pdf/2009DekelShSi.pdf) (text extracted from the PDF and read): the
+shallow perceptron prunes each new path so that "the number of nodes in the current context tree never
+exceeds the number of prediction mistakes made so far". Growth is bounded by the predictor's own errors.
+Bartlett, Pfau & Wood, [ICML 2010](https://mlanthology.org/icml/2010/bartlett2010icml-forgetting)
+(abstract only; the full text was not retrieved): constant-memory inference by forgetting a subset of
+data, the deletion rule not verified here. Dohare et al. 2024 (already cited in AGENTS, not re-read now):
+recycling low-utility units with protection for the young is the recycling comparator. What this project
+adds, if anything: allocation among many independently growing streams by a pairwise, local comparison of
+predictive record, with no global ranking.
+
+*Rules compared (each with total units capped at B = fixed units + growth pool G):*
+- **E, equal**: every stream gets fixed + G/168, market off. The present design under an enforced cap.
+- **M, market, cap enforced**: E's allowances plus the existing market. A transfer happens only when a
+  unit is actually removed from the poorer stream, and only when a birth is due.
+- **W, weight contest** (new): a shared pool. While it has free units any stream may grow. When it is
+  full and a birth is due, the stream draws one other stream at random that has a grown leaf. If that
+  stream's mixture weight is lower, it recycles that stream's least-used of four sampled leaves and grows.
+  Otherwise it recycles its own leaf, as now. Pairwise, so no global ranking is needed.
+- **U, use recycling** (Dohare-like comparator): a shared pool; when full and a birth is due, the least-used
+  of four leaves sampled from all streams is recycled.
+- **R, ruler** (sequence only): G given to the ten event streams, nothing to the others; hand-set.
+
+The pool's free count is one shared number, like a supply that every stream draws from. That is a
+physical resource rather than a ranking, but it is a global signal, noted as a limit. Each rule's random
+draws come from its own generator, seeded per life.
+
+*Design.* G = 258 (B = 2300, about A's material in D77). Sequence rung 17 (300 s) and timing rung 3
+(3000 s, which had a capacity effect: +.65 at P=560 against +.82 at 2240), arm `net10kc60SFBLMR`,
+`LB_FINE=1 LB_LIVE=1`, .0025 s step. Stage 1 uses development seeds 142000–142009 (already opened, so
+exploratory). Metric: share of the gap closed between the recorded base circuit and the told-colour brain,
+final-third efficiency, paired bootstrap over seed pairs, 2000 replicates (D76's method). A neutral check
+runs the allocation hooks with no rule change, on a seq pair at P=560 and P=4480, and must reproduce the
+record. *Stage 2, only if a rule beats E on both families in stage 1*: that rule and E, frozen, on fresh
+seeds (a range checked unused in the ledger), both families.
+
+*Predictions.* E ≈ historical P=560 on both families (high confidence; E's allowance is close to P=560's).
+M ≈ E (70%; its signal rarely fires). R ≈ D77's A, about +.7 (75%). W beats E on sequences (60%), possibly
+approaching R, but may fail through a chicken-and-egg problem: a stream must grow before its weight rises
+(it then loses contests early). W ≥ E on timing (55%). U ≈ E or worse on sequences (60%): clock streams
+speak often and are often right, so their units earn use without beating the default.
+*Criteria, declared now.* "Better than equal at the same cap": the interval of (rule − E) excludes 0.
+"As good as the large uncapped brain with less material": lower bound of (rule − historical reference)
+above −.10 (references: seq P=4480 +.81, timing P=2240 +.82). Fewer than two mechanism variants (W, U)
+are new; if neither helps, return to diagnosis rather than adding a third.
+
+*Budget.* Stage 1: about 30 min compute as one job (8 workers, one maths thread each), mostly timing.
+Stage 2 about as much. Stop after stage 2 or after stage 1 if nothing beats E.
+
+**Stage 1 observation, sequences (timing still running when written).** The neutral check passes: with the
+hooks installed and no rule changed, the seq-17 lives at P=560 and 4480 (seed 142000 pair) reproduce the
+record. Every capped rule held its cap (no CapBroken; peak ≤ 2300). Seq rung 17, ten development pairs,
+share of gap closed:
+
+| rule (cap 2300 units) | gap closed | − E | grown at end: event / clock / integrator / rhythm | recycling activity a life |
+|---|---:|---:|---|---|
+| E equal | +.19 [+.11,+.29] | — | 10 / 59 / 56 / 39 | none |
+| M market, cap enforced | +.35 [+.24,+.45] | +.15 [−.00,+.31] | 27 / 37 / 47 / 51 | 241 transfers |
+| W weight contest | **+.61 [+.42,+.76]** | **+.41 [+.25,+.53]** | 50 / 61 / 102 / 45 | 18,346 contests, 5,442 won |
+| U use recycling | +.29 [+.21,+.36] | +.09 [−.00,+.19] | 35 / 52 / 143 / 28 | 17,873 evictions |
+| R ruler (event streams) | +.54 [+.46,+.63] | +.35 [+.25,+.47] | 246 / 0 / 0 / 0 | none |
+| historical P=560 (2052 units) | +.29 [+.19,+.39] | +.10 [−.01,+.21] | | |
+| historical P=4480 (~4270 units) | +.81 [+.74,+.88] | +.61 [+.53,+.72] | | |
+
+W beats equal allocation at the same cap. Against the large uncapped brain it is −.20 [−.41,−.03]: it
+fails the declared "as good as" margin (−.10), with 54% of the material. Two surprises. (1) W beats the
+hand-set ruler while putting only 50 units in event streams: mixture-weight contests find useful material
+in integrator and rhythm streams too, so D77's "the gain is the event streams" is too simple. Event-stream
+room is *sufficient* for much of the gain; it is not the only useful place. (2) R (+.54) is below D77's
+similar ablation A (+.71). A kept the market on and gave the other streams allowance 3 rather than their
+fixed size. Small configuration changes move these brains by about .1–.2 across ten pairs, so unpaired
+comparisons between near-identical settings should not be read closely. E is slightly below historical
+P=560 (−.10, inconclusive), though it spreads one growth unit to every stream. W also churns: about 5,400
+contested recyclings in a 300 s life, against fewer than 300 in M. Churn costs writes and is not charged
+by this metric.
+
+**Stage 1 observation, timing** (rung 3, 3000 s, ten development pairs; job wall 39.7 min including sequences):
+
+| rule (cap 2300) | gap closed | − E | grown: event / clock / integrator / rhythm | recycling a life | CPU a life |
+|---|---:|---:|---|---|---:|
+| E | +.67 [+.56,+.77] | — | 10 / 60 / 56 / 41 | none | 132 s |
+| M | +.68 [+.60,+.76] | +.00 [−.14,+.19] | 32 / 126 / 1 / 6 | 246 transfers | 125 s |
+| W | +.72 [+.59,+.83] | +.04 [−.13,+.24] | 5 / 50 / 29 / **174** | 236,752 contests, 36,899 won | 265 s |
+| U | +.70 [+.65,+.78] | +.03 [−.10,+.19] | 40 / 47 / 137 / 34 | 241,740 evictions | 322 s |
+| historical P=560 | +.65 [+.44,+.84] | −.03 [−.23,+.23] | | | |
+| historical P=2240 | +.82 [+.74,+.91] | +.14 [+.02,+.30] | | | |
+
+No rule is distinguishable from equal allocation on this rung. The headroom is small (the large brain is only
++.14 above E), so this test had little power to show a benefit; inconclusive is not no effect. Qualitatively,
+the weight contest sent sequence material mostly to integrator and event streams, and timing material mostly
+to rhythm streams. Each family's material went to the representation that family should need, without being
+told. That is a hint of genericity, not evidence. The contest churns heavily in long lives: about 12 contested
+recyclings a second. The doubled CPU is partly this implementation's scans and is not a physical cost.
+
+**Gate and deviation.** The declared stage-2 gate (beat E on both families) is not met: W beats E on
+sequences only. Recorded deviation: a stage 2 for W is still run, as a separately declared replication,
+because W's timing interval is inconclusive, not negative. Selection is stated: W was chosen as the best of
+four rules on development sequences. *Stage 2 (declared before running):* W against E, frozen code
+(`alloc_rules.py`, `alloc_compare.py` as hashed in the output), fresh seeds 176000–176009. The ledger and
+scripts show no use of seeds ≥150000 except 174000–174024. Both families, with circuit and told-colour
+references run fresh on the same seeds. Confirmatory question: on sequences, does W − E exclude 0?
+(prediction: yes, 75%). Timing: report W − E. "No harm" may be claimed only if its lower bound exceeds −.10
+(prediction: it will not be resolvable, 65%). Neither outcome licenses "as good as the large brain"; that
+margin failed in stage 1. Budget about 25 min, one job.
+
+**Stage 2, sequences (fresh seeds 176000–176009).** E +.29 [+.21,+.37]; W +.57 [+.45,+.69]; **W − E +.28
+[+.12,+.45]**, as predicted. The contest's sequence advantage at equal capped material replicates on fresh
+seeds of the same family. It is smaller than on development seeds (+.41), as expected after selecting the
+best of four. Material in W: 54 event, 47 clock, 121 integrator, 36 rhythm grown units; about 5,200 contested
+recyclings a life.
+
+**Next, declared while timing stage 2 runs: is W's shortfall material or rule?** A material curve under a real
+cap: W and E at growth pools G = 258, 1000 and 2228 (totals 2300, 3042, 4270; the last equals the large
+brain's final allocation), sequence rung 17, seeds 176000–176009 (now development), against the historical
+large brain on seeds 142000–142009. That reference is unpaired, read only roughly. Readings: if W at 4270
+units reaches about +.8, the large brain's extra performance is bought by material that W uses as well, and
+W spends less at lower caps. If W plateaus below, the rule itself (its churn, or its signal) limits it.
+Predictions: W rises with G and reaches +.7 to +.8 at G=2228 (55%); E rises more steeply than W; the W − E gap
+narrows at large G (65%). Budget about 6 min. This is a scaling curve under a real cap, the thing D76 said
+the old curves were not.
+
+**Stage 2, timing (fresh seeds 176000–176009, rung 3, 3000 s).** E +.68 [+.55,+.80]; W +.68 [+.61,+.78];
+**W − E +.00 [−.09,+.13]**. The lower bound is above the declared −.10 margin, so on this rung W does no harm
+beyond that margin (narrowly; one rung, ten pairs). Again W sent timing material to rhythm streams
+(164 grown). Stage 2 wall 26.3 min (one job, 8 workers).
+
+**Material curve under a real cap (exploratory; seq 17; seeds 176000–176009, development after stage 2;
+paired references re-run on the same seeds).** [Script](/home/pilgrim/git/simple-learner/lab/alloc_curve.py),
+[log](/home/pilgrim/git/simple-learner/lab/v/alloc_curve.log); unchanged-design references:
+[script](/home/pilgrim/git/simple-learner/lab/alloc_curve_ref.py), [log](/home/pilgrim/git/simple-learner/lab/v/alloc_curve_ref.log).
+
+| brain | units at end | gap closed | grown: event / clock / integrator / rhythm |
+|---|---:|---:|---|
+| unchanged design, P=560 | 2052 | +.31 [+.25,+.37] | 10 / 0 / 0 / 0 |
+| E equal growth, cap 2300 / 3042 / 4270 | 2209 / 2857 / 4053 | +.29 / +.32 / +.38 | at 4270: 130 / 657 / 727 / 497 |
+| W weight contest, cap 2300 | 2300 | +.57 [+.45,+.69] | 54 / 47 / 121 / 36 |
+| W, cap 3042 | 3041 | +.70 [+.61,+.78] | 122 / 219 / 566 / 92 |
+| W, cap 4270 | 4269 | +.72 [+.65,+.78] | 261 / 514 / 1352 / 99 |
+| unchanged design, P=4480 (no cap) | 4275 | +.70 [+.58,+.80] | 260 / 984 / 789 / 200 |
+
+Paired differences: design 4480 − design 560 +.38 [+.28,+.50]. W at 3042 − design 4480 **+.01 [−.099,+.097]**.
+W at 4270 − design 4480 +.03 [−.11,+.14]. E at 4270 − design 4480 −.31 [−.43,−.22]. W's own curve:
+3042 − 2300 +.13 [−.01,+.28]; 4270 − 3042 +.03 [−.10,+.13]. E's: 4270 − 2300 +.09 [+.02,+.16].
+
+*Inference.* (1) Stage 1's "W misses the large brain by −.20" compared against the large brain on the other
+seed set's lives. On these seeds the same design scores +.70, not +.81. Cross-set reference levels differ by
+about .1, so references must be re-run on the seeds in use. (2) With the weight contest, about 3040 units do
+what the unchanged design does with 4275. That is about 1000 grown units against 2230, 45% of the growth
+material, though only 71% of total units because of the 2042-unit fixed floor. W then plateaus: more material
+buys nothing resolvable. (3) *Equal growth* allowance is much worse than the unchanged design at the same
+material (−.31). The original allocator divides P equally *including* the fixed symbols, so streams with
+small alphabets (event 2 symbols, clock 5) get most of the growth room and rhythm streams (10–40 symbols)
+almost none. The historical design's success relied on this accidental tilt. E removed it and became worse.
+(4) Where the material goes is the main lever on this family; how much matters little beyond about 1000
+grown units.
+
+*Limits.* Cap 3042 was chosen after seeing three caps, on development seeds; the −.10 margin is met only
+narrowly. Hence the confirmation below.
+
+**Confirmation, declared before running.** W at G=1000 (cap 3042) against the unchanged design, frozen code
+(hashes in output), fresh seeds 177000–177009 (unused: see the seed check above). Sequences rung 17 against
+design P=4480; timing rung 3 (3000 s) against design P=2240, the timing reference used in stage 1. Circuit
+and told-colour references re-run on the same seeds. Claim, separately per family: "W with a cap of 3042 units
+does as well as the unchanged design", if the lower bound of (W − design) exceeds −.10. Report material
+(final and peak units) beside it. Predictions: sequences pass (50%: the exploratory bound sat at −.099).
+Timing passes (40%): the timing design's advantage over E was +.14 and W ≈ E there, so W − design ≈ −.1 is
+expected. Budget about 35 min, one job. Stop after this; whatever the result, the next step is diagnosis
+(why the contest plateaus, and its churn), not a further rule.
+
+**Confirmation result, sequences (seeds 177000–177009).** Unchanged design (P=4480; 4269 units at end)
++.88 [+.81,+.96]; W at cap 3042 (3041 units) +.77 [+.69,+.86]; **W − design −.11 [−.20,−.02]**. The claim
+"as good as the design within .10" **fails** (predicted 50%). W gets about 88% of the design's gap closure
+with 71% of its units and 45% of its grown units, but it is resolvably worse. The exploratory near-match
+(+.01 [−.099,+.097]) partly reflects choosing the cap after the curve. Material at end: design grows
+268 event / 967 clock / 795 integrator / 196 rhythm units; W grows 129 / 224 / 556 / 90.
+
+**Diagnosis declared (before looking): does the contest under-serve families of near-duplicate streams?**
+The design grows about four times more clock units than W does. Hypothesis (dilution, linking to D75): the 60
+clock streams carry overlapping evidence, so their mixture weight is split among them. Each clock then loses
+pairwise contests against a lone stream whose weight is undivided, even when clocks are collectively useful.
+Alternative: clock growth is simply not useful and the design's advantage lies elsewhere (event and
+integrator growth, or the absence of churn). Check, on 4 confirmation pairs (seq 17, seeds 177000–177003),
+using lives re-run with an end-of-life readout: each stream's final weight, units and bits saved, by family,
+for W (cap 3042) and the design. This reads signals only; no counterfactual allocation is run. Prediction: the per-stream median clock weight
+is below the integrator median in W lives, while family sums are comparable (55%). Budget 3 min.
+
+**Confirmation result, timing (seeds 177000–177009, rung 3, 3000 s).** Unchanged design (P=2240; 3614 units
+at end) +.75 [+.63,+.84]; W at cap 3042 +.68 [+.59,+.73]; **W − design −.07 [−.18,+.04]**. The claim fails:
+the interval is inconclusive, not a demonstrated tie. The design's timing growth is almost all clock units
+(1478 clock, 80 event, 7 integrator, 7 rhythm); W's is 460 clock, 352 rhythm, 124 integrator, 63 event.
+Confirmation job wall 36.0 min ([script](/home/pilgrim/git/simple-learner/lab/alloc_confirm.py),
+[log](/home/pilgrim/git/simple-learner/lab/v/alloc_confirm.log),
+[JSON](/home/pilgrim/git/simple-learner/lab/v/alloc_confirm.json)).
+
+**Dilution check result** (16 lives, identical to the confirmation's; [script](/home/pilgrim/git/simple-learner/lab/alloc_dilution.py),
+[log](/home/pilgrim/git/simple-learner/lab/v/alloc_dilution.log)). Shares of the mixture weight at the end of life:
+
+| family (streams) | W: family share / median stream share / grown | design: family share / median stream share / grown |
+|---|---|---|
+| event (10) | .860 / .00027 / 121 | .918 / .00054 / 270 |
+| clock (60) | .029 / .00030 / 271 | .035 / .00039 / 1025 |
+| integrator (56) | .085 / .00030 / 522 | .031 / .00049 / 783 |
+| rhythm (42) | .025 / .00026 / 85 | .015 / .00032 / 202 |
+
+The prediction (clock streams individually lighter than integrators) is **false**: median weights are equal
+across families. What the readout shows instead: **one event stream holds almost all the weight. The other
+167 streams sit near the floor that fixed sharing maintains, with practically indistinguishable weights.**
+So the contest is informative only for the dominant stream; between any two others it is close to a coin
+flip decided by floor-level differences. Bits saved over the default are negative in every family in both
+brains, so the market's signal is uninformative too. D77's per-life data agree: the heaviest stream outweighs
+the second by 20–2000 times.
+
+**Inference and changed belief.**
+- *Allocation is a large lever, confirmed.* At equal material, equal growth allowance is far worse than the
+  design's accidental tilt toward small-alphabet streams (−.31). The weight contest beats equal growth on
+  fresh seeds (+.28 [+.12,+.45] on sequences) without harming timing beyond the margin (+.00 [−.09,+.13]).
+- *But no signal the brain now holds ranks streams other than the best one.* Mixture weight is
+  winner-take-all; bits saved over the default are negative everywhere. W gets about 88% of the design's
+  sequence result with 71% of the units. It does not match the design on either family, and its gains
+  plateau with material.
+- *Rejected explanations:* "the gain is the event streams" (W did better than the event-only ruler with few
+  event units); "material shortfall" (W plateaus); "weight dilution among near-duplicates" (median weights equal).
+- *What remains unexplained:* why the design's heavy clock growth helps, when clock streams end with
+  floor-level weight. Candidates, to distinguish before any new rule: (a) streams at floor weight still
+  contribute collectively, about 5–15% of the mixture together; (b) their value lies earlier in the life,
+  before one stream dominates, which end-of-life weights cannot show; (c) clock growth helps by competing
+  less with the dominant stream's own material than W's contests do. Distinguishing measures: the weight
+  trajectory through life, and the mixture's loss with floor streams removed at a few moments (a replay,
+  no new rule).
+- *Implication for the decision:* the next change still belongs in allocation. Its missing ingredient is a
+  usefulness signal that measures a stream's *marginal* contribution to the brain's predictions (would the
+  mixture be worse without it?), rather than its standalone record. That is a credit-assignment question
+  for the allocator, the kind Dohare et al.'s contribution utility addresses for units, not a new
+  representation. Two mechanism variants (W, U) have now been tried, so per the rules the next step is that
+  diagnosis, not a third rule.
+
+**Limits.** Sequence rung 17 and timing rung 3 only; 300 s and 3000 s lives; ten pairs per comparison. The
+pool's free count is a shared global number. The contest's churn (5,000–37,000 recyclings a life) is counted
+but not charged. No physical cost is implied.
+
+**Next diagnosis, first step (declared before running): weight trajectories.** Same 16 lives as the dilution
+check (seq 17, seeds 177000–177003, W at cap 3042 and the unchanged design). Every 10 s of life, read the
+mixture's weight shares: the top stream's share and identity, and each family's total. Reading only, with the
+lives checked identical to the confirmation's. Explanation (b) above predicts the clock family's share is
+substantial early (above .2 in the first third) and falls as one event stream takes over. Explanation (a)
+predicts a steady 5–15% across life. Budget 3 min.
+
+**Weight-trajectory result** ([script](/home/pilgrim/git/simple-learner/lab/alloc_trajectory.py),
+[log](/home/pilgrim/git/simple-learner/lab/v/alloc_trajectory.log); lives identical to the confirmation's).
+The first execution sampled only once: `WLife.step` replaces itself with a fast path on its first call,
+discarding the reader; the reader now re-installs itself. Mean mixture shares, 8 lives each:
+
+| window | W: top stream / event / clock / integrator / rhythm | design: top stream / event / clock / integrator / rhythm |
+|---|---|---|
+| 0–30 s | .04 / .09 / .35 / .32 / .25 | .04 / .09 / .35 / .32 / .25 (cap not yet binding: identical) |
+| 30–100 s | .30 / .26 / .24 / .25 / .24 | .26 / .26 / .26 / .22 / .26 |
+| 100–200 s | .58 / .58 / .14 / .06 / .23 | .62 / .62 / .10 / .07 / .20 |
+| 200–300 s (scored third) | .79 / .74 / .04 / .12 / .09 | .88 / .88 / .04 / .02 / .05 |
+
+Explanation (b) is supported. For the first 100 s the mixture leans on clock, integrator and rhythm streams
+(three quarters of the weight), and one event stream takes over only in the second half of life.
+End-of-life weights therefore misstate a stream's usefulness over the life. A contest using current weight
+is myopic in two ways. Early, when the eventual winner holds about 9% of the weight, it can lose material to
+streams that are useful only for now. Late, it starves streams that helped earlier. In the scored third the
+design's dominant stream holds more weight (.88 against .79) and its family has more grown units (270
+against 121). That is consistent with the design's better final-third result, with the contest having
+starved event streams early. This is consistent, not shown: the mechanism of the starvation is inferred
+from final counts, not traced.
+
+**Where D78 leaves the decision.** Allocation stays the lever. A usable usefulness signal must be
+(i) marginal (what the brain loses without the stream), not winner-take-all, and (ii) integrated over
+time, or protective of young and still-improving streams, rather than read from the current weight. Both
+points match standard practice: Dohare et al.'s utility is a running average with a maturity threshold that
+protects new units (cited from AGENTS; to be re-read in the source before use). The next work is that
+literature check and a leave-out replay to measure marginal contribution, before any third rule.
+
+**Provenance (D78).** Base revision `9099ade`; production code unchanged (`grownet.py`, `teach.py`, `ladders.py`,
+the stage-2 engine). The rules are instance patches in [alloc_rules.py](/home/pilgrim/git/simple-learner/lab/alloc_rules.py),
+installed after construction and before the first step. A neutral run, with hooks and no rule, reproduces
+the historical lives. Every run used `LB_FINE=1 LB_LIVE=1`, a .0025 s step, arm `net10kc60SFBLMR`, and the
+three maths-thread variables at 1, as one job with 8 workers.
+- Stage 1 (development seeds 142000–142009): [alloc_compare.py](/home/pilgrim/git/simple-learner/lab/alloc_compare.py) `stage1`,
+  [log](/home/pilgrim/git/simple-learner/lab/v/alloc_stage1.log), [JSON with every life and source hashes](/home/pilgrim/git/simple-learner/lab/v/alloc_stage1.json); 39.7 min.
+- Stage 2 (fresh 176000–176009, references run fresh): `alloc_compare.py stage2 W 176000`,
+  [log](/home/pilgrim/git/simple-learner/lab/v/alloc_stage2_W.log), [JSON](/home/pilgrim/git/simple-learner/lab/v/alloc_stage2_W.json); 26.3 min.
+- Material curve and paired design references (176000–176009): `alloc_curve.py`, `alloc_curve_ref.py`
+  ([JSON](/home/pilgrim/git/simple-learner/lab/v/alloc_curve.json), [JSON](/home/pilgrim/git/simple-learner/lab/v/alloc_curve_ref.json)).
+- Confirmation (fresh 177000–177009): `alloc_confirm.py`; dilution and trajectory readings on its lives:
+  `alloc_dilution.py`, `alloc_trajectory.py` ([JSON](/home/pilgrim/git/simple-learner/lab/v/alloc_dilution.json),
+  [JSON](/home/pilgrim/git/simple-learner/lab/v/alloc_trajectory.json)).
+- Metric: the frozen comparison's share of the circuit-to-told-colour gap closed in final-third efficiency,
+  paired bootstrap over seed pairs, 2000 replicates, generator seed 0 (`alloc_compare.closure_samples`).
+- Seed exposure: 176000–176009 and 177000–177009 are now development seeds.
+
+**Current account of D78's retained capability.** *Problem:* equal allowance sends material where little is
+gained. *Mechanism tried:* pairwise weight contest under a real cap. *Evidence:* beats an equal split on
+fresh sequences (+.28) and does no harm on timing; does not match the unchanged design. *Limits:* winner-take-all,
+myopic signal; heavy churn; one rung per family. Not adopted into the design.
