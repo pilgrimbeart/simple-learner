@@ -106,6 +106,30 @@ nothing, but still run the fixed machinery. These measurements identify an oppor
 better; they do not prove that the remaining memory is dispensable.
 [Resource observation, D77](discrete/NOTEBOOK.md#d77-resource-observation).
 
+**Extra room helps through a few better forecasts, and the brain already trusts the right ones.** Rebuilding the
+brain's combined prediction offline shows where extra room pays on the hardest tested sequence: in the forecasts
+of the ten colour-event streams, which with room predict from long remembered contexts. The brain's way of
+weighting its streams is already within a few hundredths of a bit per taste of the best single stream chosen
+with hindsight, so who it trusts is not the bottleneck; but weighting is necessary, since an equal average of all
+streams erases the whole gain. How well the brain predicts accounts for most of how well it eats. Context
+length, evidence and age of the speaking units do not explain differences between allocation rules; giving the
+event streams a head start, plus one unit for every other stream and the existing market, matches the large
+brain at 57% of its material, on fresh seeds too. Without that unit, the other streams speak only from single
+remembered symbols, and their weak forecasts make the creature's early choices worse. On the timing family the brain
+also trusts the right streams, but there the gain from capacity does not show up in prediction.
+[Forecasts and trust, D93–D95](discrete/NOTEBOOK.md#d93-room-prediction),
+[what lifts the head start, D96](discrete/NOTEBOOK.md#d96-ruler-ingredients).
+
+**Room earned by bits saved arrives too late.** The brain's market lends a stream more memory once it has saved
+bits over a default guess. But a stream needing long contexts cannot save bits until it has the memory, and bits
+can be saved only as fast as tastes arrive (about one every two seconds), so most requests from the useful streams
+fail and the market moves little room to them. Lowering its price spreads room to streams that saved bits by
+chance instead. Any rule that pays for memory with evidence already gathered faces this delay. Longer lives repay most of it:
+over 1000 s the market nearly catches the hand-set head start.
+[Market diagnosis, D97](discrete/NOTEBOOK.md#d97-market-diagnosis), [price test, D98](discrete/NOTEBOOK.md#d98-market-price),
+[longer lives, D99](discrete/NOTEBOOK.md#d99-longer-lives), [weak speakers, D100](discrete/NOTEBOOK.md#d100-silent-others),
+[timing, D101](discrete/NOTEBOOK.md#d101-timing-prediction), [fresh seeds, D102](discrete/NOTEBOOK.md#d102-fresh-seeds).
+
 **Allocation matters; its useful signal is still an open question.** Under a real memory cap, letting
 streams compete by prediction weight beats an equal split on fresh sequence lives, but the smaller brain
 fails to match the original design. The first explanation went beyond the evidence: family totals hid
@@ -137,8 +161,7 @@ had predicted little or nothing are parents of about 6% of new units, half of al
 forecast when food is tasted, and about one in five of those that do beat the brain's combined forecast.
 Deleted units could have been parents of many combinations nothing living could build, but scored offline
 those combinations predict about as poorly as the ones growth did build. So neither keeping old units nor
-the combinations they could have formed explains why extra room helps; which forecasts the brain trusts
-is the next suspect.
+the combinations they could have formed explains why extra room helps; the next finding says what does.
 [Allocation comparison, D78](discrete/NOTEBOOK.md#d78-allocation-rules),
 [review and diagnostic, D79](discrete/NOTEBOOK.md#d79-active-mixture),
 [scoring replay and feedback, D80–D81](discrete/NOTEBOOK.md#d80-scoring-replay),
@@ -323,6 +346,13 @@ physical circuit with the same learning, power or noise performance.
   bad meal, every red or blue eaten); contexts count events in that stream; elapsed time is always in seconds, never simulator ticks.
 - **Stream allowance** (D76, D77): how many memory units a stream may hold before a new one must recycle an old one; the setting P is
   divided equally among the 168 streams of the frozen design, and the market can move allowance between them. It is not a cap on total material.
+- **Market** (D67, D97): the growing network's existing rule for moving allowance: a stream whose allowance is full may take one unit
+  from a stream that has saved nothing, if it has itself saved more than `POOL_BITS` (1 bit) of prediction over a default guess for
+  each unit beyond its share.
+- **Event streams** (D77): the ten streams ticking on colour and taste events (every, good, bad, red and blue, each recording colour or
+  outcome), as opposed to the clock, integrator and rhythm streams.
+- **Head-started ruler** (D96, lab rule R+M+1): a hand-set allocation that gives the event streams a fixed share of growth from birth,
+  one grown unit to every other stream, and the market; a ruler for what allocation could achieve, not a design.
 - **Weight contest** (D78, lab rule `W`): an allocation rule under a total cap. When the shared supply of units is used up, a stream
   that needs a new unit compares its weight in the prediction mix with one other stream chosen at random, and takes a little-used unit
   from it if that stream's weight is lower; otherwise it recycles one of its own.

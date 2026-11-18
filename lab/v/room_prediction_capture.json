@@ -1,0 +1,18 @@
+{
+ "identity": {
+  "lives": 80,
+  "mismatches": []
+ },
+ "wall_s": 158.50974945000053,
+ "provenance": {
+  "revision": "63cd05d01e4d61f27b6e1a3f43b21ce84bf07bda",
+  "dirty": " M discrete/NOTEBOOK.md\n?? lab/room_prediction.py\n?? lab/v/room_prediction.json\n?? lab/v/room_prediction.log\n?? lab/v/room_prediction_capture.json\n?? lab/v/room_prediction_capture.log\n?? lab/v/room_prediction_capture_failed_compare.log\n?? lab/v/room_prediction_checks.json\n?? lab/v/room_prediction_checks.log\n?? lab/v/room_prediction_leaky_capture_analysis.log\n",
+  "source_sha256": {
+   "lab/room_prediction.py": "635733d273c40390c244be3ff768111227f461b771a89d8aa824976e7f0a4cb1",
+   "lab/noisy_resource_ablate10.py": "093ea2f9593cb76b8c56a482875665add274cc569c7e9ccc3d2b288d664233fa",
+   "lab/noisy_resource_observe.py": "b172a051c29d35320060bd24acd5507015f4bf288d7b5c7196a3fc677897b68b",
+   "lab/grownet.py": "1a550553b1244368ed0ca6fa59cce3e94a9badd5e5d1e801953aa42974874f0f"
+  },
+  "reference_sha256": "ba537a0a0a75e649a1812a834f0cd35e56f1ef446aa429aa90d4ec15e083c89d"
+ }
+}

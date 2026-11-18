@@ -23,7 +23,13 @@ allocation rules under an enforced cap; [D79](#d79-active-mixture) reviews its c
 [D87](#d87-retained-mixture) finds little retained-tally advantage against the same corrected combined forecast;
 [D88–D90](#d88-parent-census) find weak parents build about 6% of children and most actual children lose to that
 forecast, while deleted units would supply many partners no living unit duplicates; [D91](#d91-growth-decision) records the decision;
-[D92](#d92-ghost-children) finds the missing children no better a pool than actual growth.
+[D92](#d92-ghost-children) finds the missing children no better a pool than actual growth;
+[D93–D95](#d93-room-prediction) place extra room's sequence gain in the event streams' own forecasts, with trust
+already near the hindsight oracle; [D96](#d96-ruler-ingredients) and [D100](#d100-silent-others) show a head-started
+ruler matching the large brain at 57% of its material, and weak speakers costing the closed loop;
+[D97–D99](#d97-market-diagnosis) trace the generic market's shortfall to the evidence rate, largely repaid by longer
+lives; [D101](#d101-timing-prediction) finds trust near-optimal on timing too, but the capacity gain there not in
+prediction; [D102](#d102-fresh-seeds) replicates the sequence account on fresh seeds.
 [D72](#review-2026-11-16) is the preceding evidence review. The programme is
 [PROGRAMME.md](../PROGRAMME.md); [QUESTIONS.md](../QUESTIONS.md) owns the next discriminating investigations.
 
@@ -6642,3 +6648,420 @@ benefit on present evidence: neither keeping deleted units' readouts (D87) nor b
 (D92) beats the combined forecast as a pool. Following D91's fourth row, the next work is a review of D77's
 allowance ablation and the selection/readout alternatives (which issued forecasts the selector trusts, and
 whether extra room mainly changes selection), with no further retention or growth variants.
+
+<a id="d93-room-prediction"></a>
+### D93 — Is extra room's gain in the forecasts or in whom the mixture trusts? (2026-11-18)
+
+**Before work.** The user asked to continue with the next step (D91's fourth row) and to run the experiments
+that seem valuable. Uncertainty: D77's extra allowance (P=560 to 4480, and the ruler A that gives only the ten
+colour-event streams more room) improves final-third efficiency, but by which route? (a) *Representation*:
+grown contexts make the streams' own forecasts better, chiefly in event streams. (b) *Selection*: room changes
+which forecasts the native Bayesian mixture (weights updated by likelihood with a fixed share) trusts, or which
+unit speaks within a stream, without the forecasts themselves being better. (c) *Not prediction at all*: the
+efficiency gain arises from timing or approach behaviour not visible in prediction loss. Discriminating
+comparison: rerun D77's four settings (low, A, B, high) on its ten opened seed pairs (142000–142009, red and
+blue first, sequence rung 17, 300 s, dt .0025 s, arm `net10kc60SFBLMR`) with a passive recorder of every
+stream's issued forecast and weight at the last prediction before each accepted taste; each life must reproduce
+D77's recorded result tuple exactly (identity check). Offline, per life: bits per accepted taste and expected
+hard-choice errors for the native issued mixture; for an equal-weight average of the issued speakers (no
+selection); for a fresh Bayes mixture over event streams only (a supplied ruler); and for the best single
+stream in hindsight (an oracle reference). Representation measures: share of event-stream issued forecasts from
+grown units and their mean span. Behaviour link: per-life final-third efficiency against native bits per taste.
+Predictions: (a) dominates — the low-to-high and low-to-A differences persist under the equal-weight and
+event-only combiners (70%); a large shrinkage would favour (b); no relation between bits and efficiency would
+favour (c). Analysis: paired differences between settings over the 20 lives, bootstrap over seed pairs (2000,
+both lives of a pair together), 95% intervals; exploratory, one family and rung, seeds already used.
+Budget: 80 lives as one job (8 one-thread workers, ~3 min), 40 minutes in all; stop after this comparison.
+
+**Two errors of mine before the valid result, both kept.** (1) The first identity check compared a tuple with
+its JSON list and reported all 80 lives as mismatched; values were equal. It was rechecked from the saved
+capture with a JSON round trip ([failed log](/home/pilgrim/git/simple-learner/lab/v/room_prediction_capture_failed_compare.log)).
+(2) That first capture was *leaky*: `taste()` itself calls `predict()` after learning, and my recorder kept
+the latest prediction rather than the one issued before the taste, so forecasts already contained the answer
+(45 streams "perfect" in one life; [its analysis](/home/pilgrim/git/simple-learner/lab/v/room_prediction_leaky_capture_analysis.log)
+showed native loss rising with room and an equal-weight average making no errors). Detected because native
+loss disagreed with the brain's own code length (0.68 against 0.99 bits per taste). The fix freezes the issued
+forecast at the taste's entry, as D79's observer did; all 80 lives were rerun (159 s), reproduce D77 exactly,
+issue forecasts 0.1–0.2 s before the taste, and now give native loss equal to the brain's diagnostic on every
+life checked. Analysis definitions were not changed.
+
+**Provenance.** [Script](/home/pilgrim/git/simple-learner/lab/room_prediction.py),
+[capture JSON](/home/pilgrim/git/simple-learner/lab/v/room_prediction_capture.json) and
+[log](/home/pilgrim/git/simple-learner/lab/v/room_prediction_capture.log),
+[analysis JSON](/home/pilgrim/git/simple-learner/lab/v/room_prediction.json) and
+[log](/home/pilgrim/git/simple-learner/lab/v/room_prediction.log),
+[fixture log](/home/pilgrim/git/simple-learner/lab/v/room_prediction_checks.log); ignored per-taste pickle
+`/home/pilgrim/git/simple-learner/lab/v/room_prediction.pkl`. Revision `63cd05d` plus this script.
+
+| last third, 20 lives per setting | native mixture: bits / choice errors per taste | fresh Bayes, all streams | fresh Bayes, event streams only | best single stream in hindsight | equal-weight average | event forecasts from grown units; mean span | final-third efficiency |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| low (P=560) | .932 / .337 | .926 / .338 | .925 / .330 | .894 / .327 | .982 / .427 | 63%; 1.6 | −0.46 |
+| A (low, event streams at 26) | .551 / .156 | .549 / .167 | .527 / .153 | .522 / .148 | .981 / .443 | 95%; 14.8 | 1.19 |
+| B (high, event streams at 3) | .812 / .269 | .817 / .287 | .806 / .279 | .787 / .261 | .973 / .390 | 75%; 2.7 | 0.22 |
+| high (P=4480) | .449 / .100 | .433 / .101 | .431 / .101 | .431 / .101 | .994 / .442 | 96%; 15.7 | 1.61 |
+
+Paired differences, last third, bits per taste [95% interval]: high − low, native −.485 [−.555, −.414], event
+streams only −.495 [−.567, −.426], equal-weight +.008 [−.020, +.035]. A − low: native −.375 [−.491, −.240],
+event only −.391 [−.508, −.253]. B − low: native −.114 [−.223, −.020], event only −.112 [−.223, −.016]. High − A:
+native −.111 [−.255, +.020]. Choice errors move the same way (high − low −.235 per taste native, −.227 event only).
+Over all 80 lives, final-third efficiency correlates −0.90 with native last-third bits per taste and −0.95 with
+its choice errors.
+
+**Inference.** (a) holds and (b) is rejected for this rung. The gain from room is in the forecasts of the event
+streams: it is the same size when the mixture is rebuilt fresh over event streams alone, and the native mixture
+is already within .02 bits per taste of the best single stream chosen in hindsight in every setting. The brain's
+trust is not where room acts, and is not a bottleneck. Selection is nevertheless necessary: averaging all
+speakers equally erases the whole gain, because about 120 weak forecasts drown the good ones. (c) is rejected:
+prediction quality tracks efficiency closely across lives. Room's effect is long contexts: event forecasts come
+from grown units of mean span about 15 symbols at A and high, against 1.6 at low.
+Two corrections follow. D77's reading that the ~2000 non-event units "help measurably only when event streams
+are starved" is wrong in mechanism: B's improvement over low appears in the event-only mixture too, so it runs
+through B's event streams (44 grown units against 10, mean span 2.7 against 1.6), not through the non-event
+growth. On this rung the non-event growth, 85% of the high setting's material, adds no measurable prediction.
+And the gap between high and A (−.11 bits, interval including 0) is also carried by event streams.
+
+**Limits.** One family and rung, opened seeds, 300 s lives; the combiners are offline on each life's own
+history (each brain made its own observations). Fresh Bayes uses no fixed share; "best in hindsight" uses
+future knowledge and is a reference only. Prediction and efficiency correlate across settings that differ in
+much else, so the correlation supports the channel but does not isolate it.
+
+**Changed belief and next branch.** The economical-adaptation question on this family is now narrowly one of
+**allocation of long contexts**: which local signal can send room to the few streams whose long contexts
+predict, while selection takes care of itself. D78's weight contest is such a signal and fell short of the
+original design. Next: the same recorder on D78's capped contest, to see whether its shortfall is fewer or
+shorter event contexts, or something else.
+
+<a id="d94-contest-prediction"></a>
+### D94 — Where does the capped weight contest fall short? (2026-11-18)
+
+**Before work.** D93 places extra room's gain in long event-stream contexts, with selection near the hindsight
+oracle. D78's weight contest W (cap 2042+258 units) beats equal allocation E at the same cap, but stays below
+the uncapped original design (P=4480, ~4270 units). Competing explanations of W's shortfall: (i) its event
+streams get too little room, so their contexts stay short; (ii) it has comparable event contexts but its
+churn (D83) costs them evidence, so their forecasts are worse at the same span; (iii) its trust or other
+streams are worse. Comparison: D78 stage 1's E, W and the event ruler R (all at the same cap) on seeds
+142000–142009 seq 17, rerun with D93's recorder, each life required to reproduce its stage-1 result; compared
+with D93's low and high on the same seeds. Same offline combiners and measures as D93. Predictions: (i) — W's
+event-only mixture loss lies between low and high, its event spans clearly shorter than high's, and the W − high
+gap persists in the event-only mixture (70%); (ii) would show high-like spans with worse loss. Budget: 60 lives,
+~3 min, 30 minutes in all.
+
+**Provenance.** [Script](/home/pilgrim/git/simple-learner/lab/contest_prediction.py),
+[capture JSON](/home/pilgrim/git/simple-learner/lab/v/contest_prediction_capture.json) and
+[log](/home/pilgrim/git/simple-learner/lab/v/contest_prediction_capture.log) (all 60 lives reproduce D78 stage 1;
+90 s), [analysis JSON](/home/pilgrim/git/simple-learner/lab/v/contest_prediction.json) and
+[log](/home/pilgrim/git/simple-learner/lab/v/contest_prediction.log); ignored pickle
+`/home/pilgrim/git/simple-learner/lab/v/contest_prediction.pkl`. These are D78's historical, pre-D82 credit lives.
+
+| last third, 20 lives each | native: bits / errors per taste | event streams only (fresh Bayes) | best single in hindsight | grown units at end: event / clock / integrator / rhythm | event forecasts from grown units; mean span, last third | efficiency |
+|---|---:|---:|---:|---:|---:|---:|
+| low (P=560, D93) | .932 / .337 | .925 / .330 | .894 / .327 | 10 / 0 / 0 / 0 | 63%; 1.6 | −0.46 |
+| E equal, capped | .950 / .371 | .937 / .347 | .924 / .344 | 10 / 59 / 56 / 39 | 64%; 1.7 | −0.86 |
+| W weight contest, capped | .685 / .213 | .678 / .196 | .663 / .190 | 50 / 61 / 102 / 45 | 43%; 2.0 | 0.77 |
+| R event ruler, capped | .684 / .216 | .662 / .222 | .651 / .217 | 246 / 0 / 0 / 0 | 95%; 20.2 | 0.54 |
+| high (P=4480, D93) | .449 / .100 | .431 / .101 | .431 / .101 | 262 / 1150 / 760 / 95 (D77) | 96%; 19.9 | 1.61 |
+
+W − high, last third: native +.253 [+.109, +.396] bits, event only +.267 [+.119, +.422]; W − R +.013 [−.129, +.150];
+R − high +.240 [+.145, +.331], event only +.237 [+.142, +.329]; W − E −.252 [−.376, −.128].
+
+**Inference.** The contest's gap to the large brain lies wholly in event-stream forecasts; its trust is again
+within .02 bits of the hindsight oracle. But (i) is refuted as stated: context length does not explain it. The
+ruler R has the large brain's long contexts (mean issued span 20) and predicts no better than W, whose contexts
+are short (span 2); both fall short of high by the same .24–.27 bits per taste. What makes the large brain's
+event forecasts better is something other than span: candidates are the evidence each context has gathered
+(churn from on-demand recycling under a full cap resets tallies), the age of the issued units, or different
+observations in each closed loop. That D77's A (event streams at 26 each, market on) reached .527 with spans
+of 15 also argues against span. Next: record each issued speaker's evidence and age.
+
+**Limits.** As D93; R and W are capped rules at 2042+258 units, high is uncapped; seeds already used.
+
+<a id="d95-speaker-evidence"></a>
+### D95 — What makes the large brain's event forecasts better at the same span? (2026-11-18)
+
+**Before work.** D94: R and high issue event forecasts from equally long contexts, yet high's are better by
+about .24 bits per taste. Explanations: (e) *evidence*: high's issued units have more tallies, because a full
+cap forces on-demand recycling that keeps resetting R's units; (g) *age*: related, high's units survive longer;
+(o) *observations*: different closed-loop histories, so the same contexts face different sequences (would show
+as similar evidence and age with different loss); (s) *which contexts*: high speaks from different words.
+Comparison: rerun low, A, R, W and high on the same ten pairs with the recorder extended to keep, for each
+issued speaker, its tally total and age; each life must reproduce its earlier record. Measures, event streams,
+last third: median tallies and age of issued grown speakers; log loss of the event-only mixture split by speaker
+evidence band. Prediction: (e) — high's issued event speakers carry several times R's tallies (65%). Budget:
+100 lives, ~4 min, 30 minutes in all.
+
+**Provenance.** [Script](/home/pilgrim/git/simple-learner/lab/speaker_evidence.py),
+[capture JSON](/home/pilgrim/git/simple-learner/lab/v/speaker_evidence_capture.json) (all 100 lives reproduce
+D93/D94 exactly, including every issued mixture probability; 200 s),
+[analysis JSON](/home/pilgrim/git/simple-learner/lab/v/speaker_evidence.json) and
+[log](/home/pilgrim/git/simple-learner/lab/v/speaker_evidence.log).
+
+| last third, event streams | low | A | high | R ruler | W contest |
+|---|---:|---:|---:|---:|---:|
+| issued grown speakers (count) | 7301 | 11814 | 11382 | 10565 | 4523 |
+| their tallies, median (90th percentile) | 117 (160) | 16 (97) | 17 (90) | 19 (81) | 2 (10) |
+| their age, median (90th percentile) | 208 s (274) | 113 s (220) | 111 s (215) | 113 s (222) | 5 s (156) |
+| their span, median | 2 | 9 | 10 | 7 | 2 |
+| event-only mixture, bits per taste (D93–D94) | .925 | .527 | .431 | .662 | .678 |
+
+Each issued event speaker on its own costs about one bit per forecast in every arm and every evidence band (.86–1.39;
+JSON): individual speakers are weak, and the mixture's quality comes from the few streams it trusts.
+
+**Inference.** (e) and (g) are refuted for R against high: their issued event speakers have the same evidence,
+age and nearly the same span, yet R's event-only mixture is worse by .23 bits per taste. W shows the converse:
+heavy churn (median two tallies, five seconds old) with the same loss as R. So neither context length, evidence
+nor age of the speakers sets the quality of the event-stream prediction on these lives. That leaves (o), the
+closed loop's different observations, and (s), which contexts speak; the descriptive measures here cannot
+separate them. R differs from A and high in two configured ingredients: the market is off, and the other streams
+cannot grow at all. A closed-loop test of those two is cheaper than further description.
+
+**Limits.** Speaker-level summaries pool streams and lives; tallies count all labels a unit has seen, not those
+relevant now; ages are since birth, and recycling replaces rather than ages units.
+
+<a id="d96-ruler-ingredients"></a>
+### D96 — Which of the market or other streams' growth lifts the event ruler? (2026-11-18)
+
+**Before work.** From D95: R (event streams only, market off) is worse than A (event streams at 26, market on,
+others allowed one grown unit each) and high, at equal event-stream evidence. Test the two ingredients by
+adding each to R on the same ten pairs (seq 17, 300 s): R+M (R with the existing market test enabled, cap
+unchanged); R+1 (R with every other stream allowed one grown unit, cap raised by those 158 units so event room is
+unchanged). Each scored by D78's gap-closed metric and by D93's last-third prediction measures, paired against
+R. Predictions: R+1 recovers most of A's advantage (50%), R+M little (60%), because early non-event forecasts
+help in the first seconds (D79) and shape the closed loop; both inconclusive is likely given ten pairs (40%).
+Budget: 40 lives, ~2 min, 30 minutes in all; no change to production code (lab rule variants only).
+
+**Provenance.** [Script](/home/pilgrim/git/simple-learner/lab/ruler_ingredients.py),
+[capture log](/home/pilgrim/git/simple-learner/lab/v/ruler_ingredients_capture.log) (60 lives, 81 s; I added a
+third variant, R+M+1 with both ingredients, before running),
+[analysis JSON](/home/pilgrim/git/simple-learner/lab/v/ruler_ingredients.json) and
+[log](/home/pilgrim/git/simple-learner/lab/v/ruler_ingredients.log). R, A and high lives are D94's and D93's.
+There is no identity check for new variants; R+M is `alloc_rules.install("M")` with R's allowances written after.
+
+| seq 17, ten pairs | gap closed [95%] | − R | native last-third bits / errors per taste | grown at end: event / clock / integrator / rhythm | units at end |
+|---|---:|---:|---:|---:|---:|
+| R (event ruler, market off) | +.54 [+.46, +.63] | — | .684 / .216 | 246 / 0 / 0 / 0 | 2288 |
+| R+M (market on) | +.63 [+.51, +.74] | +.09 [−.06, +.22] | .613 / .174 | 198 / 7 / 23 / 21 | 2291 |
+| R+1 (one unit for every other stream) | +.65 [+.57, +.70] | +.10 [+.04, +.16] | .646 / .185 | 246 / 58 / 56 / 42 | 2444 |
+| R+M+1 (both) | +.77 [+.66, +.88] | +.23 [+.08, +.39] | .532 / .135 | 246 / 47 / 62 / 49 | 2446 |
+| A (D77, event streams at 26) | +.71 [+.54, +.85] | +.16 [−.00, +.31] | .551 / .156 | 214 / 10 (others) | 2266 |
+| high (P=4480) | +.81 [+.74, +.88] | +.26 [+.15, +.38] | .449 / .100 | 262 / 1150 / 760 / 95 | ~4270 |
+
+R+M+1 − high −.04 [−.16, +.08] and R+M+1 − W +.17 [−.03, +.40]: inconclusive, not a tie (the lower bound passes
+D78's declared −.10 margin).
+
+**Inference.** The two ingredients add up: one grown unit allowed in every other stream helps on its own (+.10,
+interval excluding 0), the market probably helps (+.09, inconclusive), and together (+.23) they bring the ruler
+level with the large brain within the uncertainty, at 57% of its material. Both act through the event streams'
+own forecasts: the event-only mixture improves from .662 (R) to .517 (R+M+1), although the non-event streams'
+forecasts add nothing offline (D93). How a single unit in a clock or integrator stream improves *event*
+forecasts is unexplained; the closed loop (o) is the only route available, through earlier behaviour and so
+different observations. Candidates for the market's part: it moves event room between event streams (transfers
+about 240 a life) towards those saving bits.
+For the goal this is a ruler, since the event streams were chosen by hand. D78's market alone (M: one unit
+each plus the market, +.35) shows the generic version fails: the market moves too little room to the useful
+streams. Knobs first: the market's price, `POOL_BITS` bits saved per extra unit, is an existing knob that sets
+how fast room flows towards streams that pay.
+
+**Limits.** Ten opened pairs, one rung; R+M+1 was added after the design was declared, but before running.
+
+<a id="d97-market-diagnosis"></a>
+### D97 — Why does the market move so little room to the useful streams? (2026-11-18)
+
+**Before work.** D96: given a head start in the event streams, the market helps; without it (D78's M, one unit
+for every stream plus the market) the gain is small (+.35 against high's +.81) and only 27 event units grow. The
+market transfers a unit to a stream when a birth is due, its allowance is full, and it has saved more than
+`POOL_BITS` (1 bit) over the default for each unit beyond its base, taken from a random stream that has saved
+nothing. Explanations: (k) *chicken and egg*: event streams cannot save bits until they have room for long
+contexts, so their requests fail the savings test; (d) *no donors*: few streams qualify as poor; (r) *rarely
+due*: requests seldom arise. Measure on M's ten pairs (seq 17): every market request classified by the first
+failing condition, per family, and each event stream's saved bits and allowance through life. Prediction:
+(k) — most event-stream requests fail the savings test, and event streams' saved bits stay near or below zero
+while they are small (65%). Budget: 20 lives, ~1 min; read-only wrapping of the room test.
+
+**Result.** [Script](/home/pilgrim/git/simple-learner/lab/market_diagnosis.py),
+[JSON](/home/pilgrim/git/simple-learner/lab/v/market_diagnosis.json),
+[log](/home/pilgrim/git/simple-learner/lab/v/market_diagnosis.log); all 20 lives reproduce D78's M record.
+
+| family, 20 lives | requests under allowance | full: no birth due | full: savings test fails | full: no poor donor | full: transfer attempted | transfers made |
+|---|---:|---:|---:|---:|---:|---:|
+| event | 1075 | 3532 | **28533** | 65 | 1955 | 680 |
+| clock | 34326 | 19535 | 149593 | 564 | 6942 | 1340 |
+| integrator | 4855 | 17648 | 167168 | 464 | 6761 | 1821 |
+| rhythm | 97333 | 27182 | 21445 | 81 | 1631 | 982 |
+
+Event streams through life (median over lives): best event stream's saved bits 1.2 (0–50 s), 4.6 (100–150 s),
+11.3 (250–300 s); median event stream −0.7 to −2.1 throughout; their extra allowance 9 rising to 25 units in
+total, across ten streams; poor donors fall from 125 to 42.
+
+**Inference.** (k) holds: 86% of event streams' full-allowance requests fail the savings test, donors are seldom
+missing, and requests are not rare. The test asks for one bit saved per extra unit, but a stream's savings grow
+only as fast as accepted labels arrive (163 in 300 s, at most about a bit each). A stream that needs long
+contexts must already have room to show that it saves bits, so it can earn room only late, and only slowly.
+Clock streams, saving a few bits by chance, take more transfers than event streams. Free room (P=4480) or a head
+start (D96's ruler) breaks the circle; the market's currency cannot. This is an evidence-rate limit on any rule
+that pays room in cumulative bits: the price must be paid from information not yet obtainable.
+
+<a id="d98-market-price"></a>
+### D98 — Does a cheaper market price let room reach the useful streams? (2026-11-18)
+
+**Before work.** Knobs first: the market's price `POOL_BITS` (1 bit saved per extra unit) is an existing knob.
+D97 suggests the price, not donors, is binding. Test M on the same ten pairs at prices 1/4 and 1/16 bit,
+otherwise unchanged. Predictions: more transfers at both, but spread to clock and integrator streams that save
+a little by chance as much as to event streams, so little gain over M's +.35 (60%); a gain approaching R+M+1's
++.77 would mean the price was the only obstacle. Exploratory knob test: if it helps on sequences it must be
+checked on timing before any claim. Budget: 40 lives, ~2 min.
+
+**Result.** [Script](/home/pilgrim/git/simple-learner/lab/market_price.py), [JSON](/home/pilgrim/git/simple-learner/lab/v/market_price.json),
+[log](/home/pilgrim/git/simple-learner/lab/v/market_price.log); M at the original price and E, W are D78 stage 1's
+lives on the same seeds. The price change took effect (transfers 241 → 396 → 412 a life).
+
+| seq 17, ten pairs | gap closed [95%] | − M | transfers a life | grown at end: event / clock / integrator / rhythm | native last-third bits per taste |
+|---|---:|---:|---:|---:|---:|
+| M, price 1 bit (D78) | +.35 [+.24, +.45] | — | 241 | 27 / 37 / 47 / 51 | — |
+| M, price 1/4 bit | +.47 [+.32, +.57] | +.12 [−.01, +.23] | 396 | 50 / 37 / 52 / 27 | .818 |
+| M, price 1/16 bit | +.37 [+.22, +.52] | +.03 [−.09, +.13] | 412 | 49 / 36 / 55 / 26 | .853 |
+| W contest (D78) | +.61 [+.42, +.76] | +.26 [+.08, +.43] | — | 50 / 61 / 102 / 45 | .685 |
+
+**Inference.** As predicted, the knob does not cure the market: a quarter price perhaps helps a little
+(inconclusive), and a lower one helps less. Once the price is easy to pay, cumulative savings mostly reflect
+noise, so the extra transfers go to clocks and integrators about as much as to event streams. The obstacle is
+the evidence rate identified in D97, not the price. Next: test that account's prediction on time rather than
+on a knob.
+
+<a id="d99-longer-lives"></a>
+### D99 — Does a longer life let generic allocation catch the head-started ruler? (2026-11-18)
+
+**Before work.** If allocation by evidence is limited by the evidence rate (D97–D98), its cost is a fixed delay
+before room reaches the useful streams, and lives long enough to amortise it should shrink the gap between the
+generic rules and a hand-set head start. The user allows 1000 s lives when evidence is scarce (AGENTS, real
+units); judged on the last third. Comparison: seq rung 17 at 1000 s, seeds 142000–142009, red and blue first:
+M (market), W (weight contest) at cap 2300, R+M+1 (D96's head-started ruler, cap 2458), with circuit and
+told-colour references run fresh at 1000 s; D78's gap-closed metric and D93's last-third prediction measures.
+Predictions: R+M+1 − W shrinks from about +.17 (300 s, D96) to under +.08 at 1000 s, and M improves relative to
+its 300 s level more than R+M+1 does (55%; the first rung's evidence rate may not be the binding limit at all).
+A failure to shrink would weaken the evidence-rate account. Budget: 100 lives of 1000 s as one job, ~15 min.
+
+**Result.** [Script](/home/pilgrim/git/simple-learner/lab/longer_lives.py),
+[capture log](/home/pilgrim/git/simple-learner/lab/v/longer_lives_capture.log) (100 lives of 1000 s, 384 s wall),
+[analysis JSON](/home/pilgrim/git/simple-learner/lab/v/longer_lives.json) and
+[log](/home/pilgrim/git/simple-learner/lab/v/longer_lives.log). References (circuit, told colour) were run fresh at
+1000 s on the same seeds; no historical 1000 s record exists for an identity check.
+
+| seq 17, ten pairs | gap closed, 300 s (D78, D96) | gap closed, 1000 s | last-third bits / errors per taste, 1000 s | grown at end, 1000 s: event / clock / integrator / rhythm |
+|---|---:|---:|---:|---:|
+| M market | +.35 [+.24, +.45] | +.69 [+.51, +.83] | .626 / .186 | 80 / 37 / 34 / 16 |
+| W contest | +.61 [+.42, +.76] | +.68 [+.51, +.81] | .607 / .179 | 87 / 47 / 50 / 73 |
+| R+M+1 head-started ruler | +.77 [+.66, +.88] | +.78 [+.71, +.86] | .491 / .124 | 299 / 29 / 56 / 18 |
+
+At 1000 s: R+M+1 − W +.10 [−.01, +.24] (300 s: +.17 [−.03, +.40]); R+M+1 − M +.09 [−.05, +.31] (300 s: about +.42);
+W − M .00 [−.16, +.13].
+
+**Inference.** Partly as predicted. The market, slowest to move room, gains most from time (+.35 to +.69) and
+grows three times the event units; the head-started ruler gains nothing, having nothing to wait for. Its lead
+over the generic rules shrinks but does not vanish (+.10 over W, interval reaching −.01, not under the predicted
++.08). This supports the evidence-rate account: much of what generic allocation loses at 300 s is a delay, paid
+in time rather than material. In bits: the ruler's head start is information supplied by the designer (which
+ten streams to favour) that the generic rules must collect at about half a label per second. The remaining lead
+may be a slower delay, a cost of the misallocated early material, or noise.
+
+**Limits.** The 300 s and 1000 s numbers are each paired within their length but use different references, so
+the change across lengths is a comparison of normalised levels, not a paired difference. R+M+1 has 158 more units
+than M and W. One rung, opened seeds.
+
+<a id="d100-silent-others"></a>
+### D100 — Does one unit in every other stream help through those streams' forecasts? (2026-11-18)
+
+**Before work.** The user approved three follow-ups, to run after D99 so as not to share the laptop. D96 found
+that allowing every non-event stream one grown unit (R+1) improves the event ruler R by +.10 [+.04, +.16], and
+improves the event streams' own forecasts, though non-event forecasts add nothing offline (D93). Explanations:
+(f) the extra units' early forecasts change behaviour and so the observations; (w) they change only weight
+bookkeeping or the learning credit; (x) something unrelated to their speaking (for instance which units are
+recycled). Test: R and R+1 with every non-event stream silenced everywhere (no speaker in the mixture or in
+learning credit; they still observe, tally and grow), same ten pairs, seq 17, 300 s. If (R+1 − R) vanishes when
+silenced, the route is through their speaking (f or w); if it persists, (x). Prediction: it vanishes (55%).
+Budget: 40 lives, ~2 min.
+
+<a id="d101-timing-prediction"></a>
+### D101 — Does D93's account hold on timing? (2026-11-18)
+
+**Before work.** D93's account (room improves a few streams' forecasts; trust is already near the hindsight
+oracle; equal weights erase the gain) rests on one sequence rung. Test on timing rung 3 (3000 s lives, last third
+from 2000 s), unchanged design at P=560 and 2240 (D78's timing references), seeds 142000–142009, each life required
+to reproduce the historical record. Same offline combiners, plus a fresh mixture restricted to each family.
+Predictions: native within .03 bits per taste of the best single stream (70%); the capacity gain carried by the
+rhythm streams' forecasts (60%); equal weights again erase it (75%). Budget: 40 lives of 3000 s, ~15 min.
+
+<a id="d102-fresh-seeds"></a>
+### D102 — D93's comparison and D96's ruler on fresh seeds (2026-11-18)
+
+**Before work.** All of D93–D99 use the much-reused seeds 142000–142009. Rerun low (P=560) and high (P=4480)
+with the recorder, and R+M+1, on seeds 176000–176009 (development since D78, with circuit, told and design
+records), design lives required to reproduce D78's curve references. Predictions: high − low native last-third
+loss about −.4 bits, carried equally by the event-only mixture, and native within .03 of best single (75%);
+R+M+1 − high in gap closed within ±.15 (60%). Budget: 60 lives, ~3 min.
+
+**D100 result.** [Script](/home/pilgrim/git/simple-learner/lab/followups.py) (`silent`),
+[JSON](/home/pilgrim/git/simple-learner/lab/v/followup_silent.json), [log](/home/pilgrim/git/simple-learner/lab/v/followup_silent.log);
+R and R+1 are D94's and D96's lives.
+
+| seq 17, ten pairs | gap closed | native last-third bits / errors per taste | event-only mixture |
+|---|---:|---:|---:|
+| R | +.54 [+.46, +.63] | .684 / .216 | .662 |
+| R+1 | +.65 [+.57, +.70] | .646 / .185 | .629 |
+| R, non-event streams silent | +.66 [+.55, +.76] | .653 / .188 | .643 |
+| R+1, non-event streams silent | +.66 [+.55, +.76] (identical lives) | .653 / .188 | .643 |
+
+R silent − R +.11 [−.02, +.23]; R+1 silent − R+1 +.02 [−.10, +.11]; (R+1 − R) − (R+1 silent − R silent) +.10 [+.04, +.16].
+
+**Inference.** (f or w): the one-unit benefit runs entirely through the non-event streams' speaking; silenced,
+their extra units change nothing (the two silenced arms are identical, as they must be with no market, which
+also checks the silencing). And the benefit is the removal of harm, not new help. Silencing those streams in
+R improves it about as much as giving them a unit; with the unit, silencing changes little. Without growth,
+those 158 streams speak only from single fixed symbols, and these weak forecasts degrade the closed loop.
+One grown unit per stream mostly stops that harm. This joins D79's observation that omitting non-event
+forecasts reduces immediate loss. A broad repertoire of weak speakers is a cost the mixture does not fully
+remove. The likely mechanism, untested here, is the fixed share that keeps returning weight to every speaker.
+
+**D101 result.** [Script](/home/pilgrim/git/simple-learner/lab/followups.py) (`timing`),
+[JSON](/home/pilgrim/git/simple-learner/lab/v/followup_timing.json), [log](/home/pilgrim/git/simple-learner/lab/v/followup_timing.log);
+all 40 lives of 3000 s reproduce the historical record (936 s wall). Last third is 2000–3000 s.
+
+| timing rung 3, ten pairs | gap closed | native | best single in hindsight | rhythm only | clock only | event only | integrator only | equal weights | grown at end: event / clock / integrator / rhythm |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| design P=560 | +.65 [+.44, +.84] | .391 / .105 | .383 / .107 | .404 | .744 | .739 | .729 | .850 / .350 | 10 / 0 / 0 / 0 |
+| design P=2240 | +.82 [+.74, +.91] | .337 / .073 | .323 / .070 | .365 | .548 | .653 | .695 | .727 / .192 | 88 / 1471 / 10 / 6 |
+
+(bits / choice errors per taste for native, best single and equal; bits per taste otherwise.) The best single
+stream is a rhythm tracker in 37 of 40 lives. P=2240 − P=560: gap closed +.17 [+.02, +.36]; native bits per taste
+−.054 [−.141, +.023]; rhythm only −.039 [−.159, +.084]; clock only −.197 [−.233, −.158]; equal weights −.123
+[−.135, −.112].
+
+**Inference.** The first prediction holds on timing: the native mixture is again within .01–.014 bits per taste
+of the best single stream. The second fails: the capacity gain is not clearly carried by better forecasts
+(native −.05, interval including 0), and the rhythm trackers, already designed to suit timing (D68), predict
+almost as well at P=560. The extra material goes overwhelmingly to clock streams (1471 grown units), which
+improve their own forecasts a lot without becoming the best predictor. The third fails as stated: equal weights
+do not erase the gain, but they are far worse than the native mixture at both sizes, so selection is again
+necessary. On timing the efficiency gain from capacity (+.17) is therefore not accounted for by the measured
+prediction channel. A smaller prediction change may matter more for timing behaviour, or the gain runs
+elsewhere. D93's "room improves a few streams' forecasts" is specific to the sequence family; "trust is near
+the hindsight oracle" holds on both.
+
+**D102 result.** [Script](/home/pilgrim/git/simple-learner/lab/followups.py) (`fresh`),
+[JSON](/home/pilgrim/git/simple-learner/lab/v/followup_fresh.json), [log](/home/pilgrim/git/simple-learner/lab/v/followup_fresh.log);
+all 40 design lives reproduce D78's curve references (168 s wall); circuit and told references are D78's.
+
+| seq 17, seeds 176000–176009 | gap closed | native bits / errors | event only | best single | equal weights | grown at end: event / clock / integrator / rhythm |
+|---|---:|---:|---:|---:|---:|---:|
+| low (P=560) | +.31 [+.25, +.37] | .934 / .330 | .917 | .884 | .988 | 10 / 0 / 0 / 0 |
+| high (P=4480) | +.70 [+.58, +.80] | .566 / .150 | .548 | .535 | 1.008 | 260 / 984 / 789 / 200 |
+| R+M+1 | +.70 [+.65, +.75] | .543 / .137 | .527 | .517 | 1.000 | 246 / 38 / 64 / 57 |
+
+high − low: gap closed +.38 [+.28, +.50]; native last-third bits −.369 [−.473, −.264], event only −.371 [−.472, −.266],
+equal weights +.020 [−.006, +.047]. R+M+1 − high: gap closed +.00 [−.09, +.10]; native bits −.019 [−.146, +.101].
+
+**Inference.** D93 replicates on fresh seeds: room's gain is all in the event streams' forecasts, the native mixture
+is within .03 bits per taste of the best single stream (.031, at the edge of the predicted .03), and equal weights
+erase the gain. The head-started ruler matches the large brain: the interval's lower bound (−.086) lies above
+D78's −.10 margin. With 2446 units against about 4270 (57%), a hand-set allocation of room loses nothing measurable
+by that margin on this family. Since the event streams were chosen by hand, this measures the value of that
+supplied knowledge, not a design.

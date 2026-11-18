@@ -1,0 +1,261 @@
+{
+ "identity": {
+  "lives": 20,
+  "mismatches": []
+ },
+ "requests": {
+  "event": {
+   "under allowance": 1075,
+   "transfers": 680,
+   "full, no birth due": 3532,
+   "full, savings test fails": 28533,
+   "full, transfer attempted": 1955,
+   "full, no poor donor": 65
+  },
+  "clock": {
+   "under allowance": 34326,
+   "transfers": 1340,
+   "full, no birth due": 19535,
+   "full, transfer attempted": 6942,
+   "full, savings test fails": 149593,
+   "full, no poor donor": 564
+  },
+  "integrator": {
+   "under allowance": 4855,
+   "transfers": 1821,
+   "full, savings test fails": 167168,
+   "full, no birth due": 17648,
+   "full, transfer attempted": 6761,
+   "full, no poor donor": 464
+  },
+  "rhythm": {
+   "under allowance": 97333,
+   "transfers": 982,
+   "full, no birth due": 27182,
+   "full, savings test fails": 21445,
+   "full, transfer attempted": 1631,
+   "full, no poor donor": 81
+  }
+ },
+ "event_trajectory": {
+  "0": {
+   "best_event_saved": 1.1739616517101532,
+   "median_event_saved": -0.7177824810975639,
+   "event_allowance_grown": 9.33,
+   "poor_donors": 125.08
+  },
+  "50": {
+   "best_event_saved": 2.835103457076726,
+   "median_event_saved": -1.9988654731975393,
+   "event_allowance_grown": 9.38,
+   "poor_donors": 95.39
+  },
+  "100": {
+   "best_event_saved": 4.647017042790489,
+   "median_event_saved": -2.081647273051036,
+   "event_allowance_grown": 12.64,
+   "poor_donors": 86.45
+  },
+  "150": {
+   "best_event_saved": 6.734961924796847,
+   "median_event_saved": -1.9409269101429045,
+   "event_allowance_grown": 16.65,
+   "poor_donors": 74.67
+  },
+  "200": {
+   "best_event_saved": 7.883020179474581,
+   "median_event_saved": -1.8579672545563066,
+   "event_allowance_grown": 21.74,
+   "poor_donors": 54.29
+  },
+  "250": {
+   "best_event_saved": 11.324855843463833,
+   "median_event_saved": -2.059936815606008,
+   "event_allowance_grown": 25.4,
+   "poor_donors": 41.79
+  }
+ },
+ "top_saved_end": [
+  [
+   [
+    4.498005717631078,
+    "clock53"
+   ],
+   [
+    2.677108135046467,
+    "clock28"
+   ],
+   [
+    2.4888212481099927,
+    "lbc1t2"
+   ],
+   [
+    2.2858032938405737,
+    "rt3n8"
+   ],
+   [
+    2.2858032938405737,
+    "rt3n7"
+   ]
+  ],
+  [
+   [
+    16.9524925756072,
+    "clock42"
+   ],
+   [
+    15.620904701364198,
+    "clock24"
+   ],
+   [
+    15.469829565470926,
+    "clock28"
+   ],
+   [
+    13.556849266270229,
+    "clock47"
+   ],
+   [
+    12.838083991499639,
+    "red:outcome"
+   ]
+  ],
+  [
+   [
+    9.16916818024555,
+    "every:colour"
+   ],
+   [
+    8.009949600984845,
+    "rt2n6"
+   ],
+   [
+    6.910189400911338,
+    "rt2n3"
+   ],
+   [
+    6.7517387785405,
+    "rt2n8"
+   ],
+   [
+    5.988458940357055,
+    "bad:colour"
+   ]
+  ],
+  [
+   [
+    14.052371023210988,
+    "good:colour"
+   ],
+   [
+    2.139987244640432,
+    "lbc1t0"
+   ],
+   [
+    1.9255080911643039,
+    "lbc0t2"
+   ],
+   [
+    1.5548504400803025,
+    "every:colour"
+   ],
+   [
+    1.121024832085471,
+    "lbm1t1"
+   ]
+  ]
+ ],
+ "event_saved_end": [
+  [
+   [
+    "every:colour",
+    -3.106737695071157
+   ],
+   [
+    "every:outcome",
+    -7.8945262311431215
+   ],
+   [
+    "good:colour",
+    -8.298626261709622
+   ],
+   [
+    "good:outcome",
+    -3.9956564218572317
+   ],
+   [
+    "bad:colour",
+    -0.387479071586612
+   ],
+   [
+    "bad:outcome",
+    -5.592848633229934
+   ],
+   [
+    "red:colour",
+    -3.542511284331598
+   ],
+   [
+    "red:outcome",
+    -7.196522883672053
+   ],
+   [
+    "blue:colour",
+    -2.9815257356547624
+   ],
+   [
+    "blue:outcome",
+    -0.5678840466947412
+   ]
+  ],
+  [
+   [
+    "every:colour",
+    -8.748044195214376
+   ],
+   [
+    "every:outcome",
+    -6.600393400698219
+   ],
+   [
+    "good:colour",
+    -4.340241531007024
+   ],
+   [
+    "good:outcome",
+    -3.742603029838056
+   ],
+   [
+    "bad:colour",
+    7.743311761032593
+   ],
+   [
+    "bad:outcome",
+    -3.9790484514485316
+   ],
+   [
+    "red:colour",
+    -4.279524215999011
+   ],
+   [
+    "red:outcome",
+    12.838083991499639
+   ],
+   [
+    "blue:colour",
+    -4.050381785481921
+   ],
+   [
+    "blue:outcome",
+    1.10965366861484
+   ]
+  ]
+ ],
+ "transfers_per_life": 241.15,
+ "wall_s": 23.595760910997342,
+ "source_sha256": {
+  "lab/market_diagnosis.py": "81bf22ceef8a10d3021b27db10a79b2569030d491c85d62947592d508d1f1444",
+  "lab/alloc_rules.py": "37c8f14317d6d1626e98f3569f4da1248e898e682b7a206fbd7a9fac57848543",
+  "lab/grownet.py": "1a550553b1244368ed0ca6fa59cce3e94a9badd5e5d1e801953aa42974874f0f"
+ }
+}

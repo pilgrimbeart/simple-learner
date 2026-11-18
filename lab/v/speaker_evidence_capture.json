@@ -1,0 +1,12 @@
+{
+ "identity": {
+  "lives": 100,
+  "mismatches": []
+ },
+ "wall_s": 199.77584291299718,
+ "source_sha256": {
+  "lab/speaker_evidence.py": "8ffce787ecfc33c9ee30fe93106a523b6e480a2bec1d8969abbdc23a5bde205c",
+  "lab/room_prediction.py": "635733d273c40390c244be3ff768111227f461b771a89d8aa824976e7f0a4cb1",
+  "lab/contest_prediction.py": "d495fda8461894dc1cd7bfdd079d7c8dafde6ca136c2eb62766db5848f241853"
+ }
+}

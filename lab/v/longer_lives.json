@@ -1,0 +1,97 @@
+{
+ "gap_closed": {
+  "M": {
+   "median": 0.6892014444931065,
+   "ci95": [
+    0.5081169200878534,
+    0.8324984488109282
+   ]
+  },
+  "W": {
+   "median": 0.6803697375275586,
+   "ci95": [
+    0.5127679377744723,
+    0.8143471411630164
+   ]
+  },
+  "R+M+1": {
+   "median": 0.7843897751270722,
+   "ci95": [
+    0.7131457188812429,
+    0.855334431291066
+   ]
+  }
+ },
+ "differences": {
+  "R+M+1 - W": {
+   "median": 0.10401618892092662,
+   "ci95": [
+    -0.006813665114771121,
+    0.2432545357475436
+   ]
+  },
+  "R+M+1 - M": {
+   "median": 0.09379870191146711,
+   "ci95": [
+    -0.05414927917475476,
+    0.3080459012869427
+   ]
+  },
+  "W - M": {
+   "median": -0.0036202539083400875,
+   "ci95": [
+    -0.15869465136551392,
+    0.1345113811950489
+   ]
+  }
+ },
+ "per_arm": {
+  "M": {
+   "native_last_third_bits": 0.6264576692943121,
+   "native_last_third_errors": 0.18580908626850434,
+   "grown": {
+    "event": 80.25,
+    "clock": 36.8,
+    "integrator": 34.45,
+    "rhythm": 15.6
+   },
+   "transfers": 402.6,
+   "won": 0.0
+  },
+  "W": {
+   "native_last_third_bits": 0.6073790541679792,
+   "native_last_third_errors": 0.1788011319783895,
+   "grown": {
+    "event": 87.0,
+    "clock": 47.15,
+    "integrator": 50.45,
+    "rhythm": 73.4
+   },
+   "transfers": 0.0,
+   "won": 22843.35
+  },
+  "R+M+1": {
+   "native_last_third_bits": 0.4907856887442902,
+   "native_last_third_errors": 0.12406216505894962,
+   "grown": {
+    "event": 299.15,
+    "clock": 29.1,
+    "integrator": 56.2,
+    "rhythm": 17.55
+   },
+   "transfers": 597.95,
+   "won": 0.0
+  }
+ },
+ "provenance": {
+  "wall_s": 383.83457587299927,
+  "source_sha256": {
+   "lab/longer_lives.py": "410e8b646bdb5618c3d14eee72701f8d8a53fdf0315a5e32bc6b4b75d5c8206c",
+   "lab/ruler_ingredients.py": "dc2a3dcf482a8e9b40545ff7e848ac3a0f5d071d7ef66111037a15a3f5b60896",
+   "lab/room_prediction.py": "635733d273c40390c244be3ff768111227f461b771a89d8aa824976e7f0a4cb1",
+   "lab/alloc_rules.py": "37c8f14317d6d1626e98f3569f4da1248e898e682b7a206fbd7a9fac57848543",
+   "lab/grownet.py": "1a550553b1244368ed0ca6fa59cce3e94a9badd5e5d1e801953aa42974874f0f"
+  },
+  "analysis_sha256": "410e8b646bdb5618c3d14eee72701f8d8a53fdf0315a5e32bc6b4b75d5c8206c"
+ }
+}

@@ -1,0 +1,16 @@
+{
+ "identity": {
+  "lives": 60,
+  "mismatches": []
+ },
+ "wall_s": 89.95441772999766,
+ "G": 258,
+ "reference_sha256": "3fdd9dc26a54c8e7ca7d77643545dabbcab8b738a903233bf0afd1a83e54f5b5",
+ "source_sha256": {
+  "lab/contest_prediction.py": "d495fda8461894dc1cd7bfdd079d7c8dafde6ca136c2eb62766db5848f241853",
+  "lab/room_prediction.py": "635733d273c40390c244be3ff768111227f461b771a89d8aa824976e7f0a4cb1",
+  "lab/alloc_compare.py": "d39df823d685a53351243fa8e8e49dd53457d3d623c838c36da3897b55c7fcfa",
+  "lab/alloc_rules.py": "37c8f14317d6d1626e98f3569f4da1248e898e682b7a206fbd7a9fac57848543",
+  "lab/grownet.py": "1a550553b1244368ed0ca6fa59cce3e94a9badd5e5d1e801953aa42974874f0f"
+ }
+}

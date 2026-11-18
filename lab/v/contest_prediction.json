@@ -1,0 +1,406 @@
+{
+ "per_arm": {
+  "low": {
+   "native mixture | full": {
+    "bits": 0.9651593528002946,
+    "errors": 0.3690371671056482
+   },
+   "native mixture | last_third": {
+    "bits": 0.932028078208693,
+    "errors": 0.33713784021071114
+   },
+   "fresh Bayes, event streams only | full": {
+    "bits": 0.949050818775291,
+    "errors": 0.34328358208955223
+   },
+   "fresh Bayes, event streams only | last_third": {
+    "bits": 0.924724865806173,
+    "errors": 0.3301141352063213
+   },
+   "best single stream in hindsight | full": {
+    "bits": 0.9224930125755153,
+    "errors": 0.3412350014632719
+   },
+   "best single stream in hindsight | last_third": {
+    "bits": 0.8942100209301274,
+    "errors": 0.32748024582967517
+   },
+   "event_grown_share": 0.6334784585688699,
+   "event_mean_span": 1.6334784585688695,
+   "efficiency": -0.46163100636728405,
+   "grown": null,
+   "event_mean_span_last_third": 1.6467930545712262
+  },
+  "E": {
+   "native mixture | full": {
+    "bits": 0.9738745467459257,
+    "errors": 0.3754007577965608
+   },
+   "native mixture | last_third": {
+    "bits": 0.9503953818326448,
+    "errors": 0.37114337568058076
+   },
+   "fresh Bayes, event streams only | full": {
+    "bits": 0.9622933572463386,
+    "errors": 0.35179248032643545
+   },
+   "fresh Bayes, event streams only | last_third": {
+    "bits": 0.9372571823737107,
+    "errors": 0.3466424682395644
+   },
+   "best single stream in hindsight | full": {
+    "bits": 0.9343251509290801,
+    "errors": 0.33605362867968525
+   },
+   "best single stream in hindsight | last_third": {
+    "bits": 0.9238054625797276,
+    "errors": 0.34392014519056263
+   },
+   "event_grown_share": 0.6357056782007715,
+   "event_mean_span": 1.6357056782007717,
+   "efficiency": -0.8590713899123644,
+   "grown": {
+    "event": 10.0,
+    "clock": 59.2,
+    "integrator": 56.0,
+    "rhythm": 39.35
+   },
+   "event_mean_span_last_third": 1.6515484698552318
+  },
+  "W": {
+   "native mixture | full": {
+    "bits": 0.8310355185083966,
+    "errors": 0.27565733672603904
+   },
+   "native mixture | last_third": {
+    "bits": 0.6854219008903807,
+    "errors": 0.21326616288832914
+   },
+   "fresh Bayes, event streams only | full": {
+    "bits": 0.8246353396340309,
+    "errors": 0.273960983884648
+   },
+   "fresh Bayes, event streams only | last_third": {
+    "bits": 0.6778262546432541,
+    "errors": 0.1964735516372796
+   },
+   "best single stream in hindsight | full": {
+    "bits": 0.7920276008205508,
+    "errors": 0.26024879841673737
+   },
+   "best single stream in hindsight | last_third": {
+    "bits": 0.6631340062422023,
+    "errors": 0.1897565071368598
+   },
+   "event_grown_share": 0.42632945306531517,
+   "event_mean_span": 2.1883548482089172,
+   "efficiency": 0.7732358039264755,
+   "grown": {
+    "event": 49.65,
+    "clock": 60.9,
+    "integrator": 101.95,
+    "rhythm": 45.3
+   },
+   "event_mean_span_last_third": 1.9974372116863146
+  },
+  "R": {
+   "native mixture | full": {
+    "bits": 0.804066963854981,
+    "errors": 0.2764827382708764
+   },
+   "native mixture | last_third": {
+    "bits": 0.6836906009329513,
+    "errors": 0.21649484536082475
+   },
+   "fresh Bayes, event streams only | full": {
+    "bits": 0.7835951192867936,
+    "errors": 0.25730303924461495
+   },
+   "fresh Bayes, event streams only | last_third": {
+    "bits": 0.6623530824586217,
+    "errors": 0.22211808809746955
+   },
+   "best single stream in hindsight | full": {
+    "bits": 0.7595694003921084,
+    "errors": 0.2494836234877545
+   },
+   "best single stream in hindsight | last_third": {
+    "bits": 0.6511292064069444,
+    "errors": 0.21743205248359887
+   },
+   "event_grown_share": 0.953572943863394,
+   "event_mean_span": 15.821041125929668,
+   "efficiency": 0.5406725237562526,
+   "grown": {
+    "event": 246.15,
+    "clock": 0.0,
+    "integrator": 0.0,
+    "rhythm": 0.0
+   },
+   "event_mean_span_last_third": 20.16022876429777
+  },
+  "high": {
+   "native mixture | full": {
+    "bits": 0.6995578771578956,
+    "errors": 0.21016949152542372
+   },
+   "native mixture | last_third": {
+    "bits": 0.4486289603484816,
+    "errors": 0.10008703220191471
+   },
+   "fresh Bayes, event streams only | full": {
+    "bits": 0.6794686385187967,
+    "errors": 0.19858757062146892
+   },
+   "fresh Bayes, event streams only | last_third": {
+    "bits": 0.4307065576818138,
+    "errors": 0.10095735422106179
+   },
+   "best single stream in hindsight | full": {
+    "bits": 0.6563454909814773,
+    "errors": 0.19350282485875706
+   },
+   "best single stream in hindsight | last_third": {
+    "bits": 0.4306939337132144,
+    "errors": 0.10095735422106179
+   },
+   "event_grown_share": 0.9550077864152401,
+   "event_mean_span": 15.72677922021291,
+   "efficiency": 1.6121313531800603,
+   "grown": null,
+   "event_mean_span_last_third": 19.90413582934262
+  }
+ },
+ "differences": {
+  "W - high | native mixture | last_third | bits": {
+   "mean": 0.25322401934932054,
+   "ci95": [
+    0.10929554728246971,
+    0.39579204664788
+   ]
+  },
+  "W - high | native mixture | last_third | errors": {
+   "mean": 0.11951122179304814,
+   "ci95": [
+    0.052902622374133124,
+    0.1905967427334138
+   ]
+  },
+  "W - high | fresh Bayes, event streams only | last_third | bits": {
+   "mean": 0.26712576985761677,
+   "ci95": [
+    0.11933597519782341,
+    0.4215948596238816
+   ]
+  },
+  "W - high | fresh Bayes, event streams only | last_third | errors": {
+   "mean": 0.10372655183756159,
+   "ci95": [
+    0.04359707700452913,
+    0.17001053838104405
+   ]
+  },
+  "W - high | best single stream in hindsight | last_third | bits": {
+   "mean": 0.24796007334254724,
+   "ci95": [
+    0.10350744197917379,
+    0.3944139790586645
+   ]
+  },
+  "W - high | best single stream in hindsight | last_third | errors": {
+   "mean": 0.09683421800031766,
+   "ci95": [
+    0.03927634122750546,
+    0.15622390041212555
+   ]
+  },
+  "W - E | native mixture | last_third | bits": {
+   "mean": -0.25173425856395715,
+   "ci95": [
+    -0.37562613222997804,
+    -0.12801895845399724
+   ]
+  },
+  "W - E | native mixture | last_third | errors": {
+   "mean": -0.15271943569851346,
+   "ci95": [
+    -0.21318371279807632,
+    -0.08630941593053153
+   ]
+  },
+  "W - E | fresh Bayes, event streams only | last_third | bits": {
+   "mean": -0.24253941666202686,
+   "ci95": [
+    -0.37579982191124844,
+    -0.10551725370853034
+   ]
+  },
+  "W - E | fresh Bayes, event streams only | last_third | errors": {
+   "mean": -0.14270981741072306,
+   "ci95": [
+    -0.20507619578580447,
+    -0.07500777935765661
+   ]
+  },
+  "W - E | best single stream in hindsight | last_third | bits": {
+   "mean": -0.24900387182563577,
+   "ci95": [
+    -0.38275405747865343,
+    -0.113410119934173
+   ]
+  },
+  "W - E | best single stream in hindsight | last_third | errors": {
+   "mean": -0.14708347307656983,
+   "ci95": [
+    -0.21087305195903186,
+    -0.0773321410761382
+   ]
+  },
+  "R - high | native mixture | last_third | bits": {
+   "mean": 0.24010421786922614,
+   "ci95": [
+    0.14539162055881255,
+    0.3305527862414391
+   ]
+  },
+  "R - high | native mixture | last_third | errors": {
+   "mean": 0.11771486387001033,
+   "ci95": [
+    0.08487666875181066,
+    0.14896683526654836
+   ]
+  },
+  "R - high | fresh Bayes, event streams only | last_third | bits": {
+   "mean": 0.2371240708066019,
+   "ci95": [
+    0.14197615749745732,
+    0.3294531957116602
+   ]
+  },
+  "R - high | fresh Bayes, event streams only | last_third | errors": {
+   "mean": 0.123375780817304,
+   "ci95": [
+    0.08643315813667035,
+    0.16045875053411693
+   ]
+  },
+  "R - high | best single stream in hindsight | last_third | bits": {
+   "mean": 0.22576936991878144,
+   "ci95": [
+    0.13450154565878403,
+    0.3162191784515789
+   ]
+  },
+  "R - high | best single stream in hindsight | last_third | errors": {
+   "mean": 0.11738225941333483,
+   "ci95": [
+    0.08377578674276241,
+    0.1482808177248931
+   ]
+  },
+  "W - R | native mixture | last_third | bits": {
+   "mean": 0.013119801480094315,
+   "ci95": [
+    -0.1290524246785022,
+    0.150250962151352
+   ]
+  },
+  "W - R | native mixture | last_third | errors": {
+   "mean": 0.0017963579230378377,
+   "ci95": [
+    -0.050975469512958296,
+    0.05803351571598307
+   ]
+  },
+  "W - R | fresh Bayes, event streams only | last_third | bits": {
+   "mean": 0.030001699051014852,
+   "ci95": [
+    -0.12026624605771284,
+    0.17867666075238622
+   ]
+  },
+  "W - R | fresh Bayes, event streams only | last_third | errors": {
+   "mean": -0.01964922897974239,
+   "ci95": [
+    -0.06609206601850852,
+    0.026988255595724386
+   ]
+  },
+  "W - R | best single stream in hindsight | last_third | bits": {
+   "mean": 0.022190703423765883,
+   "ci95": [
+    -0.1272799998352859,
+    0.16703527463349657
+   ]
+  },
+  "W - R | best single stream in hindsight | last_third | errors": {
+   "mean": -0.020548041413017144,
+   "ci95": [
+    -0.06722683425061711,
+    0.024285645348654225
+   ]
+  },
+  "E - low | native mixture | last_third | bits": {
+   "mean": 0.019484284143745867,
+   "ci95": [
+    -0.005208395522699873,
+    0.04581736142562674
+   ]
+  },
+  "E - low | native mixture | last_third | errors": {
+   "mean": 0.0368268044608427,
+   "ci95": [
+    -0.0028919345166496103,
+    0.07251999692567206
+   ]
+  },
+  "E - low | fresh Bayes, event streams only | last_third | bits": {
+   "mean": 0.014204202267345256,
+   "ci95": [
+    -0.01754738250213351,
+    0.04510649207397301
+   ]
+  },
+  "E - low | fresh Bayes, event streams only | last_third | errors": {
+   "mean": 0.018982271572280517,
+   "ci95": [
+    -0.023999725214800986,
+    0.058681965752231544
+   ]
+  },
+  "E - low | best single stream in hindsight | last_third | bits": {
+   "mean": 0.030886517263618317,
+   "ci95": [
+    -0.007718891785804465,
+    0.06529828124900071
+   ]
+  },
+  "E - low | best single stream in hindsight | last_third | errors": {
+   "mean": 0.01744493994542031,
+   "ci95": [
+    -0.008578792337770903,
+    0.043087618889262644
+   ]
+  }
+ },
+ "provenance": {
+  "capture": {
+   "identity": {
+    "lives": 60,
+    "mismatches": []
+   },
+   "wall_s": 89.95441772999766,
+   "G": 258,
+   "reference_sha256": "3fdd9dc26a54c8e7ca7d77643545dabbcab8b738a903233bf0afd1a83e54f5b5",
+   "source_sha256": {
+    "lab/contest_prediction.py": "d495fda8461894dc1cd7bfdd079d7c8dafde6ca136c2eb62766db5848f241853",
+    "lab/room_prediction.py": "635733d273c40390c244be3ff768111227f461b771a89d8aa824976e7f0a4cb1",
+    "lab/alloc_compare.py": "d39df823d685a53351243fa8e8e49dd53457d3d623c838c36da3897b55c7fcfa",
+    "lab/alloc_rules.py": "37c8f14317d6d1626e98f3569f4da1248e898e682b7a206fbd7a9fac57848543",
+    "lab/grownet.py": "1a550553b1244368ed0ca6fa59cce3e94a9badd5e5d1e801953aa42974874f0f"
+   }
+  },
+  "d93_pickle_sha256": "217c0f241a8003d722faa461f859ddf5c4765f0e40f98b63c80fef2e21b7c5c0",
+  "analysis_sha256": "d495fda8461894dc1cd7bfdd079d7c8dafde6ca136c2eb62766db5848f241853"
+ }
+}

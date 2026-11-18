@@ -1,0 +1,8 @@
+{
+ "success": true,
+ "checks": [
+  "specialist Bayes update with abstaining sleepers",
+  "masking",
+  "loss and hard-choice error"
+ ]
+}

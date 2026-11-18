@@ -76,8 +76,11 @@ the simple fixed-definition retention comparison without a cure, not all possibl
 about 6% of children, most children never forecast or lose to the combined forecast, and deleted units would
 have been the earlier parent for 4874 words no living unit could build. **Next discriminator:**
 [D92](discrete/NOTEBOOK.md#d92-ghost-children) finds those missing children no better a pool than actual
-growth. **Next discriminator:** D77's extra-room benefit through selection/readout alternatives (does extra
-room mainly change which forecasts are trusted?), not further retention or growth variants. Audit existing traces and
+growth. [D93–D102](discrete/NOTEBOOK.md#d93-room-prediction) answer the selection question: no, trust is near
+the hindsight oracle; room improves the event streams' own forecasts, and generic allocation is delayed by the
+evidence rate (largely repaid by 1000 s lives). **Open:** a local rule that lends room before evidence arrives;
+why weak single-symbol speakers harm the closed loop (D100; the initial prior over 168 streams is the leading
+candidate); and what carries timing's capacity gain, which is not visible in prediction (D101). Audit existing traces and
 source/theory before defining another bounded observation. Keep alternative readout/knob explanations,
 ancestry cost and displaced memory visible; retrospective winners are not a retention rule.
 Compare allocation, tuning, fixed capacity, recycling and growth on matched lives under the same account

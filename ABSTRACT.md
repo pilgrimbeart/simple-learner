@@ -64,6 +64,11 @@ finds weakly predicting units build about 6% of new units, and about one in five
 combined forecast. Deleted units would have offered many partners nothing living duplicates; those
 missing combinations [would have predicted](discrete/NOTEBOOK.md#d92-ghost-children) about as poorly as the
 units growth did build, so memory as parts does not explain the benefit of extra room on present evidence.
+[Recombining the brain's own forecasts](discrete/NOTEBOOK.md#d93-room-prediction) shows instead that extra room
+improves the colour-event streams' forecasts, while the brain's weighting is already close to the best stream
+chosen with hindsight. A hand-set head start for those streams matches the large brain with 57% of its material
+on fresh seeds; the generic market falls short because memory is paid for with evidence that arrives only as fast
+as tastes, and [longer lives](discrete/NOTEBOOK.md#d99-longer-lives) repay most of that delay.
 No retention or growth cure is selected.
 The central question remains which useful relations local components can
 exploit or discover affordably. Timing generality and retention remain conditional branches in the
