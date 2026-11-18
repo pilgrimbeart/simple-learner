@@ -1,0 +1,43 @@
+Traceback (most recent call last):
+  File "/home/pilgrim/git/simple-learner/lab/retained_prediction_checks.py", line 70, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/pilgrim/git/simple-learner/lab/retained_prediction_checks.py", line 54, in main
+    rows,validation,tastes=reconstruct(raw)
+                           ^^^^^^^^^^^^^^^^
+  File "/home/pilgrim/git/simple-learner/lab/retained_prediction.py", line 112, in reconstruct
+    assert last_prediction is not None
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+Traceback (most recent call last):
+  File "/home/pilgrim/git/simple-learner/lab/retained_prediction_checks.py", line 70, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/pilgrim/git/simple-learner/lab/retained_prediction_checks.py", line 54, in main
+    rows,validation,tastes=reconstruct(raw)
+                           ^^^^^^^^^^^^^^^^
+  File "/home/pilgrim/git/simple-learner/lab/retained_prediction.py", line 112, in reconstruct
+    assert last_prediction is not None
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+{
+  "passed": true,
+  "checks": [
+    "prediction independent of current label; score before update",
+    "one-bit mixture bound on all 64 binary length-six sequences and prefixes",
+    "native longest/confidence/insertion tie selection and silence",
+    "complete reconstruction, newborn removal, last-issued forecast, corrupted checkpoint refusal"
+  ],
+  "simulated_steps": 0
+}
+{
+  "passed": true,
+  "checks": [
+    "prediction independent of current label; score before update",
+    "one-bit mixture bound on all 64 binary length-six sequences and prefixes",
+    "native longest/confidence/insertion tie selection and silence",
+    "complete reconstruction, newborn removal, last-issued forecast, corrupted checkpoint refusal",
+    "tidy deletion after write but before counter increment"
+  ],
+  "simulated_steps": 0
+}

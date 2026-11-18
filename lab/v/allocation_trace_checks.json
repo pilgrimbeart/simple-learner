@@ -1,0 +1,33 @@
+{
+  "checks": [
+    {
+      "name": "clone_does_not_touch_live_rng_and_candidate_draw_matches",
+      "passed": true
+    },
+    {
+      "name": "won_contest_actual_leaf_and_forecast_change",
+      "passed": true
+    },
+    {
+      "name": "failed_contest_observed_without_removal",
+      "passed": true
+    },
+    {
+      "name": "actual_removal_no_birth_and_exact_neutral_fingerprint",
+      "passed": true,
+      "fingerprint": "9a9606c3c54baef347444cbd345890c26615835ea6a43a3866f46a4cce08522a"
+    },
+    {
+      "name": "cascade_probe_only_on_complete_graph",
+      "passed": true
+    }
+  ],
+  "simulated_steps": 0,
+  "wall_s": 0.006061571999453008,
+  "source_sha256": {
+    "lab/allocation_trace.py": "e09db7869bbf26cf78b1b7d1406c58e2a2468ce4be184c186398617b23a514d2",
+    "lab/allocation_trace_checks.py": "e3088de43f144d0172a88b1b2287fcc0264d4ffdf79c0b5d99f5edaa33c86135",
+    "lab/alloc_rules.py": "37c8f14317d6d1626e98f3569f4da1248e898e682b7a206fbd7a9fac57848543",
+    "lab/grownet.py": "1a550553b1244368ed0ca6fa59cce3e94a9badd5e5d1e801953aa42974874f0f"
+  }
+}

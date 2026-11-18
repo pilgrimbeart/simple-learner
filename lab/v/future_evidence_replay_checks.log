@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "simulated_steps": 0,
+  "checks": [
+    "same-taste exclusion",
+    "prediction survival",
+    "100s inclusive boundary",
+    "unchanged context",
+    "exact living equivalent",
+    "label agreement"
+  ]
+}

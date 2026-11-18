@@ -1,0 +1,430 @@
+{
+  "provenance": {
+    "revision": "d37dac6745d2657229861d6f9cee4239258367d3",
+    "dirty": " M ABSTRACT.md\n M PROGRAMME.md\n M QUESTIONS.md\n M README.md\n M discrete/NOTEBOOK.md\n?? lab/active_mixture_audit.py\n?? lab/active_mixture_review.py\n?? lab/alloc_review.py\n?? lab/issued_credit.py\n?? lab/issued_credit_checks.py\n?? lab/issued_credit_compare.py\n?? lab/scoring_feedback.py\n?? lab/scoring_feedback_analysis.py\n?? lab/scoring_order_replay.py\n?? lab/v/active_mixture_audit.json\n?? lab/v/active_mixture_audit.log\n?? lab/v/active_mixture_audit_report.md\n?? lab/v/active_mixture_review.json\n?? lab/v/active_mixture_review.log\n?? lab/v/alloc_review.json\n?? lab/v/alloc_review.log\n?? lab/v/d79_work_order.md\n?? lab/v/issued_credit_checks.json\n?? lab/v/issued_credit_checks.log\n?? lab/v/scoring_feedback.json\n?? lab/v/scoring_feedback.log\n?? lab/v/scoring_feedback_analysis.json\n?? lab/v/scoring_feedback_analysis.log\n?? lab/v/scoring_order_replay.json\n?? lab/v/scoring_order_replay.log\n?? lab/v/scoring_order_replay_failed_summary.json\n?? lab/v/scoring_order_replay_failed_summary.log\n?? lab/v/scoring_order_replay_report.md\n",
+    "source_sha256": {
+      "lab/issued_credit.py": "67dcd1854f237873c359bcc9230861e5c77567739871773face5ea98ab196bca",
+      "lab/issued_credit_checks.py": "b2918887ae1798cd314c6be6edfcd548c06b75e8596b960669e145ee68c94e8c",
+      "lab/grownet.py": "1a550553b1244368ed0ca6fa59cce3e94a9badd5e5d1e801953aa42974874f0f",
+      "lab/teach.py": "c377e37fbdeeafa5a155735ba58e4afa3acad97b14b10ce292478f5845ba6b5f",
+      "lab/scoring_order_replay.py": "7e8e69b0ee3e464eb2c7a091706b53e77d8ab450b3ba6a5c08136c4a403e4dd6"
+    },
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python lab/issued_credit_checks.py",
+    "env": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    }
+  },
+  "simulated_steps": 0,
+  "checks": [
+    {
+      "name": "known_selector_update_and_sleepers",
+      "passed": true,
+      "weights": [
+        1.01,
+        2.9899999999999998,
+        7.0
+      ]
+    },
+    {
+      "name": "living_original_and_parents_once",
+      "passed": true,
+      "summary": {
+        "enabled": true,
+        "counters": {
+          "predict_calls": 2,
+          "forecast_records_written": 338,
+          "forecast_scalar_fields_written": 1354,
+          "awake_stream_forecasts": 2,
+          "issued_entry_record_mismatches": 0,
+          "tastes_with_issued_entry_mismatch": 0,
+          "native_learn_calls": 168,
+          "stream_score_field_writes": 504,
+          "issued_abstentions_at_accepted_taste": 167,
+          "native_guessed_calls_suppressed": 1,
+          "native_unit_credit_calls_suppressed": 1,
+          "native_own_credit_calls_suppressed": 1,
+          "issued_guessed_calls": 1,
+          "unit_use_credit_calls": 3,
+          "unit_own_credit_calls": 1,
+          "delivered_correct_forecasts": 1,
+          "selector_weight_writes": 2,
+          "selector_saved_writes": 1,
+          "pbits_writes": 1,
+          "completed_accepted_updates": 1,
+          "taste_calls": 1,
+          "accepted_tastes": 1,
+          "accepted_tastes_with_issued_entry_mismatch": 0,
+          "accepted_issued_entry_record_mismatches": 0,
+          "taste_entry_stream_reads": 168
+        },
+        "max_reconstruction_error": 0.0,
+        "max_issued_entry_probability_difference": 0.0,
+        "cache_records": 169,
+        "cache_record_fields": [
+          "speaker_id",
+          "hard_choice",
+          "exact_p0",
+          "exact_p1"
+        ],
+        "persistent_cache_scalar_slots": 677,
+        "transient_taste_state_fields": [
+          "issued_reference",
+          "t",
+          "letter",
+          "processed_streams",
+          "applied",
+          "entry_E_agree_dis",
+          "entry_weights",
+          "entry_saved",
+          "entry_pbits"
+        ]
+      }
+    },
+    {
+      "name": "deleted_original_wrong_replacement",
+      "passed": true,
+      "summary": {
+        "enabled": true,
+        "counters": {
+          "predict_calls": 2,
+          "forecast_records_written": 338,
+          "forecast_scalar_fields_written": 1354,
+          "awake_stream_forecasts": 2,
+          "cached_original_speakers_removed": 1,
+          "issued_entry_record_mismatches": 1,
+          "tastes_with_issued_entry_mismatch": 1,
+          "native_learn_calls": 168,
+          "stream_score_field_writes": 504,
+          "issued_abstentions_at_accepted_taste": 167,
+          "native_guessed_calls_suppressed": 1,
+          "issued_guessed_calls": 1,
+          "missing_original_speakers_at_feedback": 1,
+          "correct_but_undeliverable_credit": 1,
+          "selector_weight_writes": 2,
+          "selector_saved_writes": 1,
+          "pbits_writes": 1,
+          "completed_accepted_updates": 1,
+          "taste_calls": 1,
+          "accepted_tastes": 1,
+          "accepted_tastes_with_issued_entry_mismatch": 1,
+          "accepted_issued_entry_record_mismatches": 1,
+          "taste_entry_stream_reads": 168
+        },
+        "max_reconstruction_error": 0.0,
+        "max_issued_entry_probability_difference": 0.375,
+        "cache_records": 169,
+        "cache_record_fields": [
+          "speaker_id",
+          "hard_choice",
+          "exact_p0",
+          "exact_p1"
+        ],
+        "persistent_cache_scalar_slots": 677,
+        "transient_taste_state_fields": [
+          "issued_reference",
+          "t",
+          "letter",
+          "processed_streams",
+          "applied",
+          "entry_E_agree_dis",
+          "entry_weights",
+          "entry_saved",
+          "entry_pbits"
+        ]
+      }
+    },
+    {
+      "name": "deleted_original_correct_replacement",
+      "passed": true,
+      "summary": {
+        "enabled": true,
+        "counters": {
+          "predict_calls": 2,
+          "forecast_records_written": 338,
+          "forecast_scalar_fields_written": 1354,
+          "awake_stream_forecasts": 2,
+          "cached_original_speakers_removed": 1,
+          "issued_entry_record_mismatches": 1,
+          "tastes_with_issued_entry_mismatch": 1,
+          "native_learn_calls": 168,
+          "stream_score_field_writes": 504,
+          "issued_abstentions_at_accepted_taste": 167,
+          "native_guessed_calls_suppressed": 1,
+          "native_unit_credit_calls_suppressed": 1,
+          "replacement_credit_prevented": 1,
+          "native_own_credit_calls_suppressed": 1,
+          "issued_guessed_calls": 1,
+          "missing_original_speakers_at_feedback": 1,
+          "correct_but_undeliverable_credit": 1,
+          "selector_weight_writes": 2,
+          "selector_saved_writes": 1,
+          "pbits_writes": 1,
+          "completed_accepted_updates": 1,
+          "taste_calls": 1,
+          "accepted_tastes": 1,
+          "accepted_tastes_with_issued_entry_mismatch": 1,
+          "accepted_issued_entry_record_mismatches": 1,
+          "taste_entry_stream_reads": 168
+        },
+        "max_reconstruction_error": 0.0,
+        "max_issued_entry_probability_difference": 0.0,
+        "cache_records": 169,
+        "cache_record_fields": [
+          "speaker_id",
+          "hard_choice",
+          "exact_p0",
+          "exact_p1"
+        ],
+        "persistent_cache_scalar_slots": 677,
+        "transient_taste_state_fields": [
+          "issued_reference",
+          "t",
+          "letter",
+          "processed_streams",
+          "applied",
+          "entry_E_agree_dis",
+          "entry_weights",
+          "entry_saved",
+          "entry_pbits"
+        ]
+      }
+    },
+    {
+      "name": "issued_abstention_cannot_gain_retrospective_credit",
+      "passed": true,
+      "summary": {
+        "enabled": true,
+        "counters": {
+          "predict_calls": 2,
+          "forecast_records_written": 338,
+          "forecast_scalar_fields_written": 1354,
+          "awake_stream_forecasts": 1,
+          "issued_entry_record_mismatches": 1,
+          "tastes_with_issued_entry_mismatch": 1,
+          "native_learn_calls": 168,
+          "stream_score_field_writes": 504,
+          "issued_abstentions_at_accepted_taste": 168,
+          "native_guessed_calls_suppressed": 1,
+          "native_unit_credit_calls_suppressed": 1,
+          "replacement_credit_prevented": 1,
+          "native_own_credit_calls_suppressed": 1,
+          "selector_weight_writes": 1,
+          "selector_saved_writes": 0,
+          "pbits_writes": 1,
+          "completed_accepted_updates": 1,
+          "taste_calls": 1,
+          "accepted_tastes": 1,
+          "accepted_tastes_with_issued_entry_mismatch": 1,
+          "accepted_issued_entry_record_mismatches": 1,
+          "taste_entry_stream_reads": 168
+        },
+        "max_reconstruction_error": 0.0,
+        "max_issued_entry_probability_difference": 0.1875,
+        "cache_records": 169,
+        "cache_record_fields": [
+          "speaker_id",
+          "hard_choice",
+          "exact_p0",
+          "exact_p1"
+        ],
+        "persistent_cache_scalar_slots": 677,
+        "transient_taste_state_fields": [
+          "issued_reference",
+          "t",
+          "letter",
+          "processed_streams",
+          "applied",
+          "entry_E_agree_dis",
+          "entry_weights",
+          "entry_saved",
+          "entry_pbits"
+        ]
+      }
+    },
+    {
+      "name": "immutable_cached_forecast_and_update_before_next_prediction",
+      "passed": true,
+      "summary": {
+        "enabled": true,
+        "counters": {
+          "predict_calls": 2,
+          "forecast_records_written": 338,
+          "forecast_scalar_fields_written": 1354,
+          "awake_stream_forecasts": 2,
+          "issued_entry_record_mismatches": 1,
+          "tastes_with_issued_entry_mismatch": 1,
+          "native_learn_calls": 168,
+          "stream_score_field_writes": 504,
+          "issued_abstentions_at_accepted_taste": 167,
+          "native_guessed_calls_suppressed": 1,
+          "issued_guessed_calls": 1,
+          "unit_use_credit_calls": 3,
+          "unit_own_credit_calls": 1,
+          "delivered_correct_forecasts": 1,
+          "selector_weight_writes": 2,
+          "selector_saved_writes": 1,
+          "pbits_writes": 1,
+          "completed_accepted_updates": 1,
+          "taste_calls": 1,
+          "accepted_tastes": 1,
+          "accepted_tastes_with_issued_entry_mismatch": 1,
+          "accepted_issued_entry_record_mismatches": 1,
+          "taste_entry_stream_reads": 168
+        },
+        "max_reconstruction_error": 0.0,
+        "max_issued_entry_probability_difference": 0.375,
+        "cache_records": 169,
+        "cache_record_fields": [
+          "speaker_id",
+          "hard_choice",
+          "exact_p0",
+          "exact_p1"
+        ],
+        "persistent_cache_scalar_slots": 677,
+        "transient_taste_state_fields": [
+          "issued_reference",
+          "t",
+          "letter",
+          "processed_streams",
+          "applied",
+          "entry_E_agree_dis",
+          "entry_weights",
+          "entry_saved",
+          "entry_pbits"
+        ]
+      },
+      "prediction_entry": [
+        [
+          0,
+          0.0,
+          1.0
+        ],
+        [
+          1,
+          1.0,
+          1.27
+        ]
+      ]
+    },
+    {
+      "name": "sequential_earlier_learning_deletes_original",
+      "passed": true,
+      "summary": {
+        "enabled": true,
+        "counters": {
+          "predict_calls": 2,
+          "forecast_records_written": 338,
+          "forecast_scalar_fields_written": 1354,
+          "awake_stream_forecasts": 2,
+          "issued_entry_record_mismatches": 0,
+          "tastes_with_issued_entry_mismatch": 0,
+          "native_learn_calls": 168,
+          "stream_score_field_writes": 504,
+          "issued_abstentions_at_accepted_taste": 167,
+          "cached_original_speakers_removed": 1,
+          "native_guessed_calls_suppressed": 1,
+          "issued_guessed_calls": 1,
+          "missing_original_speakers_at_feedback": 1,
+          "correct_but_undeliverable_credit": 1,
+          "selector_weight_writes": 2,
+          "selector_saved_writes": 1,
+          "pbits_writes": 1,
+          "completed_accepted_updates": 1,
+          "taste_calls": 1,
+          "accepted_tastes": 1,
+          "accepted_tastes_with_issued_entry_mismatch": 0,
+          "accepted_issued_entry_record_mismatches": 0,
+          "taste_entry_stream_reads": 168
+        },
+        "max_reconstruction_error": 0.0,
+        "max_issued_entry_probability_difference": 0.0,
+        "cache_records": 169,
+        "cache_record_fields": [
+          "speaker_id",
+          "hard_choice",
+          "exact_p0",
+          "exact_p1"
+        ],
+        "persistent_cache_scalar_slots": 677,
+        "transient_taste_state_fields": [
+          "issued_reference",
+          "t",
+          "letter",
+          "processed_streams",
+          "applied",
+          "entry_E_agree_dis",
+          "entry_weights",
+          "entry_saved",
+          "entry_pbits"
+        ]
+      }
+    },
+    {
+      "name": "wrong_issued_forecast_correct_replacement_is_still_wrong",
+      "passed": true,
+      "summary": {
+        "enabled": true,
+        "counters": {
+          "predict_calls": 2,
+          "forecast_records_written": 338,
+          "forecast_scalar_fields_written": 1354,
+          "awake_stream_forecasts": 2,
+          "cached_original_speakers_removed": 1,
+          "issued_entry_record_mismatches": 1,
+          "tastes_with_issued_entry_mismatch": 1,
+          "native_learn_calls": 168,
+          "stream_score_field_writes": 504,
+          "issued_abstentions_at_accepted_taste": 167,
+          "native_guessed_calls_suppressed": 1,
+          "native_unit_credit_calls_suppressed": 1,
+          "replacement_credit_prevented": 1,
+          "native_own_credit_calls_suppressed": 1,
+          "issued_guessed_calls": 1,
+          "missing_original_speakers_at_feedback": 1,
+          "selector_weight_writes": 2,
+          "selector_saved_writes": 1,
+          "pbits_writes": 1,
+          "completed_accepted_updates": 1,
+          "taste_calls": 1,
+          "accepted_tastes": 1,
+          "accepted_tastes_with_issued_entry_mismatch": 1,
+          "accepted_issued_entry_record_mismatches": 1,
+          "taste_entry_stream_reads": 168
+        },
+        "max_reconstruction_error": 0.0,
+        "max_issued_entry_probability_difference": 0.375,
+        "cache_records": 169,
+        "cache_record_fields": [
+          "speaker_id",
+          "hard_choice",
+          "exact_p0",
+          "exact_p1"
+        ],
+        "persistent_cache_scalar_slots": 677,
+        "transient_taste_state_fields": [
+          "issued_reference",
+          "t",
+          "letter",
+          "processed_streams",
+          "applied",
+          "entry_E_agree_dis",
+          "entry_weights",
+          "entry_saved",
+          "entry_pbits"
+        ]
+      }
+    },
+    {
+      "name": "disabled_observer_exact_state_identity",
+      "passed": true,
+      "fingerprint": "5234f89978d6ed87dba7773e8c24751441e8532cb54648668e286d8624cb5475"
+    },
+    {
+      "name": "accepted_without_prior_forecast_rejected",
+      "passed": true
+    }
+  ],
+  "wall_s": 0.6444034989690408
+}

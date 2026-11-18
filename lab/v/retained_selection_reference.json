@@ -1,0 +1,29 @@
+{
+  "candidates": 5369,
+  "accepted_labels": 163,
+  "native_log_bits": 97.26100236720855,
+  "selection_reference_log_bits": 97.85409191386336,
+  "saving_bits": -0.5930895466548153,
+  "likelihood_ratio": 0.6629217319758468,
+  "default_prior": 0.5,
+  "unborn_prior": 9.310986964618249e-05,
+  "largest_candidate_gain": 5.3625067087880804,
+  "candidate_prior_formula": "1/(2*j*(j+1)), j is one-tally deletion order starting at 1",
+  "best_gain_minus_prior_cost": -3.751659096748868,
+  "checks": {
+    "zero_gain_identity": true,
+    "one_candidate_identity": true,
+    "half_native_bound": true
+  },
+  "provenance": {
+    "raw_path": "/home/pilgrim/git/simple-learner/lab/v/retained_mixture_analysis.pkl",
+    "raw_sha256": "43326219d29d90de8e7a9e4069adf2d739c177d792892fd8727b089f10d82c46",
+    "source_sha256": "7950186ae09a5ff6341993fee8eb25c9bf562636ac76a630a976860e9275ac4f",
+    "command": "timeout 60s .venv/bin/python lab/retained_selection_reference.py"
+  },
+  "limitations": [
+    "Post-result exploratory supplied deletion-order prior; no alternative priors searched.",
+    "Counts each accepted taste once via sequence likelihoods, not a sum of overlapping gains.",
+    "Unlimited offline retention; no causal return, locality or resource claim."
+  ]
+}

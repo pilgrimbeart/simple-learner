@@ -1,0 +1,285 @@
+NEUTRAL PASS none red
+NEUTRAL PASS none blue
+NEUTRAL PASS W red
+NEUTRAL PASS W blue
+ALLFOOD none legacy red [202.0, 50.153000000000006, 65.0, 16.716273527777783, 202.0]
+ALLFOOD none legacy blue [202.0, 50.153000000000006, 65.0, 16.716273527777783, 202.0]
+ALLFOOD none issued red [202.0, 50.153000000000006, 65.0, 16.716273527777783, 202.0]
+ALLFOOD none issued blue [202.0, 50.153000000000006, 65.0, 16.716273527777783, 202.0]
+ALLFOOD W legacy red [202.0, 50.153000000000006, 65.0, 16.716273527777783, 202.0]
+ALLFOOD W legacy blue [202.0, 50.153000000000006, 65.0, 16.716273527777783, 202.0]
+ALLFOOD W issued red [202.0, 50.153000000000006, 65.0, 16.716273527777783, 202.0]
+ALLFOOD W issued blue [202.0, 50.153000000000006, 65.0, 16.716273527777783, 202.0]
+LIFE none selector 177000 red gains 52.0 31.0 units 4335
+LIFE none selector 177000 blue gains 65.0 44.0 units 4321
+LIFE none selector 177001 red gains 22.0 25.0 units 4432
+LIFE none selector 177001 blue gains -18.0 -17.0 units 4384
+LIFE none selector 177002 red gains 30.0 20.0 units 4313
+LIFE none selector 177002 blue gains 41.0 48.0 units 4262
+LIFE none selector 177003 red gains 55.0 39.0 units 4246
+LIFE none selector 177003 blue gains 26.0 5.0 units 4283
+LIFE none selector 177004 red gains 18.0 24.0 units 4288
+LIFE none selector 177004 blue gains 36.0 42.0 units 4298
+LIFE none selector 177005 red gains 6.0 30.0 units 4083
+LIFE none selector 177005 blue gains -10.0 6.0 units 4095
+LIFE none selector 177006 red gains 37.0 44.0 units 4312
+LIFE none selector 177006 blue gains -45.0 1.0 units 4393
+LIFE none selector 177007 red gains 37.0 33.0 units 4194
+LIFE none selector 177007 blue gains 8.0 42.0 units 4297
+LIFE none selector 177008 red gains 39.0 58.0 units 4276
+LIFE none selector 177008 blue gains 5.0 6.0 units 4251
+LIFE none selector 177009 red gains 28.0 23.0 units 4158
+LIFE none selector 177009 blue gains 40.0 41.0 units 4110
+LIFE none issued 177000 red gains 52.0 31.0 units 4335
+LIFE none issued 177000 blue gains 65.0 44.0 units 4321
+LIFE none issued 177001 red gains 22.0 25.0 units 4432
+LIFE none issued 177001 blue gains -18.0 -17.0 units 4384
+LIFE none issued 177002 red gains 30.0 20.0 units 4313
+LIFE none issued 177002 blue gains 41.0 48.0 units 4262
+LIFE none issued 177003 red gains 55.0 39.0 units 4253
+LIFE none issued 177003 blue gains 26.0 5.0 units 4283
+LIFE none issued 177004 red gains 18.0 24.0 units 4288
+LIFE none issued 177004 blue gains 36.0 42.0 units 4298
+LIFE none issued 177005 red gains 6.0 30.0 units 4083
+LIFE none issued 177005 blue gains -3.0 13.0 units 4107
+LIFE none issued 177006 red gains 37.0 44.0 units 4312
+LIFE none issued 177006 blue gains -45.0 1.0 units 4393
+LIFE none issued 177007 red gains 26.0 22.0 units 4189
+LIFE none issued 177007 blue gains 8.0 42.0 units 4297
+LIFE none issued 177008 red gains 39.0 58.0 units 4276
+LIFE none issued 177008 blue gains 5.0 6.0 units 4251
+LIFE none issued 177009 red gains 28.0 23.0 units 4160
+LIFE none issued 177009 blue gains 40.0 41.0 units 4110
+LIFE W selector 177000 red gains 68.0 22.0 units 3042
+LIFE W selector 177000 blue gains 44.0 23.0 units 3042
+LIFE W selector 177001 red gains 30.0 16.0 units 3041
+LIFE W selector 177001 blue gains 9.0 5.0 units 3042
+LIFE W selector 177002 red gains 28.0 26.0 units 3042
+LIFE W selector 177002 blue gains 34.0 24.0 units 3042
+LIFE W selector 177003 red gains 29.0 20.0 units 3042
+LIFE W selector 177003 blue gains 53.0 26.0 units 3042
+LIFE W selector 177004 red gains -27.0 -2.0 units 3042
+LIFE W selector 177004 blue gains 8.0 29.0 units 3042
+LIFE W selector 177005 red gains 44.0 42.0 units 3042
+LIFE W selector 177005 blue gains 13.0 22.0 units 3041
+LIFE W selector 177006 red gains 58.0 33.0 units 3041
+LIFE W selector 177006 blue gains -7.0 26.0 units 3042
+LIFE W selector 177007 red gains 12.0 5.0 units 3042
+LIFE W selector 177007 blue gains 15.0 21.0 units 3039
+LIFE W selector 177008 red gains 8.0 27.0 units 3039
+LIFE W selector 177008 blue gains -48.0 -13.0 units 3042
+LIFE W selector 177009 red gains -23.0 -5.0 units 3042
+LIFE W selector 177009 blue gains 33.0 24.0 units 3042
+LIFE W issued 177000 red gains 61.0 27.0 units 3042
+LIFE W issued 177000 blue gains 44.0 23.0 units 3040
+LIFE W issued 177001 red gains 23.0 9.0 units 3042
+LIFE W issued 177001 blue gains 18.0 14.0 units 3042
+LIFE W issued 177002 red gains 14.0 29.0 units 3041
+LIFE W issued 177002 blue gains 40.0 30.0 units 3042
+LIFE W issued 177003 red gains 37.0 21.0 units 3042
+LIFE W issued 177003 blue gains 48.0 1.0 units 3039
+LIFE W issued 177004 red gains 10.0 27.0 units 3037
+LIFE W issued 177004 blue gains 7.0 30.0 units 3041
+LIFE W issued 177005 red gains 33.0 31.0 units 3041
+LIFE W issued 177005 blue gains 24.0 15.0 units 3042
+LIFE W issued 177006 red gains 15.0 1.0 units 3042
+LIFE W issued 177006 blue gains 25.0 45.0 units 3042
+LIFE W issued 177007 red gains -3.0 21.0 units 3041
+LIFE W issued 177007 blue gains 23.0 29.0 units 3042
+LIFE W issued 177008 red gains -12.0 -9.0 units 3042
+LIFE W issued 177008 blue gains -13.0 25.0 units 3042
+LIFE W issued 177009 red gains -15.0 18.0 units 3042
+LIFE W issued 177009 blue gains 38.0 11.0 units 3042
+{
+  "closure": {
+    "none/legacy": {
+      "median": 0.8793596279148144,
+      "ci95": [
+        0.8053745456255742,
+        0.9625157294112581
+      ]
+    },
+    "none/selector": {
+      "median": 0.8354562064179174,
+      "ci95": [
+        0.7532009856524935,
+        0.9139197483884034
+      ]
+    },
+    "none/issued": {
+      "median": 0.8332304467636868,
+      "ci95": [
+        0.7625279641625156,
+        0.9045485121083983
+      ]
+    },
+    "W/legacy": {
+      "median": 0.7704173607279434,
+      "ci95": [
+        0.6869437369782173,
+        0.8602902556857611
+      ]
+    },
+    "W/selector": {
+      "median": 0.7216647634261248,
+      "ci95": [
+        0.6356044566947199,
+        0.7989000277955258
+      ]
+    },
+    "W/issued": {
+      "median": 0.7399833105114473,
+      "ci95": [
+        0.6658645052316902,
+        0.8034199691763967
+      ]
+    }
+  },
+  "differences": {
+    "none: selector minus legacy": {
+      "median": -0.04118105984745685,
+      "ci95": [
+        -0.1257111991498335,
+        0.0018546332231241928
+      ]
+    },
+    "none: issued minus legacy": {
+      "median": -0.04226350574787302,
+      "ci95": [
+        -0.1312280393309474,
+        0.0
+      ]
+    },
+    "none: issued minus selector": {
+      "median": -0.0021339391379093797,
+      "ci95": [
+        -0.02150936623967321,
+        0.014169908506792372
+      ]
+    },
+    "W: selector minus legacy": {
+      "median": -0.050861205656548725,
+      "ci95": [
+        -0.15115711637867374,
+        0.0546518370271646
+      ]
+    },
+    "W: issued minus legacy": {
+      "median": -0.033857547937240495,
+      "ci95": [
+        -0.1169873482473756,
+        0.06752629746623687
+      ]
+    },
+    "W: issued minus selector": {
+      "median": 0.01890156380105812,
+      "ci95": [
+        -0.04788754913957345,
+        0.08784865451402514
+      ]
+    },
+    "legacy: W minus original": {
+      "median": -0.10935122957174948,
+      "ci95": [
+        -0.20052837683290325,
+        -0.024650726907692985
+      ]
+    },
+    "selector: W minus original": {
+      "median": -0.11644988779686816,
+      "ci95": [
+        -0.22316675599557728,
+        0.0037123831671652366
+      ]
+    },
+    "issued: W minus original": {
+      "median": -0.09511271342167893,
+      "ci95": [
+        -0.16152363774011017,
+        -0.027139905208940003
+      ]
+    }
+  },
+  "resources": {
+    "none/legacy": {
+      "lives": 20,
+      "final_units_mean": 4268.6,
+      "whole_gain_mean": 27.85,
+      "last_third_gain_mean": 30.55,
+      "births_mean": 10940.75,
+      "grown_mean": {
+        "event": 267.65,
+        "clock": 967.35,
+        "integrator": 795.4,
+        "rhythm": 196.2
+      }
+    },
+    "none/selector": {
+      "lives": 20,
+      "final_units_mean": 4266.55,
+      "whole_gain_mean": 23.6,
+      "last_third_gain_mean": 27.25,
+      "births_mean": 10960.35,
+      "grown_mean": {
+        "event": 267.45,
+        "clock": 965.15,
+        "integrator": 796.3,
+        "rhythm": 195.65
+      }
+    },
+    "none/issued": {
+      "lives": 20,
+      "final_units_mean": 4267.35,
+      "whole_gain_mean": 23.4,
+      "last_third_gain_mean": 27.05,
+      "births_mean": 10901.8,
+      "grown_mean": {
+        "event": 267.05,
+        "clock": 966.8,
+        "integrator": 795.1,
+        "rhythm": 196.4
+      }
+    },
+    "W/legacy": {
+      "lives": 20,
+      "final_units_mean": 3041.1,
+      "whole_gain_mean": 17.0,
+      "last_third_gain_mean": 22.35,
+      "births_mean": 11603.75,
+      "grown_mean": {
+        "event": 129.0,
+        "clock": 223.7,
+        "integrator": 556.45,
+        "rhythm": 89.95
+      }
+    },
+    "W/selector": {
+      "lives": 20,
+      "final_units_mean": 3041.55,
+      "whole_gain_mean": 19.05,
+      "last_third_gain_mean": 18.55,
+      "births_mean": 11547.6,
+      "grown_mean": {
+        "event": 130.7,
+        "clock": 216.25,
+        "integrator": 566.9,
+        "rhythm": 85.7
+      }
+    },
+    "W/issued": {
+      "lives": 20,
+      "final_units_mean": 3041.3,
+      "whole_gain_mean": 20.85,
+      "last_third_gain_mean": 19.9,
+      "births_mean": 11423.7,
+      "grown_mean": {
+        "event": 136.25,
+        "clock": 210.55,
+        "integrator": 565.65,
+        "rhythm": 86.85
+      }
+    }
+  },
+  "metric": "Final-third efficiency gap, paired bootstrap of 10 seed pairs, 2000 samples, RNG 0; development only"
+}
+wall_s 553.0398310009623

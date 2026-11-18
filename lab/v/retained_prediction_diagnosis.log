@@ -1,0 +1,42 @@
+{
+  "explanation": "Net.write is observed before tidy, then cnt increments. Tidy removals report the prior place index.",
+  "lagged_removals": 63,
+  "all_follow_same_stream_write_before_next_predict_or_learn": true,
+  "examples": [
+    {
+      "seq": 12848,
+      "stream": 100,
+      "i": 55,
+      "written_index": 56,
+      "taste": null
+    },
+    {
+      "seq": 18203,
+      "stream": 114,
+      "i": 63,
+      "written_index": 64,
+      "taste": null
+    },
+    {
+      "seq": 18204,
+      "stream": 114,
+      "i": 63,
+      "written_index": 64,
+      "taste": null
+    },
+    {
+      "seq": 18205,
+      "stream": 114,
+      "i": 63,
+      "written_index": 64,
+      "taste": null
+    },
+    {
+      "seq": 18366,
+      "stream": 79,
+      "i": 142,
+      "written_index": 143,
+      "taste": null
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "native_semantic_evaluations": 10206,
+  "checks": [
+    "association equivalence",
+    "missing history",
+    "keep short circuit and truncation",
+    "deleted ancestor definitions retained"
+  ],
+  "simulated_steps": 0
+}

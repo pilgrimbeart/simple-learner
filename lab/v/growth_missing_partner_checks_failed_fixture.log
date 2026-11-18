@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/pilgrim/git/simple-learner/lab/growth_missing_partner.py", line 261, in <module>
+    check() if sys.argv[1] == '--check' else run()
+    ^^^^^^^
+  File "/home/pilgrim/git/simple-learner/lab/growth_missing_partner.py", line 176, in check
+    assert a and a[0]['word'] == (1, 0, 0)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

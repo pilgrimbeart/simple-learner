@@ -10,10 +10,19 @@ per meal spent resting, moving and thinking), gain rate (meals per 10 s), food, 
 
 ## Where it stands
 
-Current assessment, 2026-11-17: [D73](#d73-noisy-evidence) audits the noisy-feedback information path;
+Current assessment, 2026-11-18: [D73](#d73-noisy-evidence) audits the noisy-feedback information path;
 [D74–D76](#d74-learned-sharing) test learning the readout, redundant selection and actual resource accounting;
 [D77](#d77-resource-observation) observes what extra allowance buys; [D78](#d78-allocation-rules) compares
-allocation rules under an enforced cap.
+allocation rules under an enforced cap; [D79](#d79-active-mixture) reviews its causal interpretation;
+[D80–D81](#d80-scoring-replay) separate scoring effects on prediction and allocation;
+[D82](#d82-issued-credit) tests consistent issued-forecast credit on the existing development set;
+[D83](#d83-allocation-trace) traces actual recycling and construction in one unchanged life;
+[D84](#d84-future-evidence) finds that many deleted contexts recur on that exact history;
+[D85](#d85-retained-prediction) separates recurrence from prediction value using reconstructed forecasts;
+[D86](#d86-mixture-confidence) rejects transferring a simple confidence cure to the historical mixture;
+[D87](#d87-retained-mixture) finds little retained-tally advantage against the same corrected combined forecast;
+[D88–D90](#d88-parent-census) find weak parents build about 6% of children and most actual children lose to that
+forecast, while deleted units would supply many partners no living unit duplicates; [D91](#d91-growth-decision) records the decision.
 [D72](#review-2026-11-16) is the preceding evidence review. The programme is
 [PROGRAMME.md](../PROGRAMME.md); [QUESTIONS.md](../QUESTIONS.md) owns the next discriminating investigations.
 
@@ -40,17 +49,35 @@ allocation rules under an enforced cap.
   effectively fixed. At P=4480, 85% of the growth is in clock, integrator and rhythm streams. Yet room in
   the ten event streams alone (214 grown units) closes +.71 of the gap, against +.81 at full P (ten pairs;
   difference +.10 [−.04,+.26], unresolved). All-food lives grow nothing. Mixer communication and global
-  scans are set by the 168-stream repertoire, not by P. The next change belongs in resource allocation.
-- **Allocation is a large lever; the brain lacks a signal to steer it** ([D78](#d78-allocation-rules)). Under a
-  real total cap, equal growth allowance does far worse than the unchanged design's tilt toward
-  small-alphabet streams (−.31 at the same material). A pairwise contest by mixture weight beats equal
-  allowance on fresh seeds (+.28 [+.12,+.45], sequences) and does no harm on timing beyond the margin. It
-  still falls short of the unchanged design (−.11 sequences; −.07 [−.18,+.04] timing) and plateaus with
-  material. Mixture weight is winner-take-all: one stream holds about 90% and all others sit at the
-  fixed-share floor at the end; bits saved over the default are negative everywhere. Through life the
-  picture shifts: for the first 100 s clock, integrator and rhythm streams carry three quarters of the
-  weight, and one event stream takes over later. A usable signal must be marginal and integrated over time.
-  Next: re-read Dohare et al.'s utility, then a leave-out replay of marginal contribution, before any further rule.
+  scans reflect the 168-stream repertoire. D79 corrects counter labels: stream visits were called whole
+  scans, and non-leaf evaluations were called part reads. These remain software activity proxies.
+- **Allocation matters; its causal signal remains unresolved** ([D78](#d78-allocation-rules),
+  [D79 correction](#d79-active-mixture)). The weight contest beats equal allowance on fresh sequences
+  (+.28 [+.12,+.45]); the timing comparison excludes harm greater than the declared .10 margin on one rung.
+  The smaller brain fails to match the original design (−.11 [−.20,−.02] sequences;
+  −.07 [−.18,+.04] timing, inconclusive). D79 reproduces these numbers but rejects the inference that
+  existing signals cannot rank streams: every inspected life has positive individual bit savings, hidden
+  by family totals. The trajectory reader included sleeping streams, so it did not measure the active
+  prediction mixture or demonstrate useful early contribution. D79's validated reused pair now shows
+  that omitting non-event forecasts jointly reduces current loss in all four lives, while some individual
+  early forecasts help. D80 replays the selector accurately and finds two changed choices in 23047
+  issued predictions, but about 4% of distinguishable weight comparisons reverse under the contest.
+  D81's corrected selector changes memory before action in two lives and behaviour in three of four;
+  it does not improve last-third performance on this reused pair. [D82](#d82-issued-credit) settles a
+  consistent issued-forecast/remaining-credit contract in lab code and compares ten reused seed pairs:
+  no improvement is demonstrated, and the corrected contest remains below the original allowances
+  (−.095 [−.162,−.027]). All-food behaviour is preserved. [D83](#d83-allocation-trace) observes one
+  identical contest life: foreign transfers often remove current speakers, but 923 new units also
+  disappear during their birth taste before issuing a forecast. [D84](#d84-future-evidence) finds later activation for 3653/5369 one-tally removals, including
+  821/923 same-taste newborn removals. These are observation opportunities, not measured predictive
+  value or a benefit of retention under a cap. [D85](#d85-retained-prediction) reconstructs
+  native forecasts: 1678/3653 recurring retained units beat their surviving stream, but only 800 beat
+  both it and uniform prediction. [D86](#d86-mixture-confidence) finds halfway confidence reduction
+  worsens log loss and squared probability error in all four historical mixtures, full-life and
+  last-third. [D87](#d87-retained-mixture) captures the same corrected history exactly: only 336/3653
+  recurring retained tallies beat its combined forecast, and a supplied causal selection prior loses
+  0.593 bits on 163 labels. No retention intervention is selected. Next distinguish keeping an old
+  readout from enabling richer future combinations; the ghosts never grow children.
 - **Earlier results keep their conditions.** B's circuit and fast model, the intervention bank, body-learning,
   exploration and growth experiments answer different questions under different protocols. Their strongest
   lessons and limitations are summarised in D72. Physical validation of an earlier circuit does not transfer
@@ -5027,6 +5054,12 @@ The ten-pair rerun reproduces all 40 historical low/high lives in every behaviou
 | global scans of all 168 streams | 949k | 905k | 880k |
 | gain over life / last third; bits per accepted taste | −54 / −14; .988 | +26 / +24; .775 | +202 / +65; .035 |
 
+*D79 correction, 2026-11-17:* the row labelled global scans counts **stream visits**, exactly 168 per
+prediction call, not that many complete scans. The mean full-scan counts are 5648 and 5390.5 on the
+sequence pair and 5236 on all-food. The part-read counter counts non-leaf evaluations, not actual edge
+reads (short-circuit evaluation can use one or both parents). The recorded numbers are preserved;
+their physical communication interpretation is unestablished. See [D79](#d79-active-mixture).
+
 At P=560 the brain is effectively fixed. Each stream's allowance is 3, so 98% of births are recycled
 almost immediately and only 10 grown units survive. At P=4480, 85% of the surviving growth is in clock,
 integrator and rhythm streams. All-food lives grow nothing at either setting and are identical across P.
@@ -5093,6 +5126,12 @@ maths-thread variables set to 1. Walls: 23 s (16 lives, 8 workers), 13 s, 166 s 
 
 <a id="d78-allocation-rules"></a>
 ## D78: can a local usefulness signal direct material as well as the hand-set ruler? (2026-11-17)
+
+*D79 review, 2026-11-17:* the performance intervals below reproduce from raw life records. Several
+explanations do not follow: negative family sums hide positive streams; stored-weight trajectories
+include sleepers; equal medians do not exclude redundancy; a plateau under one allocator does not
+exclude misallocated capacity. Prediction quality, retention and learning remain possible causes.
+The following text is the historical investigation, qualified by [D79](#d79-active-mixture).
 
 **Before work.** The goal is a brain that uses additional resources economically, with no designer deciding
 where. D77 found that most of the sequence gain comes from room in ten event streams, while equal
@@ -5359,6 +5398,9 @@ predicts a steady 5–15% across life. Budget 3 min.
 
 **Weight-trajectory result** ([script](/home/pilgrim/git/simple-learner/lab/alloc_trajectory.py),
 [log](/home/pilgrim/git/simple-learner/lab/v/alloc_trajectory.log); lives identical to the confirmation's).
+*D79 correction:* these are shares of **all stored weights**, including sleeping streams, not necessarily
+shares of the issued prediction. The claimed early usefulness and starvation explanation are therefore
+unestablished; even active weight alone cannot establish helpful predictions. See [D79](#d79-active-mixture).
 The first execution sampled only once: `WLife.step` replaces itself with a fast path on its first call,
 discarding the reader; the reader now re-installs itself. Mean mixture shares, 8 lives each:
 
@@ -5408,3 +5450,1134 @@ three maths-thread variables at 1, as one job with 8 workers.
 gained. *Mechanism tried:* pairwise weight contest under a real cap. *Evidence:* beats an equal split on
 fresh sequences (+.28) and does no harm on timing; does not match the unchanged design. *Limits:* winner-take-all,
 myopic signal; heavy churn; one rung per family. Not adopted into the design.
+
+<a id="d79-active-mixture"></a>
+### D79 — Review the allocation inference before another mechanism (2026-11-17)
+
+**Before work.** The user requested review of the cheaper agent's D77–D78 and a lower-effort agent for
+the next step. The uncertainty for reusable, economical local modules is which observations could
+justify retaining or reallocating memory. D78 established a performance effect, but its trajectory
+reader sums stored weights even for sleeping predictors; it does not measure the issued mixture.
+Nor does weight alone establish useful contribution. Family sums of saved bits cannot establish
+that every stream is uninformative. These are claims to check, not grounds for a third allocator.
+
+**Comparison, sources and predictions.** The [bounded work order](/home/pilgrim/git/simple-learner/lab/v/d79_work_order.md)
+specifies an observer of actual predictions and simultaneous pre-learning versus scored forecasts,
+then a fixed-history leave-family-out calculation. Competing outcomes are dormant weight mistaken
+for influence, beneficial active forecasts, and harmful active forecasts, possibly differing by
+family and stage. Freund et al. (1997), [section 2](https://cseweb.ucsd.edu/~yfreund/papers/SpecializedExperts.pdf),
+defines the mixture over awake specialists; this is an applicable distinction, not an allocator proposal.
+One reused sequence seed pair, two arms, 300 s; four recordings and four observer-identity controls.
+No fresh performance claim or sealed test. Budget: sub-agent implementation/analysis 25 minutes,
+simulation at most 6 wall minutes in one job with at most four one-thread workers; lead review and
+documentation 20 minutes, with only small analytical work alongside that job. Stop if observation
+changes behaviour or fails to reconstruct the issued prediction. Full details and limits are in the
+work order. Historical D78 results and predictions are preserved; current guidance will be corrected
+after the observation is reviewed.
+
+**Review of existing records.** [Independent recalculation](/home/pilgrim/git/simple-learner/lab/alloc_review.py)
+([JSON](/home/pilgrim/git/simple-learner/lab/v/alloc_review.json),
+[log](/home/pilgrim/git/simple-learner/lab/v/alloc_review.log)) reproduces every median and interval in the
+fresh equal-allowance comparison and subsequent original-design confirmation, within 1e-12. These are
+ten paired seeds per comparison and family, using the unchanged final-third efficiency gap and 2000
+paired bootstrap samples. The smaller weight-contest design's sequence deficit is established; timing
+remains inconclusive and fails the declared noninferiority margin. Both results are useful, rather than
+a reason to retune until the confirmation passes.
+
+The same recalculation inspects D78's 16 end-of-life stream records. **Every life has positive individual
+saved-bit records: 1–16 of 168 streams**, with each life's best saving between 37.1 and 100.0 bits.
+Negative family sums cannot justify "bits saved are negative everywhere" or "no existing signal ranks
+streams". Positive standalone savings do not establish marginal value either. The nominal cap comparison
+also concerns provisioned limits; arms need not use identical live allocation. D78 retained D73's known
+learn-before-later-stream-scoring defect, despite the programme's correction-before-freeze condition.
+Its magnitude in the new allocator is not yet established. The recorded performance describes that code;
+it cannot isolate intended allocation from any interactions with that defect.
+
+**Source check and analytical meaning.** Read section 6 and equations (2)–(8) of
+[Dohare et al.'s April 2024 preprint](https://arxiv.org/html/2306.13812v3#S6); the final Nature text was
+blocked by access redirects, so this is not a claim to have checked that version in full. Contribution
+utility smooths activation times outgoing-weight magnitude, with a maturity threshold for new units.
+Mean correction and adaptation utility are also explored. This is a precedent for recycling, not an
+exact loss leave-out measure or proof of a necessary signal here. Its gradient-trained feed-forward
+network and per-update age differ from this event-driven categorical memory and seconds-based rules.
+
+For an issued prediction, the diagnostic difference is
+`loss_without − loss_full = log2(p_full(observed letter) / p_without(observed letter))`.
+A positive sum is a code-length advantage on those observations. Under a stated true conditional
+distribution, its expected value is the difference of the two predictive KL divergences; the true
+distribution need not be known to score realised predictions. This is not mutual information learned,
+physical storage capacity, a counterfactual reward, or the expected value of another memory unit.
+Predictions and omission sets must be fixed before the outcome, and observation times, learning gates
+and abstentions must match. These distinctions are why a small observer is justified before construction.
+
+**Observed result and independent review.** The lower-effort sub-agent completed the
+[specified diagnostic](/home/pilgrim/git/simple-learner/lab/active_mixture_audit.py), with
+[report](/home/pilgrim/git/simple-learner/lab/v/active_mixture_audit_report.md),
+[JSON](/home/pilgrim/git/simple-learner/lab/v/active_mixture_audit.json) and
+[log](/home/pilgrim/git/simple-learner/lab/v/active_mixture_audit.log).
+All four observed lives exactly match both their controls' fingerprints and the old confirmation results.
+Fingerprint scope includes noncallable brain/net data, allocation, histories, learned counts, weights,
+and learner, clock and allocator RNG states; object links have stable names. The issued mixture matches
+within 2.67e-15. Five short setup/serialization attempts failed before a passing smoke check; the mismatch
+was a bound-method memory address in the observer's fingerprint, not changed learning. The report preserves
+the failures and distinguishes transcript-only failures from retained logs. Eight full lives ran once in
+23.02 wall seconds; all smoke commands took under three seconds. No new learner or protected test was run.
+
+The lead inspected the instrumentation and independently recomputed mixture and leave-out arithmetic
+from the ignored 74 MB [raw recording](/home/pilgrim/git/simple-learner/lab/v/active_mixture_audit.pkl):
+[review script](/home/pilgrim/git/simple-learner/lab/active_mixture_review.py),
+[JSON](/home/pilgrim/git/simple-learner/lab/v/active_mixture_review.json),
+[log](/home/pilgrim/git/simple-learner/lab/v/active_mixture_review.log). Agreement is within 1e-10 bits;
+independent reconstruction differs by at most 3e-15. Every forecast precedes its associated taste in
+simulation time as well as call order. Issued and simultaneous taste-entry predictions agree up to
+floating arithmetic. The learning-time score change is therefore a separate effect here.
+
+| brain / poison colour | accepted tastes | loss increase omitting event forecasts, bits | loss increase omitting clock, integrator and rhythm forecasts together, bits | tastes whose scored forecasts differ from pre-learning forecasts |
+|---|---:|---:|---:|---:|
+| unchanged / red | 184 | +76.94 | −5.58 | 26 |
+| unchanged / blue | 187 | +73.19 | −5.99 | 15 |
+| weight contest / red | 163 | +46.60 | −5.53 | 137 |
+| weight contest / blue | 176 | +67.43 | −5.86 | 152 |
+
+Rhythm streams hold 24.85% of stored weight throughout the first 200 s, but issue no forecast in that
+period on this pair. Clock and integrator streams do participate early; that influence is not sufficient
+evidence of benefit. Removing all three non-event families jointly reduces loss in each life and each
+declared time window. Individual early families sometimes help (clocks in both first-30-s lives;
+integrators in red but not blue). Renormalizing a mixture makes these leave-out effects non-additive.
+No conclusion that whole families or their memory should be removed follows.
+
+The scoring-order defect changes predictions credited to later streams on 41/371 accepted tastes in
+the original brain and 289/339 in the contest brain. Its signed immediate loss change is small
+(−.000883 and +.06434 bits, simultaneous minus actual score). Absolute changes sum to .0100 and .5466
+bits, respectively, also small compared with the recorded code lengths. Neither statistic measures the
+later effect of altered weights on contests, memory or actions. Frequent occurrence is not evidence
+that this defect explains the performance deficit; a causal test is still needed.
+
+**Changed belief and next branch.** D77's accounting and D78's fresh performance comparison survive;
+the claimed explanation that early non-event usefulness requires a new time-integrated marginal utility
+does not. Nor does this one pair establish general harm from those predictors. The next smallest step
+uses these recordings: first validate exact replay of the original specialist-weight updates, then
+compare replay using intact simultaneous forecasts instead of the forecasts changed by earlier learning.
+Keep observations, letters and forecast histories fixed; measure weight and decision differences, not
+counterfactual return. Correct the scoring contract before another design freeze. If the replay scarcely
+changes selection, examine per-stream leave-out contributions against existing saved-bit records and
+weight, then trace survival of useful units. If it substantially changes selection, isolate the scoring
+repair in closed loop before attributing the remaining gap to allocation. No third allocator is selected.
+
+**Limits and return to the goal.** This diagnostic uses one already-used seed pair on one sequence rung,
+and each brain generates its own observations. It does not establish a general ranking rule, a benefit
+from allocating another memory unit, or a physical saving. A generic module must distinguish possessing
+memory, issuing a prediction, being credited for that prediction, and benefiting from preserving the
+memory. The present evidence now separates the first three; the last remains the research question.
+
+<a id="d80-scoring-replay"></a>
+### D80 — Does correcting scoring order change selection? (2026-11-17)
+
+**Before work.** The user approved D79's proposed replay. For reusable local memory, the question is
+whether incorrect credit changes predictive influence or the relative weights used to recycle memory.
+Frequent deleted speakers need not imply a large effect, but small mixture-loss errors could still alter
+contests among light streams. Alternatives: effects wash out, affect colour decisions, or affect mainly
+allocation rankings. No new allocator is proposed.
+
+**Discriminator and assumptions.** Reuse D79's four observed 300 s lives (sequence rung 17, seed 177000,
+both poison colours, original P=4480 and weight contest G=1000/cap 3042). Replay the original likelihood
+and fixed-share update first, checking recorded weights, predictions and scored losses; only then use
+the intact simultaneous forecasts instead of forecasts changed by earlier learning. The initial 169
+weights, likelihood exponent 1 and share .01 are supplied design choices. Teaching letters, acceptance,
+forecasts, awake sets at prediction, memory and observations remain the recorded ones. This isolates a
+selector response on fixed history, not a repaired robot or a Bayesian bound. No independent explorers
+or new evidence are introduced, so this is not a signal-to-noise-limited new learning experiment.
+
+Report each life and the existing time windows: issued-probability changes, robust changed binary
+choices, loss on accepted labels, normalized-weight changes and reversals of distinguishable pairwise
+stream-weight comparisons. The last is a proxy for possible allocation decisions; actual sampled
+contests and leaf eligibility were not recorded. Separate near-ties within 1e-12 from clear differences.
+Tolerance for original weights/probabilities is 1e-10, scored losses 1e-9 bits; stop and diagnose a larger
+replay mismatch. Expect modest final prediction effects given D79's small loss perturbations, with
+uncertain ranking effects; this expectation is not a result. The established specialist framework is
+[Freund et al. (1997), sections 2–3](https://cseweb.ucsd.edu/~yfreund/papers/SpecializedExperts.pdf),
+previously read; the exact implemented sharing rule is checked in code rather than inferred from it.
+
+**Effort and branch budget.** Reuse the user-requested lower-effort agent for the bounded replay:
+20 minutes implementation/analysis and at most 2 wall minutes of replay, one maths thread, no simulation,
+new seeds, sealed artifacts or production edits. Lead review and current documentation: 20 minutes.
+Any clear substantial choice or ranking change calls for a separately declared causal comparison; a small
+prediction effect alone is not grounds to dismiss allocation effects. If both are small, continue the
+already-authorised per-stream contribution check on these recordings (at most one additional minute of
+analysis). End this bounded branch with evidence, limitations and the next discriminator, not a new rule.
+
+**Result and review.** The delegated agent validated the original replay, then hit its usage limit after
+a summary error: a mixed list of accepted and rejected tastes was treated as if every row had a loss.
+The lead reviewed the implementation, retained the failed
+[JSON](/home/pilgrim/git/simple-learner/lab/v/scoring_order_replay_failed_summary.json) and
+[log](/home/pilgrim/git/simple-learner/lab/v/scoring_order_replay_failed_summary.log), and corrected the
+summary to count only labelled rows, with its denominator explicit. No tolerance or scientific metric
+changed. The completed [script](/home/pilgrim/git/simple-learner/lab/scoring_order_replay.py),
+[JSON](/home/pilgrim/git/simple-learner/lab/v/scoring_order_replay.json) and
+[log](/home/pilgrim/git/simple-learner/lab/v/scoring_order_replay.log) retain provenance. Original weights
+match within 2.28e-13, probabilities within 3e-15, cumulative losses within 1.43e-14 bits, and final
+saved-bit records within 1.43e-14. Hand checks cover sleeping weights, mass conservation and a known update.
+The failed and successful replay jobs took 1.38 and 2.88 s; no simulation was run.
+
+| brain / poison colour | issued predictions | clear changed choices after corrected credit | mean / maximum probability change | reversed distinguishable weight comparisons at accepted tastes | corrected-minus-original loss on accepted labels, bits |
+|---|---:|---:|---:|---:|---:|
+| unchanged / red | 5700 | 0 | .000025 / .000724 | 2841/2397510 (.118%) | +.00211 |
+| unchanged / blue | 5722 | 0 | .000010 / .000300 | 1145/2448275 (.047%) | +.00104 |
+| weight contest / red | 5920 | 1 | .000620 / .01323 | 84857/2097888 (4.045%) | −.00833 |
+| weight contest / blue | 5705 | 1 | .000397 / .00806 | 90742/2279680 (3.980%) | −.05339 |
+
+No changed choice lies within the declared numerical near-tie band. The final dominant stream remains
+`good:colour` in every life. These losses score issued predictions against the same accepted teaching
+letters, not the altered forecasts used by the historical score counter. The paper's specialist weights
+are predictive weights, not calibrated posterior probabilities of a stream's usefulness for material
+allocation (Freund et al., §3.1 explicitly separates weights from a necessary probabilistic interpretation).
+
+**Inference and next branch.** The direct prediction effect is small on these four histories; it does not
+explain the allocation performance gap through changed colour decisions alone. However, about 4% of
+distinguishable weight comparisons reverse in the contest. Those repeated pair comparisons are neither
+independent samples nor actual recorded contests. They cannot predict how many evictions change, but
+make the indirect route through allocation worth isolating. The next branch is a small closed-loop
+selector-credit correction, specified below, not a third allocator. No general no-effect or return claim
+follows from fixed-history replay.
+
+<a id="d81-scoring-feedback"></a>
+### D81 — Let corrected selector credit affect allocation and action (2026-11-17)
+
+**Before work.** D80 isolates a small prediction effect but a possible allocation effect. For a reusable
+local module, correct credit must remain consistent when memory is recycled during feedback. Test only
+the selector and cumulative saved-bit accounting: capture each stream's forecast before any stream learns,
+then use those forecasts to update mixture weights, saved bits and the diagnostic code length. Keep all
+learning, unit-use credit, growth rules and the body unchanged. This deliberately does not repair the
+separate within-stream `agree/use` credit path; it tests the selector-credit route identified by D80.
+
+**Comparison and prediction.** One reused seed pair, sequence rung 17, 300 s at .0025 s, both original
+P=4480 and contest cap 3042: four neutral instrumentation controls and four corrected lives. Neutral
+controls must match D79's fingerprints and historical results exactly. Record exact p(0) and p(1), avoiding
+complement roundoff as an accidental intervention; where forecasts are unchanged, verify the calculated
+update agrees and leave the native values untouched. Install corrected credit before the taste's next
+prediction. Return to action changes only through the brain; no observer signal reaches it. The mechanism
+is ordinary specialist likelihood scoring (D80 source), now made consistent with the forecast made.
+Competing outcomes: no meaningful trajectory change; changed allocation with similar return; or changed
+return of either sign. There is no justified directional prediction from the replay.
+
+**Analysis and limit.** Report each life's whole/last-third gain, efficiency, final allocation by family,
+birth/eviction counts and first divergence; no statistical population claim with one seed pair. Different
+actions generate different later observations. This is a causal software intervention, not equal-history
+prediction scoring, a new economical architecture or an ideal bound. No new noise level or exploration
+mechanism is added; the same known learnable development condition is used. Budget: 20 minutes work and
+at most two wall minutes of simulation, one job with four one-thread workers, eight lives plus a short
+setup check if required. Stop on failed neutral validation; no additional seeds, tuning or sealed test.
+Production code remains unchanged. Interpret the result and choose the next discriminator before ending.
+
+**Results.** [Prototype](/home/pilgrim/git/simple-learner/lab/scoring_feedback.py),
+[JSON](/home/pilgrim/git/simple-learner/lab/v/scoring_feedback.json),
+[log](/home/pilgrim/git/simple-learner/lab/v/scoring_feedback.log), and ignored
+[raw records](/home/pilgrim/git/simple-learner/lab/v/scoring_feedback.pkl). All four neutral controls
+exactly match D79's full recorded-state fingerprints and historical result tuples. On tastes where
+forecasts did not change during learning, the calculated update equals the native weights and saved
+bits exactly (maximum error 0); those native values are retained. The eight-life job took 25.86 s.
+All units, rules and simulator settings retain D79's provenance; source hashes and command are in JSON.
+
+| brain / poison colour | whole-life gain, original → corrected | last-third gain | last-third efficiency | final units |
+|---|---:|---:|---:|---:|
+| original / red | 77 → 52 | 46 → 31 | 2.727 → 1.850 | 4343 → 4335 |
+| original / blue | 65 → 65 | 44 → 44 | 2.592 → 2.592 | 4321 → 4321 |
+| weight contest / red | 43 → 68 | 32 → 22 | 1.871 → 1.291 | 3041 → 3042 |
+| weight contest / blue | 64 → 44 | 28 → 23 | 1.641 → 1.374 | 3042 → 3042 |
+
+Gain is the existing food-minus-two-poison score. Efficiency retains the original spending calculation;
+it is not newly measured physical brain energy. Whole-life and last-third results disagree in the contest's
+red life, so no metric is substituted to rescue a performance claim. There is no demonstrated performance
+cure; the repair worsens last-third gain in three lives and leaves one unchanged on this pair.
+
+**Trace the difference, rather than infer it from the final score.** The separate
+[timing analysis](/home/pilgrim/git/simple-learner/lab/scoring_feedback_analysis.py)
+([JSON](/home/pilgrim/git/simple-learner/lab/v/scoring_feedback_analysis.json),
+[log](/home/pilgrim/git/simple-learner/lab/v/scoring_feedback_analysis.log)) compares only the common
+equal-time prediction prefix, ending when the prediction schedules diverge. In original/red, the first
+score correction is at 107.762 s; allocated counts differ at 120.159 s, colour choices at 147.396 s,
+then motor firings at 147.633 versus 147.653 s. D80 had no changed colour choices anywhere on that frozen
+history. Thus that closed-loop behaviour change has an indirect route through the mutable learner;
+code inspection identifies cumulative saved bits feeding the existing allocation market. It cannot be
+explained solely by applying corrected mixture weights to unchanged forecasts.
+
+In contest/red, allocated counts diverge at 58.938 s before the first colour-choice divergence at
+78.512 s. Its fixed-history choice change at 70.515 s does not describe the actual corrected trajectory.
+In contest/blue, choices first differ at 71.265 s without a preceding allocated-count difference; constant
+counts cannot exclude different stored units. Original/blue retains exactly the same meals, motor firings
+and final allocation in this sample despite changed weights. We did not record the first specific
+opponent draw or deleted unit, so the precise recycling chain remains untraced.
+
+**Inference, limits and next branch.** Correct selector credit can change allocation and later behaviour
+even when its fixed-history prediction effect is tiny. It is therefore a prerequisite for interpreting
+allocator comparisons, but it is not established as the explanation of D78's average performance gap or
+as a performance improvement. One reused pair, one sequence rung and one step size cannot establish either.
+This prototype corrects mixture weights and cumulative saved bits; the per-unit agree/use path still
+uses the later stream's current speaker. The next bounded comparison should settle a consistent credit
+contract for that remaining path, preserve the historical implementation explicitly, and compare the
+repaired contract on the existing ten-pair development set before another allocator or new freeze.
+Log actual contest candidates and unit removals if the remaining gap needs causal attribution; a second
+set of weight plots would not identify it. No additional run was made under this budget.
+
+For reusable local modules, the transferable requirement is to preserve the forecast being judged until
+credit has been assigned, even if other memory is recycled meanwhile. Predictive influence and material
+allocation use the same learned record here, so an error in that record has two paths to behaviour.
+Neither a new primitive nor a new utility signal has yet been justified. D80–D81 finish the approved
+replay investigation and its smallest causal follow-up; the conditional programme records what remains.
+
+<a id="d82-issued-credit"></a>
+### D82 — Credit the issued forecast and its original surviving unit (2026-11-17)
+
+**Before work.** The user resumed work after resetting limits. D81 corrected selector credit but left
+per-unit use credit attached to the currently selected unit, which can be a replacement. For reusable
+memory, distinguish scoring the predictor's issued forecast from delivering use credit to memory that
+still exists. Neither correctness nor the one-pair result predicts a performance improvement.
+
+**Chosen contract, not a design law.** Cache each stream's speaker identity, choice and exact p(0), p(1)
+when it participates in the issued prediction; cache abstention too. On accepted feedback, all stream
+scores, likelihood weights and saved bits refer to that record. A correct forecast gives use/own credit
+to its original speaker and its existing ancestry only if that speaker survives; otherwise count an
+undeliverable credit, without resurrecting memory or crediting a replacement. Unique unit IDs are never
+reused. Keep sequential learning and the existing current-context count/growth updates. Do not introduce
+a global credit-before-growth barrier or protect extra units. These are alternatives, not ruled out.
+The cache is additional software state and activity, to report separately from categorical unit counts.
+
+**Sources and discriminator.** Freund et al. (1997),
+[§2–3](https://cseweb.ucsd.edu/~yfreund/papers/SpecializedExperts.pdf), score forecasts issued before the
+outcome. Dohare et al.'s [preprint algorithm 1](https://arxiv.org/html/2306.13812v3#S6) applies gradient
+updates before selective reinitialization; that is an alternative ordering, not evidence that a global
+barrier is necessary here. Existing priors, representations, teaching labels and gates remain unchanged.
+Only observations acquired through the existing interface are used. This is a software credit-semantics
+investigation, not an ideal Bayesian bound, a new architecture, or an added-exploration noise test.
+
+**Comparison and budget.** Build a versioned lab implementation, preserving historical code and D81.
+First test deletion, replacement, abstention and credit-to-ancestors on deterministic miniature cases,
+plus issued-probability reconstruction. Then neutral controls must reproduce D79 exactly. Compare legacy,
+selector-only correction and issued-forecast credit on the already-used sequence-rung-17 seeds
+177000–177009, paired poison colours, 300 s, dt=.0025, original P=4480 and contest cap 3042. Reuse historical
+legacy/reference lives after provenance and neutral validation. Include all-food controls. Primary metric
+is the unchanged final-third efficiency gap to the same circuit/told references, with the existing
+2000 paired bootstrap replicates; whole-life gain and resource/activity counters remain separate.
+Report individual failures and intervals; no equivalence or generality claim is predeclared.
+
+Effort: lower-effort implementation/tests 25 minutes; lead review, harness and analysis 30 minutes.
+At most 80 new sequence lives (two corrections, two allocators, ten paired seeds), four neutral sequence
+controls and eight all-food controls; eight wall minutes simulation in one job, four workers with one
+maths thread each. No run before code/contract review; stop on neutral mismatch or a violated credit
+invariant. No tuning, fresh family, sealed artifact or extra allocator. If corrected-vs-legacy remains
+uncertain, report that and return to tracing actual allocation/retention instead of selecting a score winner.
+
+**Results and validation.** The versioned [issued-credit wrapper](/home/pilgrim/git/simple-learner/lab/issued_credit.py)
+keeps all historical code unchanged. Ten [miniature semantic checks](/home/pilgrim/git/simple-learner/lab/issued_credit_checks.py)
+([JSON](/home/pilgrim/git/simple-learner/lab/v/issued_credit_checks.json),
+[log](/home/pilgrim/git/simple-learner/lab/v/issued_credit_checks.log)) cover deleted speakers, wrong/correct
+replacements, abstention, unchanged current-context learning, immutable cached probabilities, credit before
+the next prediction, native recursive ancestry credit, neutral identity and rejection of missing prior
+forecasts. The first fixture incorrectly left the default choice random; its failed assertion is retained
+in the log, followed by the corrected explicit fixture and passing checks. No miniature simulated a step.
+Shared ancestors retain native credit once per ancestry path; this does not deduplicate a graph.
+
+The [comparison](/home/pilgrim/git/simple-learner/lab/issued_credit_compare.py)
+([92-life JSON](/home/pilgrim/git/simple-learner/lab/v/issued_credit_compare.json),
+[log](/home/pilgrim/git/simple-learner/lab/v/issued_credit_compare.log)) completes all authorised lives:
+four neutral sequence controls, eight all-food controls, and 80 sequence lives. The four neutral controls
+exactly reproduce D79's complete recorded-state fingerprints and result tuples. All four paired all-food
+comparisons preserve exact meals/scoring/motor behaviour, allocate 2042 categorical units and grow none.
+All four selector-only repetitions on seed 177000 reproduce D81 exactly. The separate
+[analysis](/home/pilgrim/git/simple-learner/lab/issued_credit_analysis.py)
+([JSON](/home/pilgrim/git/simple-learner/lab/v/issued_credit_analysis.json),
+[log](/home/pilgrim/git/simple-learner/lab/v/issued_credit_analysis.log)) rechecks all 16 frozen source
+hashes, three historical-input hashes, D81 reproduction, controls and all individual results.
+
+Issued forecasts and intact taste-entry forecasts agree exactly on every observed taste, including
+all 7085 accepted tastes in the 40 issued-credit sequence lives. Reconstruction is within 1e-12.
+Thus issued-minus-selector here isolates the remaining stream E/agree/dis/guessed and unit use/own
+credit semantics; there is no observed forecast-timing difference. This equality is an observation of
+these lives, not an assumption for another world. Gates, teaching letters and sequential learning remain native.
+
+**Primary result: coherent credit does not remove the allocation gap.** The unchanged metric is the
+fraction of the circuit-to-told-reference gap closed in final-third efficiency. Median and 95% intervals
+use the existing 2000 paired bootstrap resamples over ten development seed pairs, generator seed 0.
+These seeds are reused; this is not a new generalisation test.
+
+| allocator | historical credit | selector-only correction | issued-forecast credit |
+|---|---:|---:|---:|
+| original allowances | .879 [.805,.963] | .835 [.753,.914] | .833 [.763,.905] |
+| weight contest, cap 3042 | .770 [.687,.860] | .722 [.636,.799] | .740 [.666,.803] |
+
+| paired difference | original allowances | weight contest |
+|---|---:|---:|
+| issued minus historical | −.042 [−.131,.000] | −.034 [−.117,+.068] |
+| issued minus selector-only | −.002 [−.022,+.014] | +.019 [−.048,+.088] |
+
+No improvement is demonstrated. Intervals including zero do not establish equivalence or no harm;
+no equivalence margin was declared for this repair. The contest-minus-original difference with issued
+credit is **−.095 [−.162,−.027]**. The scoring defects therefore do not explain away the smaller
+contest brain's deficit on this development condition. These intervals do not identify its remaining cause.
+
+Individual final-third efficiency signs (better / exactly equal observed value / worse) keep the
+heterogeneity visible. Issued versus historical: 1/14/5 with original allowances, 7/0/13 with the contest.
+Issued versus selector-only: 1/18/1 and 12/1/7 respectively. Equality of this one statistic is not
+identity of learned state or evidence of equivalent performance. All forty matched records, including
+negative-gain lives, remain in the analysis JSON; no lives were dropped.
+
+**Credit delivery and software costs.** Each denominator below counts a stream forecast on an accepted
+taste, not an independent taste. All 3651 original-allowance and 3434 contest accepted tastes completed
+their updates. A deleted correct speaker retains its stream score but receives no redirected use credit.
+
+| issued-credit allocator | awake stream forecasts | correct forecasts | correct credit undeliverable | replacement credit prevented |
+|---|---:|---:|---:|---:|
+| original allowances | 476387 | 254324 | 153 (.060%) | 135 |
+| weight contest | 440377 | 233502 | 9203 (3.941%) | 9573 |
+
+The percentages divide undeliverable credit by correct forecasts. Missing original speakers, including
+wrong forecasts, number 289 and 21711. These counts demonstrate different exposure to interleaved
+recycling; they do not measure the reward lost by a deletion. In the all-food issued controls, all
+43048 awake accepted stream forecasts per allocator are correct and deliverable.
+
+| allocator / credit | mean whole-life gain | mean last-third gain | mean final categorical units | mean births |
+|---|---:|---:|---:|---:|
+| original / historical | 27.85 | 30.55 | 4268.60 | 10940.75 |
+| original / selector-only | 23.60 | 27.25 | 4266.55 | 10960.35 |
+| original / issued | 23.40 | 27.05 | 4267.35 | 10901.80 |
+| contest / historical | 17.00 | 22.35 | 3041.10 | 11603.75 |
+| contest / selector-only | 19.05 | 18.55 | 3041.55 | 11547.60 |
+| contest / issued | 20.85 | 19.90 | 3041.30 | 11423.70 |
+
+Whole-life contest gain rises descriptively while its last-third gain falls relative to history;
+the primary metric is not changed to favour either result. Issued-credit contest lives average 14835
+contests, 6618 won transfers and 3741 within-stream recyclings; corresponding historical means are
+15009, 6749 and 3795. The JSON retains family allocation and duplicate-removal counts separately.
+
+The issued cache adds 169 records × four fields (speaker ID, choice, exact p(0), exact p(1)), plus
+the timestamp: **677 scalar slots**, outside the categorical-unit count. Transient taste snapshots
+and counters are additional state listed by the wrapper's summary. Recording activity averages about
+12806 and 12693 scalar-field writes per simulated second for original and contest sequence lives;
+all-food controls still average 11816. These are software proxies, not transistor counts, bits of
+physical memory or joules. Recursive unit-use calls total 3992119 and 1397785; ancestry path multiplicity
+is included. The inherited spending calculation does not charge the cache or these new operations,
+so the efficiency comparison is the existing behavioural metric, not a physical cost improvement.
+
+**Provenance, budget and limits.** Root revision `d37dac6`; full revision, dirty files, source/input
+hashes, flags and exact commands are retained in the comparison and analysis JSON. The checked production
+sources match the historical comparison. One job, four workers, one maths thread each, completed in
+553.04 s (9 min 13 s), **73.04 s beyond the declared eight-minute simulation budget**. The lead did not
+enforce the wall stop during a user-steering/context gap; this is a process failure, not additional
+scientific authorisation. No further simulation followed. No new seeds, family, tuning, protected test,
+production change or allocator was introduced. One rung, one life length and one step cannot establish
+generality, equivalence or finer-step robustness; the correction remains a versioned lab implementation.
+
+**Changed belief, return to the goal and next discriminator.** We now have a checked, consistent contract
+for scoring an issued forecast and delivering credit to surviving memory. Its implementation changes
+individual trajectories but has not improved the declared performance measure or removed the contest's
+gap. The immediate question for economical reusable memory returns to **which distinctions allocation
+preserves or destroys**. The smallest next diagnostic is one neutral observation of an already-used
+corrected contest life: record actual contest candidates and removals, their unit evidence/use/age,
+and the stream's forecast immediately before and after a deletion. Check exact D82 fingerprint identity.
+Ask whether stream weight ranks this immediate deletion cost before inventing another allocator.
+A harmful current deletion could still buy a better future unit: immediate prediction harm is neither
+lifetime memory value nor an effect on action. That trade-off remains unresolved; no next run is launched here.
+
+<a id="d83-allocation-trace"></a>
+### D83 — What does the weight contest actually remove? (2026-11-17)
+
+**Before work.** The user authorised continuing D82's neutral allocation diagnosis. The uncertainty for
+reusable economical memory is whether recycling usually removes currently dormant units or immediately
+changes a represented distinction, and whether stream weight ranks that local disturbance. Competing
+explanations include dormant recycling, deletion of current speakers, and destructive attempted growth
+without a subsequent birth: `Net.learn` requests room before checking partner availability and combined
+span. A removal can still rationally fund future learning; this trace cannot estimate lifetime memory value.
+
+**Discriminator and sources.** Observe one already-used D82 issued-credit contest life: sequence rung 17,
+seed 177000, red poison, 300 s, dt=.0025 s, cap 3042. Preserve the exact D82 result and full fingerprint.
+Wrap only instance methods; clone the private allocator RNG to reconstruct rejection sampling and leaf
+selection, then require exact post-state/victim agreement without drawing from the live RNG. Record failed
+and won contests, all removals, read-only stream forecasts before/after deletion at unchanged context,
+current/issued speaker identity, evidence/use/age, and actual additions per learning call. Separate streams
+already taught this taste from those not yet taught; same-taste loss after teaching is not prequential loss.
+Freund et al.'s [specialist semantics](https://cseweb.ucsd.edu/~yfreund/papers/SpecializedExperts.pdf)
+and Dohare et al.'s [recycling precedent](https://arxiv.org/html/2306.13812v3#S6) retain D82's source
+interpretation; neither establishes that current deletion disturbance measures future value.
+
+**Analysis, prediction and stop.** Report denominators and context stages, current/issued-speaker deletion,
+probability/choice changes, and removals with/without an addition in that learning call. Sampled winner
+correlations are selected observations, not an unbiased ranking test; no performance improvement or direction
+is predicted. A unit's zero own/use or initial tally is not proof it never helped: traces can be inherited.
+Prediction changes are not actual action changes. Stop and preserve failure evidence if RNG reconstruction
+or exact D82 identity fails; no failed observer is a scientific negative result.
+
+**Budget.** Implementation/checks 25 minutes; lead review five minutes before any life. One observed life
+only, at most 240 s simulation wall time with an enforced external timeout, one maths thread; analysis/docs
+15 minutes. No new seed, family, allocator, production change, agent or protected-test access. Raw traces
+and small summaries stay in `lab/v`; large pickle data is ignored and its absolute path recorded. The
+next branch depends on what the trace distinguishes, not on a new allocation rule or sweep.
+
+**Validation and provenance.** The frozen [observer and one-life harness](/home/pilgrim/git/simple-learner/lab/allocation_trace.py)
+([run JSON](/home/pilgrim/git/simple-learner/lab/v/allocation_trace.json),
+[log](/home/pilgrim/git/simple-learner/lab/v/allocation_trace.log)) ran once under the declared external
+240 s timeout, finishing in **10.84 s**. The exact result tuple, complete D82 fingerprint and allocation
+counters all match the corrected baseline. All 27384 room-call RNG post-states and 12170 actual contests
+reconstruct exactly from cloned RNGs. The final `_room` wrapper retains one direct live RNG closure
+cell per stream, preserving D82's fingerprint account. No extra live random draws or predictions occur.
+
+Five [deterministic checks](/home/pilgrim/git/simple-learner/lab/allocation_trace_checks.py)
+([JSON](/home/pilgrim/git/simple-learner/lab/v/allocation_trace_checks.json),
+[log](/home/pilgrim/git/simple-learner/lab/v/allocation_trace_checks.log)) cover cloned draws, won and lost
+contests, actual removal without a birth, exact neutral fixture identity and recursive removal. A fixture
+initially omitted native `ondemand=True`; that failure and the passing correction remain in the log.
+Cascade forecasts are probed only before/after the complete removal transaction, when the graph is valid.
+The [analysis](/home/pilgrim/git/simple-learner/lab/allocation_trace_analysis.py)
+([JSON](/home/pilgrim/git/simple-learner/lab/v/allocation_trace_analysis.json),
+[log](/home/pilgrim/git/simple-learner/lab/v/allocation_trace_analysis.log)) verifies source/baseline hashes
+and reconciles births, removals and final allocation. Its first read used the wrong pickle summary key;
+that analysis-only failure is retained, corrected without another life. Root revision `d37dac6`, dirty
+paths, exact commands and hashes are in the run JSON. The ignored 13 MB raw trace is at
+`/home/pilgrim/git/simple-learner/lab/v/allocation_trace.pkl`. No production source, seed, rule or
+protected test changed; the observed life is not a new performance comparison.
+
+**What gets removed depends on the path.** The life makes 10236 additions and removes 9236 units,
+leaving the fixed 2042 plus 1000 grown units. There are 12170 contests: 5433 transfers win, 6737 lose.
+Each won transfer removes one donor leaf; 3740 within-stream recycling transactions remove one leaf.
+Twenty-four tidy transactions remove 63 units including descendants. Thus 9197 removal transactions
+remove 9236 units; counts below distinguish transactions from units.
+
+| removal path | transactions | donor/current speaker removed | probability changes | changed choices when both forecasts speak | becomes silent | latest issued speaker removed |
+|---|---:|---:|---:|---:|---:|---:|
+| contest transfer | 5433 | 2536 | 2512 | 1051 | 80 | 1506 |
+| own recycling | 3740 | 2 | 2 | 1 | 0 | 1 |
+| tidy, including cascades | 24 | 0 | 0 | 0 | 0 | 0 |
+
+Transfer deletions therefore often change the donor's current prediction; own recycling is almost
+always dormant in this one context. The source provides one asymmetry: own recycling excludes the
+requester's deepest firing unit, while a foreign contest does not. The exact deepest firing donor ID
+at deletion was **not recorded**; `says` ignores equal-count units, so its speaker need not identify
+the deepest firing unit. We cannot report how often those two donor identities coincide.
+A changed probability or hard choice is not demonstrated harm, an action change or lifetime value.
+
+**The stronger distinction: construction can disappear before issuing a forecast.** Matching actual
+`_add` unit IDs, stream IDs, taste IDs and learning-call order identifies **923 units born and removed
+within the same taste**, all through a later foreign transfer. This is 9.02% of additions and 16.99% of
+transfers. All 923 are their stream's current speaker at removal; 909 change its probability when deleted.
+None is the latest issued speaker. Native taste calls `predict` only after its entire sequential learning
+loop, so add/removal order plus the frozen source establishes that none issued a forecast in between.
+This is not a claim of zero causal effect: temporary existence can change eligibility and later allocation.
+
+These newborns hold one tally, the current taste's label. They account for +550.65 of the +631.13 bits
+of signed same-taste **conditional stream-loss change** at transfers. The other 4510 transfers account
+for +80.47 bits (absolute changes sum to 1010.85 bits); 1613 remove a current speaker and 1603 change its
+probability. Such loss is a probe of the stream at a selected deletion, not the mixture's issued loss.
+The 2708 already-taught donor transfers sum to +776.94 bits, whereas 2725 not-yet-taught transfers sum
+to −145.81 bits. Even the latter are selected by a contradiction after seeing the label. Neither sum
+is an unbiased prequential estimate or measured action loss. The newborn result explains much, not all,
+of the post-teaching sum; adding those stage sums to the newborn/older split would double-count events.
+Silence is completed with the unchanged current default only for this diagnostic; the JSON records raw
+awake transitions and exact before/after probabilities separately.
+
+Across all transferred victims, 3117/5433 have exactly one tally; 2229/3740 own-recycled victims do too.
+Median ages are 4.23 s for transferred victims and 8.99 s for own-recycled victims. These are sparse
+records, not evidence of past uselessness: a single tally or zero own/use cannot establish that a unit
+never helped, and traces may be inherited under other designs. The same-taste ID/order match, rather
+than those scalar fields, establishes the specific failure to issue a forecast here.
+
+**Some attempted growth deletes memory without a birth, but it is a minority.** Of 9173 learning calls
+that remove memory, 8946 add a unit and **227 do not**. The latter comprise 193 foreign transfers
+(88 change the donor forecast) and 34 own recyclings (none changes the current forecast). Post-removal
+inspection finds no past partner in 208 cases (174 transfer, 34 own), all available partners too long
+in one, and 18 with partners but an unresolved sampled-growth path. This does not show that the partner
+was absent *before* own recycling: that deletion itself can change the available context. No random
+partner choice was probed or consumed. The source's early `_room` call permits this outcome, but its
+2.47% frequency alone does not justify selecting it as the explanation or the first performance fix.
+
+**Literature re-check and changed direction.** As the diagnosis changed, we re-read the primary
+[Dohare et al. preprint, §6, equations 6–8 and Algorithm 1](https://arxiv.org/html/2306.13812v3#S6).
+Its feed-forward method updates gradients before selective reinitialization, initializes new outgoing
+weights to zero and excludes immature units from replacement. Its utility smooths centered activation
+magnitude times outgoing-weight magnitude, divided by incoming-weight magnitude, with bias correction.
+The maturity condition addresses immediate replacement before useful evidence develops. That is a
+relevant comparison, not evidence that protecting our compositional specialists is beneficial, local or
+cheaper. Avoiding futile construction, accepting cheap transient units and preserving future-useful
+distinctions remain alternatives; no protection mechanism is selected. Current software activity is
+not charged as new physical energy in the reward metric.
+
+**Return to the goal and smallest next discriminator.** For economical reusable memory, this trace
+separates interruption of an issued distinction from creation that never reaches a prediction. It
+cannot tell whether deleted one-tally units would later activate or learn anything useful. The raw
+trace lacks future per-stream symbol histories and retained definitions for an offline future-firing
+test; current teaching letters alone do not reconstruct those histories. Do not invent missing symbols
+or labels. A small next observation could preserve immutable unit definitions and actual stream-write
+symbols, then ask on the frozen recorded history whether removed one-tally units would fire on later
+accepted lessons, alongside whether they survived any issued prediction. That distinguishes missing
+opportunity from never-revisited contexts before choosing between preventing futile construction and
+protecting retention. Frozen-history firing would still not establish lifetime reward value after
+changed actions. One reused life cannot establish the cause of D82's average gap, generality or an
+unbiased ranking signal. Selected-victim weight correlations remain in the analysis JSON, secondary to
+these directly traced events. No new variant, optimisation or additional run was made in this phase.
+
+<a id="d84-future-evidence"></a>
+### D84 — Would deleted units meet later teaching evidence on the same history? (2026-11-17)
+
+**Before work.** The user authorised D83's next observation. For economical reusable memory, distinguish
+contexts never revisited from evidence opportunities truncated by recycling. Future activation is not
+information gain, unique predictive value or improved return. The comparison is one exact D83 history,
+not a learner carrying ghost units or a new allocation rule.
+
+**Method and alternatives.** Record immutable initial/grown definitions, actual ordered stream writes,
+pre-learning living/firing IDs and indices at every accepted teaching observation, and birth/death/prediction
+sequence positions. The frozen 168 streams are exactly `grownet.Net`, including those named clock;
+`Net2` has different clock/gap semantics and is unsupported, as are other classes. Replay native keep and
+history truncation exactly; validate every recorded living firing set before deleted-unit replay. For Net,
+fixed span-one symbols and additive composite spans allow exact ordered-symbol-tuple equivalence across
+associations. Test that invariant rather than assuming expression shape implies semantic uniqueness.
+Retain deleted ancestor definitions and report the extra hypothetical retention required.
+
+Count firing on strictly later accepted tastes, separating same-taste lost updates, actual stream-write
+changes and repeated unchanged contexts. Report survival to any prediction separately from actual speaking.
+Compare same-taste construction/removal with other one-tally removals, by family and time remaining.
+Predeclare both the full remaining-life description and a 100 s horizon restricted to deletion time≤200 s;
+the horizon is an analysis choice, not a brain constant. Count exact equivalent living definitions where
+possible; a recurring unit may already have a represented equivalent. Missing data or unsupported semantics
+stop the replay rather than invite reconstructed labels. D83's Dohare/Freund source account still applies;
+no new mechanism is being selected.
+
+**Budget and stopping rule.** Implementation/checks 25 minutes, lead review five minutes before running.
+One neutral corrected-contest life only: seq17, seed177000, red, cap3042, 300 s, dt=.0025 s, one maths thread,
+at most 240 s under an external timeout. Require exact D83/D82 fingerprint, result and counts. Offline
+analysis has a separate enforced 240 s limit; analysis/docs 15 minutes. Stop on failed native firing/history
+reconstruction or identity; preserve failures. No other seed, body/interface, allocator, production change,
+protected test or agent. Fresh evidence, correlated labels and fixed-history counterfactuals are distinct;
+no count of raw lessons will be called learned bits or causal utility.
+
+**Reboot recovery and checks.** On resumption the D84 plan and observer/analysis existed, but there
+was no check script, run output or result. Completed source review against native `Net.write`, `fires`,
+`learn` and issued-credit wrappers, then added deterministic checks before the one authorised observation.
+[Checks](/home/pilgrim/git/simple-learner/lab/future_evidence_checks.py) compare 10206 evaluations against
+native recursive firing, including missing symbols and differently associated equivalent definitions;
+keep/truncation and retained deleted ancestors also pass
+([log](/home/pilgrim/git/simple-learner/lab/v/future_evidence_checks.log)). Additional
+[offline accounting fixtures](/home/pilgrim/git/simple-learner/lab/future_evidence_replay_checks.py)
+check same-taste exclusion, survival to prediction, unchanged contexts, equivalents and the inclusive
+100 s boundary ([log](/home/pilgrim/git/simple-learner/lab/v/future_evidence_replay_checks.log)).
+
+**Observation and provenance.** The [observer](/home/pilgrim/git/simple-learner/lab/future_evidence.py)
+ran once in 10.14 s. Final fingerprint, result, allocation, additions, removals and learning-call counts
+all exactly match D83 ([JSON](/home/pilgrim/git/simple-learner/lab/v/future_evidence.json),
+[log](/home/pilgrim/git/simple-learner/lab/v/future_evidence.log)). Its JSON records revision `d37dac6`,
+uncommitted paths, source hashes and exact command; configuration is the predeclared D83 life above.
+The [analysis](/home/pilgrim/git/simple-learner/lab/future_evidence_analysis.py) finished in 1.06 s,
+matching all 27384 native pre-learning contexts, 477568 living-unit evaluations and 24799 history
+writes with both recursive and flattened-symbol reconstruction. Results and raw hash are in its
+[JSON](/home/pilgrim/git/simple-learner/lab/v/future_evidence_analysis.json) and
+[log](/home/pilgrim/git/simple-learner/lab/v/future_evidence_analysis.log).
+Ignored raw data remain at `/home/pilgrim/git/simple-learner/lab/v/future_evidence.pkl` (7.5 MB)
+and `/home/pilgrim/git/simple-learner/lab/v/future_evidence_analysis.pkl` (per-unit results, 793 KB).
+No production code, controller, world or protected evaluation changed.
+
+**Many deleted contexts recur, including construction that never reached a prediction.** Counts
+refer to unit instances, not independent samples or unique distinctions. All one-tally removals,
+including tidy cascades, are included (5369, versus 5346 through transfer/own recycling in D83).
+
+| deleted one-tally units | removed | survived any prediction | actually spoke | would fire on a strictly later accepted taste | would fire within 100 s, among deletions by 200 s |
+|---|---:|---:|---:|---:|---:|
+| born and removed in the same taste | 923 | 0 | 0 | 821 | 450 / 500 |
+| other removals | 4446 | 4446 | 4234 | 2832 | 1700 / 2535 |
+| all | 5369 | 4446 | 4234 | 3653 | 2150 / 3035 |
+
+Thus 68.0% recur before life end; 88.9% of same-taste newborn removals recur. Only 56 removed units
+have no later accepted lesson in their stream at all. By family, recurrence is 253/354 event,
+925/1276 clock, 2360/3416 integrator and 115/323 rhythm units. No rhythm deletion qualifies for
+the 100 s horizon, so its lower full-life proportion cannot separate rarity from late construction.
+The median first recurrence among recurring units is 11.31 s; it excludes nonrecurring units.
+
+Of 38270 unit–lesson firings, 3266 retain the deletion's unchanged context and 35004 follow a history
+change. These are correlated opportunities, not independent evidence. Exact equivalent living definitions
+exist for 9087 firings; 3639 removed instances have at least one later firing without such an equivalent.
+Equal activation does not imply equal accumulated counts, and absence of an exact equivalent does not
+show unique predictive information. The definitions require a median two grown units in their ancestry
+including themselves (maximum 17); some future firings need up to 14 additionally deleted ancestors.
+These overlapping closures cannot simply be added as a physical retention bill.
+The original one-tally label agrees with 19474/38270 later firings. This selected, overlapping aggregate
+is neither a learned-bit count nor a test that the original distinction is useful or useless.
+
+**Inference, limits and next branch.** Contexts never recurring is not a general explanation for these
+removals in this life. Same-taste construction is often deprived of later observation opportunities,
+not demonstrably futile construction. The observation answers its narrow question and ends this run
+budget. It does not measure lost information, an independent-seed rate, causal reward or the value
+of retention under the cap. Retention would change future competition and potentially actions/history.
+For the goal of economical local adaptation, the next useful distinction is between later activation
+and incremental prediction evidence beyond the surviving representation. Design an offline, sequential
+comparison using only evidence available at each prediction, with a supplied readout prior explicitly
+stated, before selecting any retention mechanism. The current trace lacks all living readout counts
+at each later forecast, so it cannot settle that comparison by relabelling recurrence as utility.
+Do not launch another life or allocator under this completed observation's budget. A future comparison
+must also account for the displaced memory and retained ancestors; a no-cap ghost is only a reference.
+
+<a id="d85-retained-prediction"></a>
+### D85 — Does a retained tally predict better than its surviving stream? (2026-11-17)
+
+**Before work.** The user's “Continue” resumes diagnosis of economical local memory. D84 establishes
+recurrence, not prediction value. Competing explanations: removed contexts predict additional structure;
+they recur but their tallies are misleading; or useful structure already has a better surviving readout.
+First attempt exact reconstruction from existing events, rather than another life. Native `Net` initializes
+fixed counts at zero, increments every living firing unit at learn, gives a newborn the current label,
+and otherwise leaves those counts unchanged in this frozen mode. Every recorded deletion count and
+living set is an independent checkpoint. Stream indices start at zero and advance on each write for
+this senses-based repertoire; require matching every recorded learning/removal index. Reconstruct all
+native speakers at recorded predictions and match their saved first-speaking positions and total counts.
+Stop if these checks fail; do not infer missing forecasts from later winners. This may refine D84's
+statement that missing readout snapshots require another observation.
+
+**Sources and comparator.** Read [Freund et al. (1997), §§2–3.1](https://cseweb.ucsd.edu/~yfreund/papers/SpecializedExperts.pdf)
+on choosing awake predictors and issuing predictions before outcomes, and
+[Hutter (2003), §2, equations 1–2](https://arxiv.org/pdf/cs/0301014) on Bayes mixtures and component
+dominance. Dawid (1984) was found, but its scanned body was not read; no claim rests on its abstract.
+Use native Beta(1/2,1/2) Bernoulli prediction for an offline retained unit initialized with its actual
+one-tally record. The unknown is its conditional label probability under an explicitly supplied stationary
+Bernoulli readout model. This is exact Bayesian updating for that model, not an ideal learner for the
+changing world. The alternative is its actual surviving stream's issued forecast, completed with 1/2
+when silent; it is not the whole brain or all information in the surviving units. No predictive sufficiency
+or conditional-information claim follows from beating this readout.
+
+**Frozen exploratory comparison.** For every one-tally removal, retain its immutable definition and a
+separate pair of counts offline. On each strictly later accepted taste, score only if it fired at the last
+recorded prediction, using counts available then; update after scoring. Exclude its deletion taste from
+both scoring and learning. Compare log loss in bits to that same stream's last issued forecast, before
+any sequential same-taste deletion. Also compare a Bayesian mixture of these two policies with equal
+initial weight at deletion, updating weights only on this candidate's awake lessons. Its one-bit regret
+bound relative to the better of these two policies is algebraic, not a bound on the best possible brain.
+Report denominators, per-instance distributions and family/same-taste groups; keep all zero-opportunity
+instances. Use D84's full remainder and fixed 100 s window for deletions by 200 s. No winner selection or
+family tuning follows. Repeated labels/contexts and overlapping candidates invalidate independent-unit
+confidence intervals and summing gains as brain-level information. Report actual accepted labels per
+second and candidate evidence counts before interpreting outcomes; D84 already predicts sparse evidence.
+No additional physical-noise model or simultaneous exploration is introduced: ghosts never affect action
+or credit. This is fixed-history prediction, not control or a matched-cap retention intervention.
+
+**Budget/stopping.** Up to 25 minutes implementation/checks and 15 minutes analysis/documentation;
+no simulated life, optimiser, protected test, production change or agent. One complete offline replay,
+externally limited to 240 s with one maths thread; failed validation is a diagnostic failure, not a
+negative learning result. Deterministic fixtures test score-before-update, silence, mixture bounds and
+label leakage. Preserve raw per-instance outputs. Stop this comparison after its result and use it to
+choose the next diagnosis, accounting for inherited definitions and displaced memory before any design.
+
+**Validation failure and bounded correction, before viewing scores.** The first replay stopped at
+an index assertion, after 0.59 s; no prediction summary was produced. The
+[failed log](/home/pilgrim/git/simple-learner/lab/v/retained_prediction_failed_index.log) is retained.
+[Event-only diagnosis](/home/pilgrim/git/simple-learner/lab/retained_prediction_diagnosis.py)
+([JSON](/home/pilgrim/git/simple-learner/lab/v/retained_prediction_diagnosis.json)) identifies exactly
+63 removals following a same-stream write before the next prediction/learn. Native code does `write`,
+then `tidy`, then increments `cnt`: the removal records the previous place index. All 63 are D83's tidy
+cascade removals. This is a reconstruction-order assumption, not an observer error or a learning result.
+The checkpoint now accepts that one-step lag only in that exact event position; prediction and learning
+indices remain strict. Added a deterministic fixture for this ordering. Resume the incomplete offline
+replay once within the same 240 s allowance; hypotheses, metrics and data are unchanged. An earlier
+fixture omitted the required initial prediction; its failure and corrected pass are retained in the
+check log. No simulated life was launched.
+
+**First result and next diagnostic (exploratory addition, after results).** Reconstruction succeeds:
+9236 removal tallies, 27384 pre-learning living/firing sets, and all 10371 saved per-unit speaking
+records (first position and total count) match. There are 163 accepted binary labels in 300 s:
+0.543/s, at most that many label-entropy bits/s, not an estimate of independent information. A removed
+unit gets a median two future lessons (90th percentile 17); 1716 get none. There are 3653 recurring
+candidates: 1678 beat their surviving stream in cumulative log loss, 1932 lose, and 43 are numerically
+equal. Across the overlapping 38270 candidate–lesson pairs, retained forecasts reduce log loss by
+696.93 bits but increase expected hard-choice mistakes from 17409.5 to 19728.5 (ties count half).
+Those sums repeat the same labels across units; they are not whole-brain gains or independent evidence.
+This combination points to confidence calibration as a competing explanation, not a conclusion.
+
+Before interpreting retention as added structure, add a simple offline control: probability 1/2 on
+exactly each candidate's scored lessons, and the same equal-prior two-policy Bayesian mixture of
+that uniform forecast with the surviving-stream forecast. No new traces or replay are needed: its
+loss is n bits and mixture loss follows exactly from the two saved likelihoods. Compare candidate
+counts and distributions, including D84's 100 s sensitivity; retain the original comparison unchanged.
+This is a post-result exploratory discriminator, not a confirmatory test or a new success threshold.
+Budget: five minutes, under a 60 s external timeout, no new simulated steps. A uniform control winning
+would weaken unique-structure interpretations but would not diagnose the source of calibration error;
+a retained predictor winning against both remains only an opportunity relative to those readouts.
+
+**Evidence and limits after the control.** The
+[replay](/home/pilgrim/git/simple-learner/lab/retained_prediction.py) completes in 5.01 s with zero
+simulated steps. Its [JSON](/home/pilgrim/git/simple-learner/lab/v/retained_prediction.json) records
+source/raw hashes, root revision `d37dac6`, dirty paths, command, all group results and checks;
+[log](/home/pilgrim/git/simple-learner/lab/v/retained_prediction.log) reports evidence before scores.
+[Fixtures](/home/pilgrim/git/simple-learner/lab/retained_prediction_checks.py) and their
+[log](/home/pilgrim/git/simple-learner/lab/v/retained_prediction_checks.log) include the corrected failures.
+The ignored per-unit pickle is `/home/pilgrim/git/simple-learner/lab/v/retained_prediction.pkl`.
+Reconstructed 988344 stream predictions reproduce all saved speaking records. Thus D84's missing-count
+limitation is resolved for this frozen mode by checked reconstruction, without another observation.
+It remains unsupported for forgetting, different selection rules or other stream classes.
+
+| removed one-tally group | later-active instances | retained better than surviving stream | retained worse | numerical equality | median retained saving, active instances |
+|---|---:|---:|---:|---:|---:|
+| all | 3653 | 1678 | 1932 | 43 | −0.142 bits |
+| same-taste newborn | 821 | 435 | 384 | 2 | +0.138 bits |
+| other removal | 2832 | 1243 | 1548 | 41 | −0.204 bits |
+| eligible 100 s horizon | 2150 | 1000 | 1107 | 43 | −0.076 bits |
+
+These are descriptive comparisons of overlapping unit instances, not a success rate across independent
+lives. Numerical equality means a difference within 1e−10 bits, not a statistical equivalence claim.
+The surviving stream is silent in 727/38270 pairs (1.90%), so silence completion is not most of the
+comparison. Same-taste newborns have more later evidence (median six lessons, versus one for other
+removals); their better comparison cannot establish a causal benefit of protecting young memory.
+Per-family and fixed-horizon results remain in the JSON rather than being a family-specific rule.
+
+The [uniform control](/home/pilgrim/git/simple-learner/lab/retained_uniform_control.py)
+([JSON](/home/pilgrim/git/simple-learner/lab/v/retained_uniform_control.json),
+[log](/home/pilgrim/git/simple-learner/lab/v/retained_uniform_control.log)) checks the cumulative
+mixture identity against direct sequential updates. **800/3653** recurring retained candidates beat
+both their surviving stream and the uniform forecast; **2003/3653** do worse than uniform along with
+their stream. Retained beats uniform in 926/3653; its median saving against uniform is −1 bit.
+The corresponding 100 s counts are 507/2150 beating both and 1133/2150 losing alongside their stream.
+No future-selected subset is proposed as a deployable rule.
+
+On overlapping pairs, uniform costs 38270 bits, the original stream 42017.07, retained 41320.14,
+stream/retained mixture 40710.34, and stream/uniform mixture 38825.36. The latter comparison uses
+exactly the same equal prior and candidate awake domain, so it tests the readout rather than an
+extra privilege of switching only on favourable outcomes. The recognition domain is still supplied
+by the retained definition: it is not a demonstration that global shrinkage can discard all those
+units. Each mixture also has its own half prior; there is no free half prior for every candidate in
+one combined brain. Defining or recognizing candidates, retaining ancestors and displacing useful
+memory all remain uncharged by this offline reference. Conditional on a supplied definition and
+initial tally, the retained model performs Beta–Bernoulli updates; it does not model how label-dependent
+construction and deletion selected that initial tally. No ground-truth label probability is known here.
+
+As diagnosis changed, read [Gneiting & Raftery (2007), examples 3–4](https://sites.stat.washington.edu/raftery/Research/PDF/Gneiting2007jasa.pdf):
+logarithmic and hard-choice scores evaluate different aspects of a forecast. Our cheaper uniform
+control and worse choices weaken an interpretation of the aggregate loss gain as useful extra
+structure. They do not by themselves establish a formal calibration decomposition, identify which
+confidence error matters, or show that the brain's weighted mixture suffers the same defect.
+
+**Return to the goal and next branch.** A local unit cannot infer its future value merely from recurrence
+or one tally, and beating a weak surviving readout does not establish useful extra memory. There are
+individual opportunities worth explaining, but no retention cure follows from this one selected life.
+The next useful authorised work is to separate readout confidence from representation in issued
+forecasts: inspect what existing records contain for the actual weighted mixture, then specify a
+comparison that reduces confidence while preserving hard choices, with all accepted tastes counted
+once. This directly tests an existing knob before growing or protecting more material. Any new capture
+needs its own bounded observation record; no new allocator, body signal or sealed test is implied.
+
+<a id="d86-mixture-confidence"></a>
+### D86 — Does less confidence help the actual issued mixture? (2026-11-17)
+
+**Before work.** D85's selected overlapping unit comparisons cannot diagnose the whole learner. Existing
+D79 records do contain complete mixture probabilities with explicit prediction-call IDs for accepted
+tastes; D81 lacks explicit IDs and is not used. Test confidence as the alternative to missing structure
+on all four already observed D79 lives: original allowances P4480 and capped weight contest P560,
+seed177000, red/blue, sequence rung17, 300 s, dt=.0025. These are historical uncorrected-credit lives,
+not D84's corrected contest life. No generalisation between them is assumed.
+
+Compare the native issued probability p with q=(p+1/2)/2, a fixed halfway shrink towards uncertainty,
+and uniform 1/2. The halfway amount is a deliberately simple supplied diagnostic, not a fitted or
+selected brain constant. Each accepted taste counts once. Freeze full-life and last-third log loss,
+Brier squared probability error and expected hard-choice mistakes (half at equality); verify every
+shrunken hard choice is unchanged. A probability-score improvement without changed choices supports
+a confidence opportunity in that historical predictor, not a reward cure. Harm would warn against
+transferring D85's selected-candidate interpretation to the actual mixture. Show every life, no pooled
+independent-taste interval and no optimisation. Check recorded mixture reconstruction, observer identity,
+complete issued links and chronological order before scores.
+
+The primary source is [Gneiting & Raftery (2007), examples 1, 3–4](https://sites.stat.washington.edu/raftery/Research/PDF/Gneiting2007jasa.pdf),
+on probability scores versus hard choices; the binary squared error used here is the Brier convention
+without doubling for the complementary outcome. This is an exploratory fixed-history reference,
+not a learned knob, formal calibration decomposition or retention test. Budget: ten minutes total,
+one offline analysis capped at 60 s with one maths thread; no life, new agent, body or production change.
+
+**Result.** The [analysis](/home/pilgrim/git/simple-learner/lab/mixture_confidence.py)
+([JSON](/home/pilgrim/git/simple-learner/lab/v/mixture_confidence.json),
+[log](/home/pilgrim/git/simple-learner/lab/v/mixture_confidence.log)) verifies all 23047 issued mixtures
+(maximum reconstruction error 2.67e−15), all observed/unobserved identities, and every accepted
+prediction link. It reads the already saved D79 life and source provenance; its JSON adds the raw and
+analysis hashes and command. No new life or intervention was run.
+
+| historical learner / poison order | full-life accepted labels | native log loss | halfway-to-uniform log loss | last-third native / halfway log loss |
+|---|---:|---:|---:|---:|
+| original allowances / red | 184 | 105.32 | 133.74 | 29.03 / 44.46 |
+| original allowances / blue | 187 | 111.36 | 139.26 | 25.21 / 43.76 |
+| weight contest / red | 163 | 115.67 | 130.43 | 32.13 / 42.27 |
+| weight contest / blue | 176 | 108.48 | 130.84 | 37.27 / 48.63 |
+
+Each loss is in bits; uniform costs one bit per accepted label. Halfway shrinkage increases log loss
+by 14.77–28.42 bits over the full life and 10.14–18.55 in the last third. Squared probability error
+also increases in every window, by 3.65–7.13 full-life and 2.29–4.01 last-third sum units. Hard choices
+are exactly preserved as required. These are four descriptions on one reused seed pair, not independent
+confirmation or proof that every possible confidence adjustment fails. The native mixture beats uniform
+in all four lives; it is not the weak individual-stream forecast measured on selected removals in D85.
+
+**Changed belief and next branch.** Reject the inference from weak selected streams to a generic
+whole-mixture confidence cure. Selection/combination and the different histories remain possible
+explanations; this does not prove calibration or isolate how weighting helps. For economical adaptation,
+retained memory must add something beyond the combined forecast, not merely beat its own stream.
+The next useful comparison is a per-candidate causal likelihood comparison against the actual issued
+mixture on D84's same corrected life. Its existing trace does not directly record mixture probabilities,
+default-state updates or stream weights; reconstruction of those has not been established. D79 records cannot be joined
+to it because their learner and later trajectory differ. A minimal neutral capture of only issued
+mixture probabilities, aligned by prediction-call order and required to match D84's fingerprint,
+would supply the missing reference; specify its budget and stopping rule before running. Then compare
+retained evidence to the combined forecast, keeping a uniform control and declaring candidate prior
+costs. Do not turn the retrospective 800 D85 winners into a rule. No global shrinkage, retention policy
+or third allocator is selected by D85–D86.
+
+<a id="d87-retained-mixture"></a>
+### D87 — Retained evidence against the same life's combined forecast (2026-11-17)
+
+**Before work.** The user explicitly authorised D86's next comparison. For economical reusable memory,
+distinguish a deleted unit adding predictive evidence from merely beating a weak individual stream.
+Repeat only D84's corrected contest life (sequence17, seed177000, red, P560, total cap3042, 300 s,
+dt=.0025). Extend its neutral observer to record issued combined probabilities by exact prediction-call
+position. Require the entire D84 event/definition trace, behaviour/result, allocation, issued-credit
+summary and final fingerprint to match. Reconstruct each combined probability from issued component
+records and current mixture weights. Stop on a discrepancy; no replacement seed or changed controller.
+
+Replay D85's same one-tally candidates against this combined reference, preserving the supplied
+Beta(1/2,1/2) readout, one actual initial tally, strictly later accepted lessons, score-before-update,
+full remainder and 100 s sensitivity restricted to deletions by 200 s. Keep uniform prediction and the
+equal-prior pairwise mixtures. Verify candidate counts, activation and retained losses exactly against
+D85. Report all denominators and family/newborn groups. Each candidate's half prior costs one bit
+relative to its better component; it is not a prior over all candidates. The candidate definitions,
+ancestors and displacement remain uncharged. These correlated per-candidate comparisons are not
+whole-brain gains, independent observations, or a matched-cap retention intervention. The relevant
+sources and Bayesian model limitations remain D85's; no new mechanism is constructed.
+
+**Prediction and evidence budget.** D85's opportunities see only 163 accepted labels/300 s (at most
+0.543 binary label-entropy bits/s, independent information unknown), median two future lessons per
+removed unit. Ghosts do not explore or affect credit. Given D86's stronger combined reference, expect
+fewer retained winners than against an individual stream, but the amount is uncertain. A persistent
+minority would motivate explaining what they encode and whether their value can be identified in time;
+absence would weaken this readout/retention account, not all retention mechanisms.
+
+**Budget/stopping.** Implementation/checks 20 minutes; one neutral capture capped externally at 240 s,
+one offline comparison capped at 240 s, both one maths thread; analysis/documentation 15 minutes.
+No new seed, optimisation, production change, body/interface, protected evaluation or agent. End this
+comparison after the checked result; select the next diagnosis rather than a retention rule from winners.
+
+**Checked result and supplementary prior-cost question.** Capture matches D84's entire trace, final
+fingerprint, result, allocation and issued-credit summary. The combined reference reduces retained
+winners from D85's 1678 to 336 of 3653 recurring units (3317 lose); 279 beat both mixture and uniform.
+Median relative saving is −3.191 bits. Only 62 exceed +1 bit; the largest is +5.363 bits. These are
+selected overlapping comparisons, not evidence that those winners could be known in advance.
+
+Before a supplementary calculation, specify one causal model-selection reference: half the initial
+prior goes to the native combined forecast; candidate j in deletion order receives 1/[2j(j+1)].
+This sums to half over all future candidates, so the number born need not be known. Candidate j uses
+the native forecast before its deletion and whenever asleep, and its D85 tally prediction when awake
+on strictly later accepted tastes. Unknown/unborn candidates also predict natively. This is a supplied
+bias towards early candidates, not a fitted optimum, statistical significance threshold or unique
+selection prior. On the same full label sequence its likelihood ratio against native is 2^G_j, where
+G_j is the already scored candidate gain. Therefore the complete mixture ratio is
+`1/2 + 1/[2(N+1)] + sum_j 2^G_j/[2j(j+1)]`. Each accepted taste occurs once in that sequence;
+this calculation does not sum overlapping candidate gains. Verify zero gains give ratio one and the
+half-native bound prevents loss over one bit. No extra simulation or parameter search; 60 s compute,
+five minutes analysis. The reference still stores all candidate definitions/ancestors and conditions on
+the unchanged native history; it does not meet locality/material constraints or estimate altered return.
+
+**Provenance and results.** [Capture/replay script](/home/pilgrim/git/simple-learner/lab/retained_mixture.py),
+[capture JSON](/home/pilgrim/git/simple-learner/lab/v/retained_mixture.json),
+[capture log](/home/pilgrim/git/simple-learner/lab/v/retained_mixture.log),
+[analysis JSON](/home/pilgrim/git/simple-learner/lab/v/retained_mixture_analysis.json) and
+[analysis log](/home/pilgrim/git/simple-learner/lab/v/retained_mixture_analysis.log) record the exact
+commands, revision `d37dac6`, dirty paths and source/input hashes. Capture took 9.41 s and recorded
+5883 combined forecasts; the full D84 trace is identical, not just its summary. Replay took 0.73 s;
+all 5369 candidates' counts, learning opportunities and retained losses match D85 exactly. D85's
+score-before-update and ordering fixtures passed again
+([check log](/home/pilgrim/git/simple-learner/lab/v/retained_mixture_checks.log)). The ignored per-unit
+artifact is `/home/pilgrim/git/simple-learner/lab/v/retained_mixture_analysis.pkl`.
+
+| removed one-tally group | later-active instances | retained beats combined forecast | loses | median relative saving |
+|---|---:|---:|---:|---:|
+| all | 3653 | 336 | 3317 | −3.191 bits |
+| same-taste newborn | 821 | 57 | 764 | −5.853 bits |
+| other removal | 2832 | 279 | 2553 | −2.769 bits |
+| eligible 100 s horizon | 2150 | 279 | 1871 | −2.621 bits |
+
+Among the recurring units, 279 beat both combined and uniform forecasts; 3439 combined forecasts
+beat uniform on their candidate's awake lessons. There are no numerical equalities in the combined
+comparison. Full-life retained winners by family are 15/253 event, 77/925 clock, 231/2360 integrator
+and 13/115 rhythm; these are descriptions, not rules for allocation. Many candidates share the same
+lesson, so their counts and bit sums cannot be treated as independent trials or total learned information.
+The typical separate half-prior mixture also loses (median −0.850 bits), despite its one-bit regret
+bound; the bound is a guard against loss, not free identification of valuable candidates.
+
+The [supplementary selection reference](/home/pilgrim/git/simple-learner/lab/retained_selection_reference.py)
+([JSON](/home/pilgrim/git/simple-learner/lab/v/retained_selection_reference.json),
+[log](/home/pilgrim/git/simple-learner/lab/v/retained_selection_reference.log)) counts all 163 labels
+once via full-sequence likelihoods. The actual corrected mixture costs **97.261 bits**, versus
+**97.854 bits** for the supplied causal candidate prior: **0.593 bits worse**, with likelihood ratio
+0.663 against native. None of the individual candidates recovers its own prior code cost under this
+particular deletion-order prior (best gain minus cost −3.752 bits). This is not a universal selection
+lower bound or an equivalence test; different informed priors or model classes can differ. It is a
+checked counterexample to treating the retrospective winners as freely available improvement.
+
+**Return to the goal and next branch.** For this corrected life and supplied tally readout, retaining
+existing one-tally distinctions offers much less than the individual-stream comparison suggested.
+Neither blanket retention nor selecting retrospectively good units is justified. The minority of
+positive records remains unexplained; one life cannot separate persistent value from chance. No reward,
+activity, material or communication improvement is claimed; retention's real costs were not even paid.
+
+This closes the narrow fixed-definition retention branch without selecting an intervention. It does
+not explain D77's benefit from extra room: keeping a unit to predict with its current definition is
+different from keeping it as a building block for longer future combinations. Our ghosts never grow
+children. Next return to that distinction using existing growth traces and a short source/theory audit:
+what extra representation becomes reachable with room, as opposed to simply retaining old readouts?
+Establish a discriminating observation and account for possible knob/readout alternatives before another
+allocator or retention variant. D87's single-life capture budget is complete; further simulation needs
+a new bounded record, not a continuation of this run.
+
+<a id="d88-parent-census"></a>
+### D88 — Were weak or silent units used to build children? (PROGRAMME Job 1, 2026-11-18)
+
+**Before work.** The question from [PROGRAMME](../PROGRAMME.md#next-work-three-small-jobs-for-cheaper-agents):
+does memory help by serving as parts for later combinations, even when its own predictions are weak? D87
+scored retained units with fixed definitions only; they never grew children. Job 1 counts, on D84's same
+frozen corrected contest life (sequence rung 17, seed 177000, red first, 300 s, dt=.0025 s, total cap 3042),
+how often actual births used a grown parent that had not yet spoken or held a single tally. Method: one
+offline native-order replay of the saved events (D85's semantics, extended with checks that every parent is
+living at its child's birth, spans add, no living unit ever has a removed parent, and the expected counts).
+Speaking means issued native speaker at an actual prediction strictly before the birth event. Budget: 30
+minutes implementation and checks, one run under 240 s, no simulated life. Competing outcomes: positive counts
+show that silence is not disuse as a part; zero counts narrow that explanation on this life.
+
+**Provenance.** [Script](/home/pilgrim/git/simple-learner/lab/growth_parent_census.py),
+[JSON](/home/pilgrim/git/simple-learner/lab/v/growth_parent_census.json),
+[log](/home/pilgrim/git/simple-learner/lab/v/growth_parent_census.log),
+[fixture log](/home/pilgrim/git/simple-learner/lab/v/growth_parent_census_checks.log); per-birth rows in the
+ignored `/home/pilgrim/git/simple-learner/lab/v/growth_parent_census.pkl`. Revision `d37dac6` plus the
+uncommitted lab files listed in the JSON; input `lab/v/future_evidence.pkl` (sha256 `d74474476cf6e0fe…`).
+Fixtures: repeated parent, a parent shared by two children, a cascade removal (and refusal of a missing one),
+a child born before its parent first speaks. The replay matches 10236 births, 9236 removals, 2042 initial and
+3042 final units, 5883 predictions, 27384 learns, all 10371 speaking records and every removal tally; 4.1 s.
+
+| family | births | births using a grown parent not yet spoken | births using a one-tally grown parent | distinct grown parents | median / max child span |
+|---|---:|---:|---:|---:|---:|
+| all | 10236 | 57 | 638 | 3308 | 4 / 48 |
+| event | 760 | 57 | 45 | 283 | 6 / 48 |
+| clock | 3774 | 0 | 108 | 1507 | 4 / 23 |
+| integrator | 5253 | 0 | 468 | 1465 | 3 / 48 |
+| rhythm | 449 | 0 | 17 | 53 | 2 / 5 |
+
+**Findings and limits.** Weak parents are used, but rarely: 638 of 10236 births (6.2%) take a one-tally grown
+parent and 57 (0.6%, all in the colour-event streams) a grown parent that had never spoken; 45 births are in
+both groups. Of 20472 parent appearances, 9833 are fixed symbols and 10001 are grown parents with two or more
+tallies; 2833 births have only fixed-symbol parents. Every one-tally parent is the earlier partner u, never
+the deep parent v, because native growth requires v to have seen both labels. The 569 distinct weak parents
+have 1479 direct children (median 1, maximum 38) and 2742 descendants. So "silent" does not mean "unused as a
+part", but such use is a small share of construction here. These counts are structural observations on one
+life; they do not show the children help, that deletion prevented any, or that capacity is worthwhile.
+
+<a id="d89-child-prediction"></a>
+### D89 — Did those actual children ever add predictive evidence? (PROGRAMME Job 2, 2026-11-18)
+
+**Before work.** Same life and replay. For each of the 163 accepted tastes, take the last actual prediction
+before learning; for every stream whose issued speaker is a grown child, score
+`log2(P_child(label)/P_combined(label))` against D87's combined forecast (joined by prediction-call position),
+and against uniform 1/2, before any update. Group children by parent state at birth (D88). Fixtures: an issued
+speaker deleted during the following taste; two predictions at the same time but different positions; an
+outcome change that must not alter the preceding probability. Budget as D88. Equality means within 1e−10 bits,
+not a statistical tie.
+
+**Provenance.** [Script](/home/pilgrim/git/simple-learner/lab/growth_child_prediction.py),
+[JSON](/home/pilgrim/git/simple-learner/lab/v/growth_child_prediction.json),
+[log](/home/pilgrim/git/simple-learner/lab/v/growth_child_prediction.log),
+[fixture log](/home/pilgrim/git/simple-learner/lab/v/growth_child_prediction_checks.log); inputs D88's pickle and
+JSON, `lab/v/retained_mixture.json` (sha256 `b366b0968d3da7c1…`, its baseline hash checked against the trace).
+All 5883 combined forecasts align by position; 4.2 s.
+
+| group (full life) | born children | scored ≥1 | child–taste pairs | unique tastes | better / worse / equal vs combined, per child | median per-child saving | beat combined and uniform |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| any grown parent not yet spoken | 57 | 22 | 77 | 58 | 9 / 13 / 0 | −0.360 bits | 4 |
+| any one-tally grown parent | 638 | 131 | 321 | 129 | 40 / 91 / 0 | −0.408 bits | 21 |
+| neither | 9586 | 4866 | 13262 | 158 | 993 / 3873 / 0 | −1.312 bits | 706 |
+| all children | 10236 | 5003 | 13593 | 158 | 1036 / 3967 / 0 | −1.305 bits | 729 |
+
+In the last third [200, 300) s, 55 accepted tastes: 2/8 not-yet-spoken-parent children, 6/48 one-tally-parent
+children and 359/2285 of all scored children beat the combined forecast (medians −1.396, −0.885, −1.449 bits).
+By remaining life at birth, [0,30) s: 1450 children, 862 never scored (90 with no later accepted taste);
+[30,100): 2565, 1409; [100,200): 3749, 1912; [200,300]: 2472, 1050. Family rows are in the JSON.
+
+**Findings and limits.** Half of all children (5233/10236) never issue a forecast at an accepted taste, including
+1050 of the 2472 born with at least 115 later accepted tastes. Of those that do, about one in five (1036/5003)
+beats the combined forecast over its own scored tastes. Over the full life the weak-parent groups win more
+often (9/22 and 40/131, against 993/4866 for neither), with smaller median losses over similar numbers of
+tastes per child (2.5 versus 2.7); in the last third they do not (2/8 and 6/48, against 352/2236). The groups
+are small and overlapping, and no interval is justified, so this is a lead, not a difference. This is a descriptive
+relative score: the combined forecast already contains each child's contribution, so a child losing to it
+may still help it; shared tastes and ancestry forbid independent-unit intervals or summing to learned bits.
+Late birth limits exposure but is not shown to cause the zero opportunities.
+
+<a id="d90-missing-partner"></a>
+### D90 — Could deleted units have supplied a missing earlier parent? (PROGRAMME Job 3, 2026-11-18)
+
+**Before work.** Same life. For each of D85's 5369 one-tally removals u, at every later native learning call in
+its stream (deletion taste excluded), reconstruct the native deepest firing unit v (first longest in recorded
+firing order) and its tally after the current label; continue only if v has seen both labels. With s=span(v)
+and i the learning index, u qualifies if it would fire at i−s and span(u)+s ≤ 48 (`HIST//2`). Count the
+hypothetical word(u)+word(v), whether it or an equivalent of u is in the pre-learning living set (tallies just
+updated, before any removal inside the learn), and u's removed grown ancestors. No partner is drawn and no
+child born. Fixtures: i instead of i−s, reversed concatenation, duplicates, a missing ancestor, the maximum
+span, same-taste and not-strictly-later exclusion, the native tie rule. Additional validation: all 10236 actual
+births occur at a reconstructed trigger, with v the native deep unit and u firing at i−s.
+
+**Provenance and a procedural error.** [Script](/home/pilgrim/git/simple-learner/lab/growth_missing_partner.py),
+[JSON](/home/pilgrim/git/simple-learner/lab/v/growth_missing_partner.json),
+[log](/home/pilgrim/git/simple-learner/lab/v/growth_missing_partner.log),
+[fixture log](/home/pilgrim/git/simple-learner/lab/v/growth_missing_partner_checks.log). The first `--check` failed
+on an error in my fixture (u placed at the wrong history position;
+[failed log](/home/pilgrim/git/simple-learner/lab/v/growth_missing_partner_checks_failed_fixture.log)), and the
+`--run` in the same command ran before I read that status, against the protocol's order. That premature output
+is kept ([log](/home/pilgrim/git/simple-learner/lab/v/growth_missing_partner_premature_run.log)). After correcting
+the fixture and passing all checks, the run was repeated: its output is identical apart from wall time (4.7 s).
+
+| family | eligible native contradiction calls | calls with a qualifying deleted parent | unique potential child words | absent from living memory | also lacking a living equivalent parent | extra deleted ancestors, median / max |
+|---|---:|---:|---:|---:|---:|---:|
+| all | 13729 | 8015 | 5798 | 5798 | 4874 | 1 / 14 |
+| event | 1017 | 668 | 495 | 495 | 442 | 1 / 12 |
+| clock | 5521 | 2957 | 1929 | 1929 | 1644 | 0 / 9 |
+| integrator | 6611 | 4305 | 3308 | 3308 | 2732 | 1 / 14 |
+| rhythm | 580 | 85 | 66 | 66 | 56 | 0 / 2 |
+
+With D84's 100 s horizon (deletions by 200 s, 3035 candidates): 5853 calls qualify, 3705 unique words, 3055
+lacking a living equivalent parent, none in rhythm streams. Raw associations number 27677 (17385 after
+deduplicating by stream, taste and word); 3562 of the 5369 deleted units qualify at least once; 7604 of the
+17385 would need no removed ancestor.
+
+**Findings and limits.** The "absent from living memory" column is necessarily 100%, which the protocol did not
+anticipate: a living exact equivalent of word(u)+word(v) would fire at i and be longer than v, contradicting v
+as the deepest firing unit. It is now an asserted identity, not evidence. The informative column is the
+next one: for 4874 of 5798 potential words no living unit duplicates the deleted partner, so native growth
+could not have built them from the remaining memory at that moment. Each of these is only a possible
+construction path: the native draw might choose another partner, a fixed-symbol partner is always
+available, the child might predict badly, and keeping u has a displacement cost not counted here.
+
+<a id="d91-growth-decision"></a>
+### D91 — Decision after Jobs 1–3, and the next protocol (2026-11-18)
+
+**Literature.** Read [Ron, Singer & Tishby (1996), §5 and Fig. 2](https://cs.brown.edu/courses/csci2840/spring-2025/resources/fp_ideas/power_of_amnesia.pdf)
+("The power of amnesia", probabilistic suffix trees). Their learner extends contexts one symbol at a time and
+keeps a string on its candidate frontier because it occurs often enough, not because it predicts differently
+from its parent: "internal nodes might not have this property", so potential descendants must still be tested.
+That is the standard form of the "parts for later combinations" hypothesis. Two differences matter here: our
+growth joins whole blocks (u can be long), and one-tally units are exactly the low-count strings such a learner
+would not yet consider. Willems et al.'s context-tree weighting was not read and is not relied on.
+
+**Which row of the decision table applies.** All checks passed, so not the first row. Children do use weak
+parents (D88) and deleted units would supply partners that no living unit duplicates (D90), which is the
+second row's condition; but its "absent combinations" half is true by construction, and D89 shows mostly weak
+child evidence, which is the fourth row's. Changed belief: the parts account is not excluded but is weakened on
+this life. Weak parents build about 6% of children, and actual children mostly lose to the combined forecast;
+weak-parent children win somewhat more often over the full life but not in the last third, on small groups. D77's benefit from extra room is therefore not explained by memory
+as parts any more than by retention, on present evidence.
+
+**Next protocol (frozen here; not run, and not authorised by this record).** One offline test settles whether
+the missing children would have carried evidence beyond actual children, which decides between the second and
+fourth rows: *ghost children on the frozen history*. For each unique (stream, word(u)+word(v)) from D90 lacking
+a living equivalent parent, form one ghost at its first qualifying call (formation order fixed by call position;
+no selection on outcomes), with the native initial tally (one count of that call's label). Score it, as D87, on
+strictly later accepted tastes when it fires at the last prediction, Beta(1/2,1/2) readout, score before update,
+against the combined forecast and uniform; formation taste excluded. Matched reference: actual children scored
+by the same rule (firing, not only when issued speaker), since D89's issued-speaker rule is not comparable.
+Report both per-child win proportions, the D87 causal deletion-order prior over ghosts on the full 163-label
+sequence, full life and last third, and remaining-life bins. Prediction: ghosts beat the combined forecast no
+more often than actual children under the same rule (about one in five, uncertain), and the causal prior again
+fails to improve on native prediction. A clearly higher ghost win rate with a positive causal-prior result
+would make the parts account worth a matched-cap live test, only after identifying a local signal that could
+select partners without future knowledge. Budget: 30 minutes implementation and checks, one run under 240 s,
+no simulated life. Otherwise follow the fourth row: review D77's allowance ablation and selection/readout
+alternatives, and add no further retention variants.

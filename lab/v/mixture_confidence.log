@@ -1,0 +1,260 @@
+{
+  "lives": [
+    {
+      "rule": "none",
+      "P": 4480,
+      "first": "red",
+      "seed": 177000,
+      "fingerprint": "5e7fcc4255d50867e46ceefce969306ef043833ad0c620eef0f9d140d6fddea7",
+      "windows": {
+        "full": {
+          "native": {
+            "n": 184,
+            "log_bits": 105.3158964933349,
+            "brier_sum": 22.155406840185396,
+            "expected_errors": 25.5
+          },
+          "halfway": {
+            "n": 184,
+            "log_bits": 133.73779234089668,
+            "brier_sum": 29.28916119331863,
+            "expected_errors": 25.5
+          },
+          "uniform": {
+            "n": 184,
+            "log_bits": 184.0,
+            "brier_sum": 46.0,
+            "expected_errors": 92.0
+          },
+          "halfway_saves_bits": -28.42189584756177,
+          "halfway_reduces_brier": -7.133754353133234
+        },
+        "last_third": {
+          "native": {
+            "n": 70,
+            "log_bits": 29.03399741095264,
+            "brier_sum": 5.42261153289495,
+            "expected_errors": 6
+          },
+          "halfway": {
+            "n": 70,
+            "log_bits": 44.45653519626726,
+            "brier_sum": 9.057165128649284,
+            "expected_errors": 6
+          },
+          "uniform": {
+            "n": 70,
+            "log_bits": 70.0,
+            "brier_sum": 17.5,
+            "expected_errors": 35.0
+          },
+          "halfway_saves_bits": -15.42253778531462,
+          "halfway_reduces_brier": -3.6345535957543342
+        }
+      }
+    },
+    {
+      "rule": "none",
+      "P": 4480,
+      "first": "blue",
+      "seed": 177000,
+      "fingerprint": "bf1b2013ee5644fd5fddb2a453ebb3bd93b03b6b609c9411fcdcf28bdc506de2",
+      "windows": {
+        "full": {
+          "native": {
+            "n": 187,
+            "log_bits": 111.35862730564507,
+            "brier_sum": 24.57614917077198,
+            "expected_errors": 33.5
+          },
+          "halfway": {
+            "n": 187,
+            "log_bits": 139.26316633402033,
+            "brier_sum": 30.9481017422924,
+            "expected_errors": 33.5
+          },
+          "uniform": {
+            "n": 187,
+            "log_bits": 187.0,
+            "brier_sum": 46.75,
+            "expected_errors": 93.5
+          },
+          "halfway_saves_bits": -27.904539028375254,
+          "halfway_reduces_brier": -6.371952571520421
+        },
+        "last_third": {
+          "native": {
+            "n": 71,
+            "log_bits": 25.213913453028216,
+            "brier_sum": 4.769345933033282,
+            "expected_errors": 5
+          },
+          "halfway": {
+            "n": 71,
+            "log_bits": 43.76473130041902,
+            "brier_sum": 8.776599436426324,
+            "expected_errors": 5
+          },
+          "uniform": {
+            "n": 71,
+            "log_bits": 71.0,
+            "brier_sum": 17.75,
+            "expected_errors": 35.5
+          },
+          "halfway_saves_bits": -18.550817847390807,
+          "halfway_reduces_brier": -4.007253503393041
+        }
+      }
+    },
+    {
+      "rule": "W",
+      "P": 560,
+      "first": "red",
+      "seed": 177000,
+      "fingerprint": "24315430f45c5a52c9d27ccc888a978fb3eb0f63d63e05a2f946ca60460aca53",
+      "windows": {
+        "full": {
+          "native": {
+            "n": 163,
+            "log_bits": 115.66734941502173,
+            "brier_sum": 26.259873762541535,
+            "expected_errors": 33.5
+          },
+          "halfway": {
+            "n": 163,
+            "log_bits": 130.43473507654244,
+            "brier_sum": 29.906995123686112,
+            "expected_errors": 33.5
+          },
+          "uniform": {
+            "n": 163,
+            "log_bits": 163.0,
+            "brier_sum": 40.75,
+            "expected_errors": 81.5
+          },
+          "halfway_saves_bits": -14.767385661520706,
+          "halfway_reduces_brier": -3.6471213611445776
+        },
+        "last_third": {
+          "native": {
+            "n": 59,
+            "log_bits": 32.12976322461533,
+            "brier_sum": 6.921338539456473,
+            "expected_errors": 8
+          },
+          "halfway": {
+            "n": 59,
+            "log_bits": 42.26758306811992,
+            "brier_sum": 9.213543636712552,
+            "expected_errors": 8
+          },
+          "uniform": {
+            "n": 59,
+            "log_bits": 59.0,
+            "brier_sum": 14.75,
+            "expected_errors": 29.5
+          },
+          "halfway_saves_bits": -10.137819843504587,
+          "halfway_reduces_brier": -2.2922050972560797
+        }
+      }
+    },
+    {
+      "rule": "W",
+      "P": 560,
+      "first": "blue",
+      "seed": 177000,
+      "fingerprint": "95b7737a14b3326acfae0425ab81e61ab81440be89e72a9fde188e83b407c1a8",
+      "windows": {
+        "full": {
+          "native": {
+            "n": 176,
+            "log_bits": 108.48315975438729,
+            "brier_sum": 23.446170010723325,
+            "expected_errors": 30.5
+          },
+          "halfway": {
+            "n": 176,
+            "log_bits": 130.83552061424555,
+            "brier_sum": 29.002840653099355,
+            "expected_errors": 30.5
+          },
+          "uniform": {
+            "n": 176,
+            "log_bits": 176.0,
+            "brier_sum": 44.0,
+            "expected_errors": 88.0
+          },
+          "halfway_saves_bits": -22.352360859858265,
+          "halfway_reduces_brier": -5.55667064237603
+        },
+        "last_third": {
+          "native": {
+            "n": 70,
+            "log_bits": 37.26772711696118,
+            "brier_sum": 7.589148065087284,
+            "expected_errors": 9
+          },
+          "halfway": {
+            "n": 70,
+            "log_bits": 48.62691865606453,
+            "brier_sum": 10.415949176737055,
+            "expected_errors": 9
+          },
+          "uniform": {
+            "n": 70,
+            "log_bits": 70.0,
+            "brier_sum": 17.5,
+            "expected_errors": 35.0
+          },
+          "halfway_saves_bits": -11.35919153910335,
+          "halfway_reduces_brier": -2.826801111649771
+        }
+      }
+    }
+  ],
+  "checks": {
+    "forecasts_reconstructed": 23047,
+    "max_error": 2.6645352591003757e-15,
+    "accepted_labels": 710,
+    "observed_unobserved_identity": true,
+    "all_issued_links_present": true,
+    "all_hard_choices_preserved": true
+  },
+  "provenance": {
+    "raw_path": "/home/pilgrim/git/simple-learner/lab/v/active_mixture_audit.pkl",
+    "raw_sha256": "15fd71db4770f82b5aed7d7437e3b7f234f28802d40a3781cd665dcce186e833",
+    "source_sha256": "086ae96cfa4c21010e77230fe2518370b4f107b7ed51d33124a1149b9a0c7c30",
+    "source_provenance": {
+      "revision": "d37dac6745d2657229861d6f9cee4239258367d3",
+      "dirty": " M ABSTRACT.md\n M PROGRAMME.md\n M QUESTIONS.md\n M README.md\n M discrete/NOTEBOOK.md\n?? lab/active_mixture_audit.py\n?? lab/alloc_review.py\n?? lab/v/active_mixture_audit.json\n?? lab/v/active_mixture_audit.log\n?? lab/v/alloc_review.json\n?? lab/v/alloc_review.log\n?? lab/v/d79_work_order.md\n",
+      "sha256": {
+        "lab/active_mixture_audit.py": "0828b7ed12571860c9c9cdc7d27f9523fab2cf78da4d8c69503297d6097008b6",
+        "lab/alloc_compare.py": "d39df823d685a53351243fa8e8e49dd53457d3d623c838c36da3897b55c7fcfa",
+        "lab/alloc_rules.py": "37c8f14317d6d1626e98f3569f4da1248e898e682b7a206fbd7a9fac57848543",
+        "lab/grownet.py": "1a550553b1244368ed0ca6fa59cce3e94a9badd5e5d1e801953aa42974874f0f",
+        "lab/teach.py": "c377e37fbdeeafa5a155735ba58e4afa3acad97b14b10ce292478f5845ba6b5f",
+        "lab/ladders.py": "80de5da494d3d317c1076d3b89cd63555c9ad3d428879a04cac856782a770ee6",
+        "lab/stage2_lang/seconds.py": "d9300c87e60fa6d18369f65d57eca3ff6be73e5474aedecd3515cc84e26fa669",
+        "lab/stage2_lang/sim.py": "06bb89a15e47481491bdd903c8e274ed6de77dad572a6dec3f909ad41635c41f",
+        "lab/stage2_lang/arms.py": "1b48c7a4e9204888b3c916c49536720e60130d0c765870a6eefba35a617f8227",
+        "lab/v/alloc_confirm.json": "9769884a7226c282e3094f50268d5194780efe4b5ccc076e43752e550b4d5982"
+      },
+      "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python lab/active_mixture_audit.py",
+      "environment": {
+        "LB_FINE": "1",
+        "LB_LIVE": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1"
+      }
+    },
+    "command": "timeout 60s env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python lab/mixture_confidence.py"
+  },
+  "limitations": [
+    "Four historical uncorrected-credit D79 lives, one reused seed pair, not the D84 corrected life.",
+    "Fixed diagnostic shrinkage, no fitted knob or changed action, learning, allocation or reward.",
+    "Dependent observations; no independent-taste interval or generalisation claim."
+  ],
+  "wall_s": 0.30741269299994656
+}

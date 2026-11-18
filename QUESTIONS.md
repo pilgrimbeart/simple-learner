@@ -23,8 +23,8 @@ within a life. Exact-copy weighting is explained by [D75](discrete/NOTEBOOK.md#d
 but detecting approximate redundancy without erasing complementary information remains open. Neither
 fewer primitives nor a choice vote is established as the answer.
 
-**Next discriminator:** first measure question 2's resource account, as D76 changes what can be called
-economical. Then contrast the same relation when supplied, discovered and inappropriate, accounting for
+**Next discriminator:** question 2 now has software resource observations, but the benefit of allocating
+additional memory is unresolved. Then contrast the same relation when supplied, discovered and inappropriate, accounting for
 both model-identification evidence and parameter learning. Do not add another partition variant without
 a reason the present failure would change. A duplication test must conserve both initial and redistributed
 weight if it claims to change only representation. Correct forecast/scoring order before a new design freeze.
@@ -45,20 +45,44 @@ an older arm; it omits the later rhythm repertoire.
 communication and selection remain local as size grows; whether quiet behaviour means low activity, low allocated
 memory, or neither. No current scalar “material” count settles all of these.
 
-**Partly answered by [D77](discrete/NOTEBOOK.md#d77-resource-observation)** (sequence rung 17 only): most of
-the gain is room in the colour-event streams; 85% of the extra growth goes elsewhere; all-food lives grow
-nothing; mixer communication is set by the repertoire's breadth, not P.
+**Partly answered by [D77](discrete/NOTEBOOK.md#d77-resource-observation)** (sequence rung 17 only): room
+in the colour-event streams recovers much of the gain; 85% of the larger design's growth goes elsewhere;
+sampled all-food lives grow nothing; mixer work remains substantial even at low allowance.
 [D78](discrete/NOTEBOOK.md#d78-allocation-rules): under a real cap, a pairwise weight contest beats an equal split
-(+.28 on fresh sequences, no harm on timing) but not the original design, and plateaus. Mixture weight is
-winner-take-all and bits saved over the default are negative everywhere, so neither ranks the non-dominant
-streams. **Next discriminator:** what makes a stream marginally useful? Trace weights through life, and run a
-leave-out replay of the mixture, before proposing a marginal-contribution signal. Partly answered: clock,
-integrator and rhythm streams carry three quarters of the mix for the first 100 s, before one event stream
-dominates, so end-of-life weight misstates usefulness. Whether early growth in them causes the later result
-is not yet traced.
-Compare equal allowance, market, bits-saved allocation, tuning, fixed capacity, recycling and growth on matched lives
-under the same account before another sweep. [Dohare et al.](https://www.nature.com/articles/s41586-024-07711-7)
-provide a recycling precedent, not evidence that their method meets our locality constraints.
+(+.28 on fresh sequences; timing excludes harm larger than .10 on one rung) but fails to match the original
+design. [D79's review](discrete/NOTEBOOK.md#d79-active-mixture) rejects the inference that existing signals
+cannot rank streams: family sums hid positive individual records, and stored-weight trajectories included
+sleepers. The validated diagnostic on one reused pair finds that omitting non-event forecasts together
+reduces immediate loss, while some individual early forecasts help. Learning-time deletion changes the
+forecasts scored much more often under the contest. [D80–D81](discrete/NOTEBOOK.md#d80-scoring-replay) find
+a small direct prediction effect but changes through the allocation feedback path; no performance cure
+is established. [D82](discrete/NOTEBOOK.md#d82-issued-credit) supplies and checks a consistent issued-forecast
+contract; ten reused development pairs show no improvement and leave the contest's gap.
+[D83](discrete/NOTEBOOK.md#d83-allocation-trace) traces one identical corrected contest life and finds
+both removal of issued distinctions and construction removed before its first forecast. [D84](discrete/NOTEBOOK.md#d84-future-evidence) now validates the frozen-history reconstruction:
+3653/5369 removed one-tally units would fire on later accepted lessons, including 821/923 same-taste
+newborn removals. Some firings have exact living equivalents, contexts and lessons are correlated,
+and retaining definitions may require deleted ancestors. [D85](discrete/NOTEBOOK.md#d85-retained-prediction) reconstructs missing readout counts and native
+speakers exactly. Retained tallies beat their surviving stream for 1678/3653 recurring candidates,
+but only 800 beat both that stream and uniform prediction; probability-score gains coexist with
+worse hard choices in overlapping sums. These are not whole-brain or independent-unit comparisons.
+[D86](discrete/NOTEBOOK.md#d86-mixture-confidence) checks those historical mixtures: halfway reduction
+of confidence worsens log loss and squared error in all four lives and both time windows, with choices
+unchanged. This rejects that simple transfer, not all calibration approaches. [D87](discrete/NOTEBOOK.md#d87-retained-mixture) now captures that corrected history exactly:
+336/3653 recurring retained tallies beat the actual combined forecast, 279 also beat uniform, and
+a supplied causal prior over candidates loses 0.593 bits on the full 163-label sequence. This closes
+the simple fixed-definition retention comparison without a cure, not all possible retention mechanisms.
+[D88–D90](discrete/NOTEBOOK.md#d88-parent-census) test memory as parts on the same life: weak parents build
+about 6% of children, most children never forecast or lose to the combined forecast, and deleted units would
+have been the earlier parent for 4874 words no living unit could build. **Next discriminator:**
+[D91](discrete/NOTEBOOK.md#d91-growth-decision)'s frozen ghost-children test, else D77's extra-room benefit
+through selection/readout alternatives rather than retention. Audit existing traces and
+source/theory before defining another bounded observation. Keep alternative readout/knob explanations,
+ancestry cost and displaced memory visible; retrospective winners are not a retention rule.
+Compare allocation, tuning, fixed capacity, recycling and growth on matched lives under the same account
+before another sweep. Dohare et al.'s [preprint, section 6](https://arxiv.org/html/2306.13812v3#S6), supplies a
+recycling precedent with smoothed activation/weight utility and protection for young units. It is not an
+exact loss leave-out measure or evidence that its method meets our locality constraints.
 
 **What changes our view:** an advantage disappearing after fair accounting would weaken the growth explanation;
 a reproducible advantage attributable to new representation would strengthen it. Improvements that plateau or

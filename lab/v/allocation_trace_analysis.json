@@ -1,0 +1,1570 @@
+{
+  "provenance": {
+    "analysis_source_sha256": "d8c8c5f1f80cd50a7624ac177857284ff1cb5b1534d19f8543f23468b694798d",
+    "raw_pickle": "/home/pilgrim/git/simple-learner/lab/v/allocation_trace.pkl",
+    "raw_sha256": "b17174d11f5b6e905ef653372331be72560abca47cc722e9ac0187d4c1fad085",
+    "source_checks": {
+      "lab/allocation_trace.py": true,
+      "lab/allocation_trace_checks.py": true,
+      "lab/issued_credit.py": true,
+      "lab/issued_credit_compare.py": true,
+      "lab/alloc_rules.py": true,
+      "lab/alloc_compare.py": true,
+      "lab/grownet.py": true,
+      "lab/teach.py": true
+    },
+    "baseline_identity": {
+      "fingerprint": true,
+      "result": true,
+      "allocation": true
+    },
+    "simulation_wall_s": 10.837772037950344
+  },
+  "totals": {
+    "learn_calls": 27384,
+    "learn_calls_with_removals": 9173,
+    "removing_learns_with_addition": 8946,
+    "removing_learns_without_addition": 227,
+    "no_birth_diagnostics": {
+      "no_partner_at_i_minus_span": 208,
+      "partner_exists_no_birth_draw_not_recorded": 18,
+      "all_available_partners_too_long": 1
+    },
+    "additions": 10236,
+    "removed_units": 9236,
+    "removal_transactions": 9197,
+    "contest_attempts": 12170,
+    "won_contests": 5433,
+    "verified_room_rng_states": 27384
+  },
+  "same_taste_birth_then_removal": {
+    "removal_transactions": 923,
+    "removed_units": 923,
+    "current_speaker_deleted": 923,
+    "issued_speaker_deleted": 0,
+    "speaker_changed": 923,
+    "raw_probability_changed": 909,
+    "awake_to_silent": 29,
+    "silent_to_awake": 0,
+    "both_awake_choice_changed": 406,
+    "without_birth_in_same_learn": 21,
+    "effective_abs_dp": {
+      "n": 923,
+      "mean": 0.24207147957545258,
+      "minimum": 0.0,
+      "median": 0.23347107438016534,
+      "q90": 0.375,
+      "maximum": 0.5625
+    },
+    "victim_age_s": {
+      "n": 923,
+      "mean": 0.0,
+      "minimum": 0.0,
+      "median": 0.0,
+      "q90": 0.0,
+      "maximum": 0.0
+    },
+    "victim_use_decayed": {
+      "n": 923,
+      "mean": 0.0,
+      "minimum": 0.0,
+      "median": 0.0,
+      "q90": 0.0,
+      "maximum": 0.0
+    },
+    "victim_evidence_count": {
+      "n": 923,
+      "mean": 1.0,
+      "minimum": 1.0,
+      "median": 1.0,
+      "q90": 1.0,
+      "maximum": 1.0
+    },
+    "victims_with_exactly_one_tally": 923,
+    "stored_stream_share": {
+      "n": 923,
+      "mean": 0.0003869998332534972,
+      "minimum": 7.159581114560582e-05,
+      "median": 0.000169812318972106,
+      "q90": 0.0007331817058382027,
+      "maximum": 0.011927110269046644
+    },
+    "conditional_stream_loss_diagnostic": {
+      "n": 923,
+      "sum_bits": 550.6540506231469,
+      "absolute_sum_bits": 555.1707640492044,
+      "positive": 891,
+      "negative": 18,
+      "within_1e_12": 14,
+      "maximum_absolute": 2.0
+    },
+    "selected_victim_weight_share_vs_disturbance_spearman": 0.11645289978888905
+  },
+  "transfers_other_than_same_taste_newborn": {
+    "removal_transactions": 4510,
+    "removed_units": 4510,
+    "current_speaker_deleted": 1613,
+    "issued_speaker_deleted": 1506,
+    "speaker_changed": 1613,
+    "raw_probability_changed": 1603,
+    "awake_to_silent": 51,
+    "silent_to_awake": 0,
+    "both_awake_choice_changed": 645,
+    "without_birth_in_same_learn": 172,
+    "effective_abs_dp": {
+      "n": 4510,
+      "mean": 0.07517199127892453,
+      "minimum": 0.0,
+      "median": 0.0,
+      "q90": 0.30210274327122155,
+      "maximum": 0.6
+    },
+    "victim_age_s": {
+      "n": 4510,
+      "mean": 18.515103576785997,
+      "minimum": 0.008631693055647816,
+      "median": 6.488105382977665,
+      "q90": 48.65077235423073,
+      "maximum": 283.21086508638757
+    },
+    "victim_use_decayed": {
+      "n": 4510,
+      "mean": 2.380655616905943,
+      "minimum": 0.0,
+      "median": 0.0,
+      "q90": 3.793018824155535,
+      "maximum": 300.44191840433973
+    },
+    "victim_evidence_count": {
+      "n": 4510,
+      "mean": 4.386031042128603,
+      "minimum": 1.0,
+      "median": 2.0,
+      "q90": 7.0,
+      "maximum": 154.0
+    },
+    "victims_with_exactly_one_tally": 2194,
+    "stored_stream_share": {
+      "n": 4510,
+      "mean": 0.0003775481169084229,
+      "minimum": 7.150417000535998e-05,
+      "median": 0.0001596866930142504,
+      "q90": 0.0007591907755564125,
+      "maximum": 0.04517966472654291
+    },
+    "conditional_stream_loss_diagnostic": {
+      "n": 4510,
+      "sum_bits": 80.47495641642807,
+      "absolute_sum_bits": 1010.8518962173374,
+      "positive": 964,
+      "negative": 639,
+      "within_1e_12": 2907,
+      "maximum_absolute": 2.3407871221386785
+    },
+    "selected_victim_weight_share_vs_disturbance_spearman": -0.025585918949722855
+  },
+  "no_birth_diagnostics_by_reason": {
+    "contest_transfer": {
+      "no_partner_at_i_minus_span": 174,
+      "partner_exists_no_birth_draw_not_recorded": 18,
+      "all_available_partners_too_long": 1
+    },
+    "own_recycling": {
+      "no_partner_at_i_minus_span": 34
+    }
+  },
+  "deepest_firing_unit_at_donor_removal_recorded": false,
+  "no_prediction_between_same_taste_birth_and_removal_basis": "Exact add-ID/taste/learn-call linkage plus frozen native taste calls predict only after its sequential learn loop; no per-call prediction timestamps recorded by this observer.",
+  "all_transactions": {
+    "removal_transactions": 9197,
+    "removed_units": 9236,
+    "current_speaker_deleted": 2538,
+    "issued_speaker_deleted": 1507,
+    "speaker_changed": 2538,
+    "raw_probability_changed": 2514,
+    "awake_to_silent": 80,
+    "silent_to_awake": 0,
+    "both_awake_choice_changed": 1052,
+    "without_birth_in_same_learn": 227,
+    "effective_abs_dp": {
+      "n": 9197,
+      "mean": 0.06119534725421819,
+      "minimum": 0.0,
+      "median": 0.0,
+      "q90": 0.2725740551583248,
+      "maximum": 0.6
+    },
+    "victim_age_s": {
+      "n": 9197,
+      "mean": 18.346102115545953,
+      "minimum": 0.0,
+      "median": 6.295071764473342,
+      "q90": 50.245781554303505,
+      "maximum": 283.21086508638757
+    },
+    "victim_use_decayed": {
+      "n": 9197,
+      "mean": 1.6422692541562889,
+      "minimum": 0.0,
+      "median": 0.0,
+      "q90": 2.9155880405245167,
+      "maximum": 300.44191840433973
+    },
+    "victim_evidence_count": {
+      "n": 9197,
+      "mean": 3.4374252473632705,
+      "minimum": 1.0,
+      "median": 1.0,
+      "q90": 6.0,
+      "maximum": 154.0
+    },
+    "victims_with_exactly_one_tally": 5348,
+    "stored_stream_share": {
+      "n": 9197,
+      "mean": 0.0006507533119974696,
+      "minimum": 6.952354388071375e-05,
+      "median": 0.00017117740722790136,
+      "q90": 0.0008113237416069797,
+      "maximum": 0.953829250385125
+    },
+    "conditional_stream_loss_diagnostic": {
+      "n": 9179,
+      "sum_bits": 631.9108268695254,
+      "absolute_sum_bits": 1566.8044800964924,
+      "positive": 1857,
+      "negative": 657,
+      "within_1e_12": 6665,
+      "maximum_absolute": 2.3407871221386785
+    },
+    "selected_victim_weight_share_vs_disturbance_spearman": -0.035825873529732793
+  },
+  "by_reason": {
+    "contest_transfer": {
+      "removal_transactions": 5433,
+      "removed_units": 5433,
+      "current_speaker_deleted": 2536,
+      "issued_speaker_deleted": 1506,
+      "speaker_changed": 2536,
+      "raw_probability_changed": 2512,
+      "awake_to_silent": 80,
+      "silent_to_awake": 0,
+      "both_awake_choice_changed": 1051,
+      "without_birth_in_same_learn": 193,
+      "effective_abs_dp": {
+        "n": 5433,
+        "mean": 0.10352616534439395,
+        "minimum": 0.0,
+        "median": 0.0,
+        "q90": 0.34090909090909094,
+        "maximum": 0.6
+      },
+      "victim_age_s": {
+        "n": 5433,
+        "mean": 15.369614785809835,
+        "minimum": 0.0,
+        "median": 4.225311326104418,
+        "q90": 42.57815072876557,
+        "maximum": 283.21086508638757
+      },
+      "victim_use_decayed": {
+        "n": 5433,
+        "mean": 1.9762114544903004,
+        "minimum": 0.0,
+        "median": 0.0,
+        "q90": 2.9116490756058924,
+        "maximum": 300.44191840433973
+      },
+      "victim_evidence_count": {
+        "n": 5433,
+        "mean": 3.8107859377875943,
+        "minimum": 1.0,
+        "median": 1.0,
+        "q90": 6.0,
+        "maximum": 154.0
+      },
+      "victims_with_exactly_one_tally": 3117,
+      "stored_stream_share": {
+        "n": 5433,
+        "mean": 0.00037915384747836653,
+        "minimum": 7.150417000535998e-05,
+        "median": 0.00016171322568485786,
+        "q90": 0.0007564050532462964,
+        "maximum": 0.04517966472654291
+      },
+      "conditional_stream_loss_diagnostic": {
+        "n": 5433,
+        "sum_bits": 631.129007039575,
+        "absolute_sum_bits": 1566.0226602665418,
+        "positive": 1855,
+        "negative": 657,
+        "within_1e_12": 2921,
+        "maximum_absolute": 2.3407871221386785
+      },
+      "selected_victim_weight_share_vs_disturbance_spearman": 0.00945461086563474
+    },
+    "own_recycling": {
+      "removal_transactions": 3740,
+      "removed_units": 3740,
+      "current_speaker_deleted": 2,
+      "issued_speaker_deleted": 1,
+      "speaker_changed": 2,
+      "raw_probability_changed": 2,
+      "awake_to_silent": 0,
+      "silent_to_awake": 0,
+      "both_awake_choice_changed": 1,
+      "without_birth_in_same_learn": 34,
+      "effective_abs_dp": {
+        "n": 3740,
+        "mean": 9.517443340972752e-05,
+        "minimum": 0.0,
+        "median": 0.0,
+        "q90": 0.0,
+        "maximum": 0.22499999999999998
+      },
+      "victim_age_s": {
+        "n": 3740,
+        "mean": 22.260164333197253,
+        "minimum": 0.008631693055647816,
+        "median": 8.99481178225119,
+        "q90": 58.12083194120986,
+        "maximum": 281.8300908523059
+      },
+      "victim_use_decayed": {
+        "n": 3740,
+        "mean": 1.15839607266165,
+        "minimum": 0.0,
+        "median": 0.0,
+        "q90": 2.9245816261329898,
+        "maximum": 59.49896374059312
+      },
+      "victim_evidence_count": {
+        "n": 3740,
+        "mean": 2.86524064171123,
+        "minimum": 1.0,
+        "median": 1.0,
+        "q90": 6.0,
+        "maximum": 101.0
+      },
+      "victims_with_exactly_one_tally": 2229,
+      "stored_stream_share": {
+        "n": 3740,
+        "mean": 0.0004375459755980643,
+        "minimum": 6.952354388071375e-05,
+        "median": 0.00018581015699844128,
+        "q90": 0.000880109754524212,
+        "maximum": 0.017900899055121038
+      },
+      "conditional_stream_loss_diagnostic": {
+        "n": 3740,
+        "sum_bits": 0.7818198299504665,
+        "absolute_sum_bits": 0.7818198299504665,
+        "positive": 2,
+        "negative": 0,
+        "within_1e_12": 3738,
+        "maximum_absolute": 0.5594274086140186
+      },
+      "selected_victim_weight_share_vs_disturbance_spearman": -0.0025040010378632334
+    },
+    "tidy": {
+      "removal_transactions": 24,
+      "removed_units": 63,
+      "current_speaker_deleted": 0,
+      "issued_speaker_deleted": 0,
+      "speaker_changed": 0,
+      "raw_probability_changed": 0,
+      "awake_to_silent": 0,
+      "silent_to_awake": 0,
+      "both_awake_choice_changed": 0,
+      "without_birth_in_same_learn": 0,
+      "effective_abs_dp": {
+        "n": 24,
+        "mean": 0.0,
+        "minimum": 0.0,
+        "median": 0.0,
+        "q90": 0.0,
+        "maximum": 0.0
+      },
+      "victim_age_s": {
+        "n": 24,
+        "mean": 82.20705913389764,
+        "minimum": 8.246477899210959,
+        "median": 64.71074839544595,
+        "q90": 162.10225548573598,
+        "maximum": 212.49979383651896
+      },
+      "victim_use_decayed": {
+        "n": 24,
+        "mean": 1.4496744364589242,
+        "minimum": 0.0,
+        "median": 0.7797418822051616,
+        "q90": 3.009113810910079,
+        "maximum": 9.542485451406135
+      },
+      "victim_evidence_count": {
+        "n": 24,
+        "mean": 8.083333333333334,
+        "minimum": 1.0,
+        "median": 4.0,
+        "q90": 21.4,
+        "maximum": 35.0
+      },
+      "victims_with_exactly_one_tally": 2,
+      "stored_stream_share": {
+        "n": 24,
+        "mean": 0.09535889201475008,
+        "minimum": 8.733195522040526e-05,
+        "median": 0.00025945008143742326,
+        "q90": 0.45402843806377285,
+        "maximum": 0.953829250385125
+      },
+      "conditional_stream_loss_diagnostic": {
+        "n": 6,
+        "sum_bits": 0.0,
+        "absolute_sum_bits": 0.0,
+        "positive": 0,
+        "negative": 0,
+        "within_1e_12": 6,
+        "maximum_absolute": 0.0
+      },
+      "selected_victim_weight_share_vs_disturbance_spearman": null
+    }
+  },
+  "by_stage": {
+    "completed_learning": {
+      "removal_transactions": 2714,
+      "removed_units": 2732,
+      "current_speaker_deleted": 1616,
+      "issued_speaker_deleted": 655,
+      "speaker_changed": 1616,
+      "raw_probability_changed": 1602,
+      "awake_to_silent": 50,
+      "silent_to_awake": 0,
+      "both_awake_choice_changed": 665,
+      "without_birth_in_same_learn": 52,
+      "effective_abs_dp": {
+        "n": 2714,
+        "mean": 0.13406840838412798,
+        "minimum": 0.0,
+        "median": 0.0786375661375662,
+        "q90": 0.3616666666666669,
+        "maximum": 0.5625
+      },
+      "victim_age_s": {
+        "n": 2714,
+        "mean": 14.402773321464357,
+        "minimum": 0.0,
+        "median": 2.457988043693973,
+        "q90": 42.27208716137189,
+        "maximum": 264.14799152307864
+      },
+      "victim_use_decayed": {
+        "n": 2714,
+        "mean": 1.7139503880685498,
+        "minimum": 0.0,
+        "median": 0.0,
+        "q90": 2.9401943560795596,
+        "maximum": 243.86297912868667
+      },
+      "victim_evidence_count": {
+        "n": 2714,
+        "mean": 3.5803242446573322,
+        "minimum": 1.0,
+        "median": 1.0,
+        "q90": 6.0,
+        "maximum": 145.0
+      },
+      "victims_with_exactly_one_tally": 1403,
+      "stored_stream_share": {
+        "n": 2714,
+        "mean": 0.0012077982288059023,
+        "minimum": 7.150417000535998e-05,
+        "median": 0.00016060128404215142,
+        "q90": 0.000727041542402019,
+        "maximum": 0.953829250385125
+      },
+      "conditional_stream_loss_diagnostic": {
+        "n": 2714,
+        "sum_bits": 776.93689072361,
+        "absolute_sum_bits": 889.1437658107436,
+        "positive": 1416,
+        "negative": 186,
+        "within_1e_12": 1112,
+        "maximum_absolute": 2.0
+      },
+      "selected_victim_weight_share_vs_disturbance_spearman": 0.04628746348434263
+    },
+    "current_learning": {
+      "removal_transactions": 3740,
+      "removed_units": 3740,
+      "current_speaker_deleted": 2,
+      "issued_speaker_deleted": 1,
+      "speaker_changed": 2,
+      "raw_probability_changed": 2,
+      "awake_to_silent": 0,
+      "silent_to_awake": 0,
+      "both_awake_choice_changed": 1,
+      "without_birth_in_same_learn": 34,
+      "effective_abs_dp": {
+        "n": 3740,
+        "mean": 9.517443340972752e-05,
+        "minimum": 0.0,
+        "median": 0.0,
+        "q90": 0.0,
+        "maximum": 0.22499999999999998
+      },
+      "victim_age_s": {
+        "n": 3740,
+        "mean": 22.260164333197253,
+        "minimum": 0.008631693055647816,
+        "median": 8.99481178225119,
+        "q90": 58.12083194120986,
+        "maximum": 281.8300908523059
+      },
+      "victim_use_decayed": {
+        "n": 3740,
+        "mean": 1.15839607266165,
+        "minimum": 0.0,
+        "median": 0.0,
+        "q90": 2.9245816261329898,
+        "maximum": 59.49896374059312
+      },
+      "victim_evidence_count": {
+        "n": 3740,
+        "mean": 2.86524064171123,
+        "minimum": 1.0,
+        "median": 1.0,
+        "q90": 6.0,
+        "maximum": 101.0
+      },
+      "victims_with_exactly_one_tally": 2229,
+      "stored_stream_share": {
+        "n": 3740,
+        "mean": 0.0004375459755980643,
+        "minimum": 6.952354388071375e-05,
+        "median": 0.00018581015699844128,
+        "q90": 0.000880109754524212,
+        "maximum": 0.017900899055121038
+      },
+      "conditional_stream_loss_diagnostic": {
+        "n": 3740,
+        "sum_bits": 0.7818198299504665,
+        "absolute_sum_bits": 0.7818198299504665,
+        "positive": 2,
+        "negative": 0,
+        "within_1e_12": 3738,
+        "maximum_absolute": 0.5594274086140186
+      },
+      "selected_victim_weight_share_vs_disturbance_spearman": -0.0025040010378632334
+    },
+    "not_yet_learned": {
+      "removal_transactions": 2725,
+      "removed_units": 2725,
+      "current_speaker_deleted": 920,
+      "issued_speaker_deleted": 851,
+      "speaker_changed": 920,
+      "raw_probability_changed": 910,
+      "awake_to_silent": 30,
+      "silent_to_awake": 0,
+      "both_awake_choice_changed": 386,
+      "without_birth_in_same_learn": 141,
+      "effective_abs_dp": {
+        "n": 2725,
+        "mean": 0.07287926457305285,
+        "minimum": 0.0,
+        "median": 0.0,
+        "q90": 0.3016816516816516,
+        "maximum": 0.6
+      },
+      "victim_age_s": {
+        "n": 2725,
+        "mean": 16.53100086506742,
+        "minimum": 0.008631693055647816,
+        "median": 5.441831705549646,
+        "q90": 44.03592241498516,
+        "maximum": 283.21086508638757
+      },
+      "victim_use_decayed": {
+        "n": 2725,
+        "mean": 2.2387187909726807,
+        "minimum": 0.0,
+        "median": 0.0,
+        "q90": 2.886739863572223,
+        "maximum": 300.44191840433973
+      },
+      "victim_evidence_count": {
+        "n": 2725,
+        "mean": 4.051743119266055,
+        "minimum": 1.0,
+        "median": 1.0,
+        "q90": 6.599999999999909,
+        "maximum": 154.0
+      },
+      "victims_with_exactly_one_tally": 1715,
+      "stored_stream_share": {
+        "n": 2725,
+        "mean": 0.0003873602743828348,
+        "minimum": 7.150417000535998e-05,
+        "median": 0.00016300911444515153,
+        "q90": 0.000784327234337227,
+        "maximum": 0.02261323174751178
+      },
+      "conditional_stream_loss_diagnostic": {
+        "n": 2725,
+        "sum_bits": -145.80788368403495,
+        "absolute_sum_bits": 676.8788944557982,
+        "positive": 439,
+        "negative": 471,
+        "within_1e_12": 1815,
+        "maximum_absolute": 2.3407871221386785
+      },
+      "selected_victim_weight_share_vs_disturbance_spearman": -0.01855388061628827
+    },
+    "outside_taste": {
+      "removal_transactions": 18,
+      "removed_units": 39,
+      "current_speaker_deleted": 0,
+      "issued_speaker_deleted": 0,
+      "speaker_changed": 0,
+      "raw_probability_changed": 0,
+      "awake_to_silent": 0,
+      "silent_to_awake": 0,
+      "both_awake_choice_changed": 0,
+      "without_birth_in_same_learn": 0,
+      "effective_abs_dp": {
+        "n": 18,
+        "mean": 0.0,
+        "minimum": 0.0,
+        "median": 0.0,
+        "q90": 0.0,
+        "maximum": 0.0
+      },
+      "victim_age_s": {
+        "n": 18,
+        "mean": 74.44346659752273,
+        "minimum": 8.246477899210959,
+        "median": 62.6638364125511,
+        "q90": 142.2290682910657,
+        "maximum": 212.49979383651896
+      },
+      "victim_use_decayed": {
+        "n": 18,
+        "mean": 1.0766088945676755,
+        "minimum": 0.0,
+        "median": 0.715475434790473,
+        "q90": 2.7328431396154103,
+        "maximum": 4.73551892984193
+      },
+      "victim_evidence_count": {
+        "n": 18,
+        "mean": 7.777777777777778,
+        "minimum": 1.0,
+        "median": 3.5,
+        "q90": 18.20000000000001,
+        "maximum": 35.0
+      },
+      "victims_with_exactly_one_tally": 1,
+      "stored_stream_share": {
+        "n": 18,
+        "mean": 0.0008352845017512991,
+        "minimum": 8.733195522040526e-05,
+        "median": 0.00017547032192400883,
+        "q90": 0.0006733346675926023,
+        "maximum": 0.010705398478208932
+      },
+      "conditional_stream_loss_diagnostic": {
+        "n": 0,
+        "sum_bits": 0.0,
+        "absolute_sum_bits": 0.0,
+        "positive": 0,
+        "negative": 0,
+        "within_1e_12": 0,
+        "maximum_absolute": 0.0
+      },
+      "selected_victim_weight_share_vs_disturbance_spearman": null
+    }
+  },
+  "by_reason_stage": {
+    "contest_transfer/completed_learning": {
+      "removal_transactions": 2708,
+      "removed_units": 2708,
+      "current_speaker_deleted": 1616,
+      "issued_speaker_deleted": 655,
+      "speaker_changed": 1616,
+      "raw_probability_changed": 1602,
+      "awake_to_silent": 50,
+      "silent_to_awake": 0,
+      "both_awake_choice_changed": 665,
+      "without_birth_in_same_learn": 52,
+      "effective_abs_dp": {
+        "n": 2708,
+        "mean": 0.13436545803342811,
+        "minimum": 0.0,
+        "median": 0.08184523809523812,
+        "q90": 0.36190476190476195,
+        "maximum": 0.5625
+      },
+      "victim_age_s": {
+        "n": 2708,
+        "mean": 14.20093787813742,
+        "minimum": 0.0,
+        "median": 2.457988043693973,
+        "q90": 41.75766123476179,
+        "maximum": 264.14799152307864
+      },
+      "victim_use_decayed": {
+        "n": 2708,
+        "mean": 1.7120561768261626,
+        "minimum": 0.0,
+        "median": 0.0,
+        "q90": 2.938498657398562,
+        "maximum": 243.86297912868667
+      },
+      "victim_evidence_count": {
+        "n": 2708,
+        "mean": 3.5683161004431314,
+        "minimum": 1.0,
+        "median": 1.0,
+        "q90": 6.0,
+        "maximum": 145.0
+      },
+      "victims_with_exactly_one_tally": 1402,
+      "stored_stream_share": {
+        "n": 2708,
+        "mean": 0.00037089590312287314,
+        "minimum": 7.150417000535998e-05,
+        "median": 0.00016050822833060146,
+        "q90": 0.0007198571110179724,
+        "maximum": 0.04517966472654291
+      },
+      "conditional_stream_loss_diagnostic": {
+        "n": 2708,
+        "sum_bits": 776.93689072361,
+        "absolute_sum_bits": 889.1437658107436,
+        "positive": 1416,
+        "negative": 186,
+        "within_1e_12": 1106,
+        "maximum_absolute": 2.0
+      },
+      "selected_victim_weight_share_vs_disturbance_spearman": 0.04991529605984887
+    },
+    "contest_transfer/not_yet_learned": {
+      "removal_transactions": 2725,
+      "removed_units": 2725,
+      "current_speaker_deleted": 920,
+      "issued_speaker_deleted": 851,
+      "speaker_changed": 920,
+      "raw_probability_changed": 910,
+      "awake_to_silent": 30,
+      "silent_to_awake": 0,
+      "both_awake_choice_changed": 386,
+      "without_birth_in_same_learn": 141,
+      "effective_abs_dp": {
+        "n": 2725,
+        "mean": 0.07287926457305285,
+        "minimum": 0.0,
+        "median": 0.0,
+        "q90": 0.3016816516816516,
+        "maximum": 0.6
+      },
+      "victim_age_s": {
+        "n": 2725,
+        "mean": 16.53100086506742,
+        "minimum": 0.008631693055647816,
+        "median": 5.441831705549646,
+        "q90": 44.03592241498516,
+        "maximum": 283.21086508638757
+      },
+      "victim_use_decayed": {
+        "n": 2725,
+        "mean": 2.2387187909726807,
+        "minimum": 0.0,
+        "median": 0.0,
+        "q90": 2.886739863572223,
+        "maximum": 300.44191840433973
+      },
+      "victim_evidence_count": {
+        "n": 2725,
+        "mean": 4.051743119266055,
+        "minimum": 1.0,
+        "median": 1.0,
+        "q90": 6.599999999999909,
+        "maximum": 154.0
+      },
+      "victims_with_exactly_one_tally": 1715,
+      "stored_stream_share": {
+        "n": 2725,
+        "mean": 0.0003873602743828348,
+        "minimum": 7.150417000535998e-05,
+        "median": 0.00016300911444515153,
+        "q90": 0.000784327234337227,
+        "maximum": 0.02261323174751178
+      },
+      "conditional_stream_loss_diagnostic": {
+        "n": 2725,
+        "sum_bits": -145.80788368403495,
+        "absolute_sum_bits": 676.8788944557982,
+        "positive": 439,
+        "negative": 471,
+        "within_1e_12": 1815,
+        "maximum_absolute": 2.3407871221386785
+      },
+      "selected_victim_weight_share_vs_disturbance_spearman": -0.01855388061628827
+    },
+    "own_recycling/current_learning": {
+      "removal_transactions": 3740,
+      "removed_units": 3740,
+      "current_speaker_deleted": 2,
+      "issued_speaker_deleted": 1,
+      "speaker_changed": 2,
+      "raw_probability_changed": 2,
+      "awake_to_silent": 0,
+      "silent_to_awake": 0,
+      "both_awake_choice_changed": 1,
+      "without_birth_in_same_learn": 34,
+      "effective_abs_dp": {
+        "n": 3740,
+        "mean": 9.517443340972752e-05,
+        "minimum": 0.0,
+        "median": 0.0,
+        "q90": 0.0,
+        "maximum": 0.22499999999999998
+      },
+      "victim_age_s": {
+        "n": 3740,
+        "mean": 22.260164333197253,
+        "minimum": 0.008631693055647816,
+        "median": 8.99481178225119,
+        "q90": 58.12083194120986,
+        "maximum": 281.8300908523059
+      },
+      "victim_use_decayed": {
+        "n": 3740,
+        "mean": 1.15839607266165,
+        "minimum": 0.0,
+        "median": 0.0,
+        "q90": 2.9245816261329898,
+        "maximum": 59.49896374059312
+      },
+      "victim_evidence_count": {
+        "n": 3740,
+        "mean": 2.86524064171123,
+        "minimum": 1.0,
+        "median": 1.0,
+        "q90": 6.0,
+        "maximum": 101.0
+      },
+      "victims_with_exactly_one_tally": 2229,
+      "stored_stream_share": {
+        "n": 3740,
+        "mean": 0.0004375459755980643,
+        "minimum": 6.952354388071375e-05,
+        "median": 0.00018581015699844128,
+        "q90": 0.000880109754524212,
+        "maximum": 0.017900899055121038
+      },
+      "conditional_stream_loss_diagnostic": {
+        "n": 3740,
+        "sum_bits": 0.7818198299504665,
+        "absolute_sum_bits": 0.7818198299504665,
+        "positive": 2,
+        "negative": 0,
+        "within_1e_12": 3738,
+        "maximum_absolute": 0.5594274086140186
+      },
+      "selected_victim_weight_share_vs_disturbance_spearman": -0.0025040010378632334
+    },
+    "tidy/completed_learning": {
+      "removal_transactions": 6,
+      "removed_units": 24,
+      "current_speaker_deleted": 0,
+      "issued_speaker_deleted": 0,
+      "speaker_changed": 0,
+      "raw_probability_changed": 0,
+      "awake_to_silent": 0,
+      "silent_to_awake": 0,
+      "both_awake_choice_changed": 0,
+      "without_birth_in_same_learn": 0,
+      "effective_abs_dp": {
+        "n": 6,
+        "mean": 0.0,
+        "minimum": 0.0,
+        "median": 0.0,
+        "q90": 0.0,
+        "maximum": 0.0
+      },
+      "victim_age_s": {
+        "n": 6,
+        "mean": 105.49783674302239,
+        "minimum": 47.575037384024526,
+        "median": 93.7347449566348,
+        "q90": 171.41339278535244,
+        "maximum": 175.03212705639132
+      },
+      "victim_use_decayed": {
+        "n": 6,
+        "mean": 2.568871062132671,
+        "minimum": 0.0,
+        "median": 1.4732636194713706,
+        "q90": 6.233349566926643,
+        "maximum": 9.542485451406135
+      },
+      "victim_evidence_count": {
+        "n": 6,
+        "mean": 9.0,
+        "minimum": 1.0,
+        "median": 4.5,
+        "q90": 21.0,
+        "maximum": 22.0
+      },
+      "victims_with_exactly_one_tally": 1,
+      "stored_stream_share": {
+        "n": 6,
+        "mean": 0.3789297145537464,
+        "minimum": 0.0002788990569843507,
+        "median": 0.32583277201322103,
+        "q90": 0.8106456650103027,
+        "maximum": 0.953829250385125
+      },
+      "conditional_stream_loss_diagnostic": {
+        "n": 6,
+        "sum_bits": 0.0,
+        "absolute_sum_bits": 0.0,
+        "positive": 0,
+        "negative": 0,
+        "within_1e_12": 6,
+        "maximum_absolute": 0.0
+      },
+      "selected_victim_weight_share_vs_disturbance_spearman": null
+    },
+    "tidy/outside_taste": {
+      "removal_transactions": 18,
+      "removed_units": 39,
+      "current_speaker_deleted": 0,
+      "issued_speaker_deleted": 0,
+      "speaker_changed": 0,
+      "raw_probability_changed": 0,
+      "awake_to_silent": 0,
+      "silent_to_awake": 0,
+      "both_awake_choice_changed": 0,
+      "without_birth_in_same_learn": 0,
+      "effective_abs_dp": {
+        "n": 18,
+        "mean": 0.0,
+        "minimum": 0.0,
+        "median": 0.0,
+        "q90": 0.0,
+        "maximum": 0.0
+      },
+      "victim_age_s": {
+        "n": 18,
+        "mean": 74.44346659752273,
+        "minimum": 8.246477899210959,
+        "median": 62.6638364125511,
+        "q90": 142.2290682910657,
+        "maximum": 212.49979383651896
+      },
+      "victim_use_decayed": {
+        "n": 18,
+        "mean": 1.0766088945676755,
+        "minimum": 0.0,
+        "median": 0.715475434790473,
+        "q90": 2.7328431396154103,
+        "maximum": 4.73551892984193
+      },
+      "victim_evidence_count": {
+        "n": 18,
+        "mean": 7.777777777777778,
+        "minimum": 1.0,
+        "median": 3.5,
+        "q90": 18.20000000000001,
+        "maximum": 35.0
+      },
+      "victims_with_exactly_one_tally": 1,
+      "stored_stream_share": {
+        "n": 18,
+        "mean": 0.0008352845017512991,
+        "minimum": 8.733195522040526e-05,
+        "median": 0.00017547032192400883,
+        "q90": 0.0006733346675926023,
+        "maximum": 0.010705398478208932
+      },
+      "conditional_stream_loss_diagnostic": {
+        "n": 0,
+        "sum_bits": 0.0,
+        "absolute_sum_bits": 0.0,
+        "positive": 0,
+        "negative": 0,
+        "within_1e_12": 0,
+        "maximum_absolute": 0.0
+      },
+      "selected_victim_weight_share_vs_disturbance_spearman": null
+    }
+  },
+  "by_reason_birth_status": {
+    "contest_transfer": {
+      "without_birth": {
+        "removal_transactions": 193,
+        "removed_units": 193,
+        "current_speaker_deleted": 88,
+        "issued_speaker_deleted": 61,
+        "speaker_changed": 88,
+        "raw_probability_changed": 88,
+        "awake_to_silent": 0,
+        "silent_to_awake": 0,
+        "both_awake_choice_changed": 42,
+        "without_birth_in_same_learn": 193,
+        "effective_abs_dp": {
+          "n": 193,
+          "mean": 0.09640547749158436,
+          "minimum": 0.0,
+          "median": 0.0,
+          "q90": 0.3173946360153258,
+          "maximum": 0.5357142857142857
+        },
+        "victim_age_s": {
+          "n": 193,
+          "mean": 14.322771798369653,
+          "minimum": 0.0,
+          "median": 5.413772935561326,
+          "q90": 41.96637334077906,
+          "maximum": 177.3863574251486
+        },
+        "victim_use_decayed": {
+          "n": 193,
+          "mean": 1.5323031764050001,
+          "minimum": 0.0,
+          "median": 0.0,
+          "q90": 3.8692171662465995,
+          "maximum": 25.75166489557541
+        },
+        "victim_evidence_count": {
+          "n": 193,
+          "mean": 4.005181347150259,
+          "minimum": 1.0,
+          "median": 1.0,
+          "q90": 7.0,
+          "maximum": 52.0
+        },
+        "victims_with_exactly_one_tally": 116,
+        "stored_stream_share": {
+          "n": 193,
+          "mean": 0.0005123347722517428,
+          "minimum": 8.557121703203724e-05,
+          "median": 0.00021094461835888858,
+          "q90": 0.001436715879915963,
+          "maximum": 0.003295518394776923
+        },
+        "conditional_stream_loss_diagnostic": {
+          "n": 193,
+          "sum_bits": 17.009366892422126,
+          "absolute_sum_bits": 54.52639206585593,
+          "positive": 61,
+          "negative": 27,
+          "within_1e_12": 105,
+          "maximum_absolute": 1.855051664088901
+        },
+        "selected_victim_weight_share_vs_disturbance_spearman": -0.1478171960766308
+      },
+      "with_birth": {
+        "removal_transactions": 5240,
+        "removed_units": 5240,
+        "current_speaker_deleted": 2448,
+        "issued_speaker_deleted": 1445,
+        "speaker_changed": 2448,
+        "raw_probability_changed": 2424,
+        "awake_to_silent": 80,
+        "silent_to_awake": 0,
+        "both_awake_choice_changed": 1009,
+        "without_birth_in_same_learn": 0,
+        "effective_abs_dp": {
+          "n": 5240,
+          "mean": 0.10378843495423981,
+          "minimum": 0.0,
+          "median": 0.0,
+          "q90": 0.34090909090909094,
+          "maximum": 0.6
+        },
+        "victim_age_s": {
+          "n": 5240,
+          "mean": 15.408172170652577,
+          "minimum": 0.0,
+          "median": 4.216456248463089,
+          "q90": 42.57815072876557,
+          "maximum": 283.21086508638757
+        },
+        "victim_use_decayed": {
+          "n": 5240,
+          "mean": 1.9925615112976407,
+          "minimum": 0.0,
+          "median": 0.0,
+          "q90": 2.9000294530773405,
+          "maximum": 300.44191840433973
+        },
+        "victim_evidence_count": {
+          "n": 5240,
+          "mean": 3.8036259541984734,
+          "minimum": 1.0,
+          "median": 1.0,
+          "q90": 6.0,
+          "maximum": 154.0
+        },
+        "victims_with_exactly_one_tally": 3001,
+        "stored_stream_share": {
+          "n": 5240,
+          "mean": 0.0003742485195239273,
+          "minimum": 7.150417000535998e-05,
+          "median": 0.00016070264004725037,
+          "q90": 0.0007287348494599016,
+          "maximum": 0.04517966472654291
+        },
+        "conditional_stream_loss_diagnostic": {
+          "n": 5240,
+          "sum_bits": 614.1196401471528,
+          "absolute_sum_bits": 1511.496268200686,
+          "positive": 1794,
+          "negative": 630,
+          "within_1e_12": 2816,
+          "maximum_absolute": 2.3407871221386785
+        },
+        "selected_victim_weight_share_vs_disturbance_spearman": 0.015991580380854443
+      }
+    },
+    "own_recycling": {
+      "without_birth": {
+        "removal_transactions": 34,
+        "removed_units": 34,
+        "current_speaker_deleted": 0,
+        "issued_speaker_deleted": 0,
+        "speaker_changed": 0,
+        "raw_probability_changed": 0,
+        "awake_to_silent": 0,
+        "silent_to_awake": 0,
+        "both_awake_choice_changed": 0,
+        "without_birth_in_same_learn": 34,
+        "effective_abs_dp": {
+          "n": 34,
+          "mean": 0.0,
+          "minimum": 0.0,
+          "median": 0.0,
+          "q90": 0.0,
+          "maximum": 0.0
+        },
+        "victim_age_s": {
+          "n": 34,
+          "mean": 25.148825320661366,
+          "minimum": 6.857829783370455,
+          "median": 23.96374394254605,
+          "q90": 41.818642938657895,
+          "maximum": 78.5493250476356
+        },
+        "victim_use_decayed": {
+          "n": 34,
+          "mean": 2.360835578013838,
+          "minimum": 0.0,
+          "median": 1.8877042590504431,
+          "q90": 4.442324471984318,
+          "maximum": 6.220788231325502
+        },
+        "victim_evidence_count": {
+          "n": 34,
+          "mean": 4.647058823529412,
+          "minimum": 1.0,
+          "median": 3.0,
+          "q90": 8.0,
+          "maximum": 11.0
+        },
+        "victims_with_exactly_one_tally": 1,
+        "stored_stream_share": {
+          "n": 34,
+          "mean": 0.0009659417920663921,
+          "minimum": 9.996267007836458e-05,
+          "median": 0.0005563828111401446,
+          "q90": 0.001979069820449463,
+          "maximum": 0.005432621416124925
+        },
+        "conditional_stream_loss_diagnostic": {
+          "n": 34,
+          "sum_bits": 0.0,
+          "absolute_sum_bits": 0.0,
+          "positive": 0,
+          "negative": 0,
+          "within_1e_12": 34,
+          "maximum_absolute": 0.0
+        },
+        "selected_victim_weight_share_vs_disturbance_spearman": null
+      },
+      "with_birth": {
+        "removal_transactions": 3706,
+        "removed_units": 3706,
+        "current_speaker_deleted": 2,
+        "issued_speaker_deleted": 1,
+        "speaker_changed": 2,
+        "raw_probability_changed": 2,
+        "awake_to_silent": 0,
+        "silent_to_awake": 0,
+        "both_awake_choice_changed": 1,
+        "without_birth_in_same_learn": 0,
+        "effective_abs_dp": {
+          "n": 3706,
+          "mean": 9.60475933492663e-05,
+          "minimum": 0.0,
+          "median": 0.0,
+          "q90": 0.0,
+          "maximum": 0.22499999999999998
+        },
+        "victim_age_s": {
+          "n": 3706,
+          "mean": 22.233662856248042,
+          "minimum": 0.008631693055647816,
+          "median": 8.893345741346469,
+          "q90": 58.41670552425734,
+          "maximum": 281.8300908523059
+        },
+        "victim_use_decayed": {
+          "n": 3706,
+          "mean": 1.147364517566676,
+          "minimum": 0.0,
+          "median": 0.0,
+          "q90": 2.910398894946965,
+          "maximum": 59.49896374059312
+        },
+        "victim_evidence_count": {
+          "n": 3706,
+          "mean": 2.848893685914733,
+          "minimum": 1.0,
+          "median": 1.0,
+          "q90": 6.0,
+          "maximum": 101.0
+        },
+        "victims_with_exactly_one_tally": 2228,
+        "stored_stream_share": {
+          "n": 3706,
+          "mean": 0.0004326983075570705,
+          "minimum": 6.952354388071375e-05,
+          "median": 0.00018473705161858249,
+          "q90": 0.0008506742170106235,
+          "maximum": 0.017900899055121038
+        },
+        "conditional_stream_loss_diagnostic": {
+          "n": 3706,
+          "sum_bits": 0.7818198299504665,
+          "absolute_sum_bits": 0.7818198299504665,
+          "positive": 2,
+          "negative": 0,
+          "within_1e_12": 3704,
+          "maximum_absolute": 0.5594274086140186
+        },
+        "selected_victim_weight_share_vs_disturbance_spearman": -0.002364804850525329
+      }
+    }
+  },
+  "windows": [
+    {
+      "window": [
+        0,
+        30
+      ],
+      "summary": {
+        "removal_transactions": 0,
+        "removed_units": 0,
+        "current_speaker_deleted": 0,
+        "issued_speaker_deleted": 0,
+        "speaker_changed": 0,
+        "raw_probability_changed": 0,
+        "awake_to_silent": 0,
+        "silent_to_awake": 0,
+        "both_awake_choice_changed": 0,
+        "without_birth_in_same_learn": 0,
+        "effective_abs_dp": {
+          "n": 0
+        },
+        "victim_age_s": {
+          "n": 0
+        },
+        "victim_use_decayed": {
+          "n": 0
+        },
+        "victim_evidence_count": {
+          "n": 0
+        },
+        "victims_with_exactly_one_tally": 0,
+        "stored_stream_share": {
+          "n": 0
+        },
+        "conditional_stream_loss_diagnostic": {
+          "n": 0,
+          "sum_bits": 0.0,
+          "absolute_sum_bits": 0.0,
+          "positive": 0,
+          "negative": 0,
+          "within_1e_12": 0,
+          "maximum_absolute": 0.0
+        },
+        "selected_victim_weight_share_vs_disturbance_spearman": null
+      }
+    },
+    {
+      "window": [
+        30,
+        100
+      ],
+      "summary": {
+        "removal_transactions": 1470,
+        "removed_units": 1472,
+        "current_speaker_deleted": 312,
+        "issued_speaker_deleted": 159,
+        "speaker_changed": 312,
+        "raw_probability_changed": 306,
+        "awake_to_silent": 8,
+        "silent_to_awake": 0,
+        "both_awake_choice_changed": 112,
+        "without_birth_in_same_learn": 75,
+        "effective_abs_dp": {
+          "n": 1470,
+          "mean": 0.044821137573924266,
+          "minimum": 0.0,
+          "median": 0.0,
+          "q90": 0.2,
+          "maximum": 0.6
+        },
+        "victim_age_s": {
+          "n": 1470,
+          "mean": 17.22330844509412,
+          "minimum": 0.0,
+          "median": 8.875761454409151,
+          "q90": 47.09857419670733,
+          "maximum": 89.53066454799676
+        },
+        "victim_use_decayed": {
+          "n": 1470,
+          "mean": 1.10289983341177,
+          "minimum": 0.0,
+          "median": 0.0,
+          "q90": 2.7686075574600233,
+          "maximum": 67.69048232401197
+        },
+        "victim_evidence_count": {
+          "n": 1470,
+          "mean": 2.714965986394558,
+          "minimum": 1.0,
+          "median": 1.0,
+          "q90": 6.0,
+          "maximum": 40.0
+        },
+        "victims_with_exactly_one_tally": 911,
+        "stored_stream_share": {
+          "n": 1470,
+          "mean": 0.0011920289712119372,
+          "minimum": 0.00010803854643912326,
+          "median": 0.0006630851857664759,
+          "q90": 0.00240033459457702,
+          "maximum": 0.04517966472654291
+        },
+        "conditional_stream_loss_diagnostic": {
+          "n": 1467,
+          "sum_bits": 62.892613462285986,
+          "absolute_sum_bits": 187.90864258031877,
+          "positive": 219,
+          "negative": 87,
+          "within_1e_12": 1161,
+          "maximum_absolute": 2.321928094887362
+        },
+        "selected_victim_weight_share_vs_disturbance_spearman": 0.0350238090235779
+      }
+    },
+    {
+      "window": [
+        100,
+        200
+      ],
+      "summary": {
+        "removal_transactions": 3728,
+        "removed_units": 3749,
+        "current_speaker_deleted": 1099,
+        "issued_speaker_deleted": 687,
+        "speaker_changed": 1099,
+        "raw_probability_changed": 1089,
+        "awake_to_silent": 34,
+        "silent_to_awake": 0,
+        "both_awake_choice_changed": 432,
+        "without_birth_in_same_learn": 109,
+        "effective_abs_dp": {
+          "n": 3728,
+          "mean": 0.06276049548502817,
+          "minimum": 0.0,
+          "median": 0.0,
+          "q90": 0.27083333333333337,
+          "maximum": 0.5583333333333333
+        },
+        "victim_age_s": {
+          "n": 3728,
+          "mean": 18.012699856768496,
+          "minimum": 0.0,
+          "median": 6.139179018922988,
+          "q90": 55.23581256794107,
+          "maximum": 176.7021779550768
+        },
+        "victim_use_decayed": {
+          "n": 3728,
+          "mean": 1.6420448548015785,
+          "minimum": 0.0,
+          "median": 0.0,
+          "q90": 2.980018396854919,
+          "maximum": 158.06310634301673
+        },
+        "victim_evidence_count": {
+          "n": 3728,
+          "mean": 3.5598175965665235,
+          "minimum": 1.0,
+          "median": 1.0,
+          "q90": 7.0,
+          "maximum": 96.0
+        },
+        "victims_with_exactly_one_tally": 2112,
+        "stored_stream_share": {
+          "n": 3728,
+          "mean": 0.0006454780684442779,
+          "minimum": 6.952354388071375e-05,
+          "median": 0.000154585827245441,
+          "q90": 0.0005892350149868557,
+          "maximum": 0.6674620796354802
+        },
+        "conditional_stream_loss_diagnostic": {
+          "n": 3722,
+          "sum_bits": 242.79301427089317,
+          "absolute_sum_bits": 654.507881730443,
+          "positive": 787,
+          "negative": 302,
+          "within_1e_12": 2633,
+          "maximum_absolute": 2.3407871221386785
+        },
+        "selected_victim_weight_share_vs_disturbance_spearman": -0.00563186950169117
+      }
+    },
+    {
+      "window": [
+        200,
+        300
+      ],
+      "summary": {
+        "removal_transactions": 3999,
+        "removed_units": 4015,
+        "current_speaker_deleted": 1127,
+        "issued_speaker_deleted": 661,
+        "speaker_changed": 1127,
+        "raw_probability_changed": 1119,
+        "awake_to_silent": 38,
+        "silent_to_awake": 0,
+        "both_awake_choice_changed": 508,
+        "without_birth_in_same_learn": 43,
+        "effective_abs_dp": {
+          "n": 3999,
+          "mean": 0.06575529114658442,
+          "minimum": 0.0,
+          "median": 0.0,
+          "q90": 0.2861842105263157,
+          "maximum": 0.5833333333333334
+        },
+        "victim_age_s": {
+          "n": 3999,
+          "mean": 19.06964057923351,
+          "minimum": 0.0,
+          "median": 5.407230691333325,
+          "q90": 45.432754335542995,
+          "maximum": 283.21086508638757
+        },
+        "victim_use_decayed": {
+          "n": 3999,
+          "mean": 1.8407462757338844,
+          "minimum": 0.0,
+          "median": 0.0,
+          "q90": 2.891833270601231,
+          "maximum": 300.44191840433973
+        },
+        "victim_evidence_count": {
+          "n": 3999,
+          "mean": 3.5888972243060766,
+          "minimum": 1.0,
+          "median": 1.0,
+          "q90": 6.0,
+          "maximum": 154.0
+        },
+        "victims_with_exactly_one_tally": 2325,
+        "stored_stream_share": {
+          "n": 3999,
+          "mean": 0.0004567025215301106,
+          "minimum": 7.150417000535998e-05,
+          "median": 0.00014788166619017162,
+          "q90": 0.00035634594353746955,
+          "maximum": 0.953829250385125
+        },
+        "conditional_stream_loss_diagnostic": {
+          "n": 3990,
+          "sum_bits": 326.2251991363463,
+          "absolute_sum_bits": 724.3879557857306,
+          "positive": 851,
+          "negative": 268,
+          "within_1e_12": 2871,
+          "maximum_absolute": 2.289506617194985
+        },
+        "selected_victim_weight_share_vs_disturbance_spearman": -0.010800656962271594
+      }
+    }
+  ],
+  "no_birth_examples": [
+    {
+      "learn": 4213,
+      "t": 52.64747662941234,
+      "stream": "clock3",
+      "reason": "no_partner_at_i_minus_span",
+      "removal_ids": [
+        64
+      ]
+    },
+    {
+      "learn": 4381,
+      "t": 52.92669082529095,
+      "stream": "clock3",
+      "reason": "no_partner_at_i_minus_span",
+      "removal_ids": [
+        102
+      ]
+    },
+    {
+      "learn": 4549,
+      "t": 52.99026044996032,
+      "stream": "clock3",
+      "reason": "no_partner_at_i_minus_span",
+      "removal_ids": [
+        137
+      ]
+    },
+    {
+      "learn": 4717,
+      "t": 53.74024274808232,
+      "stream": "clock3",
+      "reason": "no_partner_at_i_minus_span",
+      "removal_ids": [
+        172
+      ]
+    },
+    {
+      "learn": 4722,
+      "t": 53.74024274808232,
+      "stream": "clock8",
+      "reason": "no_partner_at_i_minus_span",
+      "removal_ids": [
+        175
+      ]
+    }
+  ],
+  "limits": [
+    "One reused corrected contest life; no fresh-performance or generality test.",
+    "Conditional deletion events are selected after seeing feedback, even when donor tallies are not yet updated.",
+    "Before/after probes use the current context; silence is completed by current default for diagnostic loss only.",
+    "Stage-specific summed loss is not an unbiased prequential mixture loss, action effect or lifetime memory value.",
+    "Correlations among selected victims do not establish unbiased ranking of candidate deletion costs.",
+    "A unit with zero own/use or initial tally can inherit trace/history; these fields do not establish past uselessness."
+  ],
+  "analysis_wall_s": 0.38163223990704864
+}

@@ -1,0 +1,11 @@
+{
+  "success": true,
+  "checks": [
+    "repeated parent u==v: two appearances, one unique parent, fixed kept separate",
+    "child born before its parent first speaks: parent 2 later speaks (seq 14) but is silent at both births",
+    "parent shared by two children: one distinct grown parent, two children, two births counted once each",
+    "cascade removal reconciles; a missing cascade removal (orphan) is refused",
+    "corrupt removal tally and speaking record refused"
+  ],
+  "simulated_steps": 0
+}

@@ -1,0 +1,554 @@
+{
+  "failures": [],
+  "validation": {
+    "writes": 24799,
+    "stream_predictions": 988344,
+    "predictions": 5883,
+    "accepted_tastes": 163,
+    "learns": 27384,
+    "living_count_checkpoints": 477568,
+    "births": 10236,
+    "removal_tallies_exact": 9236,
+    "tidy_removals_before_index_increment": 63,
+    "native_speaking_records_exact": 10371
+  },
+  "evidence": {
+    "accepted_labels": 163,
+    "life_s": 300.0,
+    "labels_per_s": 0.5433333333333333,
+    "maximum_binary_entropy_bits_per_s": 0.5433333333333333,
+    "independent_evidence_rate_unknown": true
+  },
+  "full": {
+    "units": 5369,
+    "units_with_predictions": 3653,
+    "units_without_predictions": 1716,
+    "candidate_lesson_pairs": 38270,
+    "evidence_count": {
+      "n": 5369,
+      "minimum": 0.0,
+      "median": 2.0,
+      "q90": 17.0,
+      "maximum": 130.0
+    },
+    "retained_better": 1678,
+    "retained_worse": 1932,
+    "retained_numerically_equal": 43,
+    "retained_saving_bits_among_active": {
+      "n": 3653,
+      "minimum": -5.730293356745571,
+      "median": -0.1417281096116607,
+      "q90": 2.2630344058337943,
+      "maximum": 18.80696936750539
+    },
+    "mixture_saving_bits_among_active": {
+      "n": 3653,
+      "minimum": -0.973076859582898,
+      "median": -0.06912436065482108,
+      "q90": 1.5360529002402092,
+      "maximum": 17.806972513168148
+    },
+    "baseline_silent_pairs": 727,
+    "baseline_silent_fraction": 0.01899660308335511,
+    "retained_more_than_one_bit": 772,
+    "overlapping_sums": {
+      "baseline_bits": 42017.07113726446,
+      "retained_bits": 41320.13838911661,
+      "mixture_bits": 40710.34304522622,
+      "retained_saving_bits": 696.9327481478451,
+      "mixture_saving_bits": 1306.7280920382407,
+      "baseline_errors": 17409.5,
+      "retained_errors": 19728.5,
+      "mixture_errors": 18074.0
+    }
+  },
+  "horizon_100s": {
+    "units": 3035,
+    "units_with_predictions": 2150,
+    "units_without_predictions": 885,
+    "candidate_lesson_pairs": 18024,
+    "evidence_count": {
+      "n": 3035,
+      "minimum": 0.0,
+      "median": 2.0,
+      "q90": 15.0,
+      "maximum": 59.0
+    },
+    "retained_better": 1000,
+    "retained_worse": 1107,
+    "retained_numerically_equal": 43,
+    "retained_saving_bits_among_active": {
+      "n": 2150,
+      "minimum": -5.485748381389698,
+      "median": -0.07649698523188864,
+      "q90": 2.0003275132032865,
+      "maximum": 9.358490897866695
+    },
+    "mixture_saving_bits_among_active": {
+      "n": 2150,
+      "minimum": -0.9681581540298758,
+      "median": -0.037741507127431184,
+      "q90": 1.3221901649032763,
+      "maximum": 8.360687024973892
+    },
+    "baseline_silent_pairs": 351,
+    "baseline_silent_fraction": 0.01947403462050599,
+    "retained_more_than_one_bit": 457,
+    "overlapping_sums": {
+      "baseline_bits": 19883.617132598276,
+      "retained_bits": 19689.540998909753,
+      "mixture_bits": 19355.608814407606,
+      "retained_saving_bits": 194.07613368852492,
+      "mixture_saving_bits": 528.0083181906718,
+      "baseline_errors": 8264.5,
+      "retained_errors": 9480.0,
+      "mixture_errors": 8535.0
+    }
+  },
+  "by_family": {
+    "event": {
+      "units": 354,
+      "units_with_predictions": 253,
+      "units_without_predictions": 101,
+      "candidate_lesson_pairs": 4856,
+      "evidence_count": {
+        "n": 354,
+        "minimum": 0.0,
+        "median": 3.0,
+        "q90": 51.69999999999999,
+        "maximum": 130.0
+      },
+      "retained_better": 140,
+      "retained_worse": 112,
+      "retained_numerically_equal": 1,
+      "retained_saving_bits_among_active": {
+        "n": 253,
+        "minimum": -2.6007026909716853,
+        "median": 0.36040224270199794,
+        "q90": 4.597201927594632,
+        "maximum": 11.901896517108412
+      },
+      "mixture_saving_bits_among_active": {
+        "n": 253,
+        "minimum": -0.7798456904918547,
+        "median": 0.19142607065323447,
+        "q90": 3.655631959404063,
+        "maximum": 10.90227347248603
+      },
+      "baseline_silent_pairs": 2,
+      "baseline_silent_fraction": 0.00041186161449752884,
+      "retained_more_than_one_bit": 92,
+      "overlapping_sums": {
+        "baseline_bits": 5383.408392360982,
+        "retained_bits": 5117.168262236795,
+        "mixture_bits": 5135.329187727212,
+        "retained_saving_bits": 266.2401301241875,
+        "mixture_saving_bits": 248.07920463377044,
+        "baseline_errors": 2195.0,
+        "retained_errors": 2530.5,
+        "mixture_errors": 2357.0
+      }
+    },
+    "clock": {
+      "units": 1276,
+      "units_with_predictions": 925,
+      "units_without_predictions": 351,
+      "candidate_lesson_pairs": 10163,
+      "evidence_count": {
+        "n": 1276,
+        "minimum": 0.0,
+        "median": 4.0,
+        "q90": 22.0,
+        "maximum": 81.0
+      },
+      "retained_better": 423,
+      "retained_worse": 494,
+      "retained_numerically_equal": 8,
+      "retained_saving_bits_among_active": {
+        "n": 925,
+        "minimum": -5.730293356745571,
+        "median": -0.14801957952655087,
+        "q90": 1.7277389953594733,
+        "maximum": 5.3787632168306345
+      },
+      "mixture_saving_bits_among_active": {
+        "n": 925,
+        "minimum": -0.973076859582898,
+        "median": -0.07211228265011904,
+        "q90": 1.108392964704303,
+        "maximum": 4.413027213465718
+      },
+      "baseline_silent_pairs": 244,
+      "baseline_silent_fraction": 0.024008658860572664,
+      "retained_more_than_one_bit": 179,
+      "overlapping_sums": {
+        "baseline_bits": 11011.812135154118,
+        "retained_bits": 11186.184373004597,
+        "mixture_bits": 10917.833286111943,
+        "retained_saving_bits": -174.3722378504788,
+        "mixture_saving_bits": 93.9788490421746,
+        "baseline_errors": 4561.0,
+        "retained_errors": 5238.5,
+        "mixture_errors": 4580.5
+      }
+    },
+    "integrator": {
+      "units": 3416,
+      "units_with_predictions": 2360,
+      "units_without_predictions": 1056,
+      "candidate_lesson_pairs": 23097,
+      "evidence_count": {
+        "n": 3416,
+        "minimum": 0.0,
+        "median": 2.0,
+        "q90": 14.0,
+        "maximum": 126.0
+      },
+      "retained_better": 1053,
+      "retained_worse": 1274,
+      "retained_numerically_equal": 33,
+      "retained_saving_bits_among_active": {
+        "n": 2360,
+        "minimum": -4.464106795824854,
+        "median": -0.16992500144231215,
+        "q90": 2.3700338218305217,
+        "maximum": 18.80696936750539
+      },
+      "mixture_saving_bits_among_active": {
+        "n": 2360,
+        "minimum": -0.9360726164292892,
+        "median": -0.08246216019197261,
+        "q90": 1.6251618593632982,
+        "maximum": 17.806972513168148
+      },
+      "baseline_silent_pairs": 430,
+      "baseline_silent_fraction": 0.018617136424643892,
+      "retained_more_than_one_bit": 484,
+      "overlapping_sums": {
+        "baseline_bits": 25455.87620540227,
+        "retained_bits": 24856.999110618428,
+        "mixture_bits": 24506.379652209358,
+        "retained_saving_bits": 598.87709478384,
+        "mixture_saving_bits": 949.496553192912,
+        "baseline_errors": 10572.0,
+        "retained_errors": 11899.0,
+        "mixture_errors": 11074.5
+      }
+    },
+    "rhythm": {
+      "units": 323,
+      "units_with_predictions": 115,
+      "units_without_predictions": 208,
+      "candidate_lesson_pairs": 154,
+      "evidence_count": {
+        "n": 323,
+        "minimum": 0.0,
+        "median": 0.0,
+        "q90": 1.0,
+        "maximum": 3.0
+      },
+      "retained_better": 62,
+      "retained_worse": 52,
+      "retained_numerically_equal": 1,
+      "retained_saving_bits_among_active": {
+        "n": 115,
+        "minimum": -2.400537929583729,
+        "median": 0.2630344058337939,
+        "q90": 1.2983706192659354,
+        "maximum": 3.8073549220576046
+      },
+      "mixture_saving_bits_among_active": {
+        "n": 115,
+        "minimum": -0.7497733704668266,
+        "median": 0.1375035237499349,
+        "q90": 0.7906268517797534,
+        "maximum": 2.906890595608519
+      },
+      "baseline_silent_pairs": 51,
+      "baseline_silent_fraction": 0.33116883116883117,
+      "retained_more_than_one_bit": 17,
+      "overlapping_sums": {
+        "baseline_bits": 165.9744043470892,
+        "retained_bits": 159.78664325679281,
+        "mixture_bits": 150.80091917770562,
+        "retained_saving_bits": 6.187761090296384,
+        "mixture_saving_bits": 15.173485169383572,
+        "baseline_errors": 81.5,
+        "retained_errors": 60.5,
+        "mixture_errors": 62.0
+      }
+    }
+  },
+  "by_churn": {
+    "False": {
+      "units": 4446,
+      "units_with_predictions": 2832,
+      "units_without_predictions": 1614,
+      "candidate_lesson_pairs": 24691,
+      "evidence_count": {
+        "n": 4446,
+        "minimum": 0.0,
+        "median": 1.0,
+        "q90": 13.0,
+        "maximum": 126.0
+      },
+      "retained_better": 1243,
+      "retained_worse": 1548,
+      "retained_numerically_equal": 41,
+      "retained_saving_bits_among_active": {
+        "n": 2832,
+        "minimum": -5.730293356745571,
+        "median": -0.20353339408513207,
+        "q90": 2.0680782051307696,
+        "maximum": 18.80696936750539
+      },
+      "mixture_saving_bits_among_active": {
+        "n": 2832,
+        "minimum": -0.973076859582898,
+        "median": -0.09818039393890335,
+        "q90": 1.3766457404408048,
+        "maximum": 17.806972513168148
+      },
+      "baseline_silent_pairs": 497,
+      "baseline_silent_fraction": 0.02012879186748208,
+      "retained_more_than_one_bit": 535,
+      "overlapping_sums": {
+        "baseline_bits": 27075.97850936879,
+        "retained_bits": 26765.82502001293,
+        "mixture_bits": 26246.53878002077,
+        "retained_saving_bits": 310.1534893558601,
+        "mixture_saving_bits": 829.4397293480182,
+        "baseline_errors": 11225.5,
+        "retained_errors": 12681.0,
+        "mixture_errors": 11681.5
+      }
+    },
+    "True": {
+      "units": 923,
+      "units_with_predictions": 821,
+      "units_without_predictions": 102,
+      "candidate_lesson_pairs": 13579,
+      "evidence_count": {
+        "n": 923,
+        "minimum": 0.0,
+        "median": 6.0,
+        "q90": 35.80000000000007,
+        "maximum": 130.0
+      },
+      "retained_better": 435,
+      "retained_worse": 384,
+      "retained_numerically_equal": 2,
+      "retained_saving_bits_among_active": {
+        "n": 821,
+        "minimum": -5.616835306962292,
+        "median": 0.13750352374993502,
+        "q90": 2.9263899588907307,
+        "maximum": 12.608445063849786
+      },
+      "mixture_saving_bits_among_active": {
+        "n": 821,
+        "minimum": -0.970896132924592,
+        "median": 0.0703893278913979,
+        "q90": 2.104681793913864,
+        "maximum": 11.608676067906188
+      },
+      "baseline_silent_pairs": 230,
+      "baseline_silent_fraction": 0.016937918845275794,
+      "retained_more_than_one_bit": 237,
+      "overlapping_sums": {
+        "baseline_bits": 14941.09262789567,
+        "retained_bits": 14554.313369103686,
+        "mixture_bits": 14463.804265205448,
+        "retained_saving_bits": 386.779258791985,
+        "mixture_saving_bits": 477.2883626902224,
+        "baseline_errors": 6184.0,
+        "retained_errors": 7047.5,
+        "mixture_errors": 6392.5
+      }
+    }
+  },
+  "family_horizon_100s": {
+    "event": {
+      "units": 206,
+      "units_with_predictions": 149,
+      "units_without_predictions": 57,
+      "candidate_lesson_pairs": 2280,
+      "evidence_count": {
+        "n": 206,
+        "minimum": 0.0,
+        "median": 3.0,
+        "q90": 51.5,
+        "maximum": 58.0
+      },
+      "retained_better": 75,
+      "retained_worse": 72,
+      "retained_numerically_equal": 2,
+      "retained_saving_bits_among_active": {
+        "n": 149,
+        "minimum": -2.518241525946989,
+        "median": 0.01027498383339065,
+        "q90": 2.9936288162110616,
+        "maximum": 5.823914083589095
+      },
+      "mixture_saving_bits_among_active": {
+        "n": 149,
+        "minimum": -0.7678850028725073,
+        "median": 0.005146639299428379,
+        "q90": 2.1643083796947424,
+        "maximum": 4.849160296046534
+      },
+      "baseline_silent_pairs": 2,
+      "baseline_silent_fraction": 0.0008771929824561404,
+      "retained_more_than_one_bit": 47,
+      "overlapping_sums": {
+        "baseline_bits": 2516.7585909609084,
+        "retained_bits": 2443.531990516288,
+        "mixture_bits": 2446.2176218431455,
+        "retained_saving_bits": 73.2266004446205,
+        "mixture_saving_bits": 70.54096911776287,
+        "baseline_errors": 1018.0,
+        "retained_errors": 1215.5,
+        "mixture_errors": 1081.5
+      }
+    },
+    "clock": {
+      "units": 705,
+      "units_with_predictions": 511,
+      "units_without_predictions": 194,
+      "candidate_lesson_pairs": 4303,
+      "evidence_count": {
+        "n": 705,
+        "minimum": 0.0,
+        "median": 3.0,
+        "q90": 17.0,
+        "maximum": 44.0
+      },
+      "retained_better": 215,
+      "retained_worse": 290,
+      "retained_numerically_equal": 6,
+      "retained_saving_bits_among_active": {
+        "n": 511,
+        "minimum": -5.485748381389698,
+        "median": -0.26303440583379434,
+        "q90": 1.4880916348734203,
+        "maximum": 4.402661191855241
+      },
+      "mixture_saving_bits_among_active": {
+        "n": 511,
+        "minimum": -0.9681581540298758,
+        "median": -0.12553088208385899,
+        "q90": 0.9279634381545137,
+        "maximum": 3.4693068217941523
+      },
+      "baseline_silent_pairs": 137,
+      "baseline_silent_fraction": 0.03183825238205903,
+      "retained_more_than_one_bit": 93,
+      "overlapping_sums": {
+        "baseline_bits": 4644.4541994250885,
+        "retained_bits": 4811.749427231188,
+        "mixture_bits": 4637.758224053204,
+        "retained_saving_bits": -167.29522780609986,
+        "mixture_saving_bits": 6.69597537188407,
+        "baseline_errors": 1897.5,
+        "retained_errors": 2220.0,
+        "mixture_errors": 1918.0
+      }
+    },
+    "integrator": {
+      "units": 2124,
+      "units_with_predictions": 1490,
+      "units_without_predictions": 634,
+      "candidate_lesson_pairs": 11441,
+      "evidence_count": {
+        "n": 2124,
+        "minimum": 0.0,
+        "median": 1.0,
+        "q90": 11.0,
+        "maximum": 59.0
+      },
+      "retained_better": 710,
+      "retained_worse": 745,
+      "retained_numerically_equal": 35,
+      "retained_saving_bits_among_active": {
+        "n": 1490,
+        "minimum": -5.213511491063375,
+        "median": -0.003099908167465193,
+        "q90": 2.183164502772054,
+        "maximum": 9.358490897866695
+      },
+      "mixture_saving_bits_among_active": {
+        "n": 1490,
+        "minimum": -0.9616324988448213,
+        "median": -0.0015482888975737463,
+        "q90": 1.4702749879140367,
+        "maximum": 8.360687024973892
+      },
+      "baseline_silent_pairs": 212,
+      "baseline_silent_fraction": 0.018529848789441482,
+      "retained_more_than_one_bit": 317,
+      "overlapping_sums": {
+        "baseline_bits": 12722.404342212281,
+        "retained_bits": 12434.259581162276,
+        "mixture_bits": 12271.632968511256,
+        "retained_saving_bits": 288.14476105000426,
+        "mixture_saving_bits": 450.7713737010249,
+        "baseline_errors": 5349.0,
+        "retained_errors": 6044.5,
+        "mixture_errors": 5535.5
+      }
+    },
+    "rhythm": {
+      "units": 0,
+      "units_with_predictions": 0,
+      "units_without_predictions": 0,
+      "candidate_lesson_pairs": 0,
+      "evidence_count": {
+        "n": 0
+      },
+      "retained_better": 0,
+      "retained_worse": 0,
+      "retained_numerically_equal": 0,
+      "retained_saving_bits_among_active": {
+        "n": 0
+      },
+      "mixture_saving_bits_among_active": {
+        "n": 0
+      },
+      "baseline_silent_pairs": 0,
+      "baseline_silent_fraction": null,
+      "retained_more_than_one_bit": 0,
+      "overlapping_sums": {
+        "baseline_bits": 0,
+        "retained_bits": 0,
+        "mixture_bits": 0,
+        "retained_saving_bits": 0,
+        "mixture_saving_bits": 0,
+        "baseline_errors": 0,
+        "retained_errors": 0,
+        "mixture_errors": 0
+      }
+    }
+  },
+  "provenance": {
+    "raw_path": "/home/pilgrim/git/simple-learner/lab/v/future_evidence.pkl",
+    "raw_sha256": "d74474476cf6e0fea81ea4a08677eb3d058ee7411f330a553b9c728462af58d9",
+    "revision": "d37dac6745d2657229861d6f9cee4239258367d3",
+    "dirty": " M ABSTRACT.md\n M PROGRAMME.md\n M QUESTIONS.md\n M README.md\n M discrete/NOTEBOOK.md\n?? lab/active_mixture_audit.py\n?? lab/active_mixture_review.py\n?? lab/alloc_review.py\n?? lab/allocation_trace.py\n?? lab/allocation_trace_analysis.py\n?? lab/allocation_trace_checks.py\n?? lab/future_evidence.py\n?? lab/future_evidence_analysis.py\n?? lab/future_evidence_checks.py\n?? lab/future_evidence_replay_checks.py\n?? lab/issued_credit.py\n?? lab/issued_credit_analysis.py\n?? lab/issued_credit_checks.py\n?? lab/issued_credit_compare.py\n?? lab/retained_prediction.py\n?? lab/retained_prediction_checks.py\n?? lab/retained_prediction_diagnosis.py\n?? lab/scoring_feedback.py\n?? lab/scoring_feedback_analysis.py\n?? lab/scoring_order_replay.py\n?? lab/v/active_mixture_audit.json\n?? lab/v/active_mixture_audit.log\n?? lab/v/active_mixture_audit_report.md\n?? lab/v/active_mixture_review.json\n?? lab/v/active_mixture_review.log\n?? lab/v/alloc_review.json\n?? lab/v/alloc_review.log\n?? lab/v/allocation_trace.json\n?? lab/v/allocation_trace.log\n?? lab/v/allocation_trace_analysis.json\n?? lab/v/allocation_trace_analysis.log\n?? lab/v/allocation_trace_checks.json\n?? lab/v/allocation_trace_checks.log\n?? lab/v/d79_work_order.md\n?? lab/v/future_evidence.json\n?? lab/v/future_evidence.log\n?? lab/v/future_evidence_analysis.json\n?? lab/v/future_evidence_analysis.log\n?? lab/v/future_evidence_checks.json\n?? lab/v/future_evidence_checks.log\n?? lab/v/future_evidence_replay_checks.json\n?? lab/v/future_evidence_replay_checks.log\n?? lab/v/issued_credit_analysis.json\n?? lab/v/issued_credit_analysis.log\n?? lab/v/issued_credit_checks.json\n?? lab/v/issued_credit_checks.log\n?? lab/v/issued_credit_compare.json\n?? lab/v/issued_credit_compare.log\n?? lab/v/retained_prediction.log\n?? lab/v/retained_prediction_checks.json\n?? lab/v/retained_prediction_checks.log\n?? lab/v/retained_prediction_diagnosis.json\n?? lab/v/retained_prediction_diagnosis.log\n?? lab/v/retained_prediction_failed_index.json\n?? lab/v/retained_prediction_failed_index.log\n?? lab/v/scoring_feedback.json\n?? lab/v/scoring_feedback.log\n?? lab/v/scoring_feedback_analysis.json\n?? lab/v/scoring_feedback_analysis.log\n?? lab/v/scoring_order_replay.json\n?? lab/v/scoring_order_replay.log\n?? lab/v/scoring_order_replay_failed_summary.json\n?? lab/v/scoring_order_replay_failed_summary.log\n?? lab/v/scoring_order_replay_report.md\n",
+    "source_sha256": {
+      "lab/retained_prediction.py": "207441dc072521d8efb7ad163498ddf988428b87f95536c7061be6fe3b2a0198",
+      "lab/retained_prediction_checks.py": "7329fc11d1efece8678c8f0b2e900312fe8e924170c4302888d86f89d2c8e411",
+      "lab/future_evidence.py": "aefdc3785fcdfec86d13fff9a8d8dcd902bc2c49a3e13ab596d11af17897fe8e",
+      "lab/future_evidence_analysis.py": "d91ca9fc6d5a93058beb7dffe70bd4b70854efececb86bd72f22ea55d5f5cab5"
+    },
+    "command": "timeout --signal=TERM --kill-after=5s 240s env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python lab/retained_prediction.py"
+  },
+  "limits": [
+    "One reused life, overlapping and selected units; no independent-unit confidence intervals.",
+    "Reference is the native surviving stream at the last actual prediction, completed with 1/2 when silent, not the whole brain.",
+    "Retained readout assumes a stationary Bernoulli probability with Beta(1/2,1/2) prior; not a true-world bound.",
+    "Pairwise mixture gives each candidate its own supplied half prior; not a combined allocator or a free prior over all candidates.",
+    "No cap, displacement, action changes, ancestor storage, physical energy or communication savings are simulated.",
+    "Overlapping sums are descriptions of candidate-lesson pairs, not independent learned bits or brain-wide gain."
+  ],
+  "wall_s": 5.011435390000088
+}

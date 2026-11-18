@@ -1,0 +1,10 @@
+VALIDATION {"initial_units": 2042, "writes": 24799, "predictions": 5883, "accepted_tastes": 163, "learns": 27384, "births": 10236, "removals": 9236, "one_tally_removals": 5369, "tidy_removals_before_index_increment": 63, "native_speaking_records_exact": 10371, "final_units": 3042, "expected_counts_matched": {"births": 10236, "removals": 9236, "initial_units": 2042, "final_units": 3042, "predictions": 5883, "learns": 27384, "accepted_tastes": 163}, "parents_living_at_every_birth": true, "spans_add": true, "no_orphan_at_any_learn_or_end": true}
+| family | births | births using a grown parent not yet spoken | births using a one-tally grown parent | distinct grown parents | median / max child span |
+|---|---:|---:|---:|---:|---:|
+| all | 10236 | 57 | 638 | 3308 | 4.0 / 48.0 |
+| event | 760 | 57 | 45 | 283 | 6.0 / 48.0 |
+| clock | 3774 | 0 | 108 | 1507 | 4.0 / 23.0 |
+| integrator | 5253 | 0 | 468 | 1465 | 3.0 / 48.0 |
+| rhythm | 449 | 0 | 17 | 53 | 2.0 / 5.0 |
+SUMMARY {"births": 10236, "births_using_grown_parent_not_yet_spoken": 57, "births_using_one_tally_grown_parent": 638, "births_using_grown_parent_with_two_plus_tallies": 7146, "births_with_fixed_parents_only": 2833, "births_with_repeated_parent": 1495, "parent_appearances": {"fixed": 9833, "grown": 10639, "grown_not_yet_spoken": 57, "grown_one_tally": 638, "grown_one_tally_and_not_yet_spoken": 45, "grown_two_plus_tallies": 10001, "total": 20472}, "unique_parents": {"fixed": 882, "grown": 3308, "grown_not_yet_spoken": 43, "grown_one_tally": 566, "grown_two_plus_tallies": 2912}, "distinct_grown_parents": 3308, "weak_unique_parents": 569, "weak_parent_direct_children": {"n": 569, "minimum": 1.0, "median": 1.0, "q90": 6.0, "maximum": 38.0, "total": 1479.0}, "weak_parent_descendants": {"n": 569, "minimum": 1.0, "median": 1.0, "q90": 10.0, "maximum": 116.0, "total": 2742.0}, "weak_parent_descendant_spans": {"n": 2742, "minimum": 3.0, "median": 6.0, "q90": 11.0, "maximum": 41.0, "total": 18354.0}, "child_span": {"n": 10236, "minimum": 2.0, "median": 4.0, "q90": 9.0, "maximum": 48.0, "total": 50964.0}}
+wall_s 4.132654059998458

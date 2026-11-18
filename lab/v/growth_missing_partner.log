@@ -1,0 +1,19 @@
+VALIDATION {"initial_units": 2042, "writes": 24799, "predictions": 5883, "accepted_tastes": 163, "learns": 27384, "births": 10236, "removals": 9236, "one_tally_removals": 5369, "tidy_removals_before_index_increment": 63, "native_speaking_records_exact": 10371, "final_units": 3042, "deleted_one_tally_candidates": 5369, "actual_births_matching_reconstructed_trigger": 10236, "triggering_calls": 13729}
+FULL REMAINING LIFE
+| family | eligible native contradiction calls | calls with a qualifying deleted parent | unique potential child words | absent from living memory (≥1 occurrence) | also lacking a living equivalent parent | extra deleted ancestors, median / max |
+|---|---:|---:|---:|---:|---:|---:|
+| all | 13729 | 8015 | 5798 | 5798 | 4874 | 1.0 / 14.0 |
+| event | 1017 | 668 | 495 | 495 | 442 | 1.0 / 12.0 |
+| clock | 5521 | 2957 | 1929 | 1929 | 1644 | 0.0 / 9.0 |
+| integrator | 6611 | 4305 | 3308 | 3308 | 2732 | 1.0 / 14.0 |
+| rhythm | 580 | 85 | 66 | 66 | 56 | 0.0 / 2.0 |
+100 s HORIZON, DELETIONS BY 200 s
+| family | eligible native contradiction calls | calls with a qualifying deleted parent | unique potential child words | absent from living memory (≥1 occurrence) | also lacking a living equivalent parent | extra deleted ancestors, median / max |
+|---|---:|---:|---:|---:|---:|---:|
+| all | 13729 | 5853 | 3705 | 3705 | 3055 | 1.0 / 11.0 |
+| event | 1017 | 570 | 334 | 334 | 302 | 1.0 / 8.0 |
+| clock | 5521 | 1891 | 1131 | 1131 | 955 | 0.0 / 5.0 |
+| integrator | 6611 | 3392 | 2240 | 2240 | 1798 | 1.0 / 11.0 |
+| rhythm | 580 | 0 | 0 | 0 | 0 | - / - |
+SUMMARY {"eligible_native_contradiction_calls": 13729, "calls_with_any_qualifying_deleted_parent": 8015, "raw_candidate_associations": 27677, "unique_stream_taste_words": 17385, "unique_potential_child_words": 5798, "unique_words_absent_from_living_memory_at_some_occurrence": 5798, "unique_words_absent_at_every_occurrence": 5798, "stream_taste_words_absent": 17385, "stream_taste_words_absent_and_no_living_equivalent_parent": 14348, "unique_words_absent_and_no_living_equivalent_parent_at_some_occurrence": 4874, "deleted_candidates_ever_qualifying": 3562, "deleted_candidates": 5369, "additional_dead_ancestors_per_stream_taste_word": {"n": 17385, "minimum": 0.0, "median": 1.0, "q90": 4.0, "maximum": 14.0, "total": 26176.0}, "additional_dead_ancestors_absent_no_equivalent": {"n": 14348, "minimum": 0.0, "median": 1.0, "q90": 5.0, "maximum": 14.0, "total": 25373.0}, "stream_taste_words_needing_no_extra_ancestor": 7604}
+wall_s 4.729936653995537

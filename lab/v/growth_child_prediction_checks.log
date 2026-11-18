@@ -1,0 +1,11 @@
+{
+  "success": true,
+  "checks": [
+    "two predictions at the same time: the later call position (15) is used, not 14",
+    "issued speaker deleted during the following taste is still scored with its issued probability",
+    "child 3 spoke at seq 8, but the last prediction before taste 2 is seq 10 (speaker fixed): not scored",
+    "changing the outcome leaves the preceding probabilities unchanged; only the score changes",
+    "zero-opportunity children kept in denominators, separate from numerical equalities"
+  ],
+  "simulated_steps": 0
+}

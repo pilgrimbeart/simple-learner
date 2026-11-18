@@ -1,0 +1,75 @@
+{
+  "raw_sha256": "15fd71db4770f82b5aed7d7437e3b7f234f28802d40a3781cd665dcce186e833",
+  "script_sha256": "4694eabe532d0cdb4b3b45db90048ab5d8814545f3cb253ae2089d53b77a5828",
+  "lives": [
+    {
+      "rule": "none",
+      "first": "red",
+      "accepted": 184,
+      "non_event_delta_bits": -5.57826394873655,
+      "reconstruction_max_error": 2.1094237467877974e-15,
+      "taste_minus_issued_time_s": [
+        0.0005939208004832608,
+        0.1621595721941418
+      ],
+      "issued_after_taste_clock": 0,
+      "simultaneous_minus_scored_bits": {
+        "signed": 0.00016526940427626785,
+        "absolute": 0.008944544873180742,
+        "maximum_absolute": 0.002602374779764549
+      }
+    },
+    {
+      "rule": "none",
+      "first": "blue",
+      "accepted": 187,
+      "non_event_delta_bits": -5.992139613080293,
+      "reconstruction_max_error": 2.4424906541753444e-15,
+      "taste_minus_issued_time_s": [
+        6.13565621847556e-05,
+        0.19367178912246175
+      ],
+      "issued_after_taste_clock": 0,
+      "simultaneous_minus_scored_bits": {
+        "signed": -0.001048207025126091,
+        "absolute": 0.0010926158212143655,
+        "maximum_absolute": 0.00036153759475844593
+      }
+    },
+    {
+      "rule": "W",
+      "first": "red",
+      "accepted": 163,
+      "non_event_delta_bits": -5.526502918642299,
+      "reconstruction_max_error": 2.9976021664879227e-15,
+      "taste_minus_issued_time_s": [
+        0.0005939208004832608,
+        0.1171324641888063
+      ],
+      "issued_after_taste_clock": 0,
+      "simultaneous_minus_scored_bits": {
+        "signed": 0.0101375789068502,
+        "absolute": 0.31571875343953726,
+        "maximum_absolute": 0.025230817759145374
+      }
+    },
+    {
+      "rule": "W",
+      "first": "blue",
+      "accepted": 176,
+      "non_event_delta_bits": -5.859470891616522,
+      "reconstruction_max_error": 2.9976021664879227e-15,
+      "taste_minus_issued_time_s": [
+        0.00048697495427063586,
+        0.158230352068216
+      ],
+      "issued_after_taste_clock": 0,
+      "simultaneous_minus_scored_bits": {
+        "signed": 0.05420385538113163,
+        "absolute": 0.23090563988589993,
+        "maximum_absolute": 0.02241721799216334
+      }
+    }
+  ]
+}
+PASS: independent mixture and leave-out arithmetic agrees with the observer summary

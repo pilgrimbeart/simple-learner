@@ -1,0 +1,19 @@
+VALIDATED none red {'errors': {'prediction_weights': 1.1368683772161603e-13, 'taste_weights': 1.1368683772161603e-13, 'probability': 1.9984014443252818e-15, 'per_taste_bits': 7.202571872255703e-15, 'cumulative_bits': 1.4210854715202004e-14, 'final_weights': 8.526512829121202e-14, 'final_saved': 1.4210854715202004e-14, 'result_total_bits': 1.4210854715202004e-14}, 'predictions': 5700, 'tastes': 206, 'accepted': 184, 'replayed_bits': 105.31573122393061, 'recorded_bits': 105.3157312239306, 'final_mass': 168.99999999999972}
+VALIDATED none blue {'errors': {'prediction_weights': 2.2737367544323206e-13, 'taste_weights': 2.2737367544323206e-13, 'probability': 2.55351295663786e-15, 'per_taste_bits': 7.022160630754115e-15, 'cumulative_bits': 3.552713678800501e-15, 'final_weights': 1.1368683772161603e-13, 'final_saved': 1.4210854715202004e-14, 'result_total_bits': 0.0}, 'predictions': 5722, 'tastes': 218, 'accepted': 187, 'replayed_bits': 111.35967551267017, 'recorded_bits': 111.35967551267017, 'final_mass': 169.0000000000003}
+VALIDATED W red {'errors': {'prediction_weights': 2.2737367544323206e-13, 'taste_weights': 2.2737367544323206e-13, 'probability': 2.7755575615628914e-15, 'per_taste_bits': 6.994405055138486e-15, 'cumulative_bits': 7.105427357601002e-15, 'final_weights': 2.7755575615628914e-17, 'final_saved': 1.0658141036401503e-14, 'result_total_bits': 0.0}, 'predictions': 5920, 'tastes': 193, 'accepted': 163, 'replayed_bits': 115.65721183611493, 'recorded_bits': 115.65721183611493, 'final_mass': 169.00000000000003}
+VALIDATED W blue {'errors': {'prediction_weights': 5.684341886080802e-14, 'taste_weights': 5.684341886080802e-14, 'probability': 2.9976021664879227e-15, 'per_taste_bits': 6.994405055138486e-15, 'cumulative_bits': 1.4210854715202004e-14, 'final_weights': 1.1102230246251565e-16, 'final_saved': 1.4210854715202004e-14, 'result_total_bits': 0.0}, 'predictions': 5705, 'tastes': 208, 'accepted': 176, 'replayed_bits': 108.42895589900616, 'recorded_bits': 108.42895589900614, 'final_mass': 168.99999999999977}
+wall_s 1.381467181025073
+Traceback (most recent call last):
+  File "/home/pilgrim/git/simple-learner/lab/scoring_order_replay.py", line 257, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/pilgrim/git/simple-learner/lab/scoring_order_replay.py", line 245, in main
+    result=corrected(life,w,s)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/pilgrim/git/simple-learner/lab/scoring_order_replay.py", line 208, in corrected
+    windows.append(dict(window=[lo,hi],predictions=summarize(pp),all_tastes=summarize(tt),accepted_tastes=summarize(aa)))
+                                                                            ^^^^^^^^^^^^^
+  File "/home/pilgrim/git/simple-learner/lab/scoring_order_replay.py", line 168, in summarize
+    losses=[r['dloss'] for r in records]
+            ~^^^^^^^^^
+KeyError: 'dloss'

@@ -1,0 +1,750 @@
+{
+  "failures": [],
+  "provenance": {
+    "raw_sha256": "d74474476cf6e0fea81ea4a08677eb3d058ee7411f330a553b9c728462af58d9",
+    "raw_path": "/home/pilgrim/git/simple-learner/lab/v/future_evidence.pkl",
+    "analysis_source_sha256": "d91ca9fc6d5a93058beb7dffe70bd4b70854efececb86bd72f22ea55d5f5cab5",
+    "command": "timeout --signal=TERM --kill-after=5s 240s env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python lab/future_evidence_analysis.py"
+  },
+  "validation": {
+    "native_learn_contexts": 27384,
+    "native_living_unit_evaluations": 477568,
+    "native_history_writes": 24799,
+    "all_firing_sets_exact": true,
+    "recursive_and_word_models_exact": true
+  },
+  "full_remaining_life": {
+    "removed_units": 5369,
+    "distinct_definitions": 3598,
+    "same_taste_birth": 923,
+    "survived_any_prediction": 4446,
+    "actually_spoke": 4234,
+    "no_later_accepted_lesson": 56,
+    "any_later_firing": 3653,
+    "no_later_firing": 1716,
+    "future_lessons": 352746,
+    "future_firings": 38270,
+    "label_consistent_firings": 19474,
+    "firings_with_exact_living_equivalent": 9087,
+    "any_firing_without_exact_living_equivalent": 3639,
+    "unchanged_context_firings": 3266,
+    "changed_index_firings": 35004,
+    "new_history_firings": 35004,
+    "distinct_firing_contexts": 28224,
+    "first_firing_delay_s": {
+      "n": 3653,
+      "minimum": 0.008631693055647816,
+      "median": 11.30759087398738,
+      "q90": 74.13502745551601,
+      "maximum": 225.03503198646604
+    },
+    "remaining_life_s": {
+      "n": 5369,
+      "minimum": 2.649556858892481,
+      "median": 116.55060983352698,
+      "q90": 226.11913856493896,
+      "maximum": 247.93998175253478
+    },
+    "same_taste_remaining_firings": 442,
+    "closure_grown_units": {
+      "n": 5369,
+      "minimum": 1.0,
+      "median": 2.0,
+      "q90": 6.0,
+      "maximum": 17.0
+    },
+    "extra_dead_ancestors_on_later_firing": {
+      "n": 3653,
+      "minimum": 0.0,
+      "median": 0.0,
+      "q90": 2.0,
+      "maximum": 14.0
+    },
+    "horizon_100s": {
+      "eligible_units": 3035,
+      "no_accepted_lesson": 0,
+      "units_with_firing": 2150,
+      "units_without_firing": 885,
+      "future_lessons": 163761,
+      "firings": 18024,
+      "firings_with_exact_living_equivalent": 4099
+    }
+  },
+  "by_churn": {
+    "False": {
+      "removed_units": 4446,
+      "distinct_definitions": 3136,
+      "same_taste_birth": 0,
+      "survived_any_prediction": 4446,
+      "actually_spoke": 4234,
+      "no_later_accepted_lesson": 45,
+      "any_later_firing": 2832,
+      "no_later_firing": 1614,
+      "future_lessons": 294018,
+      "future_firings": 24691,
+      "label_consistent_firings": 12510,
+      "firings_with_exact_living_equivalent": 5525,
+      "any_firing_without_exact_living_equivalent": 2818,
+      "unchanged_context_firings": 669,
+      "changed_index_firings": 24022,
+      "new_history_firings": 24022,
+      "distinct_firing_contexts": 21237,
+      "first_firing_delay_s": {
+        "n": 2832,
+        "minimum": 0.008631693055647816,
+        "median": 17.267910485996744,
+        "q90": 84.61859269773825,
+        "maximum": 225.03503198646604
+      },
+      "remaining_life_s": {
+        "n": 4446,
+        "minimum": 2.649556858892481,
+        "median": 116.55060983352698,
+        "q90": 229.95939605337304,
+        "maximum": 247.93998175253478
+      },
+      "same_taste_remaining_firings": 442,
+      "closure_grown_units": {
+        "n": 4446,
+        "minimum": 1.0,
+        "median": 2.0,
+        "q90": 6.0,
+        "maximum": 17.0
+      },
+      "extra_dead_ancestors_on_later_firing": {
+        "n": 2832,
+        "minimum": 0.0,
+        "median": 0.0,
+        "q90": 2.0,
+        "maximum": 14.0
+      },
+      "horizon_100s": {
+        "eligible_units": 2535,
+        "no_accepted_lesson": 0,
+        "units_with_firing": 1700,
+        "units_without_firing": 835,
+        "future_lessons": 136893,
+        "firings": 11827,
+        "firings_with_exact_living_equivalent": 2536
+      }
+    },
+    "True": {
+      "removed_units": 923,
+      "distinct_definitions": 727,
+      "same_taste_birth": 923,
+      "survived_any_prediction": 0,
+      "actually_spoke": 0,
+      "no_later_accepted_lesson": 11,
+      "any_later_firing": 821,
+      "no_later_firing": 102,
+      "future_lessons": 58728,
+      "future_firings": 13579,
+      "label_consistent_firings": 6964,
+      "firings_with_exact_living_equivalent": 3562,
+      "any_firing_without_exact_living_equivalent": 821,
+      "unchanged_context_firings": 2597,
+      "changed_index_firings": 10982,
+      "new_history_firings": 10982,
+      "distinct_firing_contexts": 6987,
+      "first_firing_delay_s": {
+        "n": 821,
+        "minimum": 0.008631693055647816,
+        "median": 1.3201556398525156,
+        "q90": 22.749337535335997,
+        "maximum": 179.79811541871717
+      },
+      "remaining_life_s": {
+        "n": 923,
+        "minimum": 2.649556858892481,
+        "median": 108.98082509894846,
+        "q90": 217.44390410524232,
+        "maximum": 247.93998175253478
+      },
+      "same_taste_remaining_firings": 0,
+      "closure_grown_units": {
+        "n": 923,
+        "minimum": 1.0,
+        "median": 3.0,
+        "q90": 6.0,
+        "maximum": 15.0
+      },
+      "extra_dead_ancestors_on_later_firing": {
+        "n": 821,
+        "minimum": 0.0,
+        "median": 0.0,
+        "q90": 3.0,
+        "maximum": 14.0
+      },
+      "horizon_100s": {
+        "eligible_units": 500,
+        "no_accepted_lesson": 0,
+        "units_with_firing": 450,
+        "units_without_firing": 50,
+        "future_lessons": 26868,
+        "firings": 6197,
+        "firings_with_exact_living_equivalent": 1563
+      }
+    }
+  },
+  "by_family": {
+    "event": {
+      "removed_units": 354,
+      "distinct_definitions": 252,
+      "same_taste_birth": 125,
+      "survived_any_prediction": 229,
+      "actually_spoke": 17,
+      "no_later_accepted_lesson": 4,
+      "any_later_firing": 253,
+      "no_later_firing": 101,
+      "future_lessons": 23305,
+      "future_firings": 4856,
+      "label_consistent_firings": 2492,
+      "firings_with_exact_living_equivalent": 1011,
+      "any_firing_without_exact_living_equivalent": 253,
+      "unchanged_context_firings": 188,
+      "changed_index_firings": 4668,
+      "new_history_firings": 4668,
+      "distinct_firing_contexts": 2772,
+      "first_firing_delay_s": {
+        "n": 253,
+        "minimum": 0.008631693055647816,
+        "median": 8.65638095339969,
+        "q90": 65.9975068189128,
+        "maximum": 190.21501859513066
+      },
+      "remaining_life_s": {
+        "n": 354,
+        "minimum": 2.649556858892481,
+        "median": 108.98082509894846,
+        "q90": 217.3352108872378,
+        "maximum": 247.93998175253478
+      },
+      "same_taste_remaining_firings": 3,
+      "closure_grown_units": {
+        "n": 354,
+        "minimum": 1.0,
+        "median": 4.0,
+        "q90": 8.0,
+        "maximum": 15.0
+      },
+      "extra_dead_ancestors_on_later_firing": {
+        "n": 253,
+        "minimum": 0.0,
+        "median": 1.0,
+        "q90": 3.0,
+        "maximum": 12.0
+      },
+      "horizon_100s": {
+        "eligible_units": 206,
+        "no_accepted_lesson": 0,
+        "units_with_firing": 149,
+        "units_without_firing": 57,
+        "future_lessons": 11177,
+        "firings": 2280,
+        "firings_with_exact_living_equivalent": 457
+      }
+    },
+    "clock": {
+      "removed_units": 1276,
+      "distinct_definitions": 924,
+      "same_taste_birth": 574,
+      "survived_any_prediction": 702,
+      "actually_spoke": 702,
+      "no_later_accepted_lesson": 8,
+      "any_later_firing": 925,
+      "no_later_firing": 351,
+      "future_lessons": 83450,
+      "future_firings": 10163,
+      "label_consistent_firings": 5151,
+      "firings_with_exact_living_equivalent": 3593,
+      "any_firing_without_exact_living_equivalent": 917,
+      "unchanged_context_firings": 3073,
+      "changed_index_firings": 7090,
+      "new_history_firings": 7090,
+      "distinct_firing_contexts": 2212,
+      "first_firing_delay_s": {
+        "n": 925,
+        "minimum": 0.008631693055647816,
+        "median": 1.547437046839704,
+        "q90": 45.63726045323656,
+        "maximum": 195.2509446704913
+      },
+      "remaining_life_s": {
+        "n": 1276,
+        "minimum": 2.649556858892481,
+        "median": 116.55060983352698,
+        "q90": 220.92270786909364,
+        "maximum": 247.93998175253478
+      },
+      "same_taste_remaining_firings": 178,
+      "closure_grown_units": {
+        "n": 1276,
+        "minimum": 1.0,
+        "median": 3.0,
+        "q90": 6.0,
+        "maximum": 15.0
+      },
+      "extra_dead_ancestors_on_later_firing": {
+        "n": 925,
+        "minimum": 0.0,
+        "median": 0.0,
+        "q90": 2.0,
+        "maximum": 9.0
+      },
+      "horizon_100s": {
+        "eligible_units": 705,
+        "no_accepted_lesson": 0,
+        "units_with_firing": 511,
+        "units_without_firing": 194,
+        "future_lessons": 37872,
+        "firings": 4303,
+        "firings_with_exact_living_equivalent": 1492
+      }
+    },
+    "integrator": {
+      "removed_units": 3416,
+      "distinct_definitions": 2161,
+      "same_taste_birth": 215,
+      "survived_any_prediction": 3201,
+      "actually_spoke": 3201,
+      "no_later_accepted_lesson": 23,
+      "any_later_firing": 2360,
+      "no_later_firing": 1056,
+      "future_lessons": 242189,
+      "future_firings": 23097,
+      "label_consistent_firings": 11737,
+      "firings_with_exact_living_equivalent": 4478,
+      "any_firing_without_exact_living_equivalent": 2354,
+      "unchanged_context_firings": 0,
+      "changed_index_firings": 23097,
+      "new_history_firings": 23097,
+      "distinct_firing_contexts": 23097,
+      "first_firing_delay_s": {
+        "n": 2360,
+        "minimum": 0.008631693055647816,
+        "median": 16.836967557129114,
+        "q90": 83.40217097196629,
+        "maximum": 225.03503198646604
+      },
+      "remaining_life_s": {
+        "n": 3416,
+        "minimum": 2.649556858892481,
+        "median": 125.40333107399928,
+        "q90": 230.39940607922657,
+        "maximum": 247.93998175253478
+      },
+      "same_taste_remaining_firings": 243,
+      "closure_grown_units": {
+        "n": 3416,
+        "minimum": 1.0,
+        "median": 2.0,
+        "q90": 5.0,
+        "maximum": 17.0
+      },
+      "extra_dead_ancestors_on_later_firing": {
+        "n": 2360,
+        "minimum": 0.0,
+        "median": 0.0,
+        "q90": 2.0,
+        "maximum": 14.0
+      },
+      "horizon_100s": {
+        "eligible_units": 2124,
+        "no_accepted_lesson": 0,
+        "units_with_firing": 1490,
+        "units_without_firing": 634,
+        "future_lessons": 114712,
+        "firings": 11441,
+        "firings_with_exact_living_equivalent": 2150
+      }
+    },
+    "rhythm": {
+      "removed_units": 323,
+      "distinct_definitions": 261,
+      "same_taste_birth": 9,
+      "survived_any_prediction": 314,
+      "actually_spoke": 314,
+      "no_later_accepted_lesson": 21,
+      "any_later_firing": 115,
+      "no_later_firing": 208,
+      "future_lessons": 3802,
+      "future_firings": 154,
+      "label_consistent_firings": 94,
+      "firings_with_exact_living_equivalent": 5,
+      "any_firing_without_exact_living_equivalent": 115,
+      "unchanged_context_firings": 5,
+      "changed_index_firings": 149,
+      "new_history_firings": 149,
+      "distinct_firing_contexts": 143,
+      "first_firing_delay_s": {
+        "n": 115,
+        "minimum": 0.3828527411677669,
+        "median": 13.88294920548799,
+        "q90": 32.791975999246404,
+        "maximum": 48.52442916665015
+      },
+      "remaining_life_s": {
+        "n": 323,
+        "minimum": 2.649556858892481,
+        "median": 18.052360592464368,
+        "q90": 47.86809882368783,
+        "maximum": 57.99659196517396
+      },
+      "same_taste_remaining_firings": 18,
+      "closure_grown_units": {
+        "n": 323,
+        "minimum": 1.0,
+        "median": 1.0,
+        "q90": 2.0,
+        "maximum": 4.0
+      },
+      "extra_dead_ancestors_on_later_firing": {
+        "n": 115,
+        "minimum": 0.0,
+        "median": 0.0,
+        "q90": 0.6000000000000085,
+        "maximum": 1.0
+      },
+      "horizon_100s": {
+        "eligible_units": 0,
+        "no_accepted_lesson": 0,
+        "units_with_firing": 0,
+        "units_without_firing": 0,
+        "future_lessons": 0,
+        "firings": 0,
+        "firings_with_exact_living_equivalent": 0
+      }
+    }
+  },
+  "by_remaining_time": {
+    "0-30s": {
+      "removed_units": 861,
+      "distinct_definitions": 751,
+      "same_taste_birth": 157,
+      "survived_any_prediction": 704,
+      "actually_spoke": 670,
+      "no_later_accepted_lesson": 56,
+      "any_later_firing": 353,
+      "no_later_firing": 508,
+      "future_lessons": 7562,
+      "future_firings": 1285,
+      "label_consistent_firings": 665,
+      "firings_with_exact_living_equivalent": 309,
+      "any_firing_without_exact_living_equivalent": 347,
+      "unchanged_context_firings": 379,
+      "changed_index_firings": 906,
+      "new_history_firings": 906,
+      "distinct_firing_contexts": 799,
+      "first_firing_delay_s": {
+        "n": 353,
+        "minimum": 0.17716333476698765,
+        "median": 3.1794643930009556,
+        "q90": 17.236562985874816,
+        "maximum": 26.71977136742163
+      },
+      "remaining_life_s": {
+        "n": 861,
+        "minimum": 2.649556858892481,
+        "median": 16.53250606438047,
+        "q90": 28.986475485146343,
+        "maximum": 29.36932822631411
+      },
+      "same_taste_remaining_firings": 71,
+      "closure_grown_units": {
+        "n": 861,
+        "minimum": 1.0,
+        "median": 2.0,
+        "q90": 5.0,
+        "maximum": 17.0
+      },
+      "extra_dead_ancestors_on_later_firing": {
+        "n": 353,
+        "minimum": 0.0,
+        "median": 0.0,
+        "q90": 1.0,
+        "maximum": 4.0
+      },
+      "horizon_100s": {
+        "eligible_units": 0,
+        "no_accepted_lesson": 0,
+        "units_with_firing": 0,
+        "units_without_firing": 0,
+        "future_lessons": 0,
+        "firings": 0,
+        "firings_with_exact_living_equivalent": 0
+      }
+    },
+    "30-100s": {
+      "removed_units": 1473,
+      "distinct_definitions": 1185,
+      "same_taste_birth": 266,
+      "survived_any_prediction": 1207,
+      "actually_spoke": 1152,
+      "no_later_accepted_lesson": 0,
+      "any_later_firing": 937,
+      "no_later_firing": 536,
+      "future_lessons": 52320,
+      "future_firings": 6758,
+      "label_consistent_firings": 3403,
+      "firings_with_exact_living_equivalent": 1686,
+      "any_firing_without_exact_living_equivalent": 935,
+      "unchanged_context_firings": 1222,
+      "changed_index_firings": 5536,
+      "new_history_firings": 5536,
+      "distinct_firing_contexts": 4584,
+      "first_firing_delay_s": {
+        "n": 937,
+        "minimum": 0.047137869207858785,
+        "median": 8.395681605375103,
+        "q90": 38.41657733474142,
+        "maximum": 93.86725083218928
+      },
+      "remaining_life_s": {
+        "n": 1473,
+        "minimum": 35.47458086812401,
+        "median": 56.98295914352289,
+        "q90": 88.14910559341715,
+        "maximum": 98.09884709548214
+      },
+      "same_taste_remaining_firings": 125,
+      "closure_grown_units": {
+        "n": 1473,
+        "minimum": 1.0,
+        "median": 2.0,
+        "q90": 5.0,
+        "maximum": 17.0
+      },
+      "extra_dead_ancestors_on_later_firing": {
+        "n": 937,
+        "minimum": 0.0,
+        "median": 0.0,
+        "q90": 1.0,
+        "maximum": 9.0
+      },
+      "horizon_100s": {
+        "eligible_units": 0,
+        "no_accepted_lesson": 0,
+        "units_with_firing": 0,
+        "units_without_firing": 0,
+        "future_lessons": 0,
+        "firings": 0,
+        "firings_with_exact_living_equivalent": 0
+      }
+    },
+    "100-200s": {
+      "removed_units": 2124,
+      "distinct_definitions": 1650,
+      "same_taste_birth": 362,
+      "survived_any_prediction": 1762,
+      "actually_spoke": 1671,
+      "no_later_accepted_lesson": 0,
+      "any_later_firing": 1665,
+      "no_later_firing": 459,
+      "future_lessons": 178313,
+      "future_firings": 21719,
+      "label_consistent_firings": 11041,
+      "firings_with_exact_living_equivalent": 5240,
+      "any_firing_without_exact_living_equivalent": 1659,
+      "unchanged_context_firings": 1336,
+      "changed_index_firings": 20383,
+      "new_history_firings": 20383,
+      "distinct_firing_contexts": 16723,
+      "first_firing_delay_s": {
+        "n": 1665,
+        "minimum": 0.14688270268413817,
+        "median": 15.84850955701782,
+        "q90": 84.56731663785432,
+        "maximum": 186.09292015122318
+      },
+      "remaining_life_s": {
+        "n": 2124,
+        "minimum": 100.49541690642513,
+        "median": 150.57582163512424,
+        "q90": 193.14864355293886,
+        "maximum": 199.50955642937822
+      },
+      "same_taste_remaining_firings": 195,
+      "closure_grown_units": {
+        "n": 2124,
+        "minimum": 1.0,
+        "median": 3.0,
+        "q90": 6.0,
+        "maximum": 15.0
+      },
+      "extra_dead_ancestors_on_later_firing": {
+        "n": 1665,
+        "minimum": 0.0,
+        "median": 0.0,
+        "q90": 2.0,
+        "maximum": 14.0
+      },
+      "horizon_100s": {
+        "eligible_units": 2124,
+        "no_accepted_lesson": 0,
+        "units_with_firing": 1549,
+        "units_without_firing": 575,
+        "future_lessons": 115618,
+        "firings": 14154,
+        "firings_with_exact_living_equivalent": 3314
+      }
+    },
+    "200-301s": {
+      "removed_units": 911,
+      "distinct_definitions": 801,
+      "same_taste_birth": 138,
+      "survived_any_prediction": 773,
+      "actually_spoke": 741,
+      "no_later_accepted_lesson": 0,
+      "any_later_firing": 698,
+      "no_later_firing": 213,
+      "future_lessons": 114551,
+      "future_firings": 8508,
+      "label_consistent_firings": 4365,
+      "firings_with_exact_living_equivalent": 1852,
+      "any_firing_without_exact_living_equivalent": 698,
+      "unchanged_context_firings": 329,
+      "changed_index_firings": 8179,
+      "new_history_firings": 8179,
+      "distinct_firing_contexts": 6118,
+      "first_firing_delay_s": {
+        "n": 698,
+        "minimum": 0.008631693055647816,
+        "median": 21.07241839755477,
+        "q90": 129.1074683746232,
+        "maximum": 225.03503198646604
+      },
+      "remaining_life_s": {
+        "n": 911,
+        "minimum": 201.57641242981427,
+        "median": 234.4385288699437,
+        "q90": 247.07330917470904,
+        "maximum": 247.93998175253478
+      },
+      "same_taste_remaining_firings": 51,
+      "closure_grown_units": {
+        "n": 911,
+        "minimum": 1.0,
+        "median": 3.0,
+        "q90": 5.0,
+        "maximum": 12.0
+      },
+      "extra_dead_ancestors_on_later_firing": {
+        "n": 698,
+        "minimum": 0.0,
+        "median": 1.0,
+        "q90": 3.0,
+        "maximum": 11.0
+      },
+      "horizon_100s": {
+        "eligible_units": 911,
+        "no_accepted_lesson": 0,
+        "units_with_firing": 601,
+        "units_without_firing": 310,
+        "future_lessons": 48143,
+        "firings": 3870,
+        "firings_with_exact_living_equivalent": 785
+      }
+    }
+  },
+  "samples": [
+    {
+      "stream": 23,
+      "name": "clock13",
+      "family": "clock",
+      "k": 14,
+      "death_t": 52.060018247465216,
+      "death_seq": 9446,
+      "remaining_s": 247.93998175253478,
+      "span": 6,
+      "same_taste_birth": true,
+      "survived_prediction": false,
+      "actually_spoke": false,
+      "closure_grown_units": 5,
+      "future_lessons": 138,
+      "future_firings": 10,
+      "future_firings_label_consistent": 5,
+      "future_firings_with_equivalent": 0,
+      "unchanged_context_firings": 6,
+      "changed_index_firings": 4,
+      "new_history_firings": 4,
+      "first_delay_s": 0.5874583819471226,
+      "same_taste_remaining_firings": 0,
+      "eligible_100s": true,
+      "lessons_100s": 57,
+      "firings_100s": 6,
+      "firings_100s_with_equivalent": 0,
+      "first_100s_delay_s": 0.5874583819471226,
+      "max_extra_dead_ancestors_on_firing": 2,
+      "distinct_firing_contexts": 3
+    },
+    {
+      "stream": 36,
+      "name": "clock26",
+      "family": "clock",
+      "k": 12,
+      "death_t": 52.060018247465216,
+      "death_seq": 9449,
+      "remaining_s": 247.93998175253478,
+      "span": 9,
+      "same_taste_birth": false,
+      "survived_prediction": true,
+      "actually_spoke": true,
+      "closure_grown_units": 7,
+      "future_lessons": 138,
+      "future_firings": 3,
+      "future_firings_label_consistent": 2,
+      "future_firings_with_equivalent": 0,
+      "unchanged_context_firings": 0,
+      "changed_index_firings": 3,
+      "new_history_firings": 3,
+      "first_delay_s": 12.202836090160325,
+      "same_taste_remaining_firings": 0,
+      "eligible_100s": true,
+      "lessons_100s": 57,
+      "firings_100s": 3,
+      "firings_100s_with_equivalent": 0,
+      "first_100s_delay_s": 12.202836090160325,
+      "max_extra_dead_ancestors_on_firing": 2,
+      "distinct_firing_contexts": 1
+    },
+    {
+      "stream": 82,
+      "name": "lbe1t5",
+      "family": "integrator",
+      "k": 15,
+      "death_t": 52.060018247465216,
+      "death_seq": 9454,
+      "remaining_s": 247.93998175253478,
+      "span": 6,
+      "same_taste_birth": false,
+      "survived_prediction": true,
+      "actually_spoke": true,
+      "closure_grown_units": 3,
+      "future_lessons": 138,
+      "future_firings": 1,
+      "future_firings_label_consistent": 0,
+      "future_firings_with_equivalent": 0,
+      "unchanged_context_firings": 0,
+      "changed_index_firings": 1,
+      "new_history_firings": 1,
+      "first_delay_s": 1.6888561936727555,
+      "same_taste_remaining_firings": 0,
+      "eligible_100s": true,
+      "lessons_100s": 57,
+      "firings_100s": 1,
+      "firings_100s_with_equivalent": 0,
+      "first_100s_delay_s": 1.6888561936727555,
+      "max_extra_dead_ancestors_on_firing": 0,
+      "distinct_firing_contexts": 1
+    }
+  ],
+  "limits": [
+    "Exact frozen-history activation only; no hypothetical learning or influence on live actions.",
+    "Later accepted lessons exclude the same taste. Repeated unchanged contexts remain correlated evidence.",
+    "Equivalent words prove identical activation only, not identical prediction counts or unique utility.",
+    "Retention includes removed ancestor definitions; per-unit closure costs overlap and are not a matched-cap intervention.",
+    "No future firing by life end is censored, especially for late deletions;100s sensitivity includes only deletions by200s.",
+    "Label agreement is not information gain, an independence test or reward benefit."
+  ],
+  "wall_s": 1.0643769100000071
+}

@@ -1,0 +1,43 @@
+wall_s 1.3998687400016934
+Traceback (most recent call last):
+  File "/home/pilgrim/git/simple-learner/lab/issued_credit_checks.py", line 174, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/pilgrim/git/simple-learner/lab/issued_credit_checks.py", line 163, in main
+    out['checks']=run_checks()
+                  ^^^^^^^^^^^^
+  File "/home/pilgrim/git/simple-learner/lab/issued_credit_checks.py", line 80, in run_checks
+    assert lf.brain.best is n
+           ^^^^^^^^^^^^^^^^^^
+AssertionError
+PASS known_selector_update_and_sleepers
+PASS living_original_and_parents_once
+PASS deleted_original_wrong_replacement
+PASS deleted_original_correct_replacement
+PASS issued_abstention_cannot_gain_retrospective_credit
+PASS immutable_cached_forecast_and_update_before_next_prediction
+PASS sequential_earlier_learning_deletes_original
+PASS disabled_observer_exact_state_identity
+PASS accepted_without_prior_forecast_rejected
+wall_s 0.31747964408714324
+PASS known_selector_update_and_sleepers
+PASS living_original_and_parents_once
+PASS deleted_original_wrong_replacement
+PASS deleted_original_correct_replacement
+PASS issued_abstention_cannot_gain_retrospective_credit
+PASS immutable_cached_forecast_and_update_before_next_prediction
+PASS sequential_earlier_learning_deletes_original
+PASS disabled_observer_exact_state_identity
+PASS accepted_without_prior_forecast_rejected
+wall_s 0.8886286839842796
+PASS known_selector_update_and_sleepers
+PASS living_original_and_parents_once
+PASS deleted_original_wrong_replacement
+PASS deleted_original_correct_replacement
+PASS issued_abstention_cannot_gain_retrospective_credit
+PASS immutable_cached_forecast_and_update_before_next_prediction
+PASS sequential_earlier_learning_deletes_original
+PASS wrong_issued_forecast_correct_replacement_is_still_wrong
+PASS disabled_observer_exact_state_identity
+PASS accepted_without_prior_forecast_rejected
+wall_s 0.6444034989690408

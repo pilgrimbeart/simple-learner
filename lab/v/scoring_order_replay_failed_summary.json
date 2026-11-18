@@ -1,0 +1,124 @@
+{
+  "provenance": {
+    "revision": "d37dac6745d2657229861d6f9cee4239258367d3",
+    "dirty": " M ABSTRACT.md\n M PROGRAMME.md\n M QUESTIONS.md\n M README.md\n M discrete/NOTEBOOK.md\n?? lab/active_mixture_audit.py\n?? lab/active_mixture_review.py\n?? lab/alloc_review.py\n?? lab/scoring_order_replay.py\n?? lab/v/active_mixture_audit.json\n?? lab/v/active_mixture_audit.log\n?? lab/v/active_mixture_audit_report.md\n?? lab/v/active_mixture_review.json\n?? lab/v/active_mixture_review.log\n?? lab/v/alloc_review.json\n?? lab/v/alloc_review.log\n?? lab/v/d79_work_order.md\n?? lab/v/scoring_order_replay.log\n",
+    "inputs": {
+      "lab/v/active_mixture_audit.pkl": "15fd71db4770f82b5aed7d7437e3b7f234f28802d40a3781cd665dcce186e833",
+      "lab/v/alloc_dilution.json": "94eb2af60c5bb11c6d9bd29e16ab8f2ceb6c8ec33ca961cec60ee869af20b973"
+    },
+    "source_sha256": {
+      "lab/scoring_order_replay.py": "4eb09a9365632fd063a06a61462d6f021055a25ee67ac9b8b4120cd1399fba74",
+      "lab/grownet.py": "1a550553b1244368ed0ca6fa59cce3e94a9badd5e5d1e801953aa42974874f0f",
+      "lab/teach.py": "c377e37fbdeeafa5a155735ba58e4afa3acad97b14b10ce292478f5845ba6b5f",
+      "lab/active_mixture_audit.py": "2eed2ca2899a8c6d79387ab992f6ec0343de7b673adb13e602083043881999c4",
+      "lab/v/active_mixture_audit.json": "0b374bc75fbd7e6d704eb9d0d6d3d8b02a5087edcacc04f33e5aee9188b9b0d3"
+    },
+    "command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python lab/scoring_order_replay.py",
+    "environment": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    }
+  },
+  "checks": {
+    "hand_update": true,
+    "sleepers_unchanged": true,
+    "mass_conservation_BT1": true,
+    "null_forecast_difference": true
+  },
+  "tolerances": {
+    "weights_probabilities": 1e-10,
+    "bits": 1e-09,
+    "relative_pair_gap": 1e-12
+  },
+  "validation": [
+    {
+      "rule": "none",
+      "first": "red",
+      "errors": {
+        "prediction_weights": 1.1368683772161603e-13,
+        "taste_weights": 1.1368683772161603e-13,
+        "probability": 1.9984014443252818e-15,
+        "per_taste_bits": 7.202571872255703e-15,
+        "cumulative_bits": 1.4210854715202004e-14,
+        "final_weights": 8.526512829121202e-14,
+        "final_saved": 1.4210854715202004e-14,
+        "result_total_bits": 1.4210854715202004e-14
+      },
+      "predictions": 5700,
+      "tastes": 206,
+      "accepted": 184,
+      "replayed_bits": 105.31573122393061,
+      "recorded_bits": 105.3157312239306,
+      "final_mass": 168.99999999999972
+    },
+    {
+      "rule": "none",
+      "first": "blue",
+      "errors": {
+        "prediction_weights": 2.2737367544323206e-13,
+        "taste_weights": 2.2737367544323206e-13,
+        "probability": 2.55351295663786e-15,
+        "per_taste_bits": 7.022160630754115e-15,
+        "cumulative_bits": 3.552713678800501e-15,
+        "final_weights": 1.1368683772161603e-13,
+        "final_saved": 1.4210854715202004e-14,
+        "result_total_bits": 0.0
+      },
+      "predictions": 5722,
+      "tastes": 218,
+      "accepted": 187,
+      "replayed_bits": 111.35967551267017,
+      "recorded_bits": 111.35967551267017,
+      "final_mass": 169.0000000000003
+    },
+    {
+      "rule": "W",
+      "first": "red",
+      "errors": {
+        "prediction_weights": 2.2737367544323206e-13,
+        "taste_weights": 2.2737367544323206e-13,
+        "probability": 2.7755575615628914e-15,
+        "per_taste_bits": 6.994405055138486e-15,
+        "cumulative_bits": 7.105427357601002e-15,
+        "final_weights": 2.7755575615628914e-17,
+        "final_saved": 1.0658141036401503e-14,
+        "result_total_bits": 0.0
+      },
+      "predictions": 5920,
+      "tastes": 193,
+      "accepted": 163,
+      "replayed_bits": 115.65721183611493,
+      "recorded_bits": 115.65721183611493,
+      "final_mass": 169.00000000000003
+    },
+    {
+      "rule": "W",
+      "first": "blue",
+      "errors": {
+        "prediction_weights": 5.684341886080802e-14,
+        "taste_weights": 5.684341886080802e-14,
+        "probability": 2.9976021664879227e-15,
+        "per_taste_bits": 6.994405055138486e-15,
+        "cumulative_bits": 1.4210854715202004e-14,
+        "final_weights": 1.1102230246251565e-16,
+        "final_saved": 1.4210854715202004e-14,
+        "result_total_bits": 0.0
+      },
+      "predictions": 5705,
+      "tastes": 208,
+      "accepted": 176,
+      "replayed_bits": 108.42895589900616,
+      "recorded_bits": 108.42895589900614,
+      "final_mass": 168.99999999999977
+    }
+  ],
+  "lives": [],
+  "failures": [
+    {
+      "type": "KeyError",
+      "message": "'dloss'"
+    }
+  ],
+  "wall_s": 1.381467181025073
+}

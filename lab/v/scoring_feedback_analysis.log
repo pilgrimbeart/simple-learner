@@ -1,0 +1,90 @@
+{
+  "lives": [
+    {
+      "rule": "none",
+      "first": "red",
+      "fixed_history_choices": [],
+      "closed_loop_equal_time_prefix": {
+        "colour": {
+          "t": 147.39608677672854,
+          "original_probability": 0.2328948632707869,
+          "corrected_probability": 0.8160529876863927
+        },
+        "allocated_count": {
+          "t": 120.15866446338934,
+          "original": 3891,
+          "corrected": 3890
+        },
+        "prediction_schedule": {
+          "original_t": 148.11749999990155,
+          "corrected_t": 148.01499999990165
+        }
+      }
+    },
+    {
+      "rule": "none",
+      "first": "blue",
+      "fixed_history_choices": [],
+      "closed_loop_equal_time_prefix": {
+        "colour": null,
+        "allocated_count": null,
+        "prediction_schedule": null
+      }
+    },
+    {
+      "rule": "W",
+      "first": "red",
+      "fixed_history_choices": [
+        {
+          "t": 70.51499999997212,
+          "original": 0.5071984766835667,
+          "corrected": 0.4984397227207068
+        }
+      ],
+      "closed_loop_equal_time_prefix": {
+        "colour": {
+          "t": 78.51249999996485,
+          "original_probability": 0.48539760438022733,
+          "corrected_probability": 0.5122539596545432
+        },
+        "allocated_count": {
+          "t": 58.93749999998264,
+          "original": 3042,
+          "corrected": 3041
+        },
+        "prediction_schedule": {
+          "original_t": 82.20749999996148,
+          "corrected_t": 82.24749999996145
+        }
+      }
+    },
+    {
+      "rule": "W",
+      "first": "blue",
+      "fixed_history_choices": [
+        {
+          "t": 71.23999999997146,
+          "original": 0.49994855105730246,
+          "corrected": 0.5000550949981958
+        }
+      ],
+      "closed_loop_equal_time_prefix": {
+        "colour": {
+          "t": 71.26499999997144,
+          "original_probability": 0.5000849211894032,
+          "corrected_probability": 0.4999388098760317
+        },
+        "allocated_count": null,
+        "prediction_schedule": {
+          "original_t": 71.44499999997127,
+          "corrected_t": 71.54749999997118
+        }
+      }
+    }
+  ],
+  "sha256": {
+    "lab/v/active_mixture_audit.pkl": "15fd71db4770f82b5aed7d7437e3b7f234f28802d40a3781cd665dcce186e833",
+    "lab/v/scoring_feedback.pkl": "160ac0297676571b04e179a3d7bc6a86cafa64956403c2b6e4efc544d23d40e9"
+  },
+  "script_sha256": "576c5dff80965457b7082ff82cdc021769ec77bad3ac5f9b0bc70a1f693c63a5"
+}

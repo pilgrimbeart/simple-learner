@@ -1,0 +1,346 @@
+{
+  "success": true,
+  "checks": {
+    "initial_units": 2042,
+    "writes": 24799,
+    "predictions": 5883,
+    "accepted_tastes": 163,
+    "learns": 27384,
+    "births": 10236,
+    "removals": 9236,
+    "one_tally_removals": 5369,
+    "tidy_removals_before_index_increment": 63,
+    "native_speaking_records_exact": 10371,
+    "final_units": 3042,
+    "expected_counts_matched": {
+      "births": 10236,
+      "removals": 9236,
+      "initial_units": 2042,
+      "final_units": 3042,
+      "predictions": 5883,
+      "learns": 27384,
+      "accepted_tastes": 163
+    },
+    "parents_living_at_every_birth": true,
+    "spans_add": true,
+    "no_orphan_at_any_learn_or_end": true
+  },
+  "provenance": {
+    "revision": "d37dac6745d2657229861d6f9cee4239258367d3",
+    "dirty": " M ABSTRACT.md\n M PROGRAMME.md\n M QUESTIONS.md\n M README.md\n M discrete/NOTEBOOK.md\n?? lab/active_mixture_audit.py\n?? lab/active_mixture_review.py\n?? lab/alloc_review.py\n?? lab/allocation_trace.py\n?? lab/allocation_trace_analysis.py\n?? lab/allocation_trace_checks.py\n?? lab/future_evidence.py\n?? lab/future_evidence_analysis.py\n?? lab/future_evidence_checks.py\n?? lab/future_evidence_replay_checks.py\n?? lab/growth_parent_census.py\n?? lab/issued_credit.py\n?? lab/issued_credit_analysis.py\n?? lab/issued_credit_checks.py\n?? lab/issued_credit_compare.py\n?? lab/mixture_confidence.py\n?? lab/retained_mixture.py\n?? lab/retained_prediction.py\n?? lab/retained_prediction_checks.py\n?? lab/retained_prediction_diagnosis.py\n?? lab/retained_selection_reference.py\n?? lab/retained_uniform_control.py\n?? lab/scoring_feedback.py\n?? lab/scoring_feedback_analysis.py\n?? lab/scoring_order_replay.py\n?? lab/v/active_mixture_audit.json\n?? lab/v/active_mixture_audit.log\n?? lab/v/active_mixture_audit_report.md\n?? lab/v/active_mixture_review.json\n?? lab/v/active_mixture_review.log\n?? lab/v/alloc_review.json\n?? lab/v/alloc_review.log\n?? lab/v/allocation_trace.json\n?? lab/v/allocation_trace.log\n?? lab/v/allocation_trace_analysis.json\n?? lab/v/allocation_trace_analysis.log\n?? lab/v/allocation_trace_checks.json\n?? lab/v/allocation_trace_checks.log\n?? lab/v/d79_work_order.md\n?? lab/v/future_evidence.json\n?? lab/v/future_evidence.log\n?? lab/v/future_evidence_analysis.json\n?? lab/v/future_evidence_analysis.log\n?? lab/v/future_evidence_checks.json\n?? lab/v/future_evidence_checks.log\n?? lab/v/future_evidence_replay_checks.json\n?? lab/v/future_evidence_replay_checks.log\n?? lab/v/growth_parent_census.log\n?? lab/v/growth_parent_census_checks.json\n?? lab/v/growth_parent_census_checks.log\n?? lab/v/issued_credit_analysis.json\n?? lab/v/issued_credit_analysis.log\n?? lab/v/issued_credit_checks.json\n?? lab/v/issued_credit_checks.log\n?? lab/v/issued_credit_compare.json\n?? lab/v/issued_credit_compare.log\n?? lab/v/mixture_confidence.json\n?? lab/v/mixture_confidence.log\n?? lab/v/retained_mixture.json\n?? lab/v/retained_mixture.log\n?? lab/v/retained_mixture_analysis.json\n?? lab/v/retained_mixture_analysis.log\n?? lab/v/retained_mixture_checks.log\n?? lab/v/retained_prediction.json\n?? lab/v/retained_prediction.log\n?? lab/v/retained_prediction_checks.json\n?? lab/v/retained_prediction_checks.log\n?? lab/v/retained_prediction_diagnosis.json\n?? lab/v/retained_prediction_diagnosis.log\n?? lab/v/retained_prediction_failed_index.json\n?? lab/v/retained_prediction_failed_index.log\n?? lab/v/retained_selection_reference.json\n?? lab/v/retained_selection_reference.log\n?? lab/v/retained_uniform_control.json\n?? lab/v/retained_uniform_control.log\n?? lab/v/scoring_feedback.json\n?? lab/v/scoring_feedback.log\n?? lab/v/scoring_feedback_analysis.json\n?? lab/v/scoring_feedback_analysis.log\n?? lab/v/scoring_order_replay.json\n?? lab/v/scoring_order_replay.log\n?? lab/v/scoring_order_replay_failed_summary.json\n?? lab/v/scoring_order_replay_failed_summary.log\n?? lab/v/scoring_order_replay_report.md\n",
+    "source_sha256": {
+      "lab/growth_parent_census.py": "ca61a16199e41e7a2d277ee455e8726e45c59a23d1458498f8bcf2033bd4d526",
+      "lab/future_evidence.py": "aefdc3785fcdfec86d13fff9a8d8dcd902bc2c49a3e13ab596d11af17897fe8e",
+      "lab/future_evidence_analysis.py": "d91ca9fc6d5a93058beb7dffe70bd4b70854efececb86bd72f22ea55d5f5cab5",
+      "lab/retained_prediction.py": "207441dc072521d8efb7ad163498ddf988428b87f95536c7061be6fe3b2a0198"
+    },
+    "input_sha256": {
+      "/home/pilgrim/git/simple-learner/lab/v/future_evidence.pkl": "d74474476cf6e0fea81ea4a08677eb3d058ee7411f330a553b9c728462af58d9"
+    },
+    "command": "timeout --signal=TERM --kill-after=5s 240s env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python lab/growth_parent_census.py --run",
+    "life": {
+      "rung": "sequence 17",
+      "seed": 177000,
+      "poison_first": "red",
+      "life_s": 300.0,
+      "dt_s": 0.0025,
+      "total_cap": 3042,
+      "design": "corrected weight contest (D84 trace)"
+    }
+  },
+  "rows_path": "/home/pilgrim/git/simple-learner/lab/v/growth_parent_census.pkl",
+  "summary": {
+    "all": {
+      "births": 10236,
+      "births_using_grown_parent_not_yet_spoken": 57,
+      "births_using_one_tally_grown_parent": 638,
+      "births_using_grown_parent_with_two_plus_tallies": 7146,
+      "births_with_fixed_parents_only": 2833,
+      "births_with_repeated_parent": 1495,
+      "parent_appearances": {
+        "fixed": 9833,
+        "grown": 10639,
+        "grown_not_yet_spoken": 57,
+        "grown_one_tally": 638,
+        "grown_one_tally_and_not_yet_spoken": 45,
+        "grown_two_plus_tallies": 10001,
+        "total": 20472
+      },
+      "unique_parents": {
+        "fixed": 882,
+        "grown": 3308,
+        "grown_not_yet_spoken": 43,
+        "grown_one_tally": 566,
+        "grown_two_plus_tallies": 2912
+      },
+      "distinct_grown_parents": 3308,
+      "weak_unique_parents": 569,
+      "weak_parent_direct_children": {
+        "n": 569,
+        "minimum": 1.0,
+        "median": 1.0,
+        "q90": 6.0,
+        "maximum": 38.0,
+        "total": 1479.0
+      },
+      "weak_parent_descendants": {
+        "n": 569,
+        "minimum": 1.0,
+        "median": 1.0,
+        "q90": 10.0,
+        "maximum": 116.0,
+        "total": 2742.0
+      },
+      "weak_parent_descendant_spans": {
+        "n": 2742,
+        "minimum": 3.0,
+        "median": 6.0,
+        "q90": 11.0,
+        "maximum": 41.0,
+        "total": 18354.0
+      },
+      "child_span": {
+        "n": 10236,
+        "minimum": 2.0,
+        "median": 4.0,
+        "q90": 9.0,
+        "maximum": 48.0,
+        "total": 50964.0
+      }
+    },
+    "event": {
+      "births": 760,
+      "births_using_grown_parent_not_yet_spoken": 57,
+      "births_using_one_tally_grown_parent": 45,
+      "births_using_grown_parent_with_two_plus_tallies": 659,
+      "births_with_fixed_parents_only": 90,
+      "births_with_repeated_parent": 106,
+      "parent_appearances": {
+        "fixed": 458,
+        "grown": 1062,
+        "grown_not_yet_spoken": 57,
+        "grown_one_tally": 45,
+        "grown_one_tally_and_not_yet_spoken": 45,
+        "grown_two_plus_tallies": 1017,
+        "total": 1520
+      },
+      "unique_parents": {
+        "fixed": 16,
+        "grown": 283,
+        "grown_not_yet_spoken": 43,
+        "grown_one_tally": 40,
+        "grown_two_plus_tallies": 262
+      },
+      "distinct_grown_parents": 283,
+      "weak_unique_parents": 43,
+      "weak_parent_direct_children": {
+        "n": 43,
+        "minimum": 1.0,
+        "median": 2.0,
+        "q90": 11.800000000000004,
+        "maximum": 27.0,
+        "total": 207.0
+      },
+      "weak_parent_descendants": {
+        "n": 43,
+        "minimum": 1.0,
+        "median": 2.0,
+        "q90": 36.60000000000003,
+        "maximum": 116.0,
+        "total": 575.0
+      },
+      "weak_parent_descendant_spans": {
+        "n": 575,
+        "minimum": 3.0,
+        "median": 7.0,
+        "q90": 11.0,
+        "maximum": 16.0,
+        "total": 4221.0
+      },
+      "child_span": {
+        "n": 760,
+        "minimum": 2.0,
+        "median": 6.0,
+        "q90": 13.0,
+        "maximum": 48.0,
+        "total": 5334.0
+      }
+    },
+    "clock": {
+      "births": 3774,
+      "births_using_grown_parent_not_yet_spoken": 0,
+      "births_using_one_tally_grown_parent": 108,
+      "births_using_grown_parent_with_two_plus_tallies": 2876,
+      "births_with_fixed_parents_only": 852,
+      "births_with_repeated_parent": 541,
+      "parent_appearances": {
+        "fixed": 3346,
+        "grown": 4202,
+        "grown_one_tally": 108,
+        "grown_two_plus_tallies": 4094,
+        "total": 7548
+      },
+      "unique_parents": {
+        "fixed": 110,
+        "grown": 1507,
+        "grown_one_tally": 90,
+        "grown_two_plus_tallies": 1445,
+        "grown_not_yet_spoken": 0
+      },
+      "distinct_grown_parents": 1507,
+      "weak_unique_parents": 90,
+      "weak_parent_direct_children": {
+        "n": 90,
+        "minimum": 1.0,
+        "median": 1.0,
+        "q90": 8.0,
+        "maximum": 22.0,
+        "total": 281.0
+      },
+      "weak_parent_descendants": {
+        "n": 90,
+        "minimum": 1.0,
+        "median": 2.0,
+        "q90": 24.60000000000005,
+        "maximum": 74.0,
+        "total": 752.0
+      },
+      "weak_parent_descendant_spans": {
+        "n": 752,
+        "minimum": 3.0,
+        "median": 7.0,
+        "q90": 12.0,
+        "maximum": 23.0,
+        "total": 5566.0
+      },
+      "child_span": {
+        "n": 3774,
+        "minimum": 2.0,
+        "median": 4.0,
+        "q90": 8.0,
+        "maximum": 23.0,
+        "total": 17669.0
+      }
+    },
+    "integrator": {
+      "births": 5253,
+      "births_using_grown_parent_not_yet_spoken": 0,
+      "births_using_one_tally_grown_parent": 468,
+      "births_using_grown_parent_with_two_plus_tallies": 3568,
+      "births_with_fixed_parents_only": 1501,
+      "births_with_repeated_parent": 848,
+      "parent_appearances": {
+        "fixed": 5192,
+        "grown": 5314,
+        "grown_one_tally": 468,
+        "grown_two_plus_tallies": 4846,
+        "total": 10506
+      },
+      "unique_parents": {
+        "fixed": 266,
+        "grown": 1465,
+        "grown_one_tally": 419,
+        "grown_two_plus_tallies": 1168,
+        "grown_not_yet_spoken": 0
+      },
+      "distinct_grown_parents": 1465,
+      "weak_unique_parents": 419,
+      "weak_parent_direct_children": {
+        "n": 419,
+        "minimum": 1.0,
+        "median": 1.0,
+        "q90": 4.0,
+        "maximum": 38.0,
+        "total": 973.0
+      },
+      "weak_parent_descendants": {
+        "n": 419,
+        "minimum": 1.0,
+        "median": 1.0,
+        "q90": 6.0,
+        "maximum": 82.0,
+        "total": 1397.0
+      },
+      "weak_parent_descendant_spans": {
+        "n": 1397,
+        "minimum": 3.0,
+        "median": 5.0,
+        "q90": 9.0,
+        "maximum": 41.0,
+        "total": 8510.0
+      },
+      "child_span": {
+        "n": 5253,
+        "minimum": 2.0,
+        "median": 3.0,
+        "q90": 9.0,
+        "maximum": 48.0,
+        "total": 26996.0
+      }
+    },
+    "rhythm": {
+      "births": 449,
+      "births_using_grown_parent_not_yet_spoken": 0,
+      "births_using_one_tally_grown_parent": 17,
+      "births_using_grown_parent_with_two_plus_tallies": 43,
+      "births_with_fixed_parents_only": 390,
+      "births_with_repeated_parent": 0,
+      "parent_appearances": {
+        "fixed": 837,
+        "grown": 61,
+        "grown_two_plus_tallies": 44,
+        "grown_one_tally": 17,
+        "total": 898
+      },
+      "unique_parents": {
+        "fixed": 490,
+        "grown": 53,
+        "grown_two_plus_tallies": 37,
+        "grown_one_tally": 17,
+        "grown_not_yet_spoken": 0
+      },
+      "distinct_grown_parents": 53,
+      "weak_unique_parents": 17,
+      "weak_parent_direct_children": {
+        "n": 17,
+        "minimum": 1.0,
+        "median": 1.0,
+        "q90": 1.0,
+        "maximum": 2.0,
+        "total": 18.0
+      },
+      "weak_parent_descendants": {
+        "n": 17,
+        "minimum": 1.0,
+        "median": 1.0,
+        "q90": 1.0,
+        "maximum": 2.0,
+        "total": 18.0
+      },
+      "weak_parent_descendant_spans": {
+        "n": 18,
+        "minimum": 3.0,
+        "median": 3.0,
+        "q90": 4.0,
+        "maximum": 4.0,
+        "total": 57.0
+      },
+      "child_span": {
+        "n": 449,
+        "minimum": 2.0,
+        "median": 2.0,
+        "q90": 3.0,
+        "maximum": 5.0,
+        "total": 965.0
+      }
+    }
+  },
+  "table": "| family | births | births using a grown parent not yet spoken | births using a one-tally grown parent | distinct grown parents | median / max child span |\n|---|---:|---:|---:|---:|---:|\n| all | 10236 | 57 | 638 | 3308 | 4.0 / 48.0 |\n| event | 760 | 57 | 45 | 283 | 6.0 / 48.0 |\n| clock | 3774 | 0 | 108 | 1507 | 4.0 / 23.0 |\n| integrator | 5253 | 0 | 468 | 1465 | 3.0 / 48.0 |\n| rhythm | 449 | 0 | 17 | 53 | 2.0 / 5.0 |",
+  "limits": [
+    "One frozen corrected contest life; counts are structural observations, not forecasts or value.",
+    "Categories overlap (not-yet-spoken and one-tally); do not add them.",
+    "Speaking means issued native speaker at an actual prediction strictly before the birth event.",
+    "Unit counts describe software allocation, not physical cost."
+  ],
+  "wall_s": 4.132654059998458
+}

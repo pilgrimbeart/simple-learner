@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "checks": [
+    "native tie rule: first longest firing unit in recorded order",
+    "partner looked for at i-s, not at i or another offset",
+    "concatenation is word(u)+word(v), not reversed",
+    "duplicate deleted definitions: two raw associations, one deduplicated word",
+    "a removed grown ancestor is counted as extra storage; a living one is not",
+    "maximum allowed span: span(u)+s == HIST//2 accepted, one more refused",
+    "deletion taste and calls not strictly after the deletion are excluded",
+    "living-equivalence labels for the concatenated word and for u",
+    "birth validation refuses a birth whose deep parent has not seen both labels"
+  ],
+  "simulated_steps": 0
+}

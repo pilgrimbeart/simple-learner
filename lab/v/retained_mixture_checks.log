@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "checks": [
+    "prediction independent of current label; score before update",
+    "one-bit mixture bound on all 64 binary length-six sequences and prefixes",
+    "native longest/confidence/insertion tie selection and silence",
+    "complete reconstruction, newborn removal, last-issued forecast, corrupted checkpoint refusal",
+    "tidy deletion after write but before counter increment"
+  ],
+  "simulated_steps": 0
+}

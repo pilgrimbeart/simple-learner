@@ -1,0 +1,11 @@
+wall_s 0.5904184600000235
+Traceback (most recent call last):
+  File "/home/pilgrim/git/simple-learner/lab/retained_prediction.py", line 242, in <module>
+    main()
+  File "/home/pilgrim/git/simple-learner/lab/retained_prediction.py", line 206, in main
+    rows,checks,tastes = reconstruct(raw)
+                         ^^^^^^^^^^^^^^^^
+  File "/home/pilgrim/git/simple-learner/lab/retained_prediction.py", line 146, in reconstruct
+    assert index[j] == e['i']
+           ^^^^^^^^^^^^^^^^^^
+AssertionError

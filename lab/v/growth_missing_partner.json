@@ -1,0 +1,361 @@
+{
+  "success": true,
+  "checks": {
+    "initial_units": 2042,
+    "writes": 24799,
+    "predictions": 5883,
+    "accepted_tastes": 163,
+    "learns": 27384,
+    "births": 10236,
+    "removals": 9236,
+    "one_tally_removals": 5369,
+    "tidy_removals_before_index_increment": 63,
+    "native_speaking_records_exact": 10371,
+    "final_units": 3042,
+    "deleted_one_tally_candidates": 5369,
+    "actual_births_matching_reconstructed_trigger": 10236,
+    "triggering_calls": 13729,
+    "concatenated_word_never_living_by_construction": true
+  },
+  "provenance": {
+    "revision": "d37dac6745d2657229861d6f9cee4239258367d3",
+    "dirty": " M ABSTRACT.md\n M PROGRAMME.md\n M QUESTIONS.md\n M README.md\n M discrete/NOTEBOOK.md\n?? lab/active_mixture_audit.py\n?? lab/active_mixture_review.py\n?? lab/alloc_review.py\n?? lab/allocation_trace.py\n?? lab/allocation_trace_analysis.py\n?? lab/allocation_trace_checks.py\n?? lab/future_evidence.py\n?? lab/future_evidence_analysis.py\n?? lab/future_evidence_checks.py\n?? lab/future_evidence_replay_checks.py\n?? lab/growth_child_prediction.py\n?? lab/growth_missing_partner.py\n?? lab/growth_parent_census.py\n?? lab/issued_credit.py\n?? lab/issued_credit_analysis.py\n?? lab/issued_credit_checks.py\n?? lab/issued_credit_compare.py\n?? lab/mixture_confidence.py\n?? lab/retained_mixture.py\n?? lab/retained_prediction.py\n?? lab/retained_prediction_checks.py\n?? lab/retained_prediction_diagnosis.py\n?? lab/retained_selection_reference.py\n?? lab/retained_uniform_control.py\n?? lab/scoring_feedback.py\n?? lab/scoring_feedback_analysis.py\n?? lab/scoring_order_replay.py\n?? lab/v/active_mixture_audit.json\n?? lab/v/active_mixture_audit.log\n?? lab/v/active_mixture_audit_report.md\n?? lab/v/active_mixture_review.json\n?? lab/v/active_mixture_review.log\n?? lab/v/alloc_review.json\n?? lab/v/alloc_review.log\n?? lab/v/allocation_trace.json\n?? lab/v/allocation_trace.log\n?? lab/v/allocation_trace_analysis.json\n?? lab/v/allocation_trace_analysis.log\n?? lab/v/allocation_trace_checks.json\n?? lab/v/allocation_trace_checks.log\n?? lab/v/d79_work_order.md\n?? lab/v/future_evidence.json\n?? lab/v/future_evidence.log\n?? lab/v/future_evidence_analysis.json\n?? lab/v/future_evidence_analysis.log\n?? lab/v/future_evidence_checks.json\n?? lab/v/future_evidence_checks.log\n?? lab/v/future_evidence_replay_checks.json\n?? lab/v/future_evidence_replay_checks.log\n?? lab/v/growth_child_prediction.json\n?? lab/v/growth_child_prediction.log\n?? lab/v/growth_child_prediction_checks.json\n?? lab/v/growth_child_prediction_checks.log\n?? lab/v/growth_missing_partner.json\n?? lab/v/growth_missing_partner.log\n?? lab/v/growth_missing_partner_checks.json\n?? lab/v/growth_missing_partner_checks.log\n?? lab/v/growth_missing_partner_checks_failed_fixture.log\n?? lab/v/growth_missing_partner_premature_run.log\n?? lab/v/growth_parent_census.json\n?? lab/v/growth_parent_census.log\n?? lab/v/growth_parent_census_checks.json\n?? lab/v/growth_parent_census_checks.log\n?? lab/v/issued_credit_analysis.json\n?? lab/v/issued_credit_analysis.log\n?? lab/v/issued_credit_checks.json\n?? lab/v/issued_credit_checks.log\n?? lab/v/issued_credit_compare.json\n?? lab/v/issued_credit_compare.log\n?? lab/v/mixture_confidence.json\n?? lab/v/mixture_confidence.log\n?? lab/v/retained_mixture.json\n?? lab/v/retained_mixture.log\n?? lab/v/retained_mixture_analysis.json\n?? lab/v/retained_mixture_analysis.log\n?? lab/v/retained_mixture_checks.log\n?? lab/v/retained_prediction.json\n?? lab/v/retained_prediction.log\n?? lab/v/retained_prediction_checks.json\n?? lab/v/retained_prediction_checks.log\n?? lab/v/retained_prediction_diagnosis.json\n?? lab/v/retained_prediction_diagnosis.log\n?? lab/v/retained_prediction_failed_index.json\n?? lab/v/retained_prediction_failed_index.log\n?? lab/v/retained_selection_reference.json\n?? lab/v/retained_selection_reference.log\n?? lab/v/retained_uniform_control.json\n?? lab/v/retained_uniform_control.log\n?? lab/v/scoring_feedback.json\n?? lab/v/scoring_feedback.log\n?? lab/v/scoring_feedback_analysis.json\n?? lab/v/scoring_feedback_analysis.log\n?? lab/v/scoring_order_replay.json\n?? lab/v/scoring_order_replay.log\n?? lab/v/scoring_order_replay_failed_summary.json\n?? lab/v/scoring_order_replay_failed_summary.log\n?? lab/v/scoring_order_replay_report.md\n",
+    "source_sha256": {
+      "lab/growth_missing_partner.py": "01528c8694c7cd89bc684c74d724bc35ce352c175f7a96899b8cc5d5ac99374d",
+      "lab/growth_parent_census.py": "ca61a16199e41e7a2d277ee455e8726e45c59a23d1458498f8bcf2033bd4d526",
+      "lab/future_evidence.py": "aefdc3785fcdfec86d13fff9a8d8dcd902bc2c49a3e13ab596d11af17897fe8e",
+      "lab/grownet.py": "1a550553b1244368ed0ca6fa59cce3e94a9badd5e5d1e801953aa42974874f0f"
+    },
+    "input_sha256": {
+      "/home/pilgrim/git/simple-learner/lab/v/future_evidence.pkl": "d74474476cf6e0fea81ea4a08677eb3d058ee7411f330a553b9c728462af58d9"
+    },
+    "command": "timeout --signal=TERM --kill-after=5s 240s env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python lab/growth_missing_partner.py --run",
+    "life": {
+      "rung": "sequence 17",
+      "seed": 177000,
+      "poison_first": "red",
+      "life_s": 300.0,
+      "dt_s": 0.0025,
+      "total_cap": 3042,
+      "design": "corrected weight contest (D84 trace)"
+    }
+  },
+  "rows_path": "/home/pilgrim/git/simple-learner/lab/v/growth_missing_partner.pkl",
+  "stage": "pre-learning living set: tallies updated for the current label, before any removal inside this learn",
+  "summary": {
+    "full_remaining_life": {
+      "all": {
+        "eligible_native_contradiction_calls": 13729,
+        "calls_with_any_qualifying_deleted_parent": 8015,
+        "raw_candidate_associations": 27677,
+        "unique_stream_taste_words": 17385,
+        "unique_potential_child_words": 5798,
+        "unique_words_absent_from_living_memory_at_some_occurrence": 5798,
+        "unique_words_absent_at_every_occurrence": 5798,
+        "stream_taste_words_absent": 17385,
+        "stream_taste_words_absent_and_no_living_equivalent_parent": 14348,
+        "unique_words_absent_and_no_living_equivalent_parent_at_some_occurrence": 4874,
+        "deleted_candidates_ever_qualifying": 3562,
+        "deleted_candidates": 5369,
+        "additional_dead_ancestors_per_stream_taste_word": {
+          "n": 17385,
+          "minimum": 0.0,
+          "median": 1.0,
+          "q90": 4.0,
+          "maximum": 14.0,
+          "total": 26176.0
+        },
+        "additional_dead_ancestors_absent_no_equivalent": {
+          "n": 14348,
+          "minimum": 0.0,
+          "median": 1.0,
+          "q90": 5.0,
+          "maximum": 14.0,
+          "total": 25373.0
+        },
+        "stream_taste_words_needing_no_extra_ancestor": 7604
+      },
+      "event": {
+        "eligible_native_contradiction_calls": 1017,
+        "calls_with_any_qualifying_deleted_parent": 668,
+        "raw_candidate_associations": 3460,
+        "unique_stream_taste_words": 2324,
+        "unique_potential_child_words": 495,
+        "unique_words_absent_from_living_memory_at_some_occurrence": 495,
+        "unique_words_absent_at_every_occurrence": 495,
+        "stream_taste_words_absent": 2324,
+        "stream_taste_words_absent_and_no_living_equivalent_parent": 2038,
+        "unique_words_absent_and_no_living_equivalent_parent_at_some_occurrence": 442,
+        "deleted_candidates_ever_qualifying": 262,
+        "deleted_candidates": 354,
+        "additional_dead_ancestors_per_stream_taste_word": {
+          "n": 2324,
+          "minimum": 0.0,
+          "median": 1.0,
+          "q90": 5.0,
+          "maximum": 12.0,
+          "total": 4757.0
+        },
+        "additional_dead_ancestors_absent_no_equivalent": {
+          "n": 2038,
+          "minimum": 0.0,
+          "median": 2.0,
+          "q90": 5.0,
+          "maximum": 12.0,
+          "total": 4643.0
+        },
+        "stream_taste_words_needing_no_extra_ancestor": 740
+      },
+      "clock": {
+        "eligible_native_contradiction_calls": 5521,
+        "calls_with_any_qualifying_deleted_parent": 2957,
+        "raw_candidate_associations": 7456,
+        "unique_stream_taste_words": 4815,
+        "unique_potential_child_words": 1929,
+        "unique_words_absent_from_living_memory_at_some_occurrence": 1929,
+        "unique_words_absent_at_every_occurrence": 1929,
+        "stream_taste_words_absent": 4815,
+        "stream_taste_words_absent_and_no_living_equivalent_parent": 3969,
+        "unique_words_absent_and_no_living_equivalent_parent_at_some_occurrence": 1644,
+        "deleted_candidates_ever_qualifying": 1036,
+        "deleted_candidates": 1276,
+        "additional_dead_ancestors_per_stream_taste_word": {
+          "n": 4815,
+          "minimum": 0.0,
+          "median": 0.0,
+          "q90": 3.0,
+          "maximum": 9.0,
+          "total": 4403.0
+        },
+        "additional_dead_ancestors_absent_no_equivalent": {
+          "n": 3969,
+          "minimum": 0.0,
+          "median": 1.0,
+          "q90": 3.0,
+          "maximum": 9.0,
+          "total": 4258.0
+        },
+        "stream_taste_words_needing_no_extra_ancestor": 2471
+      },
+      "integrator": {
+        "eligible_native_contradiction_calls": 6611,
+        "calls_with_any_qualifying_deleted_parent": 4305,
+        "raw_candidate_associations": 16658,
+        "unique_stream_taste_words": 10157,
+        "unique_potential_child_words": 3308,
+        "unique_words_absent_from_living_memory_at_some_occurrence": 3308,
+        "unique_words_absent_at_every_occurrence": 3308,
+        "stream_taste_words_absent": 10157,
+        "stream_taste_words_absent_and_no_living_equivalent_parent": 8267,
+        "unique_words_absent_and_no_living_equivalent_parent_at_some_occurrence": 2732,
+        "deleted_candidates_ever_qualifying": 2188,
+        "deleted_candidates": 3416,
+        "additional_dead_ancestors_per_stream_taste_word": {
+          "n": 10157,
+          "minimum": 0.0,
+          "median": 1.0,
+          "q90": 5.0,
+          "maximum": 14.0,
+          "total": 16990.0
+        },
+        "additional_dead_ancestors_absent_no_equivalent": {
+          "n": 8267,
+          "minimum": 0.0,
+          "median": 1.0,
+          "q90": 6.0,
+          "maximum": 14.0,
+          "total": 16446.0
+        },
+        "stream_taste_words_needing_no_extra_ancestor": 4325
+      },
+      "rhythm": {
+        "eligible_native_contradiction_calls": 580,
+        "calls_with_any_qualifying_deleted_parent": 85,
+        "raw_candidate_associations": 103,
+        "unique_stream_taste_words": 89,
+        "unique_potential_child_words": 66,
+        "unique_words_absent_from_living_memory_at_some_occurrence": 66,
+        "unique_words_absent_at_every_occurrence": 66,
+        "stream_taste_words_absent": 89,
+        "stream_taste_words_absent_and_no_living_equivalent_parent": 74,
+        "unique_words_absent_and_no_living_equivalent_parent_at_some_occurrence": 56,
+        "deleted_candidates_ever_qualifying": 76,
+        "deleted_candidates": 323,
+        "additional_dead_ancestors_per_stream_taste_word": {
+          "n": 89,
+          "minimum": 0.0,
+          "median": 0.0,
+          "q90": 1.0,
+          "maximum": 2.0,
+          "total": 26.0
+        },
+        "additional_dead_ancestors_absent_no_equivalent": {
+          "n": 74,
+          "minimum": 0.0,
+          "median": 0.0,
+          "q90": 1.0,
+          "maximum": 2.0,
+          "total": 26.0
+        },
+        "stream_taste_words_needing_no_extra_ancestor": 68
+      }
+    },
+    "horizon_100s_deletions_by_200s": {
+      "all": {
+        "eligible_native_contradiction_calls": 13729,
+        "calls_with_any_qualifying_deleted_parent": 5853,
+        "raw_candidate_associations": 13235,
+        "unique_stream_taste_words": 9694,
+        "unique_potential_child_words": 3705,
+        "unique_words_absent_from_living_memory_at_some_occurrence": 3705,
+        "unique_words_absent_at_every_occurrence": 3705,
+        "stream_taste_words_absent": 9694,
+        "stream_taste_words_absent_and_no_living_equivalent_parent": 7909,
+        "unique_words_absent_and_no_living_equivalent_parent_at_some_occurrence": 3055,
+        "deleted_candidates_ever_qualifying": 2065,
+        "deleted_candidates": 3035,
+        "additional_dead_ancestors_per_stream_taste_word": {
+          "n": 9694,
+          "minimum": 0.0,
+          "median": 1.0,
+          "q90": 4.0,
+          "maximum": 11.0,
+          "total": 12164.0
+        },
+        "additional_dead_ancestors_absent_no_equivalent": {
+          "n": 7909,
+          "minimum": 0.0,
+          "median": 1.0,
+          "q90": 4.0,
+          "maximum": 11.0,
+          "total": 11775.0
+        },
+        "stream_taste_words_needing_no_extra_ancestor": 4613
+      },
+      "event": {
+        "eligible_native_contradiction_calls": 1017,
+        "calls_with_any_qualifying_deleted_parent": 570,
+        "raw_candidate_associations": 1581,
+        "unique_stream_taste_words": 1234,
+        "unique_potential_child_words": 334,
+        "unique_words_absent_from_living_memory_at_some_occurrence": 334,
+        "unique_words_absent_at_every_occurrence": 334,
+        "stream_taste_words_absent": 1234,
+        "stream_taste_words_absent_and_no_living_equivalent_parent": 1093,
+        "unique_words_absent_and_no_living_equivalent_parent_at_some_occurrence": 302,
+        "deleted_candidates_ever_qualifying": 145,
+        "deleted_candidates": 206,
+        "additional_dead_ancestors_per_stream_taste_word": {
+          "n": 1234,
+          "minimum": 0.0,
+          "median": 1.0,
+          "q90": 4.0,
+          "maximum": 8.0,
+          "total": 2133.0
+        },
+        "additional_dead_ancestors_absent_no_equivalent": {
+          "n": 1093,
+          "minimum": 0.0,
+          "median": 2.0,
+          "q90": 4.0,
+          "maximum": 8.0,
+          "total": 2091.0
+        },
+        "stream_taste_words_needing_no_extra_ancestor": 410
+      },
+      "clock": {
+        "eligible_native_contradiction_calls": 5521,
+        "calls_with_any_qualifying_deleted_parent": 1891,
+        "raw_candidate_associations": 3638,
+        "unique_stream_taste_words": 2646,
+        "unique_potential_child_words": 1131,
+        "unique_words_absent_from_living_memory_at_some_occurrence": 1131,
+        "unique_words_absent_at_every_occurrence": 1131,
+        "stream_taste_words_absent": 2646,
+        "stream_taste_words_absent_and_no_living_equivalent_parent": 2190,
+        "unique_words_absent_and_no_living_equivalent_parent_at_some_occurrence": 955,
+        "deleted_candidates_ever_qualifying": 584,
+        "deleted_candidates": 705,
+        "additional_dead_ancestors_per_stream_taste_word": {
+          "n": 2646,
+          "minimum": 0.0,
+          "median": 0.0,
+          "q90": 3.0,
+          "maximum": 5.0,
+          "total": 2295.0
+        },
+        "additional_dead_ancestors_absent_no_equivalent": {
+          "n": 2190,
+          "minimum": 0.0,
+          "median": 1.0,
+          "q90": 3.0,
+          "maximum": 5.0,
+          "total": 2231.0
+        },
+        "stream_taste_words_needing_no_extra_ancestor": 1413
+      },
+      "integrator": {
+        "eligible_native_contradiction_calls": 6611,
+        "calls_with_any_qualifying_deleted_parent": 3392,
+        "raw_candidate_associations": 8016,
+        "unique_stream_taste_words": 5814,
+        "unique_potential_child_words": 2240,
+        "unique_words_absent_from_living_memory_at_some_occurrence": 2240,
+        "unique_words_absent_at_every_occurrence": 2240,
+        "stream_taste_words_absent": 5814,
+        "stream_taste_words_absent_and_no_living_equivalent_parent": 4626,
+        "unique_words_absent_and_no_living_equivalent_parent_at_some_occurrence": 1798,
+        "deleted_candidates_ever_qualifying": 1336,
+        "deleted_candidates": 2124,
+        "additional_dead_ancestors_per_stream_taste_word": {
+          "n": 5814,
+          "minimum": 0.0,
+          "median": 1.0,
+          "q90": 4.0,
+          "maximum": 11.0,
+          "total": 7736.0
+        },
+        "additional_dead_ancestors_absent_no_equivalent": {
+          "n": 4626,
+          "minimum": 0.0,
+          "median": 1.0,
+          "q90": 5.0,
+          "maximum": 11.0,
+          "total": 7453.0
+        },
+        "stream_taste_words_needing_no_extra_ancestor": 2790
+      },
+      "rhythm": {
+        "eligible_native_contradiction_calls": 580,
+        "calls_with_any_qualifying_deleted_parent": 0,
+        "raw_candidate_associations": 0,
+        "unique_stream_taste_words": 0,
+        "unique_potential_child_words": 0,
+        "unique_words_absent_from_living_memory_at_some_occurrence": 0,
+        "unique_words_absent_at_every_occurrence": 0,
+        "stream_taste_words_absent": 0,
+        "stream_taste_words_absent_and_no_living_equivalent_parent": 0,
+        "unique_words_absent_and_no_living_equivalent_parent_at_some_occurrence": 0,
+        "deleted_candidates_ever_qualifying": 0,
+        "deleted_candidates": 0,
+        "additional_dead_ancestors_per_stream_taste_word": {
+          "n": 0
+        },
+        "additional_dead_ancestors_absent_no_equivalent": {
+          "n": 0
+        },
+        "stream_taste_words_needing_no_extra_ancestor": 0
+      }
+    }
+  },
+  "table_full": "| family | eligible native contradiction calls | calls with a qualifying deleted parent | unique potential child words | absent from living memory (\u22651 occurrence) | also lacking a living equivalent parent | extra deleted ancestors, median / max |\n|---|---:|---:|---:|---:|---:|---:|\n| all | 13729 | 8015 | 5798 | 5798 | 4874 | 1.0 / 14.0 |\n| event | 1017 | 668 | 495 | 495 | 442 | 1.0 / 12.0 |\n| clock | 5521 | 2957 | 1929 | 1929 | 1644 | 0.0 / 9.0 |\n| integrator | 6611 | 4305 | 3308 | 3308 | 2732 | 1.0 / 14.0 |\n| rhythm | 580 | 85 | 66 | 66 | 56 | 0.0 / 2.0 |",
+  "table_100s": "| family | eligible native contradiction calls | calls with a qualifying deleted parent | unique potential child words | absent from living memory (\u22651 occurrence) | also lacking a living equivalent parent | extra deleted ancestors, median / max |\n|---|---:|---:|---:|---:|---:|---:|\n| all | 13729 | 5853 | 3705 | 3705 | 3055 | 1.0 / 11.0 |\n| event | 1017 | 570 | 334 | 334 | 302 | 1.0 / 8.0 |\n| clock | 5521 | 1891 | 1131 | 1131 | 955 | 0.0 / 5.0 |\n| integrator | 6611 | 3392 | 2240 | 2240 | 1798 | 1.0 / 11.0 |\n| rhythm | 580 | 0 | 0 | 0 | 0 | - / - |",
+  "limits": [
+    "An opportunity reference only: no partner drawn, no child born, no room check; it does not show the native random draw would choose u, that a child would predict well, or that keeping u beats what the cap removes.",
+    "Zero narrows only the earlier-partner route; a deleted unit could instead be the deepest unit.",
+    "Equivalence is checked on the pre-learning living set, not the post-recycling partner pool.",
+    "Extra deleted ancestors overlap between candidates; their storage cannot be summed.",
+    "One frozen corrected contest life; counts are software allocation, not physical cost."
+  ],
+  "wall_s": 4.729936653995537
+}

@@ -1,0 +1,263 @@
+{
+  "full": {
+    "units": 5369,
+    "active": 3653,
+    "retained_beats_uniform": 926,
+    "retained_beats_both": 800,
+    "baseline_beats_uniform": 1253,
+    "uniform_beats_both": 2003,
+    "retained_mix_beats_uniform_mix": 926,
+    "retained_vs_uniform_bits": {
+      "n": 3653,
+      "minimum": -3.706882688347804,
+      "median": -1.0,
+      "q90": 1.0443941193584538,
+      "maximum": 9.366746950949635
+    },
+    "retained_mix_vs_uniform_mix_bits": {
+      "n": 3653,
+      "minimum": -3.7067681460188027,
+      "median": -0.4516121141779985,
+      "q90": 0.5019144743214493,
+      "maximum": 4.427495727923416
+    },
+    "overlapping_sums": {
+      "uniform_bits": 38270,
+      "retained_bits": 41320.13838911661,
+      "baseline_bits": 42017.07113726446,
+      "retained_mix_bits": 40710.34304522622,
+      "uniform_mix_bits": 38825.36007087044
+    }
+  },
+  "horizon_100s": {
+    "units": 3035,
+    "active": 2150,
+    "retained_beats_uniform": 590,
+    "retained_beats_both": 507,
+    "baseline_beats_uniform": 764,
+    "uniform_beats_both": 1133,
+    "retained_mix_beats_uniform_mix": 590,
+    "retained_vs_uniform_bits": {
+      "n": 2150,
+      "minimum": -3.2609567674258315,
+      "median": -1.0,
+      "q90": 1.3219280948873624,
+      "maximum": 4.744833837499545
+    },
+    "retained_mix_vs_uniform_mix_bits": {
+      "n": 2150,
+      "minimum": -3.258989889480752,
+      "median": -0.44057259138598115,
+      "q90": 0.5336434287517032,
+      "maximum": 3.7483845571229155
+    },
+    "overlapping_sums": {
+      "uniform_bits": 18024,
+      "retained_bits": 19689.540998909753,
+      "baseline_bits": 19883.617132598276,
+      "retained_mix_bits": 19355.608814407606,
+      "uniform_mix_bits": 18339.3523659282
+    }
+  },
+  "by_family": {
+    "event": {
+      "units": 354,
+      "active": 253,
+      "retained_beats_uniform": 54,
+      "retained_beats_both": 43,
+      "baseline_beats_uniform": 72,
+      "uniform_beats_both": 162,
+      "retained_mix_beats_uniform_mix": 54,
+      "retained_vs_uniform_bits": {
+        "n": 253,
+        "minimum": -3.6815715998185965,
+        "median": -1.0000000000000004,
+        "q90": 0.7291285165613447,
+        "maximum": 9.366746950949635
+      },
+      "retained_mix_vs_uniform_mix_bits": {
+        "n": 253,
+        "minimum": -3.674653580284442,
+        "median": -0.5618788876081147,
+        "q90": 0.4123286952548307,
+        "maximum": 4.075968036973195
+      },
+      "overlapping_sums": {
+        "uniform_bits": 4856,
+        "retained_bits": 5117.168262236795,
+        "baseline_bits": 5383.408392360982,
+        "retained_mix_bits": 5135.329187727212,
+        "uniform_mix_bits": 4916.236534865545
+      }
+    },
+    "clock": {
+      "units": 1276,
+      "active": 925,
+      "retained_beats_uniform": 186,
+      "retained_beats_both": 167,
+      "baseline_beats_uniform": 299,
+      "uniform_beats_both": 561,
+      "retained_mix_beats_uniform_mix": 186,
+      "retained_vs_uniform_bits": {
+        "n": 925,
+        "minimum": -3.508922418531256,
+        "median": -1.415037499278844,
+        "q90": 0.7098276823322435,
+        "maximum": 3.8517490414160576
+      },
+      "retained_mix_vs_uniform_mix_bits": {
+        "n": 925,
+        "minimum": -3.4765734856579797,
+        "median": -0.5849625007211561,
+        "q90": 0.4150374992788439,
+        "maximum": 2.3867378013709946
+      },
+      "overlapping_sums": {
+        "uniform_bits": 10163,
+        "retained_bits": 11186.184373004597,
+        "baseline_bits": 11011.812135154118,
+        "retained_mix_bits": 10917.833286111943,
+        "uniform_mix_bits": 10330.317128856856
+      }
+    },
+    "integrator": {
+      "units": 3416,
+      "active": 2360,
+      "retained_beats_uniform": 625,
+      "retained_beats_both": 529,
+      "baseline_beats_uniform": 849,
+      "uniform_beats_both": 1257,
+      "retained_mix_beats_uniform_mix": 625,
+      "retained_vs_uniform_bits": {
+        "n": 2360,
+        "minimum": -3.706882688347804,
+        "median": -1.0,
+        "q90": 1.3219280948873624,
+        "maximum": 6.502808500525662
+      },
+      "retained_mix_vs_uniform_mix_bits": {
+        "n": 2360,
+        "minimum": -3.7067681460188027,
+        "median": -0.4303500748164113,
+        "q90": 0.5344805886899486,
+        "maximum": 4.427495727923416
+      },
+      "overlapping_sums": {
+        "uniform_bits": 23097,
+        "retained_bits": 24856.999110618428,
+        "baseline_bits": 25455.87620540227,
+        "retained_mix_bits": 24506.379652209358,
+        "uniform_mix_bits": 23421.95202282332
+      }
+    },
+    "rhythm": {
+      "units": 323,
+      "active": 115,
+      "retained_beats_uniform": 61,
+      "retained_beats_both": 61,
+      "baseline_beats_uniform": 33,
+      "uniform_beats_both": 23,
+      "retained_mix_beats_uniform_mix": 61,
+      "retained_vs_uniform_bits": {
+        "n": 115,
+        "minimum": -1.415037499278844,
+        "median": 0.5849625007211562,
+        "q90": 1.0271418572208861,
+        "maximum": 2.1292830169449664
+      },
+      "retained_mix_vs_uniform_mix_bits": {
+        "n": 115,
+        "minimum": -0.7776075786635523,
+        "median": 0.28950661719498494,
+        "q90": 0.5500024964782696,
+        "maximum": 1.8365012677171206
+      },
+      "overlapping_sums": {
+        "uniform_bits": 154,
+        "retained_bits": 159.78664325679281,
+        "baseline_bits": 165.9744043470892,
+        "retained_mix_bits": 150.80091917770562,
+        "uniform_mix_bits": 156.85438432472236
+      }
+    }
+  },
+  "by_churn": {
+    "False": {
+      "units": 4446,
+      "active": 2832,
+      "retained_beats_uniform": 754,
+      "retained_beats_both": 641,
+      "baseline_beats_uniform": 1027,
+      "uniform_beats_both": 1478,
+      "retained_mix_beats_uniform_mix": 754,
+      "retained_vs_uniform_bits": {
+        "n": 2832,
+        "minimum": -3.706882688347804,
+        "median": -1.0,
+        "q90": 1.2048699351354955,
+        "maximum": 9.366746950949635
+      },
+      "retained_mix_vs_uniform_mix_bits": {
+        "n": 2832,
+        "minimum": -3.7067681460188027,
+        "median": -0.4256455132336483,
+        "q90": 0.5144330373120971,
+        "maximum": 4.427495727923416
+      },
+      "overlapping_sums": {
+        "uniform_bits": 24691,
+        "retained_bits": 26765.82502001293,
+        "baseline_bits": 27075.97850936879,
+        "retained_mix_bits": 26246.53878002077,
+        "uniform_mix_bits": 25025.040493937795
+      }
+    },
+    "True": {
+      "units": 923,
+      "active": 821,
+      "retained_beats_uniform": 172,
+      "retained_beats_both": 159,
+      "baseline_beats_uniform": 226,
+      "uniform_beats_both": 525,
+      "retained_mix_beats_uniform_mix": 172,
+      "retained_vs_uniform_bits": {
+        "n": 821,
+        "minimum": -3.6815715998185965,
+        "median": -1.415037499278844,
+        "q90": 0.7448338374995469,
+        "maximum": 4.843184994892622
+      },
+      "retained_mix_vs_uniform_mix_bits": {
+        "n": 821,
+        "minimum": -3.674653580284442,
+        "median": -0.6303544035351711,
+        "q90": 0.4150374992788439,
+        "maximum": 3.6282453073063756
+      },
+      "overlapping_sums": {
+        "uniform_bits": 13579,
+        "retained_bits": 14554.313369103686,
+        "baseline_bits": 14941.09262789567,
+        "retained_mix_bits": 14463.804265205448,
+        "uniform_mix_bits": 13800.319576932647
+      }
+    }
+  },
+  "provenance": {
+    "raw_sha256": "6a3b58177e3b0010170cf6e94dfcaecab0aa57d16c915a35d91300f84337ee0c",
+    "raw_path": "/home/pilgrim/git/simple-learner/lab/v/retained_prediction.pkl",
+    "source_sha256": "443c73913c08e25732b1e7274c0190941541787694d6633595d36d6f13c23fd5",
+    "command": "timeout 60s env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python lab/retained_uniform_control.py"
+  },
+  "checks": {
+    "equal_prior_mixture_identity": true,
+    "all_saved_mixture_losses_match": true
+  },
+  "limitations": [
+    "Post-result exploratory control; no independent sample or new simulation.",
+    "A candidate-specific uniform mixture still uses the candidate activation domain, supplied by its retained definition.",
+    "Uniform-mixture cumulative loss is exact; hard-choice counts cannot be recovered from totals.",
+    "Overlapping sums are not whole-brain information or a measured calibration decomposition."
+  ],
+  "wall_s": 0.044180503000006865
+}

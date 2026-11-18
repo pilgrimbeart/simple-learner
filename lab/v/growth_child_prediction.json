@@ -1,0 +1,615 @@
+{
+  "success": true,
+  "checks": {
+    "initial_units": 2042,
+    "writes": 24799,
+    "predictions": 5883,
+    "accepted_tastes": 163,
+    "learns": 27384,
+    "births": 10236,
+    "removals": 9236,
+    "one_tally_removals": 5369,
+    "tidy_removals_before_index_increment": 63,
+    "native_speaking_records_exact": 10371,
+    "final_units": 3042,
+    "combined_forecasts_aligned_by_position": 5883,
+    "census_children": 10236,
+    "tolerance_bits": 1e-10
+  },
+  "provenance": {
+    "revision": "d37dac6745d2657229861d6f9cee4239258367d3",
+    "dirty": " M ABSTRACT.md\n M PROGRAMME.md\n M QUESTIONS.md\n M README.md\n M discrete/NOTEBOOK.md\n?? lab/active_mixture_audit.py\n?? lab/active_mixture_review.py\n?? lab/alloc_review.py\n?? lab/allocation_trace.py\n?? lab/allocation_trace_analysis.py\n?? lab/allocation_trace_checks.py\n?? lab/future_evidence.py\n?? lab/future_evidence_analysis.py\n?? lab/future_evidence_checks.py\n?? lab/future_evidence_replay_checks.py\n?? lab/growth_child_prediction.py\n?? lab/growth_parent_census.py\n?? lab/issued_credit.py\n?? lab/issued_credit_analysis.py\n?? lab/issued_credit_checks.py\n?? lab/issued_credit_compare.py\n?? lab/mixture_confidence.py\n?? lab/retained_mixture.py\n?? lab/retained_prediction.py\n?? lab/retained_prediction_checks.py\n?? lab/retained_prediction_diagnosis.py\n?? lab/retained_selection_reference.py\n?? lab/retained_uniform_control.py\n?? lab/scoring_feedback.py\n?? lab/scoring_feedback_analysis.py\n?? lab/scoring_order_replay.py\n?? lab/v/active_mixture_audit.json\n?? lab/v/active_mixture_audit.log\n?? lab/v/active_mixture_audit_report.md\n?? lab/v/active_mixture_review.json\n?? lab/v/active_mixture_review.log\n?? lab/v/alloc_review.json\n?? lab/v/alloc_review.log\n?? lab/v/allocation_trace.json\n?? lab/v/allocation_trace.log\n?? lab/v/allocation_trace_analysis.json\n?? lab/v/allocation_trace_analysis.log\n?? lab/v/allocation_trace_checks.json\n?? lab/v/allocation_trace_checks.log\n?? lab/v/d79_work_order.md\n?? lab/v/future_evidence.json\n?? lab/v/future_evidence.log\n?? lab/v/future_evidence_analysis.json\n?? lab/v/future_evidence_analysis.log\n?? lab/v/future_evidence_checks.json\n?? lab/v/future_evidence_checks.log\n?? lab/v/future_evidence_replay_checks.json\n?? lab/v/future_evidence_replay_checks.log\n?? lab/v/growth_child_prediction.log\n?? lab/v/growth_child_prediction_checks.json\n?? lab/v/growth_child_prediction_checks.log\n?? lab/v/growth_parent_census.json\n?? lab/v/growth_parent_census.log\n?? lab/v/growth_parent_census_checks.json\n?? lab/v/growth_parent_census_checks.log\n?? lab/v/issued_credit_analysis.json\n?? lab/v/issued_credit_analysis.log\n?? lab/v/issued_credit_checks.json\n?? lab/v/issued_credit_checks.log\n?? lab/v/issued_credit_compare.json\n?? lab/v/issued_credit_compare.log\n?? lab/v/mixture_confidence.json\n?? lab/v/mixture_confidence.log\n?? lab/v/retained_mixture.json\n?? lab/v/retained_mixture.log\n?? lab/v/retained_mixture_analysis.json\n?? lab/v/retained_mixture_analysis.log\n?? lab/v/retained_mixture_checks.log\n?? lab/v/retained_prediction.json\n?? lab/v/retained_prediction.log\n?? lab/v/retained_prediction_checks.json\n?? lab/v/retained_prediction_checks.log\n?? lab/v/retained_prediction_diagnosis.json\n?? lab/v/retained_prediction_diagnosis.log\n?? lab/v/retained_prediction_failed_index.json\n?? lab/v/retained_prediction_failed_index.log\n?? lab/v/retained_selection_reference.json\n?? lab/v/retained_selection_reference.log\n?? lab/v/retained_uniform_control.json\n?? lab/v/retained_uniform_control.log\n?? lab/v/scoring_feedback.json\n?? lab/v/scoring_feedback.log\n?? lab/v/scoring_feedback_analysis.json\n?? lab/v/scoring_feedback_analysis.log\n?? lab/v/scoring_order_replay.json\n?? lab/v/scoring_order_replay.log\n?? lab/v/scoring_order_replay_failed_summary.json\n?? lab/v/scoring_order_replay_failed_summary.log\n?? lab/v/scoring_order_replay_report.md\n",
+    "source_sha256": {
+      "lab/growth_child_prediction.py": "e51069b90e252b740cdfdccfed3ddefff02e7d0ebb9973622d91fef47d74912f",
+      "lab/growth_parent_census.py": "ca61a16199e41e7a2d277ee455e8726e45c59a23d1458498f8bcf2033bd4d526",
+      "lab/future_evidence.py": "aefdc3785fcdfec86d13fff9a8d8dcd902bc2c49a3e13ab596d11af17897fe8e",
+      "lab/retained_prediction.py": "207441dc072521d8efb7ad163498ddf988428b87f95536c7061be6fe3b2a0198"
+    },
+    "input_sha256": {
+      "/home/pilgrim/git/simple-learner/lab/v/future_evidence.pkl": "d74474476cf6e0fea81ea4a08677eb3d058ee7411f330a553b9c728462af58d9",
+      "/home/pilgrim/git/simple-learner/lab/v/growth_parent_census.pkl": "845f972d49955a112ffad8ce54815b629c41c429459c87b02693911f9119bd23",
+      "/home/pilgrim/git/simple-learner/lab/v/growth_parent_census.json": "44ec14f887842a74456fa34cf79973becc9fa957a52c9149b936570b4829a46c",
+      "/home/pilgrim/git/simple-learner/lab/v/retained_mixture.json": "b366b0968d3da7c1d0768428d507c967940b52ba6bd7b32722eef34676b55245"
+    },
+    "command": "timeout --signal=TERM --kill-after=5s 240s env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python lab/growth_child_prediction.py --run",
+    "life": {
+      "rung": "sequence 17",
+      "seed": 177000,
+      "poison_first": "red",
+      "life_s": 300.0,
+      "dt_s": 0.0025,
+      "total_cap": 3042,
+      "design": "corrected weight contest (D84 trace)"
+    }
+  },
+  "rows_path": "/home/pilgrim/git/simple-learner/lab/v/growth_child_prediction.pkl",
+  "summary": {
+    "windows": {
+      "full": {
+        "any grown parent not yet spoken": {
+          "born_children": 57,
+          "children_scored": 22,
+          "children_zero_opportunities": 35,
+          "child_taste_pairs": 77,
+          "unique_accepted_tastes": 58,
+          "children_better_than_combined": 9,
+          "children_worse_than_combined": 13,
+          "children_numerically_equal": 0,
+          "pairs_better": 28,
+          "pairs_worse": 49,
+          "pairs_numerically_equal": 0,
+          "median_child_saving_vs_combined_bits": -0.359843447106601,
+          "child_saving_vs_combined_bits": {
+            "n": 22,
+            "minimum": -8.96537362839182,
+            "median": -0.359843447106601,
+            "q90": 0.09656782071946879,
+            "maximum": 5.8055024645008615,
+            "total": -28.96135994864295
+          },
+          "child_saving_vs_uniform_bits": {
+            "n": 22,
+            "minimum": -3.5431423250265293,
+            "median": -1.0,
+            "q90": 1.2482315354707434,
+            "maximum": 4.1808804056383,
+            "total": -9.29880037471438
+          },
+          "children_beating_combined_and_uniform": 4
+        },
+        "any one-tally grown parent": {
+          "born_children": 638,
+          "children_scored": 131,
+          "children_zero_opportunities": 507,
+          "child_taste_pairs": 321,
+          "unique_accepted_tastes": 129,
+          "children_better_than_combined": 40,
+          "children_worse_than_combined": 91,
+          "children_numerically_equal": 0,
+          "pairs_better": 125,
+          "pairs_worse": 196,
+          "pairs_numerically_equal": 0,
+          "median_child_saving_vs_combined_bits": -0.40753882336506825,
+          "child_saving_vs_combined_bits": {
+            "n": 131,
+            "minimum": -8.96537362839182,
+            "median": -0.40753882336506825,
+            "q90": 0.44739840389066443,
+            "maximum": 1.9823261217666654,
+            "total": -147.43922030379701
+          },
+          "child_saving_vs_uniform_bits": {
+            "n": 131,
+            "minimum": -3.5431423250265293,
+            "median": -1.0,
+            "q90": 1.3219280948873624,
+            "maximum": 4.1808804056383,
+            "total": -35.708613139784426
+          },
+          "children_beating_combined_and_uniform": 21
+        },
+        "neither": {
+          "born_children": 9586,
+          "children_scored": 4866,
+          "children_zero_opportunities": 4720,
+          "child_taste_pairs": 13262,
+          "unique_accepted_tastes": 158,
+          "children_better_than_combined": 993,
+          "children_worse_than_combined": 3873,
+          "children_numerically_equal": 0,
+          "pairs_better": 4115,
+          "pairs_worse": 9147,
+          "pairs_numerically_equal": 0,
+          "median_child_saving_vs_combined_bits": -1.31189987921858,
+          "child_saving_vs_combined_bits": {
+            "n": 4866,
+            "minimum": -16.533815088752704,
+            "median": -1.31189987921858,
+            "q90": 0.2737255142241253,
+            "maximum": 4.686628834694459,
+            "total": -7128.594392719065
+          },
+          "child_saving_vs_uniform_bits": {
+            "n": 4866,
+            "minimum": -3.362336952285964,
+            "median": -0.7776075786635523,
+            "q90": 0.5876096505559126,
+            "maximum": 19.904630840542865,
+            "total": -1484.9327683522788
+          },
+          "children_beating_combined_and_uniform": 706
+        },
+        "all children": {
+          "born_children": 10236,
+          "children_scored": 5003,
+          "children_zero_opportunities": 5233,
+          "child_taste_pairs": 13593,
+          "unique_accepted_tastes": 158,
+          "children_better_than_combined": 1036,
+          "children_worse_than_combined": 3967,
+          "children_numerically_equal": 0,
+          "pairs_better": 4245,
+          "pairs_worse": 9348,
+          "pairs_numerically_equal": 0,
+          "median_child_saving_vs_combined_bits": -1.3050835015257423,
+          "child_saving_vs_combined_bits": {
+            "n": 5003,
+            "minimum": -16.533815088752704,
+            "median": -1.3050835015257423,
+            "q90": 0.27864830220115727,
+            "maximum": 5.8055024645008615,
+            "total": -7274.117799111038
+          },
+          "child_saving_vs_uniform_bits": {
+            "n": 5003,
+            "minimum": -3.5431423250265293,
+            "median": -0.7776075786635523,
+            "q90": 0.6737982330564842,
+            "maximum": 19.904630840542865,
+            "total": -1521.09063470668
+          },
+          "children_beating_combined_and_uniform": 729
+        },
+        "family event": {
+          "born_children": 760,
+          "children_scored": 390,
+          "children_zero_opportunities": 370,
+          "child_taste_pairs": 1365,
+          "unique_accepted_tastes": 158,
+          "children_better_than_combined": 99,
+          "children_worse_than_combined": 291,
+          "children_numerically_equal": 0,
+          "pairs_better": 520,
+          "pairs_worse": 845,
+          "pairs_numerically_equal": 0,
+          "median_child_saving_vs_combined_bits": -1.3084916903721613,
+          "child_saving_vs_combined_bits": {
+            "n": 390,
+            "minimum": -10.9569593603192,
+            "median": -1.3084916903721613,
+            "q90": 0.423892097770323,
+            "maximum": 5.8055024645008615,
+            "total": -607.932504417429
+          },
+          "child_saving_vs_uniform_bits": {
+            "n": 390,
+            "minimum": -3.5431423250265293,
+            "median": -0.8417561633870108,
+            "q90": 1.3219280948873624,
+            "maximum": 19.904630840542865,
+            "total": -53.458495889008354
+          },
+          "children_beating_combined_and_uniform": 72
+        },
+        "family clock": {
+          "born_children": 3774,
+          "children_scored": 2635,
+          "children_zero_opportunities": 1139,
+          "child_taste_pairs": 6181,
+          "unique_accepted_tastes": 158,
+          "children_better_than_combined": 577,
+          "children_worse_than_combined": 2058,
+          "children_numerically_equal": 0,
+          "pairs_better": 1990,
+          "pairs_worse": 4191,
+          "pairs_numerically_equal": 0,
+          "median_child_saving_vs_combined_bits": -0.9304389855066928,
+          "child_saving_vs_combined_bits": {
+            "n": 2635,
+            "minimum": -8.710894956941074,
+            "median": -0.9304389855066928,
+            "q90": 0.3175809201324661,
+            "maximum": 4.686628834694459,
+            "total": -3335.1024678808903
+          },
+          "child_saving_vs_uniform_bits": {
+            "n": 2635,
+            "minimum": -3.1314684382755504,
+            "median": -0.6780719051126376,
+            "q90": 1.3219280948873624,
+            "maximum": 8.428147495613777,
+            "total": -673.5670232525251
+          },
+          "children_beating_combined_and_uniform": 402
+        },
+        "family integrator": {
+          "born_children": 5253,
+          "children_scored": 1885,
+          "children_zero_opportunities": 3368,
+          "child_taste_pairs": 5916,
+          "unique_accepted_tastes": 158,
+          "children_better_than_combined": 346,
+          "children_worse_than_combined": 1539,
+          "children_numerically_equal": 0,
+          "pairs_better": 1708,
+          "pairs_worse": 4208,
+          "pairs_numerically_equal": 0,
+          "median_child_saving_vs_combined_bits": -1.5689045372464727,
+          "child_saving_vs_combined_bits": {
+            "n": 1885,
+            "minimum": -16.533815088752704,
+            "median": -1.5689045372464727,
+            "q90": 0.2028353076670062,
+            "maximum": 4.496110288796998,
+            "total": -3249.5002878942832
+          },
+          "child_saving_vs_uniform_bits": {
+            "n": 1885,
+            "minimum": -3.362336952285964,
+            "median": -0.9618648711132289,
+            "q90": 0.5849625007211562,
+            "maximum": 10.310163422583267,
+            "total": -789.6214923790845
+          },
+          "children_beating_combined_and_uniform": 241
+        },
+        "family rhythm": {
+          "born_children": 449,
+          "children_scored": 93,
+          "children_zero_opportunities": 356,
+          "child_taste_pairs": 131,
+          "unique_accepted_tastes": 40,
+          "children_better_than_combined": 14,
+          "children_worse_than_combined": 79,
+          "children_numerically_equal": 0,
+          "pairs_better": 27,
+          "pairs_worse": 104,
+          "pairs_numerically_equal": 0,
+          "median_child_saving_vs_combined_bits": -0.40288551734697164,
+          "child_saving_vs_combined_bits": {
+            "n": 93,
+            "minimum": -3.0024959439493815,
+            "median": -0.40288551734697164,
+            "q90": 0.00475705395801462,
+            "maximum": 0.8640303270141803,
+            "total": -81.58253891843482
+          },
+          "child_saving_vs_uniform_bits": {
+            "n": 93,
+            "minimum": -1.0000000000000004,
+            "median": 0.5849625007211562,
+            "q90": 0.5849625007211562,
+            "maximum": 2.1292830169449664,
+            "total": -4.44362318606199
+          },
+          "children_beating_combined_and_uniform": 14
+        }
+      },
+      "last_third": {
+        "any grown parent not yet spoken": {
+          "born_children": 57,
+          "children_scored": 8,
+          "children_zero_opportunities": 49,
+          "child_taste_pairs": 19,
+          "unique_accepted_tastes": 17,
+          "children_better_than_combined": 2,
+          "children_worse_than_combined": 6,
+          "children_numerically_equal": 0,
+          "pairs_better": 4,
+          "pairs_worse": 15,
+          "pairs_numerically_equal": 0,
+          "median_child_saving_vs_combined_bits": -1.395575312858095,
+          "child_saving_vs_combined_bits": {
+            "n": 8,
+            "minimum": -3.942818640966435,
+            "median": -1.395575312858095,
+            "q90": 0.017616814129169014,
+            "maximum": 0.044459626400730104,
+            "total": -11.131496747250816
+          },
+          "child_saving_vs_uniform_bits": {
+            "n": 8,
+            "minimum": -1.765534746362977,
+            "median": 0.120157164666855,
+            "q90": 1.1500879079104656,
+            "maximum": 1.6553518286125541,
+            "total": 0.12786562791593914
+          },
+          "children_beating_combined_and_uniform": 2
+        },
+        "any one-tally grown parent": {
+          "born_children": 638,
+          "children_scored": 48,
+          "children_zero_opportunities": 590,
+          "child_taste_pairs": 81,
+          "unique_accepted_tastes": 40,
+          "children_better_than_combined": 6,
+          "children_worse_than_combined": 42,
+          "children_numerically_equal": 0,
+          "pairs_better": 15,
+          "pairs_worse": 66,
+          "pairs_numerically_equal": 0,
+          "median_child_saving_vs_combined_bits": -0.8852778660262726,
+          "child_saving_vs_combined_bits": {
+            "n": 48,
+            "minimum": -4.464542131979735,
+            "median": -0.8852778660262726,
+            "q90": 0.014577253107424953,
+            "maximum": 1.2051203267955577,
+            "total": -51.27766889843983
+          },
+          "child_saving_vs_uniform_bits": {
+            "n": 48,
+            "minimum": -2.0,
+            "median": -0.2020745915680539,
+            "q90": 0.689537618787682,
+            "maximum": 1.6553518286125541,
+            "total": -7.578661301997001
+          },
+          "children_beating_combined_and_uniform": 3
+        },
+        "neither": {
+          "born_children": 9586,
+          "children_scored": 2236,
+          "children_zero_opportunities": 7350,
+          "child_taste_pairs": 4780,
+          "unique_accepted_tastes": 55,
+          "children_better_than_combined": 352,
+          "children_worse_than_combined": 1884,
+          "children_numerically_equal": 0,
+          "pairs_better": 955,
+          "pairs_worse": 3825,
+          "pairs_numerically_equal": 0,
+          "median_child_saving_vs_combined_bits": -1.4493928484807703,
+          "child_saving_vs_combined_bits": {
+            "n": 2236,
+            "minimum": -11.062629880681689,
+            "median": -1.4493928484807703,
+            "q90": 0.15461745699865878,
+            "maximum": 2.99421042969391,
+            "total": -3276.860253692468
+          },
+          "child_saving_vs_uniform_bits": {
+            "n": 2236,
+            "minimum": -4.0,
+            "median": -0.5113600382500416,
+            "q90": 0.5894556723183602,
+            "maximum": 8.646934837853733,
+            "total": -495.01771702881194
+          },
+          "children_beating_combined_and_uniform": 274
+        },
+        "all children": {
+          "born_children": 10236,
+          "children_scored": 2285,
+          "children_zero_opportunities": 7951,
+          "child_taste_pairs": 4862,
+          "unique_accepted_tastes": 55,
+          "children_better_than_combined": 359,
+          "children_worse_than_combined": 1926,
+          "children_numerically_equal": 0,
+          "pairs_better": 971,
+          "pairs_worse": 3891,
+          "pairs_numerically_equal": 0,
+          "median_child_saving_vs_combined_bits": -1.4493928484807703,
+          "child_saving_vs_combined_bits": {
+            "n": 2285,
+            "minimum": -11.062629880681689,
+            "median": -1.4493928484807703,
+            "q90": 0.14345335138447646,
+            "maximum": 2.99421042969391,
+            "total": -3328.131809839181
+          },
+          "child_saving_vs_uniform_bits": {
+            "n": 2285,
+            "minimum": -4.0,
+            "median": -0.4943599519402496,
+            "q90": 0.5903543066378001,
+            "maximum": 8.646934837853733,
+            "total": -502.0114158300878
+          },
+          "children_beating_combined_and_uniform": 278
+        },
+        "family event": {
+          "born_children": 760,
+          "children_scored": 175,
+          "children_zero_opportunities": 585,
+          "child_taste_pairs": 446,
+          "unique_accepted_tastes": 55,
+          "children_better_than_combined": 44,
+          "children_worse_than_combined": 131,
+          "children_numerically_equal": 0,
+          "pairs_better": 119,
+          "pairs_worse": 327,
+          "pairs_numerically_equal": 0,
+          "median_child_saving_vs_combined_bits": -1.31189987921858,
+          "child_saving_vs_combined_bits": {
+            "n": 175,
+            "minimum": -11.062629880681689,
+            "median": -1.31189987921858,
+            "q90": 0.11017106973287903,
+            "maximum": 2.8785889098768545,
+            "total": -273.56517721910984
+          },
+          "child_saving_vs_uniform_bits": {
+            "n": 175,
+            "minimum": -2.7953822803915283,
+            "median": -0.29698633819508147,
+            "q90": 1.3219280948873624,
+            "maximum": 8.646934837853733,
+            "total": -5.735709276118996
+          },
+          "children_beating_combined_and_uniform": 38
+        },
+        "family clock": {
+          "born_children": 3774,
+          "children_scored": 1173,
+          "children_zero_opportunities": 2601,
+          "child_taste_pairs": 2258,
+          "unique_accepted_tastes": 55,
+          "children_better_than_combined": 175,
+          "children_worse_than_combined": 998,
+          "children_numerically_equal": 0,
+          "pairs_better": 454,
+          "pairs_worse": 1804,
+          "pairs_numerically_equal": 0,
+          "median_child_saving_vs_combined_bits": -1.1816380437006242,
+          "child_saving_vs_combined_bits": {
+            "n": 1173,
+            "minimum": -8.710894956941074,
+            "median": -1.1816380437006242,
+            "q90": 0.43616371912851304,
+            "maximum": 1.9156137096005728,
+            "total": -1535.3465421561473
+          },
+          "child_saving_vs_uniform_bits": {
+            "n": 1173,
+            "minimum": -4.0,
+            "median": -0.5145731728297583,
+            "q90": 0.5849625007211562,
+            "maximum": 2.9772799234999168,
+            "total": -252.61933220154793
+          },
+          "children_beating_combined_and_uniform": 133
+        },
+        "family integrator": {
+          "born_children": 5253,
+          "children_scored": 844,
+          "children_zero_opportunities": 4409,
+          "child_taste_pairs": 2027,
+          "unique_accepted_tastes": 55,
+          "children_better_than_combined": 126,
+          "children_worse_than_combined": 718,
+          "children_numerically_equal": 0,
+          "pairs_better": 371,
+          "pairs_worse": 1656,
+          "pairs_numerically_equal": 0,
+          "median_child_saving_vs_combined_bits": -1.7213022238351174,
+          "child_saving_vs_combined_bits": {
+            "n": 844,
+            "minimum": -11.008070884256131,
+            "median": -1.7213022238351174,
+            "q90": 0.11970240316879176,
+            "maximum": 2.99421042969391,
+            "total": -1437.6375515454888
+          },
+          "child_saving_vs_uniform_bits": {
+            "n": 844,
+            "minimum": -3.6520871636229377,
+            "median": -0.5993784310723957,
+            "q90": 0.663802811222957,
+            "maximum": 4.5179817679723975,
+            "total": -239.21275116635886
+          },
+          "children_beating_combined_and_uniform": 93
+        },
+        "family rhythm": {
+          "born_children": 449,
+          "children_scored": 93,
+          "children_zero_opportunities": 356,
+          "child_taste_pairs": 131,
+          "unique_accepted_tastes": 40,
+          "children_better_than_combined": 14,
+          "children_worse_than_combined": 79,
+          "children_numerically_equal": 0,
+          "pairs_better": 27,
+          "pairs_worse": 104,
+          "pairs_numerically_equal": 0,
+          "median_child_saving_vs_combined_bits": -0.40288551734697164,
+          "child_saving_vs_combined_bits": {
+            "n": 93,
+            "minimum": -3.0024959439493815,
+            "median": -0.40288551734697164,
+            "q90": 0.00475705395801462,
+            "maximum": 0.8640303270141803,
+            "total": -81.58253891843482
+          },
+          "child_saving_vs_uniform_bits": {
+            "n": 93,
+            "minimum": -1.0000000000000004,
+            "median": 0.5849625007211562,
+            "q90": 0.5849625007211562,
+            "maximum": 2.1292830169449664,
+            "total": -4.44362318606199
+          },
+          "children_beating_combined_and_uniform": 14
+        }
+      }
+    },
+    "remaining_life_at_birth": {
+      "[0,30) s": {
+        "children": 1450,
+        "later_accepted_tastes": {
+          "n": 1450,
+          "minimum": 0.0,
+          "median": 9.0,
+          "q90": 16.0,
+          "maximum": 17.0,
+          "total": 12839.0
+        },
+        "children_with_no_later_accepted_taste": 90,
+        "zero_score_children": 862
+      },
+      "[30,100) s": {
+        "children": 2565,
+        "later_accepted_tastes": {
+          "n": 2565,
+          "minimum": 18.0,
+          "median": 36.0,
+          "q90": 51.0,
+          "maximum": 54.0,
+          "total": 92269.0
+        },
+        "children_with_no_later_accepted_taste": 0,
+        "zero_score_children": 1409
+      },
+      "[100,200) s": {
+        "children": 3749,
+        "later_accepted_tastes": {
+          "n": 3749,
+          "minimum": 55.0,
+          "median": 84.0,
+          "q90": 108.0,
+          "maximum": 114.0,
+          "total": 315260.0
+        },
+        "children_with_no_later_accepted_taste": 0,
+        "zero_score_children": 1912
+      },
+      "[200,300] s": {
+        "children": 2472,
+        "later_accepted_tastes": {
+          "n": 2472,
+          "minimum": 115.0,
+          "median": 134.0,
+          "q90": 152.0,
+          "maximum": 158.0,
+          "total": 331801.0
+        },
+        "children_with_no_later_accepted_taste": 0,
+        "zero_score_children": 1050
+      }
+    },
+    "accepted_tastes_last_third": 55
+  },
+  "table_full": "| group | born children | scored \u22651 | child\u2013taste pairs | unique tastes | better / worse / equal vs combined (per child) | median per-child saving vs combined (bits) | beat combined and uniform |\n|---|---:|---:|---:|---:|---:|---:|---:|\n| any grown parent not yet spoken | 57 | 22 | 77 | 58 | 9 / 13 / 0 | -0.360 | 4 |\n| any one-tally grown parent | 638 | 131 | 321 | 129 | 40 / 91 / 0 | -0.408 | 21 |\n| neither | 9586 | 4866 | 13262 | 158 | 993 / 3873 / 0 | -1.312 | 706 |\n| all children | 10236 | 5003 | 13593 | 158 | 1036 / 3967 / 0 | -1.305 | 729 |\n| family event | 760 | 390 | 1365 | 158 | 99 / 291 / 0 | -1.308 | 72 |\n| family clock | 3774 | 2635 | 6181 | 158 | 577 / 2058 / 0 | -0.930 | 402 |\n| family integrator | 5253 | 1885 | 5916 | 158 | 346 / 1539 / 0 | -1.569 | 241 |\n| family rhythm | 449 | 93 | 131 | 40 | 14 / 79 / 0 | -0.403 | 14 |",
+  "table_last_third": "| group | born children | scored \u22651 | child\u2013taste pairs | unique tastes | better / worse / equal vs combined (per child) | median per-child saving vs combined (bits) | beat combined and uniform |\n|---|---:|---:|---:|---:|---:|---:|---:|\n| any grown parent not yet spoken | 57 | 8 | 19 | 17 | 2 / 6 / 0 | -1.396 | 2 |\n| any one-tally grown parent | 638 | 48 | 81 | 40 | 6 / 42 / 0 | -0.885 | 3 |\n| neither | 9586 | 2236 | 4780 | 55 | 352 / 1884 / 0 | -1.449 | 274 |\n| all children | 10236 | 2285 | 4862 | 55 | 359 / 1926 / 0 | -1.449 | 278 |\n| family event | 760 | 175 | 446 | 55 | 44 / 131 / 0 | -1.312 | 38 |\n| family clock | 3774 | 1173 | 2258 | 55 | 175 / 998 / 0 | -1.182 | 133 |\n| family integrator | 5253 | 844 | 2027 | 55 | 126 / 718 / 0 | -1.721 | 93 |\n| family rhythm | 449 | 93 | 131 | 40 | 14 / 79 / 0 | -0.403 | 14 |",
+  "limits": [
+    "Descriptive relative score: the combined forecast already includes the child; not a leave-out effect.",
+    "Children share tastes and ancestry: no independent-unit intervals; sums are not learned bits.",
+    "Equality means |difference| <= 1e-10 bits, not a statistical tie.",
+    "Late birth limits exposure; zero opportunities are not shown to be caused by birth time.",
+    "One frozen corrected contest life."
+  ],
+  "wall_s": 4.245066581999708
+}

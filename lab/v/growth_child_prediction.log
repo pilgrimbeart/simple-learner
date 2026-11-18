@@ -1,0 +1,25 @@
+VALIDATION {"initial_units": 2042, "writes": 24799, "predictions": 5883, "accepted_tastes": 163, "learns": 27384, "births": 10236, "removals": 9236, "one_tally_removals": 5369, "tidy_removals_before_index_increment": 63, "native_speaking_records_exact": 10371, "final_units": 3042, "combined_forecasts_aligned_by_position": 5883, "census_children": 10236, "tolerance_bits": 1e-10}
+FULL LIFE
+| group | born children | scored ≥1 | child–taste pairs | unique tastes | better / worse / equal vs combined (per child) | median per-child saving vs combined (bits) | beat combined and uniform |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| any grown parent not yet spoken | 57 | 22 | 77 | 58 | 9 / 13 / 0 | -0.360 | 4 |
+| any one-tally grown parent | 638 | 131 | 321 | 129 | 40 / 91 / 0 | -0.408 | 21 |
+| neither | 9586 | 4866 | 13262 | 158 | 993 / 3873 / 0 | -1.312 | 706 |
+| all children | 10236 | 5003 | 13593 | 158 | 1036 / 3967 / 0 | -1.305 | 729 |
+| family event | 760 | 390 | 1365 | 158 | 99 / 291 / 0 | -1.308 | 72 |
+| family clock | 3774 | 2635 | 6181 | 158 | 577 / 2058 / 0 | -0.930 | 402 |
+| family integrator | 5253 | 1885 | 5916 | 158 | 346 / 1539 / 0 | -1.569 | 241 |
+| family rhythm | 449 | 93 | 131 | 40 | 14 / 79 / 0 | -0.403 | 14 |
+LAST THIRD
+| group | born children | scored ≥1 | child–taste pairs | unique tastes | better / worse / equal vs combined (per child) | median per-child saving vs combined (bits) | beat combined and uniform |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| any grown parent not yet spoken | 57 | 8 | 19 | 17 | 2 / 6 / 0 | -1.396 | 2 |
+| any one-tally grown parent | 638 | 48 | 81 | 40 | 6 / 42 / 0 | -0.885 | 3 |
+| neither | 9586 | 2236 | 4780 | 55 | 352 / 1884 / 0 | -1.449 | 274 |
+| all children | 10236 | 2285 | 4862 | 55 | 359 / 1926 / 0 | -1.449 | 278 |
+| family event | 760 | 175 | 446 | 55 | 44 / 131 / 0 | -1.312 | 38 |
+| family clock | 3774 | 1173 | 2258 | 55 | 175 / 998 / 0 | -1.182 | 133 |
+| family integrator | 5253 | 844 | 2027 | 55 | 126 / 718 / 0 | -1.721 | 93 |
+| family rhythm | 449 | 93 | 131 | 40 | 14 / 79 / 0 | -0.403 | 14 |
+BINS {"[0,30) s": {"children": 1450, "later_accepted_tastes": {"n": 1450, "minimum": 0.0, "median": 9.0, "q90": 16.0, "maximum": 17.0, "total": 12839.0}, "children_with_no_later_accepted_taste": 90, "zero_score_children": 862}, "[30,100) s": {"children": 2565, "later_accepted_tastes": {"n": 2565, "minimum": 18.0, "median": 36.0, "q90": 51.0, "maximum": 54.0, "total": 92269.0}, "children_with_no_later_accepted_taste": 0, "zero_score_children": 1409}, "[100,200) s": {"children": 3749, "later_accepted_tastes": {"n": 3749, "minimum": 55.0, "median": 84.0, "q90": 108.0, "maximum": 114.0, "total": 315260.0}, "children_with_no_later_accepted_taste": 0, "zero_score_children": 1912}, "[200,300] s": {"children": 2472, "later_accepted_tastes": {"n": 2472, "minimum": 115.0, "median": 134.0, "q90": 152.0, "maximum": 158.0, "total": 331801.0}, "children_with_no_later_accepted_taste": 0, "zero_score_children": 1050}}
+wall_s 4.245066581999708

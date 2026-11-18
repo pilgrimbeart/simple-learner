@@ -99,21 +99,54 @@ curves need an actual resource account before they establish economical material
 [Scaling assessment](discrete/NOTEBOOK.md#review-2026-11-16),
 [resource audit, D76](discrete/NOTEBOOK.md#d76-resource-floor).
 
-**Most of what extra capacity buys comes from a small part of it.** On the hardest tested sequence, the brain
-with eight times the allowance builds about 2200 extra memory units. 85% of them go to clock and integrator
-streams that predict little. Giving room only to the ten streams that track the colours eaten builds about
-200 units and recovers most of the improvement. With nothing to learn, the brain builds nothing at any
-setting. The waste lies in where material is sent, so the next change belongs in how material is allocated,
-not in what the streams represent. [Resource observation, D77](discrete/NOTEBOOK.md#d77-resource-observation).
+**Some extra memory has much more apparent value than the rest.** On the hardest tested sequence,
+extra room in the ten streams that track colour events recovers much of the larger brain's improvement
+with far fewer new units. The remaining performance gap is unresolved. The sampled all-food lives grow
+nothing, but still run the fixed machinery. These measurements identify an opportunity to use resources
+better; they do not prove that the remaining memory is dispensable.
+[Resource observation, D77](discrete/NOTEBOOK.md#d77-resource-observation).
 
-**How material is shared out matters as much as how much there is, and the brain can't yet judge it.** With
-the total number of memory units truly capped, splitting new units equally among streams does far worse than
-the original design, which by accident gave more room to streams with small alphabets. Letting streams
-compete pairwise by their standing in the brain's prediction mix does much better than an equal split on fresh
-lives, but not as well as the original design. The reason: that standing is winner-take-all. One stream ends
-with about 90% of the weight and every other stream sits at the same minimum, so the brain cannot tell which
-of the rest are worth feeding. The missing piece is a measure of how much each stream adds to the brain's
-predictions. [Allocation rules, D78](discrete/NOTEBOOK.md#d78-allocation-rules).
+**Allocation matters; its useful signal is still an open question.** Under a real memory cap, letting
+streams compete by prediction weight beats an equal split on fresh sequence lives, but the smaller brain
+fails to match the original design. The first explanation went beyond the evidence: family totals hid
+individual predictors that saved bits, and the weight plots included streams that were not speaking.
+We must distinguish a predictor's stored weight, its contribution to the present prediction, and the
+future benefit of preserving or enlarging its memory. That distinction matters for a reusable local
+module deciding what to keep. The small follow-up weakens the claim that early usefulness explains the
+larger brain's advantage and exposes more frequent errors in crediting predictions under the contest.
+Replaying corrected credit barely changes immediate choices, but letting it affect the live learner
+changes memory allocation and later behaviour. It has not demonstrated a performance improvement.
+A checked contract now scores the prediction actually made and delivers unit credit only to its original
+surviving memory. On the existing ten-pair development set it does not demonstrate better performance,
+and the smaller contest brain's gap remains. Correct credit does not settle which memory to preserve;
+the trace now shows that foreign recycling often changes a current prediction, while some new units
+disappear within the same feedback event before issuing any forecast. This does not show they had zero
+causal effect or would have helped later. Replaying the exact history shows that many would meet later
+teaching opportunities, including 821 of the 923 immediately deleted newborns. Recurrence alone does
+not establish useful new information or justify keeping them at the expense of other memory.
+Reconstructing their forecasts shows: some retained units beat their surviving stream, but most
+recurring candidates lose to a uniform 50:50 forecast. Better probability scores can come from reducing
+misplaced confidence without recovering useful structure; here retaining units also worsens the
+aggregate choice score on overlapping comparisons. Yet reducing confidence in the actual combined
+forecast worsens both probability scores in all four historical lives checked. A weak individual readout
+does not imply a weak combined prediction. On the same corrected life, only 336 of 3653 recurring
+retained units beat the combined forecast, and one supplied rule for combining candidates without
+future knowledge fails to improve it. This weakens simple retention as the explanation. Extra memory
+could instead enable new combinations to form. Counting actual construction weakens that too: units that
+had predicted little or nothing are parents of about 6% of new units, half of all new units never make a
+forecast when food is tasted, and about one in five of those that do beat the brain's combined forecast.
+Deleted units could have been parents of many combinations nothing living could build; whether those would
+have predicted is untested.
+[Allocation comparison, D78](discrete/NOTEBOOK.md#d78-allocation-rules),
+[review and diagnostic, D79](discrete/NOTEBOOK.md#d79-active-mixture),
+[scoring replay and feedback, D80–D81](discrete/NOTEBOOK.md#d80-scoring-replay),
+[consistent credit comparison, D82](discrete/NOTEBOOK.md#d82-issued-credit),
+[allocation and construction trace, D83](discrete/NOTEBOOK.md#d83-allocation-trace),
+[future observation opportunities, D84](discrete/NOTEBOOK.md#d84-future-evidence),
+[retained prediction and confidence control, D85](discrete/NOTEBOOK.md#d85-retained-prediction),
+[whole-mixture counterexample, D86](discrete/NOTEBOOK.md#d86-mixture-confidence),
+[same-history combined reference, D87](discrete/NOTEBOOK.md#d87-retained-mixture),
+[memory as parts, D88–D91](discrete/NOTEBOOK.md#d88-parent-census).
 
 **Separating failure causes made timing progress possible.** The timing investigations distinguished missing
 cycle position, recovery of trust in predictors that improve late, and period estimation. Acquisition and tracking
@@ -259,9 +292,13 @@ physical circuit with the same learning, power or noise performance.
   State the target: a noisy taste is different from the hidden food state. **Calibration**: whether stated
   probabilities agree with observed frequencies. **Proper scoring rule**: one that rewards an honest probability
   forecast in expectation; see [BOUNDS.md](BOUNDS.md#prediction-belief-and-action).
+- **Brier score**: squared difference between a predicted probability and the binary outcome (0 or 1).
+  Lower is better; here the binary convention is used without also adding the complementary outcome.
 - **Phase-locked loop (PLL)**: feedback that adjusts an oscillator to track an observed rhythm. **Acquisition**
   finds a plausible rhythm; **tracking** follows it. A **Kalman filter** estimates a changing state under an explicit
   dynamical and observation model; its optimality is conditional on that model.
+- **Issued forecast** (D82): the probability, choice and speaker identity recorded when a prediction is made,
+  before feedback. Scoring that record differs from crediting a replacement selected after memory changes.
 - **Fixed share**: redistribution of some predictor weight so previously unsuccessful predictors can recover when
   conditions change. It does not itself preserve the knowledge inside those predictors.
 - **Hidden Markov model**: a model in which an unobserved state changes probabilistically and generates noisy
@@ -287,6 +324,9 @@ physical circuit with the same learning, power or noise performance.
 - **Weight contest** (D78, lab rule `W`): an allocation rule under a total cap. When the shared supply of units is used up, a stream
   that needs a new unit compares its weight in the prediction mix with one other stream chosen at random, and takes a little-used unit
   from it if that stream's weight is lower; otherwise it recycles one of its own.
+- **Prediction leave-out check** (D79): recalculate an already-issued prediction with a chosen family of predictors omitted,
+  then score both predictions on the same later observation. It measures that family's immediate contribution on the recorded
+  history, not the behaviour of a brain that never had those predictors or the value of adding more memory.
 - **Trophic support** (D59, biological analogy): a block receives credit from successful blocks built on it.
   **Siblings** are blocks built on the same parent. Competition for the modelled budget can remove blocks;
   this is not by itself a physical energy measurement or evidence of biological equivalence.

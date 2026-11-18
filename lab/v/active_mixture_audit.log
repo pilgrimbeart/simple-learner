@@ -1,0 +1,61 @@
+{"rule": "none", "P": 4480, "first": "red", "observe": true, "wall_s": 0.18787089502438903, "fingerprint": "bf525c9465a813dd94bcefdba903cfbed03c761e9d5fe9c8d0192ff2248280b1"}
+{"rule": "none", "P": 4480, "first": "red", "observe": false, "wall_s": 0.18560380407143384, "fingerprint": "ed427549c482fb3ea9f344a8031ab2354020b23772991cf8a4199cff0462781e"}
+Traceback (most recent call last):
+  File "/home/pilgrim/git/simple-learner/lab/active_mixture_audit.py", line 345, in <module>
+    main()
+  File "/home/pilgrim/git/simple-learner/lab/active_mixture_audit.py", line 316, in main
+    assert payload['lives'][0]['fingerprint']==payload['lives'][1]['fingerprint']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/concurrent/futures/process.py", line 219, in _sendback_result
+    result_queue.put(_ResultItem(work_id, result=result,
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 393, in put
+    obj = _ForkingPickler.dumps(obj)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/reduction.py", line 51, in dumps
+    cls(buf, protocol).dump(obj)
+_pickle.PicklingError: Can't pickle <class 'teach.GrowNetS'>: attribute lookup GrowNetS on teach failed
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pilgrim/git/simple-learner/lab/active_mixture_audit.py", line 351, in <module>
+    main()
+  File "/home/pilgrim/git/simple-learner/lab/active_mixture_audit.py", line 310, in main
+    for r in ex.map(one,jobs):
+  File "/usr/lib/python3.12/concurrent/futures/process.py", line 642, in _chain_from_iterable_of_lists
+    for element in iterable:
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+_pickle.PicklingError: Can't pickle <class 'teach.GrowNetS'>: attribute lookup GrowNetS on teach failed
+True 54bb9a61edb5d01c7859208ab1a098cd24b20152445161079d5b4c5d4e7f0d7a [1.0, 0.30036999999999997, 0.0, 0.09987302499999999, 1.0, None, ('-', 0, 0, 0, 0), None]
+False b5c23d835e8bd9dcf91e55f7142b7622ade76cc4e40331568b8e8731bee79aa8 [1.0, 0.30036999999999997, 0.0, 0.09987302499999999, 1.0, None, ('-', 0, 0, 0, 0), None]
+Traceback (most recent call last):
+  File "<stdin>", line 9, in <module>
+_pickle.PicklingError: Can't pickle <class 'teach.GrowNetS'>: attribute lookup GrowNetS on teach failed
+{"rule": "none", "P": 4480, "first": "red", "observe": true, "wall_s": 0.18287337198853493, "fingerprint": "ca9330dd5177a6a4066af56fceeb3a343ea71123fc098cc4ab76a24ab7dc0340"}
+{"rule": "none", "P": 4480, "first": "red", "observe": false, "wall_s": 0.1839766000630334, "fingerprint": "ca9330dd5177a6a4066af56fceeb3a343ea71123fc098cc4ab76a24ab7dc0340"}
+SMOKE PASS 0.33068795199505985
+{"rule": "none", "P": 4480, "first": "red", "observe": true, "wall_s": 12.842226353939623, "fingerprint": "5e7fcc4255d50867e46ceefce969306ef043833ad0c620eef0f9d140d6fddea7"}
+{"rule": "none", "P": 4480, "first": "red", "observe": false, "wall_s": 11.330971465096809, "fingerprint": "5e7fcc4255d50867e46ceefce969306ef043833ad0c620eef0f9d140d6fddea7"}
+{"rule": "none", "P": 4480, "first": "blue", "observe": true, "wall_s": 13.220932574011385, "fingerprint": "bf1b2013ee5644fd5fddb2a453ebb3bd93b03b6b609c9411fcdcf28bdc506de2"}
+{"rule": "none", "P": 4480, "first": "blue", "observe": false, "wall_s": 11.712295064004138, "fingerprint": "bf1b2013ee5644fd5fddb2a453ebb3bd93b03b6b609c9411fcdcf28bdc506de2"}
+{"rule": "W", "P": 560, "first": "red", "observe": true, "wall_s": 9.84649016696494, "fingerprint": "24315430f45c5a52c9d27ccc888a978fb3eb0f63d63e05a2f946ca60460aca53"}
+{"rule": "W", "P": 560, "first": "red", "observe": false, "wall_s": 8.520687951007858, "fingerprint": "24315430f45c5a52c9d27ccc888a978fb3eb0f63d63e05a2f946ca60460aca53"}
+{"rule": "W", "P": 560, "first": "blue", "observe": true, "wall_s": 9.66983666899614, "fingerprint": "95b7737a14b3326acfae0425ab81e61ab81440be89e72a9fde188e83b407c1a8"}
+{"rule": "W", "P": 560, "first": "blue", "observe": false, "wall_s": 8.391900412039831, "fingerprint": "95b7737a14b3326acfae0425ab81e61ab81440be89e72a9fde188e83b407c1a8"}
+PASS: issued reconstruction and observed/unobserved identity; historical differences retained [{'rule': 'none', 'first': 'red', 'fingerprint_equal': True, 'result_equal': True, 'historical_differences': [], 'ignored_result_field': 5, 'observed_wall_s': 12.842226353939623, 'unobserved_wall_s': 11.330971465096809}, {'rule': 'none', 'first': 'blue', 'fingerprint_equal': True, 'result_equal': True, 'historical_differences': [], 'ignored_result_field': 5, 'observed_wall_s': 13.220932574011385, 'unobserved_wall_s': 11.712295064004138}, {'rule': 'W', 'first': 'red', 'fingerprint_equal': True, 'result_equal': True, 'historical_differences': [], 'ignored_result_field': 5, 'observed_wall_s': 9.84649016696494, 'unobserved_wall_s': 8.520687951007858}, {'rule': 'W', 'first': 'blue', 'fingerprint_equal': True, 'result_equal': True, 'historical_differences': [], 'ignored_result_field': 5, 'observed_wall_s': 9.66983666899614, 'unobserved_wall_s': 8.391900412039831}]
+wall_s 23.021790683967993

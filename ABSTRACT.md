@@ -34,13 +34,37 @@ expected meal gains further limit the original control interpretation.
 
 The [resource audit](discrete/NOTEBOOK.md#d76-resource-floor) shows the present capacity knob does not cap
 total material. [Observing the brain](discrete/NOTEBOOK.md#d77-resource-observation) without changing its
-behaviour shows that, on the hardest tested sequence, room for the ten colour-event streams alone (about a
-tenth of the extra material) recovers most of the larger setting's gain. The equal-allowance allocator
-sends most material elsewhere. So the next change belongs in allocation, compared under a real total cap.
+behaviour shows that, on the hardest tested sequence, extra room for the ten colour-event streams
+recovers much of the larger setting's gain; the remaining gap is unresolved.
 [That comparison](discrete/NOTEBOOK.md#d78-allocation-rules) confirms allocation as a large lever: a pairwise
 contest by mixture weight beats an equal split on fresh lives, though not the original design. It also shows
-the brain's existing signals cannot rank its streams beyond the single best one. The open question is a local
-measure of each stream's marginal contribution. The central question remains which useful relations local components can
+that a smaller brain has not yet matched the larger design. [Review of the diagnosis](discrete/NOTEBOOK.md#d79-active-mixture)
+finds that family totals hid useful individual predictors and stored weights were mistaken for active
+influence. A validated diagnostic on one reused pair finds that removing non-event forecasts jointly
+improves current prediction loss; it also exposes more frequent scoring-order errors under the contest.
+These results do not establish that the brain needs a new usefulness signal.
+[Replaying and correcting selector credit](discrete/NOTEBOOK.md#d80-scoring-replay) separates a small
+direct prediction effect from changes through allocation and later learning. The small closed-loop
+check does not demonstrate better performance. [A consistent credit contract](discrete/NOTEBOOK.md#d82-issued-credit)
+now scores issued forecasts and credits their original surviving units. On ten reused development seed pairs,
+it does not demonstrate improvement, and the smaller contest brain's performance gap remains. The next
+diagnosis [traces actual recycling](discrete/NOTEBOOK.md#d83-allocation-trace): foreign transfers often
+change current forecasts, and some newly constructed units disappear during the same feedback before
+issuing any forecast. This separates interrupted use from construction without a prediction opportunity;
+neither establishes lifetime memory value. [Frozen-history replay](discrete/NOTEBOOK.md#d84-future-evidence)
+finds later teaching opportunities for many removed units, including most immediately deleted newborns.
+[Reconstructed prediction comparisons](discrete/NOTEBOOK.md#d85-retained-prediction) find mixed
+value: only a minority of recurring retained units beat both their surviving stream and a uniform
+forecast. But [reducing confidence in the actual historical mixtures](discrete/NOTEBOOK.md#d86-mixture-confidence)
+worsens probability scores in all four checked lives. Weak individual streams do not establish a weak
+combined forecast. [Against the same corrected combined forecast](discrete/NOTEBOOK.md#d87-retained-mixture),
+only 336/3653 recurring retained tallies win, and a supplied causal selection prior does not improve
+full-sequence prediction. [Asking whether memory serves as parts](discrete/NOTEBOOK.md#d88-parent-census) for later combinations
+finds weakly predicting units build about 6% of new units, and about one in five new units that predict beat the
+combined forecast. Deleted units would have offered many partners nothing living duplicates; whether those
+missing combinations would have predicted is [one frozen offline test](discrete/NOTEBOOK.md#d91-growth-decision).
+No retention or growth cure is selected.
+The central question remains which useful relations local components can
 exploit or discover affordably. Timing generality and retention remain conditional branches in the
 [programme](PROGRAMME.md) and [open questions](QUESTIONS.md).
-This is a research position as of 2026-11-17, not a claim of a completed breakthrough.
+This is a research position as of 2026-11-18, not a claim of a completed breakthrough.
