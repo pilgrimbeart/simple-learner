@@ -1,0 +1,160 @@
+{
+  "success": false,
+  "checks": {
+    "recorded_hashes_match": {
+      "growth_parent_census": {
+        "lab/growth_parent_census.py": true,
+        "lab/future_evidence.py": true,
+        "lab/future_evidence_analysis.py": true,
+        "lab/retained_prediction.py": true,
+        "/home/pilgrim/git/simple-learner/lab/v/future_evidence.pkl": true
+      },
+      "growth_child_prediction": {
+        "lab/growth_child_prediction.py": true,
+        "lab/growth_parent_census.py": true,
+        "lab/future_evidence.py": true,
+        "lab/retained_prediction.py": true,
+        "/home/pilgrim/git/simple-learner/lab/v/future_evidence.pkl": true,
+        "/home/pilgrim/git/simple-learner/lab/v/growth_parent_census.pkl": true,
+        "/home/pilgrim/git/simple-learner/lab/v/growth_parent_census.json": true,
+        "/home/pilgrim/git/simple-learner/lab/v/retained_mixture.json": true
+      },
+      "growth_missing_partner": {
+        "lab/growth_missing_partner.py": true,
+        "lab/growth_parent_census.py": true,
+        "lab/future_evidence.py": true,
+        "lab/grownet.py": true,
+        "/home/pilgrim/git/simple-learner/lab/v/future_evidence.pkl": true
+      },
+      "followup_fresh": {
+        "lab/followups.py": true,
+        "lab/room_prediction.py": true,
+        "lab/ruler_ingredients.py": true
+      },
+      "followup_silent": {
+        "lab/followups.py": true,
+        "lab/ruler_ingredients.py": true,
+        "lab/room_prediction.py": true
+      },
+      "followup_timing": {
+        "lab/followups.py": true,
+        "lab/room_prediction.py": true
+      }
+    },
+    "parent_rows_exact": 10236,
+    "native_replay": {
+      "initial_units": 2042,
+      "writes": 24799,
+      "predictions": 5883,
+      "accepted_tastes": 163,
+      "learns": 27384,
+      "births": 10236,
+      "removals": 9236,
+      "one_tally_removals": 5369,
+      "tidy_removals_before_index_increment": 63,
+      "native_speaking_records_exact": 10371,
+      "final_units": 3042
+    }
+  },
+  "findings": {
+    "fresh_gap": {
+      "high - low": {
+        "median": 0.37785697685284636,
+        "ci95": [
+          0.27700309320261846,
+          0.501978977911618
+        ]
+      },
+      "R+M+1 - high": {
+        "median": 0.0029206884612674178,
+        "ci95": [
+          -0.08590903213439173,
+          0.09911954265689671
+        ]
+      }
+    },
+    "fresh_forecasts": {
+      "per_arm": {
+        "R+M+1": {
+          "lives": 20,
+          "accepted_in_window": 1095,
+          "native": 0.5432688752296174,
+          "full_selected_single_in_window": 0.5173852560540152,
+          "window_selected_single": 0.5173852560540152,
+          "event_span_full": 15.134068596200434,
+          "event_span_window": 19.119619848304854
+        },
+        "high": {
+          "lives": 20,
+          "accepted_in_window": 1106,
+          "native": 0.5655427948516331,
+          "full_selected_single_in_window": 0.5414476442368746,
+          "window_selected_single": 0.5349107754668965,
+          "event_span_full": 15.000767718953446,
+          "event_span_window": 18.91816619947554
+        },
+        "low": {
+          "lives": 20,
+          "accepted_in_window": 1075,
+          "native": 0.9341841787393687,
+          "full_selected_single_in_window": 0.8955973968217412,
+          "window_selected_single": 0.8839163190610383,
+          "event_span_full": 1.6227146456489436,
+          "event_span_window": 1.6334807565634704
+        }
+      },
+      "max_mixture_error": 2.886579864025407e-15,
+      "issued_saving_increment": {
+        "n": 1212664,
+        "over_one_bit": 17349,
+        "maximum": 2.169925001442312
+      }
+    },
+    "fresh_final_units": {
+      "low": 2052.0,
+      "high": 4275.25,
+      "R+M+1": 2446.7
+    },
+    "timing_forecasts": {
+      "per_arm": {
+        "design2240": {
+          "lives": 20,
+          "accepted_in_window": 12007,
+          "native": 0.33660037293771655,
+          "full_selected_single_in_window": 0.326848962586173,
+          "window_selected_single": 0.3227460959836464,
+          "event_span_full": 5.492041992141136,
+          "event_span_window": 3.560601012793177
+        },
+        "design560": {
+          "lives": 20,
+          "accepted_in_window": 11981,
+          "native": 0.3912384517307792,
+          "full_selected_single_in_window": 0.4039480279624563,
+          "window_selected_single": 0.383065166684547,
+          "event_span_full": 1.8267419751078307,
+          "event_span_window": 1.832619602147037
+        }
+      },
+      "max_mixture_error": 3.552713678800501e-15,
+      "issued_saving_increment": {
+        "n": 11481802,
+        "over_one_bit": 1220918,
+        "maximum": 3.268831912707881
+      }
+    },
+    "timing_reported_prediction_interval": {
+      "mean": -0.05413564863386398,
+      "ci95": [
+        -0.1413312378477829,
+        0.023122923050308573
+      ]
+    }
+  },
+  "provenance": {
+    "revision": "77af1566dc6136933735056f097abb2b7b432206",
+    "source_sha256": "5745bb1bfb0d7d26faee8f109571fcb6d884ee528f625c552754bc2ebaa1dfab",
+    "command": "timeout 240s env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python lab/agent_work_review.py"
+  },
+  "wall_s": 6.578920302003098
+}

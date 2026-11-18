@@ -1,0 +1,4 @@
+sequence D93 {"lives": 80, "transitions": 13857, "exact": 12959, "lives_fully_exact": 21, "max_dev": 0.01647549331014788, "median_dev": 1.3877787807814457e-17, "inexact_changed_streams": {"median": 123.0, "awake_at_issue_share": 1.0}}
+sequence D102 {"lives": 60, "transitions": 9728, "exact": 8995, "lives_fully_exact": 20, "max_dev": 0.045022925045768526, "median_dev": 1.3877787807814457e-17, "inexact_changed_streams": {"median": 121.0, "awake_at_issue_share": 1.0}}
+timing D101 {"lives": 40, "transitions": 71619, "exact": 69652, "lives_fully_exact": 20, "max_dev": 0.07561961780903113, "median_dev": 6.938893903907228e-18, "inexact_changed_streams": {"median": 125.0, "awake_at_issue_share": 1.0}}
+replay exact: False

@@ -23,13 +23,15 @@ allocation rules under an enforced cap; [D79](#d79-active-mixture) reviews its c
 [D87](#d87-retained-mixture) finds little retained-tally advantage against the same corrected combined forecast;
 [D88–D90](#d88-parent-census) find weak parents build about 6% of children and most actual children lose to that
 forecast, while deleted units would supply many partners no living unit duplicates; [D91](#d91-growth-decision) records the decision;
-[D92](#d92-ghost-children) finds the missing children no better a pool than actual growth;
-[D93–D95](#d93-room-prediction) place extra room's sequence gain in the event streams' own forecasts, with trust
-already near the hindsight oracle; [D96](#d96-ruler-ingredients) and [D100](#d100-silent-others) show a head-started
-ruler matching the large brain at 57% of its material, and weak speakers costing the closed loop;
-[D97–D99](#d97-market-diagnosis) trace the generic market's shortfall to the evidence rate, largely repaid by longer
-lives; [D101](#d101-timing-prediction) finds trust near-optimal on timing too, but the capacity gain there not in
-prediction; [D102](#d102-fresh-seeds) replicates the sequence account on fresh seeds.
+[D92](#d92-ghost-children) finds no clear missing-child advantage;
+[D93–D102](#d93-room-prediction) add sequence prediction, allocation and longer-life comparisons.
+[D103](#d103-agent-review) checks the original parent reconstruction and selected later numerical results,
+but corrects claims of optimal selection, a universal evidence-rate wall and absent timing prediction gains.
+The head-informed ruler uses fewer final categorical units, not a measured 43% reduction in total physical
+material. Its seeds are reused development seeds. D100 jointly removes forecasts and credit; those causes
+remain unresolved. [D104](#d104-forecast-windows)–[D106](#d106-selection-share) complete Jobs A–C: windows harmonised
+(timing's capacity gain visible in choice errors), the market's gates traced (inert at P=560; leafless donors), and
+the fixed share's offline cost found negligible where replay is exact. Next is Job D's protocol.
 [D72](#review-2026-11-16) is the preceding evidence review. The programme is
 [PROGRAMME.md](../PROGRAMME.md); [QUESTIONS.md](../QUESTIONS.md) owns the next discriminating investigations.
 
@@ -83,8 +85,8 @@ prediction; [D102](#d102-fresh-seeds) replicates the sequence account on fresh s
   worsens log loss and squared probability error in all four historical mixtures, full-life and
   last-third. [D87](#d87-retained-mixture) captures the same corrected history exactly: only 336/3653
   recurring retained tallies beat its combined forecast, and a supplied causal selection prior loses
-  0.593 bits on 163 labels. No retention intervention is selected. Next distinguish keeping an old
-  readout from enabling richer future combinations; the ghosts never grow children.
+  0.593 bits on 163 labels. D88–D92 subsequently tested the parts/children route without establishing
+  a useful retention intervention. D103 and PROGRAMME own the current interpretation and next steps.
 - **Earlier results keep their conditions.** B's circuit and fast model, the intervention bank, body-learning,
   exploration and growth experiments answer different questions under different protocols. Their strongest
   lessons and limitations are summarised in D72. Physical validation of an earlier circuit does not transfer
@@ -6652,6 +6654,8 @@ whether extra room mainly changes selection), with no further retention or growt
 <a id="d93-room-prediction"></a>
 ### D93 — Is extra room's gain in the forecasts or in whom the mixture trusts? (2026-11-18)
 
+**Review correction, 2026-11-18 ([D103](#d103-agent-review)).** The numerical comparisons remain historical evidence. D103 identifies a full-life/last-third speaker-statistic label error and different hindsight-selection windows across analyses. A best single stream is not a bound on all mixtures; closed-loop arms see different histories, so this does not exclude selection or isolate representation.
+
 **Before work.** The user asked to continue with the next step (D91's fourth row) and to run the experiments
 that seem valuable. Uncertainty: D77's extra allowance (P=560 to 4480, and the ruler A that gives only the ten
 colour-event streams more room) improves final-third efficiency, but by which route? (a) *Representation*:
@@ -6866,6 +6870,10 @@ how fast room flows towards streams that pay.
 <a id="d97-market-diagnosis"></a>
 ### D97 — Why does the market move so little room to the useful streams? (2026-11-18)
 
+**Correction, 2026-11-18 ([D105](#d105-market-currency)).** The event share failing the savings test is 84% (28533 of 34085), not 86%; "transfer attempted" includes refusals because the drawn donor had no grown leaf (65% of event attempts).
+
+**Review correction, 2026-11-18 ([D103](#d103-agent-review)).** D103 corrects the rate argument below: log2(q_y/p_default_y) can exceed one bit for a binary label. The denial counts identify a binding gate, not a general impossibility theorem. Historical credit and the exact ledger still require audit.
+
 **Before work.** D96: given a head start in the event streams, the market helps; without it (D78's M, one unit
 for every stream plus the market) the gain is small (+.35 against high's +.81) and only 27 event units grow. The
 market transfers a unit to a stream when a birth is due, its allowance is full, and it has saved more than
@@ -6903,6 +6911,8 @@ that pays room in cumulative bits: the price must be paid from information not y
 <a id="d98-market-price"></a>
 ### D98 — Does a cheaper market price let room reach the useful streams? (2026-11-18)
 
+**Review correction, 2026-11-18 ([D103](#d103-agent-review)).** The quarter-price interval permits a meaningful gain; neither price irrelevance nor chance-driven allocation is established by this experiment. The universal evidence-rate interpretation below is withdrawn; see D103.
+
 **Before work.** Knobs first: the market's price `POOL_BITS` (1 bit saved per extra unit) is an existing knob.
 D97 suggests the price, not donors, is binding. Test M on the same ten pairs at prices 1/4 and 1/16 bit,
 otherwise unchanged. Predictions: more transfers at both, but spread to clock and integrator streams that save
@@ -6929,6 +6939,8 @@ on a knob.
 
 <a id="d99-longer-lives"></a>
 ### D99 — Does a longer life let generic allocation catch the head-started ruler? (2026-11-18)
+
+**Review correction, 2026-11-18 ([D103](#d103-agent-review)).** Longer lives help the market on these comparisons, but do not isolate a fixed learning delay. References differ across life lengths and the ruler has more allowed units; the intervals do not establish equivalence. See D103.
 
 **Before work.** If allocation by evidence is limited by the evidence rate (D97–D98), its cost is a fixed delay
 before room reaches the useful streams, and lives long enough to amortise it should shrink the gap between the
@@ -6970,6 +6982,8 @@ than M and W. One rung, opened seeds.
 <a id="d100-silent-others"></a>
 ### D100 — Does one unit in every other stream help through those streams' forecasts? (2026-11-18)
 
+**Review correction, 2026-11-18 ([D103](#d103-agent-review)).** The inference below must be read with D103: silencing changes forecasts and speaker learning credit together. Behaviour and issued forecasts agree between silenced arms, but internal construction counters differ. Removal of harm and fixed-share causation are hypotheses, not isolated results.
+
 **Before work.** The user approved three follow-ups, to run after D99 so as not to share the laptop. D96 found
 that allowing every non-event stream one grown unit (R+1) improves the event ruler R by +.10 [+.04, +.16], and
 improves the event streams' own forecasts, though non-event forecasts add nothing offline (D93). Explanations:
@@ -6983,6 +6997,10 @@ Budget: 40 lives, ~2 min.
 <a id="d101-timing-prediction"></a>
 ### D101 — Does D93's account hold on timing? (2026-11-18)
 
+**Correction, 2026-11-18 ([D104](#d104-forecast-windows)).** Choice errors do fall with capacity on timing: −.032 [−.071, −.001] per taste in the last third, −.025 [−.050, −.003] over the full life.
+
+**Review correction, 2026-11-18 ([D103](#d103-agent-review)).** The prediction interval permits both improvement and a small worsening. It cannot establish absence of a prediction channel or optimal trust. The hindsight comparator is restricted to single streams; see D103.
+
 **Before work.** D93's account (room improves a few streams' forecasts; trust is already near the hindsight
 oracle; equal weights erase the gain) rests on one sequence rung. Test on timing rung 3 (3000 s lives, last third
 from 2000 s), unchanged design at P=560 and 2240 (D78's timing references), seeds 142000–142009, each life required
@@ -6992,6 +7010,8 @@ rhythm streams' forecasts (60%); equal weights again erase it (75%). Budget: 40 
 
 <a id="d102-fresh-seeds"></a>
 ### D102 — D93's comparison and D96's ruler on fresh seeds (2026-11-18)
+
+**Review correction, 2026-11-18 ([D103](#d103-agent-review)).** These seeds were already used in D78, so this is a development-set replication, not untouched confirmation. The 57% count is final categorical units, not all physical material. The near-zero performance interval supports only its stated margin on this family, not equality or no cost. See D103.
 
 **Before work.** All of D93–D99 use the much-reused seeds 142000–142009. Rerun low (P=560) and high (P=4480)
 with the recorder, and R+M+1, on seeds 176000–176009 (development since D78, with circuit, told and design
@@ -7065,3 +7085,321 @@ erase the gain. The head-started ruler matches the large brain: the interval's l
 D78's −.10 margin. With 2446 units against about 4270 (57%), a hand-set allocation of room loses nothing measurable
 by that margin on this family. Since the event streams were chosen by hand, this measures the value of that
 supplied knowledge, not a design.
+
+<a id="d103-agent-review"></a>
+### D103 — Review of D88–D102 and the next work queue (2026-11-18)
+
+**Before work.** The user requested review of the cheaper agent's work and a concrete next plan.
+Review saved code/data rather than launching new lives. Check original Jobs 1–3's reconstruction and
+provenance; independently recompute selected D100–D102 headline comparisons from per-life records;
+inspect D93's forecast timing and comparator, D96's allocation, and D97–D99's evidence-rate inference.
+Competing explanations for the reported gains remain representation, selection, changed observations,
+credit bookkeeping and resource differences. Numbers reproducing is not sufficient for a causal claim.
+Budget: 40 minutes source/data review and documentation, one bounded offline audit (240 s, one maths
+thread), no simulation, agent, protected-test opening or production edit. This is a targeted review,
+not independent replication of every new life or a revalidation of physical implementation.
+
+**Observation.** Reviewed commits c64ab41, 63cd05d and 77af156; the starting worktree was clean.
+[Audit script](/home/pilgrim/git/simple-learner/lab/agent_work_review.py),
+[JSON](/home/pilgrim/git/simple-learner/lab/v/agent_work_review.json) and
+[log](/home/pilgrim/git/simple-learner/lab/v/agent_work_review.log) retain the executable checks.
+The JSON records revision, source and input hashes and invocation. Only this review script and documentation
+are uncommitted additions; no production implementation was changed and no new life was run.
+
+- D88's recorded source/input hashes match; replay reconstructs all 10,236 parent rows exactly, with 9236
+  removals, 5883 predictions and 163 accepted tastes. D89–D90 provenance hashes also match. This is not a
+  full independent reimplementation of their analyses. D90's proposed longer child being absent is by construction,
+  as D91 already noticed. D92 establishes no demonstrated useful ghost advantage, not pool equivalence.
+- D93's recorder captures the issued forecast before taste updates. The saved sequence and timing mixture
+  probabilities reconstruct to within 4.3e-15. The initial leaking recorder was corrected before the retained
+  captures; its failed logs remain. D93–D102 nevertheless use historical pre-D82 credit, not the later
+  corrected issued-forecast contract. A passive recorder does not correct the controller's learning.
+- Recomputed D102's paired-seed bootstrap exactly: large minus small closes +.378 [.277, .502] of the
+  circuit-to-told efficiency gap; hand-informed allocation minus large is +.003 [−.086, +.099]. Final mean
+  categorical units are 2446.7 versus 4275.25 (57.2%). These are sequence rung 17, 300 s, ten development
+  seed pairs 176000–176009, last-third efficiency, historical controller/body as the capture scripts specify.
+  Those seeds appeared in D78. This supports a limited performance-margin observation, not untouched
+  confirmation or a physical parts/power saving. The event allocation is supplied knowledge, not learned.
+- D93 chooses its best single stream using full-life loss, then scores the last third; D101–D102 choose
+  within the reporting window. D93's event speaker share/span use the full life despite the table's last-third
+  label. For example the large brain's mean event span is 15.75 over the life, 19.90 in its last third.
+  The new audit exposes both hindsight conventions; a restricted single-stream comparator cannot rule out
+  better mixtures or selection policies. Each arm's observations depend on its own actions.
+- D100's silenced arms have identical behavioural result fields and issued forecast rows on all 20 lives,
+  but different construction/activity diagnostic counters. The intervention suppresses both forecasts and
+  credit. Its benefit interaction does not distinguish those routes. Neither silencing contrast separately
+  excludes zero, so “removal of harm” is not isolated and the share-return explanation remains a hypothesis.
+- D101's native prediction difference is −.054 bits per accepted taste [−.141, +.023]. This is inconclusive
+  about no prediction gain. A practically useful gain remains compatible with the interval.
+- D97's gate-denial counts support a binding savings test, not the universal wall inferred from them.
+  Realised saving is log2(q_y/p_default_y): q_y=.75 and p_default_y=.1 saves 2.907 bits on one binary label.
+  This is not the entropy learned about an unknown. Saved issued forecasts themselves contain >1-bit
+  examples (maximum 3.269 on timing), although these diagnostics are **not the actual historical market ledger**.
+  Any information bound needs an unknown, prior and observation model. D98's quarter-price improvement
+  +.12 [−.01, +.23] is inconclusive; D99's longer-life improvement supports investigating time, not a unique
+  evidence-rate explanation or equality with the better-funded ruler.
+- The follow-up capture code records historical-result mismatches without asserting the list is empty before
+  summarising. Current retained lists are empty; this is a future fail-closed requirement, not evidence that
+  these captures mismatched. A future capture must stop before scientific analysis on any mismatch.
+
+**Audit failure and correction.** The first audit assumed complete silenced result tuples must match; it
+stopped because their diagnostic counters differ (e.g. first red life's construction count 606 versus 5705).
+[Failed JSON](/home/pilgrim/git/simple-learner/lab/v/agent_work_review_attempt1.json) and
+[log](/home/pilgrim/git/simple-learner/lab/v/agent_work_review_attempt1.log) are retained. The corrected check
+compares behaviour/loss separately from diagnostics and verifies every issued forecast row. An attempted
+rerun before editing repeated that failure because this shell has no `python` command; `.venv/bin/python`
+was used for the actual correction. This was a review assertion error, not a negative experiment.
+
+**Changed belief and next branch.** The agent produced useful reproducible measurements. They do not yet
+justify choosing a new allocator or dismissing selection, credit and observation-history explanations.
+The goal is still reusable, local, economical in-life adaptation: the next useful result is locating which
+of those routes actually consumes evidence or resources. [PROGRAMME's current queue](../PROGRAMME.md#current-next-steps-cheap-agent-queue-after-d103)
+owns the executable hand-offs: harmonise forecast windows, audit the market currency, then test fixed-share
+selection on saved histories if replay is possible. A later factorial protocol can separate speaking from
+credit. No new mechanism or broad sweep is selected. The review did not independently rerun the simulations,
+recompute every interval or establish physical locality/cost; preserved historical predictions and logs remain unchanged.
+
+<a id="d104-forecast-windows"></a>
+### D104 — Forecast comparisons on one footing (PROGRAMME Job A, 2026-11-18)
+
+**Before work.** D103 found that D93 chose its best single stream over the full life but scored it on the last
+third, while D101–D102 chose within the window, and that D93's event-speaker span was full-life although
+labelled last third. Method: one offline audit of the saved accepted-taste rows (D93's
+`room_prediction.pkl`: low, A, B, high on seq 17, seeds 142000–142009; D101's `followup_timing.pkl`: P=560 and
+2240 on timing rung 3; D102's `followup_fresh.pkl`: low, high, R+M+1 on seeds 176000–176009). Reconstruct every
+native probability from the issued weights, forecasts and default (error ≤ 1e−12) and check each forecast
+precedes its taste. Per life and window (full; last third from 200 s on sequences, 2000 s on timing): native,
+default and uniform loss, choice errors, accepted tastes and their rate, event-speaker span; best single stream
+chosen over the full life and chosen within the window (ties to the lower stream index, both hindsight). Paired
+per-life differences (high − low on both sequence sets, P2240 − P560 on timing) with 2000 seed-pair bootstraps,
+colours together; pooled per-taste levels reported separately. Discriminator: whether any D93/D101/D102
+summary changes under the harmonised conventions; whether timing's interval still includes a useful change.
+Prediction: the sequence conclusions survive (gaps of tenths of a bit), the D93 span label shrinks the A/high
+spans' reported value from ~20 to ~15, and timing stays inconclusive. Credit version: historical (pre-D82).
+Budget: 45 minutes, one bounded analysis under 240 s.
+
+**Provenance.** [Script](/home/pilgrim/git/simple-learner/lab/forecast_window_audit.py),
+[JSON](/home/pilgrim/git/simple-learner/lab/v/forecast_window_audit.json) (revision, dirty paths, script and input
+hashes, command, conventions), [log](/home/pilgrim/git/simple-learner/lab/v/forecast_window_audit.log),
+[fixture log](/home/pilgrim/git/simple-learner/lab/v/forecast_window_audit_checks.log). The first `--check` failed
+on a wrong expected value in my unequal-tastes fixture (an equal-weight mixture of .5, .9, .5 is .633, not .7);
+[its log](/home/pilgrim/git/simple-learner/lab/v/forecast_window_audit_checks_failed_fixture.log) is kept. The
+analysis then ran once. *Amended 2026-11-18 (D107):* I first wrote "about 4 minutes" without a recorded wall time; a
+rerun with timing added took 157 s and gave identical results ([first run's JSON](/home/pilgrim/git/simple-learner/lab/v/forecast_window_audit_run1.json)). All 180 lives' native probabilities
+reconstruct within 4.3e−15 and every forecast precedes its taste.
+
+| last third, pooled per taste | accepted tastes (rate) | event-speaker span, per-life mean | native bits / errors | default | best single chosen over full life | best single chosen within window |
+|---|---:|---:|---:|---:|---:|---:|
+| seq D93 low | 1139 (0.570/s) | 1.65 | .932 / .337 | .994 | .894 | .875 |
+| seq D93 A | 1201 (0.601/s) | 17.83 | .551 / .156 | .995 | .522 | .517 |
+| seq D93 B | 1169 (0.585/s) | 2.90 | .812 / .269 | .999 | .787 | .748 |
+| seq D93 high | 1149 (0.574/s) | 19.94 | .449 / .100 | .982 | .431 | .431 |
+| seq D102 low | 1075 (0.537/s) | 1.63 | .934 / .330 | 1.001 | .896 | .884 |
+| seq D102 high | 1106 (0.553/s) | 18.93 | .566 / .150 | 1.000 | .541 | .535 |
+| seq D102 R+M+1 | 1095 (0.547/s) | 19.12 | .543 / .137 | .992 | .517 | .517 |
+| timing P=560 | 11981 (0.599/s) | 1.83 | .391 / .105 | .776 | .404 | .383 |
+| timing P=2240 | 12007 (0.600/s) | 3.55 | .337 / .073 | .775 | .327 | .323 |
+
+Full-life spans are 14.76 (A), 15.73 (high), 1.63 (low) on D93; 5.50 and 1.83 on timing. Per-life mean native losses
+differ from the pooled values by at most .006 bits per taste (JSON); accepted tastes per life range 30–82 on
+sequences and 550–654 on timing.
+
+| paired per-life difference [95%] | full life: native bits / errors | last third: native bits / errors | last third: best single within window, bits | last third: default, bits | last third: accepted tastes |
+|---|---:|---:|---:|---:|---:|
+| seq D93 high − low | −.262 [−.286, −.234] / −.158 [−.171, −.145] | −.485 [−.555, −.414] / −.235 [−.270, −.201] | −.448 [−.515, −.378] | −.013 [−.029, −.000] | +0.5 [−5.8, +5.8] |
+| seq D102 high − low | −.180 [−.221, −.134] / −.112 [−.137, −.087] | −.369 [−.473, −.264] / −.181 [−.231, −.133] | −.352 [−.446, −.254] | +.001 [−.010, +.012] | +1.6 [−2.3, +6.1] |
+| timing P2240 − P560 | −.042 [−.100, +.013] / −.025 [−.050, −.003] | −.054 [−.141, +.023] / −.032 [−.071, −.001] | −.060 [−.152, +.021] | −.003 [−.015, +.009] | +1.3 [−13.2, +17.3] |
+
+**Observations.** (1) The sequence conclusions survive harmonisation: the larger brain's loss and choice errors
+fall by the same amounts under every comparator, the default does not change, and accepted taste counts do not
+differ. (2) D93's span column was the full-life mean under a last-third label (as D103 found). Its correct
+last-third values are larger (17.8 and 19.9 for A and high), contrary to my prediction that they would shrink.
+(3) D93's "within .02 bits of the best single stream in every setting" was wrong under either convention: low is
+.038 behind the full-life choice and .057 behind the within-window choice, B .025 and .064. The large brains are
+within .02–.03. On timing the native mixture beats the best single stream chosen over the full life (.381 against
+.400 over the full life) and is .014 behind the within-window choice. (4) On timing the capacity gain *is* visible
+in choices: errors fall by .032 per taste in the last third ([−.071, −.001]) and .025 over the full life
+([−.050, −.003]); the log-loss interval [−.141, +.023] still permits a useful change (no practical margin was declared,
+so this is stated only as compatibility, not measured against a threshold). D101's "not visible in prediction" is withdrawn.
+
+**Limits and next branch.** Hindsight single streams are references, not bounds on causal mixtures; each arm made
+its own observations, and all credit is historical. This table is Job C's input; next is Job B.
+
+<a id="d105-market-currency"></a>
+### D105 — The market's actual currency (PROGRAMME Job B, 2026-11-18)
+
+**Before work.** D97–D99 read the market's denials as an evidence-rate limit; D103 withdrew the universal reading
+(a binary label can save more than one bit against a poor default) and asked for the exact ledger. Method: trace
+the source for the balance, its increments and debits, the price and donor tests and their timing relative to
+learning, in both the design's market (`grownet.Net._room`) and the lab rule M (`alloc_rules`), historical credit
+and D82's issued-forecast contract; hand-checkable fixtures run against the real `Net._room`; inventory which saved
+fields can reconstruct balances and denials; reproduce available denominators. Discriminator: an accounting error
+or an unnoticed gate would change D97's interpretation; missing fields lead to a capture specification. Prediction:
+the equations match D97's description, and the saved data cannot reconstruct per-request balances (80%).
+Budget: 45 minutes, one bounded analysis under 240 s.
+
+**Provenance.** [Script](/home/pilgrim/git/simple-learner/lab/market_currency_audit.py),
+[JSON](/home/pilgrim/git/simple-learner/lab/v/market_currency_audit.json) (equations with source lines, denominators,
+inventory, capture specification, hashes, command), [log](/home/pilgrim/git/simple-learner/lab/v/market_currency_audit.log),
+[fixture log](/home/pilgrim/git/simple-learner/lab/v/market_currency_audit_checks.log); fixtures call the real
+`grownet.Net._room`. No life was run.
+
+**The currency, from source** (units: bits; full text in the JSON).
+- Balance `saved_j` starts at 0 and is never reset. Credit at each accepted taste, for each stream that spoke:
+  `saved_j += log2(q_j(y) / p_def(y))` (`grownet.py:799–801`); historically `q_j` is the forecast just before the
+  stream's own learn call, so after earlier streams' learning in that taste; under D82 it is the issued forecast.
+  A credit can exceed one bit (log2(.75/.1) = 2.907) or be negative (log2(.25/.5) = −1).
+- **No debit.** A transfer does not spend savings; the "price" is a threshold on cumulative savings that rises
+  with units held: `saved_j > POOL_BITS · (units_j − base_j + 1)`, `POOL_BITS` = 1 (`grownet.py:71, 176`).
+- Donor test: another stream with `saved_v ≤ 0` and, in the design's market, `P_v > 3` (`grownet.py:177`); in the
+  lab rule M, `P_v >` its fixed units (`alloc_rules.py:92`); then a leaf of the donor is recycled.
+- Timing: the room test runs inside the stream's learn call; that taste's credit arrives after the loop
+  (historical) or at the next prediction (D82), so a saving can first fund room at the following taste.
+
+**Two gates D97 did not separate.**
+1. *The design's market is inert at P=560.* Allowances are `max(3, P // 168)` = 3 for every stream (`grownet.py:455`),
+   so no stream can ever pass `P_v > 3` as a donor. D77's observed lives agree: at P=560 the savings test was
+   passed 137 and 298 times and no transfer occurred; at P=4480 (allowance 26) 115 of 115 and 157 of 157 passes
+   transferred. The "low" brain of D77, D93 and D102 therefore has a disabled market, not a slow one.
+2. *Leafless donors in rule M.* Of requests that pass the savings test and find a donor, the drawn donor often has no
+   grown leaf to give: transfers / attempts are 680/1955 (35%) for event streams, 1340/6942 clock, 1821/6761
+   integrator, 982/1631 rhythm (20 lives, D97's data). D97 counted these as "transfer attempted".
+
+**Denominators reproduced.** Savings test failures as a share of full-allowance requests (rule M, 20 lives):
+event .837, clock .847, integrator .870, rhythm .426. D97 reported 86% for event streams; the saved counts give
+84% (28533 of 34085). Transfers per life 241.
+
+*Amended 2026-11-18 (D107):* the first fixture for credit changed by learning used made-up numbers; a further fixture now
+runs the real code path. Stream A's room test (`Net._room`) recycles stream B's only speaking leaf, and B's forecast for
+letter 1 (`Net.says`) falls from .875 to .375, a credit of −.415 bits at taste time instead of +.807 under D82's contract.
+Read after the first write-up: `market_price.py` sets the price in each worker and compares with D78's price-1 lives
+rather than rerunning them (their identity was checked in D97); D82's contract and D98–D99's text agree with the equations
+above; D103's corrections to D97–D99 stand.
+
+**What cannot be reconstructed.** `market_diagnosis.json` holds per-family aggregates, 10 s medians of event
+streams' balances and a few end-of-life balances; there is no per-request or per-life record. D93's issued
+forecasts would give an issued-contract approximation of balances in the design lives, not the historical ledger,
+since scored forecasts and the set of credited streams at taste time are not saved. The minimal passive capture
+(per room call: time, stream, units, allowance, base, fixed, balance, price, birth due, donors, outcome including
+leafless donor, removed unit; per accepted taste: issued and scored forecasts, credited set, increment, learn-call
+order; identity and end-balance checks; fail closed) is specified in the JSON and not launched.
+
+**Inference and next branch.** The savings test is the most frequent denial, but it is not the only gate, and in
+the design brain at P=560 the market cannot act at all. Neither gate is an information limit: one is an allowance
+rule (`P_v > 3`), the other a random donor draw that ignores whether the donor has anything to give. D97–D99's
+interpretation should be read as "these gates blocked transfers", not "no local rule could earn room sooner". A
+corrected comparison would first fix the gates' bookkeeping (donor test against fixed units; draw among donors
+with leaves) under D82's credit, frozen before running; that needs the user's go as construction. Next is Job C.
+
+<a id="d106-selection-share"></a>
+### D106 — Does returning weight to weak streams worsen saved forecasts? (PROGRAMME Job C, 2026-11-18)
+
+**Before work.** D100 suggested, without isolating it, that the selector's fixed share (each accepted taste
+returns 1% of the speakers' weight evenly to them, Herbster & Warmuth's fixed share, D65) keeps weak speakers
+influential. The historical selector (`grownet.py:782–815`, arm flag F: share .01, BT 1; Bayes over the default
+and the streams speaking at taste time, sleepers keep their weight) is to be replayed on saved accepted-taste
+rows: sequence D93 and D102, timing D101 (D104's table). Step 1, required before any comparison: from each row's
+issued weights, forecasts, default and label, apply the historical update and require the next row's issued
+weights to agree (normalised, within 1e-9). The rows save issued forecasts, while the selector uses the forecast
+scored at taste time, after earlier streams' learning; D79 found these differ on some tastes. Prediction: replay
+agrees on most transitions but not all (75%), in which case the job stops with a capture specification, as
+instructed. Only if replay is exact: compare share .01 with 0 (priors, sleepers and totals identical), first,
+last third and full life, paired per life. Budget: 45 minutes, one bounded analysis under 240 s.
+
+**Replay result, before any comparison.** [Script](/home/pilgrim/git/simple-learner/lab/selection_share_audit.py),
+[JSON](/home/pilgrim/git/simple-learner/lab/v/selection_share_audit.json), [log](/home/pilgrim/git/simple-learner/lab/v/selection_share_audit.log),
+[fixture log](/home/pilgrim/git/simple-learner/lab/v/selection_share_audit_checks.log). Transitions reproduced exactly
+(normalised weights within 1e−9): sequence D93 12959/13857, D102 8995/9728, timing 69652/71619; inexact ones change
+the weights of about 120 streams, all awake at issue (maximum deviation .017, .045, .076). Fully exact lives:
+all 20 low lives in each sequence set, all 20 timing P=560 lives, one A life, nothing else. These are exactly the
+lives where the design's market cannot transfer (D105: allowance 3), so no stream's learning recycles another
+stream's speaker within a taste, and issued and scored forecasts coincide. Elsewhere exact replay needs the capture
+specified in the JSON (scored forecasts, credited set, weights before and after each taste).
+
+**Declared before comparing, on the 60 exactly replayable lives only** (selected by replayability, not outcome;
+they speak for the P=560 design with an inert market, not for larger brains). Replay from each life's first row's
+recorded weights twice: share .01 (must reproduce every native issued probability within 1e−9) and share 0, with
+identical priors, sleepers and totals, updating after each accepted label. Score each row's mixture against its
+label: log loss and choice errors per taste, first third, last third and full life, per-life paired differences
+(0 − .01), 2000 seed-pair bootstraps. Predictions: on sequences, share 0 lowers loss a little, since weak speakers
+lose weight for good (55%); on timing, share 0 is no better and may harm the last third, where D65 found weight
+recovery useful (55%). Either way this is a replay on fixed observations and unit forecasts, not foraging.
+
+**Comparison result.** [Compare JSON](/home/pilgrim/git/simple-learner/lab/v/selection_share_audit_compare.json),
+[log](/home/pilgrim/git/simple-learner/lab/v/selection_share_audit_compare.log) (`--compare`, same script). Share .01
+replay reproduces every native issued probability within 2.9e−15 on all 60 lives.
+
+| P=560 design, share 0 − share .01, per-life mean [95%] | first third, bits per taste | last third, bits | last third, choice errors | full life, bits | choices changed / tastes, full life |
+|---|---:|---:|---:|---:|---:|
+| sequence D93 (seeds 142000–142009) | +.002 [−.001, +.005] | −.005 [−.012, +.003] | +.003 [−.007, +.014] | −.002 [−.006, +.003] | 121 / 3423 |
+| sequence D102 (seeds 176000–176009) | +.001 [−.001, +.003] | −.007 [−.013, −.001] | −.001 [−.008, +.006] | −.004 [−.007, −.000] | 100 / 3242 |
+| timing D101 (seeds 142000–142009) | −.003 [−.007, +.001] | +.013 [−.011, +.054] | +.013 [−.002, +.037] | +.002 [−.009, +.018] | 1037 / 35770 |
+
+Levels with share .01 (full life): .965, .972 and .423 bits per taste.
+
+**Observations and inference.** On these histories the fixed share costs at most a few thousandths of a bit per
+taste on sequences (one window's interval excludes zero, by .001), and removing it tends to hurt timing's last
+third (interval includes zero); about 3% of choices change. That is two orders of magnitude smaller than the
+differences between brains in D104 (−.37 to −.49 bits per taste), so on saved forecasts the share is not a
+material cost, and zero share is not a universal cure (timing leans the other way, as D65 suggests). This does not
+test D100: those lives (rule R, market off) were not in Job A's sets, and a replay keeps the original observations
+and unit forecasts, so a closed-loop effect of the share remains possible though now less likely.
+**Limits:** only the P=560 lives replay exactly among Job A's sets; one share value; historical credit.
+*Amended 2026-11-18 ([D107](#d107-share-extensions)):* I had not used D79's recording, which replays a large brain exactly
+(share effect about −.012 bits per taste on four lives), nor checked D100's lives (all replay exactly; the share's effect
+does not differ between R and R+1). Prior mass, required by the job and omitted here, is reported in D107. I had also not
+re-read D65, D75 or D79–D82 before this job, as the job asked; D107 was written after doing so.
+**Next branch:** Job D's factorial protocol (forecast participation × credit), with the share's small offline effect
+as one input; the D105 capture would make larger brains' replay exact.
+
+<a id="d107-share-extensions"></a>
+### D107 — Completing Job C: prior mass, the large brain's exact replay and D100's lives (2026-11-18)
+
+**Before work.** The user asked me to close gaps I identified in Jobs A–C (D104–D106 are amended in place, dated).
+For Job C: (1) report prior mass, which the job required and I omitted; (2) D80 shows that D79's recording
+(`active_mixture_audit.pkl`: the unchanged design at P=4480 and the weight contest at cap 3042, seq 17, seed
+177000, red and blue, historical credit) holds the *scored* forecasts and replays exactly, so the share
+comparison can cover a large brain after all: replay share .01 (must reproduce every recorded weight and issued
+probability within 1e−10) and share 0 from the same start, scoring the issued prediction before each accepted
+taste; four lives, reported individually, no interval; (3) check whether D100's lives (rules R, R+1 and their
+silenced versions, seeds 142000–142009) replay exactly from the D93-style rows; only if both R and R+1 do in all
+20 lives, compare share 0 with .01 on each, paired per life, and the difference between those effects. These are
+extensions beyond Job A's sets, reported separately. Predictions: the large brain's share effect is as small as
+D106's (|Δ| < .01 bits per taste, 70%); R and R+1 replay exactly (market off, 70%); removing the share helps R no
+more than R+1 within .01 bits per taste, so the share does not explain D100's harm (60%). Budget: 30 minutes.
+
+**Provenance.** [Script](/home/pilgrim/git/simple-learner/lab/selection_share_extension.py),
+[JSON](/home/pilgrim/git/simple-learner/lab/v/selection_share_extension.json) (hashes, command),
+[log](/home/pilgrim/git/simple-learner/lab/v/selection_share_extension.log); 3.0 s, no life.
+
+**(1) Prior mass.** Every stream and the default start at weight 1 (168 + 1): the default holds 0.6% of the prior,
+the ten event streams 5.9%, the 158 others 93.5% (clock 35.5%, integrator 33.1%, rhythm 24.9%). This is the
+weight at every life's first accepted taste. By the start of the last third, the event streams hold 49% of the
+awake weight in the small sequence brains and 90% (D93) or 75% (D102) in the large ones; on timing, rhythm streams
+hold 86%. As in D75, many weak predictors receive prior odds without having supplied evidence: here about 15 to 1
+against the event streams at birth.
+
+**(2) The large brain, replayed exactly from scored forecasts.** Share .01 reproduces every recorded weight and
+issued probability within 2.3e−13 on all four D79 lives.
+
+| D79 life (seed 177000, seq 17) | share 0 − .01, first third | last third | full life, bits / errors per taste | choices changed, full life |
+|---|---:|---:|---:|---:|
+| unchanged design P=4480, red | −.007 | −.010 | −.011 / −.005 | 1 / 184 |
+| unchanged design P=4480, blue | +.013 | −.015 | −.012 / −.005 | 3 / 187 |
+| weight contest, red | −.010 | −.016 | −.013 / −.006 | 3 / 163 |
+| weight contest, blue | −.003 | −.015 | −.012 / −.017 | 3 / 176 |
+
+Removing the share lowers loss by about .012 bits per taste over the full life in all four, slightly more than
+the predicted .01; one seed, so no interval. Still about 1/30 of the brain-size differences of D104.
+
+**(3) D100's lives.** All 20 lives of each of R, R+1, R silent and R+1 silent replay exactly (the R rules have no
+market), as predicted. Share 0 − .01, per-life means [95%]: full life R −.000 [−.007, +.008], R+1 −.001
+[−.006, +.006]; difference of effects (R − R+1) +.001 [−.005, +.007]; last third −.007 and −.007; first third +.004
+and +.006 (R+1's interval excludes zero: removing the share slightly hurts early). The share's effect does not differ
+between R and R+1, so it does not explain why one unit for every other stream helped in D100, as predicted.
+
+**Inference.** On every exactly replayable history examined (60 small-brain lives, 4 large-brain lives, 80 ruler
+lives), the fixed share changes forecast loss by at most about .016 bits per taste, helping a little early and
+costing a little late. It is not the route of D100's effect. The large prior mass on weak streams is a candidate
+that a replay of weights cannot test, because removing that prior also changes the closed loop; Job D's factorial
+should include it as a declared factor or a stated limitation.

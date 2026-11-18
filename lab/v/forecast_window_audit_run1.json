@@ -1,0 +1,1473 @@
+{
+ "success": true,
+ "conventions": {
+  "windows": "full life; last third from 200 s (sequence, 300 s lives) or 2000 s (timing, 3000 s lives), by taste time",
+  "hindsight": "best single stream chosen over the full life, and chosen within the window; ties to lower index; default completes silence",
+  "pairing": "per-life differences on the same seed and colour order; 2000 seed-pair bootstraps, both colours together",
+  "pooled": "pooled per-taste levels are reported separately and never paired across lives",
+  "old": "D93 chose over the full life and scored the last third; D101/D102 chose within the window; D93 spans were full-life",
+  "credit": "historical pre-D82 credit in all three sets"
+ },
+ "provenance": {
+  "revision": "77af1566dc6136933735056f097abb2b7b432206",
+  "dirty": " M ABSTRACT.md\n M PROGRAMME.md\n M QUESTIONS.md\n M README.md\n M discrete/NOTEBOOK.md\n?? lab/agent_work_review.py\n?? lab/forecast_window_audit.py\n?? lab/v/agent_work_review.json\n?? lab/v/agent_work_review.log\n?? lab/v/agent_work_review_attempt1.json\n?? lab/v/agent_work_review_attempt1.log\n?? lab/v/forecast_window_audit.log\n?? lab/v/forecast_window_audit_checks.json\n?? lab/v/forecast_window_audit_checks.log\n?? lab/v/forecast_window_audit_checks_failed_fixture.log\n",
+  "script_sha256": "c773411b89077fb66cd8d7d990af88fcf6c5f90a59d4c6a2a10b194dd18149f9",
+  "inputs": {
+   "lab/v/room_prediction.pkl": "217c0f241a8003d722faa461f859ddf5c4765f0e40f98b63c80fef2e21b7c5c0",
+   "lab/v/followup_fresh.pkl": "d352fd5e1184061eb3f120a09ff7056cdf8c951d76b3db74e6a2a7ece9a4c63d",
+   "lab/v/followup_timing.pkl": "f3e00455b4529c043728c412b42d63ba7562dc48f0f7f475f2fb20ac1a831cbb"
+  },
+  "command": "timeout 240s env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python lab/forecast_window_audit.py --analyse"
+ },
+ "results": {
+  "sequence D93 (seeds 142000-142009)": {
+   "lives": 80,
+   "arms": [
+    "A_low_plus_event",
+    "B_high_minus_event",
+    "high",
+    "low"
+   ],
+   "seeds": [
+    142000,
+    142009
+   ],
+   "life_s": 300.0,
+   "max_reconstruction_error": 4.3298697960381105e-15,
+   "levels": {
+    "A_low_plus_event": {
+     "full": {
+      "tastes": 3511,
+      "per_life_tastes": [
+       173,
+       164,
+       170,
+       163,
+       179,
+       154,
+       173,
+       180,
+       184,
+       180,
+       185,
+       170,
+       180,
+       179,
+       181,
+       173,
+       192,
+       172,
+       188,
+       171
+      ],
+      "rate_per_s": 0.5851666666666667,
+      "event_span_per_life_mean": 14.76050890175076,
+      "best_differs_lives": 0,
+      "native": {
+       "pooled_bits_per_taste": 0.7780290212520392,
+       "pooled_errors_per_taste": 0.2671603531757334,
+       "per_life_mean_bits": 0.7801789279230785
+      },
+      "default": {
+       "pooled_bits_per_taste": 1.0113241084332014,
+       "pooled_errors_per_taste": 0.4839077185986898,
+       "per_life_mean_bits": 1.0115156199541837
+      },
+      "uniform": {
+       "pooled_bits_per_taste": 1.0,
+       "pooled_errors_per_taste": 0.5,
+       "per_life_mean_bits": 1.0
+      },
+      "best single chosen over full life": {
+       "pooled_bits_per_taste": 0.7376724609944535,
+       "pooled_errors_per_taste": 0.24109940187980633,
+       "per_life_mean_bits": 0.7398798520871849
+      },
+      "best single chosen within window": {
+       "pooled_bits_per_taste": 0.7376724609944535,
+       "pooled_errors_per_taste": 0.24109940187980633,
+       "per_life_mean_bits": 0.7398798520871849
+      }
+     },
+     "last_third": {
+      "tastes": 1201,
+      "per_life_tastes": [
+       63,
+       48,
+       75,
+       66,
+       61,
+       37,
+       60,
+       69,
+       51,
+       59,
+       64,
+       57,
+       59,
+       77,
+       53,
+       54,
+       69,
+       67,
+       57,
+       55
+      ],
+      "rate_per_s": 0.6005,
+      "event_span_per_life_mean": 17.8312825856248,
+      "best_differs_lives": 2,
+      "native": {
+       "pooled_bits_per_taste": 0.5511597987134749,
+       "pooled_errors_per_taste": 0.15570358034970858,
+       "per_life_mean_bits": 0.5548672079339247
+      },
+      "default": {
+       "pooled_bits_per_taste": 0.995191676167574,
+       "pooled_errors_per_taste": 0.462947543713572,
+       "per_life_mean_bits": 0.9957474756974717
+      },
+      "uniform": {
+       "pooled_bits_per_taste": 1.0,
+       "pooled_errors_per_taste": 0.5,
+       "per_life_mean_bits": 1.0
+      },
+      "best single chosen over full life": {
+       "pooled_bits_per_taste": 0.5221960449830874,
+       "pooled_errors_per_taste": 0.1482098251457119,
+       "per_life_mean_bits": 0.525971173285871
+      },
+      "best single chosen within window": {
+       "pooled_bits_per_taste": 0.5167074730185589,
+       "pooled_errors_per_taste": 0.14737718567860117,
+       "per_life_mean_bits": 0.5203020498581733
+      }
+     }
+    },
+    "B_high_minus_event": {
+     "full": {
+      "tastes": 3469,
+      "per_life_tastes": [
+       163,
+       163,
+       180,
+       184,
+       173,
+       183,
+       188,
+       177,
+       182,
+       174,
+       182,
+       164,
+       144,
+       151,
+       175,
+       148,
+       183,
+       186,
+       189,
+       180
+      ],
+      "rate_per_s": 0.5781666666666665,
+      "event_span_per_life_mean": 2.682603160667641,
+      "best_differs_lives": 0,
+      "native": {
+       "pooled_bits_per_taste": 0.9077646195457261,
+       "pooled_errors_per_taste": 0.3116171807437302,
+       "per_life_mean_bits": 0.9108357183754014
+      },
+      "default": {
+       "pooled_bits_per_taste": 1.015510639017395,
+       "pooled_errors_per_taste": 0.5051888152205246,
+       "per_life_mean_bits": 1.0156368722517217
+      },
+      "uniform": {
+       "pooled_bits_per_taste": 1.0,
+       "pooled_errors_per_taste": 0.5,
+       "per_life_mean_bits": 1.0
+      },
+      "best single chosen over full life": {
+       "pooled_bits_per_taste": 0.8758454511540735,
+       "pooled_errors_per_taste": 0.3064283655232055,
+       "per_life_mean_bits": 0.879032037116062
+      },
+      "best single chosen within window": {
+       "pooled_bits_per_taste": 0.8758454511540735,
+       "pooled_errors_per_taste": 0.3064283655232055,
+       "per_life_mean_bits": 0.879032037116062
+      }
+     },
+     "last_third": {
+      "tastes": 1169,
+      "per_life_tastes": [
+       59,
+       55,
+       57,
+       59,
+       59,
+       56,
+       50,
+       67,
+       55,
+       64,
+       73,
+       60,
+       43,
+       60,
+       65,
+       50,
+       53,
+       55,
+       61,
+       68
+      ],
+      "rate_per_s": 0.5845,
+      "event_span_per_life_mean": 2.895723500910642,
+      "best_differs_lives": 11,
+      "native": {
+       "pooled_bits_per_taste": 0.8118748480787417,
+       "pooled_errors_per_taste": 0.2686056458511548,
+       "per_life_mean_bits": 0.8153561287730258
+      },
+      "default": {
+       "pooled_bits_per_taste": 0.9988665093493977,
+       "pooled_errors_per_taste": 0.4875962360992301,
+       "per_life_mean_bits": 0.9990769202897377
+      },
+      "uniform": {
+       "pooled_bits_per_taste": 1.0,
+       "pooled_errors_per_taste": 0.5,
+       "per_life_mean_bits": 1.0
+      },
+      "best single chosen over full life": {
+       "pooled_bits_per_taste": 0.7868062512778637,
+       "pooled_errors_per_taste": 0.2613344739093242,
+       "per_life_mean_bits": 0.7896529928379341
+      },
+      "best single chosen within window": {
+       "pooled_bits_per_taste": 0.7476419678879105,
+       "pooled_errors_per_taste": 0.2309666381522669,
+       "per_life_mean_bits": 0.7490935730951926
+      }
+     }
+    },
+    "high": {
+     "full": {
+      "tastes": 3540,
+      "per_life_tastes": [
+       132,
+       160,
+       161,
+       179,
+       189,
+       169,
+       161,
+       179,
+       196,
+       174,
+       181,
+       198,
+       190,
+       178,
+       174,
+       199,
+       183,
+       192,
+       177,
+       168
+      ],
+      "rate_per_s": 0.5900000000000001,
+      "event_span_per_life_mean": 15.72677922021291,
+      "best_differs_lives": 0,
+      "native": {
+       "pooled_bits_per_taste": 0.6995578771578956,
+       "pooled_errors_per_taste": 0.21016949152542372,
+       "per_life_mean_bits": 0.7033606367079233
+      },
+      "default": {
+       "pooled_bits_per_taste": 1.0069985283579421,
+       "pooled_errors_per_taste": 0.4788135593220339,
+       "per_life_mean_bits": 1.0068928026143247
+      },
+      "uniform": {
+       "pooled_bits_per_taste": 1.0,
+       "pooled_errors_per_taste": 0.5,
+       "per_life_mean_bits": 1.0
+      },
+      "best single chosen over full life": {
+       "pooled_bits_per_taste": 0.6563454909814773,
+       "pooled_errors_per_taste": 0.19350282485875706,
+       "per_life_mean_bits": 0.6597044316715281
+      },
+      "best single chosen within window": {
+       "pooled_bits_per_taste": 0.6563454909814773,
+       "pooled_errors_per_taste": 0.19350282485875706,
+       "per_life_mean_bits": 0.6597044316715281
+      }
+     },
+     "last_third": {
+      "tastes": 1149,
+      "per_life_tastes": [
+       41,
+       54,
+       52,
+       60,
+       51,
+       67,
+       48,
+       63,
+       59,
+       59,
+       67,
+       60,
+       54,
+       65,
+       64,
+       70,
+       60,
+       49,
+       61,
+       45
+      ],
+      "rate_per_s": 0.5744999999999999,
+      "event_span_per_life_mean": 19.94354024306335,
+      "best_differs_lives": 0,
+      "native": {
+       "pooled_bits_per_taste": 0.4486289603484816,
+       "pooled_errors_per_taste": 0.10008703220191471,
+       "per_life_mean_bits": 0.4440283466827319
+      },
+      "default": {
+       "pooled_bits_per_taste": 0.982373995262886,
+       "pooled_errors_per_taste": 0.44168842471714537,
+       "per_life_mean_bits": 0.9812664367727837
+      },
+      "uniform": {
+       "pooled_bits_per_taste": 1.0,
+       "pooled_errors_per_taste": 0.5,
+       "per_life_mean_bits": 1.0
+      },
+      "best single chosen over full life": {
+       "pooled_bits_per_taste": 0.4306939337132144,
+       "pooled_errors_per_taste": 0.10095735422106179,
+       "per_life_mean_bits": 0.42591937632997173
+      },
+      "best single chosen within window": {
+       "pooled_bits_per_taste": 0.4306939337132144,
+       "pooled_errors_per_taste": 0.10095735422106179,
+       "per_life_mean_bits": 0.42591937632997173
+      }
+     }
+    },
+    "low": {
+     "full": {
+      "tastes": 3417,
+      "per_life_tastes": [
+       167,
+       165,
+       194,
+       183,
+       177,
+       161,
+       137,
+       179,
+       162,
+       171,
+       162,
+       182,
+       173,
+       154,
+       197,
+       160,
+       181,
+       167,
+       193,
+       152
+      ],
+      "rate_per_s": 0.5694999999999999,
+      "event_span_per_life_mean": 1.6334784585688695,
+      "best_differs_lives": 0,
+      "native": {
+       "pooled_bits_per_taste": 0.9651593528002946,
+       "pooled_errors_per_taste": 0.3690371671056482,
+       "per_life_mean_bits": 0.965754041967997
+      },
+      "default": {
+       "pooled_bits_per_taste": 1.0125847038651243,
+       "pooled_errors_per_taste": 0.4865378987415862,
+       "per_life_mean_bits": 1.0125747000956498
+      },
+      "uniform": {
+       "pooled_bits_per_taste": 1.0,
+       "pooled_errors_per_taste": 0.5,
+       "per_life_mean_bits": 1.0
+      },
+      "best single chosen over full life": {
+       "pooled_bits_per_taste": 0.9224930125755153,
+       "pooled_errors_per_taste": 0.3412350014632719,
+       "per_life_mean_bits": 0.9226277106384941
+      },
+      "best single chosen within window": {
+       "pooled_bits_per_taste": 0.9224930125755153,
+       "pooled_errors_per_taste": 0.3412350014632719,
+       "per_life_mean_bits": 0.9226277106384941
+      }
+     },
+     "last_third": {
+      "tastes": 1139,
+      "per_life_tastes": [
+       70,
+       49,
+       73,
+       75,
+       52,
+       63,
+       41,
+       55,
+       44,
+       64,
+       58,
+       59,
+       64,
+       47,
+       61,
+       40,
+       58,
+       57,
+       59,
+       50
+      ],
+      "rate_per_s": 0.5695,
+      "event_span_per_life_mean": 1.646333700563833,
+      "best_differs_lives": 7,
+      "native": {
+       "pooled_bits_per_taste": 0.932028078208693,
+       "pooled_errors_per_taste": 0.33713784021071114,
+       "per_life_mean_bits": 0.9295023404522638
+      },
+      "default": {
+       "pooled_bits_per_taste": 0.9937384673491217,
+       "pooled_errors_per_taste": 0.4688323090430202,
+       "per_life_mean_bits": 0.9938919256192837
+      },
+      "uniform": {
+       "pooled_bits_per_taste": 1.0,
+       "pooled_errors_per_taste": 0.5,
+       "per_life_mean_bits": 1.0
+      },
+      "best single chosen over full life": {
+       "pooled_bits_per_taste": 0.8942100209301274,
+       "pooled_errors_per_taste": 0.32748024582967517,
+       "per_life_mean_bits": 0.8919968042345363
+      },
+      "best single chosen within window": {
+       "pooled_bits_per_taste": 0.875365121024813,
+       "pooled_errors_per_taste": 0.3257243195785777,
+       "per_life_mean_bits": 0.8740760537891366
+      }
+     }
+    }
+   },
+   "paired": {
+    "full | native | bits per taste": {
+     "per_life_mean": -0.2623934052600738,
+     "ci95": [
+      -0.28552186209211494,
+      -0.2335804231218988
+     ]
+    },
+    "full | native | errors per taste": {
+     "per_life_mean": -0.15794773711230378,
+     "ci95": [
+      -0.17144610025396564,
+      -0.1449347769501969
+     ]
+    },
+    "full | default | bits per taste": {
+     "per_life_mean": -0.005681897481325087,
+     "ci95": [
+      -0.01404201175963521,
+      0.0016695045288017865
+     ]
+    },
+    "full | default | errors per taste": {
+     "per_life_mean": -0.00833446568583531,
+     "ci95": [
+      -0.04247499024644844,
+      0.02875340872086876
+     ]
+    },
+    "full | best single chosen over full life | bits per taste": {
+     "per_life_mean": -0.26292327896696577,
+     "ci95": [
+      -0.2823676639094534,
+      -0.24156418584581824
+     ]
+    },
+    "full | best single chosen over full life | errors per taste": {
+     "per_life_mean": -0.14684853706685408,
+     "ci95": [
+      -0.17443625006776312,
+      -0.12246096087415469
+     ]
+    },
+    "full | best single chosen within window | bits per taste": {
+     "per_life_mean": -0.26292327896696577,
+     "ci95": [
+      -0.2823676639094534,
+      -0.24156418584581824
+     ]
+    },
+    "full | best single chosen within window | errors per taste": {
+     "per_life_mean": -0.14684853706685408,
+     "ci95": [
+      -0.17443625006776312,
+      -0.12246096087415469
+     ]
+    },
+    "full | event speaker span": {
+     "per_life_mean": 14.09330076164404,
+     "ci95": [
+      13.757591111483045,
+      14.386578737562926
+     ]
+    },
+    "full | accepted tastes": {
+     "per_life_mean": 6.15,
+     "ci95": [
+      -3.60125,
+      13.8
+     ]
+    },
+    "last_third | native | bits per taste": {
+     "per_life_mean": -0.4854739937695317,
+     "ci95": [
+      -0.555482201450146,
+      -0.41443710945931045
+     ]
+    },
+    "last_third | native | errors per taste": {
+     "per_life_mean": -0.23540385303071898,
+     "ci95": [
+      -0.27013558381220804,
+      -0.20131807798752172
+     ]
+    },
+    "last_third | default | bits per taste": {
+     "per_life_mean": -0.012625488846499777,
+     "ci95": [
+      -0.02875704963517612,
+      -0.00017156176691326407
+     ]
+    },
+    "last_third | default | errors per taste": {
+     "per_life_mean": -0.029902742592418336,
+     "ci95": [
+      -0.0663309283496739,
+      0.008745130767360615
+     ]
+    },
+    "last_third | best single chosen over full life | bits per taste": {
+     "per_life_mean": -0.4660774279045647,
+     "ci95": [
+      -0.5375902831557862,
+      -0.39534104465676395
+     ]
+    },
+    "last_third | best single chosen over full life | errors per taste": {
+     "per_life_mean": -0.22647275113146717,
+     "ci95": [
+      -0.26924969021388934,
+      -0.181713714390742
+     ]
+    },
+    "last_third | best single chosen within window | bits per taste": {
+     "per_life_mean": -0.44815667745916477,
+     "ci95": [
+      -0.5150108514527489,
+      -0.37802798919417985
+     ]
+    },
+    "last_third | best single chosen within window | errors per taste": {
+     "per_life_mean": -0.2264251125911081,
+     "ci95": [
+      -0.27023671776329333,
+      -0.178743045435537
+     ]
+    },
+    "last_third | event speaker span": {
+     "per_life_mean": 18.297206542499517,
+     "ci95": [
+      17.602736240868417,
+      18.859599196745048
+     ]
+    },
+    "last_third | accepted tastes": {
+     "per_life_mean": 0.5,
+     "ci95": [
+      -5.8,
+      5.7512499999999935
+     ]
+    }
+   },
+   "pair": "high - low"
+  },
+  "sequence D102 (seeds 176000-176009)": {
+   "lives": 60,
+   "arms": [
+    "R+M+1",
+    "high",
+    "low"
+   ],
+   "seeds": [
+    176000,
+    176009
+   ],
+   "life_s": 300.0,
+   "max_reconstruction_error": 3.1086244689504383e-15,
+   "levels": {
+    "R+M+1": {
+     "full": {
+      "tastes": 3214,
+      "per_life_tastes": [
+       153,
+       198,
+       161,
+       168,
+       151,
+       159,
+       146,
+       190,
+       158,
+       160,
+       166,
+       154,
+       142,
+       138,
+       167,
+       179,
+       163,
+       176,
+       155,
+       130
+      ],
+      "rate_per_s": 0.5356666666666666,
+      "event_span_per_life_mean": 15.094714552328067,
+      "best_differs_lives": 0,
+      "native": {
+       "pooled_bits_per_taste": 0.751083029888528,
+       "pooled_errors_per_taste": 0.24424393279402615,
+       "per_life_mean_bits": 0.7549752745168181
+      },
+      "default": {
+       "pooled_bits_per_taste": 1.0119294641109404,
+       "pooled_errors_per_taste": 0.4704418170504045,
+       "per_life_mean_bits": 1.013082067008941
+      },
+      "uniform": {
+       "pooled_bits_per_taste": 1.0,
+       "pooled_errors_per_taste": 0.5,
+       "per_life_mean_bits": 1.0
+      },
+      "best single chosen over full life": {
+       "pooled_bits_per_taste": 0.7024661533893056,
+       "pooled_errors_per_taste": 0.21888612321095208,
+       "per_life_mean_bits": 0.705770167710558
+      },
+      "best single chosen within window": {
+       "pooled_bits_per_taste": 0.7024661533893056,
+       "pooled_errors_per_taste": 0.21888612321095208,
+       "per_life_mean_bits": 0.705770167710558
+      }
+     },
+     "last_third": {
+      "tastes": 1095,
+      "per_life_tastes": [
+       46,
+       82,
+       59,
+       60,
+       45,
+       53,
+       49,
+       72,
+       53,
+       63,
+       53,
+       54,
+       42,
+       52,
+       45,
+       62,
+       54,
+       54,
+       48,
+       49
+      ],
+      "rate_per_s": 0.5474999999999999,
+      "event_span_per_life_mean": 19.115369719131742,
+      "best_differs_lives": 0,
+      "native": {
+       "pooled_bits_per_taste": 0.5432688752296174,
+       "pooled_errors_per_taste": 0.136986301369863,
+       "per_life_mean_bits": 0.5436910557923285
+      },
+      "default": {
+       "pooled_bits_per_taste": 0.9915254006528675,
+       "pooled_errors_per_taste": 0.45662100456621,
+       "per_life_mean_bits": 0.9932358227914184
+      },
+      "uniform": {
+       "pooled_bits_per_taste": 1.0,
+       "pooled_errors_per_taste": 0.5,
+       "per_life_mean_bits": 1.0
+      },
+      "best single chosen over full life": {
+       "pooled_bits_per_taste": 0.5173852560540152,
+       "pooled_errors_per_taste": 0.12968036529680366,
+       "per_life_mean_bits": 0.5191180226806227
+      },
+      "best single chosen within window": {
+       "pooled_bits_per_taste": 0.5173852560540152,
+       "pooled_errors_per_taste": 0.12968036529680366,
+       "per_life_mean_bits": 0.5191180226806227
+      }
+     }
+    },
+    "high": {
+     "full": {
+      "tastes": 3332,
+      "per_life_tastes": [
+       168,
+       203,
+       139,
+       193,
+       168,
+       156,
+       180,
+       169,
+       177,
+       155,
+       203,
+       132,
+       171,
+       153,
+       169,
+       163,
+       166,
+       189,
+       144,
+       134
+      ],
+      "rate_per_s": 0.5553333333333333,
+      "event_span_per_life_mean": 14.957856432186025,
+      "best_differs_lives": 0,
+      "native": {
+       "pooled_bits_per_taste": 0.7873311122206097,
+       "pooled_errors_per_taste": 0.2617046818727491,
+       "per_life_mean_bits": 0.7924241862059304
+      },
+      "default": {
+       "pooled_bits_per_taste": 1.0181648644593457,
+       "pooled_errors_per_taste": 0.48964585834333735,
+       "per_life_mean_bits": 1.0186434435784961
+      },
+      "uniform": {
+       "pooled_bits_per_taste": 1.0,
+       "pooled_errors_per_taste": 0.5,
+       "per_life_mean_bits": 1.0
+      },
+      "best single chosen over full life": {
+       "pooled_bits_per_taste": 0.7395489693013976,
+       "pooled_errors_per_taste": 0.2351440576230492,
+       "per_life_mean_bits": 0.7443569317332799
+      },
+      "best single chosen within window": {
+       "pooled_bits_per_taste": 0.7395489693013976,
+       "pooled_errors_per_taste": 0.2351440576230492,
+       "per_life_mean_bits": 0.7443569317332799
+      }
+     },
+     "last_third": {
+      "tastes": 1106,
+      "per_life_tastes": [
+       60,
+       65,
+       55,
+       67,
+       54,
+       51,
+       64,
+       52,
+       67,
+       42,
+       73,
+       30,
+       65,
+       48,
+       61,
+       56,
+       53,
+       52,
+       51,
+       40
+      ],
+      "rate_per_s": 0.5529999999999999,
+      "event_span_per_life_mean": 18.926205469407456,
+      "best_differs_lives": 2,
+      "native": {
+       "pooled_bits_per_taste": 0.5655427948516331,
+       "pooled_errors_per_taste": 0.15009041591320071,
+       "per_life_mean_bits": 0.5628839739169835
+      },
+      "default": {
+       "pooled_bits_per_taste": 0.999821735453541,
+       "pooled_errors_per_taste": 0.4778481012658228,
+       "per_life_mean_bits": 1.0010449878621641
+      },
+      "uniform": {
+       "pooled_bits_per_taste": 1.0,
+       "pooled_errors_per_taste": 0.5,
+       "per_life_mean_bits": 1.0
+      },
+      "best single chosen over full life": {
+       "pooled_bits_per_taste": 0.5414476442368746,
+       "pooled_errors_per_taste": 0.14285714285714285,
+       "per_life_mean_bits": 0.5374131327778641
+      },
+      "best single chosen within window": {
+       "pooled_bits_per_taste": 0.5349107754668965,
+       "pooled_errors_per_taste": 0.1410488245931284,
+       "per_life_mean_bits": 0.5311766051156508
+      }
+     }
+    },
+    "low": {
+     "full": {
+      "tastes": 3242,
+      "per_life_tastes": [
+       177,
+       167,
+       147,
+       179,
+       143,
+       188,
+       159,
+       165,
+       180,
+       186,
+       163,
+       163,
+       184,
+       134,
+       159,
+       158,
+       155,
+       164,
+       140,
+       131
+      ],
+      "rate_per_s": 0.5403333333333334,
+      "event_span_per_life_mean": 1.6224127035472218,
+      "best_differs_lives": 0,
+      "native": {
+       "pooled_bits_per_taste": 0.9719428759291792,
+       "pooled_errors_per_taste": 0.3756940160394818,
+       "per_life_mean_bits": 0.9723535491357728
+      },
+      "default": {
+       "pooled_bits_per_taste": 1.0156336081167219,
+       "pooled_errors_per_taste": 0.49167180752621836,
+       "per_life_mean_bits": 1.0161913459220138
+      },
+      "uniform": {
+       "pooled_bits_per_taste": 1.0,
+       "pooled_errors_per_taste": 0.5,
+       "per_life_mean_bits": 1.0
+      },
+      "best single chosen over full life": {
+       "pooled_bits_per_taste": 0.9262843999344358,
+       "pooled_errors_per_taste": 0.3297347316471314,
+       "per_life_mean_bits": 0.9259720277637925
+      },
+      "best single chosen within window": {
+       "pooled_bits_per_taste": 0.9262843999344358,
+       "pooled_errors_per_taste": 0.3297347316471314,
+       "per_life_mean_bits": 0.9259720277637925
+      }
+     },
+     "last_third": {
+      "tastes": 1075,
+      "per_life_tastes": [
+       70,
+       52,
+       41,
+       61,
+       60,
+       64,
+       67,
+       59,
+       47,
+       52,
+       44,
+       61,
+       58,
+       48,
+       38,
+       49,
+       44,
+       59,
+       52,
+       49
+      ],
+      "rate_per_s": 0.5374999999999999,
+      "event_span_per_life_mean": 1.6330751231789526,
+      "best_differs_lives": 8,
+      "native": {
+       "pooled_bits_per_taste": 0.9341841787393685,
+       "pooled_errors_per_taste": 0.3302325581395349,
+       "per_life_mean_bits": 0.9322595631367099
+      },
+      "default": {
+       "pooled_bits_per_taste": 1.0007743028656142,
+       "pooled_errors_per_taste": 0.48511627906976745,
+       "per_life_mean_bits": 1.0004098746607608
+      },
+      "uniform": {
+       "pooled_bits_per_taste": 1.0,
+       "pooled_errors_per_taste": 0.5,
+       "per_life_mean_bits": 1.0
+      },
+      "best single chosen over full life": {
+       "pooled_bits_per_taste": 0.8955973968217412,
+       "pooled_errors_per_taste": 0.3209302325581395,
+       "per_life_mean_bits": 0.8941222175472238
+      },
+      "best single chosen within window": {
+       "pooled_bits_per_taste": 0.8839163190610383,
+       "pooled_errors_per_taste": 0.31813953488372093,
+       "per_life_mean_bits": 0.8831388806384108
+      }
+     }
+    }
+   },
+   "paired": {
+    "full | native | bits per taste": {
+     "per_life_mean": -0.17992936292984255,
+     "ci95": [
+      -0.22112396017577896,
+      -0.13385711171011003
+     ]
+    },
+    "full | native | errors per taste": {
+     "per_life_mean": -0.11193033380476973,
+     "ci95": [
+      -0.13671673245889768,
+      -0.08650362070674208
+     ]
+    },
+    "full | default | bits per taste": {
+     "per_life_mean": 0.0024520976564824603,
+     "ci95": [
+      -0.0038753971140588206,
+      0.009444597128602936
+     ]
+    },
+    "full | default | errors per taste": {
+     "per_life_mean": -0.0021911905870054594,
+     "ci95": [
+      -0.03463354394141128,
+      0.02985970638534157
+     ]
+    },
+    "full | best single chosen over full life | bits per taste": {
+     "per_life_mean": -0.1816150960305129,
+     "ci95": [
+      -0.22541518114456627,
+      -0.13358432042641374
+     ]
+    },
+    "full | best single chosen over full life | errors per taste": {
+     "per_life_mean": -0.0918105648296134,
+     "ci95": [
+      -0.11331792497399641,
+      -0.06981844252140881
+     ]
+    },
+    "full | best single chosen within window | bits per taste": {
+     "per_life_mean": -0.1816150960305129,
+     "ci95": [
+      -0.22541518114456627,
+      -0.13358432042641374
+     ]
+    },
+    "full | best single chosen within window | errors per taste": {
+     "per_life_mean": -0.0918105648296134,
+     "ci95": [
+      -0.11331792497399641,
+      -0.06981844252140881
+     ]
+    },
+    "full | event speaker span": {
+     "per_life_mean": 13.335443728638802,
+     "ci95": [
+      12.961962379350593,
+      13.660535922111437
+     ]
+    },
+    "full | accepted tastes": {
+     "per_life_mean": 4.5,
+     "ci95": [
+      -1.55,
+      9.801249999999994
+     ]
+    },
+    "last_third | native | bits per taste": {
+     "per_life_mean": -0.3693755892197264,
+     "ci95": [
+      -0.47280766789592776,
+      -0.2638567547434384
+     ]
+    },
+    "last_third | native | errors per taste": {
+     "per_life_mean": -0.18134749542847253,
+     "ci95": [
+      -0.23056011910787025,
+      -0.13258348432845415
+     ]
+    },
+    "last_third | default | bits per taste": {
+     "per_life_mean": 0.0006351132014031813,
+     "ci95": [
+      -0.010233315578730149,
+      0.012077247379163495
+     ]
+    },
+    "last_third | default | errors per taste": {
+     "per_life_mean": 0.0005362285447587184,
+     "ci95": [
+      -0.05722959100451763,
+      0.05752573535240925
+     ]
+    },
+    "last_third | best single chosen over full life | bits per taste": {
+     "per_life_mean": -0.3567090847693596,
+     "ci95": [
+      -0.45429904919783703,
+      -0.2556238087635562
+     ]
+    },
+    "last_third | best single chosen over full life | errors per taste": {
+     "per_life_mean": -0.17627510363130047,
+     "ci95": [
+      -0.21956164390295366,
+      -0.1348935413416753
+     ]
+    },
+    "last_third | best single chosen within window | bits per taste": {
+     "per_life_mean": -0.3519622755227602,
+     "ci95": [
+      -0.44648526720429815,
+      -0.2537616914874727
+     ]
+    },
+    "last_third | best single chosen within window | errors per taste": {
+     "per_life_mean": -0.17847364782063274,
+     "ci95": [
+      -0.22452185820135162,
+      -0.13613262545784313
+     ]
+    },
+    "last_third | event speaker span": {
+     "per_life_mean": 17.293130346228505,
+     "ci95": [
+      16.749194948770263,
+      17.903726118173818
+     ]
+    },
+    "last_third | accepted tastes": {
+     "per_life_mean": 1.55,
+     "ci95": [
+      -2.3,
+      6.05
+     ]
+    }
+   },
+   "pair": "high - low"
+  },
+  "timing D101 (seeds 142000-142009)": {
+   "lives": 40,
+   "arms": [
+    "design2240",
+    "design560"
+   ],
+   "seeds": [
+    142000,
+    142009
+   ],
+   "life_s": 3000.0,
+   "max_reconstruction_error": 2.886579864025407e-15,
+   "levels": {
+    "design2240": {
+     "full": {
+      "tastes": 35889,
+      "per_life_tastes": [
+       1795,
+       1774,
+       1877,
+       1889,
+       1740,
+       1765,
+       1804,
+       1730,
+       1819,
+       1755,
+       1847,
+       1749,
+       1904,
+       1748,
+       1842,
+       1805,
+       1801,
+       1811,
+       1722,
+       1712
+      ],
+      "rate_per_s": 0.5981500000000001,
+      "event_span_per_life_mean": 5.496941662212996,
+      "best_differs_lives": 0,
+      "native": {
+       "pooled_bits_per_taste": 0.38052492221794143,
+       "pooled_errors_per_taste": 0.08765917133383488,
+       "per_life_mean_bits": 0.38074435301668974
+      },
+      "default": {
+       "pooled_bits_per_taste": 0.7781648017164182,
+       "pooled_errors_per_taste": 0.2369110312351974,
+       "per_life_mean_bits": 0.7769088461715458
+      },
+      "uniform": {
+       "pooled_bits_per_taste": 1.0,
+       "pooled_errors_per_taste": 0.5,
+       "per_life_mean_bits": 1.0
+      },
+      "best single chosen over full life": {
+       "pooled_bits_per_taste": 0.40031433670473127,
+       "pooled_errors_per_taste": 0.09553066399175235,
+       "per_life_mean_bits": 0.4006513577293579
+      },
+      "best single chosen within window": {
+       "pooled_bits_per_taste": 0.40031433670473127,
+       "pooled_errors_per_taste": 0.09553066399175235,
+       "per_life_mean_bits": 0.4006513577293579
+      }
+     },
+     "last_third": {
+      "tastes": 12007,
+      "per_life_tastes": [
+       573,
+       621,
+       625,
+       646,
+       567,
+       581,
+       616,
+       576,
+       602,
+       559,
+       638,
+       636,
+       654,
+       607,
+       591,
+       625,
+       550,
+       591,
+       584,
+       565
+      ],
+      "rate_per_s": 0.6003499999999999,
+      "event_span_per_life_mean": 3.5501324365863964,
+      "best_differs_lives": 4,
+      "native": {
+       "pooled_bits_per_taste": 0.33660037293771655,
+       "pooled_errors_per_taste": 0.07345714999583576,
+       "per_life_mean_bits": 0.3366260238172517
+      },
+      "default": {
+       "pooled_bits_per_taste": 0.7748208955028699,
+       "pooled_errors_per_taste": 0.23711168485050388,
+       "per_life_mean_bits": 0.7721514679669965
+      },
+      "uniform": {
+       "pooled_bits_per_taste": 1.0,
+       "pooled_errors_per_taste": 0.5,
+       "per_life_mean_bits": 1.0
+      },
+      "best single chosen over full life": {
+       "pooled_bits_per_taste": 0.326848962586173,
+       "pooled_errors_per_taste": 0.07204130923627884,
+       "per_life_mean_bits": 0.32670695672207095
+      },
+      "best single chosen within window": {
+       "pooled_bits_per_taste": 0.3227460959836464,
+       "pooled_errors_per_taste": 0.07004247522278671,
+       "per_life_mean_bits": 0.3226949483662882
+      }
+     }
+    },
+    "design560": {
+     "full": {
+      "tastes": 35770,
+      "per_life_tastes": [
+       1732,
+       1759,
+       1885,
+       1911,
+       1697,
+       1703,
+       1762,
+       1820,
+       1965,
+       1752,
+       1782,
+       1746,
+       1827,
+       1791,
+       1731,
+       1780,
+       1832,
+       1817,
+       1747,
+       1731
+      ],
+      "rate_per_s": 0.5961666666666666,
+      "event_span_per_life_mean": 1.826681288377077,
+      "best_differs_lives": 0,
+      "native": {
+       "pooled_bits_per_taste": 0.42215693567687557,
+       "pooled_errors_per_taste": 0.11277606933184232,
+       "per_life_mean_bits": 0.4228357382514982
+      },
+      "default": {
+       "pooled_bits_per_taste": 0.7788192389273212,
+       "pooled_errors_per_taste": 0.237279843444227,
+       "per_life_mean_bits": 0.7782736780980501
+      },
+      "uniform": {
+       "pooled_bits_per_taste": 1.0,
+       "pooled_errors_per_taste": 0.5,
+       "per_life_mean_bits": 1.0
+      },
+      "best single chosen over full life": {
+       "pooled_bits_per_taste": 0.42938877786621227,
+       "pooled_errors_per_taste": 0.11958344981828348,
+       "per_life_mean_bits": 0.4303383582602617
+      },
+      "best single chosen within window": {
+       "pooled_bits_per_taste": 0.42938877786621227,
+       "pooled_errors_per_taste": 0.11958344981828348,
+       "per_life_mean_bits": 0.4303383582602617
+      }
+     },
+     "last_third": {
+      "tastes": 11981,
+      "per_life_tastes": [
+       594,
+       622,
+       627,
+       643,
+       568,
+       558,
+       593,
+       600,
+       638,
+       595,
+       588,
+       588,
+       578,
+       610,
+       586,
+       624,
+       594,
+       609,
+       595,
+       571
+      ],
+      "rate_per_s": 0.5990499999999999,
+      "event_span_per_life_mean": 1.8326803177655138,
+      "best_differs_lives": 4,
+      "native": {
+       "pooled_bits_per_taste": 0.3912384517307792,
+       "pooled_errors_per_taste": 0.10533344462064936,
+       "per_life_mean_bits": 0.3907616724511157
+      },
+      "default": {
+       "pooled_bits_per_taste": 0.775620449054336,
+       "pooled_errors_per_taste": 0.23612386278273934,
+       "per_life_mean_bits": 0.7750275777321345
+      },
+      "uniform": {
+       "pooled_bits_per_taste": 1.0,
+       "pooled_errors_per_taste": 0.5,
+       "per_life_mean_bits": 1.0
+      },
+      "best single chosen over full life": {
+       "pooled_bits_per_taste": 0.4039480279624564,
+       "pooled_errors_per_taste": 0.11718554377764795,
+       "per_life_mean_bits": 0.4038398533538946
+      },
+      "best single chosen within window": {
+       "pooled_bits_per_taste": 0.383065166684547,
+       "pooled_errors_per_taste": 0.10675235790000835,
+       "per_life_mean_bits": 0.3826525182026898
+      }
+     }
+    }
+   },
+   "paired": {
+    "full | native | bits per taste": {
+     "per_life_mean": -0.0420913852348084,
+     "ci95": [
+      -0.10042233984350583,
+      0.01341445405675557
+     ]
+    },
+    "full | native | errors per taste": {
+     "per_life_mean": -0.025371797601952316,
+     "ci95": [
+      -0.049850738540513855,
+      -0.00338809780924926
+     ]
+    },
+    "full | default | bits per taste": {
+     "per_life_mean": -0.0013648319265044395,
+     "ci95": [
+      -0.004318750772178146,
+      0.0014845928777379388
+     ]
+    },
+    "full | default | errors per taste": {
+     "per_life_mean": -0.0007611928279760843,
+     "ci95": [
+      -0.00224234017505807,
+      0.0007395477557491421
+     ]
+    },
+    "full | best single chosen over full life | bits per taste": {
+     "per_life_mean": -0.029687000530903857,
+     "ci95": [
+      -0.10280041806094346,
+      0.03683016032254131
+     ]
+    },
+    "full | best single chosen over full life | errors per taste": {
+     "per_life_mean": -0.024374956246514607,
+     "ci95": [
+      -0.05578175418909479,
+      0.0010465153045158592
+     ]
+    },
+    "full | best single chosen within window | bits per taste": {
+     "per_life_mean": -0.029687000530903857,
+     "ci95": [
+      -0.10280041806094346,
+      0.03683016032254131
+     ]
+    },
+    "full | best single chosen within window | errors per taste": {
+     "per_life_mean": -0.024374956246514607,
+     "ci95": [
+      -0.05578175418909479,
+      0.0010465153045158592
+     ]
+    },
+    "full | event speaker span": {
+     "per_life_mean": 3.6702603738359185,
+     "ci95": [
+      2.8382956593596687,
+      5.008260615557853
+     ]
+    },
+    "full | accepted tastes": {
+     "per_life_mean": 5.95,
+     "ci95": [
+      -18.75375,
+      30.55
+     ]
+    },
+    "last_third | native | bits per taste": {
+     "per_life_mean": -0.05413564863386398,
+     "ci95": [
+      -0.1413312378477829,
+      0.023122923050308573
+     ]
+    },
+    "last_third | native | errors per taste": {
+     "per_life_mean": -0.03184713871426522,
+     "ci95": [
+      -0.07063739306206633,
+      -0.0007575869592077321
+     ]
+    },
+    "last_third | default | bits per taste": {
+     "per_life_mean": -0.002876109765138046,
+     "ci95": [
+      -0.014813811059016368,
+      0.009231720651959952
+     ]
+    },
+    "last_third | default | errors per taste": {
+     "per_life_mean": -0.00022917749727302677,
+     "ci95": [
+      -0.007427136535067192,
+      0.008265844605429817
+     ]
+    },
+    "last_third | best single chosen over full life | bits per taste": {
+     "per_life_mean": -0.07713289663182368,
+     "ci95": [
+      -0.2034242073985486,
+      0.025077158697905007
+     ]
+    },
+    "last_third | best single chosen over full life | errors per taste": {
+     "per_life_mean": -0.04549229249984964,
+     "ci95": [
+      -0.10844322441772992,
+      0.0002716786975104387
+     ]
+    },
+    "last_third | best single chosen within window | bits per taste": {
+     "per_life_mean": -0.05995756983640159,
+     "ci95": [
+      -0.15150227293353422,
+      0.021072155313939994
+     ]
+    },
+    "last_third | best single chosen within window | errors per taste": {
+     "per_life_mean": -0.03681714167408132,
+     "ci95": [
+      -0.07970467570673086,
+      -0.0024208091245225298
+     ]
+    },
+    "last_third | event speaker span": {
+     "per_life_mean": 1.717452118820883,
+     "ci95": [
+      1.4857374071249918,
+      2.0049421371492695
+     ]
+    },
+    "last_third | accepted tastes": {
+     "per_life_mean": 1.3,
+     "ci95": [
+      -13.1525,
+      17.3
+     ]
+    }
+   },
+   "pair": "design2240 - design560"
+  }
+ }
+}

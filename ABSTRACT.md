@@ -62,13 +62,15 @@ only 336/3653 recurring retained tallies win, and a supplied causal selection pr
 full-sequence prediction. [Asking whether memory serves as parts](discrete/NOTEBOOK.md#d88-parent-census) for later combinations
 finds weakly predicting units build about 6% of new units, and about one in five new units that predict beat the
 combined forecast. Deleted units would have offered many partners nothing living duplicates; those
-missing combinations [would have predicted](discrete/NOTEBOOK.md#d92-ghost-children) about as poorly as the
-units growth did build, so memory as parts does not explain the benefit of extra room on present evidence.
-[Recombining the brain's own forecasts](discrete/NOTEBOOK.md#d93-room-prediction) shows instead that extra room
-improves the colour-event streams' forecasts, while the brain's weighting is already close to the best stream
-chosen with hindsight. A hand-set head start for those streams matches the large brain with 57% of its material
-on fresh seeds; the generic market falls short because memory is paid for with evidence that arrives only as fast
-as tastes, and [longer lives](discrete/NOTEBOOK.md#d99-longer-lives) repay most of that delay.
+missing combinations [show no clear predictive advantage](discrete/NOTEBOOK.md#d92-ghost-children),
+leaving no demonstrated memory-as-parts explanation of the benefit of extra room.
+[Recombining the brain's own forecasts](discrete/NOTEBOOK.md#d93-room-prediction) finds better sequence
+predictions with more room. A hand-informed allocation reaches similar measured performance with fewer final
+categorical units on reused development seeds. [Review](discrete/NOTEBOOK.md#d103-agent-review) confirms
+selected numerical results but leaves selection, learning credit and changed observations as competing
+explanations. The market's savings gate often blocks room; longer lives help, without establishing a universal
+evidence-rate limit. The next work is a common-window forecast audit, an exact currency audit and a bounded
+selection replay, specified in the [current queue](PROGRAMME.md#current-next-steps-cheap-agent-queue-after-d103).
 No retention or growth cure is selected.
 The central question remains which useful relations local components can
 exploit or discover affordably. Timing generality and retention remain conditional branches in the

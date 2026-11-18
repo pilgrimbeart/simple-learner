@@ -1,0 +1,72 @@
+{
+ "success": true,
+ "provenance": {
+  "revision": "77af1566dc6136933735056f097abb2b7b432206",
+  "dirty": " M ABSTRACT.md\n M PROGRAMME.md\n M QUESTIONS.md\n M README.md\n M discrete/NOTEBOOK.md\n?? lab/agent_work_review.py\n?? lab/forecast_window_audit.py\n?? lab/market_currency_audit.py\n?? lab/selection_share_audit.py\n?? lab/v/agent_work_review.json\n?? lab/v/agent_work_review.log\n?? lab/v/agent_work_review_attempt1.json\n?? lab/v/agent_work_review_attempt1.log\n?? lab/v/forecast_window_audit.json\n?? lab/v/forecast_window_audit.log\n?? lab/v/forecast_window_audit_checks.json\n?? lab/v/forecast_window_audit_checks.log\n?? lab/v/forecast_window_audit_checks_failed_fixture.log\n?? lab/v/market_currency_audit.json\n?? lab/v/market_currency_audit.log\n?? lab/v/market_currency_audit_checks.json\n?? lab/v/market_currency_audit_checks.log\n?? lab/v/selection_share_audit.log\n?? lab/v/selection_share_audit_checks.json\n?? lab/v/selection_share_audit_checks.log\n",
+  "sha256": {
+   "lab/selection_share_audit.py": "c1f3c4f4f833c64b257031fe1f6829d775ff12d5321e2813d1cebf2bd6591792",
+   "lab/grownet.py": "1a550553b1244368ed0ca6fa59cce3e94a9badd5e5d1e801953aa42974874f0f",
+   "lab/v/room_prediction.pkl": "217c0f241a8003d722faa461f859ddf5c4765f0e40f98b63c80fef2e21b7c5c0",
+   "lab/v/followup_fresh.pkl": "d352fd5e1184061eb3f120a09ff7056cdf8c951d76b3db74e6a2a7ece9a4c63d",
+   "lab/v/followup_timing.pkl": "f3e00455b4529c043728c412b42d63ba7562dc48f0f7f475f2fb20ac1a831cbb"
+  },
+  "command": "timeout 240s env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python lab/selection_share_audit.py --analyse",
+  "selector": "grownet.py:782-815, BT=1, SHARE=.01 (teach.py:473, arm flag F), credit historical (pre-D82)"
+ },
+ "replay": {
+  "sequence D93": {
+   "lives": 80,
+   "transitions": 13857,
+   "exact": 12959,
+   "lives_fully_exact": 21,
+   "max_dev": 0.01647549331014788,
+   "median_dev": 1.3877787807814457e-17,
+   "inexact_changed_streams": {
+    "median": 123.0,
+    "awake_at_issue_share": 1.0
+   }
+  },
+  "sequence D102": {
+   "lives": 60,
+   "transitions": 9728,
+   "exact": 8995,
+   "lives_fully_exact": 20,
+   "max_dev": 0.045022925045768526,
+   "median_dev": 1.3877787807814457e-17,
+   "inexact_changed_streams": {
+    "median": 121.0,
+    "awake_at_issue_share": 1.0
+   }
+  },
+  "timing D101": {
+   "lives": 40,
+   "transitions": 71619,
+   "exact": 69652,
+   "lives_fully_exact": 20,
+   "max_dev": 0.07561961780903113,
+   "median_dev": 6.938893903907228e-18,
+   "inexact_changed_streams": {
+    "median": 125.0,
+    "awake_at_issue_share": 1.0
+   }
+  }
+ },
+ "replay_exact": false,
+ "stopped": "Saved rows hold issued forecasts at the last prediction; the historical selector updates with forecasts scored at taste time, after earlier streams' learn calls, over the streams speaking then. Exact replay is impossible from these rows, so the share comparison was not run.",
+ "capture_specification": {
+  "per_accepted_taste": [
+   "letter",
+   "p_def(y) and the default's weight before the update",
+   "for every stream: weight before and after the update, issued q(y), scored q(y), spoke at taste (bool)",
+   "order of learn calls in the taste",
+   "fixed share value and the rescale factor applied"
+  ],
+  "checks": [
+   "unobserved lives identical (fingerprint, result tuple)",
+   "replay of the recorded scored forecasts reproduces every next weight vector within 1e-12",
+   "fail closed before any share comparison"
+  ],
+  "lives": "the same D93, D102 and D101 lives (historical credit), or D82's issued contract lives, where issued = scored by construction",
+  "not_launched": true
+ }
+}

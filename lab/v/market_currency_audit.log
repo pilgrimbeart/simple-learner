@@ -1,0 +1,119 @@
+{
+ "D97_denominators": {
+  "per_family": {
+   "event": {
+    "under allowance": 1075,
+    "transfers": 680,
+    "full, no birth due": 3532,
+    "full, savings test fails": 28533,
+    "full, transfer attempted": 1955,
+    "full, no poor donor": 65
+   },
+   "clock": {
+    "under allowance": 34326,
+    "transfers": 1340,
+    "full, no birth due": 19535,
+    "full, transfer attempted": 6942,
+    "full, savings test fails": 149593,
+    "full, no poor donor": 564
+   },
+   "integrator": {
+    "under allowance": 4855,
+    "transfers": 1821,
+    "full, savings test fails": 167168,
+    "full, no birth due": 17648,
+    "full, transfer attempted": 6761,
+    "full, no poor donor": 464
+   },
+   "rhythm": {
+    "under allowance": 97333,
+    "transfers": 982,
+    "full, no birth due": 27182,
+    "full, savings test fails": 21445,
+    "full, transfer attempted": 1631,
+    "full, no poor donor": 81
+   }
+  },
+  "totals": {
+   "under allowance": 137589,
+   "full, no birth due": 67897,
+   "full, savings test fails": 366739,
+   "full, no poor donor": 1174,
+   "full, transfer attempted": 17289,
+   "transfers": 4823
+  },
+  "savings_fail_share_of_full": {
+   "event": 0.8371130996039313,
+   "clock": 0.8469094285358425,
+   "integrator": 0.870480782749517,
+   "rhythm": 0.4260116410735215
+  },
+  "transfer_share_of_attempted": {
+   "event": 0.34782608695652173,
+   "clock": 0.1930279458369346,
+   "integrator": 0.2693388551989351,
+   "rhythm": 0.6020846106683017
+  },
+  "transfers_per_life": 241.15,
+  "lives": 20,
+  "rule": "lab rule M, cap 2042+258, seq 17, 300 s, seeds 142000-142009"
+ },
+ "design_market_D77": [
+  {
+   "P": 560,
+   "world": "seq17",
+   "first": "red",
+   "price_passes": 137,
+   "transfers": 0
+  },
+  {
+   "P": 560,
+   "world": "seq17",
+   "first": "blue",
+   "price_passes": 298,
+   "transfers": 0
+  },
+  {
+   "P": 4480,
+   "world": "seq17",
+   "first": "red",
+   "price_passes": 115,
+   "transfers": 115
+  },
+  {
+   "P": 4480,
+   "world": "seq17",
+   "first": "blue",
+   "price_passes": 157,
+   "transfers": 157
+  },
+  {
+   "P": 560,
+   "world": "allfood",
+   "first": "red",
+   "price_passes": 0,
+   "transfers": 0
+  },
+  {
+   "P": 560,
+   "world": "allfood",
+   "first": "blue",
+   "price_passes": 0,
+   "transfers": 0
+  },
+  {
+   "P": 4480,
+   "world": "allfood",
+   "first": "red",
+   "price_passes": 0,
+   "transfers": 0
+  },
+  {
+   "P": 4480,
+   "world": "allfood",
+   "first": "blue",
+   "price_passes": 0,
+   "transfers": 0
+  }
+ ]
+}

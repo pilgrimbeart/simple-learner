@@ -1,0 +1,8 @@
+{
+ "success": true,
+ "checks": [
+  "Bayes step: awake weights times likelihood over the mixture; the sleeping stream keeps weight 1",
+  "fixed share returns weight evenly among the default and awake speakers, conserving their total; sleepers untouched",
+  "replay check passes a consistent transition and refuses a perturbed one (sleeping/waking stream fixture)"
+ ]
+}

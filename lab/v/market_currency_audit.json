@@ -1,0 +1,211 @@
+{
+ "success": true,
+ "equations": {
+  "balance": "saved_j, bits; starts at 0 (getattr default) for every stream; never reset during a life",
+  "credit (historical, grownet.py:799-801)": "at each accepted (vouched) taste, after every stream's learn call in that taste, for each stream j that spoke at taste time: saved_j += log2(q_j(y) / p_def(y)), q_j its speaker's KT probability for the revealed letter y computed just before its own learn call (so after earlier streams' learning in the same taste), p_def(y) the default's KT probability; can be negative; units bits",
+  "credit (D82 issued contract, issued_credit.py:34-54)": "same increment but q_j(y) from the forecast issued at the last prediction before the taste, applied at the next prediction",
+  "debit": "none: a transfer does not reduce saved_j; the price is a threshold that rises with the units held",
+  "price test, design market (grownet.py:176)": "saved_j > POOL_BITS * (len(units_j) - base_j + 1), base_j = allowance at birth (grownet.py:467), POOL_BITS = 1 bit (grownet.py:71); evaluated only when len(units_j) >= P_j",
+  "donor test, design market (grownet.py:177)": "some other stream v with saved_v <= 0 and P_v > 3",
+  "price test, lab rule M (alloc_rules.py:90)": "the same threshold, and a birth due (deep firing unit has seen both labels)",
+  "donor test, lab rule M (alloc_rules.py:92)": "some other stream v with saved_v <= 0 and P_v > fixed units of v",
+  "transfer": "donor's least used of 4 sampled leaves recycled, P_v -= 1, P_j += 1",
+  "timing": "the room test runs inside stream j's learn call (grownet.py:260, called at :761) during the taste loop; the credit for that taste is added after the loop (historical) or at the next prediction (D82): a taste's saving can first fund room at the next taste",
+  "design allowance": "P_j = max(3, P // 168) (grownet.py:455): 3 for every stream at P=560, 26 at P=4480"
+ },
+ "provenance": {
+  "revision": "77af1566dc6136933735056f097abb2b7b432206",
+  "dirty": " M ABSTRACT.md\n M PROGRAMME.md\n M QUESTIONS.md\n M README.md\n M discrete/NOTEBOOK.md\n?? lab/agent_work_review.py\n?? lab/forecast_window_audit.py\n?? lab/market_currency_audit.py\n?? lab/v/agent_work_review.json\n?? lab/v/agent_work_review.log\n?? lab/v/agent_work_review_attempt1.json\n?? lab/v/agent_work_review_attempt1.log\n?? lab/v/forecast_window_audit.json\n?? lab/v/forecast_window_audit.log\n?? lab/v/forecast_window_audit_checks.json\n?? lab/v/forecast_window_audit_checks.log\n?? lab/v/forecast_window_audit_checks_failed_fixture.log\n?? lab/v/market_currency_audit.log\n?? lab/v/market_currency_audit_checks.json\n?? lab/v/market_currency_audit_checks.log\n",
+  "sha256": {
+   "lab/market_currency_audit.py": "ec0e39b54323c169fbc857ba565f00b6d5fd84aebd8a2dd421e5abd2d21e6f7b",
+   "lab/grownet.py": "1a550553b1244368ed0ca6fa59cce3e94a9badd5e5d1e801953aa42974874f0f",
+   "lab/alloc_rules.py": "37c8f14317d6d1626e98f3569f4da1248e898e682b7a206fbd7a9fac57848543",
+   "lab/issued_credit.py": "67dcd1854f237873c359bcc9230861e5c77567739871773face5ea98ab196bca",
+   "lab/market_diagnosis.py": "81bf22ceef8a10d3021b27db10a79b2569030d491c85d62947592d508d1f1444",
+   "lab/v/market_diagnosis.json": "ab80353389e3c0ed0d1ff479ada6381f86f6dc758021184a91e3d29f680de399",
+   "lab/v/noisy_resource_observe.json": "4c6bfce552ccd86e93abaeac3d42104a198053f045b7847caecd631b3c58fcb1"
+  },
+  "command": "timeout 240s env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python lab/market_currency_audit.py --analyse"
+ },
+ "D97_denominators": {
+  "per_family": {
+   "event": {
+    "under allowance": 1075,
+    "transfers": 680,
+    "full, no birth due": 3532,
+    "full, savings test fails": 28533,
+    "full, transfer attempted": 1955,
+    "full, no poor donor": 65
+   },
+   "clock": {
+    "under allowance": 34326,
+    "transfers": 1340,
+    "full, no birth due": 19535,
+    "full, transfer attempted": 6942,
+    "full, savings test fails": 149593,
+    "full, no poor donor": 564
+   },
+   "integrator": {
+    "under allowance": 4855,
+    "transfers": 1821,
+    "full, savings test fails": 167168,
+    "full, no birth due": 17648,
+    "full, transfer attempted": 6761,
+    "full, no poor donor": 464
+   },
+   "rhythm": {
+    "under allowance": 97333,
+    "transfers": 982,
+    "full, no birth due": 27182,
+    "full, savings test fails": 21445,
+    "full, transfer attempted": 1631,
+    "full, no poor donor": 81
+   }
+  },
+  "totals": {
+   "under allowance": 137589,
+   "full, no birth due": 67897,
+   "full, savings test fails": 366739,
+   "full, no poor donor": 1174,
+   "full, transfer attempted": 17289,
+   "transfers": 4823
+  },
+  "savings_fail_share_of_full": {
+   "event": 0.8371130996039313,
+   "clock": 0.8469094285358425,
+   "integrator": 0.870480782749517,
+   "rhythm": 0.4260116410735215
+  },
+  "transfer_share_of_attempted": {
+   "event": 0.34782608695652173,
+   "clock": 0.1930279458369346,
+   "integrator": 0.2693388551989351,
+   "rhythm": 0.6020846106683017
+  },
+  "transfers_per_life": 241.15,
+  "lives": 20,
+  "rule": "lab rule M, cap 2042+258, seq 17, 300 s, seeds 142000-142009"
+ },
+ "design_market_D77": [
+  {
+   "P": 560,
+   "world": "seq17",
+   "first": "red",
+   "price_passes": 137,
+   "transfers": 0
+  },
+  {
+   "P": 560,
+   "world": "seq17",
+   "first": "blue",
+   "price_passes": 298,
+   "transfers": 0
+  },
+  {
+   "P": 4480,
+   "world": "seq17",
+   "first": "red",
+   "price_passes": 115,
+   "transfers": 115
+  },
+  {
+   "P": 4480,
+   "world": "seq17",
+   "first": "blue",
+   "price_passes": 157,
+   "transfers": 157
+  },
+  {
+   "P": 560,
+   "world": "allfood",
+   "first": "red",
+   "price_passes": 0,
+   "transfers": 0
+  },
+  {
+   "P": 560,
+   "world": "allfood",
+   "first": "blue",
+   "price_passes": 0,
+   "transfers": 0
+  },
+  {
+   "P": 4480,
+   "world": "allfood",
+   "first": "red",
+   "price_passes": 0,
+   "transfers": 0
+  },
+  {
+   "P": 4480,
+   "world": "allfood",
+   "first": "blue",
+   "price_passes": 0,
+   "transfers": 0
+  }
+ ],
+ "inventory": {
+  "market_diagnosis_json": {
+   "present": [
+    "per-family request counts by first failing condition, summed over 20 lives",
+    "event streams' saved bits, allowance and donor count every 10 s (medians in 50 s bins)",
+    "end-of-life saved bits for event streams of 2 lives and the top 5 streams of 4 lives",
+    "transfers per life (mean)"
+   ],
+   "missing": [
+    "per-request time, stream, balance, price and outcome",
+    "per-taste credit increments and the forecast (scored or issued) behind each",
+    "donor identities and removed units",
+    "any per-life record (there is no market_diagnosis.pkl)"
+   ]
+  },
+  "room_prediction_pkl": {
+   "present": [
+    "issued forecasts and default probability for every stream at each accepted taste (design lives low, A, B, high; the design market is active only at P=4480 and in B)"
+   ],
+   "missing": [
+    "scored forecasts at taste time (they differ from issued after earlier learn calls)",
+    "the set of streams credited at taste time",
+    "any room-test call or transfer record"
+   ],
+   "verdict": "issued forecasts give an issued-contract approximation of the balance, not the historical ledger"
+  },
+  "counterfactuals_missing": [
+   "whether a denied request would have produced a useful unit",
+   "whether a stream's balance would have passed the price under D82's contract"
+  ]
+ },
+ "capture_specification": {
+  "purpose": "exact historical market ledger and denial reasons, unchanged lives",
+  "per_room_call": [
+   "t",
+   "stream",
+   "family",
+   "len(units)",
+   "P",
+   "base",
+   "fixed",
+   "saved",
+   "price = POOL_BITS*(len-base+1)",
+   "birth due (deep unit with both labels)",
+   "number of donors and the drawn donor",
+   "outcome (under allowance; no birth due; savings fail; no donor; no leaf; transferred)",
+   "removed unit id and its donor stream"
+  ],
+  "per_accepted_taste": [
+   "letter",
+   "p_def(y)",
+   "for each stream: issued q(y), scored q(y), spoke at taste (bool)",
+   "credit increment applied",
+   "order index of its learn call within the taste"
+  ],
+  "checks": [
+   "observed and unobserved lives: identical state fingerprint and result tuple",
+   "M lives reproduce lab/v/alloc_stage1.json; design lives reproduce the historical seq-17 pickle",
+   "sum of increments equals each stream's end-of-life saved within 1e-9",
+   "fail closed: stop before analysis on any mismatch"
+  ],
+  "lives": "seq 17, 300 s: lab rule M and design P=560/4480 on seeds 142000-142009 (40 lives); timing rung 3 at 3000 s as a second family",
+  "not_launched": true
+ }
+}

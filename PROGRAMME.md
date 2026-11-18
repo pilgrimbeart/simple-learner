@@ -106,19 +106,125 @@ parent for 5798 new words, 4874 of them with no living duplicate of that parent.
 weakened, not excluded; [D91](discrete/NOTEBOOK.md#d91-growth-decision) freezes one offline test of the
 missing children; [D92](discrete/NOTEBOOK.md#d92-ghost-children) runs it (the user approved): ghosts beat the
 combined forecast in 324/3103 scored cases against 716/8309 for actual children scored the same way, and a causal
-prior over ghosts is level with native prediction (+0.016 bits). Memory as parts does not explain D77's gain on
-present evidence; next is D91's fourth row.
-[D93–D102](discrete/NOTEBOOK.md#d93-room-prediction) follow that row. On sequences, extra room's gain lies in the
-event streams' own forecasts (fresh seeds: −.37 bits per taste), the native mixture's trust is within .03 bits of
-the best single stream with hindsight (also on timing), and equal weighting erases the gain. Neither context
-length, evidence nor age of the speakers separates allocation rules. A hand-set head start for the event streams,
-one unit for every other stream and the market match the large brain at 57% of its material (fresh seeds +.00
-[−.09, +.10]). The extra unit works by stopping weak single-symbol speakers from harming the closed loop (D100).
-The generic market fails because room is paid for with bits already saved, which arrive at the label rate
-(D97); a cheaper price does not help (D98), but 1000 s lives repay most of the delay (D99: market +.35 → +.69).
-On timing the capacity gain is not visible in prediction (D101).
+prior over ghosts differs from native prediction by +0.016 bits; this establishes no useful gain. This does not establish a useful parts-based retention rule; it also does not prove equivalence of the pools.
+[D93–D102](discrete/NOTEBOOK.md#d93-room-prediction) add useful exploratory evidence, reviewed in
+[D103](discrete/NOTEBOOK.md#d103-agent-review). Larger sequence brains predict better on their own
+histories; a hand-informed allocation reaches similar performance using fewer categorical units.
+These comparisons do not isolate representation from changed observations or establish optimal selection.
+The market's savings gate often blocks allocation, but no general evidence-rate limit has been established.
+Longer lives help the market; the cause and the remaining gap are unresolved. Timing's prediction interval
+is inconclusive, not evidence that prediction cannot carry its performance gain. D93–D102 use historical
+credit, unlike D82–D92's corrected issued-forecast contract. Diagnose that distinction before new construction.
 
-## Next work: three small jobs for cheaper agents
+## Current next steps: cheap-agent queue after D103
+
+**Status, 2026-11-18: A, B and C are complete** ([D104](discrete/NOTEBOOK.md#d104-forecast-windows),
+[D105](discrete/NOTEBOOK.md#d105-market-currency), [D106](discrete/NOTEBOOK.md#d106-selection-share)). A: sequence
+conclusions survive harmonised windows; D93's "within .02 of the best single stream" was wrong for the small brains
+(.04–.06); timing's capacity gain is visible in choice errors (−.032 [−.071, −.001]). B: the market never debits;
+the design's market is inert at P=560 (no stream can be a donor with allowance 3), and rule M's random donor is
+often leafless (65% of event attempts); balances cannot be reconstructed, capture specified. C: exact replay holds
+only where the market is inert; on those 60 lives removing the fixed share changes loss by at most .007 bits per
+taste and tends to harm timing; [D107](discrete/NOTEBOOK.md#d107-share-extensions) adds the large brain's exact replay
+(about −.012 bits per taste), D100's lives (the share does not explain its effect) and prior mass (93.5% of the initial
+weight on the 158 non-event streams). Job D (protocol only) is next.
+
+**Start with A, then B, then C. Do not rerun the historical Jobs 1–3 below.** These jobs address what
+prevents reusable, economical learning: insufficient representation, misleading credit, or costly selection.
+They are bounded diagnostics, not a request for a new brain. Job D is a protocol-writing branch, not a run.
+
+### Shared instructions — paste these with one job
+
+> Read AGENTS.md, this queue and discrete/NOTEBOOK.md's current state and D103. Work on main.
+> Do only the assigned job; no agents, simulations, sealed tests, body/brain edits, commits or pushes.
+> Use saved data and read-only helpers, never an old script's simulation entry point. Keep old artifacts intact.
+> Write your new script in lab/ and JSON plus stdout/stderr log in lab/v/. Include --check for synthetic
+> fixtures and --analyse for saved data. Before analysing, append method, predicted discriminator and budget
+> to the discrete notebook; afterwards add observations, limitations and the next branch. Record revision,
+> script/input hashes, exact command, seed/world sets, life/window, credit version, metric and denominators.
+> Use one maths thread: OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1.
+> Run --check first, then timeout 240s .venv/bin/python lab/NAME.py --analyse, with the thread variables
+> set and stdout/stderr saved. NAME is the assigned new basename, not a command that exists yet.
+> Limit each job to 45 minutes of editing/analysis and one successful bounded analysis. Stop on missing
+> fields or failed identity checks: report precisely what is missing instead of inventing data or running lives.
+> Revisions after a diagnosed failure are allowed within that budget; keep failed outputs separately.
+> Bootstrap paired seeds, keeping both colour assignments together. Distinguish per-life means from pooled
+> per-taste means. No nonsignificant result is a tie; do not choose a margin after seeing the answer.
+
+### Job A — Put the forecast comparisons on the same footing
+
+**Assign:** “Create `lab/forecast_window_audit.py`. Read `room_prediction.pkl`, `followup_timing.pkl`
+and `followup_fresh.pkl` under lab/v, their JSONs, and D103's audit. Use the already accepted taste rows;
+do not regenerate them. Reconstruct every native probability from issued weights/forecasts/default and
+assert error ≤1e-12 and prediction time ≤ taste time. Make a fixture where the best full-life stream differs
+from the best last-third stream, and one with unequal numbers of tastes per life.”
+
+1. Report full-life and last-third loss, hard-choice errors, accepted taste counts/rates and event speaker
+   span separately. Sequence last third starts at 200 s; timing at 2000 s. Do not call full-life spans last-third.
+2. On each window report native, uniform/default, best single chosen over the full life and best single chosen
+   within that window. Both chosen singles use hindsight; neither bounds all causal mixtures. Freeze any tie rule.
+3. Report paired per-life differences with 95% seed-bootstrap intervals, plus clearly separate pooled levels.
+   Include high–low on sequences and P2240–P560 on timing; never pair individual tastes across differing lives.
+4. Save `forecast_window_audit.json/.log`, documenting old/new conventions. State whether timing's interval
+   still permits a useful prediction change. Do not infer a causal channel merely from cross-life correlations.
+
+**Decision:** a convention error changes the summary; a broad timing interval leaves the channel open.
+Either way, no more lives are needed to complete this job. This standard table is the input to C.
+
+### Job B — Audit the market's actual currency
+
+**Assign:** “Create `lab/market_currency_audit.py`. Read grownet.py, market_diagnosis.py, market_price.py,
+D82, D97–D99 and the saved market_diagnosis.json. Trace the exact source locations for initial balance,
+credit increment, debit, price test, donor test and timing relative to learning. Separate the historical
+credit ledger from D82's issued-forecast contract.”
+
+1. Write the actual equations with units and a small hand-checkable fixture for each gate. Include a binary
+   label whose saving log2(q/p_default) exceeds one bit, and a case where post-label updating changes credit.
+   Label entropy is not a cap on realised savings relative to a poor default.
+2. Inventory saved fields: can the exact balance and each denied request be reconstructed? D97 has aggregate
+   JSON and examples, not a complete market_diagnosis.pkl. Do not treat D93 issued forecasts as the exact
+   historical market ledger. Reproduce available denial denominators and label missing counterfactuals.
+3. Where fields suffice, compare actual balance with the price at the request, separating no funds, no donor
+   and no birth opportunity. Otherwise produce a minimal passive-capture specification listing the fields
+   and unchanged-life checks needed. Do not launch that capture in this job.
+4. Save `market_currency_audit.json/.log`. Distinguish “this gate blocked requests” from “no local rule can
+   earn room sooner”. Check source/theory before any proposed mechanism; do not infer a universal rate bound.
+
+**Decision:** an accounting error leads to a frozen corrected-credit comparison; missing data leads to a
+passive-capture proposal. A correct binding gate still requires testing alternatives before an evidence-limit claim.
+
+### Job C — Does returning weight to weak streams worsen saved forecasts?
+
+**Assign:** “Create `lab/selection_share_audit.py`. After A, read D65, D75, D79–D82 and D100, and inspect
+the historical selector. First reproduce its native issued probabilities and updates on saved histories.
+If the rows omit required credit events/state, stop with a minimal capture specification.”
+
+If exact replay is possible, freeze two values only: the existing fixed-share rate (weight periodically
+returned to every stream) and zero. Keep initial/default priors, sleeping-stream treatment and total weight
+identical; update only after each accepted label. Use a synthetic sleeping/waking-stream fixture. Evaluate
+both sequence and timing records from A; report first third, last third and full-life paired losses and
+choice differences. Save `selection_share_audit.json/.log`, including reproduction errors and prior mass.
+Do not tune rates, suppress a hand-picked family or interpret replay as improved foraging: the observations
+and unit forecasts still came from the original controller. D65 warns that weight recovery can help tracking.
+
+**Decision:** a consistent saved-history gain motivates a closed-loop protocol; harm on timing rejects a
+universal zero-share cure. No clear effect leaves D100's credit route unresolved. Neither outcome proves
+that the current selector is optimal.
+
+### Job D — Conditional hand-off: separate forecasts from credit
+
+Only after A–C, write a protocol in the discrete notebook (no simulation script or run yet). D100's
+silencing removes both forecast participation and speaker credit, so it cannot separate those routes.
+Specify the smallest factorial comparison: ordinary versus suppressed non-event forecast participation,
+crossed with ordinary versus suppressed credit, using an explicit issued-forecast contract. Explain
+exactly what each arm changes, how default/remaining credit is conserved and how unchanged arms are checked.
+Treat the family mask as an informed diagnostic, never a candidate universal brain. Include sequence,
+timing and all-food controls, matched total capacity, cost counters, declared practical margins, seed
+provenance, life lengths, signal/credit-window estimate and a bounded run budget. Consult primary sources
+before proposing a replacement selector. Bring any new required authorisation or scope change to the user;
+do not open protected evaluation. The decision is which causal route needs work, not which score is largest.
+
+## Executed specifications: Jobs 1–3 (D88–D92; historical, do not rerun)
 
 **Status, 2026-11-18: Jobs 1–3 are complete** ([D88](discrete/NOTEBOOK.md#d88-parent-census),
 [D89](discrete/NOTEBOOK.md#d89-child-prediction), [D90](discrete/NOTEBOOK.md#d90-missing-partner)); all checks
@@ -127,18 +233,8 @@ rows both partly apply (Job 3's "absent combinations" are absent by construction
 discriminator, ghost children scored against actual children under the same rule; [D92](discrete/NOTEBOOK.md#d92-ghost-children)
 ran it and found no clear ghost advantage, so the fourth row applies. The job texts below are kept as the executed specification.
 
-**Start with Job 1 below. Run Jobs 1 → 2 → 3 in order, then apply the decision table.** These are
-bounded exploratory diagnostics, not a new brain design or a search for a higher score. The question is:
-**does memory help by serving as parts for later combinations, even when its own predictions are weak?**
-The opposite explanation is that extra room mostly preserves/repeats existing distinctions or changes
-which predictors get selected. Neither explanation is established. D87 tested retained units with fixed
-definitions; it never let them build children.
-
-This section is the immediate work queue, prepared 2026-11-18; the broader conditional programme below supplies context.
-The scripts named as **new deliverables do not exist yet**: each job includes writing its small script.
-The present request is to prepare hand-offs, not to launch agents or simulations. A user can assign a
-job by copying its block below together with the shared instructions. No job grants its worker permission
-to spawn another agent. One worker/run at a time on this laptop.
+The following specifications record the completed assignment. Their imperative wording and proposed
+new filenames are historical; the scripts now exist. Use the current queue above for new work.
 
 ### Shared instructions to paste with any job
 
@@ -313,7 +409,7 @@ investigation branches; they do not override that work queue. Their detailed que
 | investigation | first useful work | decision after that work |
 |---|---|---|
 | **1. Explain economical use of noisy evidence** | D74 closes the first learned-sharing comparison with a qualified negative result. Before another variant, identify which cheap relation between representations is supplied or learned, its evidence cost, and the counterexamples it excludes. D75 supplies an exact-copy invariance check; approximate redundancy remains unresolved. | Retain a mechanism only with a stated prior and measured learning, state and communication costs. Correct scoring order before a new freeze. Keep inference separate from return on high-noise rungs; use an existing profitable condition for a control claim. Neither a choice vote nor fewer primitives follows from these results. |
-| **2. Establish what scales and what it costs — immediate branch** | Jobs 1–3 are done (D88–D90). D93–D102 completed D91's fourth row (summary above). Next candidates: a generic rule that lends room before evidence arrives (frozen protocol and literature first; both families), a life-length curve for the generic rules, and the cost of weak speakers early in life (initial prior over a broad repertoire). Awaiting the user's choice for new construction. | Choose a discriminating observation of reachable representation versus retention/readout alternatives before constructing another allocator. Keep readout priors explicit and account for retained ancestors and displaced memory before a matched-cap intervention; no new rule is implied. Current deletion disturbance and selected correlations do not establish lifetime value. Keep cache/activity and categorical memory separate. |
+| **2. Establish what scales and what it costs — immediate branch** | D88–D102 are reviewed in D103. Execute current Jobs A–C within their stated budgets; Job D is a conditional protocol only. Resolve comparator windows, the savings ledger and selection/credit confounding before another allocator or life-length sweep. | Choose a discriminating observation of reachable representation versus retention/readout alternatives before constructing another allocator. Keep readout priors explicit and account for retained ancestors and displaced memory before a matched-cap intervention; no new rule is implied. Current deletion disturbance and selected correlations do not establish lifetime value. Keep cache/activity and categorical memory separate. |
 | **3. Explain the timing transfer** | Map the successful acquisition and tracking stages onto the literature and their assumptions; contrast D23's short, ambiguous observations with D65–D68's longer streams. | Choose a test that separates a transferable timing mechanism from dependence on the designed period range, event detector or readout. Use development worlds; reserve new sealed tests for a frozen claim. |
 | **4. Explain composition and retention** | Trace the combination-task gap and the A–B–A return experiments: what information is represented, overwritten, duplicated or discarded? | Distinguish failure to form a useful representation from failure to retain or select it. Test a single causal difference before adding a further layer or memory scheme. |
 | **5. Test a generality claim** | Once a mechanism and its limits are understood, freeze the design, analysis, resource budget and claim. Check the evaluation protocol and test-set exposure record. | Evaluate on genuinely unfamiliar families and the relevant controls. Failures and non-compiling challenges remain visible. Opening a test spends its novelty; subsequent work on it is development. |

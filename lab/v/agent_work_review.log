@@ -1,0 +1,224 @@
+{
+  "success": true,
+  "checks": {
+    "recorded_hashes_match": {
+      "growth_parent_census": {
+        "lab/growth_parent_census.py": true,
+        "lab/future_evidence.py": true,
+        "lab/future_evidence_analysis.py": true,
+        "lab/retained_prediction.py": true,
+        "/home/pilgrim/git/simple-learner/lab/v/future_evidence.pkl": true
+      },
+      "growth_child_prediction": {
+        "lab/growth_child_prediction.py": true,
+        "lab/growth_parent_census.py": true,
+        "lab/future_evidence.py": true,
+        "lab/retained_prediction.py": true,
+        "/home/pilgrim/git/simple-learner/lab/v/future_evidence.pkl": true,
+        "/home/pilgrim/git/simple-learner/lab/v/growth_parent_census.pkl": true,
+        "/home/pilgrim/git/simple-learner/lab/v/growth_parent_census.json": true,
+        "/home/pilgrim/git/simple-learner/lab/v/retained_mixture.json": true
+      },
+      "growth_missing_partner": {
+        "lab/growth_missing_partner.py": true,
+        "lab/growth_parent_census.py": true,
+        "lab/future_evidence.py": true,
+        "lab/grownet.py": true,
+        "/home/pilgrim/git/simple-learner/lab/v/future_evidence.pkl": true
+      },
+      "followup_fresh": {
+        "lab/followups.py": true,
+        "lab/room_prediction.py": true,
+        "lab/ruler_ingredients.py": true
+      },
+      "followup_silent": {
+        "lab/followups.py": true,
+        "lab/ruler_ingredients.py": true,
+        "lab/room_prediction.py": true
+      },
+      "followup_timing": {
+        "lab/followups.py": true,
+        "lab/room_prediction.py": true
+      }
+    },
+    "parent_rows_exact": 10236,
+    "native_replay": {
+      "initial_units": 2042,
+      "writes": 24799,
+      "predictions": 5883,
+      "accepted_tastes": 163,
+      "learns": 27384,
+      "births": 10236,
+      "removals": 9236,
+      "one_tally_removals": 5369,
+      "tidy_removals_before_index_increment": 63,
+      "native_speaking_records_exact": 10371,
+      "final_units": 3042
+    },
+    "silent_behaviour_and_forecast_pairs_exact": 20
+  },
+  "findings": {
+    "fresh_gap": {
+      "high - low": {
+        "median": 0.37785697685284636,
+        "ci95": [
+          0.27700309320261846,
+          0.501978977911618
+        ]
+      },
+      "R+M+1 - high": {
+        "median": 0.0029206884612674178,
+        "ci95": [
+          -0.08590903213439173,
+          0.09911954265689671
+        ]
+      }
+    },
+    "fresh_forecasts": {
+      "per_arm": {
+        "R+M+1": {
+          "lives": 20,
+          "accepted_in_window": 1095,
+          "native": 0.5432688752296174,
+          "full_selected_single_in_window": 0.5173852560540152,
+          "window_selected_single": 0.5173852560540152,
+          "event_span_full": 15.134068596200434,
+          "event_span_window": 19.119619848304854
+        },
+        "high": {
+          "lives": 20,
+          "accepted_in_window": 1106,
+          "native": 0.5655427948516331,
+          "full_selected_single_in_window": 0.5414476442368746,
+          "window_selected_single": 0.5349107754668965,
+          "event_span_full": 15.000767718953446,
+          "event_span_window": 18.91816619947554
+        },
+        "low": {
+          "lives": 20,
+          "accepted_in_window": 1075,
+          "native": 0.9341841787393687,
+          "full_selected_single_in_window": 0.8955973968217412,
+          "window_selected_single": 0.8839163190610383,
+          "event_span_full": 1.6227146456489436,
+          "event_span_window": 1.6334807565634704
+        }
+      },
+      "max_mixture_error": 2.886579864025407e-15,
+      "issued_saving_increment": {
+        "n": 1212664,
+        "over_one_bit": 17349,
+        "maximum": 2.169925001442312
+      }
+    },
+    "fresh_final_units": {
+      "low": 2052.0,
+      "high": 4275.25,
+      "R+M+1": 2446.7
+    },
+    "original_forecasts": {
+      "per_arm": {
+        "A_low_plus_event": {
+          "lives": 20,
+          "accepted_in_window": 1201,
+          "native": 0.5511597987134749,
+          "full_selected_single_in_window": 0.5221960449830874,
+          "window_selected_single": 0.5167074730185589,
+          "event_span_full": 14.746588523442966,
+          "event_span_window": 17.74316894368544
+        },
+        "B_high_minus_event": {
+          "lives": 20,
+          "accepted_in_window": 1169,
+          "native": 0.8118748480787417,
+          "full_selected_single_in_window": 0.7868062512778637,
+          "window_selected_single": 0.7476419678879105,
+          "event_span_full": 2.7178819444444446,
+          "event_span_window": 2.880251377410468
+        },
+        "high": {
+          "lives": 20,
+          "accepted_in_window": 1149,
+          "native": 0.4486289603484816,
+          "full_selected_single_in_window": 0.4306939337132144,
+          "window_selected_single": 0.4306939337132144,
+          "event_span_full": 15.753206609660273,
+          "event_span_window": 19.90413582934262
+        },
+        "low": {
+          "lives": 20,
+          "accepted_in_window": 1139,
+          "native": 0.932028078208693,
+          "full_selected_single_in_window": 0.8942100209301274,
+          "window_selected_single": 0.875365121024813,
+          "event_span_full": 1.63344707817927,
+          "event_span_window": 1.6467930545712262
+        }
+      },
+      "max_mixture_error": 4.218847493575595e-15,
+      "issued_saving_increment": {
+        "n": 1736764,
+        "over_one_bit": 20884,
+        "maximum": 2.169925001442312
+      }
+    },
+    "timing_forecasts": {
+      "per_arm": {
+        "design2240": {
+          "lives": 20,
+          "accepted_in_window": 12007,
+          "native": 0.33660037293771655,
+          "full_selected_single_in_window": 0.326848962586173,
+          "window_selected_single": 0.3227460959836464,
+          "event_span_full": 5.492041992141136,
+          "event_span_window": 3.560601012793177
+        },
+        "design560": {
+          "lives": 20,
+          "accepted_in_window": 11981,
+          "native": 0.3912384517307792,
+          "full_selected_single_in_window": 0.4039480279624563,
+          "window_selected_single": 0.383065166684547,
+          "event_span_full": 1.8267419751078307,
+          "event_span_window": 1.832619602147037
+        }
+      },
+      "max_mixture_error": 3.552713678800501e-15,
+      "issued_saving_increment": {
+        "n": 11481802,
+        "over_one_bit": 1220918,
+        "maximum": 3.268831912707881
+      }
+    },
+    "timing_reported_prediction_interval": {
+      "mean": -0.05413564863386398,
+      "ci95": [
+        -0.1413312378477829,
+        0.023122923050308573
+      ]
+    },
+    "saving_example_bits": 2.9068905956085187,
+    "scope_limits": [
+      "Source/record and targeted numerical audit, not a new simulation replication.",
+      "D93-D102 native historical credit differs from D82 corrected contract.",
+      "Best single is a restricted hindsight comparator, not an oracle over all combiners.",
+      "Loss savings relative to a default can exceed one bit per binary label.",
+      "Followup scripts record result mismatches but do not assert empty lists before summarising; saved current lists are empty.",
+      "D93 speaker spans in combiners are full-life despite the notebook table last-third label."
+    ]
+  },
+  "provenance": {
+    "revision": "77af1566dc6136933735056f097abb2b7b432206",
+    "source_sha256": "43b84f2266c9e95edc819830ae2426200db6557295cc44670bce43d228d5894a",
+    "input_sha256": {
+      "lab/v/room_prediction.pkl": "217c0f241a8003d722faa461f859ddf5c4765f0e40f98b63c80fef2e21b7c5c0",
+      "lab/v/followup_fresh.pkl": "d352fd5e1184061eb3f120a09ff7056cdf8c951d76b3db74e6a2a7ece9a4c63d",
+      "lab/v/followup_silent.pkl": "54b3a0ec395aff338cee52e901b52347b744ddeb3c3b61a07979d303bd5a79de",
+      "lab/v/followup_timing.pkl": "f3e00455b4529c043728c412b42d63ba7562dc48f0f7f475f2fb20ac1a831cbb",
+      "lab/v/growth_parent_census.pkl": "845f972d49955a112ffad8ce54815b629c41c429459c87b02693911f9119bd23",
+      "lab/v/future_evidence.pkl": "d74474476cf6e0fea81ea4a08677eb3d058ee7411f330a553b9c728462af58d9"
+    },
+    "command": "timeout 240s env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python lab/agent_work_review.py"
+  },
+  "wall_s": 7.2707347519972245
+}

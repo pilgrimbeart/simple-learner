@@ -1,0 +1,9 @@
+{
+ "success": true,
+ "checks": [
+  "best single over the full life differs from best within the last third; both reported",
+  "unequal tastes per life: per-life mean and pooled per-taste mean differ and are kept apart",
+  "a reconstruction error above 1e-12 is refused",
+  "a forecast after its taste is refused"
+ ]
+}

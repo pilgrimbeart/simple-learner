@@ -106,29 +106,20 @@ nothing, but still run the fixed machinery. These measurements identify an oppor
 better; they do not prove that the remaining memory is dispensable.
 [Resource observation, D77](discrete/NOTEBOOK.md#d77-resource-observation).
 
-**Extra room helps through a few better forecasts, and the brain already trusts the right ones.** Rebuilding the
-brain's combined prediction offline shows where extra room pays on the hardest tested sequence: in the forecasts
-of the ten colour-event streams, which with room predict from long remembered contexts. The brain's way of
-weighting its streams is already within a few hundredths of a bit per taste of the best single stream chosen
-with hindsight, so who it trusts is not the bottleneck; but weighting is necessary, since an equal average of all
-streams erases the whole gain. How well the brain predicts accounts for most of how well it eats. Context
-length, evidence and age of the speaking units do not explain differences between allocation rules; giving the
-event streams a head start, plus one unit for every other stream and the existing market, matches the large
-brain at 57% of its material, on fresh seeds too. Without that unit, the other streams speak only from single
-remembered symbols, and their weak forecasts make the creature's early choices worse. On the timing family the brain
-also trusts the right streams, but there the gain from capacity does not show up in prediction.
-[Forecasts and trust, D93–D95](discrete/NOTEBOOK.md#d93-room-prediction),
-[what lifts the head start, D96](discrete/NOTEBOOK.md#d96-ruler-ingredients).
+**Extra room improves sequence forecasts; the causal route still needs separating.** Larger brains predict
+better on their own sequence histories. Their mixture is close to the best single stream chosen with hindsight,
+but that comparator does not establish optimal selection. A hand-informed allocation has similar measured
+performance with 57% as many final categorical units on reused development seeds; this is not a total physical
+material or power comparison. Silencing weak streams changes both forecasts and learning credit, so the source
+of its effect remains open. Timing's prediction difference has a broad interval and cannot be dismissed.
+[Evidence and limitations, D103](discrete/NOTEBOOK.md#d103-agent-review).
 
-**Room earned by bits saved arrives too late.** The brain's market lends a stream more memory once it has saved
-bits over a default guess. But a stream needing long contexts cannot save bits until it has the memory, and bits
-can be saved only as fast as tastes arrive (about one every two seconds), so most requests from the useful streams
-fail and the market moves little room to them. Lowering its price spreads room to streams that saved bits by
-chance instead. Any rule that pays for memory with evidence already gathered faces this delay. Longer lives repay most of it:
-over 1000 s the market nearly catches the hand-set head start.
-[Market diagnosis, D97](discrete/NOTEBOOK.md#d97-market-diagnosis), [price test, D98](discrete/NOTEBOOK.md#d98-market-price),
-[longer lives, D99](discrete/NOTEBOOK.md#d99-longer-lives), [weak speakers, D100](discrete/NOTEBOOK.md#d100-silent-others),
-[timing, D101](discrete/NOTEBOOK.md#d101-timing-prediction), [fresh seeds, D102](discrete/NOTEBOOK.md#d102-fresh-seeds).
+**The market's savings gate blocks many requests; why it falls short remains open.** The existing allocator
+often refuses more memory because a stream has not saved enough prediction loss. Longer lives improve its
+performance, but neither that result nor the price experiments establish a universal evidence-rate limit.
+Savings relative to a bad default can exceed one bit per binary taste. Next we audit the actual credit ledger
+and selection effects before constructing another allocator.
+[Review and corrected interpretation, D103](discrete/NOTEBOOK.md#d103-agent-review).
 
 **Allocation matters; its useful signal is still an open question.** Under a real memory cap, letting
 streams compete by prediction weight beats an equal split on fresh sequence lives, but the smaller brain

@@ -1,0 +1,195 @@
+prior mass done
+[
+ {
+  "rule": "none",
+  "first": "red",
+  "seed": 177000,
+  "max_reproduction_error": 1.1368683772161603e-13,
+  "first_third": {
+   "n": 46,
+   "share_bits": 0.9359190870704793,
+   "zero_bits": 0.9289115162074666,
+   "delta_bits": -0.0070075708630127406,
+   "delta_errors": 0.0,
+   "choice_changes": 0
+  },
+  "last_third": {
+   "n": 70,
+   "share_bits": 0.4147713915850375,
+   "zero_bits": 0.4051467612863327,
+   "delta_bits": -0.009624630298704823,
+   "delta_errors": -0.014285714285714285,
+   "choice_changes": 1
+  },
+  "full": {
+   "n": 184,
+   "share_bits": 0.5723690026811677,
+   "zero_bits": 0.5612574073942327,
+   "delta_bits": -0.011111595286935142,
+   "delta_errors": -0.005434782608695652,
+   "choice_changes": 1
+  }
+ },
+ {
+  "rule": "none",
+  "first": "blue",
+  "seed": 177000,
+  "max_reproduction_error": 2.2737367544323206e-13,
+  "first_third": {
+   "n": 48,
+   "share_bits": 0.9686962143475054,
+   "zero_bits": 0.981349209943856,
+   "delta_bits": 0.012652995596350655,
+   "delta_errors": 0.0,
+   "choice_changes": 2
+  },
+  "last_third": {
+   "n": 71,
+   "share_bits": 0.3551255415919464,
+   "zero_bits": 0.340622627495909,
+   "delta_bits": -0.01450291409603746,
+   "delta_errors": 0.0,
+   "choice_changes": 0
+  },
+  "full": {
+   "n": 187,
+   "share_bits": 0.5955006807788505,
+   "zero_bits": 0.5831488511660041,
+   "delta_bits": -0.012351829612846378,
+   "delta_errors": -0.0053475935828877,
+   "choice_changes": 3
+  }
+ },
+ {
+  "rule": "W",
+  "first": "red",
+  "seed": 177000,
+  "max_reproduction_error": 2.2737367544323206e-13,
+  "first_third": {
+   "n": 59,
+   "share_bits": 0.852712897072102,
+   "zero_bits": 0.8431258721198976,
+   "delta_bits": -0.00958702495220425,
+   "delta_errors": -0.01694915254237288,
+   "choice_changes": 1
+  },
+  "last_third": {
+   "n": 59,
+   "share_bits": 0.5445722580443276,
+   "zero_bits": 0.528198813312944,
+   "delta_bits": -0.016373444731383583,
+   "delta_errors": 0.0,
+   "choice_changes": 2
+  },
+  "full": {
+   "n": 163,
+   "share_bits": 0.7096156405829557,
+   "zero_bits": 0.6968945852187336,
+   "delta_bits": -0.01272105536422212,
+   "delta_errors": -0.006134969325153374,
+   "choice_changes": 3
+  }
+ },
+ {
+  "rule": "W",
+  "first": "blue",
+  "seed": 177000,
+  "max_reproduction_error": 5.684341886080802e-14,
+  "first_third": {
+   "n": 49,
+   "share_bits": 0.9409709266144409,
+   "zero_bits": 0.9380147692909362,
+   "delta_bits": -0.0029561573235047356,
+   "delta_errors": -0.04081632653061224,
+   "choice_changes": 2
+  },
+  "last_third": {
+   "n": 70,
+   "share_bits": 0.5323961016708739,
+   "zero_bits": 0.5177723998923615,
+   "delta_bits": -0.014623701778512454,
+   "delta_errors": -0.014285714285714285,
+   "choice_changes": 1
+  },
+  "full": {
+   "n": 176,
+   "share_bits": 0.616381589513564,
+   "zero_bits": 0.60400358124647,
+   "delta_bits": -0.01237800826709408,
+   "delta_errors": -0.017045454545454544,
+   "choice_changes": 3
+  }
+ }
+]
+{
+ "replay_fully_exact": {
+  "R": "20/20",
+  "R+1": "20/20",
+  "R silent": "20/20",
+  "R+1 silent": "20/20"
+ },
+ "R | first_third | share 0 - share .01, bits per taste": {
+  "mean": 0.0042741650106891006,
+  "ci95": [
+   -0.000788045469302138,
+   0.010672582225050398
+  ]
+ },
+ "R+1 | first_third | share 0 - share .01, bits per taste": {
+  "mean": 0.005531153487419406,
+  "ci95": [
+   0.00015865681801346206,
+   0.011890769790266341
+  ]
+ },
+ "(R) - (R+1) effect | first_third": {
+  "mean": -0.0012569884767303075,
+  "ci95": [
+   -0.007729912285187731,
+   0.004863471445855176
+  ]
+ },
+ "R | last_third | share 0 - share .01, bits per taste": {
+  "mean": -0.0069559754773131505,
+  "ci95": [
+   -0.014524382124942954,
+   0.004238415478596819
+  ]
+ },
+ "R+1 | last_third | share 0 - share .01, bits per taste": {
+  "mean": -0.007499179638225539,
+  "ci95": [
+   -0.01233233600376004,
+   -0.001148998818367619
+  ]
+ },
+ "(R) - (R+1) effect | last_third": {
+  "mean": 0.0005432041609123904,
+  "ci95": [
+   -0.009243411304101851,
+   0.012387385404232981
+  ]
+ },
+ "R | full | share 0 - share .01, bits per taste": {
+  "mean": -2.2584822759037433e-05,
+  "ci95": [
+   -0.007293727815459361,
+   0.008283269659902979
+  ]
+ },
+ "R+1 | full | share 0 - share .01, bits per taste": {
+  "mean": -0.0007349506605555235,
+  "ci95": [
+   -0.006311425819423126,
+   0.005648535961484406
+  ]
+ },
+ "(R) - (R+1) effect | full": {
+  "mean": 0.0007123658377964855,
+  "ci95": [
+   -0.005306079858265097,
+   0.007272748530949068
+  ]
+ }
+}
+wall_s 2.9983734249981353

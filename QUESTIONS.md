@@ -74,15 +74,14 @@ a supplied causal prior over candidates loses 0.593 bits on the full 163-label s
 the simple fixed-definition retention comparison without a cure, not all possible retention mechanisms.
 [D88–D90](discrete/NOTEBOOK.md#d88-parent-census) test memory as parts on the same life: weak parents build
 about 6% of children, most children never forecast or lose to the combined forecast, and deleted units would
-have been the earlier parent for 4874 words no living unit could build. **Next discriminator:**
-[D92](discrete/NOTEBOOK.md#d92-ghost-children) finds those missing children no better a pool than actual
-growth. [D93–D102](discrete/NOTEBOOK.md#d93-room-prediction) answer the selection question: no, trust is near
-the hindsight oracle; room improves the event streams' own forecasts, and generic allocation is delayed by the
-evidence rate (largely repaid by 1000 s lives). **Open:** a local rule that lends room before evidence arrives;
-why weak single-symbol speakers harm the closed loop (D100; the initial prior over 168 streams is the leading
-candidate); and what carries timing's capacity gain, which is not visible in prediction (D101). Audit existing traces and
-source/theory before defining another bounded observation. Keep alternative readout/knob explanations,
-ancestry cost and displaced memory visible; retrospective winners are not a retention rule.
+have been the earlier parent for 4874 words no living unit could build. **Next discriminators:**
+[D92](discrete/NOTEBOOK.md#d92-ghost-children) establishes no clear missing-child advantage, not equivalence.
+[D103](discrete/NOTEBOOK.md#d103-agent-review) reviews D93–D102: how much do comparator windows change the
+forecast account; does the market ledger measure issued evidence consistently; does returning weight to weak
+streams explain any of D100's effect? Timing's prediction channel remains unresolved. Execute the bounded
+[Jobs A–C](PROGRAMME.md#current-next-steps-cheap-agent-queue-after-d103) before another allocator. D100 changes
+both speaking and credit; separating those routes is the conditional next intervention. Keep ancestry cost,
+displaced memory and closed-loop observation changes visible; retrospective winners are not a retention rule.
 Compare allocation, tuning, fixed capacity, recycling and growth on matched lives under the same account
 before another sweep. Dohare et al.'s [preprint, section 6](https://arxiv.org/html/2306.13812v3#S6), supplies a
 recycling precedent with smoothed activation/weight utility and protection for young units. It is not an

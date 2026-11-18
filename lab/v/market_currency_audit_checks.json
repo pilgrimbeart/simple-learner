@@ -1,0 +1,13 @@
+{
+ "success": true,
+ "checks": [
+  "one label saves log2(.75/.1) = 2.907 bits > 1: label entropy does not cap savings against a poor default",
+  "a confident wrong forecast debits: log2(.25/.5) = -1 bit",
+  "issued q=.8 vs scored q=.6 after an earlier learn call recycles the speaker: credit .678 vs .263 bits",
+  "real Net._room: saved 2.5 > price 2 with a donor of P 4 transfers one allowance unit (P 4->5, donor 4->3)",
+  "real Net._room: saved exactly at the price (2.0) is refused (strict >)",
+  "real Net._room: a poor stream with allowance 3 is not a donor, whatever the savings (the P=560 design case)",
+  "real Net._room and Net.says: an earlier stream's transfer recycles another stream's speaking leaf; that stream's forecast for letter 1 falls from .875 (issued) to .375 (scored at taste), so its historical credit is log2(.75) = -.415 bits instead of log2(1.75) = +.807 under D82's issued contract",
+  "design allowance: 3 per stream at P=560, 26 at P=4480 (grownet.py:455)"
+ ]
+}
