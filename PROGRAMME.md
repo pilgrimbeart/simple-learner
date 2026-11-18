@@ -104,7 +104,10 @@ or not yet spoken) build 638 and 57 of 10236 children; half of all children neve
 about one in five that do beats the combined forecast. Deleted units would have qualified as the earlier
 parent for 5798 new words, 4874 of them with no living duplicate of that parent. The parts account is
 weakened, not excluded; [D91](discrete/NOTEBOOK.md#d91-growth-decision) freezes one offline test of the
-missing children before any construction.
+missing children; [D92](discrete/NOTEBOOK.md#d92-ghost-children) runs it (the user approved): ghosts beat the
+combined forecast in 324/3103 scored cases against 716/8309 for actual children scored the same way, and a causal
+prior over ghosts is level with native prediction (+0.016 bits). Memory as parts does not explain D77's gain on
+present evidence; next is D91's fourth row.
 
 ## Next work: three small jobs for cheaper agents
 
@@ -112,8 +115,8 @@ missing children before any construction.
 [D89](discrete/NOTEBOOK.md#d89-child-prediction), [D90](discrete/NOTEBOOK.md#d90-missing-partner)); all checks
 passed. The decision table was applied in [D91](discrete/NOTEBOOK.md#d91-growth-decision): the second and fourth
 rows both partly apply (Job 3's "absent combinations" are absent by construction), so D91 freezes one offline
-discriminator, ghost children scored against actual children under the same rule, and awaits the user's go.
-If it is not authorised, follow the fourth row. The job texts below are kept as the executed specification.
+discriminator, ghost children scored against actual children under the same rule; [D92](discrete/NOTEBOOK.md#d92-ghost-children)
+ran it and found no clear ghost advantage, so the fourth row applies. The job texts below are kept as the executed specification.
 
 **Start with Job 1 below. Run Jobs 1 → 2 → 3 in order, then apply the decision table.** These are
 bounded exploratory diagnostics, not a new brain design or a search for a higher score. The question is:
@@ -301,7 +304,7 @@ investigation branches; they do not override that work queue. Their detailed que
 | investigation | first useful work | decision after that work |
 |---|---|---|
 | **1. Explain economical use of noisy evidence** | D74 closes the first learned-sharing comparison with a qualified negative result. Before another variant, identify which cheap relation between representations is supplied or learned, its evidence cost, and the counterexamples it excludes. D75 supplies an exact-copy invariance check; approximate redundancy remains unresolved. | Retain a mechanism only with a stated prior and measured learning, state and communication costs. Correct scoring order before a new freeze. Keep inference separate from return on high-noise rungs; use an existing profitable condition for a control claim. Neither a choice vote nor fewer primitives follows from these results. |
-| **2. Establish what scales and what it costs — immediate branch** | Jobs 1–3 are done (D88–D90). Next: D91's frozen ghost-children test (offline, awaiting the user's go), else review D77's allowance ablation and selection/readout alternatives. | Choose a discriminating observation of reachable representation versus retention/readout alternatives before constructing another allocator. Keep readout priors explicit and account for retained ancestors and displaced memory before a matched-cap intervention; no new rule is implied. Current deletion disturbance and selected correlations do not establish lifetime value. Keep cache/activity and categorical memory separate. |
+| **2. Establish what scales and what it costs — immediate branch** | Jobs 1–3 are done (D88–D90). D92 ran D91's ghost-children test: no clear advantage. Next: review D77's allowance ablation and selection/readout alternatives (D91's fourth row); no further retention or growth variants. | Choose a discriminating observation of reachable representation versus retention/readout alternatives before constructing another allocator. Keep readout priors explicit and account for retained ancestors and displaced memory before a matched-cap intervention; no new rule is implied. Current deletion disturbance and selected correlations do not establish lifetime value. Keep cache/activity and categorical memory separate. |
 | **3. Explain the timing transfer** | Map the successful acquisition and tracking stages onto the literature and their assumptions; contrast D23's short, ambiguous observations with D65–D68's longer streams. | Choose a test that separates a transferable timing mechanism from dependence on the designed period range, event detector or readout. Use development worlds; reserve new sealed tests for a frozen claim. |
 | **4. Explain composition and retention** | Trace the combination-task gap and the A–B–A return experiments: what information is represented, overwritten, duplicated or discarded? | Distinguish failure to form a useful representation from failure to retain or select it. Test a single causal difference before adding a further layer or memory scheme. |
 | **5. Test a generality claim** | Once a mechanism and its limits are understood, freeze the design, analysis, resource budget and claim. Check the evaluation protocol and test-set exposure record. | Evaluate on genuinely unfamiliar families and the relevant controls. Failures and non-compiling challenges remain visible. Opening a test spends its novelty; subsequent work on it is development. |

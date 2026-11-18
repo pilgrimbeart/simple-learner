@@ -135,8 +135,10 @@ future knowledge fails to improve it. This weakens simple retention as the expla
 could instead enable new combinations to form. Counting actual construction weakens that too: units that
 had predicted little or nothing are parents of about 6% of new units, half of all new units never make a
 forecast when food is tasted, and about one in five of those that do beat the brain's combined forecast.
-Deleted units could have been parents of many combinations nothing living could build; whether those would
-have predicted is untested.
+Deleted units could have been parents of many combinations nothing living could build, but scored offline
+those combinations predict about as poorly as the ones growth did build. So neither keeping old units nor
+the combinations they could have formed explains why extra room helps; which forecasts the brain trusts
+is the next suspect.
 [Allocation comparison, D78](discrete/NOTEBOOK.md#d78-allocation-rules),
 [review and diagnostic, D79](discrete/NOTEBOOK.md#d79-active-mixture),
 [scoring replay and feedback, D80–D81](discrete/NOTEBOOK.md#d80-scoring-replay),
@@ -146,7 +148,7 @@ have predicted is untested.
 [retained prediction and confidence control, D85](discrete/NOTEBOOK.md#d85-retained-prediction),
 [whole-mixture counterexample, D86](discrete/NOTEBOOK.md#d86-mixture-confidence),
 [same-history combined reference, D87](discrete/NOTEBOOK.md#d87-retained-mixture),
-[memory as parts, D88–D91](discrete/NOTEBOOK.md#d88-parent-census).
+[memory as parts, D88–D92](discrete/NOTEBOOK.md#d88-parent-census).
 
 **Separating failure causes made timing progress possible.** The timing investigations distinguished missing
 cycle position, recovery of trust in predictors that improve late, and period estimation. Acquisition and tracking

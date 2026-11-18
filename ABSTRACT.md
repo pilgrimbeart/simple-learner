@@ -61,8 +61,9 @@ combined forecast. [Against the same corrected combined forecast](discrete/NOTEB
 only 336/3653 recurring retained tallies win, and a supplied causal selection prior does not improve
 full-sequence prediction. [Asking whether memory serves as parts](discrete/NOTEBOOK.md#d88-parent-census) for later combinations
 finds weakly predicting units build about 6% of new units, and about one in five new units that predict beat the
-combined forecast. Deleted units would have offered many partners nothing living duplicates; whether those
-missing combinations would have predicted is [one frozen offline test](discrete/NOTEBOOK.md#d91-growth-decision).
+combined forecast. Deleted units would have offered many partners nothing living duplicates; those
+missing combinations [would have predicted](discrete/NOTEBOOK.md#d92-ghost-children) about as poorly as the
+units growth did build, so memory as parts does not explain the benefit of extra room on present evidence.
 No retention or growth cure is selected.
 The central question remains which useful relations local components can
 exploit or discover affordably. Timing generality and retention remain conditional branches in the

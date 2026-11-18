@@ -1,0 +1,10 @@
+{
+  "success": true,
+  "checks": [
+    "causal prior: zero gains give ratio 1; loss bounded by one bit; a winner raises it",
+    "one ghost per word, at the first call by position lacking a living equivalent parent",
+    "formation taste and predictions not after formation excluded; score before update",
+    "a later outcome cannot change an earlier score"
+  ],
+  "simulated_steps": 0
+}

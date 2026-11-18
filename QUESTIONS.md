@@ -75,8 +75,9 @@ the simple fixed-definition retention comparison without a cure, not all possibl
 [D88–D90](discrete/NOTEBOOK.md#d88-parent-census) test memory as parts on the same life: weak parents build
 about 6% of children, most children never forecast or lose to the combined forecast, and deleted units would
 have been the earlier parent for 4874 words no living unit could build. **Next discriminator:**
-[D91](discrete/NOTEBOOK.md#d91-growth-decision)'s frozen ghost-children test, else D77's extra-room benefit
-through selection/readout alternatives rather than retention. Audit existing traces and
+[D92](discrete/NOTEBOOK.md#d92-ghost-children) finds those missing children no better a pool than actual
+growth. **Next discriminator:** D77's extra-room benefit through selection/readout alternatives (does extra
+room mainly change which forecasts are trusted?), not further retention or growth variants. Audit existing traces and
 source/theory before defining another bounded observation. Keep alternative readout/knob explanations,
 ancestry cost and displaced memory visible; retrospective winners are not a retention rule.
 Compare allocation, tuning, fixed capacity, recycling and growth on matched lives under the same account

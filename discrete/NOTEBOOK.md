@@ -22,7 +22,8 @@ allocation rules under an enforced cap; [D79](#d79-active-mixture) reviews its c
 [D86](#d86-mixture-confidence) rejects transferring a simple confidence cure to the historical mixture;
 [D87](#d87-retained-mixture) finds little retained-tally advantage against the same corrected combined forecast;
 [D88–D90](#d88-parent-census) find weak parents build about 6% of children and most actual children lose to that
-forecast, while deleted units would supply many partners no living unit duplicates; [D91](#d91-growth-decision) records the decision.
+forecast, while deleted units would supply many partners no living unit duplicates; [D91](#d91-growth-decision) records the decision;
+[D92](#d92-ghost-children) finds the missing children no better a pool than actual growth.
 [D72](#review-2026-11-16) is the preceding evidence review. The programme is
 [PROGRAMME.md](../PROGRAMME.md); [QUESTIONS.md](../QUESTIONS.md) owns the next discriminating investigations.
 
@@ -6581,3 +6582,63 @@ would make the parts account worth a matched-cap live test, only after identifyi
 select partners without future knowledge. Budget: 30 minutes implementation and checks, one run under 240 s,
 no simulated life. Otherwise follow the fourth row: review D77's allowance ablation and selection/readout
 alternatives, and add no further retention variants.
+
+<a id="d92-ghost-children"></a>
+### D92 — Would the missing children have predicted? (D91's frozen test, the user approved, 2026-11-18)
+
+**Before work: details fixed before any score is seen.** D91's protocol, on the same frozen life. Ghosts: every
+unique (stream, word(u)+word(v)) from D90 at a call where no living unit duplicates u; formed at the first such
+call by event position; initial tally one count of that taste's label. Matched reference: every actual child
+(D88), as an offline copy from its birth to the end of life, whether or not it was later deleted, with its
+native initial tally; so both arms differ only in whether native growth built them. Both are scored by D85's
+rule: on each strictly later accepted taste (formation or birth taste excluded) whose last prediction follows
+formation, only if the word fires at that prediction; Beta(1/2,1/2) probability, scored before the update,
+updated only then. References: D87's combined forecast and uniform 1/2. Reported per arm, family, full life and
+last third [200,300) s: units formed; units scored; units better/worse/equal (1e−10 bits) than combined over
+their scored tastes; units beating both; median saving; remaining-life bins. The D87 causal prior per arm in
+formation order: likelihood ratio against native `1/2 + 1/[2(N+1)] + Σ_j 2^G_j/[2j(j+1)]`, G_j unit j's gain
+over combined on that window, so each of the 163 (or 55) labels counts once. Prediction (from D91): ghost win
+proportion no higher than actual children's under this rule, uncertain; the ghost prior fails to beat native.
+The second-row outcome requires both a clearly higher ghost proportion and a positive ghost prior; "clearly"
+has no predeclared threshold, so a modest difference is reported as inconclusive. Budget 30 minutes, one run
+under 240 s, no simulated life.
+
+**Provenance.** [Script](/home/pilgrim/git/simple-learner/lab/ghost_children.py),
+[JSON](/home/pilgrim/git/simple-learner/lab/v/ghost_children.json),
+[log](/home/pilgrim/git/simple-learner/lab/v/ghost_children.log),
+[fixture log](/home/pilgrim/git/simple-learner/lab/v/ghost_children_checks.log) (prior bounds, first-formation
+choice, formation-taste exclusion, score before update, no leakage of later outcomes); ignored per-unit pickle
+`/home/pilgrim/git/simple-learner/lab/v/ghost_children.pkl`. Revision `c64ab41`; inputs D84's trace, D90's
+pickle (sha256 `3e55443c85068ad6…`) and JSON, D88's pickle and D87's capture, all hash-checked. The replay matches
+every D88 count; 4874 ghosts, exactly D90's count; 8.0 s, no simulated step.
+
+| arm (full life) | formed | scored | better / worse vs combined | share better | beat combined and uniform | median saving | causal prior vs native |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| ghost children | 4874 | 3103 | 324 / 2779 | 0.104 | 272 | −2.713 bits | +0.016 bits |
+| actual children, same rule | 10236 | 8309 | 716 / 7593 | 0.086 | 587 | −4.489 bits | −0.979 bits |
+| ghosts needing no removed ancestor | 2544 | 1523 | 176 / 1347 | 0.116 | 153 | −2.078 bits | +0.011 bits |
+| ghosts needing removed ancestors | 2330 | 1580 | 148 / 1432 | 0.094 | 119 | −3.400 bits | −0.077 bits |
+
+Last third: ghosts 224/2510 (0.089), prior −0.017 bits; actual children 518/7250 (0.071), prior −0.974 bits.
+No numerical equalities. Family rows and remaining-life bins are in the JSON; ghosts win more often than actual
+children in the clock and integrator families and not in event or rhythm. The native combined forecast costs
+97.261 bits over the 163 labels (D87).
+
+**Inference.** Under the predeclared reading, the second-row outcome does not occur. Ghosts win about one time in
+ten, slightly more often than actual children scored the same way (0.104 against 0.086), and the causal prior
+over ghosts is level with native prediction (+0.016 bits of 97.26). The difference in proportions is modest,
+and the units share tastes, so no interval is justified: inconclusive, not a demonstrated ghost advantage.
+Two observations matter beyond the decision. First, scoring actual children whenever their word fires,
+rather than only when the brain issues them, cuts their win share from about 0.21 (D89) to 0.086: the native
+choice of speaker already filters out most of their weak forecasts. Second, the prior over actual children
+loses almost its whole one-bit allowance while the ghost prior does not, which says the missing combinations are,
+if anything, no worse a pool than what growth did build; it does not say either pool is worth material.
+
+**Limits.** One frozen life; offline tallies that never act, allocate, displace or pay; both arms persist to the
+end of life, ignoring deletion; the formation-order prior is supplied, not the only reasonable one.
+
+**Changed belief and next branch.** Memory as parts for later combinations does not explain D77's extra-room
+benefit on present evidence: neither keeping deleted units' readouts (D87) nor building their missing children
+(D92) beats the combined forecast as a pool. Following D91's fourth row, the next work is a review of D77's
+allowance ablation and the selection/readout alternatives (which issued forecasts the selector trusts, and
+whether extra room mainly changes selection), with no further retention or growth variants.
