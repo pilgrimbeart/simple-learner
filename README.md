@@ -1,11 +1,111 @@
 # simple-learner: intelligence that scales
 
-An open-ended research programme on emergent systems operating in real time. We use a small simulated robot
+A research project on emergent systems operating in real time, now under review for archiving. We use a small simulated robot
 to investigate how a brain could improve its own organisation during life. The [abstract](ABSTRACT.md) gives
-the present research position; [PROGRAMME.md](PROGRAMME.md) gives the next investigations.
+the present research position; [PROGRAMME.md](PROGRAMME.md) records the final review and historical investigations.
 
 Split from [nca-learn](https://github.com/pilgrimbeart/nca-learn) on 2026-11-02. That repository retains the sheet
 of identical cells; this one carries the circuit and growing-network investigations.
+
+## Draft conclusions for archiving
+
+*2026-11-21, for review; recommendation to archive, not a claim that archiving has been performed.*
+The [final evidence review](discrete/NOTEBOOK.md#d185-archive-review) records what was independently checked
+and what remains inherited from earlier experiments.
+
+**The original goal remains unmet.** We set out to find a small repertoire of reusable components from which
+a robot could improve its own organisation during life: to solve a bigger unfamiliar problem, add more brain,
+without designing a new solution for that problem. We demonstrated several ingredients, but not a mechanism
+that reliably decides what to change or grow, learns the improvement, and justifies its total cost across
+unfamiliar challenge families.
+
+**The positive results are worth keeping.** Small circuits learned the basic food distinction, with selected
+constructions checked against transistor simulations. Restricted local recruitment repaired a missing connection
+under an earlier noise model. Growing networks benefited substantially from extra capacity on sequence tasks.
+Rhythm acquisition and tracking improved fresh timing lives after experiments separated the missing capabilities.
+A small circuit adjusted its own bias using a local signal and passed its bounded oscillator reliability test.
+These are distinct results under distinct assumptions, not successive validations of one completed brain.
+See the [minimal search](minimal/NOTEBOOK.md#where-it-stands),
+[recruitment](experiments/NOTEBOOK.md#where-it-stands),
+[scaling and timing review](discrete/NOTEBOOK.md#review-2026-11-16), and
+[local bias adjustment](discrete/NOTEBOOK.md#d162-adaptive-oscillator).
+
+**Useful representations make learning possible within a life.** Registers, contexts, fading traces and cycle
+position exposed different regularities. Timing improved after three separate problems were addressed: representing
+position in the cycle, restoring influence to predictors that improved late, and acquiring then tracking the period.
+This supports choosing representations carefully; it does not establish how a brain discovers an appropriate
+repertoire unaided. More material does not itself supply more observations, and longer lives cannot remove a
+fixed measurement bias. [Timing and representation review](discrete/NOTEBOOK.md#review-2026-11-16),
+[measurement limits](discrete/NOTEBOOK.md#d168-calibration-precision).
+
+**Prediction and action have different evidence costs.** Many predictors can be scored against the same observed
+outcome. Competing actions generally need trials or a justified model of what would have happened. Sparse reward
+and simultaneous adjustments made those trials costly. Pre-reward movement exposed useful body information,
+but predictability alone favoured unhelpful behaviour. Sensory–motor coupling improved balance while favouring
+the wrong tempo; two adapting units benefited from taking turns and using a suitable joint signal. These bounded
+results distinguish acquiring information from making that information valuable for action.
+[Evidence costs](BOUNDS.md), [play and coordination review](discrete/NOTEBOOK.md#review-2026-11-16).
+
+**The unresolved step is deciding what deserves adaptation.** A useful component does not tell the brain
+when to recruit it, what to connect it to, which evidence should train it, or which existing skill can safely
+be displaced. Prediction weight, immediate contribution to a forecast, and future value as memory or a building
+block are different quantities. Our allocation experiments exposed these differences without establishing an
+economical local rule that closes the larger brain's advantage. Extra capacity helped, but the nominal capacity
+setting did not count all material or communication. The project therefore demonstrated some benefits of more
+capacity, not the promised general scaling law. [Resource and allocation evidence](discrete/NOTEBOOK.md#d76-resource-floor),
+[latest contribution review](discrete/NOTEBOOK.md#d122-contribution-capture).
+
+Two smaller results sharpen that allocation problem. Copying predictors changed their combined influence
+without new evidence unless both initial and redistributed weights were conserved. This concerns predictor
+streams: adding a block inside a stream does not automatically add a selection weight. Also, a circuit part that
+could not be deleted at its current settings became removable after its neighbours were retuned. Neither
+current weakness nor current indispensability establishes lifetime value.
+[Duplication check](discrete/NOTEBOOK.md#d75-redundant-selection),
+[pruning and retuning, M13](minimal/NOTEBOOK.md#m13-a-smaller-robust-circuit-by-open-search-night-of-2026-10-22).
+
+**Learning an answer and using it are separate achievements.** In the later robot diagnosis, better retention
+preserved the food distinction without improving collection. The final fixed grid improved action even with the
+answer supplied at birth, but none of its candidates met the food-rate, discrimination and stranding requirements.
+Its gains also failed the declared practical-improvement and numerical-convergence tests, and most lives
+contained proposals beyond the circuit's voltage rails. It points to an interaction between exploration and
+sensory control; it does not establish that sensory masking is the dominant cause. These failures concern
+these assemblies, not every circuit or the body's ability to support successful behaviour.
+[Retention diagnosis](discrete/NOTEBOOK.md#d177-robot-review), [final grid review](discrete/NOTEBOOK.md#d185-archive-review).
+
+**Physical and experimental accounting changed the conclusions.** Noise sometimes supplied movement that the
+design had not provided. Numerical refinement overturned apparent results. Counting supply power and actual
+parts substantially changed apparent economy. Correctly pairing lives, scoring predictions before outcomes,
+checking reference learners' information, and keeping failed cases visible prevented stronger claims than the
+data supported. Those are useful methodological results. They also mean that historical successes must keep
+their original model, interface and validation limits attached.
+[Simulator lessons](NOTEBOOK.md#lessons-from-these-lines-in-full),
+[physical accounting](minimal/NOTEBOOK.md#where-it-stands),
+[evidence review](discrete/NOTEBOOK.md#review-2026-11-16).
+
+**I recommend archiving rather than extending the current queue.** The strongest counterargument is the earlier
+sequence and rhythm work: it shows substantial gains and a clearer mechanism than the latest grid. But it still
+relies on supplied representations, ranges and selection machinery; it has not shown economical discovery and
+reuse across unfamiliar families. The oscillator repair is a credible local capability, yet it does not identify
+what a robot should learn or how useful new circuitry should be selected. Fixing the present action circuit could
+make a better baseline, but would leave those central questions unanswered. None currently makes the strong case
+for continuation required here.
+
+**The research process leaves reusable lessons too.** Bounded assignments need explicit controls, budgets and
+outputs, followed by an audit of artifacts rather than acceptance of an agent's narrative. The completed grid
+shows that thorough execution can still leave the main causal question unresolved. Interfaces and sealed tests
+need enforcement, not requests for compliance. Models should be detailed enough to answer the question being
+asked; building upward from tiny parts and simplifying a richer working learner remain alternative strategies,
+not a contest this project settled. [Review of the separate synthesis](discrete/NOTEBOOK.md#d186-closing-synthesis).
+
+The programme also became a succession of component repairs. Several clarified real failures, but progress
+on a detector or motor pathway did not automatically reduce the uncertainty about general adaptation. That is
+a limitation of the research strategy I proposed, not a failure that a larger batch or a more diligent executor
+would by itself have fixed.
+
+The defensible closing claim is that this project identified useful learning and regulation mechanisms and
+several concrete obstacles to composing them into a self-organising brain. It did not establish a general,
+scalable mechanism, nor prove that one is impossible. Any future reopening should begin with evidence for a
+specific reusable adaptation rule and its costs, rather than resume the accumulated queue of component repairs.
 
 ## The goal: intelligence that scales
 
@@ -73,14 +173,13 @@ while the user is unavailable.
 
 ## What we've learned
 
-### Exploring can drown out the senses
+### Exploration and sensory control can interfere
 
-In the catalogue brain the explorer and the senses drive the same motors. When the explorer is holding a motor,
-a sensor's pulse is lost. Making the explorer fire less often, the motors recover faster and the rhythm run faster
-(all knobs the brain already has) roughly doubles what the robot eats when told which colour is food, on fresh
-lives. A stronger sensory signal does not help. The gain is real but small (about 0.45 food per 10 s against the
-1 needed), not yet steady as the simulation's step shrinks, and reached with voltages beyond the chip's supply, so it
-points at the problem rather than solving it. [D184](discrete/NOTEBOOK.md#d184-action-grid).
+The final grid finds better informed-action settings, but does not separate sensory masking from changes in
+movement, recovery and noise. None qualifies as a successful physical learner. The
+[final review](discrete/NOTEBOOK.md#d185-archive-review) reproduces the primary comparisons and qualifies the
+original causal interpretation. This distinction matters: improving a fixed setting is evidence for an engineering
+lever, not evidence that the brain can discover and use that lever itself.
 
 ### Reliable responses and exploration are separate requirements
 
@@ -445,15 +544,16 @@ physical circuit with the same learning, power or noise performance.
 
 ## Next
 
-[PROGRAMME.md](PROGRAMME.md) owns the current work plan, starting with the
-[three-part circuit catalogue and coverage checks](PARTS.md#2-the-catalogue-primitives-dynamical-motifs-and-learning);
-[QUESTIONS.md](QUESTIONS.md) owns the ranked questions and discriminating investigations.
+The [draft conclusions](#draft-conclusions-for-archiving) recommend archiving.
+[PROGRAMME.md](PROGRAMME.md) preserves the final decision and historical work orders;
+[QUESTIONS.md](QUESTIONS.md) preserves unresolved questions, not an active execution queue.
 
 ## Terms
 
 - **Catalogue-native brain**: a brain assembled directly from the proposed dynamic nodes, controlled connections
   and retained memory nodes, with every internal state and connection explicit. The starting design is
-  [D180](discrete/NOTEBOOK.md#d180-catalogue-brain-plan); its behaviour is not yet tested.
+  [D180](discrete/NOTEBOOK.md#d180-catalogue-brain-plan); its tested limitations are reviewed in
+  [D185](discrete/NOTEBOOK.md#d185-archive-review).
 
 - **In-stream response**: what a detector actually outputs after each event during a life, scored by its
   bench criteria, as opposed to scoring each case in isolation at a fixed setting (D173).

@@ -1,5 +1,17 @@
 # The research programme
 
+## Archive review — 2026-11-21
+
+At the user's request, [D185](discrete/NOTEBOOK.md#d185-archive-review) reviews the final grid and the strongest
+older results. **Recommendation: archive; no new experiment selected.** The grid's primary gains reproduce,
+but no candidate meets the practical, convergence, physical or absolute job requirements. Its dominant-cause
+claim and full-ranking compliance need qualification. The [draft project conclusions](README.md#draft-conclusions-for-archiving)
+explain why the retained successes do not establish a sufficiently strong route to the original goal.
+The [separate-review reconciliation](discrete/NOTEBOOK.md#d186-closing-synthesis) adds representation,
+evidence-cost, play and research-process lessons without changing the recommendation.
+Archiving itself has not been performed. All execution entry points and proposed next questions below are
+historical records, not an active queue under this wrap-up request. Reserved tests remain unopened.
+
 ## Action-grid work order executed — D184, 2026-11-21
 
 The [action-grid work order](lab/WORK_ORDER_2026-11-20_action_grid.md) is complete, all R0–R8 done

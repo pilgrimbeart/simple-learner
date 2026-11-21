@@ -10,11 +10,14 @@ per meal spent resting, moving and thinking), gain rate (meals per 10 s), food, 
 
 ## Where it stands
 
-**Latest result, 2026-11-21:** [D184](#d184-action-grid) runs the fixed action grid. The catalogue brain collects poorly mainly
-because its explorer drowns out the senses: a higher explorer threshold, faster motor recovery and a faster oscillator roughly
-double food told the answer (0.45–0.49 per 10 s on fresh lives, baseline 0.18–0.22) and pass no-harm checks; sensory gain is
-not the lever. The improvement survives fresh seeds at three steps but not the +0.10 practical margin, step convergence, or the
-chip's rails (excursions in about three quarters of lives), so it is diagnostic. No setting meets the job. D183 below is historical.
+**Archive review, 2026-11-21:** [D185](#d185-archive-review) independently reproduces D184's primary reward
+comparisons and recommends archiving. Better fixed action settings do not meet the physical, convergence,
+practical-improvement or absolute job requirements. Sensory masking is a supported candidate explanation,
+not an established dominant cause. Earlier sequence, timing and local-regulation successes remain bounded;
+no reusable economical adaptation mechanism has been established. [Draft conclusions](../README.md#draft-conclusions-for-archiving).
+[D186](#d186-closing-synthesis) incorporates a separate review's positive lessons and qualifies its historical
+status and growth interpretation. The archive recommendation is unchanged.
+No new experiment is selected. The status and assignment summaries below are historical.
 
 **Current prepared assignment, 2026-11-20:** [D183](#d183-action-grid-plan) replaces D182's conditional
 next-step proposal with the user's requested broad fixed batch: 81 settings, all controls, mechanical
@@ -12241,6 +12244,9 @@ will inform which economical, local adjustment is worth studying; they cannot es
 <a id="d184-action-grid"></a>
 ## D184 — The fixed action grid: the explorer drowns out the senses (2026-11-20 to 11-21)
 
+*2026-11-21 review correction: [D185](#d185-archive-review) reproduces the primary gains but qualifies the
+“mostly masking” inference, shrinkage interpretation, levels and ranking-error account. Original record follows.*
+
 **Question (D183):** which existing settings change the catalogue brain's poor collection, and do they survive fresh
 lives and circuit refinement? Protocol, predictions, ledger, report and handoff:
 [work order](../lab/WORK_ORDER_2026-11-20_action_grid.md), [PROTOCOL](../lab/action_grid_20261120/PROTOCOL.md),
@@ -12272,3 +12278,126 @@ finish). Exact ties in the development ranking are ordered by rounding at three 
 Proposed question, for review: within the chip's rails, does masking (not encounter rate) still account for the gain?
 No repair or experiment launched.
 
+
+<a id="d185-archive-review"></a>
+## D185 — Review of the final grid and recommendation to archive (2026-11-21)
+
+**Question and scope.** At the user's request, review D184 and assess whether any remaining line makes a strong
+case for continuing towards reusable, local, economical in-life adaptation. This is a review of saved evidence,
+not another execution branch. [Coverage, competing interpretations and stopping rule](../lab/v/archive_review_20261121_scope.md).
+The draft project-wide conclusions live in [README](../README.md#draft-conclusions-for-archiving); this entry owns
+the detailed audit. No new experiment, agent, protected-test opening, mechanism or body change.
+
+**Independent evidence.** [Recount script](../lab/archive_review_20261121.py),
+[raw review output](../lab/v/archive_review_20261121.json), [log](../lab/v/archive_review_20261121.log).
+Absolute paths are recorded in the coverage file. Review starts at commit
+`7dfdad19473659381085783207c54347e2a4c82c`; changes made here are the review script/results and documentation only.
+The experiment's manifest records `5700eaa` plus dirty-source hashes, whereas its final report names `1e70cce`.
+For reproduction use that manifest and amendments, not a bare commit label. All frozen source hashes still match
+except `run.py` and `ag_analysis.py`, whose changes are disclosed in the executor's checklist (worker-count
+configuration and descriptive food contrasts). This checks identity, not correctness of the whole simulator.
+
+**What reproduces.** All three compact ledger hashes match their stored metadata. Unique row counts are
+31,104 benches, 31,104 development lives and 18,432 confirmation lives. Named invalids are respectively
+1,296, 4,536 and zero. Thus 54/81 settings have complete valid development coverage; the slower-oscillator
+settings are not 27 negative scientific results. Integer meal recounting selects exactly the frozen top three.
+All nine primary confirmation point estimates and ordinary intervals reproduce to numerical precision;
+the independently calculated corrected intervals reproduce the reported rounded values. Every candidate has
+a corrected lower bound above zero at each circuit step, but none exceeds +0.10 net food per 10 s at all three.
+All six primary halving-change intervals fail containment in ±0.05. This is failure to establish convergence,
+not proof of a nonzero discretisation bias: every one also contains zero. The body step was unchanged.
+Recounted food-rate and food-minus-three-poison intervals and stranded-seed counts reproduce the failed absolute
+gates. The saved clipping flags reproduce 3,038/4,608 baseline lives and 3,295, 3,539 and 3,298/4,608 candidate
+lives. These are pre-clipping proposals beyond the rails, not measurements of an actual chip exceeding its supply.
+Clipping remains a physical-contract failure, and its contribution to the gain is unknown.
+
+**Corrections to the interpretation.**
+
+- “Mostly the explorer drowning out the senses” is stronger than the comparisons establish. The threshold
+  intervention and controlled single-pulse benches support sensory interference as a candidate cause. Speed,
+  recovery, activity, trajectories and noise also change; the across-setting correlation does not separate them.
+  No clear marginal recovery effect is not evidence that recovery never matters, and failure of doubled sensory
+  gain is not proof that sensory gain is irrelevant in every operating region.
+- The report's “shrinkage by half” changes both seeds and noise construction: development uses native noise,
+  confirmation uses coupled noise. It cannot be attributed uniquely to selection optimism.
+- The same colour-blind trajectory paired with opposite poison labels gives exactly zero net in several controls
+  because taste is withheld. Those repeated zero contrasts are not independent mechanistic confirmations.
+- The best-by-step food levels across all candidates are 0.462, 0.505 and 0.491 per 10 s. The report's
+  0.45–0.49 describes the gain-one, high-threshold candidate, not the best level at each step. No candidate is
+  near the required food rate of 1 at the uncertainty bounds, so this correction does not change the decision.
+- Exact ranking by integer meal totals disagrees with the frozen ranked list at positions 16–17, 33–34 and
+  39–41 (one-based, complete eligible nonbaseline list). The executor's stated list of tie errors is incomplete.
+  The selected top three are unchanged. Preserve the frozen selection as history.
+
+**Obligation audit.** R0 has a manifest/freeze and an explicitly recorded user extension after the original
+budget expired. R1's 17 identity/fixture checks and R4's 384 historical reconciliations are saved evidence,
+not rerun here. R2/R3/R6 have the full expected row counts with invalid denominators exposed. R5's selection
+is accepted; its complete ranking is not strictly compliant with the tie rule. R7's headline reward uncertainty,
+absolute food/ratio failures, no-harm contrasts and primary convergence are independently reconstructed;
+secondary motor/visibility/cost measurements and physical detection logic remain inherited. R8 has the requested
+handoff and documentation, but its blanket completion language needs the ranking and interpretation qualifications
+above. The worker's archive hashes and regenerated job-key sets were inspected as saved audit evidence, not
+independently rerun. This is qualified acceptance of the experiment, not certification of every code path.
+
+**Return to the goal.** D184 is an informed offline settings search with no taste learning and no autonomous
+setting changes. It improves a diagnostic robot but does not demonstrate a physically eligible action baseline,
+let alone repair selection, growth or scaling. It also costs more supply power and motor activity with unchanged
+material. The exact cost estimates remain the worker's, not independently measured here.
+
+The strongest older alternatives remain the sequence capacity gains (D69), acquisition/tracking of rhythms
+(D68), and the local oscillator bias adjustment (D162). Original fresh timing and sequence logs and the oscillator
+confirmation report were inspected. These retain value, with their supplied representations and incomplete
+resource accounting explicit. The oscillator meets its absolute reliability criterion (40/40 versus 38/40
+original), but the paired reliability-gain interval includes zero; do not turn that into a proven general
+reliability advantage. It uses 196 rather than 95 parts and about 6.32 nW additional supply power. Shared-reading
+calibration remains a hybrid reference without demonstrated second use (D175).
+
+**Decision.** Recommend archiving. None of these results supplies strong evidence for the missing reusable
+mechanism that discovers which representation or repair to build and pays its learning, material and communication
+costs. This is a judgement about this programme's evidence and remaining work, not an impossibility claim about
+local adaptive intelligence. The D184 masking question is a reasonable engineering question, insufficient grounds
+to delay archiving. Reopening would require a new, bounded proposal connecting an actual local adaptation mechanism
+to multiple uses with fixed machinery and matched tuning/recycling controls; no such experiment is authorised here.
+
+**Preservation limit.** The final grid's three pickle archives are git-ignored and occupy approximately 8 GB;
+compact ledgers and scripts alone do not retain all detailed traces. A repository-only archive will not preserve
+those files. Keep their existing paths and hashes with any research-data backup. This review does not delete,
+move, commit, push or remotely archive anything.
+
+<a id="d186-closing-synthesis"></a>
+## D186 — Reconciling the separate closing review (2026-11-21)
+
+**Question and scope.** The user supplied a separate agent's review and requested refinement of the conclusions
+followed by a push. Does that synthesis identify stronger evidence for reusable, local, economical adaptation,
+or useful lessons missing from D185? This is a bounded document/source review, no new experiment or delegation.
+Stop after checking consequential additions against existing records and updating the closing synthesis.
+The supplied review is retained unchanged as a historical source at
+`/home/pilgrim/git/simple-learner/lab/v/external_key_insights_20261121.md`
+([snapshot](../lab/v/external_key_insights_20261121.md)); original path:
+`/mnt/c/Users/PilgrimBeart/Downloads/simple-learner-key-insights.md`.
+It describes its scope as commit `1e70cce`, through D183, with no experiment reruns.
+
+**What it adds.** The earlier closing draft concentrated on the unmet goal and final action failure. The separate
+review better preserves the lessons about representations, the different evidence costs of prediction and action,
+pre-reward exploration, interacting adjustments, and the dependence of pruning on neighbouring settings.
+D72's review, D50's readout comparisons, D54's controlled alternation and tempo results, D75's exact-duplication
+replay and M13's retuned deletion were inspected. These support the additions at their existing, bounded strength.
+No new confidence intervals or general theorem are inferred. The README owns the revised project conclusions;
+the abstract links and summarises them.
+
+**Qualifications.** Its unfinished-confirmation statement is a historical snapshot, superseded by D184 and the
+D185 independent recount. “Growing a network changes its implicit prior” needs a scope restriction: D75 copies
+predictor streams, while growing a categorical block within a stream does not create an outer selector weight.
+Both initial and redistributed mass must be conserved in the tested sharing rule. This is not an explanation
+of all capacity gains. The claim that allocation needs a contribution measure is retained as a problem, not a
+proof that one scalar measure must solve growth, retention and pruning. Mixed feedback and writable memory
+remain a tested vocabulary of motifs, not demonstrated sufficiency for a general learner. The proposed NCA
+replacement/distillation mechanism is future work; this review does not adopt or investigate it.
+
+**Changed assessment.** Broaden the closing account of what was learned; keep the recommendation to archive.
+The review offers clearer lessons, not new evidence that resolves representation discovery, local allocation,
+transfer or full cost. It also correctly leaves the choice of abstraction and building upward versus simplifying
+a working system unresolved. Bounded execution and artifact audits are valuable controls, but completion of a
+large grid cannot substitute for an experiment that distinguishes the main causal alternatives. No simulation,
+new learning result or live behaviour is claimed. The requested push uses the repository's clean-checkout,
+fresh-environment verification procedure; archiving the remote repository is a separate action not performed here.
