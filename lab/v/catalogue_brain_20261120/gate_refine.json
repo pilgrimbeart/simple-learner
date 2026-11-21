@@ -1,0 +1,39 @@
+{
+ "triggered": false,
+ "reason": "confirmation not triggered",
+ "code": {
+  "lab/catalogue_brain_20261120/analyse.py": "82a224d7c12c2f8e0e2c8ca62d20a4b02aabc1c73bb7b81c5f0d953992afec98",
+  "lab/catalogue_brain_20261120/bench.py": "fddf2183d4a44fbca130d8b02bb7e333f7d9612c67e47fd535c3d6383a76bd45",
+  "lab/catalogue_brain_20261120/brain.py": "ede15d4b1f4eeaec2a09b8db18aefe2827b29a78e3b88ba47ab191e6429c282f",
+  "lab/catalogue_brain_20261120/checks.py": "60fb4aad76f0754b119fca78e55b512bb7d7d6754837121ca9c71628eadc61f8",
+  "lab/catalogue_brain_20261120/design.py": "461c58b62a2a9f5e156682a8046133c5730b1ec5e09e6f6e2ff784281855c931",
+  "lab/catalogue_brain_20261120/diag_rail.py": "cb0c29c3a6011f1e591dc17f7181257c8705557a0dda911e98d2461dafaf60ef",
+  "lab/catalogue_brain_20261120/lives.py": "ab2819351f2b0e51b24185beac4586f6a0a5eac4e9826dd55f54eb89538cbd81",
+  "lab/catalogue_brain_20261120/make_manifest.py": "c5c9da63fb29e63dd8cc513ce7cc31f582d51698619ba998612d3b2ec54a97a3",
+  "lab/catalogue_brain_20261120/preflight.py": "aa2203294a7dbf08149a2c3ddf6e471bd8f659054185fb2984cba768e0309132",
+  "lab/catalogue_brain_20261120/prepare.py": "628a1b218739f2b44b957d6aab7501cf59197ff9cd69f65d105ca3f5e8909ff3",
+  "lab/catalogue_brain_20261120/report.py": "ea76fb6ebf3692af43c571bf065dab3e4d9f128f72b3b9ca3f2ba7783cf3456e",
+  "lab/catalogue_brain_20261120/run.py": "5d756be01ef488972aba2e010e073da0a78dd416c97bcf482255ea47eed1da1c",
+  "lab/catalogue_brain_20261120/schematic_v1.py": "0421d60d3438c2ebc38a4ee5f92be053d6ce6c239ca37417a9384b4fdc366948",
+  "lab/catalogue_brain_20261120/seed_audit.py": "ce1fc7e555201929c7e8a661b7e11e7cc7bd369df1a97ccf3f516a36e859c77e",
+  "lab/catalogue_brain_20261120/view.py": "de06abfde81c782aa5aaa029fd58128aec459b986c9d4a33347c1e3f56c8e280",
+  "mixed_feedback.py": "06157fe5e3532c625ba1494e4d23328b9988041e80c5469b2de2e94d3582131e",
+  "units.py": "dfdd23e62a79251c579cc8d43badea5894cd167d1f6229a560bd83fb0b2bf1e8",
+  "chip.py": "d0014cd1ab350ada938ee75f12a12445236895f13a451afd9a70aec0db29d037",
+  "creature.py": "a0d2cb7c5a4ddbe5d99188a6043d91d6cf1e159194a02d60fee154b89e53463f",
+  "world.py": "b64322bee1812eb24aa8467e080534e4d98cc02ead69d8412ea7f5cbc1fdf417",
+  "brains/circuit.py": "206376c6cef661d0b3b73f46a7f48c5738053a20c1ebd6a51c218ccb19efa66b"
+ },
+ "sim_code": {
+  "lab/catalogue_brain_20261120/brain.py": "ede15d4b1f4eeaec2a09b8db18aefe2827b29a78e3b88ba47ab191e6429c282f",
+  "lab/catalogue_brain_20261120/design.py": "461c58b62a2a9f5e156682a8046133c5730b1ec5e09e6f6e2ff784281855c931",
+  "lab/catalogue_brain_20261120/lives.py": "ab2819351f2b0e51b24185beac4586f6a0a5eac4e9826dd55f54eb89538cbd81",
+  "mixed_feedback.py": "06157fe5e3532c625ba1494e4d23328b9988041e80c5469b2de2e94d3582131e",
+  "units.py": "dfdd23e62a79251c579cc8d43badea5894cd167d1f6229a560bd83fb0b2bf1e8",
+  "chip.py": "d0014cd1ab350ada938ee75f12a12445236895f13a451afd9a70aec0db29d037",
+  "creature.py": "a0d2cb7c5a4ddbe5d99188a6043d91d6cf1e159194a02d60fee154b89e53463f",
+  "world.py": "b64322bee1812eb24aa8467e080534e4d98cc02ead69d8412ea7f5cbc1fdf417",
+  "brains/circuit.py": "206376c6cef661d0b3b73f46a7f48c5738053a20c1ebd6a51c218ccb19efa66b"
+ },
+ "time": "2026-11-20T16:06:09Z"
+}

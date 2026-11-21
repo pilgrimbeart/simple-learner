@@ -1,0 +1,146 @@
+{
+  "version": 1,
+  "graph": {
+    "nodes": [
+      {
+        "name": "evidence",
+        "C": 2.5e-11,
+        "R": 800000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "eligibility",
+        "C": 2.5e-11,
+        "R": 2000000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "stored",
+        "C": 2.5e-11,
+        "R": null,
+        "bias": 0.0,
+        "memory": true
+      },
+      {
+        "name": "probe",
+        "C": 2.5e-11,
+        "R": 800000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "response",
+        "C": 2.5e-11,
+        "R": 2000000000.0,
+        "bias": 0.0,
+        "memory": false
+      }
+    ],
+    "edges": [
+      {
+        "to": 4,
+        "source": 3,
+        "gate": 2,
+        "gain": 2e-10,
+        "offset": 0.0,
+        "slope": 6.666666666666667,
+        "tau": 0.0
+      },
+      {
+        "to": 2,
+        "source": 0,
+        "gate": 1,
+        "gain": 8e-12,
+        "offset": 0.0,
+        "slope": 6.666666666666667,
+        "tau": 0.0
+      }
+    ],
+    "duration": 100.0
+  },
+  "pilot": [
+    52000,
+    52001,
+    52002,
+    52003,
+    52004,
+    52005,
+    52006,
+    52007
+  ],
+  "confirm": [
+    52100,
+    52101,
+    52102,
+    52103,
+    52104,
+    52105,
+    52106,
+    52107,
+    52108,
+    52109,
+    52110,
+    52111,
+    52112,
+    52113,
+    52114,
+    52115,
+    52116,
+    52117,
+    52118,
+    52119,
+    52120,
+    52121,
+    52122,
+    52123,
+    52124,
+    52125,
+    52126,
+    52127,
+    52128,
+    52129,
+    52130,
+    52131,
+    52132,
+    52133,
+    52134,
+    52135,
+    52136,
+    52137,
+    52138,
+    52139
+  ],
+  "steps": [
+    0.000125,
+    6.25e-05,
+    3.125e-05
+  ],
+  "signs": [
+    -1,
+    1
+  ],
+  "substrate": "silicon",
+  "record_s": 0.001,
+  "initial": "Stored voltage uniform .14 to .16 V; all dynamic nodes independent uniform +/- .075 V. Measure baseline after startup settles.",
+  "stimulus": "Evidence +/- .5 V nominal for .30 s from 1+jitter; eligibility +.6 V nominal for .25 s at same time. Opposite evidence alone at 50+jitter. Identical probe pulses at .4,3,98+jitter. Jitter continuous, .001 to .009 s. Currents delivered only to explicit dynamic input nodes.",
+  "criteria": {
+    "write": "Signed change from baseline to post-write stored voltage in [.03,.14] V for EACH sign.",
+    "hold": "Stored max-min < .0001 V from 2 to 97 s, including closed-gate opposite evidence; <=.0001 V change of mean across disturbance.",
+    "readout": "Signed post-minus-pre response > .025 V; late-minus-post abs < .005 V.",
+    "rails": "No node reaches .999 rail.",
+    "robustness": "Both signs at all steps per seed; Wilson 95% lower >=.90 in 40 fresh seeds.",
+    "refinement": "Both paired mean successive-halving bootstrap 95% intervals inside +/- .05 for every normalized metric."
+  },
+  "controls": "Pilot only, all steps and signs: no eligibility stimulus and removed writer must give stored delta abs < .0001 V and readout delta abs < .005 V; ungated readout must give readout delta abs < .005 V while signed write passes. All controls zero rail hits.",
+  "noise_estimate": {
+    "thermal_sigma_V": 1.2871591976131003e-05,
+    "write_shot_sigma_V": 2.4803947819974138e-05,
+    "minimum_write_V": 0.03,
+    "hold_margin_V": 0.0001,
+    "comment": "No rest noise in retained node is the established substrate contract, not a new switch. Dead zone should stop thermal gate chatter. No multiple explorers or learning/credit claim."
+  },
+  "budget": "One sequential process, maths threads1. Pilot <=600s, confirmation <=1200s. At most two graph variants; diagnose before changing. No robot/search.",
+  "limitations": "Unipolar gate clips negative state; write sign comes from bipolar evidence through tanh. Stored value stays positive to modulate readout; no signed learned-weight construction claimed. No internal filtered connection. High-voltage pump cost absent in existing model."
+}

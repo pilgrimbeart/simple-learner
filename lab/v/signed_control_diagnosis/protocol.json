@@ -1,0 +1,13 @@
+{
+  "modes": [
+    "original",
+    "source_offsets",
+    "control_offsets",
+    "input_leaks",
+    "gains",
+    "nominal"
+  ],
+  "source": "/home/pilgrim/git/simple-learner/lab/v/signed_control/confirm.jsonl",
+  "validation_tolerance_V": 0.0001,
+  "budget_s": 60
+}

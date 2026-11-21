@@ -1,0 +1,45 @@
+{
+  "filter_exactly_constant": true,
+  "native_noise_active": {
+    "q_C": 1.602176634e-19,
+    "destination_rest_variance_rate": 8.644991219963062e-30
+  },
+  "physical_filter_C_F": 5e-12,
+  "physical_filter_thermal_sigma_V": 2.878175463726977e-05,
+  "witness_protocols": {
+    "dynamic_parts/protocol_v2.json": {
+      "connections": 6,
+      "positive_tau": []
+    },
+    "motifs/change_v2/protocol.json": {
+      "connections": 3,
+      "positive_tau": []
+    },
+    "motifs/order_v2/protocol.json": {
+      "connections": 7,
+      "positive_tau": []
+    },
+    "retained_write/protocol_v1.json": {
+      "connections": 2,
+      "positive_tau": []
+    },
+    "quiet_write/protocol.json": {
+      "connections": 4,
+      "positive_tau": []
+    },
+    "oneshot_v1/protocol.json": {
+      "connections": 4,
+      "positive_tau": []
+    },
+    "phase_v1/protocol.json": {
+      "connections": 4,
+      "positive_tau": []
+    },
+    "signed_control/protocol.json": {
+      "connections": 4,
+      "positive_tau": []
+    }
+  },
+  "source_reading": "Vx update has no independent stochastic increment; rest arrays and z have one entry per explicit node. Physical SPICE filter uses follower,R=tau/FILTER_C,C=FILTER_C. check_noise exercises explicit nodes/memories, not this hidden capacitor.",
+  "limitation": "Physical kT/C is a stiff-source passive RC reference, not a complete follower-noise model. This audit does not quantify historical behavioural bias."
+}

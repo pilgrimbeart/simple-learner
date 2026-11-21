@@ -1,0 +1,46 @@
+{
+  "vector_drift_validation_max_V_per_s": 0.0,
+  "original_root_difference_max_V": 3.292302686268951e-11,
+  "grid_root_difference_max_V": 1.609823385706477e-15,
+  "comparisons": {
+    "actual": {
+      "root_counts": [
+        1
+      ],
+      "draws_with_stable_root": [
+        51005,
+        51006,
+        51011,
+        51036
+      ]
+    },
+    "zero_self_offset": {
+      "root_counts": [
+        1
+      ],
+      "draws_with_stable_root": [
+        51011,
+        51036
+      ]
+    },
+    "zero_recovery_offset": {
+      "root_counts": [
+        1
+      ],
+      "draws_with_stable_root": [
+        51006,
+        51012
+      ]
+    },
+    "zero_slow_offset": {
+      "root_counts": [
+        1
+      ],
+      "draws_with_stable_root": [
+        51005,
+        51006,
+        51032
+      ]
+    }
+  }
+}

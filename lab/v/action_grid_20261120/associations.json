@@ -1,0 +1,659 @@
+{
+ "rows": [
+  {
+   "config": "g0.5_t0.0025_q0.15_f0.75",
+   "single_excess": 0.14285714285714285,
+   "sustained_excess": 29.642857142857142,
+   "sustained_unarmed": 0.6701468253968255,
+   "informed_net": -0.01666666666666667,
+   "complete": false
+  },
+  {
+   "config": "g0.5_t0.0025_q0.15_f1.0",
+   "single_excess": 0.125,
+   "sustained_excess": 24.5,
+   "sustained_unarmed": 0.6668506944444444,
+   "informed_net": -0.14062500000000006,
+   "complete": true
+  },
+  {
+   "config": "g0.5_t0.0025_q0.15_f1.5",
+   "single_excess": 0.1875,
+   "sustained_excess": 21.125,
+   "sustained_unarmed": 0.6816562500000001,
+   "informed_net": -0.1453125,
+   "complete": true
+  },
+  {
+   "config": "g0.5_t0.0025_q0.225_f0.75",
+   "single_excess": 0.21428571428571427,
+   "sustained_excess": 32.57142857142857,
+   "sustained_unarmed": 0.640690476190476,
+   "informed_net": -0.05833333333333335,
+   "complete": false
+  },
+  {
+   "config": "g0.5_t0.0025_q0.225_f1.0",
+   "single_excess": 0.125,
+   "sustained_excess": 25.875,
+   "sustained_unarmed": 0.6395555555555555,
+   "informed_net": -0.08437500000000002,
+   "complete": true
+  },
+  {
+   "config": "g0.5_t0.0025_q0.225_f1.5",
+   "single_excess": 0.1875,
+   "sustained_excess": 22.75,
+   "sustained_unarmed": 0.6493298611111111,
+   "informed_net": -0.18750000000000003,
+   "complete": true
+  },
+  {
+   "config": "g0.5_t0.0025_q0.3_f0.75",
+   "single_excess": 0.42857142857142855,
+   "sustained_excess": 35.642857142857146,
+   "sustained_unarmed": 0.6072619047619048,
+   "informed_net": -0.03333333333333334,
+   "complete": false
+  },
+  {
+   "config": "g0.5_t0.0025_q0.3_f1.0",
+   "single_excess": 0.1875,
+   "sustained_excess": 28.9375,
+   "sustained_unarmed": 0.6061770833333333,
+   "informed_net": -0.0421875,
+   "complete": true
+  },
+  {
+   "config": "g0.5_t0.0025_q0.3_f1.5",
+   "single_excess": 0.1875,
+   "sustained_excess": 26.0,
+   "sustained_unarmed": 0.6147430555555555,
+   "informed_net": -0.04218750000000001,
+   "complete": true
+  },
+  {
+   "config": "g0.5_t0.005_q0.15_f0.75",
+   "single_excess": 0.14285714285714285,
+   "sustained_excess": 1.6428571428571428,
+   "sustained_unarmed": 0.7144722222222223,
+   "informed_net": -0.07500000000000002,
+   "complete": false
+  },
+  {
+   "config": "g0.5_t0.005_q0.15_f1.0",
+   "single_excess": 0.0625,
+   "sustained_excess": 0.0,
+   "sustained_unarmed": 0.7119756944444444,
+   "informed_net": -0.037500000000000006,
+   "complete": true
+  },
+  {
+   "config": "g0.5_t0.005_q0.15_f1.5",
+   "single_excess": 0.0625,
+   "sustained_excess": -2.1875,
+   "sustained_unarmed": 0.7363263888888889,
+   "informed_net": -0.09375,
+   "complete": true
+  },
+  {
+   "config": "g0.5_t0.005_q0.225_f0.75",
+   "single_excess": 0.14285714285714285,
+   "sustained_excess": 1.9285714285714286,
+   "sustained_unarmed": 0.6864801587301589,
+   "informed_net": -0.05,
+   "complete": false
+  },
+  {
+   "config": "g0.5_t0.005_q0.225_f1.0",
+   "single_excess": 0.0625,
+   "sustained_excess": 0.3125,
+   "sustained_unarmed": 0.6819270833333333,
+   "informed_net": -0.06562500000000002,
+   "complete": true
+  },
+  {
+   "config": "g0.5_t0.005_q0.225_f1.5",
+   "single_excess": 0.0625,
+   "sustained_excess": -1.8125,
+   "sustained_unarmed": 0.7075243055555556,
+   "informed_net": -0.06093750000000001,
+   "complete": true
+  },
+  {
+   "config": "g0.5_t0.005_q0.3_f0.75",
+   "single_excess": 0.21428571428571427,
+   "sustained_excess": 2.2857142857142856,
+   "sustained_unarmed": 0.6532301587301588,
+   "informed_net": -0.12500000000000003,
+   "complete": false
+  },
+  {
+   "config": "g0.5_t0.005_q0.3_f1.0",
+   "single_excess": 0.0625,
+   "sustained_excess": 0.5,
+   "sustained_unarmed": 0.6542881944444445,
+   "informed_net": 0.018750000000000003,
+   "complete": true
+  },
+  {
+   "config": "g0.5_t0.005_q0.3_f1.5",
+   "single_excess": 0.0625,
+   "sustained_excess": -1.4375,
+   "sustained_unarmed": 0.6760937499999999,
+   "informed_net": -0.13125000000000003,
+   "complete": true
+  },
+  {
+   "config": "g0.5_t0.01_q0.15_f0.75",
+   "single_excess": 0.0,
+   "sustained_excess": -4.0,
+   "sustained_unarmed": 0.863186507936508,
+   "informed_net": -0.01666666666666667,
+   "complete": false
+  },
+  {
+   "config": "g0.5_t0.01_q0.15_f1.0",
+   "single_excess": 0.0,
+   "sustained_excess": -5.25,
+   "sustained_unarmed": 0.8410902777777778,
+   "informed_net": -0.0421875,
+   "complete": true
+  },
+  {
+   "config": "g0.5_t0.01_q0.15_f1.5",
+   "single_excess": 0.0,
+   "sustained_excess": -8.0625,
+   "sustained_unarmed": 0.8697013888888889,
+   "informed_net": -0.04687500000000001,
+   "complete": true
+  },
+  {
+   "config": "g0.5_t0.01_q0.225_f0.75",
+   "single_excess": 0.0,
+   "sustained_excess": -4.0,
+   "sustained_unarmed": 0.8521587301587302,
+   "informed_net": 0.0,
+   "complete": false
+  },
+  {
+   "config": "g0.5_t0.01_q0.225_f1.0",
+   "single_excess": 0.0,
+   "sustained_excess": -5.25,
+   "sustained_unarmed": 0.8284548611111111,
+   "informed_net": -0.004687500000000001,
+   "complete": true
+  },
+  {
+   "config": "g0.5_t0.01_q0.225_f1.5",
+   "single_excess": 0.0,
+   "sustained_excess": -7.9375,
+   "sustained_unarmed": 0.8491388888888889,
+   "informed_net": -0.06562500000000002,
+   "complete": true
+  },
+  {
+   "config": "g0.5_t0.01_q0.3_f0.75",
+   "single_excess": 0.0,
+   "sustained_excess": -3.9285714285714284,
+   "sustained_unarmed": 0.8316150793650793,
+   "informed_net": -0.02500000000000001,
+   "complete": false
+  },
+  {
+   "config": "g0.5_t0.01_q0.3_f1.0",
+   "single_excess": 0.0,
+   "sustained_excess": -5.25,
+   "sustained_unarmed": 0.8113159722222223,
+   "informed_net": -0.06093750000000001,
+   "complete": true
+  },
+  {
+   "config": "g0.5_t0.01_q0.3_f1.5",
+   "single_excess": 0.0,
+   "sustained_excess": -7.9375,
+   "sustained_unarmed": 0.8324305555555556,
+   "informed_net": -0.04687500000000001,
+   "complete": true
+  },
+  {
+   "config": "g1.0_t0.0025_q0.15_f0.75",
+   "single_excess": 0.2857142857142857,
+   "sustained_excess": 31.285714285714285,
+   "sustained_unarmed": 0.8788769841269841,
+   "informed_net": 0.01666666666666667,
+   "complete": false
+  },
+  {
+   "config": "g1.0_t0.0025_q0.15_f1.0",
+   "single_excess": 0.4375,
+   "sustained_excess": 28.3125,
+   "sustained_unarmed": 0.8774965277777778,
+   "informed_net": 0.07968750000000002,
+   "complete": true
+  },
+  {
+   "config": "g1.0_t0.0025_q0.15_f1.5",
+   "single_excess": 0.4375,
+   "sustained_excess": 24.6875,
+   "sustained_unarmed": 0.8775069444444444,
+   "informed_net": 0.04218750000000002,
+   "complete": true
+  },
+  {
+   "config": "g1.0_t0.0025_q0.225_f0.75",
+   "single_excess": 0.35714285714285715,
+   "sustained_excess": 34.42857142857143,
+   "sustained_unarmed": 0.868170634920635,
+   "informed_net": 0.07500000000000001,
+   "complete": false
+  },
+  {
+   "config": "g1.0_t0.0025_q0.225_f1.0",
+   "single_excess": 0.4375,
+   "sustained_excess": 31.6875,
+   "sustained_unarmed": 0.8662465277777778,
+   "informed_net": 0.09375000000000001,
+   "complete": true
+  },
+  {
+   "config": "g1.0_t0.0025_q0.225_f1.5",
+   "single_excess": 0.5,
+   "sustained_excess": 27.4375,
+   "sustained_unarmed": 0.8667118055555556,
+   "informed_net": 0.290625,
+   "complete": true
+  },
+  {
+   "config": "g1.0_t0.0025_q0.3_f0.75",
+   "single_excess": 0.5,
+   "sustained_excess": 38.142857142857146,
+   "sustained_unarmed": 0.8556190476190476,
+   "informed_net": 0.1416666666666667,
+   "complete": false
+  },
+  {
+   "config": "g1.0_t0.0025_q0.3_f1.0",
+   "single_excess": 0.5625,
+   "sustained_excess": 35.1875,
+   "sustained_unarmed": 0.8535347222222222,
+   "informed_net": 0.12656250000000002,
+   "complete": true
+  },
+  {
+   "config": "g1.0_t0.0025_q0.3_f1.5",
+   "single_excess": 0.5625,
+   "sustained_excess": 31.375,
+   "sustained_unarmed": 0.8538819444444445,
+   "informed_net": 0.27656250000000004,
+   "complete": true
+  },
+  {
+   "config": "g1.0_t0.005_q0.15_f0.75",
+   "single_excess": 0.2857142857142857,
+   "sustained_excess": -1.1428571428571428,
+   "sustained_unarmed": 0.9297738095238096,
+   "informed_net": 0.06666666666666668,
+   "complete": false
+  },
+  {
+   "config": "g1.0_t0.005_q0.15_f1.0",
+   "single_excess": 0.375,
+   "sustained_excess": -3.25,
+   "sustained_unarmed": 0.9296111111111112,
+   "informed_net": 0.05625000000000001,
+   "complete": true
+  },
+  {
+   "config": "g1.0_t0.005_q0.15_f1.5",
+   "single_excess": 0.4375,
+   "sustained_excess": -7.0625,
+   "sustained_unarmed": 0.9309722222222223,
+   "informed_net": 0.08437500000000002,
+   "complete": true
+  },
+  {
+   "config": "g1.0_t0.005_q0.225_f0.75",
+   "single_excess": 0.35714285714285715,
+   "sustained_excess": -0.6428571428571429,
+   "sustained_unarmed": 0.9230793650793652,
+   "informed_net": 0.10000000000000002,
+   "complete": false
+  },
+  {
+   "config": "g1.0_t0.005_q0.225_f1.0",
+   "single_excess": 0.4375,
+   "sustained_excess": -3.0625,
+   "sustained_unarmed": 0.923875,
+   "informed_net": 0.17812500000000003,
+   "complete": true
+  },
+  {
+   "config": "g1.0_t0.005_q0.225_f1.5",
+   "single_excess": 0.5,
+   "sustained_excess": -6.75,
+   "sustained_unarmed": 0.9241319444444445,
+   "informed_net": 0.11718750000000003,
+   "complete": true
+  },
+  {
+   "config": "g1.0_t0.005_q0.3_f0.75",
+   "single_excess": 0.5,
+   "sustained_excess": 0.07142857142857142,
+   "sustained_unarmed": 0.9155317460317461,
+   "informed_net": 0.05000000000000002,
+   "complete": false
+  },
+  {
+   "config": "g1.0_t0.005_q0.3_f1.0",
+   "single_excess": 0.5,
+   "sustained_excess": -2.5,
+   "sustained_unarmed": 0.9161388888888888,
+   "informed_net": 0.16875,
+   "complete": true
+  },
+  {
+   "config": "g1.0_t0.005_q0.3_f1.5",
+   "single_excess": 0.5,
+   "sustained_excess": -6.375,
+   "sustained_unarmed": 0.9167638888888889,
+   "informed_net": 0.25781250000000006,
+   "complete": true
+  },
+  {
+   "config": "g1.0_t0.01_q0.15_f0.75",
+   "single_excess": 0.2857142857142857,
+   "sustained_excess": -4.714285714285714,
+   "sustained_unarmed": 0.9398412698412698,
+   "informed_net": 0.0,
+   "complete": false
+  },
+  {
+   "config": "g1.0_t0.01_q0.15_f1.0",
+   "single_excess": 0.3125,
+   "sustained_excess": -6.6875,
+   "sustained_unarmed": 0.9391944444444444,
+   "informed_net": 0.037500000000000006,
+   "complete": true
+  },
+  {
+   "config": "g1.0_t0.01_q0.15_f1.5",
+   "single_excess": 0.3125,
+   "sustained_excess": -10.125,
+   "sustained_unarmed": 0.941232638888889,
+   "informed_net": 0.05156250000000001,
+   "complete": true
+  },
+  {
+   "config": "g1.0_t0.01_q0.225_f0.75",
+   "single_excess": 0.2857142857142857,
+   "sustained_excess": -4.714285714285714,
+   "sustained_unarmed": 0.9343095238095239,
+   "informed_net": 0.08333333333333333,
+   "complete": false
+  },
+  {
+   "config": "g1.0_t0.01_q0.225_f1.0",
+   "single_excess": 0.375,
+   "sustained_excess": -6.5625,
+   "sustained_unarmed": 0.9331423611111112,
+   "informed_net": 0.018750000000000003,
+   "complete": true
+  },
+  {
+   "config": "g1.0_t0.01_q0.225_f1.5",
+   "single_excess": 0.4375,
+   "sustained_excess": -10.0,
+   "sustained_unarmed": 0.9345555555555556,
+   "informed_net": 0.10781250000000002,
+   "complete": true
+  },
+  {
+   "config": "g1.0_t0.01_q0.3_f0.75",
+   "single_excess": 0.35714285714285715,
+   "sustained_excess": -4.642857142857143,
+   "sustained_unarmed": 0.9281269841269841,
+   "informed_net": 0.09166666666666669,
+   "complete": false
+  },
+  {
+   "config": "g1.0_t0.01_q0.3_f1.0",
+   "single_excess": 0.375,
+   "sustained_excess": -6.5625,
+   "sustained_unarmed": 0.9270173611111112,
+   "informed_net": 0.16875,
+   "complete": true
+  },
+  {
+   "config": "g1.0_t0.01_q0.3_f1.5",
+   "single_excess": 0.5,
+   "sustained_excess": -9.9375,
+   "sustained_unarmed": 0.9278124999999999,
+   "informed_net": 0.19218750000000004,
+   "complete": true
+  },
+  {
+   "config": "g2.0_t0.0025_q0.15_f0.75",
+   "single_excess": 0.2857142857142857,
+   "sustained_excess": 15.571428571428571,
+   "sustained_unarmed": 0.9189484126984127,
+   "informed_net": 0.03333333333333334,
+   "complete": false
+  },
+  {
+   "config": "g2.0_t0.0025_q0.15_f1.0",
+   "single_excess": 0.375,
+   "sustained_excess": 14.4375,
+   "sustained_unarmed": 0.9173333333333333,
+   "informed_net": 0.10312500000000002,
+   "complete": true
+  },
+  {
+   "config": "g2.0_t0.0025_q0.15_f1.5",
+   "single_excess": 0.4375,
+   "sustained_excess": 10.6875,
+   "sustained_unarmed": 0.9170486111111111,
+   "informed_net": 0.11718750000000001,
+   "complete": true
+  },
+  {
+   "config": "g2.0_t0.0025_q0.225_f0.75",
+   "single_excess": 0.35714285714285715,
+   "sustained_excess": 17.714285714285715,
+   "sustained_unarmed": 0.911579365079365,
+   "informed_net": 0.1166666666666667,
+   "complete": false
+  },
+  {
+   "config": "g2.0_t0.0025_q0.225_f1.0",
+   "single_excess": 0.4375,
+   "sustained_excess": 16.875,
+   "sustained_unarmed": 0.909875,
+   "informed_net": 0.16875,
+   "complete": true
+  },
+  {
+   "config": "g2.0_t0.0025_q0.225_f1.5",
+   "single_excess": 0.5,
+   "sustained_excess": 12.9375,
+   "sustained_unarmed": 0.90925,
+   "informed_net": 0.24843750000000006,
+   "complete": true
+  },
+  {
+   "config": "g2.0_t0.0025_q0.3_f0.75",
+   "single_excess": 0.5,
+   "sustained_excess": 19.928571428571427,
+   "sustained_unarmed": 0.9030515873015873,
+   "informed_net": 0.10000000000000002,
+   "complete": false
+  },
+  {
+   "config": "g2.0_t0.0025_q0.3_f1.0",
+   "single_excess": 0.5625,
+   "sustained_excess": 18.6875,
+   "sustained_unarmed": 0.9011701388888889,
+   "informed_net": 0.15468750000000003,
+   "complete": true
+  },
+  {
+   "config": "g2.0_t0.0025_q0.3_f1.5",
+   "single_excess": 0.5,
+   "sustained_excess": 15.125,
+   "sustained_unarmed": 0.9007986111111111,
+   "informed_net": 0.28125,
+   "complete": true
+  },
+  {
+   "config": "g2.0_t0.005_q0.15_f0.75",
+   "single_excess": 0.2857142857142857,
+   "sustained_excess": -4.714285714285714,
+   "sustained_unarmed": 0.9378809523809524,
+   "informed_net": 0.03333333333333334,
+   "complete": false
+  },
+  {
+   "config": "g2.0_t0.005_q0.15_f1.0",
+   "single_excess": 0.375,
+   "sustained_excess": -6.5625,
+   "sustained_unarmed": 0.9372256944444445,
+   "informed_net": 0.04687500000000001,
+   "complete": true
+  },
+  {
+   "config": "g2.0_t0.005_q0.15_f1.5",
+   "single_excess": 0.4375,
+   "sustained_excess": -10.0,
+   "sustained_unarmed": 0.937701388888889,
+   "informed_net": 0.06562500000000002,
+   "complete": true
+  },
+  {
+   "config": "g2.0_t0.005_q0.225_f0.75",
+   "single_excess": 0.35714285714285715,
+   "sustained_excess": -4.642857142857143,
+   "sustained_unarmed": 0.9321547619047621,
+   "informed_net": 0.10000000000000002,
+   "complete": false
+  },
+  {
+   "config": "g2.0_t0.005_q0.225_f1.0",
+   "single_excess": 0.375,
+   "sustained_excess": -6.5625,
+   "sustained_unarmed": 0.9318854166666667,
+   "informed_net": 0.08437500000000002,
+   "complete": true
+  },
+  {
+   "config": "g2.0_t0.005_q0.225_f1.5",
+   "single_excess": 0.4375,
+   "sustained_excess": -10.0,
+   "sustained_unarmed": 0.9317395833333334,
+   "informed_net": 0.15468750000000003,
+   "complete": true
+  },
+  {
+   "config": "g2.0_t0.005_q0.3_f0.75",
+   "single_excess": 0.5,
+   "sustained_excess": -4.5,
+   "sustained_unarmed": 0.9258134920634921,
+   "informed_net": 0.08333333333333336,
+   "complete": false
+  },
+  {
+   "config": "g2.0_t0.005_q0.3_f1.0",
+   "single_excess": 0.5,
+   "sustained_excess": -6.5,
+   "sustained_unarmed": 0.9251215277777778,
+   "informed_net": 0.17343750000000005,
+   "complete": true
+  },
+  {
+   "config": "g2.0_t0.005_q0.3_f1.5",
+   "single_excess": 0.5,
+   "sustained_excess": -9.9375,
+   "sustained_unarmed": 0.9252013888888889,
+   "informed_net": 0.12656250000000002,
+   "complete": true
+  },
+  {
+   "config": "g2.0_t0.01_q0.15_f0.75",
+   "single_excess": 0.2857142857142857,
+   "sustained_excess": -4.857142857142857,
+   "sustained_unarmed": 0.9422936507936509,
+   "informed_net": 0.04166666666666668,
+   "complete": false
+  },
+  {
+   "config": "g2.0_t0.01_q0.15_f1.0",
+   "single_excess": 0.3125,
+   "sustained_excess": -6.6875,
+   "sustained_unarmed": 0.9411006944444444,
+   "informed_net": -0.028125000000000004,
+   "complete": true
+  },
+  {
+   "config": "g2.0_t0.01_q0.15_f1.5",
+   "single_excess": 0.1875,
+   "sustained_excess": -10.125,
+   "sustained_unarmed": 0.9434548611111111,
+   "informed_net": 0.014062500000000006,
+   "complete": true
+  },
+  {
+   "config": "g2.0_t0.01_q0.225_f0.75",
+   "single_excess": 0.2857142857142857,
+   "sustained_excess": -4.857142857142857,
+   "sustained_unarmed": 0.9370555555555554,
+   "informed_net": 0.05000000000000001,
+   "complete": false
+  },
+  {
+   "config": "g2.0_t0.01_q0.225_f1.0",
+   "single_excess": 0.375,
+   "sustained_excess": -6.625,
+   "sustained_unarmed": 0.935579861111111,
+   "informed_net": 0.060937500000000006,
+   "complete": true
+  },
+  {
+   "config": "g2.0_t0.01_q0.225_f1.5",
+   "single_excess": 0.3125,
+   "sustained_excess": -10.0,
+   "sustained_unarmed": 0.93725,
+   "informed_net": 0.014062500000000002,
+   "complete": true
+  },
+  {
+   "config": "g2.0_t0.01_q0.3_f0.75",
+   "single_excess": 0.35714285714285715,
+   "sustained_excess": -4.642857142857143,
+   "sustained_unarmed": 0.9308849206349207,
+   "informed_net": 0.1166666666666667,
+   "complete": false
+  },
+  {
+   "config": "g2.0_t0.01_q0.3_f1.0",
+   "single_excess": 0.375,
+   "sustained_excess": -6.625,
+   "sustained_unarmed": 0.9296180555555555,
+   "informed_net": 0.014062500000000002,
+   "complete": true
+  },
+  {
+   "config": "g2.0_t0.01_q0.3_f1.5",
+   "single_excess": 0.375,
+   "sustained_excess": -9.9375,
+   "sustained_unarmed": 0.9308472222222222,
+   "informed_net": 0.07500000000000002,
+   "complete": true
+  }
+ ],
+ "spearman_complete_configs": {
+  "single_excess": 0.8856162167092071,
+  "sustained_excess": -0.013371483949226621,
+  "sustained_unarmed": 0.44958729481698595
+ },
+ "n": 54,
+ "note": "descriptive; no other associations examined"
+}

@@ -1,0 +1,5407 @@
+{
+  "provenance": {
+    "revision": "5700eaa0d397e1a7dc055ce69ce9ec7e1d32cc7f",
+    "files": {
+      "lab/dynamic_parts_bench.py": "f5efca300f9fa47f480ab7a245e302ea4327aa6a85f31a1976d12997b58180b1",
+      "mixed_feedback.py": "06157fe5e3532c625ba1494e4d23328b9988041e80c5469b2de2e94d3582131e",
+      "chip.py": "d0014cd1ab350ada938ee75f12a12445236895f13a451afd9a70aec0db29d037",
+      "units.py": "dfdd23e62a79251c579cc8d43badea5894cd167d1f6229a560bd83fb0b2bf1e8",
+      "minimal/spice.py": "d4c22084836781ee19df3d334b099ad81e4f493b902cfc018afd52dce5936507"
+    },
+    "dirty": [
+      " M ABSTRACT.md",
+      " M MIXED_FEEDBACK.md",
+      " M PARTS.md",
+      " M PROGRAMME.md",
+      " M QUESTIONS.md",
+      " M README.md",
+      " M discrete/NOTEBOOK.md",
+      "?? lab/build_progress_deck.py",
+      "?? lab/dynamic_parts_bench.py",
+      "?? lab/dynamic_parts_bench_v1.py",
+      "?? lab/dynamic_parts_diagnose.py",
+      "?? lab/dynamic_parts_failure.py",
+      "?? lab/dynamic_parts_margin.py",
+      "?? lab/dynamic_parts_report.py",
+      "?? lab/dynamic_parts_view.py",
+      "?? lab/dynamic_parts_view_v1.py",
+      "?? lab/gate_attribution_audit.py",
+      "?? lab/gate_contribution_capture.py",
+      "?? lab/gate_contribution_review.py",
+      "?? lab/gate_test_review.py",
+      "?? lab/hj_result_review.py",
+      "?? lab/initial_prior_replay.py",
+      "?? lab/market_ledger_capture.py",
+      "?? lab/market_transfer_cases.py",
+      "?? lab/queue_results_review.py",
+      "?? lab/spare_allowance.py",
+      "?? lab/spare_allowance_checks.py",
+      "?? lab/spare_allowance_compare.py",
+      "?? lab/spare_allowance_compare_perlife.py",
+      "?? lab/spare_allowance_experiment.py",
+      "?? lab/spare_allowance_survival.py",
+      "?? lab/spare_allowance_survival_diag.py",
+      "?? lab/test_dynamic_parts_metrics.py",
+      "?? lab/v/claude_kl_assignment.md",
+      "?? lab/v/claude_kl_session.jsonl",
+      "?? lab/v/claude_kl_stderr.log",
+      "?? lab/v/dynamic_parts/",
+      "?? lab/v/gate_attribution_audit.json",
+      "?? lab/v/gate_attribution_audit.log",
+      "?? lab/v/gate_contribution_capture.json",
+      "?? lab/v/gate_contribution_capture.log",
+      "?? lab/v/gate_contribution_capture_analysis.log",
+      "?? lab/v/gate_contribution_capture_capture.json",
+      "?? lab/v/gate_contribution_capture_checks.log",
+      "?? lab/v/gate_contribution_review.json",
+      "?? lab/v/gate_contribution_review.log",
+      "?? lab/v/gate_test_review.json",
+      "?? lab/v/gate_test_review.log",
+      "?? lab/v/hj_result_review.json",
+      "?? lab/v/hj_result_review.log",
+      "?? lab/v/hj_result_review_failed_field.json",
+      "?? lab/v/hj_result_review_failed_field.log",
+      "?? lab/v/initial_prior_replay.json",
+      "?? lab/v/initial_prior_replay.log",
+      "?? lab/v/initial_prior_replay_checks.json",
+      "?? lab/v/initial_prior_replay_checks.log",
+      "?? lab/v/initial_prior_replay_run1.json",
+      "?? lab/v/market_ledger_capture.json",
+      "?? lab/v/market_ledger_capture.log",
+      "?? lab/v/market_ledger_capture_capture.json",
+      "?? lab/v/market_ledger_capture_capture.log",
+      "?? lab/v/market_ledger_capture_checks.json",
+      "?? lab/v/market_ledger_capture_checks.log",
+      "?? lab/v/market_ledger_capture_run1.json",
+      "?? lab/v/market_transfer_cases.json",
+      "?? lab/v/market_transfer_cases.log",
+      "?? lab/v/market_transfer_cases_checks.json",
+      "?? lab/v/market_transfer_cases_checks.log",
+      "?? lab/v/market_transfer_cases_run1.json",
+      "?? lab/v/progress_deck_preview/",
+      "?? lab/v/progress_deck_validation.json",
+      "?? lab/v/queue_results_review.json",
+      "?? lab/v/queue_results_review.log",
+      "?? lab/v/simple_learner_progress_review.pptx",
+      "?? lab/v/simple_learner_progress_review_outline.md",
+      "?? lab/v/spare_allowance_checks.json",
+      "?? lab/v/spare_allowance_checks.log",
+      "?? lab/v/spare_allowance_checks_failed_corruption_fixture.log",
+      "?? lab/v/spare_allowance_checks_failed_d82_allowance.log",
+      "?? lab/v/spare_allowance_checks_failed_fixed_count.json",
+      "?? lab/v/spare_allowance_checks_failed_fixed_count.log",
+      "?? lab/v/spare_allowance_checks_failed_import_order.log",
+      "?? lab/v/spare_allowance_checks_v1.json",
+      "?? lab/v/spare_allowance_checks_v1.log",
+      "?? lab/v/spare_allowance_compare.json",
+      "?? lab/v/spare_allowance_compare.log",
+      "?? lab/v/spare_allowance_compare_failed_syntax.log",
+      "?? lab/v/spare_allowance_compare_meta.json",
+      "?? lab/v/spare_allowance_compare_new_capture.json",
+      "?? lab/v/spare_allowance_compare_perlife.json",
+      "?? lab/v/spare_allowance_compare_perlife.log",
+      "?? lab/v/spare_allowance_compare_run.log",
+      "?? lab/v/spare_allowance_compare_timeout.log",
+      "?? lab/v/spare_allowance_experiment_v1_pilot_source.py",
+      "?? lab/v/spare_allowance_pilot.json",
+      "?? lab/v/spare_allowance_pilot.log",
+      "?? lab/v/spare_allowance_pilot_analysis.log",
+      "?? lab/v/spare_allowance_pilot_analysis.log.bak",
+      "?? lab/v/spare_allowance_pilot_capture.json",
+      "?? lab/v/spare_allowance_pilot_v1.json",
+      "?? lab/v/spare_allowance_pilot_v1.log",
+      "?? lab/v/spare_allowance_pilot_v1_analysis.log",
+      "?? lab/v/spare_allowance_pilot_v1_capture.json",
+      "?? lab/v/spare_allowance_survival.json",
+      "?? lab/v/spare_allowance_survival.log",
+      "?? lab/v/spare_allowance_survival_analyse.log",
+      "?? lab/v/spare_allowance_survival_capture.json",
+      "?? lab/v/spare_allowance_survival_diag.log",
+      "?? lab/v/spare_allowance_survival_run.log"
+    ]
+  },
+  "script_sha256": "29f933c0536f1225ea742a284f962adb8d8981833b172b3782a9ccd86506ef6f",
+  "analysis": [
+    {
+      "seed": 51000,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            0.09179170033853973,
+            0.041013380359802704
+          ],
+          "residual": 9.168189937810218e-14,
+          "jacobian": [
+            [
+              54.62567714968614,
+              -225.5021833855253
+            ],
+            [
+              3.5445459856805424,
+              -5.256436574717746
+            ]
+          ],
+          "max_real_per_s": 34.54180178851424,
+          "trace_per_s": 49.369240574968394,
+          "det_per_s2": 512.1664515930279,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 3.0416235966156517e-12,
+          "jacobian": [
+            [
+              107.76708906430115,
+              -234.95840263492715
+            ],
+            [
+              3.704977779969749,
+              -5.256436574713481
+            ]
+          ],
+          "max_real_per_s": 99.45349712283296,
+          "trace_per_s": 102.51065248958767,
+          "det_per_s2": 304.0447924715931,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            0.07739015027541515,
+            0.04241064829723731
+          ],
+          "residual": 6.161517090904361e-09,
+          "jacobian": [
+            [
+              71.44851653751651,
+              -206.45266104756598
+            ],
+            [
+              4.909102632368036,
+              -5.256436574717746
+            ]
+          ],
+          "max_real_per_s": 54.48330619705961,
+          "trace_per_s": 66.19207996279877,
+          "det_per_s2": 637.9327062708643,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            0.07930827137738791,
+            0.030350007423349132
+          ],
+          "residual": 1.0991740907527144e-15,
+          "jacobian": [
+            [
+              62.923434042637844,
+              -275.4348917614048
+            ],
+            [
+              3.371484739664477,
+              -5.256436574717746
+            ]
+          ],
+          "max_real_per_s": 44.114177874794194,
+          "trace_per_s": 57.6669974679201,
+          "det_per_s2": 597.871494236152,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            0.08016405770041221,
+            0.03708074411500919
+          ],
+          "residual": 6.066048267785171e-17,
+          "jacobian": [
+            [
+              61.9528709390622,
+              -227.3707418484239
+            ],
+            [
+              3.600427713951872,
+              -4.6933775193253835
+            ]
+          ],
+          "max_real_per_s": 45.711862741011046,
+          "trace_per_s": 57.25949341973682,
+          "det_per_s2": 527.8637085698007,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            0.09179170033853971,
+            0.04101338035980268
+          ],
+          "residual": 7.963252418605008e-14,
+          "jacobian": [
+            [
+              52.37177323785884,
+              -216.19776320431416
+            ],
+            [
+              3.776114291947844,
+              -5.5998441986267435
+            ]
+          ],
+          "max_real_per_s": 28.263427336244522,
+          "trace_per_s": 46.7719290392321,
+          "det_per_s2": 523.1136929851473,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51001,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            -0.024920910635041472,
+            -0.03125509495224083
+          ],
+          "residual": 4.318161546675034e-12,
+          "jacobian": [
+            [
+              89.1914016470243,
+              -234.48765738318363
+            ],
+            [
+              3.89559261242648,
+              -4.267295281615893
+            ]
+          ],
+          "max_real_per_s": 78.10140814449797,
+          "trace_per_s": 84.92410636540842,
+          "det_per_s2": 532.8623383980666,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 2.8733203198162072e-12,
+          "jacobian": [
+            [
+              106.67050175752746,
+              -242.4237938301418
+            ],
+            [
+              3.943900399381264,
+              -4.267295281607599
+            ]
+          ],
+          "max_real_per_s": 97.25269883478438,
+          "trace_per_s": 102.40320647591986,
+          "det_per_s2": 500.9007684696049,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            -0.014949429405951557,
+            -0.026244357124911126
+          ],
+          "residual": 3.0557930668644323e-15,
+          "jacobian": [
+            [
+              85.98271422953152,
+              -230.87950899717984
+            ],
+            [
+              4.650029197117859,
+              -4.2672952816081935
+            ]
+          ],
+          "max_real_per_s": 71.88462676100585,
+          "trace_per_s": 81.71541894792333,
+          "det_per_s2": 706.6828271215763,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            -0.023565647570291868,
+            -0.030569668929045744
+          ],
+          "residual": 2.272167897839338e-12,
+          "jacobian": [
+            [
+              93.42136977705587,
+              -244.18320125704253
+            ],
+            [
+              3.9699753762627488,
+              -4.267295281615893
+            ]
+          ],
+          "max_real_per_s": 82.21169579471454,
+          "trace_per_s": 89.15407449543999,
+          "det_per_s2": 570.744725835746,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            -0.03125284364818043,
+            -0.033150975886089944
+          ],
+          "residual": 7.209090465397035e-11,
+          "jacobian": [
+            [
+              81.8267910697746,
+              -233.42809263129894
+            ],
+            [
+              3.87612345284102,
+              -4.765512673611598
+            ]
+          ],
+          "max_real_per_s": 69.67161963378054,
+          "trace_per_s": 77.061278396163,
+          "det_per_s2": 514.8494945161447,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            -0.02492091063504144,
+            -0.03125509495224082
+          ],
+          "residual": 4.385293644102235e-12,
+          "jacobian": [
+            [
+              90.55634808037502,
+              -238.07615453392552
+            ],
+            [
+              4.0872754719290345,
+              -4.477267792460728
+            ]
+          ],
+          "max_real_per_s": 78.88314779704815,
+          "trace_per_s": 86.0790802879143,
+          "det_per_s2": 567.6378062145741,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51002,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            0.023225179826017805,
+            0.027930137157078747
+          ],
+          "residual": 9.519275848121636e-13,
+          "jacobian": [
+            [
+              101.36711334058813,
+              -216.90705717952312
+            ],
+            [
+              5.979867371438447,
+              -4.373081151300681
+            ]
+          ],
+          "max_real_per_s": 87.20323974062933,
+          "trace_per_s": 96.99403218928745,
+          "det_per_s2": 853.7888211510773,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 2.517152491750738e-12,
+          "jacobian": [
+            [
+              103.86602463306953,
+              -217.29720372345798
+            ],
+            [
+              6.011503470315357,
+              -4.373081151301437
+            ]
+          ],
+          "max_real_per_s": 90.02851626417844,
+          "trace_per_s": 99.4929434817681,
+          "det_per_s2": 852.0683396899036,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            0.029837443959264322,
+            0.030788072781475558
+          ],
+          "residual": 9.975110274653611e-12,
+          "jacobian": [
+            [
+              118.18799409793476,
+              -271.0518592835617
+            ],
+            [
+              4.962210948565845,
+              -4.373081151308235
+            ]
+          ],
+          "max_real_per_s": 106.00213834209242,
+          "trace_per_s": 113.81491294662652,
+          "det_per_s2": 828.1708144654116,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            0.023915686286678235,
+            0.026963156511997134
+          ],
+          "residual": 4.065790649366763e-13,
+          "jacobian": [
+            [
+              85.06374637934391,
+              -214.95749339454173
+            ],
+            [
+              5.584755939095703,
+              -4.373081151398884
+            ]
+          ],
+          "max_real_per_s": 68.6163671157849,
+          "trace_per_s": 80.69066522794503,
+          "det_per_s2": 828.4944719294083,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            0.02591285499160659,
+            0.029556979957440485
+          ],
+          "residual": 3.380781190328686e-12,
+          "jacobian": [
+            [
+              103.65697548318275,
+              -216.67994589551526
+            ],
+            [
+              5.971000745804276,
+              -4.675749157998775
+            ]
+          ],
+          "max_real_per_s": 89.9899796823607,
+          "trace_per_s": 98.98122632518397,
+          "det_per_s2": 809.1221027067609,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            0.02322517982601781,
+            0.02793013715707876
+          ],
+          "residual": 8.848995293841697e-13,
+          "jacobian": [
+            [
+              94.03484597938942,
+              -201.21734793006118
+            ],
+            [
+              6.394555363771637,
+              -4.676342767370064
+            ]
+          ],
+          "max_real_per_s": 78.580272600362,
+          "trace_per_s": 89.35850321201936,
+          "det_per_s2": 846.9562996136009,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51003,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            -0.03918035890272531,
+            -0.03496029943914576
+          ],
+          "residual": 1.1493967304076131e-10,
+          "jacobian": [
+            [
+              80.10167625254444,
+              -213.56187662491357
+            ],
+            [
+              5.7062360226350295,
+              -5.3316393737332435
+            ]
+          ],
+          "max_real_per_s": 62.003677648756856,
+          "trace_per_s": 74.7700368788112,
+          "det_per_s2": 791.5612224485205,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 2.6175957261705737e-12,
+          "jacobian": [
+            [
+              87.57533157193986,
+              -215.7272922747342
+            ],
+            [
+              5.777795805772105,
+              -5.331639373718946
+            ]
+          ],
+          "max_real_per_s": 71.31287238307172,
+          "trace_per_s": 82.24369219822091,
+          "det_per_s2": 779.5081585200858,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            -0.03936434919884249,
+            -0.032661555191316666
+          ],
+          "residual": 4.5237150402467964e-11,
+          "jacobian": [
+            [
+              67.65712312584003,
+              -213.8417190919747
+            ],
+            [
+              5.300425688184884,
+              -5.331639373733243
+            ]
+          ],
+          "max_real_per_s": 45.24775950912931,
+          "trace_per_s": 62.32548375210679,
+          "det_per_s2": 772.7287595094722,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            -0.0436822988081533,
+            -0.03844212066309561
+          ],
+          "residual": 1.113640121225473e-09,
+          "jacobian": [
+            [
+              89.02809610963415,
+              -220.99114990240534
+            ],
+            [
+              5.499312870042197,
+              -5.331639373733243
+            ]
+          ],
+          "max_real_per_s": 73.63880000954009,
+          "trace_per_s": 83.69645673590091,
+          "det_per_s2": 740.633772237089,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            -0.03857698166003561,
+            -0.03527387276857474
+          ],
+          "residual": 1.0936562301866143e-10,
+          "jacobian": [
+            [
+              83.31018865193738,
+              -213.47512766818676
+            ],
+            [
+              5.708855840811461,
+              -5.186612325920294
+            ]
+          ],
+          "max_real_per_s": 66.25042947463237,
+          "trace_per_s": 78.12357632601709,
+          "det_per_s2": 786.6010781196165,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            -0.03918035890272527,
+            -0.03496029943914571
+          ],
+          "residual": 1.2809601124574265e-10,
+          "jacobian": [
+            [
+              89.27754952147723,
+              -238.02599281446464
+            ],
+            [
+              5.500927835075981,
+              -5.139809030147381
+            ]
+          ],
+          "max_real_per_s": 72.38875793710973,
+          "trace_per_s": 84.13774049132985,
+          "det_per_s2": 850.4942541247653,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51004,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            0.0015008230407943773,
+            0.0020169746722436327
+          ],
+          "residual": 2.651862903250857e-09,
+          "jacobian": [
+            [
+              91.4668588971272,
+              -301.7490588783686
+            ],
+            [
+              5.196526620561328,
+              -4.7165032878011255
+            ]
+          ],
+          "max_real_per_s": 70.66551992616282,
+          "trace_per_s": 86.75035560932606,
+          "det_per_s2": 1136.6432764776287,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 2.8321790851533415e-12,
+          "jacobian": [
+            [
+              104.54150790138742,
+              -310.12183908500907
+            ],
+            [
+              5.196735844303967,
+              -4.716503287717351
+            ]
+          ],
+          "max_real_per_s": 86.96256269781283,
+          "trace_per_s": 99.82500461367007,
+          "det_per_s2": 1118.5509115547106,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            0.002774902459038936,
+            0.0035888125623564273
+          ],
+          "residual": 2.9233523453693128e-15,
+          "jacobian": [
+            [
+              85.79880899099071,
+              -274.4180995764003
+            ],
+            [
+              5.451540731574056,
+              -4.716503287717475
+            ]
+          ],
+          "max_real_per_s": 64.04123778565597,
+          "trace_per_s": 81.08230570327324,
+          "det_per_s2": 1091.3310826336406,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            0.006046576556023522,
+            0.006755331504423152
+          ],
+          "residual": 1.749415533407378e-09,
+          "jacobian": [
+            [
+              84.24319100543347,
+              -250.5625877584067
+            ],
+            [
+              4.995316002360143,
+              -4.716503287719593
+            ]
+          ],
+          "max_real_per_s": 66.7228968588693,
+          "trace_per_s": 79.52668771771388,
+          "det_per_s2": 854.3060168772197,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            0.0018055978535544428,
+            0.0021164146114715887
+          ],
+          "residual": 1.3812377379632093e-09,
+          "jacobian": [
+            [
+              92.48473859590852,
+              -301.6698110017921
+            ],
+            [
+              5.196451157518984,
+              -5.243219752753232
+            ]
+          ],
+          "max_real_per_s": 72.2577289222187,
+          "trace_per_s": 87.24151884315529,
+          "det_per_s2": 1082.694630334508,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            0.0015008230407945258,
+            0.0020169746722436895
+          ],
+          "residual": 2.815346837085866e-09,
+          "jacobian": [
+            [
+              97.10578328323052,
+              -320.3518637332142
+            ],
+            [
+              4.955472844596055,
+              -4.4977165846662555
+            ]
+          ],
+          "max_real_per_s": 77.82105787422336,
+          "trace_per_s": 92.60806669856427,
+          "det_per_s2": 1150.7406695056845,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51005,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            0.11483539740762991,
+            0.09594864956210608
+          ],
+          "residual": 2.2036345465104476e-15,
+          "jacobian": [
+            [
+              2.217445287774809,
+              -251.07405913994307
+            ],
+            [
+              4.493658079434269,
+              -6.145144466730991
+            ]
+          ],
+          "max_real_per_s": -1.963849589478091,
+          "trace_per_s": -3.927699178956182,
+          "det_per_s2": 1114.6144527501142,
+          "local_unstable": false
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 2.9182261512937375e-12,
+          "jacobian": [
+            [
+              93.01372021476367,
+              -277.64563359541785
+            ],
+            [
+              5.110537230714144,
+              -6.145144466618556
+            ]
+          ],
+          "max_real_per_s": 75.6709403645308,
+          "trace_per_s": 86.8685757481451,
+          "det_per_s2": 847.3355993372394,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            0.11474239188985262,
+            0.09359769212457682
+          ],
+          "residual": 4.351434088807317e-15,
+          "jacobian": [
+            [
+              1.2902171864211311,
+              -260.22742130994607
+            ],
+            [
+              4.387516506869817,
+              -6.145144466730991
+            ]
+          ],
+          "max_real_per_s": -2.4274636401549294,
+          "trace_per_s": -4.85492728030986,
+          "det_per_s2": 1133.823535533537,
+          "local_unstable": false
+        },
+        "nominal_slopes": {
+          "root_V": [
+            0.11075274878644846,
+            0.10200210274506347
+          ],
+          "residual": 1.525007511438713e-14,
+          "jacobian": [
+            [
+              2.564683794491893,
+              -229.434715607754
+            ],
+            [
+              4.885242734722653,
+              -6.14514446683805
+            ]
+          ],
+          "max_real_per_s": -1.790230336173079,
+          "trace_per_s": -3.580460672346157,
+          "det_per_s2": 1105.0839250870272,
+          "local_unstable": false
+        },
+        "nominal_leaks": {
+          "root_V": [
+            0.10443631382238162,
+            0.09821876534032671
+          ],
+          "residual": 4.354359835689366e-15,
+          "jacobian": [
+            [
+              14.549429986848248,
+              -248.47944140365033
+            ],
+            [
+              4.588524025355508,
+              -5.52226434138209
+            ]
+          ],
+          "max_real_per_s": 4.513582822733079,
+          "trace_per_s": 9.027165645466157,
+          "det_per_s2": 1059.8080882837578,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            0.11483539740762988,
+            0.09594864956210608
+          ],
+          "residual": 2.148184191304032e-15,
+          "jacobian": [
+            [
+              2.1087478930780468,
+              -238.76660978112264
+            ],
+            [
+              4.068673465887374,
+              -5.563971667106045
+            ]
+          ],
+          "max_real_per_s": -1.7276118870139987,
+          "trace_per_s": -3.455223774027998,
+          "det_per_s2": 959.7303562261822,
+          "local_unstable": false
+        }
+      }
+    },
+    {
+      "seed": 51006,
+      "cycle_pass": false,
+      "cases": {
+        "actual": {
+          "root_V": [
+            -0.08425809739927453,
+            -0.0749912530348577
+          ],
+          "residual": 3.5705000619322845e-12,
+          "jacobian": [
+            [
+              -6.299584137802853,
+              -145.6137093409039
+            ],
+            [
+              4.943749380311248,
+              -5.394617938705147
+            ]
+          ],
+          "max_real_per_s": -5.847101038253999,
+          "trace_per_s": -11.694202076507999,
+          "det_per_s2": 753.8615349150892,
+          "local_unstable": false
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 2.119350988476301e-12,
+          "jacobian": [
+            [
+              101.70642045512932,
+              -187.3268176848473
+            ],
+            [
+              5.266608556028407,
+              -5.394617938700359
+            ]
+          ],
+          "max_real_per_s": 91.52733293237706,
+          "trace_per_s": 96.31180251642895,
+          "det_per_s2": 437.90974052434836,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            -0.07689668437530751,
+            -0.06178315754566198
+          ],
+          "residual": 8.569890735422361e-13,
+          "jacobian": [
+            [
+              -2.1892457799145624,
+              -189.68160253423127
+            ],
+            [
+              4.52869702138383,
+              -5.394617938705147
+            ]
+          ],
+          "max_real_per_s": -3.7919318593098543,
+          "trace_per_s": -7.583863718619709,
+          "det_per_s2": 870.8206529646463,
+          "local_unstable": false
+        },
+        "nominal_slopes": {
+          "root_V": [
+            -0.07863549653723165,
+            -0.0721095798322746
+          ],
+          "residual": 8.22152329064922e-14,
+          "jacobian": [
+            [
+              2.6228752570806324,
+              -143.19844884747712
+            ],
+            [
+              5.137679686560467,
+              -5.394617938705147
+            ]
+          ],
+          "max_real_per_s": -1.3858713408122574,
+          "trace_per_s": -2.7717426816245143,
+          "det_per_s2": 721.5583518778185,
+          "local_unstable": false
+        },
+        "nominal_leaks": {
+          "root_V": [
+            -0.07897835676814709,
+            -0.07668817493563773
+          ],
+          "residual": 1.8034511101615146e-12,
+          "jacobian": [
+            [
+              -0.7191795407887215,
+              -143.95292230727176
+            ],
+            [
+              4.984228522325823,
+              -4.933479480844795
+            ]
+          ],
+          "max_real_per_s": -2.8263295108167585,
+          "trace_per_s": -5.652659021633517,
+          "det_per_s2": 721.0423187435822,
+          "local_unstable": false
+        },
+        "nominal_caps": {
+          "root_V": [
+            -0.08425809739927453,
+            -0.07499125303485767
+          ],
+          "residual": 4.221448476164485e-12,
+          "jacobian": [
+            [
+              -7.448572526245211,
+              -172.17236108217145
+            ],
+            [
+              5.010408373559463,
+              -5.467356213461745
+            ]
+          ],
+          "max_real_per_s": -6.457964369853478,
+          "trace_per_s": -12.915928739706956,
+          "det_per_s2": 903.3778389444021,
+          "local_unstable": false
+        }
+      }
+    },
+    {
+      "seed": 51007,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            -0.10948942120263674,
+            -0.08459019541907144
+          ],
+          "residual": 1.247645333856629e-09,
+          "jacobian": [
+            [
+              30.802530398638158,
+              -203.80832983310768
+            ],
+            [
+              5.514042962785733,
+              -4.1290970892874235
+            ]
+          ],
+          "max_real_per_s": 13.336716654675367,
+          "trace_per_s": 26.673433309350735,
+          "det_per_s2": 996.6212482616571,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 2.647593638599115e-12,
+          "jacobian": [
+            [
+              85.51587593197036,
+              -213.09901743074002
+            ],
+            [
+              5.902646378318907,
+              -4.129097089299776
+            ]
+          ],
+          "max_real_per_s": 68.10154794275346,
+          "trace_per_s": 81.38677884267058,
+          "det_per_s2": 904.7447890612555,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            -0.11090144554224632,
+            -0.085644306299345
+          ],
+          "residual": 1.878091665947972e-09,
+          "jacobian": [
+            [
+              34.85492668134746,
+              -220.17320520719485
+            ],
+            [
+              5.443887515185786,
+              -4.129097089316466
+            ]
+          ],
+          "max_real_per_s": 15.3629147960155,
+          "trace_per_s": 30.72582959203099,
+          "det_per_s2": 1054.6787866975958,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            -0.12730902670885927,
+            -0.08419086463432474
+          ],
+          "residual": 2.1115631126642868e-15,
+          "jacobian": [
+            [
+              18.280564540973884,
+              -222.23507167371613
+            ],
+            [
+              4.241656777255381,
+              -4.129097089316467
+            ]
+          ],
+          "max_real_per_s": 7.075733725828707,
+          "trace_per_s": 14.151467451657417,
+          "det_per_s2": 867.1626720714567,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            -0.11850428588069777,
+            -0.08866538649726871
+          ],
+          "residual": 2.09954542452117e-15,
+          "jacobian": [
+            [
+              29.3817549056271,
+              -201.59803765705468
+            ],
+            [
+              5.396880005701002,
+              -4.4940994644314305
+            ]
+          ],
+          "max_real_per_s": 12.443827720597834,
+          "trace_per_s": 24.88765544119567,
+          "det_per_s2": 955.9558896344824,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            -0.10948942120263672,
+            -0.08459019541907144
+          ],
+          "residual": 1.2293392835703972e-09,
+          "jacobian": [
+            [
+              30.35063196211762,
+              -200.81829412092426
+            ],
+            [
+              6.134758483313957,
+              -4.593909327080897
+            ]
+          ],
+          "max_real_per_s": 12.878361317518362,
+          "trace_per_s": 25.756722635036724,
+          "det_per_s2": 1092.543682209406,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51008,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            0.04518395876607239,
+            0.06382785240765386
+          ],
+          "residual": 1.761766514083757e-13,
+          "jacobian": [
+            [
+              66.08590342832257,
+              -321.3988472194661
+            ],
+            [
+              4.175625270574255,
+              -4.930980420939751
+            ]
+          ],
+          "max_real_per_s": 30.577461503691406,
+          "trace_per_s": 61.15492300738281,
+          "det_per_s2": 1016.1728524778632,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 3.123974667536673e-12,
+          "jacobian": [
+            [
+              110.71077079574063,
+              -338.07440623174426
+            ],
+            [
+              4.370821155134206,
+              -4.930980420886458
+            ]
+          ],
+          "max_real_per_s": 96.08238167923402,
+          "trace_per_s": 105.77979037485417,
+          "det_per_s2": 931.7501235920984,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            0.04680566266781322,
+            0.06690892550141465
+          ],
+          "residual": 9.45278434905813e-13,
+          "jacobian": [
+            [
+              76.659617533147,
+              -327.3773169116872
+            ],
+            [
+              4.2763839089477145,
+              -4.930980420906829
+            ]
+          ],
+          "max_real_per_s": 52.120558232914895,
+          "trace_per_s": 71.72863711224016,
+          "det_per_s2": 1021.9840170654622,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            0.03745839790252521,
+            0.06480453593734659
+          ],
+          "residual": 1.3169126691257166e-16,
+          "jacobian": [
+            [
+              68.11115030456222,
+              -274.35618048171216
+            ],
+            [
+              4.735876981202203,
+              -4.930980420906829
+            ]
+          ],
+          "max_real_per_s": 37.46129396852991,
+          "trace_per_s": 63.18016988365539,
+          "det_per_s2": 963.462371196659,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            0.04919975781540995,
+            0.06506155337819232
+          ],
+          "residual": 6.403145018017269e-13,
+          "jacobian": [
+            [
+              65.13982713241006,
+              -319.9808513282642
+            ],
+            [
+              4.154327233856772,
+              -5.0945591293044545
+            ]
+          ],
+          "max_real_per_s": 30.022634001552806,
+          "trace_per_s": 60.045268003105605,
+          "det_per_s2": 997.4464639869491,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            0.04518395876607235,
+            0.06382785240765387
+          ],
+          "residual": 1.457920152135333e-13,
+          "jacobian": [
+            [
+              56.239354683729076,
+              -273.5116390379754
+            ],
+            [
+              4.0981222955262036,
+              -4.839457444593497
+            ]
+          ],
+          "max_real_per_s": 25.69994861956779,
+          "trace_per_s": 51.399897239135576,
+          "det_per_s2": 848.7161823241349,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51009,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            -0.05998324417735213,
+            -0.057767162434838926
+          ],
+          "residual": 7.981111316228408e-15,
+          "jacobian": [
+            [
+              55.125466920896116,
+              -309.20103751381924
+            ],
+            [
+              3.939237731213527,
+              -5.097311285009001
+            ]
+          ],
+          "max_real_per_s": 25.01407781794356,
+          "trace_per_s": 50.02815563588712,
+          "det_per_s2": 937.0247288775321,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 2.7923934128858385e-12,
+          "jacobian": [
+            [
+              87.22307749198708,
+              -316.10842358253535
+            ],
+            [
+              4.114583224815787,
+              -5.097311284993146
+            ]
+          ],
+          "max_real_per_s": 69.8744975859853,
+          "trace_per_s": 82.12576620699394,
+          "det_per_s2": 856.0512396839264,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            -0.07182467941259076,
+            -0.07004905193132036
+          ],
+          "residual": 7.110897976705792e-11,
+          "jacobian": [
+            [
+              63.53795449296428,
+              -259.97819946468695
+            ],
+            [
+              4.0653767551577955,
+              -5.097311285009001
+            ]
+          ],
+          "max_real_per_s": 40.21079921651763,
+          "trace_per_s": 58.44064320795528,
+          "det_per_s2": 733.0365964881402,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            -0.047797962823368886,
+            -0.05561038848496516
+          ],
+          "residual": 9.97638914528551e-16,
+          "jacobian": [
+            [
+              57.02688475836117,
+              -272.87366535847383
+            ],
+            [
+              4.566854307684087,
+              -5.0973112849929025
+            ]
+          ],
+          "max_real_per_s": 25.96478673668413,
+          "trace_per_s": 51.929573473368265,
+          "det_per_s2": 955.4904908691082,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            -0.05743923247604317,
+            -0.05708848375494066
+          ],
+          "residual": 9.971192585354056e-16,
+          "jacobian": [
+            [
+              55.80483273001848,
+              -309.66604873608566
+            ],
+            [
+              3.950987224204552,
+              -4.982103202131952
+            ]
+          ],
+          "max_real_per_s": 25.411364763943265,
+          "trace_per_s": 50.82272952788653,
+          "det_per_s2": 945.4611664875156,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            -0.059983244177352096,
+            -0.05776716243483892
+          ],
+          "residual": 8.274077733022327e-15,
+          "jacobian": [
+            [
+              57.163068892456096,
+              -320.6300317436445
+            ],
+            [
+              3.9533883295875696,
+              -5.115621935336807
+            ]
+          ],
+          "max_real_per_s": 26.023723478559642,
+          "trace_per_s": 52.04744695711929,
+          "det_per_s2": 975.150376493198,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51010,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            -0.004830139982583573,
+            -0.06162182306320694
+          ],
+          "residual": 1.8239138395383224e-11,
+          "jacobian": [
+            [
+              93.18408657096653,
+              -265.5041593274362
+            ],
+            [
+              4.268275657251691,
+              -4.920769761770564
+            ]
+          ],
+          "max_real_per_s": 79.80932325055414,
+          "trace_per_s": 88.26331680919597,
+          "det_per_s2": 674.7075046797478,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 2.7923921965631365e-12,
+          "jacobian": [
+            [
+              93.72038800939762,
+              -265.8511227678868
+            ],
+            [
+              4.52088147692421,
+              -4.92076976179366
+            ]
+          ],
+          "max_real_per_s": 79.48026073248882,
+          "trace_per_s": 88.79961824760396,
+          "det_per_s2": 740.7049651606301,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            0.012107113362988831,
+            -0.0532422731207325
+          ],
+          "residual": 2.541749081056006e-12,
+          "jacobian": [
+            [
+              95.21334720077786,
+              -226.58387029547998
+            ],
+            [
+              4.984475363366052,
+              -4.920769761802044
+            ]
+          ],
+          "max_real_per_s": 82.25839760250558,
+          "trace_per_s": 90.29257743897581,
+          "det_per_s2": 660.8787593984022,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            -0.011738987687358208,
+            -0.06407178598741332
+          ],
+          "residual": 7.9363038845121e-12,
+          "jacobian": [
+            [
+              92.85338089593762,
+              -266.69132965125965
+            ],
+            [
+              4.0176874535947285,
+              -4.920769761802044
+            ]
+          ],
+          "max_real_per_s": 80.27696137343173,
+          "trace_per_s": 87.93261113413557,
+          "det_per_s2": 614.5723001285443,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            -0.0034645929386307667,
+            -0.06105302976582634
+          ],
+          "residual": 6.34789928354023e-12,
+          "jacobian": [
+            [
+              86.13283706456292,
+              -265.42790061923284
+            ],
+            [
+              4.277904120227616,
+              -4.871038843601702
+            ]
+          ],
+          "max_real_per_s": 71.20787162076641,
+          "trace_per_s": 81.26179822096123,
+          "det_per_s2": 715.9187146312796,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            -0.004830139982583544,
+            -0.06162182306320693
+          ],
+          "residual": 1.9873684895106525e-11,
+          "jacobian": [
+            [
+              101.59079976348353,
+              -289.45693282150535
+            ],
+            [
+              4.381278608494598,
+              -5.051047548384959
+            ]
+          ],
+          "max_real_per_s": 87.9552566861786,
+          "trace_per_s": 96.53975221509857,
+          "det_per_s2": 755.0515077675082,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51011,
+      "cycle_pass": false,
+      "cases": {
+        "actual": {
+          "root_V": [
+            0.1842139444922142,
+            0.09304187200711098
+          ],
+          "residual": 2.3620411372529294e-15,
+          "jacobian": [
+            [
+              -6.968234476509142,
+              -228.39512557599625
+            ],
+            [
+              5.436779210069795,
+              -6.244827357949311
+            ]
+          ],
+          "max_real_per_s": -6.606530917229227,
+          "trace_per_s": -13.213061834458454,
+          "det_per_s2": 1285.2492917083664,
+          "local_unstable": false
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 3.0811158912194727e-12,
+          "jacobian": [
+            [
+              65.80693729182047,
+              -232.30885196217156
+            ],
+            [
+              6.007581302742347,
+              -6.244827357829305
+            ]
+          ],
+          "max_real_per_s": 29.781054966995583,
+          "trace_per_s": 59.56210993399117,
+          "det_per_s2": 984.6613531745635,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            0.2138543424229838,
+            0.1037646837357007
+          ],
+          "residual": 7.749385401196995e-11,
+          "jacobian": [
+            [
+              -13.6843989418376,
+              -218.50584764315366
+            ],
+            [
+              4.473189805371777,
+              -6.24482735794931
+            ]
+          ],
+          "max_real_per_s": -9.964613149893456,
+          "trace_per_s": -19.92922629978691,
+          "det_per_s2": 1062.874838980554,
+          "local_unstable": false
+        },
+        "nominal_slopes": {
+          "root_V": [
+            0.1801022823926347,
+            0.09329157613318922
+          ],
+          "residual": 2.7351412705180663e-09,
+          "jacobian": [
+            [
+              -10.463155747454943,
+              -283.20562371182865
+            ],
+            [
+              5.683051260393903,
+              -6.24482735794931
+            ]
+          ],
+          "max_real_per_s": -8.353991552702126,
+          "trace_per_s": -16.707983105404253,
+          "det_per_s2": 1674.8126780483394,
+          "local_unstable": false
+        },
+        "nominal_leaks": {
+          "root_V": [
+            0.17552003406696445,
+            0.0965693554698169
+          ],
+          "residual": 1.1723592289471041e-15,
+          "jacobian": [
+            [
+              1.5057972386353349,
+              -227.2061580385533
+            ],
+            [
+              5.526583796699511,
+              -5.523167032815693
+            ]
+          ],
+          "max_real_per_s": -2.0086848970901787,
+          "trace_per_s": -4.017369794180358,
+          "det_per_s2": 1247.3571018596813,
+          "local_unstable": false
+        },
+        "nominal_caps": {
+          "root_V": [
+            0.18421394449221418,
+            0.09304187200711095
+          ],
+          "residual": 1.2924697071141057e-16,
+          "jacobian": [
+            [
+              -6.145714894230134,
+              -201.43571954243436
+            ],
+            [
+              4.921795029811954,
+              -5.65330300621019
+            ]
+          ],
+          "max_real_per_s": -5.899508950220162,
+          "trace_per_s": -11.799017900440324,
+          "det_per_s2": 1026.1689117574101,
+          "local_unstable": false
+        }
+      }
+    },
+    {
+      "seed": 51012,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            0.12265884859414249,
+            0.03863951066437669
+          ],
+          "residual": 1.7220833725903964e-09,
+          "jacobian": [
+            [
+              5.328758486738538,
+              -285.96732421590286
+            ],
+            [
+              4.102888189521074,
+              -4.6908698551953005
+            ]
+          ],
+          "max_real_per_s": 0.31894431577161786,
+          "trace_per_s": 0.6378886315432375,
+          "det_per_s2": 1148.2954445633131,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 3.3591785066148763e-12,
+          "jacobian": [
+            [
+              99.73726479547096,
+              -314.3113079336718
+            ],
+            [
+              4.173305277518284,
+              -4.690869855201533
+            ]
+          ],
+          "max_real_per_s": 85.13425683399043,
+          "trace_per_s": 95.04639494026944,
+          "det_per_s2": 843.8625113139396,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            0.12053383932121946,
+            0.03905828165184093
+          ],
+          "residual": 1.6965162777787302e-10,
+          "jacobian": [
+            [
+              1.489540989183009,
+              -248.30652105037262
+            ],
+            [
+              4.364138907900008,
+              -4.69086985521126
+            ]
+          ],
+          "max_real_per_s": -1.600664433014125,
+          "trace_per_s": -3.201328866028251,
+          "det_per_s2": 1076.6569066769632,
+          "local_unstable": false
+        },
+        "nominal_slopes": {
+          "root_V": [
+            0.12408672946181404,
+            0.04439068492151156
+          ],
+          "residual": 5.64621644598641e-09,
+          "jacobian": [
+            [
+              -1.0991665614321966,
+              -272.9722126229907
+            ],
+            [
+              4.547615902048122,
+              -4.69086985521126
+            ]
+          ],
+          "max_real_per_s": -2.8950182083217264,
+          "trace_per_s": -5.790036416643456,
+          "det_per_s2": 1246.528822230452,
+          "local_unstable": false
+        },
+        "nominal_leaks": {
+          "root_V": [
+            0.12562684937389243,
+            0.03915781283277449
+          ],
+          "residual": 4.859526298617497e-09,
+          "jacobian": [
+            [
+              4.7812438291258905,
+              -285.35453232114946
+            ],
+            [
+              4.09312037345713,
+              -4.939396069797925
+            ]
+          ],
+          "max_real_per_s": -0.07907612033601819,
+          "trace_per_s": -0.1581522406720346,
+          "det_per_s2": 1144.3739929236979,
+          "local_unstable": false
+        },
+        "nominal_caps": {
+          "root_V": [
+            0.12265884859414254,
+            0.03863951066437674
+          ],
+          "residual": 1.6201975089439848e-09,
+          "jacobian": [
+            [
+              5.010062338382955,
+              -268.8645250933284
+            ],
+            [
+              4.153228584566971,
+              -4.7484244925087955
+            ]
+          ],
+          "max_real_per_s": 0.1308189229370802,
+          "trace_per_s": 0.2616378458741595,
+          "det_per_s2": 1092.8659282770618,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51013,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            0.1700868066579421,
+            0.08521223984660616
+          ],
+          "residual": 3.7550998628534226e-11,
+          "jacobian": [
+            [
+              13.808348598072062,
+              -188.73548756839227
+            ],
+            [
+              2.8615214361862837,
+              -4.878866194183779
+            ]
+          ],
+          "max_real_per_s": 4.4647412019441415,
+          "trace_per_s": 8.929482403888283,
+          "det_per_s2": 472.7015582733858,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 2.767804469325582e-12,
+          "jacobian": [
+            [
+              141.8409725653308,
+              -234.27362930253992
+            ],
+            [
+              3.2304678266196705,
+              -4.878866194168563
+            ]
+          ],
+          "max_real_per_s": 136.4874083982823,
+          "trace_per_s": 136.96210637116224,
+          "det_per_s2": 64.79029609029547,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            0.10517104703673671,
+            0.057475151952981925
+          ],
+          "residual": 1.212104028587493e-11,
+          "jacobian": [
+            [
+              48.840512628003935,
+              -226.49749114011485
+            ],
+            [
+              3.9738071065470564,
+              -4.87886619418378
+            ]
+          ],
+          "max_real_per_s": 21.980823216910075,
+          "trace_per_s": 43.96164643382016,
+          "det_per_s2": 661.7710139402931,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            0.1335211852682699,
+            0.07909793108512532
+          ],
+          "residual": 1.0308249171254519e-11,
+          "jacobian": [
+            [
+              42.488538909175695,
+              -190.7304222942951
+            ],
+            [
+              3.6971021074116877,
+              -4.87886619418378
+            ]
+          ],
+          "max_real_per_s": 18.80483635749596,
+          "trace_per_s": 37.609672714991916,
+          "det_per_s2": 497.85395008752016,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            0.1658198738347496,
+            0.07741678135981281
+          ],
+          "residual": 1.9625916384524185e-09,
+          "jacobian": [
+            [
+              7.83412991388467,
+              -197.46777351390963
+            ],
+            [
+              2.8829535760938527,
+              -5.211832546191441
+            ]
+          ],
+          "max_real_per_s": 1.3111486838466133,
+          "trace_per_s": 2.6222973676932293,
+          "det_per_s2": 528.4602505589405,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            0.1700868066579421,
+            0.08521223984660618
+          ],
+          "residual": 3.983420236470164e-11,
+          "jacobian": [
+            [
+              14.64728122701907,
+              -200.2021997281455
+            ],
+            [
+              2.7452162083405796,
+              -4.680566912840806
+            ]
+          ],
+          "max_real_per_s": 4.983357157089131,
+          "trace_per_s": 9.966714314178263,
+          "det_per_s2": 481.0407437648834,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51014,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            -0.14622094106556804,
+            -0.10251339238808077
+          ],
+          "residual": 5.639308129780984e-14,
+          "jacobian": [
+            [
+              8.281489791203171,
+              -240.93596969642576
+            ],
+            [
+              3.7969873628408286,
+              -5.234541394161312
+            ]
+          ],
+          "max_real_per_s": 1.5234741985209288,
+          "trace_per_s": 3.0469483970418594,
+          "det_per_s2": 871.4810310737518,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 2.7981545985799247e-12,
+          "jacobian": [
+            [
+              123.68027036695169,
+              -273.3281441605718
+            ],
+            [
+              4.394368161260835,
+              -5.234541394143999
+            ]
+          ],
+          "max_real_per_s": 113.57038217188746,
+          "trace_per_s": 118.44572897280769,
+          "det_per_s2": 553.6949994009983,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            -0.13574114816349064,
+            -0.10094676363549046
+          ],
+          "residual": 4.699867849253701e-15,
+          "jacobian": [
+            [
+              21.164632667645666,
+              -283.0360076995549
+            ],
+            [
+              4.13395576081945,
+              -5.234541394161312
+            ]
+          ],
+          "max_real_per_s": 7.965045636742177,
+          "trace_per_s": 15.930091273484354,
+          "det_per_s2": 1059.2711887579037,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            -0.13613998441402422,
+            -0.10410271838162417
+          ],
+          "residual": 8.616470892968418e-10,
+          "jacobian": [
+            [
+              18.556796349701152,
+              -218.9177674140496
+            ],
+            [
+              4.171218645184866,
+              -5.234541394127936
+            ]
+          ],
+          "max_real_per_s": 6.661127477786609,
+          "trace_per_s": 13.322254955573216,
+          "det_per_s2": 816.0175545648151,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            -0.13543384379735518,
+            -0.09587849013765601
+          ],
+          "residual": 6.719999626472125e-11,
+          "jacobian": [
+            [
+              4.55469147424131,
+              -248.760388146266
+            ],
+            [
+              3.885693770839841,
+              -5.164548555586441
+            ]
+          ],
+          "max_real_per_s": -0.3049285406725657,
+          "trace_per_s": -0.6098570813451305,
+          "det_per_s2": 943.0837653772122,
+          "local_unstable": false
+        },
+        "nominal_caps": {
+          "root_V": [
+            -0.1462209410655681,
+            -0.10251339238808078
+          ],
+          "residual": 4.549566804227792e-14,
+          "jacobian": [
+            [
+              7.288480250019615,
+              -212.04603288683697
+            ],
+            [
+              3.676010905978088,
+              -5.0677627848773055
+            ]
+          ],
+          "max_real_per_s": 1.1103587325711528,
+          "trace_per_s": 2.220717465142309,
+          "det_per_s2": 742.5472404920383,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51015,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            -0.011058986495889971,
+            0.0029752892164895003
+          ],
+          "residual": 5.1623506086695926e-14,
+          "jacobian": [
+            [
+              83.24069223033466,
+              -218.8447338223425
+            ],
+            [
+              4.167271031750875,
+              -4.811985074698794
+            ]
+          ],
+          "max_real_per_s": 71.25078870154869,
+          "trace_per_s": 78.42870715563586,
+          "det_per_s2": 511.4323510891127,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 2.603875878658442e-12,
+          "jacobian": [
+            [
+              93.64943965418482,
+              -225.13381560052184
+            ],
+            [
+              4.167873428325099,
+              -4.811985074698279
+            ]
+          ],
+          "max_real_per_s": 82.95875572838769,
+          "trace_per_s": 88.83745457948653,
+          "det_per_s2": 487.68954198906306,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            -0.00823640595353567,
+            0.005923576452656548
+          ],
+          "residual": 4.130719502302788e-15,
+          "jacobian": [
+            [
+              87.24834802043493,
+              -244.00837570042103
+            ],
+            [
+              4.553494023361455,
+              -4.81198507469967
+            ]
+          ],
+          "max_real_per_s": 72.9622447287708,
+          "trace_per_s": 82.43636294573525,
+          "det_per_s2": 691.2529319354684,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            -0.016222438723258927,
+            -0.0014256426527689105
+          ],
+          "residual": 5.490448314421424e-11,
+          "jacobian": [
+            [
+              89.18002965393077,
+              -216.66067769575574
+            ],
+            [
+              3.9694816067685754,
+              -4.811985074697918
+            ]
+          ],
+          "max_real_per_s": 78.90723202356223,
+          "trace_per_s": 84.36804457923286,
+          "det_per_s2": 430.8976033674841,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            -0.010872374383519763,
+            0.0034788672422852284
+          ],
+          "residual": 7.227426630837675e-15,
+          "jacobian": [
+            [
+              74.607263943377,
+              -219.08790511215946
+            ],
+            [
+              4.1672038139035505,
+              -4.338971074520018
+            ]
+          ],
+          "max_real_per_s": 60.5338128123896,
+          "trace_per_s": 70.26829286885699,
+          "det_per_s2": 589.2651935641371,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            -0.011058986495889933,
+            0.0029752892164895167
+          ],
+          "residual": 5.169913680213742e-14,
+          "jacobian": [
+            [
+              83.36243681932483,
+              -219.16480759244163
+            ],
+            [
+              4.802141982791797,
+              -5.545076231356787
+            ]
+          ],
+          "max_real_per_s": 69.30071782890639,
+          "trace_per_s": 77.81736058796804,
+          "det_per_s2": 590.2094566953301,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51016,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            0.0162348651481412,
+            0.0325580695446286
+          ],
+          "residual": 8.08869500277859e-11,
+          "jacobian": [
+            [
+              63.26999827208777,
+              -166.7494886750232
+            ],
+            [
+              6.488288398534626,
+              -5.429011391162534
+            ]
+          ],
+          "max_real_per_s": 38.818458349781395,
+          "trace_per_s": 57.840986880925236,
+          "det_per_s2": 738.4252314937353,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 2.4230001833195215e-12,
+          "jacobian": [
+            [
+              105.77482147953737,
+              -186.3255427382894
+            ],
+            [
+              6.570091239216482,
+              -5.429011391158037
+            ]
+          ],
+          "max_real_per_s": 93.38629758974547,
+          "trace_per_s": 100.34581008837932,
+          "det_per_s2": 649.9231052769752,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            0.008586302443909106,
+            0.024796601680641652
+          ],
+          "residual": 2.1310748888668448e-11,
+          "jacobian": [
+            [
+              65.08414481208482,
+              -179.2953845166484
+            ],
+            [
+              6.9211032698230674,
+              -5.429011391162534
+            ]
+          ],
+          "max_real_per_s": 31.2782311766733,
+          "trace_per_s": 59.65513342092228,
+          "det_per_s2": 887.579308473479,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            0.009768258523772071,
+            0.01995530409260555
+          ],
+          "residual": 4.515551040977276e-12,
+          "jacobian": [
+            [
+              63.30148614882294,
+              -192.14180626784878
+            ],
+            [
+              5.255615146851981,
+              -5.4290113911625335
+            ]
+          ],
+          "max_real_per_s": 42.018551228401414,
+          "trace_per_s": 57.872474757660406,
+          "det_per_s2": 666.1588979853275,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            0.01762568859500933,
+            0.033183902497524204
+          ],
+          "residual": 4.771899607937424e-12,
+          "jacobian": [
+            [
+              63.063972533831844,
+              -166.34616406259656
+            ],
+            [
+              6.479728340272867,
+              -5.598385824714529
+            ]
+          ],
+          "max_real_per_s": 38.77031846124077,
+          "trace_per_s": 57.46558670911732,
+          "det_per_s2": 724.8215036884963,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            0.016234865148141205,
+            0.032558069544628594
+          ],
+          "residual": 9.245955907179422e-11,
+          "jacobian": [
+            [
+              72.32284740524535,
+              -190.60847405608803
+            ],
+            [
+              5.794784962703902,
+              -4.848729224062416
+            ]
+          ],
+          "max_real_per_s": 53.341342822447736,
+          "trace_per_s": 67.47411818118294,
+          "det_per_s2": 753.8612154429366,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51017,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            0.031241945198177804,
+            0.009804484648739262
+          ],
+          "residual": 3.84067718636862e-16,
+          "jacobian": [
+            [
+              83.39844700515984,
+              -317.1676684637821
+            ],
+            [
+              4.921728289377631,
+              -4.8899047634735195
+            ]
+          ],
+          "max_real_per_s": 58.94424771177248,
+          "trace_per_s": 78.50854224168631,
+          "det_per_s2": 1153.2026230773163,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 2.6645121467291263e-12,
+          "jacobian": [
+            [
+              85.2056285115359,
+              -317.34425142732636
+            ],
+            [
+              4.928449417051352,
+              -4.889904763475981
+            ]
+          ],
+          "max_real_per_s": 61.728355333280945,
+          "trace_per_s": 80.31572374805992,
+          "det_per_s2": 1147.3676822180805,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            0.03013596523684061,
+            0.0105672261641655
+          ],
+          "residual": 3.840761851601623e-15,
+          "jacobian": [
+            [
+              102.69816321215107,
+              -312.75165833008674
+            ],
+            [
+              5.9858919488598925,
+              -4.8899047634735195
+            ]
+          ],
+          "max_real_per_s": 80.86817870326523,
+          "trace_per_s": 97.80825844867755,
+          "det_per_s2": 1369.9133960995682,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            0.03464510659620209,
+            0.011617247448225307
+          ],
+          "residual": 1.177886198805269e-14,
+          "jacobian": [
+            [
+              82.0391914601428,
+              -250.8044724187738
+            ],
+            [
+              4.319223497568006,
+              -4.8899047634735195
+            ]
+          ],
+          "max_real_per_s": 66.96278122311206,
+          "trace_per_s": 77.14928669666928,
+          "det_per_s2": 682.1167374538461,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            0.03157163746324331,
+            0.009420152875803504
+          ],
+          "residual": 1.4098893559909994e-15,
+          "jacobian": [
+            [
+              78.59925724503164,
+              -317.2128110451245
+            ],
+            [
+              4.921265651957918,
+              -5.26165304813257
+            ]
+          ],
+          "max_real_per_s": 50.70712669371891,
+          "trace_per_s": 73.33760419689906,
+          "det_per_s2": 1147.5264898931127,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            0.031241945198177794,
+            0.00980448464873925
+          ],
+          "residual": 5.428667269961917e-15,
+          "jacobian": [
+            [
+              84.19606320410168,
+              -320.20103513648525
+            ],
+            [
+              4.676979120767644,
+              -4.6467381246313435
+            ]
+          ],
+          "max_real_per_s": 61.584918870247506,
+          "trace_per_s": 79.54932507947034,
+          "det_per_s2": 1106.3364989471584,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51018,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            -0.013781870134129579,
+            -0.03586345788345862
+          ],
+          "residual": 9.42955969771144e-13,
+          "jacobian": [
+            [
+              97.17219139301882,
+              -221.71367710197174
+            ],
+            [
+              5.976861058987587,
+              -5.686057776013907
+            ]
+          ],
+          "max_real_per_s": 82.07216000684672,
+          "trace_per_s": 91.48613361700491,
+          "det_per_s2": 772.6251484331365,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 3.0162422819810867e-12,
+          "jacobian": [
+            [
+              104.50562986902254,
+              -225.5146675695038
+            ],
+            [
+              6.066652860884643,
+              -5.6860577760089575
+            ]
+          ],
+          "max_real_per_s": 90.24399723434618,
+          "trace_per_s": 98.81957209301359,
+          "det_per_s2": 773.8941538285106,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            -0.015170184170231395,
+            -0.03251089694436408
+          ],
+          "residual": 1.0408705570004876e-12,
+          "jacobian": [
+            [
+              72.52630222046271,
+              -220.01391070750682
+            ],
+            [
+              5.199923204022882,
+              -5.686057776013907
+            ]
+          ],
+          "max_real_per_s": 53.04759976160349,
+          "trace_per_s": 66.8402444444488,
+          "det_per_s2": 731.6666947895864,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            -0.019145820267476014,
+            -0.03824779709742084
+          ],
+          "residual": 3.22074454332113e-11,
+          "jacobian": [
+            [
+              108.7276521895372,
+              -246.23330264780986
+            ],
+            [
+              5.493196122248785,
+              -5.686057776013907
+            ]
+          ],
+          "max_real_per_s": 95.33878933039566,
+          "trace_per_s": 103.04159441352328,
+          "det_per_s2": 734.3761110734067,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            -0.006353964974662095,
+            -0.032749180989662716
+          ],
+          "residual": 4.8056112309940324e-14,
+          "jacobian": [
+            [
+              106.11993567233273,
+              -222.70733344756655
+            ],
+            [
+              6.0117950325880996,
+              -4.867029156436329
+            ]
+          ],
+          "max_real_per_s": 92.3476199426729,
+          "trace_per_s": 101.2529065158964,
+          "det_per_s2": 822.3820199446307,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            -0.013781870134129572,
+            -0.03586345788345861
+          ],
+          "residual": 9.422787429285325e-13,
+          "jacobian": [
+            [
+              97.31384541236939,
+              -222.03688308596264
+            ],
+            [
+              6.140153332602341,
+              -5.8414050884680835
+            ]
+          ],
+          "max_real_per_s": 81.74886959005747,
+          "trace_per_s": 91.47244032390131,
+          "det_per_s2": 794.8909158706991,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51019,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            0.03655811649232435,
+            0.004911936021046746
+          ],
+          "residual": 6.355492994758421e-10,
+          "jacobian": [
+            [
+              91.05586309645354,
+              -192.4641036899388
+            ],
+            [
+              5.086743714442423,
+              -4.663000835266505
+            ]
+          ],
+          "max_real_per_s": 79.41120240412488,
+          "trace_per_s": 86.39286226118703,
+          "det_per_s2": 554.4220040259157,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 2.2275735572423597e-12,
+          "jacobian": [
+            [
+              91.27491875779984,
+              -193.70096966598317
+            ],
+            [
+              5.088113152359637,
+              -4.66300083526658
+            ]
+          ],
+          "max_real_per_s": 79.57507326778253,
+          "trace_per_s": 86.61191792253325,
+          "det_per_s2": 559.9574289757942,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            0.03826437293644182,
+            0.007013684167863872
+          ],
+          "residual": 4.2224996923766284e-10,
+          "jacobian": [
+            [
+              101.85406371242537,
+              -222.11621519221785
+            ],
+            [
+              5.266202295396277,
+              -4.663000835266505
+            ]
+          ],
+          "max_real_per_s": 89.42153219391056,
+          "trace_per_s": 97.19106287715887,
+          "det_per_s2": 694.7633381236642,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            0.03781426754855973,
+            0.005745983580843468
+          ],
+          "residual": 2.7780338290549224e-10,
+          "jacobian": [
+            [
+              80.98481692335332,
+              -192.79975064907205
+            ],
+            [
+              4.652047527175896,
+              -4.663000835268452
+            ]
+          ],
+          "max_real_per_s": 68.77093203057954,
+          "trace_per_s": 76.32181608808487,
+          "det_per_s2": 519.2813342894859,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            0.036294869582121116,
+            0.004474945254645884
+          ],
+          "residual": 6.526692108455924e-10,
+          "jacobian": [
+            [
+              89.37844471745986,
+              -192.37297563314286
+            ],
+            [
+              5.086899160383046,
+              -4.819114047302919
+            ]
+          ],
+          "max_real_per_s": 77.48922498983148,
+          "trace_per_s": 84.55933067015694,
+          "det_per_s2": 547.8570097646244,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            0.036558116492324426,
+            0.004911936021046795
+          ],
+          "residual": 7.115859620453317e-10,
+          "jacobian": [
+            [
+              101.94920714296866,
+              -215.48928435021205
+            ],
+            [
+              5.277675174848558,
+              -4.838027062128429
+            ]
+          ],
+          "max_real_per_s": 89.95119247392226,
+          "trace_per_s": 97.11118008084023,
+          "det_per_s2": 644.0494233407763,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51020,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            0.07506287307556901,
+            0.02422596204449332
+          ],
+          "residual": 2.32188770559796e-15,
+          "jacobian": [
+            [
+              71.37754749094653,
+              -241.426886719837
+            ],
+            [
+              4.448206701593779,
+              -4.6179571453833015
+            ]
+          ],
+          "max_real_per_s": 52.61290427610929,
+          "trace_per_s": 66.75959034556323,
+          "det_per_s2": 744.2982399963482,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 3.1201138680083758e-12,
+          "jacobian": [
+            [
+              102.62546966552561,
+              -247.43408865515414
+            ],
+            [
+              4.475226347266345,
+              -4.617957145383856
+            ]
+          ],
+          "max_real_per_s": 91.05092733941154,
+          "trace_per_s": 98.00751252014176,
+          "det_per_s2": 633.4035318210945,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            0.07477455696909187,
+            0.024195079926797217
+          ],
+          "residual": 3.4790854267406243e-15,
+          "jacobian": [
+            [
+              72.36218095370488,
+              -243.33686356346186
+            ],
+            [
+              4.494680551644365,
+              -4.617957145391135
+            ]
+          ],
+          "max_real_per_s": 53.56383471558561,
+          "trace_per_s": 67.74422380831375,
+          "det_per_s2": 759.5560175655818,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            0.07020973682821798,
+            0.02095737174025588
+          ],
+          "residual": 2.3193491279882697e-15,
+          "jacobian": [
+            [
+              77.37857161798493,
+              -271.6362858762141
+            ],
+            [
+              4.777609266991224,
+              -4.6179571453833015
+            ]
+          ],
+          "max_real_per_s": 55.9528810490928,
+          "trace_per_s": 72.76061447260163,
+          "det_per_s2": 940.4411089504514,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            0.07891475216735844,
+            0.0266029971415233
+          ],
+          "residual": 9.59693265209244e-10,
+          "jacobian": [
+            [
+              72.31368028301483,
+              -240.32230138439905
+            ],
+            [
+              4.439305952580203,
+              -4.848764456745073
+            ]
+          ],
+          "max_real_per_s": 54.26649055362196,
+          "trace_per_s": 67.46491582626976,
+          "det_per_s2": 716.2322203808272,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            0.07506287307556903,
+            0.02422596204449332
+          ],
+          "residual": 4.140444408312437e-15,
+          "jacobian": [
+            [
+              63.64228420423338,
+              -215.26318960617132
+            ],
+            [
+              4.586948635265021,
+              -4.761993685795165
+            ]
+          ],
+          "max_real_per_s": 42.94514857751706,
+          "trace_per_s": 58.880290518438215,
+          "det_per_s2": 684.337038256682,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51021,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            0.03978903857585415,
+            0.035923695252066734
+          ],
+          "residual": 7.479021708400264e-11,
+          "jacobian": [
+            [
+              66.28816126148774,
+              -293.9875742631548
+            ],
+            [
+              4.91174916339684,
+              -4.909198836616357
+            ]
+          ],
+          "max_real_per_s": 30.689481212435684,
+          "trace_per_s": 61.37896242487139,
+          "det_per_s2": 1118.5714577897845,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 3.304676554802313e-12,
+          "jacobian": [
+            [
+              83.53314985615098,
+              -305.72975194917615
+            ],
+            [
+              4.988411722687289,
+              -4.909198836620689
+            ]
+          ],
+          "max_real_per_s": 60.05821328859882,
+          "trace_per_s": 78.6239510195303,
+          "det_per_s2": 1115.0250365044692,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            0.031647136484465294,
+            0.029439702665248355
+          ],
+          "residual": 4.003354436661732e-12,
+          "jacobian": [
+            [
+              52.304721960317465,
+              -302.97742713483353
+            ],
+            [
+              5.2434611336161305,
+              -4.909198836624483
+            ]
+          ],
+          "max_real_per_s": 23.69776156184649,
+          "trace_per_s": 47.39552312369298,
+          "det_per_s2": 1331.876083346956,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            0.06996205445079075,
+            0.06247499177383525
+          ],
+          "residual": 8.722429076537792e-13,
+          "jacobian": [
+            [
+              65.79768086625648,
+              -244.24368116165792
+            ],
+            [
+              4.521571560108584,
+              -4.909198836632611
+            ]
+          ],
+          "max_real_per_s": 42.506596790236834,
+          "trace_per_s": 60.88848202962387,
+          "det_per_s2": 781.3513841150315,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            0.040759734072551644,
+            0.03600436593390943
+          ],
+          "residual": 8.358838153217975e-11,
+          "jacobian": [
+            [
+              64.90079360690001,
+              -293.91899868798623
+            ],
+            [
+              4.907549787305884,
+              -5.030566200620509
+            ]
+          ],
+          "max_real_per_s": 29.935113703139756,
+          "trace_per_s": 59.8702274062795,
+          "det_per_s2": 1115.9343807840662,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            0.039789038575854196,
+            0.03592369525206676
+          ],
+          "residual": 6.666870131915433e-11,
+          "jacobian": [
+            [
+              59.09195765596876,
+              -262.0724569687577
+            ],
+            [
+              4.881904906548387,
+              -4.8793700756838705
+            ]
+          ],
+          "max_real_per_s": 27.106293790142445,
+          "trace_per_s": 54.21258758028489,
+          "det_per_s2": 991.0812836468565,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51022,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            0.11907474951499042,
+            0.07133379801968129
+          ],
+          "residual": 4.054579528157994e-15,
+          "jacobian": [
+            [
+              62.147736597369146,
+              -195.81562821381377
+            ],
+            [
+              3.104921754169643,
+              -4.5324792925285085
+            ]
+          ],
+          "max_real_per_s": 51.2480073019301,
+          "trace_per_s": 57.61525730484064,
+          "det_per_s2": 326.30887464237344,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 2.844161824202643e-12,
+          "jacobian": [
+            [
+              115.74230517102572,
+              -202.40158476583008
+            ],
+            [
+              3.346103576345307,
+              -4.532479292537921
+            ]
+          ],
+          "max_real_per_s": 109.81975664275623,
+          "trace_per_s": 111.2098258784878,
+          "det_per_s2": 152.65706518462292,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            0.0979575743506881,
+            0.06034644867513542
+          ],
+          "residual": 9.781897925271179e-14,
+          "jacobian": [
+            [
+              72.42767421089232,
+              -196.72521207532358
+            ],
+            [
+              3.402187259032758,
+              -4.532479292528508
+            ]
+          ],
+          "max_real_per_s": 62.433037542921895,
+          "trace_per_s": 67.89519491836381,
+          "det_per_s2": 341.01907648631294,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            0.07511591465447913,
+            0.048253874925366425
+          ],
+          "residual": 8.183276388033931e-10,
+          "jacobian": [
+            [
+              90.05030076425028,
+              -247.18589991137787
+            ],
+            [
+              3.881877435424554,
+              -4.532479292542324
+            ]
+          ],
+          "max_real_per_s": 78.49307091343212,
+          "trace_per_s": 85.51782147170796,
+          "det_per_s2": 551.3942437199175,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            0.11718894837961515,
+            0.07424190930791251
+          ],
+          "residual": 1.4651643709790828e-09,
+          "jacobian": [
+            [
+              69.79028938634282,
+              -194.6558863244387
+            ],
+            [
+              3.1135902023527646,
+              -4.275960919747407
+            ]
+          ],
+          "max_real_per_s": 60.42255232222638,
+          "trace_per_s": 65.51432846659542,
+          "det_per_s2": 307.65811049620174,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            0.11907474951499047,
+            0.07133379801968132
+          ],
+          "residual": 1.051994124400203e-15,
+          "jacobian": [
+            [
+              63.394246520584936,
+              -199.74314249599712
+            ],
+            [
+              3.6306713421391144,
+              -5.299954066004241
+            ]
+          ],
+          "max_real_per_s": 50.36665830680594,
+          "trace_per_s": 58.094292454580696,
+          "det_per_s2": 389.2151086409769,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51023,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            0.053889964308329194,
+            0.026166231525703642
+          ],
+          "residual": 8.748057598281755e-11,
+          "jacobian": [
+            [
+              69.04642071806221,
+              -227.66259152390307
+            ],
+            [
+              6.185460617007438,
+              -6.584897909220045
+            ]
+          ],
+          "max_real_per_s": 35.90260210038013,
+          "trace_per_s": 62.46152280884216,
+          "det_per_s2": 953.5343624114582,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 2.6575278054763903e-12,
+          "jacobian": [
+            [
+              80.45818015160957,
+              -229.18789094078963
+            ],
+            [
+              6.2459167972306595,
+              -6.584897909211072
+            ]
+          ],
+          "max_real_per_s": 58.44561278017408,
+          "trace_per_s": 73.87328224239849,
+          "det_per_s2": 901.679595489685,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            0.0644526942779188,
+            0.03225238190259748
+          ],
+          "residual": 2.8202529976786848e-15,
+          "jacobian": [
+            [
+              68.53964745107429,
+              -206.62572215274736
+            ],
+            [
+              5.4857704500388005,
+              -6.584897909220046
+            ]
+          ],
+          "max_real_per_s": 47.63339614742221,
+          "trace_per_s": 61.95474954185424,
+          "det_per_s2": 682.1746996042104,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            0.054839127029567614,
+            0.02530045631340757
+          ],
+          "residual": 6.853677076623572e-11,
+          "jacobian": [
+            [
+              68.18527812218775,
+              -246.85277238993748
+            ],
+            [
+              5.784938285603653,
+              -6.584897909220045
+            ]
+          ],
+          "max_real_per_s": 30.800190106483857,
+          "trace_per_s": 61.60038021296771,
+          "det_per_s2": 979.0349585595728,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            0.04739427426769465,
+            0.025279044459053327
+          ],
+          "residual": 4.098138109145354e-11,
+          "jacobian": [
+            [
+              77.3489622321782,
+              -227.85852895346088
+            ],
+            [
+              6.210414060163716,
+              -5.223241886072572
+            ]
+          ],
+          "max_real_per_s": 53.07598485065752,
+          "trace_per_s": 72.12572034610562,
+          "det_per_s2": 1011.0834725654366,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            0.05388996430832912,
+            0.026166231525703586
+          ],
+          "residual": 9.611566431103663e-11,
+          "jacobian": [
+            [
+              75.94790931699235,
+              -250.4184529209298
+            ],
+            [
+              5.921093405227712,
+              -6.303458707244476
+            ]
+          ],
+          "max_real_per_s": 49.26420700155145,
+          "trace_per_s": 69.64445060974788,
+          "det_per_s2": 1004.0165398562345,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51024,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            0.017322896639430187,
+            2.1492232304549058e-05
+          ],
+          "residual": 2.4870683337252756e-14,
+          "jacobian": [
+            [
+              83.51284902754355,
+              -228.35996936103885
+            ],
+            [
+              3.6700322115142665,
+              -4.303037006118372
+            ]
+          ],
+          "max_real_per_s": 72.6173130207119,
+          "trace_per_s": 79.20981202142518,
+          "det_per_s2": 478.7295635235268,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 2.5352648270929796e-12,
+          "jacobian": [
+            [
+              84.86235156469631,
+              -230.1329757451272
+            ],
+            [
+              3.670032241499757,
+              -4.3030370061183705
+            ]
+          ],
+          "max_real_per_s": 74.08825365549474,
+          "trace_per_s": 80.55931455857794,
+          "det_per_s2": 479.42960160778335,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            0.017895571261965785,
+            0.0006483134272464568
+          ],
+          "residual": 7.921742216467462e-14,
+          "jacobian": [
+            [
+              77.94861161489976,
+              -229.0059500135773
+            ],
+            [
+              4.666048251442503,
+              -4.303037006118509
+            ]
+          ],
+          "max_real_per_s": 61.77836008058798,
+          "trace_per_s": 73.64557460878125,
+          "det_per_s2": 733.1370522763091,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            0.014418873354340219,
+            -0.0022792468671764218
+          ],
+          "residual": 5.0663724261772265e-15,
+          "jacobian": [
+            [
+              91.3469025425431,
+              -220.03037282377437
+            ],
+            [
+              3.406627586260257,
+              -4.303037006118946
+            ]
+          ],
+          "max_real_per_s": 82.73501981882667,
+          "trace_per_s": 87.04386553642416,
+          "det_per_s2": 356.49243584169506,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            0.01757366845684254,
+            0.0002338229912912171
+          ],
+          "residual": 2.5331131420020194e-14,
+          "jacobian": [
+            [
+              85.12125189194879,
+              -228.41824829185853
+            ],
+            [
+              3.670028637680876,
+              -4.331576588204069
+            ]
+          ],
+          "max_real_per_s": 74.48516792564486,
+          "trace_per_s": 80.78967530374472,
+          "det_per_s2": 469.5922907462352,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            0.01732289663943017,
+            2.1492232304538104e-05
+          ],
+          "residual": 3.050230416048542e-14,
+          "jacobian": [
+            [
+              93.74363090227783,
+              -256.33531761772747
+            ],
+            [
+              4.236369987639454,
+              -4.96705635753569
+            ]
+          ],
+          "max_real_per_s": 81.13088786757133,
+          "trace_per_s": 88.77657454474213,
+          "det_per_s2": 620.3013484761291,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51025,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            0.1045449572917067,
+            0.07134880696082715
+          ],
+          "residual": 1.3715199701061032e-16,
+          "jacobian": [
+            [
+              32.51768597429533,
+              -198.70745908250169
+            ],
+            [
+              5.750541653207228,
+              -5.9957233713761
+            ]
+          ],
+          "max_real_per_s": 13.26098130145962,
+          "trace_per_s": 26.52196260291923,
+          "det_per_s2": 947.7084704777458,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 2.7228983740373087e-12,
+          "jacobian": [
+            [
+              127.755177118676,
+              -220.69466365526782
+            ],
+            [
+              6.168405078136287,
+              -5.995723371390761
+            ]
+          ],
+          "max_real_per_s": 116.6559920898365,
+          "trace_per_s": 121.75945374728524,
+          "det_per_s2": 595.3493827421216,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            0.10346381357567819,
+            0.06809220441912742
+          ],
+          "residual": 5.753873749502909e-15,
+          "jacobian": [
+            [
+              28.54034641271664,
+              -193.9408410996577
+            ],
+            [
+              5.5807789768012785,
+              -5.995723371478963
+            ]
+          ],
+          "max_real_per_s": 11.272311520618839,
+          "trace_per_s": 22.544623041237678,
+          "det_per_s2": 911.2209467352957,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            0.0984436855727993,
+            0.058380474246321985
+          ],
+          "residual": 5.150862974346044e-11,
+          "jacobian": [
+            [
+              40.024245025845936,
+              -223.80186324585063
+            ],
+            [
+              5.230200085228255,
+              -5.995723371444675
+            ]
+          ],
+          "max_real_per_s": 17.014260827200637,
+          "trace_per_s": 34.02852165440126,
+          "det_per_s2": 930.5542228967971,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            0.09504588598951431,
+            0.07023900436818996
+          ],
+          "residual": 8.669408935452218e-09,
+          "jacobian": [
+            [
+              43.03194063777438,
+              -199.5527563581901
+            ],
+            [
+              5.8512746007225145,
+              -5.305810892741956
+            ]
+          ],
+          "max_real_per_s": 18.863064872516212,
+          "trace_per_s": 37.726129745032424,
+          "det_per_s2": 939.318635411117,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            0.10454495729170675,
+            0.07134880696082717
+          ],
+          "residual": 6.2052007707056264e-15,
+          "jacobian": [
+            [
+              35.063217146782705,
+              -214.26256441757573
+            ],
+            [
+              5.419097824505776,
+              -5.650148009977694
+            ]
+          ],
+          "max_real_per_s": 14.706534568402505,
+          "trace_per_s": 29.41306913680501,
+          "det_per_s2": 962.9974301230034,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51026,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            0.0830253839937978,
+            0.020002269965592154
+          ],
+          "residual": 2.9958044015278534e-10,
+          "jacobian": [
+            [
+              84.50078417993724,
+              -220.83468912142698
+            ],
+            [
+              5.745744831026822,
+              -6.5146326960116765
+            ]
+          ],
+          "max_real_per_s": 67.31430018132694,
+          "trace_per_s": 77.98615148392557,
+          "det_per_s2": 718.3682020736088,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 2.7349969311417096e-12,
+          "jacobian": [
+            [
+              127.16142023144198,
+              -234.55754835909414
+            ],
+            [
+              5.789566665632944,
+              -6.514632696004045
+            ]
+          ],
+          "max_real_per_s": 116.08480711434191,
+          "trace_per_s": 120.64678753543794,
+          "det_per_s2": 529.5766172423363,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            0.06721860715299886,
+            0.006541831437097752
+          ],
+          "residual": 1.901795825590957e-15,
+          "jacobian": [
+            [
+              76.15226021326222,
+              -231.42270235065953
+            ],
+            [
+              6.303794634122124,
+              -6.514632696002888
+            ]
+          ],
+          "max_real_per_s": 50.617946852753775,
+          "trace_per_s": 69.63762751725933,
+          "det_per_s2": 962.7371850322914,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            0.08542353095429112,
+            0.01908634809796242
+          ],
+          "residual": 3.5038694987350404e-11,
+          "jacobian": [
+            [
+              78.54504812550007,
+              -215.51904043601803
+            ],
+            [
+              4.9581800237995015,
+              -6.514632696002888
+            ]
+          ],
+          "max_real_per_s": 63.22191873107117,
+          "trace_per_s": 72.03041542949718,
+          "det_per_s2": 556.8900624107981,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            0.0773838651310173,
+            0.01798547139837174
+          ],
+          "residual": 1.1548298377222217e-12,
+          "jacobian": [
+            [
+              90.21822062897174,
+              -222.28058309331036
+            ],
+            [
+              5.764863548020484,
+              -5.439738217011739
+            ]
+          ],
+          "max_real_per_s": 74.10980301906275,
+          "trace_per_s": 84.77848241196,
+          "det_per_s2": 790.653728281149,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            0.0830253839937978,
+            0.02000226996559216
+          ],
+          "residual": 3.2592408646668216e-10,
+          "jacobian": [
+            [
+              91.93154104809155,
+              -240.25425899794828
+            ],
+            [
+              5.281269614281238,
+              -5.988002028885942
+            ]
+          ],
+          "max_real_per_s": 76.56063241613022,
+          "trace_per_s": 85.9435390192056,
+          "det_per_s2": 718.3612634329357,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51027,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            -0.009961628329078188,
+            0.01719198491673908
+          ],
+          "residual": 4.3098435950776455e-13,
+          "jacobian": [
+            [
+              106.40352560631254,
+              -274.8957277555566
+            ],
+            [
+              4.708604992121251,
+              -4.687916317442145
+            ]
+          ],
+          "max_real_per_s": 93.17744218012449,
+          "trace_per_s": 101.7156092888704,
+          "det_per_s2": 795.5645720994129,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 3.224178388289015e-12,
+          "jacobian": [
+            [
+              114.44721745843036,
+              -279.5969799684799
+            ],
+            [
+              4.7216203930035565,
+              -4.687916317436615
+            ]
+          ],
+          "max_real_per_s": 102.08287315653487,
+          "trace_per_s": 109.75930114099374,
+          "det_per_s2": 783.6318242327889,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            -0.004559758335331036,
+            0.020532924824131868
+          ],
+          "residual": 2.2515385999481163e-11,
+          "jacobian": [
+            [
+              90.22755606362807,
+              -261.23720784448443
+            ],
+            [
+              4.266953557865501,
+              -4.687916317442145
+            ]
+          ],
+          "max_real_per_s": 76.49740043961971,
+          "trace_per_s": 85.53963974618593,
+          "det_per_s2": 691.7078011052638,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            -0.014907261006217011,
+            0.013242796970914204
+          ],
+          "residual": 7.676698204202462e-15,
+          "jacobian": [
+            [
+              116.2009859793465,
+              -273.6779112015317
+            ],
+            [
+              5.10846553698438,
+              -4.687916317430886
+            ]
+          ],
+          "max_real_per_s": 103.24819196169027,
+          "trace_per_s": 111.51306966191561,
+          "det_per_s2": 853.3336793327599,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            -0.010054277118381204,
+            0.017252197938247497
+          ],
+          "residual": 5.307797154526847e-13,
+          "jacobian": [
+            [
+              103.73756099424152,
+              -274.92421248088505
+            ],
+            [
+              4.708745513695551,
+              -4.646267903950771
+            ]
+          ],
+          "max_real_per_s": 90.06990396625682,
+          "trace_per_s": 99.09129309029075,
+          "det_per_s2": 812.5556520439704,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            -0.009961628329078194,
+            0.017191984916739074
+          ],
+          "residual": 4.0531850304883994e-13,
+          "jacobian": [
+            [
+              100.32228728881917,
+              -259.18472172666657
+            ],
+            [
+              5.067082967944907,
+              -5.044819212265828
+            ]
+          ],
+          "max_real_per_s": 85.87806319151909,
+          "trace_per_s": 95.27746807655333,
+          "det_per_s2": 807.2026866796458,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51028,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            -0.0823317893584078,
+            -0.057018731335276594
+          ],
+          "residual": 1.9169195726492816e-09,
+          "jacobian": [
+            [
+              69.45127694142866,
+              -199.04100898940544
+            ],
+            [
+              5.291798290399263,
+              -5.730011995955772
+            ]
+          ],
+          "max_real_per_s": 50.82828073186813,
+          "trace_per_s": 63.72126494547289,
+          "det_per_s2": 655.3282210806476,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 2.408953285879018e-12,
+          "jacobian": [
+            [
+              81.0490567017003,
+              -199.88472054725136
+            ],
+            [
+              5.501379244291378,
+              -5.730011995975132
+            ]
+          ],
+          "max_real_per_s": 65.64183887847098,
+          "trace_per_s": 75.31904470572516,
+          "det_per_s2": 635.2295857064195,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            -0.09673161744765038,
+            -0.06487115407146096
+          ],
+          "residual": 3.344875925878921e-15,
+          "jacobian": [
+            [
+              73.86290938887785,
+              -207.982447186385
+            ],
+            [
+              4.791290678547013,
+              -5.730011995955772
+            ]
+          ],
+          "max_real_per_s": 58.29977127380388,
+          "trace_per_s": 68.13289739292208,
+          "det_per_s2": 573.2690036510585,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            -0.07960231152064784,
+            -0.05525104632026191
+          ],
+          "residual": 1.3683508757046152e-09,
+          "jacobian": [
+            [
+              70.86380145554779,
+              -218.32076240265314
+            ],
+            [
+              5.3801215155522755,
+              -5.730011995955772
+            ]
+          ],
+          "max_real_per_s": 49.65668213826431,
+          "trace_per_s": 65.13378945959201,
+          "det_per_s2": 768.5417986749741,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            -0.07145363462950421,
+            -0.052116164498542936
+          ],
+          "residual": 2.004092783793625e-10,
+          "jacobian": [
+            [
+              71.2349007322622,
+              -199.63665842562023
+            ],
+            [
+              5.359545983408956,
+              -5.157197608223514
+            ]
+          ],
+          "max_real_per_s": 52.761334200099974,
+          "trace_per_s": 66.07770312403869,
+          "det_per_s2": 702.5893911277564,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            -0.08233178935840797,
+            -0.057018731335276705
+          ],
+          "residual": 2.075606350681073e-09,
+          "jacobian": [
+            [
+              75.20103609178045,
+              -215.51929295012894
+            ],
+            [
+              5.130497890985378,
+              -5.555354313808257
+            ]
+          ],
+          "max_real_per_s": 57.72867791555355,
+          "trace_per_s": 69.6456817779722,
+          "det_per_s2": 687.9528776919732,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51029,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            0.06085108836694334,
+            0.055854511756734386
+          ],
+          "residual": 4.677263070438429e-15,
+          "jacobian": [
+            [
+              62.09622937296521,
+              -220.57543911340983
+            ],
+            [
+              4.773817372110766,
+              -4.901166593015673
+            ]
+          ],
+          "max_real_per_s": 36.9147366570733,
+          "trace_per_s": 57.19506277994954,
+          "det_per_s2": 748.6428981455407,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 2.6147021894675054e-12,
+          "jacobian": [
+            [
+              82.51543335241618,
+              -224.4340818040801
+            ],
+            [
+              4.967553235186998,
+              -4.90116659302258
+            ]
+          ],
+          "max_real_per_s": 67.0122257807711,
+          "trace_per_s": 77.6142667593936,
+          "det_per_s2": 710.4663637964379,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            0.061256544919083875,
+            0.058478191947061275
+          ],
+          "residual": 1.0412444859702448e-15,
+          "jacobian": [
+            [
+              74.34891569987299,
+              -232.58277500716875
+            ],
+            [
+              4.960121862630828,
+              -4.9011665930467165
+            ]
+          ],
+          "max_real_per_s": 55.13232816151954,
+          "trace_per_s": 69.44774910682628,
+          "det_per_s2": 789.2424853269412,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            0.06505960285839155,
+            0.055869055382964675
+          ],
+          "residual": 6.2364280244280725e-15,
+          "jacobian": [
+            [
+              59.64135573581456,
+              -232.68201699674165
+            ],
+            [
+              4.440346021661298,
+              -4.901166593031195
+            ]
+          ],
+          "max_real_per_s": 30.24161484100141,
+          "trace_per_s": 54.740189142783365,
+          "det_per_s2": 740.8764481881441,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            0.06043939150406826,
+            0.056578082233327776
+          ],
+          "residual": 1.0467828893806536e-15,
+          "jacobian": [
+            [
+              65.40396717842602,
+              -220.30712187642902
+            ],
+            [
+              4.776589987580815,
+              -4.803738821801637
+            ]
+          ],
+          "max_real_per_s": 43.71516926228046,
+          "trace_per_s": 60.60022835662438,
+          "det_per_s2": 738.1332163128523,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            0.060851088366943314,
+            0.05585451175673436
+          ],
+          "residual": 2.0702222041562185e-15,
+          "jacobian": [
+            [
+              61.77266043352469,
+              -219.42607204943965
+            ],
+            [
+              4.968856081778276,
+              -5.101408272653955
+            ]
+          ],
+          "max_real_per_s": 33.60237970350329,
+          "trace_per_s": 56.671252160870736,
+          "det_per_s2": 775.1690116441494,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51030,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            -0.10548351664281835,
+            -0.0634538571747781
+          ],
+          "residual": 3.2468127935915284e-11,
+          "jacobian": [
+            [
+              44.49944914782503,
+              -280.21778750886966
+            ],
+            [
+              5.277773287239727,
+              -4.066649889430011
+            ]
+          ],
+          "max_real_per_s": 20.216399629197504,
+          "trace_per_s": 40.43279925839502,
+          "det_per_s2": 1297.9622735670314,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 3.0730911005602355e-12,
+          "jacobian": [
+            [
+              119.5622914678008,
+              -303.1087981752132
+            ],
+            [
+              5.436386307602691,
+              -4.066649889427129
+            ]
+          ],
+          "max_real_per_s": 104.36554558527259,
+          "trace_per_s": 115.49564157837368,
+          "det_per_s2": 1161.59854073645,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            -0.1081666114480371,
+            -0.061252184316321394
+          ],
+          "residual": 9.28985927352181e-11,
+          "jacobian": [
+            [
+              38.81962482659141,
+              -286.60096482418186
+            ],
+            [
+              4.813694443251631,
+              -4.066649889430011
+            ]
+          ],
+          "max_real_per_s": 17.3764874685807,
+          "trace_per_s": 34.7529749371614,
+          "det_per_s2": 1221.743648795948,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            -0.11357295639739444,
+            -0.06858044217500983
+          ],
+          "residual": 5.034371007076778e-10,
+          "jacobian": [
+            [
+              37.75791421888248,
+              -248.45087574742217
+            ],
+            [
+              4.864071807467366,
+              -4.06664988941512
+            ]
+          ],
+          "max_real_per_s": 16.84563216473368,
+          "trace_per_s": 33.691264329467366,
+          "det_per_s2": 1054.9346825808498,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            -0.11261618841437647,
+            -0.06412438731236313
+          ],
+          "residual": 8.413028949064282e-10,
+          "jacobian": [
+            [
+              37.347814918541346,
+              -279.43691181964516
+            ],
+            [
+              5.22836234871257,
+              -4.608492057862722
+            ]
+          ],
+          "max_real_per_s": 16.369661430339306,
+          "trace_per_s": 32.73932286067863,
+          "det_per_s2": 1288.8803201677235,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            -0.10548351664281835,
+            -0.06345385717477811
+          ],
+          "residual": 2.975720414770451e-11,
+          "jacobian": [
+            [
+              40.77489843273713,
+              -256.76389356354326
+            ],
+            [
+              5.726139072157333,
+              -4.412126394468179
+            ]
+          ],
+          "max_real_per_s": 18.181386019134475,
+          "trace_per_s": 36.36277203826895,
+          "det_per_s2": 1290.361757646614,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51031,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            0.07033295156474582,
+            0.02738149811385243
+          ],
+          "residual": 1.0268434480361417e-15,
+          "jacobian": [
+            [
+              29.809187749001808,
+              -204.60254637050437
+            ],
+            [
+              5.986599226777087,
+              -4.890204564998733
+            ]
+          ],
+          "max_real_per_s": 12.459491592001537,
+          "trace_per_s": 24.918983184003075,
+          "det_per_s2": 1079.1004198892124,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 2.4832542467794603e-12,
+          "jacobian": [
+            [
+              66.69055155566356,
+              -215.26037587504962
+            ],
+            [
+              6.02651416411538,
+              -4.890204564991159
+            ]
+          ],
+          "max_real_per_s": 30.900173495336198,
+          "trace_per_s": 61.8003469906724,
+          "det_per_s2": 971.1392645245031,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            0.07835712147215623,
+            0.03232121300378871
+          ],
+          "residual": 0.0,
+          "jacobian": [
+            [
+              36.16671583332642,
+              -222.0055740869619
+            ],
+            [
+              5.175197273572217,
+              -4.890204565098871
+            ]
+          ],
+          "max_real_per_s": 15.638255634113776,
+          "trace_per_s": 31.27651126822755,
+          "det_per_s2": 972.0600028599138,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            0.07600736201249927,
+            0.031247162097774627
+          ],
+          "residual": 4.090698212206118e-15,
+          "jacobian": [
+            [
+              27.911607092932826,
+              -209.78544409749114
+            ],
+            [
+              5.43708545094994,
+              -4.89020456499103
+            ]
+          ],
+          "max_real_per_s": 11.510701263970898,
+          "trace_per_s": 23.021402527941795,
+          "det_per_s2": 1004.1279175014445,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            0.0697343776041519,
+            0.027332326227922348
+          ],
+          "residual": 1.0320308853998805e-15,
+          "jacobian": [
+            [
+              30.24130795820683,
+              -204.63114992528685
+            ],
+            [
+              5.988707391339792,
+              -4.767873389717492
+            ]
+          ],
+          "max_real_per_s": 12.736717284244667,
+          "trace_per_s": 25.47343456848934,
+          "det_per_s2": 1081.2893525717398,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            0.07033295156474582,
+            0.027381498113852425
+          ],
+          "residual": 2.0689610269425165e-15,
+          "jacobian": [
+            [
+              30.1385984773363,
+              -206.86353631666103
+            ],
+            [
+              6.278060193146693,
+              -5.128286937689466
+            ]
+          ],
+          "max_real_per_s": 12.505155769823418,
+          "trace_per_s": 25.010311539646832,
+          "det_per_s2": 1144.142351871593,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51032,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            0.1046325044661952,
+            0.0901744256777292
+          ],
+          "residual": 1.292318507923776e-13,
+          "jacobian": [
+            [
+              33.66426043484332,
+              -209.40260734060038
+            ],
+            [
+              3.7541294932785134,
+              -6.565699554186869
+            ]
+          ],
+          "max_real_per_s": 13.549280440328229,
+          "trace_per_s": 27.09856088065645,
+          "det_per_s2": 565.0950844576863,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 2.9548172742541733e-12,
+          "jacobian": [
+            [
+              113.35447292287745,
+              -236.93662205670773
+            ],
+            [
+              4.423658028679741,
+              -6.565699554058439
+            ]
+          ],
+          "max_real_per_s": 103.86304380221976,
+          "trace_per_s": 106.78877336881901,
+          "det_per_s2": 303.87517812914655,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            0.056819050741968406,
+            0.06964270211276785
+          ],
+          "residual": 2.4658535910728806e-15,
+          "jacobian": [
+            [
+              68.7598955874528,
+              -269.099796459004
+            ],
+            [
+              4.659478871131251,
+              -6.565699554075444
+            ]
+          ],
+          "max_real_per_s": 43.92758923993914,
+          "trace_per_s": 62.19419603337736,
+          "det_per_s2": 802.4080000296359,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            0.08201846342266662,
+            0.08718373021412319
+          ],
+          "residual": 2.3943251466641416e-15,
+          "jacobian": [
+            [
+              52.76451480073585,
+              -216.0921121379712
+            ],
+            [
+              4.355122123044842,
+              -6.565699554038302
+            ]
+          ],
+          "max_real_per_s": 23.099407623348775,
+          "trace_per_s": 46.19881524669755,
+          "det_per_s2": 594.6715868913267,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            0.07613799656337294,
+            0.08382590664410487
+          ],
+          "residual": 2.0443960146976584e-10,
+          "jacobian": [
+            [
+              56.142293934722666,
+              -215.05897848478236
+            ],
+            [
+              3.9803081896609025,
+              -5.747445516769211
+            ]
+          ],
+          "max_real_per_s": 35.27631050758634,
+          "trace_per_s": 50.394848417953455,
+          "det_per_s2": 533.3262377468259,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            0.10463250446619526,
+            0.09017442567772922
+          ],
+          "residual": 1.137382338107742e-13,
+          "jacobian": [
+            [
+              29.089444159369698,
+              -180.94576786852085
+            ],
+            [
+              3.2659113362016186,
+              -5.711841491258166
+            ]
+          ],
+          "max_real_per_s": 11.688801334055762,
+          "trace_per_s": 23.377602668111532,
+          "det_per_s2": 424.7985404123835,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51033,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            -0.03091586540656822,
+            -0.0036207727888621735
+          ],
+          "residual": 1.1665083036803973e-14,
+          "jacobian": [
+            [
+              89.60648761748588,
+              -201.22479471753016
+            ],
+            [
+              6.655506648614487,
+              -4.768394566874607
+            ]
+          ],
+          "max_real_per_s": 72.20833382324838,
+          "trace_per_s": 84.83809305061128,
+          "det_per_s2": 911.973870396671,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 2.3594007443449004e-12,
+          "jacobian": [
+            [
+              91.36776405426806,
+              -201.3598736942812
+            ],
+            [
+              6.6561207202388255,
+              -4.768394566874808
+            ]
+          ],
+          "max_real_per_s": 74.44875569430778,
+          "trace_per_s": 86.59936948739326,
+          "det_per_s2": 904.5980778173076,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            -0.03225265521847609,
+            -0.0044866397432198665
+          ],
+          "residual": 5.895228931305294e-14,
+          "jacobian": [
+            [
+              102.62109998317726,
+              -239.11440563304006
+            ],
+            [
+              5.4419568469203385,
+              -4.768394566955745
+            ]
+          ],
+          "max_real_per_s": 88.69915255928106,
+          "trace_per_s": 97.85270541622151,
+          "det_per_s2": 811.9123813172044,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            -0.03074735812497939,
+            -0.0030476628190113392
+          ],
+          "residual": 3.5126882298365967e-15,
+          "jacobian": [
+            [
+              84.13509597366142,
+              -203.99841260937777
+            ],
+            [
+              5.991352218720462,
+              -4.768394566875596
+            ]
+          ],
+          "max_real_per_s": 67.1375182480516,
+          "trace_per_s": 79.36670140678582,
+          "det_per_s2": 821.0370074782844,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            -0.03075981521071458,
+            -0.0033116953368477796
+          ],
+          "residual": 1.5553943757462973e-14,
+          "jacobian": [
+            [
+              88.07242216759687,
+              -201.2451543132701
+            ],
+            [
+              6.655578305926811,
+              -4.899808973636901
+            ]
+          ],
+          "max_real_per_s": 70.24910579078616,
+          "trace_per_s": 83.17261319395996,
+          "det_per_s2": 907.8648387535649,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            -0.030915865406568217,
+            -0.0036207727888621873
+          ],
+          "residual": 1.706132730473452e-14,
+          "jacobian": [
+            [
+              92.33526450762882,
+              -207.35267210662184
+            ],
+            [
+              6.79159808517637,
+              -4.865898438625927
+            ]
+          ],
+          "max_real_per_s": 74.61769630540095,
+          "trace_per_s": 87.46936606900289,
+          "det_per_s2": 958.9619914377532,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51034,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            -0.030881813373543822,
+            -0.04652353894471135
+          ],
+          "residual": 1.0624163764916512e-15,
+          "jacobian": [
+            [
+              101.47016458164006,
+              -202.18366367924963
+            ],
+            [
+              3.9132904964810757,
+              -4.87758173638061
+            ]
+          ],
+          "max_real_per_s": 93.42120003318301,
+          "trace_per_s": 96.59258284525946,
+          "det_per_s2": 296.27438806879155,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 2.6214550638137187e-12,
+          "jacobian": [
+            [
+              107.56158691689434,
+              -203.99617199304933
+            ],
+            [
+              4.0279926588841555,
+              -4.877581736380668
+            ]
+          ],
+          "max_real_per_s": 99.70465945101493,
+          "trace_per_s": 102.68400518051368,
+          "det_per_s2": 297.05465134650683,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            -0.011296629281957389,
+            -0.03524985748130565
+          ],
+          "residual": 1.2124953190299204e-10,
+          "jacobian": [
+            [
+              97.20927866256973,
+              -248.05957504492181
+            ],
+            [
+              4.571948095454288,
+              -4.87758173638061
+            ]
+          ],
+          "max_real_per_s": 84.52358907490411,
+          "trace_per_s": 92.33169692618912,
+          "det_per_s2": 659.9692994745469,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            -0.016716839991045354,
+            -0.03899185139399124
+          ],
+          "residual": 3.601701129124514e-09,
+          "jacobian": [
+            [
+              105.3505078623047,
+              -210.25788304507623
+            ],
+            [
+              4.39278073758707,
+              -4.87758173638061
+            ]
+          ],
+          "max_real_per_s": 96.21407887302448,
+          "trace_per_s": 100.47292612592409,
+          "det_per_s2": 409.7610654986467,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            -0.04461943902614213,
+            -0.054407379473291426
+          ],
+          "residual": 1.2830467726892031e-13,
+          "jacobian": [
+            [
+              100.0126683378771,
+              -199.74236441154872
+            ],
+            [
+              3.8530061845765853,
+              -5.151526378752672
+            ]
+          ],
+          "max_real_per_s": 92.0989982766997,
+          "trace_per_s": 94.86114195912442,
+          "det_per_s2": 254.3906662476311,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            -0.030881813373543825,
+            -0.046523538944711354
+          ],
+          "residual": 1.5513001926764066e-15,
+          "jacobian": [
+            [
+              98.94833865174152,
+              -197.15881713826266
+            ],
+            [
+              3.7981854394452403,
+              -4.734113132476991
+            ]
+          ],
+          "max_real_per_s": 91.1374086192322,
+          "trace_per_s": 94.21422551926453,
+          "det_per_s2": 280.41311906480576,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51035,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            0.09234881730628759,
+            0.10436274057246098
+          ],
+          "residual": 4.307710197808814e-10,
+          "jacobian": [
+            [
+              58.89137175366324,
+              -159.8881943309422
+            ],
+            [
+              4.36392210888921,
+              -4.8817089677153325
+            ]
+          ],
+          "max_real_per_s": 44.865733665331135,
+          "trace_per_s": 54.00966278594791,
+          "det_per_s2": 410.2490885802579,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 2.1686521255444093e-12,
+          "jacobian": [
+            [
+              94.42862089052808,
+              -173.87018038872614
+            ],
+            [
+              4.96915906925174,
+              -4.881708967615815
+            ]
+          ],
+          "max_real_per_s": 84.79403592204966,
+          "trace_per_s": 89.54691192291227,
+          "det_per_s2": 403.0155383501895,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            0.06566670797938344,
+            0.08224593241805919
+          ],
+          "residual": 3.091988261405554e-10,
+          "jacobian": [
+            [
+              68.99567596670197,
+              -247.3421152562745
+            ],
+            [
+              4.756779975978222,
+              -4.881708967618103
+            ]
+          ],
+          "max_real_per_s": 45.765191993589646,
+          "trace_per_s": 64.11396699908386,
+          "det_per_s2": 839.7352109736224,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            0.10946205844866996,
+            0.11712697483092867
+          ],
+          "residual": 1.3532635965564032e-14,
+          "jacobian": [
+            [
+              48.15193761806614,
+              -142.5383572843119
+            ],
+            [
+              4.1195125898016345,
+              -4.8817089677153325
+            ]
+          ],
+          "max_real_per_s": 32.403278522661736,
+          "trace_per_s": 43.27022865035081,
+          "det_per_s2": 352.12481167938364,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            0.09762449498202885,
+            0.10614634452140943
+          ],
+          "residual": 6.444106288228875e-09,
+          "jacobian": [
+            [
+              55.1478070800269,
+              -158.70649981321105
+            ],
+            [
+              4.308347513701752,
+              -5.015201782529779
+            ]
+          ],
+          "max_real_per_s": 39.93688283146043,
+          "trace_per_s": 50.13260529749712,
+          "det_per_s2": 407.1853735081959,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            0.0923488173062876,
+            0.10436274057246099
+          ],
+          "residual": 4.6098833919074886e-10,
+          "jacobian": [
+            [
+              63.030670054813775,
+              -171.12625708111858
+            ],
+            [
+              4.3506944470017235,
+              -4.866911820864919
+            ]
+          ],
+          "max_real_per_s": 49.280947157904215,
+          "trace_per_s": 58.163758233948855,
+          "det_per_s2": 437.7533432522023,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51036,
+      "cycle_pass": false,
+      "cases": {
+        "actual": {
+          "root_V": [
+            0.16480744949898815,
+            0.09035449948143011
+          ],
+          "residual": 6.676959431766961e-15,
+          "jacobian": [
+            [
+              -6.868004088191287,
+              -227.33471773886313
+            ],
+            [
+              5.127310562531679,
+              -6.232189858111284
+            ]
+          ],
+          "max_real_per_s": -6.550096973151287,
+          "trace_per_s": -13.100193946302571,
+          "det_per_s2": 1208.4184049165235,
+          "local_unstable": false
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 2.8499944951991114e-12,
+          "jacobian": [
+            [
+              132.39980835692205,
+              -256.06869662825164
+            ],
+            [
+              5.807505933485416,
+              -6.232189858002412
+            ]
+          ],
+          "max_real_per_s": 120.68230972661857,
+          "trace_per_s": 126.16761849891964,
+          "det_per_s2": 661.9797322049756,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            0.1591784925293154,
+            0.08524337118943517
+          ],
+          "residual": 3.3556215545225327e-12,
+          "jacobian": [
+            [
+              -3.5363942836260596,
+              -255.77035519706428
+            ],
+            [
+              5.168468116986497,
+              -6.232189858111284
+            ]
+          ],
+          "max_real_per_s": -4.884292070868673,
+          "trace_per_s": -9.768584141737344,
+          "det_per_s2": 1343.980406695036,
+          "local_unstable": false
+        },
+        "nominal_slopes": {
+          "root_V": [
+            0.16691213087563142,
+            0.08735531357322925
+          ],
+          "residual": 5.31336826558226e-10,
+          "jacobian": [
+            [
+              -0.8136025844480277,
+              -222.18269685733296
+            ],
+            [
+              4.884187359255853,
+              -6.232189858111283
+            ]
+          ],
+          "max_real_per_s": -3.5228962212796553,
+          "trace_per_s": -7.045792442559311,
+          "det_per_s2": 1090.2524452112907,
+          "local_unstable": false
+        },
+        "nominal_leaks": {
+          "root_V": [
+            0.15110870655248257,
+            0.09013075553511232
+          ],
+          "residual": 2.1052522406337463e-10,
+          "jacobian": [
+            [
+              1.6205053019293048,
+              -227.57213029635233
+            ],
+            [
+              5.288789641768301,
+              -5.455889380622584
+            ]
+          ],
+          "max_real_per_s": -1.9176920393466403,
+          "trace_per_s": -3.8353840786932794,
+          "det_per_s2": 1194.7398277984564,
+          "local_unstable": false
+        },
+        "nominal_caps": {
+          "root_V": [
+            0.1648074494989882,
+            0.09035449948143014
+          ],
+          "residual": 1.9387045606711586e-16,
+          "jacobian": [
+            [
+              -6.381362528479366,
+              -211.2266140708291
+            ],
+            [
+              4.69887694269741,
+              -5.711433483548608
+            ]
+          ],
+          "max_real_per_s": -6.0463980060139875,
+          "trace_per_s": -12.092796012027975,
+          "det_per_s2": 1028.974594157283,
+          "local_unstable": false
+        }
+      }
+    },
+    {
+      "seed": 51037,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            -0.040237321274935234,
+            -0.016071308301670594
+          ],
+          "residual": 4.456938840576408e-12,
+          "jacobian": [
+            [
+              68.09998558362634,
+              -184.97996954049114
+            ],
+            [
+              4.802046547263545,
+              -5.418321669858376
+            ]
+          ],
+          "max_real_per_s": 52.857173451422824,
+          "trace_per_s": 62.68166391376796,
+          "det_per_s2": 519.2947964400258,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 2.515737453570237e-12,
+          "jacobian": [
+            [
+              94.32469354892518,
+              -198.64651254918243
+            ],
+            [
+              4.8185393231214,
+              -5.418321669852343
+            ]
+          ],
+          "max_real_per_s": 83.56816055430713,
+          "trace_per_s": 88.90637187907284,
+          "det_per_s2": 446.10450106084113,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            -0.026935346702766556,
+            -0.00417863033314217
+          ],
+          "residual": 2.689696355529931e-12,
+          "jacobian": [
+            [
+              64.64703976423228,
+              -207.6112861740374
+            ],
+            [
+              4.725551711611014,
+              -5.418321669852479
+            ]
+          ],
+          "max_real_per_s": 45.305466385193355,
+          "trace_per_s": 59.22871809437979,
+          "det_per_s2": 630.7994122831318,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            -0.04396386326345977,
+            -0.019943906463474288
+          ],
+          "residual": 7.129615223927362e-14,
+          "jacobian": [
+            [
+              71.46730338113672,
+              -190.40841046585368
+            ],
+            [
+              4.935263530682539,
+              -5.418321669858376
+            ]
+          ],
+          "max_real_per_s": 56.22220950992049,
+          "trace_per_s": 66.04898171127834,
+          "det_per_s2": 552.4828455110035,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            -0.03600643903535993,
+            -0.013714770096168442
+          ],
+          "residual": 2.1829868599416487e-12,
+          "jacobian": [
+            [
+              66.51590384251766,
+              -186.39505244423597
+            ],
+            [
+              4.808849115671949,
+              -4.8668408634608005
+            ]
+          ],
+          "max_real_per_s": 50.254620972792075,
+          "trace_per_s": 61.64906297905686,
+          "det_per_s2": 572.6233642212967,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            -0.040237321274935185,
+            -0.016071308301670577
+          ],
+          "residual": 4.910350911932355e-12,
+          "jacobian": [
+            [
+              75.0595118561954,
+              -203.8841285717357
+            ],
+            [
+              4.933432879742324,
+              -5.566569589871235
+            ]
+          ],
+          "max_real_per_s": 59.63206111579119,
+          "trace_per_s": 69.49294226632416,
+          "det_per_s2": 588.0246674241355,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51038,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            -0.07193425100557249,
+            -0.06697492700509482
+          ],
+          "residual": 1.2884513981925399e-13,
+          "jacobian": [
+            [
+              29.25216106506551,
+              -230.6113007462243
+            ],
+            [
+              4.130239445072121,
+              -4.7066187057871485
+            ]
+          ],
+          "max_real_per_s": 12.272771179639179,
+          "trace_per_s": 24.545542359278365,
+          "det_per_s2": 814.8011223679098,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 2.8727681918092845e-12,
+          "jacobian": [
+            [
+              82.8915653641301,
+              -245.01660983753288
+            ],
+            [
+              4.391112015757875,
+              -4.706618705788141
+            ]
+          ],
+          "max_real_per_s": 68.11772239905787,
+          "trace_per_s": 78.18494665834196,
+          "det_per_s2": 685.756387422975,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            -0.06892986661309924,
+            -0.07600542129228649
+          ],
+          "residual": 9.34757991311311e-14,
+          "jacobian": [
+            [
+              55.06917320749202,
+              -255.35056684711157
+            ],
+            [
+              4.903541956244076,
+              -4.7066187057871485
+            ]
+          ],
+          "max_real_per_s": 25.18127725085244,
+          "trace_per_s": 50.36255450170487,
+          "det_per_s2": 992.9326173549043,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            -0.07167748838182744,
+            -0.06557826190474031
+          ],
+          "residual": 5.267490406806347e-13,
+          "jacobian": [
+            [
+              29.512262180180333,
+              -250.3432521216475
+            ],
+            [
+              4.065410726322218,
+              -4.706618705820063
+            ]
+          ],
+          "max_real_per_s": 12.402821737180133,
+          "trace_per_s": 24.80564347436027,
+          "det_per_s2": 878.8451772094302,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            -0.07498759416904457,
+            -0.06436116433324668
+          ],
+          "residual": 1.3137459332461682e-13,
+          "jacobian": [
+            [
+              18.066283214787912,
+              -232.34540514796663
+            ],
+            [
+              4.109004251868465,
+              -5.093199453497535
+            ]
+          ],
+          "max_real_per_s": 6.48654188064519,
+          "trace_per_s": 12.973083761290377,
+          "det_per_s2": 862.6930738588068,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            -0.07193425100557246,
+            -0.0669749270050948
+          ],
+          "residual": 1.09601907455618e-13,
+          "jacobian": [
+            [
+              23.944234472221307,
+              -188.76591869869227
+            ],
+            [
+              4.054661007214486,
+              -4.620493217249759
+            ]
+          ],
+          "max_real_per_s": 9.661870627485774,
+          "trace_per_s": 19.323741254971548,
+          "det_per_s2": 654.7476370674713,
+          "local_unstable": true
+        }
+      }
+    },
+    {
+      "seed": 51039,
+      "cycle_pass": true,
+      "cases": {
+        "actual": {
+          "root_V": [
+            0.05053019920899739,
+            0.028586447665058533
+          ],
+          "residual": 1.9971417815397658e-09,
+          "jacobian": [
+            [
+              59.9891252622457,
+              -241.78985617229228
+            ],
+            [
+              5.3290061808597375,
+              -5.322394483587874
+            ]
+          ],
+          "max_real_per_s": 27.333365389328925,
+          "trace_per_s": 54.66673077865783,
+          "det_per_s2": 969.2138486402938,
+          "local_unstable": true
+        },
+        "zero_offsets": {
+          "root_V": [
+            0.0,
+            0.0
+          ],
+          "residual": 2.7561003110666326e-12,
+          "jacobian": [
+            [
+              87.29246493680581,
+              -249.27261494321522
+            ],
+            [
+              5.3751744735597535,
+              -5.322394483576023
+            ]
+          ],
+          "max_real_per_s": 69.34864306419459,
+          "trace_per_s": 81.9700704532298,
+          "det_per_s2": 875.2788629628518,
+          "local_unstable": true
+        },
+        "nominal_gains": {
+          "root_V": [
+            0.05622080278648504,
+            0.03150546232404765
+          ],
+          "residual": 5.8413293138346654e-15,
+          "jacobian": [
+            [
+              55.18643464714185,
+              -225.060822838313
+            ],
+            [
+              4.880032144648251,
+              -5.32239448357162
+            ]
+          ],
+          "max_real_per_s": 24.93202008178512,
+          "trace_per_s": 49.86404016357023,
+          "det_per_s2": 804.580074618019,
+          "local_unstable": true
+        },
+        "nominal_slopes": {
+          "root_V": [
+            0.04945985469687733,
+            0.028008912756759315
+          ],
+          "residual": 6.882032050818531e-10,
+          "jacobian": [
+            [
+              60.44903247046852,
+              -243.75469397951215
+            ],
+            [
+              5.427183402223339,
+              -5.322394483587874
+            ]
+          ],
+          "max_real_per_s": 27.563318993440323,
+          "trace_per_s": 55.126637986880645,
+          "det_per_s2": 1001.1678324205914,
+          "local_unstable": true
+        },
+        "nominal_leaks": {
+          "root_V": [
+            0.0506895930892619,
+            0.03041508167883621
+          ],
+          "residual": 2.4511796174688416e-09,
+          "jacobian": [
+            [
+              68.3967516049152,
+              -240.74374632158634
+            ],
+            [
+              5.328489272004846,
+              -5.030324192439083
+            ]
+          ],
+          "max_real_per_s": 39.75064176360391,
+          "trace_per_s": 63.36642741247611,
+          "det_per_s2": 938.7426352943772,
+          "local_unstable": true
+        },
+        "nominal_caps": {
+          "root_V": [
+            0.0505301992089974,
+            0.028586447665058533
+          ],
+          "residual": 2.121383271888558e-09,
+          "jacobian": [
+            [
+              63.72105881685217,
+              -256.831643724923
+            ],
+            [
+              5.296881450385316,
+              -5.2903096102623515
+            ]
+          ],
+          "max_real_per_s": 29.21537460329491,
+          "trace_per_s": 58.43074920658982,
+          "det_per_s2": 1023.3026396836287,
+          "local_unstable": true
+        }
+      }
+    }
+  ],
+  "limits": "Single Newton root per draw; no global uniqueness or cycle certificate. Category replacements are algebraic counterfactuals, not noisy replay or fresh evaluation."
+}

@@ -1,0 +1,43 @@
+{
+ "constant_input": true,
+ "ideal_cancellation": false,
+ "feedback_sign": true,
+ "bounded_states": true,
+ "current_conservation": true,
+ "prefix_causality": true,
+ "identical_errors_coincide": true,
+ "known_order_inputs_lost_gain": true
+}
+P1_native ideal_erosion_only shared n 40 mean -2.79 sd 0.00 rms 2.79 max 2.79 clip 0 in10 40
+P1_native ideal_erosion_only separate n 40 mean -7.52 sd 45.26 rms 45.32 max 114.70 clip 5 in10 5
+P1_native leak shared n 40 mean -3.00 sd 1.39 rms 3.30 max 6.05 clip 0 in10 40
+P1_native leak separate n 40 mean -7.49 sd 45.01 rms 45.07 max 114.70 clip 5 in10 5
+P1_native mirror shared n 40 mean -9.86 sd 82.24 rms 81.80 max 114.70 clip 40 in10 0
+P1_native mirror separate n 40 mean -9.86 sd 82.24 rms 81.80 max 114.70 clip 40 in10 0
+P1_native dead_band shared n 40 mean -1.49 sd 0.00 rms 1.49 max 1.49 clip 0 in10 40
+P1_native dead_band separate n 40 mean -6.14 sd 44.78 rms 44.64 max 114.70 clip 5 in10 5
+P1_native curvature shared n 40 mean -1.46 sd 0.00 rms 1.46 max 1.46 clip 0 in10 40
+P1_native curvature separate n 40 mean -6.32 sd 45.00 rms 44.88 max 114.70 clip 6 in10 4
+P1_native gate_sensitivity shared n 40 mean -55.99 sd 81.02 rms 97.65 max 114.70 clip 40 in10 0
+P1_native gate_sensitivity separate n 40 mean -14.23 sd 67.47 rms 68.12 max 114.70 clip 21 in10 2
+P1_native combined_nominal_gates shared n 40 mean -0.99 sd 6.86 rms 6.85 max 15.95 clip 0 in10 33
+P1_native combined_nominal_gates separate n 40 mean -6.09 sd 45.39 rms 45.23 max 114.70 clip 5 in10 3
+P1_native combined_with_gate_sensitivity shared n 40 mean -31.90 sd 67.19 rms 73.62 max 114.70 clip 23 in10 8
+P1_native combined_with_gate_sensitivity separate n 40 mean -15.07 sd 64.86 rms 65.79 max 114.70 clip 19 in10 4
+P2_preamp ideal_erosion_only shared n 40 mean -2.79 sd 0.00 rms 2.79 max 2.79 clip 0 in10 40
+P2_preamp ideal_erosion_only separate n 40 mean -7.52 sd 45.26 rms 45.32 max 114.70 clip 5 in10 5
+P2_preamp leak shared n 40 mean -3.00 sd 1.39 rms 3.30 max 6.05 clip 0 in10 40
+P2_preamp leak separate n 40 mean -7.49 sd 45.01 rms 45.07 max 114.70 clip 5 in10 5
+P2_preamp mirror shared n 40 mean -10.70 sd 81.75 rms 81.43 max 114.70 clip 39 in10 0
+P2_preamp mirror separate n 40 mean -10.70 sd 81.75 rms 81.43 max 114.70 clip 39 in10 0
+P2_preamp dead_band shared n 40 mean 5.47 sd 0.00 rms 5.47 max 5.47 clip 0 in10 40
+P2_preamp dead_band separate n 40 mean -1.17 sd 43.68 rms 43.15 max 114.70 clip 5 in10 2
+P2_preamp curvature shared n 40 mean 5.47 sd 0.00 rms 5.47 max 5.47 clip 0 in10 40
+P2_preamp curvature separate n 40 mean -1.25 sd 43.82 rms 43.29 max 114.70 clip 5 in10 2
+P2_preamp gate_sensitivity shared n 40 mean -55.99 sd 81.02 rms 97.65 max 114.70 clip 40 in10 0
+P2_preamp gate_sensitivity separate n 40 mean -14.23 sd 67.47 rms 68.12 max 114.70 clip 21 in10 2
+P2_preamp combined_nominal_gates shared n 40 mean 5.62 sd 3.24 rms 6.46 max 12.36 clip 0 in10 36
+P2_preamp combined_nominal_gates separate n 40 mean -0.92 sd 43.87 rms 43.33 max 114.70 clip 6 in10 4
+P2_preamp combined_with_gate_sensitivity shared n 40 mean -28.23 sd 66.31 rms 71.30 max 114.70 clip 20 in10 13
+P2_preamp combined_with_gate_sensitivity separate n 40 mean -12.62 sd 67.54 rms 67.88 max 114.70 clip 22 in10 4
+elapsed 36.2

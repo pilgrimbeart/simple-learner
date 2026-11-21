@@ -1,0 +1,27 @@
+{
+  "modes": [
+    "signed_gate",
+    "linear_signed"
+  ],
+  "amp_V": [
+    0.05,
+    0.1
+  ],
+  "drift_V": 0.05,
+  "drift_Hz": 0.05,
+  "highpass_tau_s": 1.0,
+  "grids": [
+    [
+      256,
+      128
+    ],
+    [
+      512,
+      256
+    ]
+  ],
+  "tolerance_V": 5e-05,
+  "wanted_transmission": 0.9,
+  "drift_transmission": 0.1,
+  "budget_s": 180
+}

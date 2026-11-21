@@ -1,0 +1,108 @@
+original done
+zero_lag_offsets done
+signed_gate done
+linear_signed done
+{
+  "checks": {
+    "validation_max_V": 2.042958944792339e-07,
+    "resolution_max_V": 3.2390557944128595e-09
+  },
+  "comparisons": {
+    "original:equal": {
+      "adequate_draws": 33,
+      "draws": 40,
+      "strictly_wrong_sign": 0,
+      "no_signal": 12,
+      "local_cases": 320,
+      "zero_bias_range_V": [
+        0.0,
+        0.0
+      ],
+      "both_lags_closed_cases": 12
+    },
+    "original:unequal_amplitude": {
+      "adequate_draws": 25,
+      "draws": 40,
+      "strictly_wrong_sign": 15,
+      "no_signal": 12,
+      "local_cases": 320,
+      "zero_bias_range_V": [
+        -0.006396235913969759,
+        0.0024122510281012707
+      ],
+      "both_lags_closed_cases": 12
+    },
+    "zero_lag_offsets:equal": {
+      "adequate_draws": 40,
+      "draws": 40,
+      "strictly_wrong_sign": 0,
+      "no_signal": 0,
+      "local_cases": 320,
+      "zero_bias_range_V": [
+        0.0,
+        0.0
+      ],
+      "both_lags_closed_cases": 0
+    },
+    "zero_lag_offsets:unequal_amplitude": {
+      "adequate_draws": 40,
+      "draws": 40,
+      "strictly_wrong_sign": 1,
+      "no_signal": 0,
+      "local_cases": 320,
+      "zero_bias_range_V": [
+        -0.006021921177086848,
+        0.0047466710057015495
+      ],
+      "both_lags_closed_cases": 0
+    },
+    "signed_gate:equal": {
+      "adequate_draws": 40,
+      "draws": 40,
+      "strictly_wrong_sign": 0,
+      "no_signal": 0,
+      "local_cases": 320,
+      "zero_bias_range_V": [
+        0.0,
+        0.0
+      ],
+      "both_lags_closed_cases": 12
+    },
+    "signed_gate:unequal_amplitude": {
+      "adequate_draws": 40,
+      "draws": 40,
+      "strictly_wrong_sign": 0,
+      "no_signal": 0,
+      "local_cases": 320,
+      "zero_bias_range_V": [
+        -0.000137043881487566,
+        0.00048187369074568706
+      ],
+      "both_lags_closed_cases": 12
+    },
+    "linear_signed:equal": {
+      "adequate_draws": 40,
+      "draws": 40,
+      "strictly_wrong_sign": 0,
+      "no_signal": 0,
+      "local_cases": 320,
+      "zero_bias_range_V": [
+        0.0,
+        0.0
+      ],
+      "both_lags_closed_cases": 12
+    },
+    "linear_signed:unequal_amplitude": {
+      "adequate_draws": 40,
+      "draws": 40,
+      "strictly_wrong_sign": 0,
+      "no_signal": 0,
+      "local_cases": 320,
+      "zero_bias_range_V": [
+        -6.938893903907228e-18,
+        5.204170427930421e-18
+      ],
+      "both_lags_closed_cases": 12
+    }
+  }
+}

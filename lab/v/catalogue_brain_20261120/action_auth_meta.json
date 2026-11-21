@@ -1,0 +1,8 @@
+{
+ "ledger": "/home/pilgrim/git/simple-learner/lab/v/catalogue_brain_20261120/action_auth_ledger.jsonl.gz",
+ "archive": "/home/pilgrim/git/simple-learner/lab/v/catalogue_brain_20261120_action_auth.pkl",
+ "archive_sha256": "cd51d49f2ffef4dde2f5778f6c5ee0eaec24d562a7ce8bd7758d23f71fcde175",
+ "ledger_sha256": "51d82ea384a87a85fe877aa808818d2dacb6d33a9d62cd70db39c1c326179b0b",
+ "lives": 384,
+ "seconds": 102.82139587402344
+}

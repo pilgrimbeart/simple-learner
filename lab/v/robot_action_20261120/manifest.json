@@ -1,0 +1,65 @@
+{
+ "revision": "5700eaa0d397e1a7dc055ce69ce9ec7e1d32cc7f",
+ "engine_files_dirty": [],
+ "dirty_tracked": [
+  " M .gitignore",
+  " M ABSTRACT.md",
+  " M AGENTS.md",
+  " M MIXED_FEEDBACK.md",
+  " M NOTEBOOK.md",
+  " M PARTS.md",
+  " M PROGRAMME.md",
+  " M QUESTIONS.md",
+  " M README.md",
+  " M discrete/NOTEBOOK.md"
+ ],
+ "hashes": {
+  "brains/designed.py": "358c1c14bd53269155327757e4554d5a02714767c0582803659ce2f4bacd1820",
+  "brains/circuit.py": "206376c6cef661d0b3b73f46a7f48c5738053a20c1ebd6a51c218ccb19efa66b",
+  "creature.py": "a0d2cb7c5a4ddbe5d99188a6043d91d6cf1e159194a02d60fee154b89e53463f",
+  "world.py": "b64322bee1812eb24aa8467e080534e4d98cc02ead69d8412ea7f5cbc1fdf417",
+  "mixed_feedback.py": "06157fe5e3532c625ba1494e4d23328b9988041e80c5469b2de2e94d3582131e",
+  "units.py": "dfdd23e62a79251c579cc8d43badea5894cd167d1f6229a560bd83fb0b2bf1e8",
+  "chip.py": "d0014cd1ab350ada938ee75f12a12445236895f13a451afd9a70aec0db29d037",
+  "lab/robot_action_20261120/brain.py": "3b35562e81a23e24ebcecbfdf59c9a9a8fc2e6b5334b6b526ef775e159248d38",
+  "lab/robot_action_20261120/capture.py": "5691abfa33a7c417161ff709d5af94969414385b8a16dcdade5d88da8827298e",
+  "lab/robot_action_20261120/checks.py": "9848cc20c7418a0d982283c9e24bb3b6fdd3bfb851f6315a16f93af2b5a36c4c",
+  "lab/robot_action_20261120/make_manifest.py": "d6b6a506a528005f3a6c468ee6572597ccc2c67318b24232ca19cc1986fbf383",
+  "lab/robot_action_20261120/metrics.py": "af8986a783a074271ff38d044d8a6c3a3c313e5cb0fe9bfc100c5ced61fddd07",
+  "lab/robot_action_20261120/replay.py": "22bd7ef0cece92b2bda889035c08f4d93bc3ed622f18730731383ae52c94d4bb"
+ },
+ "python": ".venv/bin/python, OPENBLAS/OMP/MKL threads 1, 7 spawn workers",
+ "work_order": "lab/WORK_ORDER_2026-11-20_robot_action.md",
+ "seeds": "development seeds 0-31, each red then blue as poison (64 lives), 100 s; all-food one life per seed per poison label (64; red/blue labels give two worlds per seed as in D176)",
+ "substrates": {
+  "biology": "mixed_feedback SUBSTRATES['biology'] (historical replication)",
+  "silicon": "mixed_feedback SUBSTRATES['silicon'] via Circuit(substrate=...) only; VOLT 1 V, on_chip False: noise-only diagnostic, not an on-chip implementation"
+ },
+ "circuit": "brains/designed.py DesignedBrain unmodified, via lab adapter brain.make_brain; D176 repairs: P memory nodes, taste writers' thresholds +-0.8 V",
+ "arms": {
+  "learn": "taste-driven learning",
+  "frozen": "Life(learning=False); knobs start 0.5",
+  "informed": "Life(learning=False); food knob 1.0, poison knob 0.0 at birth (PRIVILEGED: wiring and valence)",
+  "allfood": "both colours food, learning on"
+ },
+ "metrics": {
+  "primary": "(food-poison) per 10 s in the fixed final third of the 100 s life (ticks 6667-9999), all lives",
+  "secondary": "D176's: last third of time after moving began",
+  "separate": "food and poison counts and rates; stranding (no meal in life) Wilson 95%; knob order/strong state (>=0.8/<=0.2) end/ever/lost; path length; motor/sensor spike rates",
+  "uncertainty": "paired bootstrap over seeds (seed mean of red/blue lives), 4000 resamples, rng 178, 95% percentile",
+  "job_limits": "food rate lower bound >= 1/10 s; pooled food:poison >= 3; stranding Wilson upper <= 5%",
+  "margins": {
+   "useful": 0.1,
+   "allfood_no_harm": -0.05,
+   "stranding_no_harm": 0.05
+  }
+ },
+ "stage1_branch": "stop historical branch only if informed AND learning silicon pass all job limits AND learning silicon - learning biology lower bound > +0.10; else stage 2",
+ "commands": [
+  "python lab/robot_action_20261120/checks.py  (R1; also produces the biology stage-1 captures)",
+  "python lab/robot_action_20261120/capture.py <arm> silicon 0 31",
+  "python lab/robot_action_20261120/stage1.py  (summaries, contrasts, replay)"
+ ],
+ "large_outputs": "/home/pilgrim/nca-scratch-backup/robot_action_20261120",
+ "analysis_version": "metrics.py as hashed"
+}

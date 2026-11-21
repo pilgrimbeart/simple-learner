@@ -1,0 +1,27 @@
+{
+  "seeds": [
+    2026112204,
+    2026112215,
+    2026112223,
+    2026112226,
+    2026112236,
+    2026112237
+  ],
+  "gate_target_fraction": 0.01,
+  "gate_scale_V": 0.3,
+  "weakest_input_nominal_V": 0.35,
+  "pulse_duration_s": 0.04,
+  "sample_times_after_onset_s": [
+    0.06,
+    0.15
+  ],
+  "sample_times_after_offset_s": [
+    0.06,
+    0.15
+  ],
+  "quadrature_steps_s": [
+    5e-05,
+    2.5e-05
+  ],
+  "interpretation": "Common nominal threshold shift preserves observed offset errors; approximate leaky sigmoid response omits rail fade and stochastic variation. No pass criterion changed."
+}

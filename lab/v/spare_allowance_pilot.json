@@ -1,0 +1,1639 @@
+{
+ "checks": {
+  "historical seq red reproduces D78 stage 1": {
+   "ok": true,
+   "detail": null
+  },
+  "historical seq red brain fingerprint equals D111's unobserved life": {
+   "ok": true,
+   "detail": null
+  },
+  "disabled gate seq red = issued M: result": {
+   "ok": true,
+   "detail": null
+  },
+  "disabled gate seq red = issued M: brain fingerprint": {
+   "ok": true,
+   "detail": null
+  },
+  "disabled gate seq red = issued M: body/world fingerprint": {
+   "ok": true,
+   "detail": null
+  },
+  "disabled gate seq red = issued M: prediction trace": {
+   "ok": true,
+   "detail": null
+  },
+  "disabled gate seq red: no transfer by the gate": {
+   "ok": true,
+   "detail": null
+  },
+  "seq red: disabled lives' first opportunity is the gate lives' first transfer": {
+   "ok": true,
+   "detail": {
+    "first_opportunity": {
+     "t": 7.888440126625613,
+     "recipient": 3,
+     "donor": 160,
+     "recipient_units": 3,
+     "recipient_P": 3,
+     "donor_units": 40,
+     "donor_P": 41,
+     "saved": 1.5849625007211565,
+     "price": 1.0
+    },
+    "first_transfer": {
+     "t": 7.888440126625613,
+     "recipient": 3,
+     "donor": 160,
+     "recipient_units": 3,
+     "recipient_P": 3,
+     "donor_units": 40,
+     "donor_P": 41,
+     "saved": 1.5849625007211565,
+     "price": 1.0
+    }
+   }
+  },
+  "historical seq blue reproduces D78 stage 1": {
+   "ok": true,
+   "detail": null
+  },
+  "historical seq blue brain fingerprint equals D111's unobserved life": {
+   "ok": true,
+   "detail": null
+  },
+  "disabled gate seq blue = issued M: result": {
+   "ok": true,
+   "detail": null
+  },
+  "disabled gate seq blue = issued M: brain fingerprint": {
+   "ok": true,
+   "detail": null
+  },
+  "disabled gate seq blue = issued M: body/world fingerprint": {
+   "ok": true,
+   "detail": null
+  },
+  "disabled gate seq blue = issued M: prediction trace": {
+   "ok": true,
+   "detail": null
+  },
+  "disabled gate seq blue: no transfer by the gate": {
+   "ok": true,
+   "detail": null
+  },
+  "seq blue: disabled lives' first opportunity is the gate lives' first transfer": {
+   "ok": true,
+   "detail": {
+    "first_opportunity": {
+     "t": 7.383784130430065,
+     "recipient": 23,
+     "donor": 155,
+     "recipient_units": 6,
+     "recipient_P": 6,
+     "donor_units": 15,
+     "donor_P": 16,
+     "saved": 1.584962500721156,
+     "price": 1.0
+    },
+    "first_transfer": {
+     "t": 7.383784130430065,
+     "recipient": 23,
+     "donor": 155,
+     "recipient_units": 6,
+     "recipient_P": 6,
+     "donor_units": 15,
+     "donor_P": 16,
+     "saved": 1.584962500721156,
+     "price": 1.0
+    }
+   }
+  },
+  "seq red: prediction traces agree before the first gate transfer": {
+   "ok": true,
+   "detail": {
+    "first_transfer_t": 7.888440126625613,
+    "first_divergent_prediction": 134,
+    "divergence_t": 7.888440126625613
+   }
+  },
+  "seq issued red: issued reconstruction <= 1e-9": {
+   "ok": true,
+   "detail": 0.0
+  },
+  "seq issued red: completed issued updates = accepted tastes": {
+   "ok": true,
+   "detail": null
+  },
+  "seq issued+gate red: issued reconstruction <= 1e-9": {
+   "ok": true,
+   "detail": 0.0
+  },
+  "seq issued+gate red: completed issued updates = accepted tastes": {
+   "ok": true,
+   "detail": null
+  },
+  "seq red: gate deletion transfers = M's counter": {
+   "ok": true,
+   "detail": null
+  },
+  "seq red: allowance sum conserved": {
+   "ok": true,
+   "detail": null
+  },
+  "seq red: births after allowance-only transfers <= transfers": {
+   "ok": true,
+   "detail": null
+  },
+  "seq historical red: peak <= cap 2300": {
+   "ok": true,
+   "detail": null
+  },
+  "seq issued red: peak <= cap 2300": {
+   "ok": true,
+   "detail": null
+  },
+  "seq issued+gate red: peak <= cap 2300": {
+   "ok": true,
+   "detail": null
+  },
+  "seq blue: prediction traces agree before the first gate transfer": {
+   "ok": true,
+   "detail": {
+    "first_transfer_t": 7.383784130430065,
+    "first_divergent_prediction": 130,
+    "divergence_t": 7.383784130430065
+   }
+  },
+  "seq issued blue: issued reconstruction <= 1e-9": {
+   "ok": true,
+   "detail": 0.0
+  },
+  "seq issued blue: completed issued updates = accepted tastes": {
+   "ok": true,
+   "detail": null
+  },
+  "seq issued+gate blue: issued reconstruction <= 1e-9": {
+   "ok": true,
+   "detail": 0.0
+  },
+  "seq issued+gate blue: completed issued updates = accepted tastes": {
+   "ok": true,
+   "detail": null
+  },
+  "seq blue: gate deletion transfers = M's counter": {
+   "ok": true,
+   "detail": null
+  },
+  "seq blue: allowance sum conserved": {
+   "ok": true,
+   "detail": null
+  },
+  "seq blue: births after allowance-only transfers <= transfers": {
+   "ok": true,
+   "detail": null
+  },
+  "seq historical blue: peak <= cap 2300": {
+   "ok": true,
+   "detail": null
+  },
+  "seq issued blue: peak <= cap 2300": {
+   "ok": true,
+   "detail": null
+  },
+  "seq issued+gate blue: peak <= cap 2300": {
+   "ok": true,
+   "detail": null
+  },
+  "time red: prediction traces agree before the first gate transfer": {
+   "ok": true,
+   "detail": {
+    "first_transfer_t": 11.824649879147254,
+    "first_divergent_prediction": 214,
+    "divergence_t": 12.491698367401114
+   }
+  },
+  "time issued red: issued reconstruction <= 1e-9": {
+   "ok": true,
+   "detail": 0.0
+  },
+  "time issued red: completed issued updates = accepted tastes": {
+   "ok": true,
+   "detail": null
+  },
+  "time issued+gate red: issued reconstruction <= 1e-9": {
+   "ok": true,
+   "detail": 0.0
+  },
+  "time issued+gate red: completed issued updates = accepted tastes": {
+   "ok": true,
+   "detail": null
+  },
+  "time red: gate deletion transfers = M's counter": {
+   "ok": true,
+   "detail": null
+  },
+  "time red: allowance sum conserved": {
+   "ok": true,
+   "detail": null
+  },
+  "time red: births after allowance-only transfers <= transfers": {
+   "ok": true,
+   "detail": null
+  },
+  "time historical red: peak <= cap 2300": {
+   "ok": true,
+   "detail": null
+  },
+  "time issued red: peak <= cap 2300": {
+   "ok": true,
+   "detail": null
+  },
+  "time issued+gate red: peak <= cap 2300": {
+   "ok": true,
+   "detail": null
+  },
+  "time blue: prediction traces agree before the first gate transfer": {
+   "ok": true,
+   "detail": {
+    "first_transfer_t": 14.542700371132364,
+    "first_divergent_prediction": 253,
+    "divergence_t": 14.542700371132364
+   }
+  },
+  "time issued blue: issued reconstruction <= 1e-9": {
+   "ok": true,
+   "detail": 0.0
+  },
+  "time issued blue: completed issued updates = accepted tastes": {
+   "ok": true,
+   "detail": null
+  },
+  "time issued+gate blue: issued reconstruction <= 1e-9": {
+   "ok": true,
+   "detail": 0.0
+  },
+  "time issued+gate blue: completed issued updates = accepted tastes": {
+   "ok": true,
+   "detail": null
+  },
+  "time blue: gate deletion transfers = M's counter": {
+   "ok": true,
+   "detail": null
+  },
+  "time blue: allowance sum conserved": {
+   "ok": true,
+   "detail": null
+  },
+  "time blue: births after allowance-only transfers <= transfers": {
+   "ok": true,
+   "detail": null
+  },
+  "time historical blue: peak <= cap 2300": {
+   "ok": true,
+   "detail": null
+  },
+  "time issued blue: peak <= cap 2300": {
+   "ok": true,
+   "detail": null
+  },
+  "time issued+gate blue: peak <= cap 2300": {
+   "ok": true,
+   "detail": null
+  },
+  "allfood red: no gate transfer, so traces identical": {
+   "ok": true,
+   "detail": null
+  },
+  "allfood issued red: issued reconstruction <= 1e-9": {
+   "ok": true,
+   "detail": 0.0
+  },
+  "allfood issued red: completed issued updates = accepted tastes": {
+   "ok": true,
+   "detail": null
+  },
+  "allfood issued+gate red: issued reconstruction <= 1e-9": {
+   "ok": true,
+   "detail": 0.0
+  },
+  "allfood issued+gate red: completed issued updates = accepted tastes": {
+   "ok": true,
+   "detail": null
+  },
+  "allfood red: gate deletion transfers = M's counter": {
+   "ok": true,
+   "detail": null
+  },
+  "allfood red: allowance sum conserved": {
+   "ok": true,
+   "detail": null
+  },
+  "allfood red: births after allowance-only transfers <= transfers": {
+   "ok": true,
+   "detail": null
+  },
+  "allfood historical red: peak <= cap 2300": {
+   "ok": true,
+   "detail": null
+  },
+  "allfood issued red: peak <= cap 2300": {
+   "ok": true,
+   "detail": null
+  },
+  "allfood issued+gate red: peak <= cap 2300": {
+   "ok": true,
+   "detail": null
+  },
+  "allfood blue: no gate transfer, so traces identical": {
+   "ok": true,
+   "detail": null
+  },
+  "allfood issued blue: issued reconstruction <= 1e-9": {
+   "ok": true,
+   "detail": 0.0
+  },
+  "allfood issued blue: completed issued updates = accepted tastes": {
+   "ok": true,
+   "detail": null
+  },
+  "allfood issued+gate blue: issued reconstruction <= 1e-9": {
+   "ok": true,
+   "detail": 0.0
+  },
+  "allfood issued+gate blue: completed issued updates = accepted tastes": {
+   "ok": true,
+   "detail": null
+  },
+  "allfood blue: gate deletion transfers = M's counter": {
+   "ok": true,
+   "detail": null
+  },
+  "allfood blue: allowance sum conserved": {
+   "ok": true,
+   "detail": null
+  },
+  "allfood blue: births after allowance-only transfers <= transfers": {
+   "ok": true,
+   "detail": null
+  },
+  "allfood historical blue: peak <= cap 2300": {
+   "ok": true,
+   "detail": null
+  },
+  "allfood issued blue: peak <= cap 2300": {
+   "ok": true,
+   "detail": null
+  },
+  "allfood issued+gate blue: peak <= cap 2300": {
+   "ok": true,
+   "detail": null
+  },
+  "time historical 142000 red: ledger increments, final balances and weight replay within 1e-9": {
+   "ok": true,
+   "detail": {
+    "max_increment_error": 3.064215547965432e-14,
+    "max_weight_replay_error": 1.1937117960769683e-12,
+    "max_final_balance_error": 1.7053025658242404e-13,
+    "accepted": 1762
+   }
+  },
+  "time historical 142000 blue: ledger increments, final balances and weight replay within 1e-9": {
+   "ok": true,
+   "detail": {
+    "max_increment_error": 2.881028748902281e-14,
+    "max_weight_replay_error": 3.126388037344441e-12,
+    "max_final_balance_error": 1.7053025658242404e-13,
+    "accepted": 1741
+   }
+  },
+  "time issued 142000 red: ledger increments, final balances and weight replay within 1e-9": {
+   "ok": true,
+   "detail": {
+    "max_increment_error": 5.639932965095795e-14,
+    "max_weight_replay_error": 8.242295734817162e-13,
+    "max_final_balance_error": 1.7053025658242404e-13,
+    "accepted": 1724
+   }
+  },
+  "time issued 142000 blue: ledger increments, final balances and weight replay within 1e-9": {
+   "ok": true,
+   "detail": {
+    "max_increment_error": 2.886579864025407e-14,
+    "max_weight_replay_error": 1.7053025658242404e-12,
+    "max_final_balance_error": 2.2737367544323206e-13,
+    "accepted": 1801
+   }
+  },
+  "time issued+gate 142000 red: ledger increments, final balances and weight replay within 1e-9": {
+   "ok": true,
+   "detail": {
+    "max_increment_error": 5.678790770957676e-14,
+    "max_weight_replay_error": 1.2505552149377763e-12,
+    "max_final_balance_error": 1.7053025658242404e-13,
+    "accepted": 1819
+   }
+  },
+  "time issued+gate 142000 blue: ledger increments, final balances and weight replay within 1e-9": {
+   "ok": true,
+   "detail": {
+    "max_increment_error": 2.886579864025407e-14,
+    "max_weight_replay_error": 3.126388037344441e-12,
+    "max_final_balance_error": 1.1368683772161603e-13,
+    "accepted": 1764
+   }
+  },
+  "seq historical 142000 red: ledger increments, final balances and weight replay within 1e-9": {
+   "ok": true,
+   "detail": {
+    "max_increment_error": 1.7832957333041577e-15,
+    "max_weight_replay_error": 7.460698725481052e-14,
+    "max_final_balance_error": 7.105427357601002e-15,
+    "accepted": 175
+   }
+  },
+  "seq historical 142000 blue: ledger increments, final balances and weight replay within 1e-9": {
+   "ok": true,
+   "detail": {
+    "max_increment_error": 1.4988010832439613e-15,
+    "max_weight_replay_error": 1.5631940186722204e-13,
+    "max_final_balance_error": 4.440892098500626e-15,
+    "accepted": 162
+   }
+  },
+  "seq issued 142000 red: ledger increments, final balances and weight replay within 1e-9": {
+   "ok": true,
+   "detail": {
+    "max_increment_error": 2.1094237467877974e-15,
+    "max_weight_replay_error": 1.2079226507921703e-13,
+    "max_final_balance_error": 8.881784197001252e-15,
+    "accepted": 168
+   }
+  },
+  "seq issued 142000 blue: ledger increments, final balances and weight replay within 1e-9": {
+   "ok": true,
+   "detail": {
+    "max_increment_error": 1.3322676295501878e-15,
+    "max_weight_replay_error": 2.8421709430404007e-13,
+    "max_final_balance_error": 7.105427357601002e-15,
+    "accepted": 160
+   }
+  },
+  "seq issued+gate 142000 red: ledger increments, final balances and weight replay within 1e-9": {
+   "ok": true,
+   "detail": {
+    "max_increment_error": 1.970645868709653e-15,
+    "max_weight_replay_error": 4.405364961712621e-13,
+    "max_final_balance_error": 8.881784197001252e-15,
+    "accepted": 161
+   }
+  },
+  "seq issued+gate 142000 blue: ledger increments, final balances and weight replay within 1e-9": {
+   "ok": true,
+   "detail": {
+    "max_increment_error": 1.8041124150158794e-15,
+    "max_weight_replay_error": 1.2434497875801753e-13,
+    "max_final_balance_error": 1.0658141036401503e-14,
+    "accepted": 151
+   }
+  },
+  "allfood historical 142000 red: ledger increments, final balances and weight replay within 1e-9": {
+   "ok": true,
+   "detail": {
+    "max_increment_error": 8.881784197001252e-16,
+    "max_weight_replay_error": 6.217248937900877e-15,
+    "max_final_balance_error": 0.0,
+    "accepted": 178
+   }
+  },
+  "allfood historical 142000 blue: ledger increments, final balances and weight replay within 1e-9": {
+   "ok": true,
+   "detail": {
+    "max_increment_error": 8.881784197001252e-16,
+    "max_weight_replay_error": 6.217248937900877e-15,
+    "max_final_balance_error": 0.0,
+    "accepted": 178
+   }
+  },
+  "allfood issued 142000 red: ledger increments, final balances and weight replay within 1e-9": {
+   "ok": true,
+   "detail": {
+    "max_increment_error": 8.881784197001252e-16,
+    "max_weight_replay_error": 6.217248937900877e-15,
+    "max_final_balance_error": 0.0,
+    "accepted": 178
+   }
+  },
+  "allfood issued 142000 blue: ledger increments, final balances and weight replay within 1e-9": {
+   "ok": true,
+   "detail": {
+    "max_increment_error": 8.881784197001252e-16,
+    "max_weight_replay_error": 6.217248937900877e-15,
+    "max_final_balance_error": 0.0,
+    "accepted": 178
+   }
+  },
+  "allfood issued+gate 142000 red: ledger increments, final balances and weight replay within 1e-9": {
+   "ok": true,
+   "detail": {
+    "max_increment_error": 8.881784197001252e-16,
+    "max_weight_replay_error": 6.217248937900877e-15,
+    "max_final_balance_error": 0.0,
+    "accepted": 178
+   }
+  },
+  "allfood issued+gate 142000 blue: ledger increments, final balances and weight replay within 1e-9": {
+   "ok": true,
+   "detail": {
+    "max_increment_error": 8.881784197001252e-16,
+    "max_weight_replay_error": 6.217248937900877e-15,
+    "max_final_balance_error": 0.0,
+    "accepted": 178
+   }
+  },
+  "seq issued+gate disabled 142000 red: ledger increments, final balances and weight replay within 1e-9": {
+   "ok": true,
+   "detail": {
+    "max_increment_error": 2.1094237467877974e-15,
+    "max_weight_replay_error": 1.2079226507921703e-13,
+    "max_final_balance_error": 8.881784197001252e-15,
+    "accepted": 168
+   }
+  },
+  "seq issued+gate disabled 142000 blue: ledger increments, final balances and weight replay within 1e-9": {
+   "ok": true,
+   "detail": {
+    "max_increment_error": 1.3322676295501878e-15,
+    "max_weight_replay_error": 2.8421709430404007e-13,
+    "max_final_balance_error": 7.105427357601002e-15,
+    "accepted": 160
+   }
+  },
+  "allfood red: gate and issued identical behaviour and state": {
+   "ok": true,
+   "detail": null
+  },
+  "allfood red: zero gate transfers and no extra material": {
+   "ok": true,
+   "detail": null
+  },
+  "allfood blue: gate and issued identical behaviour and state": {
+   "ok": true,
+   "detail": null
+  },
+  "allfood blue: zero gate transfers and no extra material": {
+   "ok": true,
+   "detail": null
+  }
+ },
+ "failed": [],
+ "mechanical_checks_pass": true,
+ "gate_used_in_sequence_lives": [
+  "red",
+  "blue"
+ ],
+ "proceed_to_J": true,
+ "per_life": {
+  "allfood historical 142000 blue": {
+   "last_third_efficiency": 3.888426442172541,
+   "last_third_gain": 65.0,
+   "gain": 202.0,
+   "gain_rate_per_10s": 6.733333333333333,
+   "food": 202,
+   "poison": 0,
+   "food_last_third": 65,
+   "poison_last_third": 0,
+   "accepted_tastes": 178,
+   "issued": {
+    "full": {
+     "n": 178,
+     "bits": 0.03474070618744653,
+     "errors": 0.0028089887640449437
+    },
+    "last_third": {
+     "n": 58,
+     "bits": 0.01010642644203593,
+     "errors": 0.0
+    }
+   },
+   "births": 0,
+   "recycled": 0,
+   "peak_units": 2042,
+   "final_units": 2042,
+   "grown": {
+    "event": 0,
+    "clock": 0,
+    "integrator": 0,
+    "rhythm": 0
+   },
+   "allowance_only_transfers": 0,
+   "deletion_transfers": 0,
+   "births_after_allowance_only": 0,
+   "gate_opportunities": 0,
+   "donor_scans": null,
+   "unused_allowance": null,
+   "cpu_s": 3.9369844500000113
+  },
+  "allfood historical 142000 red": {
+   "last_third_efficiency": 3.888426442172541,
+   "last_third_gain": 65.0,
+   "gain": 202.0,
+   "gain_rate_per_10s": 6.733333333333333,
+   "food": 202,
+   "poison": 0,
+   "food_last_third": 65,
+   "poison_last_third": 0,
+   "accepted_tastes": 178,
+   "issued": {
+    "full": {
+     "n": 178,
+     "bits": 0.03474070618744653,
+     "errors": 0.0028089887640449437
+    },
+    "last_third": {
+     "n": 58,
+     "bits": 0.01010642644203593,
+     "errors": 0.0
+    }
+   },
+   "births": 0,
+   "recycled": 0,
+   "peak_units": 2042,
+   "final_units": 2042,
+   "grown": {
+    "event": 0,
+    "clock": 0,
+    "integrator": 0,
+    "rhythm": 0
+   },
+   "allowance_only_transfers": 0,
+   "deletion_transfers": 0,
+   "births_after_allowance_only": 0,
+   "gate_opportunities": 0,
+   "donor_scans": null,
+   "unused_allowance": null,
+   "cpu_s": 3.988245546999991
+  },
+  "allfood issued 142000 blue": {
+   "last_third_efficiency": 3.888426442172541,
+   "last_third_gain": 65.0,
+   "gain": 202.0,
+   "gain_rate_per_10s": 6.733333333333333,
+   "food": 202,
+   "poison": 0,
+   "food_last_third": 65,
+   "poison_last_third": 0,
+   "accepted_tastes": 178,
+   "issued": {
+    "full": {
+     "n": 178,
+     "bits": 0.03474070618744653,
+     "errors": 0.0028089887640449437
+    },
+    "last_third": {
+     "n": 58,
+     "bits": 0.01010642644203593,
+     "errors": 0.0
+    }
+   },
+   "births": 0,
+   "recycled": 0,
+   "peak_units": 2042,
+   "final_units": 2042,
+   "grown": {
+    "event": 0,
+    "clock": 0,
+    "integrator": 0,
+    "rhythm": 0
+   },
+   "allowance_only_transfers": 0,
+   "deletion_transfers": 0,
+   "births_after_allowance_only": 0,
+   "gate_opportunities": 0,
+   "donor_scans": null,
+   "unused_allowance": null,
+   "cpu_s": 5.194318358999993
+  },
+  "allfood issued 142000 red": {
+   "last_third_efficiency": 3.888426442172541,
+   "last_third_gain": 65.0,
+   "gain": 202.0,
+   "gain_rate_per_10s": 6.733333333333333,
+   "food": 202,
+   "poison": 0,
+   "food_last_third": 65,
+   "poison_last_third": 0,
+   "accepted_tastes": 178,
+   "issued": {
+    "full": {
+     "n": 178,
+     "bits": 0.03474070618744653,
+     "errors": 0.0028089887640449437
+    },
+    "last_third": {
+     "n": 58,
+     "bits": 0.01010642644203593,
+     "errors": 0.0
+    }
+   },
+   "births": 0,
+   "recycled": 0,
+   "peak_units": 2042,
+   "final_units": 2042,
+   "grown": {
+    "event": 0,
+    "clock": 0,
+    "integrator": 0,
+    "rhythm": 0
+   },
+   "allowance_only_transfers": 0,
+   "deletion_transfers": 0,
+   "births_after_allowance_only": 0,
+   "gate_opportunities": 0,
+   "donor_scans": null,
+   "unused_allowance": null,
+   "cpu_s": 5.159744302000007
+  },
+  "allfood issued+gate 142000 blue": {
+   "last_third_efficiency": 3.888426442172541,
+   "last_third_gain": 65.0,
+   "gain": 202.0,
+   "gain_rate_per_10s": 6.733333333333333,
+   "food": 202,
+   "poison": 0,
+   "food_last_third": 65,
+   "poison_last_third": 0,
+   "accepted_tastes": 178,
+   "issued": {
+    "full": {
+     "n": 178,
+     "bits": 0.03474070618744653,
+     "errors": 0.0028089887640449437
+    },
+    "last_third": {
+     "n": 58,
+     "bits": 0.01010642644203593,
+     "errors": 0.0
+    }
+   },
+   "births": 0,
+   "recycled": 0,
+   "peak_units": 2042,
+   "final_units": 2042,
+   "grown": {
+    "event": 0,
+    "clock": 0,
+    "integrator": 0,
+    "rhythm": 0
+   },
+   "allowance_only_transfers": 0,
+   "deletion_transfers": 0,
+   "births_after_allowance_only": 0,
+   "gate_opportunities": 0,
+   "donor_scans": null,
+   "unused_allowance": 168,
+   "cpu_s": 5.258300626999983
+  },
+  "allfood issued+gate 142000 red": {
+   "last_third_efficiency": 3.888426442172541,
+   "last_third_gain": 65.0,
+   "gain": 202.0,
+   "gain_rate_per_10s": 6.733333333333333,
+   "food": 202,
+   "poison": 0,
+   "food_last_third": 65,
+   "poison_last_third": 0,
+   "accepted_tastes": 178,
+   "issued": {
+    "full": {
+     "n": 178,
+     "bits": 0.03474070618744653,
+     "errors": 0.0028089887640449437
+    },
+    "last_third": {
+     "n": 58,
+     "bits": 0.01010642644203593,
+     "errors": 0.0
+    }
+   },
+   "births": 0,
+   "recycled": 0,
+   "peak_units": 2042,
+   "final_units": 2042,
+   "grown": {
+    "event": 0,
+    "clock": 0,
+    "integrator": 0,
+    "rhythm": 0
+   },
+   "allowance_only_transfers": 0,
+   "deletion_transfers": 0,
+   "births_after_allowance_only": 0,
+   "gate_opportunities": 0,
+   "donor_scans": null,
+   "unused_allowance": 168,
+   "cpu_s": 5.214497284999993
+  },
+  "seq historical 142000 blue": {
+   "last_third_efficiency": 0.1185752404242691,
+   "last_third_gain": 2.0,
+   "gain": 14.0,
+   "gain_rate_per_10s": 0.4666666666666667,
+   "food": 126,
+   "poison": 56,
+   "food_last_third": 32,
+   "poison_last_third": 15,
+   "accepted_tastes": 162,
+   "issued": {
+    "full": {
+     "n": 162,
+     "bits": 0.9323335361403092,
+     "errors": 0.28703703703703703
+    },
+    "last_third": {
+     "n": 42,
+     "bits": 0.8703253965900256,
+     "errors": 0.2619047619047619
+    }
+   },
+   "births": 2255,
+   "recycled": 1888,
+   "peak_units": 2168,
+   "final_units": 2168,
+   "grown": {
+    "event": 16,
+    "clock": 106,
+    "integrator": 4,
+    "rhythm": 0
+   },
+   "allowance_only_transfers": 0,
+   "deletion_transfers": 241,
+   "births_after_allowance_only": 0,
+   "gate_opportunities": 0,
+   "donor_scans": null,
+   "unused_allowance": null,
+   "cpu_s": 4.993868757999991
+  },
+  "seq historical 142000 red": {
+   "last_third_efficiency": -0.23742259843987332,
+   "last_third_gain": -4.0,
+   "gain": -19.0,
+   "gain_rate_per_10s": -0.6333333333333334,
+   "food": 131,
+   "poison": 75,
+   "food_last_third": 42,
+   "poison_last_third": 23,
+   "accepted_tastes": 175,
+   "issued": {
+    "full": {
+     "n": 175,
+     "bits": 0.9968938944161164,
+     "errors": 0.3171428571428571
+    },
+    "last_third": {
+     "n": 55,
+     "bits": 0.9916860581211655,
+     "errors": 0.32727272727272727
+    }
+   },
+   "births": 3588,
+   "recycled": 3201,
+   "peak_units": 2210,
+   "final_units": 2210,
+   "grown": {
+    "event": 11,
+    "clock": 54,
+    "integrator": 39,
+    "rhythm": 64
+   },
+   "allowance_only_transfers": 0,
+   "deletion_transfers": 219,
+   "births_after_allowance_only": 0,
+   "gate_opportunities": 0,
+   "donor_scans": null,
+   "unused_allowance": null,
+   "cpu_s": 5.383823112999977
+  },
+  "seq issued 142000 blue": {
+   "last_third_efficiency": -0.2393259563932651,
+   "last_third_gain": -4.0,
+   "gain": -18.0,
+   "gain_rate_per_10s": -0.6,
+   "food": 114,
+   "poison": 66,
+   "food_last_third": 38,
+   "poison_last_third": 21,
+   "accepted_tastes": 160,
+   "issued": {
+    "full": {
+     "n": 160,
+     "bits": 0.9843379804442118,
+     "errors": 0.334375
+    },
+    "last_third": {
+     "n": 50,
+     "bits": 0.9624459809765784,
+     "errors": 0.3
+    }
+   },
+   "births": 2593,
+   "recycled": 2203,
+   "peak_units": 2209,
+   "final_units": 2209,
+   "grown": {
+    "event": 13,
+    "clock": 69,
+    "integrator": 43,
+    "rhythm": 42
+   },
+   "allowance_only_transfers": 0,
+   "deletion_transfers": 223,
+   "births_after_allowance_only": 0,
+   "gate_opportunities": 0,
+   "donor_scans": null,
+   "unused_allowance": null,
+   "cpu_s": 6.350938824999986
+  },
+  "seq issued 142000 red": {
+   "last_third_efficiency": -1.0850595803787595,
+   "last_third_gain": -18.0,
+   "gain": -39.0,
+   "gain_rate_per_10s": -1.3,
+   "food": 117,
+   "poison": 78,
+   "food_last_third": 34,
+   "poison_last_third": 26,
+   "accepted_tastes": 168,
+   "issued": {
+    "full": {
+     "n": 168,
+     "bits": 1.0096043533547578,
+     "errors": 0.3958333333333333
+    },
+    "last_third": {
+     "n": 52,
+     "bits": 1.0322583056095045,
+     "errors": 0.4807692307692308
+    }
+   },
+   "births": 3801,
+   "recycled": 3466,
+   "peak_units": 2210,
+   "final_units": 2210,
+   "grown": {
+    "event": 8,
+    "clock": 56,
+    "integrator": 67,
+    "rhythm": 37
+   },
+   "allowance_only_transfers": 0,
+   "deletion_transfers": 167,
+   "births_after_allowance_only": 0,
+   "gate_opportunities": 0,
+   "donor_scans": null,
+   "unused_allowance": null,
+   "cpu_s": 6.673841060000001
+  },
+  "seq issued+gate 142000 blue": {
+   "last_third_efficiency": -0.3030004666661687,
+   "last_third_gain": -5.0,
+   "gain": -8.0,
+   "gain_rate_per_10s": -0.26666666666666666,
+   "food": 116,
+   "poison": 62,
+   "food_last_third": 45,
+   "poison_last_third": 25,
+   "accepted_tastes": 151,
+   "issued": {
+    "full": {
+     "n": 151,
+     "bits": 0.971253203325329,
+     "errors": 0.2947019867549669
+    },
+    "last_third": {
+     "n": 57,
+     "bits": 0.9304934482686322,
+     "errors": 0.2631578947368421
+    }
+   },
+   "births": 3337,
+   "recycled": 2799,
+   "peak_units": 2210,
+   "final_units": 2210,
+   "grown": {
+    "event": 5,
+    "clock": 74,
+    "integrator": 7,
+    "rhythm": 82
+   },
+   "allowance_only_transfers": 65,
+   "deletion_transfers": 370,
+   "births_after_allowance_only": 65,
+   "gate_opportunities": 65,
+   "donor_scans": 445,
+   "unused_allowance": 0,
+   "cpu_s": 6.157833434999986
+  },
+  "seq issued+gate 142000 red": {
+   "last_third_efficiency": 0.06052918314271732,
+   "last_third_gain": 1.0,
+   "gain": -9.0,
+   "gain_rate_per_10s": -0.3,
+   "food": 119,
+   "poison": 64,
+   "food_last_third": 47,
+   "poison_last_third": 23,
+   "accepted_tastes": 161,
+   "issued": {
+    "full": {
+     "n": 161,
+     "bits": 0.9697602144661719,
+     "errors": 0.30745341614906835
+    },
+    "last_third": {
+     "n": 60,
+     "bits": 0.9125026253998623,
+     "errors": 0.26666666666666666
+    }
+   },
+   "births": 3091,
+   "recycled": 2655,
+   "peak_units": 2210,
+   "final_units": 2210,
+   "grown": {
+    "event": 5,
+    "clock": 74,
+    "integrator": 6,
+    "rhythm": 83
+   },
+   "allowance_only_transfers": 68,
+   "deletion_transfers": 268,
+   "births_after_allowance_only": 67,
+   "gate_opportunities": 68,
+   "donor_scans": 336,
+   "unused_allowance": 0,
+   "cpu_s": 6.273312924999999
+  },
+  "seq issued+gate disabled 142000 blue": {
+   "last_third_efficiency": -0.2393259563932651,
+   "last_third_gain": -4.0,
+   "gain": -18.0,
+   "gain_rate_per_10s": -0.6,
+   "food": 114,
+   "poison": 66,
+   "food_last_third": 38,
+   "poison_last_third": 21,
+   "accepted_tastes": 160,
+   "issued": {
+    "full": {
+     "n": 160,
+     "bits": 0.9843379804442118,
+     "errors": 0.334375
+    },
+    "last_third": {
+     "n": 50,
+     "bits": 0.9624459809765784,
+     "errors": 0.3
+    }
+   },
+   "births": 2593,
+   "recycled": 2203,
+   "peak_units": 2209,
+   "final_units": 2209,
+   "grown": {
+    "event": 13,
+    "clock": 69,
+    "integrator": 43,
+    "rhythm": 42
+   },
+   "allowance_only_transfers": 0,
+   "deletion_transfers": 223,
+   "births_after_allowance_only": 0,
+   "gate_opportunities": 393,
+   "donor_scans": 616,
+   "unused_allowance": 1,
+   "cpu_s": 6.169766843000019
+  },
+  "seq issued+gate disabled 142000 red": {
+   "last_third_efficiency": -1.0850595803787595,
+   "last_third_gain": -18.0,
+   "gain": -39.0,
+   "gain_rate_per_10s": -1.3,
+   "food": 117,
+   "poison": 78,
+   "food_last_third": 34,
+   "poison_last_third": 26,
+   "accepted_tastes": 168,
+   "issued": {
+    "full": {
+     "n": 168,
+     "bits": 1.0096043533547578,
+     "errors": 0.3958333333333333
+    },
+    "last_third": {
+     "n": 52,
+     "bits": 1.0322583056095045,
+     "errors": 0.4807692307692308
+    }
+   },
+   "births": 3801,
+   "recycled": 3466,
+   "peak_units": 2210,
+   "final_units": 2210,
+   "grown": {
+    "event": 8,
+    "clock": 56,
+    "integrator": 67,
+    "rhythm": 37
+   },
+   "allowance_only_transfers": 0,
+   "deletion_transfers": 167,
+   "births_after_allowance_only": 0,
+   "gate_opportunities": 226,
+   "donor_scans": 393,
+   "unused_allowance": 0,
+   "cpu_s": 6.495275015000033
+  },
+  "time historical 142000 blue": {
+   "last_third_efficiency": 1.9519598529737308,
+   "last_third_gain": 327.0,
+   "gain": 1019.0,
+   "gain_rate_per_10s": 3.3966666666666665,
+   "food": 1659,
+   "poison": 320,
+   "food_last_third": 545,
+   "poison_last_third": 109,
+   "accepted_tastes": 1741,
+   "issued": {
+    "full": {
+     "n": 1741,
+     "bits": 0.3844360534191671,
+     "errors": 0.0807007466973004
+    },
+    "last_third": {
+     "n": 566,
+     "bits": 0.3252412747301513,
+     "errors": 0.0636042402826855
+    }
+   },
+   "births": 16590,
+   "recycled": 16183,
+   "peak_units": 2210,
+   "final_units": 2210,
+   "grown": {
+    "event": 34,
+    "clock": 131,
+    "integrator": 0,
+    "rhythm": 3
+   },
+   "allowance_only_transfers": 0,
+   "deletion_transfers": 232,
+   "births_after_allowance_only": 0,
+   "gate_opportunities": 0,
+   "donor_scans": null,
+   "unused_allowance": null,
+   "cpu_s": 59.69402305
+  },
+  "time historical 142000 red": {
+   "last_third_efficiency": 1.4964672978152955,
+   "last_third_gain": 252.0,
+   "gain": 879.0,
+   "gain_rate_per_10s": 2.9299999999999997,
+   "food": 1657,
+   "poison": 389,
+   "food_last_third": 506,
+   "poison_last_third": 127,
+   "accepted_tastes": 1762,
+   "issued": {
+    "full": {
+     "n": 1762,
+     "bits": 0.43646980781775246,
+     "errors": 0.09846765039727583
+    },
+    "last_third": {
+     "n": 546,
+     "bits": 0.45415240577413174,
+     "errors": 0.11538461538461539
+    }
+   },
+   "births": 14158,
+   "recycled": 13773,
+   "peak_units": 2210,
+   "final_units": 2210,
+   "grown": {
+    "event": 21,
+    "clock": 147,
+    "integrator": 0,
+    "rhythm": 0
+   },
+   "allowance_only_transfers": 0,
+   "deletion_transfers": 217,
+   "births_after_allowance_only": 0,
+   "gate_opportunities": 0,
+   "donor_scans": null,
+   "unused_allowance": null,
+   "cpu_s": 57.988425086999996
+  },
+  "time issued 142000 blue": {
+   "last_third_efficiency": 1.84767918192813,
+   "last_third_gain": 311.0,
+   "gain": 1017.0,
+   "gain_rate_per_10s": 3.39,
+   "food": 1729,
+   "poison": 356,
+   "food_last_third": 549,
+   "poison_last_third": 119,
+   "accepted_tastes": 1801,
+   "issued": {
+    "full": {
+     "n": 1801,
+     "bits": 0.40028914083678113,
+     "errors": 0.08134369794558578
+    },
+    "last_third": {
+     "n": 580,
+     "bits": 0.3959780351541241,
+     "errors": 0.08620689655172414
+    }
+   },
+   "births": 17524,
+   "recycled": 17114,
+   "peak_units": 2210,
+   "final_units": 2210,
+   "grown": {
+    "event": 37,
+    "clock": 125,
+    "integrator": 0,
+    "rhythm": 6
+   },
+   "allowance_only_transfers": 0,
+   "deletion_transfers": 242,
+   "births_after_allowance_only": 0,
+   "gate_opportunities": 0,
+   "donor_scans": null,
+   "unused_allowance": null,
+   "cpu_s": 76.72810985499999
+  },
+  "time issued 142000 red": {
+   "last_third_efficiency": 2.0725188882607832,
+   "last_third_gain": 346.0,
+   "gain": 978.0,
+   "gain_rate_per_10s": 3.2600000000000002,
+   "food": 1660,
+   "poison": 341,
+   "food_last_third": 558,
+   "poison_last_third": 106,
+   "accepted_tastes": 1724,
+   "issued": {
+    "full": {
+     "n": 1724,
+     "bits": 0.3607801260907014,
+     "errors": 0.07685614849187936
+    },
+    "last_third": {
+     "n": 567,
+     "bits": 0.3067611187690175,
+     "errors": 0.0582010582010582
+    }
+   },
+   "births": 16464,
+   "recycled": 16008,
+   "peak_units": 2210,
+   "final_units": 2210,
+   "grown": {
+    "event": 13,
+    "clock": 148,
+    "integrator": 0,
+    "rhythm": 7
+   },
+   "allowance_only_transfers": 0,
+   "deletion_transfers": 288,
+   "births_after_allowance_only": 0,
+   "gate_opportunities": 0,
+   "donor_scans": null,
+   "unused_allowance": null,
+   "cpu_s": 74.918411032
+  },
+  "time issued+gate 142000 blue": {
+   "last_third_efficiency": 1.9334902790558213,
+   "last_third_gain": 324.0,
+   "gain": 946.0,
+   "gain_rate_per_10s": 3.1533333333333333,
+   "food": 1672,
+   "poison": 363,
+   "food_last_third": 568,
+   "poison_last_third": 122,
+   "accepted_tastes": 1764,
+   "issued": {
+    "full": {
+     "n": 1764,
+     "bits": 0.38803156042009407,
+     "errors": 0.09608843537414966
+    },
+    "last_third": {
+     "n": 596,
+     "bits": 0.3660669856760654,
+     "errors": 0.09228187919463088
+    }
+   },
+   "births": 17802,
+   "recycled": 17405,
+   "peak_units": 2210,
+   "final_units": 2210,
+   "grown": {
+    "event": 16,
+    "clock": 149,
+    "integrator": 0,
+    "rhythm": 3
+   },
+   "allowance_only_transfers": 67,
+   "deletion_transfers": 229,
+   "births_after_allowance_only": 67,
+   "gate_opportunities": 67,
+   "donor_scans": 23931,
+   "unused_allowance": 0,
+   "cpu_s": 80.75739679399999
+  },
+  "time issued+gate 142000 red": {
+   "last_third_efficiency": 2.0003500584819704,
+   "last_third_gain": 336.0,
+   "gain": 997.0,
+   "gain_rate_per_10s": 3.3233333333333333,
+   "food": 1695,
+   "poison": 349,
+   "food_last_third": 558,
+   "poison_last_third": 111,
+   "accepted_tastes": 1819,
+   "issued": {
+    "full": {
+     "n": 1819,
+     "bits": 0.495548863186824,
+     "errors": 0.10692688290269378
+    },
+    "last_third": {
+     "n": 601,
+     "bits": 0.5183202715584245,
+     "errors": 0.1048252911813644
+    }
+   },
+   "births": 15104,
+   "recycled": 14706,
+   "peak_units": 2210,
+   "final_units": 2210,
+   "grown": {
+    "event": 32,
+    "clock": 136,
+    "integrator": 0,
+    "rhythm": 0
+   },
+   "allowance_only_transfers": 57,
+   "deletion_transfers": 229,
+   "births_after_allowance_only": 57,
+   "gate_opportunities": 57,
+   "donor_scans": 16526,
+   "unused_allowance": 0,
+   "cpu_s": 82.61131402499998
+  }
+ },
+ "evidence": {
+  "seq red": {
+   "gate_opportunities": 68,
+   "distinct_recipient_streams": 60,
+   "distinct_opportunity_times": 13,
+   "awake_speakers_per_prediction": 118.58227374719522,
+   "accepted_labels_per_s": 0.5366666666666666,
+   "labels_per_10s": 5.366666666666666,
+   "labels_per_200s_use_trace": 107.33333333333333,
+   "predictions_per_s": 17.826666666666668
+  },
+  "seq blue": {
+   "gate_opportunities": 65,
+   "distinct_recipient_streams": 53,
+   "distinct_opportunity_times": 12,
+   "awake_speakers_per_prediction": 120.27168696936138,
+   "accepted_labels_per_s": 0.5033333333333333,
+   "labels_per_10s": 5.033333333333333,
+   "labels_per_200s_use_trace": 100.66666666666666,
+   "predictions_per_s": 18.06
+  },
+  "time red": {
+   "gate_opportunities": 57,
+   "distinct_recipient_streams": 47,
+   "distinct_opportunity_times": 4,
+   "awake_speakers_per_prediction": 159.95731716722972,
+   "accepted_labels_per_s": 0.6063333333333333,
+   "labels_per_10s": 6.063333333333333,
+   "labels_per_200s_use_trace": 121.26666666666665,
+   "predictions_per_s": 21.609
+  },
+  "time blue": {
+   "gate_opportunities": 67,
+   "distinct_recipient_streams": 56,
+   "distinct_opportunity_times": 13,
+   "awake_speakers_per_prediction": 160.11568185090962,
+   "accepted_labels_per_s": 0.588,
+   "labels_per_10s": 5.88,
+   "labels_per_200s_use_trace": 117.6,
+   "predictions_per_s": 20.833
+  },
+  "allfood red": {
+   "gate_opportunities": 0,
+   "distinct_recipient_streams": 0,
+   "distinct_opportunity_times": 0,
+   "awake_speakers_per_prediction": 119.85466004583651,
+   "accepted_labels_per_s": 0.5933333333333334,
+   "labels_per_10s": 5.933333333333334,
+   "labels_per_200s_use_trace": 118.66666666666667,
+   "predictions_per_s": 17.453333333333333
+  },
+  "allfood blue": {
+   "gate_opportunities": 0,
+   "distinct_recipient_streams": 0,
+   "distinct_opportunity_times": 0,
+   "awake_speakers_per_prediction": 119.85466004583651,
+   "accepted_labels_per_s": 0.5933333333333334,
+   "labels_per_10s": 5.933333333333334,
+   "labels_per_200s_use_trace": 118.66666666666667,
+   "predictions_per_s": 17.453333333333333
+  }
+ },
+ "mean_cpu_s": {
+  "seq": 5.97226968599999,
+  "time": 72.11627997383333,
+  "allfood": 4.7920150949999964
+ },
+ "J_projection": {
+  "new_lives": {
+   "seq": 36,
+   "time": 36,
+   "allfood": 36
+  },
+  "cpu_s": 2983.7003311739995,
+  "wall_s_two_workers": 1491.8501655869998,
+  "budget_s": 1800
+ },
+ "capture": {
+  "wall_s": 259.55397945599543,
+  "raw": "/home/pilgrim/git/simple-learner/lab/v/spare_allowance_pilot.pkl",
+  "raw_sha256": "0cc4ba68a29fe52adf4d7cc7dd7a4fc2b08f21b3bfff307d92e7736f803b8245",
+  "jobs": [
+   [
+    "time",
+    "historical",
+    142000,
+    "red"
+   ],
+   [
+    "time",
+    "historical",
+    142000,
+    "blue"
+   ],
+   [
+    "time",
+    "issued",
+    142000,
+    "red"
+   ],
+   [
+    "time",
+    "issued",
+    142000,
+    "blue"
+   ],
+   [
+    "time",
+    "issued+gate",
+    142000,
+    "red"
+   ],
+   [
+    "time",
+    "issued+gate",
+    142000,
+    "blue"
+   ],
+   [
+    "seq",
+    "historical",
+    142000,
+    "red"
+   ],
+   [
+    "seq",
+    "historical",
+    142000,
+    "blue"
+   ],
+   [
+    "seq",
+    "issued",
+    142000,
+    "red"
+   ],
+   [
+    "seq",
+    "issued",
+    142000,
+    "blue"
+   ],
+   [
+    "seq",
+    "issued+gate",
+    142000,
+    "red"
+   ],
+   [
+    "seq",
+    "issued+gate",
+    142000,
+    "blue"
+   ],
+   [
+    "allfood",
+    "historical",
+    142000,
+    "red"
+   ],
+   [
+    "allfood",
+    "historical",
+    142000,
+    "blue"
+   ],
+   [
+    "allfood",
+    "issued",
+    142000,
+    "red"
+   ],
+   [
+    "allfood",
+    "issued",
+    142000,
+    "blue"
+   ],
+   [
+    "allfood",
+    "issued+gate",
+    142000,
+    "red"
+   ],
+   [
+    "allfood",
+    "issued+gate",
+    142000,
+    "blue"
+   ],
+   [
+    "seq",
+    "issued+gate disabled",
+    142000,
+    "red"
+   ],
+   [
+    "seq",
+    "issued+gate disabled",
+    142000,
+    "blue"
+   ]
+  ],
+  "G": 258,
+  "cap": 2300,
+  "config": {
+   "arm": "net10kc60SFBLMR",
+   "P": 560,
+   "rule": "M",
+   "dt": 0.0025,
+   "LB_FINE": 1,
+   "LB_LIVE": 1,
+   "secs": {
+    "seq": 300.0,
+    "time": 3000.0,
+    "allfood": 300.0
+   },
+   "conditions": {
+    "seq": "ladders.seq(17) 300 s",
+    "time": "ladders.timing(3) 3000 s",
+    "allfood": "stage2_lang.worlds.W['allfood']['text'] 300 s"
+   }
+  },
+  "provenance": {
+   "revision": "5700eaa0d397e1a7dc055ce69ce9ec7e1d32cc7f",
+   "dirty": " M ABSTRACT.md\n M PROGRAMME.md\n M QUESTIONS.md\n M README.md\n M discrete/NOTEBOOK.md\n?? lab/gate_test_review.py\n?? lab/initial_prior_replay.py\n?? lab/market_ledger_capture.py\n?? lab/market_transfer_cases.py\n?? lab/queue_results_review.py\n?? lab/spare_allowance.py\n?? lab/spare_allowance_checks.py\n?? lab/spare_allowance_compare.py\n?? lab/spare_allowance_experiment.py\n?? lab/v/gate_test_review.json\n?? lab/v/gate_test_review.log\n?? lab/v/initial_prior_replay.json\n?? lab/v/initial_prior_replay.log\n?? lab/v/initial_prior_replay_checks.json\n?? lab/v/initial_prior_replay_checks.log\n?? lab/v/initial_prior_replay_run1.json\n?? lab/v/market_ledger_capture.json\n?? lab/v/market_ledger_capture.log\n?? lab/v/market_ledger_capture_capture.json\n?? lab/v/market_ledger_capture_capture.log\n?? lab/v/market_ledger_capture_checks.json\n?? lab/v/market_ledger_capture_checks.log\n?? lab/v/market_ledger_capture_run1.json\n?? lab/v/market_transfer_cases.json\n?? lab/v/market_transfer_cases.log\n?? lab/v/market_transfer_cases_checks.json\n?? lab/v/market_transfer_cases_checks.log\n?? lab/v/market_transfer_cases_run1.json\n?? lab/v/queue_results_review.json\n?? lab/v/queue_results_review.log\n?? lab/v/spare_allowance_checks.json\n?? lab/v/spare_allowance_checks.log\n?? lab/v/spare_allowance_checks_failed_corruption_fixture.log\n?? lab/v/spare_allowance_checks_failed_d82_allowance.log\n?? lab/v/spare_allowance_checks_failed_fixed_count.json\n?? lab/v/spare_allowance_checks_failed_fixed_count.log\n?? lab/v/spare_allowance_checks_failed_import_order.log\n?? lab/v/spare_allowance_checks_v1.json\n?? lab/v/spare_allowance_checks_v1.log\n?? lab/v/spare_allowance_compare_failed_syntax.log\n?? lab/v/spare_allowance_compare_run.log\n?? lab/v/spare_allowance_compare_timeout.log\n?? lab/v/spare_allowance_experiment_v1_pilot_source.py\n?? lab/v/spare_allowance_pilot.json\n?? lab/v/spare_allowance_pilot.log\n?? lab/v/spare_allowance_pilot_analysis.log\n?? lab/v/spare_allowance_pilot_analysis.log.bak\n?? lab/v/spare_allowance_pilot_capture.json\n?? lab/v/spare_allowance_pilot_v1.json\n?? lab/v/spare_allowance_pilot_v1.log\n?? lab/v/spare_allowance_pilot_v1_analysis.log\n?? lab/v/spare_allowance_pilot_v1_capture.json\n",
+   "sha256": {
+    "lab/spare_allowance_experiment.py": "f623a7359f27aca35ae3b84e2ea7c3fa41b0e52b9af4c57f10dc270417131f51",
+    "lab/spare_allowance.py": "1ec73eff5f43a0eb5e12c3420e49b59e89f695d4a66a6561a1f7c90b183904bb",
+    "lab/issued_credit.py": "67dcd1854f237873c359bcc9230861e5c77567739871773face5ea98ab196bca",
+    "lab/alloc_rules.py": "37c8f14317d6d1626e98f3569f4da1248e898e682b7a206fbd7a9fac57848543",
+    "lab/alloc_compare.py": "d39df823d685a53351243fa8e8e49dd53457d3d623c838c36da3897b55c7fcfa",
+    "lab/grownet.py": "1a550553b1244368ed0ca6fa59cce3e94a9badd5e5d1e801953aa42974874f0f",
+    "lab/teach.py": "c377e37fbdeeafa5a155735ba58e4afa3acad97b14b10ce292478f5845ba6b5f",
+    "lab/active_mixture_audit.py": "2eed2ca2899a8c6d79387ab992f6ec0343de7b673adb13e602083043881999c4"
+   },
+   "command": "timeout 900s env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python lab/spare_allowance_experiment.py --pilot"
+  }
+ },
+ "analysis_sha256": "f623a7359f27aca35ae3b84e2ea7c3fa41b0e52b9af4c57f10dc270417131f51"
+}

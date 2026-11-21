@@ -1,0 +1,30 @@
+{
+ "D176_revision": "5700eaa0d397e1a7dc055ce69ce9ec7e1d32cc7f",
+ "D176_provenance_hashes_match_now": {
+  "lab/robot_shortfall_20261120/acquisition.py": true,
+  "lab/robot_shortfall_20261120/action.py": true,
+  "lab/robot_shortfall_20261120/analyse.py": true,
+  "lab/robot_shortfall_20261120/body_reference.py": true,
+  "lab/robot_shortfall_20261120/diffusion.py": true,
+  "lab/robot_shortfall_20261120/drift.py": true,
+  "lab/robot_shortfall_20261120/relay_reference.py": true,
+  "lab/robot_shortfall_20261120/rest_writers.py": true,
+  "lab/robot_shortfall_20261120/trace.py": true,
+  "lab/robot_shortfall_20261120/transfer_reference.py": true,
+  "brains/designed.py": true,
+  "brains/circuit.py": true,
+  "creature.py": true,
+  "world.py": true,
+  "mixed_feedback.py": true,
+  "units.py": true,
+  "discrete/policies.py": true
+ },
+ "D176_body_wiring_identical_of_64": {
+  "learn": 64,
+  "frozen": 64,
+  "informed": 64,
+  "allfood": 64
+ },
+ "draws_archive": "/home/pilgrim/nca-scratch-backup/robot_action_20261120/draws.npz sha256 45f19042939f7db345f7e23ee71bf2576bf77c2ba23a64190a97a13ea59564c1",
+ "draws_equal_across_substrates": true
+}

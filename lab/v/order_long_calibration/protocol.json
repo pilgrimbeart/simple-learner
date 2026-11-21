@@ -1,0 +1,17 @@
+{
+  "duration_s": 1000.0,
+  "spacing_s": 10.0,
+  "taus_s": [
+    0.15,
+    1.0,
+    3.8585074308112732
+  ],
+  "steps_s": [
+    0.0005,
+    0.00025
+  ],
+  "knob_refinement_tolerance": 0.001,
+  "source": "/home/pilgrim/git/simple-learner/lab/v/motifs/order_v2/confirm.jsonl",
+  "budget_s": 600,
+  "scope": "Same-generator extended histories; ideal stationary calibration reference, no online learner"
+}

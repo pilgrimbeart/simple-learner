@@ -1,0 +1,9 @@
+L synthetic event, pending-marker, zero-weight, joint replacement, deletion and censoring checks passed.
+PASS ('seq', 'issued', 142000, 'red') completed 1 elapsed 6.5
+PASS ('seq', 'issued', 142000, 'blue') completed 2 elapsed 12.4
+PASS ('seq', 'issued+gate', 142000, 'red') completed 3 elapsed 12.5
+PASS ('seq', 'issued+gate', 142000, 'blue') completed 4 elapsed 18.5
+PASS ('time', 'issued', 142000, 'red') completed 5 elapsed 88.2
+PASS ('time', 'issued', 142000, 'blue') completed 6 elapsed 97.5
+PASS ('time', 'issued+gate', 142000, 'red') completed 7 elapsed 169.4
+PASS ('time', 'issued+gate', 142000, 'blue') completed 8 elapsed 177.2

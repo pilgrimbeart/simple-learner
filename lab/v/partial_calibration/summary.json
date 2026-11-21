@@ -1,0 +1,36 @@
+{
+  "gaussian_reference_information_bits": 0.5,
+  "gaussian_reference_posterior_sigma_V": 0.021213203435596423,
+  "comparisons": {
+    "0.0": {
+      "conditional_expected_RMS_V": 0.030533254717627953,
+      "paired_draw_bootstrap95_MSE_difference": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "draws_lower_expected_MSE": 0,
+      "draws": 40
+    },
+    "0.5": {
+      "conditional_expected_RMS_V": 0.0206627587382053,
+      "paired_draw_bootstrap95_MSE_difference": [
+        -0.00050533004497827,
+        -0.0007388933141327532,
+        -0.0002996917088777774
+      ],
+      "draws_lower_expected_MSE": 30,
+      "draws": 40
+    },
+    "1.0": {
+      "conditional_expected_RMS_V": 0.027848137299316237,
+      "paired_draw_bootstrap95_MSE_difference": [
+        -0.0001567608926099811,
+        -0.0004677030411978237,
+        0.00011611143880704329
+      ],
+      "draws_lower_expected_MSE": 15,
+      "draws": 40
+    }
+  }
+}

@@ -1,0 +1,781 @@
+{
+  "task": "F",
+  "flags": [],
+  "checks": {
+    "paired_builds": {
+      "compared": 300,
+      "flagged": 0
+    },
+    "memory": {
+      "development:adaptive": {
+        "records": 30,
+        "change_V": {
+          "min": -0.19341601139376896,
+          "max": 0.2268566018213476,
+          "mean_abs": 0.08412527674321267
+        },
+        "range_V": {
+          "min": 0.014173973933704717,
+          "max": 0.23072161504155803,
+          "mean": 0.08983801944121914
+        },
+        "final_third_slope_V_per_s": {
+          "min": -5.410474128526655e-06,
+          "max": 1.4769013412369455e-05,
+          "max_abs": 1.4769013412369455e-05
+        },
+        "held_exactly": 0
+      },
+      "development:writer_removed": {
+        "records": 30,
+        "change_V": {
+          "min": 0.0,
+          "max": 0.0,
+          "mean_abs": 0.0
+        },
+        "range_V": {
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        "final_third_slope_V_per_s": {
+          "min": -3.5521082484385322e-19,
+          "max": 2.47212370609213e-19,
+          "max_abs": 3.5521082484385322e-19
+        },
+        "held_exactly": 30
+      },
+      "confirmation:adaptive": {
+        "records": 120,
+        "change_V": {
+          "min": -0.11852158691720062,
+          "max": 0.23675961448627306,
+          "mean_abs": 0.06431068004424996
+        },
+        "range_V": {
+          "min": 0.00607215394705615,
+          "max": 0.23687900070080622,
+          "mean": 0.06851898107733238
+        },
+        "final_third_slope_V_per_s": {
+          "min": -5.0076607070301024e-05,
+          "max": 3.0293292643019432e-05,
+          "max_abs": 5.0076607070301024e-05
+        },
+        "held_exactly": 0
+      },
+      "confirmation:writer_removed": {
+        "records": 120,
+        "change_V": {
+          "min": 0.0,
+          "max": 0.0,
+          "mean_abs": 0.0
+        },
+        "range_V": {
+          "min": 0.0,
+          "max": 0.0,
+          "mean": 0.0
+        },
+        "final_third_slope_V_per_s": {
+          "min": -2.8021340089362623e-19,
+          "max": 2.1403726134291397e-19,
+          "max_abs": 2.8021340089362623e-19
+        },
+        "held_exactly": 120
+      }
+    },
+    "failed_draw_traces": {
+      "requested": 15,
+      "available": 11,
+      "missing": [
+        [
+          "confirmation",
+          2026120208,
+          "adaptive"
+        ],
+        [
+          "confirmation",
+          2026120208,
+          "writer_removed"
+        ],
+        [
+          "confirmation",
+          2026120221,
+          "adaptive"
+        ],
+        [
+          "confirmation",
+          2026120221,
+          "writer_removed"
+        ]
+      ]
+    }
+  },
+  "traces": [
+    {
+      "set": "development",
+      "seed": 51006,
+      "arm": "original",
+      "available": true,
+      "recorded_passed": false,
+      "recorded_failing": [
+        "amplitude<=.15V",
+        "period CV>=.1",
+        "frequency ratio outside (.9,1.1)",
+        "amplitude ratio outside (.9,1.1)"
+      ],
+      "recorded_margins": {
+        "cycles": [
+          572,
+          717
+        ],
+        "amplitude_V": [
+          0.0004518932414433602,
+          0.00040565461631848765
+        ],
+        "period_cv": [
+          1.2243835902845537,
+          1.1970160153786231
+        ],
+        "frequency_ratio": 1.101516969862715,
+        "amplitude_ratio": 0.8976779892144768,
+        "rail_hits": 0
+      },
+      "memory": {},
+      "hash_listed": true,
+      "hash_matches": true,
+      "remeasured_passed": false,
+      "remeasure_error": 0.0
+    },
+    {
+      "set": "development",
+      "seed": 51006,
+      "arm": "adaptive",
+      "available": true,
+      "recorded_passed": true,
+      "recorded_failing": [],
+      "recorded_margins": {
+        "cycles": [
+          105,
+          120
+        ],
+        "amplitude_V": [
+          0.8984720653220337,
+          0.8968870824148203
+        ],
+        "period_cv": [
+          0.004354890923208429,
+          0.0002436802673009982
+        ],
+        "frequency_ratio": 0.9960501609941305,
+        "amplitude_ratio": 0.9982359129811729,
+        "rail_hits": 0
+      },
+      "memory": {
+        "range_V": [
+          -0.0754677431704756,
+          -0.03813378672951953
+        ],
+        "change_V": -0.01858676138480842,
+        "last_third_slope_V_per_s": 5.419500613134453e-08,
+        "held_exactly": false
+      },
+      "hash_listed": true,
+      "hash_matches": true,
+      "remeasured_passed": true,
+      "remeasure_error": 0.0,
+      "trace_memory": {
+        "start_V": -0.03813378672951953,
+        "end_V": -0.05672054811432795,
+        "final_third_range_V": 0.005582200779306372
+      }
+    },
+    {
+      "set": "development",
+      "seed": 51006,
+      "arm": "writer_removed",
+      "available": true,
+      "recorded_passed": false,
+      "recorded_failing": [
+        "amplitude<=.15V",
+        "period CV>=.1",
+        "amplitude ratio outside (.9,1.1)"
+      ],
+      "recorded_margins": {
+        "cycles": [
+          582,
+          715
+        ],
+        "amplitude_V": [
+          0.0004480133874236458,
+          0.00040299381633807085
+        ],
+        "period_cv": [
+          1.2504222863196681,
+          1.19806652061452
+        ],
+        "frequency_ratio": 1.0795685881286923,
+        "amplitude_ratio": 0.8995128887900753,
+        "rail_hits": 0
+      },
+      "memory": {
+        "range_V": [
+          -0.03813378672951953,
+          -0.03813378672951953
+        ],
+        "change_V": 0.0,
+        "last_third_slope_V_per_s": 9.346680833987153e-20,
+        "held_exactly": true
+      },
+      "hash_listed": true,
+      "hash_matches": true,
+      "remeasured_passed": false,
+      "remeasure_error": 0.0,
+      "trace_memory": {
+        "start_V": -0.03813378672951953,
+        "end_V": -0.03813378672951953,
+        "final_third_range_V": 0.0
+      }
+    },
+    {
+      "set": "development",
+      "seed": 51011,
+      "arm": "original",
+      "available": true,
+      "recorded_passed": false,
+      "recorded_failing": [
+        "amplitude<=.15V",
+        "period CV>=.1"
+      ],
+      "recorded_margins": {
+        "cycles": [
+          599,
+          643
+        ],
+        "amplitude_V": [
+          0.0005471705733394727,
+          0.0005260980004044569
+        ],
+        "period_cv": [
+          1.0500396093647266,
+          1.0183089487184052
+        ],
+        "frequency_ratio": 0.9377772105801201,
+        "amplitude_ratio": 0.9614881099939157,
+        "rail_hits": 0
+      },
+      "memory": {},
+      "hash_listed": true,
+      "hash_matches": true,
+      "remeasured_passed": false,
+      "remeasure_error": 0.0
+    },
+    {
+      "set": "development",
+      "seed": 51011,
+      "arm": "adaptive",
+      "available": true,
+      "recorded_passed": true,
+      "recorded_failing": [],
+      "recorded_margins": {
+        "cycles": [
+          130,
+          146
+        ],
+        "amplitude_V": [
+          0.7550102871153066,
+          0.7564524457576672
+        ],
+        "period_cv": [
+          0.01804808144511336,
+          0.00022986991961468345
+        ],
+        "frequency_ratio": 0.9874019234966369,
+        "amplitude_ratio": 1.0019101178712024,
+        "rail_hits": 0
+      },
+      "memory": {
+        "range_V": [
+          -0.040041495910962135,
+          0.1906774742132657
+        ],
+        "change_V": 0.2268566018213476,
+        "last_third_slope_V_per_s": -1.3681360191009295e-06,
+        "held_exactly": false
+      },
+      "hash_listed": true,
+      "hash_matches": true,
+      "remeasured_passed": true,
+      "remeasure_error": 0.0,
+      "trace_memory": {
+        "start_V": -0.040041495910962135,
+        "end_V": 0.18681510591038544,
+        "final_third_range_V": 0.005892543493491331
+      }
+    },
+    {
+      "set": "development",
+      "seed": 51011,
+      "arm": "writer_removed",
+      "available": true,
+      "recorded_passed": false,
+      "recorded_failing": [
+        "amplitude<=.15V",
+        "period CV>=.1"
+      ],
+      "recorded_margins": {
+        "cycles": [
+          969,
+          1108
+        ],
+        "amplitude_V": [
+          0.00039090268294705854,
+          0.0003866704602700777
+        ],
+        "period_cv": [
+          1.248416985470739,
+          1.1968788858889055
+        ],
+        "frequency_ratio": 0.9999138750221308,
+        "amplitude_ratio": 0.9891732063717914,
+        "rail_hits": 0
+      },
+      "memory": {
+        "range_V": [
+          -0.040041495910962135,
+          -0.040041495910962135
+        ],
+        "change_V": 0.0,
+        "last_third_slope_V_per_s": 1.196848814543738e-19,
+        "held_exactly": true
+      },
+      "hash_listed": true,
+      "hash_matches": true,
+      "remeasured_passed": false,
+      "remeasure_error": 0.0,
+      "trace_memory": {
+        "start_V": -0.040041495910962135,
+        "end_V": -0.040041495910962135,
+        "final_third_range_V": 0.0
+      }
+    },
+    {
+      "set": "development",
+      "seed": 51036,
+      "arm": "original",
+      "available": true,
+      "recorded_passed": false,
+      "recorded_failing": [
+        "amplitude<=.15V",
+        "period CV>=.1"
+      ],
+      "recorded_margins": {
+        "cycles": [
+          617,
+          666
+        ],
+        "amplitude_V": [
+          0.0005500818012141862,
+          0.0005454167960612932
+        ],
+        "period_cv": [
+          1.1219162251624353,
+          1.0744337411390221
+        ],
+        "frequency_ratio": 0.9453632479026407,
+        "amplitude_ratio": 0.9915194337594955,
+        "rail_hits": 0
+      },
+      "memory": {},
+      "hash_listed": true,
+      "hash_matches": true,
+      "remeasured_passed": false,
+      "remeasure_error": 0.0
+    },
+    {
+      "set": "development",
+      "seed": 51036,
+      "arm": "adaptive",
+      "available": true,
+      "recorded_passed": true,
+      "recorded_failing": [],
+      "recorded_margins": {
+        "cycles": [
+          109,
+          124
+        ],
+        "amplitude_V": [
+          1.0372823701450913,
+          1.037831961687564
+        ],
+        "period_cv": [
+          0.007267856029377026,
+          0.0002202884394952809
+        ],
+        "frequency_ratio": 0.9950575019750275,
+        "amplitude_ratio": 1.000529837928698,
+        "rail_hits": 0
+      },
+      "memory": {
+        "range_V": [
+          0.049382680776859686,
+          0.10677390528846659
+        ],
+        "change_V": 0.05710315163933595,
+        "last_third_slope_V_per_s": -6.370222914236843e-07,
+        "held_exactly": false
+      },
+      "hash_listed": true,
+      "hash_matches": true,
+      "remeasured_passed": true,
+      "remeasure_error": 0.0,
+      "trace_memory": {
+        "start_V": 0.049382680776859686,
+        "end_V": 0.10648583241619564,
+        "final_third_range_V": 0.006745520558909715
+      }
+    },
+    {
+      "set": "development",
+      "seed": 51036,
+      "arm": "writer_removed",
+      "available": true,
+      "recorded_passed": true,
+      "recorded_failing": [],
+      "recorded_margins": {
+        "cycles": [
+          119,
+          136
+        ],
+        "amplitude_V": [
+          1.0130138994360491,
+          1.0129873782925243
+        ],
+        "period_cv": [
+          0.00022199615772131845,
+          0.00017460975451744827
+        ],
+        "frequency_ratio": 1.0000199654630666,
+        "amplitude_ratio": 0.9999738195660103,
+        "rail_hits": 0
+      },
+      "memory": {
+        "range_V": [
+          0.049382680776859686,
+          0.049382680776859686
+        ],
+        "change_V": 0.0,
+        "last_third_slope_V_per_s": -1.2862114707383772e-19,
+        "held_exactly": true
+      },
+      "hash_listed": true,
+      "hash_matches": true,
+      "remeasured_passed": true,
+      "remeasure_error": 0.0,
+      "trace_memory": {
+        "start_V": 0.049382680776859686,
+        "end_V": 0.049382680776859686,
+        "final_third_range_V": 0.0
+      }
+    },
+    {
+      "set": "confirmation",
+      "seed": 2026120208,
+      "arm": "original",
+      "available": true,
+      "recorded_passed": false,
+      "recorded_failing": [
+        "amplitude<=.15V",
+        "period CV>=.1"
+      ],
+      "recorded_margins": {
+        "cycles": [
+          826,
+          991
+        ],
+        "amplitude_V": [
+          0.0003180924227060844,
+          0.0003160022771777071
+        ],
+        "period_cv": [
+          1.5191882818547564,
+          1.38073909095736
+        ],
+        "frequency_ratio": 1.0421542182143977,
+        "amplitude_ratio": 0.9934291250618423,
+        "rail_hits": 0
+      },
+      "memory": {},
+      "hash_listed": true,
+      "hash_matches": true,
+      "remeasured_passed": false,
+      "remeasure_error": 0.0
+    },
+    {
+      "set": "confirmation",
+      "seed": 2026120208,
+      "arm": "adaptive",
+      "available": false,
+      "recorded_passed": true,
+      "recorded_failing": [],
+      "recorded_margins": {
+        "cycles": [
+          61,
+          69
+        ],
+        "amplitude_V": [
+          1.0448824391980809,
+          1.0446163862935056
+        ],
+        "period_cv": [
+          0.00028435387762134993,
+          0.00025338216802328
+        ],
+        "frequency_ratio": 1.0000921502941653,
+        "amplitude_ratio": 0.9997453752741988,
+        "rail_hits": 0
+      },
+      "memory": {
+        "range_V": [
+          -0.031784200868865235,
+          -2.793000343524566e-05
+        ],
+        "change_V": 0.020334021323753976,
+        "last_third_slope_V_per_s": 1.7644798501183632e-07,
+        "held_exactly": false
+      }
+    },
+    {
+      "set": "confirmation",
+      "seed": 2026120208,
+      "arm": "writer_removed",
+      "available": false,
+      "recorded_passed": true,
+      "recorded_failing": [],
+      "recorded_margins": {
+        "cycles": [
+          53,
+          60
+        ],
+        "amplitude_V": [
+          1.0340366718800276,
+          1.034054983995178
+        ],
+        "period_cv": [
+          0.00033127733344048463,
+          0.0002914684703294287
+        ],
+        "frequency_ratio": 0.9999634605740578,
+        "amplitude_ratio": 1.0000177093478873,
+        "rail_hits": 0
+      },
+      "memory": {
+        "range_V": [
+          -0.025139989427286374,
+          -0.025139989427286374
+        ],
+        "change_V": 0.0,
+        "last_third_slope_V_per_s": 1.2643602922936718e-19,
+        "held_exactly": true
+      }
+    },
+    {
+      "set": "confirmation",
+      "seed": 2026120221,
+      "arm": "original",
+      "available": true,
+      "recorded_passed": false,
+      "recorded_failing": [
+        "amplitude<=.15V",
+        "period CV>=.1"
+      ],
+      "recorded_margins": {
+        "cycles": [
+          583,
+          670
+        ],
+        "amplitude_V": [
+          0.0004849651846449976,
+          0.0004971303133487204
+        ],
+        "period_cv": [
+          1.1901657269079888,
+          1.1254923979187033
+        ],
+        "frequency_ratio": 1.0032366720316068,
+        "amplitude_ratio": 1.0250845402698914,
+        "rail_hits": 0
+      },
+      "memory": {},
+      "hash_listed": true,
+      "hash_matches": true,
+      "remeasured_passed": false,
+      "remeasure_error": 0.0
+    },
+    {
+      "set": "confirmation",
+      "seed": 2026120221,
+      "arm": "adaptive",
+      "available": false,
+      "recorded_passed": true,
+      "recorded_failing": [],
+      "recorded_margins": {
+        "cycles": [
+          113,
+          126
+        ],
+        "amplitude_V": [
+          0.8968453249373016,
+          0.8994273519967545
+        ],
+        "period_cv": [
+          0.024063036000435016,
+          0.00023481911285613057
+        ],
+        "frequency_ratio": 0.9770564051070918,
+        "amplitude_ratio": 1.002879010446571,
+        "rail_hits": 0
+      },
+      "memory": {
+        "range_V": [
+          -0.1650542185691397,
+          -0.041656451310369325
+        ],
+        "change_V": -0.11852158691720062,
+        "last_third_slope_V_per_s": -3.9799895860667567e-07,
+        "held_exactly": false
+      }
+    },
+    {
+      "set": "confirmation",
+      "seed": 2026120221,
+      "arm": "writer_removed",
+      "available": false,
+      "recorded_passed": true,
+      "recorded_failing": [],
+      "recorded_margins": {
+        "cycles": [
+          124,
+          142
+        ],
+        "amplitude_V": [
+          0.8242454005895291,
+          0.824318767654691
+        ],
+        "period_cv": [
+          0.000261880147715609,
+          0.0002600256754786418
+        ],
+        "frequency_ratio": 0.9999743457962781,
+        "amplitude_ratio": 1.00008901119146,
+        "rail_hits": 0
+      },
+      "memory": {
+        "range_V": [
+          -0.04408732231082309,
+          -0.04408732231082309
+        ],
+        "change_V": 0.0,
+        "last_third_slope_V_per_s": 1.1654499688340624e-19,
+        "held_exactly": true
+      }
+    }
+  ],
+  "development": {
+    "passed": {
+      "original": 7,
+      "adaptive": 10,
+      "writer_removed": 6
+    },
+    "failed": {
+      "original": [
+        51006,
+        51011,
+        51036
+      ],
+      "adaptive": [],
+      "writer_removed": [
+        51005,
+        51006,
+        51007,
+        51011
+      ]
+    }
+  },
+  "confirmation": {
+    "passed": {
+      "original": 38,
+      "adaptive": 40,
+      "writer_removed": 38
+    },
+    "wilson95_adaptive": [
+      0.9123783988027135,
+      1.0000000000000002
+    ],
+    "paired": {
+      "original": {
+        "rescued": [
+          2026120208,
+          2026120221
+        ],
+        "harmed": [],
+        "pass_difference": [
+          0.05,
+          0.0,
+          0.125
+        ],
+        "power_difference_W": [
+          6.321792060135475e-09,
+          6.180119745321986e-09,
+          6.456537830184257e-09
+        ]
+      },
+      "writer_removed": {
+        "rescued": [
+          2026120204,
+          2026120225
+        ],
+        "harmed": [],
+        "pass_difference": [
+          0.05,
+          0.0,
+          0.125
+        ],
+        "power_difference_W": [
+          5.686312342726551e-10,
+          5.428764110030256e-10,
+          5.97290199563665e-10
+        ]
+      }
+    }
+  },
+  "parts": {
+    "original": 95,
+    "adaptive": 196,
+    "writer_removed": 147
+  },
+  "thresholds": {
+    "cycles_min": 10,
+    "amplitude_min_V": 0.15,
+    "period_cv_max": 0.1,
+    "frequency_ratio": [
+      0.9,
+      1.1
+    ],
+    "amplitude_ratio": [
+      0.9,
+      1.1
+    ],
+    "rail_hits": 0
+  },
+  "input_sha256": {
+    "lab/v/adaptive_oscillator/rows.jsonl": "1d32593133284705622a091c7d735402cb5e2fef61860d13725d420056269ddc",
+    "lab/v/adaptive_oscillator_confirm/rows.jsonl": "8f154137b8631d5dec87c8b87bde736104b48ca227f2506bcac7c5b00968fd60",
+    "lab/v/adaptive_oscillator/trace_manifest.json": "5252ba710de57ca29b64beb2b3788b89714e1c6aa935cd098b8cf7671ce21066",
+    "lab/v/adaptive_oscillator_confirm/trace_manifest.json": "81fadb18cf8c006d6db413f79900f83b2a8fbd59fe657c50323907d2e092f59d",
+    "lab/v/adaptive_oscillator/manifest.json": "7abe0f91c6de26ef157888e3c33e363d7fb7e491fb58c3e69c56c3761ccf0e21",
+    "lab/v/adaptive_oscillator_confirm/summary.json": "c831ca96d43d9ce326b2d4ce5711f7fc8c936749ed5f9b56c3b279fd82439626",
+    "lab/v/adaptive_oscillator/summary.json": "8e2dacfa13fa90e62945910d48c6bc0d0485bc5e4fa22893c5a3d02ca11a4937",
+    "lab/overnight_20261119/06_oscillator_review.py": "b11bc8a22e4fe934e21a909bd951ad2d9c2098d918e7cd5222f22161abc4d09f"
+  }
+}

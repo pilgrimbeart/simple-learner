@@ -1,0 +1,1198 @@
+{
+  "source_sha256": "3101a8c4597f91e53ad48c84f2f2638dd1707a2e797697b80213006c5a50d6fd",
+  "input_sha256": "ed061bbd4342f8e61743012340dbe91786bc23955e32d23d53d879adc4bea000",
+  "cases": 1360,
+  "failure_classes": {
+    "simultaneous": 9,
+    "long_separation": 5,
+    "single": 3,
+    "weak_order": 3
+  },
+  "failures": [
+    {
+      "seed": 2026112204,
+      "case": {
+        "id": "pair_0.35_0.5_0.0",
+        "a": 0.35,
+        "b": 0.5,
+        "delay": 0.0
+      },
+      "kind": "simultaneous",
+      "metrics": {
+        "coincidence_V": 0.39194207544976595,
+        "order_V": 0.06626250647133819
+      }
+    },
+    {
+      "seed": 2026112204,
+      "case": {
+        "id": "pair_0.5_0.5_0.0",
+        "a": 0.5,
+        "b": 0.5,
+        "delay": 0.0
+      },
+      "kind": "simultaneous",
+      "metrics": {
+        "coincidence_V": 0.4038880728700694,
+        "order_V": 0.062040203312761874
+      }
+    },
+    {
+      "seed": 2026112215,
+      "case": {
+        "id": "pair_0.35_0.35_0.6",
+        "a": 0.35,
+        "b": 0.35,
+        "delay": 0.6
+      },
+      "kind": "long_separation",
+      "metrics": {
+        "coincidence_V": 0.0003791358724327501,
+        "order_V": 0.03376943424509246
+      }
+    },
+    {
+      "seed": 2026112215,
+      "case": {
+        "id": "pair_0.35_0.5_0.6",
+        "a": 0.35,
+        "b": 0.5,
+        "delay": 0.6
+      },
+      "kind": "long_separation",
+      "metrics": {
+        "coincidence_V": 0.0003867136127735669,
+        "order_V": 0.037187549971807184
+      }
+    },
+    {
+      "seed": 2026112215,
+      "case": {
+        "id": "pair_0.5_0.35_0.6",
+        "a": 0.5,
+        "b": 0.35,
+        "delay": 0.6
+      },
+      "kind": "long_separation",
+      "metrics": {
+        "coincidence_V": 0.0003791358724327501,
+        "order_V": 0.03413362454125983
+      }
+    },
+    {
+      "seed": 2026112215,
+      "case": {
+        "id": "pair_0.5_0.5_0.6",
+        "a": 0.5,
+        "b": 0.5,
+        "delay": 0.6
+      },
+      "kind": "long_separation",
+      "metrics": {
+        "coincidence_V": 0.0003867136127735669,
+        "order_V": 0.03758527282730943
+      }
+    },
+    {
+      "seed": 2026112215,
+      "case": {
+        "id": "single_B_0.35",
+        "a": 0.0,
+        "b": 0.35,
+        "delay": 0.0
+      },
+      "kind": "single",
+      "metrics": {
+        "coincidence_V": 0.00035137516264336494,
+        "order_V": 0.03019506983217233
+      }
+    },
+    {
+      "seed": 2026112215,
+      "case": {
+        "id": "single_B_0.5",
+        "a": 0.0,
+        "b": 0.5,
+        "delay": 0.0
+      },
+      "kind": "single",
+      "metrics": {
+        "coincidence_V": 0.0003725713186388366,
+        "order_V": 0.033279810668750784
+      }
+    },
+    {
+      "seed": 2026112215,
+      "case": {
+        "id": "single_B_0.6",
+        "a": 0.0,
+        "b": 0.6,
+        "delay": 0.0
+      },
+      "kind": "single",
+      "metrics": {
+        "coincidence_V": 0.00037324091781497544,
+        "order_V": 0.034625085368691924
+      }
+    },
+    {
+      "seed": 2026112223,
+      "case": {
+        "id": "pair_0.35_0.35_-0.15",
+        "a": 0.35,
+        "b": 0.35,
+        "delay": -0.15
+      },
+      "kind": "weak_order",
+      "metrics": {
+        "coincidence_V": 0.002815757434688405,
+        "order_V": -0.022920073740385485
+      }
+    },
+    {
+      "seed": 2026112223,
+      "case": {
+        "id": "pair_0.35_0.35_0.0",
+        "a": 0.35,
+        "b": 0.35,
+        "delay": 0.0
+      },
+      "kind": "simultaneous",
+      "metrics": {
+        "coincidence_V": 0.42505746832709446,
+        "order_V": 0.07212408125253512
+      }
+    },
+    {
+      "seed": 2026112223,
+      "case": {
+        "id": "pair_0.35_0.5_-0.15",
+        "a": 0.35,
+        "b": 0.5,
+        "delay": -0.15
+      },
+      "kind": "weak_order",
+      "metrics": {
+        "coincidence_V": 0.0029057078986265902,
+        "order_V": -0.029346265076648392
+      }
+    },
+    {
+      "seed": 2026112223,
+      "case": {
+        "id": "pair_0.35_0.5_0.0",
+        "a": 0.35,
+        "b": 0.5,
+        "delay": 0.0
+      },
+      "kind": "simultaneous",
+      "metrics": {
+        "coincidence_V": 0.44019452895641886,
+        "order_V": 0.07171620908664816
+      }
+    },
+    {
+      "seed": 2026112223,
+      "case": {
+        "id": "pair_0.5_0.35_-0.15",
+        "a": 0.5,
+        "b": 0.35,
+        "delay": -0.15
+      },
+      "kind": "weak_order",
+      "metrics": {
+        "coincidence_V": 0.002815757434688405,
+        "order_V": -0.026237758155351128
+      }
+    },
+    {
+      "seed": 2026112223,
+      "case": {
+        "id": "pair_0.5_0.35_0.0",
+        "a": 0.5,
+        "b": 0.35,
+        "delay": 0.0
+      },
+      "kind": "simultaneous",
+      "metrics": {
+        "coincidence_V": 0.42577857394238394,
+        "order_V": 0.08387026907295939
+      }
+    },
+    {
+      "seed": 2026112223,
+      "case": {
+        "id": "pair_0.5_0.5_0.0",
+        "a": 0.5,
+        "b": 0.5,
+        "delay": 0.0
+      },
+      "kind": "simultaneous",
+      "metrics": {
+        "coincidence_V": 0.44103326406452953,
+        "order_V": 0.0826172511019482
+      }
+    },
+    {
+      "seed": 2026112226,
+      "case": {
+        "id": "pair_0.5_0.5_0.6",
+        "a": 0.5,
+        "b": 0.5,
+        "delay": 0.6
+      },
+      "kind": "long_separation",
+      "metrics": {
+        "coincidence_V": 0.014779425278860652,
+        "order_V": 0.030224999445728075
+      }
+    },
+    {
+      "seed": 2026112236,
+      "case": {
+        "id": "pair_0.5_0.35_0.0",
+        "a": 0.5,
+        "b": 0.35,
+        "delay": 0.0
+      },
+      "kind": "simultaneous",
+      "metrics": {
+        "coincidence_V": 0.6312205202570704,
+        "order_V": -0.06399060462720764
+      }
+    },
+    {
+      "seed": 2026112236,
+      "case": {
+        "id": "pair_0.5_0.5_0.0",
+        "a": 0.5,
+        "b": 0.5,
+        "delay": 0.0
+      },
+      "kind": "simultaneous",
+      "metrics": {
+        "coincidence_V": 0.6532358102436466,
+        "order_V": -0.06330827536211084
+      }
+    },
+    {
+      "seed": 2026112237,
+      "case": {
+        "id": "pair_0.5_0.35_0.0",
+        "a": 0.5,
+        "b": 0.35,
+        "delay": 0.0
+      },
+      "kind": "simultaneous",
+      "metrics": {
+        "coincidence_V": 0.4159940317592532,
+        "order_V": -0.06258048313582427
+      }
+    }
+  ],
+  "by_seed": [
+    {
+      "seed": 2026112200,
+      "approx_rest_trace_V": [
+        0.0024470364889972646,
+        0.002466931355428307
+      ],
+      "approx_rest_gate": [
+        0.008156788296657549,
+        0.008223104518094358
+      ],
+      "max_single_order_V": 0.002679278443341624,
+      "coincidence_pass": true,
+      "order_pass": true
+    },
+    {
+      "seed": 2026112201,
+      "approx_rest_trace_V": [
+        0.00043893273795243273,
+        0.0009109479870296584
+      ],
+      "approx_rest_gate": [
+        0.001463109126508109,
+        0.0030364932900988615
+      ],
+      "max_single_order_V": 0.0003698231294395083,
+      "coincidence_pass": true,
+      "order_pass": true
+    },
+    {
+      "seed": 2026112202,
+      "approx_rest_trace_V": [
+        0.0011328557750762598,
+        0.0001727934726487351
+      ],
+      "approx_rest_gate": [
+        0.003776185916920866,
+        0.0005759782421624504
+      ],
+      "max_single_order_V": 0.0007763787782882304,
+      "coincidence_pass": true,
+      "order_pass": true
+    },
+    {
+      "seed": 2026112203,
+      "approx_rest_trace_V": [
+        0.005279361377388561,
+        0.0015690278219373467
+      ],
+      "approx_rest_gate": [
+        0.01759787125796187,
+        0.005230092739791156
+      ],
+      "max_single_order_V": 0.0036203412707818796,
+      "coincidence_pass": true,
+      "order_pass": true
+    },
+    {
+      "seed": 2026112204,
+      "approx_rest_trace_V": [
+        0.005313511252499527,
+        0.010611274986931788
+      ],
+      "approx_rest_gate": [
+        0.017711704174998424,
+        0.035370916623105965
+      ],
+      "max_single_order_V": 0.009427084586377917,
+      "coincidence_pass": true,
+      "order_pass": false
+    },
+    {
+      "seed": 2026112205,
+      "approx_rest_trace_V": [
+        0.0028032035178785207,
+        0.0029050905846005476
+      ],
+      "approx_rest_gate": [
+        0.009344011726261736,
+        0.009683635282001826
+      ],
+      "max_single_order_V": 0.002135938352490247,
+      "coincidence_pass": true,
+      "order_pass": true
+    },
+    {
+      "seed": 2026112206,
+      "approx_rest_trace_V": [
+        0.0010008685506931285,
+        0.015418671610800624
+      ],
+      "approx_rest_gate": [
+        0.0033362285023104286,
+        0.051395572036002084
+      ],
+      "max_single_order_V": 0.012948118424502497,
+      "coincidence_pass": true,
+      "order_pass": true
+    },
+    {
+      "seed": 2026112207,
+      "approx_rest_trace_V": [
+        7.025629222847792e-05,
+        0.002675565949071426
+      ],
+      "approx_rest_gate": [
+        0.00023418764076159308,
+        0.008918553163571421
+      ],
+      "max_single_order_V": 0.0017626036736287764,
+      "coincidence_pass": true,
+      "order_pass": true
+    },
+    {
+      "seed": 2026112208,
+      "approx_rest_trace_V": [
+        0.002846750640422268,
+        0.00044487944904455807
+      ],
+      "approx_rest_gate": [
+        0.009489168801407561,
+        0.0014829314968151936
+      ],
+      "max_single_order_V": 0.001417972014225686,
+      "coincidence_pass": true,
+      "order_pass": true
+    },
+    {
+      "seed": 2026112209,
+      "approx_rest_trace_V": [
+        0.006515449006746419,
+        0.0011709174798155413
+      ],
+      "approx_rest_gate": [
+        0.0217181633558214,
+        0.0039030582660518043
+      ],
+      "max_single_order_V": 0.0017478706114789876,
+      "coincidence_pass": true,
+      "order_pass": true
+    },
+    {
+      "seed": 2026112210,
+      "approx_rest_trace_V": [
+        0.0030491825047149093,
+        0.0024755222946017215
+      ],
+      "approx_rest_gate": [
+        0.010163941682383031,
+        0.00825174098200574
+      ],
+      "max_single_order_V": 0.0018725799712183612,
+      "coincidence_pass": true,
+      "order_pass": true
+    },
+    {
+      "seed": 2026112211,
+      "approx_rest_trace_V": [
+        0.00033439647899704704,
+        0.001396017915526414
+      ],
+      "approx_rest_gate": [
+        0.0011146549299901568,
+        0.004653393051754714
+      ],
+      "max_single_order_V": 0.0008133006951531075,
+      "coincidence_pass": true,
+      "order_pass": true
+    },
+    {
+      "seed": 2026112212,
+      "approx_rest_trace_V": [
+        0.00027302846968453815,
+        0.003127371306952929
+      ],
+      "approx_rest_gate": [
+        0.0009100948989484606,
+        0.01042457102317643
+      ],
+      "max_single_order_V": 0.0020063841628348697,
+      "coincidence_pass": true,
+      "order_pass": true
+    },
+    {
+      "seed": 2026112213,
+      "approx_rest_trace_V": [
+        0.003979794287949269,
+        0.009795237308021646
+      ],
+      "approx_rest_gate": [
+        0.013265980959830895,
+        0.032650791026738825
+      ],
+      "max_single_order_V": 0.01328877426326629,
+      "coincidence_pass": true,
+      "order_pass": true
+    },
+    {
+      "seed": 2026112214,
+      "approx_rest_trace_V": [
+        0.009717122233861583,
+        0.0008075453228957715
+      ],
+      "approx_rest_gate": [
+        0.03239040744620528,
+        0.0026918177429859054
+      ],
+      "max_single_order_V": 0.0065034133224186885,
+      "coincidence_pass": true,
+      "order_pass": true
+    },
+    {
+      "seed": 2026112215,
+      "approx_rest_trace_V": [
+        0.042203403947383894,
+        0.00544417768120328
+      ],
+      "approx_rest_gate": [
+        0.1406780131579463,
+        0.018147258937344268
+      ],
+      "max_single_order_V": 0.034625085368691924,
+      "coincidence_pass": true,
+      "order_pass": false
+    },
+    {
+      "seed": 2026112216,
+      "approx_rest_trace_V": [
+        0.00021839345445103273,
+        0.0012162854401015274
+      ],
+      "approx_rest_gate": [
+        0.0007279781815034425,
+        0.004054284800338425
+      ],
+      "max_single_order_V": 0.0005946461848699746,
+      "coincidence_pass": true,
+      "order_pass": true
+    },
+    {
+      "seed": 2026112217,
+      "approx_rest_trace_V": [
+        0.004744724259863468,
+        0.00035622385653088113
+      ],
+      "approx_rest_gate": [
+        0.01581574753287823,
+        0.0011874128551029371
+      ],
+      "max_single_order_V": 0.003045243389654429,
+      "coincidence_pass": true,
+      "order_pass": true
+    },
+    {
+      "seed": 2026112218,
+      "approx_rest_trace_V": [
+        0.0042262106237481575,
+        0.00889089800274748
+      ],
+      "approx_rest_gate": [
+        0.014087368745827193,
+        0.029636326675824935
+      ],
+      "max_single_order_V": 0.005965778875161037,
+      "coincidence_pass": true,
+      "order_pass": true
+    },
+    {
+      "seed": 2026112219,
+      "approx_rest_trace_V": [
+        0.0006254606769867738,
+        0.0016913540783056592
+      ],
+      "approx_rest_gate": [
+        0.002084868923289246,
+        0.005637846927685531
+      ],
+      "max_single_order_V": 0.0006342656021013631,
+      "coincidence_pass": true,
+      "order_pass": true
+    },
+    {
+      "seed": 2026112220,
+      "approx_rest_trace_V": [
+        0.0006414886173699882,
+        0.0009610534939776704
+      ],
+      "approx_rest_gate": [
+        0.002138295391233294,
+        0.0032035116465922346
+      ],
+      "max_single_order_V": 0.0005850993195832338,
+      "coincidence_pass": true,
+      "order_pass": true
+    },
+    {
+      "seed": 2026112221,
+      "approx_rest_trace_V": [
+        0.00045223826147380245,
+        0.0021971262618075606
+      ],
+      "approx_rest_gate": [
+        0.0015074608715793416,
+        0.007323754206025202
+      ],
+      "max_single_order_V": 0.0011954834741633416,
+      "coincidence_pass": true,
+      "order_pass": true
+    },
+    {
+      "seed": 2026112222,
+      "approx_rest_trace_V": [
+        0.0005073572423081905,
+        0.002337345476698868
+      ],
+      "approx_rest_gate": [
+        0.0016911908076939683,
+        0.007791151588996227
+      ],
+      "max_single_order_V": 0.0016008142782046799,
+      "coincidence_pass": true,
+      "order_pass": true
+    },
+    {
+      "seed": 2026112223,
+      "approx_rest_trace_V": [
+        0.0002556587817138622,
+        0.00023296957778448022
+      ],
+      "approx_rest_gate": [
+        0.0008521959390462073,
+        0.0007765652592816007
+      ],
+      "max_single_order_V": 0.01613511000275014,
+      "coincidence_pass": true,
+      "order_pass": false
+    },
+    {
+      "seed": 2026112224,
+      "approx_rest_trace_V": [
+        0.0045428176433521695,
+        0.0020750292603300656
+      ],
+      "approx_rest_gate": [
+        0.015142725477840565,
+        0.006916764201100219
+      ],
+      "max_single_order_V": 0.004018207225954931,
+      "coincidence_pass": true,
+      "order_pass": true
+    },
+    {
+      "seed": 2026112225,
+      "approx_rest_trace_V": [
+        0.0008223086674169284,
+        0.0008822361751375305
+      ],
+      "approx_rest_gate": [
+        0.0027410288913897614,
+        0.002940787250458435
+      ],
+      "max_single_order_V": 0.00021032640637247426,
+      "coincidence_pass": true,
+      "order_pass": true
+    },
+    {
+      "seed": 2026112226,
+      "approx_rest_trace_V": [
+        0.0223704511378242,
+        0.0066099007712072545
+      ],
+      "approx_rest_gate": [
+        0.074568170459414,
+        0.022033002570690848
+      ],
+      "max_single_order_V": 0.023652618899574398,
+      "coincidence_pass": true,
+      "order_pass": false
+    },
+    {
+      "seed": 2026112227,
+      "approx_rest_trace_V": [
+        0.014203090295986421,
+        0.001440099299739525
+      ],
+      "approx_rest_gate": [
+        0.04734363431995474,
+        0.004800330999131751
+      ],
+      "max_single_order_V": 0.012127048808692056,
+      "coincidence_pass": true,
+      "order_pass": true
+    },
+    {
+      "seed": 2026112228,
+      "approx_rest_trace_V": [
+        0.005652440779661476,
+        0.0018331438540511017
+      ],
+      "approx_rest_gate": [
+        0.018841469265538254,
+        0.006110479513503673
+      ],
+      "max_single_order_V": 0.004459381981967757,
+      "coincidence_pass": true,
+      "order_pass": true
+    },
+    {
+      "seed": 2026112229,
+      "approx_rest_trace_V": [
+        0.0014646850615047074,
+        0.0005709282740335057
+      ],
+      "approx_rest_gate": [
+        0.004882283538349025,
+        0.0019030942467783525
+      ],
+      "max_single_order_V": 0.0008826137611943456,
+      "coincidence_pass": true,
+      "order_pass": true
+    },
+    {
+      "seed": 2026112230,
+      "approx_rest_trace_V": [
+        0.010196690442993806,
+        0.0014435208435252366
+      ],
+      "approx_rest_gate": [
+        0.03398896814331269,
+        0.004811736145084122
+      ],
+      "max_single_order_V": 0.00463217386027553,
+      "coincidence_pass": true,
+      "order_pass": true
+    },
+    {
+      "seed": 2026112231,
+      "approx_rest_trace_V": [
+        0.0031636486842595802,
+        0.008777643552193027
+      ],
+      "approx_rest_gate": [
+        0.010545495614198602,
+        0.029258811840643426
+      ],
+      "max_single_order_V": 0.007057824550806097,
+      "coincidence_pass": true,
+      "order_pass": true
+    },
+    {
+      "seed": 2026112232,
+      "approx_rest_trace_V": [
+        0.006499003269071948,
+        0.0010854535113453093
+      ],
+      "approx_rest_gate": [
+        0.021663344230239825,
+        0.003618178371151031
+      ],
+      "max_single_order_V": 0.005067402594580032,
+      "coincidence_pass": true,
+      "order_pass": true
+    },
+    {
+      "seed": 2026112233,
+      "approx_rest_trace_V": [
+        0.007272385483099865,
+        0.009343516926415734
+      ],
+      "approx_rest_gate": [
+        0.024241284943666216,
+        0.03114505642138578
+      ],
+      "max_single_order_V": 0.007777017062246231,
+      "coincidence_pass": true,
+      "order_pass": true
+    },
+    {
+      "seed": 2026112234,
+      "approx_rest_trace_V": [
+        0.00014084763041462425,
+        0.004786104464157146
+      ],
+      "approx_rest_gate": [
+        0.00046949210138208086,
+        0.015953681547190488
+      ],
+      "max_single_order_V": 0.003504850521647794,
+      "coincidence_pass": true,
+      "order_pass": true
+    },
+    {
+      "seed": 2026112235,
+      "approx_rest_trace_V": [
+        0.006925138416837046,
+        0.003537699124554742
+      ],
+      "approx_rest_gate": [
+        0.023083794722790152,
+        0.011792330415182474
+      ],
+      "max_single_order_V": 0.0034950256734642983,
+      "coincidence_pass": true,
+      "order_pass": true
+    },
+    {
+      "seed": 2026112236,
+      "approx_rest_trace_V": [
+        0.0005541283255251671,
+        0.010586516163084978
+      ],
+      "approx_rest_gate": [
+        0.001847094418417224,
+        0.03528838721028326
+      ],
+      "max_single_order_V": 0.008217991755706954,
+      "coincidence_pass": true,
+      "order_pass": false
+    },
+    {
+      "seed": 2026112237,
+      "approx_rest_trace_V": [
+        0.005190880584383833,
+        0.013119510623103842
+      ],
+      "approx_rest_gate": [
+        0.017302935281279446,
+        0.04373170207701281
+      ],
+      "max_single_order_V": 0.016215178127597037,
+      "coincidence_pass": true,
+      "order_pass": false
+    },
+    {
+      "seed": 2026112238,
+      "approx_rest_trace_V": [
+        0.00312815497332384,
+        0.0030031694625719486
+      ],
+      "approx_rest_gate": [
+        0.0104271832444128,
+        0.01001056487523983
+      ],
+      "max_single_order_V": 0.0013587601393465344,
+      "coincidence_pass": true,
+      "order_pass": true
+    },
+    {
+      "seed": 2026112239,
+      "approx_rest_trace_V": [
+        0.0018816126247588418,
+        0.0015354780721153509
+      ],
+      "approx_rest_gate": [
+        0.006272042082529473,
+        0.0051182602403845034
+      ],
+      "max_single_order_V": 0.001056879505359834,
+      "coincidence_pass": true,
+      "order_pass": true
+    }
+  ],
+  "coincidence_seeds_passing": 40,
+  "order_seeds_passing": 34,
+  "raw_readout_audit_first_seed": [
+    {
+      "case": "pair_0.35_0.35_-0.06",
+      "mean_raw_order_V": -0.18407036660802192,
+      "baseline_relative_order_V": -0.17653822398802868,
+      "raw_sign_correct": true
+    },
+    {
+      "case": "pair_0.35_0.35_-0.15",
+      "mean_raw_order_V": -0.13150928432706702,
+      "baseline_relative_order_V": -0.12397714170707377,
+      "raw_sign_correct": true
+    },
+    {
+      "case": "pair_0.35_0.35_0.06",
+      "mean_raw_order_V": 0.15298501379335527,
+      "baseline_relative_order_V": 0.16051715641334852,
+      "raw_sign_correct": true
+    },
+    {
+      "case": "pair_0.35_0.35_0.15",
+      "mean_raw_order_V": 0.1024153278509723,
+      "baseline_relative_order_V": 0.10994747047096551,
+      "raw_sign_correct": true
+    },
+    {
+      "case": "pair_0.35_0.5_-0.06",
+      "mean_raw_order_V": -0.1995625556355874,
+      "baseline_relative_order_V": -0.19203041301559415,
+      "raw_sign_correct": true
+    },
+    {
+      "case": "pair_0.35_0.5_-0.15",
+      "mean_raw_order_V": -0.14720334974544783,
+      "baseline_relative_order_V": -0.13967120712545458,
+      "raw_sign_correct": true
+    },
+    {
+      "case": "pair_0.35_0.5_0.06",
+      "mean_raw_order_V": 0.16258904895232726,
+      "baseline_relative_order_V": 0.1701211915723205,
+      "raw_sign_correct": true
+    },
+    {
+      "case": "pair_0.35_0.5_0.15",
+      "mean_raw_order_V": 0.10941310150823677,
+      "baseline_relative_order_V": 0.11694524412823,
+      "raw_sign_correct": true
+    },
+    {
+      "case": "pair_0.5_0.35_-0.06",
+      "mean_raw_order_V": -0.19896099474729537,
+      "baseline_relative_order_V": -0.19142885212730212,
+      "raw_sign_correct": true
+    },
+    {
+      "case": "pair_0.5_0.35_-0.15",
+      "mean_raw_order_V": -0.142894654957721,
+      "baseline_relative_order_V": -0.13536251233772778,
+      "raw_sign_correct": true
+    },
+    {
+      "case": "pair_0.5_0.35_0.06",
+      "mean_raw_order_V": 0.16730927471635465,
+      "baseline_relative_order_V": 0.1748414173363479,
+      "raw_sign_correct": true
+    },
+    {
+      "case": "pair_0.5_0.35_0.15",
+      "mean_raw_order_V": 0.115235186768507,
+      "baseline_relative_order_V": 0.12276732938850021,
+      "raw_sign_correct": true
+    },
+    {
+      "case": "pair_0.5_0.5_-0.06",
+      "mean_raw_order_V": -0.215094481342683,
+      "baseline_relative_order_V": -0.20756233872268975,
+      "raw_sign_correct": true
+    },
+    {
+      "case": "pair_0.5_0.5_-0.15",
+      "mean_raw_order_V": -0.15979179727315854,
+      "baseline_relative_order_V": -0.15225965465316532,
+      "raw_sign_correct": true
+    },
+    {
+      "case": "pair_0.5_0.5_0.06",
+      "mean_raw_order_V": 0.17745797962403628,
+      "baseline_relative_order_V": 0.18499012224402953,
+      "raw_sign_correct": true
+    },
+    {
+      "case": "pair_0.5_0.5_0.15",
+      "mean_raw_order_V": 0.12294954056362664,
+      "baseline_relative_order_V": 0.13048168318361988,
+      "raw_sign_correct": true
+    }
+  ],
+  "approximate_absolute_readout_by_seed": [
+    {
+      "seed": 2026112200,
+      "rest_order_V": -0.007552377974674984,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112201,
+      "rest_order_V": 0.08924471428800099,
+      "cases": 16,
+      "estimated_raw_sign_correct": 12
+    },
+    {
+      "seed": 2026112202,
+      "rest_order_V": 0.012097246952771718,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112203,
+      "rest_order_V": -0.04207291365623991,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112204,
+      "rest_order_V": -0.01649933815828831,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112205,
+      "rest_order_V": 0.038268518764135256,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112206,
+      "rest_order_V": 0.004668727883056995,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112207,
+      "rest_order_V": 0.02943561095038761,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112208,
+      "rest_order_V": -0.04554086179997607,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112209,
+      "rest_order_V": -0.00894702999755767,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112210,
+      "rest_order_V": -0.0016288834594197091,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112211,
+      "rest_order_V": 0.028436746463079136,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112212,
+      "rest_order_V": -0.02819094074829799,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112213,
+      "rest_order_V": -0.016331460218787827,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112214,
+      "rest_order_V": 0.045982823853789476,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112215,
+      "rest_order_V": 0.027585151196047895,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112216,
+      "rest_order_V": -0.03477701547014582,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112217,
+      "rest_order_V": -0.02270089982721106,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112218,
+      "rest_order_V": 0.012939855413801618,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112219,
+      "rest_order_V": -0.018938946196209096,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112220,
+      "rest_order_V": -0.0021661170209736624,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112221,
+      "rest_order_V": 0.0016784082358196465,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112222,
+      "rest_order_V": -0.07699853702275886,
+      "cases": 16,
+      "estimated_raw_sign_correct": 15
+    },
+    {
+      "seed": 2026112223,
+      "rest_order_V": -0.00412627300367358,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112224,
+      "rest_order_V": 0.0028216072804566365,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112225,
+      "rest_order_V": -0.017236089122869086,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112226,
+      "rest_order_V": -0.06104418844518722,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112227,
+      "rest_order_V": 0.002406103948188222,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112228,
+      "rest_order_V": -0.01923090867443547,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112229,
+      "rest_order_V": 0.038574424095081036,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112230,
+      "rest_order_V": 0.033056784312318996,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112231,
+      "rest_order_V": -0.01751406539552569,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112232,
+      "rest_order_V": 0.004864189497809025,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112233,
+      "rest_order_V": 0.048683483895097204,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112234,
+      "rest_order_V": 0.00039408786796205325,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112235,
+      "rest_order_V": -0.03828422095389357,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112236,
+      "rest_order_V": 0.11359515881572457,
+      "cases": 16,
+      "estimated_raw_sign_correct": 14
+    },
+    {
+      "seed": 2026112237,
+      "rest_order_V": -0.02725303494771327,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112238,
+      "rest_order_V": 0.007074969156128513,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    },
+    {
+      "seed": 2026112239,
+      "rest_order_V": -0.02540072910409477,
+      "cases": 16,
+      "estimated_raw_sign_correct": 16
+    }
+  ],
+  "limits": "Resting trace estimate omits exponentially tiny rail fade; not a fitted causal decomposition. Failure classification is exact against frozen metrics. Absolute decoder audit covers saved first seed only."
+}

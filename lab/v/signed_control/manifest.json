@@ -1,0 +1,89 @@
+{
+  "graph": {
+    "nodes": [
+      {
+        "name": "source",
+        "C": 2.5e-11,
+        "R": 200000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "control",
+        "C": 2.5e-11,
+        "R": 200000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "positive gate",
+        "C": 2.5e-11,
+        "R": 400000000.0,
+        "bias": 3.75e-10,
+        "memory": false
+      },
+      {
+        "name": "negative gate",
+        "C": 2.5e-11,
+        "R": 400000000.0,
+        "bias": 3.75e-10,
+        "memory": false
+      },
+      {
+        "name": "output",
+        "C": 2.5e-11,
+        "R": 400000000.0,
+        "bias": 0.0,
+        "memory": false
+      }
+    ],
+    "edges": [
+      {
+        "to": 2,
+        "source": 1,
+        "gain": 7.5e-10,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": -1
+      },
+      {
+        "to": 3,
+        "source": 1,
+        "gain": -7.5e-10,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": -1
+      },
+      {
+        "to": 4,
+        "source": 0,
+        "gain": 7.5e-10,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": 2
+      },
+      {
+        "to": 4,
+        "source": 0,
+        "gain": -7.5e-10,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": 3
+      }
+    ]
+  },
+  "states": 5,
+  "connections": 4,
+  "parts": {
+    "T": 172,
+    "R": 29,
+    "C": 13,
+    "D": 0,
+    "sources": 20
+  },
+  "scope": "Core including two input interface nodes; bench sources and recording excluded. No SPICE run. Counts use minimal.spice.count and chip.py blocks."
+}

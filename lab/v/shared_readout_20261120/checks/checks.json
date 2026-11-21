@@ -1,0 +1,750 @@
+{
+ "node7": {
+  "g7_S": 1.113352139817835e-09,
+  "C7_F": 2.3152836771660202e-11
+ },
+ "checks": {
+  "constant_input": {
+   "rows": [
+    {
+     "point": "P1_native",
+     "u_V": 0.08,
+     "e_V": 0.03,
+     "beta": 0.1,
+     "m_sim": 0.05280366699731648,
+     "m_analytic": 0.05280366699731699,
+     "error_V": 5.134781488891349e-16,
+     "knob_moved": 0.0
+    },
+    {
+     "point": "P1_native",
+     "u_V": -0.05,
+     "e_V": -0.02,
+     "beta": -0.1,
+     "m_sim": -0.03319640601360308,
+     "m_analytic": -0.033196406013603595,
+     "error_V": 5.134781488891349e-16,
+     "knob_moved": 0.0
+    },
+    {
+     "point": "P1_native",
+     "u_V": 0.0,
+     "e_V": 0.0,
+     "beta": 0.0,
+     "m_sim": 0.0,
+     "m_analytic": -1.1201427500150055e-60,
+     "error_V": 1.1201427500150055e-60,
+     "knob_moved": 0.0
+    },
+    {
+     "point": "P2_preamp",
+     "u_V": 0.08,
+     "e_V": 0.03,
+     "beta": 0.1,
+     "m_sim": 0.0499653204121075,
+     "m_analytic": 0.04996532041210802,
+     "error_V": 5.204170427930421e-16,
+     "knob_moved": 0.0
+    },
+    {
+     "point": "P2_preamp",
+     "u_V": -0.05,
+     "e_V": -0.02,
+     "beta": -0.1,
+     "m_sim": -0.030357517428790552,
+     "m_analytic": -0.030357517428790812,
+     "error_V": 2.6020852139652106e-16,
+     "knob_moved": 0.0
+    },
+    {
+     "point": "P2_preamp",
+     "u_V": 0.0,
+     "e_V": 0.0,
+     "beta": 0.0,
+     "m_sim": 0.0,
+     "m_analytic": -1.1201427500150055e-60,
+     "error_V": 1.1201427500150055e-60,
+     "knob_moved": 0.0
+    }
+   ],
+   "passed": true
+  },
+  "ideal_cancellation": {
+   "label": "nonphysical reference: linear tanh, leak-free tracker, no dead band",
+   "rows": [
+    {
+     "point": "P1_native",
+     "shared": {
+      "0.0,0.0": -0.3343976458279443,
+      "0.03,0.03": -0.3343976458250432,
+      "-0.03,-0.03": -0.33439764583084425,
+      "0.03,-0.03": -0.3343976458250432
+     },
+     "separate": {
+      "0.0,0.0": -0.33439764582790915,
+      "0.03,0.03": -0.3343976458250113,
+      "-0.03,-0.03": -0.3343976458308127,
+      "0.03,-0.03": 0.4191081167199735
+     },
+     "shared_max_change": 2.9010682744967653e-12,
+     "separate_unequal_change": 0.7535057625478827,
+     "separate_equal_change": 2.903566276302172e-12
+    },
+    {
+     "point": "P2_preamp",
+     "shared": {
+      "0.0,0.0": -0.3343979077502932,
+      "0.03,0.03": -0.334397907747391,
+      "-0.03,-0.03": -0.334397907753195,
+      "0.03,-0.03": -0.334397907747391
+     },
+     "separate": {
+      "0.0,0.0": -0.33439790775028366,
+      "0.03,0.03": -0.3343979077473867,
+      "-0.03,-0.03": -0.33439790775318784,
+      "0.03,-0.03": 0.4191077356999102
+     },
+     "shared_max_change": 2.9022340086726217e-12,
+     "separate_unequal_change": 0.7535056434501939,
+     "separate_equal_change": 2.9041768989657157e-12
+    }
+   ],
+   "passed": true
+  },
+  "feedback_sign": {
+   "rows": [
+    {
+     "point": "P1_native",
+     "A_Vs": 0.1109907333124852,
+     "B_Vs": 0.301918115044453,
+     "d_star_linear": -0.3676186614246166,
+     "d_final": -0.3475914701688094,
+     "gap_start": 0.3676186614246166,
+     "gap_end": 0.020027191255807153,
+     "gap_after_anchors": [
+      0.31913932550462026,
+      0.2771162461865743,
+      0.24080887977212642,
+      0.20951389460040695,
+      0.18259188564019746,
+      0.15945866824232272,
+      0.13959632035676922,
+      0.12255036279308124
+     ],
+     "moved_toward": true
+    },
+    {
+     "point": "P2_preamp",
+     "A_Vs": 0.1109907333124852,
+     "B_Vs": 0.301918115044453,
+     "d_star_linear": -0.3676186614246166,
+     "d_final": -0.43038438597442136,
+     "gap_start": 0.3676186614246166,
+     "gap_end": 0.06276572454980478,
+     "gap_after_anchors": [
+      0.34153950095819813,
+      0.3165079363678812,
+      0.29253808119068475,
+      0.2696406606319917,
+      0.24781948548144733,
+      0.22706813130723605,
+      0.20737849768937164,
+      0.1887439947882959
+     ],
+     "moved_toward": true
+    }
+   ],
+   "passed": true
+  },
+  "bounded_states": {
+   "rows": [
+    {
+     "point": "P1_native",
+     "arm": 0,
+     "finite": true,
+     "max_abs_m": 0.4510565538439169,
+     "max_abs_d": 1.0,
+     "max_abs_Vd": 0.9,
+     "within": true
+    },
+    {
+     "point": "P1_native",
+     "arm": 1,
+     "finite": true,
+     "max_abs_m": 0.7444220939267908,
+     "max_abs_d": 1.0,
+     "max_abs_Vd": 0.9,
+     "within": true
+    },
+    {
+     "point": "P2_preamp",
+     "arm": 0,
+     "finite": true,
+     "max_abs_m": 0.32137301366351184,
+     "max_abs_d": 1.0,
+     "max_abs_Vd": 0.4947825420952786,
+     "within": true
+    },
+    {
+     "point": "P2_preamp",
+     "arm": 1,
+     "finite": true,
+     "max_abs_m": 0.3520400484574295,
+     "max_abs_d": 1.0,
+     "max_abs_Vd": 0.9,
+     "within": true
+    }
+   ],
+   "passed": true
+  },
+  "current_conservation": {
+   "max_error_A": 2.5849394142282115e-26,
+   "passed": true
+  },
+  "prefix_causality": {
+   "rows": [
+    {
+     "point": "P1_native",
+     "arm": 0,
+     "prefix_identical": true,
+     "future_differs": true
+    },
+    {
+     "point": "P1_native",
+     "arm": 1,
+     "prefix_identical": true,
+     "future_differs": true
+    },
+    {
+     "point": "P2_preamp",
+     "arm": 0,
+     "prefix_identical": true,
+     "future_differs": true
+    },
+    {
+     "point": "P2_preamp",
+     "arm": 1,
+     "prefix_identical": true,
+     "future_differs": true
+    }
+   ],
+   "passed": true
+  },
+  "identical_errors_coincide": {
+   "rows": [
+    {
+     "point": "P1_native",
+     "max_d_diff": 1.1102230246251565e-16,
+     "max_m_diff": 2.7755575615628914e-17
+    },
+    {
+     "point": "P2_preamp",
+     "max_d_diff": 1.1102230246251565e-16,
+     "max_m_diff": 2.0816681711721685e-17
+    }
+   ],
+   "passed": true
+  },
+  "known_order_inputs_lost_gain": {
+   "rows": [
+    {
+     "point": "P1_native",
+     "order_input_V": 0.02,
+     "reading_causal_C": 9.06018884367592e-14,
+     "reading_ideal_hold_C": 9.904534162070072e-14,
+     "retained_fraction": 0.9147516375250019,
+     "tracker_excursion_V": 0.0024843385790961413,
+     "sign_kept": true
+    },
+    {
+     "point": "P1_native",
+     "order_input_V": -0.02,
+     "reading_causal_C": -9.060188843675923e-14,
+     "reading_ideal_hold_C": -9.904534162070072e-14,
+     "retained_fraction": 0.9147516375250021,
+     "tracker_excursion_V": 0.0024843385790961413,
+     "sign_kept": true
+    },
+    {
+     "point": "P1_native",
+     "order_input_V": 0.05,
+     "reading_causal_C": 2.3151408599384055e-13,
+     "reading_ideal_hold_C": 2.505035360328527e-13,
+     "retained_fraction": 0.9241948822769441,
+     "tracker_excursion_V": 0.006127529200464764,
+     "sign_kept": true
+    },
+    {
+     "point": "P1_native",
+     "order_input_V": -0.05,
+     "reading_causal_C": -2.315140859938406e-13,
+     "reading_ideal_hold_C": -2.5050353603285283e-13,
+     "retained_fraction": 0.9241948822769439,
+     "tracker_excursion_V": 0.006127529200464768,
+     "sign_kept": true
+    },
+    {
+     "point": "P2_preamp",
+     "order_input_V": 0.02,
+     "reading_causal_C": 8.761443346602846e-14,
+     "reading_ideal_hold_C": 9.372400220365314e-14,
+     "retained_fraction": 0.9348131898555806,
+     "tracker_excursion_V": 0.002394731527716186,
+     "sign_kept": true
+    },
+    {
+     "point": "P2_preamp",
+     "order_input_V": -0.02,
+     "reading_causal_C": -8.761443346602847e-14,
+     "reading_ideal_hold_C": -9.372400220365314e-14,
+     "retained_fraction": 0.9348131898555807,
+     "tracker_excursion_V": 0.002394731527716186,
+     "sign_kept": true
+    },
+    {
+     "point": "P2_preamp",
+     "order_input_V": 0.05,
+     "reading_causal_C": 1.4973885984581051e-13,
+     "reading_ideal_hold_C": 1.542150833621094e-13,
+     "retained_fraction": 0.9709741523415816,
+     "tracker_excursion_V": 0.005194338963083738,
+     "sign_kept": true
+    },
+    {
+     "point": "P2_preamp",
+     "order_input_V": -0.05,
+     "reading_causal_C": -1.4973885984581056e-13,
+     "reading_ideal_hold_C": -1.5421508336210943e-13,
+     "retained_fraction": 0.9709741523415817,
+     "tracker_excursion_V": 0.005194338963083743,
+     "sign_kept": true
+    }
+   ],
+   "passed": true,
+   "note": "retained_fraction < 1 is anchor erosion by the fast tracker; reported, not thresholded"
+  }
+ },
+ "static_budget": {
+  "note": "equivalent constant readout error at the final knob on 300 s of synthetic anchors (60 anchors), against the harness linear optimum of that stream; ideal_erosion_only is the nonphysical linear leak-free reference; dead_band uses tanh with the band; gate_sensitivity uses the assumed 30 mV gate offsets",
+  "rows": [
+   {
+    "point": "P1_native",
+    "condition": "ideal_erosion_only",
+    "arm": "shared",
+    "n": 40,
+    "mean_mV": -2.786118446896969,
+    "sd_mV": 3.9739927656979444e-10,
+    "rms_mV": 2.7861184468969684,
+    "max_abs_mV": 2.786118447770293,
+    "clipped": 0,
+    "within_10mV": 40,
+    "within_15mV": 40
+   },
+   {
+    "point": "P1_native",
+    "condition": "ideal_erosion_only",
+    "arm": "separate",
+    "n": 40,
+    "mean_mV": -7.51697823442648,
+    "sd_mV": 45.26366614537923,
+    "rms_mV": 45.32200842718891,
+    "max_abs_mV": 114.69690232137162,
+    "clipped": 5,
+    "within_10mV": 5,
+    "within_15mV": 8
+   },
+   {
+    "point": "P1_native",
+    "condition": "leak",
+    "arm": "shared",
+    "n": 40,
+    "mean_mV": -3.000205595538083,
+    "sd_mV": 1.3889502774769742,
+    "rms_mV": 3.2988159871336875,
+    "max_abs_mV": 6.05343370635844,
+    "clipped": 0,
+    "within_10mV": 40,
+    "within_15mV": 40
+   },
+   {
+    "point": "P1_native",
+    "condition": "leak",
+    "arm": "separate",
+    "n": 40,
+    "mean_mV": -7.4897988797135095,
+    "sd_mV": 45.00793907333768,
+    "rms_mV": 45.06849012777223,
+    "max_abs_mV": 114.69690232137162,
+    "clipped": 5,
+    "within_10mV": 5,
+    "within_15mV": 8
+   },
+   {
+    "point": "P1_native",
+    "condition": "mirror",
+    "arm": "shared",
+    "n": 40,
+    "mean_mV": -0.8021030558279001,
+    "sd_mV": 6.742828282038512,
+    "rms_mV": 6.706150849943685,
+    "max_abs_mV": 15.753514288040835,
+    "clipped": 0,
+    "within_10mV": 35,
+    "within_15mV": 38
+   },
+   {
+    "point": "P1_native",
+    "condition": "mirror",
+    "arm": "separate",
+    "n": 40,
+    "mean_mV": -6.338929733368207,
+    "sd_mV": 45.83337177444386,
+    "rms_mV": 45.698605549552674,
+    "max_abs_mV": 114.69690232137162,
+    "clipped": 5,
+    "within_10mV": 3,
+    "within_15mV": 6
+   },
+   {
+    "point": "P1_native",
+    "condition": "dead_band",
+    "arm": "shared",
+    "n": 40,
+    "mean_mV": -1.48641147524607,
+    "sd_mV": 1.4950875070518314e-09,
+    "rms_mV": 1.48641147524607,
+    "max_abs_mV": 1.4864114790803626,
+    "clipped": 0,
+    "within_10mV": 40,
+    "within_15mV": 40
+   },
+   {
+    "point": "P1_native",
+    "condition": "dead_band",
+    "arm": "separate",
+    "n": 40,
+    "mean_mV": -6.137818057500782,
+    "sd_mV": 44.778478450000854,
+    "rms_mV": 44.63918838304236,
+    "max_abs_mV": 114.69690232137162,
+    "clipped": 5,
+    "within_10mV": 5,
+    "within_15mV": 8
+   },
+   {
+    "point": "P1_native",
+    "condition": "curvature",
+    "arm": "shared",
+    "n": 40,
+    "mean_mV": -1.4636055408627737,
+    "sd_mV": 1.332322652704551e-09,
+    "rms_mV": 1.4636055408627737,
+    "max_abs_mV": 1.4636055442795795,
+    "clipped": 0,
+    "within_10mV": 40,
+    "within_15mV": 40
+   },
+   {
+    "point": "P1_native",
+    "condition": "curvature",
+    "arm": "separate",
+    "n": 40,
+    "mean_mV": -6.323774602756487,
+    "sd_mV": 44.99673555992527,
+    "rms_mV": 44.878487953584894,
+    "max_abs_mV": 114.69690232137162,
+    "clipped": 6,
+    "within_10mV": 4,
+    "within_15mV": 8
+   },
+   {
+    "point": "P1_native",
+    "condition": "gate_sensitivity",
+    "arm": "shared",
+    "n": 40,
+    "mean_mV": -35.81492807411441,
+    "sd_mV": 69.23223318133815,
+    "rms_mV": 77.17501947811408,
+    "max_abs_mV": 114.69690232137168,
+    "clipped": 24,
+    "within_10mV": 7,
+    "within_15mV": 9
+   },
+   {
+    "point": "P1_native",
+    "condition": "gate_sensitivity",
+    "arm": "separate",
+    "n": 40,
+    "mean_mV": -13.39833267065949,
+    "sd_mV": 67.97648090948903,
+    "rms_mV": 68.44557857357066,
+    "max_abs_mV": 114.69690232137162,
+    "clipped": 22,
+    "within_10mV": 2,
+    "within_15mV": 3
+   },
+   {
+    "point": "P1_native",
+    "condition": "combined_nominal_gates",
+    "arm": "shared",
+    "n": 40,
+    "mean_mV": -0.9909351735885081,
+    "sd_mV": 6.859248329775312,
+    "rms_mV": 6.845071802146575,
+    "max_abs_mV": 15.953031572698267,
+    "clipped": 0,
+    "within_10mV": 33,
+    "within_15mV": 39
+   },
+   {
+    "point": "P1_native",
+    "condition": "combined_nominal_gates",
+    "arm": "separate",
+    "n": 40,
+    "mean_mV": -6.0863480061136235,
+    "sd_mV": 45.38907283767791,
+    "rms_mV": 45.22949664531934,
+    "max_abs_mV": 114.69690232137162,
+    "clipped": 5,
+    "within_10mV": 3,
+    "within_15mV": 5
+   },
+   {
+    "point": "P1_native",
+    "condition": "combined_with_gate_sensitivity",
+    "arm": "shared",
+    "n": 40,
+    "mean_mV": -31.90039744768483,
+    "sd_mV": 67.19171693894799,
+    "rms_mV": 73.61721274195239,
+    "max_abs_mV": 114.69690232137168,
+    "clipped": 23,
+    "within_10mV": 8,
+    "within_15mV": 11
+   },
+   {
+    "point": "P1_native",
+    "condition": "combined_with_gate_sensitivity",
+    "arm": "separate",
+    "n": 40,
+    "mean_mV": -15.069960037208716,
+    "sd_mV": 64.85638290396079,
+    "rms_mV": 65.78978141644504,
+    "max_abs_mV": 114.69690232137162,
+    "clipped": 19,
+    "within_10mV": 4,
+    "within_15mV": 5
+   },
+   {
+    "point": "P2_preamp",
+    "condition": "ideal_erosion_only",
+    "arm": "shared",
+    "n": 40,
+    "mean_mV": -2.786096480479764,
+    "sd_mV": 3.975585726300059e-10,
+    "rms_mV": 2.7860964804797645,
+    "max_abs_mV": 2.786096481353556,
+    "clipped": 0,
+    "within_10mV": 40,
+    "within_15mV": 40
+   },
+   {
+    "point": "P2_preamp",
+    "condition": "ideal_erosion_only",
+    "arm": "separate",
+    "n": 40,
+    "mean_mV": -7.51695905163844,
+    "sd_mV": 45.263658470087464,
+    "rms_mV": 45.32199777181398,
+    "max_abs_mV": 114.69690232137162,
+    "clipped": 5,
+    "within_10mV": 5,
+    "within_15mV": 8
+   },
+   {
+    "point": "P2_preamp",
+    "condition": "leak",
+    "arm": "shared",
+    "n": 40,
+    "mean_mV": -3.00018363216764,
+    "sd_mV": 1.3889501780553026,
+    "rms_mV": 3.298795971095889,
+    "max_abs_mV": 6.053411523967543,
+    "clipped": 0,
+    "within_10mV": 40,
+    "within_15mV": 40
+   },
+   {
+    "point": "P2_preamp",
+    "condition": "leak",
+    "arm": "separate",
+    "n": 40,
+    "mean_mV": -7.489779700485204,
+    "sd_mV": 45.00793152053468,
+    "rms_mV": 45.06847958634739,
+    "max_abs_mV": 114.69690232137162,
+    "clipped": 5,
+    "within_10mV": 5,
+    "within_15mV": 8
+   },
+   {
+    "point": "P2_preamp",
+    "condition": "mirror",
+    "arm": "shared",
+    "n": 40,
+    "mean_mV": 5.832105822796934,
+    "sd_mV": 2.757877995654657,
+    "rms_mV": 6.43655203437719,
+    "max_abs_mV": 11.706650925590868,
+    "clipped": 0,
+    "within_10mV": 39,
+    "within_15mV": 40
+   },
+   {
+    "point": "P2_preamp",
+    "condition": "mirror",
+    "arm": "separate",
+    "n": 40,
+    "mean_mV": -1.0467839578199456,
+    "sd_mV": 44.23310465633959,
+    "rms_mV": 43.689233404862726,
+    "max_abs_mV": 114.69690232137162,
+    "clipped": 6,
+    "within_10mV": 4,
+    "within_15mV": 5
+   },
+   {
+    "point": "P2_preamp",
+    "condition": "dead_band",
+    "arm": "shared",
+    "n": 40,
+    "mean_mV": 5.46586015204179,
+    "sd_mV": 1.0737107429967714e-06,
+    "rms_mV": 5.465860152041894,
+    "max_abs_mV": 5.465865643872745,
+    "clipped": 0,
+    "within_10mV": 40,
+    "within_15mV": 40
+   },
+   {
+    "point": "P2_preamp",
+    "condition": "dead_band",
+    "arm": "separate",
+    "n": 40,
+    "mean_mV": -1.1730388698291976,
+    "sd_mV": 43.681721511860296,
+    "rms_mV": 43.14819225151681,
+    "max_abs_mV": 114.69690232137162,
+    "clipped": 5,
+    "within_10mV": 2,
+    "within_15mV": 5
+   },
+   {
+    "point": "P2_preamp",
+    "condition": "curvature",
+    "arm": "shared",
+    "n": 40,
+    "mean_mV": 5.471217253386714,
+    "sd_mV": 1.0829883049286511e-06,
+    "rms_mV": 5.4712172533868175,
+    "max_abs_mV": 5.471222792691272,
+    "clipped": 0,
+    "within_10mV": 40,
+    "within_15mV": 40
+   },
+   {
+    "point": "P2_preamp",
+    "condition": "curvature",
+    "arm": "separate",
+    "n": 40,
+    "mean_mV": -1.2549698229909017,
+    "sd_mV": 43.81863596659928,
+    "rms_mV": 43.28563255608762,
+    "max_abs_mV": 114.69690232137162,
+    "clipped": 5,
+    "within_10mV": 2,
+    "within_15mV": 5
+   },
+   {
+    "point": "P2_preamp",
+    "condition": "gate_sensitivity",
+    "arm": "shared",
+    "n": 40,
+    "mean_mV": -31.05659941952436,
+    "sd_mV": 69.2734690102105,
+    "rms_mV": 75.12227058932444,
+    "max_abs_mV": 114.69690232137168,
+    "clipped": 24,
+    "within_10mV": 10,
+    "within_15mV": 11
+   },
+   {
+    "point": "P2_preamp",
+    "condition": "gate_sensitivity",
+    "arm": "separate",
+    "n": 40,
+    "mean_mV": -9.657440852127575,
+    "sd_mV": 69.3703660839446,
+    "rms_mV": 69.175195425581,
+    "max_abs_mV": 114.69690232137162,
+    "clipped": 25,
+    "within_10mV": 2,
+    "within_15mV": 3
+   },
+   {
+    "point": "P2_preamp",
+    "condition": "combined_nominal_gates",
+    "arm": "shared",
+    "n": 40,
+    "mean_mV": 5.6185869119426695,
+    "sd_mV": 3.236472661814584,
+    "rms_mV": 6.463853749541354,
+    "max_abs_mV": 12.357091893183016,
+    "clipped": 0,
+    "within_10mV": 36,
+    "within_15mV": 40
+   },
+   {
+    "point": "P2_preamp",
+    "condition": "combined_nominal_gates",
+    "arm": "separate",
+    "n": 40,
+    "mean_mV": -0.9175308110315523,
+    "sd_mV": 43.87108871488046,
+    "rms_mV": 43.32894502745689,
+    "max_abs_mV": 114.69690232137162,
+    "clipped": 6,
+    "within_10mV": 4,
+    "within_15mV": 5
+   },
+   {
+    "point": "P2_preamp",
+    "condition": "combined_with_gate_sensitivity",
+    "arm": "shared",
+    "n": 40,
+    "mean_mV": -28.232612045289404,
+    "sd_mV": 66.30522349155802,
+    "rms_mV": 71.29904262056147,
+    "max_abs_mV": 114.69690232137168,
+    "clipped": 20,
+    "within_10mV": 13,
+    "within_15mV": 16
+   },
+   {
+    "point": "P2_preamp",
+    "condition": "combined_with_gate_sensitivity",
+    "arm": "separate",
+    "n": 40,
+    "mean_mV": -12.620896810333956,
+    "sd_mV": 67.54443408030998,
+    "rms_mV": 67.8784306473397,
+    "max_abs_mV": 114.69690232137162,
+    "clipped": 22,
+    "within_10mV": 4,
+    "within_15mV": 4
+   }
+  ]
+ },
+ "passed_all": true,
+ "elapsed_s": 35.19480800299789
+}

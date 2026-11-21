@@ -1,0 +1,1871 @@
+{
+ "success": true,
+ "provenance": {
+  "revision": "5700eaa0d397e1a7dc055ce69ce9ec7e1d32cc7f",
+  "dirty": " M ABSTRACT.md\n M PROGRAMME.md\n M QUESTIONS.md\n M README.md\n M discrete/NOTEBOOK.md\n?? lab/initial_prior_replay.py\n?? lab/market_ledger_capture.py\n?? lab/market_transfer_cases.py\n?? lab/queue_results_review.py\n?? lab/v/initial_prior_replay.json\n?? lab/v/initial_prior_replay.log\n?? lab/v/initial_prior_replay_checks.json\n?? lab/v/initial_prior_replay_checks.log\n?? lab/v/initial_prior_replay_run1.json\n?? lab/v/market_ledger_capture.json\n?? lab/v/market_ledger_capture.log\n?? lab/v/market_ledger_capture_capture.json\n?? lab/v/market_ledger_capture_capture.log\n?? lab/v/market_ledger_capture_checks.json\n?? lab/v/market_ledger_capture_checks.log\n?? lab/v/market_transfer_cases.json\n?? lab/v/market_transfer_cases.log\n?? lab/v/market_transfer_cases_checks.json\n?? lab/v/market_transfer_cases_checks.log\n?? lab/v/market_transfer_cases_run1.json\n?? lab/v/queue_results_review.json\n?? lab/v/queue_results_review.log\n",
+  "sha256": {
+   "lab/market_transfer_cases.py": "dff38b42afee41d16cb7b49f5a00c53c0a3b77952fd41a3a2350c1bea71385e3",
+   "lab/grownet.py": "1a550553b1244368ed0ca6fa59cce3e94a9badd5e5d1e801953aa42974874f0f",
+   "lab/alloc_rules.py": "37c8f14317d6d1626e98f3569f4da1248e898e682b7a206fbd7a9fac57848543",
+   "lab/v/future_evidence.pkl": "d74474476cf6e0fea81ea4a08677eb3d058ee7411f330a553b9c728462af58d9"
+  },
+  "command": "timeout 240s env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python lab/market_transfer_cases.py --analyse",
+  "POOL_BITS": 1.0
+ },
+ "cases": [
+  {
+   "implementation": "native Net._room",
+   "case": "a: poor donor, unused allowance, no grown unit",
+   "admitted": true,
+   "allowance_sum": [
+    9,
+    9
+   ],
+   "allowance_sum_conserved": true,
+   "occupancy": [
+    6,
+    6
+   ],
+   "removals": 0,
+   "over_allowance_after": [],
+   "changes": [
+    [
+     "recipient",
+     4,
+     5,
+     4,
+     4
+    ],
+    [
+     "donor0",
+     5,
+     4,
+     2,
+     2
+    ]
+   ],
+   "before": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 4,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 2,
+     "grown": 0,
+     "P": 5,
+     "saved": -1.0,
+     "leaves": 0
+    }
+   ],
+   "after": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 5,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 2,
+     "grown": 0,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 0
+    }
+   ],
+   "cap": null,
+   "drawn_donor": "donor0"
+  },
+  {
+   "implementation": "native Net._room",
+   "case": "b: poor donor, one removable grown leaf",
+   "admitted": true,
+   "allowance_sum": [
+    9,
+    9
+   ],
+   "allowance_sum_conserved": true,
+   "occupancy": [
+    7,
+    6
+   ],
+   "removals": 1,
+   "over_allowance_after": [],
+   "changes": [
+    [
+     "recipient",
+     4,
+     5,
+     4,
+     4
+    ],
+    [
+     "donor0",
+     5,
+     4,
+     3,
+     2
+    ]
+   ],
+   "before": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 4,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 3,
+     "grown": 1,
+     "P": 5,
+     "saved": -1.0,
+     "leaves": 1
+    }
+   ],
+   "after": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 5,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 2,
+     "grown": 0,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 0
+    }
+   ],
+   "cap": null,
+   "drawn_donor": "donor0"
+  },
+  {
+   "implementation": "native Net._room",
+   "case": "c: poor donor at its fixed-unit floor",
+   "admitted": true,
+   "allowance_sum": [
+    8,
+    8
+   ],
+   "allowance_sum_conserved": true,
+   "occupancy": [
+    8,
+    8
+   ],
+   "removals": 0,
+   "over_allowance_after": [
+    "donor0"
+   ],
+   "changes": [
+    [
+     "recipient",
+     4,
+     5,
+     4,
+     4
+    ],
+    [
+     "donor0",
+     4,
+     3,
+     4,
+     4
+    ]
+   ],
+   "before": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 4,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 4,
+     "units": 4,
+     "grown": 0,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 0
+    }
+   ],
+   "after": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 5,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 4,
+     "units": 4,
+     "grown": 0,
+     "P": 3,
+     "saved": -1.0,
+     "leaves": 0
+    }
+   ],
+   "cap": null,
+   "drawn_donor": "donor0"
+  },
+  {
+   "implementation": "native Net._room",
+   "case": "d: poor donor's grown unit has a dependant (chain of 2)",
+   "admitted": true,
+   "allowance_sum": [
+    9,
+    9
+   ],
+   "allowance_sum_conserved": true,
+   "occupancy": [
+    8,
+    7
+   ],
+   "removals": 1,
+   "over_allowance_after": [],
+   "changes": [
+    [
+     "recipient",
+     4,
+     5,
+     4,
+     4
+    ],
+    [
+     "donor0",
+     5,
+     4,
+     4,
+     3
+    ]
+   ],
+   "before": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 4,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 5,
+     "saved": -1.0,
+     "leaves": 1
+    }
+   ],
+   "after": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 5,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 3,
+     "grown": 1,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 1
+    }
+   ],
+   "cap": null,
+   "drawn_donor": "donor0"
+  },
+  {
+   "implementation": "native Net._room",
+   "case": "f: two candidates, one leafless, one with a leaf",
+   "admitted": true,
+   "allowance_sum": [
+    14,
+    14
+   ],
+   "allowance_sum_conserved": true,
+   "occupancy": [
+    9,
+    8
+   ],
+   "removals": 1,
+   "over_allowance_after": [],
+   "changes": [
+    [
+     "recipient",
+     4,
+     5,
+     4,
+     4
+    ],
+    [
+     "donor1",
+     5,
+     4,
+     3,
+     2
+    ]
+   ],
+   "before": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 4,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 2,
+     "grown": 0,
+     "P": 5,
+     "saved": -1.0,
+     "leaves": 0
+    },
+    {
+     "kind": "donor1",
+     "fixed": 2,
+     "units": 3,
+     "grown": 1,
+     "P": 5,
+     "saved": -1.0,
+     "leaves": 1
+    }
+   ],
+   "after": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 5,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 2,
+     "grown": 0,
+     "P": 5,
+     "saved": -1.0,
+     "leaves": 0
+    },
+    {
+     "kind": "donor1",
+     "fixed": 2,
+     "units": 2,
+     "grown": 0,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 0
+    }
+   ],
+   "cap": null,
+   "drawn_donor": "donor1"
+  },
+  {
+   "implementation": "native Net._room",
+   "case": "e: savings exactly at the price",
+   "admitted": false,
+   "allowance_sum": [
+    9,
+    9
+   ],
+   "allowance_sum_conserved": true,
+   "occupancy": [
+    7,
+    7
+   ],
+   "removals": 0,
+   "over_allowance_after": [],
+   "changes": [],
+   "before": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 4,
+     "saved": 2.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 3,
+     "grown": 1,
+     "P": 5,
+     "saved": -1.0,
+     "leaves": 1
+    }
+   ],
+   "after": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 4,
+     "saved": 2.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 3,
+     "grown": 1,
+     "P": 5,
+     "saved": -1.0,
+     "leaves": 1
+    }
+   ],
+   "cap": null,
+   "drawn_donor": null
+  },
+  {
+   "implementation": "native Net._room",
+   "case": "f (seed 0): drawn donor recorded",
+   "admitted": true,
+   "allowance_sum": [
+    14,
+    14
+   ],
+   "allowance_sum_conserved": true,
+   "occupancy": [
+    9,
+    8
+   ],
+   "removals": 1,
+   "over_allowance_after": [],
+   "changes": [
+    [
+     "recipient",
+     4,
+     5,
+     4,
+     4
+    ],
+    [
+     "donor1",
+     5,
+     4,
+     3,
+     2
+    ]
+   ],
+   "before": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 4,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 2,
+     "grown": 0,
+     "P": 5,
+     "saved": -1.0,
+     "leaves": 0
+    },
+    {
+     "kind": "donor1",
+     "fixed": 2,
+     "units": 3,
+     "grown": 1,
+     "P": 5,
+     "saved": -1.0,
+     "leaves": 1
+    }
+   ],
+   "after": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 5,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 2,
+     "grown": 0,
+     "P": 5,
+     "saved": -1.0,
+     "leaves": 0
+    },
+    {
+     "kind": "donor1",
+     "fixed": 2,
+     "units": 2,
+     "grown": 0,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 0
+    }
+   ],
+   "cap": null,
+   "drawn_donor": "donor1"
+  },
+  {
+   "implementation": "native Net._room",
+   "case": "f (seed 1): drawn donor recorded",
+   "admitted": true,
+   "allowance_sum": [
+    14,
+    14
+   ],
+   "allowance_sum_conserved": true,
+   "occupancy": [
+    9,
+    9
+   ],
+   "removals": 0,
+   "over_allowance_after": [],
+   "changes": [
+    [
+     "recipient",
+     4,
+     5,
+     4,
+     4
+    ],
+    [
+     "donor0",
+     5,
+     4,
+     2,
+     2
+    ]
+   ],
+   "before": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 4,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 2,
+     "grown": 0,
+     "P": 5,
+     "saved": -1.0,
+     "leaves": 0
+    },
+    {
+     "kind": "donor1",
+     "fixed": 2,
+     "units": 3,
+     "grown": 1,
+     "P": 5,
+     "saved": -1.0,
+     "leaves": 1
+    }
+   ],
+   "after": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 5,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 2,
+     "grown": 0,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 0
+    },
+    {
+     "kind": "donor1",
+     "fixed": 2,
+     "units": 3,
+     "grown": 1,
+     "P": 5,
+     "saved": -1.0,
+     "leaves": 1
+    }
+   ],
+   "cap": null,
+   "drawn_donor": "donor0"
+  },
+  {
+   "implementation": "native Net._room",
+   "case": "f (seed 2): drawn donor recorded",
+   "admitted": true,
+   "allowance_sum": [
+    14,
+    14
+   ],
+   "allowance_sum_conserved": true,
+   "occupancy": [
+    9,
+    8
+   ],
+   "removals": 1,
+   "over_allowance_after": [],
+   "changes": [
+    [
+     "recipient",
+     4,
+     5,
+     4,
+     4
+    ],
+    [
+     "donor1",
+     5,
+     4,
+     3,
+     2
+    ]
+   ],
+   "before": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 4,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 2,
+     "grown": 0,
+     "P": 5,
+     "saved": -1.0,
+     "leaves": 0
+    },
+    {
+     "kind": "donor1",
+     "fixed": 2,
+     "units": 3,
+     "grown": 1,
+     "P": 5,
+     "saved": -1.0,
+     "leaves": 1
+    }
+   ],
+   "after": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 5,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 2,
+     "grown": 0,
+     "P": 5,
+     "saved": -1.0,
+     "leaves": 0
+    },
+    {
+     "kind": "donor1",
+     "fixed": 2,
+     "units": 2,
+     "grown": 0,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 0
+    }
+   ],
+   "cap": null,
+   "drawn_donor": "donor1"
+  },
+  {
+   "implementation": "native Net._room",
+   "case": "f (seed 3): drawn donor recorded",
+   "admitted": true,
+   "allowance_sum": [
+    14,
+    14
+   ],
+   "allowance_sum_conserved": true,
+   "occupancy": [
+    9,
+    8
+   ],
+   "removals": 1,
+   "over_allowance_after": [],
+   "changes": [
+    [
+     "recipient",
+     4,
+     5,
+     4,
+     4
+    ],
+    [
+     "donor1",
+     5,
+     4,
+     3,
+     2
+    ]
+   ],
+   "before": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 4,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 2,
+     "grown": 0,
+     "P": 5,
+     "saved": -1.0,
+     "leaves": 0
+    },
+    {
+     "kind": "donor1",
+     "fixed": 2,
+     "units": 3,
+     "grown": 1,
+     "P": 5,
+     "saved": -1.0,
+     "leaves": 1
+    }
+   ],
+   "after": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 5,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 2,
+     "grown": 0,
+     "P": 5,
+     "saved": -1.0,
+     "leaves": 0
+    },
+    {
+     "kind": "donor1",
+     "fixed": 2,
+     "units": 2,
+     "grown": 0,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 0
+    }
+   ],
+   "cap": null,
+   "drawn_donor": "donor1"
+  },
+  {
+   "implementation": "capped rule M",
+   "case": "a: poor donor, unused allowance, no grown unit",
+   "admitted": false,
+   "allowance_sum": [
+    8,
+    8
+   ],
+   "allowance_sum_conserved": true,
+   "occupancy": [
+    6,
+    6
+   ],
+   "removals": 0,
+   "over_allowance_after": [],
+   "changes": [],
+   "before": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 4,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 2,
+     "grown": 0,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 0
+    }
+   ],
+   "after": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 4,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 2,
+     "grown": 0,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 0
+    }
+   ],
+   "cap": 8,
+   "drawn_donor": "donor0",
+   "cap_occupied_before": 6,
+   "cap_free_before": 2
+  },
+  {
+   "implementation": "capped rule M",
+   "case": "b: poor donor, one removable grown leaf",
+   "admitted": true,
+   "allowance_sum": [
+    8,
+    8
+   ],
+   "allowance_sum_conserved": true,
+   "occupancy": [
+    7,
+    6
+   ],
+   "removals": 1,
+   "over_allowance_after": [],
+   "changes": [
+    [
+     "recipient",
+     4,
+     5,
+     4,
+     4
+    ],
+    [
+     "donor0",
+     4,
+     3,
+     3,
+     2
+    ]
+   ],
+   "before": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 4,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 3,
+     "grown": 1,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 1
+    }
+   ],
+   "after": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 5,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 2,
+     "grown": 0,
+     "P": 3,
+     "saved": -1.0,
+     "leaves": 0
+    }
+   ],
+   "cap": 8,
+   "drawn_donor": "donor0",
+   "cap_occupied_before": 7,
+   "cap_free_before": 1
+  },
+  {
+   "implementation": "capped rule M",
+   "case": "c: poor donor at its fixed-unit floor",
+   "admitted": false,
+   "allowance_sum": [
+    8,
+    8
+   ],
+   "allowance_sum_conserved": true,
+   "occupancy": [
+    8,
+    8
+   ],
+   "removals": 0,
+   "over_allowance_after": [],
+   "changes": [],
+   "before": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 4,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 4,
+     "units": 4,
+     "grown": 0,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 0
+    }
+   ],
+   "after": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 4,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 4,
+     "units": 4,
+     "grown": 0,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 0
+    }
+   ],
+   "cap": 10,
+   "drawn_donor": null,
+   "cap_occupied_before": 8,
+   "cap_free_before": 2
+  },
+  {
+   "implementation": "capped rule M",
+   "case": "d: poor donor's grown unit has a dependant (chain of 2)",
+   "admitted": true,
+   "allowance_sum": [
+    8,
+    8
+   ],
+   "allowance_sum_conserved": true,
+   "occupancy": [
+    8,
+    7
+   ],
+   "removals": 1,
+   "over_allowance_after": [],
+   "changes": [
+    [
+     "recipient",
+     4,
+     5,
+     4,
+     4
+    ],
+    [
+     "donor0",
+     4,
+     3,
+     4,
+     3
+    ]
+   ],
+   "before": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 4,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 1
+    }
+   ],
+   "after": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 5,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 3,
+     "grown": 1,
+     "P": 3,
+     "saved": -1.0,
+     "leaves": 1
+    }
+   ],
+   "cap": 8,
+   "drawn_donor": "donor0",
+   "cap_occupied_before": 8,
+   "cap_free_before": 0
+  },
+  {
+   "implementation": "capped rule M",
+   "case": "f: two candidates, one leafless, one with a leaf",
+   "admitted": true,
+   "allowance_sum": [
+    12,
+    12
+   ],
+   "allowance_sum_conserved": true,
+   "occupancy": [
+    9,
+    8
+   ],
+   "removals": 1,
+   "over_allowance_after": [],
+   "changes": [
+    [
+     "recipient",
+     4,
+     5,
+     4,
+     4
+    ],
+    [
+     "donor1",
+     4,
+     3,
+     3,
+     2
+    ]
+   ],
+   "before": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 4,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 2,
+     "grown": 0,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 0
+    },
+    {
+     "kind": "donor1",
+     "fixed": 2,
+     "units": 3,
+     "grown": 1,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 1
+    }
+   ],
+   "after": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 5,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 2,
+     "grown": 0,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 0
+    },
+    {
+     "kind": "donor1",
+     "fixed": 2,
+     "units": 2,
+     "grown": 0,
+     "P": 3,
+     "saved": -1.0,
+     "leaves": 0
+    }
+   ],
+   "cap": 12,
+   "drawn_donor": "donor1",
+   "cap_occupied_before": 9,
+   "cap_free_before": 3
+  },
+  {
+   "implementation": "capped rule M",
+   "case": "b': poor donor's allowance full of leaves (total cap fully occupied)",
+   "admitted": true,
+   "allowance_sum": [
+    8,
+    8
+   ],
+   "allowance_sum_conserved": true,
+   "occupancy": [
+    8,
+    7
+   ],
+   "removals": 1,
+   "over_allowance_after": [],
+   "changes": [
+    [
+     "recipient",
+     4,
+     5,
+     4,
+     4
+    ],
+    [
+     "donor0",
+     4,
+     3,
+     4,
+     3
+    ]
+   ],
+   "before": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 4,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 2
+    }
+   ],
+   "after": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 5,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 3,
+     "grown": 1,
+     "P": 3,
+     "saved": -1.0,
+     "leaves": 1
+    }
+   ],
+   "cap": 8,
+   "drawn_donor": "donor0",
+   "cap_occupied_before": 8,
+   "cap_free_before": 0
+  },
+  {
+   "implementation": "capped rule M",
+   "case": "e: savings exactly at the price",
+   "admitted": false,
+   "allowance_sum": [
+    8,
+    8
+   ],
+   "allowance_sum_conserved": true,
+   "occupancy": [
+    7,
+    7
+   ],
+   "removals": 0,
+   "over_allowance_after": [],
+   "changes": [],
+   "before": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 4,
+     "saved": 1.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 3,
+     "grown": 1,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 1
+    }
+   ],
+   "after": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 4,
+     "saved": 1.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 3,
+     "grown": 1,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 1
+    }
+   ],
+   "cap": 8,
+   "drawn_donor": null,
+   "cap_occupied_before": 7,
+   "cap_free_before": 1
+  },
+  {
+   "implementation": "capped rule M",
+   "case": "f (seed 0): drawn donor recorded",
+   "admitted": true,
+   "allowance_sum": [
+    12,
+    12
+   ],
+   "allowance_sum_conserved": true,
+   "occupancy": [
+    9,
+    8
+   ],
+   "removals": 1,
+   "over_allowance_after": [],
+   "changes": [
+    [
+     "recipient",
+     4,
+     5,
+     4,
+     4
+    ],
+    [
+     "donor1",
+     4,
+     3,
+     3,
+     2
+    ]
+   ],
+   "before": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 4,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 2,
+     "grown": 0,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 0
+    },
+    {
+     "kind": "donor1",
+     "fixed": 2,
+     "units": 3,
+     "grown": 1,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 1
+    }
+   ],
+   "after": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 5,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 2,
+     "grown": 0,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 0
+    },
+    {
+     "kind": "donor1",
+     "fixed": 2,
+     "units": 2,
+     "grown": 0,
+     "P": 3,
+     "saved": -1.0,
+     "leaves": 0
+    }
+   ],
+   "cap": 12,
+   "drawn_donor": "donor1",
+   "cap_occupied_before": 9,
+   "cap_free_before": 3
+  },
+  {
+   "implementation": "capped rule M",
+   "case": "f (seed 1): drawn donor recorded",
+   "admitted": true,
+   "allowance_sum": [
+    12,
+    12
+   ],
+   "allowance_sum_conserved": true,
+   "occupancy": [
+    9,
+    8
+   ],
+   "removals": 1,
+   "over_allowance_after": [],
+   "changes": [
+    [
+     "recipient",
+     4,
+     5,
+     4,
+     4
+    ],
+    [
+     "donor1",
+     4,
+     3,
+     3,
+     2
+    ]
+   ],
+   "before": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 4,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 2,
+     "grown": 0,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 0
+    },
+    {
+     "kind": "donor1",
+     "fixed": 2,
+     "units": 3,
+     "grown": 1,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 1
+    }
+   ],
+   "after": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 5,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 2,
+     "grown": 0,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 0
+    },
+    {
+     "kind": "donor1",
+     "fixed": 2,
+     "units": 2,
+     "grown": 0,
+     "P": 3,
+     "saved": -1.0,
+     "leaves": 0
+    }
+   ],
+   "cap": 12,
+   "drawn_donor": "donor1",
+   "cap_occupied_before": 9,
+   "cap_free_before": 3
+  },
+  {
+   "implementation": "capped rule M",
+   "case": "f (seed 2): drawn donor recorded",
+   "admitted": false,
+   "allowance_sum": [
+    12,
+    12
+   ],
+   "allowance_sum_conserved": true,
+   "occupancy": [
+    9,
+    9
+   ],
+   "removals": 0,
+   "over_allowance_after": [],
+   "changes": [],
+   "before": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 4,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 2,
+     "grown": 0,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 0
+    },
+    {
+     "kind": "donor1",
+     "fixed": 2,
+     "units": 3,
+     "grown": 1,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 1
+    }
+   ],
+   "after": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 4,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 2,
+     "grown": 0,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 0
+    },
+    {
+     "kind": "donor1",
+     "fixed": 2,
+     "units": 3,
+     "grown": 1,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 1
+    }
+   ],
+   "cap": 12,
+   "drawn_donor": "donor0",
+   "cap_occupied_before": 9,
+   "cap_free_before": 3
+  },
+  {
+   "implementation": "capped rule M",
+   "case": "f (seed 3): drawn donor recorded",
+   "admitted": false,
+   "allowance_sum": [
+    12,
+    12
+   ],
+   "allowance_sum_conserved": true,
+   "occupancy": [
+    9,
+    9
+   ],
+   "removals": 0,
+   "over_allowance_after": [],
+   "changes": [],
+   "before": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 4,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 2,
+     "grown": 0,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 0
+    },
+    {
+     "kind": "donor1",
+     "fixed": 2,
+     "units": 3,
+     "grown": 1,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 1
+    }
+   ],
+   "after": [
+    {
+     "kind": "recipient",
+     "fixed": 2,
+     "units": 4,
+     "grown": 2,
+     "P": 4,
+     "saved": 5.0,
+     "leaves": 2
+    },
+    {
+     "kind": "donor0",
+     "fixed": 2,
+     "units": 2,
+     "grown": 0,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 0
+    },
+    {
+     "kind": "donor1",
+     "fixed": 2,
+     "units": 3,
+     "grown": 1,
+     "P": 4,
+     "saved": -1.0,
+     "leaves": 1
+    }
+   ],
+   "cap": 12,
+   "drawn_donor": "donor0",
+   "cap_occupied_before": 9,
+   "cap_free_before": 3
+  }
+ ],
+ "eligibility": {
+  "P=560": {
+   "event (fixed 2)": {
+    "streams": 10,
+    "allowance": 3,
+    "fixed": 2,
+    "eligible_P_gt_3": false,
+    "eligible_P_gt_fixed": true,
+    "allowance_below_fixed": false,
+    "change": "newly eligible"
+   },
+   "clock (fixed 5)": {
+    "streams": 60,
+    "allowance": 3,
+    "fixed": 5,
+    "eligible_P_gt_3": false,
+    "eligible_P_gt_fixed": false,
+    "allowance_below_fixed": true,
+    "change": "unchanged"
+   },
+   "integrator (fixed 12)": {
+    "streams": 56,
+    "allowance": 3,
+    "fixed": 12,
+    "eligible_P_gt_3": false,
+    "eligible_P_gt_fixed": false,
+    "allowance_below_fixed": true,
+    "change": "unchanged"
+   },
+   "rhythm (fixed 10)": {
+    "streams": 6,
+    "allowance": 3,
+    "fixed": 10,
+    "eligible_P_gt_3": false,
+    "eligible_P_gt_fixed": false,
+    "allowance_below_fixed": true,
+    "change": "unchanged"
+   },
+   "rhythm (fixed 15)": {
+    "streams": 6,
+    "allowance": 3,
+    "fixed": 15,
+    "eligible_P_gt_3": false,
+    "eligible_P_gt_fixed": false,
+    "allowance_below_fixed": true,
+    "change": "unchanged"
+   },
+   "rhythm (fixed 20)": {
+    "streams": 6,
+    "allowance": 3,
+    "fixed": 20,
+    "eligible_P_gt_3": false,
+    "eligible_P_gt_fixed": false,
+    "allowance_below_fixed": true,
+    "change": "unchanged"
+   },
+   "rhythm (fixed 25)": {
+    "streams": 6,
+    "allowance": 3,
+    "fixed": 25,
+    "eligible_P_gt_3": false,
+    "eligible_P_gt_fixed": false,
+    "allowance_below_fixed": true,
+    "change": "unchanged"
+   },
+   "rhythm (fixed 30)": {
+    "streams": 6,
+    "allowance": 3,
+    "fixed": 30,
+    "eligible_P_gt_3": false,
+    "eligible_P_gt_fixed": false,
+    "allowance_below_fixed": true,
+    "change": "unchanged"
+   },
+   "rhythm (fixed 35)": {
+    "streams": 6,
+    "allowance": 3,
+    "fixed": 35,
+    "eligible_P_gt_3": false,
+    "eligible_P_gt_fixed": false,
+    "allowance_below_fixed": true,
+    "change": "unchanged"
+   },
+   "rhythm (fixed 40)": {
+    "streams": 6,
+    "allowance": 3,
+    "fixed": 40,
+    "eligible_P_gt_3": false,
+    "eligible_P_gt_fixed": false,
+    "allowance_below_fixed": true,
+    "change": "unchanged"
+   }
+  },
+  "P=4480": {
+   "event (fixed 2)": {
+    "streams": 10,
+    "allowance": 26,
+    "fixed": 2,
+    "eligible_P_gt_3": true,
+    "eligible_P_gt_fixed": true,
+    "allowance_below_fixed": false,
+    "change": "unchanged"
+   },
+   "clock (fixed 5)": {
+    "streams": 60,
+    "allowance": 26,
+    "fixed": 5,
+    "eligible_P_gt_3": true,
+    "eligible_P_gt_fixed": true,
+    "allowance_below_fixed": false,
+    "change": "unchanged"
+   },
+   "integrator (fixed 12)": {
+    "streams": 56,
+    "allowance": 26,
+    "fixed": 12,
+    "eligible_P_gt_3": true,
+    "eligible_P_gt_fixed": true,
+    "allowance_below_fixed": false,
+    "change": "unchanged"
+   },
+   "rhythm (fixed 10)": {
+    "streams": 6,
+    "allowance": 26,
+    "fixed": 10,
+    "eligible_P_gt_3": true,
+    "eligible_P_gt_fixed": true,
+    "allowance_below_fixed": false,
+    "change": "unchanged"
+   },
+   "rhythm (fixed 15)": {
+    "streams": 6,
+    "allowance": 26,
+    "fixed": 15,
+    "eligible_P_gt_3": true,
+    "eligible_P_gt_fixed": true,
+    "allowance_below_fixed": false,
+    "change": "unchanged"
+   },
+   "rhythm (fixed 20)": {
+    "streams": 6,
+    "allowance": 26,
+    "fixed": 20,
+    "eligible_P_gt_3": true,
+    "eligible_P_gt_fixed": true,
+    "allowance_below_fixed": false,
+    "change": "unchanged"
+   },
+   "rhythm (fixed 25)": {
+    "streams": 6,
+    "allowance": 26,
+    "fixed": 25,
+    "eligible_P_gt_3": true,
+    "eligible_P_gt_fixed": true,
+    "allowance_below_fixed": false,
+    "change": "unchanged"
+   },
+   "rhythm (fixed 30)": {
+    "streams": 6,
+    "allowance": 26,
+    "fixed": 30,
+    "eligible_P_gt_3": true,
+    "eligible_P_gt_fixed": false,
+    "allowance_below_fixed": true,
+    "change": "newly ineligible"
+   },
+   "rhythm (fixed 35)": {
+    "streams": 6,
+    "allowance": 26,
+    "fixed": 35,
+    "eligible_P_gt_3": true,
+    "eligible_P_gt_fixed": false,
+    "allowance_below_fixed": true,
+    "change": "newly ineligible"
+   },
+   "rhythm (fixed 40)": {
+    "streams": 6,
+    "allowance": 26,
+    "fixed": 40,
+    "eligible_P_gt_3": true,
+    "eligible_P_gt_fixed": false,
+    "allowance_below_fixed": true,
+    "change": "newly ineligible"
+   }
+  }
+ }
+}

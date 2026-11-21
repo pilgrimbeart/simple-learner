@@ -1,0 +1,11 @@
+{
+  "task": "audit",
+  "command": [
+    "/home/pilgrim/git/simple-learner/.venv/bin/python",
+    "/home/pilgrim/git/simple-learner/lab/overnight_20261119/01_audit.py"
+  ],
+  "pid": 10509,
+  "start_unix_s": 1795129646.9491355,
+  "timeout_s": 120,
+  "status": "running"
+}

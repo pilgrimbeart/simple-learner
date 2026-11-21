@@ -1,0 +1,309 @@
+[
+  {
+    "name": "memory",
+    "seed": 0,
+    "rail_hits": 107,
+    "holds": {
+      "positive_hold_fraction": 1.0,
+      "negative_hold_fraction": 1.0,
+      "positive_V": 0.550516423127681,
+      "negative_V": -0.5503452520342392
+    }
+  },
+  {
+    "name": "memory",
+    "seed": 1,
+    "rail_hits": 93,
+    "holds": {
+      "positive_hold_fraction": 1.0,
+      "negative_hold_fraction": 1.0,
+      "positive_V": 0.4587115471873199,
+      "negative_V": -0.45707016684656077
+    }
+  },
+  {
+    "name": "memory",
+    "seed": 2,
+    "rail_hits": 0,
+    "holds": {
+      "positive_hold_fraction": 1.0,
+      "negative_hold_fraction": 1.0,
+      "positive_V": 0.5732461572221109,
+      "negative_V": -0.5751583183408455
+    }
+  },
+  {
+    "name": "memory",
+    "seed": 3,
+    "rail_hits": 115,
+    "holds": {
+      "positive_hold_fraction": 1.0,
+      "negative_hold_fraction": 1.0,
+      "positive_V": 0.606284796783707,
+      "negative_V": -0.6051372763649393
+    }
+  },
+  {
+    "name": "memory",
+    "seed": 4,
+    "rail_hits": 116,
+    "holds": {
+      "positive_hold_fraction": 1.0,
+      "negative_hold_fraction": 1.0,
+      "positive_V": 0.6124756111062822,
+      "negative_V": -0.6119395657015109
+    }
+  },
+  {
+    "name": "memory",
+    "seed": 5,
+    "rail_hits": 127,
+    "holds": {
+      "positive_hold_fraction": 1.0,
+      "negative_hold_fraction": 1.0,
+      "positive_V": 0.6384710293328867,
+      "negative_V": -0.6380786276768685
+    }
+  },
+  {
+    "name": "memory",
+    "seed": 6,
+    "rail_hits": 0,
+    "holds": {
+      "positive_hold_fraction": 1.0,
+      "negative_hold_fraction": 1.0,
+      "positive_V": 0.5032122784928387,
+      "negative_V": -0.5075199346126621
+    }
+  },
+  {
+    "name": "memory",
+    "seed": 7,
+    "rail_hits": 0,
+    "holds": {
+      "positive_hold_fraction": 1.0,
+      "negative_hold_fraction": 1.0,
+      "positive_V": 0.514979617217729,
+      "negative_V": -0.5145647945611996
+    }
+  },
+  {
+    "name": "resonator",
+    "seed": 0,
+    "linear_peak_Hz": 9.094062670148707,
+    "measured": {
+      "amplitudes_V": [
+        0.008491461786115935,
+        0.010519954120792797,
+        0.02415171978995261,
+        0.002459291363079662,
+        0.0005059658557778029
+      ],
+      "tail_V": [
+        2.7261611114868557e-05,
+        2.727027977123507e-05,
+        2.7469102516205178e-05,
+        2.715079597829812e-05,
+        2.7189421367909694e-05
+      ],
+      "peak_frequency_index": 2
+    },
+    "limit": "Small-signal estimate, not fitted or exact nonlinear peak"
+  },
+  {
+    "name": "resonator",
+    "seed": 1,
+    "linear_peak_Hz": 10.316293142116393,
+    "measured": {
+      "amplitudes_V": [
+        0.008849691500220799,
+        0.01036022776638611,
+        0.023135626267746526,
+        0.0036691833006991382,
+        0.0007082252248796145
+      ],
+      "tail_V": [
+        2.7276879506356322e-05,
+        2.724490171319288e-05,
+        2.7272691523486103e-05,
+        2.729675452812358e-05,
+        2.729808654362842e-05
+      ],
+      "peak_frequency_index": 2
+    },
+    "limit": "Small-signal estimate, not fitted or exact nonlinear peak"
+  },
+  {
+    "name": "resonator",
+    "seed": 2,
+    "linear_peak_Hz": 8.973479753510139,
+    "measured": {
+      "amplitudes_V": [
+        0.009314594399111024,
+        0.011694503573602778,
+        0.027424362467476354,
+        0.0025745396114060203,
+        0.0005326224107471011
+      ],
+      "tail_V": [
+        2.4695037035019074e-05,
+        2.4540073221133996e-05,
+        2.6147613568061612e-05,
+        2.4469090447912234e-05,
+        2.4246772754019097e-05
+      ],
+      "peak_frequency_index": 2
+    },
+    "limit": "Small-signal estimate, not fitted or exact nonlinear peak"
+  },
+  {
+    "name": "resonator",
+    "seed": 3,
+    "linear_peak_Hz": 9.397180360578423,
+    "measured": {
+      "amplitudes_V": [
+        0.01143628214382355,
+        0.013986080659350798,
+        0.03516832579959411,
+        0.0036054955653887534,
+        0.0007306758418441023
+      ],
+      "tail_V": [
+        3.654103099374681e-05,
+        3.6776297496529664e-05,
+        3.667492626585611e-05,
+        3.5682090108405534e-05,
+        3.585878818457636e-05
+      ],
+      "peak_frequency_index": 2
+    },
+    "limit": "Small-signal estimate, not fitted or exact nonlinear peak"
+  },
+  {
+    "name": "resonator",
+    "seed": 4,
+    "linear_peak_Hz": 7.732718953175976,
+    "measured": {
+      "amplitudes_V": [
+        0.009667636725187714,
+        0.012948423334290029,
+        0.014526790709810257,
+        0.001878140318292099,
+        0.0004098248758818898
+      ],
+      "tail_V": [
+        2.2696569621597287e-05,
+        2.2710155496050502e-05,
+        2.2343753871442024e-05,
+        2.2723158921935174e-05,
+        2.2804707704091043e-05
+      ],
+      "peak_frequency_index": 2
+    },
+    "limit": "Small-signal estimate, not fitted or exact nonlinear peak"
+  },
+  {
+    "name": "resonator",
+    "seed": 5,
+    "linear_peak_Hz": 10.360080210921634,
+    "measured": {
+      "amplitudes_V": [
+        0.008082071811830975,
+        0.009491615360581582,
+        0.022560420964034555,
+        0.0033560677642719273,
+        0.0006451223811224806
+      ],
+      "tail_V": [
+        2.7066354988475316e-05,
+        2.7062031452602248e-05,
+        2.7232787768973615e-05,
+        2.697555297858506e-05,
+        2.7051371830309756e-05
+      ],
+      "peak_frequency_index": 2
+    },
+    "limit": "Small-signal estimate, not fitted or exact nonlinear peak"
+  },
+  {
+    "name": "resonator",
+    "seed": 6,
+    "linear_peak_Hz": 7.473653979602927,
+    "measured": {
+      "amplitudes_V": [
+        0.011936627235436833,
+        0.016119570887586986,
+        0.015483913596120683,
+        0.002165204326771307,
+        0.0004787556280228722
+      ],
+      "tail_V": [
+        3.005607868308488e-05,
+        3.0017124008314272e-05,
+        3.0162357178634136e-05,
+        3.0099430795526433e-05,
+        3.0102963626852525e-05
+      ],
+      "peak_frequency_index": 1
+    },
+    "limit": "Small-signal estimate, not fitted or exact nonlinear peak"
+  },
+  {
+    "name": "resonator",
+    "seed": 7,
+    "linear_peak_Hz": 9.174632019898581,
+    "measured": {
+      "amplitudes_V": [
+        0.007345173947311984,
+        0.00894108608501914,
+        0.01809467054644216,
+        0.002230362776039307,
+        0.0004583017834710766
+      ],
+      "tail_V": [
+        2.947107137731518e-05,
+        2.9470159318509964e-05,
+        2.9461900632002727e-05,
+        2.9473250774866497e-05,
+        2.9473986204857708e-05
+      ],
+      "peak_frequency_index": 2
+    },
+    "limit": "Small-signal estimate, not fitted or exact nonlinear peak"
+  },
+  {
+    "name": "oscillator",
+    "seed": 1,
+    "control_voltage_residual_V": 0.03314353077281858
+  },
+  {
+    "name": "oscillator",
+    "seed": 2,
+    "control_voltage_residual_V": 0.07548738622969137
+  },
+  {
+    "name": "oscillator",
+    "seed": 3,
+    "control_voltage_residual_V": 0.038410682024249465
+  },
+  {
+    "name": "oscillator",
+    "seed": 4,
+    "control_voltage_residual_V": 0.025361229357741235
+  },
+  {
+    "name": "oscillator",
+    "seed": 5,
+    "control_voltage_residual_V": 0.048234543052867784
+  },
+  {
+    "name": "oscillator",
+    "seed": 6,
+    "control_voltage_residual_V": 0.03627718308254867
+  },
+  {
+    "name": "oscillator",
+    "seed": 7,
+    "control_voltage_residual_V": 0.012571685279800668
+  }
+]

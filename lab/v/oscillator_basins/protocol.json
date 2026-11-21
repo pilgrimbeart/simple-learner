@@ -1,0 +1,75 @@
+{
+  "seeds": [
+    51005,
+    51006,
+    51011,
+    51036
+  ],
+  "starts": [
+    "original",
+    "rest",
+    "near_rest",
+    "far_positive",
+    "far_negative"
+  ],
+  "steps": [
+    0.000125,
+    6.25e-05,
+    3.125e-05
+  ],
+  "duration_s": 100.0,
+  "graph": {
+    "nodes": [
+      {
+        "name": "fast",
+        "C": 2.5e-11,
+        "R": 800000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "recovery",
+        "C": 2.5e-11,
+        "R": 8000000000.0,
+        "bias": 0.0,
+        "memory": false
+      }
+    ],
+    "edges": [
+      {
+        "to": 0,
+        "source": 0,
+        "gain": 5.625e-10,
+        "offset": 0.0,
+        "slope": 6.666666666666667,
+        "tau": 0.0,
+        "gate": -1
+      },
+      {
+        "to": 0,
+        "source": 1,
+        "gain": -9.375e-10,
+        "offset": 0.0,
+        "slope": 6.666666666666667,
+        "tau": 0.0,
+        "gate": -1
+      },
+      {
+        "to": 1,
+        "source": 0,
+        "gain": 3.75e-11,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": -1
+      }
+    ],
+    "duration": 100.0
+  },
+  "initials": "Original D126 seeded start; D127 solved equilibrium; equilibrium +(.005,0)V; (+.4,-.1)V;(-.4,+.1)V. Set only before simulation.",
+  "perturbation": "Unchanged D126 current pulse at50+jitter s. Same original Brownian streams and mismatch, not new independent draws.",
+  "criteria": "Classify windows10-45s,55-95s separately: cycle if amplitude>.15V, >=10cycles, periodCV<.1; rest if amplitude<.01V; otherwise unresolved. Do not demand phase alignment. Original-start finest metrics must reproduce old values.",
+  "prediction": "Stable equilibrium predicts small perturbations decay locally. Different persistent behaviour from another start would support coexistence on these draws. The50s pulse can cross a basin boundary. No global uniqueness, exhaustive basin map, new reliability claim or repair.",
+  "noise": "Original silicon thermal/shot noise, .005V local perturbation above microvolt fluctuations; no noiseless replay.",
+  "budget": "One sequential batch <=120s wall time,60trajectories fixed; no added states/seeds or retries. No code/noise/body modification."
+}

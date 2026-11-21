@@ -1,0 +1,53 @@
+{
+  "scenarios": {
+    "equal": [
+      [
+        0.15,
+        0.15
+      ],
+      [
+        0.1,
+        0.1
+      ]
+    ],
+    "weak_A": [
+      [
+        0.15,
+        0.15
+      ],
+      [
+        0.05,
+        0.1
+      ]
+    ],
+    "weak_B": [
+      [
+        0.15,
+        0.15
+      ],
+      [
+        0.1,
+        0.05
+      ]
+    ],
+    "unequal_DC": [
+      [
+        0.1,
+        0.2
+      ],
+      [
+        0.1,
+        0.1
+      ]
+    ]
+  },
+  "resolutions": [
+    4096,
+    8192
+  ],
+  "identity_refinement_size": 32768,
+  "source": "/home/pilgrim/git/simple-learner/lab/v/phase_v1/confirm.jsonl",
+  "criterion": "Original D133 near>.004V, far>.008V, adjacent local drop>.001V; bias separately.",
+  "interpretation": "Full-port swap retains component arrays; cycle mean and same-window mean are distinct. Sequential physical readout additionally incurs settling, arbitrary window phase and drift.",
+  "budget_s": 180
+}

@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="1000" font-family="sans-serif" font-size="11">
+<rect width="100%" height="100%" fill="white"/>
+<defs><marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#0072B2"/></marker><marker id="bar" markerWidth="4" markerHeight="10" refX="2" refY="5" orient="auto"><rect width="3" height="10" fill="#E69F00"/></marker></defs>
+<text x="20" y="24" font-size="15">D180 catalogue-native brain, design v1: 15 nodes (4 retained), 22 connections, no implicit filters</text>
+<text x="20" y="42">Drawn for wiring sides=(0,1): S0 fixed to M0, gated to M1; S1 fixed to M1, gated to M0. Each life draws both sides by coin toss (both may pick the same motor).</text>
+<path d="M320,738 C290,685 370,685 340,738" fill="none" stroke="#0072B2" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="336" y="686" font-size="9" fill="#222">explore_self_0: +562 pA tanh, offset +0.00 V, slope +7/V</text>
+<line x1="210" y1="863" x2="309" y2="778" stroke="#E69F00" stroke-width="1.5" stroke-dasharray="7,4" marker-end="url(#bar)"/>
+<text x="265" y="817" font-size="9" fill="#222">explore_recover_0: -937 pA tanh, offset +0.00 V, slope +7/V</text>
+<line x1="302" y1="768" x2="203" y2="853" stroke="#0072B2" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="259" y="817" font-size="9" fill="#222">explore_follow_0: +37.5 pA tanh, offset +0.00 V, slope +3/V</text>
+<line x1="450" y1="863" x2="351" y2="778" stroke="#E69F00" stroke-width="1.5" stroke-dasharray="7,4" marker-end="url(#bar)"/>
+<text x="407" y="817" font-size="9" fill="#222">explore_bias_0: -937 pA tanh, offset +0.00 V, slope +3/V</text>
+<line x1="358" y1="768" x2="457" y2="853" stroke="#0072B2" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="413" y="817" font-size="9" fill="#222">explore_adjust_0: +1.5 pA tanh, offset +0.00 V, slope +3/V</text>
+<line x1="347" y1="740" x2="802" y2="221" stroke="#0072B2" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="580" y="477" font-size="9" fill="#222">explore_motor_0: +1.8 nA sigmoid, offset +0.15 V, slope +60/V</text>
+<path d="M710,738 C680,685 760,685 730,738" fill="none" stroke="#0072B2" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="726" y="686" font-size="9" fill="#222">explore_self_1: +562 pA tanh, offset +0.00 V, slope +7/V</text>
+<line x1="618" y1="862" x2="700" y2="780" stroke="#E69F00" stroke-width="1.5" stroke-dasharray="7,4" marker-end="url(#bar)"/>
+<text x="665" y="817" font-size="9" fill="#222">explore_recover_1: -937 pA tanh, offset +0.00 V, slope +7/V</text>
+<line x1="693" y1="770" x2="611" y2="852" stroke="#0072B2" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="658" y="818" font-size="9" fill="#222">explore_follow_1: +37.5 pA tanh, offset +0.00 V, slope +3/V</text>
+<line x1="840" y1="863" x2="741" y2="778" stroke="#E69F00" stroke-width="1.5" stroke-dasharray="7,4" marker-end="url(#bar)"/>
+<text x="797" y="817" font-size="9" fill="#222">explore_bias_1: -937 pA tanh, offset +0.00 V, slope +3/V</text>
+<line x1="748" y1="768" x2="847" y2="853" stroke="#0072B2" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="803" y="817" font-size="9" fill="#222">explore_adjust_1: +1.5 pA tanh, offset +0.00 V, slope +3/V</text>
+<line x1="728" y1="735" x2="812" y2="467" stroke="#0072B2" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="776" y="597" font-size="9" fill="#222">explore_motor_1: +1.8 nA sigmoid, offset +0.15 V, slope +60/V</text>
+<line x1="116" y1="123" x2="792" y2="197" stroke="#0072B2" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="460" y="156" font-size="9" fill="#222">side_0: +1.8 nA sigmoid, offset +0.15 V, slope +60/V</text>
+<line x1="114" y1="130" x2="794" y2="429" stroke="#0072B2" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="470" y1="200" x2="454" y2="280" stroke="#009E73" stroke-width="1.3" stroke-dasharray="2,3"/>
+<circle cx="454" cy="280" r="4" fill="white" stroke="#009E73"/>
+<text x="460" y="276" font-size="9" fill="#222">plastic_0: +1.8 nA sigmoid, offset +0.15 V, slope +60/V, gate P0</text>
+<line x1="115" y1="113" x2="273" y2="68" stroke="#0072B2" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="200" y="86" font-size="9" fill="#222">eligibility_0: +75 pA sigmoid, offset +0.15 V, slope +60/V</text>
+<line x1="115" y1="312" x2="443" y2="208" stroke="#0072B2" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="300" y1="60" x2="279" y2="260" stroke="#009E73" stroke-width="1.3" stroke-dasharray="2,3"/>
+<circle cx="279" cy="260" r="4" fill="white" stroke="#009E73"/>
+<text x="285" y="256" font-size="9" fill="#222">write_positive_0: +300 pA sigmoid, offset +0.15 V, slope +60/V, gate E0</text>
+<line x1="111" y1="301" x2="440" y2="197" stroke="#E69F00" stroke-width="1.5" stroke-dasharray="7,4" marker-end="url(#bar)"/>
+<line x1="300" y1="60" x2="275" y2="249" stroke="#009E73" stroke-width="1.3" stroke-dasharray="2,3"/>
+<circle cx="275" cy="249" r="4" fill="white" stroke="#009E73"/>
+<text x="281" y="256" font-size="9" fill="#222">write_negative_0: -300 pA sigmoid, offset -0.15 V, slope -60/V, gate E0</text>
+<line x1="116" y1="517" x2="792" y2="443" stroke="#0072B2" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="460" y="476" font-size="9" fill="#222">side_1: +1.8 nA sigmoid, offset +0.15 V, slope +60/V</text>
+<line x1="114" y1="510" x2="794" y2="211" stroke="#0072B2" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="470" y1="440" x2="454" y2="360" stroke="#009E73" stroke-width="1.3" stroke-dasharray="2,3"/>
+<circle cx="454" cy="360" r="4" fill="white" stroke="#009E73"/>
+<text x="460" y="356" font-size="9" fill="#222">plastic_1: +1.8 nA sigmoid, offset +0.15 V, slope +60/V, gate P1</text>
+<line x1="115" y1="527" x2="273" y2="572" stroke="#0072B2" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="200" y="546" font-size="9" fill="#222">eligibility_1: +75 pA sigmoid, offset +0.15 V, slope +60/V</text>
+<line x1="115" y1="328" x2="443" y2="432" stroke="#0072B2" stroke-width="1.5" marker-end="url(#arr)"/>
+<line x1="300" y1="580" x2="279" y2="380" stroke="#009E73" stroke-width="1.3" stroke-dasharray="2,3"/>
+<circle cx="279" cy="380" r="4" fill="white" stroke="#009E73"/>
+<text x="285" y="376" font-size="9" fill="#222">write_positive_1: +300 pA sigmoid, offset +0.15 V, slope +60/V, gate E1</text>
+<line x1="118" y1="316" x2="447" y2="420" stroke="#E69F00" stroke-width="1.5" stroke-dasharray="7,4" marker-end="url(#bar)"/>
+<line x1="300" y1="580" x2="283" y2="368" stroke="#009E73" stroke-width="1.3" stroke-dasharray="2,3"/>
+<circle cx="283" cy="368" r="4" fill="white" stroke="#009E73"/>
+<text x="289" y="375" font-size="9" fill="#222">write_negative_1: -300 pA sigmoid, offset -0.15 V, slope -60/V, gate E1</text>
+<circle cx="90" cy="120" r="22" fill="#f4f4f4" stroke="#000" stroke-width="1.5"/>
+<text x="90" y="124" text-anchor="middle" font-size="13" font-weight="bold">S0</text>
+<text x="90" y="156" text-anchor="middle" font-size="9" fill="#555555">5 pF, tau 10 ms</text>
+<circle cx="90" cy="520" r="22" fill="#f4f4f4" stroke="#000" stroke-width="1.5"/>
+<text x="90" y="524" text-anchor="middle" font-size="13" font-weight="bold">S1</text>
+<text x="90" y="556" text-anchor="middle" font-size="9" fill="#555555">5 pF, tau 10 ms</text>
+<circle cx="90" cy="320" r="22" fill="#f4f4f4" stroke="#000" stroke-width="1.5"/>
+<text x="90" y="324" text-anchor="middle" font-size="13" font-weight="bold">T</text>
+<text x="90" y="356" text-anchor="middle" font-size="9" fill="#555555">5 pF, tau 10 ms</text>
+<circle cx="300" cy="60" r="22" fill="#f4f4f4" stroke="#000" stroke-width="1.5"/>
+<text x="300" y="64" text-anchor="middle" font-size="13" font-weight="bold">E0</text>
+<text x="300" y="96" text-anchor="middle" font-size="9" fill="#555555">25 pF, tau 100 ms</text>
+<circle cx="300" cy="580" r="22" fill="#f4f4f4" stroke="#000" stroke-width="1.5"/>
+<text x="300" y="584" text-anchor="middle" font-size="13" font-weight="bold">E1</text>
+<text x="300" y="616" text-anchor="middle" font-size="9" fill="#555555">25 pF, tau 100 ms</text>
+<circle cx="470" cy="200" r="22" fill="#f4f4f4" stroke="#000" stroke-width="1.5"/>
+<circle cx="470" cy="200" r="17" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="470" y="204" text-anchor="middle" font-size="13" font-weight="bold">P0</text>
+<text x="470" y="236" text-anchor="middle" font-size="9" fill="#555555">5 pF, retained (no leak)</text>
+<circle cx="470" cy="440" r="22" fill="#f4f4f4" stroke="#000" stroke-width="1.5"/>
+<circle cx="470" cy="440" r="17" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="470" y="444" text-anchor="middle" font-size="13" font-weight="bold">P1</text>
+<text x="470" y="476" text-anchor="middle" font-size="9" fill="#555555">5 pF, retained (no leak)</text>
+<circle cx="330" cy="760" r="22" fill="#f4f4f4" stroke="#000" stroke-width="1.5"/>
+<text x="330" y="764" text-anchor="middle" font-size="13" font-weight="bold">X0</text>
+<text x="330" y="796" text-anchor="middle" font-size="9" fill="#555555">25 pF, tau 20 ms</text>
+<circle cx="190" cy="880" r="22" fill="#f4f4f4" stroke="#000" stroke-width="1.5"/>
+<text x="190" y="884" text-anchor="middle" font-size="13" font-weight="bold">Y0</text>
+<text x="190" y="916" text-anchor="middle" font-size="9" fill="#555555">25 pF, tau 200 ms</text>
+<circle cx="470" cy="880" r="22" fill="#f4f4f4" stroke="#000" stroke-width="1.5"/>
+<circle cx="470" cy="880" r="17" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="470" y="884" text-anchor="middle" font-size="13" font-weight="bold">B0</text>
+<text x="470" y="916" text-anchor="middle" font-size="9" fill="#555555">25 pF, retained (no leak)</text>
+<circle cx="720" cy="760" r="22" fill="#f4f4f4" stroke="#000" stroke-width="1.5"/>
+<text x="720" y="764" text-anchor="middle" font-size="13" font-weight="bold">X1</text>
+<text x="720" y="796" text-anchor="middle" font-size="9" fill="#555555">25 pF, tau 20 ms</text>
+<circle cx="600" cy="880" r="22" fill="#f4f4f4" stroke="#000" stroke-width="1.5"/>
+<text x="600" y="884" text-anchor="middle" font-size="13" font-weight="bold">Y1</text>
+<text x="600" y="916" text-anchor="middle" font-size="9" fill="#555555">25 pF, tau 200 ms</text>
+<circle cx="860" cy="880" r="22" fill="#f4f4f4" stroke="#000" stroke-width="1.5"/>
+<circle cx="860" cy="880" r="17" fill="none" stroke="#000" stroke-width="1.2"/>
+<text x="860" y="884" text-anchor="middle" font-size="13" font-weight="bold">B1</text>
+<text x="860" y="916" text-anchor="middle" font-size="9" fill="#555555">25 pF, retained (no leak)</text>
+<circle cx="820" cy="200" r="22" fill="#f4f4f4" stroke="#000" stroke-width="1.5"/>
+<text x="820" y="204" text-anchor="middle" font-size="13" font-weight="bold">M0</text>
+<text x="820" y="236" text-anchor="middle" font-size="9" fill="#555555">10 pF, tau 5 ms, bias -900 pA</text>
+<circle cx="820" cy="440" r="22" fill="#f4f4f4" stroke="#000" stroke-width="1.5"/>
+<text x="820" y="444" text-anchor="middle" font-size="13" font-weight="bold">M1</text>
+<text x="820" y="476" text-anchor="middle" font-size="9" fill="#555555">10 pF, tau 5 ms, bias -900 pA</text>
+<text x="20" y="975">Key: solid line + arrow = positive current; dashed line + bar = negative current; dotted line to a small circle = gate (current x clip(V_gate/V_TYP,0,1)); double ring = retained memory node; loop = self-connection. S0, S1, T receive the body pulses; M0, M1 events (rising through 0 V, re-armed below -V_TYP) drive the thrusters.</text>
+</svg>

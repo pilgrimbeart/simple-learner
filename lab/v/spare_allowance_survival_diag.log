@@ -1,0 +1,35 @@
+[
+ {
+  "life": [
+   "seq",
+   142000,
+   "red"
+  ],
+  "tracker": 66,
+  "replaced_by_deletion_transfer": 1,
+  "gate_counter": 67,
+  "allowance_only_transfers": 68
+ },
+ {
+  "life": [
+   "seq",
+   142008,
+   "blue"
+  ],
+  "tracker": 82,
+  "replaced_by_deletion_transfer": 4,
+  "gate_counter": 86,
+  "allowance_only_transfers": 86
+ },
+ {
+  "life": [
+   "seq",
+   142009,
+   "red"
+  ],
+  "tracker": 77,
+  "replaced_by_deletion_transfer": 1,
+  "gate_counter": 78,
+  "allowance_only_transfers": 80
+ }
+]

@@ -1,0 +1,95 @@
+[2026-11-20T21:58:07Z] invoke develop --resume pid 1059
+[2026-11-20T21:58:09Z] develop: 31104 jobs, 18505 done, 12599 tasks to run (sim 5f2066bf58ecb0e5)
+[2026-11-20T21:58:12Z]   develop parent pid 1059 workers [1069, 1072, 1073, 1074, 1075, 1076, 1077]
+[2026-11-20T22:00:11Z]   develop: 18819/31104  123 s  eta 4798 s
+[2026-11-20T22:02:47Z]   develop: 19133/31104  278 s  eta 5304 s
+[2026-11-20T22:04:21Z]   develop: 19447/31104  372 s  eta 4603 s
+[2026-11-20T22:05:54Z]   develop: 19761/31104  465 s  eta 4199 s
+[2026-11-20T22:07:13Z]   develop: 20075/31104  545 s  eta 3825 s
+[2026-11-20T22:08:46Z]   develop: 20389/31104  638 s  eta 3626 s
+[2026-11-20T22:10:20Z]   develop: 20703/31104  731 s  eta 3459 s
+[2026-11-20T22:12:16Z]   develop: 21017/31104  847 s  eta 3401 s
+[2026-11-20T22:14:30Z]   develop: 21331/31104  981 s  eta 3392 s
+[2026-11-20T22:16:50Z]   develop: 21645/31104  1121 s  eta 3377 s
+[2026-11-20T22:19:09Z]   develop: 21959/31104  1260 s  eta 3337 s
+[2026-11-20T22:21:52Z]   develop: 22273/31104  1423 s  eta 3335 s
+[2026-11-20T22:24:31Z]   develop: 22587/31104  1582 s  eta 3301 s
+[2026-11-20T22:27:01Z]   develop: 22901/31104  1732 s  eta 3232 s
+[2026-11-20T22:29:14Z]   develop: 23215/31104  1866 s  eta 3125 s
+[2026-11-20T22:32:17Z]   develop: 23529/31104  2049 s  eta 3089 s
+[2026-11-20T22:34:37Z]   develop: 23843/31104  2189 s  eta 2977 s
+[2026-11-20T22:36:54Z]   develop: 24157/31104  2325 s  eta 2858 s
+[2026-11-20T22:38:50Z]   develop: 24471/31104  2441 s  eta 2714 s
+[2026-11-20T22:40:43Z]   develop: 24785/31104  2555 s  eta 2571 s
+[2026-11-20T22:43:02Z]   develop: 25099/31104  2693 s  eta 2452 s
+[2026-11-20T22:45:13Z]   develop: 25413/31104  2824 s  eta 2327 s
+[2026-11-20T22:47:32Z]   develop: 25727/31104  2964 s  eta 2206 s
+[2026-11-20T22:49:46Z]   develop: 26041/31104  3097 s  eta 2081 s
+[2026-11-20T22:51:49Z]   develop: 26355/31104  3220 s  eta 1948 s
+[2026-11-20T22:53:55Z]   develop: 26669/31104  3346 s  eta 1818 s
+[2026-11-20T22:56:06Z]   develop: 26983/31104  3477 s  eta 1690 s
+[2026-11-20T22:58:40Z]   develop: 27297/31104  3631 s  eta 1572 s
+[2026-11-20T23:01:08Z]   develop: 27611/31104  3780 s  eta 1450 s
+[2026-11-20T23:03:40Z]   develop: 27925/31104  3931 s  eta 1327 s
+[2026-11-20T23:05:38Z]   develop: 28239/31104  4049 s  eta 1192 s
+[2026-11-20T23:07:51Z]   develop: 28553/31104  4182 s  eta 1062 s
+[2026-11-20T23:10:28Z]   develop: 28867/31104  4339 s  eta 937 s
+[2026-11-20T23:13:18Z]   develop: 29181/31104  4510 s  eta 812 s
+[2026-11-20T23:15:38Z]   develop: 29495/31104  4649 s  eta 681 s
+[2026-11-20T23:17:52Z]   develop: 29809/31104  4783 s  eta 548 s
+[2026-11-20T23:20:04Z]   develop: 30123/31104  4915 s  eta 415 s
+[2026-11-20T23:22:40Z]   develop: 30437/31104  5071 s  eta 283 s
+[2026-11-20T23:25:27Z]   develop: 30751/31104  5239 s  eta 151 s
+[2026-11-20T23:27:33Z]   develop: 31065/31104  5365 s  eta 17 s
+[2026-11-20T23:27:46Z]   develop: 31104/31104  5377 s  eta 0 s
+[2026-11-20T23:28:11Z] develop: complete, 31104 rows; ledger c6c9c5b47b25 archive a752cd45af16
+[2026-11-20T23:28:12Z] invoke analyse pid 7849
+selected ['g1.0_t0.0025_q0.225_f1.5', 'g2.0_t0.0025_q0.3_f1.5', 'g1.0_t0.0025_q0.3_f1.5']
+[2026-11-20T23:29:52Z] invoke confirm --resume pid 7947
+[2026-11-20T23:29:57Z] confirm frozen: ['g1.0_t0.005_q0.15_f1.0', 'g1.0_t0.0025_q0.225_f1.5', 'g2.0_t0.0025_q0.3_f1.5', 'g1.0_t0.0025_q0.3_f1.5'] seeds [2027112000, 2027112127]
+[2026-11-20T23:30:02Z] realised confirm table: 1536 engines, 0 failed
+[2026-11-20T23:30:02Z] confirm: 18432 jobs, 0 done, 18432 tasks to run (sim 5f2066bf58ecb0e5)
+[2026-11-20T23:30:08Z]   confirm parent pid 7947 workers [7982, 7985, 7986, 7987, 7988, 7989, 7990]
+[2026-11-20T23:35:43Z]   confirm: 460/18432  341 s  eta 13322 s
+[2026-11-20T23:40:36Z]   confirm: 920/18432  635 s  eta 12079 s
+[2026-11-20T23:45:05Z]   confirm: 1380/18432  903 s  eta 11163 s
+[2026-11-20T23:50:10Z]   confirm: 1840/18432  1208 s  eta 10893 s
+[2026-11-20T23:55:02Z]   confirm: 2300/18432  1500 s  eta 10522 s
+[2026-11-20T23:59:44Z]   confirm: 2760/18432  1783 s  eta 10122 s
+[2026-11-21T00:05:15Z]   confirm: 3220/18432  2113 s  eta 9984 s
+[2026-11-21T00:09:35Z]   confirm: 3680/18432  2373 s  eta 9514 s
+[2026-11-21T00:14:43Z]   confirm: 4140/18432  2681 s  eta 9255 s
+[2026-11-21T00:19:50Z]   confirm: 4600/18432  2989 s  eta 8987 s
+[2026-11-21T00:24:18Z]   confirm: 5060/18432  3256 s  eta 8605 s
+[2026-11-21T00:29:33Z]   confirm: 5520/18432  3571 s  eta 8353 s
+[2026-11-21T00:34:37Z]   confirm: 5980/18432  3875 s  eta 8069 s
+[2026-11-21T00:40:27Z]   confirm: 6440/18432  4225 s  eta 7868 s
+[2026-11-21T00:47:28Z]   confirm: 6900/18432  4646 s  eta 7766 s
+[2026-11-21T00:54:17Z]   confirm: 7360/18432  5055 s  eta 7604 s
+[2026-11-21T01:01:19Z]   confirm: 7820/18432  5478 s  eta 7434 s
+[2026-11-21T01:08:24Z]   confirm: 8280/18432  5902 s  eta 7236 s
+[2026-11-21T01:15:09Z]   confirm: 8740/18432  6307 s  eta 6994 s
+[2026-11-21T01:22:59Z]   confirm: 9200/18432  6777 s  eta 6801 s
+[2026-11-21T01:33:39Z]   confirm: 9660/18432  7418 s  eta 6736 s
+Traceback (most recent call last):
+  File "/home/pilgrim/git/simple-learner/lab/action_grid_20261120/run.py", line 419, in <module>
+    STAGES[s](dry, resume or st == "all")
+  File "/home/pilgrim/git/simple-learner/lab/action_grid_20261120/run.py", line 387, in stage_confirm
+    return execute("confirm", tasks, J.life_task, keys, resume, dry)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pilgrim/git/simple-learner/lab/action_grid_20261120/run.py", line 135, in execute
+    for i, res in enumerate(pool.map(fn, todo, chunksize=1)):
+  File "/usr/lib/python3.12/concurrent/futures/process.py", line 642, in _chain_from_iterable_of_lists
+    for element in iterable:
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 619, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 317, in _result_or_cancel
+    return fut.result(timeout)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+concurrent.futures.process.BrokenProcessPool: A process in the process pool was terminated abruptly while the future was running or pending.

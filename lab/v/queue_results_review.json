@@ -1,0 +1,448 @@
+{
+  "success": true,
+  "hashes": {
+    "forecast_window_audit": {
+      "lab/v/room_prediction.pkl": true,
+      "lab/v/followup_fresh.pkl": true,
+      "lab/v/followup_timing.pkl": true,
+      "script": true
+    },
+    "market_currency_audit": {
+      "lab/market_currency_audit.py": false,
+      "lab/grownet.py": true,
+      "lab/alloc_rules.py": true,
+      "lab/issued_credit.py": true,
+      "lab/market_diagnosis.py": true,
+      "lab/v/market_diagnosis.json": true,
+      "lab/v/noisy_resource_observe.json": true
+    },
+    "selection_share_audit": {
+      "lab/selection_share_audit.py": false,
+      "lab/grownet.py": true,
+      "lab/v/room_prediction.pkl": true,
+      "lab/v/followup_fresh.pkl": true,
+      "lab/v/followup_timing.pkl": true
+    },
+    "selection_share_extension": {
+      "lab/selection_share_extension.py": true,
+      "lab/selection_share_audit.py": true,
+      "lab/scoring_order_replay.py": true,
+      "lab/v/active_mixture_audit.pkl": true,
+      "lab/v/contest_prediction.pkl": true,
+      "lab/v/ruler_ingredients.pkl": true,
+      "lab/v/followup_silent.pkl": true,
+      "lab/v/room_prediction.pkl": true,
+      "lab/v/followup_fresh.pkl": true,
+      "lab/v/followup_timing.pkl": true
+    }
+  },
+  "forecast_checks": {
+    "sequence D93": {
+      "bits": {
+        "mean": -0.4854739937695317,
+        "ci95": [
+          -0.555482201450146,
+          -0.41443710945931045
+        ]
+      },
+      "errors": {
+        "mean": -0.23540385303071898,
+        "ci95": [
+          -0.27013558381220804,
+          -0.20131807798752172
+        ]
+      }
+    },
+    "sequence D102": {
+      "bits": {
+        "mean": -0.36937558921972635,
+        "ci95": [
+          -0.4728076678959278,
+          -0.2638567547434384
+        ]
+      },
+      "errors": {
+        "mean": -0.18134749542847253,
+        "ci95": [
+          -0.23056011910787025,
+          -0.13258348432845415
+        ]
+      }
+    },
+    "timing D101": {
+      "bits": {
+        "mean": -0.05413564863386398,
+        "ci95": [
+          -0.1413312378477829,
+          0.023122923050308573
+        ]
+      },
+      "errors": {
+        "mean": -0.03184713871426522,
+        "ci95": [
+          -0.07063739306206633,
+          -0.0007575869592077321
+        ]
+      }
+    }
+  },
+  "first_weights": {
+    "sequence D93": {
+      "low": {
+        "lives": 20,
+        "all_one": 20
+      },
+      "A_low_plus_event": {
+        "lives": 20,
+        "all_one": 20
+      },
+      "B_high_minus_event": {
+        "lives": 20,
+        "all_one": 20
+      },
+      "high": {
+        "lives": 20,
+        "all_one": 20
+      }
+    },
+    "sequence D102": {
+      "low": {
+        "lives": 20,
+        "all_one": 20
+      },
+      "high": {
+        "lives": 20,
+        "all_one": 20
+      },
+      "R+M+1": {
+        "lives": 20,
+        "all_one": 20
+      }
+    },
+    "timing D101": {
+      "design560": {
+        "lives": 20,
+        "all_one": 20
+      },
+      "design2240": {
+        "lives": 20,
+        "all_one": 20
+      }
+    }
+  },
+  "exact_subset_collisions": {
+    "sequence D93": [
+      {
+        "seed": 142000,
+        "first": "red",
+        "overwritten": "low",
+        "replacement": "A_low_plus_event"
+      }
+    ],
+    "sequence D102": [],
+    "timing D101": []
+  },
+  "corrected_small_brain_share": {
+    "sequence D93": {
+      "arm": "low",
+      "lives": 20,
+      "max_native_error": 2.1094237467877974e-15,
+      "windows": {
+        "full": {
+          "mean": -0.0025360871578334393,
+          "ci95": [
+            -0.006197700128886011,
+            0.0015706545051114872
+          ]
+        },
+        "first_third": {
+          "mean": 0.001839152335369407,
+          "ci95": [
+            -0.0010137533015146737,
+            0.004984057133288302
+          ]
+        },
+        "last_third": {
+          "mean": -0.006924629977455375,
+          "ci95": [
+            -0.012399602102073148,
+            -0.0005960847057074236
+          ]
+        }
+      },
+      "maximum_absolute_life_window_effect": 0.03261714292071918
+    },
+    "sequence D102": {
+      "arm": "low",
+      "lives": 20,
+      "max_native_error": 2.55351295663786e-15,
+      "windows": {
+        "full": {
+          "mean": -0.0035463084272796376,
+          "ci95": [
+            -0.006911851354527633,
+            -6.314646446793824e-05
+          ]
+        },
+        "first_third": {
+          "mean": 0.0012008933858151175,
+          "ci95": [
+            -0.000930692138304614,
+            0.0029923370725248467
+          ]
+        },
+        "last_third": {
+          "mean": -0.007181338992419827,
+          "ci95": [
+            -0.012963826904523348,
+            -0.0006869503381045799
+          ]
+        }
+      },
+      "maximum_absolute_life_window_effect": 0.039015663107839486
+    },
+    "timing D101": {
+      "arm": "design560",
+      "lives": 20,
+      "max_native_error": 2.886579864025407e-15,
+      "windows": {
+        "full": {
+          "mean": 0.0017745514657664344,
+          "ci95": [
+            -0.00890097008241282,
+            0.01792474605332181
+          ]
+        },
+        "first_third": {
+          "mean": -0.0029932935957256938,
+          "ci95": [
+            -0.0065566681805957,
+            0.0011534833049647126
+          ]
+        },
+        "last_third": {
+          "mean": 0.012885511499270228,
+          "ci95": [
+            -0.011290744029979398,
+            0.054102263937231
+          ]
+        }
+      },
+      "maximum_absolute_life_window_effect": 0.3788299529910956
+    }
+  },
+  "d100": {
+    "replay_fully_exact": {
+      "R": "20/20",
+      "R+1": "20/20",
+      "R silent": "20/20",
+      "R+1 silent": "20/20"
+    },
+    "R | first_third | share 0 - share .01, bits per taste": {
+      "mean": 0.0042741650106891006,
+      "ci95": [
+        -0.000788045469302138,
+        0.010672582225050398
+      ]
+    },
+    "R+1 | first_third | share 0 - share .01, bits per taste": {
+      "mean": 0.005531153487419406,
+      "ci95": [
+        0.00015865681801346206,
+        0.011890769790266341
+      ]
+    },
+    "(R) - (R+1) effect | first_third": {
+      "mean": -0.0012569884767303075,
+      "ci95": [
+        -0.007729912285187731,
+        0.004863471445855176
+      ]
+    },
+    "R | last_third | share 0 - share .01, bits per taste": {
+      "mean": -0.0069559754773131505,
+      "ci95": [
+        -0.014524382124942954,
+        0.004238415478596819
+      ]
+    },
+    "R+1 | last_third | share 0 - share .01, bits per taste": {
+      "mean": -0.007499179638225539,
+      "ci95": [
+        -0.01233233600376004,
+        -0.001148998818367619
+      ]
+    },
+    "(R) - (R+1) effect | last_third": {
+      "mean": 0.0005432041609123904,
+      "ci95": [
+        -0.009243411304101851,
+        0.012387385404232981
+      ]
+    },
+    "R | full | share 0 - share .01, bits per taste": {
+      "mean": -2.2584822759037433e-05,
+      "ci95": [
+        -0.007293727815459361,
+        0.008283269659902979
+      ]
+    },
+    "R+1 | full | share 0 - share .01, bits per taste": {
+      "mean": -0.0007349506605555235,
+      "ci95": [
+        -0.006311425819423126,
+        0.005648535961484406
+      ]
+    },
+    "(R) - (R+1) effect | full": {
+      "mean": 0.0007123658377964855,
+      "ci95": [
+        -0.005306079858265097,
+        0.007272748530949068
+      ]
+    }
+  },
+  "d79": [
+    {
+      "rule": "none",
+      "first": "red",
+      "seed": 177000,
+      "max_reproduction_error": 1.1368683772161603e-13,
+      "first_third": {
+        "n": 46,
+        "share_bits": 0.9359190870704793,
+        "zero_bits": 0.9289115162074666,
+        "delta_bits": -0.0070075708630127406,
+        "delta_errors": 0.0,
+        "choice_changes": 0
+      },
+      "last_third": {
+        "n": 70,
+        "share_bits": 0.4147713915850375,
+        "zero_bits": 0.4051467612863327,
+        "delta_bits": -0.009624630298704823,
+        "delta_errors": -0.014285714285714285,
+        "choice_changes": 1
+      },
+      "full": {
+        "n": 184,
+        "share_bits": 0.5723690026811677,
+        "zero_bits": 0.5612574073942327,
+        "delta_bits": -0.011111595286935142,
+        "delta_errors": -0.005434782608695652,
+        "choice_changes": 1
+      }
+    },
+    {
+      "rule": "none",
+      "first": "blue",
+      "seed": 177000,
+      "max_reproduction_error": 2.2737367544323206e-13,
+      "first_third": {
+        "n": 48,
+        "share_bits": 0.9686962143475054,
+        "zero_bits": 0.981349209943856,
+        "delta_bits": 0.012652995596350655,
+        "delta_errors": 0.0,
+        "choice_changes": 2
+      },
+      "last_third": {
+        "n": 71,
+        "share_bits": 0.3551255415919464,
+        "zero_bits": 0.340622627495909,
+        "delta_bits": -0.01450291409603746,
+        "delta_errors": 0.0,
+        "choice_changes": 0
+      },
+      "full": {
+        "n": 187,
+        "share_bits": 0.5955006807788505,
+        "zero_bits": 0.5831488511660041,
+        "delta_bits": -0.012351829612846378,
+        "delta_errors": -0.0053475935828877,
+        "choice_changes": 3
+      }
+    },
+    {
+      "rule": "W",
+      "first": "red",
+      "seed": 177000,
+      "max_reproduction_error": 2.2737367544323206e-13,
+      "first_third": {
+        "n": 59,
+        "share_bits": 0.852712897072102,
+        "zero_bits": 0.8431258721198976,
+        "delta_bits": -0.00958702495220425,
+        "delta_errors": -0.01694915254237288,
+        "choice_changes": 1
+      },
+      "last_third": {
+        "n": 59,
+        "share_bits": 0.5445722580443276,
+        "zero_bits": 0.528198813312944,
+        "delta_bits": -0.016373444731383583,
+        "delta_errors": 0.0,
+        "choice_changes": 2
+      },
+      "full": {
+        "n": 163,
+        "share_bits": 0.7096156405829557,
+        "zero_bits": 0.6968945852187336,
+        "delta_bits": -0.01272105536422212,
+        "delta_errors": -0.006134969325153374,
+        "choice_changes": 3
+      }
+    },
+    {
+      "rule": "W",
+      "first": "blue",
+      "seed": 177000,
+      "max_reproduction_error": 5.684341886080802e-14,
+      "first_third": {
+        "n": 49,
+        "share_bits": 0.9409709266144409,
+        "zero_bits": 0.9380147692909362,
+        "delta_bits": -0.0029561573235047356,
+        "delta_errors": -0.04081632653061224,
+        "choice_changes": 2
+      },
+      "last_third": {
+        "n": 70,
+        "share_bits": 0.5323961016708739,
+        "zero_bits": 0.5177723998923615,
+        "delta_bits": -0.014623701778512454,
+        "delta_errors": -0.014285714285714285,
+        "choice_changes": 1
+      },
+      "full": {
+        "n": 176,
+        "share_bits": 0.616381589513564,
+        "zero_bits": 0.60400358124647,
+        "delta_bits": -0.01237800826709408,
+        "delta_errors": -0.017045454545454544,
+        "choice_changes": 3
+      }
+    }
+  ],
+  "market_event": {
+    "full_requests": 34085,
+    "savings_fail": 0.8371130996039313,
+    "leafless_fraction": 0.6521739130434783
+  },
+  "provenance": {
+    "revision": "5700eaa0d397e1a7dc055ce69ce9ec7e1d32cc7f",
+    "script_sha256": "cabd67c3527d64d8688ed20c97abab717ce67d0da3f7b3e2c656ce6b20043840",
+    "inputs": {
+      "lab/v/room_prediction.pkl": "217c0f241a8003d722faa461f859ddf5c4765f0e40f98b63c80fef2e21b7c5c0",
+      "lab/v/followup_fresh.pkl": "d352fd5e1184061eb3f120a09ff7056cdf8c951d76b3db74e6a2a7ece9a4c63d",
+      "lab/v/followup_timing.pkl": "f3e00455b4529c043728c412b42d63ba7562dc48f0f7f475f2fb20ac1a831cbb",
+      "lab/v/active_mixture_audit.pkl": "15fd71db4770f82b5aed7d7437e3b7f234f28802d40a3781cd665dcce186e833",
+      "lab/v/contest_prediction.pkl": "591ae481f16601a4817dbd7f2b587d6e64b2767137839d47599e2350cdbbc369",
+      "lab/v/ruler_ingredients.pkl": "dd8808ece9bca805ebd70e59c2a8b97c8ed160ac31795cd8c4000d819de3b471",
+      "lab/v/followup_silent.pkl": "54b3a0ec395aff338cee52e901b52347b744ddeb3c3b61a07979d303bd5a79de",
+      "lab/v/market_diagnosis.json": "ab80353389e3c0ed0d1ff479ada6381f86f6dc758021184a91e3d29f680de399"
+    },
+    "command": "timeout 240s env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python lab/queue_results_review.py"
+  },
+  "wall_s": 6.263439841000945
+}

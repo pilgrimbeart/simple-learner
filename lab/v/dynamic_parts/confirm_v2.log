@@ -1,0 +1,8 @@
+trace done 1.6 s
+memory done 70.8 s
+resonator done 119.9 s
+oscillator done 207.3 s
+trace 40 / 40 refinement True controls None
+memory 40 / 40 refinement True controls None
+resonator 40 / 40 refinement True controls None
+oscillator 37 / 40 refinement True controls None

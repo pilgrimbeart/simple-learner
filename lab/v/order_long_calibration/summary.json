@@ -1,0 +1,42 @@
+{
+  "first_draw_knob_refinement_max": 6.056459429665262e-07,
+  "zero_anchor_histories": 0,
+  "anchor_count_range": [
+    1,
+    9
+  ],
+  "comparisons": {
+    "raw": {
+      "adequate_draws": 28,
+      "adequate_cases": 1314,
+      "rescued": 11,
+      "harmed": 37,
+      "clamped": 0,
+      "nonpositive_denominators": 0
+    },
+    "0.15": {
+      "adequate_draws": 38,
+      "adequate_cases": 1349,
+      "rescued": 13,
+      "harmed": 4,
+      "clamped": 0,
+      "nonpositive_denominators": 0
+    },
+    "1.0": {
+      "adequate_draws": 38,
+      "adequate_cases": 1349,
+      "rescued": 13,
+      "harmed": 4,
+      "clamped": 0,
+      "nonpositive_denominators": 0
+    },
+    "3.8585074308112732": {
+      "adequate_draws": 38,
+      "adequate_cases": 1349,
+      "rescued": 13,
+      "harmed": 4,
+      "clamped": 0,
+      "nonpositive_denominators": 0
+    }
+  }
+}

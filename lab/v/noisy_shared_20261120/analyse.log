@@ -1,0 +1,154 @@
+
+== balanced_skew (30 draws)
+  shared_P2_g250     instream final 0.9970588235294119 learn 0.9900422131765415 failed ev 3/997 allpass 29 infeas 29/30 eps rms 5.123745897739286 settle {'n': 3, 'median': 61.719, 'max': 133.959} |d|max 0.276
+  separate_P2_g250   instream final 0.9659685086155674 learn 0.980988298600239 failed ev 34/997 allpass 18 infeas 18/30 eps rms 34.78977486410095 settle {'n': 3, 'median': 300.851, 'max': 975.914} |d|max 0.510
+  shared_P1_g270     instream final 0.9970588235294119 learn 0.9915422885572139 failed ev 3/997 allpass 29 infeas 29/30 eps rms 10.041089789436233 settle {'n': 3, 'median': 61.7145, 'max': 133.9555} |d|max 0.317
+  separate_P1_g270   instream final 0.9260345577624989 learn 0.9546998109684677 failed ev 74/997 allpass 14 infeas 14/30 eps rms 46.89222797952691 settle {'n': 1, 'median': 501.277, 'max': 501.277} |d|max 0.853
+  shared_P1_ideal    instream final 0.9970588235294119 learn 0.9915422885572139 failed ev 3/997 allpass 29 infeas 29/30 eps rms 4.791646361110233 settle {'n': 3, 'median': 60.4435, 'max': 133.9625} |d|max 0.320
+  fixed              instream final 0.9850861556743911 learn 0.9840115376770338 failed ev 15/997 allpass 26 infeas 26/30 eps rms 22.612698821762983 settle None |d|max 0.000
+  informed           instream final 0.9970588235294119 learn 0.9930348258706467 failed ev 3/997 allpass 29 infeas 29/30 eps rms 9.300072954712006e-16 settle None |d|max 0.356
+  shared_P2_g250 - fixed               share 0.011972667855020795 [0.0, 0.026975638740344622] noharm True sup False | allpass 3 [0.0, 0.2] +3/-0 useful False
+  shared_P2_g250 - separate_P2_g250    share 0.031090314913844324 [0.011883541295306, 0.05508021390374331] noharm True sup True | allpass 11 [0.2, 0.5333333333333333] +11/-0 useful True
+  shared_P2_g250 - shared_P1_ideal     share 0.0 [0.0, 0.0] noharm True sup False | allpass 0 [0.0, 0.0] +0/-0 useful False
+  shared_P1_g270 - fixed               share 0.011972667855020795 [0.0, 0.026975638740344622] noharm True sup False | allpass 3 [0.0, 0.2] +3/-0 useful False
+  shared_P1_g270 - separate_P1_g270    share 0.07102426576691283 [0.0368555022387743, 0.1111925067375435] noharm True sup True | allpass 15 [0.3333333333333333, 0.6666666666666666] +15/-0 useful True
+  separate_P2_g250 - fixed             share -0.019117647058823527 [-0.044726678550207954, 0.003089720736779563] noharm False sup False | allpass -8 [-0.4666666666666667, -0.06666666666666667] +2/-10 useful False
+  informed - fixed                     share 0.011972667855020795 [0.0, 0.026975638740344622] noharm True sup False | allpass 3 [0.0, 0.2] +3/-0 useful False
+  shared_P2_g250 - informed            share 0.0 [0.0, 0.0] noharm True sup False | allpass 0 [0.0, 0.0] +0/-0 useful False
+
+== drift (30 draws)
+  shared_P2_g250     instream final 0.9970588235294119 learn 0.990034675109302 failed ev 3/997 allpass 29 infeas 29/30 eps rms 6.03394671070964 settle {'n': 4, 'median': 333.12874999999997, 'max': 517.2570000000001} |d|max 0.331
+  separate_P2_g250   instream final 0.9680574123588829 learn 0.9775811229059692 failed ev 32/997 allpass 20 infeas 20/30 eps rms 34.168616650845195 settle {'n': 3, 'median': 645.615, 'max': 901.875} |d|max 0.464
+  shared_P1_g270     instream final 0.9970588235294119 learn 0.9905321875471128 failed ev 3/997 allpass 29 infeas 29/30 eps rms 9.383867707343994 settle {'n': 5, 'median': 266.2955, 'max': 735.4165} |d|max 0.332
+  separate_P1_g270   instream final 0.915942513368984 learn 0.9639584539935726 failed ev 84/997 allpass 14 infeas 14/30 eps rms 44.63519490396553 settle {'n': 3, 'median': 834.719, 'max': 966.2455} |d|max 0.852
+  shared_P1_ideal    instream final 0.9970588235294119 learn 0.9910372380521634 failed ev 3/997 allpass 29 infeas 29/30 eps rms 4.574280751748402 settle {'n': 4, 'median': 183.05525, 'max': 266.2825} |d|max 0.346
+  fixed              instream final 0.9751336898395722 learn 0.9825260950151206 failed ev 25/997 allpass 25 infeas 25/30 eps rms 27.186648534202803 settle None |d|max 0.000
+  informed           instream final 0.9970588235294119 learn 0.9930348258706467 failed ev 3/997 allpass 29 infeas 29/30 eps rms 1.0304558971882293e-15 settle None |d|max 0.400
+  shared_P2_g250 - fixed               share 0.02192513368983957 [0.00404040404040404, 0.046583481877599524] noharm True sup True | allpass 4 [0.03333333333333333, 0.26666666666666666] +4/-0 useful True
+  shared_P2_g250 - separate_P2_g250    share 0.02900141117052881 [0.00903149138443256, 0.05503254047831252] noharm True sup True | allpass 9 [0.13333333333333333, 0.4666666666666667] +9/-0 useful True
+  shared_P2_g250 - shared_P1_ideal     share 0.0 [0.0, 0.0] noharm True sup False | allpass 0 [0.0, 0.0] +0/-0 useful False
+  shared_P1_g270 - fixed               share 0.02192513368983957 [0.00404040404040404, 0.046583481877599524] noharm True sup True | allpass 4 [0.03333333333333333, 0.26666666666666666] +4/-0 useful True
+  shared_P1_g270 - separate_P1_g270    share 0.08111631016042781 [0.04789652035056447, 0.11768874405822932] noharm True sup True | allpass 15 [0.3333333333333333, 0.6666666666666666] +15/-0 useful True
+  separate_P2_g250 - fixed             share -0.007076277480689242 [-0.025448232323232314, 0.011111111111111112] noharm False sup False | allpass -5 [-0.36666666666666664, 0.03333333333333333] +3/-8 useful False
+  informed - fixed                     share 0.02192513368983957 [0.00404040404040404, 0.046583481877599524] noharm True sup True | allpass 4 [0.03333333333333333, 0.26666666666666666] +4/-0 useful True
+  shared_P2_g250 - informed            share 0.0 [0.0, 0.0] noharm True sup False | allpass 0 [0.0, 0.0] +0/-0 useful False
+
+== main (100 draws)
+  shared_P2_g250     instream final 0.9913430258467024 learn 0.9889800933628853 failed ev 28/3327 allpass 97 infeas 97/99 eps rms 7.039577779724283 settle {'n': 10, 'median': 182.01850000000002, 'max': 758.988} |d|max 0.340
+  separate_P2_g250   instream final 0.979362188057041 learn 0.9854045885340881 failed ev 68/3327 allpass 82 infeas 82/99 eps rms 29.322084792959256 settle {'n': 9, 'median': 173.191, 'max': 999.315} |d|max 0.554
+  shared_P1_g270     instream final 0.9910399955436721 learn 0.9900385075854785 failed ev 29/3327 allpass 97 infeas 97/99 eps rms 9.187928274913588 settle {'n': 10, 'median': 96.54375, 'max': 829.524} |d|max 0.378
+  separate_P1_g270   instream final 0.9488072135012363 learn 0.9768189461986653 failed ev 169/3327 allpass 65 infeas 65/99 eps rms 38.421424913976274 settle {'n': 7, 'median': 152.3025, 'max': 998.4625} |d|max 0.885
+  shared_P1_ideal    instream final 0.9910399955436721 learn 0.9900385075854785 failed ev 29/3327 allpass 97 infeas 97/99 eps rms 5.122381630031307 settle {'n': 10, 'median': 56.05525, 'max': 262.5615} |d|max 0.380
+  fixed              instream final 0.9808439171122996 learn 0.9823489893191386 failed ev 63/3327 allpass 87 infeas 87/99 eps rms 22.975143096200824 settle None |d|max 0.000
+  informed           instream final 0.9910399955436721 learn 0.9918409290446165 failed ev 29/3327 allpass 97 infeas 97/99 eps rms 8.112712523974551e-16 settle None |d|max 0.415
+  shared_P2_g250 - fixed               share 0.010499108734402851 [0.0033333333333333327, 0.019287433155080205] noharm True sup True | allpass 10 [0.05, 0.16] +10/-0 useful True
+  shared_P2_g250 - separate_P2_g250    share 0.011980837789661318 [0.005017825311942959, 0.021067847593582878] noharm True sup True | allpass 15 [0.09, 0.22] +15/-0 useful True
+  shared_P2_g250 - shared_P1_ideal     share 0.00030303030303030276 [0.0, 0.0009090909090909083] noharm True sup False | allpass 0 [0.0, 0.0] +0/-0 useful False
+  shared_P1_g270 - fixed               share 0.010196078431372548 [0.00303030303030303, 0.01909090909090909] noharm True sup True | allpass 10 [0.05, 0.16] +10/-0 useful True
+  shared_P1_g270 - separate_P1_g270    share 0.04223278204243574 [0.027235224487522282, 0.05861312110071301] noharm True sup True | allpass 32 [0.23, 0.41] +32/-0 useful True
+  separate_P2_g250 - fixed             share -0.0014817290552584673 [-0.009663547237076651, 0.006682319518716577] noharm False sup False | allpass -5 [-0.14, 0.03] +7/-12 useful False
+  informed - fixed                     share 0.010196078431372548 [0.00303030303030303, 0.01909090909090909] noharm True sup True | allpass 10 [0.05, 0.16] +10/-0 useful True
+  shared_P2_g250 - informed            share 0.00030303030303030276 [0.0, 0.0009090909090909083] noharm True sup False | allpass 0 [0.0, 0.0] +0/-0 useful False
+
+== no_anchor (10 draws)
+  shared_P2_g250     instream final 0.9807692307692306 learn 0.9754098360655737 failed ev 5/289 allpass 8 infeas 8/10 eps rms 18.523806215261455 settle None |d|max 0.000
+  separate_P2_g250   instream final 0.9807692307692306 learn 0.9754098360655737 failed ev 5/289 allpass 8 infeas 8/10 eps rms 18.523609513155094 settle None |d|max 0.000
+  shared_P1_g270     instream final 0.9807692307692306 learn 0.9754098360655737 failed ev 5/289 allpass 8 infeas 8/10 eps rms 18.52378887673975 settle None |d|max 0.000
+  separate_P1_g270   instream final 0.9807692307692306 learn 0.9754098360655737 failed ev 5/289 allpass 8 infeas 8/10 eps rms 18.52378887673975 settle None |d|max 0.000
+  shared_P1_ideal    instream final 0.9807692307692306 learn 0.9754098360655737 failed ev 5/289 allpass 8 infeas 8/10 eps rms 18.336673513848748 settle None |d|max 0.020
+  fixed              instream final 0.9807692307692306 learn 0.9754098360655737 failed ev 5/289 allpass 8 infeas 8/10 eps rms 18.52378887673975 settle None |d|max 0.000
+  informed           instream final 0.8861579342669442 learn 0.8684900439165795 failed ev 32/289 allpass 2 infeas 2/10 eps rms 9.081572768629073e-16 settle None |d|max 0.845
+  shared_P2_g250 - fixed               share 0.0 [0.0, 0.0] noharm True sup False | allpass 0 [0.0, 0.0] +0/-0 useful False
+  shared_P2_g250 - separate_P2_g250    share 0.0 [0.0, 0.0] noharm True sup False | allpass 0 [0.0, 0.0] +0/-0 useful False
+  shared_P2_g250 - shared_P1_ideal     share 0.0 [0.0, 0.0] noharm True sup False | allpass 0 [0.0, 0.0] +0/-0 useful False
+  shared_P1_g270 - fixed               share 0.0 [0.0, 0.0] noharm True sup False | allpass 0 [0.0, 0.0] +0/-0 useful False
+  shared_P1_g270 - separate_P1_g270    share 0.0 [0.0, 0.0] noharm True sup False | allpass 0 [0.0, 0.0] +0/-0 useful False
+  separate_P2_g250 - fixed             share 0.0 [0.0, 0.0] noharm True sup False | allpass 0 [0.0, 0.0] +0/-0 useful False
+  informed - fixed                     share -0.09461129650228649 [-0.19923371647509577, 0.0] noharm False sup False | allpass -6 [-0.9, -0.3] +0/-6 useful False
+  shared_P2_g250 - informed            share 0.09461129650228649 [0.0, 0.19923371647509577] noharm True sup False | allpass 6 [0.3, 0.9] +6/-0 useful False
+
+== no_input (10 draws)
+  shared_P2_g250     instream final None learn None failed ev 0/0 allpass 8 infeas 8/10 eps rms 3.303164681161765 settle None |d|max 0.000
+  separate_P2_g250   instream final None learn None failed ev 0/0 allpass 8 infeas 8/10 eps rms 3.303164723761828 settle None |d|max 0.000
+  shared_P1_g270     instream final None learn None failed ev 0/0 allpass 8 infeas 8/10 eps rms 3.303164723761828 settle None |d|max 0.000
+  separate_P1_g270   instream final None learn None failed ev 0/0 allpass 8 infeas 8/10 eps rms 3.303164723761828 settle None |d|max 0.000
+  shared_P1_ideal    instream final None learn None failed ev 0/0 allpass 8 infeas 8/10 eps rms 3.302432132597749 settle None |d|max 0.003
+  fixed              instream final None learn None failed ev 0/0 allpass 8 infeas 8/10 eps rms 3.303164723761828 settle None |d|max 0.000
+  informed           instream final None learn None failed ev 0/0 allpass 0 infeas 0/10 eps rms 2.7687134243166267 settle None |d|max 1.000
+  shared_P2_g250 - fixed               share None None noharm False sup False | allpass 0 [0.0, 0.0] +0/-0 useful False
+  shared_P2_g250 - separate_P2_g250    share None None noharm False sup False | allpass 0 [0.0, 0.0] +0/-0 useful False
+  shared_P2_g250 - shared_P1_ideal     share None None noharm False sup False | allpass 0 [0.0, 0.0] +0/-0 useful False
+  shared_P1_g270 - fixed               share None None noharm False sup False | allpass 0 [0.0, 0.0] +0/-0 useful False
+  shared_P1_g270 - separate_P1_g270    share None None noharm False sup False | allpass 0 [0.0, 0.0] +0/-0 useful False
+  separate_P2_g250 - fixed             share None None noharm False sup False | allpass 0 [0.0, 0.0] +0/-0 useful False
+  informed - fixed                     share None None noharm False sup False | allpass -8 [-1.0, -0.5] +0/-8 useful False
+  shared_P2_g250 - informed            share None None noharm False sup False | allpass 8 [0.5, 1.0] +8/-0 useful False
+
+== old_diagnostic (40 draws)
+  shared_P2_g250     instream final 0.9946969696969697 learn 0.9932491389207808 failed ev 7/1322 allpass 39 infeas 39/39 eps rms 7.788868557383003 settle {'n': 5, 'median': 47.089, 'max': 313.3285} |d|max 0.320
+  separate_P2_g250   instream final 0.9856951871657754 learn 0.9913548516160458 failed ev 19/1322 allpass 33 infeas 33/39 eps rms 29.337282371421225 settle {'n': 5, 'median': 83.44500000000001, 'max': 936.9835} |d|max 0.460
+  shared_P1_g270     instream final 0.9932486631016044 learn 0.9940068886337542 failed ev 9/1322 allpass 38 infeas 38/39 eps rms 11.381801562730589 settle {'n': 5, 'median': 47.083, 'max': 157.11} |d|max 0.324
+  separate_P1_g270   instream final 0.9600849577367603 learn 0.9847041661561453 failed ev 53/1322 allpass 24 infeas 24/39 eps rms 39.11129115997456 settle {'n': 5, 'median': 55.182500000000005, 'max': 241.69} |d|max 0.878
+  shared_P1_ideal    instream final 0.9954545454545455 learn 0.9936337543053961 failed ev 6/1322 allpass 39 infeas 39/39 eps rms 7.097012136556226 settle {'n': 5, 'median': 47.084, 'max': 157.1035} |d|max 0.421
+  fixed              instream final 0.9833305481283423 learn 0.9879454127961591 failed ev 22/1322 allpass 34 infeas 34/39 eps rms 25.151735819103628 settle None |d|max 0.000
+  informed           instream final 0.9946969696969697 learn 0.9947761194029852 failed ev 7/1322 allpass 39 infeas 39/39 eps rms 1.4900256360826073e-15 settle None |d|max 0.377
+  shared_P2_g250 - fixed               share 0.011366421568627452 [0.002228163992869875, 0.025002854835115867] noharm True sup True | allpass 5 [0.025, 0.25] +5/-0 useful True
+  shared_P2_g250 - separate_P2_g250    share 0.009001782531194293 [0.0007575757575757569, 0.019704768270944622] noharm True sup True | allpass 6 [0.05, 0.275] +6/-0 useful True
+  shared_P2_g250 - shared_P1_ideal     share -0.0007575757575757596 [-0.002272727272727279, 0.0] noharm True sup False | allpass 0 [0.0, 0.0] +0/-0 useful False
+  shared_P1_g270 - fixed               share 0.009918114973262036 [-0.001314616755793227, 0.024245209447415334] noharm True sup False | allpass 4 [0.0, 0.225] +5/-1 useful False
+  shared_P1_g270 - separate_P1_g270    share 0.033163705364843886 [0.015926341210971195, 0.053327187913288485] noharm True sup True | allpass 14 [0.2, 0.5] +14/-0 useful True
+  separate_P2_g250 - fixed             share 0.002364639037433158 [-0.012828723819073077, 0.018983957219251342] noharm False sup False | allpass -1 [-0.2, 0.125] +5/-6 useful False
+  informed - fixed                     share 0.011366421568627452 [0.002228163992869875, 0.025002854835115867] noharm True sup True | allpass 5 [0.025, 0.25] +5/-0 useful True
+  shared_P2_g250 - informed            share 0.0 [0.0, 0.0] noharm True sup False | allpass 0 [0.0, 0.0] +0/-0 useful False
+
+== ordered_only (10 draws)
+  shared_P2_g250     instream final 1.0 learn 1.0 failed ev 0/151 allpass 8 infeas 8/10 eps rms 23.042572445780436 settle None |d|max 0.000
+  separate_P2_g250   instream final 1.0 learn 1.0 failed ev 0/151 allpass 8 infeas 8/10 eps rms 23.04237037620107 settle None |d|max 0.000
+  shared_P1_g270     instream final 1.0 learn 1.0 failed ev 0/151 allpass 8 infeas 8/10 eps rms 23.042551805793213 settle None |d|max 0.000
+  separate_P1_g270   instream final 1.0 learn 1.0 failed ev 0/151 allpass 8 infeas 8/10 eps rms 23.042551805793213 settle None |d|max 0.000
+  shared_P1_ideal    instream final 1.0 learn 1.0 failed ev 0/151 allpass 8 infeas 8/10 eps rms 22.868048555539836 settle None |d|max 0.020
+  fixed              instream final 1.0 learn 1.0 failed ev 0/151 allpass 8 infeas 8/10 eps rms 23.042551805793213 settle None |d|max 0.000
+  informed           instream final 0.7904306220095694 learn 0.7946815906562847 failed ev 27/151 allpass 2 infeas 2/10 eps rms 4.600121907292561e-16 settle None |d|max 0.846
+  shared_P2_g250 - fixed               share 0.0 [0.0, 0.0] noharm True sup False | allpass 0 [0.0, 0.0] +0/-0 useful False
+  shared_P2_g250 - separate_P2_g250    share 0.0 [0.0, 0.0] noharm True sup False | allpass 0 [0.0, 0.0] +0/-0 useful False
+  shared_P2_g250 - shared_P1_ideal     share 0.0 [0.0, 0.0] noharm True sup False | allpass 0 [0.0, 0.0] +0/-0 useful False
+  shared_P1_g270 - fixed               share 0.0 [0.0, 0.0] noharm True sup False | allpass 0 [0.0, 0.0] +0/-0 useful False
+  shared_P1_g270 - separate_P1_g270    share 0.0 [0.0, 0.0] noharm True sup False | allpass 0 [0.0, 0.0] +0/-0 useful False
+  separate_P2_g250 - fixed             share 0.0 [0.0, 0.0] noharm True sup False | allpass 0 [0.0, 0.0] +0/-0 useful False
+  informed - fixed                     share -0.20956937799043063 [-0.4464114832535885, 0.0] noharm False sup False | allpass -6 [-0.9, -0.3] +0/-6 useful False
+  shared_P2_g250 - informed            share 0.20956937799043063 [0.0, 0.4464114832535885] noharm True sup False | allpass 6 [0.3, 0.9] +6/-0 useful False
+
+== sparse (30 draws)
+  shared_P2_g250     instream final 0.99375 learn 0.9892156862745097 failed ev 3/495 allpass 29 infeas 29/30 eps rms 12.511580917361817 settle {'n': 3, 'median': 384.8965, 'max': 505.468} |d|max 0.205
+  separate_P2_g250   instream final 0.9854166666666667 learn 0.9764408793820558 failed ev 7/495 allpass 27 infeas 27/30 eps rms 26.815038554232103 settle {'n': 3, 'median': 384.895, 'max': 925.976} |d|max 0.256
+  shared_P1_g270     instream final 0.99375 learn 0.9901960784313726 failed ev 3/495 allpass 29 infeas 29/30 eps rms 10.94653087055687 settle {'n': 3, 'median': 384.8925, 'max': 505.4695} |d|max 0.278
+  separate_P1_g270   instream final 0.9687336601307189 learn 0.9714497920380273 failed ev 15/495 allpass 18 infeas 18/30 eps rms 35.256159588778914 settle {'n': 2, 'median': 265.03975, 'max': 431.2705} |d|max 0.713
+  shared_P1_ideal    instream final 0.99375 learn 0.9901960784313726 failed ev 3/495 allpass 29 infeas 29/30 eps rms 8.13555180930206 settle {'n': 3, 'median': 98.8125, 'max': 384.8995} |d|max 0.257
+  fixed              instream final 0.9872222222222222 learn 0.9852941176470587 failed ev 6/495 allpass 26 infeas 26/30 eps rms 23.53495920741768 settle None |d|max 0.000
+  informed           instream final 0.99375 learn 0.9941176470588236 failed ev 3/495 allpass 29 infeas 29/30 eps rms 1.1785725283022953e-15 settle None |d|max 0.344
+  shared_P2_g250 - fixed               share 0.0065277777777777764 [0.0, 0.017499999999999998] noharm True sup False | allpass 3 [0.0, 0.2] +3/-0 useful False
+  shared_P2_g250 - separate_P2_g250    share 0.008333333333333333 [0.0, 0.022916666666666665] noharm True sup False | allpass 2 [0.0, 0.16666666666666666] +2/-0 useful False
+  shared_P2_g250 - shared_P1_ideal     share 0.0 [0.0, 0.0] noharm True sup False | allpass 0 [0.0, 0.0] +0/-0 useful False
+  shared_P1_g270 - fixed               share 0.0065277777777777764 [0.0, 0.017499999999999998] noharm True sup False | allpass 3 [0.0, 0.2] +3/-0 useful False
+  shared_P1_g270 - separate_P1_g270    share 0.025016339869281045 [0.00625, 0.05015522875816993] noharm True sup True | allpass 11 [0.2, 0.5333333333333333] +11/-0 useful True
+  separate_P2_g250 - fixed             share -0.0018055555555555566 [-0.01875, 0.01333333333333333] noharm False sup False | allpass 1 [-0.1, 0.16666666666666666] +3/-2 useful False
+  informed - fixed                     share 0.0065277777777777764 [0.0, 0.017499999999999998] noharm True sup False | allpass 3 [0.0, 0.2] +3/-0 useful False
+  shared_P2_g250 - informed            share 0.0 [0.0, 0.0] noharm True sup False | allpass 0 [0.0, 0.0] +0/-0 useful False
+
+== weak_inputs (30 draws)
+  shared_P2_g250     instream final 0.986892825311943 learn 0.9820283301714381 failed ev 13/997 allpass 25 infeas 25/29 eps rms 8.711662743026919 settle {'n': 5, 'median': 569.7415, 'max': 697.2895} |d|max 0.297
+  separate_P2_g250   instream final 0.961779560308972 learn 0.9680303712481061 failed ev 38/997 allpass 19 infeas 19/29 eps rms 30.594389240261613 settle {'n': 5, 'median': 554.7485, 'max': 968.5445} |d|max 0.355
+  shared_P1_g270     instream final 0.985882724301842 learn 0.9845161140683528 failed ev 14/997 allpass 25 infeas 25/29 eps rms 10.967913276081028 settle {'n': 5, 'median': 252.762, 'max': 919.6555000000001} |d|max 0.383
+  separate_P1_g270   instream final 0.9234792780748663 learn 0.9574542309704732 failed ev 76/997 allpass 12 infeas 12/29 eps rms 40.07206070652216 settle {'n': 3, 'median': 604.3615, 'max': 845.2515} |d|max 0.844
+  shared_P1_ideal    instream final 0.988913027332145 learn 0.9845161140683528 failed ev 11/997 allpass 25 infeas 25/29 eps rms 4.776964577685023 settle {'n': 5, 'median': 248.82250000000002, 'max': 588.3100000000001} |d|max 0.342
+  fixed              instream final 0.9638313279857397 learn 0.9689947902063792 failed ev 36/997 allpass 20 infeas 20/29 eps rms 24.664005421773943 settle None |d|max 0.000
+  informed           instream final 0.9920083184789068 learn 0.9915272124227348 failed ev 8/997 allpass 25 infeas 25/29 eps rms 1.2328540222870689e-15 settle None |d|max 0.434
+  shared_P2_g250 - fixed               share 0.023061497326203204 [0.00416666666666666, 0.04771984551396315] noharm True sup True | allpass 5 [0.03333333333333333, 0.3] +5/-0 useful True
+  shared_P2_g250 - separate_P2_g250    share 0.02511326500297088 [0.003980986333927502, 0.05228902072192511] noharm True sup True | allpass 6 [0.03333333333333333, 0.36666666666666664] +7/-1 useful True
+  shared_P2_g250 - shared_P1_ideal     share -0.002020202020202022 [-0.006060606060606067, 0.0] noharm False sup False | allpass 0 [0.0, 0.0] +0/-0 useful False
+  shared_P1_g270 - fixed               share 0.022051396316102197 [0.005050505050505046, 0.04637644830659535] noharm True sup True | allpass 5 [0.03333333333333333, 0.3] +5/-0 useful True
+  shared_P1_g270 - separate_P1_g270    share 0.06240344622697564 [0.026797385620915035, 0.10279300356506235] noharm True sup True | allpass 13 [0.23333333333333334, 0.6333333333333333] +14/-1 useful True
+  separate_P2_g250 - fixed             share -0.0020517676767676757 [-0.017232991681521093, 0.0130428828728461] noharm False sup False | allpass -1 [-0.23333333333333334, 0.16666666666666666] +4/-5 useful False
+  informed - fixed                     share 0.02817699049316696 [0.007070707070707072, 0.05483562648544265] noharm True sup True | allpass 5 [0.03333333333333333, 0.3] +5/-0 useful True
+  shared_P2_g250 - informed            share -0.005115493166963758 [-0.012375594177064771, 0.0] noharm False sup False | allpass 0 [0.0, 0.0] +0/-0 useful False
+refinement ok True [(2026117300, 0.00025, 0.0016, 0.0), (2026117300, 0.000125, 0.0008, 0.0), (2026117301, 0.00025, 0.001, 0.0), (2026117301, 0.000125, 0.0005, 0.0), (2026117302, 0.00025, 0.0017, 0.0), (2026117302, 0.000125, 0.0008, 0.0), (2026117303, 0.00025, 0.0008, 0.0), (2026117303, 0.000125, 0.0004, 0.0)]

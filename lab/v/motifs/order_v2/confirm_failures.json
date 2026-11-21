@@ -1,0 +1,602 @@
+[
+  {
+    "seed": 2026112204,
+    "case": "pair_0.35_0.5_0.0",
+    "dt": 0.000125,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.39229787033825836,
+      "order_V": 0.06613461539009824
+    }
+  },
+  {
+    "seed": 2026112204,
+    "case": "pair_0.35_0.5_0.0",
+    "dt": 6.25e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.3920608575490361,
+      "order_V": 0.0662198216800007
+    }
+  },
+  {
+    "seed": 2026112204,
+    "case": "pair_0.35_0.5_0.0",
+    "dt": 3.125e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.39194207544976595,
+      "order_V": 0.06626250647133819
+    }
+  },
+  {
+    "seed": 2026112204,
+    "case": "pair_0.5_0.5_0.0",
+    "dt": 0.000125,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.40405096898790727,
+      "order_V": 0.06194166191571697
+    }
+  },
+  {
+    "seed": 2026112204,
+    "case": "pair_0.5_0.5_0.0",
+    "dt": 6.25e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.4039424305789411,
+      "order_V": 0.06200731396126985
+    }
+  },
+  {
+    "seed": 2026112204,
+    "case": "pair_0.5_0.5_0.0",
+    "dt": 3.125e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.4038880728700694,
+      "order_V": 0.062040203312761874
+    }
+  },
+  {
+    "seed": 2026112215,
+    "case": "pair_0.35_0.35_0.6",
+    "dt": 0.000125,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.0003795059907926308,
+      "order_V": 0.033773481007619545
+    }
+  },
+  {
+    "seed": 2026112215,
+    "case": "pair_0.35_0.35_0.6",
+    "dt": 6.25e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.0003792720702565871,
+      "order_V": 0.033770788896449785
+    }
+  },
+  {
+    "seed": 2026112215,
+    "case": "pair_0.35_0.35_0.6",
+    "dt": 3.125e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.0003791358724327501,
+      "order_V": 0.03376943424509246
+    }
+  },
+  {
+    "seed": 2026112215,
+    "case": "pair_0.35_0.5_0.6",
+    "dt": 0.000125,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.0003869981342831226,
+      "order_V": 0.03717745033013841
+    }
+  },
+  {
+    "seed": 2026112215,
+    "case": "pair_0.35_0.5_0.6",
+    "dt": 6.25e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.00038680893218549523,
+      "order_V": 0.03718419537080371
+    }
+  },
+  {
+    "seed": 2026112215,
+    "case": "pair_0.35_0.5_0.6",
+    "dt": 3.125e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.0003867136127735669,
+      "order_V": 0.037187549971807184
+    }
+  },
+  {
+    "seed": 2026112215,
+    "case": "pair_0.5_0.35_0.6",
+    "dt": 0.000125,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.0003795059907926308,
+      "order_V": 0.0341357866718082
+    }
+  },
+  {
+    "seed": 2026112215,
+    "case": "pair_0.5_0.35_0.6",
+    "dt": 6.25e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.0003792720702565871,
+      "order_V": 0.03413435211872466
+    }
+  },
+  {
+    "seed": 2026112215,
+    "case": "pair_0.5_0.35_0.6",
+    "dt": 3.125e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.0003791358724327501,
+      "order_V": 0.03413362454125983
+    }
+  },
+  {
+    "seed": 2026112215,
+    "case": "pair_0.5_0.5_0.6",
+    "dt": 0.000125,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.0003869981342831226,
+      "order_V": 0.037572977289484596
+    }
+  },
+  {
+    "seed": 2026112215,
+    "case": "pair_0.5_0.5_0.6",
+    "dt": 6.25e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.00038680893218549523,
+      "order_V": 0.037581187391974503
+    }
+  },
+  {
+    "seed": 2026112215,
+    "case": "pair_0.5_0.5_0.6",
+    "dt": 3.125e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.0003867136127735669,
+      "order_V": 0.03758527282730943
+    }
+  },
+  {
+    "seed": 2026112215,
+    "case": "single_B_0.35",
+    "dt": 0.000125,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.0003518360768853024,
+      "order_V": 0.03020455468191986
+    }
+  },
+  {
+    "seed": 2026112215,
+    "case": "single_B_0.35",
+    "dt": 6.25e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.00035151914976195024,
+      "order_V": 0.030198185168911883
+    }
+  },
+  {
+    "seed": 2026112215,
+    "case": "single_B_0.35",
+    "dt": 3.125e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.00035137516264336494,
+      "order_V": 0.03019506983217233
+    }
+  },
+  {
+    "seed": 2026112215,
+    "case": "single_B_0.5",
+    "dt": 0.000125,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.0003727941663885033,
+      "order_V": 0.0332770420410209
+    }
+  },
+  {
+    "seed": 2026112215,
+    "case": "single_B_0.5",
+    "dt": 6.25e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.00037262356034548327,
+      "order_V": 0.03327885329586874
+    }
+  },
+  {
+    "seed": 2026112215,
+    "case": "single_B_0.5",
+    "dt": 3.125e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.0003725713186388366,
+      "order_V": 0.033279810668750784
+    }
+  },
+  {
+    "seed": 2026112215,
+    "case": "single_B_0.6",
+    "dt": 0.000125,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.00037343180901331855,
+      "order_V": 0.03461724585132871
+    }
+  },
+  {
+    "seed": 2026112215,
+    "case": "single_B_0.6",
+    "dt": 6.25e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.00037328425889432464,
+      "order_V": 0.034622444561556186
+    }
+  },
+  {
+    "seed": 2026112215,
+    "case": "single_B_0.6",
+    "dt": 3.125e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.00037324091781497544,
+      "order_V": 0.034625085368691924
+    }
+  },
+  {
+    "seed": 2026112223,
+    "case": "pair_0.35_0.35_-0.15",
+    "dt": 0.000125,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.002819267563725728,
+      "order_V": -0.022978410791123793
+    }
+  },
+  {
+    "seed": 2026112223,
+    "case": "pair_0.35_0.35_-0.15",
+    "dt": 6.25e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.0028169104893702125,
+      "order_V": -0.022939513576226953
+    }
+  },
+  {
+    "seed": 2026112223,
+    "case": "pair_0.35_0.35_-0.15",
+    "dt": 3.125e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.002815757434688405,
+      "order_V": -0.022920073740385485
+    }
+  },
+  {
+    "seed": 2026112223,
+    "case": "pair_0.35_0.35_0.0",
+    "dt": 0.000125,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.4255985893450356,
+      "order_V": 0.07198794718149507
+    }
+  },
+  {
+    "seed": 2026112223,
+    "case": "pair_0.35_0.35_0.0",
+    "dt": 6.25e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.4252375741946873,
+      "order_V": 0.07207884806611642
+    }
+  },
+  {
+    "seed": 2026112223,
+    "case": "pair_0.35_0.35_0.0",
+    "dt": 3.125e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.42505746832709446,
+      "order_V": 0.07212408125253512
+    }
+  },
+  {
+    "seed": 2026112223,
+    "case": "pair_0.35_0.5_-0.15",
+    "dt": 0.000125,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.0029072993589641973,
+      "order_V": -0.029376739382555535
+    }
+  },
+  {
+    "seed": 2026112223,
+    "case": "pair_0.35_0.5_-0.15",
+    "dt": 6.25e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.002906223017433326,
+      "order_V": -0.02935642856841773
+    }
+  },
+  {
+    "seed": 2026112223,
+    "case": "pair_0.35_0.5_-0.15",
+    "dt": 3.125e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.0029057078986265902,
+      "order_V": -0.029346265076648392
+    }
+  },
+  {
+    "seed": 2026112223,
+    "case": "pair_0.35_0.5_0.0",
+    "dt": 0.000125,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.4404486736219746,
+      "order_V": 0.07159753362447224
+    }
+  },
+  {
+    "seed": 2026112223,
+    "case": "pair_0.35_0.5_0.0",
+    "dt": 6.25e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.4402812480201128,
+      "order_V": 0.07167682507280151
+    }
+  },
+  {
+    "seed": 2026112223,
+    "case": "pair_0.35_0.5_0.0",
+    "dt": 3.125e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.44019452895641886,
+      "order_V": 0.07171620908664816
+    }
+  },
+  {
+    "seed": 2026112223,
+    "case": "pair_0.5_0.35_-0.15",
+    "dt": 0.000125,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.002819267563725728,
+      "order_V": -0.026292136332057993
+    }
+  },
+  {
+    "seed": 2026112223,
+    "case": "pair_0.5_0.35_-0.15",
+    "dt": 6.25e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.0028169104893702125,
+      "order_V": -0.026255888885743185
+    }
+  },
+  {
+    "seed": 2026112223,
+    "case": "pair_0.5_0.35_-0.15",
+    "dt": 3.125e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.002815757434688405,
+      "order_V": -0.026237758155351128
+    }
+  },
+  {
+    "seed": 2026112223,
+    "case": "pair_0.5_0.35_0.0",
+    "dt": 0.000125,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.42631081895598694,
+      "order_V": 0.08366966473726409
+    }
+  },
+  {
+    "seed": 2026112223,
+    "case": "pair_0.5_0.35_0.0",
+    "dt": 6.25e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.4259557206416174,
+      "order_V": 0.0838035830013201
+    }
+  },
+  {
+    "seed": 2026112223,
+    "case": "pair_0.5_0.35_0.0",
+    "dt": 3.125e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.42577857394238394,
+      "order_V": 0.08387026907295939
+    }
+  },
+  {
+    "seed": 2026112223,
+    "case": "pair_0.5_0.5_0.0",
+    "dt": 0.000125,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.44126285312332514,
+      "order_V": 0.08244619474604899
+    }
+  },
+  {
+    "seed": 2026112223,
+    "case": "pair_0.5_0.5_0.0",
+    "dt": 6.25e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.44110390501859326,
+      "order_V": 0.08256044916801626
+    }
+  },
+  {
+    "seed": 2026112223,
+    "case": "pair_0.5_0.5_0.0",
+    "dt": 3.125e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.44103326406452953,
+      "order_V": 0.0826172511019482
+    }
+  },
+  {
+    "seed": 2026112226,
+    "case": "pair_0.5_0.5_0.6",
+    "dt": 0.000125,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.014782000810997892,
+      "order_V": 0.03021905294933903
+    }
+  },
+  {
+    "seed": 2026112226,
+    "case": "pair_0.5_0.5_0.6",
+    "dt": 6.25e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.014780266376784403,
+      "order_V": 0.03022303106523344
+    }
+  },
+  {
+    "seed": 2026112226,
+    "case": "pair_0.5_0.5_0.6",
+    "dt": 3.125e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.014779425278860652,
+      "order_V": 0.030224999445728075
+    }
+  },
+  {
+    "seed": 2026112236,
+    "case": "pair_0.5_0.35_0.0",
+    "dt": 0.000125,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.6318888849172771,
+      "order_V": -0.06387490725603955
+    }
+  },
+  {
+    "seed": 2026112236,
+    "case": "pair_0.5_0.35_0.0",
+    "dt": 6.25e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.631442712111994,
+      "order_V": -0.06395209551636524
+    }
+  },
+  {
+    "seed": 2026112236,
+    "case": "pair_0.5_0.35_0.0",
+    "dt": 3.125e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.6312205202570704,
+      "order_V": -0.06399060462720764
+    }
+  },
+  {
+    "seed": 2026112236,
+    "case": "pair_0.5_0.5_0.0",
+    "dt": 0.000125,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.6536448230360499,
+      "order_V": -0.06319228537676388
+    }
+  },
+  {
+    "seed": 2026112236,
+    "case": "pair_0.5_0.5_0.0",
+    "dt": 6.25e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.6533706899404593,
+      "order_V": -0.06326966971050323
+    }
+  },
+  {
+    "seed": 2026112236,
+    "case": "pair_0.5_0.5_0.0",
+    "dt": 3.125e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.6532358102436466,
+      "order_V": -0.06330827536211084
+    }
+  },
+  {
+    "seed": 2026112237,
+    "case": "pair_0.5_0.35_0.0",
+    "dt": 0.000125,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.4162568575055836,
+      "order_V": -0.062492016401149784
+    }
+  },
+  {
+    "seed": 2026112237,
+    "case": "pair_0.5_0.35_0.0",
+    "dt": 6.25e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.41608152953876176,
+      "order_V": -0.06255099721393094
+    }
+  },
+  {
+    "seed": 2026112237,
+    "case": "pair_0.5_0.35_0.0",
+    "dt": 3.125e-05,
+    "control": false,
+    "metrics": {
+      "coincidence_V": 0.4159940317592532,
+      "order_V": -0.06258048313582427
+    }
+  }
+]

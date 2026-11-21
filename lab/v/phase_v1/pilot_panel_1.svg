@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 290"><rect width="540" height="290" fill="white"/><g font-family="sans-serif" font-size="13" fill="#222">
+<text x="20" y="24" font-size="18">5 Hz band: first saved draw</text>
+<path d="M65,240.0 h450" stroke="#ddd"/><text x="8" y="244.0">0.109 V</text>
+<path d="M65,175.0 h450" stroke="#ddd"/><text x="8" y="179.0">0.125 V</text>
+<path d="M65,110.0 h450" stroke="#ddd"/><text x="8" y="114.0">0.14 V</text>
+<path d="M65,45.0 h450" stroke="#ddd"/><text x="8" y="49.0">0.155 V</text>
+<text x="53.0" y="260">-1.5708</text>
+<text x="503.0" y="260">3.14159</text>
+<text x="240" y="280">relative phase (rad)</text>
+<polyline fill="none" stroke="#0072B2" stroke-width="1.7"  points="65.00,67.50 165.00,106.23 215.00,144.15 265.00,181.62 365.00,217.50 515.00,140.96"/><text x="70" y="41" fill="#0072B2">raw output mean</text>
+</g></svg>

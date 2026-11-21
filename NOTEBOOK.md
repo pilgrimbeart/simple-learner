@@ -320,7 +320,7 @@ which subthreshold silicon shares (Sarpeshkar, Delbrueck and Mead 1993), and the
   0.88. Noise is both its engine (the spontaneous spikes that make it move and search) and its enemy (it blurs which
   colour was seen), so it was tuned to the old noise's pattern across its nodes, and no level of the new one gives
   that back.
-- **Mismatch breaks the neurons, not the learning.** With mismatch in one group of parts at a time (64 lives, last
+- **Mismatch breaks the neurons, not the learning.** (Qualified 2026-11-20, [D176](discrete/NOTEBOOK.md#d176-robot-shortfall): measured on actual lives without these switches, the neurons are confirmed as the dominant loss, but the learning is broken too: P random-walks under its node's resting noise, and its writers' mismatched offsets drift it.) With mismatch in one group of parts at a time (64 lives, last
   third food:poison): none 1.70, the neurons' own parts 0.99, synapses 2.05, learning (E, P and their writers) 1.59,
   hush 2.15, taste 2.02. So the neurons alone do the damage. Of 200 standard neurons under 10% mismatch, half fire
   more than 10 times per 10 s of their own accord, and those that don't miss pulses; moving them further from

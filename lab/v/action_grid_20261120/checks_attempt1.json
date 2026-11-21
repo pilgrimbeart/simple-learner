@@ -1,0 +1,381 @@
+{
+ "valid": true,
+ "checks": {
+  "baseline_graph_equals_D180_all_wirings": {
+   "ok": true
+  },
+  "d180_baseline_seed8_reproduction": {
+   "ok": true,
+   "lives": [
+    {
+     "arm": "informed",
+     "poison": "red",
+     "meals": true,
+     "firings": true,
+     "node_events": true,
+     "trace": true,
+     "arrays_hash": true,
+     "wiring": true
+    },
+    {
+     "arm": "neutral",
+     "poison": "red",
+     "meals": true,
+     "firings": true,
+     "node_events": true,
+     "trace": true,
+     "arrays_hash": true,
+     "wiring": true
+    },
+    {
+     "arm": "reversed",
+     "poison": "red",
+     "meals": true,
+     "firings": true,
+     "node_events": true,
+     "trace": true,
+     "arrays_hash": true,
+     "wiring": true
+    },
+    {
+     "arm": "no_explore",
+     "poison": "red",
+     "meals": true,
+     "firings": true,
+     "node_events": true,
+     "trace": true,
+     "arrays_hash": true,
+     "wiring": true
+    },
+    {
+     "arm": "no_sensory",
+     "poison": "red",
+     "meals": true,
+     "firings": true,
+     "node_events": true,
+     "trace": true,
+     "arrays_hash": true,
+     "wiring": true
+    },
+    {
+     "arm": "informed",
+     "poison": "blue",
+     "meals": true,
+     "firings": true,
+     "node_events": true,
+     "trace": true,
+     "arrays_hash": true,
+     "wiring": true
+    },
+    {
+     "arm": "neutral",
+     "poison": "blue",
+     "meals": true,
+     "firings": true,
+     "node_events": true,
+     "trace": true,
+     "arrays_hash": true,
+     "wiring": true
+    },
+    {
+     "arm": "reversed",
+     "poison": "blue",
+     "meals": true,
+     "firings": true,
+     "node_events": true,
+     "trace": true,
+     "arrays_hash": true,
+     "wiring": true
+    },
+    {
+     "arm": "no_explore",
+     "poison": "blue",
+     "meals": true,
+     "firings": true,
+     "node_events": true,
+     "trace": true,
+     "arrays_hash": true,
+     "wiring": true
+    },
+    {
+     "arm": "no_sensory",
+     "poison": "blue",
+     "meals": true,
+     "firings": true,
+     "node_events": true,
+     "trace": true,
+     "arrays_hash": true,
+     "wiring": true
+    },
+    {
+     "arm": "informed_allfood",
+     "poison": null,
+     "meals": true,
+     "firings": true,
+     "node_events": true,
+     "trace": true,
+     "arrays_hash": true,
+     "wiring": true
+    },
+    {
+     "arm": "neutral_allfood",
+     "poison": null,
+     "meals": true,
+     "firings": true,
+     "node_events": true,
+     "trace": true,
+     "arrays_hash": true,
+     "wiring": true
+    }
+   ],
+   "archive": "/home/pilgrim/git/simple-learner/lab/v/catalogue_brain_20261120_action_auth.pkl",
+   "note": "historical ledger lacks motor-event sequences: event-time identity is not claimed from counts"
+  },
+  "transforms_named_fields_only": {
+   "ok": true,
+   "violations": [],
+   "configs": 81,
+   "wirings": 4
+  },
+  "observer_on_off_identical": {
+   "ok": true,
+   "cases": [
+    {
+     "case": [
+      "g1.0_t0.005_q0.15_f1.0",
+      8,
+      "red",
+      "none",
+      1,
+      "native"
+     ],
+     "identical": true,
+     "sees_wrapper_called_every_tick": true
+    },
+    {
+     "case": [
+      "g1.0_t0.005_q0.15_f1.0",
+      9,
+      null,
+      "none",
+      1,
+      "native"
+     ],
+     "identical": true,
+     "sees_wrapper_called_every_tick": true
+    },
+    {
+     "case": [
+      "g1.0_t0.005_q0.15_f1.0",
+      10,
+      "blue",
+      "no_explore",
+      1,
+      "native"
+     ],
+     "identical": true,
+     "sees_wrapper_called_every_tick": true
+    },
+    {
+     "case": [
+      "g1.0_t0.005_q0.15_f1.0",
+      11,
+      "red",
+      "no_sensory",
+      1,
+      "native"
+     ],
+     "identical": true,
+     "sees_wrapper_called_every_tick": true
+    },
+    {
+     "case": [
+      "g1.0_t0.005_q0.15_f1.0",
+      8,
+      "red",
+      "none",
+      2,
+      "coupled"
+     ],
+     "identical": true,
+     "sees_wrapper_called_every_tick": true
+    },
+    {
+     "case": [
+      "g1.0_t0.005_q0.15_f1.0",
+      8,
+      "blue",
+      "none",
+      4,
+      "coupled"
+     ],
+     "identical": true,
+     "sees_wrapper_called_every_tick": true
+    },
+    {
+     "case": [
+      "g2.0_t0.0025_q0.3_f1.5",
+      12,
+      "red",
+      "none",
+      1,
+      "native"
+     ],
+     "identical": true,
+     "sees_wrapper_called_every_tick": true
+    },
+    {
+     "case": [
+      "g0.5_t0.01_q0.15_f0.75",
+      12,
+      "red",
+      "none",
+      1,
+      "native"
+     ],
+     "identical": true,
+     "sees_wrapper_called_every_tick": true
+    },
+    {
+     "case": [
+      "g1.0_t0.005_q0.225_f1.0",
+      12,
+      "red",
+      "none",
+      1,
+      "native"
+     ],
+     "identical": true,
+     "sees_wrapper_called_every_tick": true
+    },
+    {
+     "case": [
+      "g2.0_t0.0025_q0.3_f1.5",
+      13,
+      "blue",
+      "none",
+      4,
+      "coupled"
+     ],
+     "identical": true,
+     "sees_wrapper_called_every_tick": true
+    }
+   ],
+   "seconds_each": 20.0
+  },
+  "adapter_equals_circuit_run": {
+   "ok": true,
+   "cases": [
+    {
+     "config": "g1.0_t0.005_q0.15_f1.0",
+     "identical": true
+    },
+    {
+     "config": "g2.0_t0.0025_q0.3_f1.5",
+     "identical": true
+    }
+   ],
+   "ticks": 300
+  },
+  "identical_arm_reproduction": {
+   "ok": true,
+   "job": "check|g2.0_t0.0025_q0.3_f1.5|informed|none|14|red|None|r1|native"
+  },
+  "removal_keeps_surviving_draws_and_noise": {
+   "ok": true,
+   "configs": [
+    "g1.0_t0.005_q0.15_f1.0",
+    "g2.0_t0.0025_q0.3_f1.5",
+    "g0.5_t0.01_q0.15_f0.75",
+    "g1.0_t0.005_q0.225_f1.0"
+   ]
+  },
+  "event_buffer_overflow_detected": {
+   "ok": true,
+   "note": "every job row records overflow; any True invalidates that job"
+  },
+  "fixture_no_meal": {
+   "ok": true
+  },
+  "fixture_zero_poison": {
+   "ok": true
+  },
+  "fixture_final_third_boundaries": {
+   "ok": true,
+   "note": "tick 6666 (66.66 s) outside [200/3,100); 6667 inside"
+  },
+  "fixture_duplicate_missing_extra_rows": {
+   "ok": true
+  },
+  "fixture_held_positive_one_event": {
+   "ok": true,
+   "events": 1,
+   "rearms": 0,
+   "unarmed_substeps": 7970,
+   "event_step": 30,
+   "seconds": 1.0
+  },
+  "unarmed_accounting": {
+   "ok": true,
+   "life": {
+    "M0": {
+     "events": 340,
+     "rearms": 339,
+     "first_event_s": 0.3125,
+     "high_s": 36.65775,
+     "unarmed_s": 39.448875,
+     "longest_unarmed_s": 0.2115,
+     "unarmed_from_intervals_s": 39.448875,
+     "censored_open_interval": true
+    },
+    "M1": {
+     "events": 413,
+     "rearms": 413,
+     "first_event_s": 0.018125,
+     "high_s": 43.33875,
+     "unarmed_s": 46.25,
+     "longest_unarmed_s": 0.213,
+     "unarmed_from_intervals_s": 46.25,
+     "censored_open_interval": false
+    }
+   }
+  },
+  "fixture_ranking_tiebreak": {
+   "ok": true,
+   "ranked": [
+    "d",
+    "c",
+    "a",
+    "b"
+   ]
+  },
+  "coupled_noise_summation": {
+   "ok": true,
+   "std": [
+    1.0010971266468058,
+    1.0059460102513613,
+    1.008136792044653
+   ]
+  },
+  "no_hidden_labels_reach_brain": {
+   "ok": true,
+   "forbidden_found": [],
+   "calls": [
+    "step",
+    "stimulate",
+    "taste"
+   ],
+   "note": "taste is withheld in every grid life (learning=False); the spy life has learning on only to show taste would be the only other call"
+  }
+ },
+ "seconds": 23.52909564971924,
+ "code": {
+  "ag_analysis.py": "fdbd939fb866289fe286290d16f2c97744658b7ba59fbc53e51f1ed2783c6dbd",
+  "ag_checks.py": "aa8f7c3644b279390717ba7575f94df01a795deac8e6e97ef3909c698e7fd316",
+  "ag_engine.py": "638c3f3cbb8b83cfe726bcc59099a6740cf9279c361e6e23cea703537df160c3",
+  "ag_jobs.py": "ade6515ed1e4f3e23dce260ec1982dd4b7b54bfaacec9256219c45f391375222",
+  "ag_seeds.py": "eb22646454e3bbdaf55927e533cb92d9c11f113e3d8ede4a5d247eaae2464797",
+  "run.py": "f2ecc08069489d97c7a01710d59bdd1765deab0ecb7dc4d90bf7fe1eb801665b",
+  "variants.py": "9484a30df535f64c796a637cd1f13cecbfc245bc3b690ae7440567392b0157f7"
+ }
+}

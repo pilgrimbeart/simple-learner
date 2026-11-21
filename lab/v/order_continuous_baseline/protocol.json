@@ -1,0 +1,23 @@
+{
+  "taus_s": [
+    0.15,
+    1.0,
+    3.8585074308112732
+  ],
+  "initialisations": [
+    "random",
+    "informed"
+  ],
+  "readout_errors_V": [
+    -0.03,
+    0.0,
+    0.03
+  ],
+  "positive_near_priors": [
+    0.5,
+    0.8
+  ],
+  "source": "/home/pilgrim/git/simple-learner/lab/v/motifs/order_v2/confirm.jsonl",
+  "budget_s": 180,
+  "scope": "Isolated-history linear reference with explicit startup/error probes; no noisy-circuit or learning claim"
+}

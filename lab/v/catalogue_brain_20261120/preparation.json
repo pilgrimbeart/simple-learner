@@ -1,0 +1,61 @@
+{
+  "revision": "5700eaa0d397e1a7dc055ce69ce9ec7e1d32cc7f",
+  "hashes": {
+    "lab/catalogue_brain_20261120/design.py": "461c58b62a2a9f5e156682a8046133c5730b1ec5e09e6f6e2ff784281855c931",
+    "lab/catalogue_brain_20261120/DESIGN.md": "1cfa0eafee2c2bc59740c8a24f34bbd57afb2c0bef17af320fbd77530d30611f",
+    "lab/catalogue_brain_20261120/prepare.py": "628a1b218739f2b44b957d6aab7501cf59197ff9cd69f65d105ca3f5e8909ff3",
+    "lab/WORK_ORDER_2026-11-20_catalogue_brain.md": "1f25e6f67437893ceb0a43058b4674df7480e050e9783c5eef264d9acab2b465",
+    "mixed_feedback.py": "06157fe5e3532c625ba1494e4d23328b9988041e80c5469b2de2e94d3582131e",
+    "units.py": "dfdd23e62a79251c579cc8d43badea5894cd167d1f6229a560bd83fb0b2bf1e8",
+    "chip.py": "d0014cd1ab350ada938ee75f12a12445236895f13a451afd9a70aec0db29d037",
+    "creature.py": "a0d2cb7c5a4ddbe5d99188a6043d91d6cf1e159194a02d60fee154b89e53463f",
+    "world.py": "b64322bee1812eb24aa8467e080534e4d98cc02ead69d8412ea7f5cbc1fdf417"
+  },
+  "checks": [
+    {
+      "nodes": 15,
+      "retained": 4,
+      "connections": 22,
+      "implicit_filters": 0,
+      "limitation": "Static nominal limits only; mismatch, aggregate slew, dynamics, cost and behaviour require execution."
+    },
+    {
+      "nodes": 15,
+      "retained": 4,
+      "connections": 22,
+      "implicit_filters": 0,
+      "limitation": "Static nominal limits only; mismatch, aggregate slew, dynamics, cost and behaviour require execution."
+    },
+    {
+      "nodes": 15,
+      "retained": 4,
+      "connections": 22,
+      "implicit_filters": 0,
+      "limitation": "Static nominal limits only; mismatch, aggregate slew, dynamics, cost and behaviour require execution."
+    },
+    {
+      "nodes": 15,
+      "retained": 4,
+      "connections": 22,
+      "implicit_filters": 0,
+      "limitation": "Static nominal limits only; mismatch, aggregate slew, dynamics, cost and behaviour require execution."
+    }
+  ],
+  "nominal_parts": {
+    "T": 770,
+    "R": 97,
+    "C": 27,
+    "D": 6,
+    "sources": 88
+  },
+  "estimates": {
+    "sensor_peak_V": 0.3981585904714712,
+    "passive_input_sigma_V": 2.878175463726977e-05
+  },
+  "limitations": [
+    "No simulation or reward observed",
+    "Nominal static checks only",
+    "Existing cost model; memory write supply energy unmeasured",
+    "Runner, adapter and benches are executor deliverables"
+  ]
+}

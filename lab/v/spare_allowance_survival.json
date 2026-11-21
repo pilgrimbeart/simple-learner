@@ -1,0 +1,1107 @@
+{
+ "lives": 40,
+ "identity_failures": [],
+ "seq": {
+  "allowance-only transfer": {
+   "units": 1325,
+   "per_life_mean": 66.25,
+   "alive_at_end": 0.0369811320754717,
+   "median_survival_s": 9.148335226474615,
+   "mean_survival_s": 34.25725817198767,
+   "ever_predicted": 0.6445283018867924,
+   "scored_forecasts_mean": 6.32377358490566,
+   "scored_forecasts_per_predicting_unit": 9.811475409836065,
+   "bits_saved_total_per_life": -9.6892580161751,
+   "bits_saved_per_scored_forecast": -0.02312748064488626,
+   "share_predicting_units_net_positive": 0.41451990632318503,
+   "born_before_last_third": 1315,
+   "born_before_last_third_ever_predicted": 0.6471482889733841,
+   "by_family": {
+    "event": 155,
+    "clock": 458,
+    "integrator": 699,
+    "rhythm": 13
+   },
+   "per_life": [
+    {
+     "seed": 142000,
+     "first": "red",
+     "units": 66,
+     "ever_predicted": 49,
+     "alive_at_end": 0,
+     "bits": -13.007741905344288
+    },
+    {
+     "seed": 142000,
+     "first": "blue",
+     "units": 65,
+     "ever_predicted": 44,
+     "alive_at_end": 0,
+     "bits": 13.97604707511344
+    },
+    {
+     "seed": 142001,
+     "first": "red",
+     "units": 68,
+     "ever_predicted": 45,
+     "alive_at_end": 1,
+     "bits": -14.598453624198154
+    },
+    {
+     "seed": 142001,
+     "first": "blue",
+     "units": 66,
+     "ever_predicted": 48,
+     "alive_at_end": 0,
+     "bits": -11.888669408833128
+    },
+    {
+     "seed": 142002,
+     "first": "red",
+     "units": 63,
+     "ever_predicted": 21,
+     "alive_at_end": 0,
+     "bits": -3.36773562293248
+    },
+    {
+     "seed": 142002,
+     "first": "blue",
+     "units": 64,
+     "ever_predicted": 49,
+     "alive_at_end": 1,
+     "bits": -21.618870047057868
+    },
+    {
+     "seed": 142003,
+     "first": "red",
+     "units": 82,
+     "ever_predicted": 60,
+     "alive_at_end": 2,
+     "bits": -17.16512444068165
+    },
+    {
+     "seed": 142003,
+     "first": "blue",
+     "units": 62,
+     "ever_predicted": 30,
+     "alive_at_end": 1,
+     "bits": -10.58883793894763
+    },
+    {
+     "seed": 142004,
+     "first": "red",
+     "units": 94,
+     "ever_predicted": 51,
+     "alive_at_end": 3,
+     "bits": 2.0536892473092196
+    },
+    {
+     "seed": 142004,
+     "first": "blue",
+     "units": 79,
+     "ever_predicted": 59,
+     "alive_at_end": 3,
+     "bits": 28.562060823423092
+    },
+    {
+     "seed": 142005,
+     "first": "red",
+     "units": 47,
+     "ever_predicted": 30,
+     "alive_at_end": 1,
+     "bits": -23.61393857572259
+    },
+    {
+     "seed": 142005,
+     "first": "blue",
+     "units": 60,
+     "ever_predicted": 47,
+     "alive_at_end": 3,
+     "bits": -43.2953108476443
+    },
+    {
+     "seed": 142006,
+     "first": "red",
+     "units": 51,
+     "ever_predicted": 28,
+     "alive_at_end": 4,
+     "bits": -5.538248009725006
+    },
+    {
+     "seed": 142006,
+     "first": "blue",
+     "units": 55,
+     "ever_predicted": 26,
+     "alive_at_end": 4,
+     "bits": -9.641999949076657
+    },
+    {
+     "seed": 142007,
+     "first": "red",
+     "units": 63,
+     "ever_predicted": 40,
+     "alive_at_end": 1,
+     "bits": -23.4522099354378
+    },
+    {
+     "seed": 142007,
+     "first": "blue",
+     "units": 74,
+     "ever_predicted": 57,
+     "alive_at_end": 1,
+     "bits": -29.715909737863957
+    },
+    {
+     "seed": 142008,
+     "first": "red",
+     "units": 74,
+     "ever_predicted": 47,
+     "alive_at_end": 4,
+     "bits": 7.186466818889366
+    },
+    {
+     "seed": 142008,
+     "first": "blue",
+     "units": 82,
+     "ever_predicted": 61,
+     "alive_at_end": 12,
+     "bits": -7.342335740957577
+    },
+    {
+     "seed": 142009,
+     "first": "red",
+     "units": 77,
+     "ever_predicted": 46,
+     "alive_at_end": 7,
+     "bits": -4.834530242641274
+    },
+    {
+     "seed": 142009,
+     "first": "blue",
+     "units": 33,
+     "ever_predicted": 16,
+     "alive_at_end": 1,
+     "bits": -5.893508261172724
+    }
+   ]
+  },
+  "transfer with deletion": {
+   "units": 5729,
+   "per_life_mean": 286.45,
+   "alive_at_end": 0.10054110665037529,
+   "median_survival_s": 7.240911252425441,
+   "mean_survival_s": 24.086437614157592,
+   "ever_predicted": 0.5896316983766801,
+   "scored_forecasts_mean": 3.363763309478094,
+   "scored_forecasts_per_predicting_unit": 5.7048549437537,
+   "bits_saved_total_per_life": -50.21485386385889,
+   "bits_saved_per_scored_forecast": -0.05211442464206205,
+   "share_predicting_units_net_positive": 0.3872113676731794,
+   "born_before_last_third": 3810,
+   "born_before_last_third_ever_predicted": 0.6412073490813648,
+   "by_family": {
+    "event": 750,
+    "clock": 1779,
+    "integrator": 1826,
+    "rhythm": 1374
+   },
+   "per_life": [
+    {
+     "seed": 142000,
+     "first": "red",
+     "units": 267,
+     "ever_predicted": 140,
+     "alive_at_end": 71,
+     "bits": -28.804020773091704
+    },
+    {
+     "seed": 142000,
+     "first": "blue",
+     "units": 364,
+     "ever_predicted": 181,
+     "alive_at_end": 77,
+     "bits": -29.003329865092162
+    },
+    {
+     "seed": 142001,
+     "first": "red",
+     "units": 380,
+     "ever_predicted": 214,
+     "alive_at_end": 24,
+     "bits": -97.91153394973364
+    },
+    {
+     "seed": 142001,
+     "first": "blue",
+     "units": 383,
+     "ever_predicted": 249,
+     "alive_at_end": 31,
+     "bits": -64.98682557992717
+    },
+    {
+     "seed": 142002,
+     "first": "red",
+     "units": 349,
+     "ever_predicted": 202,
+     "alive_at_end": 19,
+     "bits": -15.248349575670083
+    },
+    {
+     "seed": 142002,
+     "first": "blue",
+     "units": 346,
+     "ever_predicted": 190,
+     "alive_at_end": 21,
+     "bits": -49.64711976370852
+    },
+    {
+     "seed": 142003,
+     "first": "red",
+     "units": 194,
+     "ever_predicted": 81,
+     "alive_at_end": 10,
+     "bits": -51.6664970378868
+    },
+    {
+     "seed": 142003,
+     "first": "blue",
+     "units": 207,
+     "ever_predicted": 82,
+     "alive_at_end": 20,
+     "bits": -36.95909559342573
+    },
+    {
+     "seed": 142004,
+     "first": "red",
+     "units": 334,
+     "ever_predicted": 226,
+     "alive_at_end": 29,
+     "bits": -83.59370710621648
+    },
+    {
+     "seed": 142004,
+     "first": "blue",
+     "units": 436,
+     "ever_predicted": 316,
+     "alive_at_end": 29,
+     "bits": -52.964310632135444
+    },
+    {
+     "seed": 142005,
+     "first": "red",
+     "units": 170,
+     "ever_predicted": 88,
+     "alive_at_end": 20,
+     "bits": -57.68042690821919
+    },
+    {
+     "seed": 142005,
+     "first": "blue",
+     "units": 177,
+     "ever_predicted": 98,
+     "alive_at_end": 23,
+     "bits": -55.575335039921164
+    },
+    {
+     "seed": 142006,
+     "first": "red",
+     "units": 113,
+     "ever_predicted": 70,
+     "alive_at_end": 15,
+     "bits": -31.869789405086014
+    },
+    {
+     "seed": 142006,
+     "first": "blue",
+     "units": 196,
+     "ever_predicted": 83,
+     "alive_at_end": 28,
+     "bits": -15.554634578391743
+    },
+    {
+     "seed": 142007,
+     "first": "red",
+     "units": 229,
+     "ever_predicted": 132,
+     "alive_at_end": 15,
+     "bits": -37.455113111388805
+    },
+    {
+     "seed": 142007,
+     "first": "blue",
+     "units": 228,
+     "ever_predicted": 96,
+     "alive_at_end": 13,
+     "bits": -32.032697460142494
+    },
+    {
+     "seed": 142008,
+     "first": "red",
+     "units": 411,
+     "ever_predicted": 290,
+     "alive_at_end": 21,
+     "bits": -44.342042023432676
+    },
+    {
+     "seed": 142008,
+     "first": "blue",
+     "units": 578,
+     "ever_predicted": 438,
+     "alive_at_end": 47,
+     "bits": -185.24629032899244
+    },
+    {
+     "seed": 142009,
+     "first": "red",
+     "units": 197,
+     "ever_predicted": 103,
+     "alive_at_end": 28,
+     "bits": -9.711910858970153
+    },
+    {
+     "seed": 142009,
+     "first": "blue",
+     "units": 170,
+     "ever_predicted": 99,
+     "alive_at_end": 35,
+     "bits": -24.044047685745394
+    }
+   ]
+  },
+  "within allowance": {
+   "units": 73566,
+   "per_life_mean": 3678.3,
+   "alive_at_end": 0.03704156811570562,
+   "median_survival_s": 0.5700026127789215,
+   "mean_survival_s": 7.964666262079242,
+   "ever_predicted": 0.39453008183128074,
+   "scored_forecasts_mean": 1.301565940787864,
+   "scored_forecasts_per_predicting_unit": 3.2990283902976847,
+   "bits_saved_total_per_life": -346.084477216698,
+   "bits_saved_per_scored_forecast": -0.07228843087105054,
+   "share_predicting_units_net_positive": 0.40873070562293273,
+   "born_before_last_third": 48431,
+   "born_before_last_third_ever_predicted": 0.4097582127149966,
+   "by_family": {
+    "event": 5949,
+    "clock": 18718,
+    "integrator": 40529,
+    "rhythm": 8370
+   },
+   "per_life": [
+    {
+     "seed": 142000,
+     "first": "red",
+     "units": 2758,
+     "ever_predicted": 1095,
+     "alive_at_end": 97,
+     "bits": -216.94906277147203
+    },
+    {
+     "seed": 142000,
+     "first": "blue",
+     "units": 2908,
+     "ever_predicted": 1438,
+     "alive_at_end": 91,
+     "bits": -247.98114762264098
+    },
+    {
+     "seed": 142001,
+     "first": "red",
+     "units": 3045,
+     "ever_predicted": 1176,
+     "alive_at_end": 143,
+     "bits": -74.35930789095049
+    },
+    {
+     "seed": 142001,
+     "first": "blue",
+     "units": 3541,
+     "ever_predicted": 1320,
+     "alive_at_end": 137,
+     "bits": -200.50923302310593
+    },
+    {
+     "seed": 142002,
+     "first": "red",
+     "units": 3289,
+     "ever_predicted": 1522,
+     "alive_at_end": 149,
+     "bits": -332.8224610131035
+    },
+    {
+     "seed": 142002,
+     "first": "blue",
+     "units": 3897,
+     "ever_predicted": 1847,
+     "alive_at_end": 146,
+     "bits": -258.9585479239862
+    },
+    {
+     "seed": 142003,
+     "first": "red",
+     "units": 5327,
+     "ever_predicted": 2006,
+     "alive_at_end": 156,
+     "bits": -654.6246754382619
+    },
+    {
+     "seed": 142003,
+     "first": "blue",
+     "units": 4698,
+     "ever_predicted": 1586,
+     "alive_at_end": 147,
+     "bits": -540.6103930113892
+    },
+    {
+     "seed": 142004,
+     "first": "red",
+     "units": 1978,
+     "ever_predicted": 1036,
+     "alive_at_end": 136,
+     "bits": 115.36219686027273
+    },
+    {
+     "seed": 142004,
+     "first": "blue",
+     "units": 2345,
+     "ever_predicted": 1480,
+     "alive_at_end": 136,
+     "bits": -39.54101486645397
+    },
+    {
+     "seed": 142005,
+     "first": "red",
+     "units": 5128,
+     "ever_predicted": 1885,
+     "alive_at_end": 147,
+     "bits": -713.6502701282911
+    },
+    {
+     "seed": 142005,
+     "first": "blue",
+     "units": 4064,
+     "ever_predicted": 1444,
+     "alive_at_end": 142,
+     "bits": -660.6799234860415
+    },
+    {
+     "seed": 142006,
+     "first": "red",
+     "units": 4901,
+     "ever_predicted": 1719,
+     "alive_at_end": 149,
+     "bits": -577.3245165542855
+    },
+    {
+     "seed": 142006,
+     "first": "blue",
+     "units": 3669,
+     "ever_predicted": 1205,
+     "alive_at_end": 136,
+     "bits": -411.2289490816166
+    },
+    {
+     "seed": 142007,
+     "first": "red",
+     "units": 4379,
+     "ever_predicted": 1579,
+     "alive_at_end": 147,
+     "bits": -520.3812457854514
+    },
+    {
+     "seed": 142007,
+     "first": "blue",
+     "units": 4534,
+     "ever_predicted": 1554,
+     "alive_at_end": 154,
+     "bits": -412.4828878549704
+    },
+    {
+     "seed": 142008,
+     "first": "red",
+     "units": 3153,
+     "ever_predicted": 1324,
+     "alive_at_end": 142,
+     "bits": -68.20861892501503
+    },
+    {
+     "seed": 142008,
+     "first": "blue",
+     "units": 2616,
+     "ever_predicted": 1031,
+     "alive_at_end": 109,
+     "bits": 19.51336226483814
+    },
+    {
+     "seed": 142009,
+     "first": "red",
+     "units": 3372,
+     "ever_predicted": 1361,
+     "alive_at_end": 133,
+     "bits": -643.7202490353209
+    },
+    {
+     "seed": 142009,
+     "first": "blue",
+     "units": 3964,
+     "ever_predicted": 1416,
+     "alive_at_end": 128,
+     "bits": -482.5325990467147
+    }
+   ]
+  }
+ },
+ "time": {
+  "allowance-only transfer": {
+   "units": 1237,
+   "per_life_mean": 61.85,
+   "alive_at_end": 0.012934518997574777,
+   "median_survival_s": 9.00495997525752,
+   "mean_survival_s": 90.94912162199093,
+   "ever_predicted": 0.6216653193209377,
+   "scored_forecasts_mean": 5.487469684721099,
+   "scored_forecasts_per_predicting_unit": 8.82704811443433,
+   "bits_saved_total_per_life": 1.632839723145048,
+   "bits_saved_per_scored_forecast": 0.004810959702843395,
+   "share_predicting_units_net_positive": 0.576072821846554,
+   "born_before_last_third": 1237,
+   "born_before_last_third_ever_predicted": 0.6216653193209377,
+   "by_family": {
+    "event": 138,
+    "clock": 443,
+    "integrator": 656,
+    "rhythm": 0
+   },
+   "per_life": [
+    {
+     "seed": 142000,
+     "first": "red",
+     "units": 57,
+     "ever_predicted": 42,
+     "alive_at_end": 0,
+     "bits": -91.41322424537402
+    },
+    {
+     "seed": 142000,
+     "first": "blue",
+     "units": 67,
+     "ever_predicted": 47,
+     "alive_at_end": 1,
+     "bits": 19.832367967541625
+    },
+    {
+     "seed": 142001,
+     "first": "red",
+     "units": 69,
+     "ever_predicted": 40,
+     "alive_at_end": 0,
+     "bits": 12.757497866096488
+    },
+    {
+     "seed": 142001,
+     "first": "blue",
+     "units": 83,
+     "ever_predicted": 50,
+     "alive_at_end": 1,
+     "bits": 36.98449396963047
+    },
+    {
+     "seed": 142002,
+     "first": "red",
+     "units": 50,
+     "ever_predicted": 32,
+     "alive_at_end": 0,
+     "bits": 4.03870856038605
+    },
+    {
+     "seed": 142002,
+     "first": "blue",
+     "units": 51,
+     "ever_predicted": 33,
+     "alive_at_end": 1,
+     "bits": 20.149571783099066
+    },
+    {
+     "seed": 142003,
+     "first": "red",
+     "units": 63,
+     "ever_predicted": 48,
+     "alive_at_end": 2,
+     "bits": -23.362689331681437
+    },
+    {
+     "seed": 142003,
+     "first": "blue",
+     "units": 58,
+     "ever_predicted": 39,
+     "alive_at_end": 2,
+     "bits": -29.277301245732513
+    },
+    {
+     "seed": 142004,
+     "first": "red",
+     "units": 47,
+     "ever_predicted": 34,
+     "alive_at_end": 0,
+     "bits": 19.486954379492627
+    },
+    {
+     "seed": 142004,
+     "first": "blue",
+     "units": 52,
+     "ever_predicted": 37,
+     "alive_at_end": 1,
+     "bits": 6.529119128318251
+    },
+    {
+     "seed": 142005,
+     "first": "red",
+     "units": 64,
+     "ever_predicted": 35,
+     "alive_at_end": 1,
+     "bits": 7.534480190646207
+    },
+    {
+     "seed": 142005,
+     "first": "blue",
+     "units": 62,
+     "ever_predicted": 43,
+     "alive_at_end": 0,
+     "bits": -22.04406704839979
+    },
+    {
+     "seed": 142006,
+     "first": "red",
+     "units": 68,
+     "ever_predicted": 39,
+     "alive_at_end": 4,
+     "bits": -47.77774019268954
+    },
+    {
+     "seed": 142006,
+     "first": "blue",
+     "units": 64,
+     "ever_predicted": 35,
+     "alive_at_end": 0,
+     "bits": 25.85736193497748
+    },
+    {
+     "seed": 142007,
+     "first": "red",
+     "units": 81,
+     "ever_predicted": 51,
+     "alive_at_end": 1,
+     "bits": 12.50305017571484
+    },
+    {
+     "seed": 142007,
+     "first": "blue",
+     "units": 62,
+     "ever_predicted": 41,
+     "alive_at_end": 0,
+     "bits": 19.658118901254547
+    },
+    {
+     "seed": 142008,
+     "first": "red",
+     "units": 63,
+     "ever_predicted": 34,
+     "alive_at_end": 1,
+     "bits": 11.095323921286951
+    },
+    {
+     "seed": 142008,
+     "first": "blue",
+     "units": 66,
+     "ever_predicted": 37,
+     "alive_at_end": 0,
+     "bits": 5.595329402008101
+    },
+    {
+     "seed": 142009,
+     "first": "red",
+     "units": 55,
+     "ever_predicted": 17,
+     "alive_at_end": 1,
+     "bits": 20.93876610885496
+    },
+    {
+     "seed": 142009,
+     "first": "blue",
+     "units": 55,
+     "ever_predicted": 35,
+     "alive_at_end": 0,
+     "bits": 23.570672237470582
+    }
+   ]
+  },
+  "transfer with deletion": {
+   "units": 5366,
+   "per_life_mean": 268.3,
+   "alive_at_end": 0.018449496831904586,
+   "median_survival_s": 11.682350040749508,
+   "mean_survival_s": 110.46620316150091,
+   "ever_predicted": 0.7532612746925084,
+   "scored_forecasts_mean": 6.038576220648528,
+   "scored_forecasts_per_predicting_unit": 8.016575952498764,
+   "bits_saved_total_per_life": -18.424769886304613,
+   "bits_saved_per_scored_forecast": -0.011372261757432715,
+   "share_predicting_units_net_positive": 0.4901039089559624,
+   "born_before_last_third": 5297,
+   "born_before_last_third_ever_predicted": 0.7526902020011327,
+   "by_family": {
+    "event": 961,
+    "clock": 3138,
+    "integrator": 1239,
+    "rhythm": 28
+   },
+   "per_life": [
+    {
+     "seed": 142000,
+     "first": "red",
+     "units": 229,
+     "ever_predicted": 174,
+     "alive_at_end": 5,
+     "bits": -91.4172937888285
+    },
+    {
+     "seed": 142000,
+     "first": "blue",
+     "units": 223,
+     "ever_predicted": 182,
+     "alive_at_end": 3,
+     "bits": 38.608852139462336
+    },
+    {
+     "seed": 142001,
+     "first": "red",
+     "units": 336,
+     "ever_predicted": 247,
+     "alive_at_end": 5,
+     "bits": -51.38617017547916
+    },
+    {
+     "seed": 142001,
+     "first": "blue",
+     "units": 242,
+     "ever_predicted": 185,
+     "alive_at_end": 4,
+     "bits": 5.9597781177100355
+    },
+    {
+     "seed": 142002,
+     "first": "red",
+     "units": 376,
+     "ever_predicted": 290,
+     "alive_at_end": 11,
+     "bits": 80.76279657240683
+    },
+    {
+     "seed": 142002,
+     "first": "blue",
+     "units": 240,
+     "ever_predicted": 200,
+     "alive_at_end": 8,
+     "bits": -49.20925665503573
+    },
+    {
+     "seed": 142003,
+     "first": "red",
+     "units": 281,
+     "ever_predicted": 219,
+     "alive_at_end": 4,
+     "bits": -84.17505340550031
+    },
+    {
+     "seed": 142003,
+     "first": "blue",
+     "units": 288,
+     "ever_predicted": 203,
+     "alive_at_end": 3,
+     "bits": 3.2946925964814233
+    },
+    {
+     "seed": 142004,
+     "first": "red",
+     "units": 291,
+     "ever_predicted": 216,
+     "alive_at_end": 6,
+     "bits": 81.18146402549951
+    },
+    {
+     "seed": 142004,
+     "first": "blue",
+     "units": 382,
+     "ever_predicted": 301,
+     "alive_at_end": 15,
+     "bits": -409.01548188754134
+    },
+    {
+     "seed": 142005,
+     "first": "red",
+     "units": 274,
+     "ever_predicted": 196,
+     "alive_at_end": 2,
+     "bits": 58.05779553517556
+    },
+    {
+     "seed": 142005,
+     "first": "blue",
+     "units": 240,
+     "ever_predicted": 173,
+     "alive_at_end": 2,
+     "bits": -45.41373836324244
+    },
+    {
+     "seed": 142006,
+     "first": "red",
+     "units": 232,
+     "ever_predicted": 174,
+     "alive_at_end": 4,
+     "bits": 12.429247647919698
+    },
+    {
+     "seed": 142006,
+     "first": "blue",
+     "units": 203,
+     "ever_predicted": 135,
+     "alive_at_end": 0,
+     "bits": 27.758389712146876
+    },
+    {
+     "seed": 142007,
+     "first": "red",
+     "units": 218,
+     "ever_predicted": 158,
+     "alive_at_end": 5,
+     "bits": 130.4053733880172
+    },
+    {
+     "seed": 142007,
+     "first": "blue",
+     "units": 279,
+     "ever_predicted": 225,
+     "alive_at_end": 5,
+     "bits": 95.73665558191006
+    },
+    {
+     "seed": 142008,
+     "first": "red",
+     "units": 238,
+     "ever_predicted": 161,
+     "alive_at_end": 5,
+     "bits": 10.520533440223982
+    },
+    {
+     "seed": 142008,
+     "first": "blue",
+     "units": 210,
+     "ever_predicted": 151,
+     "alive_at_end": 2,
+     "bits": -5.356421529987545
+    },
+    {
+     "seed": 142009,
+     "first": "red",
+     "units": 330,
+     "ever_predicted": 265,
+     "alive_at_end": 7,
+     "bits": -148.6169248266925
+    },
+    {
+     "seed": 142009,
+     "first": "blue",
+     "units": 254,
+     "ever_predicted": 187,
+     "alive_at_end": 3,
+     "bits": -28.620635850738196
+    }
+   ]
+  },
+  "within allowance": {
+   "units": 319719,
+   "per_life_mean": 15985.95,
+   "alive_at_end": 0.010149537562672221,
+   "median_survival_s": 4.069365506092254,
+   "mean_survival_s": 26.339112077143483,
+   "ever_predicted": 0.7381388031365043,
+   "scored_forecasts_mean": 2.660723948217028,
+   "scored_forecasts_per_predicting_unit": 3.6046390420217205,
+   "bits_saved_total_per_life": 4154.367303118168,
+   "bits_saved_per_scored_forecast": 0.09767122228978488,
+   "share_predicting_units_net_positive": 0.5752064644889554,
+   "born_before_last_third": 213562,
+   "born_before_last_third_ever_predicted": 0.7353040334891039,
+   "by_family": {
+    "event": 46833,
+    "clock": 251598,
+    "integrator": 15515,
+    "rhythm": 5773
+   },
+   "per_life": [
+    {
+     "seed": 142000,
+     "first": "red",
+     "units": 14818,
+     "ever_predicted": 11130,
+     "alive_at_end": 163,
+     "bits": 2652.6275404958456
+    },
+    {
+     "seed": 142000,
+     "first": "blue",
+     "units": 17512,
+     "ever_predicted": 13500,
+     "alive_at_end": 164,
+     "bits": 2360.9624586104087
+    },
+    {
+     "seed": 142001,
+     "first": "red",
+     "units": 16258,
+     "ever_predicted": 11448,
+     "alive_at_end": 163,
+     "bits": 4433.672405967087
+    },
+    {
+     "seed": 142001,
+     "first": "blue",
+     "units": 18849,
+     "ever_predicted": 13087,
+     "alive_at_end": 163,
+     "bits": 6184.696849878101
+    },
+    {
+     "seed": 142002,
+     "first": "red",
+     "units": 15314,
+     "ever_predicted": 11996,
+     "alive_at_end": 157,
+     "bits": 2984.050534826598
+    },
+    {
+     "seed": 142002,
+     "first": "blue",
+     "units": 13769,
+     "ever_predicted": 11759,
+     "alive_at_end": 159,
+     "bits": 4219.061869453258
+    },
+    {
+     "seed": 142003,
+     "first": "red",
+     "units": 15185,
+     "ever_predicted": 11090,
+     "alive_at_end": 162,
+     "bits": 4904.172271361873
+    },
+    {
+     "seed": 142003,
+     "first": "blue",
+     "units": 18055,
+     "ever_predicted": 11561,
+     "alive_at_end": 163,
+     "bits": 4825.6232297091055
+    },
+    {
+     "seed": 142004,
+     "first": "red",
+     "units": 9153,
+     "ever_predicted": 7080,
+     "alive_at_end": 162,
+     "bits": 1739.537755687369
+    },
+    {
+     "seed": 142004,
+     "first": "blue",
+     "units": 8051,
+     "ever_predicted": 5330,
+     "alive_at_end": 152,
+     "bits": 1527.819974197605
+    },
+    {
+     "seed": 142005,
+     "first": "red",
+     "units": 18070,
+     "ever_predicted": 12392,
+     "alive_at_end": 165,
+     "bits": 5669.884798277761
+    },
+    {
+     "seed": 142005,
+     "first": "blue",
+     "units": 19986,
+     "ever_predicted": 15358,
+     "alive_at_end": 166,
+     "bits": 7066.799530792329
+    },
+    {
+     "seed": 142006,
+     "first": "red",
+     "units": 15100,
+     "ever_predicted": 11991,
+     "alive_at_end": 160,
+     "bits": 5226.146117873408
+    },
+    {
+     "seed": 142006,
+     "first": "blue",
+     "units": 21921,
+     "ever_predicted": 15855,
+     "alive_at_end": 168,
+     "bits": 4287.462711665434
+    },
+    {
+     "seed": 142007,
+     "first": "red",
+     "units": 19170,
+     "ever_predicted": 14011,
+     "alive_at_end": 162,
+     "bits": 6001.821698177247
+    },
+    {
+     "seed": 142007,
+     "first": "blue",
+     "units": 15116,
+     "ever_predicted": 11008,
+     "alive_at_end": 163,
+     "bits": 4684.696087618408
+    },
+    {
+     "seed": 142008,
+     "first": "red",
+     "units": 20463,
+     "ever_predicted": 15173,
+     "alive_at_end": 162,
+     "bits": 4281.286706465861
+    },
+    {
+     "seed": 142008,
+     "first": "blue",
+     "units": 16906,
+     "ever_predicted": 12166,
+     "alive_at_end": 166,
+     "bits": 4591.649257368882
+    },
+    {
+     "seed": 142009,
+     "first": "red",
+     "units": 11262,
+     "ever_predicted": 8470,
+     "alive_at_end": 160,
+     "bits": 2662.2863206196917
+    },
+    {
+     "seed": 142009,
+     "first": "blue",
+     "units": 14761,
+     "ever_predicted": 11592,
+     "alive_at_end": 165,
+     "bits": 2783.0879433170803
+    }
+   ]
+  }
+ },
+ "analysis_sha256": "6406f52a223bffafe7ab7d92273040ae3200b829d14872a795fdc054e4cf6a3b"
+}

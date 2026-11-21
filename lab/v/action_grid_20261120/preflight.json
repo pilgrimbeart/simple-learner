@@ -1,0 +1,21 @@
+{
+ "timing": {
+  "r1_coupled_1s": 0.01510477066040039,
+  "r2_coupled_1s": 0.02550673484802246,
+  "r4_coupled_1s": 0.0462794303894043,
+  "bench_silent_10s": 0.09225058555603027,
+  "native_100s_life_traced": 1.0777695178985596,
+  "native_100s_life": 1.0554018020629883
+ },
+ "estimate": {
+  "bench_s": 532.881553867885,
+  "develop_s": 4689.602521623884,
+  "confirm_s": 8770.52280970982,
+  "total_s": 13993.00688520159,
+  "total_with_1.25x_s": 17491.258606501986,
+  "remaining_budget_s": 42468.0,
+  "reserve_reporting_s": 5400.0,
+  "fits": true
+ },
+ "note": "bench x1.3 for the sustained schedule's pulses; confirm 1 s coupled timings x100 x1.15 for observation; all x1.25 allowance. Reward not read."
+}

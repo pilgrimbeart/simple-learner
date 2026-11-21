@@ -1,0 +1,112 @@
+{
+  "original": {
+    "single": {
+      "original_failures": 3,
+      "rescued": 0,
+      "new_failures": 0
+    },
+    "simultaneous": {
+      "original_failures": 9,
+      "rescued": 0,
+      "new_failures": 0
+    },
+    "long gap": {
+      "original_failures": 5,
+      "rescued": 0,
+      "new_failures": 0
+    },
+    "ordered pair": {
+      "original_failures": 3,
+      "rescued": 0,
+      "new_failures": 0
+    }
+  },
+  "trace_offsets": {
+    "single": {
+      "original_failures": 3,
+      "rescued": 3,
+      "new_failures": 0
+    },
+    "simultaneous": {
+      "original_failures": 9,
+      "rescued": 3,
+      "new_failures": 0
+    },
+    "long gap": {
+      "original_failures": 5,
+      "rescued": 5,
+      "new_failures": 0
+    },
+    "ordered pair": {
+      "original_failures": 3,
+      "rescued": 2,
+      "new_failures": 0
+    }
+  },
+  "detector_offsets": {
+    "single": {
+      "original_failures": 3,
+      "rescued": 1,
+      "new_failures": 0
+    },
+    "simultaneous": {
+      "original_failures": 9,
+      "rescued": 5,
+      "new_failures": 2
+    },
+    "long gap": {
+      "original_failures": 5,
+      "rescued": 0,
+      "new_failures": 1
+    },
+    "ordered pair": {
+      "original_failures": 3,
+      "rescued": 3,
+      "new_failures": 0
+    }
+  },
+  "difference_offsets": {
+    "single": {
+      "original_failures": 3,
+      "rescued": 0,
+      "new_failures": 0
+    },
+    "simultaneous": {
+      "original_failures": 9,
+      "rescued": 3,
+      "new_failures": 3
+    },
+    "long gap": {
+      "original_failures": 5,
+      "rescued": 0,
+      "new_failures": 0
+    },
+    "ordered pair": {
+      "original_failures": 3,
+      "rescued": 1,
+      "new_failures": 0
+    }
+  },
+  "connection_gains": {
+    "single": {
+      "original_failures": 3,
+      "rescued": 0,
+      "new_failures": 0
+    },
+    "simultaneous": {
+      "original_failures": 9,
+      "rescued": 7,
+      "new_failures": 0
+    },
+    "long gap": {
+      "original_failures": 5,
+      "rescued": 0,
+      "new_failures": 2
+    },
+    "ordered pair": {
+      "original_failures": 3,
+      "rescued": 3,
+      "new_failures": 0
+    }
+  }
+}

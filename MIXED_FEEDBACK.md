@@ -205,6 +205,8 @@ learns by local rules, and circuits shaped by evolution, which needs no gradient
 
 ## Learning: what the literature covers, and what it doesn't
 
+**Historical October survey; qualified by the [November catalogue review](#minimal-catalogue-review-2026-11-19) below.**
+
 - **Modulation, not learning.** In these papers the conductances are set by a designer or an external controller
   (neuromodulation); the circuits show *what modulation can do*, not how a circuit could find good settings itself.
 - **Estimation.** Adaptive observers learn a circuit's conductances from its voltage [26]: system identification,
@@ -217,6 +219,172 @@ learns by local rules, and circuits shaped by evolution, which needs no gradient
   evolution or automatic design of Ribar-Sepulchre circuits. This project works in that gap: the designed circuit (a
   three-factor rule built from the same elements, learning from one taste signal, though fragile to mismatch) and the
   minimal circuit search's circuits, found by optimisation, which learn under biological noise and mismatch.
+
+<a id="minimal-catalogue-review-2026-11-19"></a>
+## Focused review for the minimal catalogue (2026-11-19)
+
+The [three-part proposal and coverage obligations](PARTS.md#2-the-catalogue-primitives-dynamical-motifs-and-learning)
+own the current design recommendation. This section owns the source assessment. We read the indicated
+full-text sections, not every paper in full. This is a targeted review, not a systematic review or a priority claim.
+
+| primary source and reading scope | finding that affects the choice | assumptions and limitation for this project |
+|---|---|---|
+| [Ribar & Sepulchre, *Neuromorphic Control* (2021)](https://arxiv.org/pdf/2011.04441), equations 3–8, excitability/bursting construction, equations 16–19 and modulation section, PDF pp. 5–22 revisited | Filtered saturating currents implement feedback and intercell connections. Changing their strengths changes dynamical regimes. Retain this common connection mechanism. | The graphical construction uses timescale separation. Controllable dynamics do not supply a task-specific reward-learning rule. This is the 2021 framework, not a claim about every later Sepulchre paper. |
+| [Mendolia et al., *A Neuromodulable Current-Mode Silicon Neuron…*](https://arxiv.org/pdf/2512.01133), April 2026 version, §3.2 and conclusions | Fabricated circuits demonstrate spiking, bursting and modulation between them. The mixed-feedback basis has hardware evidence. | Different process/circuit from ours. Measured regimes use neuron-specific biases; mismatch yield is assessed by simulation of a revised design. Do not import power numbers or assume identical-bias robustness. |
+| [Hasler, Diorio, Minch & Mead, *Single Transistor Learning Synapses*, NIPS 1994 proceedings](https://papers.nips.cc/paper/1994/file/934815ad542a4a7c5e8a2dfa04fea9f5-Paper.pdf), pp. 1–4, array and write/read description | Retained analogue storage, signal weighting and electrical updates are established circuit functions. Memory is not a new invention required by our catalogue. | Particular learning depends on surrounding circuitry; measurements use additional programming voltages. Not a free one-transistor implementation of our whole learner, nor a replacement for the existing SONOS contract. |
+| [Righetti, Buchli & Ijspeert, *Dynamic Hebbian learning in adaptive frequency oscillators* (2006)](https://robotcub.org/misc/papers/06_Righetti_Buchli_Ijspeert.pdf), §2.1–2.2 equations and convergence assumptions | An oscillator can adjust a retained frequency variable through a phase-sensitive input interaction. Provides a concrete learned-rhythm comparison. | Hopf example uses oscillator state and an explicit update, with perturbation assumptions; multiple frequencies can select a component. Our mixed-feedback circuit must construct the corresponding signal rather than receiving phase or frequency from outside. |
+| [Florian, *Reinforcement Learning Through Modulation of Spike-Timing-Dependent Synaptic Plasticity* (2007)](https://www.florian.io/papers/2007_Florian_Modulated_STDP.pdf), §2.1–2.2 | Eligibility storage and reward-modulated parameter writing are established online-learning mechanisms; distinguish fading eligibility from retained weight. | Derivation uses a stochastic policy, a particular local eligibility estimator, timescale conditions and shared reward. A generic activity trace times taste does not inherit its convergence argument. Delivering feedback locally at scale remains our responsibility. |
+| [Mills, National Semiconductor AN-46, *The Phase Locked Loop IC as a Communication System Building Block* (1971)](https://www.ti.com/lit/an/snoa651/snoa651.pdf), basic operation, equations 1–5 | A multiplier followed by low-pass filtering supplies phase comparison; a controlled oscillator closes the loop. No need to make a whole phase-locked loop a primitive. | Sinusoidal operating argument; finite capture range, ambiguity and gain matter. Our nonnegative gate requires a constructive signed-signal implementation. |
+| [Burger, Shahhosseini & Sepulchre, *A memristive model of spatio-temporal excitability* (2025 preprint)](https://arxiv.org/pdf/2505.22269), introduction and model motivation | A common history-dependent conductance description for internal currents and connections is an existing research direction. | “Memristive” here refers to state-dependent conductance, not automatically nonvolatile parameter retention or autonomous reward learning. We did not verify all later model results. |
+| [Wu & Sepulchre, *A Scale-Space Theory of Memory* (9 Nov 2026 preprint)](https://arxiv.org/html/2611.12316v1), introduction/contribution statements | Distinguishes useful constraints on retained history from the mere existence of state; relates relaxation memory to first-order lags. | Its stated approximation result concerns nonlinear relaxation memory under additional conditions. It is not completeness for all dynamics or a finite noisy circuit-size bound; no proof audit performed here. |
+| [Haag et al., *Mixed-signal implementation of feedback-control optimizer…* (2026 preprint)](https://arxiv.org/html/2603.24113v1), methods §II-A–C and conclusion | Feedback-driven local updates are an active hardware research direction and a close alternative to reward-modulated plasticity. | This experiment supplies target spike trains and calculates updates on a host computer. It is not evidence that the chip autonomously learns from our scalar taste signal. Useful comparator, not an admissible shortcut. |
+
+**Choice and closest alternatives.** Recommend mixed-feedback nodes/connections with explicit retained storage.
+A fully equipped universal cell is a packaging alternative, not yet a smaller design. Bistable feedback could
+replace some retained memories, but analogue retention range, precision and activity would then need comparing.
+Adaptive oscillators and eligibility-based learning are benchmark assemblies to express, not additional primitive
+types. Supervised feedback-control learning needs a target unavailable at our interface. A general reservoir or
+universal-approximation theorem would not by itself demonstrate compact local in-life learning, so neither is
+being used as a completeness argument. A memristive formulation may unify notation without eliminating state.
+
+**What this project would add if successful.** A bounded, reproducible construction grammar whose measured
+repairs work in the same noisy embodied interface, followed by an explanation of what reusable local changes
+produce adaptation. We are not claiming invention of any constituent memory, oscillator, gate or learning rule.
+
+**Correction to the October survey above.** Its “what I could not find” is a historical search result, not a
+claim that the literature contains no online mixed-feedback learning. The new review narrows the question to
+which published mechanisms can be realised entirely inside this brain, with its actual observations and costs.
+
+<a id="rnn-time-stability-review-2026-11-19"></a>
+## RNNs: time, stability and online learning (2026-11-19)
+
+**Conclusion.** The proposed catalogue is closely related to continuous-time recurrent neural networks
+(CTRNNs), not a new class of recurrent dynamics. Existing work provides temporal models, stability tools,
+gated storage and online learning. The project's open question is how to assemble economical local in-life
+adaptation under its actual sensory, feedback and physical constraints. No claim of novelty follows from
+combining recurrence, time constants and memory. The [catalogue](PARTS.md#2-the-catalogue-primitives-dynamical-motifs-and-learning)
+owns construction choices; [D125](discrete/NOTEBOOK.md#d125-rnn-time-stability) owns this investigation's record.
+
+### How time is represented
+
+- **Ordinary discrete RNN:** the recurrent update is applied once per token, sample or event. In the simple
+  form `h_next = tanh(W*h + U*u + b)`, the update index does not itself specify seconds. Two identical event
+  sequences with different gaps are indistinguishable unless time enters through sampling, elapsed-time
+  inputs or dynamics between events. A fixed sampling interval supplies an implicit time scale.
+- **Continuous-time RNN:** state evolves between observations. A familiar leaky form is
+  `tau_i * dh_i/dt = -h_i + sum_j W_ij*sigma(h_j + theta_j) + input_i(t)`.
+  This is a dimensionless neural notation with `tau_i` measured in seconds. The physical catalogue uses
+  capacitor current balance with explicit volts/amperes instead. Source nonlinearities, edge filters and
+  gates make the exact topology differ, but do not remove the mathematical connection.
+- **Gated recurrence:** LSTM stores an additive state behind write/read gates. The later forget-gate version
+  controls retention. For fixed gate value `0<f<1` and interval `dt`, the homogeneous recurrence
+  `c_next=f*c` has effective decay time `-dt/log(f)` (our algebraic interpretation). Holding f fixed while
+  changing the sampling interval changes its physical memory time. State-dependent gates need not have one
+  constant timescale. The original and forget-gate papers are distinct sources below.
+- **Variable-time-constant models:** liquid time-constant networks explicitly modulate the effective decay
+  rate using state/input-dependent conductances. This is a close alternative for controllable circuit timing,
+  not proof that our engine already implements every such conductance. Their published training uses BPTT.
+
+A numerical integration step is an approximation parameter, not the circuit's clock. For a leaky node with
+held forcing, the retention factor is `exp(-dt/tau)`. Forward Euler instead uses `1-dt/tau`; even the simple
+unforced leak numerically oscillates for `tau<dt<2*tau` and diverges for `dt>2*tau`, although its exact solution
+only decays. This is our elementary diagnostic example, not a newly measured failure. Retain all existing
+step-refinement requirements. A timestamp or clock supplied in a paper does not authorise a new body signal.
+
+### “Stable” does not mean one thing
+
+**Bounded activity:** signals remain finite. Saturating outputs, restoring currents and physical rails help,
+but bounded systems can still oscillate, switch between attractors or behave chaotically. For example,
+`h_next=tanh(-2*h)` remains bounded yet has an attracting sign-alternating two-cycle: its magnitude solves
+`a=tanh(2*a)` with `a>0`. This is an analytical counterexample to equating saturation with settling.
+
+**Contraction:** two trajectories under the same input approach each other. Miller & Hardt enforce this
+for recurrent models; Lohmiller & Slotine provide continuous-time tools. For an autonomous bounded system,
+global strict contraction rules out competing persistent memories and autonomous periodic orbits. A contracting
+system can still follow a periodic *input*. It can also retain useful transient information; convergence does
+not mean immediate forgetting. It is an appropriate candidate property for some filters, not a rule for the
+whole brain. A guarantee conditional on fixed weights does not automatically include the learning dynamics.
+
+**Energy descent:** Hopfield's continuous model uses symmetric couplings and monotone responses to make a
+Lyapunov function decrease under fixed inputs. This can permit several stable memories while excluding
+nonstationary recurrent motion in that model. The energy is a mathematical function, not electrical energy
+consumption. Delays, arbitrary asymmetric coupling, changing weights and noise require separate analysis.
+
+**Stable rhythm:** a perturbation away from an attracting cycle can decay while a phase displacement persists.
+An autonomous oscillator need not return to the same time-indexed trajectory; that would impose a clock it
+does not have. Assess recovery of amplitude and period separately from phase shift/drift. Stable rhythms are
+intended behaviours in this project, not instability failures.
+
+**Trainable gradients:** avoiding exploding/vanishing derivatives concerns learning calculations. Gradient
+clipping limits an optimiser's update; it does not certify the forward circuit's dynamical stability. Gates or
+orthogonal recurrent matrices likewise do not by themselves guarantee convergence to a fixed point.
+
+**Closed-loop behaviour:** even a well-behaved module may participate in an unstable feedback loop when joined
+to other modules or to the body. Conversely, useful switching may be induced by input. Stability claims must
+name the inputs, parameter range, connected system and whether learning is active. A simulation trace alone
+cannot prove a global guarantee; common-noise paired trajectories and independent-noise trials address
+sensitivity and repeatability differently. These are proposed diagnostics, not changes to the noise model.
+
+### Reservoirs and stabilising feedback
+
+An echo-state reservoir is designed to lose dependence on its starting state when driven by an admissible
+input history. Its transient state retains input information for a learned readout. It is a useful fading-memory
+comparator, not a complete recipe for retained learning. The familiar rule “scale the recurrent matrix so its
+spectral radius is below one” is not a general nonlinear guarantee: Yildiz, Jaeger & Kiebel provide counterexamples.
+A matrix-norm contraction bound is stronger and conservative; the input domain and full transition map matter.
+
+Sussillo & Abbott's FORCE learning is particularly relevant to the oscillation question: trained feedback can
+turn chaotic activity into a desired coherent pattern, including oscillation. Their RLS implementation uses a
+matrix of activity correlations and a target trajectory, and the paper describes failure conditions. It is an
+informed comparator, not a local taste-driven learning rule we can silently import. Stabilising an operating
+trajectory is also different from removing every other attractor.
+
+### Learning while running already has a literature
+
+RTRL computes recurrent sensitivities forward in time rather than replaying an entire trajectory backwards.
+The original dense algorithm has nonlocal information requirements and roughly cubic storage and quartic
+per-update work in neuron count. It establishes online recurrence learning as prior art, but is a poor direct
+fit to this project's locality/economy requirement. It is still a possible small-network reference if needed.
+
+Jaeger's 2002 reservoir work explicitly includes online RLS readout adaptation. E-prop instead combines
+forward local eligibility traces with learning signals approximating otherwise unavailable credit. The
+2019 precursor read here still has task-dependent learning-signal pathways, and some reported experiments
+apply accumulated updates after trials; an online-computable formula is not evidence that every experiment
+updates continuously. The 2020 paper's primary abstract/figure captions were checked, not its inaccessible
+full text. Do not transfer a theorem or an experimental protocol between these versions without checking.
+
+The architecture/training distinction matters throughout: continuous state evolution is not necessarily
+parameter learning; fixed-weight state can nevertheless retain acquired information and change behaviour.
+BPTT is a training method, not a mandatory property of RNNs. An offline-trained or evolved circuit can learn
+within a life through its states; a self-modifying circuit must additionally expose all of its update machinery.
+Our requirement is the actual in-life behaviour and information path, not a claim that existing RNNs cannot learn online.
+
+### Sources, reading depth and limits
+
+Primary papers were read at the indicated scope; no exhaustive survey or complete proof audit is claimed.
+
+| source | checked scope and why it matters |
+|---|---|
+| [Beer (1995), *On the Dynamics of Small Continuous-Time Recurrent Neural Networks*](https://doi.org/10.1177/105971239500300405) | Publisher abstract only this turn: small CTRNN dynamical regimes and bifurcations. Do not claim a full reread. Existing evolutionary-robotics notes below remain relevant. |
+| [Funahashi & Nakamura (1993)](https://doi.org/10.1016/S0893-6080(05)80125-X) | Primary abstract: finite-time trajectory approximation with hidden units and suitable initial condition. Not a compact noisy-circuit bound or a learning rule. |
+| [Hochreiter & Schmidhuber (1997), *Long Short-Term Memory*](https://deeplearning.cs.cmu.edu/S23/document/readings/LSTM.pdf) | Introduction and §4 memory-cell construction: retained additive state with multiplicative input/output gates; motivation concerns gradient propagation. No universal forward-stability guarantee. |
+| [Gers, Schmidhuber & Cummins (2000), *Learning to Forget*](https://doi.org/10.1162/089976600300015015) | Publisher abstract checked: forget gates address continual streams without prescribed resets. Author PDF text extraction was unreadable; no full-text claim. |
+| [Hasani et al. (2021), *Liquid Time-constant Networks*](https://arxiv.org/pdf/2006.04439) | Model equation, training description and §4 bounds. State/time-constant boundedness is not a theorem excluding oscillation or chaos. |
+| [Miller & Hardt (2019), *Stable Recurrent Models*](https://arxiv.org/pdf/1805.10369) | §2 contractivity definition and RNN/LSTM sufficient conditions; §3 finite-context approximation. Applicable assumptions must survive gating and adaptation. |
+| [Lohmiller & Slotine (1998), *On Contraction Analysis for Nonlinear Systems*](https://www.mit.edu/~nsl/preprints/contraction.pdf) | §2 Jacobian symmetric-part bound and contraction-region assumptions. Deterministic convergence result, not automatically a stochastic guarantee. |
+| [Hopfield (1984), graded-response neurons](https://redwood.berkeley.edu/wp-content/uploads/2018/08/hopfield84.pdf) | Circuit equation and energy derivative, equations 5–10. Symmetry and fixed inputs are essential to this argument. |
+| [Jaeger (2001), echo-state report](https://www.ai.rug.nl/minds/uploads/EchoStatesTechRep.pdf) and [Yildiz, Jaeger & Kiebel (2012)](https://www.ai.rug.nl/minds/uploads/2519_Yildizetal12.pdf) | Original report accessed; rely on the later paper's §2 corrected definition and §3 counterexamples. Separate erratum download failed; its correction is discussed in the later paper. |
+| [Jaeger (2002), *Adaptive Nonlinear System Identification with Echo State Networks*](https://papers.nips.cc/paper_files/paper/2002/file/426f990b332ef8193a61cc90516c1245-Paper.pdf) | Reservoir/readout setup and online adaptation discussion. Online output training is established; RLS is not assumed local. |
+| [Williams & Zipser (1989), experimental analysis of RTRL](https://gwern.net/doc/ai/nn/rnn/1989-williams.pdf) | Original paper copy: introduction, information/storage requirements and algorithm setup. Reference algorithm, not an economical local implementation. |
+| [Sussillo & Abbott (2009), FORCE](https://stuff.mit.edu/afs/athena/course/9/9.49/www/Supplementary/Sussilo%20and%20Abbott%202009.pdf) | Feedback architecture, RLS equations 4–6 and suppression-of-chaos discussion. Target, correlation matrix and learning-rate limits remain explicit. |
+| [Bellec et al., 2019 e-prop precursor](https://arxiv.org/pdf/1901.09049), [2020 publication](https://doi.org/10.1038/s41467-020-17236-y) | Precursor eligibility/learning-signal construction and pattern-generation update schedule; final publication abstract/captions only. Do not equate an approximate learning signal with arbitrary scalar reward. |
+
+**Decision for this project.** Keep the three-part proposal, explicitly acknowledging CTRNN and gated-memory
+antecedents. Attach a declared dynamical role to each witness: fading response, retained state, excitable event,
+or attracting rhythm. Roles describe intended behaviour, not extra part types. Test return to that role after
+perturbation, including learning-driven knob changes; do not impose universal contraction or a spectral-radius
+cutoff. Use established RNN constructions as references before inventing replacements. This changes the
+coverage criteria, not the body/interface or the authorised run budget.
 
 ## Related work from evolutionary robotics
 
@@ -371,3 +539,232 @@ learned. A fair test needs a start built of his components, events from positive
 37. Y. LeCun, Y. Bengio, G. Hinton, "Deep learning", Nature 521, 2015.
 38. E. O. Neftci, H. Mostafa, F. Zenke, "Surrogate gradient learning in spiking neural networks", IEEE Signal
     Processing Magazine 36(6), 2019.
+
+## Motif-bench choices after the catalogue (2026-11-19)
+
+The construction records and measured outcomes live in [D128–D133](discrete/NOTEBOOK.md#d128-change-and-order).
+These sources informed the mechanism choices; none establishes our noisy circuit's performance.
+
+| primary source | reading scope and design consequence |
+|---|---|
+| [Ma et al. (2009), *Defining Network Topologies that Can Achieve Biochemical Adaptation*](https://pmc.ncbi.nlm.nih.gov/articles/PMC3068210/) | Adaptation definition, model/search assumptions and feedback-buffer equations 2–4. Sensitivity and return to baseline are separate requirements. Integral feedback is the established alternative to fragile cancellation; biochemical model guarantees do not transfer unchanged. |
+| [Haag, Denk & Borst (2004), *Fly motion vision is based on Reichardt detectors regardless of the signal-to-noise ratio*](https://www.pnas.org/doi/10.1073/pnas.0407368101) | Introduction and Fig. 1 mechanism: asymmetric filtering, multiplication and mirrored subtraction. Used as a temporal-comparison precedent; our clipped gates are approximate products and do not imply a fly model or calibrated motion estimate. |
+| [TI, *Window comparator circuit*](https://www.ti.com/tool/CIRCUIT060084) | Primary design description. Two thresholds define an inactive region; our split writers instantiate that functional idea using the existing macros, rather than importing a packaged comparator as a new primitive. |
+| [TI, *Designing With the SN74LVC1G123 Monostable Multivibrator*](https://www.ti.com/lit/an/slva720a/slva720a.pdf?ts=1794683495401) | Sections 3.1–3.2: RC timing, recovery assumptions and retriggering. A bounded adaptive pulse is weaker than constant-width monostable timing or demonstrated regenerative excitability; the tests keep those claims separate. |
+
+The component benches distinguish measurable information from a usable internal reference. An observer can
+compare phase conditions or subtract a baseline, but the brain must carry any reference required for action.
+The present tests do not establish that such calibration or useful eligibility follows automatically from the
+three macros. The current [coverage ledger](PARTS.md#coverage-ledger-behaviours-are-assemblies-not-additional-parts) and [assignments](PARTS.md#bounded-next-work-after-the-first-witness-batch)
+keep those limitations visible.
+
+## Baseline rejection before timing comparison (2026-11-19)
+
+[D141](discrete/NOTEBOOK.md#d141-baseline-rejection) owns the experiment and its limitations.
+The following primary-source reading selects an analytic discriminator, not a circuit implementation.
+
+| Method/source | What was read; relevance and assumptions |
+|---|---|
+| AC coupling: Analog Devices [ADN2811 data sheet, p.17](https://www.analog.com/media/en/technical-documentation/data-sheets/adn2811.pdf) | Coupling-time-constant discussion and Fig.22 describe baseline wander and resulting timing distortion. A high-pass is a simple local constant-baseline rejector, but does not distinguish desired slow signals from drift; startup and long constant intervals matter. The product's particular frequency and capacitor choices are not imported into this project. |
+| Integral feedback: Yi, Huang, Simon & Doyle (2000), [primary paper](https://groups.csail.mit.edu/mac/projects/amorphous/6.978/papers/doyle-PNAS-2000.pdf) | Read pp.1–3, especially Fig.2 and the steady-state argument plus biological assumptions. An integral of local error can enforce a stable equilibrium's return to a reference. Stability and the reference's own dependence on input matter. This is constant-input adaptation, not proof that arbitrary drift is removed while phase is preserved. D128 already has a noisy integral-feedback witness, whose resting level follows writer offset. |
+
+A first-order idealisation writes tau × db/dt = x−b, y=x−b, giving H(s)=s tau/(1+s tau).
+It supplies a precise reference for baseline rejection, not a claim that our mismatched subtractors implement
+it without residual error, or that capacitor state is noise-free. Feedforward cancellation requires matching;
+feedback adaptation can remove dependence on input level while retaining a device-dependent equilibrium.
+A phase detector following either method must tolerate that equilibrium and differential phase shifts.
+D138's auto-zero and chopping precedents remain distinct: they impose an internal comparison, rather than
+infer a baseline from an arbitrary signal's time average. No method here supplies a world period for free.
+
+For signed modulation, [Analog Devices MT-079](https://www.analog.com/media/en/training-seminars/tutorials/MT-079.pdf)
+pp.1 and 4–5 distinguish two-quadrant control (one input unipolar) from four-quadrant multiplication,
+and describe cross-coupled cells plus conversion circuitry. Its offset discussion identifies input
+feedthrough and output/gain errors. This manufacturer account is the precedent read, not a claim to
+have read Gilbert's original papers. D142–D144 recover analogous limitations in our different macro
+model. An explicit pair of complementary gates is a candidate for signed gain control; it is not an
+exact Gilbert cell, and no published trimmed-product accuracy is transferred to it. The alternative is
+retaining only nonnegative gain and using separate signed signal paths; either needs a counted graph.
+
+### Shared-path reversal review (D152–D153, 2026-11-19)
+
+Re-read [AN-1131](https://www.analog.com/en/resources/app-notes/an-1131.html),
+chopping equations and settling sections: opposite input polarity followed by output reversal cancels
+an unchanged additive internal offset; successive observations also introduce delay.
+Read technique and artifact sections of [Basilico, How to Use Zero-Drift Amplifiers in Wider Bandwidth Applications](https://www.analog.com/en/resources/analog-dialogue/articles/how-to-use-zero-drift-amplifiers-in-wider-bandwidth-applications.html):
+input/output switching and filtering are actual operations, with charge-injection error, ripple and
+finite bandwidth. Auto-zeroing instead stores an internal-zero measurement and interrupts that path's
+signal acquisition. These manufacturer descriptions were read; their cited original papers were not.
+[D152–D153](discrete/NOTEBOOK.md#d152-shared-path-reversal) test the narrower question of which error
+parities the existing signed-control assembly can reject. Product accuracy does not transfer to it.
+
+### Oscillator operating-point adaptation (D161–D162, 2026-11-19)
+
+Read Che & Forni, [A tunable mixed feedback oscillator](https://api.repository.cam.ac.uk/server/api/core/bitstreams/5fc2227a-cdff-4361-b9f8-38fea84ae28a/content),
+model description and SectionV (equilibria/coexistence). Their oscillation guarantee additionally
+requires boundedness and2-dominance; an unstable root alone does not transfer that guarantee to our
+multiple nonlinear branches and added memory state.
+Read Thorsen et al.2014, [Robust Concentration and Frequency Control in Oscillatory Homeostats](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0107766),
+introduction, controller motifs and average-regulation argument. Integral feedback can regulate an
+oscillatory variable's average under their kinetic assumptions; instantaneous constancy is not
+required. These biochemical models are a functional precedent, not a physical/noise theorem for
+our SONOS writer. Together with the earlier Yi et al. review, this motivates a diagnostic slow
+negative-feedback bias loop, rather than an asserted global cycle repair. Fixed bias and changing
+feedback gain are the closest existing-knob alternatives; D127/D159–D161 separate their limits.
+
+<a id="calibration-identification-review-2026-11-20"></a>
+## Calibration and identification review — 2026-11-20
+
+D165 changes the question from obtaining more simultaneous events to distinguishing useful
+calibration evidence from real order. These sources guide the next discriminating measurements,
+not a decision to implement a named learning algorithm.
+
+- [Bradtke & Barto (1996), *Linear Least-Squares Algorithms for Temporal Difference Learning*](https://all.cs.umass.edu/pubs/1995_96/bradtke_b_ML96.pdf),
+  section 5.1, pp. 38–40, equations 5–8 and lemmas 1–2 **read in the paper**. Their
+  instrumental-variable construction requires informative correlations with the quantity being
+  estimated and absence of correlation with nuisance errors; more samples do not remove bias
+  when those conditions fail. Our inference: coincidence-weighted balancing needs its own
+  identification argument, because genuine event order contributes to the proposed error signal.
+  This is an analogy at the estimation level, not an application of their convergence theorem.
+  Their linear Markov prediction setting differs from our nonlinear noisy circuit. Closest options
+  here are selective observations, a supplied simultaneous-event reference, and a separate internal
+  reference. None is yet established as a physical solution. We would add a local, costed circuit
+  demonstration under its actual observation restrictions, not a new general estimation theorem.
+- [Enz & Temes (1996), *Circuit Techniques for Reducing the Effects of Op-Amp Imperfections: Autozeroing, Correlated Double Sampling, and Chopper Stabilization*](https://docenti.ing.unipi.it/~a008309/mat_stud/MIXED/archive/2022/Optional_Materials/articles/Offset_canc_Enz_Temes_96.pdf),
+  DOI 10.1109/5.542410. **Source-indexed excerpts of sections II–III read; the PDF opened but its
+  full text was not extractable in this review.** The excerpts distinguish sampling an offset
+  from modulating/demodulating the signal, and discuss noise folding in sampled cancellation.
+  Use this as a literature lead, not a fully checked implementation recipe. Our inference is that
+  a fixed reference error needs an error-rejection operation, not just a longer observation.
+  Before any construction, read the relevant circuits and assumptions directly and map every
+  switch, stored state and noise source to the catalogue. The D154 routing problem remains parked;
+  this citation supplies neither a primitive nor an exception to it.
+
+The [next assignment](PROGRAMME.md#next-diagnostic-assignment-2026-11-20) measures selectivity and
+precision separately and tests a two-gain capacity reference. It deliberately postpones physical
+construction. Our own D164/D165 equations and saved data, rather than an unverified paper claim,
+supply the numerical error model used there.
+
+<a id="offset-rejection-review-2026-11-20"></a>
+### Offset rejection: primary sources read for D168 (2026-11-20)
+
+[D168](discrete/NOTEBOOK.md#d168-calibration-precision) asks whether the order calibration's readout can reject
+its own fixed error. The D166 entry above recorded Enz & Temes as excerpts only. Both sources below are scanned
+PDFs with no text layer; their pages were decoded locally from the PDFs' fax-compressed page images and read as
+images. Pages and equations read are listed; nothing else in them is claimed.
+
+- **Enz & Temes (1996)**, *Proc. IEEE* 84(11), DOI 10.1109/5.542410,
+  [PDF](https://docenti.ing.unipi.it/~a008309/mat_stud/MIXED/archive/2022/Optional_Materials/articles/Offset_canc_Enz_Temes_96.pdf).
+  **Read in the paper:** pp. 1584–1602, i.e. the abstract, I and all of sections II–IV (equations 1–40,
+  Figs. 1–26 and 28–31 as they fall on those pages), up to the start of V on p. 1602. Not read: sections V–VII
+  and the appendix.
+  - *Autozero (AZ)* (II A, C): two phases. During a sampling phase the amplifier is **disconnected from the signal
+    path, its inputs short-circuited**, and a nulling control x_c drives the output to zero; x_c is stored (analogue
+    S/H or digital register) and held during the signal phase. The offset cancels only if it is **unchanged between
+    the phases** and the amplifier is used "under the same conditions as during sampling" (p. 1586). Residual
+    offset (II C, Fig. 8): an error Δx_c in storing the control (charge injection of the sampling switch, A/D
+    quantisation) leaves V_ios-lin or V_ios-NL; a nonlinear nulling characteristic helps only when the initial
+    offset is already small.
+  - *Noise* (II B): AZ subtracts a recent sample of the same noise, a high-pass with a zero at dc (eqs. 3–4), so it
+    removes offset and much 1/f noise; but sampling **aliases wideband noise** into the baseband: the foldover term
+    is about (πf_cT_s − 1)·S₀·sinc² (eq. 11), roughly the white noise multiplied by the ratio of noise bandwidth to
+    the Nyquist frequency (p. 1589).
+  - *Correlated double sampling (CDS)* (II D): AZ followed by a sample-and-hold of the signal; same zero at dc,
+    comparable foldover. AZ "may be incompatible with continuous-time applications" because the amplifier is
+    unavailable during the sampling phase (p. 1590).
+  - *Chopper stabilisation (CHS)* (III): modulation, not sampling: input multiplied by a ±1 square wave, amplified,
+    demodulated; offset and 1/f noise modulated once are moved to the odd harmonics and filtered (p. 1591); gain
+    depends on matching the demodulator's phase to the amplifier's delay. Residual offset (III C) comes mainly from
+    the **input modulator's** nonidealities (clock feedthrough, charge injection): spikes demodulated to dc,
+    V_os ≈ (2τ/T)V_spike (eq. 22), reduced to (2τ/T)²V_spike by limiting bandwidth (eq. 23).
+  - *Switch errors* (IV A, eq. 24): a sampled voltage on hold capacitor C_h carries
+    ΔV = α C_ov/(C_ov+C_h) V_swing + q_inj/C_h + √(kT/C_h) + I_leak T_h/C_h: clock feedthrough, channel-charge
+    injection (hard to predict; partly cancelled by dummy switches or fully differential structures, never
+    perfectly), sampled kT/C noise, and leakage **droop** over the hold time.
+  - *Offset storage and nulling ports* (IV B–E, eqs. 25–35): output storage leaves q_inj/(A·C) (eq. 25); closed-loop
+    storage leaves V_os/A + q_inj/C (eq. 27); a cascade stored stage by stage leaves only the last stage's error
+    divided by the total gain (eqs. 28–29). A separate **nulling input** (an extra differential pair in parallel
+    with the main one, Fig. 24, or an adjustable degenerated mirror, Fig. 25) driven by a stored control leaves
+    −V_os/(A₂A₃) − (g_m2/g_m1)·q_inj/C_h (eq. 31): loop gain shrinks the first term, the transconductance ratio
+    the second, bounded by the control's range (eqs. 33–35).
+  - *Continuous-time autozero* (IV F, eqs. 36–40, Fig. 26): a main amplifier never leaves the signal path; a nulling
+    amplifier, itself autozeroed in alternate phases, drives the main amplifier's nulling input. The residual is the
+    two amplifiers' offsets divided by the nulling amplifier's gain plus the stored charge errors (eq. 39): the
+    corrector's own offset still enters, reduced only by gain. Input signals near multiples of the clock are aliased
+    into an apparent offset, so the nulling path low-pass filters the sensed voltage (an OTA loaded by a large
+    capacitor) to track its mean (p. 1602).
+- **Shieh, Patil & Sheu (1987)**, *Measurement and analysis of charge injection in MOS analog switches*, IEEE JSSC
+  SC-22(2) pp. 277–281, [PDF](https://hasler.ece.gatech.edu/Courses/ECE4430/Proj4/Sheu_02.pdf).
+  **Read in the paper:** pp. 277–281, the whole paper (II's equations 1–17, III's measurement circuit, IV's
+  results). Switch-induced error is
+  "usually in the millivolt range"; a fully differential circuit cancels it only "to the first order" (p. 277).
+  The injected error depends on the gate's falling rate U, the holding and source capacitances and resistance,
+  and V_HT = V_H − V_S − V_TE (eqs. 4–10), so it varies **with the signal level V_S**: it is not a constant offset
+  that a later subtraction removes. With slow switching the charge divides towards the larger capacitance;
+  fast switching splits it about equally whatever the capacitances (eqs. 14–17, Figs. 3–5); a small source
+  resistance drains it. Measurements on 3 µm CMOS agree with the model for gate falling rates of 1.25×10⁶ to
+  5×10⁸ V/s (Fig. 9).
+- **Cauwenberghs (NIPS 5, 1992, published 1993)**, *A fast stochastic error-descent algorithm for supervised
+  learning and optimization*, [PDF](https://papers.nips.cc/paper_files/paper/1992/file/c06d06da9666a219db15cf575aff2824-Paper.pdf).
+  **Read in the paper:** pp. 244–248 (sections 1–2 and the start of 3; the PDF has a text layer). Read for D168's
+  question of how a circuit could observe a knob's own effect (B) without a model of itself. Perturb every
+  parameter at once by a small random ±σ held for an epoch, measure the change in error against the unperturbed
+  error, and update Δp = −µ·(E(p+π) − E(p))·π (eqs. 4–5). On average this is gradient descent with rate µσ²
+  (2.1). Subtracting the unperturbed reference E(p) is what makes each step a descent and removes the need to
+  average (2.2). With P parameters it is √P slower than true gradient descent, against P for sequential weight
+  perturbation, because one scalar response channel carries the information (2.3). The motivation is analogue
+  hardware whose "unknown process impurities" make computed gradients ill-posed (p. 245).
+  For us: one knob means P = 1, two gains P = 2, so √2 slower. The method needs the same "error" to be evaluated with
+  and without the perturbation. Anchors differ from one another in amplitude, so successive anchors are not
+  repeats, and their differences would add variance that the paper's deterministic setting does not have.
+  Extremum-seeking control (Krstić & Wang 2000, Automatica 36:595–601) is the continuous-time control
+  counterpart; only its bibliographic record was found, not read.
+
+**What fits here and what does not.** AZ, CDS and CHS all cancel an offset by observing **the same physical path**
+in two conditions, and all three create the second condition by **switching** (disconnecting or shorting the
+input, or reversing its polarity under a clock). Their residuals are exactly the costs of those switches:
+charge injection, feedthrough, kT/C sampling noise with foldover, droop, and demodulator phase. Our catalogue has
+no switch, no clock and no input disconnection ([D154](discrete/NOTEBOOK.md#d154-routing-contract)); a body or
+world clock is not admissible. D168's quiet self-reference keeps the AZ idea — read the same path while the
+wanted signal is absent — but takes the "sampling phase" from the circuit's own quiet time, weighted continuously
+by 1 − w, so there is no switch to inject charge and no sample to alias. The paper's assumptions then become our
+requirements: the same path must carry both readings (otherwise D149's rule applies: an independent detector adds
+its own error), the offset must be unchanged between quiet and coincident moments, and the wanted signal must be
+absent in quiet time, which in this circuit holds only after the baseline or resting level is accounted for.
+IV E–F is the closest published form: a nulling port driven by a slowly filtered estimate, whose
+own offset is suppressed only by loop gain or by being autozeroed in turn, which again needs switches.
+Closest alternatives: CHS (needs polarity routing, parked at D154), a second independent detector (rejected,
+D149/D151), and accepting the error. What this project would add: a switch-free, locally weighted variant whose
+phases are set by the circuit's own signal statistics; it is a candidate specification, not an established
+technique, and none of the papers' accuracy figures transfer to it.
+
+<a id="local-adaptation-review-2026-11-20"></a>
+### Local adaptation and what supplies its target — D171 review (2026-11-20)
+
+Primary-source update for the programme review. Read the specified methods/results sections in the linked
+full-text versions, not just abstracts. These papers inform comparisons; none validates our circuit.
+
+- **Saponati, De Luca, Indiveri & Grewe (2026 preprint), feedback control optimizer**,
+  [source](https://arxiv.org/html/2602.13261v1), sections II-A, III-B/C and V-B. Paired positive/negative
+  control neurons guide local updates toward supplied target spikes; evaluation here is a single-layer network
+  with simulated hardware mismatch. Population redundancy is an alternative to precision correction.
+  Relevant lesson: feedback can carry local correction information, but the source and communication cost of
+  its target must be counted. Our taste interface does not supply those per-output targets. This supports a
+  comparator, not direct adoption or a claim of hardware validation.
+- **Putra et al. (October 2026 preprint), ENCL**,
+  [source](https://arxiv.org/html/2610.31927v1), Related Work, methodology and Algorithms 1–2.
+  Combines local supervised learning (TESS) with task-specific masks and freezing in a fixed network.
+  Task identities and boundaries are supplied during training and inference; capacity is allocated in fractions
+  of a declared maximum task count. Relevant alternative: protect/reuse existing material before growth.
+  It does not solve autonomous detection of when a new capacity is needed. Its reported GPU measurements are
+  not transistor costs for this project.
+- **Dohare et al., continual backpropagation**, read the
+  [April 2024 author preprint](https://arxiv.org/html/2306.13812v3), abstract and Discussion; publication is
+  [Nature 2024](https://doi.org/10.1038/s41586-024-07711-7) (publisher full text inaccessible in this review).
+  Selective reinitialisation of low-utility units motivates the recycling comparison already required here.
+  Retaining an old skill and retaining the ability to learn a new one are different measurements. The method
+  uses backpropagation; it is not an explicit local analogue implementation for this robot.
+
+The earlier [offset-rejection source review](#offset-rejection-review-2026-11-20) remains the basis for the
+shared-path mechanism. No new claim of novelty for offset cancellation follows from D170. The prospective
+contribution is a costed mechanism with locally available reference conditions that transfers between uses,
+then demonstrably improves in-life action. Whether that contribution exists remains to be tested.

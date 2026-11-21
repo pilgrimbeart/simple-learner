@@ -1,0 +1,5 @@
+{"mode": "original", "passed": 184, "cases": 204, "rescued": 0, "new_failures": 0, "elapsed_s": 9.36441347199434}
+{"mode": "trace_offsets", "passed": 197, "cases": 204, "rescued": 13, "new_failures": 0, "elapsed_s": 18.531911821002723}
+{"mode": "detector_offsets", "passed": 190, "cases": 204, "rescued": 9, "new_failures": 3, "elapsed_s": 27.604455994995078}
+{"mode": "difference_offsets", "passed": 185, "cases": 204, "rescued": 4, "new_failures": 3, "elapsed_s": 36.53425111300021}
+{"mode": "connection_gains", "passed": 192, "cases": 204, "rescued": 10, "new_failures": 2, "elapsed_s": 45.633073978999164}

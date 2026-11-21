@@ -1,0 +1,13 @@
+{
+  "task": "attribution",
+  "command": [
+    "/home/pilgrim/git/simple-learner/.venv/bin/python",
+    "/home/pilgrim/git/simple-learner/lab/overnight_20261119/03_attribution.py"
+  ],
+  "pid": 10878,
+  "start_unix_s": 1795129842.919133,
+  "timeout_s": 900,
+  "status": "complete",
+  "exit_code": 0,
+  "elapsed_s": 437.0993685722351
+}

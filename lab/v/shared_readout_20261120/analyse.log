@@ -1,0 +1,18 @@
+P1_native|shared all-pass 39 cases 1354 eps_lt mean -1.63 rms 8.17 max 28.44
+P1_native|separate all-pass 25 cases 1290 eps_lt mean -4.62 rms 39.41 max 84.85
+P2_preamp|shared all-pass 39 cases 1353 eps_lt mean -2.37 rms 8.12 max 28.14
+P2_preamp|separate all-pass 34 cases 1337 eps_lt mean -4.03 rms 30.15 max 59.34
+none|fixed all-pass 34 cases 1340 eps_lt mean -1.47 rms 26.60 max 64.97
+none|offline_full_1000s all-pass 39 cases 1353 
+none|offline_final_third_1000s all-pass 38 cases 1349 
+P1_native|shared vs none|fixed {'draws_rescued': 5, 'draws_harmed': 0, 'cases_rescued': 14, 'cases_harmed': 0} [1.0, 9.0]
+P2_preamp|shared vs none|fixed {'draws_rescued': 5, 'draws_harmed': 0, 'cases_rescued': 13, 'cases_harmed': 0} [1.0, 10.0]
+P1_native|shared vs P1_native|separate {'draws_rescued': 14, 'draws_harmed': 0, 'cases_rescued': 64, 'cases_harmed': 0} [8.0, 20.0]
+P2_preamp|shared vs P2_preamp|separate {'draws_rescued': 5, 'draws_harmed': 0, 'cases_rescued': 16, 'cases_harmed': 0} [1.0, 10.0]
+P1_native|shared vs none|offline_final_third_1000s {'draws_rescued': 1, 'draws_harmed': 0, 'cases_rescued': 5, 'cases_harmed': 0} [0.0, 3.0]
+P1_native|shared vs none|offline_full_1000s {'draws_rescued': 0, 'draws_harmed': 0, 'cases_rescued': 1, 'cases_harmed': 0} [0.0, 0.0]
+P2_preamp|shared vs none|offline_final_third_1000s {'draws_rescued': 1, 'draws_harmed': 0, 'cases_rescued': 4, 'cases_harmed': 0} [0.0, 3.0]
+P2_preamp|shared vs none|offline_full_1000s {'draws_rescued': 0, 'draws_harmed': 0, 'cases_rescued': 0, 'cases_harmed': 0} [0.0, 0.0]
+P2_preamp|shared vs P1_native|shared {'draws_rescued': 0, 'draws_harmed': 0, 'cases_rescued': 0, 'cases_harmed': 1} [0.0, 0.0]
+P1_native|separate vs none|fixed {'draws_rescued': 5, 'draws_harmed': 14, 'cases_rescued': 13, 'cases_harmed': 63} [-17.0, -1.0]
+P2_preamp|separate vs none|fixed {'draws_rescued': 5, 'draws_harmed': 5, 'cases_rescued': 13, 'cases_harmed': 16} [-6.0, 6.0]

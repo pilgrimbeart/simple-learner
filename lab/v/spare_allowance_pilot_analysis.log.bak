@@ -1,0 +1,18 @@
+{
+ "failed": [],
+ "gate_used_seq": [
+  "red",
+  "blue"
+ ],
+ "proceed_to_J": true,
+ "J_projection": {
+  "new_lives": {
+   "seq": 36,
+   "time": 36,
+   "allfood": 36
+  },
+  "cpu_s": 2734.1724035459997,
+  "wall_s_two_workers": 1367.0862017729999,
+  "budget_s": 1800
+ }
+}

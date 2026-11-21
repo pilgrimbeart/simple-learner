@@ -1,0 +1,8 @@
+{
+  "detector_prior": "Independent zero-mean Gaussian offsets, sigma=MISMATCH*V_TYP; detectors independent of previously drawn circuit",
+  "sigma_V": 0.03,
+  "source": "/home/pilgrim/git/simple-learner/lab/v/signed_control_diagnosis/original_predictions.json",
+  "formula": "E residual^2 = sigma^2*(g_plus^2+g_minus^2)",
+  "scope": "Steady small-error detector-mismatch contribution only, no new physical implementation or sampled detector errors",
+  "budget_s": 30
+}

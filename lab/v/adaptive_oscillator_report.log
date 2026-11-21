@@ -1,0 +1,32 @@
+{
+  "parts": {
+    "original": {
+      "T": 72,
+      "R": 11,
+      "C": 4,
+      "D": 0,
+      "sources": 8
+    },
+    "adaptive": {
+      "T": 148,
+      "R": 21,
+      "C": 9,
+      "D": 0,
+      "sources": 18
+    },
+    "writer_removed": {
+      "T": 110,
+      "R": 16,
+      "C": 7,
+      "D": 0,
+      "sources": 14
+    }
+  },
+  "power_difference_W": [
+    6.378290951278253e-09,
+    6.002915465219061e-09,
+    6.7653418764488076e-09
+  ],
+  "scope": "Complete circuit core; external bench pulse/observer excluded. Memory pump implementation and energy remain excluded under existing contract. Selected development draws, no fresh reliability claim."
+}
+Live saved-trace replay completed

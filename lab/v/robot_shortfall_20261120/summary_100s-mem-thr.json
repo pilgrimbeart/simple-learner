@@ -1,0 +1,171 @@
+{
+ "learn": {
+  "food_poison_last_third": 1.0427350427350428,
+  "food": 122,
+  "poison": 117,
+  "net_per_10s": [
+   0.023518704110867483,
+   -0.14065978302552906,
+   0.18772630206805618
+  ],
+  "meals_per_10s_last_third": 1.182430761010459,
+  "stranded": 12,
+  "lives": 64,
+  "lives_ratio_ge3": 11,
+  "sensor_spikes_per_10s": 43.33749771118164,
+  "motor_spikes_per_10s": 102.08125305175781,
+  "pulses_per_10s": 34.4625,
+  "E_mean": 0.32889890670776367,
+  "final_P_food": [
+   0.6922055082395673,
+   0.6251023731543682,
+   0.7589694741356653
+  ],
+  "final_P_poison": [
+   0.253316730863558,
+   0.2024627784927273,
+   0.30520013441851085
+  ],
+  "final_P_right_order": 54,
+  "final_P_learned_0.2": 15,
+  "P_abs_change_over_life_median": 0.2608566880226135,
+  "P_abs_change_gt_0.3": 56,
+  "credit_e": {
+   "tastes": 835,
+   "absent": 0,
+   "right": 667,
+   "share_right": 0.7988023952095809,
+   "bits_per_taste_bound": 0.2756831521199625
+  },
+  "credit_s": {
+   "tastes": 835,
+   "absent": 8,
+   "right": 668,
+   "share_right": 0.8077388149939541,
+   "bits_per_taste_bound": 0.2938222090788818
+  },
+  "credit_p": {
+   "tastes": 835,
+   "absent": 0,
+   "right": 780,
+   "share_right": 0.9341317365269461,
+   "bits_per_taste_bound": 0.6496878868524211
+  },
+  "competing_trace": {
+   "other_E_at_least_half_eaten": 0.22035928143712574,
+   "other_E_above_eaten": 0.20119760479041915,
+   "other_write_over_eaten_write_median": 0.1313574638983794
+  },
+  "E_eaten_share_of_sum_mean": 0.7673084162297547,
+  "write_sign_right": {
+   "n": 597,
+   "share": 0.9932998324958124
+  },
+  "write_mean_dP_eaten": {
+   "food": 0.07051077929287795,
+   "poison": -0.06912647767813442
+  },
+  "write_mean_dP_other": {
+   "food": 0.030436505380378218,
+   "poison": -0.04245623490551756
+  },
+  "P_drift_between_tastes_abs_median": 0.002361863851547241
+ },
+ "frozen": {
+  "food_poison_last_third": 1.0,
+  "food": 151,
+  "poison": 151,
+  "net_per_10s": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "meals_per_10s_last_third": 1.4941175306491992,
+  "stranded": 12,
+  "lives": 64,
+  "lives_ratio_ge3": 12,
+  "sensor_spikes_per_10s": 43.60469055175781,
+  "motor_spikes_per_10s": 103.72500610351562,
+  "pulses_per_10s": 36.215625,
+  "E_mean": 0.32993975281715393,
+  "final_P_food": [
+   0.4974896442145109,
+   0.4869893655646592,
+   0.5069348895573057
+  ],
+  "final_P_poison": [
+   0.4974896442145109,
+   0.48708585714921354,
+   0.5067338337656111
+  ],
+  "final_P_right_order": 32,
+  "final_P_learned_0.2": 0,
+  "P_abs_change_over_life_median": 0.001838192343711853,
+  "P_abs_change_gt_0.3": 0
+ },
+ "informed": {
+  "food_poison_last_third": 1.0949367088607596,
+  "food": 173,
+  "poison": 158,
+  "net_per_10s": [
+   0.07037537556353377,
+   -0.09378005854078461,
+   0.24854900611910757
+  ],
+  "meals_per_10s_last_third": 1.637578889909513,
+  "stranded": 9,
+  "lives": 64,
+  "lives_ratio_ge3": 9,
+  "sensor_spikes_per_10s": 43.63593673706055,
+  "motor_spikes_per_10s": 107.0601577758789,
+  "pulses_per_10s": 36.3265625,
+  "E_mean": 0.32932230830192566,
+  "final_P_food": [
+   0.9915507221594453,
+   0.9827768297865986,
+   0.9980369010474532
+  ],
+  "final_P_poison": [
+   0.006562049099075318,
+   0.0023743673740839522,
+   0.012590613822456997
+  ],
+  "final_P_right_order": 64,
+  "final_P_learned_0.2": 63,
+  "P_abs_change_over_life_median": 3.3035074011422694e-05,
+  "P_abs_change_gt_0.3": 0
+ },
+ "allfood": {
+  "food_poison_last_third": 428.0,
+  "food": 428,
+  "poison": 0,
+  "net_per_10s": [
+   2.0069578126868963,
+   1.3507061060475183,
+   2.7105753080302573
+  ],
+  "meals_per_10s_last_third": 2.11749106992668,
+  "stranded": 12,
+  "lives": 64,
+  "lives_ratio_ge3": 50,
+  "sensor_spikes_per_10s": 43.72968673706055,
+  "motor_spikes_per_10s": 108.89530944824219,
+  "pulses_per_10s": 39.015625,
+  "E_mean": 0.33003437519073486
+ },
+ "net_informed_minus_frozen": [
+  0.07037537556353377,
+  -0.09847321283160591,
+  0.2438783915218931
+ ],
+ "net_learn_minus_frozen": [
+  0.023518704110867483,
+  -0.13593613423340808,
+  0.1877042214981187
+ ],
+ "net_informed_minus_learn": [
+  0.046856671452666296,
+  -0.1500109644441073,
+  0.2391029935252904
+ ]
+}

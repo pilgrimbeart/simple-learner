@@ -1,0 +1,53 @@
+{
+  "envelope": {
+    "z": 3.384036251864579,
+    "simultaneous_component_probability_lower": 0.99,
+    "variables": 14,
+    "input_thermal_sigma_upper_V": 1.5824708030692608e-05,
+    "trace_noise_sigma_upper_V": 0.00011587807508033886,
+    "nominal_threshold_V": 0.3536859287733871,
+    "allowed_deterministic_rest_V": 0.0023047315495179667,
+    "maximum_gain_over_leak_V": 1.8206920541354157,
+    "minimum_slope_per_V": 26.463854992541684
+  },
+  "maximum_refinement_change_V": 7.058522369374209e-07,
+  "validation": {
+    "order_V": {
+      "rmse_V": 3.0857753416952415e-05,
+      "maximum_error_V": 0.00016487176549234706
+    },
+    "coincidence_V": {
+      "rmse_V": 5.607024233422304e-05,
+      "maximum_error_V": 0.0003669045697353157
+    }
+  },
+  "modes": {
+    "original": {
+      "adequate_cases": 1340,
+      "cases": 1360,
+      "adequate_draws": 34,
+      "draws": 40,
+      "failed_order": 20,
+      "failed_near_order": 3,
+      "maximum_rest_trace_V": 0.042203403947383894
+    },
+    "selected_draw_bound": {
+      "adequate_cases": 1330,
+      "cases": 1360,
+      "adequate_draws": 26,
+      "draws": 40,
+      "failed_order": 30,
+      "failed_near_order": 26,
+      "maximum_rest_trace_V": 0.0030000000000000027
+    },
+    "population_envelope": {
+      "adequate_cases": 1072,
+      "cases": 1360,
+      "adequate_draws": 1,
+      "draws": 40,
+      "failed_order": 288,
+      "failed_near_order": 273,
+      "maximum_rest_trace_V": 5.207269778066632e-05
+    }
+  }
+}

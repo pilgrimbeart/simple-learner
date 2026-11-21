@@ -1,0 +1,11 @@
+{
+  "task": "histories",
+  "command": [
+    "/home/pilgrim/git/simple-learner/.venv/bin/python",
+    "/home/pilgrim/git/simple-learner/lab/overnight_20261119/04_histories.py"
+  ],
+  "pid": 11479,
+  "start_unix_s": 1795130296.0262625,
+  "timeout_s": 2400,
+  "status": "running"
+}

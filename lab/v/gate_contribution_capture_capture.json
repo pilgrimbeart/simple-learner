@@ -1,0 +1,68 @@
+{
+  "success": true,
+  "lives": 8,
+  "jobs": [
+    [
+      "seq",
+      "issued",
+      142000,
+      "red"
+    ],
+    [
+      "seq",
+      "issued",
+      142000,
+      "blue"
+    ],
+    [
+      "seq",
+      "issued+gate",
+      142000,
+      "red"
+    ],
+    [
+      "seq",
+      "issued+gate",
+      142000,
+      "blue"
+    ],
+    [
+      "time",
+      "issued",
+      142000,
+      "red"
+    ],
+    [
+      "time",
+      "issued",
+      142000,
+      "blue"
+    ],
+    [
+      "time",
+      "issued+gate",
+      142000,
+      "red"
+    ],
+    [
+      "time",
+      "issued+gate",
+      142000,
+      "blue"
+    ]
+  ],
+  "wall_s": 177.2427898620008,
+  "raw": "/home/pilgrim/git/simple-learner/lab/v/gate_contribution_capture.pkl",
+  "raw_sha256": "4e5079c5aeafa543d41c4a5ab190f0b6bc64387fa9c8e247f7ad29d0329501e4",
+  "sources": {
+    "lab/spare_allowance_experiment.py": "f623a7359f27aca35ae3b84e2ea7c3fa41b0e52b9af4c57f10dc270417131f51",
+    "lab/spare_allowance.py": "1ec73eff5f43a0eb5e12c3420e49b59e89f695d4a66a6561a1f7c90b183904bb",
+    "lab/issued_credit.py": "67dcd1854f237873c359bcc9230861e5c77567739871773face5ea98ab196bca",
+    "lab/alloc_rules.py": "37c8f14317d6d1626e98f3569f4da1248e898e682b7a206fbd7a9fac57848543",
+    "lab/alloc_compare.py": "d39df823d685a53351243fa8e8e49dd53457d3d623c838c36da3897b55c7fcfa",
+    "lab/grownet.py": "1a550553b1244368ed0ca6fa59cce3e94a9badd5e5d1e801953aa42974874f0f",
+    "lab/teach.py": "c377e37fbdeeafa5a155735ba58e4afa3acad97b14b10ce292478f5845ba6b5f",
+    "lab/active_mixture_audit.py": "2eed2ca2899a8c6d79387ab992f6ec0343de7b673adb13e602083043881999c4",
+    "lab/gate_contribution_capture.py": "70ff414542685d94487f6d07ca0e87ab6737030e7ad5c521fc905dfffdf31c85"
+  }
+}

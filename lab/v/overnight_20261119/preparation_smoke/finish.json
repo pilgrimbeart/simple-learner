@@ -1,0 +1,13 @@
+{
+  "task": "preparation_smoke",
+  "command": [
+    "/home/pilgrim/git/simple-learner/.venv/bin/python",
+    "/home/pilgrim/git/simple-learner/lab/overnight_20261119/00_smoke.py"
+  ],
+  "pid": 9,
+  "start_unix_s": 1795129376.2283218,
+  "timeout_s": 30,
+  "status": "complete",
+  "exit_code": 0,
+  "elapsed_s": 0.06453919410705566
+}

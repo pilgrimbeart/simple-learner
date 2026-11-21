@@ -1,0 +1,13 @@
+{
+  "task": "oscillator_review",
+  "command": [
+    "/home/pilgrim/git/simple-learner/.venv/bin/python",
+    "/home/pilgrim/git/simple-learner/lab/overnight_20261119/06_oscillator_review.py"
+  ],
+  "pid": 12850,
+  "start_unix_s": 1795131339.5591884,
+  "timeout_s": 120,
+  "status": "complete",
+  "exit_code": 0,
+  "elapsed_s": 0.7718963623046875
+}

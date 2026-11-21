@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="400"><rect width="100%" height="100%" fill="white"/><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#222"/></marker></defs><g font-family="sans-serif" fill="#222"><text x="30" y="35" font-size="23">change_v2: explicit circuit graph</text>
+<rect x="40" y="100" width="230" height="85" fill="#eef5f8" stroke="#222"/><text x="50" y="125" font-size="17">0: input</text><text x="50" y="148">C=25 pF</text><text x="50" y="170">R=0.4 Gohm</text>
+<rect x="350" y="100" width="230" height="85" fill="#eef5f8" stroke="#222"/><text x="360" y="125" font-size="17">1: integral</text><text x="360" y="148">C=25 pF</text><text x="360" y="170">retained, no leak</text>
+<rect x="660" y="100" width="230" height="85" fill="#eef5f8" stroke="#222"/><text x="670" y="125" font-size="17">2: response</text><text x="670" y="148">C=25 pF</text><text x="670" y="170">R=0.8 Gohm</text>
+<path d="M155,100 C155,75 775,75 775,100" fill="none" stroke="#222" marker-end="url(#arrow)"/><text x="465.0" y="75.0" font-size="13">e0 +</text>
+<path d="M465,100 C465,65 775,65 775,100" fill="none" stroke="#222" marker-end="url(#arrow)"/><text x="620.0" y="65.0" font-size="13">e1 −</text>
+<path d="M775,100 C775,55 465,55 465,100" fill="none" stroke="#222" marker-end="url(#arrow)"/><text x="620.0" y="55.0" font-size="13">e2 +</text>
+<text x="30" y="360">Solid: signed connection current. Dashed: gate voltage. Exact transfer functions and parts: manifest.json.</text></g></svg>

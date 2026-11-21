@@ -1,0 +1,77 @@
+completed equal
+completed weak_A
+completed weak_B
+completed unequal_DC
+{
+  "validation_rmse_V": 2.0449325264613715e-05,
+  "validation_max_error_V": 5.3327963712712645e-05,
+  "maximum_resolution_change_V": 2.656052475180637e-09,
+  "swap_cycle_identity_error_V": 9.646610767133357e-11,
+  "coarse_identity_error_V": 6.156373744126142e-10,
+  "refined_identity_cases": 8,
+  "scenarios": {}
+}
+{
+  "validation_rmse_V": 2.0449325264613715e-05,
+  "validation_max_error_V": 5.3327963712712645e-05,
+  "maximum_resolution_change_V": 2.656052475180637e-09,
+  "swap_cycle_identity_error_V": 9.646610767133357e-11,
+  "coarse_identity_error_V": 6.156373744126142e-10,
+  "refined_identity_cases": 8,
+  "scenarios": {
+    "equal": {
+      "zero_bias_range_V": [
+        0.0,
+        0.0
+      ],
+      "zero_bias_rms_V": 0.0,
+      "adequate_draws": 40,
+      "draws": 40,
+      "wrong_local_sign": 0,
+      "local_cases": 320,
+      "max_sequential_window_error_bound_V": 0.0010529067617863013
+    },
+    "weak_A": {
+      "zero_bias_range_V": [
+        -0.0028817831859157886,
+        0.0032805405714627367
+      ],
+      "zero_bias_rms_V": 0.0013833858477822261,
+      "adequate_draws": 40,
+      "draws": 40,
+      "wrong_local_sign": 0,
+      "local_cases": 320,
+      "max_sequential_window_error_bound_V": 0.0008061980077439765
+    },
+    "weak_B": {
+      "zero_bias_range_V": [
+        -0.0032805405714627367,
+        0.0028817831859157886
+      ],
+      "zero_bias_rms_V": 0.0013833858477822261,
+      "adequate_draws": 40,
+      "draws": 40,
+      "wrong_local_sign": 0,
+      "local_cases": 320,
+      "max_sequential_window_error_bound_V": 0.0008061980077439764
+    },
+    "unequal_DC": {
+      "zero_bias_range_V": [
+        -0.08556813685107685,
+        0.04938987555679637
+      ],
+      "zero_bias_rms_V": 0.031651305446234075,
+      "adequate_draws": 40,
+      "draws": 40,
+      "wrong_local_sign": 87,
+      "local_cases": 320,
+      "max_sequential_window_error_bound_V": 0.0010472076280441378
+    }
+  },
+  "settling": {
+    "max_wait_1mV_s": 5.53,
+    "max_wait_0_1mV_s": 7.04,
+    "max_mean_error_6_to_12s_V": 5.277826183845875e-05,
+    "max_RC_s": 0.6552506498688082
+  }
+}

@@ -1,0 +1,165 @@
+action_auth: 384 lives, pool pid(s):
+  workers [89186, 89189, 89190, 89191, 89192, 89193, 89194]
+  50/384  15 s  eta 98 s
+  100/384  25 s  eta 71 s
+  150/384  36 s  eta 56 s
+  200/384  49 s  eta 45 s
+  250/384  62 s  eta 33 s
+  300/384  79 s  eta 22 s
+  350/384  93 s  eta 9 s
+  384/384  102 s  eta 0 s
+{
+ "triggered": true,
+ "version": 1,
+ "neutral_ok": false,
+ "reversed_ok": false,
+ "food_rate_ok": false,
+ "no_meal_ok": true,
+ "pass": false,
+ "contrasts": {
+  "informed_minus_neutral": [
+   0.05625000000000001,
+   0.004687500000000001,
+   0.1078125
+  ],
+  "informed_minus_reversed": [
+   0.11250000000000002,
+   0.009375000000000001,
+   0.215625
+  ],
+  "informed_minus_no_explore": [
+   0.05625000000000001,
+   0.004687500000000001,
+   0.1078125
+  ],
+  "informed_minus_no_sensory": [
+   0.05625000000000001,
+   0.004687500000000001,
+   0.1078125
+  ],
+  "allfood_informed_minus_neutral": [
+   0.15000000000000002,
+   -0.04687500000000001,
+   0.34687500000000004
+  ]
+ },
+ "informed": {
+  "lives": 64,
+  "seeds": 32,
+  "net": [
+   0.05625000000000001,
+   0.004687500000000001,
+   0.1078125
+  ],
+  "food_rate_final": [
+   0.19218750000000004,
+   0.13593750000000002,
+   0.25312500000000004
+  ],
+  "poison_rate_final": [
+   0.13593750000000004,
+   0.0890625,
+   0.18750000000000006
+  ],
+  "job_linear": [
+   -0.215625,
+   -0.3421875000000001,
+   -0.09375
+  ],
+  "net_first": [
+   0.14531249999999998,
+   0.046875,
+   0.24375
+  ],
+  "net_second": [
+   0.103125,
+   0.009375000000000001,
+   0.19687500000000002
+  ],
+  "net_full": [
+   0.10156250000000001,
+   0.04375,
+   0.1625
+  ],
+  "food_rate_full": [
+   0.23750000000000002,
+   0.17812500000000003,
+   0.30625
+  ],
+  "poison_rate_full": [
+   0.1359375,
+   0.10312500000000001,
+   0.17031249999999998
+  ],
+  "food_final": 41,
+  "poison_final": 29,
+  "food_poison_pooled": 1.4137931034482758,
+  "stranding": {
+   "seed_any": [
+    4,
+    32,
+    0.125,
+    0.04970053844474301,
+    0.2806864978482796
+   ],
+   "life_fraction": [
+    4,
+    64
+   ],
+   "life_rate_cluster": [
+    0.0625,
+    0.015625,
+    0.125
+   ]
+  },
+  "never_moved": 0,
+  "no_meal_fraction": 0.0625,
+  "acquisition": {
+   "ever": 64,
+   "final": 64,
+   "first_s_median": 0.0,
+   "first_missing": 0,
+   "fraction_mean": 1.0,
+   "exits": 0,
+   "reentries": 0,
+   "order_final": 64,
+   "order_fraction_mean": 1.0,
+   "P_min": -0.004789823200553656,
+   "P_max": 0.32269287109375,
+   "P_outside_s_mean": 100.0
+  },
+  "power_W": [
+   9.949573960533224e-08,
+   9.86751284476239e-08,
+   1.0031739081126929e-07
+  ],
+  "motor_events": [
+   818.46875,
+   779.998046875,
+   858.016015625
+  ],
+  "clip_steps": [
+   22.703125,
+   16.890625,
+   28.734375
+  ],
+  "write_charge_abs_C": [
+   2.7540748517022665e-15,
+   5.9891369281861e-20,
+   7.606213660562075e-15
+  ]
+ },
+ "authorised_by_user": true,
+ "sim_code": {
+  "lab/catalogue_brain_20261120/brain.py": "ede15d4b1f4eeaec2a09b8db18aefe2827b29a78e3b88ba47ab191e6429c282f",
+  "lab/catalogue_brain_20261120/design.py": "461c58b62a2a9f5e156682a8046133c5730b1ec5e09e6f6e2ff784281855c931",
+  "lab/catalogue_brain_20261120/lives.py": "ab2819351f2b0e51b24185beac4586f6a0a5eac4e9826dd55f54eb89538cbd81",
+  "mixed_feedback.py": "06157fe5e3532c625ba1494e4d23328b9988041e80c5469b2de2e94d3582131e",
+  "units.py": "dfdd23e62a79251c579cc8d43badea5894cd167d1f6229a560bd83fb0b2bf1e8",
+  "chip.py": "d0014cd1ab350ada938ee75f12a12445236895f13a451afd9a70aec0db29d037",
+  "creature.py": "a0d2cb7c5a4ddbe5d99188a6043d91d6cf1e159194a02d60fee154b89e53463f",
+  "world.py": "b64322bee1812eb24aa8467e080534e4d98cc02ead69d8412ea7f5cbc1fdf417",
+  "brains/circuit.py": "206376c6cef661d0b3b73f46a7f48c5738053a20c1ebd6a51c218ccb19efa66b"
+ },
+ "time": "2026-11-20T16:50:27Z"
+}

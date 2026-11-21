@@ -1,0 +1,405 @@
+{
+  "scope": "Saved-summary arithmetic/provenance review only; no simulation or raw-trace replication.",
+  "revision": "5700eaa0d397e1a7dc055ce69ce9ec7e1d32cc7f",
+  "provenance": [
+    {
+      "path": "lab/robot_shortfall_20261120/acquisition.py",
+      "matches": true
+    },
+    {
+      "path": "lab/robot_shortfall_20261120/action.py",
+      "matches": true
+    },
+    {
+      "path": "lab/robot_shortfall_20261120/analyse.py",
+      "matches": true
+    },
+    {
+      "path": "lab/robot_shortfall_20261120/body_reference.py",
+      "matches": true
+    },
+    {
+      "path": "lab/robot_shortfall_20261120/diffusion.py",
+      "matches": true
+    },
+    {
+      "path": "lab/robot_shortfall_20261120/drift.py",
+      "matches": true
+    },
+    {
+      "path": "lab/robot_shortfall_20261120/relay_reference.py",
+      "matches": true
+    },
+    {
+      "path": "lab/robot_shortfall_20261120/rest_writers.py",
+      "matches": true
+    },
+    {
+      "path": "lab/robot_shortfall_20261120/trace.py",
+      "matches": true
+    },
+    {
+      "path": "lab/robot_shortfall_20261120/transfer_reference.py",
+      "matches": true
+    },
+    {
+      "path": "brains/designed.py",
+      "matches": true
+    },
+    {
+      "path": "brains/circuit.py",
+      "matches": true
+    },
+    {
+      "path": "creature.py",
+      "matches": true
+    },
+    {
+      "path": "world.py",
+      "matches": true
+    },
+    {
+      "path": "mixed_feedback.py",
+      "matches": true
+    },
+    {
+      "path": "units.py",
+      "matches": true
+    },
+    {
+      "path": "discrete/policies.py",
+      "matches": true
+    }
+  ],
+  "summaries": {
+    "summary_100s.json": {
+      "learn": {
+        "food": 181,
+        "poison": 167,
+        "food_poison_last_third": 1.0838323353293413,
+        "stranded": 8,
+        "final_P_right_order": 39,
+        "final_P_learned_0.2": 8
+      },
+      "frozen": {
+        "food": 165,
+        "poison": 165,
+        "food_poison_last_third": 1.0,
+        "stranded": 8,
+        "final_P_right_order": 32,
+        "final_P_learned_0.2": 4
+      },
+      "informed": {
+        "food": 158,
+        "poison": 155,
+        "food_poison_last_third": 1.0193548387096774,
+        "stranded": 8,
+        "final_P_right_order": 32,
+        "final_P_learned_0.2": 4
+      },
+      "allfood": {
+        "food": 426,
+        "poison": 0,
+        "food_poison_last_third": 426.0,
+        "stranded": 8
+      },
+      "held": {
+        "food": 184,
+        "poison": 158,
+        "food_poison_last_third": 1.1645569620253164,
+        "stranded": 9,
+        "final_P_right_order": 64,
+        "final_P_learned_0.2": 64
+      },
+      "learn_minus_frozen": [
+        0.06571189437713745,
+        -0.05156772301533798,
+        0.18309569942778897
+      ]
+    },
+    "summary_100s-mem.json": {
+      "learn": {
+        "food": 157,
+        "poison": 151,
+        "food_poison_last_third": 1.0397350993377483,
+        "stranded": 12,
+        "final_P_right_order": 39,
+        "final_P_learned_0.2": 16
+      },
+      "frozen": {
+        "food": 174,
+        "poison": 174,
+        "food_poison_last_third": 1.0,
+        "stranded": 12,
+        "final_P_right_order": 31,
+        "final_P_learned_0.2": 5
+      },
+      "informed": {
+        "food": 202,
+        "poison": 170,
+        "food_poison_last_third": 1.188235294117647,
+        "stranded": 10,
+        "final_P_right_order": 42,
+        "final_P_learned_0.2": 26
+      },
+      "allfood": {
+        "food": 334,
+        "poison": 0,
+        "food_poison_last_third": 334.0,
+        "stranded": 12
+      },
+      "held": {
+        "food": 184,
+        "poison": 158,
+        "food_poison_last_third": 1.1645569620253164,
+        "stranded": 9,
+        "final_P_right_order": 64,
+        "final_P_learned_0.2": 64
+      },
+      "learn_minus_frozen": [
+        0.028174766800090442,
+        -0.11718377345736447,
+        0.17818364432315634
+      ]
+    },
+    "summary_100s-mem-thr.json": {
+      "learn": {
+        "food": 122,
+        "poison": 117,
+        "food_poison_last_third": 1.0427350427350428,
+        "stranded": 12,
+        "final_P_right_order": 54,
+        "final_P_learned_0.2": 15
+      },
+      "frozen": {
+        "food": 151,
+        "poison": 151,
+        "food_poison_last_third": 1.0,
+        "stranded": 12,
+        "final_P_right_order": 32,
+        "final_P_learned_0.2": 0
+      },
+      "informed": {
+        "food": 173,
+        "poison": 158,
+        "food_poison_last_third": 1.0949367088607596,
+        "stranded": 9,
+        "final_P_right_order": 64,
+        "final_P_learned_0.2": 63
+      },
+      "allfood": {
+        "food": 428,
+        "poison": 0,
+        "food_poison_last_third": 428.0,
+        "stranded": 12
+      },
+      "learn_minus_frozen": [
+        0.023518704110867483,
+        -0.13593613423340808,
+        0.1877042214981187
+      ]
+    },
+    "summary_100s_half.json": {
+      "learn": {
+        "food": 196,
+        "poison": 154,
+        "food_poison_last_third": 1.2727272727272727,
+        "stranded": 10,
+        "final_P_right_order": 38,
+        "final_P_learned_0.2": 8
+      },
+      "frozen": {
+        "food": 140,
+        "poison": 140,
+        "food_poison_last_third": 1.0,
+        "stranded": 10,
+        "final_P_right_order": 32,
+        "final_P_learned_0.2": 6
+      },
+      "informed": {
+        "food": 164,
+        "poison": 143,
+        "food_poison_last_third": 1.1468531468531469,
+        "stranded": 13,
+        "final_P_right_order": 32,
+        "final_P_learned_0.2": 6
+      },
+      "held": {
+        "food": 151,
+        "poison": 124,
+        "food_poison_last_third": 1.217741935483871,
+        "stranded": 13,
+        "final_P_right_order": 64,
+        "final_P_learned_0.2": 64
+      },
+      "learn_minus_frozen": [
+        0.1969509916580542,
+        0.042216738208651246,
+        0.389142800465006
+      ]
+    },
+    "summary_100s_quarter.json": {
+      "learn": {
+        "food": 152,
+        "poison": 164,
+        "food_poison_last_third": 0.926829268292683,
+        "stranded": 10,
+        "final_P_right_order": 41,
+        "final_P_learned_0.2": 12
+      },
+      "frozen": {
+        "food": 141,
+        "poison": 141,
+        "food_poison_last_third": 1.0,
+        "stranded": 10,
+        "final_P_right_order": 32,
+        "final_P_learned_0.2": 10
+      },
+      "informed": {
+        "food": 156,
+        "poison": 151,
+        "food_poison_last_third": 1.033112582781457,
+        "stranded": 12,
+        "final_P_right_order": 35,
+        "final_P_learned_0.2": 10
+      },
+      "held": {
+        "food": 184,
+        "poison": 143,
+        "food_poison_last_third": 1.2867132867132867,
+        "stranded": 8,
+        "final_P_right_order": 64,
+        "final_P_learned_0.2": 64
+      },
+      "learn_minus_frozen": [
+        -0.05623073920446214,
+        -0.22029602850641997,
+        0.10318896539454278
+      ]
+    }
+  },
+  "relay": {
+    "own_0.0_keep_1_spont_0": {
+      "food": 0,
+      "poison": 0,
+      "food_poison_last_third": 0.0,
+      "net_per_10s": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "stranded": 55,
+      "lives": 64
+    },
+    "own_2.0_keep_1_spont_0": {
+      "food": 266,
+      "poison": 24,
+      "food_poison_last_third": 11.083333333333334,
+      "net_per_10s": [
+        1.1362925109676107,
+        0.9720857031027754,
+        1.2917872955512009
+      ],
+      "stranded": 0,
+      "lives": 64
+    },
+    "own_5.8_keep_1_spont_0": {
+      "food": 476,
+      "poison": 102,
+      "food_poison_last_third": 4.666666666666667,
+      "net_per_10s": [
+        1.7545127759985,
+        1.5617184187182147,
+        1.9509373255627076
+      ],
+      "stranded": 0,
+      "lives": 64
+    },
+    "own_5.8_keep_0.47_spont_0": {
+      "food": 357,
+      "poison": 121,
+      "food_poison_last_third": 2.950413223140496,
+      "net_per_10s": [
+        1.1071753562443858,
+        0.9338060229706786,
+        1.2714874276768162
+      ],
+      "stranded": 0,
+      "lives": 64
+    },
+    "own_5.8_keep_1_spont_3.5": {
+      "food": 583,
+      "poison": 119,
+      "food_poison_last_third": 4.899159663865547,
+      "net_per_10s": [
+        2.176014826715905,
+        1.9180805657628743,
+        2.4338304726004965
+      ],
+      "stranded": 0,
+      "lives": 64
+    },
+    "own_5.8_keep_0.47_spont_3.5": {
+      "food": 451,
+      "poison": 148,
+      "food_poison_last_third": 3.0472972972972974,
+      "net_per_10s": [
+        1.421036422804524,
+        1.2052367617264887,
+        1.6133760328426896
+      ],
+      "stranded": 0,
+      "lives": 64
+    }
+  },
+  "acquisition": {
+    "learn_64x100s": {
+      "lives": 64,
+      "learned": 34,
+      "median_s": 16.75,
+      "later_lost_it": 34
+    },
+    "learn-mem_64x100s": {
+      "lives": 64,
+      "learned": 19,
+      "median_s": 25.0,
+      "later_lost_it": 14
+    },
+    "learn_64x100s_half": {
+      "lives": 64,
+      "learned": 36,
+      "median_s": 23.0,
+      "later_lost_it": 36
+    },
+    "frozen_64x100s": {
+      "lives": 64,
+      "learned": 27,
+      "median_s": 27.5,
+      "later_lost_it": 27
+    },
+    "learn-mem-thr_64x100s": {
+      "lives": 64,
+      "learned": 21,
+      "median_s": 33.5,
+      "later_lost_it": 14
+    },
+    "frozen-mem-thr_64x100s": {
+      "lives": 64,
+      "learned": 0,
+      "median_s": null,
+      "later_lost_it": 0
+    },
+    "learn_64x100s_quarter": {
+      "lives": 64,
+      "learned": 37,
+      "median_s": 28.0,
+      "later_lost_it": 37
+    },
+    "frozen_64x100s_quarter": {
+      "lives": 64,
+      "learned": 24,
+      "median_s": 18.5,
+      "later_lost_it": 24
+    }
+  }
+}

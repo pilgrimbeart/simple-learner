@@ -1,0 +1,208 @@
+{
+ "learn": {
+  "food_poison_last_third": 1.0397350993377483,
+  "food": 157,
+  "poison": 151,
+  "net_per_10s": [
+   0.028174766800090442,
+   -0.11264643314429518,
+   0.18292992677048261
+  ],
+  "meals_per_10s_last_third": 1.5238019849005078,
+  "stranded": 12,
+  "lives": 64,
+  "lives_ratio_ge3": 9,
+  "sensor_spikes_per_10s": 43.39140319824219,
+  "motor_spikes_per_10s": 103.84530639648438,
+  "pulses_per_10s": 34.7125,
+  "E_mean": 0.3288075029850006,
+  "final_P_food": [
+   0.6729332978611495,
+   0.5783178166508347,
+   0.7660633471180215
+  ],
+  "final_P_poison": [
+   0.43175420373497,
+   0.328921278082997,
+   0.5371975529533305
+  ],
+  "final_P_right_order": 39,
+  "final_P_learned_0.2": 16,
+  "P_abs_change_over_life_median": 0.4973239004611969,
+  "P_abs_change_gt_0.3": 98,
+  "credit_e": {
+   "tastes": 941,
+   "absent": 0,
+   "right": 726,
+   "share_right": 0.7715196599362381,
+   "bits_per_taste_bound": 0.22464722589702002
+  },
+  "credit_s": {
+   "tastes": 941,
+   "absent": 6,
+   "right": 722,
+   "share_right": 0.772192513368984,
+   "bits_per_taste_bound": 0.22583036342889518
+  },
+  "credit_p": {
+   "tastes": 941,
+   "absent": 0,
+   "right": 891,
+   "share_right": 0.946865037194474,
+   "bits_per_taste_bound": 0.7004323330363611
+  },
+  "E_eaten_share_of_sum_mean": 0.7428759023992514,
+  "write_sign_right": {
+   "n": 625,
+   "share": 0.9952
+  },
+  "write_mean_dP_eaten": {
+   "food": 0.06988340416426127,
+   "poison": -0.10810345046874653
+  },
+  "write_mean_dP_other": {
+   "food": 0.04257579330529329,
+   "poison": -0.0453599515266744
+  },
+  "P_drift_between_tastes_abs_median": 0.47777634859085083
+ },
+ "frozen": {
+  "food_poison_last_third": 1.0,
+  "food": 174,
+  "poison": 174,
+  "net_per_10s": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "meals_per_10s_last_third": 1.7216983465758984,
+  "stranded": 12,
+  "lives": 64,
+  "lives_ratio_ge3": 9,
+  "sensor_spikes_per_10s": 43.556251525878906,
+  "motor_spikes_per_10s": 105.6796875,
+  "pulses_per_10s": 37.25625,
+  "E_mean": 0.32925280928611755,
+  "final_P_food": [
+   0.556161610230407,
+   0.45670746423659425,
+   0.6467780510148372
+  ],
+  "final_P_poison": [
+   0.556161610230407,
+   0.4588121137296951,
+   0.6486987940786938
+  ],
+  "final_P_right_order": 31,
+  "final_P_learned_0.2": 5,
+  "P_abs_change_over_life_median": 0.49916142225265503,
+  "P_abs_change_gt_0.3": 80
+ },
+ "informed": {
+  "food_poison_last_third": 1.188235294117647,
+  "food": 202,
+  "poison": 170,
+  "net_per_10s": [
+   0.14994966947654498,
+   -0.05162694800221738,
+   0.35626456284869246
+  ],
+  "meals_per_10s_last_third": 1.8404209880554043,
+  "stranded": 10,
+  "lives": 64,
+  "lives_ratio_ge3": 10,
+  "sensor_spikes_per_10s": 43.84140396118164,
+  "motor_spikes_per_10s": 105.734375,
+  "pulses_per_10s": 37.84375,
+  "E_mean": 0.3303089737892151,
+  "final_P_food": [
+   0.7544426128620039,
+   0.6509392538023431,
+   0.8497590484230635
+  ],
+  "final_P_poison": [
+   0.3480811268531241,
+   0.24045857999369663,
+   0.4608913849083541
+  ],
+  "final_P_right_order": 42,
+  "final_P_learned_0.2": 26,
+  "P_abs_change_over_life_median": 0.003661927068606019,
+  "P_abs_change_gt_0.3": 39
+ },
+ "allfood": {
+  "food_poison_last_third": 334.0,
+  "food": 334,
+  "poison": 0,
+  "net_per_10s": [
+   1.5663150229081952,
+   0.99424202419846,
+   2.18616561429173
+  ],
+  "meals_per_10s_last_third": 1.6524346199895117,
+  "stranded": 12,
+  "lives": 64,
+  "lives_ratio_ge3": 46,
+  "sensor_spikes_per_10s": 43.59375,
+  "motor_spikes_per_10s": 107.76874542236328,
+  "pulses_per_10s": 37.115625,
+  "E_mean": 0.32935214042663574
+ },
+ "held": {
+  "food_poison_last_third": 1.1645569620253164,
+  "food": 184,
+  "poison": 158,
+  "net_per_10s": [
+   0.12196274258566905,
+   -0.05624022079245319,
+   0.31892818759569563
+  ],
+  "meals_per_10s_last_third": 1.6919999406315813,
+  "stranded": 9,
+  "lives": 64,
+  "lives_ratio_ge3": 12,
+  "sensor_spikes_per_10s": 43.607810974121094,
+  "motor_spikes_per_10s": 107.11406707763672,
+  "pulses_per_10s": 36.940625,
+  "E_mean": 0.32911592721939087,
+  "final_P_food": [
+   1.0,
+   1.0,
+   1.0
+  ],
+  "final_P_poison": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "final_P_right_order": 64,
+  "final_P_learned_0.2": 64,
+  "P_abs_change_over_life_median": 0.0,
+  "P_abs_change_gt_0.3": 0
+ },
+ "net_informed_minus_frozen": [
+  0.14994966947654498,
+  -0.046941655088767076,
+  0.356283548678398
+ ],
+ "net_learn_minus_frozen": [
+  0.028174766800090442,
+  -0.11718377345736447,
+  0.17818364432315634
+ ],
+ "net_informed_minus_learn": [
+  0.12177490267645452,
+  -0.10322225823042089,
+  0.34687930883341406
+ ],
+ "net_held_minus_frozen": [
+  0.12196274258566905,
+  -0.056230313622459636,
+  0.32384856970231196
+ ],
+ "net_held_minus_learn": [
+  0.0937879757855786,
+  -0.0843683128917476,
+  0.2860578485831149
+ ]
+}

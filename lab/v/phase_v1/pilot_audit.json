@@ -1,0 +1,9 @@
+{
+  "zero_phase_bias_range_V": [
+    -0.13849446437499333,
+    0.21421082372231112
+  ],
+  "minimum_near_contrast_V": 0.012552158911428496,
+  "minimum_far_contrast_V": 0.02495354835341765,
+  "maximum_ripple_V": 0.08878919816790137
+}

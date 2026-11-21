@@ -1,0 +1,207 @@
+native Net._room  | a: poor donor, unused allowance, no grown unit             | admitted True  | allowance sum (9, 9) | occupancy (6, 6) removals 0 | over allowance [] | cap None free None | drawn donor0 | changes [('recipient', 4, 5, 4, 4), ('donor0', 5, 4, 2, 2)]
+native Net._room  | b: poor donor, one removable grown leaf                    | admitted True  | allowance sum (9, 9) | occupancy (7, 6) removals 1 | over allowance [] | cap None free None | drawn donor0 | changes [('recipient', 4, 5, 4, 4), ('donor0', 5, 4, 3, 2)]
+native Net._room  | c: poor donor at its fixed-unit floor                      | admitted True  | allowance sum (8, 8) | occupancy (8, 8) removals 0 | over allowance ['donor0'] | cap None free None | drawn donor0 | changes [('recipient', 4, 5, 4, 4), ('donor0', 4, 3, 4, 4)]
+native Net._room  | d: poor donor's grown unit has a dependant (chain of 2)    | admitted True  | allowance sum (9, 9) | occupancy (8, 7) removals 1 | over allowance [] | cap None free None | drawn donor0 | changes [('recipient', 4, 5, 4, 4), ('donor0', 5, 4, 4, 3)]
+native Net._room  | f: two candidates, one leafless, one with a leaf           | admitted True  | allowance sum (14, 14) | occupancy (9, 8) removals 1 | over allowance [] | cap None free None | drawn donor1 | changes [('recipient', 4, 5, 4, 4), ('donor1', 5, 4, 3, 2)]
+native Net._room  | e: savings exactly at the price                            | admitted False | allowance sum (9, 9) | occupancy (7, 7) removals 0 | over allowance [] | cap None free None | drawn None | changes []
+native Net._room  | f (seed 0): drawn donor recorded                           | admitted True  | allowance sum (14, 14) | occupancy (9, 8) removals 1 | over allowance [] | cap None free None | drawn donor1 | changes [('recipient', 4, 5, 4, 4), ('donor1', 5, 4, 3, 2)]
+native Net._room  | f (seed 1): drawn donor recorded                           | admitted True  | allowance sum (14, 14) | occupancy (9, 9) removals 0 | over allowance [] | cap None free None | drawn donor0 | changes [('recipient', 4, 5, 4, 4), ('donor0', 5, 4, 2, 2)]
+native Net._room  | f (seed 2): drawn donor recorded                           | admitted True  | allowance sum (14, 14) | occupancy (9, 8) removals 1 | over allowance [] | cap None free None | drawn donor1 | changes [('recipient', 4, 5, 4, 4), ('donor1', 5, 4, 3, 2)]
+native Net._room  | f (seed 3): drawn donor recorded                           | admitted True  | allowance sum (14, 14) | occupancy (9, 8) removals 1 | over allowance [] | cap None free None | drawn donor1 | changes [('recipient', 4, 5, 4, 4), ('donor1', 5, 4, 3, 2)]
+capped rule M     | a: poor donor, unused allowance, no grown unit             | admitted False | allowance sum (8, 8) | occupancy (6, 6) removals 0 | over allowance [] | cap 8 free 2 | drawn donor0 | changes []
+capped rule M     | b: poor donor, one removable grown leaf                    | admitted True  | allowance sum (8, 8) | occupancy (7, 6) removals 1 | over allowance [] | cap 8 free 1 | drawn donor0 | changes [('recipient', 4, 5, 4, 4), ('donor0', 4, 3, 3, 2)]
+capped rule M     | c: poor donor at its fixed-unit floor                      | admitted False | allowance sum (8, 8) | occupancy (8, 8) removals 0 | over allowance [] | cap 10 free 2 | drawn None | changes []
+capped rule M     | d: poor donor's grown unit has a dependant (chain of 2)    | admitted True  | allowance sum (8, 8) | occupancy (8, 7) removals 1 | over allowance [] | cap 8 free 0 | drawn donor0 | changes [('recipient', 4, 5, 4, 4), ('donor0', 4, 3, 4, 3)]
+capped rule M     | f: two candidates, one leafless, one with a leaf           | admitted True  | allowance sum (12, 12) | occupancy (9, 8) removals 1 | over allowance [] | cap 12 free 3 | drawn donor1 | changes [('recipient', 4, 5, 4, 4), ('donor1', 4, 3, 3, 2)]
+capped rule M     | b': poor donor's allowance full of leaves (total cap fully occupied) | admitted True  | allowance sum (8, 8) | occupancy (8, 7) removals 1 | over allowance [] | cap 8 free 0 | drawn donor0 | changes [('recipient', 4, 5, 4, 4), ('donor0', 4, 3, 4, 3)]
+capped rule M     | e: savings exactly at the price                            | admitted False | allowance sum (8, 8) | occupancy (7, 7) removals 0 | over allowance [] | cap 8 free 1 | drawn None | changes []
+capped rule M     | f (seed 0): drawn donor recorded                           | admitted True  | allowance sum (12, 12) | occupancy (9, 8) removals 1 | over allowance [] | cap 12 free 3 | drawn donor1 | changes [('recipient', 4, 5, 4, 4), ('donor1', 4, 3, 3, 2)]
+capped rule M     | f (seed 1): drawn donor recorded                           | admitted True  | allowance sum (12, 12) | occupancy (9, 8) removals 1 | over allowance [] | cap 12 free 3 | drawn donor1 | changes [('recipient', 4, 5, 4, 4), ('donor1', 4, 3, 3, 2)]
+capped rule M     | f (seed 2): drawn donor recorded                           | admitted False | allowance sum (12, 12) | occupancy (9, 9) removals 0 | over allowance [] | cap 12 free 3 | drawn donor0 | changes []
+capped rule M     | f (seed 3): drawn donor recorded                           | admitted False | allowance sum (12, 12) | occupancy (9, 9) removals 0 | over allowance [] | cap 12 free 3 | drawn donor0 | changes []
+{
+ "P=560": {
+  "event (fixed 2)": {
+   "streams": 10,
+   "allowance": 3,
+   "fixed": 2,
+   "eligible_P_gt_3": false,
+   "eligible_P_gt_fixed": true,
+   "allowance_below_fixed": false,
+   "change": "newly eligible"
+  },
+  "clock (fixed 5)": {
+   "streams": 60,
+   "allowance": 3,
+   "fixed": 5,
+   "eligible_P_gt_3": false,
+   "eligible_P_gt_fixed": false,
+   "allowance_below_fixed": true,
+   "change": "unchanged"
+  },
+  "integrator (fixed 12)": {
+   "streams": 56,
+   "allowance": 3,
+   "fixed": 12,
+   "eligible_P_gt_3": false,
+   "eligible_P_gt_fixed": false,
+   "allowance_below_fixed": true,
+   "change": "unchanged"
+  },
+  "rhythm (fixed 10)": {
+   "streams": 6,
+   "allowance": 3,
+   "fixed": 10,
+   "eligible_P_gt_3": false,
+   "eligible_P_gt_fixed": false,
+   "allowance_below_fixed": true,
+   "change": "unchanged"
+  },
+  "rhythm (fixed 15)": {
+   "streams": 6,
+   "allowance": 3,
+   "fixed": 15,
+   "eligible_P_gt_3": false,
+   "eligible_P_gt_fixed": false,
+   "allowance_below_fixed": true,
+   "change": "unchanged"
+  },
+  "rhythm (fixed 20)": {
+   "streams": 6,
+   "allowance": 3,
+   "fixed": 20,
+   "eligible_P_gt_3": false,
+   "eligible_P_gt_fixed": false,
+   "allowance_below_fixed": true,
+   "change": "unchanged"
+  },
+  "rhythm (fixed 25)": {
+   "streams": 6,
+   "allowance": 3,
+   "fixed": 25,
+   "eligible_P_gt_3": false,
+   "eligible_P_gt_fixed": false,
+   "allowance_below_fixed": true,
+   "change": "unchanged"
+  },
+  "rhythm (fixed 30)": {
+   "streams": 6,
+   "allowance": 3,
+   "fixed": 30,
+   "eligible_P_gt_3": false,
+   "eligible_P_gt_fixed": false,
+   "allowance_below_fixed": true,
+   "change": "unchanged"
+  },
+  "rhythm (fixed 35)": {
+   "streams": 6,
+   "allowance": 3,
+   "fixed": 35,
+   "eligible_P_gt_3": false,
+   "eligible_P_gt_fixed": false,
+   "allowance_below_fixed": true,
+   "change": "unchanged"
+  },
+  "rhythm (fixed 40)": {
+   "streams": 6,
+   "allowance": 3,
+   "fixed": 40,
+   "eligible_P_gt_3": false,
+   "eligible_P_gt_fixed": false,
+   "allowance_below_fixed": true,
+   "change": "unchanged"
+  }
+ },
+ "P=4480": {
+  "event (fixed 2)": {
+   "streams": 10,
+   "allowance": 26,
+   "fixed": 2,
+   "eligible_P_gt_3": true,
+   "eligible_P_gt_fixed": true,
+   "allowance_below_fixed": false,
+   "change": "unchanged"
+  },
+  "clock (fixed 5)": {
+   "streams": 60,
+   "allowance": 26,
+   "fixed": 5,
+   "eligible_P_gt_3": true,
+   "eligible_P_gt_fixed": true,
+   "allowance_below_fixed": false,
+   "change": "unchanged"
+  },
+  "integrator (fixed 12)": {
+   "streams": 56,
+   "allowance": 26,
+   "fixed": 12,
+   "eligible_P_gt_3": true,
+   "eligible_P_gt_fixed": true,
+   "allowance_below_fixed": false,
+   "change": "unchanged"
+  },
+  "rhythm (fixed 10)": {
+   "streams": 6,
+   "allowance": 26,
+   "fixed": 10,
+   "eligible_P_gt_3": true,
+   "eligible_P_gt_fixed": true,
+   "allowance_below_fixed": false,
+   "change": "unchanged"
+  },
+  "rhythm (fixed 15)": {
+   "streams": 6,
+   "allowance": 26,
+   "fixed": 15,
+   "eligible_P_gt_3": true,
+   "eligible_P_gt_fixed": true,
+   "allowance_below_fixed": false,
+   "change": "unchanged"
+  },
+  "rhythm (fixed 20)": {
+   "streams": 6,
+   "allowance": 26,
+   "fixed": 20,
+   "eligible_P_gt_3": true,
+   "eligible_P_gt_fixed": true,
+   "allowance_below_fixed": false,
+   "change": "unchanged"
+  },
+  "rhythm (fixed 25)": {
+   "streams": 6,
+   "allowance": 26,
+   "fixed": 25,
+   "eligible_P_gt_3": true,
+   "eligible_P_gt_fixed": true,
+   "allowance_below_fixed": false,
+   "change": "unchanged"
+  },
+  "rhythm (fixed 30)": {
+   "streams": 6,
+   "allowance": 26,
+   "fixed": 30,
+   "eligible_P_gt_3": true,
+   "eligible_P_gt_fixed": false,
+   "allowance_below_fixed": true,
+   "change": "newly ineligible"
+  },
+  "rhythm (fixed 35)": {
+   "streams": 6,
+   "allowance": 26,
+   "fixed": 35,
+   "eligible_P_gt_3": true,
+   "eligible_P_gt_fixed": false,
+   "allowance_below_fixed": true,
+   "change": "newly ineligible"
+  },
+  "rhythm (fixed 40)": {
+   "streams": 6,
+   "allowance": 26,
+   "fixed": 40,
+   "eligible_P_gt_3": true,
+   "eligible_P_gt_fixed": false,
+   "allowance_below_fixed": true,
+   "change": "newly ineligible"
+  }
+ }
+}

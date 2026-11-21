@@ -1,0 +1,23 @@
+{
+  "2.0": {
+    "zero_output_range_V": [
+      -0.2375846157728126,
+      0.22535175020797202
+    ],
+    "wrong_raw_sign": 67,
+    "nonzero_cases": 160,
+    "cross_draw_zero_crossings": 236,
+    "ordered_draw_pairs": 1560
+  },
+  "5.0": {
+    "zero_output_range_V": [
+      -0.23462828313802297,
+      0.22682770853936005
+    ],
+    "wrong_raw_sign": 71,
+    "nonzero_cases": 160,
+    "cross_draw_zero_crossings": 129,
+    "ordered_draw_pairs": 1560
+  }
+}
+Largest interpolated ambiguity: {"band_Hz": 2.0, "zero_seed": 2026112828, "nonzero_seed": 2026112810, "output_V": -0.004387290882534822, "interpolated_phase_rad": -1.5697705294644384, "phase_bracket_rad": [-1.5707963267948966, -0.5235987755982988], "output_bracket_V": [-0.004370463211152029, -0.021549194078516826], "actual_frequencies_Hz": [1.8700947463808077, 1.834963759633732]}

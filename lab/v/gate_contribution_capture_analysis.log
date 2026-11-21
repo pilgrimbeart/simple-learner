@@ -1,0 +1,754 @@
+{
+  "success": true,
+  "lives": [
+    {
+      "cond": "seq",
+      "arm": "issued",
+      "first": "red",
+      "activity": {
+        "room_requests": 28224,
+        "births": 3801,
+        "removals": 3633,
+        "native_donor_list_traversals": 393,
+        "native_donor_loop_iterations": 66024
+      },
+      "attribution": {
+        "pending_births": 0,
+        "unmatched_pending": 0,
+        "overwritten_latest_marks": 0,
+        "unconsumed_latest_marks": 0
+      },
+      "windows": {
+        "same_call full": {
+          "tastes": 168,
+          "affected": 0,
+          "bits_total": 0.0,
+          "bits_per_taste": 0.0,
+          "positive_bits": 0,
+          "negative_bits": 0,
+          "error_difference_total": 0.0,
+          "mean_selected_weight": 0.0
+        },
+        "same_call first_third": {
+          "tastes": 50,
+          "affected": 0,
+          "bits_total": 0.0,
+          "bits_per_taste": 0.0,
+          "positive_bits": 0,
+          "negative_bits": 0,
+          "error_difference_total": 0.0,
+          "mean_selected_weight": 0.0
+        },
+        "same_call last_third": {
+          "tastes": 52,
+          "affected": 0,
+          "bits_total": 0.0,
+          "bits_per_taste": 0.0,
+          "positive_bits": 0,
+          "negative_bits": 0,
+          "error_difference_total": 0.0,
+          "mean_selected_weight": 0.0
+        },
+        "latest full": {
+          "tastes": 168,
+          "affected": 0,
+          "bits_total": 0.0,
+          "bits_per_taste": 0.0,
+          "positive_bits": 0,
+          "negative_bits": 0,
+          "error_difference_total": 0.0,
+          "mean_selected_weight": 0.0
+        },
+        "latest first_third": {
+          "tastes": 50,
+          "affected": 0,
+          "bits_total": 0.0,
+          "bits_per_taste": 0.0,
+          "positive_bits": 0,
+          "negative_bits": 0,
+          "error_difference_total": 0.0,
+          "mean_selected_weight": 0.0
+        },
+        "latest last_third": {
+          "tastes": 52,
+          "affected": 0,
+          "bits_total": 0.0,
+          "bits_per_taste": 0.0,
+          "positive_bits": 0,
+          "negative_bits": 0,
+          "error_difference_total": 0.0,
+          "mean_selected_weight": 0.0
+        }
+      },
+      "same_call_lifetimes": {
+        "units": 0,
+        "removed": 0,
+        "censored": 0,
+        "median_observed_duration": null
+      },
+      "latest_lifetimes": {
+        "units": 0,
+        "removed": 0,
+        "censored": 0,
+        "median_observed_duration": null
+      }
+    },
+    {
+      "cond": "seq",
+      "arm": "issued",
+      "first": "blue",
+      "activity": {
+        "room_requests": 26880,
+        "births": 2593,
+        "removals": 2426,
+        "native_donor_list_traversals": 616,
+        "native_donor_loop_iterations": 103488
+      },
+      "attribution": {
+        "pending_births": 0,
+        "unmatched_pending": 0,
+        "overwritten_latest_marks": 0,
+        "unconsumed_latest_marks": 0
+      },
+      "windows": {
+        "same_call full": {
+          "tastes": 160,
+          "affected": 0,
+          "bits_total": 0.0,
+          "bits_per_taste": 0.0,
+          "positive_bits": 0,
+          "negative_bits": 0,
+          "error_difference_total": 0.0,
+          "mean_selected_weight": 0.0
+        },
+        "same_call first_third": {
+          "tastes": 56,
+          "affected": 0,
+          "bits_total": 0.0,
+          "bits_per_taste": 0.0,
+          "positive_bits": 0,
+          "negative_bits": 0,
+          "error_difference_total": 0.0,
+          "mean_selected_weight": 0.0
+        },
+        "same_call last_third": {
+          "tastes": 50,
+          "affected": 0,
+          "bits_total": 0.0,
+          "bits_per_taste": 0.0,
+          "positive_bits": 0,
+          "negative_bits": 0,
+          "error_difference_total": 0.0,
+          "mean_selected_weight": 0.0
+        },
+        "latest full": {
+          "tastes": 160,
+          "affected": 0,
+          "bits_total": 0.0,
+          "bits_per_taste": 0.0,
+          "positive_bits": 0,
+          "negative_bits": 0,
+          "error_difference_total": 0.0,
+          "mean_selected_weight": 0.0
+        },
+        "latest first_third": {
+          "tastes": 56,
+          "affected": 0,
+          "bits_total": 0.0,
+          "bits_per_taste": 0.0,
+          "positive_bits": 0,
+          "negative_bits": 0,
+          "error_difference_total": 0.0,
+          "mean_selected_weight": 0.0
+        },
+        "latest last_third": {
+          "tastes": 50,
+          "affected": 0,
+          "bits_total": 0.0,
+          "bits_per_taste": 0.0,
+          "positive_bits": 0,
+          "negative_bits": 0,
+          "error_difference_total": 0.0,
+          "mean_selected_weight": 0.0
+        }
+      },
+      "same_call_lifetimes": {
+        "units": 0,
+        "removed": 0,
+        "censored": 0,
+        "median_observed_duration": null
+      },
+      "latest_lifetimes": {
+        "units": 0,
+        "removed": 0,
+        "censored": 0,
+        "median_observed_duration": null
+      }
+    },
+    {
+      "cond": "seq",
+      "arm": "issued+gate",
+      "first": "red",
+      "activity": {
+        "room_requests": 27048,
+        "births": 3091,
+        "removals": 2923,
+        "native_donor_list_traversals": 336,
+        "native_donor_loop_iterations": 56448,
+        "adapter_donor_list_traversals": 336,
+        "adapter_donor_loop_iterations": 56448,
+        "adapter_invariant_allowance_traversals": 336
+      },
+      "attribution": {
+        "pending_births": 67,
+        "unmatched_pending": 1,
+        "overwritten_latest_marks": 1,
+        "unconsumed_latest_marks": 2
+      },
+      "windows": {
+        "same_call full": {
+          "tastes": 161,
+          "affected": 150,
+          "bits_total": -0.18487012887417195,
+          "bits_per_taste": -0.0011482616700259128,
+          "positive_bits": 1.949236342919326,
+          "negative_bits": -2.134106471793498,
+          "error_difference_total": 2.0,
+          "mean_selected_weight": 0.03190711690498219
+        },
+        "same_call first_third": {
+          "tastes": 44,
+          "affected": 39,
+          "bits_total": -0.1075309399044567,
+          "bits_per_taste": -0.002443884997828562,
+          "positive_bits": 1.8552491690271518,
+          "negative_bits": -1.9627801089316084,
+          "error_difference_total": 2.0,
+          "mean_selected_weight": 0.09500327489037347
+        },
+        "same_call last_third": {
+          "tastes": 60,
+          "affected": 54,
+          "bits_total": -0.01113229131139204,
+          "bits_per_taste": -0.00018553818852320067,
+          "positive_bits": 0.036060211805393205,
+          "negative_bits": -0.047192503116785245,
+          "error_difference_total": 0.0,
+          "mean_selected_weight": 0.006118012173523692
+        },
+        "latest full": {
+          "tastes": 161,
+          "affected": 150,
+          "bits_total": -0.22590485352086928,
+          "bits_per_taste": -0.0014031357361544683,
+          "positive_bits": 1.9681341286520249,
+          "negative_bits": -2.194038982172894,
+          "error_difference_total": 3.0,
+          "mean_selected_weight": 0.03388971444503573
+        },
+        "latest first_third": {
+          "tastes": 44,
+          "affected": 39,
+          "bits_total": -0.14742328301961613,
+          "bits_per_taste": -0.0033505291595367333,
+          "positive_bits": 1.8743456694155507,
+          "negative_bits": -2.021768952435167,
+          "error_difference_total": 3.0,
+          "mean_selected_weight": 0.10204967412060913
+        },
+        "latest last_third": {
+          "tastes": 60,
+          "affected": 54,
+          "bits_total": -0.01113229131139204,
+          "bits_per_taste": -0.00018553818852320067,
+          "positive_bits": 0.036060211805393205,
+          "negative_bits": -0.047192503116785245,
+          "error_difference_total": 0.0,
+          "mean_selected_weight": 0.006118012173523692
+        }
+      },
+      "same_call_lifetimes": {
+        "units": 48,
+        "removed": 48,
+        "censored": 0,
+        "median_observed_duration": 26.978049535051262
+      },
+      "latest_lifetimes": {
+        "units": 66,
+        "removed": 66,
+        "censored": 0,
+        "median_observed_duration": 27.06376008440491
+      }
+    },
+    {
+      "cond": "seq",
+      "arm": "issued+gate",
+      "first": "blue",
+      "activity": {
+        "room_requests": 25368,
+        "births": 3337,
+        "removals": 3169,
+        "native_donor_list_traversals": 445,
+        "native_donor_loop_iterations": 74760,
+        "adapter_donor_list_traversals": 445,
+        "adapter_donor_loop_iterations": 74760,
+        "adapter_invariant_allowance_traversals": 435
+      },
+      "attribution": {
+        "pending_births": 65,
+        "unmatched_pending": 0,
+        "overwritten_latest_marks": 0,
+        "unconsumed_latest_marks": 6
+      },
+      "windows": {
+        "same_call full": {
+          "tastes": 151,
+          "affected": 38,
+          "bits_total": 0.05885399365007843,
+          "bits_per_taste": 0.00038976154735151277,
+          "positive_bits": 0.6532597845861882,
+          "negative_bits": -0.5944057909361098,
+          "error_difference_total": 1.0,
+          "mean_selected_weight": 0.009949848907369725
+        },
+        "same_call first_third": {
+          "tastes": 50,
+          "affected": 37,
+          "bits_total": 0.05762364264163583,
+          "bits_per_taste": 0.0011524728528327166,
+          "positive_bits": 0.6520294335777456,
+          "negative_bits": -0.5944057909361098,
+          "error_difference_total": 1.0,
+          "mean_selected_weight": 0.02998129967182612
+        },
+        "same_call last_third": {
+          "tastes": 57,
+          "affected": 0,
+          "bits_total": 0.0,
+          "bits_per_taste": 0.0,
+          "positive_bits": 0,
+          "negative_bits": 0,
+          "error_difference_total": 0.0,
+          "mean_selected_weight": 0.0
+        },
+        "latest full": {
+          "tastes": 151,
+          "affected": 40,
+          "bits_total": 0.044179863442227296,
+          "bits_per_taste": 0.000292581877100843,
+          "positive_bits": 0.808361917949826,
+          "negative_bits": -0.7641820545075988,
+          "error_difference_total": 1.0,
+          "mean_selected_weight": 0.01226825970474547
+        },
+        "latest first_third": {
+          "tastes": 50,
+          "affected": 39,
+          "bits_total": 0.0429495124337847,
+          "bits_per_taste": 0.000858990248675694,
+          "positive_bits": 0.8071315669413834,
+          "negative_bits": -0.7641820545075988,
+          "error_difference_total": 1.0,
+          "mean_selected_weight": 0.036982900279900865
+        },
+        "latest last_third": {
+          "tastes": 57,
+          "affected": 0,
+          "bits_total": 0.0,
+          "bits_per_taste": 0.0,
+          "positive_bits": 0,
+          "negative_bits": 0,
+          "error_difference_total": 0.0,
+          "mean_selected_weight": 0.0
+        }
+      },
+      "same_call_lifetimes": {
+        "units": 58,
+        "removed": 58,
+        "censored": 0,
+        "median_observed_duration": 8.47208390546965
+      },
+      "latest_lifetimes": {
+        "units": 65,
+        "removed": 65,
+        "censored": 0,
+        "median_observed_duration": 9.93053347455141
+      }
+    },
+    {
+      "cond": "time",
+      "arm": "issued",
+      "first": "red",
+      "activity": {
+        "room_requests": 289632,
+        "births": 16464,
+        "native_donor_list_traversals": 18211,
+        "native_donor_loop_iterations": 3059448,
+        "removals": 16296
+      },
+      "attribution": {
+        "pending_births": 0,
+        "unmatched_pending": 0,
+        "overwritten_latest_marks": 0,
+        "unconsumed_latest_marks": 0
+      },
+      "windows": {
+        "same_call full": {
+          "tastes": 1724,
+          "affected": 0,
+          "bits_total": 0.0,
+          "bits_per_taste": 0.0,
+          "positive_bits": 0,
+          "negative_bits": 0,
+          "error_difference_total": 0.0,
+          "mean_selected_weight": 0.0
+        },
+        "same_call first_third": {
+          "tastes": 556,
+          "affected": 0,
+          "bits_total": 0.0,
+          "bits_per_taste": 0.0,
+          "positive_bits": 0,
+          "negative_bits": 0,
+          "error_difference_total": 0.0,
+          "mean_selected_weight": 0.0
+        },
+        "same_call last_third": {
+          "tastes": 567,
+          "affected": 0,
+          "bits_total": 0.0,
+          "bits_per_taste": 0.0,
+          "positive_bits": 0,
+          "negative_bits": 0,
+          "error_difference_total": 0.0,
+          "mean_selected_weight": 0.0
+        },
+        "latest full": {
+          "tastes": 1724,
+          "affected": 0,
+          "bits_total": 0.0,
+          "bits_per_taste": 0.0,
+          "positive_bits": 0,
+          "negative_bits": 0,
+          "error_difference_total": 0.0,
+          "mean_selected_weight": 0.0
+        },
+        "latest first_third": {
+          "tastes": 556,
+          "affected": 0,
+          "bits_total": 0.0,
+          "bits_per_taste": 0.0,
+          "positive_bits": 0,
+          "negative_bits": 0,
+          "error_difference_total": 0.0,
+          "mean_selected_weight": 0.0
+        },
+        "latest last_third": {
+          "tastes": 567,
+          "affected": 0,
+          "bits_total": 0.0,
+          "bits_per_taste": 0.0,
+          "positive_bits": 0,
+          "negative_bits": 0,
+          "error_difference_total": 0.0,
+          "mean_selected_weight": 0.0
+        }
+      },
+      "same_call_lifetimes": {
+        "units": 0,
+        "removed": 0,
+        "censored": 0,
+        "median_observed_duration": null
+      },
+      "latest_lifetimes": {
+        "units": 0,
+        "removed": 0,
+        "censored": 0,
+        "median_observed_duration": null
+      }
+    },
+    {
+      "cond": "time",
+      "arm": "issued",
+      "first": "blue",
+      "activity": {
+        "room_requests": 302568,
+        "births": 17524,
+        "removals": 17356,
+        "native_donor_list_traversals": 21230,
+        "native_donor_loop_iterations": 3566640
+      },
+      "attribution": {
+        "pending_births": 0,
+        "unmatched_pending": 0,
+        "overwritten_latest_marks": 0,
+        "unconsumed_latest_marks": 0
+      },
+      "windows": {
+        "same_call full": {
+          "tastes": 1801,
+          "affected": 0,
+          "bits_total": 0.0,
+          "bits_per_taste": 0.0,
+          "positive_bits": 0,
+          "negative_bits": 0,
+          "error_difference_total": 0.0,
+          "mean_selected_weight": 0.0
+        },
+        "same_call first_third": {
+          "tastes": 617,
+          "affected": 0,
+          "bits_total": 0.0,
+          "bits_per_taste": 0.0,
+          "positive_bits": 0,
+          "negative_bits": 0,
+          "error_difference_total": 0.0,
+          "mean_selected_weight": 0.0
+        },
+        "same_call last_third": {
+          "tastes": 580,
+          "affected": 0,
+          "bits_total": 0.0,
+          "bits_per_taste": 0.0,
+          "positive_bits": 0,
+          "negative_bits": 0,
+          "error_difference_total": 0.0,
+          "mean_selected_weight": 0.0
+        },
+        "latest full": {
+          "tastes": 1801,
+          "affected": 0,
+          "bits_total": 0.0,
+          "bits_per_taste": 0.0,
+          "positive_bits": 0,
+          "negative_bits": 0,
+          "error_difference_total": 0.0,
+          "mean_selected_weight": 0.0
+        },
+        "latest first_third": {
+          "tastes": 617,
+          "affected": 0,
+          "bits_total": 0.0,
+          "bits_per_taste": 0.0,
+          "positive_bits": 0,
+          "negative_bits": 0,
+          "error_difference_total": 0.0,
+          "mean_selected_weight": 0.0
+        },
+        "latest last_third": {
+          "tastes": 580,
+          "affected": 0,
+          "bits_total": 0.0,
+          "bits_per_taste": 0.0,
+          "positive_bits": 0,
+          "negative_bits": 0,
+          "error_difference_total": 0.0,
+          "mean_selected_weight": 0.0
+        }
+      },
+      "same_call_lifetimes": {
+        "units": 0,
+        "removed": 0,
+        "censored": 0,
+        "median_observed_duration": null
+      },
+      "latest_lifetimes": {
+        "units": 0,
+        "removed": 0,
+        "censored": 0,
+        "median_observed_duration": null
+      }
+    },
+    {
+      "cond": "time",
+      "arm": "issued+gate",
+      "first": "red",
+      "activity": {
+        "room_requests": 305592,
+        "births": 15104,
+        "native_donor_list_traversals": 16526,
+        "native_donor_loop_iterations": 2776368,
+        "adapter_donor_list_traversals": 16526,
+        "adapter_donor_loop_iterations": 2776368,
+        "adapter_invariant_allowance_traversals": 286,
+        "removals": 14936
+      },
+      "attribution": {
+        "pending_births": 57,
+        "unmatched_pending": 0,
+        "overwritten_latest_marks": 0,
+        "unconsumed_latest_marks": 0
+      },
+      "windows": {
+        "same_call full": {
+          "tastes": 1819,
+          "affected": 76,
+          "bits_total": -0.7021734626707022,
+          "bits_per_taste": -0.00038602169470626854,
+          "positive_bits": 0.03472357137742832,
+          "negative_bits": -0.7368970340481306,
+          "error_difference_total": -1.0,
+          "mean_selected_weight": 0.0009900547154064697
+        },
+        "same_call first_third": {
+          "tastes": 583,
+          "affected": 76,
+          "bits_total": -0.7021734626707022,
+          "bits_per_taste": -0.0012044141726770194,
+          "positive_bits": 0.03472357137742832,
+          "negative_bits": -0.7368970340481306,
+          "error_difference_total": -1.0,
+          "mean_selected_weight": 0.0030890386403505457
+        },
+        "same_call last_third": {
+          "tastes": 601,
+          "affected": 0,
+          "bits_total": 0.0,
+          "bits_per_taste": 0.0,
+          "positive_bits": 0,
+          "negative_bits": 0,
+          "error_difference_total": 0.0,
+          "mean_selected_weight": 0.0
+        },
+        "latest full": {
+          "tastes": 1819,
+          "affected": 76,
+          "bits_total": -0.6923207551571798,
+          "bits_per_taste": -0.000380605143022089,
+          "positive_bits": 0.05223017571052255,
+          "negative_bits": -0.7445509308677024,
+          "error_difference_total": -1.0,
+          "mean_selected_weight": 0.001093771825112653
+        },
+        "latest first_third": {
+          "tastes": 583,
+          "affected": 76,
+          "bits_total": -0.6923207551571798,
+          "bits_per_taste": -0.0011875141597893308,
+          "positive_bits": 0.05223017571052255,
+          "negative_bits": -0.7445509308677024,
+          "error_difference_total": -1.0,
+          "mean_selected_weight": 0.0034126431387305582
+        },
+        "latest last_third": {
+          "tastes": 601,
+          "affected": 0,
+          "bits_total": 0.0,
+          "bits_per_taste": 0.0,
+          "positive_bits": 0,
+          "negative_bits": 0,
+          "error_difference_total": 0.0,
+          "mean_selected_weight": 0.0
+        }
+      },
+      "same_call_lifetimes": {
+        "units": 53,
+        "removed": 53,
+        "censored": 0,
+        "median_observed_duration": 16.79591969623202
+      },
+      "latest_lifetimes": {
+        "units": 57,
+        "removed": 57,
+        "censored": 0,
+        "median_observed_duration": 16.79591969623202
+      }
+    },
+    {
+      "cond": "time",
+      "arm": "issued+gate",
+      "first": "blue",
+      "activity": {
+        "room_requests": 296352,
+        "births": 17802,
+        "removals": 17634,
+        "native_donor_list_traversals": 23931,
+        "native_donor_loop_iterations": 4020408,
+        "adapter_donor_list_traversals": 23931,
+        "adapter_donor_loop_iterations": 4020408,
+        "adapter_invariant_allowance_traversals": 296
+      },
+      "attribution": {
+        "pending_births": 67,
+        "unmatched_pending": 0,
+        "overwritten_latest_marks": 0,
+        "unconsumed_latest_marks": 6
+      },
+      "windows": {
+        "same_call full": {
+          "tastes": 1764,
+          "affected": 220,
+          "bits_total": -0.3192178725491373,
+          "bits_per_taste": -0.0001809625127829576,
+          "positive_bits": 0.5986191963984235,
+          "negative_bits": -0.9178370689475609,
+          "error_difference_total": -2.0,
+          "mean_selected_weight": 0.0015177333900058027
+        },
+        "same_call first_third": {
+          "tastes": 557,
+          "affected": 107,
+          "bits_total": -0.3240978337511205,
+          "bits_per_taste": -0.0005818632562856743,
+          "positive_bits": 0.5888634349305735,
+          "negative_bits": -0.912961268681694,
+          "error_difference_total": -2.0,
+          "mean_selected_weight": 0.004625293907389559
+        },
+        "same_call last_third": {
+          "tastes": 596,
+          "affected": 32,
+          "bits_total": 9.157152889811143e-05,
+          "bits_per_taste": 1.5364350486260308e-07,
+          "positive_bits": 0.00021590210147504757,
+          "negative_bits": -0.00012433057257693614,
+          "error_difference_total": 0.0,
+          "mean_selected_weight": 4.038982000020473e-05
+        },
+        "latest full": {
+          "tastes": 1764,
+          "affected": 220,
+          "bits_total": -0.3192178725491373,
+          "bits_per_taste": -0.0001809625127829576,
+          "positive_bits": 0.5986191963984235,
+          "negative_bits": -0.9178370689475609,
+          "error_difference_total": -2.0,
+          "mean_selected_weight": 0.0015177333900058027
+        },
+        "latest first_third": {
+          "tastes": 557,
+          "affected": 107,
+          "bits_total": -0.3240978337511205,
+          "bits_per_taste": -0.0005818632562856743,
+          "positive_bits": 0.5888634349305735,
+          "negative_bits": -0.912961268681694,
+          "error_difference_total": -2.0,
+          "mean_selected_weight": 0.004625293907389559
+        },
+        "latest last_third": {
+          "tastes": 596,
+          "affected": 32,
+          "bits_total": 9.157152889811143e-05,
+          "bits_per_taste": 1.5364350486260308e-07,
+          "positive_bits": 0.00021590210147504757,
+          "negative_bits": -0.00012433057257693614,
+          "error_difference_total": 0.0,
+          "mean_selected_weight": 4.038982000020473e-05
+        }
+      },
+      "same_call_lifetimes": {
+        "units": 67,
+        "removed": 66,
+        "censored": 1,
+        "median_observed_duration": 19.946606383447154
+      },
+      "latest_lifetimes": {
+        "units": 67,
+        "removed": 66,
+        "censored": 1,
+        "median_observed_duration": 19.946606383447154
+      }
+    }
+  ],
+  "interpretation": "Conditional fixed-history forecast substitution, not a causal control intervention; one seed pair per family."
+}

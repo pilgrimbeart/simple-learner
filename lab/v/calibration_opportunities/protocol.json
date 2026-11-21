@@ -1,0 +1,11 @@
+{
+  "source": "/home/pilgrim/git/simple-learner/lab/v/order_baseline_stream",
+  "measured_window_s": [
+    66.66666666666667,
+    100.0
+  ],
+  "simultaneous_probability": 0.11764705882352941,
+  "opportunity_probability": 0.95,
+  "budget_s": 30,
+  "scope": "Post-result association and generator probability, no causal conditioning or sufficient-learning claim"
+}

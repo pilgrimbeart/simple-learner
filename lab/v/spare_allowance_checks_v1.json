@@ -1,0 +1,60 @@
+{
+ "success": true,
+ "provenance": {
+  "revision": "5700eaa0d397e1a7dc055ce69ce9ec7e1d32cc7f",
+  "dirty": " M ABSTRACT.md\n M PROGRAMME.md\n M QUESTIONS.md\n M README.md\n M discrete/NOTEBOOK.md\n?? lab/gate_test_review.py\n?? lab/initial_prior_replay.py\n?? lab/market_ledger_capture.py\n?? lab/market_transfer_cases.py\n?? lab/queue_results_review.py\n?? lab/spare_allowance.py\n?? lab/spare_allowance_checks.py\n?? lab/spare_allowance_experiment.py\n?? lab/v/gate_test_review.json\n?? lab/v/gate_test_review.log\n?? lab/v/initial_prior_replay.json\n?? lab/v/initial_prior_replay.log\n?? lab/v/initial_prior_replay_checks.json\n?? lab/v/initial_prior_replay_checks.log\n?? lab/v/initial_prior_replay_run1.json\n?? lab/v/market_ledger_capture.json\n?? lab/v/market_ledger_capture.log\n?? lab/v/market_ledger_capture_capture.json\n?? lab/v/market_ledger_capture_capture.log\n?? lab/v/market_ledger_capture_checks.json\n?? lab/v/market_ledger_capture_checks.log\n?? lab/v/market_ledger_capture_run1.json\n?? lab/v/market_transfer_cases.json\n?? lab/v/market_transfer_cases.log\n?? lab/v/market_transfer_cases_checks.json\n?? lab/v/market_transfer_cases_checks.log\n?? lab/v/market_transfer_cases_run1.json\n?? lab/v/queue_results_review.json\n?? lab/v/queue_results_review.log\n?? lab/v/spare_allowance_checks.json\n?? lab/v/spare_allowance_checks.log\n?? lab/v/spare_allowance_checks_failed_corruption_fixture.log\n?? lab/v/spare_allowance_checks_failed_fixed_count.json\n?? lab/v/spare_allowance_checks_failed_fixed_count.log\n?? lab/v/spare_allowance_checks_failed_import_order.log\n",
+  "sha256": {
+   "lab/spare_allowance.py": "1c1da2e9e3488c3929bf0e1f88cca1fde2a54801e9b6ee7c35b7d668ef26f01a",
+   "lab/spare_allowance_checks.py": "dc4057cade44e45b654a8871f911558793119bacc63ed7cc063016a9aebd5557",
+   "lab/alloc_rules.py": "37c8f14317d6d1626e98f3569f4da1248e898e682b7a206fbd7a9fac57848543",
+   "lab/grownet.py": "1a550553b1244368ed0ca6fa59cce3e94a9badd5e5d1e801953aa42974874f0f",
+   "lab/issued_credit.py": "67dcd1854f237873c359bcc9230861e5c77567739871773face5ea98ab196bca",
+   "lab/issued_credit_checks.py": "b2918887ae1798cd314c6be6edfcd548c06b75e8596b960669e145ee68c94e8c"
+  },
+  "command": "timeout 240s env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python lab/spare_allowance_checks.py",
+  "simulated_steps": 0
+ },
+ "checks": [
+  {
+   "name": "1 disabled adapter identical to original M (return, units, tallies, links, allowances, savings, counters, RNG) in every case, 4 seeds each, plus price-equal, no-birth-due and under-allowance requests; duplicate install refused",
+   "passed": true
+  },
+  {
+   "name": "2 leafless spare donor: exactly one allowance moves with no deletion and no savings debit; the next birth fits the recipient's allowance and the cap; donor at its fixed floor and savings at the price still refused",
+   "passed": true
+  },
+  {
+   "name": "3 a donor with a leaf and spare allowance follows the old removal path exactly (identical to original M); chain dependants stay valid; fixed units never removed",
+   "passed": true
+  },
+  {
+   "name": "4 two candidates: the single original draw decides (8 seeds: both outcomes seen), generator state identical to original M, allowance taken only from the drawn leafless donor; price equality and no birth due refused; under-allowance requests unchanged",
+   "passed": true,
+   "outcomes": {
+    "leaf drawn": 5,
+    "leafless drawn": 3
+   }
+  },
+  {
+   "name": "5 whole-brain invariants hold on valid states and the checker rejects each corruption: allowance sum changed; fixed unit missing (units below fixed); units above allowance; total above cap; orphan link",
+   "passed": true
+  },
+  {
+   "name": "6 real brain (168 streams, rule M cap 2300, D82 issued credit, adapter, harness order): an allowance-only transfer between issue and taste leaves credit on the issued original speaker (agree 1, use and own credit 1, saved +log2 1.75), removes nothing, credits no replacement and spends no savings; disabled adapter gives the same fingerprint and D82 summary as no adapter; D82's own checks pass unchanged",
+   "passed": true,
+   "d82_checks": [
+    "known_selector_update_and_sleepers",
+    "living_original_and_parents_once",
+    "deleted_original_wrong_replacement",
+    "deleted_original_correct_replacement",
+    "issued_abstention_cannot_gain_retrospective_credit",
+    "immutable_cached_forecast_and_update_before_next_prediction",
+    "sequential_earlier_learning_deletes_original",
+    "wrong_issued_forecast_correct_replacement_is_still_wrong",
+    "disabled_observer_exact_state_identity",
+    "accepted_without_prior_forecast_rejected"
+   ]
+  }
+ ],
+ "wall_s": 0.37385949700546917
+}

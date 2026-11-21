@@ -1,0 +1,13 @@
+{
+  "prior_sigma_V": 0.03,
+  "detector_sigma_V": 0.03,
+  "alpha": 0.5,
+  "comparators": [
+    0.0,
+    0.5,
+    1.0
+  ],
+  "source": "/home/pilgrim/git/simple-learner/lab/v/calibration_error_floor/rows.json",
+  "budget_s": 30,
+  "limitation": "Normal approximation, supplied zero-centred prior and ideal internal-zero measurement; no brain learning or physical calibration claim."
+}

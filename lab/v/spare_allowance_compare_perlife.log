@@ -1,0 +1,32 @@
+{
+ "seq issued last_third": {
+  "tastes": 1221,
+  "pooled_bits": 0.865025118479193,
+  "pooled_errors": 0.31285831285831284
+ },
+ "seq issued+gate last_third": {
+  "tastes": 1241,
+  "pooled_bits": 0.8549893457102422,
+  "pooled_errors": 0.28122481869460114
+ },
+ "time issued last_third": {
+  "tastes": 11888,
+  "pooled_bits": 0.44142500048612093,
+  "pooled_errors": 0.10254037685060566
+ },
+ "time issued+gate last_third": {
+  "tastes": 12158,
+  "pooled_bits": 0.38452083187933356,
+  "pooled_errors": 0.08784339529527883
+ },
+ "allfood issued last_third": {
+  "tastes": 1146,
+  "pooled_bits": 0.012681712313802012,
+  "pooled_errors": 0.0
+ },
+ "allfood issued+gate last_third": {
+  "tastes": 1146,
+  "pooled_bits": 0.012681712313802012,
+  "pooled_errors": 0.0
+ }
+}

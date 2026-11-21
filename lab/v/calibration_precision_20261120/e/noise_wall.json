@@ -1,0 +1,284 @@
+{
+ "evidence_rate": {
+  "nominal_anchor_interval_s": 85.0,
+  "counted_anchors_per_1000s": {
+   "min": 5,
+   "median": 12.0,
+   "max": 18,
+   "mean": 11.975
+  },
+  "events_per_1000s_mean": 100.1,
+  "time_s_for_95pct_at_least_N_anchors": {
+   "1": 240.0,
+   "2": 390.0,
+   "4": 640.0,
+   "8": 1090.0
+  }
+ },
+ "per_anchor": {
+  "w|0.15": {
+   "anchors": 483,
+   "B_per_anchor_Vs": [
+    0.005060962727808959,
+    0.006884561816231366,
+    0.009201648183219363
+   ],
+   "W_per_anchor_s": [
+    0.04740820175810463,
+    0.0513065107573602,
+    0.057031366405637204
+   ],
+   "W2_per_anchor_s": [
+    0.039885579565943165,
+    0.04356400733299517,
+    0.04879648481024972
+   ],
+   "note": "10%, 50%, 90% over 40 draws of each draw's mean per anchor"
+  },
+  "w|1.0": {
+   "anchors": 483,
+   "B_per_anchor_Vs": [
+    0.005593374361856337,
+    0.007655933078447063,
+    0.010228494826722438
+   ],
+   "W_per_anchor_s": [
+    0.04740820175810463,
+    0.0513065107573602,
+    0.057031366405637204
+   ],
+   "W2_per_anchor_s": [
+    0.039885579565943165,
+    0.04356400733299517,
+    0.04879648481024972
+   ],
+   "note": "10%, 50%, 90% over 40 draws of each draw's mean per anchor"
+  },
+  "w|3.8585074308112732": {
+   "anchors": 483,
+   "B_per_anchor_Vs": [
+    0.005666902644448715,
+    0.00777106037371454,
+    0.010394366239665536
+   ],
+   "W_per_anchor_s": [
+    0.04740820175810463,
+    0.0513065107573602,
+    0.057031366405637204
+   ],
+   "W2_per_anchor_s": [
+    0.039885579565943165,
+    0.04356400733299517,
+    0.04879648481024972
+   ],
+   "note": "10%, 50%, 90% over 40 draws of each draw's mean per anchor"
+  },
+  "w|raw": {
+   "anchors": 483,
+   "B_per_anchor_Vs": [
+    0.00548750862906727,
+    0.008605864823369738,
+    0.010772764122578642
+   ],
+   "W_per_anchor_s": [
+    0.04740820175810463,
+    0.0513065107573602,
+    0.057031366405637204
+   ],
+   "W2_per_anchor_s": [
+    0.039885579565943165,
+    0.04356400733299517,
+    0.04879648481024972
+   ],
+   "note": "10%, 50%, 90% over 40 draws of each draw's mean per anchor"
+  },
+  "w2|0.15": {
+   "anchors": 483,
+   "B_per_anchor_Vs": [
+    0.004340250622223251,
+    0.005968604195859501,
+    0.008017797445715073
+   ],
+   "W_per_anchor_s": [
+    0.039885579565943165,
+    0.04356400733299517,
+    0.04879648481024972
+   ],
+   "W2_per_anchor_s": [
+    0.03498186402023793,
+    0.038639289817607225,
+    0.04410289108369187
+   ],
+   "note": "10%, 50%, 90% over 40 draws of each draw's mean per anchor"
+  },
+  "w2|1.0": {
+   "anchors": 483,
+   "B_per_anchor_Vs": [
+    0.0047037798489391845,
+    0.006509700871715559,
+    0.008793051398886398
+   ],
+   "W_per_anchor_s": [
+    0.039885579565943165,
+    0.04356400733299517,
+    0.04879648481024972
+   ],
+   "W2_per_anchor_s": [
+    0.03498186402023793,
+    0.038639289817607225,
+    0.04410289108369187
+   ],
+   "note": "10%, 50%, 90% over 40 draws of each draw's mean per anchor"
+  },
+  "w2|3.8585074308112732": {
+   "anchors": 483,
+   "B_per_anchor_Vs": [
+    0.004752253202032875,
+    0.006588175201571397,
+    0.009017578008445482
+   ],
+   "W_per_anchor_s": [
+    0.039885579565943165,
+    0.04356400733299517,
+    0.04879648481024972
+   ],
+   "W2_per_anchor_s": [
+    0.03498186402023793,
+    0.038639289817607225,
+    0.04410289108369187
+   ],
+   "note": "10%, 50%, 90% over 40 draws of each draw's mean per anchor"
+  },
+  "w2|raw": {
+   "anchors": 483,
+   "B_per_anchor_Vs": [
+    0.00470433612633328,
+    0.0072740454424116245,
+    0.00913818993870693
+   ],
+   "W_per_anchor_s": [
+    0.039885579565943165,
+    0.04356400733299517,
+    0.04879648481024972
+   ],
+   "W2_per_anchor_s": [
+    0.03498186402023793,
+    0.038639289817607225,
+    0.04410289108369187
+   ],
+   "note": "10%, 50%, 90% over 40 draws of each draw's mean per anchor"
+  }
+ },
+ "single_anchor_settings": {
+  "raw": {
+   "anchors": 165,
+   "single_anchor_setting_inside_feasible_interval": 132,
+   "share": 0.8,
+   "setting_quantiles_10_50_90": [
+    -0.23513649362166994,
+    0.01236248122130998,
+    0.31240833180425115
+   ]
+  },
+  "0.15": {
+   "anchors": 165,
+   "single_anchor_setting_inside_feasible_interval": 165,
+   "share": 1.0,
+   "setting_quantiles_10_50_90": [
+    -0.2257514526254238,
+    0.041653868216341323,
+    0.2303284812739375
+   ]
+  },
+  "1.0": {
+   "anchors": 165,
+   "single_anchor_setting_inside_feasible_interval": 165,
+   "share": 1.0,
+   "setting_quantiles_10_50_90": [
+    -0.22250737134040552,
+    0.042571541167129766,
+    0.23187587363515044
+   ]
+  },
+  "3.8585074308112732": {
+   "anchors": 165,
+   "single_anchor_setting_inside_feasible_interval": 165,
+   "share": 1.0,
+   "setting_quantiles_10_50_90": [
+    -0.22192821694680445,
+    0.0436292776635693,
+    0.23124894433574894
+   ]
+  }
+ },
+ "noise": {
+  "silicon": {
+   "order_node_equivalent_error_per_anchor_mV": {
+    "median": 0.0448405826483547,
+    "max": 0.054228712395504676
+   },
+   "baseline_node_mV": 0.012871591976131004,
+   "memory_write_equivalent_mV": 0.019612293718515982,
+   "combined_per_anchor_mV": 0.05060630195089609,
+   "requirement_mV": {
+    "D165 histories, 95%": 10,
+    "D163 draws, 95%": 15
+   },
+   "snr_per_anchor": {
+    "D165 histories, 95%": 197.60384802871235,
+    "D163 draws, 95%": 296.4057720430685
+   },
+   "anchors_for_noise_sd_equal_requirement": {
+    "D165 histories, 95%": 1,
+    "D163 draws, 95%": 1
+   },
+   "anchors_for_noise_sd_third_of_requirement": {
+    "D165 histories, 95%": 1,
+    "D163 draws, 95%": 1
+   },
+   "evidence_rate_snr2_per_second": {
+    "D165 histories, 95%": 459.3797735971111,
+    "D163 draws, 95%": 1033.6044905935
+   }
+  },
+  "biology_reference_only": {
+   "order_node_equivalent_error_per_anchor_mV": {
+    "median": 23.03010945307111,
+    "max": 27.94889486349702
+   },
+   "baseline_node_mV": 73.48469228349535,
+   "memory_write_equivalent_mV": 3.0004668002460773,
+   "combined_per_anchor_mV": 77.06742984192358,
+   "requirement_mV": {
+    "D165 histories, 95%": 10,
+    "D163 draws, 95%": 15
+   },
+   "snr_per_anchor": {
+    "D165 histories, 95%": 0.12975650051534665,
+    "D163 draws, 95%": 0.19463475077301998
+   },
+   "anchors_for_noise_sd_equal_requirement": {
+    "D165 histories, 95%": 60,
+    "D163 draws, 95%": 27
+   },
+   "anchors_for_noise_sd_third_of_requirement": {
+    "D165 histories, 95%": 535,
+    "D163 draws, 95%": 238
+   },
+   "evidence_rate_snr2_per_second": {
+    "D165 histories, 95%": 0.00019807940501163711,
+    "D163 draws, 95%": 0.0004456786612761836
+   }
+  },
+  "assumptions": "order node currents bounded by |g5|+|g6|+leak*V_TYP; integral of OU noise approximated as white over the anchor; Wa, W2a medians per anchor (w, 0.15 s); memory 25 pF, full V_TYP write, knob span +-V_TYP for d in +-1; noise model of mixed_feedback.py, silicon events of one electron"
+ },
+ "explorers_per_credit_window": {
+  "one_knob": 1,
+  "two_gains": 2,
+  "note": "one scalar observation per credit window (an anchor); two gains need anchors whose positive/negative branch responses differ in ratio to separate them"
+ },
+ "fixed_offset_for_comparison": {
+  "one_offset_mV": 30.0,
+  "note": "a fixed offset is not reduced by more anchors (D164, D167); noise is"
+ }
+}

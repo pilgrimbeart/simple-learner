@@ -1,0 +1,11 @@
+{
+  "task": "information",
+  "command": [
+    "/home/pilgrim/git/simple-learner/.venv/bin/python",
+    "/home/pilgrim/git/simple-learner/lab/overnight_20261119/05_information.py"
+  ],
+  "pid": 12815,
+  "start_unix_s": 1795131333.446834,
+  "timeout_s": 120,
+  "status": "running"
+}

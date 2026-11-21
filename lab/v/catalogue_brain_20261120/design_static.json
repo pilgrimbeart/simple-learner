@@ -1,0 +1,424 @@
+{
+  "check": {
+    "nodes": 15,
+    "retained": 4,
+    "connections": 22,
+    "implicit_filters": 0,
+    "limitation": "Static nominal limits only; mismatch, aggregate slew, dynamics, cost and behaviour require execution."
+  },
+  "graph": {
+    "version": 1,
+    "nodes": [
+      {
+        "name": "S0",
+        "C": 5e-12,
+        "R": 2000000000.0000002,
+        "bias": 0.0,
+        "memory": false,
+        "lo": -0.9,
+        "hi": 0.9,
+        "initial": "random"
+      },
+      {
+        "name": "S1",
+        "C": 5e-12,
+        "R": 2000000000.0000002,
+        "bias": 0.0,
+        "memory": false,
+        "lo": -0.9,
+        "hi": 0.9,
+        "initial": "random"
+      },
+      {
+        "name": "T",
+        "C": 5e-12,
+        "R": 2000000000.0000002,
+        "bias": 0.0,
+        "memory": false,
+        "lo": -0.9,
+        "hi": 0.9,
+        "initial": "random"
+      },
+      {
+        "name": "E0",
+        "C": 2.5e-11,
+        "R": 4000000000.0,
+        "bias": 0.0,
+        "memory": false,
+        "lo": -0.9,
+        "hi": 0.9,
+        "initial": "random"
+      },
+      {
+        "name": "E1",
+        "C": 2.5e-11,
+        "R": 4000000000.0,
+        "bias": 0.0,
+        "memory": false,
+        "lo": -0.9,
+        "hi": 0.9,
+        "initial": "random"
+      },
+      {
+        "name": "P0",
+        "C": 5e-12,
+        "R": null,
+        "bias": 0.0,
+        "memory": true,
+        "lo": -0.9,
+        "hi": 0.9,
+        "initial": "neutral"
+      },
+      {
+        "name": "P1",
+        "C": 5e-12,
+        "R": null,
+        "bias": 0.0,
+        "memory": true,
+        "lo": -0.9,
+        "hi": 0.9,
+        "initial": "neutral"
+      },
+      {
+        "name": "X0",
+        "C": 2.5e-11,
+        "R": 800000000.0,
+        "bias": 0.0,
+        "memory": false,
+        "lo": -0.9,
+        "hi": 0.9,
+        "initial": "random"
+      },
+      {
+        "name": "Y0",
+        "C": 2.5e-11,
+        "R": 8000000000.0,
+        "bias": 0.0,
+        "memory": false,
+        "lo": -0.9,
+        "hi": 0.9,
+        "initial": "random"
+      },
+      {
+        "name": "B0",
+        "C": 2.5e-11,
+        "R": null,
+        "bias": 0.0,
+        "memory": true,
+        "lo": -0.9,
+        "hi": 0.9,
+        "initial": "random"
+      },
+      {
+        "name": "X1",
+        "C": 2.5e-11,
+        "R": 800000000.0,
+        "bias": 0.0,
+        "memory": false,
+        "lo": -0.9,
+        "hi": 0.9,
+        "initial": "random"
+      },
+      {
+        "name": "Y1",
+        "C": 2.5e-11,
+        "R": 8000000000.0,
+        "bias": 0.0,
+        "memory": false,
+        "lo": -0.9,
+        "hi": 0.9,
+        "initial": "random"
+      },
+      {
+        "name": "B1",
+        "C": 2.5e-11,
+        "R": null,
+        "bias": 0.0,
+        "memory": true,
+        "lo": -0.9,
+        "hi": 0.9,
+        "initial": "random"
+      },
+      {
+        "name": "M0",
+        "C": 1e-11,
+        "R": 500000000.00000006,
+        "bias": -8.999999999999998e-10,
+        "memory": false,
+        "lo": -0.9,
+        "hi": 0.9,
+        "initial": "motor_rest"
+      },
+      {
+        "name": "M1",
+        "C": 1e-11,
+        "R": 500000000.00000006,
+        "bias": -8.999999999999998e-10,
+        "memory": false,
+        "lo": -0.9,
+        "hi": 0.9,
+        "initial": "motor_rest"
+      }
+    ],
+    "edges": [
+      {
+        "name": "explore_self_0",
+        "to": "X0",
+        "source": "X0",
+        "gain": 5.625e-10,
+        "offset": 0.0,
+        "slope": 6.666666666666667,
+        "gate": null,
+        "sigmoid": false,
+        "tau": 0.0
+      },
+      {
+        "name": "explore_recover_0",
+        "to": "X0",
+        "source": "Y0",
+        "gain": -9.375e-10,
+        "offset": 0.0,
+        "slope": 6.666666666666667,
+        "gate": null,
+        "sigmoid": false,
+        "tau": 0.0
+      },
+      {
+        "name": "explore_follow_0",
+        "to": "Y0",
+        "source": "X0",
+        "gain": 3.75e-11,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "gate": null,
+        "sigmoid": false,
+        "tau": 0.0
+      },
+      {
+        "name": "explore_bias_0",
+        "to": "X0",
+        "source": "B0",
+        "gain": -9.375e-10,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "gate": null,
+        "sigmoid": false,
+        "tau": 0.0
+      },
+      {
+        "name": "explore_adjust_0",
+        "to": "B0",
+        "source": "X0",
+        "gain": 1.5e-12,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "gate": null,
+        "sigmoid": false,
+        "tau": 0.0
+      },
+      {
+        "name": "explore_motor_0",
+        "to": "M0",
+        "source": "X0",
+        "gain": 1.7999999999999996e-09,
+        "offset": 0.15,
+        "slope": 60.0,
+        "gate": null,
+        "sigmoid": true,
+        "tau": 0.0
+      },
+      {
+        "name": "explore_self_1",
+        "to": "X1",
+        "source": "X1",
+        "gain": 5.625e-10,
+        "offset": 0.0,
+        "slope": 6.666666666666667,
+        "gate": null,
+        "sigmoid": false,
+        "tau": 0.0
+      },
+      {
+        "name": "explore_recover_1",
+        "to": "X1",
+        "source": "Y1",
+        "gain": -9.375e-10,
+        "offset": 0.0,
+        "slope": 6.666666666666667,
+        "gate": null,
+        "sigmoid": false,
+        "tau": 0.0
+      },
+      {
+        "name": "explore_follow_1",
+        "to": "Y1",
+        "source": "X1",
+        "gain": 3.75e-11,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "gate": null,
+        "sigmoid": false,
+        "tau": 0.0
+      },
+      {
+        "name": "explore_bias_1",
+        "to": "X1",
+        "source": "B1",
+        "gain": -9.375e-10,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "gate": null,
+        "sigmoid": false,
+        "tau": 0.0
+      },
+      {
+        "name": "explore_adjust_1",
+        "to": "B1",
+        "source": "X1",
+        "gain": 1.5e-12,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "gate": null,
+        "sigmoid": false,
+        "tau": 0.0
+      },
+      {
+        "name": "explore_motor_1",
+        "to": "M1",
+        "source": "X1",
+        "gain": 1.7999999999999996e-09,
+        "offset": 0.15,
+        "slope": 60.0,
+        "gate": null,
+        "sigmoid": true,
+        "tau": 0.0
+      },
+      {
+        "name": "side_0",
+        "to": "M0",
+        "source": "S0",
+        "gain": 1.7999999999999996e-09,
+        "offset": 0.15,
+        "slope": 60.0,
+        "gate": null,
+        "sigmoid": true,
+        "tau": 0.0
+      },
+      {
+        "name": "plastic_0",
+        "to": "M1",
+        "source": "S0",
+        "gain": 1.7999999999999996e-09,
+        "offset": 0.15,
+        "slope": 60.0,
+        "gate": "P0",
+        "sigmoid": true,
+        "tau": 0.0
+      },
+      {
+        "name": "eligibility_0",
+        "to": "E0",
+        "source": "S0",
+        "gain": 7.5e-11,
+        "offset": 0.15,
+        "slope": 60.0,
+        "gate": null,
+        "sigmoid": true,
+        "tau": 0.0
+      },
+      {
+        "name": "write_positive_0",
+        "to": "P0",
+        "source": "T",
+        "gain": 2.9999999999999995e-10,
+        "offset": 0.15,
+        "slope": 60.0,
+        "gate": "E0",
+        "sigmoid": true,
+        "tau": 0.0
+      },
+      {
+        "name": "write_negative_0",
+        "to": "P0",
+        "source": "T",
+        "gain": -2.9999999999999995e-10,
+        "offset": -0.15,
+        "slope": -60.0,
+        "gate": "E0",
+        "sigmoid": true,
+        "tau": 0.0
+      },
+      {
+        "name": "side_1",
+        "to": "M1",
+        "source": "S1",
+        "gain": 1.7999999999999996e-09,
+        "offset": 0.15,
+        "slope": 60.0,
+        "gate": null,
+        "sigmoid": true,
+        "tau": 0.0
+      },
+      {
+        "name": "plastic_1",
+        "to": "M0",
+        "source": "S1",
+        "gain": 1.7999999999999996e-09,
+        "offset": 0.15,
+        "slope": 60.0,
+        "gate": "P1",
+        "sigmoid": true,
+        "tau": 0.0
+      },
+      {
+        "name": "eligibility_1",
+        "to": "E1",
+        "source": "S1",
+        "gain": 7.5e-11,
+        "offset": 0.15,
+        "slope": 60.0,
+        "gate": null,
+        "sigmoid": true,
+        "tau": 0.0
+      },
+      {
+        "name": "write_positive_1",
+        "to": "P1",
+        "source": "T",
+        "gain": 2.9999999999999995e-10,
+        "offset": 0.15,
+        "slope": 60.0,
+        "gate": "E1",
+        "sigmoid": true,
+        "tau": 0.0
+      },
+      {
+        "name": "write_negative_1",
+        "to": "P1",
+        "source": "T",
+        "gain": -2.9999999999999995e-10,
+        "offset": -0.15,
+        "slope": -60.0,
+        "gate": "E1",
+        "sigmoid": true,
+        "tau": 0.0
+      }
+    ],
+    "sides": [
+      0,
+      1
+    ],
+    "sensors": [
+      "S0",
+      "S1"
+    ],
+    "taste": "T",
+    "motors": [
+      "M0",
+      "M1"
+    ],
+    "volt": 0.3,
+    "substrate": "silicon",
+    "on_chip": true
+  }
+}

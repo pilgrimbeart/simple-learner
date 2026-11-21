@@ -1,0 +1,82 @@
+{
+  "graph": {
+    "nodes": [
+      {
+        "name": "input",
+        "C": 2.5e-11,
+        "R": 400000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "fast",
+        "C": 2.5e-11,
+        "R": 800000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "slow",
+        "C": 2.5e-11,
+        "R": 8000000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "response",
+        "C": 2.5e-11,
+        "R": 400000000.0,
+        "bias": 0.0,
+        "memory": false
+      }
+    ],
+    "edges": [
+      {
+        "to": 1,
+        "source": 0,
+        "gain": 3.75e-10,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": -1
+      },
+      {
+        "to": 2,
+        "source": 0,
+        "gain": 3.75e-11,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": -1
+      },
+      {
+        "to": 3,
+        "source": 1,
+        "gain": 1e-09,
+        "offset": 0.0,
+        "slope": 6.666666666666667,
+        "tau": 0.0,
+        "gate": -1
+      },
+      {
+        "to": 3,
+        "source": 2,
+        "gain": -1e-09,
+        "offset": 0.0,
+        "slope": 6.666666666666667,
+        "tau": 0.0,
+        "gate": -1
+      }
+    ]
+  },
+  "states": 4,
+  "connections": 4,
+  "parts": {
+    "T": 108,
+    "R": 18,
+    "C": 8,
+    "D": 0,
+    "sources": 12
+  },
+  "scope": "Core only; bench sources/recording excluded. Memory pump sources counted ideally; implementation and energy absent. Activity in raw rows separate from supply power."
+}

@@ -1,0 +1,11 @@
+{
+  "source": "/home/pilgrim/git/simple-learner/lab/v/signed_control_diagnosis/original_predictions.json",
+  "modes": [
+    "original",
+    "source_odd",
+    "both_odd"
+  ],
+  "criteria": "D145 static sign >.02V, control contrast >.04/.08V; reused draws, no reliability or dynamic claim",
+  "assumption": "Same stationary transfer, exact external reversal and subtraction; switching/storage/settling absent",
+  "budget_s": 30
+}

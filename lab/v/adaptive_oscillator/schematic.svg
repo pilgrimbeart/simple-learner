@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1050" height="670"><rect width="1050" height="670" fill="white"/><g font-family="sans-serif" fill="#222"><text x="25" y="30" font-size="23">D162: local retained bias adjustment</text>
+<rect x="90" y="90" width="180" height="110" fill="#eef5f8" stroke="#222"/>
+<text x="98" y="115">0: fast</text>
+<text x="98" y="145">C=25pF</text>
+<text x="98" y="175">R=0.8Gohm</text>
+<rect x="450" y="90" width="180" height="110" fill="#eef5f8" stroke="#222"/>
+<text x="458" y="115">1: recovery</text>
+<text x="458" y="145">C=25pF</text>
+<text x="458" y="175">R=8Gohm</text>
+<rect x="780" y="90" width="180" height="110" fill="#eef5f8" stroke="#222"/>
+<text x="788" y="115">2: bias memory</text>
+<text x="788" y="145">C=25pF</text>
+<text x="788" y="175">retained, no leak</text>
+<path d="M150 200 V235 H200 V200" fill="none" stroke="#222"/><text x="160" y="230">E0: 0 to 0, positive</text>
+<text x="25" y="495">E0: gain 562.5pA; slope 6.667/V; offset 0V; no gate or filter</text>
+<path d="M510 200 V280 H200 V200" fill="none" stroke="#222"/><text x="210" y="275">E1: 1 to 0, negative</text>
+<text x="25" y="522">E1: gain -937.5pA; slope 6.667/V; offset 0V; no gate or filter</text>
+<path d="M150 200 V325 H560 V200" fill="none" stroke="#222"/><text x="160" y="320">E2: 0 to 1, positive</text>
+<text x="25" y="549">E2: gain 37.5pA; slope 3.333/V; offset 0V; no gate or filter</text>
+<path d="M840 200 V370 H200 V200" fill="none" stroke="#222"/><text x="210" y="365">E3: 2 to 0, negative</text>
+<text x="25" y="576">E3: gain -937.5pA; slope 3.333/V; offset 0V; no gate or filter</text>
+<path d="M150 200 V415 H890 V200" fill="none" stroke="#222"/><text x="160" y="410">E4: 0 to 2, positive</text>
+<text x="25" y="603">E4: gain 1.5pA; slope 3.333/V; offset 0V; no gate or filter</text>
+</g></svg>

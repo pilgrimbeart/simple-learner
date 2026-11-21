@@ -1,0 +1,144 @@
+{
+  "graph": {
+    "nodes": [
+      {
+        "name": "A",
+        "C": 2.5e-11,
+        "R": 400000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "B",
+        "C": 2.5e-11,
+        "R": 400000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "trace A",
+        "C": 2.5e-11,
+        "R": 6000000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "trace B",
+        "C": 2.5e-11,
+        "R": 6000000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "A then B",
+        "C": 2.5e-11,
+        "R": 400000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "B then A",
+        "C": 2.5e-11,
+        "R": 400000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "coincidence",
+        "C": 2.5e-11,
+        "R": 400000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "order difference",
+        "C": 2.5e-11,
+        "R": 800000000.0,
+        "bias": 0.0,
+        "memory": false
+      }
+    ],
+    "edges": [
+      {
+        "to": 2,
+        "source": 0,
+        "gain": 1.5e-10,
+        "offset": 0.15,
+        "slope": 40.0,
+        "tau": 0.0,
+        "gate": -1,
+        "sigmoid": true
+      },
+      {
+        "to": 3,
+        "source": 1,
+        "gain": 1.5e-10,
+        "offset": 0.15,
+        "slope": 40.0,
+        "tau": 0.0,
+        "gate": -1,
+        "sigmoid": true
+      },
+      {
+        "to": 4,
+        "source": 1,
+        "gain": 1.125e-09,
+        "offset": 0.15,
+        "slope": 40.0,
+        "tau": 0.0,
+        "gate": 2,
+        "sigmoid": true
+      },
+      {
+        "to": 5,
+        "source": 0,
+        "gain": 1.125e-09,
+        "offset": 0.15,
+        "slope": 40.0,
+        "tau": 0.0,
+        "gate": 3,
+        "sigmoid": true
+      },
+      {
+        "to": 6,
+        "source": 0,
+        "gain": 1.125e-09,
+        "offset": 0.15,
+        "slope": 40.0,
+        "tau": 0.0,
+        "gate": 1,
+        "sigmoid": true
+      },
+      {
+        "to": 7,
+        "source": 4,
+        "gain": 3.75e-10,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": -1,
+        "sigmoid": false
+      },
+      {
+        "to": 7,
+        "source": 5,
+        "gain": -3.75e-10,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": -1,
+        "sigmoid": false
+      }
+    ]
+  },
+  "states": 8,
+  "connections": 7,
+  "parts": {
+    "T": 267,
+    "R": 39,
+    "C": 12,
+    "D": 0,
+    "sources": 31
+  },
+  "scope": "Core only; bench sources/recording excluded. Memory pump sources counted ideally; implementation and energy absent. Activity in raw rows separate from supply power."
+}

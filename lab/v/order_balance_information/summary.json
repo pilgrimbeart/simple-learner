@@ -1,0 +1,48 @@
+{
+  "reconstruction_max_error_V": 2.7755575615628914e-17,
+  "first_draw_branch_refinement_max_V": 2.9045667510052553e-08,
+  "capacity_feasible_draws": 39,
+  "draws": 40,
+  "comparisons": {
+    "unchanged": {
+      "adequate_draws": 34,
+      "adequate_cases": 1340,
+      "rescued": 0,
+      "harmed": 0,
+      "knob_range": [
+        0.0,
+        0.0
+      ]
+    },
+    "simultaneous": {
+      "adequate_draws": 39,
+      "adequate_cases": 1353,
+      "rescued": 13,
+      "harmed": 0,
+      "knob_range": [
+        -0.4144386677899874,
+        0.317197656200919
+      ]
+    },
+    "balanced_order": {
+      "adequate_draws": 39,
+      "adequate_cases": 1353,
+      "rescued": 13,
+      "harmed": 0,
+      "knob_range": [
+        -0.4544576123345239,
+        0.36778680576791956
+      ]
+    },
+    "biased_order": {
+      "adequate_draws": 0,
+      "adequate_cases": 1099,
+      "rescued": 11,
+      "harmed": 252,
+      "knob_range": [
+        -0.8160476729394154,
+        -0.2816911913274135
+      ]
+    }
+  }
+}

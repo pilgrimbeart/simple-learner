@@ -1,0 +1,75 @@
+matched equal done
+matched unequal_amplitude done
+matched drifting done
+reused_RC equal done
+reused_RC unequal_amplitude done
+reused_RC drifting done
+{"bypass_validation_max_error_V": 1.1102230246251565e-16, "maximum_resolution_change_V": 8.338348284030184e-07, "maximum_state_magnitude_V": 0.1640307870323629, "within_rails": true}
+{
+  "matched:equal": {
+    "adequate_draws": 33,
+    "draws": 40,
+    "any_drift_phase_wrong_sign_cases": 12,
+    "local_cases": 320,
+    "zero_phase_range_V": [
+      0.0,
+      0.0
+    ],
+    "minimum_adjacent_drop_V": 0.0
+  },
+  "matched:unequal_amplitude": {
+    "adequate_draws": 25,
+    "draws": 40,
+    "any_drift_phase_wrong_sign_cases": 27,
+    "local_cases": 320,
+    "zero_phase_range_V": [
+      -0.0063962354280482515,
+      0.002412270248117677
+    ],
+    "minimum_adjacent_drop_V": -0.0003561880626100043
+  },
+  "matched:drifting": {
+    "adequate_draws": 23,
+    "draws": 40,
+    "any_drift_phase_wrong_sign_cases": 74,
+    "local_cases": 320,
+    "zero_phase_range_V": [
+      -0.016022836336388475,
+      0.015730317853813715
+    ],
+    "minimum_adjacent_drop_V": -0.0011388918428213851
+  },
+  "reused_RC:equal": {
+    "adequate_draws": 33,
+    "draws": 40,
+    "any_drift_phase_wrong_sign_cases": 12,
+    "local_cases": 320,
+    "zero_phase_range_V": [
+      0.0,
+      0.0
+    ],
+    "minimum_adjacent_drop_V": 0.0
+  },
+  "reused_RC:unequal_amplitude": {
+    "adequate_draws": 25,
+    "draws": 40,
+    "any_drift_phase_wrong_sign_cases": 27,
+    "local_cases": 320,
+    "zero_phase_range_V": [
+      -0.006408259863985919,
+      0.0024107795913053667
+    ],
+    "minimum_adjacent_drop_V": -0.0003928239123792681
+  },
+  "reused_RC:drifting": {
+    "adequate_draws": 22,
+    "draws": 40,
+    "any_drift_phase_wrong_sign_cases": 76,
+    "local_cases": 320,
+    "zero_phase_range_V": [
+      -0.0167194635328198,
+      0.016231443959955183
+    ],
+    "minimum_adjacent_drop_V": -0.001648516398689931
+  }
+}

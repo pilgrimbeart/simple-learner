@@ -1,0 +1,17 @@
+{
+  "original_predicted_vs_recorded_pass_disagreements": []
+}
+{
+  "original": {
+    "order_cases_within_original_max_error_of_threshold": 0,
+    "failed_by_more_than_original_max_error": 20
+  },
+  "population_envelope": {
+    "order_cases_within_original_max_error_of_threshold": 2,
+    "failed_by_more_than_original_max_error": 286
+  },
+  "selected_draw_bound": {
+    "order_cases_within_original_max_error_of_threshold": 2,
+    "failed_by_more_than_original_max_error": 28
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "success": false,
+  "hashes": {
+    "spare_allowance_pilot": {
+      "lab/spare_allowance_experiment.py": true,
+      "lab/spare_allowance.py": true,
+      "lab/issued_credit.py": true,
+      "lab/alloc_rules.py": true,
+      "lab/alloc_compare.py": true,
+      "lab/grownet.py": true,
+      "lab/teach.py": true,
+      "lab/active_mixture_audit.py": true
+    },
+    "spare_allowance_compare_new": {
+      "lab/spare_allowance_experiment.py": true,
+      "lab/spare_allowance.py": true,
+      "lab/issued_credit.py": true,
+      "lab/alloc_rules.py": true,
+      "lab/alloc_compare.py": true,
+      "lab/grownet.py": true,
+      "lab/teach.py": true,
+      "lab/active_mixture_audit.py": true
+    },
+    "spare_allowance_survival": {
+      "lab/spare_allowance_experiment.py": true,
+      "lab/spare_allowance.py": true,
+      "lab/issued_credit.py": true,
+      "lab/alloc_rules.py": true,
+      "lab/alloc_compare.py": true,
+      "lab/grownet.py": true,
+      "lab/teach.py": true,
+      "lab/active_mixture_audit.py": true,
+      "lab/spare_allowance_survival.py": false
+    }
+  },
+  "primary": {
+    "seq": {
+      "median": 0.04691877149720905,
+      "ci95": [
+        -0.012946724324902709,
+        0.10793720808195546
+      ]
+    },
+    "time": {
+      "median": 0.10902820120827096,
+      "ci95": [
+        -0.017630890907101668,
+        0.21113438669520682
+      ]
+    }
+  },
+  "allfood_pairs_exact": 20,
+  "provenance": {
+    "revision": "5700eaa0d397e1a7dc055ce69ce9ec7e1d32cc7f",
+    "script_sha256": "b0805d864505b4136faa3e61b2b3f84164745855ff8561517bb3379dea3bd2f2",
+    "command": "timeout 240s env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python lab/hj_result_review.py"
+  },
+  "wall_s": 1.4332648440031335
+}
+Traceback (most recent call last):
+  File "/home/pilgrim/git/simple-learner/lab/hj_result_review.py", line 60, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/pilgrim/git/simple-learner/lab/hj_result_review.py", line 39, in main
+    out['ledger_pass']=all(r['ledger']['max_increment_error']<=1e-9 and r['ledger']['max_weight_error']<=1e-9 and r['ledger']['max_final_balance_error']<=1e-9 for r in records.values())
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/pilgrim/git/simple-learner/lab/hj_result_review.py", line 39, in <genexpr>
+    out['ledger_pass']=all(r['ledger']['max_increment_error']<=1e-9 and r['ledger']['max_weight_error']<=1e-9 and r['ledger']['max_final_balance_error']<=1e-9 for r in records.values())
+                                                                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+KeyError: 'max_weight_error'

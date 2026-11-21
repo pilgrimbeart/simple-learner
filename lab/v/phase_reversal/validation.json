@@ -1,0 +1,9 @@
+{
+  "validation_rmse_V": 2.0449325264613715e-05,
+  "validation_max_error_V": 5.3327963712712645e-05,
+  "maximum_resolution_change_V": 2.656052475180637e-09,
+  "swap_cycle_identity_error_V": 9.646610767133357e-11,
+  "coarse_identity_error_V": 6.156373744126142e-10,
+  "refined_identity_cases": 8,
+  "scenarios": {}
+}

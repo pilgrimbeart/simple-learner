@@ -1,0 +1,9 @@
+{
+ "ledger": "/home/pilgrim/git/simple-learner/lab/v/action_grid_20261120/develop_ledger.jsonl.gz",
+ "ledger_sha256": "c6c9c5b47b257af454c557b9698e833950c6e4c889a2264145fd09ed498e302a",
+ "archive": "/home/pilgrim/git/simple-learner/lab/v/action_grid_20261120_develop.pkl",
+ "archive_sha256": "a752cd45af16d3a0b15e0a459afce5201a9916c2b6b08e818fe253b787f46d03",
+ "rows": 31104,
+ "seconds": 5402.339854478836,
+ "sim": "5f2066bf58ecb0e5"
+}

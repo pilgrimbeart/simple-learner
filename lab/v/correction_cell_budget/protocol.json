@@ -1,0 +1,79 @@
+{
+  "graph": {
+    "nodes": [
+      {
+        "name": "source",
+        "C": 2.5e-11,
+        "R": 200000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "output",
+        "C": 2.5e-11,
+        "R": 400000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "retained correction",
+        "bias": 0.0,
+        "R": null,
+        "C": 2.5e-11,
+        "memory": true
+      },
+      {
+        "name": "calibration permission",
+        "C": 2.5e-11,
+        "R": 200000000.0,
+        "bias": 0.0,
+        "memory": false
+      }
+    ],
+    "edges": [
+      {
+        "to": 1,
+        "source": 0,
+        "gain": 7.5e-10,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": -1
+      },
+      {
+        "to": 1,
+        "source": 2,
+        "gain": -7.5e-10,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": -1
+      },
+      {
+        "to": 2,
+        "source": 1,
+        "gain": 7.5e-11,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": 3
+      },
+      {
+        "to": 2,
+        "source": 2,
+        "gain": -7.5e-11,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": 3
+      }
+    ]
+  },
+  "a_per_s": 10.0,
+  "r_per_s": 10.0,
+  "K_V_per_V": 1.0,
+  "output_tau_s": 0.01,
+  "original_offset_sigma_V": 0.03,
+  "assumption": "Independent equal nominal device offsets; linearised local loop. Source blanking/path isolation/local schedule absent and required.",
+  "budget_s": 30
+}

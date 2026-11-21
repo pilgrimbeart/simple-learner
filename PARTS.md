@@ -1,7 +1,8 @@
 # Parts and interventions
 
-**Status, 2026-11-16.** This is a provisional design taxonomy, not a proof that its catalogue is complete or
-that a brain can discover its parts. The current question and work order are in [PROGRAMME.md](PROGRAMME.md).
+**Status, 2026-11-19.** Section 2 is the literature-informed three-part proposal for the user-approved return
+to a tiny in-life learner and finite repair search. It is not a complete taxonomy or a frozen search grammar.
+Other sections retain the intervention background; none authorises a new run. The current question and work order are in [PROGRAMME.md](PROGRAMME.md).
 The intervention results are historical evidence in [STORIES.md](STORIES.md); each retained capability needs
 a problem, mechanism, evidence and limits, as recorded in [D72](discrete/NOTEBOOK.md#review-2026-11-16).
 
@@ -27,7 +28,7 @@ more exploration than a protected new unit; count time, energy, storage and comm
 
 | | operation | example | reversible? |
 |---|---|---|---|
-| 0 | **State**: not learning; what the circuit holds | B's doubt | yes, fast |
+| 0 | **State**: what the circuit holds; can support learning if evidence changes later decisions | B's doubt | yes, fast |
 | 1 | **Tune** a knob: a gain, threshold, time constant or bias | D20's balance; D15's tuner | yes |
 | 2 | **Modulate**: switch an existing part into another mode | a relay neuron made an oscillator by its conductances [1] | yes |
 | 3 | **Rewire**: a connection's target or sign changed, or enabled or disabled | NEAT's disable gene [2] | mostly |
@@ -48,33 +49,239 @@ Two ideas from the literature govern growth and pruning:
   pruned: `QUESTIONS.md`, step 3) is the selective one. Pruning by what a part's removal would cost is classical in
   networks (Optimal Brain Damage and Surgeon [9, 10]), but needs a global measure; local forms are in section 3.
 
-## 2. The catalogue: parts by what they do in time
+## 2. The catalogue: primitives, dynamical motifs and learning
 
-A small brain computes in time (`BOUNDS.md`, Time), so its parts are best sorted by what they do with time:
+**Purpose.** Enumerate a bounded language of possible repairs to a simple robot circuit, not keep adding
+hand-designed capabilities to the current growing network. The user prioritises real-time, in-life learning
+and dynamical circuits. Real-time means causal operation while the body acts; learning means evidence retained
+in state changes later decisions during that life. An oscillator alone supplies dynamics, not necessarily learning.
+A volatile or bistable memory can support learning; changing synaptic weights is not the only possible form.
 
-| family | parts | made by (feedback's sign and timescale) | here |
+There is no claim to enumerate every possible dynamical circuit or function. Exhaustiveness becomes meaningful
+only after fixing a finite set of primitives, legal compositions, parameter values and a size bound. The motifs
+below are a vocabulary for describing circuits, not twenty equally priced indivisible modules.
+
+### Recommendation: three circuit-level parts
+
+**Proposal, 2026-11-19; not a demonstrated minimal basis.** Use three kinds of circuit macro with declared
+ports and internal state. A macro is a small fixed circuit contract, not an arbitrary software function.
+All brain graphs use this level. Transistors implement the macros; oscillators and learning mechanisms are
+assemblies above them. Neither transistors nor complete oscillators are alternative entries in this catalogue.
+
+| part | contract | internal state and exposed controls |
+|---|---|---|
+| **Dynamic node** | Sum incoming currents into a leaky voltage state, with a fixed bias option. Other parts may read the voltage. | One voltage, capacitance and leak. Inputs/outputs obey rails and substrate noise. Feedback arrives through controlled connections. |
+| **Controlled connection** | Read a source voltage, optionally filter it, apply a bounded saturating response, and inject signed current into a destination. A local control voltage can gate its strength. | Zero or one filter state; declared sign, current scale, threshold, slope and filter timescale. The modulation port is explicit, with its own cost. Self-connections use the same part. |
+| **Retained memory node** | Integrate signed write currents into a retained voltage; expose that voltage for reading or controlling a connection. | One retained voltage plus the declared write-driver interface. Finite range, write threshold and write noise. No external parameter assignment during life. |
+
+The first two parts package the existing mixed-feedback construction. The third exposes retained analogue
+settings. The proposal is therefore **Sepulchre-style dynamics and connections, plus retained writable state**.
+The extension also requires usable local modulation and write ports; memory alone does not supply a learning
+rule. Positive-feedback circuits already supply bistable memory, so retained storage is a practical choice
+for analogue knobs, not a theorem that Sepulchre circuits cannot remember.
+
+All three are circuit macros even though they have different roles. A node is not a complete neuron; a
+connection is not an uncounted wire. An assembled neuron and a learning synapse must expand into these same
+parts. Each part instance and each internal filter state counts. Wiring/load, activity and material are
+recorded separately; we postpone transistor minimisation, not the visibility of resources.
+
+### One universal cell, or several parts?
+
+A cell containing all three could be a convenient repeated implementation later. Calling it one primitive
+would not remove its internal choices: how many currents, timescales, control ports and memories does it hold?
+The three-part description leaves those quantities visible without descending to transistors. We have not
+proved that three is the smallest possible vocabulary; fewer names is not an objective worth optimising now.
+
+**Make controls connectable, and allocate memory when a parameter is to be learned.** Do not automatically
+put a learner on every physical constant. For an instantiated adjustable parameter, name its controlling
+voltage, bounded transfer function and write path. A frozen setting and a learned setting must be visibly
+different in the circuit graph. Prefer the same memory/connection mechanism for intrinsic feedback and
+between-node coupling. This leaves open a later fully populated identical-cell architecture.
+
+The existing engine directly supports a strength gate. Bias can be changed by another input current;
+feedback strength can alter effective thresholds and response times. Direct voltage-controlled changes to
+`tau`, `offset` or `slope` are **not** already implemented. They require an explicit circuit construction and
+bench check, or a separately reviewed macro extension. Do not mutate Python parameter arrays during a life
+and call that circuit learning. Effective timing control is not identical to independent control of every
+physical time constant. Whether the existing strength gate suffices is a concrete first question.
+
+### Coverage ledger: behaviours are assemblies, not additional parts
+
+The status column distinguishes completed restricted bench evidence from proposed construction routes. “Source” means
+published evidence for a mechanism; “derivation” means the limited analytical argument below; “candidate”
+means the topology still needs an instantiated witness. Reading depths and source links live in the
+[focused literature review](MIXED_FEEDBACK.md#minimal-catalogue-review-2026-11-19).
+
+| behaviour required | assembly from the three parts | present evidence and discriminating bench | current coverage status |
 |---|---|---|---|
-| **static maps** | gain, threshold or comparator, sum, coincidence (AND), veto (AND-NOT), winner-take-all | fast negative feedback; mutual inhibition | an eye pulse starting the hold |
-| **memory** | a leaky level (analogue, fading); a latch or flip-flop (bistable, one bit); a counter or tally (a bounded integrator, a few bits); a non-volatile knob | positive feedback, or slow integration | B's doubt (a tally); the SONOS knobs |
-| **change** | adaptation, a differentiator (answers a change, then returns to rest) | slow negative feedback | |
-| **time** | a delay; a one-shot (an interval timed); refractoriness | a leak's time constant | B's hold |
-| **time's relations** | an interval detector (a delay and a coincidence); an order or sequence detector (one channel delayed against another, then a coincidence [11]); a rate detector (a resonator) | delay and coincidence | D20's interval counters; D24's map |
-| **rhythm** | a relaxation oscillator; a half-centre pair [12]; an entraining oscillator; phase reset | fast positive and slow negative feedback | B's scan |
-| **selection** | priority (subsumption [13]); a mode switch | mutual inhibition, positive feedback | B's drive, run and scan |
-| **for learning itself** | an eligibility trace; a knob's writer (a third factor, such as the taste); a surprise or novelty detector; a homeostat | | doubt's writer; D16's evidence gate |
+| Fading trace / leaky integrator | One dynamic node driven by a connection. | Derivation: exponential decay. Measure response and decay in seconds. | demonstrated within [D126](discrete/NOTEBOOK.md#d126-first-dynamic-witnesses) silicon bench |
+| Bounded evidence accumulation | A retained node with positive/negative write paths. | Existing engine contract; demonstrate both write signs, saturation and hold under the declared memory model. | restricted writes/hold in D127; boundary/reversal audit [D129](discrete/NOTEBOOK.md#d129-memory-limits); absence-preserving writes [D131](discrete/NOTEBOOK.md#d131-absence-preserving-writes) |
+| Bistable memory / hysteresis | Dynamic node with strong saturating positive self-feedback. | Derivation below. Set/reset with opposite pulses; test retention and switching under noise. | demonstrated within [D126](discrete/NOTEBOOK.md#d126-first-dynamic-witnesses) silicon bench |
+| Change detector / adaptation | Fast excitation opposed by slower feedforward or integral-feedback correction. | Fixed cancellation is mismatch-sensitive; test onset, offset and sustained residual. | integral-feedback witness demonstrated in [D128](discrete/NOTEBOOK.md#d128-change-and-order); fixed-path version failed |
+| Excitable pulse | Fast regenerative self-feedback opposed by slower restorative feedback. | Mixed-feedback source construction. Isolated perturbation must trigger one bounded excursion and recovery. | unbuilt |
+| One-shot | Adaptive response followed by a thresholded output; excitability is a separate possible construction. | Bounded pulse per positive change, quiet under sustained input, repeated responses. Constant width and regenerative excitability are stronger claims. | bounded pulse demonstrated, 40/40 ([D132](discrete/NOTEBOOK.md#d132-one-shot)); recovery envelope measured in [D136](discrete/NOTEBOOK.md#d136-pulse-recovery); not constant-width timing |
+| Refractory gate | Recovery voltage inhibits the trigger connection. | Candidate. Probe paired pulses at several separations. | unbuilt |
+| Lag / approximate delay | Cascade dynamic nodes or filtered connections. | Derivation below. Measure distortion as well as latency over a declared bandwidth. Exact arbitrary delay is excluded. | unbuilt |
+| Coincidence detector | Two convergent inputs into a thresholded response, or one input gating the other. | Candidate; single inputs must stay subthreshold. Sweep overlap and amplitude independently. | demonstrated as a subsystem in [D128](discrete/NOTEBOOK.md#d128-change-and-order), including large single inputs |
+| Order / interval detector | Trace from A gates a B-driven path; a mirrored path distinguishes B-then-A. | Candidate. Compare both orders, absent inputs and varied separations. | unresolved:34/40 in D128; offsets and resting trace leakage |
+| Resonator | Two dynamic nodes coupled with opposite signs. | Derivation below. Measure decaying oscillation and a nonzero-frequency response peak, not merely a slow filter. | demonstrated within [D126](discrete/NOTEBOOK.md#d126-first-dynamic-witnesses) silicon bench |
+| Autonomous oscillator | Mixed feedback with an unstable rest state and a bounded attracting cycle. | Source construction. Persistent rhythm without periodic input; independent initial phase. | original reliability shortfall diagnosed; explicit retained bias adaptation passes fresh confirmation, with added cost ([D162](discrete/NOTEBOOK.md#d162-adaptive-oscillator)) |
+| Coupled / entrained oscillator | Oscillator plus an input connection. | Source mechanisms; mapping to this catalogue pending. Measure locking range and recovery after perturbation. | unbuilt |
+| Phase detector | Compare two oscillating signals through gated paths, then low-pass the result. | Measure signed local phase sensitivity, bias and phase ambiguity; never supply phase as a privileged input. | local sensitivity demonstrated, 40/40 ([D133](discrete/NOTEBOOK.md#d133-phase-response)); absolute calibration unresolved; mismatch decomposition [D137](discrete/NOTEBOOK.md#d137-phase-bias) |
+| Bursting | Oscillatory assembly plus another slower feedback process. | Source construction and silicon examples. Distinguish bursts from missed/noisy spikes. | unbuilt |
+| Competitive selection | Two or more driven nodes with mutual inhibition and optional self-excitation. | Candidate. Compare weak/strong/equal inputs and reversals; small local contest first, no global winner routine. | unbuilt |
+| Tunable gain / effective threshold / response time | Memory voltage gates a corresponding signal, bias or feedback path. | Engine gate exists; each claimed knob needs its own transfer curve and interaction check. | partial: retained-state nonnegative modulation in D127; explicit signed control 39/40 in [D145](discrete/NOTEBOOK.md#d145-signed-control), below required reliability; threshold/timing untested |
+| Adaptive regulation | A measured local response drives signed feedback onto a retained control voltage. | Candidate. Perturb the controlled circuit and measure recovery; a bench-supplied target is not an admissible body-provided learning signal. | partial: integral regulation of a circuit response in D128; no reward-directed tuning |
+| Evidence-gated learning | Dynamic trace gates a taste-driven writer into retained state; that state controls a later response. | Established three-factor learning family; our useful credit signal is unproved. Compare no-write, reversed evidence and delay controls. | partial: supplied-eligibility writes in D131; D129 exposes overlap/bias limits; reward credit unresolved |
+| Learned rhythm | Phase-sensitive response drives retained state controlling an oscillator. | Adaptive-frequency-oscillator source gives a known example. Our circuit mapping must show retained frequency change after input removal, not just entrainment. | unbuilt |
+| Evidence-dependent competition | The learning assembly changes drive/connection strength in a local contest. | Candidate, not demonstrated Bayesian hypothesis selection. Compare learned preference, reversal and equal-evidence cases. | unbuilt |
 
-**The catalogue is a grammar, not a list.** Every part above is made of feedback loops, each with a sign and a
-timescale, plus delays and coincidences: fast negative feedback gives stability; positive feedback, memory and
-decision; slow negative feedback, adaptation; fast positive with slow negative, rhythm; a delay with a coincidence,
-order and interval. That is Tyson, Chen and Novák's sniffers (adaptation), buzzers (oscillators), toggles (switches)
-and blinkers [14], the network motifs of cells [15, 16], and Sepulchre's mixed feedback (`MIXED_FEEDBACK.md`), whose
-one circuit element with loops of either sign at several timescales makes each of them by its settings. A brain that
-grows its own parts might use such a grammar instead of a built-in catalogue. Whether local rules can discover,
-tune and connect useful compositions within a life is the open question; expressibility does not establish learnability.
+D126 validates only the three marked rows within its [frozen protocol and results](lab/v/dynamic_parts/report.md).
+D127–D133 add restricted write/readout, adaptation, coincidence, bounded-pulse and local phase-sensitivity evidence; see each linked protocol.
+Order and oscillator reliability remain unresolved. Baseline-relative response measurements are observer
+metrics, not an implicit reference signal supplied to a brain.
+The remaining rows have construction routes, not inferred passes. This does **not** establish that a small
+fixed graph, finite grid, physical noise level and life length can realise every row. There is no universal
+approximation argument being used to hide the size or precision needed. A failed recipe is a gap to diagnose,
+not permission to add a bespoke “order detector” or “learning module” to the grammar.
 
-**Neurons themselves sort the same way**: by the bifurcation at which they start firing, into integrators (a rate
-that grows from zero with the input: a memory of evidence) and resonators (firing at their own frequency, picking out
-inputs at it) [17].
+### Short constructive checks
+
+These are our analytical checks on idealised macro equations, not noise-free simulation results. Variables
+are voltages and time is in seconds; numerical values must later come from the allowed SI parameter ranges.
+
+- **Trace:** `C dx/dt = -g x + I(t)` has decay time `C/g`. A difference of fast and slow paths with matched
+  DC gains has transfer `K[1/(1+s*t_fast) - 1/(1+s*t_slow)]`, hence rejects a constant after settling.
+  Mismatch leaves a residual, to be measured rather than assumed away.
+- **Bit:** `C dx/dt = -g x + A*tanh(x/V_s)` has an unstable zero and two stable nonzero equilibria when
+  `A/V_s > g`, provided those equilibria fit within the rails. This establishes deterministic bistability,
+  not a lifetime against random switching. A bias shifts the switching thresholds.
+- **Resonance:** `dx/dt = -a*x - b*y + k*u`, `dy/dt = b*x - a*y` has eigenvalues `-a ± i*b` for positive
+  rates `a,b` (per second). Reading y gives `k*b/[(s+a)^2+b^2]`, with a nonzero-frequency peak if `b>a`.
+  Signed connections approximate these linear dynamics over a declared small-signal range. More feedback
+  can generate oscillation, but resonance alone does not prove a stable nonlinear cycle.
+- **Delay:** a cascade of n equal lags has transfer `(1+s*T/n)^(-n)`, approaching delay `exp(-s*T)` as n
+  grows. At finite n it attenuates and distorts; the bandwidth/accuracy/state-count tradeoff is part of the test.
+- **Phase:** averaging the product of `A*cos(w*t)` and `B*sin(w*t+phi)` gives `(A*B/2)*sin(phi)` after
+  rejecting the double-frequency component. A nonnegative gate requires rectification/differential paths
+  to implement signed multiplication; those paths count and their approximation must be measured. No
+  single periodic detector identifies unwrapped phase globally.
+- **Retained update:** a trace voltage can gate a signed evidence-driven current into memory, whose voltage
+  then gates a readout. This is an explicit evidence-to-memory-to-action route. It does not determine which
+  trace is eligible or whether that rule improves reward in a closed loop.
+
+### Existing-engine mapping and exposed gaps
+
+Checked against `mixed_feedback.py` (`Circuit.node`, `Circuit.element`, `_step`) and `chip.py`, at working
+revision `5700eaa0d397e1a7dc055ce69ce9ec7e1d32cc7f` on 2026-11-19; documentation was already modified. No
+simulation or engine code was changed for this review.
+
+- Dynamic node maps to `node(..., R, C, bias)`. Retained node maps to `node(..., R=None, memory=True)`;
+  the write threshold and write noise are applied in `_step`. Physical implementation assumptions remain
+  those in `chip.py` and the existing rules, including the already recorded memory-supply omission.
+- Controlled connection maps to `element(to, frm, gain, offset, tau, slope, sigmoid, gate)`. It contains
+  a filter state when `tau>0`. The gate is nonnegative and clipped, so a signed multiplier is not available
+  as one primitive. A negative signal must use explicit signed/differential paths where required.
+- The internal filter states currently follow deterministic low-pass updates driven by noisy node voltages.
+  [D147](discrete/NOTEBOOK.md#d147-filter-state-audit) confirms missing independent filter noise.
+  New witnesses must use explicit noisy nodes until physical state/noise/cost and regression checks agree;
+  do not add another noise model or silently change the established substrate. Existing witnesses scanned
+  in D147 use tau=0 throughout and are unaffected by this particular omission.
+- No direct arbitrary parameter-control ports, arbitrary exact delay, event-history buffer, global clock,
+  external winner selection or external learning update is admitted.
+
+### Dynamical role and recovery — RNN review consequence
+
+The [RNN literature review](MIXED_FEEDBACK.md#rnn-time-stability-review-2026-11-19) identifies direct
+continuous-time RNN and gated-memory precedents. No additional part is selected. Each coverage witness must
+state whether its intended behaviour is a fading response, retained state, excitable event or attracting rhythm.
+These are test expectations, not types added to the construction grammar.
+
+Alongside its existing functional test, predeclare perturbations and the appropriate recovery measure:
+filters forget perturbations over a measured time; memory preserves the distinction between stored values;
+excitable circuits recover after events; oscillators recover amplitude/period while allowing phase displacement.
+For learnt controls, check the admissible parameter range and transitions with writes enabled as well as frozen.
+Always distinguish bounded voltage, recovery of behaviour and power/activity cost. Neither saturation, gradient
+clipping nor a recurrent-matrix spectral radius below one supplies a general nonlinear stability certificate.
+Do not require contraction of the entire brain: that would rule out some intended memory and rhythm mechanisms.
+An isolated-module result does not establish closed-loop stability after interconnection with the body.
+
+### Bounded next work after the first witness batch
+
+**Current queue, reviewed 2026-11-20:** follow the [programme's next diagnostic assignment](PROGRAMME.md#next-diagnostic-assignment-2026-11-20).
+[D166](discrete/NOTEBOOK.md#d166-overnight-review) reviews the overnight evidence; the capability
+requirements and construction gates below remain in force.
+
+[D128](discrete/NOTEBOOK.md#d128-change-and-order) adds integral-feedback change detection and coincidence
+coverage; order fails its confirmation and has reached its two-variant limit. [D129](discrete/NOTEBOOK.md#d129-memory-limits)
+exposes gate-only false writes; [D131](discrete/NOTEBOOK.md#d131-absence-preserving-writes) demonstrates an
+explicit no-write region with extra parts and reduced weak-signal sensitivity. [D130](discrete/NOTEBOOK.md#d130-oscillator-starting-states)
+finds coexisting rest/cycle on one draw but no general startup-kick repair. [D132–D133](discrete/NOTEBOOK.md#d132-one-shot)
+add bounded pulses and local phase sensitivity; phase calibration remains unresolved. Internal filtered connections,
+signed learned weights and full coverage remain unvalidated. No robot search is ready.
+
+These are small assignments for sequential work, not authorisation to launch agents. Each new construction
+gets a frozen graph, SI settings, stimulus schedule, margins and noise estimate before its pilot; at most two
+variants before returning to diagnosis. Budget per witness: 60 minutes construction/analysis, one pilot up to
+600 s and confirmation up to 1200 s. Reuse the existing noise engine. Do not stretch budgets after a failure.
+
+The three diagnostics below are completed in [D135–D137](discrete/NOTEBOOK.md#d135-trace-margin).
+They support useful event traces despite a quietness constraint, establish a restricted pulse-recovery
+envelope, and trace phase bias to mismatch in both upstream and output paths. They select no new topology.
+
+1. **Next: offset handling and representation, not confirmation tuning.**
+   [D141–D144](discrete/NOTEBOOK.md#d141-baseline-rejection) establish the signed-interaction need and
+   isolate drift feedthrough. [D145–D146](discrete/NOTEBOOK.md#d145-signed-control) test a counted
+   complementary-gate composition: 39/40 fresh draws, below the frozen reliability criterion. Source
+   offsets and opposing-gate leakage explain its sole magnitude shortfall; large null outputs remain.
+   Preserve that result. [D148–D150](discrete/NOTEBOOK.md#d148-local-zero-reference) complete the
+   internal-zero reference and detector-error analysis: full cancellation can exchange one uncertain
+   offset for another; nominal-prior half correction improves the conditional error model. This is not
+   an implemented rule or a universal optimum. [D151](discrete/NOTEBOOK.md#d151-correction-cell-budget)
+   counts a local correction kernel: its own offsets erase that nominal advantage.
+   [D152–D153](discrete/NOTEBOOK.md#d152-shared-path-reversal) recover useful signal by ideal reversal,
+   but show the available active reverser carries source offsets through as signal.
+   [D154](discrete/NOTEBOOK.md#d154-routing-contract) finds no direct reciprocal-routing contract;
+   economical composite support is unproved. Park this switching cure rather than implicitly adding
+   a primitive. The order diagnosis below now identifies the missing resting-output reference. Preserve weak-event
+   sensitivity and freeze any new comparison separately.
+   Independently, [D147](discrete/NOTEBOOK.md#d147-filter-state-audit) resolves the hidden-filter audit:
+   use explicit noisy nodes for new witnesses; specify state/noise/cost lowering and regression checks
+   before any general positive-tau connection claim. No automatic engine rewrite or robot search.
+2. **Order: quietness is insufficient; retain the measured tradeoff.**
+   [D139](discrete/NOTEBOOK.md#d139-population-trace-margin) completes the all-draw analytic comparison
+   with manufacturing and pointwise noise allowance. Raising the trace threshold loses downstream
+   sensitivity, including at D135's selected-draw bound. Keep the original criteria and branch imbalance
+   separate. No third threshold-only variant follows. A future local correction must explain how it
+   distinguishes absence from weak events and demonstrate an adequate downstream margin before construction.
+   [D155–D156](discrete/NOTEBOOK.md#d155-order-balance-information) find an informed constant balance
+   sufficient for39/40 reused draws; raw coincidence-weighted calibration gives27/40, supplied-baseline
+   calibration39/40. Next diagnose a continuously maintained baseline with explicit settling, event
+   contamination and readout/estimator errors. Budget30 minutes analytic comparison before construction.
+   The remaining draw's simultaneous and long-gap requirements conflict; balance alone cannot cure it.
+   [D157–D160](discrete/NOTEBOOK.md#d157-continuous-baseline) complete that reference diagnosis:
+   an ideal continuous baseline helps, readout error remains costly, and low event rates lack simultaneous
+   calibration opportunities. D163 completes the1000s opportunity check: most reference performance recovers; one known capacity failure and one single-anchor calibration failure remain. D165–D166 complete that inspection: ordered events contaminate its reference. The programme now specifies selectivity, precision and existing-gain diagnostics.
+   Do not select a physical baseline topology from these ideal references alone.
+3. **Pulse branch: retain the measured envelope; no new variant.** D136 passes all tested development
+   conditions at input-off gaps of 100 ms or more, with failures at 20/50 ms. Those gaps are not event
+   periods. Use the actual durations and recovery states when composing modules. Regenerative excitability,
+   an explicit refractory gate and constant-width timing remain separate unproved capabilities; do not
+   build them merely to improve this table. Select a discriminating use case before reopening this branch.
+4. **Memory and oscillator remaining limits.** D131 rejects weak evidence on purpose; map sensitivity and
+   offset tolerance before calling its thresholds generic. Signed learned weights and autonomous eligibility
+   remain open. D130 does not support fixing oscillator reliability by initial kicks; examine parameter
+   regions and equilibrium structure before another oscillator variant. [D159–D162](discrete/NOTEBOOK.md#d159-oscillator-root-census)
+   complete that diagnosis and justify one explicit retained bias controller. Its unchanged design passes fresh confirmation (D162), with costs and limits recorded; retain the bounded repair. No changed success threshold, hidden cost or further tuning.
+5. **For each retained witness**, include removal controls, mismatch/noise, perturbed starts, appropriate
+   recovery, fresh evaluation and both step halvings. Count a seed once across signs and timesteps. Record
+   material, power and activity separately; show live traces. Exact quiet memory follows the established
+   idle-noise assumption and must not be advertised as measured hardware retention.
+6. **Only after coverage**, test whether a known one-bit repair fits a bounded module. Freeze graphs, ports,
+   finite SI settings, seed sets, metrics and budget; count candidates before running the robot search.
+   Keep the retuning-only comparator. A module may contain several catalogue parts; its cost stays explicit.
+
+The completed benches establish component operations, not autonomous in-life reward learning.
 
 ## 3. When: the trigger
 

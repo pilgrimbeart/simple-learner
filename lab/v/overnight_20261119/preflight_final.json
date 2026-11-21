@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "failures": [],
+  "checked_files": 115,
+  "record_counts": {
+    "lab/v/order_balance_information/branches.json": 1360,
+    "lab/v/order_balance_information/draws.json": 40,
+    "lab/v/order_balance_information/rows.json": 5440,
+    "lab/v/order_local_calibration/observations.json": 1360,
+    "lab/v/order_local_calibration/draws.json": 160,
+    "lab/v/order_local_calibration/rows.json": 5440,
+    "lab/v/order_continuous_baseline/observations.json": 1360,
+    "lab/v/order_continuous_baseline/draws.json": 1440,
+    "lab/v/order_baseline_stream/streams.json": 120,
+    "lab/v/order_baseline_stream/draws.json": 480,
+    "lab/v/order_long_calibration/streams.json": 40,
+    "lab/v/order_long_calibration/draws.json": 160,
+    "lab/v/order_calibration_precision/rows.json": 240,
+    "lab/v/adaptive_oscillator/rows.jsonl": 90,
+    "lab/v/adaptive_oscillator_confirm/rows.jsonl": 360
+  },
+  "helper_checks": {
+    "piecewise_linear_boundary_check": "passed",
+    "unidentifiable_and_clip_checks": "passed"
+  },
+  "python": "3.12.3",
+  "numpy": "2.5.4",
+  "numba": "0.68.1",
+  "frozen_revision": "5700eaa0d397e1a7dc055ce69ce9ec7e1d32cc7f",
+  "current_revision": "5700eaa0d397e1a7dc055ce69ce9ec7e1d32cc7f",
+  "note": "A dirty worktree is expected. Content hashes, not cleanliness or revision alone, protect scientific inputs."
+}

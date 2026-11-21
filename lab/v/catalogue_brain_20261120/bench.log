@@ -1,0 +1,5 @@
+A {'P_drift_max': 0.0, 'P_drift_ok': True, 'no_clip': True, 'motors_min_events': 203, 'per_seed_motor_ok': True, 'pass': True} 30 s
+B {'correct_change_min': 0.02865343127628231, 'correct_change_max': 0.13170230157515217, 'size_ok': True, 'unexposed_max': 0.0, 'controls_max': 0.0, 'unexposed_ok': True, 'controls_ok': True, 'no_clip': False, 'n_single': 32, 'pass': False} 5 s
+C {'side_excess_50ms': [0.42578125, 0.3671875, 0.48828125], 'plastic_typ_minus_zero': [0.42578125, 0.36328125, 0.50390625], 'no_clip': True, 'side_ok': True, 'plastic_ok': True} 88 s
+PROGRESSION {'A': True, 'B': False, 'C_side': True, 'C_plastic': True, 'C_no_clip': True, 'R3R4_pass': False}
+/home/pilgrim/git/simple-learner/lab/v/catalogue_brain_20261120/gate_bench.json exists: refusing to overwrite

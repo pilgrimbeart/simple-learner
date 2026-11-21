@@ -1,0 +1,126 @@
+generator copy reproduces D163 schedules for all 10 seeds
+refinement 2026112200 0 elapsed 31.6
+refinement 2026112227 0 elapsed 62.2
+history 2026112200 0 elapsed 62.2
+history 2026112200 1 elapsed 71.4
+history 2026112200 2 elapsed 80.6
+history 2026112200 3 elapsed 90.8
+history 2026112200 4 elapsed 100.7
+history 2026112200 5 elapsed 110.0
+history 2026112200 6 elapsed 119.4
+history 2026112200 7 elapsed 128.6
+history 2026112201 0 elapsed 138.6
+history 2026112201 1 elapsed 148.5
+history 2026112201 2 elapsed 158.5
+history 2026112201 3 elapsed 168.3
+history 2026112201 4 elapsed 178.1
+history 2026112201 5 elapsed 187.7
+history 2026112201 6 elapsed 197.6
+history 2026112201 7 elapsed 206.6
+history 2026112202 0 elapsed 216.1
+history 2026112202 1 elapsed 225.8
+history 2026112202 2 elapsed 237.0
+history 2026112202 3 elapsed 246.0
+history 2026112202 4 elapsed 255.4
+history 2026112202 5 elapsed 268.3
+history 2026112202 6 elapsed 281.7
+history 2026112202 7 elapsed 295.4
+history 2026112203 0 elapsed 309.8
+history 2026112203 1 elapsed 323.0
+history 2026112203 2 elapsed 339.3
+history 2026112203 3 elapsed 351.1
+history 2026112203 4 elapsed 363.1
+history 2026112203 5 elapsed 377.7
+history 2026112203 6 elapsed 391.9
+history 2026112203 7 elapsed 407.0
+history 2026112204 0 elapsed 421.7
+history 2026112204 1 elapsed 436.0
+history 2026112204 2 elapsed 448.9
+history 2026112204 3 elapsed 460.9
+history 2026112204 4 elapsed 472.1
+history 2026112204 5 elapsed 483.1
+history 2026112204 6 elapsed 494.4
+history 2026112204 7 elapsed 505.4
+history 2026112205 0 elapsed 517.6
+history 2026112205 1 elapsed 529.7
+history 2026112205 2 elapsed 542.1
+history 2026112205 3 elapsed 554.4
+history 2026112205 4 elapsed 568.4
+history 2026112205 5 elapsed 583.4
+history 2026112205 6 elapsed 596.0
+history 2026112205 7 elapsed 607.0
+history 2026112206 0 elapsed 618.4
+history 2026112206 1 elapsed 630.1
+history 2026112206 2 elapsed 644.1
+history 2026112206 3 elapsed 658.6
+history 2026112206 4 elapsed 669.7
+history 2026112206 5 elapsed 681.0
+history 2026112206 6 elapsed 696.7
+history 2026112206 7 elapsed 709.9
+history 2026112207 0 elapsed 723.9
+history 2026112207 1 elapsed 736.4
+history 2026112207 2 elapsed 751.0
+history 2026112207 3 elapsed 763.9
+history 2026112207 4 elapsed 777.1
+history 2026112207 5 elapsed 789.5
+history 2026112207 6 elapsed 803.3
+history 2026112207 7 elapsed 817.0
+history 2026112215 0 elapsed 830.0
+history 2026112215 1 elapsed 842.4
+history 2026112215 2 elapsed 855.1
+history 2026112215 3 elapsed 868.5
+history 2026112215 4 elapsed 880.7
+history 2026112215 5 elapsed 893.9
+history 2026112215 6 elapsed 906.9
+history 2026112215 7 elapsed 920.6
+history 2026112227 0 elapsed 920.6
+history 2026112227 1 elapsed 937.4
+history 2026112227 2 elapsed 951.5
+history 2026112227 3 elapsed 964.1
+history 2026112227 4 elapsed 975.4
+history 2026112227 5 elapsed 988.6
+history 2026112227 6 elapsed 1005.0
+history 2026112227 7 elapsed 1020.1
+# Task D — fixed development schedules
+
+Histories 80/80, settings 1920/1920; elapsed 1020.2 s; refinement passed (max knob change 7.84e-06).
+Ten reused, deliberately selected component draws (the two failures and the lowest eight labels) × eight new schedules. Not a population sample; not fresh components; not new event families. Observer settings computed from a fixed trajectory and scored on isolated old cases; not closed-loop lives or online learning.
+
+## Draws whose every old case passes (of 80 histories), by observation mode and window
+
+| window | raw | 0.15 | 1.0 | 3.8585074308112732 |
+|---|---|---|---|---|
+| first_100s_last_third | 23/80 | 19/80 | 19/80 | 19/80 |
+| full_100s | 38/80 | 51/80 | 51/80 | 51/80 |
+| last_third_1000s | 56/80 | 70/80 | 70/80 | 70/80 |
+| full_1000s | 55/80 | 71/80 | 72/80 | 72/80 |
+| prefix_666.6666666666666s | 57/80 | 72/80 | 72/80 | 72/80 |
+| prefix_833.3333333333334s | 54/80 | 72/80 | 72/80 | 72/80 |
+
+## By component seed (all-pass count of 8 schedules), tau 0.15 s
+
+| seed | first_100s_last_third | full_100s | last_third_1000s | full_1000s | prefix_666.6666666666666s | prefix_833.3333333333334s |
+|---|---|---|---|---|---|---|
+| 2026112200 | 4/8 | 5/8 | 8/8 | 8/8 | 8/8 | 8/8 |
+| 2026112201 | 2/8 | 6/8 | 8/8 | 8/8 | 8/8 | 8/8 |
+| 2026112202 | 2/8 | 6/8 | 8/8 | 8/8 | 8/8 | 8/8 |
+| 2026112203 | 2/8 | 6/8 | 8/8 | 8/8 | 8/8 | 8/8 |
+| 2026112204 | 2/8 | 5/8 | 7/8 | 7/8 | 8/8 | 8/8 |
+| 2026112205 | 0/8 | 6/8 | 8/8 | 8/8 | 8/8 | 8/8 |
+| 2026112206 | 1/8 | 7/8 | 8/8 | 8/8 | 8/8 | 8/8 |
+| 2026112207 | 3/8 | 6/8 | 8/8 | 8/8 | 8/8 | 8/8 |
+| 2026112215 | 0/8 | 0/8 | 0/8 | 0/8 | 0/8 | 0/8 |
+| 2026112227 | 3/8 | 4/8 | 7/8 | 8/8 | 8/8 | 8/8 |
+
+## By evidence (simultaneous events in the window: 0, 1, 2+), tau 0.15 s
+
+| window | 0 | 1 | 2+ |
+|---|---|---|---|
+| first_100s_last_third | 0/58 | 18/21 | 1/1 |
+| full_100s | 1/24 | 36/39 | 14/17 |
+| last_third_1000s | 0/2 | 3/4 | 67/74 |
+| full_1000s | 0/0 | 0/1 | 71/79 |
+| prefix_666.6666666666666s | 0/0 | 2/2 | 70/78 |
+| prefix_833.3333333333334s | 0/0 | 1/1 | 71/79 |
+
+Every setting, failed case and denominator is in `settings.jsonl` / `case_scores.jsonl`; full tables by seed, mode, window and evidence in `history_summary.json`.

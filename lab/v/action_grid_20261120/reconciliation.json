@@ -1,0 +1,19 @@
+{
+ "historical": 384,
+ "reproduced": 384,
+ "all_match": true,
+ "discrepancies": [],
+ "extra": [],
+ "per_check": {
+  "meals": 384,
+  "firings": 384,
+  "motor_events": 384,
+  "node_events": 384,
+  "clip_steps": 384,
+  "arrays_hash": 384,
+  "Pf_hash": 384,
+  "trace": 384,
+  "power": 384,
+  "wiring": 384
+ }
+}

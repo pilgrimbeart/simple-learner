@@ -1,0 +1,44 @@
+R | first_third | alternative - baseline delta_bits {"per_life_mean": 0.0069031419489729295, "ci95": [0.0015231626415844585, 0.012239552905653098]}
+R | first_third | alternative - baseline delta_errors {"per_life_mean": 0.04761809415295265, "ci95": [0.02892203705324496, 0.0649373136880486]}
+R | first_third | baseline bits level 1.0036684006481604
+R | first_third | changed choices / tastes "139 / 1102"
+R | last_third | alternative - baseline delta_bits {"per_life_mean": -0.0019177364434896705, "ci95": [-0.003246802146075954, -0.0005932276748178011]}
+R | last_third | alternative - baseline delta_errors {"per_life_mean": -3.561253561253641e-05, "ci95": [-0.0028846153846153826, 0.0027777777777777735]}
+R | last_third | baseline bits level 0.6841325645519583
+R | last_third | changed choices / tastes "4 / 1067"
+R | full | alternative - baseline delta_bits {"per_life_mean": 0.001761256757907992, "ci95": [-0.0005182608322546369, 0.003967112508935615]}
+R | full | alternative - baseline delta_errors {"per_life_mean": 0.015507572270215226, "ci95": [0.00948591297440735, 0.021835244988843684]}
+R | full | baseline bits level 0.808262059442281
+R | full | changed choices / tastes "184 / 3389"
+R+1 | first_third | alternative - baseline delta_bits {"per_life_mean": 0.01052060855685712, "ci95": [0.003963700071931919, 0.017230527584733254]}
+R+1 | first_third | alternative - baseline delta_errors {"per_life_mean": 0.03620057920409683, "ci95": [0.02077493988185683, 0.05413494975191444]}
+R+1 | first_third | baseline bits level 0.9727176706321619
+R+1 | first_third | changed choices / tastes "143 / 1160"
+R+1 | last_third | alternative - baseline delta_bits {"per_life_mean": -0.002275563634763697, "ci95": [-0.003471564384915916, -0.001255241832222837]}
+R+1 | last_third | alternative - baseline delta_errors {"per_life_mean": -0.005047767547767548, "ci95": [-0.014571577071577075, 0.0]}
+R+1 | last_third | baseline bits level 0.649473383037447
+R+1 | last_third | changed choices / tastes "6 / 1135"
+R+1 | full | alternative - baseline delta_bits {"per_life_mean": 0.0022805947470301846, "ci95": [0.00018508552400185285, 0.004427556123988752]}
+R+1 | full | alternative - baseline delta_errors {"per_life_mean": 0.009533177575275192, "ci95": [0.002372317467123002, 0.017759858565669178]}
+R+1 | full | baseline bits level 0.7792190022722943
+R+1 | full | changed choices / tastes "163 / 3472"
+design560 timing | first_third | alternative - baseline delta_bits {"per_life_mean": 0.0029448893717755583, "ci95": [0.002329669620406607, 0.003505567143435069]}
+design560 timing | first_third | alternative - baseline delta_errors {"per_life_mean": 0.000627437553925949, "ci95": [-0.0014392238367547587, 0.0026006097501609948]}
+design560 timing | first_third | baseline bits level 0.5215605251964944
+design560 timing | first_third | changed choices / tastes "172 / 11823"
+design560 timing | last_third | alternative - baseline delta_bits {"per_life_mean": -1.993521110817131e-06, "ci95": [-5.9720880912663555e-06, -5.009585704596205e-10]}
+design560 timing | last_third | alternative - baseline delta_errors {"per_life_mean": -7.974481658692204e-05, "ci95": [-0.0002392344497607661, 0.0]}
+design560 timing | last_third | baseline bits level 0.3907616724511157
+design560 timing | last_third | changed choices / tastes "1 / 11981"
+design560 timing | full | alternative - baseline delta_bits {"per_life_mean": 0.0009729962776867468, "ci95": [0.0007775526539475651, 0.0011551316387654765]}
+design560 timing | full | alternative - baseline delta_errors {"per_life_mean": 0.00018048631430651955, "ci95": [-0.00046960247276598403, 0.0007838655189044085]}
+design560 timing | full | baseline bits level 0.4228357382514982
+design560 timing | full | changed choices / tastes "173 / 35770"
+R minus R+1 effect | first_third | bits {"per_life_mean": -0.0036174666078841898, "ci95": [-0.0078055979959158325, 0.0006975819401564305]}
+R minus R+1 effect | last_third | bits {"per_life_mean": 0.00035782719127402663, "ci95": [-0.0010191401359956826, 0.001899248029908373]}
+R minus R+1 effect | full | bits {"per_life_mean": -0.0005193379891221927, "ci95": [-0.002240540821540243, 0.0010548175308103644]}
+('D79 none', 177000, 'red') {'first_third': (0.0511, 0.087, 4, 46), 'last_third': (-0.0031, 0.0, 0, 70), 'full': (0.012, 0.0217, 4, 184)}
+('D79 none', 177000, 'blue') {'first_third': (0.0097, -0.0417, 4, 48), 'last_third': (-0.0031, 0.0, 0, 71), 'full': (-0.0006, -0.016, 5, 187)}
+('D79 W', 177000, 'red') {'first_third': (0.0416, 0.0678, 4, 59), 'last_third': (-0.0047, 0.0, 0, 59), 'full': (0.0134, 0.0245, 4, 163)}
+('D79 W', 177000, 'blue') {'first_third': (0.003, -0.0612, 5, 49), 'last_third': (-0.0032, 0.0, 0, 70), 'full': (-0.0006, -0.017, 5, 176)}
+max baseline error 2.2737367544323206e-13 wall 3.9851990950046456

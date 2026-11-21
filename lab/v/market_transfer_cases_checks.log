@@ -1,0 +1,12 @@
+{
+ "success": true,
+ "checks": [
+  "invariant check refuses a parent that does not list its child",
+  "invariant check refuses an orphan (parent removed without its child)",
+  "native admission with a leaf conserves the allowance sum",
+  "allocation invariant check refuses an allowance created from nothing",
+  "allocation invariant check refuses capped M: units above a stream's allowance",
+  "allocation invariant check refuses capped M: total above the cap",
+  "a copied generator predicts the native draw without consuming it"
+ ]
+}

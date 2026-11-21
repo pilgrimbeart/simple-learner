@@ -1,0 +1,44 @@
+{
+  "adaptive_passed": 40,
+  "requirement_met": true,
+  "original_passed": 38,
+  "removed_passed": 38,
+  "saved_trace_error": 0.0,
+  "paired": {
+    "original": {
+      "rescued": [
+        2026120208,
+        2026120221
+      ],
+      "harmed": [],
+      "pass_difference": [
+        0.05,
+        0.0,
+        0.125
+      ],
+      "power_difference_W": [
+        6.321792060135475e-09,
+        6.180119745321986e-09,
+        6.456537830184257e-09
+      ]
+    },
+    "writer_removed": {
+      "rescued": [
+        2026120204,
+        2026120225
+      ],
+      "harmed": [],
+      "pass_difference": [
+        0.05,
+        0.0,
+        0.125
+      ],
+      "power_difference_W": [
+        5.686312342726551e-10,
+        5.428764110030256e-10,
+        5.97290199563665e-10
+      ]
+    }
+  }
+}
+Live fresh saved-trace replay completed

@@ -1,0 +1,190 @@
+{
+ "learn": {
+  "food_poison_last_third": 1.2727272727272727,
+  "food": 196,
+  "poison": 154,
+  "net_per_10s": [
+   0.1969509916580542,
+   0.03756465035068558,
+   0.3798074629296796
+  ],
+  "meals_per_10s_last_third": 1.6613293166082306,
+  "stranded": 10,
+  "lives": 64,
+  "lives_ratio_ge3": 9,
+  "sensor_spikes_per_10s": 43.618751525878906,
+  "motor_spikes_per_10s": 104.4296875,
+  "pulses_per_10s": 36.3421875,
+  "E_mean": 0.32938551902770996,
+  "final_P_food": [
+   0.5346875141840428,
+   0.4479655166191151,
+   0.6216288391606213
+  ],
+  "final_P_poison": [
+   0.42631460921256803,
+   0.3403956984115212,
+   0.5113128047596547
+  ],
+  "final_P_right_order": 38,
+  "final_P_learned_0.2": 8,
+  "P_abs_change_over_life_median": 0.35650455951690674,
+  "P_abs_change_gt_0.3": 80,
+  "credit_e": {
+   "tastes": 1026,
+   "absent": 4,
+   "right": 843,
+   "share_right": 0.824853228962818,
+   "bits_per_taste_bound": 0.33065593998652465
+  },
+  "credit_s": {
+   "tastes": 1026,
+   "absent": 4,
+   "right": 839,
+   "share_right": 0.8209393346379648,
+   "bits_per_taste_bound": 0.3219821861611962
+  },
+  "credit_p": {
+   "tastes": 1026,
+   "absent": 0,
+   "right": 968,
+   "share_right": 0.9434697855750487,
+   "bits_per_taste_bound": 0.6864856777644922
+  },
+  "E_eaten_share_of_sum_mean": 0.783181915999385,
+  "write_sign_right": {
+   "n": 998,
+   "share": 0.9038076152304609
+  },
+  "write_mean_dP_eaten": {
+   "food": 0.101101536657829,
+   "poison": -0.13819877573745246
+  },
+  "write_mean_dP_other": {
+   "food": 0.0340008698351396,
+   "poison": -0.04858115364920008
+  },
+  "P_drift_between_tastes_abs_median": 0.4915362000465393
+ },
+ "frozen": {
+  "food_poison_last_third": 1.0,
+  "food": 140,
+  "poison": 140,
+  "net_per_10s": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "meals_per_10s_last_third": 1.3290634532865844,
+  "stranded": 10,
+  "lives": 64,
+  "lives_ratio_ge3": 14,
+  "sensor_spikes_per_10s": 43.47968673706055,
+  "motor_spikes_per_10s": 105.1156234741211,
+  "pulses_per_10s": 35.95,
+  "E_mean": 0.32899728417396545,
+  "final_P_food": [
+   0.5100324384548003,
+   0.42452383274958266,
+   0.5948291689683174
+  ],
+  "final_P_poison": [
+   0.5100324384548003,
+   0.4254072651096067,
+   0.5935008854246917
+  ],
+  "final_P_right_order": 32,
+  "final_P_learned_0.2": 6,
+  "P_abs_change_over_life_median": 0.3446563184261322,
+  "P_abs_change_gt_0.3": 80
+ },
+ "informed": {
+  "food_poison_last_third": 1.1468531468531469,
+  "food": 164,
+  "poison": 143,
+  "net_per_10s": [
+   0.09847085607824375,
+   -0.05170551681825824,
+   0.271916293609255
+  ],
+  "meals_per_10s_last_third": 1.457186254034555,
+  "stranded": 13,
+  "lives": 64,
+  "lives_ratio_ge3": 16,
+  "sensor_spikes_per_10s": 43.72343444824219,
+  "motor_spikes_per_10s": 105.2109375,
+  "pulses_per_10s": 36.2046875,
+  "E_mean": 0.32974371314048767,
+  "final_P_food": [
+   0.507630310683453,
+   0.4204599679964304,
+   0.5942240871430841
+  ],
+  "final_P_poison": [
+   0.5015178816975094,
+   0.4102496776375119,
+   0.586072024056557
+  ],
+  "final_P_right_order": 32,
+  "final_P_learned_0.2": 6,
+  "P_abs_change_over_life_median": 0.49198973178863525,
+  "P_abs_change_gt_0.3": 78
+ },
+ "held": {
+  "food_poison_last_third": 1.217741935483871,
+  "food": 151,
+  "poison": 124,
+  "net_per_10s": [
+   0.1266314745627338,
+   -0.08435953960935823,
+   0.3188214309382673
+  ],
+  "meals_per_10s_last_third": 1.3052971330928425,
+  "stranded": 13,
+  "lives": 64,
+  "lives_ratio_ge3": 20,
+  "sensor_spikes_per_10s": 43.49843978881836,
+  "motor_spikes_per_10s": 107.11328125,
+  "pulses_per_10s": 34.704687500000006,
+  "E_mean": 0.32897669076919556,
+  "final_P_food": [
+   1.0,
+   1.0,
+   1.0
+  ],
+  "final_P_poison": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "final_P_right_order": 64,
+  "final_P_learned_0.2": 64,
+  "P_abs_change_over_life_median": 0.0,
+  "P_abs_change_gt_0.3": 0
+ },
+ "net_informed_minus_frozen": [
+  0.09847085607824375,
+  -0.060914074146894454,
+  0.26723462068074477
+ ],
+ "net_learn_minus_frozen": [
+  0.1969509916580542,
+  0.042216738208651246,
+  0.389142800465006
+ ],
+ "net_informed_minus_learn": [
+  -0.09848013557981043,
+  -0.32838461050893275,
+  0.107819345320298
+ ],
+ "net_held_minus_frozen": [
+  0.1266314745627338,
+  -0.08896805760745533,
+  0.32824973766199667
+ ],
+ "net_held_minus_learn": [
+  -0.07031951709532037,
+  -0.29066352438395154,
+  0.15467595281743654
+ ]
+}

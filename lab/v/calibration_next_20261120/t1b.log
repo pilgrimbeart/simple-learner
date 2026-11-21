@@ -1,0 +1,101 @@
+seed 2026112200 elapsed 11.6 maxV 0.684
+seed 2026112201 elapsed 23.3 maxV 0.692
+seed 2026112202 elapsed 35.1 maxV 0.621
+seed 2026112203 elapsed 46.3 maxV 0.632
+seed 2026112204 elapsed 57.7 maxV 0.604
+seed 2026112205 elapsed 68.7 maxV 0.492
+seed 2026112206 elapsed 80.0 maxV 0.545
+seed 2026112207 elapsed 91.2 maxV 0.556
+seed 2026112208 elapsed 102.0 maxV 0.56
+seed 2026112209 elapsed 112.9 maxV 0.569
+seed 2026112210 elapsed 123.5 maxV 0.609
+seed 2026112211 elapsed 134.3 maxV 0.765
+seed 2026112212 elapsed 145.4 maxV 0.633
+seed 2026112213 elapsed 157.0 maxV 0.586
+seed 2026112214 elapsed 168.2 maxV 0.635
+seed 2026112215 elapsed 179.2 maxV 0.617
+seed 2026112216 elapsed 190.2 maxV 0.643
+seed 2026112217 elapsed 200.9 maxV 0.621
+seed 2026112218 elapsed 211.8 maxV 0.64
+seed 2026112219 elapsed 223.4 maxV 0.628
+seed 2026112220 elapsed 233.8 maxV 0.656
+seed 2026112221 elapsed 244.7 maxV 0.567
+seed 2026112222 elapsed 255.6 maxV 0.597
+seed 2026112223 elapsed 266.5 maxV 0.556
+seed 2026112224 elapsed 277.1 maxV 0.611
+seed 2026112225 elapsed 288.1 maxV 0.611
+seed 2026112226 elapsed 299.5 maxV 0.602
+seed 2026112227 elapsed 311.1 maxV 0.612
+seed 2026112228 elapsed 321.9 maxV 0.559
+seed 2026112229 elapsed 332.7 maxV 0.633
+seed 2026112230 elapsed 343.4 maxV 0.587
+seed 2026112231 elapsed 354.1 maxV 0.589
+seed 2026112232 elapsed 365.1 maxV 0.589
+seed 2026112233 elapsed 375.8 maxV 0.637
+seed 2026112234 elapsed 386.4 maxV 0.572
+seed 2026112235 elapsed 397.6 maxV 0.565
+seed 2026112236 elapsed 408.3 maxV 0.653
+seed 2026112237 elapsed 419.4 maxV 0.682
+seed 2026112238 elapsed 430.2 maxV 0.544
+seed 2026112239 elapsed 440.8 maxV 0.553
+intervention done 451.0
+refined 2026112200 472.6
+refined 2026112227 494.1
+{
+ "completed_seeds": [
+  2026112200,
+  2026112201,
+  2026112202,
+  2026112203,
+  2026112204,
+  2026112205,
+  2026112206,
+  2026112207,
+  2026112208,
+  2026112209,
+  2026112210,
+  2026112211,
+  2026112212,
+  2026112213,
+  2026112214,
+  2026112215,
+  2026112216,
+  2026112217,
+  2026112218,
+  2026112219,
+  2026112220,
+  2026112221,
+  2026112222,
+  2026112223,
+  2026112224,
+  2026112225,
+  2026112226,
+  2026112227,
+  2026112228,
+  2026112229,
+  2026112230,
+  2026112231,
+  2026112232,
+  2026112233,
+  2026112234,
+  2026112235,
+  2026112236,
+  2026112237,
+  2026112238,
+  2026112239
+ ],
+ "stopped": null,
+ "refinement": {
+  "rows": 32,
+  "all_ok": true,
+  "max_d_change": 1.0266645788070683e-05
+ },
+ "elapsed_s": 494.1200659640017,
+ "checks": {
+  "max_d163_A_B_error_Vs": 0.0,
+  "max_d163_knob_error": 0.0,
+  "max_partition_error_Vs": 5.861977570020827e-14,
+  "schedules_identical": true,
+  "pulses_rebuilt": true
+ }
+}

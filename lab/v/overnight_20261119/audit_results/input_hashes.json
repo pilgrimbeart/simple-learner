@@ -1,0 +1,20 @@
+{
+  "lab/overnight_20261119_inputs.json": "4dede6eeb40d5cf440faa93008f0f3e873f646c7f7504f1af2b5d374107ae213",
+  "lab/v/adaptive_oscillator_confirm/protocol.json": "0cd45fde90445dfed2a12e5e13374ddcc65ff8714a909e09dd228c8e3039c2c8",
+  "lab/v/adaptive_oscillator_confirm/rows.jsonl": "8f154137b8631d5dec87c8b87bde736104b48ca227f2506bcac7c5b00968fd60",
+  "lab/v/adaptive_oscillator_confirm/summary.json": "c831ca96d43d9ce326b2d4ce5711f7fc8c936749ed5f9b56c3b279fd82439626",
+  "lab/v/adaptive_oscillator_confirm/trace_manifest.json": "81fadb18cf8c006d6db413f79900f83b2a8fbd59fe657c50323907d2e092f59d",
+  "lab/v/adaptive_oscillator/manifest.json": "7abe0f91c6de26ef157888e3c33e363d7fb7e491fb58c3e69c56c3761ccf0e21",
+  "lab/v/order_long_calibration/streams.json": "9f57f109d7b34b6e4858a8da5354b9fa520ec3e4c50f487e61dea1fcaa72223d",
+  "lab/v/order_long_calibration/draws.json": "d0aff07e245e1960d6e9c42688a89c89b6a9ca8a29783c4025813c2245bc9ffb",
+  "lab/v/order_long_calibration/summary.json": "fac2939d84672bac73e1fb6de3bb75ccfb3276cb71c2302a320fc2c5e1134761",
+  "lab/v/order_baseline_stream/streams.json": "a4b2f9e8f5b49996b1c01833212ecbbff6373f8692be4a2625e95787e2217575",
+  "lab/v/order_balance_information/branches.json": "488eb9d87a5ba67d25c3fa3491caa023ab6d782f4de008b75414fadbc0985c3e",
+  "lab/v/order_balance_information/draws.json": "ee95f7fb13d6e54adeb221513ee1bff1d5283583d8f6fcbebdc92b43c876db70",
+  "lab/v/order_calibration_precision/rows.json": "e27fcb4ae6d2291a3938098e1470e78505c2a670f605243bfb823d2f97d10619",
+  "lab/v/order_calibration_precision/summary.json": "795f3cd124c4a65188eab9400ef6be14031810f5c415fcf8bcf0fd5ec93e6089",
+  "lab/v/order_continuous_baseline/observations.json": "9e81fa28a06fc534143aed5b5654c40b46fd15116e8a96c3d32bb1c8697aff5a",
+  "lab/dynamic_parts_bench.py": "f5efca300f9fa47f480ab7a245e302ea4327aa6a85f31a1976d12997b58180b1",
+  "units.py": "dfdd23e62a79251c579cc8d43badea5894cd167d1f6229a560bd83fb0b2bf1e8",
+  "lab/overnight_20261119/01_audit.py": "b7bedeaad60bad4da292968ec97e6699c02c0d66a10dd121ae930258ff1250d9"
+}

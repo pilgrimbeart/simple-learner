@@ -1,0 +1,82 @@
+{
+  "revision": "5700eaa0d397e1a7dc055ce69ce9ec7e1d32cc7f",
+  "hash_checks": {
+    "brains/designed.py": true,
+    "brains/circuit.py": true,
+    "creature.py": true,
+    "world.py": true,
+    "mixed_feedback.py": true,
+    "units.py": true,
+    "chip.py": true,
+    "lab/robot_action_20261120/brain.py": true,
+    "lab/robot_action_20261120/capture.py": true,
+    "lab/robot_action_20261120/checks.py": true,
+    "lab/robot_action_20261120/make_manifest.py": true,
+    "lab/robot_action_20261120/metrics.py": true,
+    "lab/robot_action_20261120/replay.py": true
+  },
+  "bias_vs_baseline": {
+    "delta": [
+      0.004687500000000011,
+      -0.2296875,
+      0.24374999999999997
+    ],
+    "stranded": [
+      11,
+      32
+    ],
+    "food_poison": [
+      [
+        240,
+        229
+      ],
+      [
+        98,
+        88
+      ]
+    ]
+  },
+  "learn_vs_frozen": {
+    "delta": [
+      0.0796875,
+      -0.009375,
+      0.1828125
+    ],
+    "stranded": [
+      40,
+      40
+    ],
+    "food_poison": [
+      [
+        99,
+        82
+      ],
+      [
+        111,
+        111
+      ]
+    ]
+  },
+  "allfood_bias_vs_baseline": {
+    "delta": [
+      1.153125,
+      0.10312499999999997,
+      2.23125
+    ],
+    "stranded": [
+      10,
+      40
+    ],
+    "food_poison": [
+      [
+        532,
+        0
+      ],
+      [
+        286,
+        0
+      ]
+    ]
+  },
+  "scope": "CSV arithmetic and paired seed bootstrap only; no full capture replay or rail measurement replication"
+}

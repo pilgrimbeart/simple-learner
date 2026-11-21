@@ -1,5 +1,12 @@
 # Can more of the same brain learn unfamiliar challenges?
 
+**Latest review (2026-11-20):** [D182](discrete/NOTEBOOK.md#d182-catalogue-review) verifies the catalogue
+brain's small informed sensory benefit, but collection still fails even in all-food lives. The next question
+is whether sustained sensory transfer, motor recovery or movement coordination explains the loss.
+Exploration alone is not yet established as the cause. Learning and local autonomous repair remain unproved.
+The user has since chosen a broad fixed test of existing settings; [D183](discrete/NOTEBOOK.md#d183-action-grid-plan)
+records the prepared assignment, with no simulations yet run.
+
 We seek reusable components for a real-time robot brain that recognises an improvable shortfall and adapts
 its own organisation during life. Additional brain material should extend what it can learn without a designer
 supplying a new solution for each challenge. Local information, limited evidence, learning time, communication
@@ -9,7 +16,7 @@ separate this ambition from the project's exploratory milestones.
 The experiments use a simple simulated robot. Hand-designed controllers establish achievable behaviours and
 expose missing capabilities; they are evidence for understanding, not the autonomous solution. Small circuits
 learn a basic food distinction. Earlier local recruitment repairs a missing connection, under an older noise
-model. The current growing networks improve with capacity on sequence challenges. Rhythm acquisition and
+model. The earlier growing networks improve with capacity on sequence challenges. Rhythm acquisition and
 tracking substantially improve timing performance. These findings support several useful mechanisms, but
 combined challenges, noisy changing feedback and reuse of old knowledge remain difficult.
 
@@ -68,11 +75,58 @@ leaving no demonstrated memory-as-parts explanation of the benefit of extra room
 predictions with more room. A hand-informed allocation reaches similar measured performance with fewer final
 categorical units on reused development seeds. [Review](discrete/NOTEBOOK.md#d103-agent-review) confirms
 selected numerical results but leaves selection, learning credit and changed observations as competing
-explanations. The market's savings gate often blocks room; longer lives help, without establishing a universal
-evidence-rate limit. The next work is a common-window forecast audit, an exact currency audit and a bounded
-selection replay, specified in the [current queue](PROGRAMME.md#current-next-steps-cheap-agent-queue-after-d103).
+explanations. The [latest review](discrete/NOTEBOOK.md#d120-hj-review) reproduces the completed spare-allowance comparison:
+positive but inconclusive efficiency effects in both families. New units often speak, but standalone bit totals
+do not bound their contribution to the combined forecast. [Eight passive replays](discrete/NOTEBOOK.md#d122-contribution-capture) now reproduce the original lives and
+measure small, mixed conditional contributions from transfer-associated new speakers on one seed pair.
+The result narrows the forecast explanation on those histories without identifying a causal efficiency route.
+Matched counts confirm extra global scanning work in the diagnostic adapter. A
+[step-back presentation](lab/v/simple_learner_progress_review.pptx) connects these findings to the original goal;
+no new controller or broad run is selected.
 No retention or growth cure is selected.
 The central question remains which useful relations local components can
 exploit or discover affordably. Timing generality and retention remain conditional branches in the
 [programme](PROGRAMME.md) and [open questions](QUESTIONS.md).
-This is a research position as of 2026-11-18, not a claim of a completed breakthrough.
+**Current direction, reviewed 2026-11-20:** the user has reset the investigation to a tiny circuit and a finite repair
+search. The [catalogue proposal](PARTS.md#2-the-catalogue-primitives-dynamical-motifs-and-learning) separates
+three circuit parts from the behaviours assembled from them. The [first bench batch](discrete/NOTEBOOK.md#d126-first-dynamic-witnesses) establishes three restricted
+behaviour witnesses and diagnoses a fourth’s reliability shortfall.
+[D127](discrete/NOTEBOOK.md#d127-feedback-margin-and-retained-write) adds controlled retained writes and
+readout modulation, while exposing limitations of a local oscillator-stability check. Full coverage and
+autonomous learning remain open. [D128–D131](discrete/NOTEBOOK.md#d128-change-and-order) add adaptation and
+coincidence, expose offset-driven false writes, and demonstrate a costed no-write region. Order and
+oscillator robustness remain unresolved; observer baseline subtraction is not a brain mechanism.
+[D132–D133](discrete/NOTEBOOK.md#d132-one-shot) demonstrate bounded pulses and phase sensitivity, while
+exposing a large phase-output bias. [D135–D137](discrete/NOTEBOOK.md#d135-trace-margin) show that quiet
+traces can retain measurable events, bound pulse recovery, and explain the phase bias through mismatch.
+[D138–D139](discrete/NOTEBOOK.md#d138-phase-information) show why mean-only calibration can erase a
+real timing lead, while suppressing idle traces can lose useful event sensitivity. Internal calibration
+remains a requirement, not a free observer service. [Input reversal](discrete/NOTEBOOK.md#d140-input-reversal)
+cancels bias for identical waveforms but leaves errors with unequal baselines.
+[D141–D144](discrete/NOTEBOOK.md#d141-baseline-rejection) identify loss of negative signals at gates and
+offset feedthrough during drift. [Explicit signed control](discrete/NOTEBOOK.md#d145-signed-control) reaches 39/40 fresh draws, below
+its required reliability, with offset-induced limitations. The [filter audit](discrete/NOTEBOOK.md#d147-filter-state-audit)
+identifies missing independent noise in implicit connection filters; current witnesses use explicit noisy
+nodes instead. [D148–D150](discrete/NOTEBOOK.md#d148-local-zero-reference) identify a useful partial
+correction under an explicit uncertainty model; its measurement and prior paths have not been built.
+[D151–D153](discrete/NOTEBOOK.md#d151-correction-cell-budget) expose errors in both the correction kernel and the available reverser; ideal cancellation does not establish a physical cure. [D154](discrete/NOTEBOOK.md#d154-routing-contract) finds no direct routing-switch contract, while possible composites remain unproved. The switching cure is parked. [D155–D156](discrete/NOTEBOOK.md#d155-order-balance-information) show why temporal-order balancing needs a resting-output reference: raw local calibration worsens responses, while an informed baseline reaches39/40 reused draws. [D157–D160](discrete/NOTEBOOK.md#d157-continuous-baseline) separate its readout/startup limitations
+from scarce calibration opportunities; the longer reference check recovers most performance, leaving precision and two failures unresolved. [D159–D162](discrete/NOTEBOOK.md#d159-oscillator-root-census)
+produce a locally retained bias adjustment that passes fresh oscillator confirmation, with extra
+material and power counted. This is a bounded operating-point repair, not robot learning. No calibration circuit is selected.
+The preceding growth results are background evidence,
+not the active work queue. This is not a claim of a completed breakthrough.
+
+**Latest review, 2026-11-20.** [D175](discrete/NOTEBOOK.md#d175-results-review) reproduces the
+shared-reading detector's fresh-draw improvement, while qualifying its hybrid simulation and the robot
+coincidence census. Full physical implementation and reuse remain unestablished. The repair stays parked.
+The next proposed investigation diagnoses a concrete robot shortfall using existing eligibility traces,
+learning writes and motor responses before adding a timing front end. This connects the component work
+back to autonomous, economical in-life adaptation; no general scaling claim follows from the bench result.
+
+**Latest result, 2026-11-20.** [D176](discrete/NOTEBOOK.md#d176-robot-shortfall) carries out that diagnosis on the
+designed circuit's robot lives. The evidence linking a sensor to a later taste is present and is written the
+right way. The learned knob is lost to its own node's noise and its writers' offsets. Even a perfect knob held all
+life gains little, because the mismatched excitable neurons relay the eyes to the thrusters unreliably. Curing
+the forgetting with existing means lets the brain retain the answer in most lives without eating better. The
+shortfall is in action and retention, not in timing or credit assignment, so a calibrated timing front end
+would not address it.

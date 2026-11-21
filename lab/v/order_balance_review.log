@@ -1,0 +1,33 @@
+{
+  "verified": [
+    "order_balance_information",
+    "order_local_calibration"
+  ],
+  "scored_rows_each": 5440,
+  "conflicts": [
+    {
+      "seed": 2026112215,
+      "constraints": [
+        {
+          "case": {
+            "id": "pair_0.5_0.35_0.0",
+            "a": 0.5,
+            "b": 0.35,
+            "delay": 0.0
+          },
+          "requires_d_greater_than": -0.16218631700961111
+        },
+        {
+          "case": {
+            "id": "pair_0.5_0.5_0.6",
+            "a": 0.5,
+            "b": 0.5,
+            "delay": 0.6
+          },
+          "requires_d_less_than": -0.19449161091760545
+        }
+      ]
+    }
+  ],
+  "script_sha256": "0c965f4355a038e3cbb1c24e5bcddeb3c2d7f34d24f9ec925c82c6a5c170f7c4"
+}

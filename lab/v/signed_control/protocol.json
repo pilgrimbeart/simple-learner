@@ -1,0 +1,274 @@
+{
+  "graph": {
+    "nodes": [
+      {
+        "name": "source",
+        "C": 2.5e-11,
+        "R": 200000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "control",
+        "C": 2.5e-11,
+        "R": 200000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "positive gate",
+        "C": 2.5e-11,
+        "R": 400000000.0,
+        "bias": 3.75e-10,
+        "memory": false
+      },
+      {
+        "name": "negative gate",
+        "C": 2.5e-11,
+        "R": 400000000.0,
+        "bias": 3.75e-10,
+        "memory": false
+      },
+      {
+        "name": "output",
+        "C": 2.5e-11,
+        "R": 400000000.0,
+        "bias": 0.0,
+        "memory": false
+      }
+    ],
+    "edges": [
+      {
+        "to": 2,
+        "source": 1,
+        "gain": 7.5e-10,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": -1
+      },
+      {
+        "to": 3,
+        "source": 1,
+        "gain": -7.5e-10,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": -1
+      },
+      {
+        "to": 4,
+        "source": 0,
+        "gain": 7.5e-10,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": 2
+      },
+      {
+        "to": 4,
+        "source": 0,
+        "gain": -7.5e-10,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": 3
+      }
+    ]
+  },
+  "cases": [
+    {
+      "x": -0.3,
+      "y": -0.3,
+      "id": "0_0"
+    },
+    {
+      "x": -0.3,
+      "y": -0.15,
+      "id": "0_1"
+    },
+    {
+      "x": -0.3,
+      "y": 0.0,
+      "id": "0_2"
+    },
+    {
+      "x": -0.3,
+      "y": 0.15,
+      "id": "0_3"
+    },
+    {
+      "x": -0.3,
+      "y": 0.3,
+      "id": "0_4"
+    },
+    {
+      "x": -0.15,
+      "y": -0.3,
+      "id": "1_0"
+    },
+    {
+      "x": -0.15,
+      "y": -0.15,
+      "id": "1_1"
+    },
+    {
+      "x": -0.15,
+      "y": 0.0,
+      "id": "1_2"
+    },
+    {
+      "x": -0.15,
+      "y": 0.15,
+      "id": "1_3"
+    },
+    {
+      "x": -0.15,
+      "y": 0.3,
+      "id": "1_4"
+    },
+    {
+      "x": 0.0,
+      "y": -0.3,
+      "id": "2_0"
+    },
+    {
+      "x": 0.0,
+      "y": -0.15,
+      "id": "2_1"
+    },
+    {
+      "x": 0.0,
+      "y": 0.0,
+      "id": "2_2"
+    },
+    {
+      "x": 0.0,
+      "y": 0.15,
+      "id": "2_3"
+    },
+    {
+      "x": 0.0,
+      "y": 0.3,
+      "id": "2_4"
+    },
+    {
+      "x": 0.15,
+      "y": -0.3,
+      "id": "3_0"
+    },
+    {
+      "x": 0.15,
+      "y": -0.15,
+      "id": "3_1"
+    },
+    {
+      "x": 0.15,
+      "y": 0.0,
+      "id": "3_2"
+    },
+    {
+      "x": 0.15,
+      "y": 0.15,
+      "id": "3_3"
+    },
+    {
+      "x": 0.15,
+      "y": 0.3,
+      "id": "3_4"
+    },
+    {
+      "x": 0.3,
+      "y": -0.3,
+      "id": "4_0"
+    },
+    {
+      "x": 0.3,
+      "y": -0.15,
+      "id": "4_1"
+    },
+    {
+      "x": 0.3,
+      "y": 0.0,
+      "id": "4_2"
+    },
+    {
+      "x": 0.3,
+      "y": 0.15,
+      "id": "4_3"
+    },
+    {
+      "x": 0.3,
+      "y": 0.3,
+      "id": "4_4"
+    }
+  ],
+  "pilot": [
+    2026112900,
+    2026112901,
+    2026112902,
+    2026112903,
+    2026112904,
+    2026112905,
+    2026112906,
+    2026112907
+  ],
+  "confirm": [
+    2026113000,
+    2026113001,
+    2026113002,
+    2026113003,
+    2026113004,
+    2026113005,
+    2026113006,
+    2026113007,
+    2026113008,
+    2026113009,
+    2026113010,
+    2026113011,
+    2026113012,
+    2026113013,
+    2026113014,
+    2026113015,
+    2026113016,
+    2026113017,
+    2026113018,
+    2026113019,
+    2026113020,
+    2026113021,
+    2026113022,
+    2026113023,
+    2026113024,
+    2026113025,
+    2026113026,
+    2026113027,
+    2026113028,
+    2026113029,
+    2026113030,
+    2026113031,
+    2026113032,
+    2026113033,
+    2026113034,
+    2026113035,
+    2026113036,
+    2026113037,
+    2026113038,
+    2026113039
+  ],
+  "steps": [
+    0.000125,
+    6.25e-05,
+    3.125e-05
+  ],
+  "stimuli": "Both .6s pulses start .2+jitter(.001,.009)s; raw mean onset+.2..+.5s; recovery1.1..1.2s; starts uniform+/-.075V.",
+  "criteria": "All nonzero xy: sign(xy)*mean>.02V; control contrasts at +/-.15 >.04V and +/-.30>.08V after sign(x). Recovery to own zero-zero condition within .01V. No rails.",
+  "control": "Remove only y-to-gate connections after building aligned arrays. Output spread over control levels at fixed source <.005V. Biases remain; no zero-output claim.",
+  "refinement": "Both paired-seed bootstrap95 intervals inside +/-.05 for output and recovery divided by V_TYP, each of25 cases.",
+  "reliability": "All conditions and3steps per seed, Wilson95 lower>=.90 on40fresh draws.",
+  "budget": "pilot600s confirm1200s; two variants maximum after diagnosis",
+  "noise": {
+    "thermal_sigma_V": 1.2871591976131003e-05,
+    "output_full_current_sigma_V": 6.333168086826687e-05
+  },
+  "limitation": "Signed saturating control only; zero-input feedthrough reported, not removed. No exact multiplier, retained signed weight, calibration or reward learning."
+}

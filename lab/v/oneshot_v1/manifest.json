@@ -1,0 +1,83 @@
+{
+  "graph": {
+    "nodes": [
+      {
+        "name": "input",
+        "C": 2.5e-11,
+        "R": 400000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "integral",
+        "C": 2.5e-11,
+        "R": null,
+        "bias": 0.0,
+        "memory": true
+      },
+      {
+        "name": "adaptive response",
+        "C": 2.5e-11,
+        "R": 800000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "pulse output",
+        "C": 2.5e-11,
+        "R": 200000000.0,
+        "bias": 0.0,
+        "memory": false
+      }
+    ],
+    "edges": [
+      {
+        "to": 2,
+        "source": 0,
+        "gain": 1.125e-09,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": -1
+      },
+      {
+        "to": 2,
+        "source": 1,
+        "gain": -1.6875000000000002e-09,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": -1
+      },
+      {
+        "to": 1,
+        "source": 2,
+        "gain": 4.6875e-11,
+        "offset": 0.0,
+        "slope": 6.666666666666667,
+        "tau": 0.0,
+        "gate": -1
+      },
+      {
+        "to": 3,
+        "source": 2,
+        "gain": 3e-09,
+        "offset": 0.2,
+        "slope": 40.0,
+        "tau": 0.0,
+        "gate": -1,
+        "sigmoid": true
+      }
+    ]
+  },
+  "states": 4,
+  "connections": 4,
+  "parts": {
+    "T": 127,
+    "R": 18,
+    "C": 8,
+    "D": 0,
+    "sources": 16
+  },
+  "scope": "Core only; bench sources/recording excluded. Memory pump sources counted ideally; implementation and energy absent. Activity in raw rows separate from supply power."
+}

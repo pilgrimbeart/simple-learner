@@ -1,0 +1,172 @@
+{
+  "failed_cases": 9,
+  "evaluated_cases": 272,
+  "failures": [
+    {
+      "seed": 2026112100,
+      "case": {
+        "id": "pair_0.35_0.35_0.15",
+        "a": 0.35,
+        "b": 0.35,
+        "delay": 0.15
+      },
+      "criteria": {
+        "coincidence": true,
+        "order": false,
+        "rails": true
+      },
+      "actual_trace_tau_s": 0.09773556574620779,
+      "order_V": 0.028367185926779736,
+      "predicted_tail_ratio": 1.5519368143010777,
+      "approx_order_after_V": 0.04402408015789291
+    },
+    {
+      "seed": 2026112103,
+      "case": {
+        "id": "pair_0.35_0.35_0.15",
+        "a": 0.35,
+        "b": 0.35,
+        "delay": 0.15
+      },
+      "criteria": {
+        "coincidence": true,
+        "order": false,
+        "rails": true
+      },
+      "actual_trace_tau_s": 0.09695296000136966,
+      "order_V": 0.02994009689476599,
+      "predicted_tail_ratio": 1.5574035288980763,
+      "approx_order_after_V": 0.04662881255945889
+    },
+    {
+      "seed": 2026112104,
+      "case": {
+        "id": "pair_0.35_0.35_-0.15",
+        "a": 0.35,
+        "b": 0.35,
+        "delay": -0.15
+      },
+      "criteria": {
+        "coincidence": true,
+        "order": false,
+        "rails": true
+      },
+      "actual_trace_tau_s": 0.06639769053225751,
+      "order_V": -0.027689941440014354,
+      "predicted_tail_ratio": 1.9045935300660113,
+      "approx_order_after_V": -0.05273808331455807
+    },
+    {
+      "seed": 2026112106,
+      "case": {
+        "id": "pair_0.35_0.35_-0.15",
+        "a": 0.35,
+        "b": 0.35,
+        "delay": -0.15
+      },
+      "criteria": {
+        "coincidence": true,
+        "order": false,
+        "rails": true
+      },
+      "actual_trace_tau_s": 0.10150714710646683,
+      "order_V": -0.025710099807934494,
+      "predicted_tail_ratio": 1.5270098780091383,
+      "approx_order_after_V": -0.03925957637131682
+    },
+    {
+      "seed": 2026112106,
+      "case": {
+        "id": "pair_0.35_0.5_-0.15",
+        "a": 0.35,
+        "b": 0.5,
+        "delay": -0.15
+      },
+      "criteria": {
+        "coincidence": true,
+        "order": false,
+        "rails": true
+      },
+      "actual_trace_tau_s": 0.10150714710646683,
+      "order_V": -0.02898358227352732,
+      "predicted_tail_ratio": 1.5270098780091383,
+      "approx_order_after_V": -0.04425821643176678
+    },
+    {
+      "seed": 2026112106,
+      "case": {
+        "id": "pair_0.5_0.35_-0.15",
+        "a": 0.5,
+        "b": 0.35,
+        "delay": -0.15
+      },
+      "criteria": {
+        "coincidence": true,
+        "order": false,
+        "rails": true
+      },
+      "actual_trace_tau_s": 0.10150714710646683,
+      "order_V": -0.029768973222638717,
+      "predicted_tail_ratio": 1.5270098780091383,
+      "approx_order_after_V": -0.04545751616915885
+    },
+    {
+      "seed": 2026112107,
+      "case": {
+        "id": "pair_0.35_0.35_-0.15",
+        "a": 0.35,
+        "b": 0.35,
+        "delay": -0.15
+      },
+      "criteria": {
+        "coincidence": true,
+        "order": false,
+        "rails": true
+      },
+      "actual_trace_tau_s": 0.08727213491228997,
+      "order_V": -0.023774432537766257,
+      "predicted_tail_ratio": 1.6350618186169805,
+      "approx_order_after_V": -0.03887266690178681
+    },
+    {
+      "seed": 2026112107,
+      "case": {
+        "id": "pair_0.35_0.5_-0.15",
+        "a": 0.35,
+        "b": 0.5,
+        "delay": -0.15
+      },
+      "criteria": {
+        "coincidence": true,
+        "order": false,
+        "rails": true
+      },
+      "actual_trace_tau_s": 0.08727213491228997,
+      "order_V": -0.026816303798950135,
+      "predicted_tail_ratio": 1.6350618186169805,
+      "approx_order_after_V": -0.04384631445809685
+    },
+    {
+      "seed": 2026112107,
+      "case": {
+        "id": "pair_0.5_0.35_-0.15",
+        "a": 0.5,
+        "b": 0.35,
+        "delay": -0.15
+      },
+      "criteria": {
+        "coincidence": true,
+        "order": false,
+        "rails": true
+      },
+      "actual_trace_tau_s": 0.08727213491228997,
+      "order_V": -0.02802827776029223,
+      "predicted_tail_ratio": 1.6350618186169805,
+      "approx_order_after_V": -0.04582796680744528
+    }
+  ],
+  "all_failures_long_gap_weak_correct_sign": true,
+  "source_sha256": "9c49d83d593a16bb44f09867bc638b4685aa5ff163de2423e60130fec2765b47",
+  "input_sha256": "28b3b10edeea96aa5ac662198e661946b8f7432fcb58000a8b54f42edd65b44a",
+  "limitation": "Rectangular constant-current approximation of first trace; input lag, threshold, offsets and downstream nonlinearities remain in the actual simulator. Prediction is not a pass label."
+}

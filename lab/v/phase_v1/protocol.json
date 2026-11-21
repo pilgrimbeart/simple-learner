@@ -1,0 +1,221 @@
+{
+  "graph": {
+    "nodes": [
+      {
+        "name": "A",
+        "C": 2.5e-11,
+        "R": 200000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "B",
+        "C": 2.5e-11,
+        "R": 200000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "lag A",
+        "C": 2.5e-11,
+        "R": 4000000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "lag B",
+        "C": 2.5e-11,
+        "R": 4000000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "phase response",
+        "C": 2.5e-11,
+        "R": 20000000000.0,
+        "bias": 0.0,
+        "memory": false
+      }
+    ],
+    "edges": [
+      {
+        "to": 2,
+        "source": 0,
+        "gain": 7.5e-11,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": -1
+      },
+      {
+        "to": 3,
+        "source": 1,
+        "gain": 7.5e-11,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": -1
+      },
+      {
+        "to": 4,
+        "source": 1,
+        "gain": 5e-11,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": 2
+      },
+      {
+        "to": 4,
+        "source": 0,
+        "gain": -5e-11,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": 3
+      }
+    ]
+  },
+  "cases": [
+    {
+      "id": "2.0_0",
+      "frequency": 2.0,
+      "phase_index": 0,
+      "phase": -1.5707963267948966
+    },
+    {
+      "id": "2.0_1",
+      "frequency": 2.0,
+      "phase_index": 1,
+      "phase": -0.5235987755982988
+    },
+    {
+      "id": "2.0_2",
+      "frequency": 2.0,
+      "phase_index": 2,
+      "phase": 0.0
+    },
+    {
+      "id": "2.0_3",
+      "frequency": 2.0,
+      "phase_index": 3,
+      "phase": 0.5235987755982988
+    },
+    {
+      "id": "2.0_4",
+      "frequency": 2.0,
+      "phase_index": 4,
+      "phase": 1.5707963267948966
+    },
+    {
+      "id": "2.0_5",
+      "frequency": 2.0,
+      "phase_index": 5,
+      "phase": 3.141592653589793
+    },
+    {
+      "id": "5.0_0",
+      "frequency": 5.0,
+      "phase_index": 0,
+      "phase": -1.5707963267948966
+    },
+    {
+      "id": "5.0_1",
+      "frequency": 5.0,
+      "phase_index": 1,
+      "phase": -0.5235987755982988
+    },
+    {
+      "id": "5.0_2",
+      "frequency": 5.0,
+      "phase_index": 2,
+      "phase": 0.0
+    },
+    {
+      "id": "5.0_3",
+      "frequency": 5.0,
+      "phase_index": 3,
+      "phase": 0.5235987755982988
+    },
+    {
+      "id": "5.0_4",
+      "frequency": 5.0,
+      "phase_index": 4,
+      "phase": 1.5707963267948966
+    },
+    {
+      "id": "5.0_5",
+      "frequency": 5.0,
+      "phase_index": 5,
+      "phase": 3.141592653589793
+    }
+  ],
+  "pilot": [
+    2026112700,
+    2026112701,
+    2026112702,
+    2026112703,
+    2026112704,
+    2026112705,
+    2026112706,
+    2026112707
+  ],
+  "confirm": [
+    2026112800,
+    2026112801,
+    2026112802,
+    2026112803,
+    2026112804,
+    2026112805,
+    2026112806,
+    2026112807,
+    2026112808,
+    2026112809,
+    2026112810,
+    2026112811,
+    2026112812,
+    2026112813,
+    2026112814,
+    2026112815,
+    2026112816,
+    2026112817,
+    2026112818,
+    2026112819,
+    2026112820,
+    2026112821,
+    2026112822,
+    2026112823,
+    2026112824,
+    2026112825,
+    2026112826,
+    2026112827,
+    2026112828,
+    2026112829,
+    2026112830,
+    2026112831,
+    2026112832,
+    2026112833,
+    2026112834,
+    2026112835,
+    2026112836,
+    2026112837,
+    2026112838,
+    2026112839
+  ],
+  "steps": [
+    0.000125,
+    6.25e-05,
+    3.125e-05
+  ],
+  "duration_s": 12.0,
+  "input": "Two sinusoidal input currents, nominal voltage .15+.10*cos(omega*t+phase). Actual frequency uniform .9..1.1 times 2/5Hz, common initial phase uniform0..2pi per draw/frequency; B relative phase from six declared values. Circuit starts independently uniform+/-.075V; no circuit oscillator/reference phase. Integrate currents analytically over each step.",
+  "metrics": "Mean raw phase-output voltage over6..12s; ripple amplitude recorded separately. Output offset at phase0 reported, never subtracted from stored raw means.",
+  "criteria": "Per draw, each frequency: mean(-pi/6)-mean(+pi/6)>.004V, mean(-pi/2)-mean(+pi/2)>.008V; means at -pi/2,-pi/6,0,+pi/6,+pi/2 strictly descending with each adjacent drop>.001V. These are response comparisons across tests, not a circuit calibration. Phase pi included to expose ambiguity but no unique global phase inference claimed. No rails.",
+  "control": "Pilot: remove differential lag by gating positive output connection with A directly and negative with B directly; all parts remain, so cost not a pruning claim. Both odd contrasts abs<.002V. Offsets/even phase dependence may remain.",
+  "prediction": "Matched small-signal lag-and-product difference contains -sin(phi)*omega*tau/(1+(omega*tau)^2). This gives local signed phase sensitivity, not a universal zero-centred error. Nonnegative gates, nonlinear source response, component mismatch and input lag invalidate exact multiplication; test the realized curve.",
+  "reliability": "All frequencies/steps per seed; Wilson95 lower>=.90 for40draws. Both paired-seed step-halving95 intervals within+/-.05 of V_TYP for each raw mean and ripple.",
+  "initial_noise": "Original silicon noise/mismatch. Nominal thermal sigma~13uV versus1mV minimum adjacent separation; average over at least10cycles. No noise switch or filter state without its own noisy node.",
+  "budget": "Pilot<=600s,confirm<=1200s; at most2variants after diagnosis, one sequential job.",
+  "limitation": "This establishes a phase-dependent analogue response only. Zero-phase bias and 2pi ambiguity prevent claiming an absolute unwrapped phase sensor, lock acquisition, frequency learning or robot skill. Independent constant phases/frequencies are bench stimuli, not brain inputs beyond their waveforms.",
+  "source": "Haag,Denk,Borst2004 introduction/Fig1 checked in D128; this is the same established asymmetric-filter/product/subtraction family, now tested with harmonic input."
+}

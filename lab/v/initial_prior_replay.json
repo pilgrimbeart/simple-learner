@@ -1,0 +1,2333 @@
+{
+ "success": true,
+ "priors": {
+  "baseline": "default 1, each stream 1 (total 169; default share 1/169)",
+  "alternative": "default 84.5, each stream 169/336 (total 169; default share 1/2)"
+ },
+ "share": 0.01,
+ "credit": "historical (pre-D82)",
+ "provenance": {
+  "revision": "5700eaa0d397e1a7dc055ce69ce9ec7e1d32cc7f",
+  "dirty": " M ABSTRACT.md\n M PROGRAMME.md\n M QUESTIONS.md\n M README.md\n M discrete/NOTEBOOK.md\n?? lab/initial_prior_replay.py\n?? lab/market_ledger_capture.py\n?? lab/market_transfer_cases.py\n?? lab/queue_results_review.py\n?? lab/v/initial_prior_replay.json\n?? lab/v/initial_prior_replay.log\n?? lab/v/initial_prior_replay_checks.json\n?? lab/v/initial_prior_replay_checks.log\n?? lab/v/initial_prior_replay_run1.json\n?? lab/v/market_ledger_capture.json\n?? lab/v/market_ledger_capture.log\n?? lab/v/market_ledger_capture_capture.json\n?? lab/v/market_ledger_capture_capture.log\n?? lab/v/market_ledger_capture_checks.json\n?? lab/v/market_ledger_capture_checks.log\n?? lab/v/market_transfer_cases.json\n?? lab/v/market_transfer_cases.log\n?? lab/v/market_transfer_cases_checks.json\n?? lab/v/market_transfer_cases_checks.log\n?? lab/v/queue_results_review.json\n?? lab/v/queue_results_review.log\n",
+  "sha256": {
+   "lab/initial_prior_replay.py": "c8675eb109070801dd6c60fbf554839fd1deb29e86281b427a4f428efb9125be",
+   "lab/selection_share_audit.py": "46bc644b600d7ed70d54146f7ba399705b99816a3fd3aad26b142d134628741d",
+   "lab/selection_share_extension.py": "0f8a0002232f9457816c894a79996b08f7e4e172daaa29efa77b545f84287542",
+   "lab/scoring_order_replay.py": "7e8e69b0ee3e464eb2c7a091706b53e77d8ab450b3ba6a5c08136c4a403e4dd6",
+   "lab/v/contest_prediction.pkl": "591ae481f16601a4817dbd7f2b587d6e64b2767137839d47599e2350cdbbc369",
+   "lab/v/ruler_ingredients.pkl": "dd8808ece9bca805ebd70e59c2a8b97c8ed160ac31795cd8c4000d819de3b471",
+   "lab/v/followup_timing.pkl": "f3e00455b4529c043728c412b42d63ba7562dc48f0f7f475f2fb20ac1a831cbb",
+   "lab/v/active_mixture_audit.pkl": "15fd71db4770f82b5aed7d7437e3b7f234f28802d40a3781cd665dcce186e833"
+  },
+  "command": "timeout 240s env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python lab/initial_prior_replay.py --analyse"
+ },
+ "counts": {
+  "R": 20,
+  "R+1": 20,
+  "design560 timing": 20,
+  "D79": 4
+ },
+ "max_baseline_error": 2.2737367544323206e-13,
+ "baseline_errors_per_life": {
+  "('R', 142000, 'red')": 1.5543122344752192e-15,
+  "('R', 142000, 'blue')": 1.2212453270876722e-15,
+  "('R', 142001, 'red')": 1.4432899320127035e-15,
+  "('R', 142001, 'blue')": 1.9984014443252818e-15,
+  "('R', 142002, 'red')": 2.4424906541753444e-15,
+  "('R', 142002, 'blue')": 1.6653345369377348e-15,
+  "('R', 142003, 'red')": 2.886579864025407e-15,
+  "('R', 142003, 'blue')": 2.9976021664879227e-15,
+  "('R', 142004, 'red')": 2.3314683517128287e-15,
+  "('R', 142004, 'blue')": 2.3314683517128287e-15,
+  "('R', 142005, 'red')": 2.1094237467877974e-15,
+  "('R', 142005, 'blue')": 1.7763568394002505e-15,
+  "('R', 142006, 'red')": 1.4432899320127035e-15,
+  "('R', 142006, 'blue')": 2.3314683517128287e-15,
+  "('R', 142007, 'red')": 3.3306690738754696e-15,
+  "('R', 142007, 'blue')": 1.6653345369377348e-15,
+  "('R', 142008, 'red')": 1.6653345369377348e-15,
+  "('R', 142008, 'blue')": 2.9976021664879227e-15,
+  "('R', 142009, 'red')": 2.1094237467877974e-15,
+  "('R', 142009, 'blue')": 1.4432899320127035e-15,
+  "('R+1', 142000, 'red')": 2.220446049250313e-15,
+  "('R+1', 142000, 'blue')": 1.6653345369377348e-15,
+  "('R+1', 142001, 'red')": 1.9984014443252818e-15,
+  "('R+1', 142001, 'blue')": 1.5543122344752192e-15,
+  "('R+1', 142002, 'red')": 2.220446049250313e-15,
+  "('R+1', 142002, 'blue')": 1.6653345369377348e-15,
+  "('R+1', 142003, 'red')": 2.220446049250313e-15,
+  "('R+1', 142003, 'blue')": 1.5543122344752192e-15,
+  "('R+1', 142004, 'red')": 1.9984014443252818e-15,
+  "('R+1', 142004, 'blue')": 2.220446049250313e-15,
+  "('R+1', 142005, 'red')": 2.3314683517128287e-15,
+  "('R+1', 142005, 'blue')": 1.5543122344752192e-15,
+  "('R+1', 142006, 'red')": 2.4424906541753444e-15,
+  "('R+1', 142006, 'blue')": 1.7763568394002505e-15,
+  "('R+1', 142007, 'red')": 1.6653345369377348e-15,
+  "('R+1', 142007, 'blue')": 2.220446049250313e-15,
+  "('R+1', 142008, 'red')": 1.1102230246251565e-15,
+  "('R+1', 142008, 'blue')": 2.4424906541753444e-15,
+  "('R+1', 142009, 'red')": 1.5543122344752192e-15,
+  "('R+1', 142009, 'blue')": 2.1094237467877974e-15,
+  "('design560 timing', 142000, 'red')": 1.5543122344752192e-15,
+  "('design560 timing', 142000, 'blue')": 1.6653345369377348e-15,
+  "('design560 timing', 142001, 'red')": 1.2212453270876722e-15,
+  "('design560 timing', 142001, 'blue')": 1.2212453270876722e-15,
+  "('design560 timing', 142002, 'red')": 1.9984014443252818e-15,
+  "('design560 timing', 142002, 'blue')": 1.887379141862766e-15,
+  "('design560 timing', 142003, 'red')": 1.1102230246251565e-15,
+  "('design560 timing', 142003, 'blue')": 1.9984014443252818e-15,
+  "('design560 timing', 142004, 'red')": 1.6653345369377348e-15,
+  "('design560 timing', 142004, 'blue')": 1.7763568394002505e-15,
+  "('design560 timing', 142005, 'red')": 9.992007221626409e-16,
+  "('design560 timing', 142005, 'blue')": 1.4432899320127035e-15,
+  "('design560 timing', 142006, 'red')": 2.886579864025407e-15,
+  "('design560 timing', 142006, 'blue')": 1.3322676295501878e-15,
+  "('design560 timing', 142007, 'red')": 2.3314683517128287e-15,
+  "('design560 timing', 142007, 'blue')": 1.609823385706477e-15,
+  "('design560 timing', 142008, 'red')": 1.9984014443252818e-15,
+  "('design560 timing', 142008, 'blue')": 1.4432899320127035e-15,
+  "('design560 timing', 142009, 'red')": 1.7763568394002505e-15,
+  "('design560 timing', 142009, 'blue')": 2.55351295663786e-15,
+  "('D79 none', 177000, 'red')": 1.1368683772161603e-13,
+  "('D79 none', 177000, 'blue')": 2.2737367544323206e-13,
+  "('D79 W', 177000, 'red')": 2.2737367544323206e-13,
+  "('D79 W', 177000, 'blue')": 5.684341886080802e-14
+ },
+ "prior_mass": {
+  "baseline": {
+   "default": 0.005917159763313609,
+   "event (10 streams)": 0.05917159763313609,
+   "clock (60 streams)": 0.35502958579881655,
+   "integrator (56 streams)": 0.33136094674556216,
+   "rhythm (42 streams)": 0.2485207100591716
+  },
+  "alternative": {
+   "default": 0.5,
+   "event (10 streams)": 0.029761904761904764,
+   "clock (60 streams)": 0.17857142857142858,
+   "integrator (56 streams)": 0.16666666666666666,
+   "rhythm (42 streams)": 0.125
+  }
+ },
+ "summary": {
+  "R | first_third | alternative - baseline delta_bits": {
+   "per_life_mean": 0.0069031419489729295,
+   "ci95": [
+    0.0015231626415844585,
+    0.012239552905653098
+   ]
+  },
+  "R | first_third | alternative - baseline delta_errors": {
+   "per_life_mean": 0.04761809415295265,
+   "ci95": [
+    0.02892203705324496,
+    0.0649373136880486
+   ]
+  },
+  "R | first_third | baseline bits level": 1.0036684006481604,
+  "R | first_third | changed choices / tastes": "139 / 1102",
+  "R | last_third | alternative - baseline delta_bits": {
+   "per_life_mean": -0.0019177364434896705,
+   "ci95": [
+    -0.003246802146075954,
+    -0.0005932276748178011
+   ]
+  },
+  "R | last_third | alternative - baseline delta_errors": {
+   "per_life_mean": -3.561253561253641e-05,
+   "ci95": [
+    -0.0028846153846153826,
+    0.0027777777777777735
+   ]
+  },
+  "R | last_third | baseline bits level": 0.6841325645519583,
+  "R | last_third | changed choices / tastes": "4 / 1067",
+  "R | full | alternative - baseline delta_bits": {
+   "per_life_mean": 0.001761256757907992,
+   "ci95": [
+    -0.0005182608322546369,
+    0.003967112508935615
+   ]
+  },
+  "R | full | alternative - baseline delta_errors": {
+   "per_life_mean": 0.015507572270215226,
+   "ci95": [
+    0.00948591297440735,
+    0.021835244988843684
+   ]
+  },
+  "R | full | baseline bits level": 0.808262059442281,
+  "R | full | changed choices / tastes": "184 / 3389",
+  "R+1 | first_third | alternative - baseline delta_bits": {
+   "per_life_mean": 0.01052060855685712,
+   "ci95": [
+    0.003963700071931919,
+    0.017230527584733254
+   ]
+  },
+  "R+1 | first_third | alternative - baseline delta_errors": {
+   "per_life_mean": 0.03620057920409683,
+   "ci95": [
+    0.02077493988185683,
+    0.05413494975191444
+   ]
+  },
+  "R+1 | first_third | baseline bits level": 0.9727176706321619,
+  "R+1 | first_third | changed choices / tastes": "143 / 1160",
+  "R+1 | last_third | alternative - baseline delta_bits": {
+   "per_life_mean": -0.002275563634763697,
+   "ci95": [
+    -0.003471564384915916,
+    -0.001255241832222837
+   ]
+  },
+  "R+1 | last_third | alternative - baseline delta_errors": {
+   "per_life_mean": -0.005047767547767548,
+   "ci95": [
+    -0.014571577071577075,
+    0.0
+   ]
+  },
+  "R+1 | last_third | baseline bits level": 0.649473383037447,
+  "R+1 | last_third | changed choices / tastes": "6 / 1135",
+  "R+1 | full | alternative - baseline delta_bits": {
+   "per_life_mean": 0.0022805947470301846,
+   "ci95": [
+    0.00018508552400185285,
+    0.004427556123988752
+   ]
+  },
+  "R+1 | full | alternative - baseline delta_errors": {
+   "per_life_mean": 0.009533177575275192,
+   "ci95": [
+    0.002372317467123002,
+    0.017759858565669178
+   ]
+  },
+  "R+1 | full | baseline bits level": 0.7792190022722943,
+  "R+1 | full | changed choices / tastes": "163 / 3472",
+  "design560 timing | first_third | alternative - baseline delta_bits": {
+   "per_life_mean": 0.0029448893717755583,
+   "ci95": [
+    0.002329669620406607,
+    0.003505567143435069
+   ]
+  },
+  "design560 timing | first_third | alternative - baseline delta_errors": {
+   "per_life_mean": 0.000627437553925949,
+   "ci95": [
+    -0.0014392238367547587,
+    0.0026006097501609948
+   ]
+  },
+  "design560 timing | first_third | baseline bits level": 0.5215605251964944,
+  "design560 timing | first_third | changed choices / tastes": "172 / 11823",
+  "design560 timing | last_third | alternative - baseline delta_bits": {
+   "per_life_mean": -1.993521110817131e-06,
+   "ci95": [
+    -5.9720880912663555e-06,
+    -5.009585704596205e-10
+   ]
+  },
+  "design560 timing | last_third | alternative - baseline delta_errors": {
+   "per_life_mean": -7.974481658692204e-05,
+   "ci95": [
+    -0.0002392344497607661,
+    0.0
+   ]
+  },
+  "design560 timing | last_third | baseline bits level": 0.3907616724511157,
+  "design560 timing | last_third | changed choices / tastes": "1 / 11981",
+  "design560 timing | full | alternative - baseline delta_bits": {
+   "per_life_mean": 0.0009729962776867468,
+   "ci95": [
+    0.0007775526539475651,
+    0.0011551316387654765
+   ]
+  },
+  "design560 timing | full | alternative - baseline delta_errors": {
+   "per_life_mean": 0.00018048631430651955,
+   "ci95": [
+    -0.00046960247276598403,
+    0.0007838655189044085
+   ]
+  },
+  "design560 timing | full | baseline bits level": 0.4228357382514982,
+  "design560 timing | full | changed choices / tastes": "173 / 35770",
+  "R minus R+1 effect | first_third | bits": {
+   "per_life_mean": -0.0036174666078841898,
+   "ci95": [
+    -0.0078055979959158325,
+    0.0006975819401564305
+   ]
+  },
+  "R minus R+1 effect | last_third | bits": {
+   "per_life_mean": 0.00035782719127402663,
+   "ci95": [
+    -0.0010191401359956826,
+    0.001899248029908373
+   ]
+  },
+  "R minus R+1 effect | full | bits": {
+   "per_life_mean": -0.0005193379891221927,
+   "ci95": [
+    -0.002240540821540243,
+    0.0010548175308103644
+   ]
+  }
+ },
+ "per_life": {
+  "('R', 142000, 'red')": {
+   "first_third": {
+    "n": 53,
+    "base_bits": 1.0339028174006635,
+    "alt_bits": 1.0273148133709855,
+    "base_errors": 0.42452830188679247,
+    "alt_errors": 0.44339622641509435,
+    "changed_choices": 3,
+    "delta_bits": -0.006588004029677963,
+    "delta_errors": 0.018867924528301883
+   },
+   "last_third": {
+    "n": 52,
+    "base_bits": 0.7224187883981621,
+    "alt_bits": 0.7191287339004145,
+    "base_errors": 0.25,
+    "alt_errors": 0.23076923076923078,
+    "changed_choices": 1,
+    "delta_bits": -0.003290054497747552,
+    "delta_errors": -0.019230769230769218
+   },
+   "full": {
+    "n": 164,
+    "base_bits": 0.8971151489376208,
+    "alt_bits": 0.8949625543204881,
+    "base_errors": 0.3567073170731707,
+    "alt_errors": 0.3445121951219512,
+    "changed_choices": 14,
+    "delta_bits": -0.002152594617132686,
+    "delta_errors": -0.012195121951219523
+   }
+  },
+  "('R', 142000, 'blue')": {
+   "first_third": {
+    "n": 41,
+    "base_bits": 1.0651841695943296,
+    "alt_bits": 1.0793692356269935,
+    "base_errors": 0.4268292682926829,
+    "alt_errors": 0.524390243902439,
+    "changed_choices": 8,
+    "delta_bits": 0.014185066032663896,
+    "delta_errors": 0.09756097560975613
+   },
+   "last_third": {
+    "n": 35,
+    "base_bits": 0.8957516535028683,
+    "alt_bits": 0.9015274350483327,
+    "base_errors": 0.2571428571428571,
+    "alt_errors": 0.2571428571428571,
+    "changed_choices": 0,
+    "delta_bits": 0.00577578154546432,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 132,
+    "base_bits": 1.0000995862223727,
+    "alt_bits": 1.0008173011227037,
+    "base_errors": 0.375,
+    "alt_errors": 0.4053030303030303,
+    "changed_choices": 12,
+    "delta_bits": 0.0007177149003310124,
+    "delta_errors": 0.030303030303030276
+   }
+  },
+  "('R', 142001, 'red')": {
+   "first_third": {
+    "n": 65,
+    "base_bits": 1.0448041281976899,
+    "alt_bits": 1.050588342770465,
+    "base_errors": 0.45384615384615384,
+    "alt_errors": 0.5,
+    "changed_choices": 3,
+    "delta_bits": 0.005784214572775115,
+    "delta_errors": 0.046153846153846156
+   },
+   "last_third": {
+    "n": 67,
+    "base_bits": 0.9205027459015477,
+    "alt_bits": 0.9176998939953305,
+    "base_errors": 0.2835820895522388,
+    "alt_errors": 0.2835820895522388,
+    "changed_choices": 2,
+    "delta_bits": -0.0028028519062172075,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 183,
+    "base_bits": 0.9880929141769034,
+    "alt_bits": 0.9892843135302926,
+    "base_errors": 0.38524590163934425,
+    "alt_errors": 0.4180327868852459,
+    "changed_choices": 8,
+    "delta_bits": 0.0011913993533891887,
+    "delta_errors": 0.032786885245901676
+   }
+  },
+  "('R', 142001, 'blue')": {
+   "first_third": {
+    "n": 50,
+    "base_bits": 1.062156594201943,
+    "alt_bits": 1.0645197799590422,
+    "base_errors": 0.43,
+    "alt_errors": 0.55,
+    "changed_choices": 8,
+    "delta_bits": 0.002363185757099151,
+    "delta_errors": 0.12000000000000005
+   },
+   "last_third": {
+    "n": 49,
+    "base_bits": 0.8795928773509369,
+    "alt_bits": 0.8713981946741622,
+    "base_errors": 0.2653061224489796,
+    "alt_errors": 0.2653061224489796,
+    "changed_choices": 0,
+    "delta_bits": -0.0081946826767747,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 160,
+    "base_bits": 0.9680325015829435,
+    "alt_bits": 0.9697291895187323,
+    "base_errors": 0.353125,
+    "alt_errors": 0.390625,
+    "changed_choices": 10,
+    "delta_bits": 0.0016966879357888098,
+    "delta_errors": 0.03749999999999998
+   }
+  },
+  "('R', 142002, 'red')": {
+   "first_third": {
+    "n": 53,
+    "base_bits": 0.9538990957888811,
+    "alt_bits": 0.9761157813764368,
+    "base_errors": 0.330188679245283,
+    "alt_errors": 0.36792452830188677,
+    "changed_choices": 2,
+    "delta_bits": 0.02221668558755574,
+    "delta_errors": 0.037735849056603765
+   },
+   "last_third": {
+    "n": 54,
+    "base_bits": 0.4125873912057049,
+    "alt_bits": 0.4062550737641338,
+    "base_errors": 0.14814814814814814,
+    "alt_errors": 0.14814814814814814,
+    "changed_choices": 0,
+    "delta_bits": -0.006332317441571145,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 171,
+    "base_bits": 0.6243392014589175,
+    "alt_bits": 0.6303530758493852,
+    "base_errors": 0.20175438596491227,
+    "alt_errors": 0.2134502923976608,
+    "changed_choices": 4,
+    "delta_bits": 0.006013874390467633,
+    "delta_errors": 0.011695906432748537
+   }
+  },
+  "('R', 142002, 'blue')": {
+   "first_third": {
+    "n": 59,
+    "base_bits": 1.0262741785184215,
+    "alt_bits": 1.0423669837876737,
+    "base_errors": 0.4152542372881356,
+    "alt_errors": 0.4322033898305085,
+    "changed_choices": 5,
+    "delta_bits": 0.016092805269252164,
+    "delta_errors": 0.01694915254237289
+   },
+   "last_third": {
+    "n": 48,
+    "base_bits": 0.65906543101427,
+    "alt_bits": 0.6549521333874786,
+    "base_errors": 0.3125,
+    "alt_errors": 0.3125,
+    "changed_choices": 0,
+    "delta_bits": -0.004113297626791357,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 161,
+    "base_bits": 0.8778448300407242,
+    "alt_bits": 0.8830187797814033,
+    "base_errors": 0.37577639751552794,
+    "alt_errors": 0.37577639751552794,
+    "changed_choices": 10,
+    "delta_bits": 0.005173949740679085,
+    "delta_errors": 0.0
+   }
+  },
+  "('R', 142003, 'red')": {
+   "first_third": {
+    "n": 47,
+    "base_bits": 1.0133363697067264,
+    "alt_bits": 1.0432550779253733,
+    "base_errors": 0.39361702127659576,
+    "alt_errors": 0.5,
+    "changed_choices": 9,
+    "delta_bits": 0.02991870821864695,
+    "delta_errors": 0.10638297872340424
+   },
+   "last_third": {
+    "n": 63,
+    "base_bits": 0.6710674225326907,
+    "alt_bits": 0.6710335583293195,
+    "base_errors": 0.19047619047619047,
+    "alt_errors": 0.19047619047619047,
+    "changed_choices": 0,
+    "delta_bits": -3.3864203371147816e-05,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 170,
+    "base_bits": 0.6952355510889221,
+    "alt_bits": 0.7033136337361517,
+    "base_errors": 0.2088235294117647,
+    "alt_errors": 0.23823529411764705,
+    "changed_choices": 9,
+    "delta_bits": 0.008078082647229645,
+    "delta_errors": 0.02941176470588233
+   }
+  },
+  "('R', 142003, 'blue')": {
+   "first_third": {
+    "n": 48,
+    "base_bits": 1.0399946527761783,
+    "alt_bits": 1.0448777871342805,
+    "base_errors": 0.40625,
+    "alt_errors": 0.4895833333333333,
+    "changed_choices": 14,
+    "delta_bits": 0.00488313435810217,
+    "delta_errors": 0.08333333333333331
+   },
+   "last_third": {
+    "n": 55,
+    "base_bits": 0.7749993160694065,
+    "alt_bits": 0.7747602806950211,
+    "base_errors": 0.23636363636363636,
+    "alt_errors": 0.23636363636363636,
+    "changed_choices": 0,
+    "delta_bits": -0.00023903537438541012,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 163,
+    "base_bits": 0.8543443468332179,
+    "alt_bits": 0.858348272302007,
+    "base_errors": 0.27300613496932513,
+    "alt_errors": 0.30368098159509205,
+    "changed_choices": 15,
+    "delta_bits": 0.004003925468789138,
+    "delta_errors": 0.030674846625766916
+   }
+  },
+  "('R', 142004, 'red')": {
+   "first_third": {
+    "n": 55,
+    "base_bits": 0.9218538827494718,
+    "alt_bits": 0.9391235605786653,
+    "base_errors": 0.3,
+    "alt_errors": 0.33636363636363636,
+    "changed_choices": 2,
+    "delta_bits": 0.01726967782919353,
+    "delta_errors": 0.036363636363636376
+   },
+   "last_third": {
+    "n": 55,
+    "base_bits": 0.7390446533504219,
+    "alt_bits": 0.7350880194804297,
+    "base_errors": 0.21818181818181817,
+    "alt_errors": 0.21818181818181817,
+    "changed_choices": 0,
+    "delta_bits": -0.003956633869992232,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 173,
+    "base_bits": 0.7634789973691012,
+    "alt_bits": 0.7682808447771745,
+    "base_errors": 0.24566473988439305,
+    "alt_errors": 0.25722543352601157,
+    "changed_choices": 2,
+    "delta_bits": 0.004801847408073323,
+    "delta_errors": 0.011560693641618519
+   }
+  },
+  "('R', 142004, 'blue')": {
+   "first_third": {
+    "n": 63,
+    "base_bits": 1.000203427078336,
+    "alt_bits": 1.0131824149244624,
+    "base_errors": 0.3253968253968254,
+    "alt_errors": 0.3888888888888889,
+    "changed_choices": 6,
+    "delta_bits": 0.012978987846126389,
+    "delta_errors": 0.06349206349206349
+   },
+   "last_third": {
+    "n": 66,
+    "base_bits": 0.653338131978374,
+    "alt_bits": 0.6517116862635409,
+    "base_errors": 0.2727272727272727,
+    "alt_errors": 0.2727272727272727,
+    "changed_choices": 0,
+    "delta_bits": -0.001626445714833058,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 193,
+    "base_bits": 0.820553579239758,
+    "alt_bits": 0.8269333746526805,
+    "base_errors": 0.28756476683937826,
+    "alt_errors": 0.3134715025906736,
+    "changed_choices": 11,
+    "delta_bits": 0.00637979541292244,
+    "delta_errors": 0.025906735751295318
+   }
+  },
+  "('R', 142005, 'red')": {
+   "first_third": {
+    "n": 54,
+    "base_bits": 1.0645623767216041,
+    "alt_bits": 1.0571675955613626,
+    "base_errors": 0.4537037037037037,
+    "alt_errors": 0.4537037037037037,
+    "changed_choices": 10,
+    "delta_bits": -0.007394781160241504,
+    "delta_errors": 0.0
+   },
+   "last_third": {
+    "n": 54,
+    "base_bits": 0.8677721595690776,
+    "alt_bits": 0.8664576456900861,
+    "base_errors": 0.2777777777777778,
+    "alt_errors": 0.2962962962962963,
+    "changed_choices": 1,
+    "delta_bits": -0.0013145138789915078,
+    "delta_errors": 0.01851851851851849
+   },
+   "full": {
+    "n": 159,
+    "base_bits": 0.9462643127440128,
+    "alt_bits": 0.9478134759924552,
+    "base_errors": 0.33647798742138363,
+    "alt_errors": 0.36163522012578614,
+    "changed_choices": 14,
+    "delta_bits": 0.0015491632484424533,
+    "delta_errors": 0.02515723270440251
+   }
+  },
+  "('R', 142005, 'blue')": {
+   "first_third": {
+    "n": 51,
+    "base_bits": 0.9973310344974784,
+    "alt_bits": 1.0153914567560363,
+    "base_errors": 0.3627450980392157,
+    "alt_errors": 0.3431372549019608,
+    "changed_choices": 1,
+    "delta_bits": 0.018060422258557862,
+    "delta_errors": -0.019607843137254888
+   },
+   "last_third": {
+    "n": 51,
+    "base_bits": 0.6401489817652385,
+    "alt_bits": 0.6384817398470425,
+    "base_errors": 0.19607843137254902,
+    "alt_errors": 0.19607843137254902,
+    "changed_choices": 0,
+    "delta_bits": -0.0016672419181960052,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 174,
+    "base_bits": 0.7916824089107032,
+    "alt_bits": 0.7953500120856403,
+    "base_errors": 0.2614942528735632,
+    "alt_errors": 0.25,
+    "changed_choices": 2,
+    "delta_bits": 0.003667603174937084,
+    "delta_errors": -0.011494252873563204
+   }
+  },
+  "('R', 142006, 'red')": {
+   "first_third": {
+    "n": 59,
+    "base_bits": 0.9944916734392504,
+    "alt_bits": 1.0089752092997848,
+    "base_errors": 0.3983050847457627,
+    "alt_errors": 0.4830508474576271,
+    "changed_choices": 9,
+    "delta_bits": 0.014483535860534413,
+    "delta_errors": 0.0847457627118644
+   },
+   "last_third": {
+    "n": 60,
+    "base_bits": 0.8248699708395983,
+    "alt_bits": 0.8215738249923742,
+    "base_errors": 0.25,
+    "alt_errors": 0.25,
+    "changed_choices": 0,
+    "delta_bits": -0.0032961458472241523,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 169,
+    "base_bits": 0.858825314618621,
+    "alt_bits": 0.8634678187685597,
+    "base_errors": 0.2988165680473373,
+    "alt_errors": 0.32840236686390534,
+    "changed_choices": 9,
+    "delta_bits": 0.00464250414993872,
+    "delta_errors": 0.029585798816568032
+   }
+  },
+  "('R', 142006, 'blue')": {
+   "first_third": {
+    "n": 53,
+    "base_bits": 1.024117299444851,
+    "alt_bits": 1.0360651987379956,
+    "base_errors": 0.4056603773584906,
+    "alt_errors": 0.46226415094339623,
+    "changed_choices": 9,
+    "delta_bits": 0.011947899293144548,
+    "delta_errors": 0.05660377358490565
+   },
+   "last_third": {
+    "n": 50,
+    "base_bits": 0.6569422835894045,
+    "alt_bits": 0.6567953568526486,
+    "base_errors": 0.18,
+    "alt_errors": 0.18,
+    "changed_choices": 0,
+    "delta_bits": -0.00014692673675598122,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 169,
+    "base_bits": 0.7887082433762728,
+    "alt_bits": 0.7939509134719217,
+    "base_errors": 0.23964497041420119,
+    "alt_errors": 0.257396449704142,
+    "changed_choices": 9,
+    "delta_bits": 0.005242670095648938,
+    "delta_errors": 0.017751479289940808
+   }
+  },
+  "('R', 142007, 'red')": {
+   "first_third": {
+    "n": 55,
+    "base_bits": 0.9812416277978405,
+    "alt_bits": 0.9744294789528928,
+    "base_errors": 0.3181818181818182,
+    "alt_errors": 0.35454545454545455,
+    "changed_choices": 4,
+    "delta_bits": -0.006812148844947741,
+    "delta_errors": 0.036363636363636376
+   },
+   "last_third": {
+    "n": 42,
+    "base_bits": 0.5541317540155821,
+    "alt_bits": 0.5541307603452742,
+    "base_errors": 0.21428571428571427,
+    "alt_errors": 0.21428571428571427,
+    "changed_choices": 0,
+    "delta_bits": -9.936703079249654e-07,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 173,
+    "base_bits": 0.7178532929202155,
+    "alt_bits": 0.7142893347817683,
+    "base_errors": 0.22254335260115607,
+    "alt_errors": 0.23410404624277456,
+    "changed_choices": 4,
+    "delta_bits": -0.003563958138447232,
+    "delta_errors": 0.011560693641618491
+   }
+  },
+  "('R', 142007, 'blue')": {
+   "first_third": {
+    "n": 57,
+    "base_bits": 1.0196785844362366,
+    "alt_bits": 1.031188165147763,
+    "base_errors": 0.4473684210526316,
+    "alt_errors": 0.5,
+    "changed_choices": 7,
+    "delta_bits": 0.011509580711526413,
+    "delta_errors": 0.05263157894736842
+   },
+   "last_third": {
+    "n": 53,
+    "base_bits": 0.6825348813783205,
+    "alt_bits": 0.6763028283543319,
+    "base_errors": 0.24528301886792453,
+    "alt_errors": 0.24528301886792453,
+    "changed_choices": 0,
+    "delta_bits": -0.00623205302398866,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 165,
+    "base_bits": 0.8315371638765717,
+    "alt_bits": 0.8350754455387748,
+    "base_errors": 0.33636363636363636,
+    "alt_errors": 0.3484848484848485,
+    "changed_choices": 8,
+    "delta_bits": 0.0035382816622030466,
+    "delta_errors": 0.012121212121212144
+   }
+  },
+  "('R', 142008, 'red')": {
+   "first_third": {
+    "n": 65,
+    "base_bits": 0.9443096816263796,
+    "alt_bits": 0.9527806286947527,
+    "base_errors": 0.33076923076923076,
+    "alt_errors": 0.3923076923076923,
+    "changed_choices": 6,
+    "delta_bits": 0.008470947068373036,
+    "delta_errors": 0.06153846153846154
+   },
+   "last_third": {
+    "n": 55,
+    "base_bits": 0.7051871347639539,
+    "alt_bits": 0.7043148482205616,
+    "base_errors": 0.2,
+    "alt_errors": 0.2,
+    "changed_choices": 0,
+    "delta_bits": -0.000872286543392331,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 177,
+    "base_bits": 0.7566370118022427,
+    "alt_bits": 0.7584887283455907,
+    "base_errors": 0.2288135593220339,
+    "alt_errors": 0.2457627118644068,
+    "changed_choices": 7,
+    "delta_bits": 0.0018517165433479255,
+    "delta_errors": 0.01694915254237289
+   }
+  },
+  "('R', 142008, 'blue')": {
+   "first_third": {
+    "n": 55,
+    "base_bits": 1.0249162768894264,
+    "alt_bits": 1.0024815743141833,
+    "base_errors": 0.39090909090909093,
+    "alt_errors": 0.37272727272727274,
+    "changed_choices": 13,
+    "delta_bits": -0.02243470257524316,
+    "delta_errors": -0.018181818181818188
+   },
+   "last_third": {
+    "n": 46,
+    "base_bits": 0.6588400091449994,
+    "alt_bits": 0.6588312151052729,
+    "base_errors": 0.13043478260869565,
+    "alt_errors": 0.13043478260869565,
+    "changed_choices": 0,
+    "delta_bits": -8.794039726534031e-06,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 170,
+    "base_bits": 0.7093111774320547,
+    "alt_bits": 0.7008068038402633,
+    "base_errors": 0.21470588235294116,
+    "alt_errors": 0.2088235294117647,
+    "changed_choices": 13,
+    "delta_bits": -0.008504373591791459,
+    "delta_errors": -0.00588235294117645
+   }
+  },
+  "('R', 142009, 'red')": {
+   "first_third": {
+    "n": 56,
+    "base_bits": 0.9500524124880805,
+    "alt_bits": 0.9521838249567149,
+    "base_errors": 0.3125,
+    "alt_errors": 0.38392857142857145,
+    "changed_choices": 6,
+    "delta_bits": 0.0021314124686344638,
+    "delta_errors": 0.07142857142857145
+   },
+   "last_third": {
+    "n": 48,
+    "base_bits": 0.3781861582030142,
+    "alt_bits": 0.3781852670404882,
+    "base_errors": 0.08333333333333333,
+    "alt_errors": 0.08333333333333333,
+    "changed_choices": 0,
+    "delta_bits": -8.911625259955258e-07,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 180,
+    "base_bits": 0.5914328585817654,
+    "alt_bits": 0.5876614907567482,
+    "base_errors": 0.1638888888888889,
+    "alt_errors": 0.18611111111111112,
+    "changed_choices": 8,
+    "delta_bits": -0.003771367825017191,
+    "delta_errors": 0.022222222222222227
+   }
+  },
+  "('R', 142009, 'blue')": {
+   "first_third": {
+    "n": 63,
+    "base_bits": 0.911057729609418,
+    "alt_bits": 0.9000539420668011,
+    "base_errors": 0.3253968253968254,
+    "alt_errors": 0.3253968253968254,
+    "changed_choices": 14,
+    "delta_bits": -0.011003787542616883,
+    "delta_errors": 0.0
+   },
+   "last_third": {
+    "n": 64,
+    "base_bits": 0.3856695464655927,
+    "alt_bits": 0.3856680661831279,
+    "base_errors": 0.109375,
+    "alt_errors": 0.109375,
+    "changed_choices": 0,
+    "delta_bits": -1.4802824648274537e-06,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 183,
+    "base_bits": 0.6838527476326777,
+    "alt_bits": 0.6785209608310376,
+    "base_errors": 0.2103825136612022,
+    "alt_errors": 0.20491803278688525,
+    "changed_choices": 15,
+    "delta_bits": -0.005331786801640037,
+    "delta_errors": -0.005464480874316946
+   }
+  },
+  "('R+1', 142000, 'red')": {
+   "first_third": {
+    "n": 56,
+    "base_bits": 0.9890661085051626,
+    "alt_bits": 1.0015170615025817,
+    "base_errors": 0.3125,
+    "alt_errors": 0.41964285714285715,
+    "changed_choices": 6,
+    "delta_bits": 0.012450952997419051,
+    "delta_errors": 0.10714285714285715
+   },
+   "last_third": {
+    "n": 42,
+    "base_bits": 0.6683457725816654,
+    "alt_bits": 0.6637761047755921,
+    "base_errors": 0.14285714285714285,
+    "alt_errors": 0.14285714285714285,
+    "changed_choices": 0,
+    "delta_bits": -0.004569667806073263,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 164,
+    "base_bits": 0.7061554523851289,
+    "alt_bits": 0.7098356308556085,
+    "base_errors": 0.18597560975609756,
+    "alt_errors": 0.2225609756097561,
+    "changed_choices": 6,
+    "delta_bits": 0.0036801784704796336,
+    "delta_errors": 0.03658536585365854
+   }
+  },
+  "('R+1', 142000, 'blue')": {
+   "first_third": {
+    "n": 55,
+    "base_bits": 0.9411421923939252,
+    "alt_bits": 0.9682597693789594,
+    "base_errors": 0.3,
+    "alt_errors": 0.33636363636363636,
+    "changed_choices": 2,
+    "delta_bits": 0.027117576985034253,
+    "delta_errors": 0.036363636363636376
+   },
+   "last_third": {
+    "n": 75,
+    "base_bits": 0.4750840178011944,
+    "alt_bits": 0.4721571909473947,
+    "base_errors": 0.14666666666666667,
+    "alt_errors": 0.14666666666666667,
+    "changed_choices": 0,
+    "delta_bits": -0.002926826853799691,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 192,
+    "base_bits": 0.6267726030003168,
+    "alt_bits": 0.6335468354502495,
+    "base_errors": 0.18489583333333334,
+    "alt_errors": 0.1953125,
+    "changed_choices": 2,
+    "delta_bits": 0.006774232449932693,
+    "delta_errors": 0.010416666666666657
+   }
+  },
+  "('R+1', 142001, 'red')": {
+   "first_third": {
+    "n": 48,
+    "base_bits": 1.0147418719836154,
+    "alt_bits": 1.0335777811978812,
+    "base_errors": 0.34375,
+    "alt_errors": 0.46875,
+    "changed_choices": 6,
+    "delta_bits": 0.01883590921426581,
+    "delta_errors": 0.125
+   },
+   "last_third": {
+    "n": 52,
+    "base_bits": 0.5315925017069104,
+    "alt_bits": 0.526915095644439,
+    "base_errors": 0.15384615384615385,
+    "alt_errors": 0.1346153846153846,
+    "changed_choices": 1,
+    "delta_bits": -0.0046774060624714675,
+    "delta_errors": -0.019230769230769246
+   },
+   "full": {
+    "n": 156,
+    "base_bits": 0.7533051041143176,
+    "alt_bits": 0.7598898152498997,
+    "base_errors": 0.2403846153846154,
+    "alt_errors": 0.27884615384615385,
+    "changed_choices": 8,
+    "delta_bits": 0.006584711135582122,
+    "delta_errors": 0.038461538461538464
+   }
+  },
+  "('R+1', 142001, 'blue')": {
+   "first_third": {
+    "n": 74,
+    "base_bits": 1.029724921249015,
+    "alt_bits": 1.0254617153987053,
+    "base_errors": 0.39864864864864863,
+    "alt_errors": 0.4527027027027027,
+    "changed_choices": 10,
+    "delta_bits": -0.004263205850309593,
+    "delta_errors": 0.05405405405405406
+   },
+   "last_third": {
+    "n": 74,
+    "base_bits": 0.7637447156299956,
+    "alt_bits": 0.7616140337174352,
+    "base_errors": 0.1891891891891892,
+    "alt_errors": 0.20270270270270271,
+    "changed_choices": 1,
+    "delta_bits": -0.0021306819125603838,
+    "delta_errors": 0.013513513513513514
+   },
+   "full": {
+    "n": 214,
+    "base_bits": 0.9138831613819322,
+    "alt_bits": 0.9136017391594827,
+    "base_errors": 0.31542056074766356,
+    "alt_errors": 0.34345794392523366,
+    "changed_choices": 14,
+    "delta_bits": -0.0002814222224494234,
+    "delta_errors": 0.028037383177570097
+   }
+  },
+  "('R+1', 142002, 'red')": {
+   "first_third": {
+    "n": 42,
+    "base_bits": 1.014276829013398,
+    "alt_bits": 1.0405384395823167,
+    "base_errors": 0.39285714285714285,
+    "alt_errors": 0.4166666666666667,
+    "changed_choices": 1,
+    "delta_bits": 0.026261610568918625,
+    "delta_errors": 0.023809523809523836
+   },
+   "last_third": {
+    "n": 66,
+    "base_bits": 0.5415000687220118,
+    "alt_bits": 0.5381744757409591,
+    "base_errors": 0.18181818181818182,
+    "alt_errors": 0.18181818181818182,
+    "changed_choices": 0,
+    "delta_bits": -0.0033255929810527274,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 163,
+    "base_bits": 0.6839740721942992,
+    "alt_bits": 0.6906374963960387,
+    "base_errors": 0.22392638036809817,
+    "alt_errors": 0.23006134969325154,
+    "changed_choices": 1,
+    "delta_bits": 0.006663424201739487,
+    "delta_errors": 0.006134969325153367
+   }
+  },
+  "('R+1', 142002, 'blue')": {
+   "first_third": {
+    "n": 53,
+    "base_bits": 1.0104070751565086,
+    "alt_bits": 1.0174307941506855,
+    "base_errors": 0.3490566037735849,
+    "alt_errors": 0.36792452830188677,
+    "changed_choices": 7,
+    "delta_bits": 0.007023718994176864,
+    "delta_errors": 0.018867924528301883
+   },
+   "last_third": {
+    "n": 52,
+    "base_bits": 0.8363963907276892,
+    "alt_bits": 0.8354642391399345,
+    "base_errors": 0.2692307692307692,
+    "alt_errors": 0.2692307692307692,
+    "changed_choices": 0,
+    "delta_bits": -0.000932151587754726,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 163,
+    "base_bits": 0.8127878756026806,
+    "alt_bits": 0.8131503396150006,
+    "base_errors": 0.2668711656441718,
+    "alt_errors": 0.2791411042944785,
+    "changed_choices": 8,
+    "delta_bits": 0.00036246401231998515,
+    "delta_errors": 0.012269938650306733
+   }
+  },
+  "('R+1', 142003, 'red')": {
+   "first_third": {
+    "n": 47,
+    "base_bits": 1.0044164435134753,
+    "alt_bits": 1.033119182251441,
+    "base_errors": 0.3723404255319149,
+    "alt_errors": 0.39361702127659576,
+    "changed_choices": 7,
+    "delta_bits": 0.028702738737965694,
+    "delta_errors": 0.021276595744680882
+   },
+   "last_third": {
+    "n": 66,
+    "base_bits": 0.6164657902555221,
+    "alt_bits": 0.6159846244651686,
+    "base_errors": 0.16666666666666666,
+    "alt_errors": 0.16666666666666666,
+    "changed_choices": 0,
+    "delta_bits": -0.0004811657903535105,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 169,
+    "base_bits": 0.7692644685914687,
+    "alt_bits": 0.7775641768793029,
+    "base_errors": 0.2514792899408284,
+    "alt_errors": 0.257396449704142,
+    "changed_choices": 7,
+    "delta_bits": 0.008299708287834218,
+    "delta_errors": 0.005917159763313584
+   }
+  },
+  "('R+1', 142003, 'blue')": {
+   "first_third": {
+    "n": 59,
+    "base_bits": 1.0034699066116313,
+    "alt_bits": 1.0235711627908668,
+    "base_errors": 0.3813559322033898,
+    "alt_errors": 0.4830508474576271,
+    "changed_choices": 12,
+    "delta_bits": 0.020101256179235527,
+    "delta_errors": 0.1016949152542373
+   },
+   "last_third": {
+    "n": 60,
+    "base_bits": 0.6307861016614472,
+    "alt_bits": 0.6269332939378913,
+    "base_errors": 0.18333333333333332,
+    "alt_errors": 0.18333333333333332,
+    "changed_choices": 0,
+    "delta_bits": -0.0038528077235558955,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 167,
+    "base_bits": 0.8444786207428677,
+    "alt_bits": 0.8504380350852476,
+    "base_errors": 0.2904191616766467,
+    "alt_errors": 0.3263473053892216,
+    "changed_choices": 14,
+    "delta_bits": 0.005959414342379898,
+    "delta_errors": 0.035928143712574856
+   }
+  },
+  "('R+1', 142004, 'red')": {
+   "first_third": {
+    "n": 69,
+    "base_bits": 0.9323986206564193,
+    "alt_bits": 0.9472516217667983,
+    "base_errors": 0.2971014492753623,
+    "alt_errors": 0.3115942028985507,
+    "changed_choices": 1,
+    "delta_bits": 0.014853001110379016,
+    "delta_errors": 0.014492753623188415
+   },
+   "last_third": {
+    "n": 53,
+    "base_bits": 0.7627975088480202,
+    "alt_bits": 0.7615234770724875,
+    "base_errors": 0.2641509433962264,
+    "alt_errors": 0.2641509433962264,
+    "changed_choices": 0,
+    "delta_bits": -0.001274031775532758,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 196,
+    "base_bits": 0.8746238712066079,
+    "alt_bits": 0.8787643915242512,
+    "base_errors": 0.3086734693877551,
+    "alt_errors": 0.3086734693877551,
+    "changed_choices": 2,
+    "delta_bits": 0.004140520317643337,
+    "delta_errors": 0.0
+   }
+  },
+  "('R+1', 142004, 'blue')": {
+   "first_third": {
+    "n": 54,
+    "base_bits": 0.9473633125950679,
+    "alt_bits": 0.9809515120372934,
+    "base_errors": 0.32407407407407407,
+    "alt_errors": 0.3611111111111111,
+    "changed_choices": 2,
+    "delta_bits": 0.033588199442225464,
+    "delta_errors": 0.037037037037037035
+   },
+   "last_third": {
+    "n": 42,
+    "base_bits": 0.40753925856729467,
+    "alt_bits": 0.4062188701856114,
+    "base_errors": 0.023809523809523808,
+    "alt_errors": 0.023809523809523808,
+    "changed_choices": 0,
+    "delta_bits": -0.0013203883816832462,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 169,
+    "base_bits": 0.7790175666328777,
+    "alt_bits": 0.7879259814312594,
+    "base_errors": 0.21005917159763313,
+    "alt_errors": 0.21597633136094674,
+    "changed_choices": 3,
+    "delta_bits": 0.00890841479838167,
+    "delta_errors": 0.005917159763313612
+   }
+  },
+  "('R+1', 142005, 'red')": {
+   "first_third": {
+    "n": 56,
+    "base_bits": 1.0858901824004032,
+    "alt_bits": 1.0662151471593153,
+    "base_errors": 0.49107142857142855,
+    "alt_errors": 0.5446428571428571,
+    "changed_choices": 13,
+    "delta_bits": -0.019675035241087935,
+    "delta_errors": 0.05357142857142855
+   },
+   "last_third": {
+    "n": 48,
+    "base_bits": 0.6737053133657969,
+    "alt_bits": 0.6735003886584483,
+    "base_errors": 0.20833333333333334,
+    "alt_errors": 0.20833333333333334,
+    "changed_choices": 0,
+    "delta_bits": -0.00020492470734856383,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 164,
+    "base_bits": 0.8891390680349915,
+    "alt_bits": 0.8832995623451539,
+    "base_errors": 0.3567073170731707,
+    "alt_errors": 0.35060975609756095,
+    "changed_choices": 17,
+    "delta_bits": -0.0058395056898375985,
+    "delta_errors": -0.0060975609756097615
+   }
+  },
+  "('R+1', 142005, 'blue')": {
+   "first_third": {
+    "n": 51,
+    "base_bits": 0.8585407507164418,
+    "alt_bits": 0.8701669882568274,
+    "base_errors": 0.2647058823529412,
+    "alt_errors": 0.28431372549019607,
+    "changed_choices": 1,
+    "delta_bits": 0.011626237540385609,
+    "delta_errors": 0.019607843137254888
+   },
+   "last_third": {
+    "n": 57,
+    "base_bits": 0.6349549315670783,
+    "alt_bits": 0.6346445367291674,
+    "base_errors": 0.19298245614035087,
+    "alt_errors": 0.19298245614035087,
+    "changed_choices": 0,
+    "delta_bits": -0.00031039483791084344,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 164,
+    "base_bits": 0.7624680399120061,
+    "alt_bits": 0.7647316295190968,
+    "base_errors": 0.22865853658536586,
+    "alt_errors": 0.2347560975609756,
+    "changed_choices": 1,
+    "delta_bits": 0.0022635896070907213,
+    "delta_errors": 0.006097560975609734
+   }
+  },
+  "('R+1', 142006, 'red')": {
+   "first_third": {
+    "n": 75,
+    "base_bits": 0.7926457679578263,
+    "alt_bits": 0.8078312177742639,
+    "base_errors": 0.24666666666666667,
+    "alt_errors": 0.24666666666666667,
+    "changed_choices": 8,
+    "delta_bits": 0.015185449816437657,
+    "delta_errors": 0.0
+   },
+   "last_third": {
+    "n": 61,
+    "base_bits": 0.6179527830665436,
+    "alt_bits": 0.6176707067204785,
+    "base_errors": 0.14754098360655737,
+    "alt_errors": 0.14754098360655737,
+    "changed_choices": 0,
+    "delta_bits": -0.00028207634606502996,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 202,
+    "base_bits": 0.5615409656028147,
+    "alt_bits": 0.5657903033137988,
+    "base_errors": 0.14603960396039603,
+    "alt_errors": 0.14603960396039603,
+    "changed_choices": 8,
+    "delta_bits": 0.004249337710984014,
+    "delta_errors": 0.0
+   }
+  },
+  "('R+1', 142006, 'blue')": {
+   "first_third": {
+    "n": 41,
+    "base_bits": 1.0103372740883243,
+    "alt_bits": 1.033365271488416,
+    "base_errors": 0.45121951219512196,
+    "alt_errors": 0.47560975609756095,
+    "changed_choices": 7,
+    "delta_bits": 0.02302799740009176,
+    "delta_errors": 0.02439024390243899
+   },
+   "last_third": {
+    "n": 53,
+    "base_bits": 0.6567435280909301,
+    "alt_bits": 0.6526036362532512,
+    "base_errors": 0.16981132075471697,
+    "alt_errors": 0.16981132075471697,
+    "changed_choices": 0,
+    "delta_bits": -0.004139891837678822,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 145,
+    "base_bits": 0.8126440758801856,
+    "alt_bits": 0.8156038870736848,
+    "base_errors": 0.28620689655172415,
+    "alt_errors": 0.28620689655172415,
+    "changed_choices": 8,
+    "delta_bits": 0.0029598111934991955,
+    "delta_errors": 0.0
+   }
+  },
+  "('R+1', 142007, 'red')": {
+   "first_third": {
+    "n": 60,
+    "base_bits": 1.0214278395379486,
+    "alt_bits": 1.024450586529665,
+    "base_errors": 0.39166666666666666,
+    "alt_errors": 0.39166666666666666,
+    "changed_choices": 4,
+    "delta_bits": 0.0030227469917163408,
+    "delta_errors": 0.0
+   },
+   "last_third": {
+    "n": 42,
+    "base_bits": 0.8868218966927562,
+    "alt_bits": 0.8742857434695889,
+    "base_errors": 0.38095238095238093,
+    "alt_errors": 0.2857142857142857,
+    "changed_choices": 4,
+    "delta_bits": -0.012536153223167368,
+    "delta_errors": -0.09523809523809523
+   },
+   "full": {
+    "n": 157,
+    "base_bits": 0.8716259496482252,
+    "alt_bits": 0.8703569698726694,
+    "base_errors": 0.32802547770700635,
+    "alt_errors": 0.30254777070063693,
+    "changed_choices": 8,
+    "delta_bits": -0.0012689797755557342,
+    "delta_errors": -0.02547770700636942
+   }
+  },
+  "('R+1', 142007, 'blue')": {
+   "first_third": {
+    "n": 51,
+    "base_bits": 1.0468602677796304,
+    "alt_bits": 1.0408776393051098,
+    "base_errors": 0.4215686274509804,
+    "alt_errors": 0.4215686274509804,
+    "changed_choices": 20,
+    "delta_bits": -0.005982628474520579,
+    "delta_errors": 0.0
+   },
+   "last_third": {
+    "n": 71,
+    "base_bits": 0.6501812874304114,
+    "alt_bits": 0.6498133236856473,
+    "base_errors": 0.2112676056338028,
+    "alt_errors": 0.2112676056338028,
+    "changed_choices": 0,
+    "delta_bits": -0.0003679637447641104,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 177,
+    "base_bits": 0.7739055210219127,
+    "alt_bits": 0.7742096310803621,
+    "base_errors": 0.2853107344632768,
+    "alt_errors": 0.2853107344632768,
+    "changed_choices": 20,
+    "delta_bits": 0.00030411005844943606,
+    "delta_errors": 0.0
+   }
+  },
+  "('R+1', 142008, 'red')": {
+   "first_third": {
+    "n": 57,
+    "base_bits": 1.0090571103378039,
+    "alt_bits": 1.0236685260872813,
+    "base_errors": 0.41228070175438597,
+    "alt_errors": 0.5,
+    "changed_choices": 9,
+    "delta_bits": 0.014611415749477441,
+    "delta_errors": 0.08771929824561403
+   },
+   "last_third": {
+    "n": 48,
+    "base_bits": 0.6637368783702869,
+    "alt_bits": 0.6622975418584106,
+    "base_errors": 0.22916666666666666,
+    "alt_errors": 0.22916666666666666,
+    "changed_choices": 0,
+    "delta_bits": -0.0014393365118763324,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 155,
+    "base_bits": 0.798910681685105,
+    "alt_bits": 0.8021979540136015,
+    "base_errors": 0.27419354838709675,
+    "alt_errors": 0.3064516129032258,
+    "changed_choices": 9,
+    "delta_bits": 0.00328727232849646,
+    "delta_errors": 0.03225806451612906
+   }
+  },
+  "('R+1', 142008, 'blue')": {
+   "first_third": {
+    "n": 57,
+    "base_bits": 0.9964354779159558,
+    "alt_bits": 0.9817270904111207,
+    "base_errors": 0.39473684210526316,
+    "alt_errors": 0.34210526315789475,
+    "changed_choices": 9,
+    "delta_bits": -0.014708387504835052,
+    "delta_errors": -0.05263157894736842
+   },
+   "last_third": {
+    "n": 55,
+    "base_bits": 0.6660279286148094,
+    "alt_bits": 0.6659179365227854,
+    "base_errors": 0.14545454545454545,
+    "alt_errors": 0.14545454545454545,
+    "changed_choices": 0,
+    "delta_bits": -0.00010999209202400273,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 177,
+    "base_bits": 0.8300753144550153,
+    "alt_bits": 0.8239551266111674,
+    "base_errors": 0.2796610169491525,
+    "alt_errors": 0.2627118644067797,
+    "changed_choices": 9,
+    "delta_bits": -0.006120187843847824,
+    "delta_errors": -0.016949152542372836
+   }
+  },
+  "('R+1', 142009, 'red')": {
+   "first_third": {
+    "n": 77,
+    "base_bits": 1.0039710247952642,
+    "alt_bits": 1.0132968360376997,
+    "base_errors": 0.3961038961038961,
+    "alt_errors": 0.42207792207792205,
+    "changed_choices": 6,
+    "delta_bits": 0.009325811242435478,
+    "delta_errors": 0.025974025974025927
+   },
+   "last_third": {
+    "n": 64,
+    "base_bits": 0.6121509716864233,
+    "alt_bits": 0.6115221916032035,
+    "base_errors": 0.140625,
+    "alt_errors": 0.140625,
+    "changed_choices": 0,
+    "delta_bits": -0.0006287800832197599,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 189,
+    "base_bits": 0.8132029376913188,
+    "alt_bits": 0.8135563647756581,
+    "base_errors": 0.2566137566137566,
+    "alt_errors": 0.2671957671957672,
+    "changed_choices": 6,
+    "delta_bits": 0.00035342708433927505,
+    "delta_errors": 0.010582010582010581
+   }
+  },
+  "('R+1', 142009, 'blue')": {
+   "first_third": {
+    "n": 78,
+    "base_bits": 0.7421804354354234,
+    "alt_bits": 0.7314872406731544,
+    "base_errors": 0.22435897435897437,
+    "alt_errors": 0.25,
+    "changed_choices": 12,
+    "delta_bits": -0.010693194762269043,
+    "delta_errors": 0.025641025641025633
+   },
+   "last_third": {
+    "n": 54,
+    "base_bits": 0.6929400153621523,
+    "alt_bits": 0.6929389769257709,
+    "base_errors": 0.18518518518518517,
+    "alt_errors": 0.18518518518518517,
+    "changed_choices": 0,
+    "delta_bits": -1.0384363814397446e-06,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 189,
+    "base_bits": 0.7066046956618128,
+    "alt_bits": 0.700936070134955,
+    "base_errors": 0.1984126984126984,
+    "alt_errors": 0.20899470899470898,
+    "changed_choices": 12,
+    "delta_bits": -0.005668625526857873,
+    "delta_errors": 0.010582010582010581
+   }
+  },
+  "('design560 timing', 142000, 'red')": {
+   "first_third": {
+    "n": 565,
+    "base_bits": 0.4629068842298194,
+    "alt_bits": 0.4630169495216926,
+    "base_errors": 0.11061946902654868,
+    "alt_errors": 0.10707964601769912,
+    "changed_choices": 6,
+    "delta_bits": 0.00011006529187318481,
+    "delta_errors": -0.0035398230088495575
+   },
+   "last_third": {
+    "n": 594,
+    "base_bits": 0.2582432368058637,
+    "alt_bits": 0.2582432368058637,
+    "base_errors": 0.06902356902356903,
+    "alt_errors": 0.06902356902356903,
+    "changed_choices": 0,
+    "delta_bits": 0.0,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 1732,
+    "base_bits": 0.3183296063358706,
+    "alt_bits": 0.3183655110067184,
+    "base_errors": 0.07361431870669746,
+    "alt_errors": 0.07245958429561201,
+    "changed_choices": 6,
+    "delta_bits": 3.590467084779725e-05,
+    "delta_errors": -0.001154734411085448
+   }
+  },
+  "('design560 timing', 142000, 'blue')": {
+   "first_third": {
+    "n": 554,
+    "base_bits": 0.4779991914342406,
+    "alt_bits": 0.4834080088474361,
+    "base_errors": 0.11101083032490974,
+    "alt_errors": 0.11101083032490974,
+    "changed_choices": 4,
+    "delta_bits": 0.0054088174131955435,
+    "delta_errors": 0.0
+   },
+   "last_third": {
+    "n": 622,
+    "base_bits": 0.27516031504108174,
+    "alt_bits": 0.27516031497343946,
+    "base_errors": 0.06109324758842444,
+    "alt_errors": 0.06109324758842444,
+    "changed_choices": 0,
+    "delta_bits": -6.764228066558076e-11,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 1759,
+    "base_bits": 0.34175546090613285,
+    "alt_bits": 0.34345895534918736,
+    "base_errors": 0.07760090960773167,
+    "alt_errors": 0.07760090960773167,
+    "changed_choices": 4,
+    "delta_bits": 0.0017034944430545096,
+    "delta_errors": 0.0
+   }
+  },
+  "('design560 timing', 142001, 'red')": {
+   "first_third": {
+    "n": 584,
+    "base_bits": 0.541478631852472,
+    "alt_bits": 0.5463736424400075,
+    "base_errors": 0.1601027397260274,
+    "alt_errors": 0.175513698630137,
+    "changed_choices": 11,
+    "delta_bits": 0.004895010587535498,
+    "delta_errors": 0.015410958904109595
+   },
+   "last_third": {
+    "n": 627,
+    "base_bits": 0.31940001045925603,
+    "alt_bits": 0.31936023419432563,
+    "base_errors": 0.0685805422647528,
+    "alt_errors": 0.06698564593301436,
+    "changed_choices": 1,
+    "delta_bits": -3.9776264930402316e-05,
+    "delta_errors": -0.0015948963317384407
+   },
+   "full": {
+    "n": 1885,
+    "base_bits": 0.37439720760580375,
+    "alt_bits": 0.375959156901908,
+    "base_errors": 0.0973474801061008,
+    "alt_errors": 0.10159151193633953,
+    "changed_choices": 12,
+    "delta_bits": 0.0015619492961042591,
+    "delta_errors": 0.004244031830238734
+   }
+  },
+  "('design560 timing', 142001, 'blue')": {
+   "first_third": {
+    "n": 627,
+    "base_bits": 0.5215769939725174,
+    "alt_bits": 0.5247129370900002,
+    "base_errors": 0.14274322169059012,
+    "alt_errors": 0.13955342902711323,
+    "changed_choices": 8,
+    "delta_bits": 0.0031359431174827757,
+    "delta_errors": -0.0031897926634768814
+   },
+   "last_third": {
+    "n": 643,
+    "base_bits": 0.3371288821242798,
+    "alt_bits": 0.33712888297949734,
+    "base_errors": 0.049766718506998445,
+    "alt_errors": 0.049766718506998445,
+    "changed_choices": 0,
+    "delta_bits": 8.5521750792239e-10,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 1911,
+    "base_bits": 0.3849241801140023,
+    "alt_bits": 0.38595309103284126,
+    "base_errors": 0.0913134484563056,
+    "alt_errors": 0.09026687598116169,
+    "changed_choices": 8,
+    "delta_bits": 0.0010289109188389434,
+    "delta_errors": -0.001046572475143906
+   }
+  },
+  "('design560 timing', 142002, 'red')": {
+   "first_third": {
+    "n": 560,
+    "base_bits": 0.5405471142726365,
+    "alt_bits": 0.5458330426764254,
+    "base_errors": 0.13125,
+    "alt_errors": 0.13303571428571428,
+    "changed_choices": 7,
+    "delta_bits": 0.005285928403788942,
+    "delta_errors": 0.0017857142857142794
+   },
+   "last_third": {
+    "n": 568,
+    "base_bits": 0.2951802190762222,
+    "alt_bits": 0.2951802186256989,
+    "base_errors": 0.07042253521126761,
+    "alt_errors": 0.07042253521126761,
+    "changed_choices": 0,
+    "delta_bits": -4.50523340855824e-10,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 1697,
+    "base_bits": 0.3889945325432232,
+    "alt_bits": 0.3907387958901495,
+    "base_errors": 0.10106069534472599,
+    "alt_errors": 0.10164997053624042,
+    "changed_choices": 7,
+    "delta_bits": 0.0017442633469262891,
+    "delta_errors": 0.0005892751915144295
+   }
+  },
+  "('design560 timing', 142002, 'blue')": {
+   "first_third": {
+    "n": 575,
+    "base_bits": 0.5121272931562937,
+    "alt_bits": 0.513764126642648,
+    "base_errors": 0.12260869565217392,
+    "alt_errors": 0.12608695652173912,
+    "changed_choices": 4,
+    "delta_bits": 0.0016368334863543499,
+    "delta_errors": 0.0034782608695652084
+   },
+   "last_third": {
+    "n": 558,
+    "base_bits": 0.29541277013034734,
+    "alt_bits": 0.29541277018635415,
+    "base_errors": 0.08960573476702509,
+    "alt_errors": 0.08960573476702509,
+    "changed_choices": 0,
+    "delta_bits": 5.600681030060173e-11,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 1703,
+    "base_bits": 0.39642655141360006,
+    "alt_bits": 0.3969792077377867,
+    "base_errors": 0.10657662947739284,
+    "alt_errors": 0.10775102759835584,
+    "changed_choices": 4,
+    "delta_bits": 0.0005526563241866622,
+    "delta_errors": 0.0011743981209629967
+   }
+  },
+  "('design560 timing', 142003, 'red')": {
+   "first_third": {
+    "n": 624,
+    "base_bits": 0.5734786320262685,
+    "alt_bits": 0.5758556894451249,
+    "base_errors": 0.17067307692307693,
+    "alt_errors": 0.1658653846153846,
+    "changed_choices": 17,
+    "delta_bits": 0.0023770574188564098,
+    "delta_errors": -0.004807692307692318
+   },
+   "last_third": {
+    "n": 593,
+    "base_bits": 0.4849066004501059,
+    "alt_bits": 0.4849066004501059,
+    "base_errors": 0.14839797639123103,
+    "alt_errors": 0.14839797639123103,
+    "changed_choices": 0,
+    "delta_bits": 0.0,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 1762,
+    "base_bits": 0.479129399100694,
+    "alt_bits": 0.4799712173917647,
+    "base_errors": 0.13649262202043133,
+    "alt_errors": 0.1347900113507378,
+    "changed_choices": 17,
+    "delta_bits": 0.0008418182910706618,
+    "delta_errors": -0.001702610669693544
+   }
+  },
+  "('design560 timing', 142003, 'blue')": {
+   "first_third": {
+    "n": 618,
+    "base_bits": 0.5839197081662532,
+    "alt_bits": 0.5834922464473603,
+    "base_errors": 0.17071197411003236,
+    "alt_errors": 0.17233009708737865,
+    "changed_choices": 11,
+    "delta_bits": -0.000427461718892852,
+    "delta_errors": 0.0016181229773462869
+   },
+   "last_third": {
+    "n": 600,
+    "base_bits": 0.5445184793880898,
+    "alt_bits": 0.5445184793878833,
+    "base_errors": 0.155,
+    "alt_errors": 0.155,
+    "changed_choices": 0,
+    "delta_bits": -2.0650148258027912e-13,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 1820,
+    "base_bits": 0.5901021133324517,
+    "alt_bits": 0.5899568082839158,
+    "base_errors": 0.185989010989011,
+    "alt_errors": 0.18653846153846154,
+    "changed_choices": 11,
+    "delta_bits": -0.0001453050485358265,
+    "delta_errors": 0.0005494505494505475
+   }
+  },
+  "('design560 timing', 142004, 'red')": {
+   "first_third": {
+    "n": 619,
+    "base_bits": 0.49147452734909897,
+    "alt_bits": 0.49422627302812955,
+    "base_errors": 0.11712439418416801,
+    "alt_errors": 0.11712439418416801,
+    "changed_choices": 12,
+    "delta_bits": 0.0027517456790305816,
+    "delta_errors": 0.0
+   },
+   "last_third": {
+    "n": 638,
+    "base_bits": 0.28513921527163233,
+    "alt_bits": 0.28513921525226277,
+    "base_errors": 0.045454545454545456,
+    "alt_errors": 0.045454545454545456,
+    "changed_choices": 0,
+    "delta_bits": -1.9369561510274025e-11,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 1965,
+    "base_bits": 0.3629304824185975,
+    "alt_bits": 0.3637974032877378,
+    "base_errors": 0.07608142493638677,
+    "alt_errors": 0.07608142493638677,
+    "changed_choices": 12,
+    "delta_bits": 0.0008669208691403085,
+    "delta_errors": 0.0
+   }
+  },
+  "('design560 timing', 142004, 'blue')": {
+   "first_third": {
+    "n": 556,
+    "base_bits": 0.5506974205763818,
+    "alt_bits": 0.5523707728482187,
+    "base_errors": 0.14658273381294964,
+    "alt_errors": 0.14658273381294964,
+    "changed_choices": 8,
+    "delta_bits": 0.0016733522718368476,
+    "delta_errors": 0.0
+   },
+   "last_third": {
+    "n": 595,
+    "base_bits": 0.4132565600250338,
+    "alt_bits": 0.4132565607183664,
+    "base_errors": 0.10588235294117647,
+    "alt_errors": 0.10588235294117647,
+    "changed_choices": 0,
+    "delta_bits": 6.933326135438733e-10,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 1752,
+    "base_bits": 0.41112473872382976,
+    "alt_bits": 0.41165583897373703,
+    "base_errors": 0.0990296803652968,
+    "alt_errors": 0.0990296803652968,
+    "changed_choices": 8,
+    "delta_bits": 0.0005311002499072681,
+    "delta_errors": 0.0
+   }
+  },
+  "('design560 timing', 142005, 'red')": {
+   "first_third": {
+    "n": 586,
+    "base_bits": 0.5371853479925575,
+    "alt_bits": 0.5413398021454711,
+    "base_errors": 0.17320819112627986,
+    "alt_errors": 0.17320819112627986,
+    "changed_choices": 6,
+    "delta_bits": 0.0041544541529136,
+    "delta_errors": 0.0
+   },
+   "last_third": {
+    "n": 588,
+    "base_bits": 0.33322373522472964,
+    "alt_bits": 0.3332237352172723,
+    "base_errors": 0.07993197278911565,
+    "alt_errors": 0.07993197278911565,
+    "changed_choices": 0,
+    "delta_bits": -7.457368056407176e-12,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 1782,
+    "base_bits": 0.36836931992957733,
+    "alt_bits": 0.369735486836288,
+    "base_errors": 0.09455667789001122,
+    "alt_errors": 0.09455667789001122,
+    "changed_choices": 6,
+    "delta_bits": 0.001366166906710653,
+    "delta_errors": 0.0
+   }
+  },
+  "('design560 timing', 142005, 'blue')": {
+   "first_third": {
+    "n": 599,
+    "base_bits": 0.5379229138980309,
+    "alt_bits": 0.5411047024648807,
+    "base_errors": 0.166110183639399,
+    "alt_errors": 0.17111853088480802,
+    "changed_choices": 13,
+    "delta_bits": 0.003181788566849808,
+    "delta_errors": 0.005008347245409023
+   },
+   "last_third": {
+    "n": 588,
+    "base_bits": 0.30532214405812397,
+    "alt_bits": 0.3053220629952233,
+    "base_errors": 0.06462585034013606,
+    "alt_errors": 0.06462585034013606,
+    "changed_choices": 0,
+    "delta_bits": -8.106290066978161e-08,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 1746,
+    "base_bits": 0.39529038656458515,
+    "alt_bits": 0.3963816185975855,
+    "base_errors": 0.1079610538373425,
+    "alt_errors": 0.10967926689576174,
+    "changed_choices": 13,
+    "delta_bits": 0.0010912320330003777,
+    "delta_errors": 0.0017182130584192379
+   }
+  },
+  "('design560 timing', 142006, 'red')": {
+   "first_third": {
+    "n": 645,
+    "base_bits": 0.4256271535856014,
+    "alt_bits": 0.4297114599825919,
+    "base_errors": 0.10465116279069768,
+    "alt_errors": 0.10930232558139535,
+    "changed_choices": 7,
+    "delta_bits": 0.0040843063969905335,
+    "delta_errors": 0.004651162790697674
+   },
+   "last_third": {
+    "n": 578,
+    "base_bits": 0.3144565692398992,
+    "alt_bits": 0.31445656924590815,
+    "base_errors": 0.06920415224913495,
+    "alt_errors": 0.06920415224913495,
+    "changed_choices": 0,
+    "delta_bits": 6.008971098481197e-12,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 1827,
+    "base_bits": 0.3639923948064266,
+    "alt_bits": 0.3654343092565501,
+    "base_errors": 0.09003831417624521,
+    "alt_errors": 0.09168035030103995,
+    "changed_choices": 7,
+    "delta_bits": 0.0014419144501235381,
+    "delta_errors": 0.0016420361247947435
+   }
+  },
+  "('design560 timing', 142006, 'blue')": {
+   "first_third": {
+    "n": 577,
+    "base_bits": 0.5222714518830919,
+    "alt_bits": 0.5220683896201637,
+    "base_errors": 0.15164644714038128,
+    "alt_errors": 0.1464471403812825,
+    "changed_choices": 21,
+    "delta_bits": -0.00020306226292821083,
+    "delta_errors": -0.005199306759098771
+   },
+   "last_third": {
+    "n": 610,
+    "base_bits": 0.33873825426986853,
+    "alt_bits": 0.3387382448874891,
+    "base_errors": 0.09180327868852459,
+    "alt_errors": 0.09180327868852459,
+    "changed_choices": 0,
+    "delta_bits": -9.38237942893494e-09,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 1791,
+    "base_bits": 0.3818152489155378,
+    "alt_bits": 0.3817498248434427,
+    "base_errors": 0.10636515912897822,
+    "alt_errors": 0.10469011725293133,
+    "changed_choices": 21,
+    "delta_bits": -6.542407209508827e-05,
+    "delta_errors": -0.00167504187604689
+   }
+  },
+  "('design560 timing', 142007, 'red')": {
+   "first_third": {
+    "n": 553,
+    "base_bits": 0.5675240021348419,
+    "alt_bits": 0.5702022940442483,
+    "base_errors": 0.18354430379746836,
+    "alt_errors": 0.17088607594936708,
+    "changed_choices": 15,
+    "delta_bits": 0.002678291909406383,
+    "delta_errors": -0.012658227848101278
+   },
+   "last_third": {
+    "n": 586,
+    "base_bits": 0.8292193936120557,
+    "alt_bits": 0.8292193936120557,
+    "base_errors": 0.310580204778157,
+    "alt_errors": 0.310580204778157,
+    "changed_choices": 0,
+    "delta_bits": 0.0,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 1731,
+    "base_bits": 0.7010059853860017,
+    "alt_bits": 0.7018616153258641,
+    "base_errors": 0.24003466204506066,
+    "alt_errors": 0.2359907567879838,
+    "changed_choices": 15,
+    "delta_bits": 0.0008556299398624345,
+    "delta_errors": -0.004043905257076846
+   }
+  },
+  "('design560 timing', 142007, 'blue')": {
+   "first_third": {
+    "n": 582,
+    "base_bits": 0.5798436223623773,
+    "alt_bits": 0.5832338225324909,
+    "base_errors": 0.15378006872852235,
+    "alt_errors": 0.15378006872852235,
+    "changed_choices": 4,
+    "delta_bits": 0.0033902001701135998,
+    "delta_errors": 0.0
+   },
+   "last_third": {
+    "n": 624,
+    "base_bits": 0.7541386749371208,
+    "alt_bits": 0.7541386749371208,
+    "base_errors": 0.2548076923076923,
+    "alt_errors": 0.2548076923076923,
+    "changed_choices": 0,
+    "delta_bits": 0.0,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 1780,
+    "base_bits": 0.6233731426341863,
+    "alt_bits": 0.6244816238134032,
+    "base_errors": 0.19129213483146068,
+    "alt_errors": 0.19129213483146068,
+    "changed_choices": 4,
+    "delta_bits": 0.0011084811792169136,
+    "delta_errors": 0.0
+   }
+  },
+  "('design560 timing', 142008, 'red')": {
+   "first_third": {
+    "n": 617,
+    "base_bits": 0.45777094152402487,
+    "alt_bits": 0.46206426366732684,
+    "base_errors": 0.08670988654781199,
+    "alt_errors": 0.08995137763371151,
+    "changed_choices": 2,
+    "delta_bits": 0.00429332214330197,
+    "delta_errors": 0.0032414910858995227
+   },
+   "last_third": {
+    "n": 594,
+    "base_bits": 0.31622053041197257,
+    "alt_bits": 0.31622053015184304,
+    "base_errors": 0.10437710437710437,
+    "alt_errors": 0.10437710437710437,
+    "changed_choices": 0,
+    "delta_bits": -2.60129529028319e-10,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 1832,
+    "base_bits": 0.3397952295628303,
+    "alt_bits": 0.34124120761805565,
+    "base_errors": 0.08487991266375546,
+    "alt_errors": 0.08597161572052402,
+    "changed_choices": 2,
+    "delta_bits": 0.0014459780552253387,
+    "delta_errors": 0.0010917030567685615
+   }
+  },
+  "('design560 timing', 142008, 'blue')": {
+   "first_third": {
+    "n": 582,
+    "base_bits": 0.48836881198241056,
+    "alt_bits": 0.4926867219307608,
+    "base_errors": 0.11082474226804123,
+    "alt_errors": 0.11597938144329897,
+    "changed_choices": 5,
+    "delta_bits": 0.00431790994835024,
+    "delta_errors": 0.005154639175257741
+   },
+   "last_third": {
+    "n": 609,
+    "base_bits": 0.3384950374220433,
+    "alt_bits": 0.3384950332159357,
+    "base_errors": 0.08866995073891626,
+    "alt_errors": 0.08866995073891626,
+    "changed_choices": 0,
+    "delta_bits": -4.206107573345719e-09,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 1817,
+    "base_bits": 0.3870042984374232,
+    "alt_bits": 0.38838755793261,
+    "base_errors": 0.10484314804623004,
+    "alt_errors": 0.10649422124380847,
+    "changed_choices": 5,
+    "delta_bits": 0.001383259495186806,
+    "delta_errors": 0.0016510731975784287
+   }
+  },
+  "('design560 timing', 142009, 'red')": {
+   "first_third": {
+    "n": 627,
+    "base_bits": 0.5136563272452479,
+    "alt_bits": 0.5163145730384133,
+    "base_errors": 0.13157894736842105,
+    "alt_errors": 0.1331738437001595,
+    "changed_choices": 9,
+    "delta_bits": 0.0026582457931654258,
+    "delta_errors": 0.0015948963317384546
+   },
+   "last_third": {
+    "n": 595,
+    "base_bits": 0.5512828637091365,
+    "alt_bits": 0.5512828637091365,
+    "base_errors": 0.14453781512605043,
+    "alt_errors": 0.14453781512605043,
+    "changed_choices": 0,
+    "delta_bits": 0.0,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 1747,
+    "base_bits": 0.48926774299187,
+    "alt_bits": 0.4902217899941763,
+    "base_errors": 0.12678878076702918,
+    "alt_errors": 0.12736119061247853,
+    "changed_choices": 9,
+    "delta_bits": 0.0009540470023063352,
+    "delta_errors": 0.0005724098454493454
+   }
+  },
+  "('design560 timing', 142009, 'blue')": {
+   "first_third": {
+    "n": 573,
+    "base_bits": 0.5448335342857195,
+    "alt_bits": 0.548328572952006,
+    "base_errors": 0.12827225130890052,
+    "alt_errors": 0.12827225130890052,
+    "changed_choices": 2,
+    "delta_bits": 0.003495038666286532,
+    "delta_errors": 0.0
+   },
+   "last_third": {
+    "n": 571,
+    "base_bits": 0.225789957365451,
+    "alt_bits": 0.2257899570543154,
+    "base_errors": 0.03677758318739054,
+    "alt_errors": 0.03677758318739054,
+    "changed_choices": 0,
+    "delta_bits": -3.1113558951467724e-10,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 1731,
+    "base_bits": 0.3586867433073198,
+    "alt_bits": 0.35984367050997657,
+    "base_errors": 0.07019064124783363,
+    "alt_errors": 0.07019064124783363,
+    "changed_choices": 2,
+    "delta_bits": 0.0011569272026567545,
+    "delta_errors": 0.0
+   }
+  }
+ },
+ "D79_per_life": {
+  "('D79 none', 177000, 'red')": {
+   "first_third": {
+    "n": 46,
+    "base_bits": 0.9359190870704793,
+    "alt_bits": 0.9869995767930988,
+    "base_errors": 0.25,
+    "alt_errors": 0.33695652173913043,
+    "changed_choices": 4,
+    "delta_bits": 0.05108048972261947,
+    "delta_errors": 0.08695652173913043
+   },
+   "last_third": {
+    "n": 70,
+    "base_bits": 0.4147713915850375,
+    "alt_bits": 0.41163854072688877,
+    "base_errors": 0.08571428571428572,
+    "alt_errors": 0.08571428571428572,
+    "changed_choices": 0,
+    "delta_bits": -0.003132850858148739,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 184,
+    "base_bits": 0.5723690026811677,
+    "alt_bits": 0.5843510501371663,
+    "base_errors": 0.13858695652173914,
+    "alt_errors": 0.16032608695652173,
+    "changed_choices": 4,
+    "delta_bits": 0.011982047455998512,
+    "delta_errors": 0.021739130434782594
+   }
+  },
+  "('D79 none', 177000, 'blue')": {
+   "first_third": {
+    "n": 48,
+    "base_bits": 0.9686962143475054,
+    "alt_bits": 0.9783856319536999,
+    "base_errors": 0.3645833333333333,
+    "alt_errors": 0.3229166666666667,
+    "changed_choices": 4,
+    "delta_bits": 0.009689417606194461,
+    "delta_errors": -0.04166666666666663
+   },
+   "last_third": {
+    "n": 71,
+    "base_bits": 0.3551255415919464,
+    "alt_bits": 0.35204295821235565,
+    "base_errors": 0.07042253521126761,
+    "alt_errors": 0.07042253521126761,
+    "changed_choices": 0,
+    "delta_bits": -0.0030825833795907753,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 187,
+    "base_bits": 0.5955006807788505,
+    "alt_bits": 0.5948744844897609,
+    "base_errors": 0.17914438502673796,
+    "alt_errors": 0.16310160427807488,
+    "changed_choices": 5,
+    "delta_bits": -0.0006261962890896644,
+    "delta_errors": -0.016042780748663082
+   }
+  },
+  "('D79 W', 177000, 'red')": {
+   "first_third": {
+    "n": 59,
+    "base_bits": 0.852712897072102,
+    "alt_bits": 0.8942993804828978,
+    "base_errors": 0.2627118644067797,
+    "alt_errors": 0.3305084745762712,
+    "changed_choices": 4,
+    "delta_bits": 0.04158648341079585,
+    "delta_errors": 0.06779661016949151
+   },
+   "last_third": {
+    "n": 59,
+    "base_bits": 0.5445722580443276,
+    "alt_bits": 0.5398298019406221,
+    "base_errors": 0.13559322033898305,
+    "alt_errors": 0.13559322033898305,
+    "changed_choices": 0,
+    "delta_bits": -0.004742456103705495,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 163,
+    "base_bits": 0.7096156405829557,
+    "alt_bits": 0.722967515806175,
+    "base_errors": 0.20552147239263804,
+    "alt_errors": 0.23006134969325154,
+    "changed_choices": 4,
+    "delta_bits": 0.013351875223219345,
+    "delta_errors": 0.024539877300613494
+   }
+  },
+  "('D79 W', 177000, 'blue')": {
+   "first_third": {
+    "n": 49,
+    "base_bits": 0.9409709266144409,
+    "alt_bits": 0.9439586704221269,
+    "base_errors": 0.336734693877551,
+    "alt_errors": 0.2755102040816326,
+    "changed_choices": 5,
+    "delta_bits": 0.002987743807685961,
+    "delta_errors": -0.06122448979591838
+   },
+   "last_third": {
+    "n": 70,
+    "base_bits": 0.5323961016708739,
+    "alt_bits": 0.5291843583193564,
+    "base_errors": 0.12857142857142856,
+    "alt_errors": 0.12857142857142856,
+    "changed_choices": 0,
+    "delta_bits": -0.0032117433515175264,
+    "delta_errors": 0.0
+   },
+   "full": {
+    "n": 176,
+    "base_bits": 0.616381589513564,
+    "alt_bits": 0.6158238911702233,
+    "base_errors": 0.17329545454545456,
+    "alt_errors": 0.15625,
+    "changed_choices": 5,
+    "delta_bits": -0.0005576983433407401,
+    "delta_errors": -0.017045454545454558
+   }
+  }
+ },
+ "wall_s": 3.9851990950046456
+}

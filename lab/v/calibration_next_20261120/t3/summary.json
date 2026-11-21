@@ -1,0 +1,105 @@
+{
+ "fixtures": {
+  "original_line_endpoints_on_closure": true,
+  "empty": true,
+  "boundary_only": true,
+  "sign_pos": true,
+  "sign_neg": true
+ },
+ "one_d_reproduction_max_error": 0.0,
+ "one_d_feasible": 39,
+ "counts": {
+  "feasible": 40,
+  "boundary_only": 0,
+  "empty": 0,
+  "order_region_but_coincidence_fails": 0
+ },
+ "margin_range_V": [
+  0.01276082074395139,
+  0.027144481341689137
+ ],
+ "seed_2215": {
+  "seed": 2026112215,
+  "coincidence_all": true,
+  "one_d_interval": [
+   -0.16218631700961111,
+   -0.19449161091760545
+  ],
+  "one_d_feasible": false,
+  "one_d_saved": [
+   -0.16218631700961111,
+   -0.19449161091760545
+  ],
+  "readout_currents_A": {
+   "positive": 3.6089729696093505e-10,
+   "negative": -3.91970653184586e-10
+  },
+  "node7": {
+   "C_F": 2.3773366028623177e-11,
+   "G_S": 1.110419430787752e-09
+  },
+  "status": "feasible",
+  "polygon": [
+   [
+    0.3273270215039113,
+    0.7433061746965655
+   ],
+   [
+    0.32393783621909605,
+    0.2978280118233868
+   ],
+   [
+    0.7881388392070288,
+    0.3024934725871401
+   ],
+   [
+    0.8043541183116336,
+    1.1352150386381916
+   ],
+   [
+    0.5110952488701467,
+    0.898823242195718
+   ]
+  ],
+  "vertices": 5,
+  "active": [
+   "pair_0.35_0.35_-0.15:upper",
+   "pair_0.35_0.35_0.15:lower",
+   "pair_0.5_0.35_0.0:lower",
+   "pair_0.5_0.5_0.0:lower",
+   "pair_0.5_0.5_0.6:upper"
+  ],
+  "margin_V": [
+   0.01276082074395139,
+   0.012760820743951391
+  ],
+  "proven_margin_V": 0.012760820743951391,
+  "margin_point": [
+   0.4642618542044854,
+   0.757530924270448
+  ],
+  "margin_active": [],
+  "contains_original_line": false,
+  "a_range": [
+   0.32393783621909605,
+   0.8043541183116336
+  ],
+  "b_range": [
+   0.2978280118233868,
+   1.1352150386381916
+  ],
+  "physical": {
+   "max_scaled_current_A": 4.44970980199977e-10,
+   "min_scaled_current_A": 1.1673984033107952e-10,
+   "I_MIN_A": 1e-12,
+   "below_I_MIN_somewhere": false,
+   "max_slew_V_per_s": 30.927896639154383,
+   "SLEW_limit_V_per_s": 1200.0,
+   "max_static_offset_V": 0.40072333738279997,
+   "RAIL_V": 0.9
+  }
+ },
+ "draws_whose_margin_point_is_off_the_original_line": 40,
+ "below_I_MIN_somewhere": 0,
+ "elapsed_s": 5.1432885250033
+}

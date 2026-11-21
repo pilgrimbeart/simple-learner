@@ -1,0 +1,506 @@
+{
+ "quiet_s": 0.25,
+ "brain": "baseline-circuit",
+ "rows": [
+  {
+   "seed": 0,
+   "poison": "red",
+   "seconds": 1000.0,
+   "moving_s": 4.71,
+   "pulses": [
+    0,
+    1
+   ],
+   "onsets": [
+    0,
+    1
+   ],
+   "pairs": {
+    "simultaneous": 0,
+    "near": 0,
+    "far": 0,
+    "single": 1
+   },
+   "tastes": 0,
+   "food": 0,
+   "poison_eaten": 0,
+   "tastes_with_sensor_pulse_within_10ms": 0,
+   "taste_lead_median_s": null
+  },
+  {
+   "seed": 0,
+   "poison": "blue",
+   "seconds": 1000.0,
+   "moving_s": 4.71,
+   "pulses": [
+    0,
+    1
+   ],
+   "onsets": [
+    0,
+    1
+   ],
+   "pairs": {
+    "simultaneous": 0,
+    "near": 0,
+    "far": 0,
+    "single": 1
+   },
+   "tastes": 0,
+   "food": 0,
+   "poison_eaten": 0,
+   "tastes_with_sensor_pulse_within_10ms": 0,
+   "taste_lead_median_s": null
+  },
+  {
+   "seed": 1,
+   "poison": "red",
+   "seconds": 1000.0,
+   "moving_s": 0.04,
+   "pulses": [
+    2634,
+    2389
+   ],
+   "onsets": [
+    377,
+    361
+   ],
+   "pairs": {
+    "simultaneous": 3,
+    "near": 31,
+    "far": 106,
+    "single": 481
+   },
+   "tastes": 214,
+   "food": 112,
+   "poison_eaten": 104,
+   "tastes_with_sensor_pulse_within_10ms": 48,
+   "taste_lead_median_s": 0.01849101380656748
+  },
+  {
+   "seed": 1,
+   "poison": "blue",
+   "seconds": 1000.0,
+   "moving_s": 0.04,
+   "pulses": [
+    2634,
+    2389
+   ],
+   "onsets": [
+    377,
+    361
+   ],
+   "pairs": {
+    "simultaneous": 3,
+    "near": 31,
+    "far": 106,
+    "single": 481
+   },
+   "tastes": 214,
+   "food": 104,
+   "poison_eaten": 112,
+   "tastes_with_sensor_pulse_within_10ms": 48,
+   "taste_lead_median_s": 0.01849101380656748
+  },
+  {
+   "seed": 2,
+   "poison": "red",
+   "seconds": 1000.0,
+   "moving_s": 0.04,
+   "pulses": [
+    3051,
+    2670
+   ],
+   "onsets": [
+    526,
+    509
+   ],
+   "pairs": {
+    "simultaneous": 1,
+    "near": 78,
+    "far": 218,
+    "single": 487
+   },
+   "tastes": 404,
+   "food": 217,
+   "poison_eaten": 189,
+   "tastes_with_sensor_pulse_within_10ms": 92,
+   "taste_lead_median_s": 0.018870878470235608
+  },
+  {
+   "seed": 2,
+   "poison": "blue",
+   "seconds": 1000.0,
+   "moving_s": 0.04,
+   "pulses": [
+    3051,
+    2670
+   ],
+   "onsets": [
+    526,
+    509
+   ],
+   "pairs": {
+    "simultaneous": 1,
+    "near": 78,
+    "far": 218,
+    "single": 487
+   },
+   "tastes": 404,
+   "food": 189,
+   "poison_eaten": 217,
+   "tastes_with_sensor_pulse_within_10ms": 92,
+   "taste_lead_median_s": 0.018870878470235608
+  },
+  {
+   "seed": 3,
+   "poison": "red",
+   "seconds": 1000.0,
+   "moving_s": 0.04,
+   "pulses": [
+    1857,
+    2007
+   ],
+   "onsets": [
+    547,
+    799
+   ],
+   "pairs": {
+    "simultaneous": 6,
+    "near": 133,
+    "far": 255,
+    "single": 612
+   },
+   "tastes": 99,
+   "food": 28,
+   "poison_eaten": 71,
+   "tastes_with_sensor_pulse_within_10ms": 25,
+   "taste_lead_median_s": 0.02103669944892772
+  },
+  {
+   "seed": 3,
+   "poison": "blue",
+   "seconds": 1000.0,
+   "moving_s": 0.04,
+   "pulses": [
+    1857,
+    2007
+   ],
+   "onsets": [
+    547,
+    799
+   ],
+   "pairs": {
+    "simultaneous": 6,
+    "near": 133,
+    "far": 255,
+    "single": 612
+   },
+   "tastes": 99,
+   "food": 71,
+   "poison_eaten": 28,
+   "tastes_with_sensor_pulse_within_10ms": 25,
+   "taste_lead_median_s": 0.02103669944892772
+  },
+  {
+   "seed": 4,
+   "poison": "red",
+   "seconds": 1000.0,
+   "moving_s": 0.01,
+   "pulses": [
+    1382,
+    728
+   ],
+   "onsets": [
+    739,
+    463
+   ],
+   "pairs": {
+    "simultaneous": 5,
+    "near": 147,
+    "far": 117,
+    "single": 697
+   },
+   "tastes": 6,
+   "food": 4,
+   "poison_eaten": 2,
+   "tastes_with_sensor_pulse_within_10ms": 3,
+   "taste_lead_median_s": 0.011990398889039966
+  },
+  {
+   "seed": 4,
+   "poison": "blue",
+   "seconds": 1000.0,
+   "moving_s": 0.01,
+   "pulses": [
+    1382,
+    728
+   ],
+   "onsets": [
+    739,
+    463
+   ],
+   "pairs": {
+    "simultaneous": 5,
+    "near": 147,
+    "far": 117,
+    "single": 697
+   },
+   "tastes": 6,
+   "food": 2,
+   "poison_eaten": 4,
+   "tastes_with_sensor_pulse_within_10ms": 3,
+   "taste_lead_median_s": 0.011990398889039966
+  },
+  {
+   "seed": 5,
+   "poison": "red",
+   "seconds": 1000.0,
+   "moving_s": 0.01,
+   "pulses": [
+    2582,
+    3019
+   ],
+   "onsets": [
+    611,
+    641
+   ],
+   "pairs": {
+    "simultaneous": 6,
+    "near": 100,
+    "far": 301,
+    "single": 506
+   },
+   "tastes": 471,
+   "food": 250,
+   "poison_eaten": 222,
+   "tastes_with_sensor_pulse_within_10ms": 122,
+   "taste_lead_median_s": 0.020325380286521977
+  },
+  {
+   "seed": 5,
+   "poison": "blue",
+   "seconds": 1000.0,
+   "moving_s": 0.01,
+   "pulses": [
+    2582,
+    3019
+   ],
+   "onsets": [
+    611,
+    641
+   ],
+   "pairs": {
+    "simultaneous": 6,
+    "near": 100,
+    "far": 301,
+    "single": 506
+   },
+   "tastes": 471,
+   "food": 222,
+   "poison_eaten": 250,
+   "tastes_with_sensor_pulse_within_10ms": 122,
+   "taste_lead_median_s": 0.020325380286521977
+  },
+  {
+   "seed": 6,
+   "poison": "red",
+   "seconds": 1000.0,
+   "moving_s": 0.02,
+   "pulses": [
+    2812,
+    2965
+   ],
+   "onsets": [
+    605,
+    567
+   ],
+   "pairs": {
+    "simultaneous": 6,
+    "near": 102,
+    "far": 260,
+    "single": 495
+   },
+   "tastes": 447,
+   "food": 223,
+   "poison_eaten": 229,
+   "tastes_with_sensor_pulse_within_10ms": 97,
+   "taste_lead_median_s": 0.021125952581314777
+  },
+  {
+   "seed": 6,
+   "poison": "blue",
+   "seconds": 1000.0,
+   "moving_s": 0.02,
+   "pulses": [
+    2812,
+    2965
+   ],
+   "onsets": [
+    605,
+    567
+   ],
+   "pairs": {
+    "simultaneous": 6,
+    "near": 102,
+    "far": 260,
+    "single": 495
+   },
+   "tastes": 447,
+   "food": 229,
+   "poison_eaten": 223,
+   "tastes_with_sensor_pulse_within_10ms": 97,
+   "taste_lead_median_s": 0.021125952581314777
+  },
+  {
+   "seed": 7,
+   "poison": "red",
+   "seconds": 1000.0,
+   "moving_s": 0.0,
+   "pulses": [
+    1929,
+    1926
+   ],
+   "onsets": [
+    566,
+    690
+   ],
+   "pairs": {
+    "simultaneous": 8,
+    "near": 138,
+    "far": 259,
+    "single": 493
+   },
+   "tastes": 175,
+   "food": 107,
+   "poison_eaten": 70,
+   "tastes_with_sensor_pulse_within_10ms": 44,
+   "taste_lead_median_s": 0.02446747717795006
+  },
+  {
+   "seed": 7,
+   "poison": "blue",
+   "seconds": 1000.0,
+   "moving_s": 0.0,
+   "pulses": [
+    1929,
+    1926
+   ],
+   "onsets": [
+    566,
+    690
+   ],
+   "pairs": {
+    "simultaneous": 8,
+    "near": 138,
+    "far": 259,
+    "single": 493
+   },
+   "tastes": 175,
+   "food": 70,
+   "poison_eaten": 107,
+   "tastes_with_sensor_pulse_within_10ms": 44,
+   "taste_lead_median_s": 0.02446747717795006
+  },
+  {
+   "seed": 8,
+   "poison": "red",
+   "seconds": 1000.0,
+   "moving_s": 0.0,
+   "pulses": [
+    2855,
+    3066
+   ],
+   "onsets": [
+    535,
+    551
+   ],
+   "pairs": {
+    "simultaneous": 5,
+    "near": 66,
+    "far": 241,
+    "single": 518
+   },
+   "tastes": 376,
+   "food": 199,
+   "poison_eaten": 179,
+   "tastes_with_sensor_pulse_within_10ms": 91,
+   "taste_lead_median_s": 0.020756696539256936
+  },
+  {
+   "seed": 8,
+   "poison": "blue",
+   "seconds": 1000.0,
+   "moving_s": 0.0,
+   "pulses": [
+    2855,
+    3066
+   ],
+   "onsets": [
+    535,
+    551
+   ],
+   "pairs": {
+    "simultaneous": 5,
+    "near": 66,
+    "far": 241,
+    "single": 518
+   },
+   "tastes": 376,
+   "food": 179,
+   "poison_eaten": 199,
+   "tastes_with_sensor_pulse_within_10ms": 91,
+   "taste_lead_median_s": 0.020756696539256936
+  },
+  {
+   "seed": 9,
+   "poison": "red",
+   "seconds": 1000.0,
+   "moving_s": 0.03,
+   "pulses": [
+    1063,
+    1151
+   ],
+   "onsets": [
+    326,
+    369
+   ],
+   "pairs": {
+    "simultaneous": 5,
+    "near": 56,
+    "far": 123,
+    "single": 357
+   },
+   "tastes": 98,
+   "food": 47,
+   "poison_eaten": 51,
+   "tastes_with_sensor_pulse_within_10ms": 14,
+   "taste_lead_median_s": 0.023045315654961485
+  },
+  {
+   "seed": 9,
+   "poison": "blue",
+   "seconds": 1000.0,
+   "moving_s": 0.03,
+   "pulses": [
+    1063,
+    1151
+   ],
+   "onsets": [
+    326,
+    369
+   ],
+   "pairs": {
+    "simultaneous": 5,
+    "near": 56,
+    "far": 123,
+    "single": 357
+   },
+   "tastes": 98,
+   "food": 51,
+   "poison_eaten": 47,
+   "tastes_with_sensor_pulse_within_10ms": 14,
+   "taste_lead_median_s": 0.023045315654961485
+  }
+ ]
+}

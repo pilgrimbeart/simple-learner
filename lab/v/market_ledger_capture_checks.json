@@ -1,0 +1,9 @@
+{
+ "success": true,
+ "checks": [
+  "a draw from a copied generator predicts the native draw and consumes nothing from the original",
+  "closure_rng finds the allocator generator in a closure",
+  "balance increments are log2(q_scored(y)/p_def(y)) and sum to the final balance",
+  "unwrap restores original instance attributes and removes added ones"
+ ]
+}

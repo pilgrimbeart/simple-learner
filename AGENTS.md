@@ -17,6 +17,27 @@ the cheats a grid invites) is in nca-learn's `NOTEBOOK.md`, worth reading before
   clean checkout of that commit (a temporary `git worktree`), and push only if they pass. Say nothing if all pass;
   report a failure with its log. (A fresh venv because another may hide a missing dependency. No GitHub CI.)
 - **Rip up and rewrite**: prefer a cleaner, smaller design to incremental edits that keep legacy structure.
+- **Keep delegated work on its assigned track** (the user's standing instruction, 2026-11-20). When preparing
+  or reviewing a sub-agent assignment, assume it may drift, omit requirements or start its own academic work.
+  Give it one authoritative work order with numbered obligations, exact scope, allowed files/actions, explicit
+  branch conditions, budgets, required outputs and evidence for acceptance. Distinguish mandatory work,
+  conditional work and future proposals; remove vague escape clauses such as "if useful" or "as time permits".
+  Check that required work fits the budget; if it does not, narrow the assignment explicitly before dispatch,
+  rather than leaving the executor to choose what to drop. Preparing a work order does not authorise launching
+  an agent. A bounded assignment does not inherit the wider programme's open-ended queue.
+  The executor keeps a requirement-by-requirement ledger: done with evidence, not triggered with the exact branch
+  evidence, or incomplete with the blocker and remaining work. It follows the specified order and completes all
+  triggered obligations before optional work. An interesting finding, an inconclusive result, or a narrative
+  summary cannot substitute for a required comparison, control, check or deliverable. Budget expiry means an
+  explicit incomplete handoff, not permission to silently omit work or claim completion.
+  Routine implementation choices and bug fixes within the protocol remain autonomous and are logged. Changes
+  to scope, hypotheses under test, arms, metrics, margins, seeds, budgets or required validation are proposed
+  separately, never silently substituted. Park tangents in QUESTIONS.md without pursuing them. Academic work
+  is limited to sources/questions and effort explicitly assigned in the work order; otherwise the assigning
+  reviewer owns the literature step. If a changed diagnosis requires new research, hand that branch back for
+  review and continue independent assigned work. This allocates, rather than waives, the research discipline
+  below. At handoff, audit every obligation against artifacts and identify omissions before reporting success;
+  the reviewing agent independently checks that ledger and consequential claims, not just the worker's summary.
 - **Real units, from few axioms** (the user's decision): every quantity in SI, every number that can be derived
   derived from the axioms in `units.py`; a design's own choices stay with the design, in SI. Rates are per 10 s, a
   life lasts 100 s, or 1000 s in a test that says so (the user, 2026-11-06: some evidence is too scarce for 100 s), or

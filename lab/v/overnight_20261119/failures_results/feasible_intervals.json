@@ -1,0 +1,1282 @@
+[
+  {
+    "seed": 2026112200,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.12441364526318228,
+      0.2874182658810708
+    ],
+    "width": 0.41183191114425305,
+    "lower_bound": {
+      "value": -0.12441364526318228,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.2913810143235049,
+      "threshold_V": -0.06,
+      "strict": true,
+      "u_V": -0.023748225847529225
+    },
+    "upper_bound": {
+      "value": 0.2874182658810708,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.2913810143235049,
+      "threshold_V": 0.06,
+      "strict": true,
+      "u_V": -0.023748225847529225
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112201,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.27439215181480076,
+      0.3474895482324291
+    ],
+    "width": 0.6218817000472299,
+    "lower_bound": {
+      "value": -0.27439215181480076,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.19296274515054293,
+      "threshold_V": -0.06,
+      "strict": true,
+      "u_V": -0.007052537138051512
+    },
+    "upper_bound": {
+      "value": 0.3474895482324291,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.19296274515054293,
+      "threshold_V": 0.06,
+      "strict": true,
+      "u_V": -0.007052537138051512
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112202,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.3955577539262416,
+      0.28495008704520386
+    ],
+    "width": 0.6805078409714455,
+    "lower_bound": {
+      "value": -0.3955577539262416,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.17392603646095944,
+      "threshold_V": -0.06,
+      "strict": true,
+      "u_V": 0.008797792331790719
+    },
+    "upper_bound": {
+      "value": 0.28495008704520386,
+      "case": "pair_0.35_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.15693317189066197,
+      "threshold_V": 0.06,
+      "strict": true,
+      "u_V": 0.015281879009475932
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112203,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.5070845144197688,
+      0.1471760231037049
+    ],
+    "width": 0.6542605375234737,
+    "lower_bound": {
+      "value": -0.5070845144197688,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.1826051689477699,
+      "threshold_V": -0.06,
+      "strict": true,
+      "u_V": 0.03259625342641974
+    },
+    "upper_bound": {
+      "value": 0.1471760231037049,
+      "case": "pair_0.35_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.1675807571537677,
+      "threshold_V": 0.06,
+      "strict": true,
+      "u_V": 0.035336130613400726
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112204,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.45070421002794203,
+      -0.026139735546109908
+    ],
+    "width": 0.4245644744818321,
+    "lower_bound": {
+      "value": -0.45070421002794203,
+      "case": "pair_0.5_0.35_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.2410888612616403,
+      "threshold_V": -0.06,
+      "strict": true,
+      "u_V": 0.04865976476146372
+    },
+    "upper_bound": {
+      "value": -0.026139735546109908,
+      "case": "pair_0.35_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.24219965953316336,
+      "threshold_V": 0.06,
+      "strict": true,
+      "u_V": 0.06633103504955475
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112205,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.05532807801855099,
+      0.3620161292772742
+    ],
+    "width": 0.4173442072958252,
+    "lower_bound": {
+      "value": -0.05532807801855099,
+      "case": "pair_0.35_0.35_0.15",
+      "kind": "near",
+      "coefficient_V": 0.03183936527212275,
+      "threshold_V": 0.03,
+      "strict": true,
+      "u_V": 0.03176161088583715
+    },
+    "upper_bound": {
+      "value": 0.3620161292772742,
+      "case": "pair_0.35_0.35_-0.15",
+      "kind": "near",
+      "coefficient_V": 0.04782510381040268,
+      "threshold_V": -0.03,
+      "strict": true,
+      "u_V": -0.047313458963725796
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112206,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.15820625305235958,
+      0.5502350921912972
+    ],
+    "width": 0.7084413452436568,
+    "lower_bound": {
+      "value": -0.15820625305235958,
+      "case": "pair_0.5_0.35_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.15229565179903967,
+      "threshold_V": -0.06,
+      "strict": true,
+      "u_V": -0.03590587557270709
+    },
+    "upper_bound": {
+      "value": 0.5502350921912972,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.1652612063613486,
+      "threshold_V": 0.06,
+      "strict": true,
+      "u_V": -0.030932515117881643
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112207,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.18775397436353186,
+      0.3618663831987623
+    ],
+    "width": 0.5496203575622942,
+    "lower_bound": {
+      "value": -0.18775397436353186,
+      "case": "pair_0.35_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.18746631847470457,
+      "threshold_V": -0.06,
+      "strict": true,
+      "u_V": -0.024802453647074618
+    },
+    "upper_bound": {
+      "value": 0.3618663831987623,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.2169914945117013,
+      "threshold_V": 0.06,
+      "strict": true,
+      "u_V": -0.01852192730384343
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112208,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.3553131587656429,
+      0.14626907709604298
+    ],
+    "width": 0.5015822358616859,
+    "lower_bound": {
+      "value": -0.3553131587656429,
+      "case": "pair_0.35_0.35_0.15",
+      "kind": "near",
+      "coefficient_V": 0.04742736645037578,
+      "threshold_V": 0.03,
+      "strict": true,
+      "u_V": 0.046851567385418694
+    },
+    "upper_bound": {
+      "value": 0.14626907709604298,
+      "case": "pair_0.35_0.35_-0.15",
+      "kind": "near",
+      "coefficient_V": 0.035478916306047006,
+      "threshold_V": -0.03,
+      "strict": true,
+      "u_V": -0.035189468344453245
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112209,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.1220941080743991,
+      0.4902650076853118
+    ],
+    "width": 0.6123591157597109,
+    "lower_bound": {
+      "value": -0.1220941080743991,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.1959634418949156,
+      "threshold_V": -0.06,
+      "strict": true,
+      "u_V": -0.03607401834665094
+    },
+    "upper_bound": {
+      "value": 0.4902650076853118,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.1959634418949156,
+      "threshold_V": 0.06,
+      "strict": true,
+      "u_V": -0.03607401834665094
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112210,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.21167600759670427,
+      0.5641232941729173
+    ],
+    "width": 0.7757993017696215,
+    "lower_bound": {
+      "value": -0.21167600759670427,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.15467918020327728,
+      "threshold_V": -0.06,
+      "strict": true,
+      "u_V": -0.027258128676239085
+    },
+    "upper_bound": {
+      "value": 0.5641232941729173,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.15467918020327728,
+      "threshold_V": 0.06,
+      "strict": true,
+      "u_V": -0.027258128676239085
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112211,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.2965587319437868,
+      0.35136747949114644
+    ],
+    "width": 0.6479262114349332,
+    "lower_bound": {
+      "value": -0.2965587319437868,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.18520627485380065,
+      "threshold_V": -0.06,
+      "strict": true,
+      "u_V": -0.005075461981324428
+    },
+    "upper_bound": {
+      "value": 0.35136747949114644,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.18520627485380065,
+      "threshold_V": 0.06,
+      "strict": true,
+      "u_V": -0.005075461981324428
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112212,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.25110103264878114,
+      0.2179114412591447
+    ],
+    "width": 0.46901247390792583,
+    "lower_bound": {
+      "value": -0.25110103264878114,
+      "case": "pair_0.5_0.35_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.23607941768513052,
+      "threshold_V": -0.06,
+      "strict": true,
+      "u_V": -0.0007202144321407922
+    },
+    "upper_bound": {
+      "value": 0.2179114412591447,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.2555873326120951,
+      "threshold_V": 0.06,
+      "strict": true,
+      "u_V": 0.004304595982917964
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112213,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.08413255780437758,
+      0.2743459432007086
+    ],
+    "width": 0.35847850100508616,
+    "lower_bound": {
+      "value": -0.08413255780437758,
+      "case": "pair_0.5_0.35_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.2988918950028342,
+      "threshold_V": -0.06,
+      "strict": true,
+      "u_V": -0.034853460366414096
+    },
+    "upper_bound": {
+      "value": 0.2743459432007086,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.3224148506315138,
+      "threshold_V": 0.06,
+      "strict": true,
+      "u_V": -0.028453206298418243
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112214,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.10460956849630021,
+      0.4147904369641201
+    ],
+    "width": 0.5194000054604203,
+    "lower_bound": {
+      "value": -0.10460956849630021,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.22746495763709024,
+      "threshold_V": -0.06,
+      "strict": true,
+      "u_V": -0.03620498893355478
+    },
+    "upper_bound": {
+      "value": 0.4147904369641201,
+      "case": "pair_0.35_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.2092738599295393,
+      "threshold_V": 0.06,
+      "strict": true,
+      "u_V": -0.026804795805341675
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112215,
+    "order_feasible": false,
+    "coincidence_all": true,
+    "any_setting_suffices": false,
+    "interval": [
+      -0.16218631700961111,
+      -0.19449161091760545
+    ],
+    "width": -0.03230529390799433,
+    "lower_bound": {
+      "value": -0.16218631700961111,
+      "case": "pair_0.5_0.35_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.22259036270228505,
+      "threshold_V": -0.06,
+      "strict": true,
+      "u_V": -0.02389888887148288
+    },
+    "upper_bound": {
+      "value": -0.19449161091760545,
+      "case": "pair_0.5_0.5_0.6",
+      "kind": "far",
+      "coefficient_V": 0.03909777912577271,
+      "threshold_V": 0.03,
+      "strict": true,
+      "u_V": 0.03760419004547226
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112216,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.27339040229463935,
+      0.29751653421856916
+    ],
+    "width": 0.5709069365132085,
+    "lower_bound": {
+      "value": -0.27339040229463935,
+      "case": "pair_0.35_0.35_0.15",
+      "kind": "near",
+      "coefficient_V": 0.04156116385817557,
+      "threshold_V": 0.03,
+      "strict": true,
+      "u_V": 0.041362423307020044
+    },
+    "upper_bound": {
+      "value": 0.29751653421856916,
+      "case": "pair_0.35_0.35_-0.15",
+      "kind": "near",
+      "coefficient_V": 0.04315685769036329,
+      "threshold_V": -0.03,
+      "strict": true,
+      "u_V": -0.04283987872780089
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112217,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.443753123860794,
+      0.1822253945614799
+    ],
+    "width": 0.6259785184222739,
+    "lower_bound": {
+      "value": -0.443753123860794,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.19169986903456349,
+      "threshold_V": -0.06,
+      "strict": true,
+      "u_V": 0.02506741572779264
+    },
+    "upper_bound": {
+      "value": 0.1822253945614799,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.19169986903456349,
+      "threshold_V": 0.06,
+      "strict": true,
+      "u_V": 0.02506741572779264
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112218,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.322324810651822,
+      0.39889350253809636
+    ],
+    "width": 0.7212183131899184,
+    "lower_bound": {
+      "value": -0.322324810651822,
+      "case": "pair_0.5_0.35_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.15248268398577133,
+      "threshold_V": -0.06,
+      "strict": true,
+      "u_V": -0.010851047756604643
+    },
+    "upper_bound": {
+      "value": 0.39889350253809636,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.1645891937619399,
+      "threshold_V": 0.06,
+      "strict": true,
+      "u_V": -0.0056535599796216085
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112219,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.5554760277846296,
+      0.022242114843781198
+    ],
+    "width": 0.5777181426284108,
+    "lower_bound": {
+      "value": -0.5554760277846296,
+      "case": "pair_0.35_0.35_0.15",
+      "kind": "near",
+      "coefficient_V": 0.06875705798230874,
+      "threshold_V": 0.03,
+      "strict": true,
+      "u_V": 0.06819289745017032
+    },
+    "upper_bound": {
+      "value": 0.022242114843781198,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.20172654457234412,
+      "threshold_V": 0.06,
+      "strict": true,
+      "u_V": 0.05551317502858277
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112220,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.2975750328816049,
+      0.34286582363020873
+    ],
+    "width": 0.6404408565118136,
+    "lower_bound": {
+      "value": -0.2975750328816049,
+      "case": "pair_0.5_0.35_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.16891338050180343,
+      "threshold_V": -0.06,
+      "strict": true,
+      "u_V": -0.009735595243032802
+    },
+    "upper_bound": {
+      "value": 0.34286582363020873,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.1862049415940047,
+      "threshold_V": 0.06,
+      "strict": true,
+      "u_V": -0.0038433106636433373
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112221,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.373451178596864,
+      0.22101623377571628
+    ],
+    "width": 0.5944674123725803,
+    "lower_bound": {
+      "value": -0.373451178596864,
+      "case": "pair_0.35_0.35_0.15",
+      "kind": "near",
+      "coefficient_V": 0.0487991121163018,
+      "threshold_V": 0.03,
+      "strict": true,
+      "u_V": 0.04822408593431341
+    },
+    "upper_bound": {
+      "value": 0.22101623377571628,
+      "case": "pair_0.35_0.35_-0.15",
+      "kind": "near",
+      "coefficient_V": 0.03925823651151106,
+      "threshold_V": -0.03,
+      "strict": true,
+      "u_V": -0.03867670757845049
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112222,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.578781522013623,
+      0.057829690429501084
+    ],
+    "width": 0.636611212443124,
+    "lower_bound": {
+      "value": -0.578781522013623,
+      "case": "pair_0.35_0.35_0.15",
+      "kind": "near",
+      "coefficient_V": 0.07572268636319357,
+      "threshold_V": 0.03,
+      "strict": true,
+      "u_V": 0.07382689166424938
+    },
+    "upper_bound": {
+      "value": 0.057829690429501084,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.18282994954951032,
+      "threshold_V": 0.06,
+      "strict": true,
+      "u_V": 0.049427000616310515
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112223,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.6668765339117487,
+      -0.14931401571031827
+    ],
+    "width": 0.5175625182014305,
+    "lower_bound": {
+      "value": -0.6668765339117487,
+      "case": "pair_0.35_0.35_0.15",
+      "kind": "near",
+      "coefficient_V": 0.09038050416520887,
+      "threshold_V": 0.03,
+      "strict": true,
+      "u_V": 0.09027263735089086
+    },
+    "upper_bound": {
+      "value": -0.14931401571031827,
+      "case": "pair_0.35_0.35_-0.15",
+      "kind": "near",
+      "coefficient_V": 0.04789791838319096,
+      "threshold_V": -0.03,
+      "strict": true,
+      "u_V": -0.02284816946204068
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112224,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.4380961106460637,
+      0.11001072954580786
+    ],
+    "width": 0.5481068401918715,
+    "lower_bound": {
+      "value": -0.4380961106460637,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.20898121281103796,
+      "threshold_V": -0.06,
+      "strict": true,
+      "u_V": 0.03155385653061307
+    },
+    "upper_bound": {
+      "value": 0.11001072954580786,
+      "case": "pair_0.35_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.18191456605895445,
+      "threshold_V": 0.06,
+      "strict": true,
+      "u_V": 0.03998744587284536
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112225,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.5389258531504244,
+      0.15230813351961586
+    ],
+    "width": 0.6912339866700403,
+    "lower_bound": {
+      "value": -0.5389258531504244,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.17360257498056422,
+      "threshold_V": -0.06,
+      "strict": true,
+      "u_V": 0.0335589158305111
+    },
+    "upper_bound": {
+      "value": 0.15230813351961586,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.17360257498056422,
+      "threshold_V": 0.06,
+      "strict": true,
+      "u_V": 0.0335589158305111
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112226,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.3551075306320869,
+      -0.006665315931815682
+    ],
+    "width": 0.3484422147002712,
+    "lower_bound": {
+      "value": -0.3551075306320869,
+      "case": "pair_0.5_0.35_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.22985830423993825,
+      "threshold_V": -0.06,
+      "strict": true,
+      "u_V": 0.021624414813923423
+    },
+    "upper_bound": {
+      "value": -0.006665315931815682,
+      "case": "pair_0.5_0.5_0.6",
+      "kind": "far",
+      "coefficient_V": 0.03204050752713626,
+      "threshold_V": 0.03,
+      "strict": true,
+      "u_V": 0.03021356010528408
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112227,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.45253703180607974,
+      0.115993393007634
+    ],
+    "width": 0.5685304248137137,
+    "lower_bound": {
+      "value": -0.45253703180607974,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.20600226509518701,
+      "threshold_V": -0.06,
+      "strict": true,
+      "u_V": 0.033223653591505115
+    },
+    "upper_bound": {
+      "value": 0.115993393007634,
+      "case": "pair_0.35_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.19294051503694304,
+      "threshold_V": 0.06,
+      "strict": true,
+      "u_V": 0.037620175012224547
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112228,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.18797429943862973,
+      0.3804265616463977
+    ],
+    "width": 0.5684008610850274,
+    "lower_bound": {
+      "value": -0.18797429943862973,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.21111861050127637,
+      "threshold_V": -0.06,
+      "strict": true,
+      "u_V": -0.020315127092565638
+    },
+    "upper_bound": {
+      "value": 0.3804265616463977,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.21111861050127637,
+      "threshold_V": 0.06,
+      "strict": true,
+      "u_V": -0.020315127092565638
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112229,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.06937095876555983,
+      0.46631587711327177
+    ],
+    "width": 0.5356868358788316,
+    "lower_bound": {
+      "value": -0.06937095876555983,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.22401147827934137,
+      "threshold_V": -0.06,
+      "strict": true,
+      "u_V": -0.044460108977271706
+    },
+    "upper_bound": {
+      "value": 0.46631587711327177,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.22401147827934137,
+      "threshold_V": 0.06,
+      "strict": true,
+      "u_V": -0.044460108977271706
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112230,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.32404010545077244,
+      0.3783175943737255
+    ],
+    "width": 0.7023576998244979,
+    "lower_bound": {
+      "value": -0.32404010545077244,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.14185276940930736,
+      "threshold_V": -0.06,
+      "strict": true,
+      "u_V": -0.014034013642123935
+    },
+    "upper_bound": {
+      "value": 0.3783175943737255,
+      "case": "pair_0.35_0.35_-0.15",
+      "kind": "near",
+      "coefficient_V": 0.0506930014878917,
+      "threshold_V": -0.03,
+      "strict": true,
+      "u_V": -0.049178054374482874
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112231,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.3603703838165549,
+      0.30630582167204695
+    ],
+    "width": 0.6666762054886018,
+    "lower_bound": {
+      "value": -0.3603703838165549,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.17999742455492757,
+      "threshold_V": -0.06,
+      "strict": true,
+      "u_V": 0.004865740972850627
+    },
+    "upper_bound": {
+      "value": 0.30630582167204695,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.17999742455492757,
+      "threshold_V": 0.06,
+      "strict": true,
+      "u_V": 0.004865740972850627
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112232,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.5452853038509591,
+      0.014067552074030178
+    ],
+    "width": 0.5593528559249893,
+    "lower_bound": {
+      "value": -0.5452853038509591,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.20953309697070416,
+      "threshold_V": -0.06,
+      "strict": true,
+      "u_V": 0.0542553184485029
+    },
+    "upper_bound": {
+      "value": 0.014067552074030178,
+      "case": "pair_0.35_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.19661547384845424,
+      "threshold_V": 0.06,
+      "strict": true,
+      "u_V": 0.05723410158307675
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112233,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.35847825504118924,
+      0.07643601233817056
+    ],
+    "width": 0.4349142673793598,
+    "lower_bound": {
+      "value": -0.35847825504118924,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.2654383206264489,
+      "threshold_V": -0.06,
+      "strict": true,
+      "u_V": 0.03515386599923312
+    },
+    "upper_bound": {
+      "value": 0.07643601233817056,
+      "case": "pair_0.35_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.24540963457846415,
+      "threshold_V": 0.06,
+      "strict": true,
+      "u_V": 0.041241866143454584
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112234,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.30523916016433256,
+      0.3624131896556647
+    ],
+    "width": 0.6676523498199973,
+    "lower_bound": {
+      "value": -0.30523916016433256,
+      "case": "pair_0.35_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.14410896429215408,
+      "threshold_V": -0.06,
+      "strict": true,
+      "u_V": -0.016012300767311097
+    },
+    "upper_bound": {
+      "value": 0.3624131896556647,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.17689125963407276,
+      "threshold_V": 0.06,
+      "strict": true,
+      "u_V": -0.004107725626192646
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112235,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.18517980963903996,
+      0.5078861610340157
+    ],
+    "width": 0.6930659706730558,
+    "lower_bound": {
+      "value": -0.18517980963903996,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.17314369061211396,
+      "threshold_V": -0.06,
+      "strict": true,
+      "u_V": -0.027937284332247903
+    },
+    "upper_bound": {
+      "value": 0.5078861610340157,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.17314369061211396,
+      "threshold_V": 0.06,
+      "strict": true,
+      "u_V": -0.027937284332247903
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112236,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      0.020149722094632064,
+      0.5794852619149996
+    ],
+    "width": 0.5593355398203675,
+    "lower_bound": {
+      "value": 0.020149722094632064,
+      "case": "pair_0.5_0.35_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.19825396901973696,
+      "threshold_V": -0.06,
+      "strict": true,
+      "u_V": -0.06399476237990549
+    },
+    "upper_bound": {
+      "value": 0.5794852619149996,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.21279652457133222,
+      "threshold_V": 0.06,
+      "strict": true,
+      "u_V": -0.0633124497758201
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112237,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      0.011966235379306583,
+      0.5167020329966937
+    ],
+    "width": 0.5047357976173871,
+    "lower_bound": {
+      "value": 0.011966235379306583,
+      "case": "pair_0.5_0.35_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.21564990844608553,
+      "threshold_V": -0.06,
+      "strict": true,
+      "u_V": -0.06258051756399177
+    },
+    "upper_bound": {
+      "value": 0.5167020329966937,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.23121445322495277,
+      "threshold_V": 0.06,
+      "strict": true,
+      "u_V": -0.059468978039552034
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112238,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.24901916145752706,
+      0.42568999286413817
+    ],
+    "width": 0.6747091543216652,
+    "lower_bound": {
+      "value": -0.24901916145752706,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.14695786599366298,
+      "threshold_V": -0.06,
+      "strict": true,
+      "u_V": -0.02340467544067041
+    },
+    "upper_bound": {
+      "value": 0.42568999286413817,
+      "case": "pair_0.35_0.35_-0.15",
+      "kind": "near",
+      "coefficient_V": 0.056110455969347696,
+      "threshold_V": -0.03,
+      "strict": true,
+      "u_V": -0.05388565960119516
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  },
+  {
+    "seed": 2026112239,
+    "order_feasible": true,
+    "coincidence_all": true,
+    "any_setting_suffices": true,
+    "interval": [
+      -0.2682496418419053,
+      0.47728994663842667
+    ],
+    "width": 0.745539588480332,
+    "lower_bound": {
+      "value": -0.2682496418419053,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.16095724741405293,
+      "threshold_V": -0.06,
+      "strict": true,
+      "u_V": -0.016823276029321363
+    },
+    "upper_bound": {
+      "value": 0.47728994663842667,
+      "case": "pair_0.5_0.5_0.0",
+      "kind": "simultaneous",
+      "coefficient_V": 0.16095724741405293,
+      "threshold_V": 0.06,
+      "strict": true,
+      "u_V": -0.016823276029321363
+    },
+    "coincidence_failures": [],
+    "zero_v_cases": [],
+    "contradictions": []
+  }
+]

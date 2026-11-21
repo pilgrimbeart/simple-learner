@@ -1,0 +1,89 @@
+{
+  "graph": {
+    "nodes": [
+      {
+        "name": "A",
+        "C": 2.5e-11,
+        "R": 200000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "B",
+        "C": 2.5e-11,
+        "R": 200000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "lag A",
+        "C": 2.5e-11,
+        "R": 4000000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "lag B",
+        "C": 2.5e-11,
+        "R": 4000000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "phase response",
+        "C": 2.5e-11,
+        "R": 20000000000.0,
+        "bias": 0.0,
+        "memory": false
+      }
+    ],
+    "edges": [
+      {
+        "to": 2,
+        "source": 0,
+        "gain": 7.5e-11,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": -1
+      },
+      {
+        "to": 3,
+        "source": 1,
+        "gain": 7.5e-11,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": -1
+      },
+      {
+        "to": 4,
+        "source": 1,
+        "gain": 5e-11,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": 2
+      },
+      {
+        "to": 4,
+        "source": 0,
+        "gain": -5e-11,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": 3
+      }
+    ]
+  },
+  "states": 5,
+  "connections": 4,
+  "parts": {
+    "T": 164,
+    "R": 29,
+    "C": 13,
+    "D": 0,
+    "sources": 18
+  },
+  "scope": "Core circuit only; external bench sources and recording excluded. Activity and gross charge are in raw rows, separately from supply power."
+}

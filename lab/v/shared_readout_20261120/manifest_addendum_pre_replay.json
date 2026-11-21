@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-11-20T11:18:59Z",
+  "files": {
+    "lab/v/shared_readout_20261120/CONTRACT.md": "6145c5fbc641f1bb191a8149b7d1444ee242d0efc3e5ae39d7f5575569177b9e",
+    "lab/v/shared_readout_20261120/bounds.json": "279b262bcb7e9ad58d473133c3bd27a132a27ac032464c6503d153146a247d98",
+    "lab/v/shared_readout_20261120/SOURCE_REVIEW.md": "70a1bfd5ddb058bb760b5122a12e207fe3a0bc0040999c1cbd86e4537e77a8ed",
+    "lab/shared_readout_20261120/bounds.py": "2657e17f5abb711a69ad81185e32b1e3770297d9be9330d89ebcd17e5086b7e6",
+    "lab/shared_readout_20261120/core.py": "8f4eaa5bd4fd2fcaa9a4e93436d9504e2834acbfa8b1fd83ce3b32732a1c594d",
+    "lab/shared_readout_20261120/checks.py": "68a96edcd2f6eee2bc5f26db1ad5eb540bf27a25b3250d625afa9d6da78ce46d",
+    "lab/shared_readout_20261120/replay.py": "322201358c7ae36bbe1f357c555477f1711d92d3ce9158880ecfd22b885d927c",
+    "lab/v/shared_readout_20261120/checks/checks.json": "ab6620cb65526f4d14240d3cc2145e9f1d767b8cbd795f2e08365ad7c003c2c1",
+    "lab/v/shared_readout_20261120/checks/budget_rows.jsonl": "d6536b5af827fd11100e9626bd761d23628aa4b75ac4def61cff5b14e68e5dc4"
+  }
+}

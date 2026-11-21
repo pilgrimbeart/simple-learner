@@ -1,0 +1,100 @@
+seed 2026112200 elapsed 11.3 maxV 0.684 maxerr 0.0
+seed 2026112201 elapsed 22.3 maxV 0.692 maxerr 0.0
+seed 2026112202 elapsed 33.8 maxV 0.621 maxerr 0.0
+seed 2026112203 elapsed 44.6 maxV 0.632 maxerr 0.0
+seed 2026112204 elapsed 55.4 maxV 0.604 maxerr 0.0
+seed 2026112205 elapsed 66.6 maxV 0.492 maxerr 0.0
+seed 2026112206 elapsed 77.7 maxV 0.545 maxerr 0.0
+seed 2026112207 elapsed 89.3 maxV 0.556 maxerr 0.0
+seed 2026112208 elapsed 100.1 maxV 0.56 maxerr 0.0
+seed 2026112209 elapsed 110.8 maxV 0.569 maxerr 0.0
+seed 2026112210 elapsed 121.2 maxV 0.609 maxerr 0.0
+seed 2026112211 elapsed 131.6 maxV 0.765 maxerr 0.0
+seed 2026112212 elapsed 142.5 maxV 0.633 maxerr 0.0
+seed 2026112213 elapsed 153.7 maxV 0.586 maxerr 0.0
+seed 2026112214 elapsed 164.8 maxV 0.635 maxerr 0.0
+seed 2026112215 elapsed 175.6 maxV 0.617 maxerr 0.0
+seed 2026112216 elapsed 186.5 maxV 0.643 maxerr 0.0
+seed 2026112217 elapsed 197.1 maxV 0.621 maxerr 0.0
+seed 2026112218 elapsed 208.1 maxV 0.64 maxerr 0.0
+seed 2026112219 elapsed 218.8 maxV 0.628 maxerr 0.0
+seed 2026112220 elapsed 229.1 maxV 0.656 maxerr 0.0
+seed 2026112221 elapsed 240.3 maxV 0.567 maxerr 0.0
+seed 2026112222 elapsed 251.2 maxV 0.597 maxerr 0.0
+seed 2026112223 elapsed 261.7 maxV 0.556 maxerr 0.0
+seed 2026112224 elapsed 272.2 maxV 0.611 maxerr 0.0
+seed 2026112225 elapsed 283.9 maxV 0.611 maxerr 0.0
+seed 2026112226 elapsed 295.2 maxV 0.602 maxerr 0.0
+seed 2026112227 elapsed 306.5 maxV 0.612 maxerr 0.0
+seed 2026112228 elapsed 317.2 maxV 0.559 maxerr 0.0
+seed 2026112229 elapsed 328.2 maxV 0.633 maxerr 0.0
+seed 2026112230 elapsed 339.0 maxV 0.587 maxerr 0.0
+seed 2026112231 elapsed 349.9 maxV 0.589 maxerr 0.0
+seed 2026112232 elapsed 360.9 maxV 0.589 maxerr 0.0
+seed 2026112233 elapsed 371.6 maxV 0.637 maxerr 0.0
+seed 2026112234 elapsed 382.2 maxV 0.572 maxerr 0.0
+seed 2026112235 elapsed 393.4 maxV 0.565 maxerr 0.0
+seed 2026112236 elapsed 404.0 maxV 0.653 maxerr 0.0
+seed 2026112237 elapsed 415.0 maxV 0.682 maxerr 0.0
+seed 2026112238 elapsed 425.8 maxV 0.544 maxerr 0.0
+seed 2026112239 elapsed 436.3 maxV 0.553 maxerr 0.0
+refined 2026112200 458.7
+refined 2026112227 482.1
+{
+ "completed": [
+  2026112200,
+  2026112201,
+  2026112202,
+  2026112203,
+  2026112204,
+  2026112205,
+  2026112206,
+  2026112207,
+  2026112208,
+  2026112209,
+  2026112210,
+  2026112211,
+  2026112212,
+  2026112213,
+  2026112214,
+  2026112215,
+  2026112216,
+  2026112217,
+  2026112218,
+  2026112219,
+  2026112220,
+  2026112221,
+  2026112222,
+  2026112223,
+  2026112224,
+  2026112225,
+  2026112226,
+  2026112227,
+  2026112228,
+  2026112229,
+  2026112230,
+  2026112231,
+  2026112232,
+  2026112233,
+  2026112234,
+  2026112235,
+  2026112236,
+  2026112237,
+  2026112238,
+  2026112239
+ ],
+ "stopped": null,
+ "refinement": {
+  "rows": 32,
+  "max_d_change": 1.0266645788070683e-05,
+  "max_d_star_change": 6.852770856435875e-06,
+  "all_ok": true
+ },
+ "checks": {
+  "max_A_B_W_error": 0.0,
+  "schedules_identical": true,
+  "gate_A_B_W": true
+ },
+ "elapsed_s": 482.0597673299999,
+ "gate_passed": true
+}

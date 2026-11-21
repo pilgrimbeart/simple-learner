@@ -1,0 +1,115 @@
+{
+  "first_draw_integral_refinement_max_Vs": 1.542283244830578e-07,
+  "first_draw_knob_refinement_max": 5.889194080399562e-06,
+  "maximum_state_abs_V": 0.7651366720344229,
+  "comparisons": {
+    "1.0:raw": {
+      "adequate_draws": 28,
+      "adequate_cases": 1309,
+      "rescued": 11,
+      "harmed": 42,
+      "clamped": 0,
+      "nonpositive_denominator": 0,
+      "unidentifiable": 0
+    },
+    "1.0:0.15": {
+      "adequate_draws": 38,
+      "adequate_cases": 1347,
+      "rescued": 13,
+      "harmed": 6,
+      "clamped": 0,
+      "nonpositive_denominator": 0,
+      "unidentifiable": 0
+    },
+    "1.0:1.0": {
+      "adequate_draws": 38,
+      "adequate_cases": 1348,
+      "rescued": 13,
+      "harmed": 5,
+      "clamped": 0,
+      "nonpositive_denominator": 0,
+      "unidentifiable": 0
+    },
+    "1.0:3.8585074308112732": {
+      "adequate_draws": 38,
+      "adequate_cases": 1347,
+      "rescued": 13,
+      "harmed": 6,
+      "clamped": 0,
+      "nonpositive_denominator": 0,
+      "unidentifiable": 0
+    },
+    "2.5:raw": {
+      "adequate_draws": 28,
+      "adequate_cases": 1283,
+      "rescued": 12,
+      "harmed": 69,
+      "clamped": 2,
+      "nonpositive_denominator": 0,
+      "unidentifiable": 0
+    },
+    "2.5:0.15": {
+      "adequate_draws": 32,
+      "adequate_cases": 1271,
+      "rescued": 9,
+      "harmed": 78,
+      "clamped": 1,
+      "nonpositive_denominator": 0,
+      "unidentifiable": 0
+    },
+    "2.5:1.0": {
+      "adequate_draws": 32,
+      "adequate_cases": 1273,
+      "rescued": 9,
+      "harmed": 76,
+      "clamped": 0,
+      "nonpositive_denominator": 0,
+      "unidentifiable": 0
+    },
+    "2.5:3.8585074308112732": {
+      "adequate_draws": 32,
+      "adequate_cases": 1273,
+      "rescued": 9,
+      "harmed": 76,
+      "clamped": 0,
+      "nonpositive_denominator": 0,
+      "unidentifiable": 0
+    },
+    "10.0:raw": {
+      "adequate_draws": 14,
+      "adequate_cases": 1092,
+      "rescued": 15,
+      "harmed": 263,
+      "clamped": 12,
+      "nonpositive_denominator": 4,
+      "unidentifiable": 0
+    },
+    "10.0:0.15": {
+      "adequate_draws": 12,
+      "adequate_cases": 1030,
+      "rescued": 16,
+      "harmed": 326,
+      "clamped": 4,
+      "nonpositive_denominator": 0,
+      "unidentifiable": 0
+    },
+    "10.0:1.0": {
+      "adequate_draws": 12,
+      "adequate_cases": 1028,
+      "rescued": 16,
+      "harmed": 328,
+      "clamped": 1,
+      "nonpositive_denominator": 0,
+      "unidentifiable": 0
+    },
+    "10.0:3.8585074308112732": {
+      "adequate_draws": 12,
+      "adequate_cases": 1028,
+      "rescued": 16,
+      "harmed": 328,
+      "clamped": 1,
+      "nonpositive_denominator": 0,
+      "unidentifiable": 0
+    }
+  }
+}

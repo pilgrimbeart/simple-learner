@@ -1,0 +1,19 @@
+{
+ "arm": "held",
+ "motor_spikes": 137106,
+ "motor_after_sensor_spike": 0.4512493908405304,
+ "sensor_spikes": 55818,
+ "sensor_after_body_pulse": 0.19688989222049713,
+ "food_meals": {
+  "n": 604,
+  "seen_within_0_5s": 0.9768211920529801,
+  "pulses_last_0_5s_median": 6.0,
+  "since_last_median_s": 0.017973620001949797
+ },
+ "poison_meals": {
+  "n": 443,
+  "seen_within_0_5s": 0.9683972911963883,
+  "pulses_last_0_5s_median": 6.0,
+  "since_last_median_s": 0.02016385581144675
+ }
+}

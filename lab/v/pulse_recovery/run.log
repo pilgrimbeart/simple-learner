@@ -1,0 +1,6 @@
+{"gap_s": 1.0, "passes": 64, "cases": 64, "missed": 0, "extra": 0, "merged": 0, "elapsed_s": 5.019073008996202}
+{"gap_s": 0.5, "passes": 64, "cases": 64, "missed": 0, "extra": 0, "merged": 0, "elapsed_s": 9.67822377498669}
+{"gap_s": 0.2, "passes": 64, "cases": 64, "missed": 0, "extra": 0, "merged": 0, "elapsed_s": 14.382288952998351}
+{"gap_s": 0.1, "passes": 64, "cases": 64, "missed": 0, "extra": 0, "merged": 0, "elapsed_s": 19.02679346399964}
+{"gap_s": 0.05, "passes": 44, "cases": 64, "missed": 10, "extra": 0, "merged": 0, "elapsed_s": 23.641645064999466}
+{"gap_s": 0.02, "passes": 18, "cases": 64, "missed": 42, "extra": 0, "merged": 0, "elapsed_s": 28.22402544299257}

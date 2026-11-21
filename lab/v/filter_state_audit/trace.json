@@ -1,0 +1,122 @@
+[
+  {
+    "time_s": 0.005,
+    "source_V": 0.3,
+    "filter_V": 0.3,
+    "destination_V": 0.009045317675674463
+  },
+  {
+    "time_s": 0.01,
+    "source_V": 0.3,
+    "filter_V": 0.3,
+    "destination_V": 0.01620554693804312
+  },
+  {
+    "time_s": 0.015,
+    "source_V": 0.3,
+    "filter_V": 0.3,
+    "destination_V": 0.021911837886081482
+  },
+  {
+    "time_s": 0.02,
+    "source_V": 0.3,
+    "filter_V": 0.3,
+    "destination_V": 0.0264396454460671
+  },
+  {
+    "time_s": 0.025,
+    "source_V": 0.3,
+    "filter_V": 0.3,
+    "destination_V": 0.029979938382207555
+  },
+  {
+    "time_s": 0.03,
+    "source_V": 0.3,
+    "filter_V": 0.3,
+    "destination_V": 0.03282010192622167
+  },
+  {
+    "time_s": 0.035,
+    "source_V": 0.3,
+    "filter_V": 0.3,
+    "destination_V": 0.03507278513538027
+  },
+  {
+    "time_s": 0.04,
+    "source_V": 0.3,
+    "filter_V": 0.3,
+    "destination_V": 0.03684717570557239
+  },
+  {
+    "time_s": 0.045,
+    "source_V": 0.3,
+    "filter_V": 0.3,
+    "destination_V": 0.038245638800274095
+  },
+  {
+    "time_s": 0.05,
+    "source_V": 0.3,
+    "filter_V": 0.3,
+    "destination_V": 0.03935919441058437
+  },
+  {
+    "time_s": 0.055,
+    "source_V": 0.3,
+    "filter_V": 0.3,
+    "destination_V": 0.0402532615257368
+  },
+  {
+    "time_s": 0.06,
+    "source_V": 0.3,
+    "filter_V": 0.3,
+    "destination_V": 0.04097862186748602
+  },
+  {
+    "time_s": 0.065,
+    "source_V": 0.3,
+    "filter_V": 0.3,
+    "destination_V": 0.0415344094445768
+  },
+  {
+    "time_s": 0.07,
+    "source_V": 0.3,
+    "filter_V": 0.3,
+    "destination_V": 0.041981156182940835
+  },
+  {
+    "time_s": 0.075,
+    "source_V": 0.3,
+    "filter_V": 0.3,
+    "destination_V": 0.042319786238726766
+  },
+  {
+    "time_s": 0.08,
+    "source_V": 0.3,
+    "filter_V": 0.3,
+    "destination_V": 0.042583009711201485
+  },
+  {
+    "time_s": 0.085,
+    "source_V": 0.3,
+    "filter_V": 0.3,
+    "destination_V": 0.04281874696998156
+  },
+  {
+    "time_s": 0.09,
+    "source_V": 0.3,
+    "filter_V": 0.3,
+    "destination_V": 0.042969552777075135
+  },
+  {
+    "time_s": 0.095,
+    "source_V": 0.3,
+    "filter_V": 0.3,
+    "destination_V": 0.04310868251626333
+  },
+  {
+    "time_s": 0.1,
+    "source_V": 0.3,
+    "filter_V": 0.3,
+    "destination_V": 0.04323116822563264
+  }
+]

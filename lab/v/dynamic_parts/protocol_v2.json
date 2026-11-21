@@ -1,0 +1,218 @@
+{
+  "version": 2,
+  "substrate": "silicon",
+  "definitions": {
+    "trace": {
+      "nodes": [
+        {
+          "name": "trace",
+          "C": 2.5e-11,
+          "R": 2000000000.0,
+          "bias": 0.0,
+          "memory": false
+        }
+      ],
+      "edges": [],
+      "duration": 2.0
+    },
+    "memory": {
+      "nodes": [
+        {
+          "name": "bit",
+          "C": 2.5e-11,
+          "R": 2000000000.0,
+          "bias": 0.0,
+          "memory": false
+        }
+      ],
+      "edges": [
+        {
+          "to": 0,
+          "source": 0,
+          "gain": 3e-10,
+          "offset": 0.0,
+          "slope": 6.666666666666667,
+          "tau": 0.0,
+          "gate": -1
+        }
+      ],
+      "duration": 100.0
+    },
+    "resonator": {
+      "nodes": [
+        {
+          "name": "x",
+          "C": 2.5e-11,
+          "R": 4000000000.0,
+          "bias": 0.0,
+          "memory": false
+        },
+        {
+          "name": "y",
+          "C": 2.5e-11,
+          "R": 4000000000.0,
+          "bias": 0.0,
+          "memory": false
+        }
+      ],
+      "edges": [
+        {
+          "to": 0,
+          "source": 1,
+          "gain": -4.5e-10,
+          "offset": 0.0,
+          "slope": 3.3333333333333335,
+          "tau": 0.0,
+          "gate": -1
+        },
+        {
+          "to": 1,
+          "source": 0,
+          "gain": 4.5e-10,
+          "offset": 0.0,
+          "slope": 3.3333333333333335,
+          "tau": 0.0,
+          "gate": -1
+        }
+      ],
+      "duration": 6.5,
+      "frequencies": [
+        2.3873241463784303,
+        4.7746482927568605,
+        6.207042780583919,
+        7.639437268410977,
+        9.549296585513721,
+        11.936620731892152,
+        15.278874536821954,
+        19.098593171027442,
+        38.197186342054884
+      ]
+    },
+    "oscillator": {
+      "nodes": [
+        {
+          "name": "fast",
+          "C": 2.5e-11,
+          "R": 800000000.0,
+          "bias": 0.0,
+          "memory": false
+        },
+        {
+          "name": "recovery",
+          "C": 2.5e-11,
+          "R": 8000000000.0,
+          "bias": 0.0,
+          "memory": false
+        }
+      ],
+      "edges": [
+        {
+          "to": 0,
+          "source": 0,
+          "gain": 5.625e-10,
+          "offset": 0.0,
+          "slope": 6.666666666666667,
+          "tau": 0.0,
+          "gate": -1
+        },
+        {
+          "to": 0,
+          "source": 1,
+          "gain": -9.375e-10,
+          "offset": 0.0,
+          "slope": 6.666666666666667,
+          "tau": 0.0,
+          "gate": -1
+        },
+        {
+          "to": 1,
+          "source": 0,
+          "gain": 3.75e-11,
+          "offset": 0.0,
+          "slope": 3.3333333333333335,
+          "tau": 0.0,
+          "gate": -1
+        }
+      ],
+      "duration": 100.0
+    }
+  },
+  "pilot_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "confirm_seeds": [
+    51000,
+    51001,
+    51002,
+    51003,
+    51004,
+    51005,
+    51006,
+    51007,
+    51008,
+    51009,
+    51010,
+    51011,
+    51012,
+    51013,
+    51014,
+    51015,
+    51016,
+    51017,
+    51018,
+    51019,
+    51020,
+    51021,
+    51022,
+    51023,
+    51024,
+    51025,
+    51026,
+    51027,
+    51028,
+    51029,
+    51030,
+    51031,
+    51032,
+    51033,
+    51034,
+    51035,
+    51036,
+    51037,
+    51038,
+    51039
+  ],
+  "steps": [
+    0.000125,
+    6.25e-05,
+    3.125e-05
+  ],
+  "record_interval_s": 0.001,
+  "criteria": {
+    "trace": "peak > .15 V; measured tau/nominal in [.5,1.6]; late residual < .01 V",
+    "memory": "after set/reset, >=99.9% of samples in each hold window beyond +/- .3 V; weak opposite pulses do not erase",
+    "resonator": "sampled peak lies at an interior frequency (.5 to 2 nominal); peak amplitude >1.5 times both extreme-frequency amplitudes; after drive ends late amplitude < .1 driven amplitude",
+    "oscillator": "each before/after window >=10 cycles, mean peak-to-peak amplitude > .15 V; period CV < .1; post/pre frequency and amplitude ratios in [.9,1.1]",
+    "rails": "zero samples at >=.999 supply rail, including during programming pulses",
+    "robustness": "all four per-seed criteria at all three steps; Wilson 95% lower bound >= .90 per circuit on confirm seeds",
+    "refinement": "for every named dimensionless metric, paired mean difference bootstrap 95% CI lies inside [-.05,.05] for both successive halvings"
+  },
+  "controls": "Trace absent input; memory self-feedback removed; resonator cross-coupling removed; oscillator positive self-feedback removed. Pilot seeds only. All control node peak-to-peak amplitudes < .01 V in final window; a static offset is permitted.",
+  "analysis": "Bootstrap over seeds, 4000 draws, seed 126; Wilson binomial interval. No optimisation. At most 2 construction variants per failed circuit; preserve v1 results.",
+  "budget": "One sequential process, <=600 s pilot and <=1200 s confirmation per fixed variant. No robot lives or biological-noise claim.",
+  "pulse_note": "Bench stimulus, not a body/interface change. Pulse overlap integrated at continuous jittered times; sinusoid phase independent of initial circuit state.",
+  "initialisation": "Each node starts independently uniform +/-V_TYP/4; memory starts unknown, trace and resonator settle before input. Oscillator is never started at a supplied phase.",
+  "noise_feasibility": {
+    "passive_sigma_V": 1.2871591976131003e-05,
+    "minimum_signal_V": 0.01,
+    "comment": "Thermal sigma approx 13 uV versus 10 mV minimum; shot-noise estimate recorded per run. Mismatch 10% plus offset ~30 mV is the main anticipated challenge."
+  },
+  "limitations": "No nonvolatile-memory/write-gate coverage yet. No internal filtered channels; every dynamic state is an explicit node. Counts use chip.py blocks; no SPICE or silicon validation."
+}

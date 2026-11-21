@@ -1,0 +1,68 @@
+{
+ "wall_s": 29.047029410001414,
+ "raw": "/home/pilgrim/git/simple-learner/lab/v/market_ledger_capture.pkl",
+ "raw_sha256": "0ae9fecd053016deee45ee73b38baf30372bdfcc8d4ef12c3bc7efd0a7aecf46",
+ "jobs": [
+  [
+   "M",
+   560,
+   "red",
+   false
+  ],
+  [
+   "M",
+   560,
+   "red",
+   true
+  ],
+  [
+   "M",
+   560,
+   "blue",
+   false
+  ],
+  [
+   "M",
+   560,
+   "blue",
+   true
+  ],
+  [
+   "none",
+   4480,
+   "red",
+   false
+  ],
+  [
+   "none",
+   4480,
+   "red",
+   true
+  ],
+  [
+   "none",
+   4480,
+   "blue",
+   false
+  ],
+  [
+   "none",
+   4480,
+   "blue",
+   true
+  ]
+ ],
+ "provenance": {
+  "revision": "5700eaa0d397e1a7dc055ce69ce9ec7e1d32cc7f",
+  "dirty": " M ABSTRACT.md\n M PROGRAMME.md\n M QUESTIONS.md\n M README.md\n M discrete/NOTEBOOK.md\n?? lab/initial_prior_replay.py\n?? lab/market_ledger_capture.py\n?? lab/market_transfer_cases.py\n?? lab/queue_results_review.py\n?? lab/v/initial_prior_replay.json\n?? lab/v/initial_prior_replay.log\n?? lab/v/initial_prior_replay_checks.json\n?? lab/v/initial_prior_replay_checks.log\n?? lab/v/market_ledger_capture_capture.log\n?? lab/v/market_ledger_capture_checks.json\n?? lab/v/market_ledger_capture_checks.log\n?? lab/v/market_transfer_cases.json\n?? lab/v/market_transfer_cases.log\n?? lab/v/market_transfer_cases_checks.json\n?? lab/v/market_transfer_cases_checks.log\n?? lab/v/queue_results_review.json\n?? lab/v/queue_results_review.log\n",
+  "sha256": {
+   "lab/market_ledger_capture.py": "6aca536a64491a1153e3c4173cb517b10d86e4cbea346e79b02f53193950e720",
+   "lab/room_prediction.py": "635733d273c40390c244be3ff768111227f461b771a89d8aa824976e7f0a4cb1",
+   "lab/alloc_compare.py": "d39df823d685a53351243fa8e8e49dd53457d3d623c838c36da3897b55c7fcfa",
+   "lab/alloc_rules.py": "37c8f14317d6d1626e98f3569f4da1248e898e682b7a206fbd7a9fac57848543",
+   "lab/grownet.py": "1a550553b1244368ed0ca6fa59cce3e94a9badd5e5d1e801953aa42974874f0f",
+   "lab/active_mixture_audit.py": "2eed2ca2899a8c6d79387ab992f6ec0343de7b673adb13e602083043881999c4"
+  },
+  "command": "timeout 900s env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python lab/market_ledger_capture.py --capture"
+ }
+}

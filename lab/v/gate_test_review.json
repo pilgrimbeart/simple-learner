@@ -1,0 +1,109 @@
+{
+  "success": true,
+  "hashes": {
+    "initial_prior_replay": {
+      "lab/initial_prior_replay.py": true,
+      "lab/selection_share_audit.py": true,
+      "lab/selection_share_extension.py": true,
+      "lab/scoring_order_replay.py": true,
+      "lab/v/contest_prediction.pkl": true,
+      "lab/v/ruler_ingredients.pkl": true,
+      "lab/v/followup_timing.pkl": true,
+      "lab/v/active_mixture_audit.pkl": true
+    },
+    "market_transfer_cases": {
+      "lab/market_transfer_cases.py": true,
+      "lab/grownet.py": true,
+      "lab/alloc_rules.py": true,
+      "lab/v/future_evidence.pkl": true
+    }
+  },
+  "capture_source_hashes": {
+    "lab/market_ledger_capture.py": false,
+    "lab/room_prediction.py": true,
+    "lab/alloc_compare.py": true,
+    "lab/alloc_rules.py": true,
+    "lab/grownet.py": true,
+    "lab/active_mixture_audit.py": true
+  },
+  "ledger": {
+    "M red": {
+      "requests": 29400,
+      "gate_reached": 18751,
+      "historical_price_passes": 469,
+      "spare_leafless_refusals": 250,
+      "distinct_refusal_streams": 81,
+      "distinct_refusal_times": 75,
+      "credit_flips_to_pass": 11,
+      "credit_flips_to_fail": 15,
+      "fail_flips_fraction_of_historical_passes": 0.031982942430703626,
+      "already_successful_spare_and_leaf": 4
+    },
+    "M blue": {
+      "requests": 27216,
+      "gate_reached": 16603,
+      "historical_price_passes": 944,
+      "spare_leafless_refusals": 703,
+      "distinct_refusal_streams": 98,
+      "distinct_refusal_times": 126,
+      "credit_flips_to_pass": 20,
+      "credit_flips_to_fail": 32,
+      "fail_flips_fraction_of_historical_passes": 0.03389830508474576,
+      "already_successful_spare_and_leaf": 1
+    },
+    "none red": {
+      "requests": 22176,
+      "gate_reached": 10899,
+      "historical_price_passes": 115,
+      "spare_leafless_refusals": 0,
+      "distinct_refusal_streams": 0,
+      "distinct_refusal_times": 0,
+      "credit_flips_to_pass": 4,
+      "credit_flips_to_fail": 0,
+      "fail_flips_fraction_of_historical_passes": 0.0,
+      "already_successful_spare_and_leaf": 36
+    },
+    "none blue": {
+      "requests": 26880,
+      "gate_reached": 14495,
+      "historical_price_passes": 157,
+      "spare_leafless_refusals": 0,
+      "distinct_refusal_streams": 0,
+      "distinct_refusal_times": 0,
+      "credit_flips_to_pass": 1,
+      "credit_flips_to_fail": 0,
+      "fail_flips_fraction_of_historical_passes": 0.0,
+      "already_successful_spare_and_leaf": 38
+    }
+  },
+  "fixture_cases_reproduced": 21,
+  "prior_replay": {
+    "R": {
+      "per_life_mean": 0.04761809415295264,
+      "ci95": [
+        0.028922037053244944,
+        0.06493731368804859
+      ]
+    },
+    "R+1": {
+      "per_life_mean": 0.03620057920409683,
+      "ci95": [
+        0.02077493988185684,
+        0.05413494975191444
+      ]
+    }
+  },
+  "provenance": {
+    "revision": "5700eaa0d397e1a7dc055ce69ce9ec7e1d32cc7f",
+    "script_sha256": "6ec2d3eadbd5e9b62295438df039dfefae3508b5e56d4afe35960aa299ca8018",
+    "input_sha256": {
+      "/home/pilgrim/git/simple-learner/lab/v/market_ledger_capture.pkl": "0ae9fecd053016deee45ee73b38baf30372bdfcc8d4ef12c3bc7efd0a7aecf46",
+      "/home/pilgrim/git/simple-learner/lab/v/market_transfer_cases.json": "98a7d9ebe340cd6bff113f4fc297a506d051225d4261e6664e8eba61c779e7d2",
+      "/home/pilgrim/git/simple-learner/lab/v/initial_prior_replay.json": "0f32a1baa4df7cbb0f97456ed33232a59a9f0ba6fa1cb9690d7e431d9d438179",
+      "/home/pilgrim/git/simple-learner/lab/v/contest_prediction.pkl": "591ae481f16601a4817dbd7f2b587d6e64b2767137839d47599e2350cdbbc369",
+      "/home/pilgrim/git/simple-learner/lab/v/ruler_ingredients.pkl": "dd8808ece9bca805ebd70e59c2a8b97c8ed160ac31795cd8c4000d819de3b471"
+    },
+    "command": "timeout 240s env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python lab/gate_test_review.py"
+  },
+  "wall_s": 0.8417672979994677
+}

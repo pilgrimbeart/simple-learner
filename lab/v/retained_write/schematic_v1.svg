@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="600"><rect width="1100" height="600" fill="white"/><defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#222"/></marker></defs><g font-family="sans-serif" fill="#222"><text x="30" y="35" font-size="23">Retained write circuit: five states, two controlled connections</text>
+<rect x="50" y="120" width="210" height="90" fill="#eef5f8" stroke="#222"/><text x="62" y="145" font-size="18">evidence</text><text x="62" y="170">C = 25 pF</text><text x="62" y="193">R = 0.8 Gohm</text>
+<rect x="340" y="120" width="210" height="90" fill="#eef5f8" stroke="#222"/><text x="352" y="145" font-size="18">eligibility</text><text x="352" y="170">C = 25 pF</text><text x="352" y="193">R = 2 Gohm</text>
+<rect x="670" y="120" width="210" height="90" fill="#eef5f8" stroke="#222"/><text x="682" y="145" font-size="18">stored</text><text x="682" y="170">C = 25 pF</text><text x="682" y="193">retained; no leak</text>
+<rect x="50" y="360" width="210" height="90" fill="#eef5f8" stroke="#222"/><text x="62" y="385" font-size="18">probe</text><text x="62" y="410">C = 25 pF</text><text x="62" y="433">R = 0.8 Gohm</text>
+<rect x="670" y="360" width="210" height="90" fill="#eef5f8" stroke="#222"/><text x="682" y="385" font-size="18">response</text><text x="682" y="410">C = 25 pF</text><text x="682" y="433">R = 2 Gohm</text>
+<path d="M155 210 V270 H775 V210" fill="none" stroke="#222" marker-end="url(#a)" /><text x="210" y="295" font-size="14">write: 8 pA × tanh(evidence / .15 V)</text>
+<path d="M445 210 V270" fill="none" stroke="#222" marker-end="url(#a)" stroke-dasharray="6 4"/><text x="350" y="245" font-size="14">eligibility gates write</text>
+<path d="M260 405 H670" fill="none" stroke="#222" marker-end="url(#a)" /><text x="280" y="435" font-size="14">read: 200 pA × tanh(probe / .15 V)</text>
+<path d="M775 210 V320 H470 V405" fill="none" stroke="#222" marker-end="url(#a)" stroke-dasharray="6 4"/><text x="490" y="345" font-size="14">stored voltage gates read</text>
+<text x="30" y="520">Every control gate: clip(voltage / .3 V, 0, 1). Write driver dead zone: .01 × full current.</text><text x="30" y="550">Bench currents enter evidence, eligibility and probe only. All nodes retain the existing substrate noise.</text></g></svg>

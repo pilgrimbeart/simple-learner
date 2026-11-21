@@ -1,0 +1,24 @@
+{
+  "source": "/home/pilgrim/git/simple-learner/lab/v/motifs/order_v2/confirm.jsonl",
+  "source_sha256": "ed061bbd4342f8e61743012340dbe91786bc23955e32d23d53d879adc4bea000",
+  "seeds": [
+    2026112204,
+    2026112215,
+    2026112223,
+    2026112226,
+    2026112236,
+    2026112237
+  ],
+  "cases": "All34 cases for each of six previously failed seeds",
+  "step_s": 3.125e-05,
+  "modes": [
+    "original",
+    "trace_offsets",
+    "detector_offsets",
+    "difference_offsets",
+    "connection_gains"
+  ],
+  "interpretation": "Diagnostic nominalisation of one parameter group at a time, not a realizable repair or fresh evaluation. All dynamic noise remains enabled. No combined intervention.",
+  "baseline_tolerance_V": 1e-12,
+  "budget_s": 600
+}

@@ -1,0 +1,96 @@
+{
+ "seq": {
+  "allowance-only transfer": {
+   "units": 1325,
+   "per_life_mean": 66.25,
+   "alive_at_end": 0.0369811320754717,
+   "median_survival_s": 9.148335226474615,
+   "mean_survival_s": 34.25725817198767,
+   "ever_predicted": 0.6445283018867924,
+   "scored_forecasts_mean": 6.32377358490566,
+   "scored_forecasts_per_predicting_unit": 9.811475409836065,
+   "bits_saved_total_per_life": -9.6892580161751,
+   "bits_saved_per_scored_forecast": -0.02312748064488626,
+   "share_predicting_units_net_positive": 0.41451990632318503,
+   "born_before_last_third": 1315,
+   "born_before_last_third_ever_predicted": 0.6471482889733841
+  },
+  "transfer with deletion": {
+   "units": 5729,
+   "per_life_mean": 286.45,
+   "alive_at_end": 0.10054110665037529,
+   "median_survival_s": 7.240911252425441,
+   "mean_survival_s": 24.086437614157592,
+   "ever_predicted": 0.5896316983766801,
+   "scored_forecasts_mean": 3.363763309478094,
+   "scored_forecasts_per_predicting_unit": 5.7048549437537,
+   "bits_saved_total_per_life": -50.21485386385889,
+   "bits_saved_per_scored_forecast": -0.05211442464206205,
+   "share_predicting_units_net_positive": 0.3872113676731794,
+   "born_before_last_third": 3810,
+   "born_before_last_third_ever_predicted": 0.6412073490813648
+  },
+  "within allowance": {
+   "units": 73566,
+   "per_life_mean": 3678.3,
+   "alive_at_end": 0.03704156811570562,
+   "median_survival_s": 0.5700026127789215,
+   "mean_survival_s": 7.964666262079242,
+   "ever_predicted": 0.39453008183128074,
+   "scored_forecasts_mean": 1.301565940787864,
+   "scored_forecasts_per_predicting_unit": 3.2990283902976847,
+   "bits_saved_total_per_life": -346.084477216698,
+   "bits_saved_per_scored_forecast": -0.07228843087105054,
+   "share_predicting_units_net_positive": 0.40873070562293273,
+   "born_before_last_third": 48431,
+   "born_before_last_third_ever_predicted": 0.4097582127149966
+  }
+ },
+ "time": {
+  "allowance-only transfer": {
+   "units": 1237,
+   "per_life_mean": 61.85,
+   "alive_at_end": 0.012934518997574777,
+   "median_survival_s": 9.00495997525752,
+   "mean_survival_s": 90.94912162199093,
+   "ever_predicted": 0.6216653193209377,
+   "scored_forecasts_mean": 5.487469684721099,
+   "scored_forecasts_per_predicting_unit": 8.82704811443433,
+   "bits_saved_total_per_life": 1.632839723145048,
+   "bits_saved_per_scored_forecast": 0.004810959702843395,
+   "share_predicting_units_net_positive": 0.576072821846554,
+   "born_before_last_third": 1237,
+   "born_before_last_third_ever_predicted": 0.6216653193209377
+  },
+  "transfer with deletion": {
+   "units": 5366,
+   "per_life_mean": 268.3,
+   "alive_at_end": 0.018449496831904586,
+   "median_survival_s": 11.682350040749508,
+   "mean_survival_s": 110.46620316150091,
+   "ever_predicted": 0.7532612746925084,
+   "scored_forecasts_mean": 6.038576220648528,
+   "scored_forecasts_per_predicting_unit": 8.016575952498764,
+   "bits_saved_total_per_life": -18.424769886304613,
+   "bits_saved_per_scored_forecast": -0.011372261757432715,
+   "share_predicting_units_net_positive": 0.4901039089559624,
+   "born_before_last_third": 5297,
+   "born_before_last_third_ever_predicted": 0.7526902020011327
+  },
+  "within allowance": {
+   "units": 319719,
+   "per_life_mean": 15985.95,
+   "alive_at_end": 0.010149537562672221,
+   "median_survival_s": 4.069365506092254,
+   "mean_survival_s": 26.339112077143483,
+   "ever_predicted": 0.7381388031365043,
+   "scored_forecasts_mean": 2.660723948217028,
+   "scored_forecasts_per_predicting_unit": 3.6046390420217205,
+   "bits_saved_total_per_life": 4154.367303118168,
+   "bits_saved_per_scored_forecast": 0.09767122228978488,
+   "share_predicting_units_net_positive": 0.5752064644889554,
+   "born_before_last_third": 213562,
+   "born_before_last_third_ever_predicted": 0.7353040334891039
+  }
+ }
+}

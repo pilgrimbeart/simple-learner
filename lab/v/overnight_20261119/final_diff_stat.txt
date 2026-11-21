@@ -1,0 +1,9 @@
+ .gitignore           |   17 +
+ ABSTRACT.md          |   42 +-
+ MIXED_FEEDBACK.md    |  239 +++++
+ PARTS.md             |  261 ++++-
+ PROGRAMME.md         |  467 +++++++-
+ QUESTIONS.md         |   41 +-
+ README.md            |  135 ++-
+ discrete/NOTEBOOK.md | 2870 +++++++++++++++++++++++++++++++++++++++++++++++++-
+ 8 files changed, 3997 insertions(+), 75 deletions(-)

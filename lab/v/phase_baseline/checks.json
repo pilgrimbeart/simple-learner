@@ -1,0 +1,6 @@
+{
+  "bypass_validation_max_error_V": 1.1102230246251565e-16,
+  "maximum_resolution_change_V": 8.338348284030184e-07,
+  "maximum_state_magnitude_V": 0.1640307870323629,
+  "within_rails": true
+}

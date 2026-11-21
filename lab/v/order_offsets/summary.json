@@ -1,0 +1,32 @@
+{
+  "original": {
+    "cases": 204,
+    "passed": 184,
+    "rescued": 0,
+    "new_failures": 0
+  },
+  "trace_offsets": {
+    "cases": 204,
+    "passed": 197,
+    "rescued": 13,
+    "new_failures": 0
+  },
+  "detector_offsets": {
+    "cases": 204,
+    "passed": 190,
+    "rescued": 9,
+    "new_failures": 3
+  },
+  "difference_offsets": {
+    "cases": 204,
+    "passed": 185,
+    "rescued": 4,
+    "new_failures": 3
+  },
+  "connection_gains": {
+    "cases": 204,
+    "passed": 192,
+    "rescued": 10,
+    "new_failures": 2
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "source_sha256": "7da4033e3478d223c02eb27ef02e59e2e32a065fba4ae372156f5751146a00bb",
+  "input_sha256": "a815ce5131b38cc7d85b41cfe08414c6f813456be47bb62125f768031f9dc130",
+  "prediction_RMSE_V": 1.4717352484981358e-05,
+  "repeated_saturation_success": 16,
+  "reverse_write_success": 16,
+  "repeated_denominator": 16,
+  "limitations": "Exploratory8draws; RC analytic expectation omits tiny sigmoid noise rectification and rail fade, not a noiseless alternate simulation. Memory saturation and idle hold follow the engine contract."
+}
+gate only below1mV 0 /8

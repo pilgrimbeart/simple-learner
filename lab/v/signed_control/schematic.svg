@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="650"><rect width="1100" height="650" fill="white"/><g font-family="sans-serif" fill="#222"><text x="25" y="30" font-size="23">D145: explicit complementary gates for signed control</text>
+<rect x="25" y="65" width="195" height="120" fill="#eef5f8" stroke="#222"/>
+<text x="33" y="88" font-size="15">0: source</text>
+<text x="33" y="115" font-size="15">C=25 pF</text>
+<text x="33" y="142" font-size="15">R=0.2 Gohm</text>
+<text x="33" y="169" font-size="15">bias=0 pA</text>
+<rect x="240" y="65" width="195" height="120" fill="#eef5f8" stroke="#222"/>
+<text x="248" y="88" font-size="15">1: control</text>
+<text x="248" y="115" font-size="15">C=25 pF</text>
+<text x="248" y="142" font-size="15">R=0.2 Gohm</text>
+<text x="248" y="169" font-size="15">bias=0 pA</text>
+<rect x="455" y="65" width="195" height="120" fill="#eef5f8" stroke="#222"/>
+<text x="463" y="88" font-size="15">2: positive gate</text>
+<text x="463" y="115" font-size="15">C=25 pF</text>
+<text x="463" y="142" font-size="15">R=0.4 Gohm</text>
+<text x="463" y="169" font-size="15">bias=375 pA</text>
+<rect x="670" y="65" width="195" height="120" fill="#eef5f8" stroke="#222"/>
+<text x="678" y="88" font-size="15">3: negative gate</text>
+<text x="678" y="115" font-size="15">C=25 pF</text>
+<text x="678" y="142" font-size="15">R=0.4 Gohm</text>
+<text x="678" y="169" font-size="15">bias=375 pA</text>
+<rect x="885" y="65" width="195" height="120" fill="#eef5f8" stroke="#222"/>
+<text x="893" y="88" font-size="15">4: output</text>
+<text x="893" y="115" font-size="15">C=25 pF</text>
+<text x="893" y="142" font-size="15">R=0.4 Gohm</text>
+<text x="893" y="169" font-size="15">bias=0 pA</text>
+<path d="M335 185 V225 H550 V185" fill="none" stroke="#222"/><text x="442.5" y="220">E0: +</text>
+<text x="25" y="440">E0: node 1 to 2; gain=750 pA; slope=3.333/V; offset=0 V; gate=-1</text>
+<path d="M335 185 V270 H765 V185" fill="none" stroke="#222"/><text x="550.0" y="265">E1: minus</text>
+<text x="25" y="469">E1: node 1 to 3; gain=-750 pA; slope=3.333/V; offset=0 V; gate=-1</text>
+<path d="M120 185 V315 H980 V185" fill="none" stroke="#222"/><text x="550.0" y="310">E2: +</text>
+<path d="M550 185 V300 H550.0" fill="none" stroke="#0072B2" stroke-dasharray="6 4"/>
+<text x="25" y="498">E2: node 0 to 4; gain=750 pA; slope=3.333/V; offset=0 V; gate=2</text>
+<path d="M120 185 V360 H980 V185" fill="none" stroke="#222"/><text x="550.0" y="355">E3: minus</text>
+<path d="M765 185 V345 H550.0" fill="none" stroke="#0072B2" stroke-dasharray="6 4"/>
+<text x="25" y="527">E3: node 0 to 4; gain=-750 pA; slope=3.333/V; offset=0 V; gate=3</text>
+<text x="25" y="590">Dashed lines: control ports. Every state is noisy. No implicit filters, exact inversion or baseline subtraction.</text></g></svg>

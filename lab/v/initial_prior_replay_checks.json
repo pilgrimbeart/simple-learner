@@ -1,0 +1,10 @@
+{
+ "success": true,
+ "checks": [
+  "both priors total 169; the alternative puts exactly half on the default, streams equal",
+  "no label is used before its prediction: changing the second label leaves both probabilities unchanged",
+  "a sleeping stream's weight is preserved by the update",
+  "duplicate life keys are rejected",
+  "an incomplete red/blue pair is rejected"
+ ]
+}

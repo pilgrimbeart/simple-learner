@@ -1,0 +1,54 @@
+{
+  "metric_reconstruction_error_V": 1.6653345369377348e-16,
+  "first_draw_integral_refinement_max_Vs": 6.33175439336553e-09,
+  "comparisons": {
+    "raw_0.5": {
+      "adequate_draws": 27,
+      "adequate_cases": 1299,
+      "rescued": 10,
+      "harmed": 51,
+      "clamped": 0,
+      "nonpositive_denominators": 0,
+      "knob_range": [
+        -0.38897087777855366,
+        0.82196409808107
+      ]
+    },
+    "raw_0.8": {
+      "adequate_draws": 27,
+      "adequate_cases": 1311,
+      "rescued": 10,
+      "harmed": 39,
+      "clamped": 0,
+      "nonpositive_denominators": 0,
+      "knob_range": [
+        -0.4388129631281845,
+        0.7232248316001181
+      ]
+    },
+    "baseline_reference_0.5": {
+      "adequate_draws": 39,
+      "adequate_cases": 1353,
+      "rescued": 13,
+      "harmed": 0,
+      "clamped": 0,
+      "nonpositive_denominators": 0,
+      "knob_range": [
+        -0.3225139253268121,
+        0.33648920248071257
+      ]
+    },
+    "baseline_reference_0.8": {
+      "adequate_draws": 39,
+      "adequate_cases": 1353,
+      "rescued": 13,
+      "harmed": 0,
+      "clamped": 0,
+      "nonpositive_denominators": 0,
+      "knob_range": [
+        -0.36172241709776054,
+        0.3267852960183245
+      ]
+    }
+  }
+}

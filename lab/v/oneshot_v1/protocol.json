@@ -1,0 +1,190 @@
+{
+  "graph": {
+    "nodes": [
+      {
+        "name": "input",
+        "C": 2.5e-11,
+        "R": 400000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "integral",
+        "C": 2.5e-11,
+        "R": null,
+        "bias": 0.0,
+        "memory": true
+      },
+      {
+        "name": "adaptive response",
+        "C": 2.5e-11,
+        "R": 800000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "pulse output",
+        "C": 2.5e-11,
+        "R": 200000000.0,
+        "bias": 0.0,
+        "memory": false
+      }
+    ],
+    "edges": [
+      {
+        "to": 2,
+        "source": 0,
+        "gain": 1.125e-09,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": -1
+      },
+      {
+        "to": 2,
+        "source": 1,
+        "gain": -1.6875000000000002e-09,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": -1
+      },
+      {
+        "to": 1,
+        "source": 2,
+        "gain": 4.6875e-11,
+        "offset": 0.0,
+        "slope": 6.666666666666667,
+        "tau": 0.0,
+        "gate": -1
+      },
+      {
+        "to": 3,
+        "source": 2,
+        "gain": 3e-09,
+        "offset": 0.2,
+        "slope": 40.0,
+        "tau": 0.0,
+        "gate": -1,
+        "sigmoid": true
+      }
+    ]
+  },
+  "cases": [
+    {
+      "id": "-1_0.4_0.5",
+      "sign": -1,
+      "amplitude": 0.4,
+      "duration": 0.5
+    },
+    {
+      "id": "-1_0.4_2.0",
+      "sign": -1,
+      "amplitude": 0.4,
+      "duration": 2.0
+    },
+    {
+      "id": "-1_0.55_0.5",
+      "sign": -1,
+      "amplitude": 0.55,
+      "duration": 0.5
+    },
+    {
+      "id": "-1_0.55_2.0",
+      "sign": -1,
+      "amplitude": 0.55,
+      "duration": 2.0
+    },
+    {
+      "id": "1_0.4_0.5",
+      "sign": 1,
+      "amplitude": 0.4,
+      "duration": 0.5
+    },
+    {
+      "id": "1_0.4_2.0",
+      "sign": 1,
+      "amplitude": 0.4,
+      "duration": 2.0
+    },
+    {
+      "id": "1_0.55_0.5",
+      "sign": 1,
+      "amplitude": 0.55,
+      "duration": 0.5
+    },
+    {
+      "id": "1_0.55_2.0",
+      "sign": 1,
+      "amplitude": 0.55,
+      "duration": 2.0
+    }
+  ],
+  "pilot": [
+    2026112500,
+    2026112501,
+    2026112502,
+    2026112503,
+    2026112504,
+    2026112505,
+    2026112506,
+    2026112507
+  ],
+  "confirm": [
+    2026112600,
+    2026112601,
+    2026112602,
+    2026112603,
+    2026112604,
+    2026112605,
+    2026112606,
+    2026112607,
+    2026112608,
+    2026112609,
+    2026112610,
+    2026112611,
+    2026112612,
+    2026112613,
+    2026112614,
+    2026112615,
+    2026112616,
+    2026112617,
+    2026112618,
+    2026112619,
+    2026112620,
+    2026112621,
+    2026112622,
+    2026112623,
+    2026112624,
+    2026112625,
+    2026112626,
+    2026112627,
+    2026112628,
+    2026112629,
+    2026112630,
+    2026112631,
+    2026112632,
+    2026112633,
+    2026112634,
+    2026112635,
+    2026112636,
+    2026112637,
+    2026112638,
+    2026112639
+  ],
+  "steps": [
+    0.000125,
+    6.25e-05,
+    3.125e-05
+  ],
+  "stimuli": "Two equal input pulses: first1+jitter, second first+duration+1s; each lasts case duration. Positive trigger is rising onset for positive pulses and return to zero for negative pulses. Run ends1s after second offset.",
+  "criteria": "Absolute output, no baseline subtraction: exactly2excursions above .25V after .8s, each starts within .15s after its positive input change, peak>.35V, width between .01 and .25s, later returns below .1V. Outside .3s following positive changes output<.05V. No rail hits. This is bounded pulse width, not amplitude-independent fixed width or demonstrated regenerative excitability.",
+  "measurement": "Output crossings linearly interpolated at .001s recording; arm above .25V, re-arm below .1V. Width from upward .25V crossing to downward .1V. Each event represented by actual absolute node voltage; observer only measures.",
+  "control": "Pilot positive pulses only: remove integral writer. At least one pulse remains above .25V for >.3s or no normal two-pulse response; the bounded one-shot criteria must fail. No changed parameters during run.",
+  "prediction": "Input/output integral feedback provides adaptation. Stronger inhibitory authority bounds integral demands for larger input amplitudes. Approx local adaptive poles -25 +/-46.8i/s. Thresholded readout should emit one finite pulse per positive step and remain quiet during held input. Component offset, short pulse/lag or input saturation can defeat it.",
+  "initial": "Each node uniform +/-.075V; all original silicon mismatch/noise; continuous stimulus jitter .001-.009s.",
+  "noise": "Microvolt thermal state variation vs .05V quiet and .35V peak margins; gate transfer offsets dominate likely failures.",
+  "reliability": "All8conditions/all3steps per seed; Wilson95 lower>=.90 in40newdraws. Both paired-seed bootstrap95 step-halving intervals inside+/-.05 on declared normalized metrics.",
+  "budget": "One sequential pilot<=600s, confirmation<=1200s, at most2variants with diagnosis before second. No robot lives.",
+  "literature": "TI SN74LVC1G123 product description checked: one-shot pulse generation and RC duration are established. This graph is an adaptive pulse generator, not that chip or a proof of all-or-none excitability."
+}

@@ -1,0 +1,37 @@
+{
+  "modes": {
+    "original": [
+      false,
+      false,
+      0.0
+    ],
+    "source_zero": [
+      true,
+      false,
+      0.0
+    ],
+    "gate_centres": [
+      false,
+      true,
+      0.0
+    ],
+    "both": [
+      true,
+      true,
+      0.0
+    ],
+    "detector_positive_error": [
+      true,
+      true,
+      0.03
+    ],
+    "detector_negative_error": [
+      true,
+      true,
+      -0.03
+    ]
+  },
+  "source": "/home/pilgrim/git/simple-learner/lab/v/signed_control/confirm.jsonl",
+  "budget_s": 120,
+  "meaning": "Additive current reference fitted ONLY to an internal blanked-source/control equilibrium; detector target perturbations explicit. No parameter offsets changed. Original D145 signal criteria retained, dynamic recovery not re-evaluated."
+}

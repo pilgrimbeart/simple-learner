@@ -1,0 +1,21 @@
+{
+  "duration_s": 100.0,
+  "spacings_s": [
+    1.0,
+    2.5,
+    10.0
+  ],
+  "taus_s": [
+    0.15,
+    1.0,
+    3.8585074308112732
+  ],
+  "steps_s": [
+    0.00025,
+    0.000125
+  ],
+  "near_positive_prior": 0.8,
+  "source": "/home/pilgrim/git/simple-learner/lab/v/motifs/order_v2/confirm.jsonl",
+  "budget_s": 360,
+  "scope": "New recorded development schedules of old cases; fixed component draws; analytic stationary-balance reference, no noise trajectories or online learner"
+}

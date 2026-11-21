@@ -1,0 +1,9 @@
+{"seed": 2026112100, "failures": 0, "elapsed_s": 6.592075938999187}
+{"seed": 2026112101, "failures": 0, "elapsed_s": 12.97639605999575}
+{"seed": 2026112102, "failures": 0, "elapsed_s": 19.49533500398684}
+{"seed": 2026112103, "failures": 0, "elapsed_s": 26.11840851099987}
+{"seed": 2026112104, "failures": 0, "elapsed_s": 32.23739879598725}
+{"seed": 2026112105, "failures": 0, "elapsed_s": 39.332964068991714}
+{"seed": 2026112106, "failures": 0, "elapsed_s": 46.98822386699612}
+{"seed": 2026112107, "failures": 0, "elapsed_s": 53.73064503898786}
+{"passed": 8, "seeds": 8, "failed_seeds": [], "wilson95": [0.6755924351161198, 1.0], "reliability_pass": false, "refinement_pass": true, "control_rows": 816, "control_pass": true, "power_W": [2.3986458036175395e-08, 2.356552126670242e-08, 2.4370479459675956e-08], "elapsed_s": 53.77116880098765}

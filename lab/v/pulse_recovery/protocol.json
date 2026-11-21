@@ -1,0 +1,75 @@
+{
+  "gaps_s": [
+    0.02,
+    0.05,
+    0.1,
+    0.2,
+    0.5,
+    1.0
+  ],
+  "seeds": [
+    2026112500,
+    2026112501,
+    2026112502,
+    2026112503,
+    2026112504,
+    2026112505,
+    2026112506,
+    2026112507
+  ],
+  "cases": [
+    {
+      "id": "-1_0.4_0.5",
+      "sign": -1,
+      "amplitude": 0.4,
+      "duration": 0.5
+    },
+    {
+      "id": "-1_0.4_2.0",
+      "sign": -1,
+      "amplitude": 0.4,
+      "duration": 2.0
+    },
+    {
+      "id": "-1_0.55_0.5",
+      "sign": -1,
+      "amplitude": 0.55,
+      "duration": 0.5
+    },
+    {
+      "id": "-1_0.55_2.0",
+      "sign": -1,
+      "amplitude": 0.55,
+      "duration": 2.0
+    },
+    {
+      "id": "1_0.4_0.5",
+      "sign": 1,
+      "amplitude": 0.4,
+      "duration": 0.5
+    },
+    {
+      "id": "1_0.4_2.0",
+      "sign": 1,
+      "amplitude": 0.4,
+      "duration": 2.0
+    },
+    {
+      "id": "1_0.55_0.5",
+      "sign": 1,
+      "amplitude": 0.55,
+      "duration": 0.5
+    },
+    {
+      "id": "1_0.55_2.0",
+      "sign": 1,
+      "amplitude": 0.55,
+      "duration": 2.0
+    }
+  ],
+  "dt_s": 3.125e-05,
+  "source": "lab/oneshot_bench.py",
+  "criterion": "Unchanged absolute pulse metrics; missed=no event start within150ms; extra=event outside both windows; merged=earlier event remains active at second positive change. Gap is input-off time, not positive-event spacing.",
+  "budget_s": 600,
+  "limitations": "Development draws and one previously tested timestep; diagnostic, not new robustness evidence."
+}

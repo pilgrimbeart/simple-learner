@@ -1,0 +1,101 @@
+{
+  "graph": {
+    "nodes": [
+      {
+        "name": "evidence",
+        "C": 2.5e-11,
+        "R": 800000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "eligibility",
+        "C": 2.5e-11,
+        "R": 2000000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "stored",
+        "C": 2.5e-11,
+        "R": null,
+        "bias": 0.0,
+        "memory": true
+      },
+      {
+        "name": "probe",
+        "C": 2.5e-11,
+        "R": 800000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "response",
+        "C": 2.5e-11,
+        "R": 2000000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "inverted evidence",
+        "C": 2.5e-11,
+        "R": 800000000.0,
+        "bias": 0.0,
+        "memory": false
+      }
+    ],
+    "edges": [
+      {
+        "to": 4,
+        "source": 3,
+        "gate": 2,
+        "gain": 2e-10,
+        "offset": 0.0,
+        "slope": 6.666666666666667,
+        "tau": 0.0,
+        "sigmoid": false
+      },
+      {
+        "to": 2,
+        "source": 0,
+        "gate": 1,
+        "gain": 8e-12,
+        "offset": 0.3,
+        "slope": 60.0,
+        "tau": 0.0,
+        "sigmoid": true
+      },
+      {
+        "to": 5,
+        "source": 0,
+        "gain": -9.375e-10,
+        "offset": 0.0,
+        "slope": 1.6666666666666667,
+        "tau": 0.0,
+        "gate": -1,
+        "sigmoid": false
+      },
+      {
+        "to": 2,
+        "source": 5,
+        "gain": -8e-12,
+        "offset": 0.3,
+        "slope": 60.0,
+        "tau": 0.0,
+        "gate": 1,
+        "sigmoid": true
+      }
+    ],
+    "duration": 12.0
+  },
+  "states": 6,
+  "connections": 4,
+  "parts": {
+    "T": 142,
+    "R": 21,
+    "C": 8,
+    "D": 0,
+    "sources": 18
+  },
+  "scope": "Core only. Two ideal pump supplies counted; actual pump implementation/energy and bench sources/readout excluded. Activity separate in raw rows."
+}

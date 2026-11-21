@@ -1,0 +1,11 @@
+{
+  "source": "/home/pilgrim/git/simple-learner/lab/v/signed_control/confirm.jsonl",
+  "control_magnitude_V": 0.3,
+  "secant_source_magnitude_V": 0.15,
+  "modes": [
+    "original",
+    "source_offsets"
+  ],
+  "budget_s": 30,
+  "meaning": "Reused static reference; no switching, dynamics or reliability claim"
+}

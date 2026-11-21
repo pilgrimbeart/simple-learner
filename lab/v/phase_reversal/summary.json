@@ -1,0 +1,2632 @@
+{
+  "validation_rmse_V": 2.0449325264613715e-05,
+  "validation_max_error_V": 5.3327963712712645e-05,
+  "maximum_resolution_change_V": 2.656052475180637e-09,
+  "swap_cycle_identity_error_V": 9.646610767133357e-11,
+  "coarse_identity_error_V": 6.156373744126142e-10,
+  "refined_identity_cases": 8,
+  "scenarios": {
+    "equal": {
+      "zero_bias_range_V": [
+        0.0,
+        0.0
+      ],
+      "zero_bias_rms_V": 0.0,
+      "adequate_draws": 40,
+      "draws": 40,
+      "wrong_local_sign": 0,
+      "local_cases": 320,
+      "max_sequential_window_error_bound_V": 0.0010529067617863013,
+      "groups": [
+        {
+          "seed": 2026112800,
+          "band_Hz": 2.0,
+          "near_V": 0.036596151132194485,
+          "far_V": 0.07256698803344529,
+          "minimum_drop_V": 0.017985418450625373,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112800,
+          "band_Hz": 5.0,
+          "near_V": 0.021318280391370542,
+          "far_V": 0.0423613676533485,
+          "minimum_drop_V": 0.010521543630988978,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112801,
+          "band_Hz": 2.0,
+          "near_V": 0.021591469665743573,
+          "far_V": 0.042979849643482476,
+          "minimum_drop_V": 0.010694189988869451,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112801,
+          "band_Hz": 5.0,
+          "near_V": 0.012817849658333408,
+          "far_V": 0.025544812688318846,
+          "minimum_drop_V": 0.006363481514992719,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112802,
+          "band_Hz": 2.0,
+          "near_V": 0.03382074762899124,
+          "far_V": 0.06723943171764053,
+          "minimum_drop_V": 0.016709342044324636,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112802,
+          "band_Hz": 5.0,
+          "near_V": 0.02034661397366552,
+          "far_V": 0.04051313721141425,
+          "minimum_drop_V": 0.010083261618874361,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112803,
+          "band_Hz": 2.0,
+          "near_V": 0.03158301519057431,
+          "far_V": 0.06254896528528284,
+          "minimum_drop_V": 0.015482975047354255,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112803,
+          "band_Hz": 5.0,
+          "near_V": 0.01725011019224004,
+          "far_V": 0.03424541496780006,
+          "minimum_drop_V": 0.008497652387780009,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112804,
+          "band_Hz": 2.0,
+          "near_V": 0.026318406020946997,
+          "far_V": 0.05230177916886111,
+          "minimum_drop_V": 0.012991686573957058,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112804,
+          "band_Hz": 5.0,
+          "near_V": 0.014054429306099195,
+          "far_V": 0.027981625044856174,
+          "minimum_drop_V": 0.006963597869378484,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112805,
+          "band_Hz": 2.0,
+          "near_V": 0.029639710785885093,
+          "far_V": 0.05902494990454402,
+          "minimum_drop_V": 0.014692619559329455,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112805,
+          "band_Hz": 5.0,
+          "near_V": 0.017018979170585535,
+          "far_V": 0.03393257406162062,
+          "minimum_drop_V": 0.008456797445517528,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112806,
+          "band_Hz": 2.0,
+          "near_V": 0.032828710742815286,
+          "far_V": 0.06539276763822088,
+          "minimum_drop_V": 0.01628202844770279,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112806,
+          "band_Hz": 5.0,
+          "near_V": 0.01776893229466197,
+          "far_V": 0.03543131118306017,
+          "minimum_drop_V": 0.00883118944419909,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112807,
+          "band_Hz": 2.0,
+          "near_V": 0.031475968698269956,
+          "far_V": 0.0626217501554524,
+          "minimum_drop_V": 0.015572890728591214,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112807,
+          "band_Hz": 5.0,
+          "near_V": 0.017629945548936127,
+          "far_V": 0.03511332070237962,
+          "minimum_drop_V": 0.008741687576721745,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112808,
+          "band_Hz": 2.0,
+          "near_V": 0.0274400313640752,
+          "far_V": 0.054703818562096176,
+          "minimum_drop_V": 0.013631893599010486,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112808,
+          "band_Hz": 5.0,
+          "near_V": 0.018431372851301565,
+          "far_V": 0.036779322352648566,
+          "minimum_drop_V": 0.009173974750673497,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112809,
+          "band_Hz": 2.0,
+          "near_V": 0.02687486528113344,
+          "far_V": 0.05352385528896747,
+          "minimum_drop_V": 0.013324495003917006,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112809,
+          "band_Hz": 5.0,
+          "near_V": 0.014264020550010765,
+          "far_V": 0.028438611289082615,
+          "minimum_drop_V": 0.007087295369535923,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112810,
+          "band_Hz": 2.0,
+          "near_V": 0.025460666730401968,
+          "far_V": 0.0504983219281417,
+          "minimum_drop_V": 0.012518827598869865,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112810,
+          "band_Hz": 5.0,
+          "near_V": 0.01632140519483296,
+          "far_V": 0.03246158375588387,
+          "minimum_drop_V": 0.008070089280525449,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112811,
+          "band_Hz": 2.0,
+          "near_V": 0.037378040065396925,
+          "far_V": 0.073867932194395,
+          "minimum_drop_V": 0.01824494606449902,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112811,
+          "band_Hz": 5.0,
+          "near_V": 0.025153092961910532,
+          "far_V": 0.04987050375098791,
+          "minimum_drop_V": 0.012358705394538667,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112812,
+          "band_Hz": 2.0,
+          "near_V": 0.026936319908140757,
+          "far_V": 0.053697241737985034,
+          "minimum_drop_V": 0.013380460914922138,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112812,
+          "band_Hz": 5.0,
+          "near_V": 0.016614809231179403,
+          "far_V": 0.033148292458610645,
+          "minimum_drop_V": 0.008266741613715607,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112813,
+          "band_Hz": 2.0,
+          "near_V": 0.023191986010335314,
+          "far_V": 0.04616587549518258,
+          "minimum_drop_V": 0.011486944742423627,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112813,
+          "band_Hz": 5.0,
+          "near_V": 0.014641446819340808,
+          "far_V": 0.02918475741812862,
+          "minimum_drop_V": 0.007271655299393902,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112814,
+          "band_Hz": 2.0,
+          "near_V": 0.024354875053673897,
+          "far_V": 0.04834634868809409,
+          "minimum_drop_V": 0.011995736817210084,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112814,
+          "band_Hz": 5.0,
+          "near_V": 0.01437355058064091,
+          "far_V": 0.02859396900124525,
+          "minimum_drop_V": 0.007110209210302157,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112815,
+          "band_Hz": 2.0,
+          "near_V": 0.02506766272742581,
+          "far_V": 0.0497329289486272,
+          "minimum_drop_V": 0.012332633110600687,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112815,
+          "band_Hz": 5.0,
+          "near_V": 0.014654224654404628,
+          "far_V": 0.02912330413495035,
+          "minimum_drop_V": 0.007234539740272854,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112816,
+          "band_Hz": 2.0,
+          "near_V": 0.027098421456617894,
+          "far_V": 0.05386864618526353,
+          "minimum_drop_V": 0.013385112364322816,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112816,
+          "band_Hz": 5.0,
+          "near_V": 0.018172072685766205,
+          "far_V": 0.03618154650315991,
+          "minimum_drop_V": 0.009004736908696853,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112817,
+          "band_Hz": 2.0,
+          "near_V": 0.03829910220493793,
+          "far_V": 0.07604673755192976,
+          "minimum_drop_V": 0.018873817673495906,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112817,
+          "band_Hz": 5.0,
+          "near_V": 0.020864099074977917,
+          "far_V": 0.04150130132692367,
+          "minimum_drop_V": 0.010318601125972876,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112818,
+          "band_Hz": 2.0,
+          "near_V": 0.030766959193928495,
+          "far_V": 0.061162694977917896,
+          "minimum_drop_V": 0.015197867891994697,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112818,
+          "band_Hz": 5.0,
+          "near_V": 0.017555141918607395,
+          "far_V": 0.034949387518823545,
+          "minimum_drop_V": 0.008697122800108072,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112819,
+          "band_Hz": 2.0,
+          "near_V": 0.02424700523962237,
+          "far_V": 0.04817865256024152,
+          "minimum_drop_V": 0.011965823660309568,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112819,
+          "band_Hz": 5.0,
+          "near_V": 0.016374695394015436,
+          "far_V": 0.032599915160379134,
+          "minimum_drop_V": 0.008112609883181843,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112820,
+          "band_Hz": 2.0,
+          "near_V": 0.021660693182514158,
+          "far_V": 0.04317840829200491,
+          "minimum_drop_V": 0.010758857554745364,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112820,
+          "band_Hz": 5.0,
+          "near_V": 0.012108418045899322,
+          "far_V": 0.024151708445202716,
+          "minimum_drop_V": 0.006021645199651697,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112821,
+          "band_Hz": 2.0,
+          "near_V": 0.033518997013041556,
+          "far_V": 0.06651850590216152,
+          "minimum_drop_V": 0.016499754444559978,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112821,
+          "band_Hz": 5.0,
+          "near_V": 0.018315170224557246,
+          "far_V": 0.0364185846505492,
+          "minimum_drop_V": 0.009051707212995965,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112822,
+          "band_Hz": 2.0,
+          "near_V": 0.030224182882495586,
+          "far_V": 0.05987212875860312,
+          "minimum_drop_V": 0.014823972938053761,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112822,
+          "band_Hz": 5.0,
+          "near_V": 0.01777025102365857,
+          "far_V": 0.03526053662480676,
+          "minimum_drop_V": 0.008745142800574087,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112823,
+          "band_Hz": 2.0,
+          "near_V": 0.03660101291959107,
+          "far_V": 0.07254351238568485,
+          "minimum_drop_V": 0.01797124973304689,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112823,
+          "band_Hz": 5.0,
+          "near_V": 0.02394682608928047,
+          "far_V": 0.047593205929252605,
+          "minimum_drop_V": 0.011823189919986033,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112824,
+          "band_Hz": 2.0,
+          "near_V": 0.03831876923731706,
+          "far_V": 0.07605793351389066,
+          "minimum_drop_V": 0.01886958213828679,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112824,
+          "band_Hz": 5.0,
+          "near_V": 0.02104950420585691,
+          "far_V": 0.04186574897638522,
+          "minimum_drop_V": 0.010408122385264146,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112825,
+          "band_Hz": 2.0,
+          "near_V": 0.038428896853848885,
+          "far_V": 0.0756789920541183,
+          "minimum_drop_V": 0.018625047600134698,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112825,
+          "band_Hz": 5.0,
+          "near_V": 0.023971096491410646,
+          "far_V": 0.04739646228718418,
+          "minimum_drop_V": 0.01171268289788674,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112826,
+          "band_Hz": 2.0,
+          "near_V": 0.02483701877961036,
+          "far_V": 0.04947839353703315,
+          "minimum_drop_V": 0.012320687378711384,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112826,
+          "band_Hz": 5.0,
+          "near_V": 0.014584502257823156,
+          "far_V": 0.029090751483358518,
+          "minimum_drop_V": 0.007253124612767663,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112827,
+          "band_Hz": 2.0,
+          "near_V": 0.026595479866560478,
+          "far_V": 0.052750817779803325,
+          "minimum_drop_V": 0.013077668956621418,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112827,
+          "band_Hz": 5.0,
+          "near_V": 0.015149944428678957,
+          "far_V": 0.030114701588730166,
+          "minimum_drop_V": 0.007482378580025595,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112828,
+          "band_Hz": 2.0,
+          "near_V": 0.03644756049124292,
+          "far_V": 0.07246897679064622,
+          "minimum_drop_V": 0.018010708149701647,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112828,
+          "band_Hz": 5.0,
+          "near_V": 0.018355122049660468,
+          "far_V": 0.0365500116443992,
+          "minimum_drop_V": 0.009097444797369358,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112829,
+          "band_Hz": 2.0,
+          "near_V": 0.028520070262233757,
+          "far_V": 0.05665072010046752,
+          "minimum_drop_V": 0.014065324919116863,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112829,
+          "band_Hz": 5.0,
+          "near_V": 0.017740376636721428,
+          "far_V": 0.03530119232238646,
+          "minimum_drop_V": 0.008780407842832502,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112830,
+          "band_Hz": 2.0,
+          "near_V": 0.03888834554369856,
+          "far_V": 0.0770358508301985,
+          "minimum_drop_V": 0.019073752643249946,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112830,
+          "band_Hz": 5.0,
+          "near_V": 0.024173497229695695,
+          "far_V": 0.048028953367703506,
+          "minimum_drop_V": 0.011927728069003884,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112831,
+          "band_Hz": 2.0,
+          "near_V": 0.025693075348636255,
+          "far_V": 0.050949610638205634,
+          "minimum_drop_V": 0.01262826764478469,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112831,
+          "band_Hz": 5.0,
+          "near_V": 0.013364147527546354,
+          "far_V": 0.02655215233312941,
+          "minimum_drop_V": 0.006594002402791524,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112832,
+          "band_Hz": 2.0,
+          "near_V": 0.03702999368811531,
+          "far_V": 0.073708669747152,
+          "minimum_drop_V": 0.01833933802951833,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112832,
+          "band_Hz": 5.0,
+          "near_V": 0.022665465689450354,
+          "far_V": 0.045171808256428414,
+          "minimum_drop_V": 0.011253171283489006,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112833,
+          "band_Hz": 2.0,
+          "near_V": 0.030416569277377375,
+          "far_V": 0.060302179815827514,
+          "minimum_drop_V": 0.014942805269225068,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112833,
+          "band_Hz": 5.0,
+          "near_V": 0.015960939768955233,
+          "far_V": 0.03170907229194579,
+          "minimum_drop_V": 0.007874066261495276,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112834,
+          "band_Hz": 2.0,
+          "near_V": 0.026363721248629596,
+          "far_V": 0.052393517150997576,
+          "minimum_drop_V": 0.013014897951183983,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112834,
+          "band_Hz": 5.0,
+          "near_V": 0.016189534494000797,
+          "far_V": 0.03221850340292097,
+          "minimum_drop_V": 0.008014484454460069,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112835,
+          "band_Hz": 2.0,
+          "near_V": 0.028077752687252516,
+          "far_V": 0.05561063776416775,
+          "minimum_drop_V": 0.013766442538457616,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112835,
+          "band_Hz": 5.0,
+          "near_V": 0.013959838148732417,
+          "far_V": 0.027721525846843342,
+          "minimum_drop_V": 0.006880843849055462,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112836,
+          "band_Hz": 2.0,
+          "near_V": 0.03283429334742621,
+          "far_V": 0.06518786612722646,
+          "minimum_drop_V": 0.016176786389900104,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112836,
+          "band_Hz": 5.0,
+          "near_V": 0.021421306080542296,
+          "far_V": 0.042625228698229684,
+          "minimum_drop_V": 0.010601961308843694,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112837,
+          "band_Hz": 2.0,
+          "near_V": 0.03451163295642701,
+          "far_V": 0.06856389677892914,
+          "minimum_drop_V": 0.01702613191125106,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112837,
+          "band_Hz": 5.0,
+          "near_V": 0.021599390809179483,
+          "far_V": 0.04297572934468646,
+          "minimum_drop_V": 0.01068816926775347,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112838,
+          "band_Hz": 2.0,
+          "near_V": 0.035182309134149235,
+          "far_V": 0.06988473961245496,
+          "minimum_drop_V": 0.017351215239152847,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112838,
+          "band_Hz": 5.0,
+          "near_V": 0.023745320817663382,
+          "far_V": 0.04725541604105825,
+          "minimum_drop_V": 0.011755047611697433,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112839,
+          "band_Hz": 2.0,
+          "near_V": 0.026204659226745766,
+          "far_V": 0.051891608984732024,
+          "minimum_drop_V": 0.012843474878993129,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112839,
+          "band_Hz": 5.0,
+          "near_V": 0.016139623587784313,
+          "far_V": 0.03206745234342541,
+          "minimum_drop_V": 0.007963914377820548,
+          "sensitivity_adequate": true
+        }
+      ]
+    },
+    "weak_A": {
+      "zero_bias_range_V": [
+        -0.0028817831859157886,
+        0.0032805405714627367
+      ],
+      "zero_bias_rms_V": 0.0013833858477822261,
+      "adequate_draws": 40,
+      "draws": 40,
+      "wrong_local_sign": 0,
+      "local_cases": 320,
+      "max_sequential_window_error_bound_V": 0.0008061980077439765,
+      "groups": [
+        {
+          "seed": 2026112800,
+          "band_Hz": 2.0,
+          "near_V": 0.01824030731162679,
+          "far_V": 0.036318693255324955,
+          "minimum_drop_V": 0.00902143147788248,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112800,
+          "band_Hz": 5.0,
+          "near_V": 0.010635440954829309,
+          "far_V": 0.021199697895777095,
+          "minimum_drop_V": 0.00527630976039907,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112801,
+          "band_Hz": 2.0,
+          "near_V": 0.010837070338265226,
+          "far_V": 0.02162201632770676,
+          "minimum_drop_V": 0.0053813325579042115,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112801,
+          "band_Hz": 5.0,
+          "near_V": 0.006437742342663019,
+          "far_V": 0.01285216354712207,
+          "minimum_drop_V": 0.00320444236713896,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112802,
+          "band_Hz": 2.0,
+          "near_V": 0.017031947914542808,
+          "far_V": 0.03395934610166598,
+          "minimum_drop_V": 0.00846226342243859,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112802,
+          "band_Hz": 5.0,
+          "near_V": 0.010252382253020527,
+          "far_V": 0.02045795630014064,
+          "minimum_drop_V": 0.005102549831012895,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112803,
+          "band_Hz": 2.0,
+          "near_V": 0.015847963119240496,
+          "far_V": 0.03153403489390742,
+          "minimum_drop_V": 0.007772180256671811,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112803,
+          "band_Hz": 5.0,
+          "near_V": 0.008664323384296565,
+          "far_V": 0.017261894192933152,
+          "minimum_drop_V": 0.004284121823631949,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112804,
+          "band_Hz": 2.0,
+          "near_V": 0.01317452617037699,
+          "far_V": 0.026262877873038687,
+          "minimum_drop_V": 0.006532593471498878,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112804,
+          "band_Hz": 5.0,
+          "near_V": 0.007040889126227686,
+          "far_V": 0.01404907192317303,
+          "minimum_drop_V": 0.003501850524924962,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112805,
+          "band_Hz": 2.0,
+          "near_V": 0.014913670949334226,
+          "far_V": 0.029761699644932138,
+          "minimum_drop_V": 0.0074211186010675265,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112805,
+          "band_Hz": 5.0,
+          "near_V": 0.00856785515568971,
+          "far_V": 0.01710853437543952,
+          "minimum_drop_V": 0.004269689339144081,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112806,
+          "band_Hz": 2.0,
+          "near_V": 0.016537785491435038,
+          "far_V": 0.033007195045160115,
+          "minimum_drop_V": 0.008192905263429308,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112806,
+          "band_Hz": 5.0,
+          "near_V": 0.008951854973086797,
+          "far_V": 0.01787619994110666,
+          "minimum_drop_V": 0.004454171780841109,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112807,
+          "band_Hz": 2.0,
+          "near_V": 0.015822175086753626,
+          "far_V": 0.031558791840153075,
+          "minimum_drop_V": 0.00786359358085821,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112807,
+          "band_Hz": 5.0,
+          "near_V": 0.00886615099098825,
+          "far_V": 0.01769434304557768,
+          "minimum_drop_V": 0.004413422008162755,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112808,
+          "band_Hz": 2.0,
+          "near_V": 0.01385930490313547,
+          "far_V": 0.02767303191963972,
+          "minimum_drop_V": 0.006902949827221717,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112808,
+          "band_Hz": 5.0,
+          "near_V": 0.009312596330730973,
+          "far_V": 0.018603605490245825,
+          "minimum_drop_V": 0.004644851673926434,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112809,
+          "band_Hz": 2.0,
+          "near_V": 0.0135023218277373,
+          "far_V": 0.026946537697292803,
+          "minimum_drop_V": 0.006713368845224478,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112809,
+          "band_Hz": 5.0,
+          "near_V": 0.007169235374443694,
+          "far_V": 0.014315475265359255,
+          "minimum_drop_V": 0.0035716526830723797,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112810,
+          "band_Hz": 2.0,
+          "near_V": 0.012779058663889323,
+          "far_V": 0.025448113683854127,
+          "minimum_drop_V": 0.006299573706782909,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112810,
+          "band_Hz": 5.0,
+          "near_V": 0.008201784484154737,
+          "far_V": 0.016356467198808088,
+          "minimum_drop_V": 0.0040692236524878175,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112811,
+          "band_Hz": 2.0,
+          "near_V": 0.018664544111988333,
+          "far_V": 0.0370975263128526,
+          "minimum_drop_V": 0.009183112421607322,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112811,
+          "band_Hz": 5.0,
+          "near_V": 0.012576527832633244,
+          "far_V": 0.025039539261003906,
+          "minimum_drop_V": 0.006221599703475834,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112812,
+          "band_Hz": 2.0,
+          "near_V": 0.013587144048697625,
+          "far_V": 0.027129028480606047,
+          "minimum_drop_V": 0.006725240250737889,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112812,
+          "band_Hz": 5.0,
+          "near_V": 0.00838230995242499,
+          "far_V": 0.016743636882878297,
+          "minimum_drop_V": 0.004168976523856956,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112813,
+          "band_Hz": 2.0,
+          "near_V": 0.011647286169331885,
+          "far_V": 0.023238546914208964,
+          "minimum_drop_V": 0.005787875072732177,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112813,
+          "band_Hz": 5.0,
+          "near_V": 0.007357637547459778,
+          "far_V": 0.014690071643869814,
+          "minimum_drop_V": 0.003664414658104573,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112814,
+          "band_Hz": 2.0,
+          "near_V": 0.012187139141154088,
+          "far_V": 0.024280657286164298,
+          "minimum_drop_V": 0.0060257021228424384,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112814,
+          "band_Hz": 5.0,
+          "near_V": 0.007202683721872577,
+          "far_V": 0.014365933473105316,
+          "minimum_drop_V": 0.0035772208508067505,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112815,
+          "band_Hz": 2.0,
+          "near_V": 0.012548376329105996,
+          "far_V": 0.024992461080100014,
+          "minimum_drop_V": 0.006215111057043178,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112815,
+          "band_Hz": 5.0,
+          "near_V": 0.0073407837895757555,
+          "far_V": 0.014633622583046214,
+          "minimum_drop_V": 0.0036440219635452925,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112816,
+          "band_Hz": 2.0,
+          "near_V": 0.013615368944174831,
+          "far_V": 0.027145873687905324,
+          "minimum_drop_V": 0.006752672521142363,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112816,
+          "band_Hz": 5.0,
+          "near_V": 0.009135337983486015,
+          "far_V": 0.018228656085145952,
+          "minimum_drop_V": 0.004542836255775982,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112817,
+          "band_Hz": 2.0,
+          "near_V": 0.019205837591319518,
+          "far_V": 0.038268712507160636,
+          "minimum_drop_V": 0.009514101482813616,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112817,
+          "band_Hz": 5.0,
+          "near_V": 0.010469836475641656,
+          "far_V": 0.02088090606701267,
+          "minimum_drop_V": 0.005201309594987307,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112818,
+          "band_Hz": 2.0,
+          "near_V": 0.015455744429453494,
+          "far_V": 0.03081529291750961,
+          "minimum_drop_V": 0.007653893950929677,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112818,
+          "band_Hz": 5.0,
+          "near_V": 0.00882421495504021,
+          "far_V": 0.01760676699967116,
+          "minimum_drop_V": 0.004385352069166314,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112819,
+          "band_Hz": 2.0,
+          "near_V": 0.012137738853964165,
+          "far_V": 0.02419431053895406,
+          "minimum_drop_V": 0.006026412415079074,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112819,
+          "band_Hz": 5.0,
+          "near_V": 0.008204037566943342,
+          "far_V": 0.01636962157278901,
+          "minimum_drop_V": 0.0040826292267732225,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112820,
+          "band_Hz": 2.0,
+          "near_V": 0.010893584125826986,
+          "far_V": 0.02175045955438628,
+          "minimum_drop_V": 0.005422405750513969,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112820,
+          "band_Hz": 5.0,
+          "near_V": 0.0060896616346118385,
+          "far_V": 0.012162609051841314,
+          "minimum_drop_V": 0.0030354187487119377,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112821,
+          "band_Hz": 2.0,
+          "near_V": 0.016823964119794248,
+          "far_V": 0.03351231384104607,
+          "minimum_drop_V": 0.00831337127076202,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112821,
+          "band_Hz": 5.0,
+          "near_V": 0.009199672126621216,
+          "far_V": 0.018344144860166514,
+          "minimum_drop_V": 0.004567408382842013,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112822,
+          "band_Hz": 2.0,
+          "near_V": 0.01509766812161406,
+          "far_V": 0.03004546528599679,
+          "minimum_drop_V": 0.007410000633277472,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112822,
+          "band_Hz": 5.0,
+          "near_V": 0.008883000878600653,
+          "far_V": 0.017693234507851284,
+          "minimum_drop_V": 0.004387877121622447,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112823,
+          "band_Hz": 2.0,
+          "near_V": 0.018330334652007466,
+          "far_V": 0.036489812902845684,
+          "minimum_drop_V": 0.009025206244134755,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112823,
+          "band_Hz": 5.0,
+          "near_V": 0.012006755411124267,
+          "far_V": 0.023935615892925727,
+          "minimum_drop_V": 0.005949822106237797,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112824,
+          "band_Hz": 2.0,
+          "near_V": 0.019095986601522393,
+          "far_V": 0.03804263455487766,
+          "minimum_drop_V": 0.009380699198174493,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112824,
+          "band_Hz": 5.0,
+          "near_V": 0.010502101649780684,
+          "far_V": 0.02094414287213903,
+          "minimum_drop_V": 0.005200416908126251,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112825,
+          "band_Hz": 2.0,
+          "near_V": 0.019085610999736463,
+          "far_V": 0.03786424302168289,
+          "minimum_drop_V": 0.009388353115515807,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112825,
+          "band_Hz": 5.0,
+          "near_V": 0.011930844542838562,
+          "far_V": 0.023719701081109268,
+          "minimum_drop_V": 0.005893688142530308,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112826,
+          "band_Hz": 2.0,
+          "near_V": 0.01249555034466629,
+          "far_V": 0.024940795094114072,
+          "minimum_drop_V": 0.006216403623191153,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112826,
+          "band_Hz": 5.0,
+          "near_V": 0.007340164301066406,
+          "far_V": 0.014660217632689482,
+          "minimum_drop_V": 0.003658612949237238,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112827,
+          "band_Hz": 2.0,
+          "near_V": 0.013277014558959108,
+          "far_V": 0.02644003858889988,
+          "minimum_drop_V": 0.006546456349185173,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112827,
+          "band_Hz": 5.0,
+          "near_V": 0.007569595133373904,
+          "far_V": 0.015091269314558023,
+          "minimum_drop_V": 0.003753087143102329,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112828,
+          "band_Hz": 2.0,
+          "near_V": 0.01828015435357329,
+          "far_V": 0.03645005318606756,
+          "minimum_drop_V": 0.00905335277875381,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112828,
+          "band_Hz": 5.0,
+          "near_V": 0.00921125910796513,
+          "far_V": 0.018381091592815597,
+          "minimum_drop_V": 0.004579365022047003,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112829,
+          "band_Hz": 2.0,
+          "near_V": 0.014318927675097057,
+          "far_V": 0.028536707262095895,
+          "minimum_drop_V": 0.0070685677721188805,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112829,
+          "band_Hz": 5.0,
+          "near_V": 0.008913863506538527,
+          "far_V": 0.017781121281285298,
+          "minimum_drop_V": 0.004422884724153489,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112830,
+          "band_Hz": 2.0,
+          "near_V": 0.019494020551468996,
+          "far_V": 0.0387951571627507,
+          "minimum_drop_V": 0.00961584866152096,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112830,
+          "band_Hz": 5.0,
+          "near_V": 0.012132907244885555,
+          "far_V": 0.02418309657410224,
+          "minimum_drop_V": 0.006017277136226795,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112831,
+          "band_Hz": 2.0,
+          "near_V": 0.012858470221593213,
+          "far_V": 0.025603795281669978,
+          "minimum_drop_V": 0.006368560193932525,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112831,
+          "band_Hz": 5.0,
+          "near_V": 0.006693738323319015,
+          "far_V": 0.013341875428460485,
+          "minimum_drop_V": 0.0033231468402705883,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112832,
+          "band_Hz": 2.0,
+          "near_V": 0.01862593248329915,
+          "far_V": 0.03716092699652511,
+          "minimum_drop_V": 0.009203435970417756,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112832,
+          "band_Hz": 5.0,
+          "near_V": 0.011406425016179764,
+          "far_V": 0.022771681706930308,
+          "minimum_drop_V": 0.005667019877798081,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112833,
+          "band_Hz": 2.0,
+          "near_V": 0.015208773144707626,
+          "far_V": 0.030280013970540674,
+          "minimum_drop_V": 0.007527705041839028,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112833,
+          "band_Hz": 5.0,
+          "near_V": 0.007987361079985156,
+          "far_V": 0.015919642830339475,
+          "minimum_drop_V": 0.003963447402517195,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112834,
+          "band_Hz": 2.0,
+          "near_V": 0.013221729906508065,
+          "far_V": 0.026357204897829584,
+          "minimum_drop_V": 0.00655893322226906,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112834,
+          "band_Hz": 5.0,
+          "near_V": 0.008123398827778128,
+          "far_V": 0.016205349760246547,
+          "minimum_drop_V": 0.00403881352487645,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112835,
+          "band_Hz": 2.0,
+          "near_V": 0.014004580035535855,
+          "far_V": 0.027868745147623997,
+          "minimum_drop_V": 0.006924282995093359,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112835,
+          "band_Hz": 5.0,
+          "near_V": 0.006972094893888045,
+          "far_V": 0.013893169665804367,
+          "minimum_drop_V": 0.0034591195496433275,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112836,
+          "band_Hz": 2.0,
+          "near_V": 0.016516344881665646,
+          "far_V": 0.03290818758762176,
+          "minimum_drop_V": 0.008181929131676008,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112836,
+          "band_Hz": 5.0,
+          "near_V": 0.010786638552221006,
+          "far_V": 0.021517000307091347,
+          "minimum_drop_V": 0.005361199597685579,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112837,
+          "band_Hz": 2.0,
+          "near_V": 0.017349525508480353,
+          "far_V": 0.03457971326495105,
+          "minimum_drop_V": 0.008614916135088392,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112837,
+          "band_Hz": 5.0,
+          "near_V": 0.010866846689792958,
+          "far_V": 0.021675769526831513,
+          "minimum_drop_V": 0.00540424595167488,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112838,
+          "band_Hz": 2.0,
+          "near_V": 0.017662588511351593,
+          "far_V": 0.03520100355802756,
+          "minimum_drop_V": 0.00876163390400339,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112838,
+          "band_Hz": 5.0,
+          "near_V": 0.01193431226310087,
+          "far_V": 0.02380777394350491,
+          "minimum_drop_V": 0.005934016980163423,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112839,
+          "band_Hz": 2.0,
+          "near_V": 0.013086558639353027,
+          "far_V": 0.026039369237508346,
+          "minimum_drop_V": 0.006438527028761694,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112839,
+          "band_Hz": 5.0,
+          "near_V": 0.0080705800115961,
+          "far_V": 0.016086492861930445,
+          "minimum_drop_V": 0.003999130726541289,
+          "sensitivity_adequate": true
+        }
+      ]
+    },
+    "weak_B": {
+      "zero_bias_range_V": [
+        -0.0032805405714627367,
+        0.0028817831859157886
+      ],
+      "zero_bias_rms_V": 0.0013833858477822261,
+      "adequate_draws": 40,
+      "draws": 40,
+      "wrong_local_sign": 0,
+      "local_cases": 320,
+      "max_sequential_window_error_bound_V": 0.0008061980077439764,
+      "groups": [
+        {
+          "seed": 2026112800,
+          "band_Hz": 2.0,
+          "near_V": 0.018240307311626666,
+          "far_V": 0.036318693255324955,
+          "minimum_drop_V": 0.009021431477882536,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112800,
+          "band_Hz": 5.0,
+          "near_V": 0.010635440954829309,
+          "far_V": 0.021199697895777095,
+          "minimum_drop_V": 0.00527630976039907,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112801,
+          "band_Hz": 2.0,
+          "near_V": 0.010837070338265226,
+          "far_V": 0.021622016327706786,
+          "minimum_drop_V": 0.0053813325579042115,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112801,
+          "band_Hz": 5.0,
+          "near_V": 0.006437742342663019,
+          "far_V": 0.012852163547122056,
+          "minimum_drop_V": 0.003204442367138946,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112802,
+          "band_Hz": 2.0,
+          "near_V": 0.01703194791454286,
+          "far_V": 0.03395934610166598,
+          "minimum_drop_V": 0.00846226342243855,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112802,
+          "band_Hz": 5.0,
+          "near_V": 0.010252382253020536,
+          "far_V": 0.020457956300140644,
+          "minimum_drop_V": 0.005102549831012887,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112803,
+          "band_Hz": 2.0,
+          "near_V": 0.0158479631192405,
+          "far_V": 0.03153403489390742,
+          "minimum_drop_V": 0.007772180256671814,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112803,
+          "band_Hz": 5.0,
+          "near_V": 0.008664323384296516,
+          "far_V": 0.017261894192933155,
+          "minimum_drop_V": 0.00428412182363197,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112804,
+          "band_Hz": 2.0,
+          "near_V": 0.013174526170377,
+          "far_V": 0.026262877873038687,
+          "minimum_drop_V": 0.006532593471498885,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112804,
+          "band_Hz": 5.0,
+          "near_V": 0.0070408891262277,
+          "far_V": 0.014049071923173014,
+          "minimum_drop_V": 0.003501850524924955,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112805,
+          "band_Hz": 2.0,
+          "near_V": 0.014913670949334233,
+          "far_V": 0.029761699644932124,
+          "minimum_drop_V": 0.007421118601067513,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112805,
+          "band_Hz": 5.0,
+          "near_V": 0.008567855155689717,
+          "far_V": 0.01710853437543953,
+          "minimum_drop_V": 0.004269689339144081,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112806,
+          "band_Hz": 2.0,
+          "near_V": 0.01653778549143505,
+          "far_V": 0.033007195045160115,
+          "minimum_drop_V": 0.008192905263429303,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112806,
+          "band_Hz": 5.0,
+          "near_V": 0.008951854973086803,
+          "far_V": 0.017876199941106667,
+          "minimum_drop_V": 0.004454171780841138,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112807,
+          "band_Hz": 2.0,
+          "near_V": 0.015822175086753616,
+          "far_V": 0.031558791840153075,
+          "minimum_drop_V": 0.007863593580858214,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112807,
+          "band_Hz": 5.0,
+          "near_V": 0.00886615099098827,
+          "far_V": 0.01769434304557767,
+          "minimum_drop_V": 0.004413422008162748,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112808,
+          "band_Hz": 2.0,
+          "near_V": 0.013859304903135484,
+          "far_V": 0.02767303191963972,
+          "minimum_drop_V": 0.006902949827221706,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112808,
+          "band_Hz": 5.0,
+          "near_V": 0.009312596330730977,
+          "far_V": 0.01860360549024582,
+          "minimum_drop_V": 0.004644851673926441,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112809,
+          "band_Hz": 2.0,
+          "near_V": 0.013502321827737291,
+          "far_V": 0.026946537697292793,
+          "minimum_drop_V": 0.00671336884522448,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112809,
+          "band_Hz": 5.0,
+          "near_V": 0.007169235374443701,
+          "far_V": 0.01431547526535926,
+          "minimum_drop_V": 0.0035716526830723728,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112810,
+          "band_Hz": 2.0,
+          "near_V": 0.012779058663889334,
+          "far_V": 0.02544811368385414,
+          "minimum_drop_V": 0.006299573706782902,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112810,
+          "band_Hz": 5.0,
+          "near_V": 0.008201784484154753,
+          "far_V": 0.01635646719880808,
+          "minimum_drop_V": 0.0040692236524878,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112811,
+          "band_Hz": 2.0,
+          "near_V": 0.0186645441119883,
+          "far_V": 0.03709752631285258,
+          "minimum_drop_V": 0.009183112421607322,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112811,
+          "band_Hz": 5.0,
+          "near_V": 0.012576527832633237,
+          "far_V": 0.025039539261003926,
+          "minimum_drop_V": 0.006221599703475841,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112812,
+          "band_Hz": 2.0,
+          "near_V": 0.013587144048697632,
+          "far_V": 0.02712902848060604,
+          "minimum_drop_V": 0.006725240250737875,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112812,
+          "band_Hz": 5.0,
+          "near_V": 0.008382309952425004,
+          "far_V": 0.016743636882878284,
+          "minimum_drop_V": 0.004168976523856935,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112813,
+          "band_Hz": 2.0,
+          "near_V": 0.011647286169331892,
+          "far_V": 0.023238546914208964,
+          "minimum_drop_V": 0.005787875072732181,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112813,
+          "band_Hz": 5.0,
+          "near_V": 0.007357637547459803,
+          "far_V": 0.014690071643869793,
+          "minimum_drop_V": 0.0036644146581045565,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112814,
+          "band_Hz": 2.0,
+          "near_V": 0.012187139141154171,
+          "far_V": 0.024280657286164298,
+          "minimum_drop_V": 0.006025702122842397,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112814,
+          "band_Hz": 5.0,
+          "near_V": 0.007202683721872577,
+          "far_V": 0.014365933473105316,
+          "minimum_drop_V": 0.0035772208508067505,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112815,
+          "band_Hz": 2.0,
+          "near_V": 0.012548376329105984,
+          "far_V": 0.024992461080100017,
+          "minimum_drop_V": 0.00621511105704319,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112815,
+          "band_Hz": 5.0,
+          "near_V": 0.007340783789575763,
+          "far_V": 0.014633622583046213,
+          "minimum_drop_V": 0.003644021963545304,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112816,
+          "band_Hz": 2.0,
+          "near_V": 0.013615368944174845,
+          "far_V": 0.027145873687905324,
+          "minimum_drop_V": 0.006752672521142363,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112816,
+          "band_Hz": 5.0,
+          "near_V": 0.009135337983486036,
+          "far_V": 0.01822865608514596,
+          "minimum_drop_V": 0.004542836255775982,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112817,
+          "band_Hz": 2.0,
+          "near_V": 0.019205837591319525,
+          "far_V": 0.038268712507160636,
+          "minimum_drop_V": 0.009514101482813606,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112817,
+          "band_Hz": 5.0,
+          "near_V": 0.01046983647564167,
+          "far_V": 0.02088090606701267,
+          "minimum_drop_V": 0.005201309594987288,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112818,
+          "band_Hz": 2.0,
+          "near_V": 0.015455744429453508,
+          "far_V": 0.030815292917509618,
+          "minimum_drop_V": 0.007653893950929663,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112818,
+          "band_Hz": 5.0,
+          "near_V": 0.00882421495504021,
+          "far_V": 0.017606766999671182,
+          "minimum_drop_V": 0.004385352069166314,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112819,
+          "band_Hz": 2.0,
+          "near_V": 0.012137738853964113,
+          "far_V": 0.024194310538954066,
+          "minimum_drop_V": 0.006026412415079103,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112819,
+          "band_Hz": 5.0,
+          "near_V": 0.008204037566943387,
+          "far_V": 0.01636962157278901,
+          "minimum_drop_V": 0.004082629226773212,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112820,
+          "band_Hz": 2.0,
+          "near_V": 0.010893584125826958,
+          "far_V": 0.021750459554386266,
+          "minimum_drop_V": 0.005422405750513969,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112820,
+          "band_Hz": 5.0,
+          "near_V": 0.0060896616346118385,
+          "far_V": 0.012162609051841314,
+          "minimum_drop_V": 0.0030354187487119377,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112821,
+          "band_Hz": 2.0,
+          "near_V": 0.016823964119794234,
+          "far_V": 0.03351231384104607,
+          "minimum_drop_V": 0.008313371270762022,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112821,
+          "band_Hz": 5.0,
+          "near_V": 0.009199672126621188,
+          "far_V": 0.018344144860166514,
+          "minimum_drop_V": 0.0045674083828420135,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112822,
+          "band_Hz": 2.0,
+          "near_V": 0.015097668121614047,
+          "far_V": 0.030045465285996796,
+          "minimum_drop_V": 0.007410000633277486,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112822,
+          "band_Hz": 5.0,
+          "near_V": 0.008883000878600708,
+          "far_V": 0.017693234507851263,
+          "minimum_drop_V": 0.004387877121622467,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112823,
+          "band_Hz": 2.0,
+          "near_V": 0.01833033465200752,
+          "far_V": 0.036489812902845684,
+          "minimum_drop_V": 0.009025206244134734,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112823,
+          "band_Hz": 5.0,
+          "near_V": 0.012006755411124205,
+          "far_V": 0.023935615892925727,
+          "minimum_drop_V": 0.005949822106237804,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112824,
+          "band_Hz": 2.0,
+          "near_V": 0.019095986601522418,
+          "far_V": 0.03804263455487767,
+          "minimum_drop_V": 0.009380699198174466,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112824,
+          "band_Hz": 5.0,
+          "near_V": 0.01050210164978069,
+          "far_V": 0.020944142872139016,
+          "minimum_drop_V": 0.00520041690812623,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112825,
+          "band_Hz": 2.0,
+          "near_V": 0.01908561099973649,
+          "far_V": 0.03786424302168292,
+          "minimum_drop_V": 0.009388353115515835,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112825,
+          "band_Hz": 5.0,
+          "near_V": 0.011930844542838527,
+          "far_V": 0.023719701081109282,
+          "minimum_drop_V": 0.005893688142530322,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112826,
+          "band_Hz": 2.0,
+          "near_V": 0.012495550344666269,
+          "far_V": 0.024940795094114072,
+          "minimum_drop_V": 0.006216403623191175,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112826,
+          "band_Hz": 5.0,
+          "near_V": 0.007340164301066383,
+          "far_V": 0.01466021763268948,
+          "minimum_drop_V": 0.003658612949237229,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112827,
+          "band_Hz": 2.0,
+          "near_V": 0.013277014558959119,
+          "far_V": 0.026440038588899886,
+          "minimum_drop_V": 0.006546456349185175,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112827,
+          "band_Hz": 5.0,
+          "near_V": 0.007569595133373883,
+          "far_V": 0.01509126931455802,
+          "minimum_drop_V": 0.0037530871431023256,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112828,
+          "band_Hz": 2.0,
+          "near_V": 0.018280154353573295,
+          "far_V": 0.03645005318606756,
+          "minimum_drop_V": 0.009053352778753822,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112828,
+          "band_Hz": 5.0,
+          "near_V": 0.009211259107965112,
+          "far_V": 0.018381091592815597,
+          "minimum_drop_V": 0.004579365022047017,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112829,
+          "band_Hz": 2.0,
+          "near_V": 0.014318927675097029,
+          "far_V": 0.028536707262095895,
+          "minimum_drop_V": 0.00706856777211895,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112829,
+          "band_Hz": 5.0,
+          "near_V": 0.008913863506538514,
+          "far_V": 0.017781121281285325,
+          "minimum_drop_V": 0.004422884724153503,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112830,
+          "band_Hz": 2.0,
+          "near_V": 0.019494020551468996,
+          "far_V": 0.0387951571627507,
+          "minimum_drop_V": 0.00961584866152096,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112830,
+          "band_Hz": 5.0,
+          "near_V": 0.012132907244885568,
+          "far_V": 0.02418309657410224,
+          "minimum_drop_V": 0.006017277136226795,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112831,
+          "band_Hz": 2.0,
+          "near_V": 0.012858470221593213,
+          "far_V": 0.025603795281670012,
+          "minimum_drop_V": 0.00636856019393256,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112831,
+          "band_Hz": 5.0,
+          "near_V": 0.006693738323319022,
+          "far_V": 0.013341875428460478,
+          "minimum_drop_V": 0.003323146840270602,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112832,
+          "band_Hz": 2.0,
+          "near_V": 0.018625932483299152,
+          "far_V": 0.0371609269965251,
+          "minimum_drop_V": 0.009203435970417766,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112832,
+          "band_Hz": 5.0,
+          "near_V": 0.011406425016179708,
+          "far_V": 0.022771681706930294,
+          "minimum_drop_V": 0.005667019877798128,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112833,
+          "band_Hz": 2.0,
+          "near_V": 0.015208773144707685,
+          "far_V": 0.03028001397054067,
+          "minimum_drop_V": 0.007527705041839014,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112833,
+          "band_Hz": 5.0,
+          "near_V": 0.007987361079985204,
+          "far_V": 0.01591964283033949,
+          "minimum_drop_V": 0.003963447402517188,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112834,
+          "band_Hz": 2.0,
+          "near_V": 0.013221729906508037,
+          "far_V": 0.026357204897829598,
+          "minimum_drop_V": 0.006558933222269074,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112834,
+          "band_Hz": 5.0,
+          "near_V": 0.0081233988277781,
+          "far_V": 0.016205349760246533,
+          "minimum_drop_V": 0.00403881352487645,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112835,
+          "band_Hz": 2.0,
+          "near_V": 0.014004580035535882,
+          "far_V": 0.027868745147623997,
+          "minimum_drop_V": 0.006924282995093359,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112835,
+          "band_Hz": 5.0,
+          "near_V": 0.006972094893888045,
+          "far_V": 0.013893169665804367,
+          "minimum_drop_V": 0.0034591195496433275,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112836,
+          "band_Hz": 2.0,
+          "near_V": 0.016516344881665646,
+          "far_V": 0.03290818758762176,
+          "minimum_drop_V": 0.008181929131676008,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112836,
+          "band_Hz": 5.0,
+          "near_V": 0.010786638552221034,
+          "far_V": 0.02151700030709136,
+          "minimum_drop_V": 0.005361199597685579,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112837,
+          "band_Hz": 2.0,
+          "near_V": 0.017349525508480387,
+          "far_V": 0.03457971326495105,
+          "minimum_drop_V": 0.008614916135088357,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112837,
+          "band_Hz": 5.0,
+          "near_V": 0.010866846689792958,
+          "far_V": 0.0216757695268315,
+          "minimum_drop_V": 0.005404245951674831,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112838,
+          "band_Hz": 2.0,
+          "near_V": 0.017662588511351517,
+          "far_V": 0.03520100355802756,
+          "minimum_drop_V": 0.008761633904003446,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112838,
+          "band_Hz": 5.0,
+          "near_V": 0.011934312263100884,
+          "far_V": 0.02380777394350491,
+          "minimum_drop_V": 0.005934016980163409,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112839,
+          "band_Hz": 2.0,
+          "near_V": 0.013086558639353027,
+          "far_V": 0.026039369237508346,
+          "minimum_drop_V": 0.006438527028761694,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112839,
+          "band_Hz": 5.0,
+          "near_V": 0.008070580011596142,
+          "far_V": 0.01608649286193043,
+          "minimum_drop_V": 0.003999130726541247,
+          "sensitivity_adequate": true
+        }
+      ]
+    },
+    "unequal_DC": {
+      "zero_bias_range_V": [
+        -0.08556813685107685,
+        0.04938987555679637
+      ],
+      "zero_bias_rms_V": 0.031651305446234075,
+      "adequate_draws": 40,
+      "draws": 40,
+      "wrong_local_sign": 87,
+      "local_cases": 320,
+      "max_sequential_window_error_bound_V": 0.0010472076280441378,
+      "groups": [
+        {
+          "seed": 2026112800,
+          "band_Hz": 2.0,
+          "near_V": 0.03446953351399526,
+          "far_V": 0.0687776672493205,
+          "minimum_drop_V": 0.015972289681880372,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112800,
+          "band_Hz": 5.0,
+          "near_V": 0.02059335128092553,
+          "far_V": 0.04094739066572668,
+          "minimum_drop_V": 0.009896809105734067,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112801,
+          "band_Hz": 2.0,
+          "near_V": 0.020900717852733952,
+          "far_V": 0.0416239275725871,
+          "minimum_drop_V": 0.010074808632133156,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112801,
+          "band_Hz": 5.0,
+          "near_V": 0.012407413376698026,
+          "far_V": 0.024735460276788176,
+          "minimum_drop_V": 0.0060913014730076265,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112802,
+          "band_Hz": 2.0,
+          "near_V": 0.03228696125504324,
+          "far_V": 0.0642499197037616,
+          "minimum_drop_V": 0.015766476271014858,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112802,
+          "band_Hz": 5.0,
+          "near_V": 0.019428258900500567,
+          "far_V": 0.038711358219038074,
+          "minimum_drop_V": 0.009625690369035208,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112803,
+          "band_Hz": 2.0,
+          "near_V": 0.029603033917654675,
+          "far_V": 0.058799696644113685,
+          "minimum_drop_V": 0.013595909913084167,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112803,
+          "band_Hz": 5.0,
+          "near_V": 0.016300619998639923,
+          "far_V": 0.03239454503943074,
+          "minimum_drop_V": 0.00786341875885456,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112804,
+          "band_Hz": 2.0,
+          "near_V": 0.025474712454645235,
+          "far_V": 0.05065374718932549,
+          "minimum_drop_V": 0.011385416676843299,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112804,
+          "band_Hz": 5.0,
+          "near_V": 0.013607064785791514,
+          "far_V": 0.02710181721016495,
+          "minimum_drop_V": 0.0065195057512493215,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112805,
+          "band_Hz": 2.0,
+          "near_V": 0.028577989523669335,
+          "far_V": 0.05694403660098335,
+          "minimum_drop_V": 0.013702345750057708,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112805,
+          "band_Hz": 5.0,
+          "near_V": 0.016412010365327627,
+          "far_V": 0.03273628498756873,
+          "minimum_drop_V": 0.008051041661852408,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112806,
+          "band_Hz": 2.0,
+          "near_V": 0.03151647053598284,
+          "far_V": 0.06283770869811425,
+          "minimum_drop_V": 0.0151600887119209,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112806,
+          "band_Hz": 5.0,
+          "near_V": 0.01711096942656421,
+          "far_V": 0.03413365650622005,
+          "minimum_drop_V": 0.008358219011999929,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112807,
+          "band_Hz": 2.0,
+          "near_V": 0.03022268268217248,
+          "far_V": 0.060171446691814505,
+          "minimum_drop_V": 0.014668799372002186,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112807,
+          "band_Hz": 5.0,
+          "near_V": 0.01692926520967632,
+          "far_V": 0.03373696393143233,
+          "minimum_drop_V": 0.008290948559661449,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112808,
+          "band_Hz": 2.0,
+          "near_V": 0.025932297272615437,
+          "far_V": 0.05187444488014202,
+          "minimum_drop_V": 0.012825257791455262,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112808,
+          "band_Hz": 5.0,
+          "near_V": 0.017705807067117683,
+          "far_V": 0.03534955048150504,
+          "minimum_drop_V": 0.00869841302356162,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112809,
+          "band_Hz": 2.0,
+          "near_V": 0.026009505059042475,
+          "far_V": 0.051824330854601204,
+          "minimum_drop_V": 0.012748921694504874,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112809,
+          "band_Hz": 5.0,
+          "near_V": 0.013808940057264631,
+          "far_V": 0.027540785824729755,
+          "minimum_drop_V": 0.006813189895739185,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112810,
+          "band_Hz": 2.0,
+          "near_V": 0.02418737220847706,
+          "far_V": 0.0480808510280164,
+          "minimum_drop_V": 0.011560650013317728,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112810,
+          "band_Hz": 5.0,
+          "near_V": 0.01559971957990395,
+          "far_V": 0.031048620450505812,
+          "minimum_drop_V": 0.0076682406152599955,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112811,
+          "band_Hz": 2.0,
+          "near_V": 0.03556541264943218,
+          "far_V": 0.07038842249348115,
+          "minimum_drop_V": 0.016588869305256125,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112811,
+          "band_Hz": 5.0,
+          "near_V": 0.02392949691239467,
+          "far_V": 0.04749472814693727,
+          "minimum_drop_V": 0.011542465522136221,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112812,
+          "band_Hz": 2.0,
+          "near_V": 0.023441926576932705,
+          "far_V": 0.047075809257102454,
+          "minimum_drop_V": 0.009449131554399692,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112812,
+          "band_Hz": 5.0,
+          "near_V": 0.01543146621223752,
+          "far_V": 0.03083861672086674,
+          "minimum_drop_V": 0.007355549209598224,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112813,
+          "band_Hz": 2.0,
+          "near_V": 0.02245007123361451,
+          "far_V": 0.04471108149714235,
+          "minimum_drop_V": 0.011048734929353356,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112813,
+          "band_Hz": 5.0,
+          "near_V": 0.014172709812014683,
+          "far_V": 0.02826038161286066,
+          "minimum_drop_V": 0.007026435084327692,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112814,
+          "band_Hz": 2.0,
+          "near_V": 0.02345408756427332,
+          "far_V": 0.04659312933258236,
+          "minimum_drop_V": 0.011438238540044957,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112814,
+          "band_Hz": 5.0,
+          "near_V": 0.013841687338071729,
+          "far_V": 0.027550795207441817,
+          "minimum_drop_V": 0.006840663591269586,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112815,
+          "band_Hz": 2.0,
+          "near_V": 0.02401024391584273,
+          "far_V": 0.047676417743816105,
+          "minimum_drop_V": 0.011553584623172956,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112815,
+          "band_Hz": 5.0,
+          "near_V": 0.014038665635691946,
+          "far_V": 0.027918990075335347,
+          "minimum_drop_V": 0.006841462919516476,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112816,
+          "band_Hz": 2.0,
+          "near_V": 0.026025310437726545,
+          "far_V": 0.05177424608724329,
+          "minimum_drop_V": 0.012633376857292794,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112816,
+          "band_Hz": 5.0,
+          "near_V": 0.017458419008744307,
+          "far_V": 0.03477982584643345,
+          "minimum_drop_V": 0.00859621410656564,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112817,
+          "band_Hz": 2.0,
+          "near_V": 0.03670061574707843,
+          "far_V": 0.07293360218729376,
+          "minimum_drop_V": 0.018040927699866267,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112817,
+          "band_Hz": 5.0,
+          "near_V": 0.01999700440180724,
+          "far_V": 0.039801566213678086,
+          "minimum_drop_V": 0.009888168041867137,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112818,
+          "band_Hz": 2.0,
+          "near_V": 0.02951041802591734,
+          "far_V": 0.05870959570559086,
+          "minimum_drop_V": 0.014184254714420877,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112818,
+          "band_Hz": 5.0,
+          "near_V": 0.016841874667661596,
+          "far_V": 0.03354886637817131,
+          "minimum_drop_V": 0.008264071059722267,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112819,
+          "band_Hz": 2.0,
+          "near_V": 0.023483162544065843,
+          "far_V": 0.0466885440112761,
+          "minimum_drop_V": 0.011432890906651165,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112819,
+          "band_Hz": 5.0,
+          "near_V": 0.015861091845818593,
+          "far_V": 0.03159049725255679,
+          "minimum_drop_V": 0.007855243136019752,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112820,
+          "band_Hz": 2.0,
+          "near_V": 0.020985226123363683,
+          "far_V": 0.041847675549541066,
+          "minimum_drop_V": 0.009852142349807545,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112820,
+          "band_Hz": 5.0,
+          "near_V": 0.011733606472908803,
+          "far_V": 0.023411239174510323,
+          "minimum_drop_V": 0.005685192708418843,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112821,
+          "band_Hz": 2.0,
+          "near_V": 0.031925912032811345,
+          "far_V": 0.06342760919055865,
+          "minimum_drop_V": 0.01571945663228934,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112821,
+          "band_Hz": 5.0,
+          "near_V": 0.017448717223403295,
+          "far_V": 0.03472448072621086,
+          "minimum_drop_V": 0.008518833722155759,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112822,
+          "band_Hz": 2.0,
+          "near_V": 0.028850694127471682,
+          "far_V": 0.05720615151045805,
+          "minimum_drop_V": 0.013106232106625051,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112822,
+          "band_Hz": 5.0,
+          "near_V": 0.016964886421829126,
+          "far_V": 0.033689141986519525,
+          "minimum_drop_V": 0.008069767483294452,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112823,
+          "band_Hz": 2.0,
+          "near_V": 0.03502272713487501,
+          "far_V": 0.06948481085253248,
+          "minimum_drop_V": 0.015831592396971933,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112823,
+          "band_Hz": 5.0,
+          "near_V": 0.022920229344699748,
+          "far_V": 0.045584617300559724,
+          "minimum_drop_V": 0.010983592708665946,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112824,
+          "band_Hz": 2.0,
+          "near_V": 0.037230741384853785,
+          "far_V": 0.07394216258554526,
+          "minimum_drop_V": 0.016579543371008643,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112824,
+          "band_Hz": 5.0,
+          "near_V": 0.020451304663331546,
+          "far_V": 0.040693631533341164,
+          "minimum_drop_V": 0.009664231895529271,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112825,
+          "band_Hz": 2.0,
+          "near_V": 0.03632263336874765,
+          "far_V": 0.07165421781986542,
+          "minimum_drop_V": 0.017051563662662902,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112825,
+          "band_Hz": 5.0,
+          "near_V": 0.02266643946258009,
+          "far_V": 0.044874166009939445,
+          "minimum_drop_V": 0.010907747595902198,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112826,
+          "band_Hz": 2.0,
+          "near_V": 0.024021595457200246,
+          "far_V": 0.04787783734116261,
+          "minimum_drop_V": 0.011252801469748962,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112826,
+          "band_Hz": 5.0,
+          "near_V": 0.014107686058611214,
+          "far_V": 0.02814920138374319,
+          "minimum_drop_V": 0.006882553937637429,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112827,
+          "band_Hz": 2.0,
+          "near_V": 0.025659212657903167,
+          "far_V": 0.05093236071346505,
+          "minimum_drop_V": 0.01217359125338454,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112827,
+          "band_Hz": 5.0,
+          "near_V": 0.014621261475500752,
+          "far_V": 0.029079988201172913,
+          "minimum_drop_V": 0.007121162040928376,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112828,
+          "band_Hz": 2.0,
+          "near_V": 0.035127774269192114,
+          "far_V": 0.06989156993804359,
+          "minimum_drop_V": 0.016003773044897293,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112828,
+          "band_Hz": 5.0,
+          "near_V": 0.017693564948706407,
+          "far_V": 0.03525024722918506,
+          "minimum_drop_V": 0.008523485918829385,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112829,
+          "band_Hz": 2.0,
+          "near_V": 0.027314157928836014,
+          "far_V": 0.05430106678764229,
+          "minimum_drop_V": 0.013468258495129129,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112829,
+          "band_Hz": 5.0,
+          "near_V": 0.017000996892940476,
+          "far_V": 0.03385109948491357,
+          "minimum_drop_V": 0.008419489030008054,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112830,
+          "band_Hz": 2.0,
+          "near_V": 0.0369820237954452,
+          "far_V": 0.07336250475557646,
+          "minimum_drop_V": 0.017195617568106822,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112830,
+          "band_Hz": 5.0,
+          "near_V": 0.023016104726291627,
+          "far_V": 0.045768637384055046,
+          "minimum_drop_V": 0.011126668991064084,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112831,
+          "band_Hz": 2.0,
+          "near_V": 0.024556635558420706,
+          "far_V": 0.048741516013379914,
+          "minimum_drop_V": 0.01185623535302982,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112831,
+          "band_Hz": 5.0,
+          "near_V": 0.012776230502728754,
+          "far_V": 0.025402451249151727,
+          "minimum_drop_V": 0.006261634807873916,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112832,
+          "band_Hz": 2.0,
+          "near_V": 0.03462666614780735,
+          "far_V": 0.06931089876953679,
+          "minimum_drop_V": 0.01521857096439111,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112832,
+          "band_Hz": 5.0,
+          "near_V": 0.021829484133726443,
+          "far_V": 0.04352505508878745,
+          "minimum_drop_V": 0.010465837201904776,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112833,
+          "band_Hz": 2.0,
+          "near_V": 0.029140569145173902,
+          "far_V": 0.0578231502362093,
+          "minimum_drop_V": 0.01354305361490793,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112833,
+          "band_Hz": 5.0,
+          "near_V": 0.015298669964899465,
+          "far_V": 0.03041368923535518,
+          "minimum_drop_V": 0.007373164618662397,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112834,
+          "band_Hz": 2.0,
+          "near_V": 0.025361074376592248,
+          "far_V": 0.050434089962207884,
+          "minimum_drop_V": 0.012017056694823995,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112834,
+          "band_Hz": 5.0,
+          "near_V": 0.015577528405655228,
+          "far_V": 0.0310165067882284,
+          "minimum_drop_V": 0.007575985705823858,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112835,
+          "band_Hz": 2.0,
+          "near_V": 0.02697612910974656,
+          "far_V": 0.05347362840588546,
+          "minimum_drop_V": 0.013176451324658153,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112835,
+          "band_Hz": 5.0,
+          "near_V": 0.013410822903989358,
+          "far_V": 0.026647658243668562,
+          "minimum_drop_V": 0.006606106545717763,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112836,
+          "band_Hz": 2.0,
+          "near_V": 0.03090512611752798,
+          "far_V": 0.061525162790361895,
+          "minimum_drop_V": 0.014863744249312041,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112836,
+          "band_Hz": 5.0,
+          "near_V": 0.020416921693022935,
+          "far_V": 0.040657569549946426,
+          "minimum_drop_V": 0.010049167474783766,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112837,
+          "band_Hz": 2.0,
+          "near_V": 0.03295090924922543,
+          "far_V": 0.06552395417522658,
+          "minimum_drop_V": 0.015916741784920432,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112837,
+          "band_Hz": 5.0,
+          "near_V": 0.02062206573786872,
+          "far_V": 0.04106081875928727,
+          "minimum_drop_V": 0.010117520191316842,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112838,
+          "band_Hz": 2.0,
+          "near_V": 0.03303382087305245,
+          "far_V": 0.0658425435011153,
+          "minimum_drop_V": 0.016108678246805487,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112838,
+          "band_Hz": 5.0,
+          "near_V": 0.02276881072198965,
+          "far_V": 0.045339537554709965,
+          "minimum_drop_V": 0.011051434690724497,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112839,
+          "band_Hz": 2.0,
+          "near_V": 0.025194149088650183,
+          "far_V": 0.04993780494817577,
+          "minimum_drop_V": 0.011886358378834547,
+          "sensitivity_adequate": true
+        },
+        {
+          "seed": 2026112839,
+          "band_Hz": 5.0,
+          "near_V": 0.0155208738902149,
+          "far_V": 0.030857321203377454,
+          "minimum_drop_V": 0.007518877797221275,
+          "sensitivity_adequate": true
+        }
+      ]
+    }
+  },
+  "settling": {
+    "max_wait_1mV_s": 5.53,
+    "max_wait_0_1mV_s": 7.04,
+    "max_mean_error_6_to_12s_V": 5.277826183845875e-05,
+    "max_RC_s": 0.6552506498688082
+  }
+}

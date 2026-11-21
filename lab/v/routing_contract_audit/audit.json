@@ -1,0 +1,47 @@
+{
+  "revision": "5700eaa0d397e1a7dc055ce69ce9ec7e1d32cc7f",
+  "source_review": {
+    "mixed_feedback.py": {
+      "sha256": "06157fe5e3532c625ba1494e4d23328b9988041e80c5469b2de2e94d3582131e",
+      "line_ranges": [
+        [
+          82,
+          150
+        ],
+        [
+          225,
+          240
+        ]
+      ]
+    },
+    "chip.py": {
+      "sha256": "d0014cd1ab350ada938ee75f12a12445236895f13a451afd9a70aec0db29d037",
+      "line_ranges": [
+        [
+          1,
+          38
+        ]
+      ]
+    },
+    "minimal/spice.py": {
+      "sha256": "d4c22084836781ee19df3d334b099ad81e4f493b902cfc018afd52dce5936507",
+      "line_ranges": [
+        [
+          198,
+          267
+        ]
+      ]
+    },
+    "PARTS.md": {
+      "sha256": "5ea6772d344884b8023f6b94647677c88cab4e695b5ecf8f394e015f72727e1a",
+      "line_ranges": [
+        [
+          65,
+          108
+        ]
+      ]
+    }
+  },
+  "conclusion": "No direct reciprocal conductance or dynamically swapped differential input contract. Composite impossibility not established. No simulator or circuit change.",
+  "scope": "Read-only source review; line ranges refer to recorded content hashes; dirty documentation and lab work remain."
+}

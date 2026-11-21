@@ -1,0 +1,39 @@
+{
+ "material_all_designs": {
+  "nodes": 11,
+  "memory_nodes": 2,
+  "elements": 24,
+  "filtered_elements": 8,
+  "gated_elements": 6
+ },
+ "firing_energy_J_guess": 2e-08,
+ "designs": {
+  "biology_None": {
+   "circuit_power_W_mean": 1.5934645290347002e-05,
+   "circuit_power_W_p10_90": [
+    1.430195343380282e-05,
+    1.738262467597291e-05
+   ],
+   "firings_per_life_mean": 2141.203125,
+   "thruster_energy_J_per_life_guess": 4.28240625e-05
+  },
+  "silicon_None": {
+   "circuit_power_W_mean": 1.4247811563056264e-05,
+   "circuit_power_W_p10_90": [
+    1.220659555478997e-05,
+    1.7331838031698022e-05
+   ],
+   "firings_per_life_mean": 1703.703125,
+   "thruster_energy_J_per_life_guess": 3.40740625e-05
+  },
+  "silicon_('motor', -1.3e-09)": {
+   "circuit_power_W_mean": 1.466517745601063e-05,
+   "circuit_power_W_p10_90": [
+    1.215031520750036e-05,
+    1.7320323755173393e-05
+   ],
+   "firings_per_life_mean": 2738.359375,
+   "thruster_energy_J_per_life_guess": 5.47671875e-05
+  }
+ }
+}

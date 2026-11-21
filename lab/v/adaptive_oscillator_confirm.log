@@ -1,0 +1,132 @@
+completed 2026120200 adaptive True 7.9
+completed 2026120201 adaptive True 15.5
+completed 2026120202 adaptive True 23.3
+completed 2026120203 adaptive True 30.9
+completed 2026120204 adaptive True 38.6
+completed 2026120205 adaptive True 46.0
+completed 2026120206 adaptive True 53.6
+completed 2026120207 adaptive True 61.0
+completed 2026120208 adaptive True 69.4
+completed 2026120209 adaptive True 77.9
+completed 2026120210 adaptive True 85.6
+completed 2026120211 adaptive True 93.4
+completed 2026120212 adaptive True 100.8
+completed 2026120213 adaptive True 108.1
+completed 2026120214 adaptive True 115.5
+completed 2026120215 adaptive True 124.1
+completed 2026120216 adaptive True 131.5
+completed 2026120217 adaptive True 139.2
+completed 2026120218 adaptive True 147.3
+completed 2026120219 adaptive True 155.2
+completed 2026120220 adaptive True 163.1
+completed 2026120221 adaptive True 170.9
+completed 2026120222 adaptive True 178.7
+completed 2026120223 adaptive True 186.1
+completed 2026120224 adaptive True 193.6
+completed 2026120225 adaptive True 201.4
+completed 2026120226 adaptive True 215.9
+completed 2026120227 adaptive True 226.1
+completed 2026120228 adaptive True 235.7
+completed 2026120229 adaptive True 245.0
+completed 2026120230 adaptive True 253.0
+completed 2026120231 adaptive True 260.2
+completed 2026120232 adaptive True 267.6
+completed 2026120233 adaptive True 274.7
+completed 2026120234 adaptive True 281.7
+completed 2026120235 adaptive True 288.7
+completed 2026120236 adaptive True 296.0
+completed 2026120237 adaptive True 304.0
+completed 2026120238 adaptive True 312.0
+completed 2026120239 adaptive True 320.7
+{
+  "original": {
+    "passed": 38,
+    "draws": 40,
+    "wilson95": [
+      0.8349612263085903,
+      0.9861793326138516
+    ],
+    "reliability_pass": false,
+    "failed_seeds": [
+      2026120208,
+      2026120221
+    ],
+    "refinement_pass": true,
+    "power_W": [
+      9.948178135331514e-09,
+      9.784481867295447e-09,
+      1.0108129101831939e-08
+    ]
+  },
+  "adaptive": {
+    "passed": 40,
+    "draws": 40,
+    "wilson95": [
+      0.9123783988027135,
+      1.0000000000000002
+    ],
+    "reliability_pass": true,
+    "failed_seeds": [],
+    "refinement_pass": true,
+    "power_W": [
+      1.626997019546699e-08,
+      1.6040658299499175e-08,
+      1.6488100453340815e-08
+    ]
+  },
+  "writer_removed": {
+    "passed": 38,
+    "draws": 40,
+    "wilson95": [
+      0.8349612263085903,
+      0.9861793326138516
+    ],
+    "reliability_pass": false,
+    "failed_seeds": [
+      2026120204,
+      2026120225
+    ],
+    "refinement_pass": true,
+    "power_W": [
+      1.5701338961194335e-08,
+      1.5472269663930405e-08,
+      1.5919196842085856e-08
+    ]
+  },
+  "paired": {
+    "original": {
+      "rescued": [
+        2026120208,
+        2026120221
+      ],
+      "harmed": [],
+      "pass_difference": [
+        0.05,
+        0.0,
+        0.125
+      ],
+      "power_difference_W": [
+        6.321792060135475e-09,
+        6.180119745321986e-09,
+        6.456537830184257e-09
+      ]
+    },
+    "writer_removed": {
+      "rescued": [
+        2026120204,
+        2026120225
+      ],
+      "harmed": [],
+      "pass_difference": [
+        0.05,
+        0.0,
+        0.125
+      ],
+      "power_difference_W": [
+        5.686312342726551e-10,
+        5.428764110030256e-10,
+        5.97290199563665e-10
+      ]
+    }
+  }
+}

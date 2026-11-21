@@ -1,0 +1,103 @@
+{
+  "success": true,
+  "hashes": {
+    "spare_allowance_pilot": {
+      "lab/spare_allowance_experiment.py": true,
+      "lab/spare_allowance.py": true,
+      "lab/issued_credit.py": true,
+      "lab/alloc_rules.py": true,
+      "lab/alloc_compare.py": true,
+      "lab/grownet.py": true,
+      "lab/teach.py": true,
+      "lab/active_mixture_audit.py": true
+    },
+    "spare_allowance_compare_new": {
+      "lab/spare_allowance_experiment.py": true,
+      "lab/spare_allowance.py": true,
+      "lab/issued_credit.py": true,
+      "lab/alloc_rules.py": true,
+      "lab/alloc_compare.py": true,
+      "lab/grownet.py": true,
+      "lab/teach.py": true,
+      "lab/active_mixture_audit.py": true
+    },
+    "spare_allowance_survival": {
+      "lab/spare_allowance_experiment.py": true,
+      "lab/spare_allowance.py": true,
+      "lab/issued_credit.py": true,
+      "lab/alloc_rules.py": true,
+      "lab/alloc_compare.py": true,
+      "lab/grownet.py": true,
+      "lab/teach.py": true,
+      "lab/active_mixture_audit.py": true,
+      "lab/spare_allowance_survival.py": false
+    }
+  },
+  "primary": {
+    "seq": {
+      "median": 0.04691877149720905,
+      "ci95": [
+        -0.012946724324902709,
+        0.10793720808195546
+      ]
+    },
+    "time": {
+      "median": 0.10902820120827096,
+      "ci95": [
+        -0.017630890907101668,
+        0.21113438669520682
+      ]
+    }
+  },
+  "allfood_pairs_exact": 20,
+  "ledger_pass": true,
+  "survival": {
+    "seq": {
+      "units": 1325,
+      "ever_spoke": 854,
+      "net_bits_per_life": -9.6892580161751,
+      "positive_unit_totals": 380.91721745530936,
+      "negative_unit_totals": -574.7023777788114,
+      "median_last_seen_duration": 9.148335226474615,
+      "median_first_absent_duration": 11.571143088507998,
+      "first_spoke_in_last_third": 3,
+      "pending_count_mismatch_lives": 6
+    },
+    "time": {
+      "units": 1237,
+      "ever_spoke": 769,
+      "net_bits_per_life": 1.632839723145048,
+      "positive_unit_totals": 674.7579342125675,
+      "negative_unit_totals": -642.1011397496666,
+      "median_last_seen_duration": 9.00495997525752,
+      "median_first_absent_duration": 11.94757275957084,
+      "first_spoke_in_last_third": 0,
+      "pending_count_mismatch_lives": 4
+    }
+  },
+  "bound_counterexample": {
+    "unweighted_net_bits": -1.4739311883324122,
+    "mixture_gain_bits": 0.840416019454025,
+    "q": [
+      0.9,
+      0.1
+    ],
+    "unit_mixture_share": [
+      0.99,
+      0.001
+    ],
+    "default": 0.5,
+    "label": 1
+  },
+  "provenance": {
+    "revision": "5700eaa0d397e1a7dc055ce69ce9ec7e1d32cc7f",
+    "script_sha256": "16e480f9b57f5b771d9b056f623164eb203da6bdd474279523cd5260aaad8f7a",
+    "inputs": {
+      "lab/v/spare_allowance_pilot.pkl": "0cc4ba68a29fe52adf4d7cc7dd7a4fc2b08f21b3bfff307d92e7736f803b8245",
+      "lab/v/spare_allowance_compare_new.pkl": "43eb496782205b029bad92c0d380c3262ba29e115f34103320facf861c8069fd",
+      "lab/v/spare_allowance_survival.pkl": "e36fac33afe7852b61f5604fc7ea97e08f18cd98ac45599f1c1ff17d8c1732bb"
+    },
+    "command": "timeout 240s env OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 .venv/bin/python lab/hj_result_review.py"
+  },
+  "wall_s": 0.8739240759969107
+}

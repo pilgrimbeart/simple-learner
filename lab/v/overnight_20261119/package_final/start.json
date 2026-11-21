@@ -1,0 +1,11 @@
+{
+  "task": "package_final",
+  "command": [
+    "/home/pilgrim/git/simple-learner/.venv/bin/python",
+    "/home/pilgrim/git/simple-learner/lab/overnight_20261119/07_pack.py"
+  ],
+  "pid": 13272,
+  "start_unix_s": 1795131449.9528399,
+  "timeout_s": 120,
+  "status": "running"
+}

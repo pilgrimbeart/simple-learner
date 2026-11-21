@@ -1,0 +1,57 @@
+{
+  "records": 2030,
+  "unique": true,
+  "hash_matches": {
+    "lab/noisy_shared_20261120/harness.py": true,
+    "lab/noisy_shared_20261120/core2.py": true,
+    "lab/shared_readout_20261120/checks.py": true,
+    "lab/v/shared_readout_20261120/bounds.json": true,
+    "lab/order_bench.py": true,
+    "lab/dynamic_parts_bench.py": true,
+    "lab/population_trace_margin.py": true,
+    "lab/overnight_20261119_support.py": true,
+    "mixed_feedback.py": true,
+    "chip.py": true,
+    "units.py": true,
+    "lab/v/gate_contract_20261120/bound2.json": true,
+    "PROGRAMME.md": false
+  },
+  "main_mean": 0.010499108734402851,
+  "main_ci": [
+    0.0033333333333333327,
+    0.019287433155080205
+  ],
+  "all_pass_delta": 10,
+  "all_pass_ci": [
+    0.05,
+    0.16
+  ],
+  "share_harms": 0,
+  "refinement_draws": [
+    {
+      "seed": 2026117300,
+      "effect": 0.0,
+      "isolated_rescue": 0
+    },
+    {
+      "seed": 2026117301,
+      "effect": 0.0,
+      "isolated_rescue": 0
+    },
+    {
+      "seed": 2026117302,
+      "effect": 0.2941176470588235,
+      "isolated_rescue": 0
+    },
+    {
+      "seed": 2026117303,
+      "effect": 0.0,
+      "isolated_rescue": 0
+    }
+  ],
+  "input_sha256": {
+    "lab/v/noisy_shared_20261120/records.jsonl": "92c1b2592d400581b66145c66b7f46bd050f29dd9cf8e18bd2ad7090c82e6705",
+    "lab/v/noisy_shared_20261120/refine.jsonl": "e0b7f01c591056b7425bf3a32dc6a835e602de08b8a084a0f944291342c16038",
+    "lab/v/noisy_shared_20261120/manifest.json": "364f79dce8f4916bf8c06253de656205d6bcda5c679f13d82357eb95e836b4dd"
+  }
+}

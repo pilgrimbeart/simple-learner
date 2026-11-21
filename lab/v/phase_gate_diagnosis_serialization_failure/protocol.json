@@ -1,0 +1,25 @@
+{
+  "modes": [
+    "original",
+    "zero_lag_offsets",
+    "signed_gate",
+    "linear_signed"
+  ],
+  "scenarios": {
+    "equal": [
+      0.1,
+      0.1
+    ],
+    "unequal_amplitude": [
+      0.05,
+      0.1
+    ]
+  },
+  "grids": [
+    4096,
+    8192
+  ],
+  "tolerance_V": 5e-05,
+  "budget_s": 120,
+  "meaning": "Algebraic interventions only: a signed gate and ideal linear transfer are not silently added to circuit engine."
+}

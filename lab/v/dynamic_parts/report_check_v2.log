@@ -1,0 +1,13 @@
+# First four dynamic circuit witnesses — D126
+
+Silicon-noise bench results with component mismatch. These are component tests, not robot learning.
+
+| Circuit | Fresh seeds passing all 3 steps | Wilson 95% interval | Both refinements | Mean core power, 95% bootstrap | States / connections | Verdict |
+|---|---:|---|---|---|---|---|
+| trace | 40/40 | 0.912–1.000 | True | 0.5443 nW [0.5442, 0.5444] | 1 / 0 | demonstrated within this protocol |
+| memory | 40/40 | 0.912–1.000 | True | 2.651 nW [2.546, 2.758] | 1 / 1 | demonstrated within this protocol |
+| resonator | 40/40 | 0.912–1.000 | True | 6.4 nW [6.287, 6.513] | 2 / 2 | demonstrated within this protocol |
+| oscillator | 37/40 | 0.801–0.974 | True | 9.995 nW [9.748, 10.24] | 2 / 3 | unresolved under this protocol |
+
+Each seed is a separate component-tolerance draw. Its three timestep evaluations are paired, not three independent seeds.
+Independent completeness and summary reconstruction passed: 480 rows

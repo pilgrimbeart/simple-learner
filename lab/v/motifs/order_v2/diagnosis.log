@@ -1,0 +1,17 @@
+{
+  "source_sha256": "3101a8c4597f91e53ad48c84f2f2638dd1707a2e797697b80213006c5a50d6fd",
+  "input_sha256": "ed061bbd4342f8e61743012340dbe91786bc23955e32d23d53d879adc4bea000",
+  "cases": 1360,
+  "failure_classes": {
+    "simultaneous": 9,
+    "long_separation": 5,
+    "single": 3,
+    "weak_order": 3
+  },
+  "coincidence_seeds_passing": 40,
+  "order_seeds_passing": 34,
+  "limits": "Resting trace estimate omits exponentially tiny rail fade; not a fitted causal decomposition. Failure classification is exact against frozen metrics. Absolute decoder audit covers saved first seed only."
+}
+raw zero-threshold signs 16 / 16
+largest resting gate 0.1406780131579463
+Algebraic-baseline estimated raw signs 633 / 640

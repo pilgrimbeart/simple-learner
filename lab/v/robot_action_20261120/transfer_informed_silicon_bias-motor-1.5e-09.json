@@ -1,0 +1,7427 @@
+{
+ "summary": {
+  "units": 91,
+  "inc_resp_q": [
+   0.0,
+   0.07738095238095238,
+   0.3333333333333333,
+   0.6091269841269842,
+   0.7142857142857143
+  ],
+  "inc_resp_mean": 0.35264711962532935,
+  "assoc_resp_q": [
+   0.009146341463414634,
+   0.19392416628597534,
+   0.4852941176470588,
+   0.6627363943219124,
+   0.7473309608540926
+  ],
+  "own_rate_q": [
+   0.0,
+   0.0,
+   0.0,
+   4.217863526588834,
+   17.650020136931133
+  ],
+  "latency_median_ms_q": [
+   1.4070848311067863,
+   1.605883106472028,
+   1.8426996680975805,
+   2.83204176327434,
+   4.191398656312196
+  ],
+  "unit_classes": {
+   "reliable": 1,
+   "partial": 43,
+   "dead": 21,
+   "oscillating": 26
+  },
+  "response_by_time_since_own_spike_s": {
+   "0.0": [
+    0.002012072434607646,
+    1491
+   ],
+   "0.01": [
+    0.08333333333333333,
+    1344
+   ],
+   "0.02": [
+    0.5975049244911359,
+    3046
+   ],
+   "0.05": [
+    0.9585561497326203,
+    1496
+   ],
+   "0.1": [
+    0.382855110267963,
+    8434
+   ]
+  },
+  "incremental_side_motor_spikes_per_pulse_q": [
+   -0.021739130434782608,
+   0.0,
+   0.09302325581395349,
+   0.24099883855981416,
+   0.3411764705882353
+  ],
+  "motor_own_rate_q": [
+   0.0,
+   0.0,
+   0.43,
+   16.462500000000002,
+   20.774
+  ],
+  "motor_imbalance_q": [
+   0.0,
+   1.0,
+   1.7648756187462575,
+   44.76222222222222,
+   969.45
+  ],
+  "lives_with_a_silent_motor": 32,
+  "lives_both_sensors_dead_or_osc": 38
+ },
+ "lives": [
+  {
+   "seed": 0,
+   "poison": "red",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 0,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": null,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 0
+    },
+    {
+     "sensor": 1,
+     "pulses": 0,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": null,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 1
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 0,
+     "own": 0,
+     "own_rate": 0.0
+    },
+    {
+     "motor": 1,
+     "spikes": 0,
+     "own": 0,
+     "own_rate": 0.0
+    }
+   ],
+   "motor_imbalance": 0.0
+  },
+  {
+   "seed": 0,
+   "poison": "blue",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 0,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": null,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 0
+    },
+    {
+     "sensor": 1,
+     "pulses": 0,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": null,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 1
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 0,
+     "own": 0,
+     "own_rate": 0.0
+    },
+    {
+     "motor": 1,
+     "spikes": 0,
+     "own": 0,
+     "own_rate": 0.0
+    }
+   ],
+   "motor_imbalance": 0.0
+  },
+  {
+   "seed": 1,
+   "poison": "red",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 1,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": 1.0,
+     "spikes": 1,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.431325327728994,
+      1.431325327728994,
+      1.431325327728994
+     ],
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       1.0,
+       1
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 0
+    },
+    {
+     "sensor": 1,
+     "pulses": 0,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": null,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 0
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 1,
+     "own": 0,
+     "own_rate": 0.0
+    },
+    {
+     "motor": 1,
+     "spikes": 0,
+     "own": 0,
+     "own_rate": 0.0
+    }
+   ],
+   "motor_imbalance": 0.0
+  },
+  {
+   "seed": 1,
+   "poison": "blue",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 6,
+     "omitted": 1,
+     "inc_resp": 1.0,
+     "assoc_resp": 1.0,
+     "spikes": 6,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.0557145481719932,
+      1.1032357530348924,
+      2.2138805101801493
+     ],
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       1.0,
+       2
+      ],
+      "0.05": [
+       1.0,
+       1
+      ],
+      "0.1": [
+       1.0,
+       3
+      ]
+     },
+     "inc_motor": {
+      "0": 0.0,
+      "1": 0.0
+     },
+     "side_motor": 0
+    },
+    {
+     "sensor": 1,
+     "pulses": 0,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": null,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 0
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 5,
+     "own": 1,
+     "own_rate": 0.01
+    },
+    {
+     "motor": 1,
+     "spikes": 5,
+     "own": 1,
+     "own_rate": 0.01
+    }
+   ],
+   "motor_imbalance": 1.0
+  },
+  {
+   "seed": 2,
+   "poison": "red",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 12,
+     "omitted": 2,
+     "inc_resp": 0.5,
+     "assoc_resp": 0.75,
+     "spikes": 9,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.3838237724976499,
+      1.8160700093632491,
+      2.3730715753147003
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       2
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       0.5,
+       2
+      ],
+      "0.05": [
+       1.0,
+       4
+      ],
+      "0.1": [
+       1.0,
+       4
+      ]
+     },
+     "inc_motor": {
+      "0": 0.5,
+      "1": 0.5
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 0,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": null,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 1
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 9,
+     "own": 4,
+     "own_rate": 0.04
+    },
+    {
+     "motor": 1,
+     "spikes": 9,
+     "own": 0,
+     "own_rate": 0.0
+    }
+   ],
+   "motor_imbalance": 4.0
+  },
+  {
+   "seed": 2,
+   "poison": "blue",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 1,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": 1.0,
+     "spikes": 1,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.8716890646961193,
+      1.8716890646961193,
+      1.8716890646961193
+     ],
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       1.0,
+       1
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 0,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": null,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 1
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 0,
+     "own": 0,
+     "own_rate": 0.0
+    },
+    {
+     "motor": 1,
+     "spikes": 1,
+     "own": 0,
+     "own_rate": 0.0
+    }
+   ],
+   "motor_imbalance": 0.0
+  },
+  {
+   "seed": 3,
+   "poison": "red",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 6,
+     "omitted": 1,
+     "inc_resp": 0.0,
+     "assoc_resp": 0.0,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       0.0,
+       6
+      ]
+     },
+     "inc_motor": {
+      "0": 0.0,
+      "1": 0.0
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 16,
+     "omitted": 3,
+     "inc_resp": 0.3333333333333333,
+     "assoc_resp": 0.5625,
+     "spikes": 182,
+     "own_rate": 1.732772435897436,
+     "latency_ms": [
+      0.16377435728269774,
+      1.468014443577914,
+      2.597001446154934
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       2
+      ],
+      "0.01": [
+       0.0,
+       3
+      ],
+      "0.02": [
+       0.6,
+       5
+      ],
+      "0.05": [
+       1.0,
+       5
+      ],
+      "0.1": [
+       1.0,
+       1
+      ]
+     },
+     "inc_motor": {
+      "0": 0.3333333333333333,
+      "1": 0.0
+     },
+     "side_motor": 0
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 182,
+     "own": 0,
+     "own_rate": 0.0
+    },
+    {
+     "motor": 1,
+     "spikes": 0,
+     "own": 0,
+     "own_rate": 0.0
+    }
+   ],
+   "motor_imbalance": 0.0
+  },
+  {
+   "seed": 3,
+   "poison": "blue",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 6,
+     "omitted": 1,
+     "inc_resp": 0.0,
+     "assoc_resp": 0.0,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       0.0,
+       6
+      ]
+     },
+     "inc_motor": {
+      "0": 0.0,
+      "1": 0.0
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 16,
+     "omitted": 3,
+     "inc_resp": 0.3333333333333333,
+     "assoc_resp": 0.5625,
+     "spikes": 182,
+     "own_rate": 1.732772435897436,
+     "latency_ms": [
+      0.16377435728269774,
+      1.468014443577914,
+      2.597001446154934
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       2
+      ],
+      "0.01": [
+       0.0,
+       3
+      ],
+      "0.02": [
+       0.6,
+       5
+      ],
+      "0.05": [
+       1.0,
+       5
+      ],
+      "0.1": [
+       1.0,
+       1
+      ]
+     },
+     "inc_motor": {
+      "0": 0.3333333333333333,
+      "1": 0.0
+     },
+     "side_motor": 0
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 182,
+     "own": 0,
+     "own_rate": 0.0
+    },
+    {
+     "motor": 1,
+     "spikes": 0,
+     "own": 0,
+     "own_rate": 0.0
+    }
+   ],
+   "motor_imbalance": 0.0
+  },
+  {
+   "seed": 4,
+   "poison": "red",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 45,
+     "omitted": 7,
+     "inc_resp": 0.7142857142857143,
+     "assoc_resp": 0.7555555555555555,
+     "spikes": 33,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.6823103870122758,
+      2.152827183359962,
+      2.5271330454010865
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       5
+      ],
+      "0.01": [
+       0.5,
+       2
+      ],
+      "0.02": [
+       1.0,
+       2
+      ],
+      "0.05": [
+       1.0,
+       2
+      ],
+      "0.1": [
+       0.8529411764705882,
+       34
+      ]
+     },
+     "inc_motor": {
+      "0": 0.14285714285714285,
+      "1": 0.7142857142857143
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 28,
+     "omitted": 8,
+     "inc_resp": 0.75,
+     "assoc_resp": 0.7857142857142857,
+     "spikes": 22,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.2108185160375484,
+      1.6216120685434987,
+      1.9406268435574248
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       4
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       0.0,
+       1
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       0.9565217391304348,
+       23
+      ]
+     },
+     "inc_motor": {
+      "0": -0.125,
+      "1": 0.0
+     },
+     "side_motor": 1
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 2209,
+     "own": 2180,
+     "own_rate": 21.8
+    },
+    {
+     "motor": 1,
+     "spikes": 29,
+     "own": 29,
+     "own_rate": 0.29
+    }
+   ],
+   "motor_imbalance": 75.17241379310346
+  },
+  {
+   "seed": 4,
+   "poison": "blue",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 75,
+     "omitted": 18,
+     "inc_resp": 0.6666666666666666,
+     "assoc_resp": 0.7333333333333333,
+     "spikes": 55,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.7036873875042602,
+      2.097091847168997,
+      2.487758145487362
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       5
+      ],
+      "0.01": [
+       0.0,
+       1
+      ],
+      "0.02": [
+       0.0,
+       4
+      ],
+      "0.05": [
+       1.0,
+       1
+      ],
+      "0.1": [
+       0.84375,
+       64
+      ]
+     },
+     "inc_motor": {
+      "0": -0.05555555555555555,
+      "1": 0.6666666666666666
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 58,
+     "omitted": 9,
+     "inc_resp": 0.7777777777777778,
+     "assoc_resp": 0.8103448275862069,
+     "spikes": 47,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.257032372006961,
+      1.6090386797174006,
+      2.076755785406359
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       3
+      ],
+      "0.01": [
+       0.0,
+       3
+      ],
+      "0.02": [
+       0.0,
+       3
+      ],
+      "0.05": [
+       1.0,
+       1
+      ],
+      "0.1": [
+       0.9583333333333334,
+       48
+      ]
+     },
+     "inc_motor": {
+      "0": 0.1111111111111111,
+      "1": 0.0
+     },
+     "side_motor": 1
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 2208,
+     "own": 2168,
+     "own_rate": 21.68
+    },
+    {
+     "motor": 1,
+     "spikes": 55,
+     "own": 55,
+     "own_rate": 0.55
+    }
+   ],
+   "motor_imbalance": 39.418181818181814
+  },
+  {
+   "seed": 5,
+   "poison": "red",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 243,
+     "omitted": 50,
+     "inc_resp": 0.64,
+     "assoc_resp": 0.6625514403292181,
+     "spikes": 153,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.3240766780242552,
+      1.8330114036686496,
+      2.206207146755901
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       32
+      ],
+      "0.01": [
+       0.2631578947368421,
+       19
+      ],
+      "0.02": [
+       0.4523809523809524,
+       42
+      ],
+      "0.05": [
+       1.0,
+       16
+      ],
+      "0.1": [
+       0.9029850746268657,
+       134
+      ]
+     },
+     "inc_motor": {
+      "0": 0.0,
+      "1": 0.1
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 179,
+     "omitted": 34,
+     "inc_resp": 0.3235294117647059,
+     "assoc_resp": 0.5586592178770949,
+     "spikes": 88,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.6713661731142082,
+      2.4308499853349375,
+      3.79476088936226
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       7
+      ],
+      "0.01": [
+       0.043478260869565216,
+       23
+      ],
+      "0.02": [
+       0.46875,
+       32
+      ],
+      "0.05": [
+       1.0,
+       23
+      ],
+      "0.1": [
+       0.648936170212766,
+       94
+      ]
+     },
+     "inc_motor": {
+      "0": 0.29411764705882354,
+      "1": 0.20588235294117646
+     },
+     "side_motor": 1
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 85,
+     "own": 0,
+     "own_rate": 0.0
+    },
+    {
+     "motor": 1,
+     "spikes": 1943,
+     "own": 1815,
+     "own_rate": 18.15
+    }
+   ],
+   "motor_imbalance": 1814.9999999999998
+  },
+  {
+   "seed": 5,
+   "poison": "blue",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 65,
+     "omitted": 14,
+     "inc_resp": 0.7142857142857143,
+     "assoc_resp": 0.6307692307692307,
+     "spikes": 40,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.4280954662062584,
+      1.9030419090615425,
+      4.119896715277793
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       8
+      ],
+      "0.01": [
+       0.16666666666666666,
+       6
+      ],
+      "0.02": [
+       0.7333333333333333,
+       15
+      ],
+      "0.05": [
+       1.0,
+       4
+      ],
+      "0.1": [
+       0.78125,
+       32
+      ]
+     },
+     "inc_motor": {
+      "0": 0.6428571428571429,
+      "1": 0.07142857142857142
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 163,
+     "omitted": 32,
+     "inc_resp": 0.71875,
+     "assoc_resp": 0.7423312883435583,
+     "spikes": 118,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.7798731631444298,
+      2.1724403096641254,
+      2.613085361474532
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       10
+      ],
+      "0.01": [
+       0.0,
+       4
+      ],
+      "0.02": [
+       0.38095238095238093,
+       21
+      ],
+      "0.05": [
+       1.0,
+       10
+      ],
+      "0.1": [
+       0.8728813559322034,
+       118
+      ]
+     },
+     "inc_motor": {
+      "0": -0.03125,
+      "1": 0.125
+     },
+     "side_motor": 1
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 39,
+     "own": 2,
+     "own_rate": 0.02
+    },
+    {
+     "motor": 1,
+     "spikes": 1940,
+     "own": 1857,
+     "own_rate": 18.57
+    }
+   ],
+   "motor_imbalance": 928.5
+  },
+  {
+   "seed": 6,
+   "poison": "red",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 141,
+     "omitted": 28,
+     "inc_resp": 0.6071428571428571,
+     "assoc_resp": 0.6808510638297872,
+     "spikes": 89,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.394742124090076,
+      1.863887455151314,
+      2.9306738940952926
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       13
+      ],
+      "0.01": [
+       0.0,
+       17
+      ],
+      "0.02": [
+       0.6470588235294118,
+       34
+      ],
+      "0.05": [
+       1.0,
+       10
+      ],
+      "0.1": [
+       0.9552238805970149,
+       67
+      ]
+     },
+     "inc_motor": {
+      "0": 0.0,
+      "1": 0.10714285714285714
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 128,
+     "omitted": 26,
+     "inc_resp": 0.6923076923076923,
+     "assoc_resp": 0.734375,
+     "spikes": 88,
+     "own_rate": 0.0,
+     "latency_ms": [
+      0.8025969157650081,
+      1.3402851200616794,
+      2.3655691605444686
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       8
+      ],
+      "0.01": [
+       0.2,
+       10
+      ],
+      "0.02": [
+       0.5833333333333334,
+       36
+      ],
+      "0.05": [
+       1.0,
+       20
+      ],
+      "0.1": [
+       0.9444444444444444,
+       54
+      ]
+     },
+     "inc_motor": {
+      "0": 0.5769230769230769,
+      "1": 0.15384615384615385
+     },
+     "side_motor": 1
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 82,
+     "own": 82,
+     "own_rate": 0.82
+    },
+    {
+     "motor": 1,
+     "spikes": 1811,
+     "own": 1708,
+     "own_rate": 17.08
+    }
+   ],
+   "motor_imbalance": 20.829268292682926
+  },
+  {
+   "seed": 6,
+   "poison": "blue",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 190,
+     "omitted": 41,
+     "inc_resp": 0.5609756097560976,
+     "assoc_resp": 0.6684210526315789,
+     "spikes": 124,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.441942155369702,
+      1.950736066845593,
+      3.2361339373892415
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       11
+      ],
+      "0.01": [
+       0.0,
+       14
+      ],
+      "0.02": [
+       0.5609756097560976,
+       41
+      ],
+      "0.05": [
+       1.0,
+       22
+      ],
+      "0.1": [
+       0.803921568627451,
+       102
+      ]
+     },
+     "inc_motor": {
+      "0": 0.6097560975609756,
+      "1": 0.07317073170731707
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 185,
+     "omitted": 34,
+     "inc_resp": 0.6764705882352942,
+     "assoc_resp": 0.6864864864864865,
+     "spikes": 126,
+     "own_rate": 0.0,
+     "latency_ms": [
+      0.8460639406422388,
+      1.2377848989757467,
+      1.7350466269306253
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       19
+      ],
+      "0.01": [
+       0.0,
+       10
+      ],
+      "0.02": [
+       0.5833333333333334,
+       12
+      ],
+      "0.05": [
+       1.0,
+       11
+      ],
+      "0.1": [
+       0.8195488721804511,
+       133
+      ]
+     },
+     "inc_motor": {
+      "0": 0.0,
+      "1": 0.14705882352941177
+     },
+     "side_motor": 1
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 120,
+     "own": 120,
+     "own_rate": 1.2
+    },
+    {
+     "motor": 1,
+     "spikes": 1813,
+     "own": 1673,
+     "own_rate": 16.73
+    }
+   ],
+   "motor_imbalance": 13.941666666666668
+  },
+  {
+   "seed": 7,
+   "poison": "red",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 138,
+     "omitted": 27,
+     "inc_resp": 0.037037037037037035,
+     "assoc_resp": 0.014492753623188406,
+     "spikes": 1,
+     "own_rate": 0.0,
+     "latency_ms": [
+      6.067073843968629,
+      6.387556274093598,
+      6.708038704218566
+     ],
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       0.014492753623188406,
+       138
+      ]
+     },
+     "inc_motor": {
+      "0": 0.0,
+      "1": -0.07407407407407407
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 26,
+     "omitted": 6,
+     "inc_resp": 0.0,
+     "assoc_resp": 0.4230769230769231,
+     "spikes": 1790,
+     "own_rate": 17.83637457389212,
+     "latency_ms": [
+      0.318029495645078,
+      1.4034011998589335,
+      1.952613515712187
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       6
+      ],
+      "0.01": [
+       0.0,
+       6
+      ],
+      "0.02": [
+       0.7272727272727273,
+       11
+      ],
+      "0.05": [
+       1.0,
+       3
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": 0.0,
+      "1": 0.3333333333333333
+     },
+     "side_motor": 1
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 0,
+     "own": 0,
+     "own_rate": 0.0
+    },
+    {
+     "motor": 1,
+     "spikes": 2043,
+     "own": 1790,
+     "own_rate": 17.9
+    }
+   ],
+   "motor_imbalance": 1789.9999999999998
+  },
+  {
+   "seed": 7,
+   "poison": "blue",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 187,
+     "omitted": 38,
+     "inc_resp": 0.05263157894736842,
+     "assoc_resp": 0.053475935828877004,
+     "spikes": 5,
+     "own_rate": 0.0,
+     "latency_ms": [
+      0.4547131667948179,
+      3.280587210284125,
+      6.596141246746612
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       1
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       0.0,
+       1
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       0.05405405405405406,
+       185
+      ]
+     },
+     "inc_motor": {
+      "0": 0.0,
+      "1": 0.0
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 68,
+     "omitted": 13,
+     "inc_resp": 0.15384615384615385,
+     "assoc_resp": 0.4852941176470588,
+     "spikes": 1786,
+     "own_rate": 17.650020136931133,
+     "latency_ms": [
+      0.804544415753128,
+      1.4592936328625683,
+      2.6937411983197994
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       19
+      ],
+      "0.01": [
+       0.08333333333333333,
+       12
+      ],
+      "0.02": [
+       0.84375,
+       32
+      ],
+      "0.05": [
+       1.0,
+       5
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": 0.15384615384615385,
+      "1": 0.0
+     },
+     "side_motor": 1
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 892,
+     "own": 892,
+     "own_rate": 8.92
+    },
+    {
+     "motor": 1,
+     "spikes": 2055,
+     "own": 1785,
+     "own_rate": 17.85
+    }
+   ],
+   "motor_imbalance": 2.001121076233184
+  },
+  {
+   "seed": 8,
+   "poison": "red",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 202,
+     "omitted": 42,
+     "inc_resp": 0.19047619047619047,
+     "assoc_resp": 0.22277227722772278,
+     "spikes": 25,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.0660003227854988,
+      2.8778761162868705,
+      7.396765366201309
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       4
+      ],
+      "0.01": [
+       0.0,
+       9
+      ],
+      "0.02": [
+       0.3333333333333333,
+       15
+      ],
+      "0.05": [
+       0.2,
+       15
+      ],
+      "0.1": [
+       0.23270440251572327,
+       159
+      ]
+     },
+     "inc_motor": {
+      "0": 0.023809523809523808,
+      "1": -0.023809523809523808
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 287,
+     "omitted": 56,
+     "inc_resp": 0.625,
+     "assoc_resp": 0.6411149825783972,
+     "spikes": 169,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.567888986757282,
+      2.9159881527931475,
+      3.880265292568197
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       27
+      ],
+      "0.01": [
+       0.0,
+       33
+      ],
+      "0.02": [
+       0.4935064935064935,
+       77
+      ],
+      "0.05": [
+       1.0,
+       61
+      ],
+      "0.1": [
+       0.9550561797752809,
+       89
+      ]
+     },
+     "inc_motor": {
+      "0": 0.32142857142857145,
+      "1": 0.26785714285714285
+     },
+     "side_motor": 0
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 1516,
+     "own": 1394,
+     "own_rate": 13.94
+    },
+    {
+     "motor": 1,
+     "spikes": 1763,
+     "own": 1659,
+     "own_rate": 16.59
+    }
+   ],
+   "motor_imbalance": 1.190100430416069
+  },
+  {
+   "seed": 8,
+   "poison": "blue",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 300,
+     "omitted": 56,
+     "inc_resp": 0.125,
+     "assoc_resp": 0.24333333333333335,
+     "spikes": 43,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.3755256183657139,
+      2.8078138198708302,
+      7.538823009593898
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       13
+      ],
+      "0.01": [
+       0.0,
+       8
+      ],
+      "0.02": [
+       0.08695652173913043,
+       23
+      ],
+      "0.05": [
+       0.5333333333333333,
+       30
+      ],
+      "0.1": [
+       0.24336283185840707,
+       226
+      ]
+     },
+     "inc_motor": {
+      "0": 0.03571428571428571,
+      "1": 0.10714285714285714
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 387,
+     "omitted": 81,
+     "inc_resp": 0.5432098765432098,
+     "assoc_resp": 0.661498708010336,
+     "spikes": 239,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.6919994987496523,
+      2.9359427429014318,
+      4.1345001768426926
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       39
+      ],
+      "0.01": [
+       0.09523809523809523,
+       42
+      ],
+      "0.02": [
+       0.5360824742268041,
+       97
+      ],
+      "0.05": [
+       1.0,
+       94
+      ],
+      "0.1": [
+       0.9217391304347826,
+       115
+      ]
+     },
+     "inc_motor": {
+      "0": 0.2222222222222222,
+      "1": -0.012345679012345678
+     },
+     "side_motor": 0
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 1520,
+     "own": 1352,
+     "own_rate": 13.52
+    },
+    {
+     "motor": 1,
+     "spikes": 1751,
+     "own": 1684,
+     "own_rate": 16.84
+    }
+   ],
+   "motor_imbalance": 1.2455621301775148
+  },
+  {
+   "seed": 9,
+   "poison": "red",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 1,
+     "omitted": 1,
+     "inc_resp": 1.0,
+     "assoc_resp": 1.0,
+     "spikes": 1,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.2705709424963851,
+      1.2705709424963851,
+      1.2705709424963851
+     ],
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       1.0,
+       1
+      ]
+     },
+     "inc_motor": {
+      "0": 0.0,
+      "1": 1.0
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 2,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": 0.5,
+     "spikes": 1,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.0944866507175965,
+      1.0944866507175965,
+      1.0944866507175965
+     ],
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       0.0,
+       1
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       1.0,
+       1
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 1
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 0,
+     "own": 0,
+     "own_rate": 0.0
+    },
+    {
+     "motor": 1,
+     "spikes": 2,
+     "own": 0,
+     "own_rate": 0.0
+    }
+   ],
+   "motor_imbalance": 0.0
+  },
+  {
+   "seed": 9,
+   "poison": "blue",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 1,
+     "omitted": 1,
+     "inc_resp": 1.0,
+     "assoc_resp": 1.0,
+     "spikes": 1,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.2705709424963851,
+      1.2705709424963851,
+      1.2705709424963851
+     ],
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       1.0,
+       1
+      ]
+     },
+     "inc_motor": {
+      "0": 0.0,
+      "1": 1.0
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 2,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": 0.5,
+     "spikes": 1,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.0944866507175965,
+      1.0944866507175965,
+      1.0944866507175965
+     ],
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       0.0,
+       1
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       1.0,
+       1
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 1
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 0,
+     "own": 0,
+     "own_rate": 0.0
+    },
+    {
+     "motor": 1,
+     "spikes": 2,
+     "own": 0,
+     "own_rate": 0.0
+    }
+   ],
+   "motor_imbalance": 0.0
+  },
+  {
+   "seed": 10,
+   "poison": "red",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 0,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": null,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 0,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": null,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 0
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 1536,
+     "own": 1536,
+     "own_rate": 15.36
+    },
+    {
+     "motor": 1,
+     "spikes": 1594,
+     "own": 1594,
+     "own_rate": 15.94
+    }
+   ],
+   "motor_imbalance": 1.0377604166666667
+  },
+  {
+   "seed": 10,
+   "poison": "blue",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 0,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": null,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 0,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": null,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 0
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 1536,
+     "own": 1536,
+     "own_rate": 15.36
+    },
+    {
+     "motor": 1,
+     "spikes": 1594,
+     "own": 1594,
+     "own_rate": 15.94
+    }
+   ],
+   "motor_imbalance": 1.0377604166666667
+  },
+  {
+   "seed": 11,
+   "poison": "red",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 0,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": null,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 0
+    },
+    {
+     "sensor": 1,
+     "pulses": 0,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": null,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 0
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 0,
+     "own": 0,
+     "own_rate": 0.0
+    },
+    {
+     "motor": 1,
+     "spikes": 0,
+     "own": 0,
+     "own_rate": 0.0
+    }
+   ],
+   "motor_imbalance": 0.0
+  },
+  {
+   "seed": 11,
+   "poison": "blue",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 0,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": null,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 0
+    },
+    {
+     "sensor": 1,
+     "pulses": 0,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": null,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 0
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 0,
+     "own": 0,
+     "own_rate": 0.0
+    },
+    {
+     "motor": 1,
+     "spikes": 0,
+     "own": 0,
+     "own_rate": 0.0
+    }
+   ],
+   "motor_imbalance": 0.0
+  },
+  {
+   "seed": 12,
+   "poison": "red",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 179,
+     "omitted": 36,
+     "inc_resp": 0.6111111111111112,
+     "assoc_resp": 0.6871508379888268,
+     "spikes": 120,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.0354674116365814,
+      1.5314165006827807,
+      3.146808577348281
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       18
+      ],
+      "0.01": [
+       0.12,
+       25
+      ],
+      "0.02": [
+       0.675,
+       40
+      ],
+      "0.05": [
+       1.0,
+       21
+      ],
+      "0.1": [
+       0.96,
+       75
+      ]
+     },
+     "inc_motor": {
+      "0": -0.027777777777777776,
+      "1": 0.16666666666666666
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 79,
+     "omitted": 16,
+     "inc_resp": 0.75,
+     "assoc_resp": 0.7215189873417721,
+     "spikes": 57,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.988898179517662,
+      2.3449165753053336,
+      3.4026672603744137
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       6
+      ],
+      "0.01": [
+       0.0,
+       5
+      ],
+      "0.02": [
+       0.5,
+       8
+      ],
+      "0.05": [
+       1.0,
+       4
+      ],
+      "0.1": [
+       0.875,
+       56
+      ]
+     },
+     "inc_motor": {
+      "0": 0.0625,
+      "1": 0.25
+     },
+     "side_motor": 1
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 2463,
+     "own": 2402,
+     "own_rate": 24.02
+    },
+    {
+     "motor": 1,
+     "spikes": 1452,
+     "own": 1351,
+     "own_rate": 13.51
+    }
+   ],
+   "motor_imbalance": 1.7779422649888972
+  },
+  {
+   "seed": 12,
+   "poison": "blue",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 144,
+     "omitted": 28,
+     "inc_resp": 0.7142857142857143,
+     "assoc_resp": 0.7569444444444444,
+     "spikes": 103,
+     "own_rate": 0.0,
+     "latency_ms": [
+      0.9516476948117081,
+      1.482329971629781,
+      2.2503187758857734
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       15
+      ],
+      "0.01": [
+       0.11764705882352941,
+       17
+      ],
+      "0.02": [
+       0.8461538461538461,
+       26
+      ],
+      "0.05": [
+       1.0,
+       11
+      ],
+      "0.1": [
+       0.9866666666666667,
+       75
+      ]
+     },
+     "inc_motor": {
+      "0": 0.03571428571428571,
+      "1": 0.35714285714285715
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 33,
+     "omitted": 7,
+     "inc_resp": 0.8571428571428571,
+     "assoc_resp": 0.8181818181818182,
+     "spikes": 26,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.8942531983793032,
+      2.2575964457018927,
+      2.7579547569374085
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       1
+      ],
+      "0.01": [
+       0.0,
+       2
+      ],
+      "0.02": [
+       1.0,
+       1
+      ],
+      "0.05": [
+       1.0,
+       1
+      ],
+      "0.1": [
+       0.8928571428571429,
+       28
+      ]
+     },
+     "inc_motor": {
+      "0": 0.2857142857142857,
+      "1": 0.2857142857142857
+     },
+     "side_motor": 1
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 2463,
+     "own": 2421,
+     "own_rate": 24.21
+    },
+    {
+     "motor": 1,
+     "spikes": 1442,
+     "own": 1382,
+     "own_rate": 13.82
+    }
+   ],
+   "motor_imbalance": 1.751808972503618
+  },
+  {
+   "seed": 13,
+   "poison": "red",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 136,
+     "omitted": 28,
+     "inc_resp": 0.0,
+     "assoc_resp": 0.0,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       0.0,
+       136
+      ]
+     },
+     "inc_motor": {
+      "0": 0.0,
+      "1": 0.0
+     },
+     "side_motor": 0
+    },
+    {
+     "sensor": 1,
+     "pulses": 29,
+     "omitted": 5,
+     "inc_resp": 0.2,
+     "assoc_resp": 0.41379310344827586,
+     "spikes": 2057,
+     "own_rate": 20.50947748470565,
+     "latency_ms": [
+      0.9437235429331281,
+      1.3858356025537866,
+      2.9952219245456218
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       7
+      ],
+      "0.01": [
+       0.0,
+       7
+      ],
+      "0.02": [
+       0.8,
+       15
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": 0.0,
+      "1": -0.2
+     },
+     "side_motor": 1
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 0,
+     "own": 0,
+     "own_rate": 0.0
+    },
+    {
+     "motor": 1,
+     "spikes": 2057,
+     "own": 0,
+     "own_rate": 0.0
+    }
+   ],
+   "motor_imbalance": 0.0
+  },
+  {
+   "seed": 13,
+   "poison": "blue",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 173,
+     "omitted": 35,
+     "inc_resp": 0.0,
+     "assoc_resp": 0.023121387283236993,
+     "spikes": 1,
+     "own_rate": 0.0,
+     "latency_ms": [
+      0.6398919463151743,
+      3.356655321681501,
+      5.3632219157485395
+     ],
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       0.0,
+       1
+      ],
+      "0.1": [
+       0.023255813953488372,
+       172
+      ]
+     },
+     "inc_motor": {
+      "0": -0.05714285714285714,
+      "1": -0.05714285714285714
+     },
+     "side_motor": 0
+    },
+    {
+     "sensor": 1,
+     "pulses": 92,
+     "omitted": 18,
+     "inc_resp": 0.16666666666666666,
+     "assoc_resp": 0.3804347826086957,
+     "spikes": 2056,
+     "own_rate": 20.39765845781187,
+     "latency_ms": [
+      0.5810010608406913,
+      1.6048312487235705,
+      3.39793872223595
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       20
+      ],
+      "0.01": [
+       0.0,
+       24
+      ],
+      "0.02": [
+       0.723404255319149,
+       47
+      ],
+      "0.05": [
+       1.0,
+       1
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": -0.05555555555555555,
+      "1": 0.05555555555555555
+     },
+     "side_motor": 1
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 1657,
+     "own": 1412,
+     "own_rate": 14.12
+    },
+    {
+     "motor": 1,
+     "spikes": 2056,
+     "own": 1,
+     "own_rate": 0.01
+    }
+   ],
+   "motor_imbalance": 1412.0
+  },
+  {
+   "seed": 14,
+   "poison": "red",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 76,
+     "omitted": 18,
+     "inc_resp": 0.0,
+     "assoc_resp": 0.0,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       0.0,
+       76
+      ]
+     },
+     "inc_motor": {
+      "0": 0.0,
+      "1": 0.0
+     },
+     "side_motor": 0
+    },
+    {
+     "sensor": 1,
+     "pulses": 135,
+     "omitted": 24,
+     "inc_resp": 0.16666666666666666,
+     "assoc_resp": 0.48148148148148145,
+     "spikes": 1617,
+     "own_rate": 15.732387227572223,
+     "latency_ms": [
+      0.7345344936297238,
+      1.9015518694232014,
+      4.844698503249847
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       32
+      ],
+      "0.01": [
+       0.16,
+       25
+      ],
+      "0.02": [
+       0.7213114754098361,
+       61
+      ],
+      "0.05": [
+       1.0,
+       17
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": 0.16666666666666666,
+      "1": 0.0
+     },
+     "side_motor": 0
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 2169,
+     "own": 2064,
+     "own_rate": 20.64
+    },
+    {
+     "motor": 1,
+     "spikes": 1644,
+     "own": 1359,
+     "own_rate": 13.59
+    }
+   ],
+   "motor_imbalance": 1.5187637969094923
+  },
+  {
+   "seed": 14,
+   "poison": "blue",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 265,
+     "omitted": 52,
+     "inc_resp": 0.038461538461538464,
+     "assoc_resp": 0.022641509433962263,
+     "spikes": 2,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.672858254567089,
+      5.05407882288722,
+      5.877210909865482
+     ],
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       0.0,
+       1
+      ],
+      "0.05": [
+       0.0,
+       1
+      ],
+      "0.1": [
+       0.022813688212927757,
+       263
+      ]
+     },
+     "inc_motor": {
+      "0": 0.09615384615384616,
+      "1": -0.038461538461538464
+     },
+     "side_motor": 0
+    },
+    {
+     "sensor": 1,
+     "pulses": 125,
+     "omitted": 26,
+     "inc_resp": 0.5384615384615384,
+     "assoc_resp": 0.472,
+     "spikes": 1606,
+     "own_rate": 15.665822784810127,
+     "latency_ms": [
+      0.3508025740828203,
+      1.7241857111756076,
+      4.394564408723061
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       28
+      ],
+      "0.01": [
+       0.0,
+       18
+      ],
+      "0.02": [
+       0.6428571428571429,
+       56
+      ],
+      "0.05": [
+       1.0,
+       23
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": 0.19230769230769232,
+      "1": 0.23076923076923078
+     },
+     "side_motor": 0
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 2166,
+     "own": 2083,
+     "own_rate": 20.83
+    },
+    {
+     "motor": 1,
+     "spikes": 1613,
+     "own": 1512,
+     "own_rate": 15.12
+    }
+   ],
+   "motor_imbalance": 1.3776455026455026
+  },
+  {
+   "seed": 15,
+   "poison": "red",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 43,
+     "omitted": 9,
+     "inc_resp": 0.7777777777777778,
+     "assoc_resp": 0.7906976744186046,
+     "spikes": 33,
+     "own_rate": 0.0,
+     "latency_ms": [
+      0.7298619967680109,
+      1.1141735496168481,
+      1.6188031081314278
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       2
+      ],
+      "0.01": [
+       0.16666666666666666,
+       6
+      ],
+      "0.02": [
+       0.7142857142857143,
+       7
+      ],
+      "0.05": [
+       1.0,
+       6
+      ],
+      "0.1": [
+       1.0,
+       22
+      ]
+     },
+     "inc_motor": {
+      "0": 0.6666666666666666,
+      "1": 0.6666666666666666
+     },
+     "side_motor": 0
+    },
+    {
+     "sensor": 1,
+     "pulses": 0,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": null,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 1
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 30,
+     "own": 23,
+     "own_rate": 0.23
+    },
+    {
+     "motor": 1,
+     "spikes": 31,
+     "own": 4,
+     "own_rate": 0.04
+    }
+   ],
+   "motor_imbalance": 5.75
+  },
+  {
+   "seed": 15,
+   "poison": "blue",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 1,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": 1.0,
+     "spikes": 1,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.1544301770312626,
+      1.1544301770312626,
+      1.1544301770312626
+     ],
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       1.0,
+       1
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 0
+    },
+    {
+     "sensor": 1,
+     "pulses": 0,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": null,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 1
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 1,
+     "own": 1,
+     "own_rate": 0.01
+    },
+    {
+     "motor": 1,
+     "spikes": 0,
+     "own": 0,
+     "own_rate": 0.0
+    }
+   ],
+   "motor_imbalance": 1.0
+  },
+  {
+   "seed": 16,
+   "poison": "red",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 0,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": null,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 0,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": null,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 0
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 0,
+     "own": 0,
+     "own_rate": 0.0
+    },
+    {
+     "motor": 1,
+     "spikes": 0,
+     "own": 0,
+     "own_rate": 0.0
+    }
+   ],
+   "motor_imbalance": 0.0
+  },
+  {
+   "seed": 16,
+   "poison": "blue",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 0,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": null,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 0,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": null,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 0
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 0,
+     "own": 0,
+     "own_rate": 0.0
+    },
+    {
+     "motor": 1,
+     "spikes": 0,
+     "own": 0,
+     "own_rate": 0.0
+    }
+   ],
+   "motor_imbalance": 0.0
+  },
+  {
+   "seed": 17,
+   "poison": "red",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 203,
+     "omitted": 39,
+     "inc_resp": 0.6666666666666666,
+     "assoc_resp": 0.8029556650246306,
+     "spikes": 161,
+     "own_rate": 0.0,
+     "latency_ms": [
+      2.054645467197247,
+      2.499388245382761,
+      2.890665617537991
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       14
+      ],
+      "0.01": [
+       0.0,
+       16
+      ],
+      "0.02": [
+       0.375,
+       8
+      ],
+      "0.05": [
+       1.0,
+       6
+      ],
+      "0.1": [
+       0.9685534591194969,
+       159
+      ]
+     },
+     "inc_motor": {
+      "0": 0.0,
+      "1": 0.3076923076923077
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 120,
+     "omitted": 26,
+     "inc_resp": 0.5384615384615384,
+     "assoc_resp": 0.575,
+     "spikes": 66,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.4036700931967516,
+      1.9391370322381363,
+      2.9734408366834946
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       11
+      ],
+      "0.01": [
+       0.08333333333333333,
+       12
+      ],
+      "0.02": [
+       0.45161290322580644,
+       31
+      ],
+      "0.05": [
+       1.0,
+       17
+      ],
+      "0.1": [
+       0.7551020408163265,
+       49
+      ]
+     },
+     "inc_motor": {
+      "0": 0.5,
+      "1": -0.038461538461538464
+     },
+     "side_motor": 0
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 65,
+     "own": 1,
+     "own_rate": 0.01
+    },
+    {
+     "motor": 1,
+     "spikes": 1892,
+     "own": 1758,
+     "own_rate": 17.58
+    }
+   ],
+   "motor_imbalance": 1757.9999999999998
+  },
+  {
+   "seed": 17,
+   "poison": "blue",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 326,
+     "omitted": 62,
+     "inc_resp": 0.41935483870967744,
+     "assoc_resp": 0.588957055214724,
+     "spikes": 175,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.7692968101712836,
+      2.513419138111761,
+      3.5405322931808314
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       38
+      ],
+      "0.01": [
+       0.09090909090909091,
+       33
+      ],
+      "0.02": [
+       0.5492957746478874,
+       71
+      ],
+      "0.05": [
+       0.9830508474576272,
+       59
+      ],
+      "0.1": [
+       0.736,
+       125
+      ]
+     },
+     "inc_motor": {
+      "0": 0.3709677419354839,
+      "1": 0.11290322580645161
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 366,
+     "omitted": 76,
+     "inc_resp": 0.4473684210526316,
+     "assoc_resp": 0.6147540983606558,
+     "spikes": 214,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.32588466729735,
+      1.9049485901714291,
+      2.8908670766981004
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       46
+      ],
+      "0.01": [
+       0.09302325581395349,
+       43
+      ],
+      "0.02": [
+       0.5612244897959183,
+       98
+      ],
+      "0.05": [
+       1.0,
+       70
+      ],
+      "0.1": [
+       0.8807339449541285,
+       109
+      ]
+     },
+     "inc_motor": {
+      "0": 0.4342105263157895,
+      "1": 0.013157894736842105
+     },
+     "side_motor": 0
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 372,
+     "own": 165,
+     "own_rate": 1.65
+    },
+    {
+     "motor": 1,
+     "spikes": 1884,
+     "own": 1749,
+     "own_rate": 17.49
+    }
+   ],
+   "motor_imbalance": 10.6
+  },
+  {
+   "seed": 18,
+   "poison": "red",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 328,
+     "omitted": 69,
+     "inc_resp": 0.0,
+     "assoc_resp": 0.009146341463414634,
+     "spikes": 1,
+     "own_rate": 0.0,
+     "latency_ms": [
+      3.480707168400343,
+      4.343341644714727,
+      5.658688198342432
+     ],
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       0.0,
+       1
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       0.009174311926605505,
+       327
+      ]
+     },
+     "inc_motor": {
+      "0": 0.057971014492753624,
+      "1": 0.014492753623188406
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 477,
+     "omitted": 92,
+     "inc_resp": 0.2826086956521739,
+     "assoc_resp": 0.469601677148847,
+     "spikes": 1287,
+     "own_rate": 11.162448808148692,
+     "latency_ms": [
+      0.6905578906124532,
+      1.6838400027285871,
+      4.3626656969895095
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       80
+      ],
+      "0.01": [
+       0.056338028169014086,
+       71
+      ],
+      "0.02": [
+       0.47,
+       200
+      ],
+      "0.05": [
+       1.0,
+       126
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": 0.09782608695652174,
+      "1": 0.06521739130434782
+     },
+     "side_motor": 1
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 2116,
+     "own": 1747,
+     "own_rate": 17.47
+    },
+    {
+     "motor": 1,
+     "spikes": 2387,
+     "own": 2158,
+     "own_rate": 21.58
+    }
+   ],
+   "motor_imbalance": 1.2352604464796795
+  },
+  {
+   "seed": 18,
+   "poison": "blue",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 272,
+     "omitted": 58,
+     "inc_resp": -0.017241379310344827,
+     "assoc_resp": 0.0,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       0.0,
+       272
+      ]
+     },
+     "inc_motor": {
+      "0": -0.05172413793103448,
+      "1": 0.06896551724137931
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 197,
+     "omitted": 36,
+     "inc_resp": 0.3055555555555556,
+     "assoc_resp": 0.5126903553299492,
+     "spikes": 1259,
+     "own_rate": 11.81271039477711,
+     "latency_ms": [
+      0.6829487519226518,
+      1.6857342801017694,
+      5.495263198341149
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       48
+      ],
+      "0.01": [
+       0.05,
+       20
+      ],
+      "0.02": [
+       0.5606060606060606,
+       66
+      ],
+      "0.05": [
+       1.0,
+       63
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": 0.0,
+      "1": 0.08333333333333333
+     },
+     "side_motor": 1
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 2003,
+     "own": 1731,
+     "own_rate": 17.31
+    },
+    {
+     "motor": 1,
+     "spikes": 2421,
+     "own": 2295,
+     "own_rate": 22.95
+    }
+   ],
+   "motor_imbalance": 1.3258232235701908
+  },
+  {
+   "seed": 19,
+   "poison": "red",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 179,
+     "omitted": 34,
+     "inc_resp": 0.08823529411764706,
+     "assoc_resp": 0.08379888268156424,
+     "spikes": 7,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.1606138940805977,
+      4.513681415950543,
+      8.10604173228384
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       2
+      ],
+      "0.01": [
+       0.0,
+       3
+      ],
+      "0.02": [
+       0.75,
+       4
+      ],
+      "0.05": [
+       1.0,
+       1
+      ],
+      "0.1": [
+       0.0650887573964497,
+       169
+      ]
+     },
+     "inc_motor": {
+      "0": -0.14705882352941177,
+      "1": -0.08823529411764706
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 173,
+     "omitted": 36,
+     "inc_resp": 0.3333333333333333,
+     "assoc_resp": 0.43352601156069365,
+     "spikes": 2198,
+     "own_rate": 21.603744784776637,
+     "latency_ms": [
+      0.6238854061166421,
+      1.6332638391602927,
+      5.775355233307523
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       46
+      ],
+      "0.01": [
+       0.16666666666666666,
+       42
+      ],
+      "0.02": [
+       0.7976190476190477,
+       84
+      ],
+      "0.05": [
+       1.0,
+       1
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": -0.08333333333333333,
+      "1": 0.0
+     },
+     "side_motor": 0
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 2191,
+     "own": 45,
+     "own_rate": 0.45
+    },
+    {
+     "motor": 1,
+     "spikes": 2808,
+     "own": 2155,
+     "own_rate": 21.55
+    }
+   ],
+   "motor_imbalance": 47.88888888888889
+  },
+  {
+   "seed": 19,
+   "poison": "blue",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 346,
+     "omitted": 68,
+     "inc_resp": 0.11764705882352941,
+     "assoc_resp": 0.12716763005780346,
+     "spikes": 24,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.5319831284045904,
+      3.455807379708631,
+      6.687023945531223
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       4
+      ],
+      "0.01": [
+       0.25,
+       4
+      ],
+      "0.02": [
+       0.3,
+       10
+      ],
+      "0.05": [
+       0.75,
+       4
+      ],
+      "0.1": [
+       0.11419753086419752,
+       324
+      ]
+     },
+     "inc_motor": {
+      "0": 0.014705882352941176,
+      "1": -0.029411764705882353
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 226,
+     "omitted": 46,
+     "inc_resp": 0.13043478260869565,
+     "assoc_resp": 0.3495575221238938,
+     "spikes": 2163,
+     "own_rate": 21.321874360548396,
+     "latency_ms": [
+      0.5577273030752394,
+      1.7409709788580585,
+      5.464328428240608
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       60
+      ],
+      "0.01": [
+       0.07407407407407407,
+       54
+      ],
+      "0.02": [
+       0.6697247706422018,
+       109
+      ],
+      "0.05": [
+       1.0,
+       1
+      ],
+      "0.1": [
+       0.5,
+       2
+      ]
+     },
+     "inc_motor": {
+      "0": -0.021739130434782608,
+      "1": 0.06521739130434782
+     },
+     "side_motor": 0
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 2156,
+     "own": 50,
+     "own_rate": 0.5
+    },
+    {
+     "motor": 1,
+     "spikes": 2273,
+     "own": 2186,
+     "own_rate": 21.86
+    }
+   ],
+   "motor_imbalance": 43.72
+  },
+  {
+   "seed": 20,
+   "poison": "red",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 248,
+     "omitted": 48,
+     "inc_resp": 0.08333333333333333,
+     "assoc_resp": 0.21774193548387097,
+     "spikes": 541,
+     "own_rate": 4.993847415914685,
+     "latency_ms": [
+      0.692885432960111,
+      1.8138678564785238,
+      6.798677291111943
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       19
+      ],
+      "0.01": [
+       0.05555555555555555,
+       18
+      ],
+      "0.02": [
+       0.6785714285714286,
+       28
+      ],
+      "0.05": [
+       1.0,
+       17
+      ],
+      "0.1": [
+       0.10240963855421686,
+       166
+      ]
+     },
+     "inc_motor": {
+      "0": 0.020833333333333332,
+      "1": 0.0
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 309,
+     "omitted": 63,
+     "inc_resp": 0.047619047619047616,
+     "assoc_resp": 0.33980582524271846,
+     "spikes": 1178,
+     "own_rate": 11.072128779279744,
+     "latency_ms": [
+      0.5310790511117602,
+      1.1402039369841077,
+      3.8742544180024683
+     ],
+     "recovery": {
+      "0.0": [
+       0.0196078431372549,
+       51
+      ],
+      "0.01": [
+       0.1702127659574468,
+       47
+      ],
+      "0.02": [
+       0.723404255319149,
+       94
+      ],
+      "0.05": [
+       1.0,
+       16
+      ],
+      "0.1": [
+       0.1188118811881188,
+       101
+      ]
+     },
+     "inc_motor": {
+      "0": -0.06349206349206349,
+      "1": 0.0
+     },
+     "side_motor": 0
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 2110,
+     "own": 1872,
+     "own_rate": 18.72
+    },
+    {
+     "motor": 1,
+     "spikes": 1505,
+     "own": 1277,
+     "own_rate": 12.77
+    }
+   ],
+   "motor_imbalance": 1.465935787000783
+  },
+  {
+   "seed": 20,
+   "poison": "blue",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 296,
+     "omitted": 59,
+     "inc_resp": 0.22033898305084745,
+     "assoc_resp": 0.23986486486486486,
+     "spikes": 405,
+     "own_rate": 3.4418796372629843,
+     "latency_ms": [
+      0.7742035567268601,
+      1.7412740616720157,
+      4.567801847031205
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       25
+      ],
+      "0.01": [
+       0.0,
+       16
+      ],
+      "0.02": [
+       0.5862068965517241,
+       58
+      ],
+      "0.05": [
+       1.0,
+       22
+      ],
+      "0.1": [
+       0.08571428571428572,
+       175
+      ]
+     },
+     "inc_motor": {
+      "0": 0.01694915254237288,
+      "1": 0.03389830508474576
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 131,
+     "omitted": 26,
+     "inc_resp": 0.15384615384615385,
+     "assoc_resp": 0.3969465648854962,
+     "spikes": 1350,
+     "own_rate": 13.152295065356165,
+     "latency_ms": [
+      0.4440240206038393,
+      1.532639739210473,
+      5.045995671103753
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       15
+      ],
+      "0.01": [
+       0.2,
+       20
+      ],
+      "0.02": [
+       0.7272727272727273,
+       44
+      ],
+      "0.05": [
+       0.7,
+       10
+      ],
+      "0.1": [
+       0.21428571428571427,
+       42
+      ]
+     },
+     "inc_motor": {
+      "0": 0.23076923076923078,
+      "1": -0.038461538461538464
+     },
+     "side_motor": 0
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 2012,
+     "own": 1886,
+     "own_rate": 18.86
+    },
+    {
+     "motor": 1,
+     "spikes": 1753,
+     "own": 378,
+     "own_rate": 3.78
+    }
+   ],
+   "motor_imbalance": 4.98941798941799
+  },
+  {
+   "seed": 21,
+   "poison": "red",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 0,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": null,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 0
+    },
+    {
+     "sensor": 1,
+     "pulses": 2,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": 1.0,
+     "spikes": 2,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.4424544416016927,
+      1.6489122416561974,
+      1.8553700417107022
+     ],
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       1.0,
+       2
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 0
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 2,
+     "own": 2,
+     "own_rate": 0.02
+    },
+    {
+     "motor": 1,
+     "spikes": 2,
+     "own": 0,
+     "own_rate": 0.0
+    }
+   ],
+   "motor_imbalance": 2.0
+  },
+  {
+   "seed": 21,
+   "poison": "blue",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 0,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": null,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 0
+    },
+    {
+     "sensor": 1,
+     "pulses": 1,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": 1.0,
+     "spikes": 1,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.3908399915880665,
+      1.3908399915880665,
+      1.3908399915880665
+     ],
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       1.0,
+       1
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 0
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 1,
+     "own": 1,
+     "own_rate": 0.01
+    },
+    {
+     "motor": 1,
+     "spikes": 0,
+     "own": 0,
+     "own_rate": 0.0
+    }
+   ],
+   "motor_imbalance": 1.0
+  },
+  {
+   "seed": 22,
+   "poison": "red",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 0,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": null,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 0
+    },
+    {
+     "sensor": 1,
+     "pulses": 0,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": null,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 1
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 0,
+     "own": 0,
+     "own_rate": 0.0
+    },
+    {
+     "motor": 1,
+     "spikes": 0,
+     "own": 0,
+     "own_rate": 0.0
+    }
+   ],
+   "motor_imbalance": 0.0
+  },
+  {
+   "seed": 22,
+   "poison": "blue",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 0,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": null,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 0
+    },
+    {
+     "sensor": 1,
+     "pulses": 0,
+     "omitted": 0,
+     "inc_resp": null,
+     "assoc_resp": null,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": null,
+      "1": null
+     },
+     "side_motor": 1
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 0,
+     "own": 0,
+     "own_rate": 0.0
+    },
+    {
+     "motor": 1,
+     "spikes": 0,
+     "own": 0,
+     "own_rate": 0.0
+    }
+   ],
+   "motor_imbalance": 0.0
+  },
+  {
+   "seed": 23,
+   "poison": "red",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 313,
+     "omitted": 70,
+     "inc_resp": 0.07142857142857142,
+     "assoc_resp": 0.07028753993610223,
+     "spikes": 11,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.9563740111195214,
+      4.207257315965052,
+      6.767683850677032
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       4
+      ],
+      "0.01": [
+       0.0,
+       2
+      ],
+      "0.02": [
+       0.3333333333333333,
+       6
+      ],
+      "0.05": [
+       0.6,
+       5
+      ],
+      "0.1": [
+       0.057432432432432436,
+       296
+      ]
+     },
+     "inc_motor": {
+      "0": 0.05714285714285714,
+      "1": -0.014285714285714285
+     },
+     "side_motor": 0
+    },
+    {
+     "sensor": 1,
+     "pulses": 187,
+     "omitted": 30,
+     "inc_resp": 0.36666666666666664,
+     "assoc_resp": 0.46524064171123,
+     "spikes": 1736,
+     "own_rate": 16.804239274431875,
+     "latency_ms": [
+      0.6415208087377167,
+      1.455979039960198,
+      4.526286578648353
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       40
+      ],
+      "0.01": [
+       0.0975609756097561,
+       41
+      ],
+      "0.02": [
+       0.7578947368421053,
+       95
+      ],
+      "0.05": [
+       1.0,
+       10
+      ],
+      "0.1": [
+       1.0,
+       1
+      ]
+     },
+     "inc_motor": {
+      "0": 0.23333333333333334,
+      "1": 0.23333333333333334
+     },
+     "side_motor": 0
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 1749,
+     "own": 58,
+     "own_rate": 0.58
+    },
+    {
+     "motor": 1,
+     "spikes": 1702,
+     "own": 1397,
+     "own_rate": 13.97
+    }
+   ],
+   "motor_imbalance": 24.086206896551726
+  },
+  {
+   "seed": 23,
+   "poison": "blue",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 233,
+     "omitted": 45,
+     "inc_resp": 0.022222222222222223,
+     "assoc_resp": 0.04721030042918455,
+     "spikes": 5,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.4716795371185754,
+      3.2256860632884354,
+      5.972731541810106
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       1
+      ],
+      "0.01": [
+       0.0,
+       1
+      ],
+      "0.02": [
+       0.25,
+       4
+      ],
+      "0.05": [
+       0.3333333333333333,
+       3
+      ],
+      "0.1": [
+       0.04017857142857143,
+       224
+      ]
+     },
+     "inc_motor": {
+      "0": 0.022222222222222223,
+      "1": 0.0
+     },
+     "side_motor": 0
+    },
+    {
+     "sensor": 1,
+     "pulses": 115,
+     "omitted": 25,
+     "inc_resp": 0.48,
+     "assoc_resp": 0.45217391304347826,
+     "spikes": 1738,
+     "own_rate": 17.056145675265554,
+     "latency_ms": [
+      0.5774473879712083,
+      1.2660895277676332,
+      4.575768651550227
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       30
+      ],
+      "0.01": [
+       0.043478260869565216,
+       23
+      ],
+      "0.02": [
+       0.8070175438596491,
+       57
+      ],
+      "0.05": [
+       1.0,
+       5
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": 0.32,
+      "1": 0.0
+     },
+     "side_motor": 0
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 1747,
+     "own": 41,
+     "own_rate": 0.41
+    },
+    {
+     "motor": 1,
+     "spikes": 4,
+     "own": 3,
+     "own_rate": 0.03
+    }
+   ],
+   "motor_imbalance": 13.666666666666666
+  },
+  {
+   "seed": 24,
+   "poison": "red",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 219,
+     "omitted": 40,
+     "inc_resp": 0.3,
+     "assoc_resp": 0.45662100456621,
+     "spikes": 2237,
+     "own_rate": 21.848481750332276,
+     "latency_ms": [
+      0.6347415484036389,
+      1.632091255075352,
+      3.748233007259217
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       50
+      ],
+      "0.01": [
+       0.1774193548387097,
+       62
+      ],
+      "0.02": [
+       0.8301886792452831,
+       106
+      ],
+      "0.05": [
+       1.0,
+       1
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": 0.075,
+      "1": 0.0
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 194,
+     "omitted": 43,
+     "inc_resp": 0.046511627906976744,
+     "assoc_resp": 0.05154639175257732,
+     "spikes": 5,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.246441337884363,
+      4.114853453961231,
+      6.027654186756592
+     ],
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       0.0,
+       1
+      ],
+      "0.05": [
+       1.0,
+       2
+      ],
+      "0.1": [
+       0.041884816753926704,
+       191
+      ]
+     },
+     "inc_motor": {
+      "0": 0.09302325581395349,
+      "1": 0.023255813953488372
+     },
+     "side_motor": 0
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 1496,
+     "own": 1488,
+     "own_rate": 14.88
+    },
+    {
+     "motor": 1,
+     "spikes": 1846,
+     "own": 1259,
+     "own_rate": 12.59
+    }
+   ],
+   "motor_imbalance": 1.1818903891977761
+  },
+  {
+   "seed": 24,
+   "poison": "blue",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 11,
+     "omitted": 4,
+     "inc_resp": 0.0,
+     "assoc_resp": 0.18181818181818182,
+     "spikes": 2227,
+     "own_rate": 22.27450195214736,
+     "latency_ms": [
+      0.7052515995475517,
+      0.9783288390572409,
+      1.25140607856693
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       4
+      ],
+      "0.01": [
+       0.0,
+       5
+      ],
+      "0.02": [
+       1.0,
+       2
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": 0.0,
+      "1": 0.25
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 263,
+     "omitted": 51,
+     "inc_resp": 0.0,
+     "assoc_resp": 0.011406844106463879,
+     "spikes": 1,
+     "own_rate": 0.0,
+     "latency_ms": [
+      4.066877810996061,
+      5.631980769791767,
+      8.797368105453529
+     ],
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       0.011406844106463879,
+       263
+      ]
+     },
+     "inc_motor": {
+      "0": 0.0,
+      "1": 0.0
+     },
+     "side_motor": 0
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 1,
+     "own": 0,
+     "own_rate": 0.0
+    },
+    {
+     "motor": 1,
+     "spikes": 1857,
+     "own": 1306,
+     "own_rate": 13.06
+    }
+   ],
+   "motor_imbalance": 1306.0
+  },
+  {
+   "seed": 25,
+   "poison": "red",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 60,
+     "omitted": 16,
+     "inc_resp": 0.0,
+     "assoc_resp": 0.0,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       0.0,
+       60
+      ]
+     },
+     "inc_motor": {
+      "0": 0.0625,
+      "1": 0.0
+     },
+     "side_motor": 0
+    },
+    {
+     "sensor": 1,
+     "pulses": 59,
+     "omitted": 8,
+     "inc_resp": 0.25,
+     "assoc_resp": 0.4745762711864407,
+     "spikes": 1660,
+     "own_rate": 16.416859470878183,
+     "latency_ms": [
+      0.5851225124963834,
+      1.7551533873430003,
+      4.482092176682162
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       12
+      ],
+      "0.01": [
+       0.07692307692307693,
+       13
+      ],
+      "0.02": [
+       0.72,
+       25
+      ],
+      "0.05": [
+       1.0,
+       9
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": 0.25,
+      "1": 0.25
+     },
+     "side_motor": 1
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 1643,
+     "own": 1642,
+     "own_rate": 16.42
+    },
+    {
+     "motor": 1,
+     "spikes": 1658,
+     "own": 0,
+     "own_rate": 0.0
+    }
+   ],
+   "motor_imbalance": 1642.0000000000002
+  },
+  {
+   "seed": 25,
+   "poison": "blue",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 132,
+     "omitted": 23,
+     "inc_resp": 0.0,
+     "assoc_resp": 0.0,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       0.0,
+       132
+      ]
+     },
+     "inc_motor": {
+      "0": 0.0,
+      "1": 0.13043478260869565
+     },
+     "side_motor": 0
+    },
+    {
+     "sensor": 1,
+     "pulses": 91,
+     "omitted": 22,
+     "inc_resp": 0.36363636363636365,
+     "assoc_resp": 0.38461538461538464,
+     "spikes": 1661,
+     "own_rate": 16.40932485619134,
+     "latency_ms": [
+      0.8222051832547095,
+      1.8541034531551759,
+      4.968463382596157
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       18
+      ],
+      "0.01": [
+       0.0,
+       15
+      ],
+      "0.02": [
+       0.5,
+       46
+      ],
+      "0.05": [
+       1.0,
+       12
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": 0.0,
+      "1": 0.18181818181818182
+     },
+     "side_motor": 1
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 0,
+     "own": 0,
+     "own_rate": 0.0
+    },
+    {
+     "motor": 1,
+     "spikes": 1660,
+     "own": 2,
+     "own_rate": 0.02
+    }
+   ],
+   "motor_imbalance": 2.0
+  },
+  {
+   "seed": 26,
+   "poison": "red",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 66,
+     "omitted": 13,
+     "inc_resp": 0.0,
+     "assoc_resp": 0.0,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       0.0,
+       66
+      ]
+     },
+     "inc_motor": {
+      "0": 0.0,
+      "1": 0.07692307692307693
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 106,
+     "omitted": 21,
+     "inc_resp": 0.7142857142857143,
+     "assoc_resp": 0.7264150943396226,
+     "spikes": 988,
+     "own_rate": 9.207600565999597,
+     "latency_ms": [
+      0.9576996249975878,
+      1.5800806525234634,
+      3.2667299462730175
+     ],
+     "recovery": {
+      "0.0": [
+       0.07692307692307693,
+       13
+      ],
+      "0.01": [
+       0.0,
+       8
+      ],
+      "0.02": [
+       0.7,
+       30
+      ],
+      "0.05": [
+       1.0,
+       54
+      ],
+      "0.1": [
+       1.0,
+       1
+      ]
+     },
+     "inc_motor": {
+      "0": 0.0,
+      "1": 0.09523809523809523
+     },
+     "side_motor": 1
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 0,
+     "own": 0,
+     "own_rate": 0.0
+    },
+    {
+     "motor": 1,
+     "spikes": 1942,
+     "own": 987,
+     "own_rate": 9.87
+    }
+   ],
+   "motor_imbalance": 986.9999999999999
+  },
+  {
+   "seed": 26,
+   "poison": "blue",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 184,
+     "omitted": 34,
+     "inc_resp": 0.029411764705882353,
+     "assoc_resp": 0.125,
+     "spikes": 11,
+     "own_rate": 0.0,
+     "latency_ms": [
+      0.8528861691544876,
+      2.893936296501698,
+      5.1240043142883
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       6
+      ],
+      "0.01": [
+       0.0,
+       3
+      ],
+      "0.02": [
+       0.5,
+       2
+      ],
+      "0.05": [
+       0.6666666666666666,
+       3
+      ],
+      "0.1": [
+       0.11764705882352941,
+       170
+      ]
+     },
+     "inc_motor": {
+      "0": 0.029411764705882353,
+      "1": 0.029411764705882353
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 269,
+     "omitted": 57,
+     "inc_resp": 0.5087719298245614,
+     "assoc_resp": 0.5650557620817844,
+     "spikes": 999,
+     "own_rate": 8.704141403761176,
+     "latency_ms": [
+      0.7710224718252334,
+      1.6033783329856277,
+      3.1122764876627684
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       31
+      ],
+      "0.01": [
+       0.0,
+       32
+      ],
+      "0.02": [
+       0.4791666666666667,
+       96
+      ],
+      "0.05": [
+       0.98,
+       100
+      ],
+      "0.1": [
+       0.8,
+       10
+      ]
+     },
+     "inc_motor": {
+      "0": 0.42105263157894735,
+      "1": 0.07017543859649122
+     },
+     "side_motor": 1
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 992,
+     "own": 646,
+     "own_rate": 6.46
+    },
+    {
+     "motor": 1,
+     "spikes": 1942,
+     "own": 1005,
+     "own_rate": 10.05
+    }
+   ],
+   "motor_imbalance": 1.5557275541795668
+  },
+  {
+   "seed": 27,
+   "poison": "red",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 156,
+     "omitted": 39,
+     "inc_resp": 0.4358974358974359,
+     "assoc_resp": 0.6217948717948718,
+     "spikes": 102,
+     "own_rate": 0.05079236082893133,
+     "latency_ms": [
+      1.2721720207865772,
+      1.839170528612044,
+      3.1686800682351195
+     ],
+     "recovery": {
+      "0.0": [
+       0.041666666666666664,
+       24
+      ],
+      "0.01": [
+       0.3333333333333333,
+       12
+      ],
+      "0.02": [
+       0.42105263157894735,
+       38
+      ],
+      "0.05": [
+       1.0,
+       18
+      ],
+      "0.1": [
+       0.90625,
+       64
+      ]
+     },
+     "inc_motor": {
+      "0": 0.38461538461538464,
+      "1": 0.07692307692307693
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 307,
+     "omitted": 54,
+     "inc_resp": 0.46296296296296297,
+     "assoc_resp": 0.5960912052117264,
+     "spikes": 174,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.1730875829414344,
+      1.6519851090919246,
+      2.994290703169612
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       42
+      ],
+      "0.01": [
+       0.05555555555555555,
+       36
+      ],
+      "0.02": [
+       0.5189873417721519,
+       79
+      ],
+      "0.05": [
+       1.0,
+       44
+      ],
+      "0.1": [
+       0.9056603773584906,
+       106
+      ]
+     },
+     "inc_motor": {
+      "0": 0.4074074074074074,
+      "1": -0.05555555555555555
+     },
+     "side_motor": 0
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 268,
+     "own": 19,
+     "own_rate": 0.19
+    },
+    {
+     "motor": 1,
+     "spikes": 2180,
+     "own": 2085,
+     "own_rate": 20.85
+    }
+   ],
+   "motor_imbalance": 109.73684210526316
+  },
+  {
+   "seed": 27,
+   "poison": "blue",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 344,
+     "omitted": 70,
+     "inc_resp": 0.5,
+     "assoc_resp": 0.6133720930232558,
+     "spikes": 227,
+     "own_rate": 0.16570008285004142,
+     "latency_ms": [
+      1.2820191488742694,
+      1.7419025795817333,
+      3.3821435466165894
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       43
+      ],
+      "0.01": [
+       0.07894736842105263,
+       38
+      ],
+      "0.02": [
+       0.4838709677419355,
+       62
+      ],
+      "0.05": [
+       1.0,
+       28
+      ],
+      "0.1": [
+       0.8670520231213873,
+       173
+      ]
+     },
+     "inc_motor": {
+      "0": 0.0,
+      "1": 0.05714285714285714
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 244,
+     "omitted": 48,
+     "inc_resp": 0.5625,
+     "assoc_resp": 0.6147540983606558,
+     "spikes": 140,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.1819130166227154,
+      1.8462288075831168,
+      3.331190021454943
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       27
+      ],
+      "0.01": [
+       0.043478260869565216,
+       23
+      ],
+      "0.02": [
+       0.6470588235294118,
+       51
+      ],
+      "0.05": [
+       1.0,
+       40
+      ],
+      "0.1": [
+       0.7378640776699029,
+       103
+      ]
+     },
+     "inc_motor": {
+      "0": 0.4791666666666667,
+      "1": 0.020833333333333332
+     },
+     "side_motor": 0
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 138,
+     "own": 8,
+     "own_rate": 0.08
+    },
+    {
+     "motor": 1,
+     "spikes": 2176,
+     "own": 1993,
+     "own_rate": 19.93
+    }
+   ],
+   "motor_imbalance": 249.125
+  },
+  {
+   "seed": 28,
+   "poison": "red",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 36,
+     "omitted": 6,
+     "inc_resp": 0.0,
+     "assoc_resp": 0.0,
+     "spikes": 0,
+     "own_rate": 0.0,
+     "latency_ms": null,
+     "recovery": {
+      "0.0": [
+       null,
+       0
+      ],
+      "0.01": [
+       null,
+       0
+      ],
+      "0.02": [
+       null,
+       0
+      ],
+      "0.05": [
+       null,
+       0
+      ],
+      "0.1": [
+       0.0,
+       36
+      ]
+     },
+     "inc_motor": {
+      "0": 0.0,
+      "1": 0.16666666666666666
+     },
+     "side_motor": 0
+    },
+    {
+     "sensor": 1,
+     "pulses": 98,
+     "omitted": 21,
+     "inc_resp": 0.3333333333333333,
+     "assoc_resp": 0.4897959183673469,
+     "spikes": 1858,
+     "own_rate": 18.279135528176127,
+     "latency_ms": [
+      0.9173104465407533,
+      1.4402375123374611,
+      3.9448588549234436
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       20
+      ],
+      "0.01": [
+       0.0,
+       21
+      ],
+      "0.02": [
+       0.8269230769230769,
+       52
+      ],
+      "0.05": [
+       1.0,
+       5
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": 0.0,
+      "1": 0.23809523809523808
+     },
+     "side_motor": 1
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 0,
+     "own": 0,
+     "own_rate": 0.0
+    },
+    {
+     "motor": 1,
+     "spikes": 1855,
+     "own": 25,
+     "own_rate": 0.25
+    }
+   ],
+   "motor_imbalance": 25.0
+  },
+  {
+   "seed": 28,
+   "poison": "blue",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 302,
+     "omitted": 60,
+     "inc_resp": 0.06666666666666667,
+     "assoc_resp": 0.0695364238410596,
+     "spikes": 14,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.544768972578936,
+      4.7475558194136624,
+      7.139888672405448
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       4
+      ],
+      "0.01": [
+       0.0,
+       3
+      ],
+      "0.02": [
+       0.0,
+       4
+      ],
+      "0.05": [
+       0.8,
+       5
+      ],
+      "0.1": [
+       0.05944055944055944,
+       286
+      ]
+     },
+     "inc_motor": {
+      "0": -0.016666666666666666,
+      "1": -0.016666666666666666
+     },
+     "side_motor": 0
+    },
+    {
+     "sensor": 1,
+     "pulses": 204,
+     "omitted": 41,
+     "inc_resp": 0.17073170731707318,
+     "assoc_resp": 0.45588235294117646,
+     "spikes": 1838,
+     "own_rate": 17.813393221723153,
+     "latency_ms": [
+      0.4941304176291795,
+      1.5961279254597116,
+      4.204959717716859
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       49
+      ],
+      "0.01": [
+       0.13333333333333333,
+       45
+      ],
+      "0.02": [
+       0.7604166666666666,
+       96
+      ],
+      "0.05": [
+       1.0,
+       14
+      ],
+      "0.1": [
+       null,
+       0
+      ]
+     },
+     "inc_motor": {
+      "0": 0.12195121951219512,
+      "1": 0.0975609756097561
+     },
+     "side_motor": 1
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 1817,
+     "own": 994,
+     "own_rate": 9.94
+    },
+    {
+     "motor": 1,
+     "spikes": 1826,
+     "own": 41,
+     "own_rate": 0.41
+    }
+   ],
+   "motor_imbalance": 24.243902439024392
+  },
+  {
+   "seed": 29,
+   "poison": "red",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 213,
+     "omitted": 41,
+     "inc_resp": 0.5853658536585366,
+     "assoc_resp": 0.5821596244131455,
+     "spikes": 120,
+     "own_rate": 0.0,
+     "latency_ms": [
+      2.3728987538667923,
+      2.9731807547186406,
+      4.887193526533551
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       28
+      ],
+      "0.01": [
+       0.0,
+       20
+      ],
+      "0.02": [
+       0.532258064516129,
+       62
+      ],
+      "0.05": [
+       1.0,
+       29
+      ],
+      "0.1": [
+       0.8378378378378378,
+       74
+      ]
+     },
+     "inc_motor": {
+      "0": 0.07317073170731707,
+      "1": 0.24390243902439024
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 210,
+     "omitted": 44,
+     "inc_resp": 0.6818181818181818,
+     "assoc_resp": 0.6523809523809524,
+     "spikes": 127,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.6481181961850666,
+      2.0956857601781564,
+      3.027257045056331
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       15
+      ],
+      "0.01": [
+       0.0,
+       15
+      ],
+      "0.02": [
+       0.3389830508474576,
+       59
+      ],
+      "0.05": [
+       1.0,
+       47
+      ],
+      "0.1": [
+       0.9459459459459459,
+       74
+      ]
+     },
+     "inc_motor": {
+      "0": 0.13636363636363635,
+      "1": 0.13636363636363635
+     },
+     "side_motor": 0
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 2217,
+     "own": 2139,
+     "own_rate": 21.39
+    },
+    {
+     "motor": 1,
+     "spikes": 1714,
+     "own": 1602,
+     "own_rate": 16.02
+    }
+   ],
+   "motor_imbalance": 1.3352059925093633
+  },
+  {
+   "seed": 29,
+   "poison": "blue",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 152,
+     "omitted": 28,
+     "inc_resp": 0.5357142857142857,
+     "assoc_resp": 0.7171052631578947,
+     "spikes": 99,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.532474152429897,
+      2.8401177444088432,
+      4.518737455830292
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       13
+      ],
+      "0.01": [
+       0.14285714285714285,
+       14
+      ],
+      "0.02": [
+       0.6923076923076923,
+       39
+      ],
+      "0.05": [
+       1.0,
+       20
+      ],
+      "0.1": [
+       0.9090909090909091,
+       66
+      ]
+     },
+     "inc_motor": {
+      "0": -0.07142857142857142,
+      "1": 0.32142857142857145
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 89,
+     "omitted": 20,
+     "inc_resp": 0.7,
+     "assoc_resp": 0.6629213483146067,
+     "spikes": 58,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.7933915693966185,
+      2.1657753467607677,
+      3.3418513376425096
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       8
+      ],
+      "0.01": [
+       0.0,
+       5
+      ],
+      "0.02": [
+       0.3333333333333333,
+       15
+      ],
+      "0.05": [
+       1.0,
+       11
+      ],
+      "0.1": [
+       0.86,
+       50
+      ]
+     },
+     "inc_motor": {
+      "0": 0.05,
+      "1": -0.2
+     },
+     "side_motor": 0
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 2219,
+     "own": 2152,
+     "own_rate": 21.52
+    },
+    {
+     "motor": 1,
+     "spikes": 1711,
+     "own": 1640,
+     "own_rate": 16.4
+    }
+   ],
+   "motor_imbalance": 1.3121951219512196
+  },
+  {
+   "seed": 30,
+   "poison": "red",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 202,
+     "omitted": 40,
+     "inc_resp": 0.3,
+     "assoc_resp": 0.5594059405940595,
+     "spikes": 107,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.1931629954347045,
+      1.662376130980192,
+      2.610861122742225
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       22
+      ],
+      "0.01": [
+       0.11538461538461539,
+       26
+      ],
+      "0.02": [
+       0.5897435897435898,
+       39
+      ],
+      "0.05": [
+       0.96,
+       25
+      ],
+      "0.1": [
+       0.7,
+       90
+      ]
+     },
+     "inc_motor": {
+      "0": -0.075,
+      "1": 0.25
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 168,
+     "omitted": 34,
+     "inc_resp": 0.6176470588235294,
+     "assoc_resp": 0.7083333333333334,
+     "spikes": 119,
+     "own_rate": 0.0,
+     "latency_ms": [
+      3.8137951858786323,
+      4.335135512079091,
+      4.693986296439334
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       9
+      ],
+      "0.01": [
+       0.0,
+       6
+      ],
+      "0.02": [
+       0.06666666666666667,
+       15
+      ],
+      "0.05": [
+       0.8571428571428571,
+       14
+      ],
+      "0.1": [
+       0.8548387096774194,
+       124
+      ]
+     },
+     "inc_motor": {
+      "0": 0.08823529411764706,
+      "1": -0.029411764705882353
+     },
+     "side_motor": 0
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 2212,
+     "own": 2110,
+     "own_rate": 21.1
+    },
+    {
+     "motor": 1,
+     "spikes": 103,
+     "own": 6,
+     "own_rate": 0.06
+    }
+   ],
+   "motor_imbalance": 351.6666666666667
+  },
+  {
+   "seed": 30,
+   "poison": "blue",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 0,
+     "plastic_motor": 1,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 413,
+     "omitted": 85,
+     "inc_resp": 0.43529411764705883,
+     "assoc_resp": 0.5907990314769975,
+     "spikes": 231,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.2321963300356176,
+      1.818380982541612,
+      2.661795787951782
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       72
+      ],
+      "0.01": [
+       0.08333333333333333,
+       48
+      ],
+      "0.02": [
+       0.7372881355932204,
+       118
+      ],
+      "0.05": [
+       1.0,
+       50
+      ],
+      "0.1": [
+       0.824,
+       125
+      ]
+     },
+     "inc_motor": {
+      "0": 0.011764705882352941,
+      "1": 0.3411764705882353
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 360,
+     "omitted": 70,
+     "inc_resp": 0.5,
+     "assoc_resp": 0.6027777777777777,
+     "spikes": 188,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.074740014678355,
+      4.199903678795636,
+      5.290869239624385
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       25
+      ],
+      "0.01": [
+       0.075,
+       40
+      ],
+      "0.02": [
+       0.3793103448275862,
+       87
+      ],
+      "0.05": [
+       0.9803921568627451,
+       51
+      ],
+      "0.1": [
+       0.8343949044585988,
+       157
+      ]
+     },
+     "inc_motor": {
+      "0": 0.1,
+      "1": 0.45714285714285713
+     },
+     "side_motor": 0
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 2205,
+     "own": 2075,
+     "own_rate": 20.75
+    },
+    {
+     "motor": 1,
+     "spikes": 409,
+     "own": 23,
+     "own_rate": 0.23
+    }
+   ],
+   "motor_imbalance": 90.21739130434783
+  },
+  {
+   "seed": 31,
+   "poison": "red",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 381,
+     "omitted": 79,
+     "inc_resp": 0.17721518987341772,
+     "assoc_resp": 0.2152230971128609,
+     "spikes": 48,
+     "own_rate": 0.0,
+     "latency_ms": [
+      0.9584143956502089,
+      3.1455318855790892,
+      7.625905987513449
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       6
+      ],
+      "0.01": [
+       0.0,
+       3
+      ],
+      "0.02": [
+       0.0,
+       5
+      ],
+      "0.05": [
+       0.1111111111111111,
+       9
+      ],
+      "0.1": [
+       0.22625698324022347,
+       358
+      ]
+     },
+     "inc_motor": {
+      "0": 0.0,
+      "1": 0.06329113924050633
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 87,
+     "omitted": 15,
+     "inc_resp": 0.6666666666666666,
+     "assoc_resp": 0.7241379310344828,
+     "spikes": 61,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.2376308913310652,
+      1.6795048542199709,
+      3.071114527165265
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       10
+      ],
+      "0.01": [
+       0.25,
+       4
+      ],
+      "0.02": [
+       0.6538461538461539,
+       26
+      ],
+      "0.05": [
+       1.0,
+       14
+      ],
+      "0.1": [
+       0.9393939393939394,
+       33
+      ]
+     },
+     "inc_motor": {
+      "0": 0.7333333333333333,
+      "1": -0.06666666666666667
+     },
+     "side_motor": 1
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 56,
+     "own": 14,
+     "own_rate": 0.14
+    },
+    {
+     "motor": 1,
+     "spikes": 2042,
+     "own": 1983,
+     "own_rate": 19.83
+    }
+   ],
+   "motor_imbalance": 141.6428571428571
+  },
+  {
+   "seed": 31,
+   "poison": "blue",
+   "wiring": [
+    {
+     "sensor": 0,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P0"
+    },
+    {
+     "sensor": 1,
+     "side_motor": 1,
+     "plastic_motor": 0,
+     "knob": "P1"
+    }
+   ],
+   "units": [
+    {
+     "sensor": 0,
+     "pulses": 199,
+     "omitted": 43,
+     "inc_resp": 0.20930232558139536,
+     "assoc_resp": 0.20603015075376885,
+     "spikes": 25,
+     "own_rate": 0.0,
+     "latency_ms": [
+      1.0618167551541546,
+      2.6771114832655485,
+      6.1922589775527115
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       3
+      ],
+      "0.01": [
+       0.0,
+       2
+      ],
+      "0.02": [
+       0.2631578947368421,
+       19
+      ],
+      "0.05": [
+       0.1,
+       10
+      ],
+      "0.1": [
+       0.21212121212121213,
+       165
+      ]
+     },
+     "inc_motor": {
+      "0": 0.18604651162790697,
+      "1": 0.046511627906976744
+     },
+     "side_motor": 1
+    },
+    {
+     "sensor": 1,
+     "pulses": 281,
+     "omitted": 53,
+     "inc_resp": 0.6226415094339622,
+     "assoc_resp": 0.7473309608540926,
+     "spikes": 232,
+     "own_rate": 0.22636073670130671,
+     "latency_ms": [
+      1.1908519734838308,
+      1.6766232541378656,
+      2.0967003821072083
+     ],
+     "recovery": {
+      "0.0": [
+       0.0,
+       34
+      ],
+      "0.01": [
+       0.12,
+       25
+      ],
+      "0.02": [
+       0.6206896551724138,
+       29
+      ],
+      "0.05": [
+       1.0,
+       16
+      ],
+      "0.1": [
+       0.9774011299435028,
+       177
+      ]
+     },
+     "inc_motor": {
+      "0": 0.0,
+      "1": 0.18867924528301888
+     },
+     "side_motor": 1
+    }
+   ],
+   "motors": [
+    {
+     "motor": 0,
+     "spikes": 24,
+     "own": 5,
+     "own_rate": 0.05
+    },
+    {
+     "motor": 1,
+     "spikes": 2058,
+     "own": 1892,
+     "own_rate": 18.92
+    }
+   ],
+   "motor_imbalance": 378.40000000000003
+  }
+ ]
+}

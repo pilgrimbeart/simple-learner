@@ -1,0 +1,46 @@
+signed_gate done
+linear_signed done
+{
+  "checks": {
+    "validation_max_V": 1.3877787807814457e-17,
+    "resolution_max_V": 1.5265566588595902e-16,
+    "maximum_state_V": 0.15806761910509343
+  },
+  "comparisons": {
+    "signed_gate": {
+      "adequate_draws": 40,
+      "draws": 40,
+      "any_drift_phase_wrong_sign_cases": 66,
+      "any_drift_phase_zero_cases": 0,
+      "local_cases": 320,
+      "zero_bias_range_V": [
+        -0.02926255424976689,
+        0.029135772909234678
+      ]
+    },
+    "linear_signed": {
+      "adequate_draws": 40,
+      "draws": 40,
+      "any_drift_phase_wrong_sign_cases": 72,
+      "any_drift_phase_zero_cases": 0,
+      "local_cases": 320,
+      "zero_bias_range_V": [
+        -0.032047271580728225,
+        0.032047271580728225
+      ]
+    }
+  },
+  "separation": {
+    "wanted_min_Hz": 1.8163992735394399,
+    "drift_Hz": 0.05,
+    "minimum_frequency_ratio": 20.543919576822418,
+    "feasible_tau_interval_s": [
+      0.180914976901887,
+      0.31991347258556546
+    ],
+    "physical_leak_tau_max_s": 3.8585074308112732,
+    "frozen_1s_fast_transmission": 0.996183232758209,
+    "frozen_1s_drift_transmission": 0.29971680358919595,
+    "condition": "Bounds apply to a first-order ideal filter and specified sinusoidal components; not a universal brain prior or demonstrated circuit optimum."
+  }
+}

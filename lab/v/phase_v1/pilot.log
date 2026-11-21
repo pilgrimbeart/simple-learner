@@ -1,0 +1,9 @@
+{"seed": 2026112700, "failed_groups": 0, "elapsed_s": 10.967830673005665}
+{"seed": 2026112701, "failed_groups": 0, "elapsed_s": 19.52824983400933}
+{"seed": 2026112702, "failed_groups": 0, "elapsed_s": 27.820746598998085}
+{"seed": 2026112703, "failed_groups": 0, "elapsed_s": 36.85829333300353}
+{"seed": 2026112704, "failed_groups": 0, "elapsed_s": 45.36491417400248}
+{"seed": 2026112705, "failed_groups": 0, "elapsed_s": 53.690485095008626}
+{"seed": 2026112706, "failed_groups": 0, "elapsed_s": 62.08035963799921}
+{"seed": 2026112707, "failed_groups": 0, "elapsed_s": 71.54955890300334}
+{"passed": 8, "seeds": 8, "failed_seeds": [], "wilson95": [0.6755924351161198, 1.0], "reliability_pass": false, "refinement_pass": true, "control_rows": 288, "control_pass": true, "power_W": [5.8036118173061244e-09, 5.771460556402624e-09, 5.842890930719879e-09], "elapsed_s": 71.56431169599819}

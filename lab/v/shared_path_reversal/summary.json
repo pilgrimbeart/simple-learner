@@ -1,0 +1,33 @@
+{
+  "comparisons": {
+    "original": {
+      "static_adequate_draws": 39,
+      "draws": 40,
+      "minimum_signed_response_V": 0.016436588852549026,
+      "source_zero_max_abs_V": 0.0939362733593741,
+      "control_zero_max_abs_V": 0.1214120565686122
+    },
+    "source_odd": {
+      "static_adequate_draws": 40,
+      "draws": 40,
+      "minimum_signed_response_V": 0.053328858840947235,
+      "source_zero_max_abs_V": 0.0,
+      "control_zero_max_abs_V": 0.11521929122671533
+    },
+    "both_odd": {
+      "static_adequate_draws": 40,
+      "draws": 40,
+      "minimum_signed_response_V": 0.0810144559997038,
+      "source_zero_max_abs_V": 0.0,
+      "control_zero_max_abs_V": 0.0
+    }
+  },
+  "reconstruction_max_error_V": 5.551115123125783e-17,
+  "component_RMS_V": {
+    "even_even": 0.0172922241483862,
+    "odd_even": 0.021616788781667434,
+    "even_odd": 0.013536543794904555,
+    "odd_odd": 0.1396054575936753
+  },
+  "scope": "Same stationary transfer, exact external reversal and subtraction; switching/storage/settling absent"
+}

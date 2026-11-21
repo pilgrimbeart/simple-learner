@@ -1,0 +1,86 @@
+completed 51000 0.9
+completed 51001 1.8
+completed 51002 2.6
+completed 51003 3.3
+completed 51004 4.1
+completed 51005 4.9
+completed 51006 5.6
+completed 51007 6.4
+completed 51008 7.3
+completed 51009 8.1
+completed 51010 8.9
+completed 51011 9.7
+completed 51012 10.5
+completed 51013 11.4
+completed 51014 12.1
+completed 51015 13.0
+completed 51016 13.9
+completed 51017 14.8
+completed 51018 15.6
+completed 51019 16.5
+completed 51020 17.3
+completed 51021 18.2
+completed 51022 19.1
+completed 51023 20.0
+completed 51024 20.8
+completed 51025 21.6
+completed 51026 22.4
+completed 51027 23.2
+completed 51028 24.0
+completed 51029 24.8
+completed 51030 25.6
+completed 51031 26.3
+completed 51032 27.2
+completed 51033 28.0
+completed 51034 28.8
+completed 51035 29.7
+completed 51036 30.6
+completed 51037 31.3
+completed 51038 32.1
+completed 51039 32.9
+{
+  "vector_drift_validation_max_V_per_s": 0.0,
+  "original_root_difference_max_V": 3.292302686268951e-11,
+  "grid_root_difference_max_V": 1.609823385706477e-15,
+  "comparisons": {
+    "actual": {
+      "root_counts": [
+        1
+      ],
+      "draws_with_stable_root": [
+        51005,
+        51006,
+        51011,
+        51036
+      ]
+    },
+    "zero_self_offset": {
+      "root_counts": [
+        1
+      ],
+      "draws_with_stable_root": [
+        51011,
+        51036
+      ]
+    },
+    "zero_recovery_offset": {
+      "root_counts": [
+        1
+      ],
+      "draws_with_stable_root": [
+        51006,
+        51012
+      ]
+    },
+    "zero_slow_offset": {
+      "root_counts": [
+        1
+      ],
+      "draws_with_stable_root": [
+        51005,
+        51006,
+        51032
+      ]
+    }
+  }
+}

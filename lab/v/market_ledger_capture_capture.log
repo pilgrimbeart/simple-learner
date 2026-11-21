@@ -1,0 +1,55 @@
+{
+ "wall_s": 29.047029410001414,
+ "raw": "/home/pilgrim/git/simple-learner/lab/v/market_ledger_capture.pkl",
+ "raw_sha256": "0ae9fecd053016deee45ee73b38baf30372bdfcc8d4ef12c3bc7efd0a7aecf46",
+ "jobs": [
+  [
+   "M",
+   560,
+   "red",
+   false
+  ],
+  [
+   "M",
+   560,
+   "red",
+   true
+  ],
+  [
+   "M",
+   560,
+   "blue",
+   false
+  ],
+  [
+   "M",
+   560,
+   "blue",
+   true
+  ],
+  [
+   "none",
+   4480,
+   "red",
+   false
+  ],
+  [
+   "none",
+   4480,
+   "red",
+   true
+  ],
+  [
+   "none",
+   4480,
+   "blue",
+   false
+  ],
+  [
+   "none",
+   4480,
+   "blue",
+   true
+  ]
+ ]
+}

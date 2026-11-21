@@ -1,0 +1,48 @@
+{
+  "scenarios": {
+    "equal": [
+      [
+        0.1,
+        0.1
+      ],
+      0.0
+    ],
+    "unequal_amplitude": [
+      [
+        0.05,
+        0.1
+      ],
+      0.0
+    ],
+    "drifting": [
+      [
+        0.05,
+        0.1
+      ],
+      0.05
+    ]
+  },
+  "constant_means_V": [
+    0.1,
+    0.2
+  ],
+  "highpass_tau_s": 1.0,
+  "drift_frequency_Hz": 0.05,
+  "modes": [
+    "matched",
+    "reused_RC"
+  ],
+  "grids": [
+    [
+      256,
+      128
+    ],
+    [
+      512,
+      256
+    ]
+  ],
+  "tolerance_V": 5e-05,
+  "budget_s": 180,
+  "observation": "Fast-phase Fourier projection at every drift phase, retaining slow nonlinear response. No observer projection supplied to a brain; no noise/rail-fading/new filter offsets in this analytical reference."
+}

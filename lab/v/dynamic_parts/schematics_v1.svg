@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+<rect width="1200" height="900" fill="white"/>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#333"/></marker></defs>
+<g font-family="sans-serif" fill="#222"><text x="35" y="40" font-size="24">Four circuits, one circuit-block vocabulary</text>
+<text x="35" y="80" font-size="22">Trace</text>
+<rect x="75" y="150" width="160" height="85" rx="8" fill="#eef5f8" stroke="#333"/>
+<text x="87" y="173" font-size="16">trace</text>
+<text x="87" y="196" font-size="16">C = 25 pF</text>
+<text x="87" y="219" font-size="16">R = 2 Gohm</text>
+<text x="45" y="275" font-size="16">Input current → capacitor + leak</text>
+<text x="45" y="385" font-size="15">1 noisy states; 0 saturating connections</text>
+<text x="635" y="80" font-size="22">Memory</text>
+<rect x="675" y="150" width="160" height="85" rx="8" fill="#eef5f8" stroke="#333"/>
+<text x="687" y="173" font-size="16">bit</text>
+<text x="687" y="196" font-size="16">C = 25 pF</text>
+<text x="687" y="219" font-size="16">R = 2 Gohm</text>
+<text x="645" y="275" font-size="14">bit → bit: +300 pA, tanh(6.67/V · source)</text>
+<text x="645" y="385" font-size="15">1 noisy states; 1 saturating connections</text>
+<text x="35" y="480" font-size="22">Resonator</text>
+<rect x="75" y="550" width="160" height="85" rx="8" fill="#eef5f8" stroke="#333"/>
+<text x="87" y="573" font-size="16">x</text>
+<text x="87" y="596" font-size="16">C = 25 pF</text>
+<text x="87" y="619" font-size="16">R = 4 Gohm</text>
+<rect x="335" y="550" width="160" height="85" rx="8" fill="#eef5f8" stroke="#333"/>
+<text x="347" y="573" font-size="16">y</text>
+<text x="347" y="596" font-size="16">C = 25 pF</text>
+<text x="347" y="619" font-size="16">R = 4 Gohm</text>
+<text x="45" y="675" font-size="14">y → x: -450 pA, tanh(3.33/V · source)</text>
+<text x="45" y="703" font-size="14">x → y: +450 pA, tanh(3.33/V · source)</text>
+<text x="45" y="785" font-size="15">2 noisy states; 2 saturating connections</text>
+<text x="635" y="480" font-size="22">Oscillator</text>
+<rect x="675" y="550" width="160" height="85" rx="8" fill="#eef5f8" stroke="#333"/>
+<text x="687" y="573" font-size="16">fast</text>
+<text x="687" y="596" font-size="16">C = 25 pF</text>
+<text x="687" y="619" font-size="16">R = 0.8 Gohm</text>
+<rect x="935" y="550" width="160" height="85" rx="8" fill="#eef5f8" stroke="#333"/>
+<text x="947" y="573" font-size="16">recovery</text>
+<text x="947" y="596" font-size="16">C = 25 pF</text>
+<text x="947" y="619" font-size="16">R = 8 Gohm</text>
+<text x="645" y="675" font-size="14">fast → fast: +562.5 pA, tanh(6.67/V · source)</text>
+<text x="645" y="703" font-size="14">recovery → fast: -937.5 pA, tanh(6.67/V · source)</text>
+<text x="645" y="731" font-size="14">fast → recovery: +37.5 pA, tanh(3.33/V · source)</text>
+<text x="645" y="785" font-size="15">2 noisy states; 3 saturating connections</text>
+<text x="35" y="870" font-size="15">All nodes: silicon noise, component mismatch, ±0.9 V supply. No internal filtered channels.</text></g></svg>

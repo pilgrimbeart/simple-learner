@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="560"><rect width="100%" height="100%" fill="white"/><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#222"/></marker></defs><g font-family="sans-serif" fill="#222"><text x="30" y="35" font-size="23">order_v2: explicit circuit graph</text>
+<rect x="40" y="100" width="230" height="85" fill="#eef5f8" stroke="#222"/><text x="50" y="125" font-size="17">0: A</text><text x="50" y="148">C=25 pF</text><text x="50" y="170">R=0.4 Gohm</text>
+<rect x="350" y="100" width="230" height="85" fill="#eef5f8" stroke="#222"/><text x="360" y="125" font-size="17">1: B</text><text x="360" y="148">C=25 pF</text><text x="360" y="170">R=0.4 Gohm</text>
+<rect x="660" y="100" width="230" height="85" fill="#eef5f8" stroke="#222"/><text x="670" y="125" font-size="17">2: trace A</text><text x="670" y="148">C=25 pF</text><text x="670" y="170">R=6 Gohm</text>
+<rect x="970" y="100" width="230" height="85" fill="#eef5f8" stroke="#222"/><text x="980" y="125" font-size="17">3: trace B</text><text x="980" y="148">C=25 pF</text><text x="980" y="170">R=6 Gohm</text>
+<rect x="40" y="260" width="230" height="85" fill="#eef5f8" stroke="#222"/><text x="50" y="285" font-size="17">4: A then B</text><text x="50" y="308">C=25 pF</text><text x="50" y="330">R=0.4 Gohm</text>
+<rect x="350" y="260" width="230" height="85" fill="#eef5f8" stroke="#222"/><text x="360" y="285" font-size="17">5: B then A</text><text x="360" y="308">C=25 pF</text><text x="360" y="330">R=0.4 Gohm</text>
+<rect x="660" y="260" width="230" height="85" fill="#eef5f8" stroke="#222"/><text x="670" y="285" font-size="17">6: coincidence</text><text x="670" y="308">C=25 pF</text><text x="670" y="330">R=0.4 Gohm</text>
+<rect x="970" y="260" width="230" height="85" fill="#eef5f8" stroke="#222"/><text x="980" y="285" font-size="17">7: order difference</text><text x="980" y="308">C=25 pF</text><text x="980" y="330">R=0.8 Gohm</text>
+<path d="M155,100 C155,75 775,75 775,100" fill="none" stroke="#222" marker-end="url(#arrow)"/><text x="465.0" y="75.0" font-size="13">e0 +</text>
+<path d="M465,100 C465,65 1085,65 1085,100" fill="none" stroke="#222" marker-end="url(#arrow)"/><text x="775.0" y="65.0" font-size="13">e1 +</text>
+<path d="M465,100 C465,55 155,215 155,260" fill="none" stroke="#222" marker-end="url(#arrow)"/><text x="310.0" y="135.0" font-size="13">e2 +</text>
+<path d="M775,185 L310.0,135.0" stroke="#555" stroke-dasharray="5 5" fill="none"/>
+<path d="M155,100 C155,75 465,235 465,260" fill="none" stroke="#222" marker-end="url(#arrow)"/><text x="310.0" y="155.0" font-size="13">e3 +</text>
+<path d="M1085,185 L310.0,155.0" stroke="#555" stroke-dasharray="5 5" fill="none"/>
+<path d="M155,100 C155,65 775,225 775,260" fill="none" stroke="#222" marker-end="url(#arrow)"/><text x="465.0" y="145.0" font-size="13">e4 +</text>
+<path d="M465,185 L465.0,145.0" stroke="#555" stroke-dasharray="5 5" fill="none"/>
+<path d="M155,260 C155,215 1085,215 1085,260" fill="none" stroke="#222" marker-end="url(#arrow)"/><text x="620.0" y="215.0" font-size="13">e5 +</text>
+<path d="M465,260 C465,235 1085,235 1085,260" fill="none" stroke="#222" marker-end="url(#arrow)"/><text x="775.0" y="235.0" font-size="13">e6 −</text>
+<text x="30" y="520">Solid: signed connection current. Dashed: gate voltage. Exact transfer functions and parts: manifest.json.</text></g></svg>

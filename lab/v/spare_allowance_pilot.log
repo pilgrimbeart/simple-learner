@@ -1,0 +1,19 @@
+{"wall_s": 259.55397945599543, "raw": "/home/pilgrim/git/simple-learner/lab/v/spare_allowance_pilot.pkl", "raw_sha256": "0cc4ba68a29fe52adf4d7cc7dd7a4fc2b08f21b3bfff307d92e7736f803b8245", "G": 258, "cap": 2300, "config": {"arm": "net10kc60SFBLMR", "P": 560, "rule": "M", "dt": 0.0025, "LB_FINE": 1, "LB_LIVE": 1, "secs": {"seq": 300.0, "time": 3000.0, "allfood": 300.0}, "conditions": {"seq": "ladders.seq(17) 300 s", "time": "ladders.timing(3) 3000 s", "allfood": "stage2_lang.worlds.W['allfood']['text'] 300 s"}}}
+{
+ "failed": [],
+ "gate_used_seq": [
+  "red",
+  "blue"
+ ],
+ "proceed_to_J": true,
+ "J_projection": {
+  "new_lives": {
+   "seq": 36,
+   "time": 36,
+   "allfood": 36
+  },
+  "cpu_s": 2983.7003311739995,
+  "wall_s_two_workers": 1491.8501655869998,
+  "budget_s": 1800
+ }
+}

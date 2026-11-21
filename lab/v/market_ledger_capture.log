@@ -1,0 +1,298 @@
+{
+ "identity": {
+  "M red": {
+   "observed_equals_unobserved_result": true,
+   "observed_equals_unobserved_fingerprint": true,
+   "reproduces_alloc_stage1": true,
+   "transfers_equal_stage1": true
+  },
+  "M blue": {
+   "observed_equals_unobserved_result": true,
+   "observed_equals_unobserved_fingerprint": true,
+   "reproduces_alloc_stage1": true,
+   "transfers_equal_stage1": true
+  },
+  "none red": {
+   "observed_equals_unobserved_result": true,
+   "observed_equals_unobserved_fingerprint": true,
+   "reproduces_D93_result": true,
+   "reproduces_D93_issued_rows": true
+  },
+  "none blue": {
+   "observed_equals_unobserved_result": true,
+   "observed_equals_unobserved_fingerprint": true,
+   "reproduces_D93_result": true,
+   "reproduces_D93_issued_rows": true
+  }
+ },
+ "checks": {
+  "M red": {
+   "balance_increment_max_error": 1.7832957333041577e-15,
+   "balance_sum_max_error": 0.0,
+   "weight_replay_max_error": 7.460698725481052e-14,
+   "predicted_donor_mismatches": 0,
+   "removals_outside_donor": 0,
+   "transfers": 219,
+   "allocator_transfers": 219,
+   "allowance_conservation_violations": 0,
+   "transfers_reconcile": true,
+   "peak_within_cap": true
+  },
+  "M blue": {
+   "balance_increment_max_error": 1.4988010832439613e-15,
+   "balance_sum_max_error": 0.0,
+   "weight_replay_max_error": 1.5631940186722204e-13,
+   "predicted_donor_mismatches": 0,
+   "removals_outside_donor": 0,
+   "transfers": 241,
+   "allocator_transfers": 241,
+   "allowance_conservation_violations": 0,
+   "transfers_reconcile": true,
+   "peak_within_cap": true
+  },
+  "none red": {
+   "balance_increment_max_error": 3.552713678800501e-15,
+   "balance_sum_max_error": 0.0,
+   "weight_replay_max_error": 2.4158453015843406e-13,
+   "predicted_donor_mismatches": 0,
+   "removals_outside_donor": 0,
+   "transfers": 115,
+   "allocator_transfers": null,
+   "allowance_conservation_violations": 0,
+   "D77_market_transfer_counter": 115,
+   "transfers_equal_D77_counter": true
+  },
+  "none blue": {
+   "balance_increment_max_error": 3.552713678800501e-15,
+   "balance_sum_max_error": 0.0,
+   "weight_replay_max_error": 3.126388037344441e-13,
+   "predicted_donor_mismatches": 0,
+   "removals_outside_donor": 0,
+   "transfers": 157,
+   "allocator_transfers": null,
+   "allowance_conservation_violations": 0,
+   "D77_market_transfer_counter": 157,
+   "transfers_equal_D77_counter": true
+  }
+ },
+ "all_checks_pass": true
+}
+{
+ "M red": {
+  "requests": 29400,
+  "accepted_tastes": 175,
+  "outcomes": {
+   "under allowance": 7379,
+   "full, no birth due": 3270,
+   "full, savings test fails": 18282,
+   "refused: drawn donor has no leaf": 250,
+   "transferred with removal": 219
+  },
+  "by_family": {
+   "event": {
+    "full, no birth due": 149,
+    "full, savings test fails": 1504,
+    "refused: drawn donor has no leaf": 25,
+    "transferred with removal": 15,
+    "under allowance": 57,
+    "leafless refusals with spare drawn donor": 25,
+    "issued credit would pass (historical fails)": 0,
+    "issued credit would fail (historical passes)": 0
+   },
+   "clock": {
+    "full, no birth due": 1148,
+    "full, savings test fails": 7955,
+    "refused: drawn donor has no leaf": 115,
+    "transferred with removal": 77,
+    "under allowance": 1205,
+    "leafless refusals with spare drawn donor": 115,
+    "issued credit would pass (historical fails)": 7,
+    "issued credit would fail (historical passes)": 11
+   },
+   "integrator": {
+    "full, no birth due": 1015,
+    "full, savings test fails": 8355,
+    "refused: drawn donor has no leaf": 108,
+    "transferred with removal": 83,
+    "under allowance": 239,
+    "leafless refusals with spare drawn donor": 108,
+    "issued credit would pass (historical fails)": 4,
+    "issued credit would fail (historical passes)": 4
+   },
+   "rhythm": {
+    "full, no birth due": 958,
+    "full, savings test fails": 468,
+    "refused: drawn donor has no leaf": 2,
+    "transferred with removal": 44,
+    "under allowance": 5878,
+    "leafless refusals with spare drawn donor": 2,
+    "issued credit would pass (historical fails)": 0,
+    "issued credit would fail (historical passes)": 0
+   }
+  },
+  "leafless_refusals": 250,
+  "leafless_with_spare_drawn_donor": 250,
+  "issued_would_pass": 11,
+  "issued_would_fail": 15,
+  "gated_requests": 18751
+ },
+ "M blue": {
+  "requests": 27216,
+  "accepted_tastes": 162,
+  "outcomes": {
+   "under allowance": 8157,
+   "full, no birth due": 2456,
+   "full, savings test fails": 15659,
+   "refused: drawn donor has no leaf": 703,
+   "transferred with removal": 241
+  },
+  "by_family": {
+   "event": {
+    "full, no birth due": 149,
+    "full, savings test fails": 1315,
+    "refused: drawn donor has no leaf": 86,
+    "transferred with removal": 22,
+    "under allowance": 48,
+    "leafless refusals with spare drawn donor": 86,
+    "issued credit would pass (historical fails)": 0,
+    "issued credit would fail (historical passes)": 0
+   },
+   "clock": {
+    "full, no birth due": 1568,
+    "full, savings test fails": 6487,
+    "refused: drawn donor has no leaf": 463,
+    "transferred with removal": 152,
+    "under allowance": 1050,
+    "leafless refusals with spare drawn donor": 463,
+    "issued credit would pass (historical fails)": 14,
+    "issued credit would fail (historical passes)": 26
+   },
+   "integrator": {
+    "full, no birth due": 739,
+    "full, savings test fails": 7857,
+    "refused: drawn donor has no leaf": 154,
+    "transferred with removal": 67,
+    "under allowance": 255,
+    "leafless refusals with spare drawn donor": 154,
+    "issued credit would pass (historical fails)": 6,
+    "issued credit would fail (historical passes)": 6
+   },
+   "rhythm": {
+    "under allowance": 6804,
+    "leafless refusals with spare drawn donor": 0,
+    "issued credit would pass (historical fails)": 0,
+    "issued credit would fail (historical passes)": 0
+   }
+  },
+  "leafless_refusals": 703,
+  "leafless_with_spare_drawn_donor": 703,
+  "issued_would_pass": 20,
+  "issued_would_fail": 32,
+  "gated_requests": 16603
+ },
+ "none red": {
+  "requests": 22176,
+  "accepted_tastes": 132,
+  "outcomes": {
+   "under allowance": 11277,
+   "full, savings test fails": 10784,
+   "transferred with removal": 87,
+   "transferred allowance only": 28
+  },
+  "by_family": {
+   "event": {
+    "full, savings test fails": 556,
+    "transferred allowance only": 6,
+    "transferred with removal": 16,
+    "under allowance": 742,
+    "leafless refusals with spare drawn donor": 0,
+    "issued credit would pass (historical fails)": 0,
+    "issued credit would fail (historical passes)": 0
+   },
+   "clock": {
+    "full, savings test fails": 2875,
+    "transferred allowance only": 12,
+    "transferred with removal": 45,
+    "under allowance": 4988,
+    "leafless refusals with spare drawn donor": 0,
+    "issued credit would pass (historical fails)": 4,
+    "issued credit would fail (historical passes)": 0
+   },
+   "integrator": {
+    "full, savings test fails": 4834,
+    "transferred allowance only": 10,
+    "transferred with removal": 25,
+    "under allowance": 2523,
+    "leafless refusals with spare drawn donor": 0,
+    "issued credit would pass (historical fails)": 0,
+    "issued credit would fail (historical passes)": 0
+   },
+   "rhythm": {
+    "full, savings test fails": 2519,
+    "transferred with removal": 1,
+    "under allowance": 3024,
+    "leafless refusals with spare drawn donor": 0,
+    "issued credit would pass (historical fails)": 0,
+    "issued credit would fail (historical passes)": 0
+   }
+  },
+  "leafless_refusals": 0,
+  "leafless_with_spare_drawn_donor": 0,
+  "issued_would_pass": 4,
+  "issued_would_fail": 0,
+  "gated_requests": 10899
+ },
+ "none blue": {
+  "requests": 26880,
+  "accepted_tastes": 160,
+  "outcomes": {
+   "under allowance": 12385,
+   "full, savings test fails": 14338,
+   "transferred allowance only": 27,
+   "transferred with removal": 130
+  },
+  "by_family": {
+   "event": {
+    "full, savings test fails": 742,
+    "transferred allowance only": 2,
+    "transferred with removal": 22,
+    "under allowance": 834,
+    "leafless refusals with spare drawn donor": 0,
+    "issued credit would pass (historical fails)": 0,
+    "issued credit would fail (historical passes)": 0
+   },
+   "clock": {
+    "full, savings test fails": 3707,
+    "transferred allowance only": 13,
+    "transferred with removal": 73,
+    "under allowance": 5807,
+    "leafless refusals with spare drawn donor": 0,
+    "issued credit would pass (historical fails)": 0,
+    "issued credit would fail (historical passes)": 0
+   },
+   "integrator": {
+    "full, savings test fails": 6617,
+    "transferred allowance only": 11,
+    "transferred with removal": 29,
+    "under allowance": 2303,
+    "leafless refusals with spare drawn donor": 0,
+    "issued credit would pass (historical fails)": 1,
+    "issued credit would fail (historical passes)": 0
+   },
+   "rhythm": {
+    "full, savings test fails": 3272,
+    "transferred allowance only": 1,
+    "transferred with removal": 6,
+    "under allowance": 3441,
+    "leafless refusals with spare drawn donor": 0,
+    "issued credit would pass (historical fails)": 0,
+    "issued credit would fail (historical passes)": 0
+   }
+  },
+  "leafless_refusals": 0,
+  "leafless_with_spare_drawn_donor": 0,
+  "issued_would_pass": 1,
+  "issued_would_fail": 0,
+  "gated_requests": 14495
+ }
+}

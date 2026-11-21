@@ -1,0 +1,163 @@
+{
+  "graph": {
+    "nodes": [
+      {
+        "name": "evidence",
+        "C": 2.5e-11,
+        "R": 800000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "eligibility",
+        "C": 2.5e-11,
+        "R": 2000000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "stored",
+        "C": 2.5e-11,
+        "R": null,
+        "bias": 0.0,
+        "memory": true
+      },
+      {
+        "name": "probe",
+        "C": 2.5e-11,
+        "R": 800000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "response",
+        "C": 2.5e-11,
+        "R": 2000000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "inverted evidence",
+        "C": 2.5e-11,
+        "R": 800000000.0,
+        "bias": 0.0,
+        "memory": false
+      }
+    ],
+    "edges": [
+      {
+        "to": 4,
+        "source": 3,
+        "gate": 2,
+        "gain": 2e-10,
+        "offset": 0.0,
+        "slope": 6.666666666666667,
+        "tau": 0.0,
+        "sigmoid": false
+      },
+      {
+        "to": 2,
+        "source": 0,
+        "gate": 1,
+        "gain": 8e-12,
+        "offset": 0.3,
+        "slope": 60.0,
+        "tau": 0.0,
+        "sigmoid": true
+      },
+      {
+        "to": 5,
+        "source": 0,
+        "gain": -9.375e-10,
+        "offset": 0.0,
+        "slope": 1.6666666666666667,
+        "tau": 0.0,
+        "gate": -1,
+        "sigmoid": false
+      },
+      {
+        "to": 2,
+        "source": 5,
+        "gain": -8e-12,
+        "offset": 0.3,
+        "slope": 60.0,
+        "tau": 0.0,
+        "gate": 1,
+        "sigmoid": true
+      }
+    ],
+    "duration": 12.0
+  },
+  "cases": [
+    -0.5,
+    -0.05,
+    0.0,
+    0.05,
+    0.5
+  ],
+  "pilot": [
+    2026112300,
+    2026112301,
+    2026112302,
+    2026112303,
+    2026112304,
+    2026112305,
+    2026112306,
+    2026112307
+  ],
+  "confirm": [
+    2026112400,
+    2026112401,
+    2026112402,
+    2026112403,
+    2026112404,
+    2026112405,
+    2026112406,
+    2026112407,
+    2026112408,
+    2026112409,
+    2026112410,
+    2026112411,
+    2026112412,
+    2026112413,
+    2026112414,
+    2026112415,
+    2026112416,
+    2026112417,
+    2026112418,
+    2026112419,
+    2026112420,
+    2026112421,
+    2026112422,
+    2026112423,
+    2026112424,
+    2026112425,
+    2026112426,
+    2026112427,
+    2026112428,
+    2026112429,
+    2026112430,
+    2026112431,
+    2026112432,
+    2026112433,
+    2026112434,
+    2026112435,
+    2026112436,
+    2026112437,
+    2026112438,
+    2026112439
+  ],
+  "steps": [
+    0.000125,
+    6.25e-05,
+    3.125e-05
+  ],
+  "initial": "D127 first5state initialization retained; added inverter uniform+/-.075V; stored uniform.14-.16V.",
+  "stimulus": "Evidence amplitude case for.3s at1+jitter; eligibility+.6Vnominal .25s (1s for zero evidence stress). Opposite evidence alone at6+jitter. Probe+.5Vfor.3s at.4,3,10+jitter.12s component bench, continuous jitter. Cases +/- .05 intentionally below deadband.",
+  "criteria": "Every case/all3steps per seed. For +/- .5: signed write in(.03,.14)V and signed response change>.025V. For0,+/-.05: abs write<.001V and abs response change<.005V. Hold span2.5-9.9s<.0001V, late response change<.005V, startup write abs<.001V, no rails.",
+  "controls": "Pilot allcases/steps: no eligibility pulse; removed positive/negative writers. Stored delta<1mV; response change<5mV; same hold/startup/rail checks. Readout and inverter retain original per-edge mismatches.",
+  "prediction": "Threshold V_TYP=.3V and60/V logistic: each branch falls below existing1%writer dead zone when source is about77mV below threshold. Inverter nominal -.75*tanh(evidence/.6)V makes negative .5V evidence about+.51V; weak .05V yields about.062V. Cost/lag/offset of inversion explicit. This intentionally rejects weak evidence; thresholds are innate, not learned.",
+  "reliability": "Wilson95 lower>=.90 in40draws; paired-seed4000bootstrap bothstep-halving intervals within+/- .05 for each normalized metric/case.",
+  "budget": "One sequential process; pilot600s,confirm1200s; at most2variants then diagnosis. No engine noise/driver parameter changes.",
+  "limitations": "Positive stored control range; no signed learned-weight/readout claim, no useful eligibility generation, no robot learning. Pump implementation/energy absent as in existing model."
+}

@@ -1,0 +1,1103 @@
+{
+ "mechanical_failures": [],
+ "allfood_exact": {
+  "142000 red": true,
+  "142000 blue": true,
+  "142001 red": true,
+  "142001 blue": true,
+  "142002 red": true,
+  "142002 blue": true,
+  "142003 red": true,
+  "142003 blue": true,
+  "142004 red": true,
+  "142004 blue": true,
+  "142005 red": true,
+  "142005 blue": true,
+  "142006 red": true,
+  "142006 blue": true,
+  "142007 red": true,
+  "142007 blue": true,
+  "142008 red": true,
+  "142008 blue": true,
+  "142009 red": true,
+  "142009 blue": true
+ },
+ "families": {
+  "seq": {
+   "reference": "/home/pilgrim/git/simple-learner/lab/v/grownet_pair300_seq_5-11-17_10_s142000_net10kc60SFBLMR560-net10kc60SFBLMR1120-net10kc60SFBLMR2240-net10kc60SFBLMR4480.pkl",
+   "gate_minus_baseline_gap_closed": {
+    "median": 0.04691877149720913,
+    "ci95": [
+     -0.012946724324902686,
+     0.10793720808195544
+    ]
+   },
+   "per_arm": {
+    "issued": {
+     "gap_closed": {
+      "median": 0.37432290812848534,
+      "ci95": [
+       0.20778554951318304,
+       0.525467909015927
+      ]
+     },
+     "last_third_efficiency_per_life_mean": -0.16729051284950316,
+     "last_third_efficiency_pooled": -0.15314633183628829,
+     "gain_per_10s": -0.7716666666666666,
+     "food": 2579,
+     "poison": 1521,
+     "food_last_third": 909,
+     "poison_last_third": 481,
+     "reward_gain_mean": -23.15,
+     "material": {
+      "peak_units": 2208.75,
+      "final_units": 2208.65,
+      "grown": {
+       "event": 29.4,
+       "clock": 35.6,
+       "integrator": 50.6,
+       "rhythm": 51.05
+      }
+     },
+     "activity": {
+      "births": 4064.45,
+      "recycled": 3652.95,
+      "cpu_s": 7.4498714221499736
+     },
+     "communication": "not counted in the arm without the adapter",
+     "gate": {
+      "deletion_transfers": 244.35
+     }
+    },
+    "issued+gate": {
+     "gap_closed": {
+      "median": 0.41822689671664626,
+      "ci95": [
+       0.27922551687551145,
+       0.5692028702867888
+      ]
+     },
+     "last_third_efficiency_per_life_mean": 0.029098130500209714,
+     "last_third_efficiency_pooled": 0.028990636196906044,
+     "gain_per_10s": -0.7283333333333333,
+     "food": 2531,
+     "poison": 1484,
+     "food_last_third": 944,
+     "poison_last_third": 467,
+     "reward_gain_mean": -21.85,
+     "material": {
+      "peak_units": 2210.0,
+      "final_units": 2209.5,
+      "grown": {
+       "event": 30.85,
+       "clock": 46.7,
+       "integrator": 46.7,
+       "rhythm": 43.25
+      }
+     },
+     "activity": {
+      "births": 4031.0,
+      "recycled": 3571.05,
+      "cpu_s": 6.382806085450035
+     },
+     "communication": {
+      "donor_scans": 873.85,
+      "stream_visits": 145932.95
+     },
+     "gate": {
+      "deletion_transfers": 291.5,
+      "allowance_only_transfers": 67.3,
+      "births_after": 66.7
+     }
+    }
+   },
+   "secondary": {
+    "last_third issued bits per taste, gate - baseline": {
+     "per_life_mean": -0.030160292164687845,
+     "ci95": [
+      -0.06953961480450808,
+      0.013771829306737196
+     ]
+    },
+    "last_third issued errors per taste, gate - baseline": {
+     "per_life_mean": -0.04591732043027087,
+     "ci95": [
+      -0.07226208201066574,
+      -0.021530826395934677
+     ]
+    },
+    "first_third issued bits per taste, gate - baseline (diagnostic)": {
+     "per_life_mean": 0.00029996112644770643,
+     "ci95": [
+      -0.01221446639065982,
+      0.012992926570140754
+     ]
+    },
+    "first_third issued errors per taste, gate - baseline (diagnostic)": {
+     "per_life_mean": -0.029843544984707315,
+     "ci95": [
+      -0.05110634537060801,
+      -0.009906113134782152
+     ]
+    },
+    "full issued bits per taste, gate - baseline (diagnostic)": {
+     "per_life_mean": -0.007327765181516089,
+     "ci95": [
+      -0.03020098143117284,
+      0.023174561131514854
+     ]
+    },
+    "full issued errors per taste, gate - baseline (diagnostic)": {
+     "per_life_mean": -0.01968750683655391,
+     "ci95": [
+      -0.03589757366320563,
+      -0.004581926087016843
+     ]
+    }
+   },
+   "per_life": {
+    "issued 142000 red": {
+     "result": [
+      -39.0,
+      49.77100000000001,
+      -18.0,
+      16.58895080555556,
+      195.0
+     ]
+    },
+    "issued 142000 blue": {
+     "result": [
+      -18.0,
+      50.144999999999996,
+      -4.0,
+      16.713607083333333,
+      180.0
+     ]
+    },
+    "issued 142001 red": {
+     "result": [
+      -54.0,
+      52.114999999999995,
+      -28.0,
+      17.370653319444447,
+      204.0
+     ]
+    },
+    "issued 142001 blue": {
+     "result": [
+      -39.0,
+      53.851,
+      -12.0,
+      17.94928623055556,
+      210.0
+     ]
+    },
+    "issued 142002 red": {
+     "result": [
+      -54.0,
+      48.609,
+      -23.0,
+      16.2019198,
+      192.0
+     ]
+    },
+    "issued 142002 blue": {
+     "result": [
+      -36.0,
+      49.993,
+      -30.0,
+      16.663222377777778,
+      195.0
+     ]
+    },
+    "issued 142003 red": {
+     "result": [
+      -50.0,
+      49.841,
+      -15.0,
+      16.612835983333333,
+      175.0
+     ]
+    },
+    "issued 142003 blue": {
+     "result": [
+      -50.0,
+      50.443,
+      -11.0,
+      16.813492616666665,
+      178.0
+     ]
+    },
+    "issued 142004 red": {
+     "result": [
+      -22.0,
+      58.675,
+      -12.0,
+      19.557355416666667,
+      233.0
+     ]
+    },
+    "issued 142004 blue": {
+     "result": [
+      15.0,
+      57.257000000000005,
+      4.0,
+      19.084712383333336,
+      216.0
+     ]
+    },
+    "issued 142005 red": {
+     "result": [
+      -7.0,
+      52.803,
+      30.0,
+      17.599679925,
+      239.0
+     ]
+    },
+    "issued 142005 blue": {
+     "result": [
+      33.0,
+      51.535000000000004,
+      21.0,
+      17.177044958333337,
+      225.0
+     ]
+    },
+    "issued 142006 red": {
+     "result": [
+      -30.0,
+      52.413,
+      -4.0,
+      17.470126450000002,
+      204.0
+     ]
+    },
+    "issued 142006 blue": {
+     "result": [
+      -44.0,
+      53.85699999999999,
+      3.0,
+      17.951435716666666,
+      220.0
+     ]
+    },
+    "issued 142007 red": {
+     "result": [
+      -32.0,
+      50.603,
+      -4.0,
+      16.86640159166667,
+      187.0
+     ]
+    },
+    "issued 142007 blue": {
+     "result": [
+      -62.0,
+      48.253,
+      -16.0,
+      16.083127008333335,
+      184.0
+     ]
+    },
+    "issued 142008 red": {
+     "result": [
+      3.0,
+      53.319,
+      8.0,
+      17.77285189166667,
+      222.0
+     ]
+    },
+    "issued 142008 blue": {
+     "result": [
+      -6.0,
+      52.629,
+      13.0,
+      17.542853808333337,
+      225.0
+     ]
+    },
+    "issued 142009 red": {
+     "result": [
+      24.0,
+      51.733000000000004,
+      41.0,
+      17.243327413888895,
+      219.0
+     ]
+    },
+    "issued 142009 blue": {
+     "result": [
+      5.0,
+      50.437,
+      4.0,
+      16.81135261388889,
+      197.0
+     ]
+    },
+    "issued+gate 142000 red": {
+     "result": [
+      -9.0,
+      49.567,
+      1.0,
+      16.520956472222224,
+      183.0
+     ]
+    },
+    "issued+gate 142000 blue": {
+     "result": [
+      -8.0,
+      49.509,
+      -5.0,
+      16.50162475,
+      178.0
+     ]
+    },
+    "issued+gate 142001 red": {
+     "result": [
+      -44.0,
+      53.093,
+      -12.0,
+      17.696634302777785,
+      199.0
+     ]
+    },
+    "issued+gate 142001 blue": {
+     "result": [
+      -21.0,
+      54.937,
+      -4.0,
+      18.31126511388889,
+      234.0
+     ]
+    },
+    "issued+gate 142002 red": {
+     "result": [
+      -25.0,
+      47.857000000000006,
+      -27.0,
+      15.951269844444445,
+      179.0
+     ]
+    },
+    "issued+gate 142002 blue": {
+     "result": [
+      -53.0,
+      50.263000000000005,
+      -12.0,
+      16.75321637777778,
+      217.0
+     ]
+    },
+    "issued+gate 142003 red": {
+     "result": [
+      -49.0,
+      52.063,
+      -16.0,
+      17.353465616666668,
+      215.0
+     ]
+    },
+    "issued+gate 142003 blue": {
+     "result": [
+      -40.0,
+      50.969,
+      -16.0,
+      16.988817183333335,
+      191.0
+     ]
+    },
+    "issued+gate 142004 red": {
+     "result": [
+      -16.0,
+      58.911,
+      2.0,
+      19.636018149999998,
+      230.0
+     ]
+    },
+    "issued+gate 142004 blue": {
+     "result": [
+      -3.0,
+      60.087,
+      -7.0,
+      20.027998550000003,
+      219.0
+     ]
+    },
+    "issued+gate 142005 red": {
+     "result": [
+      -21.0,
+      50.02300000000001,
+      17.0,
+      16.67308275833334,
+      192.0
+     ]
+    },
+    "issued+gate 142005 blue": {
+     "result": [
+      44.0,
+      50.723,
+      45.0,
+      16.906398591666665,
+      200.0
+     ]
+    },
+    "issued+gate 142006 red": {
+     "result": [
+      -24.0,
+      51.283,
+      2.0,
+      17.09347861666667,
+      192.0
+     ]
+    },
+    "issued+gate 142006 blue": {
+     "result": [
+      -45.0,
+      52.266999999999996,
+      -4.0,
+      17.421462216666665,
+      189.0
+     ]
+    },
+    "issued+gate 142007 red": {
+     "result": [
+      -61.0,
+      51.041000000000004,
+      -9.0,
+      17.01239064166667,
+      218.0
+     ]
+    },
+    "issued+gate 142007 blue": {
+     "result": [
+      -45.0,
+      49.035,
+      -14.0,
+      16.343774125,
+      174.0
+     ]
+    },
+    "issued+gate 142008 red": {
+     "result": [
+      -8.0,
+      51.995000000000005,
+      14.0,
+      17.331522236111116,
+      211.0
+     ]
+    },
+    "issued+gate 142008 blue": {
+     "result": [
+      26.0,
+      51.737,
+      29.0,
+      17.24552295277778,
+      209.0
+     ]
+    },
+    "issued+gate 142009 red": {
+     "result": [
+      -33.0,
+      50.001000000000005,
+      11.0,
+      16.66602775833334,
+      186.0
+     ]
+    },
+    "issued+gate 142009 blue": {
+     "result": [
+      -2.0,
+      49.515,
+      15.0,
+      16.504037208333337,
+      199.0
+     ]
+    }
+   },
+   "decision": "inconclusive",
+   "no_harm_check_as_other_family": "no harm beyond the margin"
+  },
+  "time": {
+   "reference": "/home/pilgrim/git/simple-learner/lab/v/grownet_pair3000_time_3-5-7_10_s142000_net10kc60SFBLMR560-net10kc60SFBLMR1120-net10kc60SFBLMR2240-net10kc60SFBLMR4480.pkl",
+   "gate_minus_baseline_gap_closed": {
+    "median": 0.109028201208271,
+    "ci95": [
+     -0.01763089090710161,
+     0.2111343866952069
+    ]
+   },
+   "per_arm": {
+    "issued": {
+     "gap_closed": {
+      "median": 0.662010501696568,
+      "ci95": [
+       0.5761253503194764,
+       0.7703539713229081
+      ]
+     },
+     "last_third_efficiency_per_life_mean": 1.7684797520431927,
+     "last_third_efficiency_pooled": 1.7631507282620293,
+     "gain_per_10s": 2.9815,
+     "food": 33279,
+     "poison": 7695,
+     "food_last_third": 11116,
+     "poison_last_third": 2506,
+     "reward_gain_mean": 894.45,
+     "material": {
+      "peak_units": 2209.65,
+      "final_units": 2209.65,
+      "grown": {
+       "event": 36.1,
+       "clock": 124.85,
+       "integrator": 1.05,
+       "rhythm": 5.65
+      }
+     },
+     "activity": {
+      "births": 20358.15,
+      "recycled": 19941.05,
+      "cpu_s": 73.8860521391
+     },
+     "communication": "not counted in the arm without the adapter",
+     "gate": {
+      "deletion_transfers": 247.8
+     }
+    },
+    "issued+gate": {
+     "gap_closed": {
+      "median": 0.769742344694017,
+      "ci95": [
+       0.6134287832667719,
+       0.9061602800916319
+      ]
+     },
+     "last_third_efficiency_per_life_mean": 1.97594636045709,
+     "last_third_efficiency_pooled": 1.9694020308423246,
+     "gain_per_10s": 3.134666666666667,
+     "food": 33948,
+     "poison": 7570,
+     "food_last_third": 11564,
+     "poison_last_third": 2365,
+     "reward_gain_mean": 940.4,
+     "material": {
+      "peak_units": 2210.0,
+      "final_units": 2210.0,
+      "grown": {
+       "event": 24.15,
+       "clock": 142.55,
+       "integrator": 0.85,
+       "rhythm": 0.45
+      }
+     },
+     "activity": {
+      "births": 16316.1,
+      "recycled": 15874.8,
+      "cpu_s": 96.26386788350001
+     },
+     "communication": {
+      "donor_scans": 37682.95,
+      "stream_visits": 6293052.65
+     },
+     "gate": {
+      "deletion_transfers": 271.5,
+      "allowance_only_transfers": 63.55,
+      "births_after": 62.25
+     }
+    }
+   },
+   "secondary": {
+    "last_third issued bits per taste, gate - baseline": {
+     "per_life_mean": -0.055507271567876694,
+     "ci95": [
+      -0.12281548140302452,
+      0.0160820322988503
+     ]
+    },
+    "last_third issued errors per taste, gate - baseline": {
+     "per_life_mean": -0.014263228328011407,
+     "ci95": [
+      -0.039316571037468974,
+      0.010069394083564638
+     ]
+    },
+    "first_third issued bits per taste, gate - baseline (diagnostic)": {
+     "per_life_mean": -0.011097155537314742,
+     "ci95": [
+      -0.03991374245055563,
+      0.020282138118683405
+     ]
+    },
+    "first_third issued errors per taste, gate - baseline (diagnostic)": {
+     "per_life_mean": 0.00047479876099482815,
+     "ci95": [
+      -0.010861961406357612,
+      0.014189893201369715
+     ]
+    },
+    "full issued bits per taste, gate - baseline (diagnostic)": {
+     "per_life_mean": -0.02582993216883054,
+     "ci95": [
+      -0.07693836695035917,
+      0.030504209887381173
+     ]
+    },
+    "full issued errors per taste, gate - baseline (diagnostic)": {
+     "per_life_mean": -0.003512280302947742,
+     "ci95": [
+      -0.0214486692239561,
+      0.01495140103446202
+     ]
+    }
+   },
+   "per_life": {
+    "issued 142000 red": {
+     "result": [
+      978.0,
+      500.84400000000005,
+      346.0,
+      166.94660876666669,
+      2001.0
+     ]
+    },
+    "issued 142000 blue": {
+     "result": [
+      1017.0,
+      504.962,
+      311.0,
+      168.3192639944444,
+      2085.0
+     ]
+    },
+    "issued 142001 red": {
+     "result": [
+      488.0,
+      539.2560000000001,
+      104.0,
+      179.7509514466667,
+      2099.0
+     ]
+    },
+    "issued 142001 blue": {
+     "result": [
+      999.0,
+      543.484,
+      386.0,
+      181.16027655888888,
+      2232.0
+     ]
+    },
+    "issued 142002 red": {
+     "result": [
+      894.0,
+      497.51800000000003,
+      314.0,
+      165.8382277377778,
+      1986.0
+     ]
+    },
+    "issued 142002 blue": {
+     "result": [
+      1046.0,
+      494.51599999999996,
+      414.0,
+      164.83756774222223,
+      2009.0
+     ]
+    },
+    "issued 142003 red": {
+     "result": [
+      916.0,
+      518.702,
+      301.0,
+      172.89980216333333,
+      2008.0
+     ]
+    },
+    "issued 142003 blue": {
+     "result": [
+      970.0,
+      520.822,
+      366.0,
+      173.60646529666667,
+      1984.0
+     ]
+    },
+    "issued 142004 red": {
+     "result": [
+      927.0,
+      569.662,
+      302.0,
+      189.8863838966667,
+      2043.0
+     ]
+    },
+    "issued 142004 blue": {
+     "result": [
+      1106.0,
+      580.3,
+      318.0,
+      193.43236616666667,
+      2156.0
+     ]
+    },
+    "issued 142005 red": {
+     "result": [
+      1039.0,
+      500.50600000000003,
+      383.0,
+      166.83408206833334,
+      2086.0
+     ]
+    },
+    "issued 142005 blue": {
+     "result": [
+      626.0,
+      502.054,
+      267.0,
+      167.35007819833334,
+      2072.0
+     ]
+    },
+    "issued 142006 red": {
+     "result": [
+      1008.0,
+      535.55,
+      386.0,
+      178.51577408333333,
+      2067.0
+     ]
+    },
+    "issued 142006 blue": {
+     "result": [
+      787.0,
+      529.9200000000001,
+      222.0,
+      176.63911680000004,
+      2002.0
+     ]
+    },
+    "issued 142007 red": {
+     "result": [
+      780.0,
+      496.36800000000005,
+      279.0,
+      165.45475908000003,
+      2034.0
+     ]
+    },
+    "issued 142007 blue": {
+     "result": [
+      688.0,
+      498.858,
+      191.0,
+      166.28475285500002,
+      2017.0
+     ]
+    },
+    "issued 142008 red": {
+     "result": [
+      847.0,
+      522.534,
+      295.0,
+      174.17785485166667,
+      2062.0
+     ]
+    },
+    "issued 142008 blue": {
+     "result": [
+      742.0,
+      518.5920000000001,
+      222.0,
+      172.8638559466667,
+      2032.0
+     ]
+    },
+    "issued 142009 red": {
+     "result": [
+      1101.0,
+      508.166,
+      451.0,
+      169.3876785661111,
+      1992.0
+     ]
+    },
+    "issued 142009 blue": {
+     "result": [
+      930.0,
+      503.398,
+      246.0,
+      167.7983545038889,
+      2007.0
+     ]
+    },
+    "issued+gate 142000 red": {
+     "result": [
+      997.0,
+      503.916,
+      336.0,
+      167.97060023333333,
+      2044.0
+     ]
+    },
+    "issued+gate 142000 blue": {
+     "result": [
+      946.0,
+      502.72200000000004,
+      324.0,
+      167.57260355,
+      2035.0
+     ]
+    },
+    "issued+gate 142001 red": {
+     "result": [
+      1094.0,
+      542.8960000000001,
+      436.0,
+      180.96427770222223,
+      2240.0
+     ]
+    },
+    "issued+gate 142001 blue": {
+     "result": [
+      1047.0,
+      540.9780000000001,
+      383.0,
+      180.32494809833335,
+      2136.0
+     ]
+    },
+    "issued+gate 142002 red": {
+     "result": [
+      1001.0,
+      500.02200000000005,
+      289.0,
+      166.67288884000004,
+      2078.0
+     ]
+    },
+    "issued+gate 142002 blue": {
+     "result": [
+      1059.0,
+      499.372,
+      419.0,
+      166.45622361777782,
+      2022.0
+     ]
+    },
+    "issued+gate 142003 red": {
+     "result": [
+      894.0,
+      519.796,
+      295.0,
+      173.26446700666668,
+      2025.0
+     ]
+    },
+    "issued+gate 142003 blue": {
+     "result": [
+      622.0,
+      522.1500000000001,
+      255.0,
+      174.04912975000002,
+      2128.0
+     ]
+    },
+    "issued+gate 142004 red": {
+     "result": [
+      844.0,
+      576.562,
+      265.0,
+      192.18637239666668,
+      2110.0
+     ]
+    },
+    "issued+gate 142004 blue": {
+     "result": [
+      739.0,
+      579.06,
+      235.0,
+      193.01903489999998,
+      2092.0
+     ]
+    },
+    "issued+gate 142005 red": {
+     "result": [
+      1085.0,
+      504.61800000000005,
+      415.0,
+      168.204738455,
+      2144.0
+     ]
+    },
+    "issued+gate 142005 blue": {
+     "result": [
+      1106.0,
+      505.59400000000005,
+      463.0,
+      168.53006934833337,
+      2117.0
+     ]
+    },
+    "issued+gate 142006 red": {
+     "result": [
+      1206.0,
+      534.012,
+      459.0,
+      178.00310997999998,
+      2049.0
+     ]
+    },
+    "issued+gate 142006 blue": {
+     "result": [
+      1045.0,
+      532.172,
+      366.0,
+      177.38977971333335,
+      2083.0
+     ]
+    },
+    "issued+gate 142007 red": {
+     "result": [
+      970.0,
+      500.334,
+      356.0,
+      166.776749165,
+      2074.0
+     ]
+    },
+    "issued+gate 142007 blue": {
+     "result": [
+      396.0,
+      493.12399999999997,
+      213.0,
+      164.37343385666668,
+      1947.0
+     ]
+    },
+    "issued+gate 142008 red": {
+     "result": [
+      1003.0,
+      524.614,
+      380.0,
+      174.87118760722223,
+      2134.0
+     ]
+    },
+    "issued+gate 142008 blue": {
+     "result": [
+      715.0,
+      515.932,
+      203.0,
+      171.9771900188889,
+      1972.0
+     ]
+    },
+    "issued+gate 142009 red": {
+     "result": [
+      959.0,
+      504.95,
+      342.0,
+      168.31568481944444,
+      2054.0
+     ]
+    },
+    "issued+gate 142009 blue": {
+     "result": [
+      1080.0,
+      507.50200000000007,
+      400.0,
+      169.1663465238889,
+      2034.0
+     ]
+    }
+   },
+   "decision": "inconclusive",
+   "no_harm_check_as_other_family": "no harm beyond the margin"
+  }
+ },
+ "lives": 120,
+ "meta": {
+  "reused_pilot_lives": [
+   [
+    "seq",
+    "issued",
+    142000,
+    "red"
+   ],
+   [
+    "seq",
+    "issued",
+    142000,
+    "blue"
+   ],
+   [
+    "seq",
+    "issued+gate",
+    142000,
+    "red"
+   ],
+   [
+    "seq",
+    "issued+gate",
+    142000,
+    "blue"
+   ],
+   [
+    "time",
+    "issued",
+    142000,
+    "red"
+   ],
+   [
+    "time",
+    "issued",
+    142000,
+    "blue"
+   ],
+   [
+    "time",
+    "issued+gate",
+    142000,
+    "red"
+   ],
+   [
+    "time",
+    "issued+gate",
+    142000,
+    "blue"
+   ],
+   [
+    "allfood",
+    "issued",
+    142000,
+    "red"
+   ],
+   [
+    "allfood",
+    "issued",
+    142000,
+    "blue"
+   ],
+   [
+    "allfood",
+    "issued+gate",
+    142000,
+    "red"
+   ],
+   [
+    "allfood",
+    "issued+gate",
+    142000,
+    "blue"
+   ]
+  ],
+  "new_lives": 108,
+  "pilot_capture_sha256": "54647c33a5dc23cd0e2990c207df31699ac86b6f406449daa20b8b69245a951c",
+  "pilot_raw_sha256": "0cc4ba68a29fe52adf4d7cc7dd7a4fc2b08f21b3bfff307d92e7736f803b8245",
+  "budget": "timeout 5400 s (the user's decision, 2026-11-18, after the first 1800 s attempt timed out)"
+ },
+ "analysis_sha256": "f623a7359f27aca35ae3b84e2ea7c3fa41b0e52b9af4c57f10dc270417131f51"
+}

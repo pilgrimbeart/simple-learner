@@ -1,0 +1,37 @@
+{
+  "files": 304,
+  "large": [
+    {
+      "absolute_path": "/home/pilgrim/git/simple-learner/lab/v/overnight_20261119/attribution_results/aggregate_settings.jsonl",
+      "bytes": 1492801,
+      "sha256": "ea2a43f1bca7a357c7465a1b26a032d52aa238e53e3c4368c38a539e20aa2a82"
+    },
+    {
+      "absolute_path": "/home/pilgrim/git/simple-learner/lab/v/overnight_20261119/histories_results/case_scores.jsonl",
+      "bytes": 8459118,
+      "sha256": "2f2ebf70bd9b3dc83751602b7b88ae324d59edc75f41c25eb9c3739bdbdf33a7"
+    },
+    {
+      "absolute_path": "/home/pilgrim/git/simple-learner/lab/v/overnight_20261119/histories_results/settings.jsonl",
+      "bytes": 1295344,
+      "sha256": "e2bf8bf6b5446ceef2e0a32e9bc2270c2b28728f99be18623536d3cd48bf3c32"
+    }
+  ],
+  "runs": {
+    "attribution": "complete",
+    "audit": "complete",
+    "failures": "complete",
+    "histories": "complete",
+    "information": "complete",
+    "oscillator_review": "complete",
+    "package": "complete",
+    "package_final": "no finish record",
+    "preparation_smoke": "complete"
+  },
+  "environment": {
+    "python": "3.12.3",
+    "numpy": "2.5.4",
+    "revision": "5700eaa0d397e1a7dc055ce69ce9ec7e1d32cc7f",
+    "numba": "0.68.1"
+  }
+}

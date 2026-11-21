@@ -1,0 +1,8 @@
+P1_native sigmoid rho 0.0 safe from 0.23 useful (0.27, 0.28) overlap (0.27, 0.28)
+P1_native sigmoid rho 0.5 safe from 0.23 useful (0.265, 0.28) overlap (0.265, 0.28)
+P1_native clip rho 0.0 safe from 0.08 useful (0.085, 0.125) overlap (0.085, 0.125)
+P1_native clip rho 0.5 safe from 0.08 useful (0.085, 0.125) overlap (0.085, 0.125)
+P2_preamp sigmoid rho 0.0 safe from 0.23 useful (0.0, 0.28) overlap (0.23, 0.28)
+P2_preamp sigmoid rho 0.5 safe from 0.23 useful (0.0, 0.28) overlap (0.23, 0.28)
+P2_preamp clip rho 0.0 safe from 0.08 useful (0.04, 0.125) overlap (0.08, 0.125)
+P2_preamp clip rho 0.5 safe from 0.08 useful (0.04, 0.125) overlap (0.08, 0.125)

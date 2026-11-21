@@ -1,0 +1,54 @@
+{
+  "negative_reference": {
+    "unstable_draws": 40,
+    "draws": 40,
+    "bias_range_A": [
+      -7.072126672721224e-10,
+      5.253092775151354e-10
+    ],
+    "max_real_range_per_s": [
+      12.321002874274546,
+      131.13774591569583
+    ],
+    "minimum_det_per_s2": -114.46775223231798
+  },
+  "zero_reference": {
+    "unstable_draws": 40,
+    "draws": 40,
+    "bias_range_A": [
+      -6.296813518846065e-10,
+      6.367768144945043e-10
+    ],
+    "max_real_range_per_s": [
+      25.153350038574423,
+      136.828671479814
+    ],
+    "minimum_det_per_s2": 1.9246847667149016
+  },
+  "positive_reference": {
+    "unstable_draws": 40,
+    "draws": 40,
+    "bias_range_A": [
+      -5.589463820473516e-10,
+      6.814113796444114e-10
+    ],
+    "max_real_range_per_s": [
+      22.621293041745822,
+      126.33795078775505
+    ],
+    "minimum_det_per_s2": 96.98646201397686
+  },
+  "informed_self_centre": {
+    "unstable_draws": 40,
+    "draws": 40,
+    "bias_range_A": [
+      -7.457301702544e-10,
+      6.590446135607319e-10
+    ],
+    "max_real_range_per_s": [
+      51.79404549844312,
+      137.00876620955765
+    ],
+    "minimum_det_per_s2": -6.392807035848825
+  }
+}

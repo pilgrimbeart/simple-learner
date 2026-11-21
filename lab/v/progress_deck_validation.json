@@ -1,0 +1,79 @@
+{
+  "pptx": "/home/pilgrim/git/simple-learner/lab/v/simple_learner_progress_review.pptx",
+  "bytes": 26483,
+  "sha256": "4e62e4735e7e0846f36274a5f7a7d5a1f2e004d7e5509856aa26a854622453a7",
+  "slides": 13,
+  "zip_xml_and_relationships": "pass",
+  "layout": [
+    {
+      "slide": 1,
+      "title": "The original goal: intelligence that scales",
+      "text_and_shape_bounds": "pass"
+    },
+    {
+      "slide": 2,
+      "title": "What would count as success?",
+      "text_and_shape_bounds": "pass"
+    },
+    {
+      "slide": 3,
+      "title": "A small robot makes the problem observable",
+      "text_and_shape_bounds": "pass"
+    },
+    {
+      "slide": 4,
+      "title": "Progress: three useful pieces, not the whole goal",
+      "text_and_shape_bounds": "pass"
+    },
+    {
+      "slide": 5,
+      "title": "The most durable discoveries",
+      "text_and_shape_bounds": "pass"
+    },
+    {
+      "slide": 6,
+      "title": "Why we investigated memory allocation",
+      "text_and_shape_bounds": "pass"
+    },
+    {
+      "slide": 7,
+      "title": "The recent test changed one admission rule",
+      "text_and_shape_bounds": "pass"
+    },
+    {
+      "slide": 8,
+      "title": "Efficiency gains remain inconclusive",
+      "text_and_shape_bounds": "pass"
+    },
+    {
+      "slide": 9,
+      "title": "Latest test: contribution to prediction",
+      "text_and_shape_bounds": "pass"
+    },
+    {
+      "slide": 10,
+      "title": "What the recent work settles",
+      "text_and_shape_bounds": "pass"
+    },
+    {
+      "slide": 11,
+      "title": "Step back: how close are we to the original goal?",
+      "text_and_shape_bounds": "pass"
+    },
+    {
+      "slide": 12,
+      "title": "Next steps: explanation before expansion",
+      "text_and_shape_bounds": "pass"
+    },
+    {
+      "slide": 13,
+      "title": "Evidence map and reading guide",
+      "text_and_shape_bounds": "pass"
+    }
+  ],
+  "preview_method": "SVG/PNG from shared text and geometry, not an Office rendering",
+  "result_inputs": [
+    "lab/v/gate_contribution_capture.json",
+    "lab/v/hj_result_review.json"
+  ]
+}

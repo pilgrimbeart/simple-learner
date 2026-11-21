@@ -1,0 +1,76 @@
+{
+  "all_controls": {
+    "uncorrected_rms_V": 0.030533254717627953,
+    "conditional_expected_detector_rms_V": 0.027848137299316237,
+    "expected_minus_observed_MSE_V2": -0.0001567608926099813,
+    "paired_draw_bootstrap95_MSE_difference": [
+      -0.0001567608926099811,
+      -0.0004677030411978237,
+      0.00011611143880704329
+    ],
+    "draws_where_conditional_expected_MSE_is_lower": 15,
+    "draws": 40
+  },
+  "by_control": {
+    "-0.3": {
+      "uncorrected_rms_V": 0.03410165207730252,
+      "conditional_expected_detector_rms_V": 0.03,
+      "expected_minus_observed_MSE_V2": -0.00026292267440139135,
+      "paired_draw_bootstrap95_MSE_difference": [
+        -0.00026292267440139125,
+        -0.0006877731349942706,
+        0.0001290593033372245
+      ],
+      "draws_where_conditional_expected_MSE_is_lower": 18,
+      "draws": 40
+    },
+    "-0.15": {
+      "uncorrected_rms_V": 0.0324754130829251,
+      "conditional_expected_detector_rms_V": 0.02852706976694955,
+      "expected_minus_observed_MSE_V2": -0.0002408587454182157,
+      "paired_draw_bootstrap95_MSE_difference": [
+        -0.00024085874541821542,
+        -0.0006503823981859562,
+        0.00011879120402573836
+      ],
+      "draws_where_conditional_expected_MSE_is_lower": 17,
+      "draws": 40
+    },
+    "0.0": {
+      "uncorrected_rms_V": 0.02569453778028707,
+      "conditional_expected_detector_rms_V": 0.022468804176239476,
+      "expected_minus_observed_MSE_V2": -0.00015536211063240323,
+      "paired_draw_bootstrap95_MSE_difference": [
+        -0.00015536211063240323,
+        -0.00048106141524241415,
+        0.00011155226477993198
+      ],
+      "draws_where_conditional_expected_MSE_is_lower": 14,
+      "draws": 40
+    },
+    "0.15": {
+      "uncorrected_rms_V": 0.028587114141913884,
+      "conditional_expected_detector_rms_V": 0.02772318824474115,
+      "expected_minus_observed_MSE_V2": -4.864792850945885e-05,
+      "paired_draw_bootstrap95_MSE_difference": [
+        -4.86479285094587e-05,
+        -0.0006106335083840194,
+        0.0003774750290968554
+      ],
+      "draws_where_conditional_expected_MSE_is_lower": 10,
+      "draws": 40
+    },
+    "0.3": {
+      "uncorrected_rms_V": 0.031086825541446348,
+      "conditional_expected_detector_rms_V": 0.029839197679493397,
+      "expected_minus_observed_MSE_V2": -7.601300408843705e-05,
+      "paired_draw_bootstrap95_MSE_difference": [
+        -7.601300408843696e-05,
+        -0.0006956855712469394,
+        0.00043773675377782253
+      ],
+      "draws_where_conditional_expected_MSE_is_lower": 11,
+      "draws": 40
+    }
+  }
+}

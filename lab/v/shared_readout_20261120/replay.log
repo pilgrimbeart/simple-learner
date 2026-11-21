@@ -1,0 +1,116 @@
+seed 2026112200 elapsed 13.2 ABW err 0.0 node7 1.1102230246251565e-16
+seed 2026112201 elapsed 26.6 ABW err 0.0 node7 1.1102230246251565e-16
+seed 2026112202 elapsed 40.4 ABW err 0.0 node7 5.551115123125783e-17
+seed 2026112203 elapsed 54.3 ABW err 0.0 node7 5.551115123125783e-17
+seed 2026112204 elapsed 67.1 ABW err 0.0 node7 1.1102230246251565e-16
+seed 2026112205 elapsed 81.6 ABW err 0.0 node7 5.551115123125783e-17
+seed 2026112206 elapsed 107.7 ABW err 0.0 node7 5.551115123125783e-17
+seed 2026112207 elapsed 126.7 ABW err 0.0 node7 5.551115123125783e-17
+seed 2026112208 elapsed 140.4 ABW err 0.0 node7 5.551115123125783e-17
+seed 2026112209 elapsed 153.0 ABW err 0.0 node7 5.551115123125783e-17
+seed 2026112210 elapsed 166.0 ABW err 0.0 node7 4.163336342344337e-17
+seed 2026112211 elapsed 178.4 ABW err 0.0 node7 5.551115123125783e-17
+seed 2026112212 elapsed 192.0 ABW err 0.0 node7 5.551115123125783e-17
+seed 2026112213 elapsed 205.7 ABW err 0.0 node7 1.1102230246251565e-16
+seed 2026112214 elapsed 221.6 ABW err 0.0 node7 8.326672684688674e-17
+seed 2026112215 elapsed 235.3 ABW err 0.0 node7 8.326672684688674e-17
+seed 2026112216 elapsed 248.2 ABW err 0.0 node7 5.551115123125783e-17
+seed 2026112217 elapsed 260.4 ABW err 0.0 node7 5.551115123125783e-17
+seed 2026112218 elapsed 273.0 ABW err 0.0 node7 5.551115123125783e-17
+seed 2026112219 elapsed 285.4 ABW err 0.0 node7 8.326672684688674e-17
+seed 2026112220 elapsed 297.5 ABW err 0.0 node7 5.551115123125783e-17
+seed 2026112221 elapsed 310.7 ABW err 0.0 node7 5.551115123125783e-17
+seed 2026112222 elapsed 323.5 ABW err 0.0 node7 6.938893903907228e-17
+seed 2026112223 elapsed 336.5 ABW err 0.0 node7 6.938893903907228e-17
+seed 2026112224 elapsed 349.0 ABW err 0.0 node7 5.551115123125783e-17
+seed 2026112225 elapsed 362.2 ABW err 0.0 node7 5.551115123125783e-17
+seed 2026112226 elapsed 375.7 ABW err 0.0 node7 5.551115123125783e-17
+seed 2026112227 elapsed 388.5 ABW err 0.0 node7 8.326672684688674e-17
+seed 2026112228 elapsed 401.2 ABW err 0.0 node7 5.551115123125783e-17
+seed 2026112229 elapsed 413.7 ABW err 0.0 node7 5.551115123125783e-17
+seed 2026112230 elapsed 426.2 ABW err 0.0 node7 5.551115123125783e-17
+seed 2026112231 elapsed 438.2 ABW err 0.0 node7 5.551115123125783e-17
+seed 2026112232 elapsed 451.1 ABW err 0.0 node7 5.551115123125783e-17
+seed 2026112233 elapsed 463.6 ABW err 0.0 node7 1.1102230246251565e-16
+seed 2026112234 elapsed 475.5 ABW err 0.0 node7 8.326672684688674e-17
+seed 2026112235 elapsed 488.1 ABW err 0.0 node7 4.163336342344337e-17
+seed 2026112236 elapsed 500.3 ABW err 0.0 node7 6.938893903907228e-17
+seed 2026112237 elapsed 512.9 ABW err 0.0 node7 8.326672684688674e-17
+seed 2026112238 elapsed 525.0 ABW err 0.0 node7 5.551115123125783e-17
+seed 2026112239 elapsed 537.0 ABW err 0.0 node7 5.551115123125783e-17
+refined 2026112200 0.00025 563.4
+refined 2026112200 0.000125 631.0
+refined 2026112227 0.00025 657.4
+refined 2026112227 0.000125 728.7
+/home/pilgrim/git/simple-learner/.venv/lib/python3.12/site-packages/numpy/_core/fromnumeric.py:3862: RuntimeWarning: Mean of empty slice
+  return _methods._mean(a, axis=axis, dtype=dtype,
+/home/pilgrim/git/simple-learner/.venv/lib/python3.12/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+control 2026112200 no_input 731.9
+control 2026112200 ordered_only 743.5
+control 2026112200 simultaneous_only 748.5
+control 2026112227 no_input 750.2
+control 2026112227 ordered_only 769.9
+control 2026112227 simultaneous_only 778.0
+{
+ "completed": [
+  2026112200,
+  2026112201,
+  2026112202,
+  2026112203,
+  2026112204,
+  2026112205,
+  2026112206,
+  2026112207,
+  2026112208,
+  2026112209,
+  2026112210,
+  2026112211,
+  2026112212,
+  2026112213,
+  2026112214,
+  2026112215,
+  2026112216,
+  2026112217,
+  2026112218,
+  2026112219,
+  2026112220,
+  2026112221,
+  2026112222,
+  2026112223,
+  2026112224,
+  2026112225,
+  2026112226,
+  2026112227,
+  2026112228,
+  2026112229,
+  2026112230,
+  2026112231,
+  2026112232,
+  2026112233,
+  2026112234,
+  2026112235,
+  2026112236,
+  2026112237,
+  2026112238,
+  2026112239
+ ],
+ "stopped": null,
+ "refinement": {
+  "rows": 28,
+  "all_ok": true,
+  "max_d_change": 7.372831290691773e-05,
+  "max_eps_change_mV": 0.01195376124081804
+ },
+ "checks": {
+  "schedules_identical": true,
+  "pulses_rebuilt": true,
+  "max_A_B_W_error": 0.0,
+  "max_node7_repro_error_V": 1.1102230246251565e-16,
+  "gate_A_B_W": true,
+  "gate_node7": true,
+  "max_node7_repro_error_V_fine": 1.1102230246251565e-16
+ },
+ "elapsed_s": 777.9790577960011,
+ "gate_passed": true
+}

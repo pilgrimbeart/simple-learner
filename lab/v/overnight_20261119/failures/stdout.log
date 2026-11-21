@@ -1,0 +1,43 @@
+# Task B — what "the two remaining failures" means
+
+Order output under balance d is u + d·v (positive readout gain ×(1+d), negative ×(1−d)), d in [−1, 1]. All original strict inequalities; coincidence adequacy is required separately and is unaffected by d. Stored branch responses (D155) and D163 settings only; no new trajectories.
+
+**39/40 component draws have some constant setting that meets all 34 conditions.** Old-interval mismatches: []; old-feasibility mismatches: [].
+
+## All 40 draws: allowed interval and its active bounds
+
+{
+ "old_interval_mismatch": [],
+ "old_feasibility_mismatch": [],
+ "d2215_simultaneous_lower": {
+  "value": -0.16218631700961111,
+  "case": "pair_0.5_0.35_0.0",
+  "expected": -0.162186317,
+  "matches": true
+ },
+ "d2215_long_gap_upper": {
+  "value": -0.19449161091760545,
+  "case": "pair_0.5_0.5_0.6",
+  "expected": -0.1944916109,
+  "matches": true
+ },
+ "d2215_requirements_by_case": {
+  "simultaneous_lower": -0.16218631700961111,
+  "long_gap_upper": null,
+  "long_gap_bounds": {
+   "pair_0.5_0.5_-0.6": [
+    -1.1954018546782958,
+    2.9244779688522664
+   ],
+   "pair_0.5_0.5_0.6": [
+    -1.7291056309873243,
+    -0.19449161091760545
+   ]
+  }
+ },
+ "feasible_count": 39
+}
+
+- **2026112215: no setting exists.** Its simultaneous (.5, .35) V case requires d > -0.1621863170 (regression target −.1621863170: True); its long-gap (.5, .5) V case requires d < -0.1944916109 (target −.1944916109: True). More evidence cannot create a constant setting meeting contradictory inequalities.
+- **2026112227: a setting exists, but the available calculation selected one outside it.** Allowed (-0.4525, +0.1160); the baseline references chose d ≈ -0.5672, 0.1147 outside. Why it was selected is Task C's question; nothing here explains it.
+- The other raw-mode failures are listed above; they are not part of "the two remaining failures", which refers to the three ideal baseline references.

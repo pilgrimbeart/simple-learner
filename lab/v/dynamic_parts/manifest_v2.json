@@ -1,0 +1,192 @@
+{
+  "trace": {
+    "states": 1,
+    "connections": 0,
+    "counts": {
+      "T": 0,
+      "R": 1,
+      "C": 1,
+      "D": 0,
+      "sources": 0
+    },
+    "graph": {
+      "nodes": [
+        {
+          "name": "trace",
+          "C": 2.5e-11,
+          "R": 2000000000.0,
+          "bias": 0.0,
+          "memory": false
+        }
+      ],
+      "edges": [],
+      "duration": 2.0
+    },
+    "count_scope": "Core circuit only; bench current sources and readout equipment excluded. Count via minimal.spice.count, not a SPICE simulation."
+  },
+  "memory": {
+    "states": 1,
+    "connections": 1,
+    "counts": {
+      "T": 18,
+      "R": 3,
+      "C": 1,
+      "D": 0,
+      "sources": 2
+    },
+    "graph": {
+      "nodes": [
+        {
+          "name": "bit",
+          "C": 2.5e-11,
+          "R": 2000000000.0,
+          "bias": 0.0,
+          "memory": false
+        }
+      ],
+      "edges": [
+        {
+          "to": 0,
+          "source": 0,
+          "gain": 3e-10,
+          "offset": 0.0,
+          "slope": 6.666666666666667,
+          "tau": 0.0,
+          "gate": -1
+        }
+      ],
+      "duration": 100.0
+    },
+    "count_scope": "Core circuit only; bench current sources and readout equipment excluded. Count via minimal.spice.count, not a SPICE simulation."
+  },
+  "resonator": {
+    "states": 2,
+    "connections": 2,
+    "counts": {
+      "T": 72,
+      "R": 12,
+      "C": 6,
+      "D": 0,
+      "sources": 8
+    },
+    "graph": {
+      "nodes": [
+        {
+          "name": "x",
+          "C": 2.5e-11,
+          "R": 4000000000.0,
+          "bias": 0.0,
+          "memory": false
+        },
+        {
+          "name": "y",
+          "C": 2.5e-11,
+          "R": 4000000000.0,
+          "bias": 0.0,
+          "memory": false
+        }
+      ],
+      "edges": [
+        {
+          "to": 0,
+          "source": 1,
+          "gain": -4.5e-10,
+          "offset": 0.0,
+          "slope": 3.3333333333333335,
+          "tau": 0.0,
+          "gate": -1
+        },
+        {
+          "to": 1,
+          "source": 0,
+          "gain": 4.5e-10,
+          "offset": 0.0,
+          "slope": 3.3333333333333335,
+          "tau": 0.0,
+          "gate": -1
+        }
+      ],
+      "duration": 6.5,
+      "frequencies": [
+        2.3873241463784303,
+        4.7746482927568605,
+        6.207042780583919,
+        7.639437268410977,
+        9.549296585513721,
+        11.936620731892152,
+        15.278874536821954,
+        19.098593171027442,
+        38.197186342054884
+      ]
+    },
+    "count_scope": "Core circuit only; bench current sources and readout equipment excluded. Count via minimal.spice.count, not a SPICE simulation."
+  },
+  "oscillator": {
+    "states": 2,
+    "connections": 3,
+    "counts": {
+      "T": 72,
+      "R": 11,
+      "C": 4,
+      "D": 0,
+      "sources": 8
+    },
+    "graph": {
+      "nodes": [
+        {
+          "name": "fast",
+          "C": 2.5e-11,
+          "R": 800000000.0,
+          "bias": 0.0,
+          "memory": false
+        },
+        {
+          "name": "recovery",
+          "C": 2.5e-11,
+          "R": 8000000000.0,
+          "bias": 0.0,
+          "memory": false
+        }
+      ],
+      "edges": [
+        {
+          "to": 0,
+          "source": 0,
+          "gain": 5.625e-10,
+          "offset": 0.0,
+          "slope": 6.666666666666667,
+          "tau": 0.0,
+          "gate": -1
+        },
+        {
+          "to": 0,
+          "source": 1,
+          "gain": -9.375e-10,
+          "offset": 0.0,
+          "slope": 6.666666666666667,
+          "tau": 0.0,
+          "gate": -1
+        },
+        {
+          "to": 1,
+          "source": 0,
+          "gain": 3.75e-11,
+          "offset": 0.0,
+          "slope": 3.3333333333333335,
+          "tau": 0.0,
+          "gate": -1
+        }
+      ],
+      "duration": 100.0
+    },
+    "count_scope": "Core circuit only; bench current sources and readout equipment excluded. Count via minimal.spice.count, not a SPICE simulation."
+  },
+  "retained_memory_contract": {
+    "status": "specified, not demonstrated in D126",
+    "input": "signed write current through existing thresholded write driver",
+    "output": "retained voltage",
+    "states": 1,
+    "noise": "existing silicon memory write shot noise; no rest noise under the established model",
+    "controls": "read via controlled connection; do not assign parameters from Python"
+  }
+}

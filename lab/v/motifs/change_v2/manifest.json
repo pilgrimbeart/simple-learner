@@ -1,0 +1,66 @@
+{
+  "graph": {
+    "nodes": [
+      {
+        "name": "input",
+        "C": 2.5e-11,
+        "R": 400000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "integral",
+        "C": 2.5e-11,
+        "R": null,
+        "bias": 0.0,
+        "memory": true
+      },
+      {
+        "name": "response",
+        "C": 2.5e-11,
+        "R": 800000000.0,
+        "bias": 0.0,
+        "memory": false
+      }
+    ],
+    "edges": [
+      {
+        "to": 2,
+        "source": 0,
+        "gain": 7.5e-10,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": -1
+      },
+      {
+        "to": 2,
+        "source": 1,
+        "gain": -7.5e-10,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": -1
+      },
+      {
+        "to": 1,
+        "source": 2,
+        "gain": 4.6875e-11,
+        "offset": 0.0,
+        "slope": 6.666666666666667,
+        "tau": 0.0,
+        "gate": -1
+      }
+    ]
+  },
+  "states": 3,
+  "connections": 3,
+  "parts": {
+    "T": 94,
+    "R": 14,
+    "C": 7,
+    "D": 0,
+    "sources": 12
+  },
+  "scope": "Core only; bench sources/recording excluded. Memory pump sources counted ideally; implementation and energy absent. Activity in raw rows separate from supply power."
+}

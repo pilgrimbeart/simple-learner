@@ -1,0 +1,7 @@
+{
+  "created_utc": "2026-11-20T10:30:04Z",
+  "note": "input added for Task E after the manifest freeze, hashed before first use; D165 per-event final-third contributions on the 40 D163 schedules",
+  "inputs": {
+    "lab/v/overnight_20261119/attribution_results/event_contributions.jsonl": "a40488d45527ae734fc43f36f521b51392fac852bde7465549f2b6d4c614be44"
+  }
+}

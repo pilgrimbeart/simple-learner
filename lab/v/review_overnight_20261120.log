@@ -1,0 +1,15 @@
+{
+  "indexed_files": 304,
+  "indexed_file_mismatches": [
+    "lab/v/overnight_20261119/STATUS.md",
+    "lab/v/overnight_20261119/package_final/stdout.log"
+  ],
+  "script_mismatches": [],
+  "settings_independently_rescored": 1920,
+  "cases_rescored": 65280,
+  "feasible_draws": 39,
+  "aggregate_count": 1984,
+  "aggregate_max_error_Vs": 0.0,
+  "limits": "Saved-data arithmetic only; no independent trajectory replay or oscillator remeasurement.",
+  "revision": "5700eaa0d397e1a7dc055ce69ce9ec7e1d32cc7f"
+}

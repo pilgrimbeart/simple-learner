@@ -1,0 +1,190 @@
+{
+  "scope": "Saved meal-ledger arithmetic and hashes; no simulation, live demo or convergence check.",
+  "rows": 384,
+  "arms": {
+    "informed": {
+      "food": [
+        0.19218749999999998,
+        0.1359375,
+        0.253125
+      ],
+      "net": [
+        0.056249999999999994,
+        0.004687500000000001,
+        0.10781249999999999
+      ],
+      "meals": [
+        0.328125,
+        0.23437499999999997,
+        0.43124999999999997
+      ]
+    },
+    "informed_allfood": {
+      "food": [
+        0.46875,
+        0.328125,
+        0.61875
+      ],
+      "net": [
+        0.46875,
+        0.328125,
+        0.61875
+      ],
+      "meals": [
+        0.46875,
+        0.328125,
+        0.61875
+      ]
+    },
+    "neutral": {
+      "food": [
+        0.159375,
+        0.08906249999999999,
+        0.24374999999999997
+      ],
+      "net": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "meals": [
+        0.31875,
+        0.17812499999999998,
+        0.48749999999999993
+      ]
+    },
+    "neutral_allfood": {
+      "food": [
+        0.31875,
+        0.17812499999999998,
+        0.48749999999999993
+      ],
+      "net": [
+        0.31875,
+        0.17812499999999998,
+        0.48749999999999993
+      ],
+      "meals": [
+        0.31875,
+        0.17812499999999998,
+        0.48749999999999993
+      ]
+    },
+    "no_explore": {
+      "food": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "net": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "meals": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "no_sensory": {
+      "food": [
+        0.1265625,
+        0.056249999999999994,
+        0.20625
+      ],
+      "net": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "meals": [
+        0.253125,
+        0.11249999999999999,
+        0.4125
+      ]
+    },
+    "reversed": {
+      "food": [
+        0.1359375,
+        0.08906249999999999,
+        0.1875
+      ],
+      "net": [
+        -0.056249999999999994,
+        -0.10781249999999999,
+        -0.004687500000000001
+      ],
+      "meals": [
+        0.328125,
+        0.23437499999999997,
+        0.43124999999999997
+      ]
+    }
+  },
+  "contrasts": {
+    "neutral": [
+      0.056249999999999994,
+      0.004687500000000001,
+      0.10781249999999999
+    ],
+    "reversed": [
+      0.11249999999999999,
+      0.009375000000000001,
+      0.21562499999999998
+    ],
+    "no_explore": [
+      0.056249999999999994,
+      0.004687500000000001,
+      0.10781249999999999
+    ],
+    "no_sensory": [
+      0.056249999999999994,
+      0.004687500000000001,
+      0.10781249999999999
+    ]
+  },
+  "artifact_hashes": {
+    "ledger": true,
+    "archive": true
+  },
+  "frozen_code_hashes": {
+    "lab/catalogue_brain_20261120/analyse.py": true,
+    "lab/catalogue_brain_20261120/bench.py": false,
+    "lab/catalogue_brain_20261120/brain.py": true,
+    "lab/catalogue_brain_20261120/checks.py": true,
+    "lab/catalogue_brain_20261120/design.py": true,
+    "lab/catalogue_brain_20261120/lives.py": true,
+    "lab/catalogue_brain_20261120/make_manifest.py": true,
+    "lab/catalogue_brain_20261120/preflight.py": true,
+    "lab/catalogue_brain_20261120/prepare.py": true,
+    "lab/catalogue_brain_20261120/run.py": false,
+    "lab/catalogue_brain_20261120/schematic_v1.py": true,
+    "lab/catalogue_brain_20261120/seed_audit.py": true,
+    "lab/catalogue_brain_20261120/view.py": true,
+    "lab/catalogue_brain_20261120/CHECKLIST.md": false,
+    "lab/catalogue_brain_20261120/DESIGN.md": true,
+    "lab/catalogue_brain_20261120/PREDICTIONS.md": true,
+    "lab/catalogue_brain_20261120/PREPARATION.md": true,
+    "lab/catalogue_brain_20261120/PROTOCOL.md": false
+  },
+  "frozen_input_hashes": {
+    "lab/WORK_ORDER_2026-11-20_catalogue_brain.md": true,
+    "lab/catalogue_brain_20261120/DESIGN.md": true,
+    "lab/catalogue_brain_20261120/design.py": true,
+    "AGENTS.md": true,
+    "mixed_feedback.py": true,
+    "units.py": true,
+    "chip.py": true,
+    "creature.py": true,
+    "world.py": true,
+    "brains/circuit.py": true,
+    "minimal/spice.py": true,
+    "requirements.txt": true
+  },
+  "informed_clipped_lives": 52,
+  "informed_final_food_poison": [
+    41,
+    29
+  ]
+}

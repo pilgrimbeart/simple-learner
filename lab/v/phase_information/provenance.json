@@ -1,0 +1,10 @@
+{
+  "revision": "5700eaa0d397e1a7dc055ce69ce9ec7e1d32cc7f",
+  "files": {
+    "lab/v/phase_v1/confirm.jsonl": "d48b9e13e009f6f3d54202aa67c8dbe9a5e826c75f73cb794c72f9d75f186247",
+    "lab/phase_information.py": "2a1e9eb58fa2e140aecf51efc2b808035ff9891ab9126b6c3e6178fda8481e2d",
+    "lab/v/phase_information/protocol.json": "c248a8d8967c13e5718b4253ee1e992da7a8df93f38baeeb9018588259ea95a9"
+  },
+  "source_provenance": "/home/pilgrim/git/simple-learner/lab/v/phase_v1/confirm_provenance.json",
+  "worktree": "Uncommitted D138 script and notebook; input is the preserved D133 output."
+}

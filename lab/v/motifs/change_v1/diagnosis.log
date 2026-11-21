@@ -1,0 +1,20 @@
+{
+  "source_sha256": "d486d9407eaf8601ae39c4a00def7c8d67753d5d34805f53f5e9cef39d846915",
+  "input_sha256": "9febf1cb92cc94c85c6e0c92378f74e759b5b02be8193e14c6d5b6596d9ac2f0",
+  "residual_correlation": 0.9991384986718728,
+  "residual_RMSE_V": 0.003575853370552302,
+  "rms_DC_by_restoration": {
+    "actual": 0.07340392144633835,
+    "nominal_gains": 0.07838755316498065,
+    "nominal_leaks": 0.06892850540105033,
+    "nominal_slopes": 0.06519307795938757,
+    "zero_offsets": 0.03771550593554755,
+    "all_nominal": 1.8097501898060916e-13
+  },
+  "failures": {
+    "onset": 0,
+    "offset": 0,
+    "residual": 35,
+    "recovery": 6
+  }
+}

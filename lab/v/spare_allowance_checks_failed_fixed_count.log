@@ -1,0 +1,10 @@
+PASS 1 disabled adapter identical to original M (return, units, tallies, links, allowances, savings, counters, RNG) in every case, 4 seeds each, plus price-equal, no-birth-due and under-allowance requests; duplicate install refused
+PASS 2 leafless spare donor: exactly one allowance moves with no deletion and no savings debit; the next birth fits the recipient's allowance and the cap; donor at its fixed floor and savings at the price still refused
+PASS 3 a donor with a leaf and spare allowance follows the old removal path exactly (identical to original M); chain dependants stay valid; fixed units never removed
+PASS 4 two candidates: the single original draw decides (8 seeds: both outcomes seen), generator state identical to original M, allowance taken only from the drawn leafless donor; price equality and no birth due refused; under-allowance requests unchanged
+Traceback (most recent call last):
+  File "/home/pilgrim/git/simple-learner/lab/spare_allowance_checks.py", line 320, in <module>
+    main()
+  File "/home/pilgrim/git/simple-learner/lab/spare_allowance_checks.py", line 226, in main
+    raise AssertionError(f"invariant checker accepted: {why}")
+AssertionError: invariant checker accepted: fixed unit missing (units below fixed)

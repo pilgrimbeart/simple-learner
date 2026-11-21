@@ -1,0 +1,20 @@
+{
+  "seed": 147,
+  "source": "Idle retained node at .3V; existing exact-idle-memory assumption",
+  "destination": "25pF,1Gohm leak",
+  "connection": "100pA,offset0,slope1/V_TYP,tau.05s",
+  "duration_s": 0.1,
+  "sample_s": 0.005,
+  "expectation": "Vx stays exactly at its constant source despite active native destination noise. No external clamp or zero-noise draws.",
+  "files": [
+    "dynamic_parts/protocol_v2.json",
+    "motifs/change_v2/protocol.json",
+    "motifs/order_v2/protocol.json",
+    "retained_write/protocol_v1.json",
+    "quiet_write/protocol.json",
+    "oneshot_v1/protocol.json",
+    "phase_v1/protocol.json",
+    "signed_control/protocol.json"
+  ],
+  "budget_s": 30
+}

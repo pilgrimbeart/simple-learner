@@ -1,0 +1,48 @@
+{
+ "offset_sigma_mV": 30.0,
+ "relative_sigma_gain_slope_leak": 0.1,
+ "relative_sigma_stage_gain_k": 0.17320508075688773,
+ "relative_sigma_k1_minus_k2kb": 0.3,
+ "u_rest_mV": {
+  "min": -76.99853702275868,
+  "median": -1.8975002401715733,
+  "max": 113.5951588174409,
+  "rms": 36.457295799943424
+ },
+ "coincidence_rest_V_max_abs": 0.0,
+ "chains": {
+  "raw: product connection reads u directly (1 offset)": {
+   "offsets": 1,
+   "sigma_mV": 30.0
+  },
+  "integral-feedback baseline + product (offsets of the baseline integrator's reading of r and of the product; the u and baseline readings into r sit inside the loop)": {
+   "offsets": 2,
+   "sigma_mV": 42.42640687119285
+  },
+  "feed-forward low-pass baseline + two-input difference node + product (follower, two difference inputs, product)": {
+   "offsets": 4,
+   "sigma_mV": 60.0,
+   "gain_mismatch_term_mV_rms": 10.937188739983027
+  },
+  "two separately gated readings for a quiet self-reference (Task D with catalogue parts): e_w - e_q": {
+   "offsets": 2,
+   "sigma_mV": 42.42640687119285
+  },
+  "one reading pair steered to two outputs (not in the catalogue): residual e*(k_w-k_q) from output-mirror mismatch, per volt of shared error": {
+   "relative": 0.14142135623730953
+  }
+ },
+ "dead_band": {
+  "DEAD": 0.01,
+  "band_mV_for_writer_slope_per_V": {
+   "3.3333333333333335": 3.0001000060004284,
+   "10.0": 1.0000333353334763,
+   "12.958378569064259": 0.77172721108864
+  },
+  "note": "a write tunnels only when |I| > DEAD*|gain|; with I = gain*tanh(slope*x)*w the band is |x| < atanh(DEAD/w)/slope, widening as w falls"
+ },
+ "noise": {
+  "kT_over_C_uV_at_25pF": 12.871591976131004,
+  "note": "voltage noise of a 25 pF node from its leak, silicon (mixed_feedback SUBSTRATES); see Task E"
+ }
+}

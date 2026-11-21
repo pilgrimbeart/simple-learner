@@ -1,0 +1,74 @@
+{
+ "own_0.0_keep_1_spont_0": {
+  "food": 0,
+  "poison": 0,
+  "food_poison_last_third": 0.0,
+  "net_per_10s": [
+   0.0,
+   0.0,
+   0.0
+  ],
+  "stranded": 55,
+  "lives": 64
+ },
+ "own_2.0_keep_1_spont_0": {
+  "food": 266,
+  "poison": 24,
+  "food_poison_last_third": 11.083333333333334,
+  "net_per_10s": [
+   1.1362925109676107,
+   0.9720857031027754,
+   1.2917872955512009
+  ],
+  "stranded": 0,
+  "lives": 64
+ },
+ "own_5.8_keep_1_spont_0": {
+  "food": 476,
+  "poison": 102,
+  "food_poison_last_third": 4.666666666666667,
+  "net_per_10s": [
+   1.7545127759985,
+   1.5617184187182147,
+   1.9509373255627076
+  ],
+  "stranded": 0,
+  "lives": 64
+ },
+ "own_5.8_keep_0.47_spont_0": {
+  "food": 357,
+  "poison": 121,
+  "food_poison_last_third": 2.950413223140496,
+  "net_per_10s": [
+   1.1071753562443858,
+   0.9338060229706786,
+   1.2714874276768162
+  ],
+  "stranded": 0,
+  "lives": 64
+ },
+ "own_5.8_keep_1_spont_3.5": {
+  "food": 583,
+  "poison": 119,
+  "food_poison_last_third": 4.899159663865547,
+  "net_per_10s": [
+   2.176014826715905,
+   1.9180805657628743,
+   2.4338304726004965
+  ],
+  "stranded": 0,
+  "lives": 64
+ },
+ "own_5.8_keep_0.47_spont_3.5": {
+  "food": 451,
+  "poison": 148,
+  "food_poison_last_third": 3.0472972972972974,
+  "net_per_10s": [
+   1.421036422804524,
+   1.2052367617264887,
+   1.6133760328426896
+  ],
+  "stranded": 0,
+  "lives": 64
+ }
+}

@@ -1,0 +1,296 @@
+{
+ "inputs": {
+  "u_rest_rms_V": 0.036457295799943425,
+  "e_sd_V": 0.03,
+  "m_rms_V": 0.04721371005380293,
+  "B_per_anchor_median_Vs": 0.006884561816231366,
+  "B_per_anchor_90pct_Vs": 0.009201648183219363,
+  "R_MAX": 77170148616.22546,
+  "C_MAX": 5e-11,
+  "TAU_MAX": 3.8585074308112732,
+  "V_TYP": 0.3
+ },
+ "target": {
+  "conservative_screen_mV": 10.0,
+  "d163_95pct_mV": 15.0,
+  "note": "engineering screen from D168 Task A; not a yield threshold"
+ },
+ "points": {
+  "P1_native": {
+   "slope_per_V": 12.958378569064259,
+   "preamplifier": false,
+   "I0_A": 5e-11,
+   "k_q": 1.0,
+   "k_w": 0.25,
+   "g_m_S": 1.295837856906426e-11,
+   "V_bias_V": 0.0,
+   "C_m_F": 5e-11,
+   "C_d_F": 1.49e-11,
+   "loop_gain_G": 50.0,
+   "tau_m_s": 0.07565700844727986,
+   "leak_tau_s": 3.8585074308112732,
+   "kappa_per_V_s": 36.237076535414595,
+   "per_anchor_contraction_median_B": 0.24947639344756892,
+   "per_anchor_contraction_90pct_B": 0.3334408294672787,
+   "dead_band_mV": {
+    "1.0": 0.7717272110886401,
+    "0.5": 1.5436088087904967,
+    "0.2": 3.8617276854340923
+   },
+   "tanh_linear_range_mV": 38.58507430811273,
+   "static_budget_mV": {
+    "mirror_sd": 5.456753539170671,
+    "leak_rms": 0.9442742010760586,
+    "dead_band_sd": 0.4455569130629855,
+    "shared_rms": 5.555747826966923,
+    "separate_rms": 42.788623884355616,
+    "pass_shared_10mV": true,
+    "pass_separate_10mV": false
+   },
+   "gate_mismatch_sensitivity": {
+    "assumption": "each steering/gate pair opening shifted by N(0,(30 mV)^2), by analogy with a connection offset; NOT a measured device statistic",
+    "delta_sd": 0.14142135623730953,
+    "anchor_error_sd_lower_bound_mV": 5.456753539170671,
+    "p_at_least_one_gate_open_at_rest": 0.75,
+    "rest_write_threshold_delta": 0.02,
+    "knob_drift_V_per_s_at_delta_0p15": 0.06291946308724831,
+    "time_to_V_TYP_s": 4.768000000000001,
+    "verdict": "fails at rest in both arms on most draws unless a closed-at-rest gate margin (about 3 sigma = 90 mV) is designed in; the shared arm also carries the anchor-time delta term"
+   },
+   "step_limits": {
+    "tracker_max_move_per_step_V": 0.000125,
+    "knob_max_move_per_step_V": 0.00010486577181208052,
+    "STEP_MOVE_V": 0.15,
+    "tau_m_over_TAU_LOOP": 60.52560675782389,
+    "ok": true
+   },
+   "rails": {
+    "tracker_quiet_level_rms_V": 0.04721371005380293,
+    "tracker_3sigma_V": 0.1416411301614088,
+    "RAIL": 0.9,
+    "knob_range_V": [
+     -0.3,
+     0.3
+    ],
+    "knob_memory_rail_V": 0.9,
+    "ok": true
+   },
+   "cost": {
+    "static_current_A": {
+     "read_tail_and_reference": 1e-10,
+     "tracker_leak_ota": 3e-12,
+     "steering_reference_bias": [
+      0.0,
+      1e-10
+     ],
+     "level_shifters": [
+      0.0,
+      4e-10
+     ],
+     "preamp": 0.0
+    },
+    "static_current_range_A": [
+     1.03e-10,
+     6.03e-10
+    ],
+    "static_power_range_W": [
+     1.8540000000000003e-10,
+     1.0854e-09
+    ],
+    "transistors": {
+     "read_pair": 2,
+     "tail_mirror_cascoded": [
+      4,
+      6
+     ],
+     "steering_quad": 4,
+     "output_mirrors_two_outputs": [
+      16,
+      24
+     ],
+     "steering_reference": [
+      2,
+      4
+     ],
+     "tracker_leak_ota": [
+      7,
+      9
+     ],
+     "level_shifters": [
+      0,
+      4
+     ],
+     "preamp": 0,
+     "knob_memory_driver": "existing memory block (SONOS cell + pulse driver); high-voltage pumps excluded as in chip.py"
+    },
+    "transistor_range": [
+     35,
+     53
+    ],
+    "capacitors": {
+     "tracker_C_m_F": 5e-11,
+     "knob_C_d_F": 1.49e-11
+    },
+    "area_um2": {
+     "capacitors": 12979.999999999998,
+     "transistors": [
+      525.0,
+      795.0
+     ]
+    },
+    "writes": "knob write charge and time measured in the replay"
+   }
+  },
+  "P2_preamp": {
+   "slope_per_V": 51.833514276257034,
+   "preamplifier": true,
+   "I0_A": 1.25e-11,
+   "k_q": 1.0,
+   "k_w": 0.25,
+   "g_m_S": 1.295837856906426e-11,
+   "V_bias_V": 0.0,
+   "C_m_F": 5e-11,
+   "C_d_F": 1.49e-11,
+   "loop_gain_G": 50.0,
+   "tau_m_s": 0.07565700844727986,
+   "leak_tau_s": 3.8585074308112732,
+   "kappa_per_V_s": 36.237076535414595,
+   "per_anchor_contraction_median_B": 0.24947639344756892,
+   "per_anchor_contraction_90pct_B": 0.3334408294672787,
+   "dead_band_mV": {
+    "1.0": 0.19293180277216002,
+    "0.5": 0.38590220219762417,
+    "0.2": 0.9654319213585231
+   },
+   "tanh_linear_range_mV": 9.646268577028183,
+   "static_budget_mV": {
+    "mirror_sd": 1.3641883847926677,
+    "leak_rms": 0.9442742010760586,
+    "dead_band_sd": 0.11138922826574638,
+    "shared_rms": 1.6628503469027798,
+    "separate_rms": 42.45898104378148,
+    "pass_shared_10mV": true,
+    "pass_separate_10mV": false
+   },
+   "gate_mismatch_sensitivity": {
+    "assumption": "each steering/gate pair opening shifted by N(0,(30 mV)^2), by analogy with a connection offset; NOT a measured device statistic",
+    "delta_sd": 0.14142135623730953,
+    "anchor_error_sd_lower_bound_mV": 1.3641883847926677,
+    "p_at_least_one_gate_open_at_rest": 0.75,
+    "rest_write_threshold_delta": 0.02,
+    "knob_drift_V_per_s_at_delta_0p15": 0.01572986577181208,
+    "time_to_V_TYP_s": 19.072000000000003,
+    "verdict": "fails at rest in both arms on most draws unless a closed-at-rest gate margin (about 3 sigma = 90 mV) is designed in; the shared arm also carries the anchor-time delta term"
+   },
+   "step_limits": {
+    "tracker_max_move_per_step_V": 3.125e-05,
+    "knob_max_move_per_step_V": 2.621644295302013e-05,
+    "STEP_MOVE_V": 0.15,
+    "tau_m_over_TAU_LOOP": 60.52560675782389,
+    "ok": true
+   },
+   "rails": {
+    "tracker_quiet_level_rms_V": 0.04721371005380293,
+    "tracker_3sigma_V": 0.1416411301614088,
+    "RAIL": 0.9,
+    "knob_range_V": [
+     -0.3,
+     0.3
+    ],
+    "knob_memory_rail_V": 0.9,
+    "ok": true
+   },
+   "cost": {
+    "static_current_A": {
+     "read_tail_and_reference": 2.5e-11,
+     "tracker_leak_ota": 3e-12,
+     "steering_reference_bias": [
+      0.0,
+      2.5e-11
+     ],
+     "level_shifters": [
+      0.0,
+      4e-10
+     ],
+     "preamp": 3e-10
+    },
+    "static_current_range_A": [
+     3.28e-10,
+     7.53e-10
+    ],
+    "static_power_range_W": [
+     5.904e-10,
+     1.3554e-09
+    ],
+    "transistors": {
+     "read_pair": 2,
+     "tail_mirror_cascoded": [
+      4,
+      6
+     ],
+     "steering_quad": 4,
+     "output_mirrors_two_outputs": [
+      16,
+      24
+     ],
+     "steering_reference": [
+      2,
+      4
+     ],
+     "tracker_leak_ota": [
+      7,
+      9
+     ],
+     "level_shifters": [
+      0,
+      4
+     ],
+     "preamp": [
+      7,
+      11
+     ],
+     "knob_memory_driver": "existing memory block (SONOS cell + pulse driver); high-voltage pumps excluded as in chip.py"
+    },
+    "transistor_range": [
+     42,
+     64
+    ],
+    "capacitors": {
+     "tracker_C_m_F": 5e-11,
+     "knob_C_d_F": 1.49e-11
+    },
+    "area_um2": {
+     "capacitors": 12979.999999999998,
+     "transistors": [
+      630.0,
+      960.0
+     ]
+    },
+    "writes": "knob write charge and time measured in the replay"
+   }
+  }
+ },
+ "rules": {
+  "leak_bound": "tau_m = C_m/(g_m (1+G)) <= TAU_MAX/G: a tracker accurate to m/G must be fast; with G = 50, tau_m <= 77.2 ms",
+  "gain_factors": "mirror gains k_w, k_q and the tail I0 scale both loops and drop out of each zero crossing at equilibrium; they set speed (tau_m, kappa) and so change causal operation (anchor erosion, convergence), not the static equilibrium",
+  "what_cancels": "the reading pair offset e and any stage before the split (level shifters, preamplifier) are shared and cancel",
+  "what_remains": "output-stage terms after the split: output mirror imbalance (alpha, beta), steering-pair mismatch (delta), leak (m/G), dead band, tanh curvature under time-varying input",
+  "unavailable_operations": [
+   "difference reading of two node voltages by one pair (D154: a connection reads one node against a fixed offset)",
+   "one pair steered to two destinations with complementary weights (a Gilbert-type steering quad)",
+   "a complementary 1-w gate for the separate-path control (engine gates are clip(V/V_TYP,0,1) only)"
+  ],
+  "no_further_operation_needed": "none beyond these three for the nominal contract; a closed-at-rest gate margin would be needed under the gate-mismatch sensitivity"
+ },
+ "noise_bound": {
+  "note": "silicon, analytic: order node 0.045 mV per anchor (D168 Task E); tracker kT/C at 50 pF and knob write shot noise below",
+  "tracker_kT_over_C_uV": 9.101589970988584,
+  "knob_write_shot_uV_per_anchor": {
+   "P1_native": 21.447915107876177,
+   "P2_preamp": 10.723957553938089
+  },
+  "combined_bound_mV": 0.1,
+  "verdict": "noise bound (~0.1 mV) far below the 10 mV screen"
+ },
+ "explorers_per_credit_window": 1
+}

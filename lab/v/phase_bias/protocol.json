@@ -1,0 +1,19 @@
+{
+  "rows": 80,
+  "source": "/home/pilgrim/git/simple-learner/lab/v/phase_v1/confirm.jsonl",
+  "modes": [
+    "original",
+    "zero_output_offsets",
+    "equal_output_gains",
+    "equal_upstream",
+    "equal_output_transfers",
+    "both_matched"
+  ],
+  "resolutions": [
+    4096,
+    8192
+  ],
+  "analysis": "Periodic Fourier solution of linear RC filters with nonlinear tanh and clipped gates evaluated on the phase grid. Mean over6..12s includes drawn initial phase. Omit rail fading, noise and startup transient; validate against original noisy means before interpreting interventions.",
+  "counterfactuals": "Equal upstream averages paired input/lag leak/cap and lag element parameters. Equal output transfers averages gain magnitude, threshold and slope. All equalisation is an informed algebraic intervention, not an implementable calibration.",
+  "budget_minutes": 30
+}

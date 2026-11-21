@@ -1,0 +1,97 @@
+{
+  "scope": "saved-record audit, not simulation replication",
+  "revision": "5700eaa0d397e1a7dc055ce69ce9ec7e1d32cc7f",
+  "script_sha256": "8b6f1e54a5d10c50588fcdc98522576d16f5a0fca7e4fd75cb473d7bbfa382a2",
+  "hash_checks": {
+    "index.json": {
+      "checked": 35,
+      "failures": []
+    },
+    "manifest_addendum_pre_replay.json": {
+      "checked": 9,
+      "failures": []
+    }
+  },
+  "groups": {
+    "P1_native|shared": {
+      "draws": 39,
+      "cases": 1354,
+      "equivalent_error_rms_mV": 8.167986189763065
+    },
+    "P1_native|separate": {
+      "draws": 25,
+      "cases": 1290,
+      "equivalent_error_rms_mV": 39.41390710804609
+    },
+    "P2_preamp|shared": {
+      "draws": 39,
+      "cases": 1353,
+      "equivalent_error_rms_mV": 8.11781939816037
+    },
+    "P2_preamp|separate": {
+      "draws": 34,
+      "cases": 1337,
+      "equivalent_error_rms_mV": 30.151371394069965
+    },
+    "none|fixed": {
+      "draws": 34,
+      "cases": 1340,
+      "equivalent_error_rms_mV": 26.59817323647448
+    },
+    "none|offline_full_1000s": {
+      "draws": 39,
+      "cases": 1353
+    },
+    "none|offline_final_third_1000s": {
+      "draws": 38,
+      "cases": 1349
+    }
+  },
+  "paired": {
+    "P1_native|shared": {
+      "rescues": [
+        2026112204,
+        2026112223,
+        2026112226,
+        2026112236,
+        2026112237
+      ],
+      "harms": [],
+      "failures": [
+        2026112215
+      ],
+      "settling_seconds_rescued": [
+        11.984,
+        157.10150000000002,
+        29.3595,
+        47.0835,
+        83.44200000000001
+      ]
+    },
+    "P2_preamp|shared": {
+      "rescues": [
+        2026112204,
+        2026112223,
+        2026112226,
+        2026112236,
+        2026112237
+      ],
+      "harms": [],
+      "failures": [
+        2026112215
+      ],
+      "settling_seconds_rescued": [
+        33.1495,
+        313.3275,
+        29.3685,
+        47.094500000000004,
+        83.447
+      ]
+    }
+  },
+  "inputs": {
+    "lab/v/shared_readout_20261120/index.json": "a4387a73b3e9517794ce1455d58b39904811548e6fb6c5c390a5b8fea5361ccb",
+    "lab/v/shared_readout_20261120/manifest_addendum_pre_replay.json": "8690ac6f95acc50567a8f20321dbc7cb88e4b30da8622611cd85f8fbb156df2c",
+    "lab/v/shared_readout_20261120/replay/records.jsonl": "0224c7b7db2f0a2abfe63b748397a91ad859cd4de871a60a813f3359d7faec34"
+  }
+}

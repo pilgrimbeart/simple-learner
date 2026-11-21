@@ -1,0 +1,8 @@
+trace done 2.2 s
+memory done 19.0 s
+resonator done 24.8 s
+oscillator done 45.4 s
+trace 8 / 8 refinement True controls True
+memory 3 / 8 refinement True controls True
+resonator 6 / 8 refinement True controls True
+oscillator 8 / 8 refinement True controls False

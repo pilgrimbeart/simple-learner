@@ -1,0 +1,25 @@
+{
+  "thresholds_V": {
+    "original": 0.15,
+    "selected_draw_bound": 0.23121181739836938,
+    "population_envelope": 0.3536859287733871
+  },
+  "envelope": {
+    "z": 3.384036251864579,
+    "simultaneous_component_probability_lower": 0.99,
+    "variables": 14,
+    "input_thermal_sigma_upper_V": 1.5824708030692608e-05,
+    "trace_noise_sigma_upper_V": 0.00011587807508033886,
+    "nominal_threshold_V": 0.3536859287733871,
+    "allowed_deterministic_rest_V": 0.0023047315495179667,
+    "maximum_gain_over_leak_V": 1.8206920541354157,
+    "minimum_slope_per_V": 26.463854992541684
+  },
+  "quadrature_steps_s": [
+    5e-05,
+    2.5e-05
+  ],
+  "source": "/home/pilgrim/git/simple-learner/lab/v/motifs/order_v2/confirm.jsonl",
+  "interpretation": "RC convolution with trapezoid forcing; omits rail fading/noise. Original 34-case criteria unchanged; no reliability or physical pass assigned to predictions.",
+  "budget_minutes": 30
+}

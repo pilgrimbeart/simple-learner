@@ -73,6 +73,155 @@ while the user is unavailable.
 
 ## What we've learned
 
+### Reliable responses and exploration are separate requirements
+
+The catalogue assembly now moves and benefits slightly from correct sensory settings, yet collects too
+little even when every block is food. Reliable isolated responses do not guarantee useful sustained motor
+action. [D182](discrete/NOTEBOOK.md#d182-catalogue-review) checks the results and distinguishes the unresolved
+roles of exploration, motor recovery and coordination before further learning machinery is added.
+
+The robot diagnosis shows that retaining the right answer does not guarantee useful action. Its idealised
+relay reference also shows that removing autonomous movement can strand the robot. The next comparison must
+separate responding to sensory evidence from moving enough to find it, under the intended silicon noise.
+Correctly ordering two memory values is weaker than reliably acquiring and using the answer; a poor informed
+setting is not a bound on all possible settings. [D177](discrete/NOTEBOOK.md#d177-robot-review) reviews the
+evidence and proposes the bounded next comparison. Autonomous repair and general scaling remain unproved.
+
+### Silence must survive the circuit
+
+Opening a write gate with no evidence still changed memory in the original writer: component offsets
+created a false signal. Explicit positive and negative thresholds prevent that in the bounded tests, at
+the cost of more parts and rejecting weaker evidence. A useful gate must control both when writing is
+allowed and what counts as evidence. [D129–D131](discrete/NOTEBOOK.md#d129-memory-limits) record the tests
+and limits. Similarly, subtracting a resting level in a plot is not a reference signal available to a brain.
+
+A timing comparator illustrates the same problem: it responds reliably to relative timing, but differences
+between its parts produce a large unknown output bias. The measured bias is explained by both input-path
+and output-path mismatch. Automatically forcing the output to zero could erase a genuine persistent timing
+difference. A useful correction must have local evidence for what is error and what is signal.
+[D137–D138](discrete/NOTEBOOK.md#d137-phase-bias) explain the bias and show why the mean output alone cannot identify its cause.
+[Reversing the inputs](discrete/NOTEBOOK.md#d140-input-reversal) cancels bias when the two waveforms
+are identical, but different baseline signal levels can still masquerade as a timing difference.
+
+Simply raising a threshold is also costly: it makes idle event traces quieter, but can suppress the weak
+signals the next stage needs. Measurable memory is not necessarily usable memory.
+[D139](discrete/NOTEBOOK.md#d139-population-trace-margin) compares this tradeoff against the original
+response criteria; it does not establish that all local corrections fail.
+
+### Composed signals must keep their sign
+
+Removing a signal's baseline makes it swing positive and negative. A gate that only opens for positive
+control voltages can then throw useful information away. An analytic signed-gate reference restores
+timing sensitivity, but drifting baselines still leak through device offsets. Signed gain control means
+that a control signal can reverse a connection's effect as well as change its strength; it is a useful
+operation to test, not yet a calibrated timing solution. [D141–D144](discrete/NOTEBOOK.md#d141-baseline-rejection)
+separate these failures and limits. An [explicit complementary-gate circuit](discrete/NOTEBOOK.md#d145-signed-control)
+meets its sign/response criteria on 39/40 fresh draws, below the required reliability; it also retains
+large zero-input errors. That is partial evidence for the operation, not precision multiplication.
+
+### Correcting an error needs an honest reference
+
+A calibration loop can replace one device's offset with its error detector's offset. An internal-zero
+measurement can still help if the circuit does not trust it completely: a fixed partial correction
+improves a stated model of the current measurements. That is a reference calculation, not yet a working
+calibration circuit; the mechanism representing its prior also has errors and costs.
+[D148–D150](discrete/NOTEBOOK.md#d148-local-zero-reference) state the observations, priors and limits. Including the
+correction paths' own offsets erases that predicted advantage in the proposed circuit kernel.
+Reusing a path can cancel a fixed error, but only if the switching does not carry another error along
+with the signal. Our available reverser does exactly that; an ideal reversal calculation is therefore
+not an implemented cure ([D151–D153](discrete/NOTEBOOK.md#d151-correction-cell-budget)).
+
+### Local bias adjustment can restore a stalled oscillator
+
+A small memory circuit can use an oscillator's own voltage to adjust its operating point, without
+being told a frequency or phase. The unchanged design passed its fresh component test, including
+numerical refinement. This is a reusable local regulation mechanism, with substantial added material
+and power; it is not yet reward-driven robot learning. The [experiment](discrete/NOTEBOOK.md#d162-adaptive-oscillator)
+records the controls, costs and limits of the comparison.
+
+### Balance must not erase a real pattern
+
+Making two order-sensitive branches equally active can mistake a frequent event order for a circuit
+fault. Their existing coincidence signal offers more selective calibration evidence, but the resting
+output still biases that adjustment. Supplying a baseline reference improves the tested responses;
+constructing that reference remains work for the brain. One component draw also needs more than a
+constant balance setting ([D155–D156](discrete/NOTEBOOK.md#d155-order-balance-information)).
+The [overnight review](discrete/NOTEBOOK.md#d166-overnight-review) shows that even with a baseline,
+genuine ordered events can mislead calibration. More history helps the ideal calculation, but does
+not supply a physical way to distinguish useful calibration evidence or remove fixed measurement
+error.
+
+Those requirements have since been separated ([D167](discrete/NOTEBOOK.md#d167-calibration-next)):
+
+- **Telling useful evidence from real order is possible in principle.** Simultaneous inputs drive the coincidence
+  signal much harder than ordered ones. Weighting more sharply by that signal stops ordered events from biasing
+  the balance, in a simplified, noise-free calculation.
+- **Measurement precision is the blocking requirement.** One fixed measurement error, of the size of an ordinary
+  component's offset, still spoils about a quarter of the settings, and a longer history doesn't help.
+- **The one draw no single balance can fix** becomes fixable when both output gains are turned down independently.
+
+### The robot's learning fails in its action, not its credit assignment
+
+The hand-designed circuit brain remembers which sensor fired just before each taste and nudges that sensor's
+knob up for food, down for poison. On the same 64 lives we followed that chain step by step. The memory points
+at the colour just eaten 80% of the time, and the knob moves the right way 89% of the time. So the evidence
+is there. But the knob forgets: its own resting noise and a small leakage in its writers move it about half its
+range in a 100 s life. Making the knob a memory and raising its writers' threshold cures that: the brain then
+ends its life knowing which colour is poison in 54 of 64 lives. It still eats as much poison as before. Even a
+knob held at the right answer all life gives only about 1.2 food per poison, because the circuit's excitable
+neurons, whose parts differ by 10%, relay the eyes to the thrusters unreliably and fire on their own. A
+simplified replay of the same wiring with ideal relays reaches about 4.7, and a scripted policy told the answer
+reaches 6.6 on this body, so the body allows at least that. A better timing front end would not help this robot;
+the evidence points to relaying that survives component variation, which is not yet demonstrated.
+[D176](discrete/NOTEBOOK.md#d176-robot-shortfall) has the evidence and limits.
+
+### Shared reading improves a detector; robot usefulness remains unproved
+
+The order detector can set its own balance during life by reading its output and a quiet-time copy of it through
+one shared path. Moments when both inputs arrive together are the reference. A real transistor gate never closes
+completely, so the loop needs a designed threshold (about 0.25 V) to stay quiet at rest. Because simultaneous
+inputs drive the coincidence signal much higher than anything at rest, a safe threshold still lets their evidence
+through ([D172](discrete/NOTEBOOK.md#d172-gate-contract)).
+
+The threshold also stops ordered events from misleading the balance. A hybrid simulation with noisy circuit
+inputs improved responses on fresh components and schedules ([D173](discrete/NOTEBOOK.md#d173-noisy-shared-confirmation)).
+The [review](discrete/NOTEBOOK.md#d175-results-review) verifies the gain but identifies remaining physical
+approximations: some adjustment dynamics and noise are outside the common circuit engine.
+
+It is not yet a reusable part. No second use with the required local reference is established.
+Robot coincidence counts are only a proxy for available evidence, not a learning limit. The existing robot
+brain already contains fading memories for assigning later taste to earlier sensor activity. The next question
+is which part of that learning actually fails, before building another timing mechanism. See
+[D175](discrete/NOTEBOOK.md#d175-results-review) for the evidence, literature and conditional plan.
+
+### A noisy input does not make every internal state physically noisy
+
+An internal connection filter can receive noisy input yet omit noise generated by its own physical
+resistor and capacitor. The [filter audit](discrete/NOTEBOOK.md#d147-filter-state-audit) finds that gap
+in the implicit filter state. The current component witnesses use explicit noisy nodes instead, so this
+specific omission does not invalidate them. General filter coverage needs a consistent state and noise mapping.
+
+### Feedback can replace fragile cancellation
+
+A change detector made from fixed fast and slow opposing paths often failed to return to baseline because
+real components did not match. Integrating the persistent error and feeding it back passed the same tests.
+This is established integral control, realised here with the proposed parts; it is not reward learning.
+[D128](discrete/NOTEBOOK.md#d128-change-and-order) gives the failed construction, diagnosis and comparison.
+
+### A useful circuit can change behaviour when its components vary
+
+The first fixed catalogue tests demonstrate a fading trace, a held bit and a resonator under the declared
+silicon noise and component variation. The proposed oscillator sometimes settles at rest instead of sustaining
+a rhythm. Its failed component draws have locally stable resting points, giving a concrete feedback-balance
+problem to investigate. This is component coverage, not yet an autonomous learner; see
+[D126](discrete/NOTEBOOK.md#d126-first-dynamic-witnesses) for tests, intervals and limitations.
+[D127](discrete/NOTEBOOK.md#d127-feedback-margin-and-retained-write) identifies offset sensitivity and finds
+an observed rhythm even when the resting point is locally stable, so checking rest alone cannot certify behaviour.
+It also demonstrates controlled retained writes: evidence changes a stored voltage while a gate is open,
+and that voltage changes a later response. The bench supplies the write-permission signal; learning when
+to open that gate is still a separate problem.
+
+
 The detailed evidence and qualifications are in the notebooks. The [2026-11-16 review](discrete/NOTEBOOK.md#review-2026-11-16)
 connects the major experiment families to the goal; it is a review of existing records, not new experimental data.
 
@@ -111,15 +260,17 @@ better on their own sequence histories. Their mixture is close to the best singl
 but that comparator does not establish optimal selection. A hand-informed allocation has similar measured
 performance with 57% as many final categorical units on reused development seeds; this is not a total physical
 material or power comparison. Silencing weak streams changes both forecasts and learning credit, so the source
-of its effect remains open. Timing's prediction difference has a broad interval and cannot be dismissed.
-[Evidence and limitations, D103](discrete/NOTEBOOK.md#d103-agent-review).
+of its effect remains open. Timing's log-loss difference remains uncertain, while the harmonised comparison finds fewer choice errors.
+[Forecast audit, D104](discrete/NOTEBOOK.md#d104-forecast-windows), [review, D108](discrete/NOTEBOOK.md#d108-review-next).
 
-**The market's savings gate blocks many requests; why it falls short remains open.** The existing allocator
-often refuses more memory because a stream has not saved enough prediction loss. Longer lives improve its
-performance, but neither that result nor the price experiments establish a universal evidence-rate limit.
-Savings relative to a bad default can exceed one bit per binary taste. Next we audit the actual credit ledger
-and selection effects before constructing another allocator.
-[Review and corrected interpretation, D103](discrete/NOTEBOOK.md#d103-agent-review).
+**Freeing spare allowance has not yet demonstrated an efficiency gain.** A narrow gate change was tested
+under matched credit and capacity on sequence and timing challenges. Both estimates are positive, but their
+95% intervals include zero. Many units born after transfers do speak; their summed standalone bit savings
+do not establish how much they help the weighted combined forecast. Exact attribution and matched activity
+counts are still missing, and the diagnostic adapter adds global scanning work. Eight passive replays now measure small, mixed conditional contributions on one seed pair,
+with little in the judged last third. This does not identify a causal efficiency route; matched counts also
+confirm added global scan work. The next action is a step-back review before another controller or broad run.
+[Comparison, D117](discrete/NOTEBOOK.md#d117-gaps-closed), [review and limits, D120](discrete/NOTEBOOK.md#d120-hj-review), [completed diagnostic, D122](discrete/NOTEBOOK.md#d122-contribution-capture).
 
 **Allocation matters; its useful signal is still an open question.** Under a real memory cap, letting
 streams compete by prediction weight beats an equal split on fresh sequence lives, but the smaller brain
@@ -285,10 +436,47 @@ physical circuit with the same learning, power or noise performance.
 
 ## Next
 
-[PROGRAMME.md](PROGRAMME.md#conditional-programme) owns the conditional work plan;
+[PROGRAMME.md](PROGRAMME.md) owns the current work plan, starting with the
+[three-part circuit catalogue and coverage checks](PARTS.md#2-the-catalogue-primitives-dynamical-motifs-and-learning);
 [QUESTIONS.md](QUESTIONS.md) owns the ranked questions and discriminating investigations.
 
 ## Terms
+
+- **Catalogue-native brain**: a brain assembled directly from the proposed dynamic nodes, controlled connections
+  and retained memory nodes, with every internal state and connection explicit. The starting design is
+  [D180](discrete/NOTEBOOK.md#d180-catalogue-brain-plan); its behaviour is not yet tested.
+
+- **In-stream response**: what a detector actually outputs after each event during a life, scored by its
+  bench criteria, as opposed to scoring each case in isolation at a fixed setting (D173).
+- **Steering gate**: a transistor pair that splits one current between two destinations according to a control
+  voltage; a physical one opens gradually and never closes completely, so it needs a threshold to stay quiet (D172).
+- **Calibration anchor**: an observation with a known desired reference response; in the order bench,
+  a simultaneous input pair should give zero order output. An analyst knowing its label does not
+  mean the brain can identify it locally.
+
+- **Signed gain control**: a local control signal changes both the strength and direction of a connection’s effect. This does not imply accurate multiplication or a learned weight.
+
+- **Deadband / no-write region**: a range of inputs that produces no update; it protects against small offsets/noise but also rejects real signals in that range.
+- **Integral feedback**: accumulate a persistent error in a state and feed that state back to reduce the error; its stability and available correction range still need checking.
+
+- **Fixed point / equilibrium**: a state where the model's mean currents balance, so its deterministic state stops changing. Noise can still cause fluctuations.
+- **Jacobian**: the matrix describing how small changes in each state change the rates of change of all states. Near an equilibrium it tests whether small disturbances grow or decay; it does not classify every possible trajectory.
+- **Attractor / basin**: a persistent behaviour approached from nearby starting states, such as rest or a cycle / the set of starting states that approach it. Different attractors can coexist in one circuit.
+
+- **Continuous-time recurrent neural network (CTRNN)**: interconnected neural states evolving by differential equations, with feedback and explicit response times. A close mathematical relative of the circuit brains.
+- **Contraction**: trajectories driven by the same input approach one another under stated conditions; stronger than merely keeping activity bounded.
+- **Echo-state reservoir**: a recurrent network whose driven state loses dependence on its initial state over time, supplying temporal features to a readout; the property depends on the model and input domain.
+- **BPTT (backpropagation through time)**: a training method that differentiates through an unfolded sequence of recurrent states; distinct from running the recurrent dynamics.
+- **Circuit macro**: a small circuit block with fixed, declared ports, internal state and transfer behaviour; its implementation and cost remain explicit. The proposed catalogue uses this one level of abstraction.
+
+- **Dynamical primitive**: an explicitly represented circuit element or state from which larger circuits are built; its ports, units and costs must be declared.
+- **Dynamical motif**: a recurring behaviour or small circuit pattern, such as a fading trace, bistable memory or oscillator. Different motifs can arise from the same topology under different settings.
+- **Repair grammar**: the declared finite rules for constructing candidate changes to a starting brain. Exhaustive search is complete only within those rules and parameter choices.
+- **Phase detector**: a circuit producing an output related to the relative phase of two signals; it is not an externally supplied phase measurement or a whole phase-locked loop.
+- **Eligibility trace**: a retained local record of activity that can gate a later memory update when feedback arrives; it does not itself prove correct credit assignment.
+- **Monostable / one-shot**: a circuit with a resting state that emits a transient response after a trigger, then returns to rest.
+- **Resonator**: a dynamical system especially responsive to a range of input frequencies; unlike an autonomous oscillator, it need not sustain a rhythm without input.
+
 
 **Research and evaluation**
 

@@ -1,0 +1,7 @@
+{
+  "source": "/home/pilgrim/git/simple-learner/lab/v/phase_v1/confirm.jsonl",
+  "observation": "mean output over 6..12 s",
+  "analysis": "Finest stored step; all 40 draws in each frequency band. Overlap describes unknown-draw ambiguity, not identical full waveforms. Piecewise-linear crossing is an interpolated counterexample, not a new measurement.",
+  "budget_minutes": 30,
+  "new_simulations": 0
+}

@@ -1,0 +1,38 @@
+{
+  "nominal_RMS_V": {
+    "original_path": 0.03,
+    "correction_hardware_held_at_nominal": 0.042426406871192854,
+    "full_correction": 0.03,
+    "half_correction": 0.03,
+    "quadratic_model_minimum": 0.02598076211353316
+  },
+  "model_optimal_alpha": 0.7500000000000001,
+  "linear_loop_eigenvalues_per_s": {
+    "0.0": [
+      -88.72983346207417,
+      -11.270166537925832
+    ],
+    "10.0": [
+      -87.01562118716424,
+      -22.984378812835757
+    ]
+  },
+  "nominal_correction_current_authority_A": 7.462910652650478e-10,
+  "parts": {
+    "full": {
+      "T": 122,
+      "R": 20,
+      "C": 10,
+      "D": 0,
+      "sources": 15
+    },
+    "partial": {
+      "T": 170,
+      "R": 27,
+      "C": 12,
+      "D": 0,
+      "sources": 20
+    }
+  },
+  "scope": "Kernel lower bound only: external current sources, internal source blanking, path-isolation switches, local schedule and downstream readout not counted; pump implementation/power omitted under existing memory model. No noise trajectories or physical pass claim."
+}

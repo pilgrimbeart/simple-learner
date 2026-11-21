@@ -1,0 +1,1472 @@
+{
+  "checks": [
+    "signed standalone savings do not bound weighted gain",
+    "zero weight has zero effect",
+    "cancelling standalone gains need not cancel in mixture"
+  ],
+  "success": true,
+  "lives": 40,
+  "per_life": [
+    {
+      "condition": "time",
+      "seed": 142000,
+      "first": "red",
+      "latest_transfer_births": 57,
+      "pending_births": 57,
+      "transfers": 57,
+      "positive": 3.6988161940037645,
+      "negative": -95.1120404393778,
+      "censored": 0,
+      "family": {
+        "event": 3,
+        "clock": 29,
+        "integrator": 25,
+        "rhythm": 0
+      },
+      "birth_third": [
+        57,
+        0,
+        0
+      ],
+      "first_speaking_third": [
+        42,
+        0,
+        0
+      ],
+      "duration_lower_median": 9.00495997525752,
+      "duration_upper_or_censor_median": 16.79591969623202
+    },
+    {
+      "condition": "time",
+      "seed": 142000,
+      "first": "blue",
+      "latest_transfer_births": 67,
+      "pending_births": 67,
+      "transfers": 67,
+      "positive": 48.85116718874153,
+      "negative": -29.018799221199902,
+      "censored": 1,
+      "family": {
+        "event": 7,
+        "clock": 26,
+        "integrator": 34,
+        "rhythm": 0
+      },
+      "birth_third": [
+        67,
+        0,
+        0
+      ],
+      "first_speaking_third": [
+        47,
+        0,
+        0
+      ],
+      "duration_lower_median": 18.019617815926356,
+      "duration_upper_or_censor_median": 19.946606383447154
+    },
+    {
+      "condition": "time",
+      "seed": 142001,
+      "first": "red",
+      "latest_transfer_births": 69,
+      "pending_births": 69,
+      "transfers": 70,
+      "positive": 27.255519169475317,
+      "negative": -14.49802130337883,
+      "censored": 0,
+      "family": {
+        "event": 7,
+        "clock": 23,
+        "integrator": 39,
+        "rhythm": 0
+      },
+      "birth_third": [
+        69,
+        0,
+        0
+      ],
+      "first_speaking_third": [
+        40,
+        0,
+        0
+      ],
+      "duration_lower_median": 3.4702733097772267,
+      "duration_upper_or_censor_median": 4.12135098908286
+    },
+    {
+      "condition": "time",
+      "seed": 142001,
+      "first": "blue",
+      "latest_transfer_births": 83,
+      "pending_births": 83,
+      "transfers": 83,
+      "positive": 60.00390896721103,
+      "negative": -23.019414997580558,
+      "censored": 1,
+      "family": {
+        "event": 13,
+        "clock": 26,
+        "integrator": 44,
+        "rhythm": 0
+      },
+      "birth_third": [
+        83,
+        0,
+        0
+      ],
+      "first_speaking_third": [
+        50,
+        0,
+        0
+      ],
+      "duration_lower_median": 5.04746386734913,
+      "duration_upper_or_censor_median": 5.953443841957995
+    },
+    {
+      "condition": "time",
+      "seed": 142002,
+      "first": "red",
+      "latest_transfer_births": 50,
+      "pending_births": 50,
+      "transfers": 50,
+      "positive": 7.971811342174858,
+      "negative": -3.9331027817888082,
+      "censored": 0,
+      "family": {
+        "event": 3,
+        "clock": 21,
+        "integrator": 26,
+        "rhythm": 0
+      },
+      "birth_third": [
+        50,
+        0,
+        0
+      ],
+      "first_speaking_third": [
+        32,
+        0,
+        0
+      ],
+      "duration_lower_median": 8.730679751219892,
+      "duration_upper_or_censor_median": 11.83586736822469
+    },
+    {
+      "condition": "time",
+      "seed": 142002,
+      "first": "blue",
+      "latest_transfer_births": 51,
+      "pending_births": 51,
+      "transfers": 51,
+      "positive": 30.94761256736279,
+      "negative": -10.798040784263723,
+      "censored": 1,
+      "family": {
+        "event": 2,
+        "clock": 18,
+        "integrator": 31,
+        "rhythm": 0
+      },
+      "birth_third": [
+        51,
+        0,
+        0
+      ],
+      "first_speaking_third": [
+        33,
+        0,
+        0
+      ],
+      "duration_lower_median": 9.868483979431069,
+      "duration_upper_or_censor_median": 15.077429969908664
+    },
+    {
+      "condition": "time",
+      "seed": 142003,
+      "first": "red",
+      "latest_transfer_births": 63,
+      "pending_births": 63,
+      "transfers": 63,
+      "positive": 22.31828524603688,
+      "negative": -45.68097457771832,
+      "censored": 2,
+      "family": {
+        "event": 4,
+        "clock": 28,
+        "integrator": 31,
+        "rhythm": 0
+      },
+      "birth_third": [
+        63,
+        0,
+        0
+      ],
+      "first_speaking_third": [
+        48,
+        0,
+        0
+      ],
+      "duration_lower_median": 3.6104852626230013,
+      "duration_upper_or_censor_median": 6.32099771519362
+    },
+    {
+      "condition": "time",
+      "seed": 142003,
+      "first": "blue",
+      "latest_transfer_births": 58,
+      "pending_births": 58,
+      "transfers": 58,
+      "positive": 12.211799518770833,
+      "negative": -41.48910076450335,
+      "censored": 2,
+      "family": {
+        "event": 5,
+        "clock": 21,
+        "integrator": 32,
+        "rhythm": 0
+      },
+      "birth_third": [
+        58,
+        0,
+        0
+      ],
+      "first_speaking_third": [
+        39,
+        0,
+        0
+      ],
+      "duration_lower_median": 13.31724929571649,
+      "duration_upper_or_censor_median": 14.259649483557418
+    },
+    {
+      "condition": "time",
+      "seed": 142004,
+      "first": "red",
+      "latest_transfer_births": 47,
+      "pending_births": 47,
+      "transfers": 47,
+      "positive": 64.28335381282034,
+      "negative": -44.796399433327714,
+      "censored": 0,
+      "family": {
+        "event": 8,
+        "clock": 19,
+        "integrator": 20,
+        "rhythm": 0
+      },
+      "birth_third": [
+        47,
+        0,
+        0
+      ],
+      "first_speaking_third": [
+        34,
+        0,
+        0
+      ],
+      "duration_lower_median": 25.63255222856307,
+      "duration_upper_or_censor_median": 33.18136858904634
+    },
+    {
+      "condition": "time",
+      "seed": 142004,
+      "first": "blue",
+      "latest_transfer_births": 52,
+      "pending_births": 53,
+      "transfers": 53,
+      "positive": 29.642189703321325,
+      "negative": -23.113070575003075,
+      "censored": 1,
+      "family": {
+        "event": 7,
+        "clock": 16,
+        "integrator": 29,
+        "rhythm": 0
+      },
+      "birth_third": [
+        52,
+        0,
+        0
+      ],
+      "first_speaking_third": [
+        37,
+        0,
+        0
+      ],
+      "duration_lower_median": 17.366470627175993,
+      "duration_upper_or_censor_median": 19.376014141350595
+    },
+    {
+      "condition": "time",
+      "seed": 142005,
+      "first": "red",
+      "latest_transfer_births": 64,
+      "pending_births": 68,
+      "transfers": 71,
+      "positive": 43.10296131799803,
+      "negative": -35.56848112735182,
+      "censored": 1,
+      "family": {
+        "event": 9,
+        "clock": 18,
+        "integrator": 37,
+        "rhythm": 0
+      },
+      "birth_third": [
+        64,
+        0,
+        0
+      ],
+      "first_speaking_third": [
+        35,
+        0,
+        0
+      ],
+      "duration_lower_median": 4.133876060616133,
+      "duration_upper_or_censor_median": 5.9024297809811195
+    },
+    {
+      "condition": "time",
+      "seed": 142005,
+      "first": "blue",
+      "latest_transfer_births": 62,
+      "pending_births": 62,
+      "transfers": 62,
+      "positive": 19.098469643865506,
+      "negative": -41.142536692265296,
+      "censored": 0,
+      "family": {
+        "event": 7,
+        "clock": 25,
+        "integrator": 30,
+        "rhythm": 0
+      },
+      "birth_third": [
+        62,
+        0,
+        0
+      ],
+      "first_speaking_third": [
+        43,
+        0,
+        0
+      ],
+      "duration_lower_median": 9.764686343211153,
+      "duration_upper_or_censor_median": 10.480852120732134
+    },
+    {
+      "condition": "time",
+      "seed": 142006,
+      "first": "red",
+      "latest_transfer_births": 68,
+      "pending_births": 68,
+      "transfers": 69,
+      "positive": 41.81918451279927,
+      "negative": -89.59692470548882,
+      "censored": 4,
+      "family": {
+        "event": 3,
+        "clock": 23,
+        "integrator": 42,
+        "rhythm": 0
+      },
+      "birth_third": [
+        68,
+        0,
+        0
+      ],
+      "first_speaking_third": [
+        39,
+        0,
+        0
+      ],
+      "duration_lower_median": 6.405861044312615,
+      "duration_upper_or_censor_median": 8.637744828677324
+    },
+    {
+      "condition": "time",
+      "seed": 142006,
+      "first": "blue",
+      "latest_transfer_births": 64,
+      "pending_births": 64,
+      "transfers": 64,
+      "positive": 38.1822209987147,
+      "negative": -12.324859063737216,
+      "censored": 0,
+      "family": {
+        "event": 6,
+        "clock": 27,
+        "integrator": 31,
+        "rhythm": 0
+      },
+      "birth_third": [
+        64,
+        0,
+        0
+      ],
+      "first_speaking_third": [
+        35,
+        0,
+        0
+      ],
+      "duration_lower_median": 7.511865754426745,
+      "duration_upper_or_censor_median": 9.91875740856283
+    },
+    {
+      "condition": "time",
+      "seed": 142007,
+      "first": "red",
+      "latest_transfer_births": 81,
+      "pending_births": 82,
+      "transfers": 94,
+      "positive": 59.4295075798752,
+      "negative": -46.92645740416036,
+      "censored": 1,
+      "family": {
+        "event": 12,
+        "clock": 26,
+        "integrator": 43,
+        "rhythm": 0
+      },
+      "birth_third": [
+        81,
+        0,
+        0
+      ],
+      "first_speaking_third": [
+        51,
+        0,
+        0
+      ],
+      "duration_lower_median": 11.127712275439194,
+      "duration_upper_or_censor_median": 15.117421951749037
+    },
+    {
+      "condition": "time",
+      "seed": 142007,
+      "first": "blue",
+      "latest_transfer_births": 62,
+      "pending_births": 62,
+      "transfers": 64,
+      "positive": 37.51274290759788,
+      "negative": -17.854624006343336,
+      "censored": 0,
+      "family": {
+        "event": 8,
+        "clock": 26,
+        "integrator": 28,
+        "rhythm": 0
+      },
+      "birth_third": [
+        62,
+        0,
+        0
+      ],
+      "first_speaking_third": [
+        41,
+        0,
+        0
+      ],
+      "duration_lower_median": 6.766181099989378,
+      "duration_upper_or_censor_median": 7.626905870920904
+    },
+    {
+      "condition": "time",
+      "seed": 142008,
+      "first": "red",
+      "latest_transfer_births": 63,
+      "pending_births": 63,
+      "transfers": 65,
+      "positive": 28.66419634100803,
+      "negative": -17.568872419721078,
+      "censored": 1,
+      "family": {
+        "event": 11,
+        "clock": 9,
+        "integrator": 43,
+        "rhythm": 0
+      },
+      "birth_third": [
+        63,
+        0,
+        0
+      ],
+      "first_speaking_third": [
+        34,
+        0,
+        0
+      ],
+      "duration_lower_median": 12.94651650290702,
+      "duration_upper_or_censor_median": 16.497871962034946
+    },
+    {
+      "condition": "time",
+      "seed": 142008,
+      "first": "blue",
+      "latest_transfer_births": 66,
+      "pending_births": 66,
+      "transfers": 68,
+      "positive": 28.2570186423322,
+      "negative": -22.661689240324097,
+      "censored": 0,
+      "family": {
+        "event": 13,
+        "clock": 19,
+        "integrator": 34,
+        "rhythm": 0
+      },
+      "birth_third": [
+        66,
+        0,
+        0
+      ],
+      "first_speaking_third": [
+        37,
+        0,
+        0
+      ],
+      "duration_lower_median": 18.28319004996071,
+      "duration_upper_or_censor_median": 26.994642834110103
+    },
+    {
+      "condition": "time",
+      "seed": 142009,
+      "first": "red",
+      "latest_transfer_births": 55,
+      "pending_births": 55,
+      "transfers": 56,
+      "positive": 27.893034825000562,
+      "negative": -6.954268716145604,
+      "censored": 1,
+      "family": {
+        "event": 6,
+        "clock": 24,
+        "integrator": 25,
+        "rhythm": 0
+      },
+      "birth_third": [
+        55,
+        0,
+        0
+      ],
+      "first_speaking_third": [
+        17,
+        0,
+        0
+      ],
+      "duration_lower_median": 5.21409354145565,
+      "duration_upper_or_censor_median": 9.820338379964603
+    },
+    {
+      "condition": "time",
+      "seed": 142009,
+      "first": "blue",
+      "latest_transfer_births": 55,
+      "pending_births": 57,
+      "transfers": 59,
+      "positive": 43.6141337334575,
+      "negative": -20.043461495986918,
+      "censored": 0,
+      "family": {
+        "event": 4,
+        "clock": 19,
+        "integrator": 32,
+        "rhythm": 0
+      },
+      "birth_third": [
+        55,
+        0,
+        0
+      ],
+      "first_speaking_third": [
+        35,
+        0,
+        0
+      ],
+      "duration_lower_median": 11.301268481153098,
+      "duration_upper_or_censor_median": 14.480110109750019
+    },
+    {
+      "condition": "seq",
+      "seed": 142000,
+      "first": "red",
+      "latest_transfer_births": 66,
+      "pending_births": 67,
+      "transfers": 68,
+      "positive": 19.070324248925065,
+      "negative": -32.07806615426935,
+      "censored": 0,
+      "family": {
+        "event": 8,
+        "clock": 24,
+        "integrator": 34,
+        "rhythm": 0
+      },
+      "birth_third": [
+        66,
+        0,
+        0
+      ],
+      "first_speaking_third": [
+        49,
+        0,
+        0
+      ],
+      "duration_lower_median": 26.289905656425823,
+      "duration_upper_or_censor_median": 27.06376008440491
+    },
+    {
+      "condition": "seq",
+      "seed": 142000,
+      "first": "blue",
+      "latest_transfer_births": 65,
+      "pending_births": 65,
+      "transfers": 65,
+      "positive": 25.729796362534806,
+      "negative": -11.753749287421368,
+      "censored": 0,
+      "family": {
+        "event": 5,
+        "clock": 28,
+        "integrator": 32,
+        "rhythm": 0
+      },
+      "birth_third": [
+        65,
+        0,
+        0
+      ],
+      "first_speaking_third": [
+        44,
+        0,
+        0
+      ],
+      "duration_lower_median": 9.622453170434468,
+      "duration_upper_or_censor_median": 9.93053347455141
+    },
+    {
+      "condition": "seq",
+      "seed": 142001,
+      "first": "red",
+      "latest_transfer_births": 68,
+      "pending_births": 69,
+      "transfers": 69,
+      "positive": 15.913535142302536,
+      "negative": -30.51198876650069,
+      "censored": 1,
+      "family": {
+        "event": 11,
+        "clock": 14,
+        "integrator": 43,
+        "rhythm": 0
+      },
+      "birth_third": [
+        63,
+        5,
+        0
+      ],
+      "first_speaking_third": [
+        41,
+        4,
+        0
+      ],
+      "duration_lower_median": 12.085375657938119,
+      "duration_upper_or_censor_median": 14.49379963573067
+    },
+    {
+      "condition": "seq",
+      "seed": 142001,
+      "first": "blue",
+      "latest_transfer_births": 66,
+      "pending_births": 66,
+      "transfers": 67,
+      "positive": 18.524248609267506,
+      "negative": -30.412918018100633,
+      "censored": 0,
+      "family": {
+        "event": 2,
+        "clock": 23,
+        "integrator": 39,
+        "rhythm": 2
+      },
+      "birth_third": [
+        58,
+        8,
+        0
+      ],
+      "first_speaking_third": [
+        44,
+        4,
+        0
+      ],
+      "duration_lower_median": 13.477302815856604,
+      "duration_upper_or_censor_median": 17.095405416153486
+    },
+    {
+      "condition": "seq",
+      "seed": 142002,
+      "first": "red",
+      "latest_transfer_births": 63,
+      "pending_births": 63,
+      "transfers": 63,
+      "positive": 11.919768279602689,
+      "negative": -15.28750390253517,
+      "censored": 0,
+      "family": {
+        "event": 6,
+        "clock": 28,
+        "integrator": 29,
+        "rhythm": 0
+      },
+      "birth_third": [
+        63,
+        0,
+        0
+      ],
+      "first_speaking_third": [
+        21,
+        0,
+        0
+      ],
+      "duration_lower_median": 3.474406942659847,
+      "duration_upper_or_censor_median": 7.000289468315195
+    },
+    {
+      "condition": "seq",
+      "seed": 142002,
+      "first": "blue",
+      "latest_transfer_births": 64,
+      "pending_births": 64,
+      "transfers": 65,
+      "positive": 17.273240068531187,
+      "negative": -38.892110115589055,
+      "censored": 1,
+      "family": {
+        "event": 3,
+        "clock": 35,
+        "integrator": 26,
+        "rhythm": 0
+      },
+      "birth_third": [
+        64,
+        0,
+        0
+      ],
+      "first_speaking_third": [
+        49,
+        0,
+        0
+      ],
+      "duration_lower_median": 5.604762129499758,
+      "duration_upper_or_censor_median": 10.363543595021703
+    },
+    {
+      "condition": "seq",
+      "seed": 142003,
+      "first": "red",
+      "latest_transfer_births": 82,
+      "pending_births": 82,
+      "transfers": 82,
+      "positive": 30.73066738201144,
+      "negative": -47.89579182269309,
+      "censored": 2,
+      "family": {
+        "event": 5,
+        "clock": 28,
+        "integrator": 49,
+        "rhythm": 0
+      },
+      "birth_third": [
+        82,
+        0,
+        0
+      ],
+      "first_speaking_third": [
+        60,
+        0,
+        0
+      ],
+      "duration_lower_median": 7.694633285065834,
+      "duration_upper_or_censor_median": 9.135934646017606
+    },
+    {
+      "condition": "seq",
+      "seed": 142003,
+      "first": "blue",
+      "latest_transfer_births": 62,
+      "pending_births": 62,
+      "transfers": 63,
+      "positive": 11.216874206005226,
+      "negative": -21.805712144952857,
+      "censored": 1,
+      "family": {
+        "event": 5,
+        "clock": 16,
+        "integrator": 38,
+        "rhythm": 3
+      },
+      "birth_third": [
+        51,
+        8,
+        3
+      ],
+      "first_speaking_third": [
+        26,
+        3,
+        1
+      ],
+      "duration_lower_median": 5.881471755106864,
+      "duration_upper_or_censor_median": 7.113964107875093
+    },
+    {
+      "condition": "seq",
+      "seed": 142004,
+      "first": "red",
+      "latest_transfer_births": 94,
+      "pending_births": 95,
+      "transfers": 97,
+      "positive": 20.113044589148323,
+      "negative": -18.059355341839105,
+      "censored": 3,
+      "family": {
+        "event": 18,
+        "clock": 31,
+        "integrator": 45,
+        "rhythm": 0
+      },
+      "birth_third": [
+        90,
+        4,
+        0
+      ],
+      "first_speaking_third": [
+        47,
+        4,
+        0
+      ],
+      "duration_lower_median": 16.500767494386785,
+      "duration_upper_or_censor_median": 22.270060919602887
+    },
+    {
+      "condition": "seq",
+      "seed": 142004,
+      "first": "blue",
+      "latest_transfer_births": 79,
+      "pending_births": 80,
+      "transfers": 80,
+      "positive": 57.27071993785847,
+      "negative": -28.70865911443538,
+      "censored": 3,
+      "family": {
+        "event": 7,
+        "clock": 32,
+        "integrator": 40,
+        "rhythm": 0
+      },
+      "birth_third": [
+        76,
+        3,
+        0
+      ],
+      "first_speaking_third": [
+        57,
+        2,
+        0
+      ],
+      "duration_lower_median": 8.544536632630827,
+      "duration_upper_or_censor_median": 10.151679388661332
+    },
+    {
+      "condition": "seq",
+      "seed": 142005,
+      "first": "red",
+      "latest_transfer_births": 47,
+      "pending_births": 47,
+      "transfers": 47,
+      "positive": 2.0643456410879057,
+      "negative": -25.678284216810493,
+      "censored": 1,
+      "family": {
+        "event": 3,
+        "clock": 21,
+        "integrator": 23,
+        "rhythm": 0
+      },
+      "birth_third": [
+        45,
+        2,
+        0
+      ],
+      "first_speaking_third": [
+        29,
+        1,
+        0
+      ],
+      "duration_lower_median": 8.198608141119976,
+      "duration_upper_or_censor_median": 10.676439376898458
+    },
+    {
+      "condition": "seq",
+      "seed": 142005,
+      "first": "blue",
+      "latest_transfer_births": 60,
+      "pending_births": 60,
+      "transfers": 61,
+      "positive": 7.535844528690886,
+      "negative": -50.83115537633519,
+      "censored": 3,
+      "family": {
+        "event": 11,
+        "clock": 19,
+        "integrator": 30,
+        "rhythm": 0
+      },
+      "birth_third": [
+        60,
+        0,
+        0
+      ],
+      "first_speaking_third": [
+        47,
+        0,
+        0
+      ],
+      "duration_lower_median": 10.872070870255946,
+      "duration_upper_or_censor_median": 11.29201805826952
+    },
+    {
+      "condition": "seq",
+      "seed": 142006,
+      "first": "red",
+      "latest_transfer_births": 51,
+      "pending_births": 51,
+      "transfers": 52,
+      "positive": 16.762255992139217,
+      "negative": -22.30050400186422,
+      "censored": 4,
+      "family": {
+        "event": 12,
+        "clock": 12,
+        "integrator": 26,
+        "rhythm": 1
+      },
+      "birth_third": [
+        46,
+        4,
+        1
+      ],
+      "first_speaking_third": [
+        23,
+        4,
+        1
+      ],
+      "duration_lower_median": 10.174036925413496,
+      "duration_upper_or_censor_median": 13.693411300016637
+    },
+    {
+      "condition": "seq",
+      "seed": 142006,
+      "first": "blue",
+      "latest_transfer_births": 55,
+      "pending_births": 55,
+      "transfers": 55,
+      "positive": 10.036235535869647,
+      "negative": -19.678235484946306,
+      "censored": 4,
+      "family": {
+        "event": 11,
+        "clock": 6,
+        "integrator": 38,
+        "rhythm": 0
+      },
+      "birth_third": [
+        50,
+        5,
+        0
+      ],
+      "first_speaking_third": [
+        24,
+        2,
+        0
+      ],
+      "duration_lower_median": 10.796552392533354,
+      "duration_upper_or_censor_median": 12.89453599773957
+    },
+    {
+      "condition": "seq",
+      "seed": 142007,
+      "first": "red",
+      "latest_transfer_births": 63,
+      "pending_births": 63,
+      "transfers": 64,
+      "positive": 8.809199408058427,
+      "negative": -32.261409343496226,
+      "censored": 1,
+      "family": {
+        "event": 6,
+        "clock": 15,
+        "integrator": 42,
+        "rhythm": 0
+      },
+      "birth_third": [
+        60,
+        3,
+        0
+      ],
+      "first_speaking_third": [
+        39,
+        1,
+        0
+      ],
+      "duration_lower_median": 14.304898335169838,
+      "duration_upper_or_censor_median": 15.62861265024985
+    },
+    {
+      "condition": "seq",
+      "seed": 142007,
+      "first": "blue",
+      "latest_transfer_births": 74,
+      "pending_births": 74,
+      "transfers": 74,
+      "positive": 15.244872251843905,
+      "negative": -44.96078198970786,
+      "censored": 1,
+      "family": {
+        "event": 7,
+        "clock": 35,
+        "integrator": 32,
+        "rhythm": 0
+      },
+      "birth_third": [
+        72,
+        2,
+        0
+      ],
+      "first_speaking_third": [
+        57,
+        0,
+        0
+      ],
+      "duration_lower_median": 11.742110575745565,
+      "duration_upper_or_censor_median": 12.65811662105243
+    },
+    {
+      "condition": "seq",
+      "seed": 142008,
+      "first": "red",
+      "latest_transfer_births": 74,
+      "pending_births": 74,
+      "transfers": 75,
+      "positive": 36.85060864378502,
+      "negative": -29.664141824895655,
+      "censored": 4,
+      "family": {
+        "event": 6,
+        "clock": 38,
+        "integrator": 30,
+        "rhythm": 0
+      },
+      "birth_third": [
+        71,
+        3,
+        0
+      ],
+      "first_speaking_third": [
+        47,
+        0,
+        0
+      ],
+      "duration_lower_median": 6.974957595540467,
+      "duration_upper_or_censor_median": 8.26404685625468
+    },
+    {
+      "condition": "seq",
+      "seed": 142008,
+      "first": "blue",
+      "latest_transfer_births": 82,
+      "pending_births": 86,
+      "transfers": 86,
+      "positive": 24.56027324174982,
+      "negative": -31.902608982707395,
+      "censored": 12,
+      "family": {
+        "event": 11,
+        "clock": 35,
+        "integrator": 36,
+        "rhythm": 0
+      },
+      "birth_third": [
+        81,
+        1,
+        0
+      ],
+      "first_speaking_third": [
+        60,
+        1,
+        0
+      ],
+      "duration_lower_median": 5.790927525235016,
+      "duration_upper_or_censor_median": 7.713205518981189
+    },
+    {
+      "condition": "seq",
+      "seed": 142009,
+      "first": "red",
+      "latest_transfer_births": 77,
+      "pending_births": 78,
+      "transfers": 80,
+      "positive": 29.047944472522683,
+      "negative": -33.88247471516396,
+      "censored": 7,
+      "family": {
+        "event": 12,
+        "clock": 13,
+        "integrator": 47,
+        "rhythm": 5
+      },
+      "birth_third": [
+        71,
+        0,
+        6
+      ],
+      "first_speaking_third": [
+        45,
+        0,
+        1
+      ],
+      "duration_lower_median": 7.599663680592801,
+      "duration_upper_or_censor_median": 9.480876228332825
+    },
+    {
+      "condition": "seq",
+      "seed": 142009,
+      "first": "blue",
+      "latest_transfer_births": 33,
+      "pending_births": 33,
+      "transfers": 33,
+      "positive": 2.243418913374631,
+      "negative": -8.136927174547356,
+      "censored": 1,
+      "family": {
+        "event": 6,
+        "clock": 5,
+        "integrator": 20,
+        "rhythm": 2
+      },
+      "birth_third": [
+        29,
+        4,
+        0
+      ],
+      "first_speaking_third": [
+        15,
+        1,
+        0
+      ],
+      "duration_lower_median": 6.271800578647387,
+      "duration_upper_or_censor_median": 8.361048020095843
+    }
+  ],
+  "mismatches": [
+    {
+      "condition": "time",
+      "seed": 142004,
+      "first": "blue",
+      "latest_transfer_births": 52,
+      "pending_births": 53,
+      "transfers": 53,
+      "positive": 29.642189703321325,
+      "negative": -23.113070575003075,
+      "censored": 1,
+      "family": {
+        "event": 7,
+        "clock": 16,
+        "integrator": 29,
+        "rhythm": 0
+      },
+      "birth_third": [
+        52,
+        0,
+        0
+      ],
+      "first_speaking_third": [
+        37,
+        0,
+        0
+      ],
+      "duration_lower_median": 17.366470627175993,
+      "duration_upper_or_censor_median": 19.376014141350595
+    },
+    {
+      "condition": "time",
+      "seed": 142005,
+      "first": "red",
+      "latest_transfer_births": 64,
+      "pending_births": 68,
+      "transfers": 71,
+      "positive": 43.10296131799803,
+      "negative": -35.56848112735182,
+      "censored": 1,
+      "family": {
+        "event": 9,
+        "clock": 18,
+        "integrator": 37,
+        "rhythm": 0
+      },
+      "birth_third": [
+        64,
+        0,
+        0
+      ],
+      "first_speaking_third": [
+        35,
+        0,
+        0
+      ],
+      "duration_lower_median": 4.133876060616133,
+      "duration_upper_or_censor_median": 5.9024297809811195
+    },
+    {
+      "condition": "time",
+      "seed": 142007,
+      "first": "red",
+      "latest_transfer_births": 81,
+      "pending_births": 82,
+      "transfers": 94,
+      "positive": 59.4295075798752,
+      "negative": -46.92645740416036,
+      "censored": 1,
+      "family": {
+        "event": 12,
+        "clock": 26,
+        "integrator": 43,
+        "rhythm": 0
+      },
+      "birth_third": [
+        81,
+        0,
+        0
+      ],
+      "first_speaking_third": [
+        51,
+        0,
+        0
+      ],
+      "duration_lower_median": 11.127712275439194,
+      "duration_upper_or_censor_median": 15.117421951749037
+    },
+    {
+      "condition": "time",
+      "seed": 142009,
+      "first": "blue",
+      "latest_transfer_births": 55,
+      "pending_births": 57,
+      "transfers": 59,
+      "positive": 43.6141337334575,
+      "negative": -20.043461495986918,
+      "censored": 0,
+      "family": {
+        "event": 4,
+        "clock": 19,
+        "integrator": 32,
+        "rhythm": 0
+      },
+      "birth_third": [
+        55,
+        0,
+        0
+      ],
+      "first_speaking_third": [
+        35,
+        0,
+        0
+      ],
+      "duration_lower_median": 11.301268481153098,
+      "duration_upper_or_censor_median": 14.480110109750019
+    },
+    {
+      "condition": "seq",
+      "seed": 142000,
+      "first": "red",
+      "latest_transfer_births": 66,
+      "pending_births": 67,
+      "transfers": 68,
+      "positive": 19.070324248925065,
+      "negative": -32.07806615426935,
+      "censored": 0,
+      "family": {
+        "event": 8,
+        "clock": 24,
+        "integrator": 34,
+        "rhythm": 0
+      },
+      "birth_third": [
+        66,
+        0,
+        0
+      ],
+      "first_speaking_third": [
+        49,
+        0,
+        0
+      ],
+      "duration_lower_median": 26.289905656425823,
+      "duration_upper_or_censor_median": 27.06376008440491
+    },
+    {
+      "condition": "seq",
+      "seed": 142001,
+      "first": "red",
+      "latest_transfer_births": 68,
+      "pending_births": 69,
+      "transfers": 69,
+      "positive": 15.913535142302536,
+      "negative": -30.51198876650069,
+      "censored": 1,
+      "family": {
+        "event": 11,
+        "clock": 14,
+        "integrator": 43,
+        "rhythm": 0
+      },
+      "birth_third": [
+        63,
+        5,
+        0
+      ],
+      "first_speaking_third": [
+        41,
+        4,
+        0
+      ],
+      "duration_lower_median": 12.085375657938119,
+      "duration_upper_or_censor_median": 14.49379963573067
+    },
+    {
+      "condition": "seq",
+      "seed": 142004,
+      "first": "red",
+      "latest_transfer_births": 94,
+      "pending_births": 95,
+      "transfers": 97,
+      "positive": 20.113044589148323,
+      "negative": -18.059355341839105,
+      "censored": 3,
+      "family": {
+        "event": 18,
+        "clock": 31,
+        "integrator": 45,
+        "rhythm": 0
+      },
+      "birth_third": [
+        90,
+        4,
+        0
+      ],
+      "first_speaking_third": [
+        47,
+        4,
+        0
+      ],
+      "duration_lower_median": 16.500767494386785,
+      "duration_upper_or_censor_median": 22.270060919602887
+    },
+    {
+      "condition": "seq",
+      "seed": 142004,
+      "first": "blue",
+      "latest_transfer_births": 79,
+      "pending_births": 80,
+      "transfers": 80,
+      "positive": 57.27071993785847,
+      "negative": -28.70865911443538,
+      "censored": 3,
+      "family": {
+        "event": 7,
+        "clock": 32,
+        "integrator": 40,
+        "rhythm": 0
+      },
+      "birth_third": [
+        76,
+        3,
+        0
+      ],
+      "first_speaking_third": [
+        57,
+        2,
+        0
+      ],
+      "duration_lower_median": 8.544536632630827,
+      "duration_upper_or_censor_median": 10.151679388661332
+    },
+    {
+      "condition": "seq",
+      "seed": 142008,
+      "first": "blue",
+      "latest_transfer_births": 82,
+      "pending_births": 86,
+      "transfers": 86,
+      "positive": 24.56027324174982,
+      "negative": -31.902608982707395,
+      "censored": 12,
+      "family": {
+        "event": 11,
+        "clock": 35,
+        "integrator": 36,
+        "rhythm": 0
+      },
+      "birth_third": [
+        81,
+        1,
+        0
+      ],
+      "first_speaking_third": [
+        60,
+        1,
+        0
+      ],
+      "duration_lower_median": 5.790927525235016,
+      "duration_upper_or_censor_median": 7.713205518981189
+    },
+    {
+      "condition": "seq",
+      "seed": 142009,
+      "first": "red",
+      "latest_transfer_births": 77,
+      "pending_births": 78,
+      "transfers": 80,
+      "positive": 29.047944472522683,
+      "negative": -33.88247471516396,
+      "censored": 7,
+      "family": {
+        "event": 12,
+        "clock": 13,
+        "integrator": 47,
+        "rhythm": 5
+      },
+      "birth_third": [
+        71,
+        0,
+        6
+      ],
+      "first_speaking_third": [
+        45,
+        0,
+        1
+      ],
+      "duration_lower_median": 7.599663680592801,
+      "duration_upper_or_censor_median": 9.480876228332825
+    }
+  ],
+  "missing": [
+    "issued per-stream weights and forecasts at each scored taste",
+    "exact transfer/birth/removal chronology",
+    "last speaking time",
+    "exact death time; seen/gone are observation bounds"
+  ],
+  "decision": "L required for weighted conditional contribution; aggregate totals cannot reconstruct it",
+  "raw_sha256": "e36fac33afe7852b61f5604fc7ea97e08f18cd98ac45599f1c1ff17d8c1732bb",
+  "script_sha256": "bf027d13c09a8205100952418c31f79927ae0754d270a475cb1d01ee0807763a"
+}

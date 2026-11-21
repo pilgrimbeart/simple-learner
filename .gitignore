@@ -6,3 +6,24 @@ frames/
 experiments/results/*.pkl
 minimal/results/league_cache.json
 lab/v/*.pkl
+lab/v/retained_write/*.npz
+lab/v/motifs/**/*.npz
+lab/v/memory_limits/*.npz
+lab/v/oscillator_basins/*.npz
+lab/v/quiet_write/*.npz
+lab/v/oneshot_v1/*.npz
+lab/v/phase_v1/*.npz
+lab/v/pulse_recovery/*.npz
+
+# Large local raw arrays and replay traces; hashes/absolute paths in the continuation audit.
+lab/v/signed_control/*.npz
+lab/v/signed_control/*.jsonl
+lab/v/phase_baseline/rows.json
+lab/v/phase_gate_diagnosis/rows.json
+lab/v/phase_gate_diagnosis_serialization_failure/rows.json
+lab/v/phase_signed_drift/rows.json
+lab/v/signed_control_zero/rows.json
+lab/v/gate_contract_20261120/*.npz
+
+# Partial job ledgers being written by a running job (the complete ledger is the .jsonl.gz)
+lab/v/*/*.part.jsonl

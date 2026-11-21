@@ -1,0 +1,848 @@
+{
+  "inputs": {
+    "task_c": "/home/pilgrim/git/simple-learner/lab/v/overnight_20261119/attribution_results",
+    "task_c_valid": true,
+    "task_d": "/home/pilgrim/git/simple-learner/lab/v/overnight_20261119/histories_results",
+    "task_d_complete": true
+  },
+  "infeasible_draws": {
+    "2026112215": {
+      "interval": [
+        -0.16218631700961111,
+        -0.19449161091760545
+      ],
+      "note": "no constant setting meets all 34 conditions; more evidence cannot create one"
+    }
+  },
+  "C": {
+    "raw": {
+      "histories": 40,
+      "no_anchor": 0,
+      "anchor_present_all_window_fail": [
+        2026112201,
+        2026112205,
+        2026112208,
+        2026112212,
+        2026112214,
+        2026112215,
+        2026112222,
+        2026112226,
+        2026112227,
+        2026112230,
+        2026112233,
+        2026112236
+      ],
+      "anchor_present_anchor_only_fail": [
+        2026112201,
+        2026112205,
+        2026112208,
+        2026112212,
+        2026112214,
+        2026112215,
+        2026112222,
+        2026112226,
+        2026112230,
+        2026112233,
+        2026112236
+      ],
+      "anchor_only_pass": 29,
+      "all_window_pass": 28,
+      "other_only_pass": 14
+    },
+    "0.15": {
+      "histories": 40,
+      "no_anchor": 0,
+      "anchor_present_all_window_fail": [
+        2026112215,
+        2026112227
+      ],
+      "anchor_present_anchor_only_fail": [
+        2026112215
+      ],
+      "anchor_only_pass": 39,
+      "all_window_pass": 38,
+      "other_only_pass": 12
+    },
+    "1.0": {
+      "histories": 40,
+      "no_anchor": 0,
+      "anchor_present_all_window_fail": [
+        2026112215,
+        2026112227
+      ],
+      "anchor_present_anchor_only_fail": [
+        2026112215
+      ],
+      "anchor_only_pass": 39,
+      "all_window_pass": 38,
+      "other_only_pass": 11
+    },
+    "3.8585074308112732": {
+      "histories": 40,
+      "no_anchor": 0,
+      "anchor_present_all_window_fail": [
+        2026112215,
+        2026112227
+      ],
+      "anchor_present_anchor_only_fail": [
+        2026112215
+      ],
+      "anchor_only_pass": 39,
+      "all_window_pass": 38,
+      "other_only_pass": 10
+    }
+  },
+  "D_completed": {
+    "histories": 80,
+    "settings": 1920,
+    "expected_histories": 80,
+    "expected_settings": 1920
+  },
+  "D_anchors": {
+    "raw|first_100s_last_third": {
+      "no_anchor": 58,
+      "no_anchor_pass": 6,
+      "one_anchor": 21,
+      "one_anchor_fail": 5,
+      "multi_anchor_one_case": 1,
+      "multi_anchor_one_case_pass": 1,
+      "multi_case": 0,
+      "multi_case_pass": 0,
+      "unidentifiable": 0,
+      "all_pass": 23,
+      "failures_on_infeasible_draw": 8
+    },
+    "0.15|first_100s_last_third": {
+      "no_anchor": 58,
+      "no_anchor_pass": 0,
+      "one_anchor": 21,
+      "one_anchor_fail": 3,
+      "multi_anchor_one_case": 1,
+      "multi_anchor_one_case_pass": 1,
+      "multi_case": 0,
+      "multi_case_pass": 0,
+      "unidentifiable": 0,
+      "all_pass": 19,
+      "failures_on_infeasible_draw": 8
+    },
+    "1.0|first_100s_last_third": {
+      "no_anchor": 58,
+      "no_anchor_pass": 0,
+      "one_anchor": 21,
+      "one_anchor_fail": 3,
+      "multi_anchor_one_case": 1,
+      "multi_anchor_one_case_pass": 1,
+      "multi_case": 0,
+      "multi_case_pass": 0,
+      "unidentifiable": 0,
+      "all_pass": 19,
+      "failures_on_infeasible_draw": 8
+    },
+    "3.8585074308112732|first_100s_last_third": {
+      "no_anchor": 58,
+      "no_anchor_pass": 0,
+      "one_anchor": 21,
+      "one_anchor_fail": 3,
+      "multi_anchor_one_case": 1,
+      "multi_anchor_one_case_pass": 1,
+      "multi_case": 0,
+      "multi_case_pass": 0,
+      "unidentifiable": 0,
+      "all_pass": 19,
+      "failures_on_infeasible_draw": 8
+    },
+    "raw|full_100s": {
+      "no_anchor": 24,
+      "no_anchor_pass": 2,
+      "one_anchor": 39,
+      "one_anchor_fail": 16,
+      "multi_anchor_one_case": 3,
+      "multi_anchor_one_case_pass": 3,
+      "multi_case": 14,
+      "multi_case_pass": 10,
+      "unidentifiable": 0,
+      "all_pass": 38,
+      "failures_on_infeasible_draw": 8
+    },
+    "0.15|full_100s": {
+      "no_anchor": 24,
+      "no_anchor_pass": 1,
+      "one_anchor": 39,
+      "one_anchor_fail": 3,
+      "multi_anchor_one_case": 3,
+      "multi_anchor_one_case_pass": 3,
+      "multi_case": 14,
+      "multi_case_pass": 11,
+      "unidentifiable": 0,
+      "all_pass": 51,
+      "failures_on_infeasible_draw": 8
+    },
+    "1.0|full_100s": {
+      "no_anchor": 24,
+      "no_anchor_pass": 1,
+      "one_anchor": 39,
+      "one_anchor_fail": 3,
+      "multi_anchor_one_case": 3,
+      "multi_anchor_one_case_pass": 3,
+      "multi_case": 14,
+      "multi_case_pass": 11,
+      "unidentifiable": 0,
+      "all_pass": 51,
+      "failures_on_infeasible_draw": 8
+    },
+    "3.8585074308112732|full_100s": {
+      "no_anchor": 24,
+      "no_anchor_pass": 1,
+      "one_anchor": 39,
+      "one_anchor_fail": 3,
+      "multi_anchor_one_case": 3,
+      "multi_anchor_one_case_pass": 3,
+      "multi_case": 14,
+      "multi_case_pass": 11,
+      "unidentifiable": 0,
+      "all_pass": 51,
+      "failures_on_infeasible_draw": 8
+    },
+    "raw|last_third_1000s": {
+      "no_anchor": 2,
+      "no_anchor_pass": 0,
+      "one_anchor": 4,
+      "one_anchor_fail": 1,
+      "multi_anchor_one_case": 3,
+      "multi_anchor_one_case_pass": 1,
+      "multi_case": 71,
+      "multi_case_pass": 52,
+      "unidentifiable": 0,
+      "all_pass": 56,
+      "failures_on_infeasible_draw": 8
+    },
+    "0.15|last_third_1000s": {
+      "no_anchor": 2,
+      "no_anchor_pass": 0,
+      "one_anchor": 4,
+      "one_anchor_fail": 1,
+      "multi_anchor_one_case": 3,
+      "multi_anchor_one_case_pass": 2,
+      "multi_case": 71,
+      "multi_case_pass": 65,
+      "unidentifiable": 0,
+      "all_pass": 70,
+      "failures_on_infeasible_draw": 8
+    },
+    "1.0|last_third_1000s": {
+      "no_anchor": 2,
+      "no_anchor_pass": 0,
+      "one_anchor": 4,
+      "one_anchor_fail": 1,
+      "multi_anchor_one_case": 3,
+      "multi_anchor_one_case_pass": 2,
+      "multi_case": 71,
+      "multi_case_pass": 65,
+      "unidentifiable": 0,
+      "all_pass": 70,
+      "failures_on_infeasible_draw": 8
+    },
+    "3.8585074308112732|last_third_1000s": {
+      "no_anchor": 2,
+      "no_anchor_pass": 0,
+      "one_anchor": 4,
+      "one_anchor_fail": 1,
+      "multi_anchor_one_case": 3,
+      "multi_anchor_one_case_pass": 2,
+      "multi_case": 71,
+      "multi_case_pass": 65,
+      "unidentifiable": 0,
+      "all_pass": 70,
+      "failures_on_infeasible_draw": 8
+    },
+    "raw|full_1000s": {
+      "no_anchor": 0,
+      "no_anchor_pass": 0,
+      "one_anchor": 1,
+      "one_anchor_fail": 1,
+      "multi_anchor_one_case": 0,
+      "multi_anchor_one_case_pass": 0,
+      "multi_case": 79,
+      "multi_case_pass": 55,
+      "unidentifiable": 0,
+      "all_pass": 55,
+      "failures_on_infeasible_draw": 8
+    },
+    "0.15|full_1000s": {
+      "no_anchor": 0,
+      "no_anchor_pass": 0,
+      "one_anchor": 1,
+      "one_anchor_fail": 1,
+      "multi_anchor_one_case": 0,
+      "multi_anchor_one_case_pass": 0,
+      "multi_case": 79,
+      "multi_case_pass": 71,
+      "unidentifiable": 0,
+      "all_pass": 71,
+      "failures_on_infeasible_draw": 8
+    },
+    "1.0|full_1000s": {
+      "no_anchor": 0,
+      "no_anchor_pass": 0,
+      "one_anchor": 1,
+      "one_anchor_fail": 0,
+      "multi_anchor_one_case": 0,
+      "multi_anchor_one_case_pass": 0,
+      "multi_case": 79,
+      "multi_case_pass": 71,
+      "unidentifiable": 0,
+      "all_pass": 72,
+      "failures_on_infeasible_draw": 8
+    },
+    "3.8585074308112732|full_1000s": {
+      "no_anchor": 0,
+      "no_anchor_pass": 0,
+      "one_anchor": 1,
+      "one_anchor_fail": 0,
+      "multi_anchor_one_case": 0,
+      "multi_anchor_one_case_pass": 0,
+      "multi_case": 79,
+      "multi_case_pass": 71,
+      "unidentifiable": 0,
+      "all_pass": 72,
+      "failures_on_infeasible_draw": 8
+    },
+    "raw|prefix_666.6666666666666s": {
+      "no_anchor": 0,
+      "no_anchor_pass": 0,
+      "one_anchor": 2,
+      "one_anchor_fail": 1,
+      "multi_anchor_one_case": 0,
+      "multi_anchor_one_case_pass": 0,
+      "multi_case": 78,
+      "multi_case_pass": 56,
+      "unidentifiable": 0,
+      "all_pass": 57,
+      "failures_on_infeasible_draw": 8
+    },
+    "0.15|prefix_666.6666666666666s": {
+      "no_anchor": 0,
+      "no_anchor_pass": 0,
+      "one_anchor": 2,
+      "one_anchor_fail": 0,
+      "multi_anchor_one_case": 0,
+      "multi_anchor_one_case_pass": 0,
+      "multi_case": 78,
+      "multi_case_pass": 70,
+      "unidentifiable": 0,
+      "all_pass": 72,
+      "failures_on_infeasible_draw": 8
+    },
+    "1.0|prefix_666.6666666666666s": {
+      "no_anchor": 0,
+      "no_anchor_pass": 0,
+      "one_anchor": 2,
+      "one_anchor_fail": 0,
+      "multi_anchor_one_case": 0,
+      "multi_anchor_one_case_pass": 0,
+      "multi_case": 78,
+      "multi_case_pass": 70,
+      "unidentifiable": 0,
+      "all_pass": 72,
+      "failures_on_infeasible_draw": 8
+    },
+    "3.8585074308112732|prefix_666.6666666666666s": {
+      "no_anchor": 0,
+      "no_anchor_pass": 0,
+      "one_anchor": 2,
+      "one_anchor_fail": 0,
+      "multi_anchor_one_case": 0,
+      "multi_anchor_one_case_pass": 0,
+      "multi_case": 78,
+      "multi_case_pass": 70,
+      "unidentifiable": 0,
+      "all_pass": 72,
+      "failures_on_infeasible_draw": 8
+    },
+    "raw|prefix_833.3333333333334s": {
+      "no_anchor": 0,
+      "no_anchor_pass": 0,
+      "one_anchor": 1,
+      "one_anchor_fail": 1,
+      "multi_anchor_one_case": 0,
+      "multi_anchor_one_case_pass": 0,
+      "multi_case": 79,
+      "multi_case_pass": 54,
+      "unidentifiable": 0,
+      "all_pass": 54,
+      "failures_on_infeasible_draw": 8
+    },
+    "0.15|prefix_833.3333333333334s": {
+      "no_anchor": 0,
+      "no_anchor_pass": 0,
+      "one_anchor": 1,
+      "one_anchor_fail": 0,
+      "multi_anchor_one_case": 0,
+      "multi_anchor_one_case_pass": 0,
+      "multi_case": 79,
+      "multi_case_pass": 71,
+      "unidentifiable": 0,
+      "all_pass": 72,
+      "failures_on_infeasible_draw": 8
+    },
+    "1.0|prefix_833.3333333333334s": {
+      "no_anchor": 0,
+      "no_anchor_pass": 0,
+      "one_anchor": 1,
+      "one_anchor_fail": 0,
+      "multi_anchor_one_case": 0,
+      "multi_anchor_one_case_pass": 0,
+      "multi_case": 79,
+      "multi_case_pass": 71,
+      "unidentifiable": 0,
+      "all_pass": 72,
+      "failures_on_infeasible_draw": 8
+    },
+    "3.8585074308112732|prefix_833.3333333333334s": {
+      "no_anchor": 0,
+      "no_anchor_pass": 0,
+      "one_anchor": 1,
+      "one_anchor_fail": 0,
+      "multi_anchor_one_case": 0,
+      "multi_anchor_one_case_pass": 0,
+      "multi_case": 79,
+      "multi_case_pass": 71,
+      "unidentifiable": 0,
+      "all_pass": 72,
+      "failures_on_infeasible_draw": 8
+    }
+  },
+  "D_retention": {
+    "raw|last_third_1000s->full_1000s": {
+      "reference_pass": 56,
+      "alternative_pass": 55,
+      "rescued": 1,
+      "harmed": 2,
+      "mean_change_in_pass_fraction": -0.0125,
+      "cluster_bootstrap95": [
+        -0.0375,
+        0.0
+      ],
+      "interval_note": "descriptive, over 10 selected component seeds with all 8 schedules kept together; not confirmation; an interval containing zero is not equivalence",
+      "median_abs_d_change": 0.007611186674765673
+    },
+    "0.15|last_third_1000s->full_1000s": {
+      "reference_pass": 70,
+      "alternative_pass": 71,
+      "rescued": 1,
+      "harmed": 0,
+      "mean_change_in_pass_fraction": 0.0125,
+      "cluster_bootstrap95": [
+        0.0,
+        0.0375
+      ],
+      "interval_note": "descriptive, over 10 selected component seeds with all 8 schedules kept together; not confirmation; an interval containing zero is not equivalence",
+      "median_abs_d_change": 0.007303176619289219
+    },
+    "1.0|last_third_1000s->full_1000s": {
+      "reference_pass": 70,
+      "alternative_pass": 72,
+      "rescued": 2,
+      "harmed": 0,
+      "mean_change_in_pass_fraction": 0.025,
+      "cluster_bootstrap95": [
+        0.0,
+        0.0625
+      ],
+      "interval_note": "descriptive, over 10 selected component seeds with all 8 schedules kept together; not confirmation; an interval containing zero is not equivalence",
+      "median_abs_d_change": 0.006748692818793492
+    },
+    "3.8585074308112732|last_third_1000s->full_1000s": {
+      "reference_pass": 70,
+      "alternative_pass": 72,
+      "rescued": 2,
+      "harmed": 0,
+      "mean_change_in_pass_fraction": 0.025,
+      "cluster_bootstrap95": [
+        0.0,
+        0.0625
+      ],
+      "interval_note": "descriptive, over 10 selected component seeds with all 8 schedules kept together; not confirmation; an interval containing zero is not equivalence",
+      "median_abs_d_change": 0.006673771064677959
+    },
+    "raw|last_third_1000s->prefix_666.6666666666666s": {
+      "reference_pass": 56,
+      "alternative_pass": 57,
+      "rescued": 5,
+      "harmed": 4,
+      "mean_change_in_pass_fraction": 0.0125,
+      "cluster_bootstrap95": [
+        -0.025,
+        0.05
+      ],
+      "interval_note": "descriptive, over 10 selected component seeds with all 8 schedules kept together; not confirmation; an interval containing zero is not equivalence",
+      "median_abs_d_change": 0.013563223565815519
+    },
+    "0.15|last_third_1000s->prefix_666.6666666666666s": {
+      "reference_pass": 70,
+      "alternative_pass": 72,
+      "rescued": 2,
+      "harmed": 0,
+      "mean_change_in_pass_fraction": 0.025,
+      "cluster_bootstrap95": [
+        0.0,
+        0.0625
+      ],
+      "interval_note": "descriptive, over 10 selected component seeds with all 8 schedules kept together; not confirmation; an interval containing zero is not equivalence",
+      "median_abs_d_change": 0.01241948493423932
+    },
+    "1.0|last_third_1000s->prefix_666.6666666666666s": {
+      "reference_pass": 70,
+      "alternative_pass": 72,
+      "rescued": 2,
+      "harmed": 0,
+      "mean_change_in_pass_fraction": 0.025,
+      "cluster_bootstrap95": [
+        0.0,
+        0.0625
+      ],
+      "interval_note": "descriptive, over 10 selected component seeds with all 8 schedules kept together; not confirmation; an interval containing zero is not equivalence",
+      "median_abs_d_change": 0.012309165411254087
+    },
+    "3.8585074308112732|last_third_1000s->prefix_666.6666666666666s": {
+      "reference_pass": 70,
+      "alternative_pass": 72,
+      "rescued": 2,
+      "harmed": 0,
+      "mean_change_in_pass_fraction": 0.025,
+      "cluster_bootstrap95": [
+        0.0,
+        0.0625
+      ],
+      "interval_note": "descriptive, over 10 selected component seeds with all 8 schedules kept together; not confirmation; an interval containing zero is not equivalence",
+      "median_abs_d_change": 0.011728596876872468
+    },
+    "raw|last_third_1000s->prefix_833.3333333333334s": {
+      "reference_pass": 56,
+      "alternative_pass": 54,
+      "rescued": 2,
+      "harmed": 4,
+      "mean_change_in_pass_fraction": -0.025,
+      "cluster_bootstrap95": [
+        -0.0625,
+        0.0
+      ],
+      "interval_note": "descriptive, over 10 selected component seeds with all 8 schedules kept together; not confirmation; an interval containing zero is not equivalence",
+      "median_abs_d_change": 0.01009968815148414
+    },
+    "0.15|last_third_1000s->prefix_833.3333333333334s": {
+      "reference_pass": 70,
+      "alternative_pass": 72,
+      "rescued": 2,
+      "harmed": 0,
+      "mean_change_in_pass_fraction": 0.025,
+      "cluster_bootstrap95": [
+        0.0,
+        0.0625
+      ],
+      "interval_note": "descriptive, over 10 selected component seeds with all 8 schedules kept together; not confirmation; an interval containing zero is not equivalence",
+      "median_abs_d_change": 0.009757057633130225
+    },
+    "1.0|last_third_1000s->prefix_833.3333333333334s": {
+      "reference_pass": 70,
+      "alternative_pass": 72,
+      "rescued": 2,
+      "harmed": 0,
+      "mean_change_in_pass_fraction": 0.025,
+      "cluster_bootstrap95": [
+        0.0,
+        0.0625
+      ],
+      "interval_note": "descriptive, over 10 selected component seeds with all 8 schedules kept together; not confirmation; an interval containing zero is not equivalence",
+      "median_abs_d_change": 0.008904898385995348
+    },
+    "3.8585074308112732|last_third_1000s->prefix_833.3333333333334s": {
+      "reference_pass": 70,
+      "alternative_pass": 72,
+      "rescued": 2,
+      "harmed": 0,
+      "mean_change_in_pass_fraction": 0.025,
+      "cluster_bootstrap95": [
+        0.0,
+        0.0625
+      ],
+      "interval_note": "descriptive, over 10 selected component seeds with all 8 schedules kept together; not confirmation; an interval containing zero is not equivalence",
+      "median_abs_d_change": 0.008797953296970147
+    },
+    "raw|first_100s_last_third->full_100s": {
+      "reference_pass": 23,
+      "alternative_pass": 38,
+      "rescued": 19,
+      "harmed": 4,
+      "mean_change_in_pass_fraction": 0.1875,
+      "cluster_bootstrap95": [
+        0.025,
+        0.35
+      ],
+      "interval_note": "descriptive, over 10 selected component seeds with all 8 schedules kept together; not confirmation; an interval containing zero is not equivalence",
+      "median_abs_d_change": 0.15379073770117258
+    },
+    "0.15|first_100s_last_third->full_100s": {
+      "reference_pass": 19,
+      "alternative_pass": 51,
+      "rescued": 32,
+      "harmed": 0,
+      "mean_change_in_pass_fraction": 0.4,
+      "cluster_bootstrap95": [
+        0.25,
+        0.55
+      ],
+      "interval_note": "descriptive, over 10 selected component seeds with all 8 schedules kept together; not confirmation; an interval containing zero is not equivalence",
+      "median_abs_d_change": 0.4215186959280951
+    },
+    "1.0|first_100s_last_third->full_100s": {
+      "reference_pass": 19,
+      "alternative_pass": 51,
+      "rescued": 32,
+      "harmed": 0,
+      "mean_change_in_pass_fraction": 0.4,
+      "cluster_bootstrap95": [
+        0.25,
+        0.55
+      ],
+      "interval_note": "descriptive, over 10 selected component seeds with all 8 schedules kept together; not confirmation; an interval containing zero is not equivalence",
+      "median_abs_d_change": 0.3612316000576934
+    },
+    "3.8585074308112732|first_100s_last_third->full_100s": {
+      "reference_pass": 19,
+      "alternative_pass": 51,
+      "rescued": 32,
+      "harmed": 0,
+      "mean_change_in_pass_fraction": 0.4,
+      "cluster_bootstrap95": [
+        0.25,
+        0.55
+      ],
+      "interval_note": "descriptive, over 10 selected component seeds with all 8 schedules kept together; not confirmation; an interval containing zero is not equivalence",
+      "median_abs_d_change": 0.34689288618652475
+    },
+    "raw|first_100s_last_third->last_third_1000s": {
+      "reference_pass": 23,
+      "alternative_pass": 56,
+      "rescued": 35,
+      "harmed": 2,
+      "mean_change_in_pass_fraction": 0.4125,
+      "cluster_bootstrap95": [
+        0.2375,
+        0.575
+      ],
+      "interval_note": "descriptive, over 10 selected component seeds with all 8 schedules kept together; not confirmation; an interval containing zero is not equivalence",
+      "median_abs_d_change": 0.5822838385477318
+    },
+    "0.15|first_100s_last_third->last_third_1000s": {
+      "reference_pass": 19,
+      "alternative_pass": 70,
+      "rescued": 52,
+      "harmed": 1,
+      "mean_change_in_pass_fraction": 0.6375,
+      "cluster_bootstrap95": [
+        0.4625,
+        0.775
+      ],
+      "interval_note": "descriptive, over 10 selected component seeds with all 8 schedules kept together; not confirmation; an interval containing zero is not equivalence",
+      "median_abs_d_change": 0.8065397547068109
+    },
+    "1.0|first_100s_last_third->last_third_1000s": {
+      "reference_pass": 19,
+      "alternative_pass": 70,
+      "rescued": 52,
+      "harmed": 1,
+      "mean_change_in_pass_fraction": 0.6375,
+      "cluster_bootstrap95": [
+        0.4625,
+        0.775
+      ],
+      "interval_note": "descriptive, over 10 selected component seeds with all 8 schedules kept together; not confirmation; an interval containing zero is not equivalence",
+      "median_abs_d_change": 0.8010712439400118
+    },
+    "3.8585074308112732|first_100s_last_third->last_third_1000s": {
+      "reference_pass": 19,
+      "alternative_pass": 70,
+      "rescued": 52,
+      "harmed": 1,
+      "mean_change_in_pass_fraction": 0.6375,
+      "cluster_bootstrap95": [
+        0.4625,
+        0.775
+      ],
+      "interval_note": "descriptive, over 10 selected component seeds with all 8 schedules kept together; not confirmation; an interval containing zero is not equivalence",
+      "median_abs_d_change": 0.7974080806514057
+    }
+  },
+  "D_opportunities": {
+    "first_100s_last_third": {
+      "window_seconds": [
+        66.667,
+        100.0
+      ],
+      "mean_event_starts": 3.35,
+      "observed_no_anchor": 58,
+      "expected_no_anchor": 52.704110343506414,
+      "mean_simultaneous": 0.2875,
+      "expected_mean_simultaneous": 0.3941176470588235
+    },
+    "full_100s": {
+      "window_seconds": [
+        0.0,
+        100.0
+      ],
+      "mean_event_starts": 10.025,
+      "observed_no_anchor": 24,
+      "expected_no_anchor": 22.860586908580398,
+      "mean_simultaneous": 1.0,
+      "expected_mean_simultaneous": 1.1794117647058824
+    },
+    "last_third_1000s": {
+      "window_seconds": [
+        666.667,
+        1000.0
+      ],
+      "mean_event_starts": 33.325,
+      "observed_no_anchor": 2,
+      "expected_no_anchor": 1.2412222925342609,
+      "mean_simultaneous": 3.95,
+      "expected_mean_simultaneous": 3.920588235294118
+    },
+    "full_1000s": {
+      "window_seconds": [
+        0.0,
+        1000.0
+      ],
+      "mean_event_starts": 99.8375,
+      "observed_no_anchor": 0,
+      "expected_no_anchor": 0.0003041469198065605,
+      "mean_simultaneous": 11.575,
+      "expected_mean_simultaneous": 11.745588235294118
+    },
+    "prefix_666.6666666666666s": {
+      "window_seconds": [
+        0.0,
+        666.6665
+      ],
+      "mean_event_starts": 66.5125,
+      "observed_no_anchor": 0,
+      "expected_no_anchor": 0.019605332651039593,
+      "mean_simultaneous": 7.625,
+      "expected_mean_simultaneous": 7.825
+    },
+    "prefix_833.3333333333334s": {
+      "window_seconds": [
+        0.0,
+        833.333
+      ],
+      "mean_event_starts": 83.35,
+      "observed_no_anchor": 0,
+      "expected_no_anchor": 0.0023887781021550893,
+      "mean_simultaneous": 9.5625,
+      "expected_mean_simultaneous": 9.805882352941175
+    }
+  },
+  "C_opportunities": {
+    "window": "first 0.5 ms sample at or after 666.667 s to 1000 s",
+    "mean_event_starts": 33.05,
+    "observed_no_anchor": 0,
+    "expected_no_anchor": 0.6423790469661845
+  },
+  "generator": {
+    "p_simultaneous": 0.11764705882352941,
+    "n_for_95pct_one_anchor": 24,
+    "note": "(1-4/34)^N is the generator probability of no simultaneous event among N starts; not a probability that a circuit learns or passes"
+  },
+  "D164": {
+    "summary": {
+      "0.15:0.5": {
+        "draws": 40,
+        "zero_error_adequate": 39,
+        "positive_symmetric_margin_range_V": [
+          0.003671968263090337,
+          0.04443617245927503
+        ],
+        "conditional_expected_adequate_draws": {
+          "1": 28.443014260746427,
+          "4": 36.62614939771352,
+          "16": 38.42868405084639
+        }
+      },
+      "0.15:0.8": {
+        "draws": 40,
+        "zero_error_adequate": 39,
+        "positive_symmetric_margin_range_V": [
+          0.006098106115278614,
+          0.04485912298557275
+        ],
+        "conditional_expected_adequate_draws": {
+          "1": 28.596566809969367,
+          "4": 36.63690930515734,
+          "16": 38.50279653202146
+        }
+      },
+      "1.0:0.5": {
+        "draws": 40,
+        "zero_error_adequate": 35,
+        "positive_symmetric_margin_range_V": [
+          0.0035539224664936815,
+          0.04458763980328066
+        ],
+        "conditional_expected_adequate_draws": {
+          "1": 27.088707176733564,
+          "4": 32.55151804993575,
+          "16": 34.60720164313251
+        }
+      },
+      "1.0:0.8": {
+        "draws": 40,
+        "zero_error_adequate": 35,
+        "positive_symmetric_margin_range_V": [
+          0.001378740709906395,
+          0.04697810659269785
+        ],
+        "conditional_expected_adequate_draws": {
+          "1": 27.241098057922844,
+          "4": 32.65911627550137,
+          "16": 34.76278212873093
+        }
+      },
+      "3.8585074308112732:0.5": {
+        "draws": 40,
+        "zero_error_adequate": 22,
+        "positive_symmetric_margin_range_V": [
+          0.0005590147485744491,
+          0.041408498744682457
+        ],
+        "conditional_expected_adequate_draws": {
+          "1": 19.97134881803657,
+          "4": 21.325019848579924,
+          "16": 20.9796605310386
+        }
+      },
+      "3.8585074308112732:0.8": {
+        "draws": 40,
+        "zero_error_adequate": 22,
+        "positive_symmetric_margin_range_V": [
+          0.00024434374789415763,
+          0.04348767696181827
+        ],
+        "conditional_expected_adequate_draws": {
+          "1": 19.972034471468493,
+          "4": 21.21178841615086,
+          "16": 21.227375983916772
+        }
+      }
+    },
+    "explanation": "A fixed manufacturing offset e in the detector adds e*W to the integral A on every reading; d=(e*W-A)/B. Longer observation grows W, A and B together, so the bias -e*W/B converges to a constant, not to zero. Averaging only reduces error that is independent between readings; one detector read repeatedly supplies the same e every time. The 4- and 16-path rows assume independent paths that are neither built nor costed."
+  },
+  "notes": [],
+  "input_sha256": {
+    "lab/v/overnight_20261119/failures_results/feasible_intervals.json": "fae52f2c6fa61d9cb407d8e0c2be8fecdaa33e17e319507d785e00c7499b1b7f",
+    "lab/v/order_calibration_precision/summary.json": "795f3cd124c4a65188eab9400ef6be14031810f5c415fcf8bcf0fd5ec93e6089",
+    "lab/overnight_20261119/05_information.py": "48dea62d951568f6f4e02556893cb67cf1c9e50d07dacbd8e88ff91d03b51e46",
+    "lab/v/overnight_20261119/attribution_results/aggregate_settings.jsonl": "ea2a43f1bca7a357c7465a1b26a032d52aa238e53e3c4368c38a539e20aa2a82",
+    "lab/v/overnight_20261119/attribution_results/event_contributions.jsonl": "a40488d45527ae734fc43f36f521b51392fac852bde7465549f2b6d4c614be44",
+    "lab/v/overnight_20261119/histories_results/settings.jsonl": "e2bf8bf6b5446ceef2e0a32e9bc2270c2b28728f99be18623536d3cd48bf3c32"
+  }
+}

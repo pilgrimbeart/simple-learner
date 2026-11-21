@@ -1,0 +1,104 @@
+{
+  "graph": {
+    "nodes": [
+      {
+        "name": "fast",
+        "C": 2.5e-11,
+        "R": 800000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "recovery",
+        "C": 2.5e-11,
+        "R": 8000000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "bias memory",
+        "C": 2.5e-11,
+        "R": null,
+        "bias": 0.0,
+        "memory": true
+      }
+    ],
+    "edges": [
+      {
+        "to": 0,
+        "source": 0,
+        "gain": 5.625e-10,
+        "offset": 0.0,
+        "slope": 6.666666666666667,
+        "tau": 0.0,
+        "gate": -1
+      },
+      {
+        "to": 0,
+        "source": 1,
+        "gain": -9.375e-10,
+        "offset": 0.0,
+        "slope": 6.666666666666667,
+        "tau": 0.0,
+        "gate": -1
+      },
+      {
+        "to": 1,
+        "source": 0,
+        "gain": 3.75e-11,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": -1
+      },
+      {
+        "to": 0,
+        "source": 2,
+        "gain": -9.375e-10,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": -1
+      },
+      {
+        "to": 2,
+        "source": 0,
+        "gain": 1.5e-12,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": -1
+      }
+    ],
+    "duration": 100.0
+  },
+  "seeds": [
+    51000,
+    51001,
+    51002,
+    51003,
+    51004,
+    51005,
+    51006,
+    51007,
+    51011,
+    51036
+  ],
+  "arms": [
+    "original",
+    "adaptive",
+    "writer_removed"
+  ],
+  "steps_s": [
+    0.000125,
+    6.25e-05,
+    3.125e-05
+  ],
+  "duration_s": 100.0,
+  "criteria": "Original D126 metrics unchanged: before10..45s and after55..95s, amp>.15V, >=10cycles, CV<.1; frequency and amplitude post/pre in(.9,1.1); no rail hits. All adaptive cases required.",
+  "refinement": "Both successive paired-seed bootstrap95 intervals inside \u00b1.05 on original normalized metrics",
+  "control": "Removed writer holds memory exactly; original metrics reproduce D126 within1e-12; full original/removal behavioural denominators reported",
+  "purpose": "Diagnostic local bias adaptation, not task learning or global oscillation proof",
+  "writer_shot_sigma_1s_V": 1.96092425187716e-05,
+  "budget_s": 600
+}

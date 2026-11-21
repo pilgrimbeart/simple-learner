@@ -1,0 +1,82 @@
+completed 2026112200 33.7
+completed 2026112201 43.4
+completed 2026112202 53.3
+completed 2026112203 62.7
+completed 2026112204 72.7
+completed 2026112205 83.0
+completed 2026112206 95.6
+completed 2026112207 106.8
+completed 2026112208 117.0
+completed 2026112209 128.7
+completed 2026112210 140.1
+completed 2026112211 152.8
+completed 2026112212 167.2
+completed 2026112213 179.5
+completed 2026112214 194.7
+completed 2026112215 205.5
+completed 2026112216 215.7
+completed 2026112217 229.7
+completed 2026112218 241.9
+completed 2026112219 256.5
+completed 2026112220 267.7
+completed 2026112221 281.4
+completed 2026112222 292.3
+completed 2026112223 303.0
+completed 2026112224 314.7
+completed 2026112225 325.5
+completed 2026112226 336.4
+completed 2026112227 347.9
+completed 2026112228 358.6
+completed 2026112229 371.1
+completed 2026112230 383.2
+completed 2026112231 392.7
+completed 2026112232 403.0
+completed 2026112233 412.3
+completed 2026112234 421.6
+completed 2026112235 432.6
+completed 2026112236 442.3
+completed 2026112237 451.6
+completed 2026112238 460.8
+completed 2026112239 469.6
+{
+  "first_draw_knob_refinement_max": 6.056459429665262e-07,
+  "zero_anchor_histories": 0,
+  "anchor_count_range": [
+    1,
+    9
+  ],
+  "comparisons": {
+    "raw": {
+      "adequate_draws": 28,
+      "adequate_cases": 1314,
+      "rescued": 11,
+      "harmed": 37,
+      "clamped": 0,
+      "nonpositive_denominators": 0
+    },
+    "0.15": {
+      "adequate_draws": 38,
+      "adequate_cases": 1349,
+      "rescued": 13,
+      "harmed": 4,
+      "clamped": 0,
+      "nonpositive_denominators": 0
+    },
+    "1.0": {
+      "adequate_draws": 38,
+      "adequate_cases": 1349,
+      "rescued": 13,
+      "harmed": 4,
+      "clamped": 0,
+      "nonpositive_denominators": 0
+    },
+    "3.8585074308112732": {
+      "adequate_draws": 38,
+      "adequate_cases": 1349,
+      "rescued": 13,
+      "harmed": 4,
+      "clamped": 0,
+      "nonpositive_denominators": 0
+    }
+  }
+}

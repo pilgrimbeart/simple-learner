@@ -1,0 +1,80 @@
+{
+ "reused_pilot_lives": [
+  [
+   "seq",
+   "issued",
+   142000,
+   "red"
+  ],
+  [
+   "seq",
+   "issued",
+   142000,
+   "blue"
+  ],
+  [
+   "seq",
+   "issued+gate",
+   142000,
+   "red"
+  ],
+  [
+   "seq",
+   "issued+gate",
+   142000,
+   "blue"
+  ],
+  [
+   "time",
+   "issued",
+   142000,
+   "red"
+  ],
+  [
+   "time",
+   "issued",
+   142000,
+   "blue"
+  ],
+  [
+   "time",
+   "issued+gate",
+   142000,
+   "red"
+  ],
+  [
+   "time",
+   "issued+gate",
+   142000,
+   "blue"
+  ],
+  [
+   "allfood",
+   "issued",
+   142000,
+   "red"
+  ],
+  [
+   "allfood",
+   "issued",
+   142000,
+   "blue"
+  ],
+  [
+   "allfood",
+   "issued+gate",
+   142000,
+   "red"
+  ],
+  [
+   "allfood",
+   "issued+gate",
+   142000,
+   "blue"
+  ]
+ ],
+ "new_lives": 108,
+ "pilot_capture_sha256": "54647c33a5dc23cd0e2990c207df31699ac86b6f406449daa20b8b69245a951c",
+ "pilot_raw_sha256": "0cc4ba68a29fe52adf4d7cc7dd7a4fc2b08f21b3bfff307d92e7736f803b8245",
+ "budget": "timeout 5400 s (the user's decision, 2026-11-18, after the first 1800 s attempt timed out)"
+}

@@ -1,0 +1,11 @@
+{
+  "task": "failures",
+  "command": [
+    "/home/pilgrim/git/simple-learner/.venv/bin/python",
+    "/home/pilgrim/git/simple-learner/lab/overnight_20261119/02_failures.py"
+  ],
+  "pid": 10633,
+  "start_unix_s": 1795129708.080255,
+  "timeout_s": 120,
+  "status": "running"
+}

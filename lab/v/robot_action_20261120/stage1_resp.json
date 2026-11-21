@@ -1,0 +1,50 @@
+{
+ "learn_inputs-biology_silicon-biology_sensor_resp": [
+  0.047813090124378135,
+  0.008324276798208236,
+  0.09144518000036099,
+  31
+ ],
+ "learn_inputs-biology_silicon-biology_sensor_spike_purity": [
+  0.2577540873980603,
+  0.1367290631587284,
+  0.3844210208959227,
+  31
+ ],
+ "learn_inputs-silicon_silicon-biology_sensor_resp": [
+  0.09690358140883139,
+  0.002442904886925104,
+  0.20897290719103537,
+  27
+ ],
+ "learn_inputs-silicon_silicon-biology_sensor_spike_purity": [
+  0.32029417947231736,
+  0.16116841633951845,
+  0.48300372561784133,
+  27
+ ],
+ "informed_inputs-biology_silicon-biology_sensor_resp": [
+  0.04234265691833657,
+  0.0046351626769176955,
+  0.08217362711032905,
+  31
+ ],
+ "informed_inputs-biology_silicon-biology_sensor_spike_purity": [
+  0.2610969757346981,
+  0.1397011379601969,
+  0.3891783902392688,
+  31
+ ],
+ "informed_inputs-silicon_silicon-biology_sensor_resp": [
+  0.09207082707017912,
+  0.01688716329300649,
+  0.17541858607591293,
+  27
+ ],
+ "informed_inputs-silicon_silicon-biology_sensor_spike_purity": [
+  0.32288071758728215,
+  0.16246264262543356,
+  0.48403513373192103,
+  27
+ ]
+}

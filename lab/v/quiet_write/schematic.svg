@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1140" height="760"><rect width="1140" height="760" fill="white"/><g font-family="sans-serif" fill="#222"><text x="25" y="35" font-size="24">D131: six explicit states, four connections</text>
+<rect x="40" y="100" width="250" height="90" fill="#eef5f8" stroke="#222"/><text x="50" y="125" font-size="17">0: evidence</text><text x="50" y="150">C=25 pF</text><text x="50" y="175">R=0.8 Gohm</text>
+<rect x="400" y="100" width="250" height="90" fill="#eef5f8" stroke="#222"/><text x="410" y="125" font-size="17">1: eligibility</text><text x="410" y="150">C=25 pF</text><text x="410" y="175">R=2 Gohm</text>
+<rect x="760" y="100" width="250" height="90" fill="#eef5f8" stroke="#222"/><text x="770" y="125" font-size="17">2: stored</text><text x="770" y="150">C=25 pF</text><text x="770" y="175">retained; no leak</text>
+<rect x="40" y="300" width="250" height="90" fill="#eef5f8" stroke="#222"/><text x="50" y="325" font-size="17">3: probe</text><text x="50" y="350">C=25 pF</text><text x="50" y="375">R=0.8 Gohm</text>
+<rect x="760" y="300" width="250" height="90" fill="#eef5f8" stroke="#222"/><text x="770" y="325" font-size="17">4: response</text><text x="770" y="350">C=25 pF</text><text x="770" y="375">R=2 Gohm</text>
+<rect x="400" y="300" width="250" height="90" fill="#eef5f8" stroke="#222"/><text x="410" y="325" font-size="17">5: inverted evidence</text><text x="410" y="350">C=25 pF</text><text x="410" y="375">R=0.8 Gohm</text>
+<path d="M165 300 C165 270, 885 270, 885 300" stroke="#222" fill="none"/><text x="525.0" y="270.0" font-size="15">E0 +</text>
+<text x="25" y="480" font-size="14">E0: probe to response; 200 pA × tanh(6.667/V × (source−0V)); gate stored</text>
+<path d="M165 100 C165 50, 885 50, 885 100" stroke="#222" fill="none"/><text x="525.0" y="50.0" font-size="15">E1 +</text>
+<text x="25" y="520" font-size="14">E1: evidence to stored; 8 pA × sigmoid(60/V × (source−0.3V)); gate eligibility</text>
+<path d="M165 100 C165 30, 525 230, 525 300" stroke="#222" fill="none"/><text x="345.0" y="130.0" font-size="15">E2 −</text>
+<text x="25" y="560" font-size="14">E2: evidence to inverted evidence; -937.5 pA × tanh(1.667/V × (source−0V))</text>
+<path d="M525 300 C525 210, 885 10, 885 100" stroke="#222" fill="none"/><text x="705.0" y="110.0" font-size="15">E3 −</text>
+<text x="25" y="600" font-size="14">E3: inverted evidence to stored; -8 pA × sigmoid(60/V × (source−0.3V)); gate eligibility</text>
+<text x="25" y="690">Control gates clip voltage / .3 V to [0,1]. Each writer retains the original 1% dead zone.</text><text x="25" y="720">Bench currents enter evidence, eligibility and probe. Every signal-shaping state is explicit and noisy.</text></g></svg>

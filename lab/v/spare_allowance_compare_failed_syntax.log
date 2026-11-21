@@ -1,0 +1,4 @@
+  File "/home/pilgrim/git/simple-learner/lab/spare_allowance_compare.py", line 119
+    per[a] = dict(gap_closed=C.ci(X_[a]),
+                 ^
+SyntaxError: '(' was never closed

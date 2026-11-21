@@ -1,0 +1,26 @@
+{
+  "modes": {
+    "original": [],
+    "zero_lag_offsets": [
+      0,
+      1
+    ],
+    "zero_output_offsets": [
+      2,
+      3
+    ],
+    "zero_all_offsets": [
+      0,
+      1,
+      2,
+      3
+    ]
+  },
+  "grid": [
+    32,
+    64
+  ],
+  "source": "/home/pilgrim/git/simple-learner/lab/v/phase_v1/confirm.jsonl",
+  "budget_s": 60,
+  "meaning": "Same linear signed reference, only the listed offsets set to zero by an informed analyst."
+}

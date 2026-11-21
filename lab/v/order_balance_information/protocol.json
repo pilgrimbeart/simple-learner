@@ -1,0 +1,18 @@
+{
+  "source": "/home/pilgrim/git/simple-learner/lab/v/motifs/order_v2/confirm.jsonl",
+  "threshold_V": 0.15,
+  "knob": "positive gain*(1+d), negative gain*(1-d); d in [-1,1]",
+  "references": [
+    "unchanged",
+    "simultaneous",
+    "balanced_order",
+    "biased_order"
+  ],
+  "biased_positive_fraction": 0.8,
+  "steps_s": [
+    5e-05,
+    2.5e-05
+  ],
+  "budget_s": 180,
+  "scope": "Analytic current/readout reference on reused cases, no physically implemented knob or event classifier"
+}

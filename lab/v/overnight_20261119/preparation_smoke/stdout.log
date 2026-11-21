@@ -1,0 +1,7 @@
+{
+  "purpose": "handoff helper smoke test only",
+  "checks": {
+    "piecewise_linear_boundary_check": "passed",
+    "unidentifiable_and_clip_checks": "passed"
+  }
+}

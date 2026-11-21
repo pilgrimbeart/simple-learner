@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="620"><rect width="1100" height="620" fill="white"/><g fill="#222" font-family="sans-serif"><text x="25" y="30" font-size="23">D133: five explicit noisy states; four connections</text>
+<rect x="25" y="80" width="195" height="100" fill="#eef5f8" stroke="#222"/><text x="33" y="105">0: A</text><text x="33" y="135">C=25 pF</text><text x="33" y="160">R=0.2 Gohm</text>
+<rect x="240" y="80" width="195" height="100" fill="#eef5f8" stroke="#222"/><text x="248" y="105">1: B</text><text x="248" y="135">C=25 pF</text><text x="248" y="160">R=0.2 Gohm</text>
+<rect x="455" y="80" width="195" height="100" fill="#eef5f8" stroke="#222"/><text x="463" y="105">2: lag A</text><text x="463" y="135">C=25 pF</text><text x="463" y="160">R=4 Gohm</text>
+<rect x="670" y="80" width="195" height="100" fill="#eef5f8" stroke="#222"/><text x="678" y="105">3: lag B</text><text x="678" y="135">C=25 pF</text><text x="678" y="160">R=4 Gohm</text>
+<rect x="885" y="80" width="195" height="100" fill="#eef5f8" stroke="#222"/><text x="893" y="105">4: phase response</text><text x="893" y="135">C=25 pF</text><text x="893" y="160">R=20 Gohm</text>
+<path d="M120 180 V220 H550 V180" fill="none" stroke="#222"/><text x="335.0" y="215">E0</text>
+<text x="25" y="440">E0: A to lag A, gain 75 pA, slope 3.333/V</text>
+<path d="M335 180 V265 H765 V180" fill="none" stroke="#222"/><text x="550.0" y="260">E1</text>
+<text x="25" y="470">E1: B to lag B, gain 75 pA, slope 3.333/V</text>
+<path d="M335 180 V310 H980 V180" fill="none" stroke="#222"/><text x="657.5" y="305">E2</text>
+<text x="25" y="500">E2: B to phase response, gain 50 pA, slope 3.333/V; gate lag A</text>
+<path d="M120 180 V355 H980 V180" fill="none" stroke="#222"/><text x="550.0" y="350">E3</text>
+<text x="25" y="530">E3: A to phase response, gain -50 pA, slope 3.333/V; gate lag B</text>
+<text x="25" y="590">Exact functions in manifest.json; gates clip voltage / .3 V to [0,1]. No hidden filter states.</text></g></svg>

@@ -1,0 +1,22 @@
+{
+  "validation_max_error_V": 1.0061396160665481e-16,
+  "maximum_higher_harmonic_sum_V": 2.8392053048489297e-17,
+  "modes": {
+    "original": {
+      "maximum_absolute_bias_V": 0.032047271580728225,
+      "rms_bias_V": 0.008167459877640643
+    },
+    "zero_lag_offsets": {
+      "maximum_absolute_bias_V": 0.021816736223138386,
+      "rms_bias_V": 0.00549075699737431
+    },
+    "zero_output_offsets": {
+      "maximum_absolute_bias_V": 0.018333092525334042,
+      "rms_bias_V": 0.0054414516523793284
+    },
+    "zero_all_offsets": {
+      "maximum_absolute_bias_V": 3.469446951953614e-18,
+      "rms_bias_V": 5.842424060446719e-19
+    }
+  }
+}

@@ -1,0 +1,539 @@
+{
+ "policy": {
+  "scan": 16,
+  "drive": 40,
+  "hold": 0.2,
+  "bored": 3.0,
+  "roam": 1.0,
+  "roam_rate": 40,
+  "until_seen": true,
+  "avoid": "drop",
+  "learn": "toggle",
+  "n": 1000000000,
+  "oracle": true
+ },
+ "food": 1434,
+ "poison": 217,
+ "food_poison_last_third": 6.608294930875576,
+ "net_per_10s": [
+  5.705809568797779,
+  5.30266645841453,
+  6.07645655513898
+ ],
+ "stranded": 0,
+ "lives": 64,
+ "rows": [
+  {
+   "seed": 0,
+   "poison": "red",
+   "food": 24,
+   "poison_eaten": 4,
+   "seconds": 33.33,
+   "stranded": false
+  },
+  {
+   "seed": 0,
+   "poison": "blue",
+   "food": 27,
+   "poison_eaten": 3,
+   "seconds": 33.33,
+   "stranded": false
+  },
+  {
+   "seed": 1,
+   "poison": "red",
+   "food": 24,
+   "poison_eaten": 1,
+   "seconds": 33.32333333333333,
+   "stranded": false
+  },
+  {
+   "seed": 1,
+   "poison": "blue",
+   "food": 27,
+   "poison_eaten": 4,
+   "seconds": 33.32333333333333,
+   "stranded": false
+  },
+  {
+   "seed": 2,
+   "poison": "red",
+   "food": 23,
+   "poison_eaten": 5,
+   "seconds": 33.33333333333333,
+   "stranded": false
+  },
+  {
+   "seed": 2,
+   "poison": "blue",
+   "food": 11,
+   "poison_eaten": 1,
+   "seconds": 33.33333333333333,
+   "stranded": false
+  },
+  {
+   "seed": 3,
+   "poison": "red",
+   "food": 25,
+   "poison_eaten": 6,
+   "seconds": 33.33,
+   "stranded": false
+  },
+  {
+   "seed": 3,
+   "poison": "blue",
+   "food": 16,
+   "poison_eaten": 6,
+   "seconds": 33.33,
+   "stranded": false
+  },
+  {
+   "seed": 4,
+   "poison": "red",
+   "food": 19,
+   "poison_eaten": 0,
+   "seconds": 33.32333333333333,
+   "stranded": false
+  },
+  {
+   "seed": 4,
+   "poison": "blue",
+   "food": 25,
+   "poison_eaten": 2,
+   "seconds": 33.32333333333333,
+   "stranded": false
+  },
+  {
+   "seed": 5,
+   "poison": "red",
+   "food": 21,
+   "poison_eaten": 5,
+   "seconds": 33.33333333333333,
+   "stranded": false
+  },
+  {
+   "seed": 5,
+   "poison": "blue",
+   "food": 21,
+   "poison_eaten": 4,
+   "seconds": 33.33333333333333,
+   "stranded": false
+  },
+  {
+   "seed": 6,
+   "poison": "red",
+   "food": 31,
+   "poison_eaten": 6,
+   "seconds": 33.32,
+   "stranded": false
+  },
+  {
+   "seed": 6,
+   "poison": "blue",
+   "food": 28,
+   "poison_eaten": 3,
+   "seconds": 33.32,
+   "stranded": false
+  },
+  {
+   "seed": 7,
+   "poison": "red",
+   "food": 27,
+   "poison_eaten": 3,
+   "seconds": 33.33,
+   "stranded": false
+  },
+  {
+   "seed": 7,
+   "poison": "blue",
+   "food": 17,
+   "poison_eaten": 3,
+   "seconds": 33.33,
+   "stranded": false
+  },
+  {
+   "seed": 8,
+   "poison": "red",
+   "food": 25,
+   "poison_eaten": 3,
+   "seconds": 33.31666666666667,
+   "stranded": false
+  },
+  {
+   "seed": 8,
+   "poison": "blue",
+   "food": 20,
+   "poison_eaten": 5,
+   "seconds": 33.32666666666667,
+   "stranded": false
+  },
+  {
+   "seed": 9,
+   "poison": "red",
+   "food": 21,
+   "poison_eaten": 3,
+   "seconds": 33.32666666666667,
+   "stranded": false
+  },
+  {
+   "seed": 9,
+   "poison": "blue",
+   "food": 24,
+   "poison_eaten": 2,
+   "seconds": 33.32666666666667,
+   "stranded": false
+  },
+  {
+   "seed": 10,
+   "poison": "red",
+   "food": 22,
+   "poison_eaten": 5,
+   "seconds": 33.32666666666667,
+   "stranded": false
+  },
+  {
+   "seed": 10,
+   "poison": "blue",
+   "food": 21,
+   "poison_eaten": 3,
+   "seconds": 33.32666666666667,
+   "stranded": false
+  },
+  {
+   "seed": 11,
+   "poison": "red",
+   "food": 11,
+   "poison_eaten": 2,
+   "seconds": 33.32,
+   "stranded": false
+  },
+  {
+   "seed": 11,
+   "poison": "blue",
+   "food": 18,
+   "poison_eaten": 4,
+   "seconds": 33.32,
+   "stranded": false
+  },
+  {
+   "seed": 12,
+   "poison": "red",
+   "food": 16,
+   "poison_eaten": 5,
+   "seconds": 33.32666666666667,
+   "stranded": false
+  },
+  {
+   "seed": 12,
+   "poison": "blue",
+   "food": 25,
+   "poison_eaten": 4,
+   "seconds": 33.32666666666667,
+   "stranded": false
+  },
+  {
+   "seed": 13,
+   "poison": "red",
+   "food": 28,
+   "poison_eaten": 4,
+   "seconds": 33.32333333333333,
+   "stranded": false
+  },
+  {
+   "seed": 13,
+   "poison": "blue",
+   "food": 20,
+   "poison_eaten": 4,
+   "seconds": 33.32333333333333,
+   "stranded": false
+  },
+  {
+   "seed": 14,
+   "poison": "red",
+   "food": 15,
+   "poison_eaten": 3,
+   "seconds": 33.32,
+   "stranded": false
+  },
+  {
+   "seed": 14,
+   "poison": "blue",
+   "food": 31,
+   "poison_eaten": 6,
+   "seconds": 33.32,
+   "stranded": false
+  },
+  {
+   "seed": 15,
+   "poison": "red",
+   "food": 31,
+   "poison_eaten": 3,
+   "seconds": 33.32666666666667,
+   "stranded": false
+  },
+  {
+   "seed": 15,
+   "poison": "blue",
+   "food": 21,
+   "poison_eaten": 1,
+   "seconds": 33.32666666666667,
+   "stranded": false
+  },
+  {
+   "seed": 16,
+   "poison": "red",
+   "food": 18,
+   "poison_eaten": 1,
+   "seconds": 33.33333333333333,
+   "stranded": false
+  },
+  {
+   "seed": 16,
+   "poison": "blue",
+   "food": 18,
+   "poison_eaten": 2,
+   "seconds": 33.33333333333333,
+   "stranded": false
+  },
+  {
+   "seed": 17,
+   "poison": "red",
+   "food": 19,
+   "poison_eaten": 6,
+   "seconds": 33.32,
+   "stranded": false
+  },
+  {
+   "seed": 17,
+   "poison": "blue",
+   "food": 19,
+   "poison_eaten": 1,
+   "seconds": 33.32,
+   "stranded": false
+  },
+  {
+   "seed": 18,
+   "poison": "red",
+   "food": 21,
+   "poison_eaten": 3,
+   "seconds": 33.32666666666667,
+   "stranded": false
+  },
+  {
+   "seed": 18,
+   "poison": "blue",
+   "food": 14,
+   "poison_eaten": 1,
+   "seconds": 33.32666666666667,
+   "stranded": false
+  },
+  {
+   "seed": 19,
+   "poison": "red",
+   "food": 32,
+   "poison_eaten": 6,
+   "seconds": 33.33,
+   "stranded": false
+  },
+  {
+   "seed": 19,
+   "poison": "blue",
+   "food": 20,
+   "poison_eaten": 4,
+   "seconds": 33.33,
+   "stranded": false
+  },
+  {
+   "seed": 20,
+   "poison": "red",
+   "food": 27,
+   "poison_eaten": 2,
+   "seconds": 33.32666666666667,
+   "stranded": false
+  },
+  {
+   "seed": 20,
+   "poison": "blue",
+   "food": 30,
+   "poison_eaten": 3,
+   "seconds": 33.32666666666667,
+   "stranded": false
+  },
+  {
+   "seed": 21,
+   "poison": "red",
+   "food": 27,
+   "poison_eaten": 5,
+   "seconds": 33.33333333333333,
+   "stranded": false
+  },
+  {
+   "seed": 21,
+   "poison": "blue",
+   "food": 26,
+   "poison_eaten": 1,
+   "seconds": 33.33333333333333,
+   "stranded": false
+  },
+  {
+   "seed": 22,
+   "poison": "red",
+   "food": 19,
+   "poison_eaten": 1,
+   "seconds": 33.32333333333333,
+   "stranded": false
+  },
+  {
+   "seed": 22,
+   "poison": "blue",
+   "food": 9,
+   "poison_eaten": 3,
+   "seconds": 33.32333333333333,
+   "stranded": false
+  },
+  {
+   "seed": 23,
+   "poison": "red",
+   "food": 30,
+   "poison_eaten": 5,
+   "seconds": 33.33,
+   "stranded": false
+  },
+  {
+   "seed": 23,
+   "poison": "blue",
+   "food": 26,
+   "poison_eaten": 6,
+   "seconds": 33.33,
+   "stranded": false
+  },
+  {
+   "seed": 24,
+   "poison": "red",
+   "food": 24,
+   "poison_eaten": 3,
+   "seconds": 33.33333333333333,
+   "stranded": false
+  },
+  {
+   "seed": 24,
+   "poison": "blue",
+   "food": 22,
+   "poison_eaten": 2,
+   "seconds": 33.33333333333333,
+   "stranded": false
+  },
+  {
+   "seed": 25,
+   "poison": "red",
+   "food": 22,
+   "poison_eaten": 2,
+   "seconds": 33.31666666666667,
+   "stranded": false
+  },
+  {
+   "seed": 25,
+   "poison": "blue",
+   "food": 30,
+   "poison_eaten": 6,
+   "seconds": 33.31666666666667,
+   "stranded": false
+  },
+  {
+   "seed": 26,
+   "poison": "red",
+   "food": 24,
+   "poison_eaten": 4,
+   "seconds": 33.32,
+   "stranded": false
+  },
+  {
+   "seed": 26,
+   "poison": "blue",
+   "food": 24,
+   "poison_eaten": 3,
+   "seconds": 33.32,
+   "stranded": false
+  },
+  {
+   "seed": 27,
+   "poison": "red",
+   "food": 11,
+   "poison_eaten": 2,
+   "seconds": 33.33,
+   "stranded": false
+  },
+  {
+   "seed": 27,
+   "poison": "blue",
+   "food": 18,
+   "poison_eaten": 2,
+   "seconds": 33.33,
+   "stranded": false
+  },
+  {
+   "seed": 28,
+   "poison": "red",
+   "food": 24,
+   "poison_eaten": 2,
+   "seconds": 33.32666666666667,
+   "stranded": false
+  },
+  {
+   "seed": 28,
+   "poison": "blue",
+   "food": 23,
+   "poison_eaten": 3,
+   "seconds": 33.32666666666667,
+   "stranded": false
+  },
+  {
+   "seed": 29,
+   "poison": "red",
+   "food": 29,
+   "poison_eaten": 3,
+   "seconds": 33.33333333333333,
+   "stranded": false
+  },
+  {
+   "seed": 29,
+   "poison": "blue",
+   "food": 18,
+   "poison_eaten": 3,
+   "seconds": 33.33333333333333,
+   "stranded": false
+  },
+  {
+   "seed": 30,
+   "poison": "red",
+   "food": 18,
+   "poison_eaten": 6,
+   "seconds": 33.32666666666667,
+   "stranded": false
+  },
+  {
+   "seed": 30,
+   "poison": "blue",
+   "food": 28,
+   "poison_eaten": 7,
+   "seconds": 33.32666666666667,
+   "stranded": false
+  },
+  {
+   "seed": 31,
+   "poison": "red",
+   "food": 31,
+   "poison_eaten": 2,
+   "seconds": 33.33333333333333,
+   "stranded": false
+  },
+  {
+   "seed": 31,
+   "poison": "blue",
+   "food": 18,
+   "poison_eaten": 4,
+   "seconds": 33.33333333333333,
+   "stranded": false
+  }
+ ]
+}

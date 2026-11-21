@@ -1,0 +1,31 @@
+{
+  "old_interval_mismatch": [],
+  "old_feasibility_mismatch": [],
+  "d2215_simultaneous_lower": {
+    "value": -0.16218631700961111,
+    "case": "pair_0.5_0.35_0.0",
+    "expected": -0.162186317,
+    "matches": true
+  },
+  "d2215_long_gap_upper": {
+    "value": -0.19449161091760545,
+    "case": "pair_0.5_0.5_0.6",
+    "expected": -0.1944916109,
+    "matches": true
+  },
+  "d2215_requirements_by_case": {
+    "simultaneous_lower": -0.16218631700961111,
+    "long_gap_upper": null,
+    "long_gap_bounds": {
+      "pair_0.5_0.5_-0.6": [
+        -1.1954018546782958,
+        2.9244779688522664
+      ],
+      "pair_0.5_0.5_0.6": [
+        -1.7291056309873243,
+        -0.19449161091760545
+      ]
+    }
+  },
+  "feasible_count": 39
+}

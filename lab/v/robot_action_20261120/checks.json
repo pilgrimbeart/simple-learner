@@ -1,0 +1,1768 @@
+{
+ "identity_vs_D176_mem_thr": {
+  "learn": {
+   "lives": 64,
+   "identical": 64
+  },
+  "frozen": {
+   "lives": 64,
+   "identical": 64
+  },
+  "informed": {
+   "lives": 64,
+   "identical": 64
+  },
+  "allfood": {
+   "lives": 64,
+   "identical": 64
+  }
+ },
+ "passive_logging": {
+  "biology": [
+   true,
+   true,
+   true
+  ],
+  "silicon": [
+   true,
+   true,
+   true
+  ],
+  "original_vs_adapter_unrepaired": [
+   true,
+   true,
+   true
+  ]
+ },
+ "identities": [
+  {
+   "seed": 0,
+   "biology": {
+    "sensor": {
+     "red": 0,
+     "blue": 1
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P1"
+     }
+    ],
+    "draws": "c4e77cd36af0f62c"
+   },
+   "silicon": {
+    "sensor": {
+     "red": 0,
+     "blue": 1
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P1"
+     }
+    ],
+    "draws": "c4e77cd36af0f62c"
+   },
+   "same_across_substrates": true
+  },
+  {
+   "seed": 1,
+   "biology": {
+    "sensor": {
+     "red": 0,
+     "blue": 1
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P1"
+     }
+    ],
+    "draws": "77626523a8d6dfb9"
+   },
+   "silicon": {
+    "sensor": {
+     "red": 0,
+     "blue": 1
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P1"
+     }
+    ],
+    "draws": "77626523a8d6dfb9"
+   },
+   "same_across_substrates": true
+  },
+  {
+   "seed": 2,
+   "biology": {
+    "sensor": {
+     "red": 1,
+     "blue": 0
+    },
+    "motor": {
+     "left": 0,
+     "right": 1
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P1"
+     }
+    ],
+    "draws": "41cd273a1dd53d11"
+   },
+   "silicon": {
+    "sensor": {
+     "red": 1,
+     "blue": 0
+    },
+    "motor": {
+     "left": 0,
+     "right": 1
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P1"
+     }
+    ],
+    "draws": "41cd273a1dd53d11"
+   },
+   "same_across_substrates": true
+  },
+  {
+   "seed": 3,
+   "biology": {
+    "sensor": {
+     "red": 0,
+     "blue": 1
+    },
+    "motor": {
+     "left": 0,
+     "right": 1
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P1"
+     }
+    ],
+    "draws": "a49adae53ce4d1a6"
+   },
+   "silicon": {
+    "sensor": {
+     "red": 0,
+     "blue": 1
+    },
+    "motor": {
+     "left": 0,
+     "right": 1
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P1"
+     }
+    ],
+    "draws": "a49adae53ce4d1a6"
+   },
+   "same_across_substrates": true
+  },
+  {
+   "seed": 4,
+   "biology": {
+    "sensor": {
+     "red": 1,
+     "blue": 0
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P1"
+     }
+    ],
+    "draws": "d3cc14e2bc70af68"
+   },
+   "silicon": {
+    "sensor": {
+     "red": 1,
+     "blue": 0
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P1"
+     }
+    ],
+    "draws": "d3cc14e2bc70af68"
+   },
+   "same_across_substrates": true
+  },
+  {
+   "seed": 5,
+   "biology": {
+    "sensor": {
+     "red": 0,
+     "blue": 1
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P1"
+     }
+    ],
+    "draws": "79f29b43a97f1da2"
+   },
+   "silicon": {
+    "sensor": {
+     "red": 0,
+     "blue": 1
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P1"
+     }
+    ],
+    "draws": "79f29b43a97f1da2"
+   },
+   "same_across_substrates": true
+  },
+  {
+   "seed": 6,
+   "biology": {
+    "sensor": {
+     "red": 0,
+     "blue": 1
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P1"
+     }
+    ],
+    "draws": "3e96b124fc7ee1da"
+   },
+   "silicon": {
+    "sensor": {
+     "red": 0,
+     "blue": 1
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P1"
+     }
+    ],
+    "draws": "3e96b124fc7ee1da"
+   },
+   "same_across_substrates": true
+  },
+  {
+   "seed": 7,
+   "biology": {
+    "sensor": {
+     "red": 1,
+     "blue": 0
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P1"
+     }
+    ],
+    "draws": "263eaffa79618de9"
+   },
+   "silicon": {
+    "sensor": {
+     "red": 1,
+     "blue": 0
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P1"
+     }
+    ],
+    "draws": "263eaffa79618de9"
+   },
+   "same_across_substrates": true
+  },
+  {
+   "seed": 8,
+   "biology": {
+    "sensor": {
+     "red": 0,
+     "blue": 1
+    },
+    "motor": {
+     "left": 0,
+     "right": 1
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P1"
+     }
+    ],
+    "draws": "a915f6e37f4c94e9"
+   },
+   "silicon": {
+    "sensor": {
+     "red": 0,
+     "blue": 1
+    },
+    "motor": {
+     "left": 0,
+     "right": 1
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P1"
+     }
+    ],
+    "draws": "a915f6e37f4c94e9"
+   },
+   "same_across_substrates": true
+  },
+  {
+   "seed": 9,
+   "biology": {
+    "sensor": {
+     "red": 1,
+     "blue": 0
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P1"
+     }
+    ],
+    "draws": "a78c1478886c62a4"
+   },
+   "silicon": {
+    "sensor": {
+     "red": 1,
+     "blue": 0
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P1"
+     }
+    ],
+    "draws": "a78c1478886c62a4"
+   },
+   "same_across_substrates": true
+  },
+  {
+   "seed": 10,
+   "biology": {
+    "sensor": {
+     "red": 0,
+     "blue": 1
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P1"
+     }
+    ],
+    "draws": "a6a5ccd500eb710d"
+   },
+   "silicon": {
+    "sensor": {
+     "red": 0,
+     "blue": 1
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P1"
+     }
+    ],
+    "draws": "a6a5ccd500eb710d"
+   },
+   "same_across_substrates": true
+  },
+  {
+   "seed": 11,
+   "biology": {
+    "sensor": {
+     "red": 1,
+     "blue": 0
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P1"
+     }
+    ],
+    "draws": "f9846646aafca83b"
+   },
+   "silicon": {
+    "sensor": {
+     "red": 1,
+     "blue": 0
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P1"
+     }
+    ],
+    "draws": "f9846646aafca83b"
+   },
+   "same_across_substrates": true
+  },
+  {
+   "seed": 12,
+   "biology": {
+    "sensor": {
+     "red": 1,
+     "blue": 0
+    },
+    "motor": {
+     "left": 0,
+     "right": 1
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P1"
+     }
+    ],
+    "draws": "14a9f6ec6cf88eaa"
+   },
+   "silicon": {
+    "sensor": {
+     "red": 1,
+     "blue": 0
+    },
+    "motor": {
+     "left": 0,
+     "right": 1
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P1"
+     }
+    ],
+    "draws": "14a9f6ec6cf88eaa"
+   },
+   "same_across_substrates": true
+  },
+  {
+   "seed": 13,
+   "biology": {
+    "sensor": {
+     "red": 1,
+     "blue": 0
+    },
+    "motor": {
+     "left": 0,
+     "right": 1
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P1"
+     }
+    ],
+    "draws": "b498ef810fda6a9a"
+   },
+   "silicon": {
+    "sensor": {
+     "red": 1,
+     "blue": 0
+    },
+    "motor": {
+     "left": 0,
+     "right": 1
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P1"
+     }
+    ],
+    "draws": "b498ef810fda6a9a"
+   },
+   "same_across_substrates": true
+  },
+  {
+   "seed": 14,
+   "biology": {
+    "sensor": {
+     "red": 1,
+     "blue": 0
+    },
+    "motor": {
+     "left": 0,
+     "right": 1
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P1"
+     }
+    ],
+    "draws": "68877aebab802876"
+   },
+   "silicon": {
+    "sensor": {
+     "red": 1,
+     "blue": 0
+    },
+    "motor": {
+     "left": 0,
+     "right": 1
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P1"
+     }
+    ],
+    "draws": "68877aebab802876"
+   },
+   "same_across_substrates": true
+  },
+  {
+   "seed": 15,
+   "biology": {
+    "sensor": {
+     "red": 1,
+     "blue": 0
+    },
+    "motor": {
+     "left": 0,
+     "right": 1
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P1"
+     }
+    ],
+    "draws": "1f92ec4b1ce685c5"
+   },
+   "silicon": {
+    "sensor": {
+     "red": 1,
+     "blue": 0
+    },
+    "motor": {
+     "left": 0,
+     "right": 1
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P1"
+     }
+    ],
+    "draws": "1f92ec4b1ce685c5"
+   },
+   "same_across_substrates": true
+  },
+  {
+   "seed": 16,
+   "biology": {
+    "sensor": {
+     "red": 0,
+     "blue": 1
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P1"
+     }
+    ],
+    "draws": "ee7eb98af7d6d251"
+   },
+   "silicon": {
+    "sensor": {
+     "red": 0,
+     "blue": 1
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P1"
+     }
+    ],
+    "draws": "ee7eb98af7d6d251"
+   },
+   "same_across_substrates": true
+  },
+  {
+   "seed": 17,
+   "biology": {
+    "sensor": {
+     "red": 0,
+     "blue": 1
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P1"
+     }
+    ],
+    "draws": "4e4094f2a7f91d19"
+   },
+   "silicon": {
+    "sensor": {
+     "red": 0,
+     "blue": 1
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P1"
+     }
+    ],
+    "draws": "4e4094f2a7f91d19"
+   },
+   "same_across_substrates": true
+  },
+  {
+   "seed": 18,
+   "biology": {
+    "sensor": {
+     "red": 0,
+     "blue": 1
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P1"
+     }
+    ],
+    "draws": "5997d7cb0e5f79d4"
+   },
+   "silicon": {
+    "sensor": {
+     "red": 0,
+     "blue": 1
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P1"
+     }
+    ],
+    "draws": "5997d7cb0e5f79d4"
+   },
+   "same_across_substrates": true
+  },
+  {
+   "seed": 19,
+   "biology": {
+    "sensor": {
+     "red": 1,
+     "blue": 0
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P1"
+     }
+    ],
+    "draws": "030fa4f7297f278e"
+   },
+   "silicon": {
+    "sensor": {
+     "red": 1,
+     "blue": 0
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P1"
+     }
+    ],
+    "draws": "030fa4f7297f278e"
+   },
+   "same_across_substrates": true
+  },
+  {
+   "seed": 20,
+   "biology": {
+    "sensor": {
+     "red": 1,
+     "blue": 0
+    },
+    "motor": {
+     "left": 0,
+     "right": 1
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P1"
+     }
+    ],
+    "draws": "0ad4970b55311098"
+   },
+   "silicon": {
+    "sensor": {
+     "red": 1,
+     "blue": 0
+    },
+    "motor": {
+     "left": 0,
+     "right": 1
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P1"
+     }
+    ],
+    "draws": "0ad4970b55311098"
+   },
+   "same_across_substrates": true
+  },
+  {
+   "seed": 21,
+   "biology": {
+    "sensor": {
+     "red": 0,
+     "blue": 1
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P1"
+     }
+    ],
+    "draws": "bbcdb142eedaa912"
+   },
+   "silicon": {
+    "sensor": {
+     "red": 0,
+     "blue": 1
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P1"
+     }
+    ],
+    "draws": "bbcdb142eedaa912"
+   },
+   "same_across_substrates": true
+  },
+  {
+   "seed": 22,
+   "biology": {
+    "sensor": {
+     "red": 0,
+     "blue": 1
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P1"
+     }
+    ],
+    "draws": "d2d4b306c69d084b"
+   },
+   "silicon": {
+    "sensor": {
+     "red": 0,
+     "blue": 1
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P1"
+     }
+    ],
+    "draws": "d2d4b306c69d084b"
+   },
+   "same_across_substrates": true
+  },
+  {
+   "seed": 23,
+   "biology": {
+    "sensor": {
+     "red": 0,
+     "blue": 1
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P1"
+     }
+    ],
+    "draws": "901067f495103dc5"
+   },
+   "silicon": {
+    "sensor": {
+     "red": 0,
+     "blue": 1
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P1"
+     }
+    ],
+    "draws": "901067f495103dc5"
+   },
+   "same_across_substrates": true
+  },
+  {
+   "seed": 24,
+   "biology": {
+    "sensor": {
+     "red": 1,
+     "blue": 0
+    },
+    "motor": {
+     "left": 0,
+     "right": 1
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P1"
+     }
+    ],
+    "draws": "563951e270c79a31"
+   },
+   "silicon": {
+    "sensor": {
+     "red": 1,
+     "blue": 0
+    },
+    "motor": {
+     "left": 0,
+     "right": 1
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P1"
+     }
+    ],
+    "draws": "563951e270c79a31"
+   },
+   "same_across_substrates": true
+  },
+  {
+   "seed": 25,
+   "biology": {
+    "sensor": {
+     "red": 0,
+     "blue": 1
+    },
+    "motor": {
+     "left": 0,
+     "right": 1
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P1"
+     }
+    ],
+    "draws": "54e3ad79e7301bea"
+   },
+   "silicon": {
+    "sensor": {
+     "red": 0,
+     "blue": 1
+    },
+    "motor": {
+     "left": 0,
+     "right": 1
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P1"
+     }
+    ],
+    "draws": "54e3ad79e7301bea"
+   },
+   "same_across_substrates": true
+  },
+  {
+   "seed": 26,
+   "biology": {
+    "sensor": {
+     "red": 1,
+     "blue": 0
+    },
+    "motor": {
+     "left": 0,
+     "right": 1
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P1"
+     }
+    ],
+    "draws": "d03af0724873b005"
+   },
+   "silicon": {
+    "sensor": {
+     "red": 1,
+     "blue": 0
+    },
+    "motor": {
+     "left": 0,
+     "right": 1
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P1"
+     }
+    ],
+    "draws": "d03af0724873b005"
+   },
+   "same_across_substrates": true
+  },
+  {
+   "seed": 27,
+   "biology": {
+    "sensor": {
+     "red": 1,
+     "blue": 0
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P1"
+     }
+    ],
+    "draws": "92f1ff9232ecd1ef"
+   },
+   "silicon": {
+    "sensor": {
+     "red": 1,
+     "blue": 0
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P1"
+     }
+    ],
+    "draws": "92f1ff9232ecd1ef"
+   },
+   "same_across_substrates": true
+  },
+  {
+   "seed": 28,
+   "biology": {
+    "sensor": {
+     "red": 1,
+     "blue": 0
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P1"
+     }
+    ],
+    "draws": "6110cc4a757f78dd"
+   },
+   "silicon": {
+    "sensor": {
+     "red": 1,
+     "blue": 0
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P1"
+     }
+    ],
+    "draws": "6110cc4a757f78dd"
+   },
+   "same_across_substrates": true
+  },
+  {
+   "seed": 29,
+   "biology": {
+    "sensor": {
+     "red": 0,
+     "blue": 1
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P1"
+     }
+    ],
+    "draws": "d2e8a463b7e59b87"
+   },
+   "silicon": {
+    "sensor": {
+     "red": 0,
+     "blue": 1
+    },
+    "motor": {
+     "left": 1,
+     "right": 0
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P1"
+     }
+    ],
+    "draws": "d2e8a463b7e59b87"
+   },
+   "same_across_substrates": true
+  },
+  {
+   "seed": 30,
+   "biology": {
+    "sensor": {
+     "red": 1,
+     "blue": 0
+    },
+    "motor": {
+     "left": 0,
+     "right": 1
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P1"
+     }
+    ],
+    "draws": "9077481fabed4820"
+   },
+   "silicon": {
+    "sensor": {
+     "red": 1,
+     "blue": 0
+    },
+    "motor": {
+     "left": 0,
+     "right": 1
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 0,
+      "plastic_motor": 1,
+      "knob": "P1"
+     }
+    ],
+    "draws": "9077481fabed4820"
+   },
+   "same_across_substrates": true
+  },
+  {
+   "seed": 31,
+   "biology": {
+    "sensor": {
+     "red": 0,
+     "blue": 1
+    },
+    "motor": {
+     "left": 0,
+     "right": 1
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P1"
+     }
+    ],
+    "draws": "80da1c6a4e52332c"
+   },
+   "silicon": {
+    "sensor": {
+     "red": 0,
+     "blue": 1
+    },
+    "motor": {
+     "left": 0,
+     "right": 1
+    },
+    "wiring": [
+     {
+      "sensor": 0,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P0"
+     },
+     {
+      "sensor": 1,
+      "side_motor": 1,
+      "plastic_motor": 0,
+      "knob": "P1"
+     }
+    ],
+    "draws": "80da1c6a4e52332c"
+   },
+   "same_across_substrates": true
+  }
+ ],
+ "identities_same_wiring_all": true
+}

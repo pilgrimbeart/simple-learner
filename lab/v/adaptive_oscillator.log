@@ -1,0 +1,74 @@
+51000 original True 2.4
+51000 adaptive True 5.5
+51000 writer_removed True 8.1
+51001 original True 10.5
+51001 adaptive True 13.4
+51001 writer_removed True 16.2
+51002 original True 18.7
+51002 adaptive True 21.8
+51002 writer_removed True 24.4
+51003 original True 26.9
+51003 adaptive True 30.0
+51003 writer_removed True 32.7
+51004 original True 35.1
+51004 adaptive True 37.9
+51004 writer_removed True 40.6
+51005 original True 42.9
+51005 adaptive True 45.8
+51005 writer_removed False 48.4
+51006 original False 50.6
+51006 adaptive True 53.6
+51006 writer_removed False 56.3
+51007 original True 58.8
+51007 adaptive True 61.9
+51007 writer_removed False 64.8
+51011 original False 67.0
+51011 adaptive True 69.9
+51011 writer_removed False 72.5
+51036 original False 74.9
+51036 adaptive True 77.7
+51036 writer_removed True 80.4
+{
+  "original": {
+    "passed": 7,
+    "draws": 10,
+    "failed_seeds": [
+      51006,
+      51011,
+      51036
+    ],
+    "refinement_pass": true,
+    "power_W": [
+      9.95118517821271e-09,
+      9.354550903688148e-09,
+      1.0522316047892113e-08
+    ]
+  },
+  "adaptive": {
+    "passed": 10,
+    "draws": 10,
+    "failed_seeds": [],
+    "refinement_pass": true,
+    "power_W": [
+      1.6329476129490966e-08,
+      1.577107356478142e-08,
+      1.6915483571726885e-08
+    ]
+  },
+  "writer_removed": {
+    "passed": 6,
+    "draws": 10,
+    "failed_seeds": [
+      51005,
+      51006,
+      51007,
+      51011
+    ],
+    "refinement_pass": true,
+    "power_W": [
+      1.5693835693267948e-08,
+      1.512614451678365e-08,
+      1.6266010834090193e-08
+    ]
+  }
+}

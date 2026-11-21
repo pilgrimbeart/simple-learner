@@ -1,0 +1,410 @@
+{
+  "graph": {
+    "nodes": [
+      {
+        "name": "A",
+        "C": 2.5e-11,
+        "R": 400000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "B",
+        "C": 2.5e-11,
+        "R": 400000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "trace A",
+        "C": 2.5e-11,
+        "R": 4000000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "trace B",
+        "C": 2.5e-11,
+        "R": 4000000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "A then B",
+        "C": 2.5e-11,
+        "R": 400000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "B then A",
+        "C": 2.5e-11,
+        "R": 400000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "coincidence",
+        "C": 2.5e-11,
+        "R": 400000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "order difference",
+        "C": 2.5e-11,
+        "R": 800000000.0,
+        "bias": 0.0,
+        "memory": false
+      }
+    ],
+    "edges": [
+      {
+        "to": 2,
+        "source": 0,
+        "gain": 1.5e-10,
+        "offset": 0.15,
+        "slope": 40.0,
+        "tau": 0.0,
+        "gate": -1,
+        "sigmoid": true
+      },
+      {
+        "to": 3,
+        "source": 1,
+        "gain": 1.5e-10,
+        "offset": 0.15,
+        "slope": 40.0,
+        "tau": 0.0,
+        "gate": -1,
+        "sigmoid": true
+      },
+      {
+        "to": 4,
+        "source": 1,
+        "gain": 1.125e-09,
+        "offset": 0.15,
+        "slope": 40.0,
+        "tau": 0.0,
+        "gate": 2,
+        "sigmoid": true
+      },
+      {
+        "to": 5,
+        "source": 0,
+        "gain": 1.125e-09,
+        "offset": 0.15,
+        "slope": 40.0,
+        "tau": 0.0,
+        "gate": 3,
+        "sigmoid": true
+      },
+      {
+        "to": 6,
+        "source": 0,
+        "gain": 1.125e-09,
+        "offset": 0.15,
+        "slope": 40.0,
+        "tau": 0.0,
+        "gate": 1,
+        "sigmoid": true
+      },
+      {
+        "to": 7,
+        "source": 4,
+        "gain": 3.75e-10,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": -1,
+        "sigmoid": false
+      },
+      {
+        "to": 7,
+        "source": 5,
+        "gain": -3.75e-10,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": -1,
+        "sigmoid": false
+      }
+    ]
+  },
+  "cases": [
+    {
+      "id": "pair_0.35_0.35_-0.6",
+      "a": 0.35,
+      "b": 0.35,
+      "delay": -0.6
+    },
+    {
+      "id": "pair_0.35_0.35_-0.15",
+      "a": 0.35,
+      "b": 0.35,
+      "delay": -0.15
+    },
+    {
+      "id": "pair_0.35_0.35_-0.06",
+      "a": 0.35,
+      "b": 0.35,
+      "delay": -0.06
+    },
+    {
+      "id": "pair_0.35_0.35_0.0",
+      "a": 0.35,
+      "b": 0.35,
+      "delay": 0.0
+    },
+    {
+      "id": "pair_0.35_0.35_0.06",
+      "a": 0.35,
+      "b": 0.35,
+      "delay": 0.06
+    },
+    {
+      "id": "pair_0.35_0.35_0.15",
+      "a": 0.35,
+      "b": 0.35,
+      "delay": 0.15
+    },
+    {
+      "id": "pair_0.35_0.35_0.6",
+      "a": 0.35,
+      "b": 0.35,
+      "delay": 0.6
+    },
+    {
+      "id": "pair_0.35_0.5_-0.6",
+      "a": 0.35,
+      "b": 0.5,
+      "delay": -0.6
+    },
+    {
+      "id": "pair_0.35_0.5_-0.15",
+      "a": 0.35,
+      "b": 0.5,
+      "delay": -0.15
+    },
+    {
+      "id": "pair_0.35_0.5_-0.06",
+      "a": 0.35,
+      "b": 0.5,
+      "delay": -0.06
+    },
+    {
+      "id": "pair_0.35_0.5_0.0",
+      "a": 0.35,
+      "b": 0.5,
+      "delay": 0.0
+    },
+    {
+      "id": "pair_0.35_0.5_0.06",
+      "a": 0.35,
+      "b": 0.5,
+      "delay": 0.06
+    },
+    {
+      "id": "pair_0.35_0.5_0.15",
+      "a": 0.35,
+      "b": 0.5,
+      "delay": 0.15
+    },
+    {
+      "id": "pair_0.35_0.5_0.6",
+      "a": 0.35,
+      "b": 0.5,
+      "delay": 0.6
+    },
+    {
+      "id": "pair_0.5_0.35_-0.6",
+      "a": 0.5,
+      "b": 0.35,
+      "delay": -0.6
+    },
+    {
+      "id": "pair_0.5_0.35_-0.15",
+      "a": 0.5,
+      "b": 0.35,
+      "delay": -0.15
+    },
+    {
+      "id": "pair_0.5_0.35_-0.06",
+      "a": 0.5,
+      "b": 0.35,
+      "delay": -0.06
+    },
+    {
+      "id": "pair_0.5_0.35_0.0",
+      "a": 0.5,
+      "b": 0.35,
+      "delay": 0.0
+    },
+    {
+      "id": "pair_0.5_0.35_0.06",
+      "a": 0.5,
+      "b": 0.35,
+      "delay": 0.06
+    },
+    {
+      "id": "pair_0.5_0.35_0.15",
+      "a": 0.5,
+      "b": 0.35,
+      "delay": 0.15
+    },
+    {
+      "id": "pair_0.5_0.35_0.6",
+      "a": 0.5,
+      "b": 0.35,
+      "delay": 0.6
+    },
+    {
+      "id": "pair_0.5_0.5_-0.6",
+      "a": 0.5,
+      "b": 0.5,
+      "delay": -0.6
+    },
+    {
+      "id": "pair_0.5_0.5_-0.15",
+      "a": 0.5,
+      "b": 0.5,
+      "delay": -0.15
+    },
+    {
+      "id": "pair_0.5_0.5_-0.06",
+      "a": 0.5,
+      "b": 0.5,
+      "delay": -0.06
+    },
+    {
+      "id": "pair_0.5_0.5_0.0",
+      "a": 0.5,
+      "b": 0.5,
+      "delay": 0.0
+    },
+    {
+      "id": "pair_0.5_0.5_0.06",
+      "a": 0.5,
+      "b": 0.5,
+      "delay": 0.06
+    },
+    {
+      "id": "pair_0.5_0.5_0.15",
+      "a": 0.5,
+      "b": 0.5,
+      "delay": 0.15
+    },
+    {
+      "id": "pair_0.5_0.5_0.6",
+      "a": 0.5,
+      "b": 0.5,
+      "delay": 0.6
+    },
+    {
+      "id": "single_A_0.35",
+      "a": 0.35,
+      "b": 0.0,
+      "delay": 0.0
+    },
+    {
+      "id": "single_A_0.5",
+      "a": 0.5,
+      "b": 0.0,
+      "delay": 0.0
+    },
+    {
+      "id": "single_A_0.6",
+      "a": 0.6,
+      "b": 0.0,
+      "delay": 0.0
+    },
+    {
+      "id": "single_B_0.35",
+      "a": 0.0,
+      "b": 0.35,
+      "delay": 0.0
+    },
+    {
+      "id": "single_B_0.5",
+      "a": 0.0,
+      "b": 0.5,
+      "delay": 0.0
+    },
+    {
+      "id": "single_B_0.6",
+      "a": 0.0,
+      "b": 0.6,
+      "delay": 0.0
+    }
+  ],
+  "pilot": [
+    2026112100,
+    2026112101,
+    2026112102,
+    2026112103,
+    2026112104,
+    2026112105,
+    2026112106,
+    2026112107
+  ],
+  "confirm": [
+    2026112200,
+    2026112201,
+    2026112202,
+    2026112203,
+    2026112204,
+    2026112205,
+    2026112206,
+    2026112207,
+    2026112208,
+    2026112209,
+    2026112210,
+    2026112211,
+    2026112212,
+    2026112213,
+    2026112214,
+    2026112215,
+    2026112216,
+    2026112217,
+    2026112218,
+    2026112219,
+    2026112220,
+    2026112221,
+    2026112222,
+    2026112223,
+    2026112224,
+    2026112225,
+    2026112226,
+    2026112227,
+    2026112228,
+    2026112229,
+    2026112230,
+    2026112231,
+    2026112232,
+    2026112233,
+    2026112234,
+    2026112235,
+    2026112236,
+    2026112237,
+    2026112238,
+    2026112239
+  ],
+  "steps": [
+    0.000125,
+    6.25e-05,
+    3.125e-05
+  ],
+  "duration_s": 2.5,
+  "stimuli": "A and B independent input nodes; positive .04s pulses at1+jitter and1+jitter+delay, shifted together if delay negative so first at1+jitter. Jitter .001-.009s. Large singles up to .6V nominal.",
+  "initial": "All8 nodes uniform +/-.075V; silicon noise/mismatch; baseline .7-.95s. No internal filter or Python event recognition.",
+  "criteria": "Each seed/all steps: coincidence peak simultaneous>.15V; every single and +/- .15/.6s separated coincidence<.03V. Order difference signed mean following second event>.03V at +/- .06/.15s. Simultaneous abs order mean<.06V; far-separated abs order mean<.03V. No criterion for near-separated coincidence; finite bandwidth. All rails untouched.",
+  "windows": "Coincidence: baseline-subtracted max from first event to last+.2s. Order: baseline-subtracted mean last+.02 to+.10s. Far test excludes first-event transient by design.",
+  "controls": "Pilot: remove trace-building edges; order mean abs<.015V for all cases, coincidence tests unchanged. Single-input conditions are coincidence controls. No-trace is a distinct graph, not parameters changed during run.",
+  "prediction": "Mirrored low-pass-then-gate paths approximate delay-and-correlate. A trace decays with .1s time constant: later second input uses remaining first trace. Reversing order reverses explicit difference node. Fast A/B overlap drives separate coincidence output. Sigmoid thresholds reduce absent-input offset leakage; no exact multiplier or motion-inference claim.",
+  "noise_sigma_V": 1.2871591976131003e-05,
+  "minimum_margin_V": 0.015,
+  "reliability": "Wilson95 lower>=.90 for40seeds. One seed counts once across34conditions/3steps.",
+  "refinement": "Both successive paired-seed bootstrap95 intervals inside +/-.05 for coincidence/V_TYP and order/V_TYP in every case.",
+  "budget": "Pilot<=600s; confirm<=1200s; at most2 variants after diagnosis; one job/one maths thread.",
+  "source": "Haag,Denk,Borst2004 https://www.pnas.org/doi/10.1073/pnas.0407368101 introduction and Fig1 construction read; mirrored asymmetric filters, products, subtraction. This bench implements approximate gated products, not a fly model."
+}

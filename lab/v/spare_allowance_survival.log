@@ -1,0 +1,49 @@
+time 142000 red {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 74s
+time 142000 blue {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 75s
+time 142001 red {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 158s
+time 142001 blue {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 165s
+time 142002 red {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 242s
+time 142002 blue {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 253s
+time 142003 red {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 321s
+time 142003 blue {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 338s
+time 142004 red {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 400s
+time 142004 blue {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 416s
+time 142005 red {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 491s
+time 142005 blue {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 504s
+time 142006 red {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 575s
+time 142006 blue {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 589s
+time 142007 red {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 656s
+time 142007 blue {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 665s
+time 142008 red {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 734s
+time 142008 blue {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 744s
+time 142009 red {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 817s
+time 142009 blue {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 824s
+seq 142000 red {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 824s
+seq 142000 blue {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 829s
+seq 142001 red {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 830s
+seq 142001 blue {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 836s
+seq 142002 red {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 837s
+seq 142002 blue {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 843s
+seq 142003 red {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 843s
+seq 142003 blue {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 849s
+seq 142004 red {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 849s
+seq 142004 blue {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 855s
+seq 142005 red {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 857s
+seq 142005 blue {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 863s
+seq 142006 red {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 863s
+seq 142006 blue {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 869s
+seq 142007 red {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 870s
+seq 142007 blue {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 875s
+seq 142008 red {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 876s
+seq 142008 blue {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 881s
+seq 142009 red {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 883s
+seq 142009 blue {'fingerprint': True, 'body_fingerprint': True, 'behaviour': True, 'result': True, 'gate_counters': True} 888s
+Traceback (most recent call last):
+  File "/home/pilgrim/git/simple-learner/lab/spare_allowance_survival.py", line 233, in <module>
+    {"--run": run, "--analyse": analyse}[sys.argv[1]]()
+  File "/home/pilgrim/git/simple-learner/lab/spare_allowance_survival.py", line 181, in run
+    analyse()
+  File "/home/pilgrim/git/simple-learner/lab/spare_allowance_survival.py", line 192, in analyse
+    assert a == r["gate"]["counters"].get("births_after_allowance_only_transfer", 0), (r["cond"], r["seed"], r["first"])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('time', 142004, 'blue')

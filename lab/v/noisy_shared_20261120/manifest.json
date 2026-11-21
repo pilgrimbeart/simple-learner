@@ -1,0 +1,32 @@
+{
+ "revision": "5700eaa0d397e1a7dc055ce69ce9ec7e1d32cc7f",
+ "frozen_utc": "2026-11-20T12:48:38Z",
+ "protocol": "discrete/NOTEBOOK.md#d173-noisy-shared-confirmation",
+ "hashes": {
+  "lab/noisy_shared_20261120/harness.py": "19463b2b6c15323f44f6f4efe68d2066e820a37168f699f33ef4dc8969015b9d",
+  "lab/noisy_shared_20261120/core2.py": "aee66ee136bb110ef7b722c79874dd89e2b3de26350e9cce0f8e07baef3a4298",
+  "lab/shared_readout_20261120/checks.py": "68a96edcd2f6eee2bc5f26db1ad5eb540bf27a25b3250d625afa9d6da78ce46d",
+  "lab/v/shared_readout_20261120/bounds.json": "279b262bcb7e9ad58d473133c3bd27a132a27ac032464c6503d153146a247d98",
+  "lab/order_bench.py": "8e53be18f101b779fc093ca15a28863c32267f86465a5b7a15f52ffc2466b526",
+  "lab/dynamic_parts_bench.py": "f5efca300f9fa47f480ab7a245e302ea4327aa6a85f31a1976d12997b58180b1",
+  "lab/population_trace_margin.py": "48399669fdc91be9ed407bfb450777cb5b6e1d59c52e97022f6d828cb64512c1",
+  "lab/overnight_20261119_support.py": "5723202e81890b1d01b1cb9c9ba68d6856d8de4caaa9eecd02d8b2f13812a01c",
+  "mixed_feedback.py": "06157fe5e3532c625ba1494e4d23328b9988041e80c5469b2de2e94d3582131e",
+  "chip.py": "d0014cd1ab350ada938ee75f12a12445236895f13a451afd9a70aec0db29d037",
+  "units.py": "dfdd23e62a79251c579cc8d43badea5894cd167d1f6229a560bd83fb0b2bf1e8",
+  "lab/v/gate_contract_20261120/bound2.json": "2c7d0c54928bc346b362a9ebf5049981ee2857cdcacd01027884252faad1c4c6",
+  "PROGRAMME.md": "0de0b30f24e449755d75c02b9f75347a93eb588586cd641c6e9feb0802c8c20d"
+ },
+ "dirty_tracked": {
+  ".gitignore": "12a90ab2deabf629ab0a95809bced8dc3b4aa84ad2e9469aa0e18d415528a308",
+  "ABSTRACT.md": "efc0079647b189b9b43efc7a815672e616ec387e21c5b75af2030d86ed89146b",
+  "MIXED_FEEDBACK.md": "bcbcb650c970711a135d06326ed435bf9c34789c17c7732bf2ce6054df31cd50",
+  "PARTS.md": "9ebaaa79d2495455f28281584a77cbeb74fd2af7d3e82289319f54664d480de5",
+  "PROGRAMME.md": "0de0b30f24e449755d75c02b9f75347a93eb588586cd641c6e9feb0802c8c20d",
+  "QUESTIONS.md": "294bde38374190dac62c1e1dbdec82a5487f8593fc0d7786af36cfd7c239e40b",
+  "README.md": "2b5ad1b2d8b99461c46ab3c1c5be4bd065ff296eae26aca4837a4159818290aa",
+  "discrete/NOTEBOOK.md": "c77fdb1c21812bcc296c68f4b3889f796132075567b5678fb2e90a0e7c3fef2f"
+ },
+ "untracked_count": 275,
+ "note": "probe run (harness.py one 2026112200 2, noise tag 9) on one old diagnostic draw before freezing: code check only, not data"
+}

@@ -1,0 +1,86 @@
+[
+  {
+    "seed": 2026112204,
+    "side": 0,
+    "actual_threshold_required_V": 0.13814012947187634,
+    "offset_error_V": -0.025294859710576587,
+    "nominal_required_V": 0.16343498918245292
+  },
+  {
+    "seed": 2026112204,
+    "side": 1,
+    "actual_threshold_required_V": 0.1452348389797303,
+    "offset_error_V": -0.037605451780911375,
+    "nominal_required_V": 0.18284029076064168
+  },
+  {
+    "seed": 2026112215,
+    "side": 0,
+    "actual_threshold_required_V": 0.17099342337283888,
+    "offset_error_V": -0.0602183940255305,
+    "nominal_required_V": 0.23121181739836938
+  },
+  {
+    "seed": 2026112215,
+    "side": 1,
+    "actual_threshold_required_V": 0.13320327486591296,
+    "offset_error_V": -0.030540239998938373,
+    "nominal_required_V": 0.16374351486485134
+  },
+  {
+    "seed": 2026112223,
+    "side": 0,
+    "actual_threshold_required_V": 0.13320426356770054,
+    "offset_error_V": 0.04204095332349081,
+    "nominal_required_V": 0.09116331024420973
+  },
+  {
+    "seed": 2026112223,
+    "side": 1,
+    "actual_threshold_required_V": 0.1314444949904192,
+    "offset_error_V": 0.03909356064254518,
+    "nominal_required_V": 0.092350934347874
+  },
+  {
+    "seed": 2026112226,
+    "side": 0,
+    "actual_threshold_required_V": 0.17500015001787333,
+    "offset_error_V": -0.036094698690386534,
+    "nominal_required_V": 0.21109484870825987
+  },
+  {
+    "seed": 2026112226,
+    "side": 1,
+    "actual_threshold_required_V": 0.1435853489811737,
+    "offset_error_V": -0.025810114628398412,
+    "nominal_required_V": 0.1693954636095721
+  },
+  {
+    "seed": 2026112236,
+    "side": 0,
+    "actual_threshold_required_V": 0.14506244698728596,
+    "offset_error_V": 0.04067609694471583,
+    "nominal_required_V": 0.10438635004257013
+  },
+  {
+    "seed": 2026112236,
+    "side": 1,
+    "actual_threshold_required_V": 0.15108064830105455,
+    "offset_error_V": -0.03114807265525693,
+    "nominal_required_V": 0.18222872095631149
+  },
+  {
+    "seed": 2026112237,
+    "side": 0,
+    "actual_threshold_required_V": 0.1376095019458209,
+    "offset_error_V": -0.026035621153446986,
+    "nominal_required_V": 0.16364512309926788
+  },
+  {
+    "seed": 2026112237,
+    "side": 1,
+    "actual_threshold_required_V": 0.15788882790205666,
+    "offset_error_V": -0.03284382110577255,
+    "nominal_required_V": 0.1907326490078292
+  }
+]

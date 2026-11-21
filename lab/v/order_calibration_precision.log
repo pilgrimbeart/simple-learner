@@ -1,0 +1,80 @@
+{
+  "0.15:0.5": {
+    "draws": 40,
+    "zero_error_adequate": 39,
+    "positive_symmetric_margin_range_V": [
+      0.003671968263090337,
+      0.04443617245927503
+    ],
+    "conditional_expected_adequate_draws": {
+      "1": 28.443014260746427,
+      "4": 36.62614939771352,
+      "16": 38.42868405084639
+    }
+  },
+  "0.15:0.8": {
+    "draws": 40,
+    "zero_error_adequate": 39,
+    "positive_symmetric_margin_range_V": [
+      0.006098106115278614,
+      0.04485912298557275
+    ],
+    "conditional_expected_adequate_draws": {
+      "1": 28.596566809969367,
+      "4": 36.63690930515734,
+      "16": 38.50279653202146
+    }
+  },
+  "1.0:0.5": {
+    "draws": 40,
+    "zero_error_adequate": 35,
+    "positive_symmetric_margin_range_V": [
+      0.0035539224664936815,
+      0.04458763980328066
+    ],
+    "conditional_expected_adequate_draws": {
+      "1": 27.088707176733564,
+      "4": 32.55151804993575,
+      "16": 34.60720164313251
+    }
+  },
+  "1.0:0.8": {
+    "draws": 40,
+    "zero_error_adequate": 35,
+    "positive_symmetric_margin_range_V": [
+      0.001378740709906395,
+      0.04697810659269785
+    ],
+    "conditional_expected_adequate_draws": {
+      "1": 27.241098057922844,
+      "4": 32.65911627550137,
+      "16": 34.76278212873093
+    }
+  },
+  "3.8585074308112732:0.5": {
+    "draws": 40,
+    "zero_error_adequate": 22,
+    "positive_symmetric_margin_range_V": [
+      0.0005590147485744491,
+      0.041408498744682457
+    ],
+    "conditional_expected_adequate_draws": {
+      "1": 19.97134881803657,
+      "4": 21.325019848579924,
+      "16": 20.9796605310386
+    }
+  },
+  "3.8585074308112732:0.8": {
+    "draws": 40,
+    "zero_error_adequate": 22,
+    "positive_symmetric_margin_range_V": [
+      0.00024434374789415763,
+      0.04348767696181827
+    ],
+    "conditional_expected_adequate_draws": {
+      "1": 19.972034471468493,
+      "4": 21.21178841615086,
+      "16": 21.227375983916772
+    }
+  }
+}

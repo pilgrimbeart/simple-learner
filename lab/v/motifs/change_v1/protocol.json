@@ -1,0 +1,190 @@
+{
+  "name": "change_v1",
+  "graph": {
+    "nodes": [
+      {
+        "name": "input",
+        "C": 2.5e-11,
+        "R": 400000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "fast",
+        "C": 2.5e-11,
+        "R": 800000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "slow",
+        "C": 2.5e-11,
+        "R": 8000000000.0,
+        "bias": 0.0,
+        "memory": false
+      },
+      {
+        "name": "response",
+        "C": 2.5e-11,
+        "R": 400000000.0,
+        "bias": 0.0,
+        "memory": false
+      }
+    ],
+    "edges": [
+      {
+        "to": 1,
+        "source": 0,
+        "gain": 3.75e-10,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": -1
+      },
+      {
+        "to": 2,
+        "source": 0,
+        "gain": 3.75e-11,
+        "offset": 0.0,
+        "slope": 3.3333333333333335,
+        "tau": 0.0,
+        "gate": -1
+      },
+      {
+        "to": 3,
+        "source": 1,
+        "gain": 1e-09,
+        "offset": 0.0,
+        "slope": 6.666666666666667,
+        "tau": 0.0,
+        "gate": -1
+      },
+      {
+        "to": 3,
+        "source": 2,
+        "gain": -1e-09,
+        "offset": 0.0,
+        "slope": 6.666666666666667,
+        "tau": 0.0,
+        "gate": -1
+      }
+    ]
+  },
+  "cases": [
+    {
+      "id": "-1_0.08_1.0",
+      "sign": -1,
+      "amplitude": 0.08,
+      "duration": 1.0
+    },
+    {
+      "id": "-1_0.08_2.0",
+      "sign": -1,
+      "amplitude": 0.08,
+      "duration": 2.0
+    },
+    {
+      "id": "-1_0.16_1.0",
+      "sign": -1,
+      "amplitude": 0.16,
+      "duration": 1.0
+    },
+    {
+      "id": "-1_0.16_2.0",
+      "sign": -1,
+      "amplitude": 0.16,
+      "duration": 2.0
+    },
+    {
+      "id": "1_0.08_1.0",
+      "sign": 1,
+      "amplitude": 0.08,
+      "duration": 1.0
+    },
+    {
+      "id": "1_0.08_2.0",
+      "sign": 1,
+      "amplitude": 0.08,
+      "duration": 2.0
+    },
+    {
+      "id": "1_0.16_1.0",
+      "sign": 1,
+      "amplitude": 0.16,
+      "duration": 1.0
+    },
+    {
+      "id": "1_0.16_2.0",
+      "sign": 1,
+      "amplitude": 0.16,
+      "duration": 2.0
+    }
+  ],
+  "steps": [
+    0.000125,
+    6.25e-05,
+    3.125e-05
+  ],
+  "pilot": [
+    2026111900,
+    2026111901,
+    2026111902,
+    2026111903,
+    2026111904,
+    2026111905,
+    2026111906,
+    2026111907
+  ],
+  "confirm": [
+    2026112000,
+    2026112001,
+    2026112002,
+    2026112003,
+    2026112004,
+    2026112005,
+    2026112006,
+    2026112007,
+    2026112008,
+    2026112009,
+    2026112010,
+    2026112011,
+    2026112012,
+    2026112013,
+    2026112014,
+    2026112015,
+    2026112016,
+    2026112017,
+    2026112018,
+    2026112019,
+    2026112020,
+    2026112021,
+    2026112022,
+    2026112023,
+    2026112024,
+    2026112025,
+    2026112026,
+    2026112027,
+    2026112028,
+    2026112029,
+    2026112030,
+    2026112031,
+    2026112032,
+    2026112033,
+    2026112034,
+    2026112035,
+    2026112036,
+    2026112037,
+    2026112038,
+    2026112039
+  ],
+  "criteria": "Every case: signed onset and opposite offset peaks >.025 V; sustained change from baseline <.35 times EACH peak; after return abs residual <.01 V. Zero rail hits. All cases/all steps per seed. Wilson95 lower>=.90 in40 seeds.",
+  "control": "Remove slow-to-output connection: sustained/onset>.70, onset>.025 V; zero rails. Pilot seeds only, all cases/steps.",
+  "windows": "Input at1+jitter(.001,.009)s; baseline .7-.95s; onset start+.01 to+.4; sustained end-.2 to-.02; offset end+.01 to+.4; recovery end+.8 to+1. Simulation ends input duration+2.2s. Max/min peaks taken on recorded .001s samples.",
+  "prediction": "Linear matched branches: K[(1+s*.02)^-1-(1+s*.2)^-1], with .01s input/output lags; nominal DC rejection. Mismatched DC gains leave a persistent residual. Saturation/offset alternatives may reduce transients. No robust perfect-adaptation theorem claimed.",
+  "initial": "Independent uniform +/- .075 V, then settling; silicon mismatch and existing thermal/shot noise. Jitter not locked to integration step.",
+  "noise_sigma_passive_V": 1.2871591976131003e-05,
+  "minimum_signal_V": 0.025,
+  "refinement": "Both successive step-halving paired-seed bootstrap95 intervals entirely inside +/-.05 on every normalized case metric.",
+  "budget": "One sequential process; pilot <=600s, confirm <=1200s; <=2 construction variants with diagnosis before second. These are short component benches, not robot lives.",
+  "source": "Ma et al. 2009, https://pmc.ncbi.nlm.nih.gov/articles/PMC3068210/ ; summary, adaptation definition and enzymatic-model assumptions read. Functional precedent, not transfer of biochemical guarantees."
+}

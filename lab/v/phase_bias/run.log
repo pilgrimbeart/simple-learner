@@ -1,0 +1,51 @@
+{
+  "validation_rmse_V": 2.0162192610022876e-05,
+  "validation_max_error_V": 4.753764123630044e-05,
+  "validation_correlation": 0.9999999798393013,
+  "maximum_resolution_change_V": 5.551115123125783e-17,
+  "observed_rms_bias_V": 0.09920973904281222,
+  "modes": {
+    "original": {
+      "predicted_rms_bias_V": 0.09921048770164606,
+      "range_V": [
+        -0.23756653877968414,
+        0.22684368010610167
+      ]
+    },
+    "zero_output_offsets": {
+      "predicted_rms_bias_V": 0.07127346258283748,
+      "range_V": [
+        -0.17890318701916597,
+        0.14308484596709933
+      ]
+    },
+    "equal_output_gains": {
+      "predicted_rms_bias_V": 0.08583380695359097,
+      "range_V": [
+        -0.18079144434824068,
+        0.18208535055090624
+      ]
+    },
+    "equal_upstream": {
+      "predicted_rms_bias_V": 0.0636213070979945,
+      "range_V": [
+        -0.14248683368176754,
+        0.1251396059826886
+      ]
+    },
+    "equal_output_transfers": {
+      "predicted_rms_bias_V": 0.05676465191626521,
+      "range_V": [
+        -0.15830132704885513,
+        0.10443539999029525
+      ]
+    },
+    "both_matched": {
+      "predicted_rms_bias_V": 0.0,
+      "range_V": [
+        0.0,
+        0.0
+      ]
+    }
+  }
+}

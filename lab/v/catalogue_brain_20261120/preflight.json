@@ -1,0 +1,32 @@
+{
+ "timing": {
+  "r1_native": {
+   "s_per_life_second": 0.010469913482666016,
+   "est_s_per_100s_life": 1.0469913482666016
+  },
+  "r1_coupled": {
+   "s_per_life_second": 0.015346050262451172,
+   "est_s_per_100s_life": 1.5346050262451172
+  },
+  "r2_coupled": {
+   "s_per_life_second": 0.023169755935668945,
+   "est_s_per_100s_life": 2.3169755935668945
+  },
+  "r4_coupled": {
+   "s_per_life_second": 0.03779959678649902,
+   "est_s_per_100s_life": 3.7799596786499023
+  }
+ },
+ "estimates_7_workers": {
+  "action_384_lives_s": 57.43495396205357,
+  "learn_192_lives_s": 28.717476981026785,
+  "confirm_per_seed_s": {
+   "1": 1.7538343157087053,
+   "2": 2.6479721069335938,
+   "4": 4.319953918457031
+  },
+  "confirm_plus_refine_N128_s": 1116.3853236607142,
+  "confirm_plus_refine_N256_s": 2232.7706473214284
+ },
+ "note": "1 s lives x 2 development seeds; reward not read"
+}

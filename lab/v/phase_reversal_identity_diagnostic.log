@@ -1,0 +1,19 @@
+completed equal
+completed weak_A
+completed weak_B
+completed unequal_DC
+{
+  "validation_rmse_V": 2.0449325264613715e-05,
+  "validation_max_error_V": 5.3327963712712645e-05,
+  "maximum_resolution_change_V": 2.656052475180637e-09,
+  "swap_cycle_identity_error_V": 6.156373744126142e-10,
+  "scenarios": {}
+}
+Traceback (most recent call last):
+  File "/home/pilgrim/git/simple-learner/lab/phase_reversal.py", line 99, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/pilgrim/git/simple-learner/lab/phase_reversal.py", line 79, in main
+    assert summary['validation_max_error_V']<.001 and resolution<1e-6 and identity<1e-10
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

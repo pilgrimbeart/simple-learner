@@ -1,0 +1,43 @@
+learn_biology_s0-31 done 19.9 s
+frozen_biology_s0-31 done 21.6 s
+informed_biology_s0-31 done 30.8 s
+allfood_biology_s0-31 done 19.8 s
+{
+ "identity_vs_D176_mem_thr": {
+  "learn": {
+   "lives": 64,
+   "identical": 64
+  },
+  "frozen": {
+   "lives": 64,
+   "identical": 64
+  },
+  "informed": {
+   "lives": 64,
+   "identical": 64
+  },
+  "allfood": {
+   "lives": 64,
+   "identical": 64
+  }
+ },
+ "passive_logging": {
+  "biology": [
+   true,
+   true,
+   true
+  ],
+  "silicon": [
+   true,
+   true,
+   true
+  ],
+  "original_vs_adapter_unrepaired": [
+   true,
+   true,
+   true
+  ]
+ },
+ "identities_same_wiring_all": true
+}
+wiring same across substrates: True
