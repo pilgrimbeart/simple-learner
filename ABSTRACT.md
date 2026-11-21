@@ -1,11 +1,10 @@
 # Can more of the same brain learn unfamiliar challenges?
 
-**Latest review (2026-11-20):** [D182](discrete/NOTEBOOK.md#d182-catalogue-review) verifies the catalogue
-brain's small informed sensory benefit, but collection still fails even in all-food lives. The next question
-is whether sustained sensory transfer, motor recovery or movement coordination explains the loss.
-Exploration alone is not yet established as the cause. Learning and local autonomous repair remain unproved.
-The user has since chosen a broad fixed test of existing settings; [D183](discrete/NOTEBOOK.md#d183-action-grid-plan)
-records the prepared assignment, with no simulations yet run.
+**Latest result (2026-11-21):** [D184](discrete/NOTEBOOK.md#d184-action-grid) tests 81 settings of the catalogue
+brain's existing knobs. They point to the explorer holding the shared motors when the senses fire (not yet separated from encounter rate): less
+frequent exploration, faster motor recovery and a faster rhythm double informed collection on fresh lives, while
+sensory gain does not help. The gain misses its practical margin, step convergence and the chip's rails, and no
+setting does the job; learning and local autonomous repair remain unproved.
 
 We seek reusable components for a real-time robot brain that recognises an improvable shortfall and adapts
 its own organisation during life. Additional brain material should extend what it can learn without a designer

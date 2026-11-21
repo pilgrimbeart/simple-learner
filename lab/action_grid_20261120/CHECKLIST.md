@@ -7,13 +7,13 @@ Status values: done / not triggered (with branch evidence) / incomplete (blocker
 |---|---|---|---|---|---|
 | R0 | Freeze inputs, plan, budget | done | PROTOCOL.md, PREDICTIONS.md, lab/v/action_grid_20261120/manifest.json (18:39:48Z; attempt1 superseded, logged), bench_jobs.json, develop_jobs.json, preflight.json | estimate 4.9 h incl. 1.25x vs 11.8 h left: fits | none |
 | R1 | Observer/runner, identity checks | done | ag_engine.py, ag_jobs.py, ag_checks.py, run.py; checks.json valid (17 checks incl. D180 seed-8 12-life reproduction of meals, firings, node events, traces, arrays hash, wiring); realised.json | 17/17 pass | none |
-| R2 | Every fixed bench | pending | | 31,104 / – | |
-| R3 | Every development life | pending | | 31,104 / – | |
-| R4 | Historical reconciliation, costs | pending | | | |
-| R5 | Development analysis, selection | pending | | 81 rows, 3 selected | |
-| R6 | Fresh confirmation, 3 steps | pending | | 18,432 / – | |
-| R7 | Uncertainty, physical, convergence | pending | | | |
-| R8 | Omission audit, handoff, docs | pending | | | |
+| R2 | Every fixed bench | done | lab/v/action_grid_20261120/bench_ledger.jsonl.gz (meta hashes verified, audit.json); bench_tables.json; dev_tables.md §Bench | 31,104 / 31,104 (29,808 ok, 1,296 named invalid: oscillator 0.75 below 1 pA) | none |
+| R3 | Every development life | done | develop_ledger.jsonl.gz (hashes verified); key set equals regenerated job list (audit.json) | 31,104 / 31,104 (26,568 ok, 4,536 named invalid; 54 of 81 settings complete) | none (resumed once after a reboot, logged) |
+| R4 | Historical reconciliation, costs | done | reconciliation.json (384/384 D180 lives match on 10 checks), historical_reconciliation.md, dev_tables.md §Activity | all match | none |
+| R5 | Development analysis, selection | done | dev_tables.md/json, factors.json, associations.json, selection.json (frozen 23:29Z, before any confirmation life) | 81 rows, 3 selected; selection reproduced independently | discrepancy: exact float ties at ranks 12–13, 31–32, 33–35 ordered by rounding, not food (see below); top three unaffected |
+| R6 | Fresh confirmation, 3 steps | done | confirm_freeze.json (seeds 2027112000–127), confirm_ledger.jsonl.gz (hashes verified), realised_confirm.json (0 of 1,536 failed) | 18,432 / 18,432 ok | none (resumed once after an OOM kill, logged; past the 12 h envelope at the user's decision) |
+| R7 | Uncertainty, physical, convergence | done | confirm_tables.md/json; primary points re-derived independently (audit.json, 9/9 match) | all §9 tables for every candidate | none |
+| R8 | Omission audit, handoff, docs | done | REPORT.md, HANDOFF.md, audit.json, discrete/NOTEBOOK.md D184, PROGRAMME.md status | – | none |
 
 ## Amendments and routine fixes log
 (none yet)
@@ -52,3 +52,9 @@ Status values: done / not triggered (with branch evidence) / incomplete (blocker
   Routine change: `run.py` WORKERS now read from AG_WORKERS (default 7), run with 4 to stay within 7.8 GB (a confirm
   worker reached 1.1 GB). run.py is not in the simulation hash; the hash (5f2066bf58ecb0e5) is unchanged. Confirm
   archive checked intact (9,695 complete pickles, clean EOF). `run.py confirm --resume` (pid 43592) then `report`.
+- 2026-11-21T12:30Z (audit discrepancy, recorded): `ag_audit.py` reports `ranked_list_reproduced: false`. Cause: seven
+  settings tie exactly on informed net (e.g. 99/640 = 0.1546875) but floating-point summation leaves them 1e-17 apart, so
+  both the runner's ranking and the audit's order those ties by rounding rather than by the food tie-breaker. The exact
+  ordering differs from both at ranks 12–13 (runner correct), 31–32 (runner correct) and 33–35 (both wrong). The top three
+  have distinct nets (0.291, 0.281, 0.277), so the selection is unaffected (`selection_reproduced: true`). Not corrected
+  in selection.json (frozen); the audit's `all_ok: false` stands for this reason only.

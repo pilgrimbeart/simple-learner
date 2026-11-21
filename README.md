@@ -73,6 +73,15 @@ while the user is unavailable.
 
 ## What we've learned
 
+### Exploring can drown out the senses
+
+In the catalogue brain the explorer and the senses drive the same motors. When the explorer is holding a motor,
+a sensor's pulse is lost. Making the explorer fire less often, the motors recover faster and the rhythm run faster
+(all knobs the brain already has) roughly doubles what the robot eats when told which colour is food, on fresh
+lives. A stronger sensory signal does not help. The gain is real but small (about 0.45 food per 10 s against the
+1 needed), not yet steady as the simulation's step shrinks, and reached with voltages beyond the chip's supply, so it
+points at the problem rather than solving it. [D184](discrete/NOTEBOOK.md#d184-action-grid).
+
 ### Reliable responses and exploration are separate requirements
 
 The catalogue assembly now moves and benefits slightly from correct sensory settings, yet collects too

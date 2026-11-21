@@ -1,5 +1,14 @@
 # The research programme
 
+## Action-grid work order executed — D184, 2026-11-21
+
+The [action-grid work order](lab/WORK_ORDER_2026-11-20_action_grid.md) is complete, all R0–R8 done
+([D184](discrete/NOTEBOOK.md#d184-action-grid), [REPORT](lab/action_grid_20261120/REPORT.md),
+[HANDOFF](lab/action_grid_20261120/HANDOFF.md)); finished past its 12 h envelope at the user's decision. Three
+settings (higher explorer threshold, faster motor recovery and oscillator) improve informed collection on fresh lives
+at three steps, but miss the practical margin, step convergence and the chip's rails: diagnostic only; no setting
+meets the job. **Reviewer decision needed:** the HANDOFF's one proposed question. Nothing else launched.
+
 ## Current prepared assignment — fixed action grid, D183, 2026-11-20
 
 The user prefers a broad fixed experiment batch over scientific branching by the executor.

@@ -10,6 +10,12 @@ per meal spent resting, moving and thinking), gain rate (meals per 10 s), food, 
 
 ## Where it stands
 
+**Latest result, 2026-11-21:** [D184](#d184-action-grid) runs the fixed action grid. The catalogue brain collects poorly mainly
+because its explorer drowns out the senses: a higher explorer threshold, faster motor recovery and a faster oscillator roughly
+double food told the answer (0.45–0.49 per 10 s on fresh lives, baseline 0.18–0.22) and pass no-harm checks; sensory gain is
+not the lever. The improvement survives fresh seeds at three steps but not the +0.10 practical margin, step convergence, or the
+chip's rails (excursions in about three quarters of lives), so it is diagnostic. No setting meets the job. D183 below is historical.
+
 **Current prepared assignment, 2026-11-20:** [D183](#d183-action-grid-plan) replaces D182's conditional
 next-step proposal with the user's requested broad fixed batch: 81 settings, all controls, mechanical
 selection and fresh three-step confirmation. Static checks pass; no simulations or executor launched.
@@ -12231,3 +12237,38 @@ The 12-hour envelope includes all mandatory stages and a final omission audit; m
 not negative evidence. No agent, long job or scientific experiment was launched during preparation.
 The changed programme makes the executor a measurer rather than a chooser of explanations. Its outputs
 will inform which economical, local adjustment is worth studying; they cannot establish one by themselves.
+
+<a id="d184-action-grid"></a>
+## D184 — The fixed action grid: the explorer drowns out the senses (2026-11-20 to 11-21)
+
+**Question (D183):** which existing settings change the catalogue brain's poor collection, and do they survive fresh
+lives and circuit refinement? Protocol, predictions, ledger, report and handoff:
+[work order](../lab/WORK_ORDER_2026-11-20_action_grid.md), [PROTOCOL](../lab/action_grid_20261120/PROTOCOL.md),
+[PREDICTIONS](../lab/action_grid_20261120/PREDICTIONS.md), [CHECKLIST](../lab/action_grid_20261120/CHECKLIST.md),
+[REPORT](../lab/action_grid_20261120/REPORT.md), [HANDOFF](../lab/action_grid_20261120/HANDOFF.md); raw ledgers, manifest
+and tables in `lab/v/action_grid_20261120/` (archives git-ignored, `lab/v/action_grid_20261120_*.pkl`). Code 1e70cce,
+simulation hash 5f2066bf58ecb0e5. Taste withheld in every life: the informed arm is told the colour bit at birth.
+
+**Observation.** 81 settings of four existing knobs (sensory gain, motor decay, explorer threshold, oscillator speed);
+31,104 benches and 31,104 development lives (100 s, native noise, seeds 8–39), then the three best by development net
+and the baseline on 128 fresh seeds (2027112000–127) at DT, DT/2, DT/4 with coupled noise (18,432 lives). The baseline
+reproduces D180's 384 lives exactly. In development a higher explorer threshold raised net (+0.07 [+0.05, +0.09]),
+against my prediction; a faster oscillator raised food (+0.13); halving the gain hurt (−0.19); doubling it did not help.
+The single-pulse bench response ranks with net (Spearman 0.89). Fresh: all three winners improve on the baseline
+(Bonferroni lower bounds > 0 at every step; +0.10 to +0.27 net per 10 s), pass the all-food and stranding no-harm
+margins, eat 0.40–0.49 food per 10 s (1.0–1.1 all-food), and strand 2–5% of lives against 12–15%.
+
+**Inference.** In this brain the explorer and the senses share the motors, and poor collection is mostly the explorer
+holding them when a sensor pulse arrives. Making exploration intermittent and the motors quick to recover lets the
+senses steer. Gain is not the bottleneck.
+
+**Limits.** Not the practical margin (+0.10 at every step; lower bounds at DT +0.02 to +0.08); not converged in the step
+(halving changes up to +0.09, intervals wider than ±0.05); not physically eligible (pre-clip rail excursions in
+3,295–3,539 of each candidate's 4,608 lives, now including the motors). Masking and encounter rate are confounded. A run
+past its 12 h envelope (a reboot and an out-of-memory kill, both resumed from intact ledgers; the user's decision to
+finish). Exact ties in the development ranking are ordered by rounding at three places; the selection is unaffected.
+
+**Changed belief and next branch.** D181's "too few encounters" becomes "the senses lose the motors to the explorer".
+Proposed question, for review: within the chip's rails, does masking (not encounter rate) still account for the gain?
+No repair or experiment launched.
+
